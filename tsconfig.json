@@ -24,6 +24,22 @@
 			"@/*": ["./src/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(protected)/admin/layout.js", "src/app/api/tips/route.js", "src/api/og/route.js", "src/app/(data)/expert-tips/page.js", "src/components/ui/Search.js", "src/app/(data)/services/page.js", "src/components/sections/Header.js", "src/components/forms/SubscriptionForm.js", "src/app/api/newsletter/route.js", "src/app/(data)/services/[slug]/page.js", "src/app/(data)/expert-tips/[...uri]/page.js"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"src/app/(protected)/admin/layout.js",
+		"src/app/api/tips/route.js",
+		"src/api/og/route.js",
+		"src/app/(website)/(data)/expert-tips/page.js",
+		"src/components/ui/Search.js",
+		"src/app/(website)/(data)/services/page.js",
+		"src/components/sections/Header.js",
+		"src/components/forms/SubscriptionForm.js",
+		"src/app/api/newsletter/route.js",
+		"src/app/(website)/(data)/services/[slug]/page.js",
+		"src/app/(website)/(data)/expert-tips/[...uri]/page.js"
+	],
 	"exclude": ["node_modules"]
 }

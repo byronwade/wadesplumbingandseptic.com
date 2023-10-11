@@ -1,4 +1,4 @@
-import { supabase } from "../../../utils/supabase";
+import { supabase } from "../../../../utils/supabase";
 
 export async function GET(request) {
 	// Extract the search term from the query parameters
@@ -19,7 +19,7 @@ export async function GET(request) {
 	if (slug) {
 		// If a slug is provided, search for the exact item by its URI
 		query = supabase
-			.from("services")
+			.from("posts")
 			.select(
 				`
         id,
@@ -37,7 +37,7 @@ export async function GET(request) {
 			.eq("slug", slug); // Use eq to find the exact item by its URI
 	} else {
 		// If no slug is provided, perform a regular search
-		query = supabase.from("services").select(`
+		query = supabase.from("posts").select(`
         id,
         title,
         excerpt,
@@ -62,22 +62,22 @@ export async function GET(request) {
 	const { data, error } = await query.limit(100);
 
 	if (error) {
-		console.error("Error fetching services:", error);
+		console.error("Error fetching tips:", error);
 		return new Response(JSON.stringify({ error }), { statusCode: 500 });
 	}
 
-	// Determine total count - if there's a search term, only count matching services
-	let countQuery = supabase.from("services").select("id", { count: "exact" });
+	// Determine total count - if there's a search term, only count matching posts
+	let countQuery = supabase.from("posts").select("id", { count: "exact" });
 	if (searchTerm) {
 		countQuery = countQuery.ilike("title", `%${searchTerm}%`);
 	}
 	const countData = await countQuery;
-	const totalservices = countData.data.length;
+	const totalPosts = countData.data.length;
 
 	const responsePayload = {
-		services: data,
+		posts: data,
 		pageInfo: {
-			total: totalservices,
+			total: totalPosts,
 		},
 	};
 

@@ -1,4 +1,4 @@
-import { supabase } from "../../../utils/supabase";
+import { supabase } from "../../../../utils/supabase";
 
 // Function to fetch the newest 4 items (either posts or services) for specified categories
 async function fetchNewestItems(entityType, categoryIds) {
