@@ -1,35 +1,14 @@
 "use client";
-import { useEffect } from "react";
-import useSWR from "swr";
-import { useRecoilState } from "recoil";
 import { NavBar } from "../header/NavBar";
 import { ServicesMenu } from "../header/ServicesMenu";
 import { ExpertTipsMenu } from "../header/ExpertTipsMenu";
 import { AboutUsMenu } from "../header/AboutUsMenu";
 import { MobileMenuButton } from "../header/MobileMenuButton";
 import { InfoBar } from "../header/InfoBar";
-import { menuAtom } from "../../states/menuAtoms";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 
-// Fetcher for useSWR
-const fetcher = (url) => fetch(url).then((res) => res.json());
-
-export default function Header() {
-	const [menu, setMenu] = useRecoilState(menuAtom);
-	const { data, error } = useSWR("/api/menu", fetcher);
-
-	useEffect(() => {
-		if (data) {
-			setMenu(data);
-		}
-		if (error) {
-			console.error("Error fetching tips:", error);
-		}
-	}, [data, error]);
-
-	console.log(menu);
-
+export default function Header({ data: menu }) {
 	return (
 		<>
 			<Disclosure as="nav" className="bg-black text-white sticky top-0 z-50">

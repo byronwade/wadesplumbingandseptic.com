@@ -3,8 +3,8 @@ import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
-export function ServicesMenu({ menu, close }) {
-	const { Residential, Commercial, DrainClearing, Septic, EngineeredSeptic, Drainage } = menu?.services || {};
+export function ServicesMenu({ menu }) {
+	const { residential, commercial, drainClearing, septic, engineeredSeptic, drainage } = menu?.services || {};
 
 	return (
 		<Popover>
@@ -21,7 +21,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Residential</h3>
 										<div className="flex flex-col space-y-4">
-											{Residential?.map((services, index) => (
+											{residential?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}
@@ -38,7 +38,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Commercial</h3>
 										<div className="flex flex-col space-y-4">
-											{Commercial?.map((services, index) => (
+											{commercial?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}
@@ -55,7 +55,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Drain Clearing</h3>
 										<div className="flex flex-col space-y-4">
-											{DrainClearing?.map((services, index) => (
+											{drainClearing?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}
@@ -72,7 +72,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Septic</h3>
 										<div className="flex flex-col space-y-4">
-											{Septic?.map((services, index) => (
+											{septic?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}
@@ -89,7 +89,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Engineered Septic</h3>
 										<div className="flex flex-col space-y-4">
-											{EngineeredSeptic?.map((services, index) => (
+											{engineeredSeptic?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}
@@ -106,7 +106,7 @@ export function ServicesMenu({ menu, close }) {
 									<div className="flex flex-col space-y-6">
 										<h3 className="text-sm font-bold leading-6 text-brand">Drainage</h3>
 										<div className="flex flex-col space-y-4">
-											{Drainage?.map((services, index) => (
+											{drainage?.map((services, index) => (
 												<Link
 													key={index}
 													href={`/services/${services.slug}`}

@@ -4,11 +4,13 @@ import Footer from "@/components/sections/Footer";
 import "./globals.css";
 //import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import getMenu from "./getMenu";
 
 export default async function RootLayout({ children, props }: { children: React.ReactNode; props?: any }) {
-	console.log("Layout", props);
+	const data = await getMenu();
+	console.log(data);
 	return (
-		<Provider>
+		<Provider children={undefined}>
 			<html lang="en">
 				<head>
 					{/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
@@ -23,7 +25,7 @@ export default async function RootLayout({ children, props }: { children: React.
 				</Script> */}
 				</head>
 				<body className="bg-gray-50 text-base">
-					<Header />
+					<Header data={data} />
 					{children}
 					<Analytics />
 					<Footer />
