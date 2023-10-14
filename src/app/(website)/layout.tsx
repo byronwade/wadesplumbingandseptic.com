@@ -10,7 +10,7 @@ export default async function RootLayout({ children, props }: { children: React.
 	const data = await getMenu();
 	console.log(data);
 	return (
-		<Provider children={undefined}>
+		<Provider>
 			<html lang="en">
 				<head>
 					{/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
