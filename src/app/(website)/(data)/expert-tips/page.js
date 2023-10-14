@@ -21,7 +21,7 @@ export default async function Page({ searchParams }) {
 				<div className="mx-auto max-w-7xl">
 					<div className="flex flex-col space-y-6 justify-center items-start">
 						<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">{serviceMsg}</h2>
-						<p className="mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Tips from experts</p>
+						<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Tips from experts</p>
 						<p className="max-w-2xl text-lg leading-6 text-gray-600">
 							Have a different question and can’t find the answer you’re looking for? Reach out to our support team by
 							<Link href="/contact-us" className="font-semibold text-brand-600 hover:text-brand-500">
