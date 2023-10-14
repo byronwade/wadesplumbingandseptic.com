@@ -3,8 +3,7 @@ import Modal from "../ui/Modal";
 import { truncateString } from "../../helpers/truncate";
 import Link from "next/link";
 
-export default function Sidebar({ NewestPosts, pathname }) {
-	console.log(NewestPosts);
+export default function Sidebar({ data, pathname }) {
 	return (
 		<aside className="hidden xl:block" aria-labelledby="sidebar-label">
 			<div className="xl:w-[336px] sticky top-6">
@@ -18,7 +17,7 @@ export default function Sidebar({ NewestPosts, pathname }) {
 				</div>
 				<div className="mb-12">
 					<h4 className="mb-4 text-sm font-bold text-gray-900 dark:text-white uppercase">Latest Tips</h4>
-					{NewestPosts?.slice(0, 3).map((post, index) => (
+					{data?.slice(0, 3).map((post, index) => (
 						<Link href={`${pathname}/${post.slug}`} key={index} className="mb-6 flex items-start">
 							<span className="shrink-0">
 								<Image sizes={post?.featuredImage?.sizes} width={96} height={96} src={post?.featuredImage?.sourceurl ? post.featuredImage.sourceurl : "/placeholder.webp"} alt={post?.featuredImage?.alttext ? post.featuredImage.alttext : "/placeholder.webp"} className="mr-4 max-w-full w-24 h-24 rounded" />

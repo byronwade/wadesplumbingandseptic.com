@@ -1,10 +1,9 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { truncateString } from "../../helpers/truncate";
 
-export default function RelatedArticlesSection({ posts, pathname }) {
-	const truncatedPosts = posts?.slice(0, 4);
+export default function RelatedArticlesSection({ data, pathname }) {
+	const truncatedPosts = data?.slice(0, 4);
 
 	if (!truncatedPosts || truncatedPosts.length === 0) {
 		return null;
@@ -25,7 +24,7 @@ export default function RelatedArticlesSection({ posts, pathname }) {
 									<h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
 										<span>{post.title}</span>
 									</h2>
-									<div className="mb-4 font-light text-gray-500 dark:text-gray-400 max-w-sm" dangerouslySetInnerHTML={{ __html: truncateString(post.excerpt, 100) }} />
+									<div className="mb-4 font-light text-gray-500 dark:text-gray-400 max-w-sm" dangerouslySetInnerHTML={{ __html: truncateString(post?.excerpt, 100) }} />
 									<span className="inline-flex items-center font-medium underline underline-offset-4 text-brand-600 dark:text-brand-500 hover:no-underline">Read in {post.readingtime} minutes</span>
 								</div>
 							</article>

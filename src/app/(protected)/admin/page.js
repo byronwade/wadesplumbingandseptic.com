@@ -1,7 +1,7 @@
 import { supabase } from "../../../utils/supabase";
 
 export default async function Posts() {
-	const { data: posts } = await supabase.from("posts").select();
+	const { data: posts } = await supabase.from("tips").select();
 	console.log(posts);
 	return (
 		<>
