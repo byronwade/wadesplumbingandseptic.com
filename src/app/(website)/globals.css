@@ -25,4 +25,19 @@
       transform: rotate(360deg);
     }
   }
-  
+
+  /* Parallax effect styles */
+  .relative {
+    perspective: 1000px;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .parallax-container {
+    background-image: url('/redwoods.jpg');
+    background-size: cover; /* Ensure the image covers the container */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center center; /* Center the image horizontally and vertically */
+  }

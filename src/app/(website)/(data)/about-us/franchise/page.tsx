@@ -85,10 +85,10 @@ export default function Example() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<h1>Franchise Opportunities at Wade's Plumbing & Septic</h1>
-			<p>Are you an ambitious individual with a passion for plumbing and community service? Wade's Plumbing & Septic offers a remarkable franchise opportunity that empowers you to own and operate your own plumbing business under our reputable brand. By becoming a franchisee, you'll gain access to our proven business model, comprehensive training programs, and continuous support from a team of industry experts.</p>
+			<h1>Franchise Opportunities at Wade&#39;s Plumbing &amp; Septic</h1>
+			<p>Are you an ambitious individual with a passion for plumbing and community service? Wade&#39;s Plumbing &amp; Septic offers a remarkable franchise opportunity that empowers you to own and operate your own plumbing business under our reputable brand. By becoming a franchisee, you&#39;ll gain access to our proven business model, comprehensive training programs, and continuous support from a team of industry experts.</p>
 
-			<h2>Why Choose a Wade's Plumbing & Septic Franchise?</h2>
+			<h2>Why Choose a Wade&#39;s Plumbing &amp; Septic Franchise?</h2>
 			<p>We offer a turnkey franchise solution that provides everything you need to hit the ground running. Our franchisees benefit from:</p>
 			<ul>
 				<li>Exclusive territorial rights to build a loyal customer base.</li>
@@ -100,7 +100,7 @@ export default function Example() {
 			</ul>
 
 			<h2>Ready to Take the Next Step?</h2>
-			<p>If you're ready to take control of your future and make a positive impact in your community, a Wade's Plumbing & Septic franchise could be the perfect fit. Get in touch with us today to learn more about our franchise program and discover how you can build a successful plumbing business with Wade's Plumbing & Septic.</p>
+			<p>If you&#39;re ready to take control of your future and make a positive impact in your community, a Wade&#39;s Plumbing &amp; Septic franchise could be the perfect fit. Get in touch with us today to learn more about our franchise program and discover how you can build a successful plumbing business with Wade&#39;s Plumbing &amp; Septic.</p>
 			<p>
 				Contact us at <a href="tel:8314306011">(831) 225-4344</a> or <a href="mailto:support@wadesinc.io">support@wadesinc.io</a>, or fill out our online inquiry form to get started.
 			</p>

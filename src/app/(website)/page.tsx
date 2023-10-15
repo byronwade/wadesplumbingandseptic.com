@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+	metadataBase: new URL("http://localhost:3002"),
 	title: {
 		default: "Wade's Plumbing & Septic - 24/7 Emergency Service - Santa Cruz, Monterey, Santa Clara",
 		template: "%s | Wade's Plumbing & Septic",
