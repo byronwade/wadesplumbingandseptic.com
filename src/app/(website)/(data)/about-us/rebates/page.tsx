@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export const metadata = {
 	title: "Plumbing Rebates and Savings | Wade's Plumbing & Septic",
 	description: "Discover local plumbing rebates with Wade's Plumbing & Septic. Explore savings and incentives for your next plumbing project. Your path to economical plumbing upgrades starts here.",
@@ -99,7 +101,9 @@ const jsonLd = {
 export default function Rebates() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>
 				<p>

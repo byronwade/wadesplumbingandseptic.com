@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export const metadata = {
 	title: "Comprehensive Privacy Policy | Wade's Plumbing & Septic",
 	description: "At Wade's Plumbing & Septic, safeguarding your privacy is our priority. Explore our policy detailing the data collection, usage, and management practices ensuring your privacy.",
@@ -75,7 +77,9 @@ const jsonLd = {
 export default function PrivacyPolicy() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>
 			<p>Wade&apos;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>

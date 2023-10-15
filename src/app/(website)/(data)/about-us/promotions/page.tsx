@@ -1,5 +1,6 @@
 import Image from "next/image";
 import fetchData from "./getPromotions";
+import Head from "next/head";
 
 export const metadata = {
 	title: "Current Promotions & Discounts | Wade's Plumbing & Septic",
@@ -77,46 +78,50 @@ export default async function Discounts() {
 	};
 
 	return (
-		<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Discounts</h2>
-			<p className="mb-6 text-4xl tracking-tight font-extrabold text-black dark:text-white">Promotions for our company</p>
-			<div className="flex flex-col overflow-hidden">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-x-8">
-					{(promotions?.length ?? 0) > 0 ? (
-						promotions?.map((promotion, index) => {
-							const expirationDate = promotion?.expiration;
-							const today = new Date().getTime();
-							const expiration = new Date(expirationDate).getTime();
-							const differenceInTime = expiration - today;
-							const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+		<>
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
+			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Discounts</h2>
+				<p className="mb-6 text-4xl tracking-tight font-extrabold text-black dark:text-white">Promotions for our company</p>
+				<div className="flex flex-col overflow-hidden">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-x-8">
+						{(promotions?.length ?? 0) > 0 ? (
+							promotions?.map((promotion, index) => {
+								const expirationDate = promotion?.expiration;
+								const today = new Date().getTime();
+								const expiration = new Date(expirationDate).getTime();
+								const differenceInTime = expiration - today;
+								const differenceInDays = differenceInTime / (1000 * 3600 * 24);
 
-							return (
-								<div key={index} className="h-full space-y-4 w-full flex flex-col items-center text-center p-6 bg-white overflow-hidden rounded-xl border-4 border-dashed border-gray-500">
-									<Image priority className="w-auto h-auto" src="/WadesLogo.png" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
-									<div>
-										<h2 className="font-extrabold text-lg">{promotion.title}</h2>
-										<div dangerouslySetInnerHTML={{ __html: promotion.content }} />
+								return (
+									<div key={index} className="h-full space-y-4 w-full flex flex-col items-center text-center p-6 bg-white overflow-hidden rounded-xl border-4 border-dashed border-gray-500">
+										<Image priority className="w-auto h-auto" src="/WadesLogo.png" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
+										<div>
+											<h2 className="font-extrabold text-lg">{promotion.title}</h2>
+											<div dangerouslySetInnerHTML={{ __html: promotion.content }} />
+										</div>
+										<div>
+											Contact us today at{" "}
+											<a href="tel:8314306011" className="text-brand hover:underline">
+												(831) 225-4344
+											</a>{" "}
+											or{" "}
+											<a href="mailto:support@wadesinc.io" className="text-brand hover:underline">
+												support@wadesinc.io
+											</a>
+											<p className="mt-2 text-red font-bold">{promotion.expiration === null ? "This item does not expire" : differenceInDays <= 7 ? `Expiring soon on: ${promotion.expiration}` : `Expires: ${promotion.expiration}`}</p>
+										</div>
 									</div>
-									<div>
-										Contact us today at{" "}
-										<a href="tel:8314306011" className="text-brand hover:underline">
-											(831) 225-4344
-										</a>{" "}
-										or{" "}
-										<a href="mailto:support@wadesinc.io" className="text-brand hover:underline">
-											support@wadesinc.io
-										</a>
-										<p className="mt-2 text-red font-bold">{promotion.expiration === null ? "This item does not expire" : differenceInDays <= 7 ? `Expiring soon on: ${promotion.expiration}` : `Expires: ${promotion.expiration}`}</p>
-									</div>
-								</div>
-							);
-						})
-					) : (
-						<div>No promotions available</div>
-					)}
+								);
+							})
+						) : (
+							<div>No promotions available</div>
+						)}
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }

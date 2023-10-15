@@ -5,6 +5,7 @@ import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
 import Image from "next/image";
 import fetchData from "../getServices";
+import Head from "next/head";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
@@ -72,8 +73,10 @@ export default async function BlogPage({ params }) {
 
 	return (
 		<>
-			<section className="bg-white dark:bg-gray-900">
+			<Head>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
+			<section className="bg-white dark:bg-gray-900">
 				<div className="py-16 px-6 sm:py-24 lg:px-8">
 					<div className="flex justify-between px-4 mx-auto max-w-screen-xl">
 						<article className="space-y-4 mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">

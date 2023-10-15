@@ -16,28 +16,32 @@ export default async function Page({ searchParams }) {
 	const serviceMsg = searchTerm ? `We ${allPosts.length ? "found " + allPosts.length : "couldn't find any"} expert tips matching "${searchTerm}".` : `We have ${allPosts.length} expert tips.`;
 
 	return (
-		<section className="bg-gray-50 relative overflow-hidden">
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			<div className="py-16 px-6 sm:py-24 lg:px-8">
-				<div className="mx-auto max-w-7xl">
-					<div className="flex flex-col space-y-6 justify-center items-start">
-						<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">{serviceMsg}</h2>
-						<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Tips from experts</p>
-						<p className="max-w-2xl text-lg leading-6 text-gray-600">
-							Have a different question and can’t find the answer you’re looking for? Reach out to our support team by
-							<Link href="/contact-us" className="font-semibold text-brand-600 hover:text-brand-500">
-								{" "}
-								sending us an email{" "}
-							</Link>
-							and we’ll get back to you as soon as we can.
-						</p>
-						<Search placeholder="Search for a tip..." search={searchParams} />
-						<ExpertTips tips={pagedData} itemsPerPage={ITEMS_PER_PAGE} />
-						<Pagnation total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+		<>
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
+			<section className="bg-gray-50 relative overflow-hidden">
+				<div className="py-16 px-6 sm:py-24 lg:px-8">
+					<div className="mx-auto max-w-7xl">
+						<div className="flex flex-col space-y-6 justify-center items-start">
+							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">{serviceMsg}</h2>
+							<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Tips from experts</p>
+							<p className="max-w-2xl text-lg leading-6 text-gray-600">
+								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by
+								<Link href="/contact-us" className="font-semibold text-brand-600 hover:text-brand-500">
+									{" "}
+									sending us an email{" "}
+								</Link>
+								and we’ll get back to you as soon as we can.
+							</p>
+							<Search placeholder="Search for a tip..." search={searchParams} />
+							<ExpertTips tips={pagedData} itemsPerPage={ITEMS_PER_PAGE} />
+							<Pagnation total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }
 export const metadata = {

@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export const metadata = {
 	title: "Franchise Opportunities | Wade's Plumbing & Septic",
 	description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
@@ -89,7 +91,9 @@ const jsonLd = {
 export default function Example() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 			<h1>Franchise Opportunities at Wade's Plumbing & Septic</h1>
 			<p>Are you an ambitious individual with a passion for plumbing and community service? Wade's Plumbing & Septic offers a remarkable franchise opportunity that empowers you to own and operate your own plumbing business under our reputable brand. By becoming a franchisee, you'll gain access to our proven business model, comprehensive training programs, and continuous support from a team of industry experts.</p>
 

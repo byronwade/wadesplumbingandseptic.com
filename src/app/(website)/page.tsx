@@ -6,6 +6,7 @@ import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
 	title: {
@@ -90,7 +91,9 @@ const jsonLd = {
 export default function Home() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 			<HeroSection />
 			<Step />
 			<FeatureSection />

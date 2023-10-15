@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export const metadata = {
 	title: "Financing Options | Wade's Plumbing & Septic",
 	description: "Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
@@ -75,7 +77,9 @@ const jsonLd = {
 export default function Example() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 			<h1>Financing Your Plumbing Project with WiseStack</h1>
 			<div>
 				<p>Financing Your Plumbing Project with WiseStack</p>
