@@ -67,12 +67,13 @@ const jsonLd = {
 			addressCountry: "US",
 		},
 	},
-	provider: {
+	mentions: {
 		"@type": "Corporation",
 		name: "WiseStack",
 		url: "https://www.wisestack.com/",
 	},
 };
+
 
 export default function Example() {
 	return (

@@ -101,7 +101,7 @@ export default async function Jobs() {
 				employmentType: "FULL_TIME",
 				validThrough: "2024-12-31",
 				datePosted: "2023-10-14", // This should be the actual posting date of each job
-				jobPostingURL: `https://www.wadesplumbingandseptic.com/about-us/jobs/${job.slug}`, // Assuming each job has a unique slug
+				url: `https://www.wadesplumbingandseptic.com/about-us/jobs/${job.slug}`, // Assuming each job has a unique slug
 			},
 		})),
 	};

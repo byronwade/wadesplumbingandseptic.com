@@ -63,7 +63,8 @@ export const metadata: Metadata = {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "PlumbingService",
+	"@type": "ProfessionalService",
+	additionalType: "http://www.productontology.org/id/Plumbing",
 	name: "Wade's Plumbing & Septic",
 	address: {
 		"@type": "PostalAddress",
@@ -87,6 +88,7 @@ const jsonLd = {
 	openingHours: "Mo-Su 00:00-23:59",
 	sameAs: ["https://www.facebook.com/wadesplumbing", "https://www.twitter.com/wadesplumbing", "https://www.linkedin.com/company/wadesplumbing"],
 };
+
 
 export default function Home() {
 	return (

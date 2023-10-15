@@ -52,10 +52,10 @@ export const metadata = {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "PrivacyPolicy",
+	"@type": "WebPage",
 	url: "https://www.wadesplumbingandseptic.com/about-us/privacy-policy/",
 	name: "Comprehensive Privacy Policy of Wade's Plumbing & Septic",
-	provider: {
+	publisher: {
 		"@type": "Organization",
 		name: "Wade's Plumbing & Septic",
 		url: "https://www.wadesplumbingandseptic.com",
@@ -73,6 +73,7 @@ const jsonLd = {
 		description: "This privacy policy is intended for customers and visitors of Wade's Plumbing & Septic website.",
 	},
 };
+
 
 export default function PrivacyPolicy() {
 	return (

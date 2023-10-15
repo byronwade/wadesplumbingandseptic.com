@@ -54,7 +54,7 @@ export const metadata = {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "Plumbing",
+	"@type": "LocalBusiness",
 	name: "Wade's Plumbing & Septic",
 	telephone: "+1-831-123-4567",
 	url: "https://www.wadesplumbingandseptic.com",
@@ -79,6 +79,7 @@ const jsonLd = {
 	},
 	openingHours: "Mo-Su 00:00-23:59",
 };
+
 
 export default function ContactPage() {
 	return (

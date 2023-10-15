@@ -58,24 +58,25 @@ export default async function Discounts() {
 
 	const jsonLd = {
 		"@context": "https://schema.org",
-		"@type": "OfferCatalog",
-		name: "Current Promotions & Discounts",
-		url: "https://www.wadesplumbingandseptic.com/about-us/promotions/",
-		description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
-		provider: {
-			"@type": "Organization",
-			name: "Wade's Plumbing & Septic",
-			url: "https://www.wadesplumbingandseptic.com",
+		"@type": "Organization",
+		name: "Wade's Plumbing & Septic",
+		url: "https://www.wadesplumbingandseptic.com",
+		offers: {
+			"@type": "OfferCatalog",
+			name: "Current Promotions & Discounts",
+			url: "https://www.wadesplumbingandseptic.com/about-us/promotions/",
+			description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+			itemListElement: promotions?.map((promotion, index) => ({
+				"@type": "Offer",
+				url: `https://www.wadesplumbingandseptic.com/about-us/promotions/#offer-${index + 1}`,
+				name: promotion.title,
+				description: promotion.content,
+				price: "Contact for Price",
+				validThrough: promotion.expiration,
+			})),
 		},
-		itemListElement: promotions?.map((promotion, index) => ({
-			"@type": "Offer",
-			url: `https://www.wadesplumbingandseptic.com/about-us/promotions/#offer-${index + 1}`,
-			name: promotion.title,
-			description: promotion.content,
-			price: "Contact for Price",
-			validThrough: promotion.expiration,
-		})),
 	};
+	
 
 	return (
 		<>

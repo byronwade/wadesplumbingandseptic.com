@@ -52,41 +52,34 @@ export const metadata = {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "BusinessOpportunity",
+	"@type": "Corporation",
 	name: "Wade's Plumbing & Septic Franchise Opportunities",
 	url: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
 	telephone: "+18314206011",
 	description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
-	areaServed: {
-		"@type": "GeoShape",
-		address: {
-			"@type": "PostalAddress",
-			addressLocality: "Santa Cruz",
-			addressRegion: "CA",
-			postalCode: "95060",
-			addressCountry: "US",
-		},
+	location: {
+		"@type": "PostalAddress",
+		addressLocality: "Santa Cruz",
+		addressRegion: "CA",
+		postalCode: "95060",
+		addressCountry: "US",
 	},
-	businessFunction: {
-		"@type": "SellAction",
-		target: {
-			"@type": "EntryPoint",
-			urlTemplate: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
-			inLanguage: "en-US",
-			actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"],
-		},
-		priceSpecification: {
-			"@type": "PriceSpecification",
-			price: "Contact for pricing details",
-			validFrom: "2023-10-14",
-		},
+	contactPoint: {
+		"@type": "ContactPoint",
+		contactType: "sales",
+		url: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
 	},
-	provider: {
-		"@type": "Corporation",
-		name: "Wade's Plumbing & Septic",
-		url: "https://www.wadesplumbingandseptic.com/",
+	offers: {
+		"@type": "Offer",
+		url: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
+		price: "Contact for pricing details",
+		priceCurrency: "USD",
+		validFrom: "2023-10-14",
 	},
+	sameAs: "https://www.wadesplumbingandseptic.com/",
 };
+
+
 
 export default function Example() {
 	return (
