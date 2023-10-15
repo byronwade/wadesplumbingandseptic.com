@@ -36,6 +36,7 @@
 		"use-debounce": "^9.0.4"
 	},
 	"devDependencies": {
+		"@builder.io/partytown": "^0.8.1",
 		"@storybook/addon-controls": "^7.4.6",
 		"@storybook/addon-essentials": "^7.4.6",
 		"@storybook/addon-interactions": "^7.4.6",

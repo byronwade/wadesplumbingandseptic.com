@@ -1,7 +1,6 @@
 import JobForm from "@/components/forms/JobForm";
 import fetchData from "../getJobs";
 import Script from "next/script";
-import Head from "next/head";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
@@ -61,7 +60,7 @@ export async function generateMetadata({ params }, parent) {
 export default async function Job({ params }) {
 	const slug = params.slug;
 	const { jobDetails } = await fetchData({ slug });
-	const jobPostingJsonLd = {
+	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "JobPosting",
 		title: jobDetails?.title,
@@ -101,11 +100,7 @@ export default async function Job({ params }) {
 	};
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json">
-					{JSON.stringify(jobPostingJsonLd)}
-				</Script>
-			</Head>
+			<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<h1>{jobDetails?.title}</h1>
 
 			<ul>

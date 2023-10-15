@@ -2,6 +2,9 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
+	experimental: {
+		nextScriptWorkers: true,
+	},
 	images: {
 		domains: ["wadesplumbingandseptic.byronw35.sg-host.com", "lh3.googleusercontent.com", "images.unsplash.com", "abuqrtstxqryqcvsohkz.supabase.co"],
 	},

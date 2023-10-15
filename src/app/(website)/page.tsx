@@ -92,11 +92,7 @@ const jsonLd = {
 export default function Home() {
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json">
-					{JSON.stringify(jsonLd)}
-				</Script>
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<HeroSection />
 			<Step />
 			<FeatureSection />
