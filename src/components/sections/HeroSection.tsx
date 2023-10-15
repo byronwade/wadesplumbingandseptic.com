@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import ContactForm from "../forms/ContactForm";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 
 export default function HeroSection() {
 	return (
@@ -12,7 +12,6 @@ export default function HeroSection() {
 		>
 			<div className="z-20 absolute inset-0 bg-black opacity-60"></div>
 			<section className="z-30 relative overflow-hidden">
-				<Background className="bg-center bg-[url('/redwoods.jpg')] bg-contain" />
 				<Image className="hidden md:block absolute bottom-0 right-10 w-auto h-auto" src="/mario.png" height={100} width={100} alt="Mario Plumber" />
 				<div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-12 xl:gap-0 lg:py-44 lg:grid-cols-12">
 					<div className="z-10 place-self-center mr-auto mb-10 lg:col-span-7 xl:col-span-8 xl:mb-0 p-4 m:p-6 lg:p-8">
