@@ -2,6 +2,38 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 
 export function MobileMenuButton() {
+	const navigation = [
+		{
+			name: "Home",
+			href: "/",
+			current: true,
+		},
+		{
+			name: "Services",
+			href: "/services",
+			current: false,
+		},
+		{
+			name: "Expert Tips",
+			href: "/expert-tips",
+			current: false,
+		},
+		{
+			name: "About",
+			href: "/about",
+			current: false,
+		},
+		{
+			name: "Contact",
+			href: "/contact",
+			current: false,
+		},
+	];
+
+	function classNames(...classes) {
+		return classes.filter(Boolean).join(" ");
+	}
+
 	return (
 		<Disclosure.Panel className="md:hidden">
 			{({ close }) => (
