@@ -3,7 +3,6 @@ import Pagnation from "@/components/ui/Pagnation";
 import Services from "./Services";
 import Link from "next/link";
 import fetchData from "./getServices";
-import Head from "next/head";
 import Script from "next/script";
 
 const ITEMS_PER_PAGE = 6;
@@ -24,9 +23,7 @@ export default async function Page({ searchParams }) {
 
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="bg-gray-50 relative overflow-hidden">
 				<div className="py-16 px-6 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">

@@ -5,7 +5,6 @@ import RelatedArticlesSection from "@/components/sections/RelatedArticlesSection
 import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
 import fetchData from "../getTips";
-import Head from "next/head";
 import Script from "next/script";
 
 export async function generateMetadata({ params }, parent) {
@@ -74,9 +73,7 @@ export default async function BlogPage({ params }) {
 
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="bg-white dark:bg-gray-900">
 				<div className="relative">
 					<header className="w-full h-[460px] xl:h-[537px] relative">

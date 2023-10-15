@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 
@@ -153,9 +152,7 @@ const team = [
 export default function Example() {
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="mb-44">
 				<div className="relative">
 					<div className="overflow-hidden">

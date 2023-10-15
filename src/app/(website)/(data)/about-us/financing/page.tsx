@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -78,9 +77,7 @@ const jsonLd = {
 export default function Example() {
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Financing Your Plumbing Project with WiseStack</h1>
 			<div>
 				<p>Financing Your Plumbing Project with WiseStack</p>

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -78,9 +77,7 @@ const jsonLd = {
 export default function PrivacyPolicy() {
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>
 			<p>Wade&apos;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>

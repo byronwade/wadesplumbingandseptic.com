@@ -100,9 +100,8 @@ export default async function Job({ params }) {
 	};
 	return (
 		<>
-			<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>{jobDetails?.title}</h1>
-
 			<ul>
 				<li>Job Type: {jobDetails?.job_type}</li>
 				<li>Location: {jobDetails?.location}</li>
@@ -119,7 +118,6 @@ export default async function Job({ params }) {
 				</li> */}
 			</ul>
 			<div dangerouslySetInnerHTML={{ __html: jobDetails?.content || "<p>no data</p>" }} />
-
 			<div className="!mt-16">
 				<h1 className="font-extrabold text-black sm:text-3xl lg:text-4xl mb-4">Apply with this form</h1>
 				<JobForm />

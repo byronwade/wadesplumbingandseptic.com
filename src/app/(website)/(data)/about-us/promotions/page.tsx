@@ -1,6 +1,5 @@
 import Image from "next/image";
 import fetchData from "./getPromotions";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -80,9 +79,7 @@ export default async function Discounts() {
 
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
 				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Discounts</h2>
 				<p className="mb-6 text-4xl tracking-tight font-extrabold text-black dark:text-white">Promotions for our company</p>

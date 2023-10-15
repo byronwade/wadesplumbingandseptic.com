@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -102,9 +101,7 @@ const jsonLd = {
 export default function Rebates() {
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>
 				<p>

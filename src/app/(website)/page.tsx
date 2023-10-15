@@ -6,7 +6,6 @@ import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import { Metadata } from "next";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
 
 const jsonLd = {
 	"@context": "https://schema.org",
-	"@type": "Plumbing",
+	"@type": "PlumbingService",
 	name: "Wade's Plumbing & Septic",
 	address: {
 		"@type": "PostalAddress",

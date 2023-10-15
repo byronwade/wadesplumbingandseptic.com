@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowLongRightIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import fetchData from "./getJobs";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
@@ -101,9 +100,7 @@ export default async function Jobs() {
 
 	return (
 		<>
-			<Head>
-				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			</Head>
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
 				<div className="space-y-6 relative flex flex-col overflow-hidden">
 					{allJobs?.map((job, index) => (
