@@ -3,7 +3,6 @@ export const metadata = {
 	description: "Looking for reliable plumbing services in the local area? Look no further than Wade's Plumbing & Septic! Our experienced team offers a wide range of plumbing services to meet all your needs.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
 	keywords: ["Next.js", "React", "JavaScript"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",

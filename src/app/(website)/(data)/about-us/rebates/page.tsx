@@ -1,10 +1,9 @@
 export const metadata = {
-	title: "Rebates | Wade's Plumbing & Septic",
-	description: "Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+	title: "Plumbing Rebates and Savings | Wade's Plumbing & Septic",
+	description: "Discover local plumbing rebates with Wade's Plumbing & Septic. Explore savings and incentives for your next plumbing project. Your path to economical plumbing upgrades starts here.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
-	keywords: ["Next.js", "React", "JavaScript"],
+	keywords: ["Plumbing Rebates", "Water-Saving Rebates", "Efficient Plumbing", "Wade's Plumbing & Septic", "Rebate Programs"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -18,27 +17,27 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/rebates/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Rebates | Wade's Plumbing & Septic",
-		description: "Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+		title: "Plumbing Rebates and Savings | Wade's Plumbing & Septic",
+		description: "Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
 			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Rebates | Wade's Plumbing & Septic",
-		description: "Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+		title: "Plumbing Rebates and Savings | Wade's Plumbing & Septic",
+		description: "Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/rebates/",
 		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Looking for plumbing rebates in your local area? Look no further than Wade's Plumbing & Septic. Find savings and incentives for your next plumbing project now.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Rebates&link=www.wadesplumbingandseptic.com&description=Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
 				width: 1800,
 				height: 1600,
 				alt: "Wade's Plumbing & Septic",
@@ -49,9 +48,58 @@ export const metadata = {
 	},
 };
 
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	url: "https://www.wadesplumbingandseptic.com/about-us/rebates/",
+	name: "Plumbing Rebates and Savings",
+	description: "Discover local plumbing rebates and start saving on your plumbing upgrades with Wade's Plumbing & Septic. Find incentives for water-efficient fixtures and more.",
+	provider: {
+		"@type": "Organization",
+		name: "Wade's Plumbing & Septic",
+		url: "https://www.wadesplumbingandseptic.com",
+	},
+	datePublished: "2023-10-14",
+	dateModified: "2023-10-14",
+	breadcrumb: {
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				item: {
+					"@type": "WebSite",
+					url: "https://www.wadesplumbingandseptic.com",
+					name: "Home",
+				},
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				item: {
+					"@type": "WebPage",
+					url: "https://www.wadesplumbingandseptic.com/about-us/rebates/",
+					name: "Rebates",
+				},
+			},
+		],
+	},
+	isPartOf: {
+		"@type": "WebSite",
+		url: "https://www.wadesplumbingandseptic.com",
+		name: "Wade's Plumbing & Septic",
+	},
+	about: {
+		"@type": "Thing",
+		name: "Plumbing Rebates and Savings",
+		description: "Information about available rebates and savings for plumbing services and products.",
+	},
+};
+
 export default function Rebates() {
 	return (
 		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>
 				<p>

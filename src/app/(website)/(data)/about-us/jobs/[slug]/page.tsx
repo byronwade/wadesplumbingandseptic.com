@@ -1,13 +1,105 @@
 import JobForm from "@/components/forms/JobForm";
-import { Metadata } from "next";
 import fetchData from "../getJobs";
+
+export async function generateMetadata({ params }, parent) {
+	const slug = params.slug;
+	const { jobDetails } = await fetchData({ slug });
+	const previousImages = (await parent).openGraph?.images || [];
+	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade's Plumbing & Septic`;
+	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
+	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
+
+	return {
+		title: formattedTitle,
+		description: formattedDescription,
+		generator: "Next.js",
+		applicationName: "Wade's Plumbing & Septic",
+		keywords: "plumbing, septic, job listing, careers",
+		authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
+		creator: "Byron Wade",
+		publisher: "Byron Wade",
+		alternates: {},
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		category: "construction",
+		bookmarks: [`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`],
+		twitter: {
+			card: "summary_large_image",
+			title: formattedTitle,
+			description: formattedDescription,
+			creator: "@wadesplumbing",
+			images: {
+				url: apiOGUrl,
+				alt: "Job Listing Image",
+			},
+		},
+		openGraph: {
+			title: formattedTitle,
+			description: formattedDescription,
+			url: `https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`,
+			siteName: "Wade's Plumbing & Septic",
+			images: [
+				{
+					url: apiOGUrl,
+					width: 800,
+					height: 600,
+					alt: "Job Listing Image",
+				},
+				...previousImages,
+			],
+			locale: "en-US",
+			type: "website",
+		},
+	};
+}
 
 export default async function Job({ params }) {
 	const slug = params.slug;
 	const { jobDetails } = await fetchData({ slug });
-	console.log(jobDetails);
+	const jobPostingJsonLd = {
+		"@context": "https://schema.org",
+		"@type": "JobPosting",
+		title: jobDetails?.title,
+		description: jobDetails?.content,
+		identifier: {
+			"@type": "PropertyValue",
+			name: "Wade's Plumbing & Septic",
+			value: jobDetails?.id,
+		},
+		datePosted: jobDetails?.created_at,
+		employmentType: jobDetails?.job_type,
+		hiringOrganization: {
+			"@type": "Organization",
+			name: "Wade's Plumbing & Septic",
+			sameAs: "https://www.wadesplumbingandseptic.com",
+			logo: "https://www.wadesplumbingandseptic.com/logo.png",
+		},
+		jobLocation: {
+			"@type": "Place",
+			address: {
+				"@type": "PostalAddress",
+				addressLocality: jobDetails?.location,
+				addressRegion: "CA",
+				addressCountry: "US",
+			},
+		},
+		baseSalary: {
+			"@type": "MonetaryAmount",
+			currency: "USD",
+			value: {
+				"@type": "QuantitativeValue",
+				minValue: jobDetails?.pay_range?.min,
+				maxValue: jobDetails?.pay_range?.max,
+				unitText: "HOUR",
+			},
+		},
+	};
 	return (
 		<>
+			<script type="application/ld+json">{JSON.stringify(jobPostingJsonLd)}</script>
 			<h1>{jobDetails?.title}</h1>
 
 			<ul>
@@ -34,56 +126,3 @@ export default async function Job({ params }) {
 		</>
 	);
 }
-
-// export async function generateMetadata({ params }): Promise<Metadata> {
-// 	const { data } = await getJob(`"/${params.slug}"`);
-// 	const seo = data?.job?.seo;
-// 	console.log(seo);
-// 	return {
-// 		title: data?.job?.title || "This is a title to the service",
-// 		description: seo?.metaDesc || seo?.opengraphDescription || "This is a Service from Wade's Plumbing & Septic",
-// 		generator: "Next.js",
-// 		applicationName: "Wade's Plumbing & Septic",
-// 		referrer: "origin-when-cross-origin",
-// 		keywords: seo?.metaKeywords,
-// 		authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: `https://www.wadesplumbingandseptic.com/expert-tips/${params.slug}` }],
-// 		creator: "Byron Wade",
-// 		publisher: "Byron Wade",
-// 		alternates: {},
-// 		formatDetection: {
-// 			email: false,
-// 			address: false,
-// 			telephone: false,
-// 		},
-// 		category: "construction",
-// 		bookmarks: [`https://www.wadesplumbingandseptic.com/expert-tips/${params.slug}`],
-// 		twitter: {
-// 			card: "summary_large_image",
-// 			title: seo?.twitterTitle || seo?.title || data?.job?.title,
-// 			description: seo?.twitterDescription || seo?.metaDesc || seo?.opengraphDescription,
-// 			creator: "@wadesplumbing",
-// 			images: [`https://www.wadesplumbingandseptic.com/api/og?title=${data?.job?.title}&discription=${seo?.metaDesc.slice(0, 200) || seo?.opengraphDescription.slice(0, 200) || "This is a Service from Wade's Plumbing & Septic"}`],
-// 		},
-// 		openGraph: {
-// 			title: seo?.opengraphTitle || seo?.title,
-// 			description: seo?.opengraphDescription || seo?.metaDesc,
-// 			url: `https://www.wadesplumbingandseptic.com/expert-tips/${params.slug}`,
-// 			siteName: seo?.opengraphTitle || seo?.title,
-// 			images: [
-// 				{
-// 					url: `https://www.wadesplumbingandseptic.com/api/og?title=${data?.job?.title}&discription=${seo?.metaDesc.slice(0, 200) || seo?.opengraphDescription.slice(0, 200) || "This is a Service from Wade's Plumbing & Septic"}}`,
-// 					width: 800,
-// 					height: 600,
-// 				},
-// 				{
-// 					url: `https://www.wadesplumbingandseptic.com/api/og?title=${data?.job?.title}&discription=${seo?.metaDesc.slice(0, 200) || seo?.opengraphDescription.slice(0, 200) || "This is a Service from Wade's Plumbing & Septic"}}`,
-// 					width: 1800,
-// 					height: 1600,
-// 					alt: "My custom alt",
-// 				},
-// 			],
-// 			locale: "en-US",
-// 			type: "website",
-// 		},
-// 	};
-// }

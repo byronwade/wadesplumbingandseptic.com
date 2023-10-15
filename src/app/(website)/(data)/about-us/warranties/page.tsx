@@ -1,10 +1,9 @@
 export const metadata = {
-	title: "Warranties | Wade's Plumbing & Septic",
-	description: "Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+	title: "Industry-Leading Plumbing Warranties | Wade's Plumbing & Septic",
+	description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority. Explore our warranty offerings now.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
-	keywords: ["Next.js", "React", "JavaScript"],
+	keywords: ["Plumbing Warranties", "Septic Service Warranty", "Wade's Plumbing & Septic", "Warranty Registration", "Satisfaction Guarantee"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -18,27 +17,27 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/warranties/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Warranties | Wade's Plumbing & Septic",
-		description: "Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+		title: "Industry-Leading Plumbing Warranties | Wade's Plumbing & Septic",
+		description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority.",
 			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Warranties | Wade's Plumbing & Septic",
-		description: "Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+		title: "Industry-Leading Plumbing Warranties | Wade's Plumbing & Septic",
+		description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/warranties/",
 		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Looking for a trusted plumbing & septic service in your local area? Explore our industry-leading warranties at Wade's Plumbing & Septic.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Warranties&link=www.wadesplumbingandseptic.com&description=Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority.",
 				width: 1800,
 				height: 1600,
 				alt: "Wade's Plumbing & Septic",
@@ -49,9 +48,58 @@ export const metadata = {
 	},
 };
 
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	url: "https://www.wadesplumbingandseptic.com/about-us/warranties/",
+	name: "Industry-Leading Plumbing Warranties",
+	description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority. Explore our warranty offerings now.",
+	provider: {
+		"@type": "Organization",
+		name: "Wade's Plumbing & Septic",
+		url: "https://www.wadesplumbingandseptic.com",
+	},
+	datePublished: "2023-10-14",
+	dateModified: "2023-10-14",
+	breadcrumb: {
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				item: {
+					"@type": "WebSite",
+					url: "https://www.wadesplumbingandseptic.com",
+					name: "Home",
+				},
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				item: {
+					"@type": "WebPage",
+					url: "https://www.wadesplumbingandseptic.com/about-us/warranties/",
+					name: "Warranties",
+				},
+			},
+		],
+	},
+	isPartOf: {
+		"@type": "WebSite",
+		url: "https://www.wadesplumbingandseptic.com",
+		name: "Wade's Plumbing & Septic",
+	},
+	about: {
+		"@type": "Thing",
+		name: "Plumbing and Septic Service Warranties",
+		description: "Information about the comprehensive warranties offered for plumbing and septic services.",
+	},
+};
+
 export default function Warranties() {
 	return (
 		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<h1>Warranty and Registrations</h1>
 			<p>At Wade&apos;s Plumbing & Septic, we stand behind our work and are committed to providing our customers with the highest quality plumbing and septic services. To ensure your satisfaction and confidence in our work, we offer the following warranty:</p>
 			<ul>

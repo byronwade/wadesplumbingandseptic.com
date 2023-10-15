@@ -9,14 +9,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: {
-		default: "Wade's Plumbing & Septic",
+		default: "Wade's Plumbing & Septic - 24/7 Emergency Service - Santa Cruz, Monterey, Santa Clara",
 		template: "%s | Wade's Plumbing & Septic",
 	},
-	description: "Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
+	description: "Wade's Plumbing & Septic offers 24/7 emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Our experienced team is ready to assist you anytime, any day. Contact us for all your plumbing and septic needs!",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
-	keywords: ["Next.js", "React", "JavaScript"],
+	keywords: ["24/7 Plumbing Service", "Emergency Plumbing", "Plumbing Santa Cruz", "Plumbing Monterey", "Plumbing Santa Clara"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -30,27 +29,27 @@ export const metadata: Metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Wade's Plumbing & Septic",
-		description: "Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
+		title: "Wade's Plumbing & Septic - 24/7 Emergency Service - Santa Cruz, Monterey, Santa Clara",
+		description: "Wade's Plumbing & Septic offers 24/7 emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact us for immediate assistance!",
 		creator: "@wadesplumbing",
 		images: {
-			url: "http://localhost:3002/api/og?title=Wade's Plumbing & Septic&link=www.wadesplumbingandseptic.com&description=Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
+			url: "https://www.wadesplumbingandseptic.com/social-image.jpg",
 			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Wade's Plumbing & Septic",
-		description: "Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
-		url: "https://nextjs.org",
-		siteName: "Next.js",
+		title: "Wade's Plumbing & Septic - 24/7 Emergency Service - Santa Cruz, Monterey, Santa Clara",
+		description: "Wade's Plumbing & Septic offers 24/7 emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact us for immediate assistance!",
+		url: "https://www.wadesplumbingandseptic.com",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "http://localhost:3002/api/og?title=Wade's Plumbing & Septic&link=www.wadesplumbingandseptic.com&description=Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
+				url: "https://www.wadesplumbingandseptic.com/og-image.jpg",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "http://localhost:3002/api/og?title=wades%20plumbing&link=www.wadesplumbingandseptic.com&description=Wade's Plumbing & Septic is your go-to local plumbing company. With years of experience, our team of experts provides top-notch plumbing and septic services to ensure your home or business runs smoothly. Trust us for all your plumbing needs, big or small.",
+				url: "https://www.wadesplumbingandseptic.com/og-image2.jpg",
 				width: 1800,
 				height: 1600,
 				alt: "Wade's Plumbing & Septic",
@@ -61,9 +60,37 @@ export const metadata: Metadata = {
 	},
 };
 
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Plumbing",
+	name: "Wade's Plumbing & Septic",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "123 Main St",
+		addressLocality: "Santa Cruz",
+		addressRegion: "CA",
+		postalCode: "95060",
+		addressCountry: "US",
+	},
+	telephone: "+1-831-123-4567",
+	url: "https://www.wadesplumbingandseptic.com",
+	logo: "https://www.wadesplumbingandseptic.com/logo.png",
+	image: "https://www.wadesplumbingandseptic.com/og-image.jpg",
+	description: "Wade's Plumbing & Septic offers 24/7 emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact us for all your plumbing and septic needs!",
+	priceRange: "$$",
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: "36.974117",
+		longitude: "-122.030796",
+	},
+	openingHours: "Mo-Su 00:00-23:59",
+	sameAs: ["https://www.facebook.com/wadesplumbing", "https://www.twitter.com/wadesplumbing", "https://www.linkedin.com/company/wadesplumbing"],
+};
+
 export default function Home() {
 	return (
 		<>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<HeroSection />
 			<Step />
 			<FeatureSection />

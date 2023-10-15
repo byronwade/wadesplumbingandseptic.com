@@ -5,8 +5,8 @@ export const metadata = {
 	description: "Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
-	keywords: ["Next.js", "React", "JavaScript"],
+	keywords: ["Plumbing", "Septic Services", "Local Plumber", "Santa Cruz Plumbing", "Wade's Plumbing & Septic"],
+	link: [{ rel: "canonical", href: "https://www.wadesplumbingandseptic.com/about-us/" }],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -48,6 +48,44 @@ export const metadata = {
 		],
 		locale: "en-US",
 		type: "website",
+	},
+};
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	url: "https://www.wadesplumbingandseptic.com/about-us/",
+	name: "Industry-Leading Plumbing Warranties",
+	description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority. Explore our warranty offerings now.",
+	provider: {
+		"@type": "Organization",
+		name: "Wade's Plumbing & Septic",
+		url: "https://www.wadesplumbingandseptic.com",
+	},
+	datePublished: "2023-10-14",
+	dateModified: "2023-10-14",
+	breadcrumb: {
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				item: {
+					"@type": "WebSite",
+					url: "https://www.wadesplumbingandseptic.com",
+					name: "Home",
+				},
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				item: {
+					"@type": "WebPage",
+					url: "https://www.wadesplumbingandseptic.com/about-us/",
+					name: "About Us",
+				},
+			},
+		],
 	},
 };
 
@@ -113,6 +151,7 @@ const team = [
 export default function Example() {
 	return (
 		<section className="mb-44">
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative">
 				<div className="overflow-hidden">
 					<div className="mx-auto max-w-7xl px-6 pb-32 pt-16 sm:pt-60 lg:px-8 lg:pt-16">

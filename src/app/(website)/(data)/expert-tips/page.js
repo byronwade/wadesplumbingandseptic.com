@@ -17,6 +17,7 @@ export default async function Page({ searchParams }) {
 
 	return (
 		<section className="bg-gray-50 relative overflow-hidden">
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
 				<div className="mx-auto max-w-7xl">
 					<div className="flex flex-col space-y-6 justify-center items-start">
@@ -39,15 +40,13 @@ export default async function Page({ searchParams }) {
 		</section>
 	);
 }
-
 export const metadata = {
 	title: "Expert Tips | Wade's Plumbing & Septic",
 	description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	referrer: "origin-when-cross-origin",
-	keywords: ["Next.js", "React", "JavaScript"],
-	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
+	keywords: ["Plumbing", "Tips", "Expert Advice", "Wade's Plumbing & Septic", "Construction"],
+	authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
 	alternates: {},
@@ -87,6 +86,28 @@ export const metadata = {
 			},
 		],
 		locale: "en-US",
-		type: "website",
+		type: "article",
+	},
+};
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Blog",
+	headline: "Expert Tips | Wade's Plumbing & Septic",
+	description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+	url: "https://www.wadesplumbingandseptic.com/expert-tips/",
+	publisher: {
+		"@type": "Organization",
+		name: "Wade's Plumbing & Septic",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://www.wadesplumbingandseptic.com/logo.png",
+			width: 180,
+			height: 60,
+		},
+	},
+	mainEntity: {
+		"@type": "ItemList",
+		itemListElement: [], // Array of BlogPosting objects, one for each post.
 	},
 };

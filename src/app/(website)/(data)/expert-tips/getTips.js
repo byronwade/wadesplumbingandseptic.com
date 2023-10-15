@@ -76,11 +76,37 @@ export default async function fetchData({ searchTerm = "", slug = "", page = 1, 
 	const endAt = startAt + itemsPerPage;
 	let pagedData = allPosts?.slice(startAt, endAt);
 
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		name: postDetails?.title,
+		serviceType: postDetails?.categories.join(", "),
+		provider: {
+			"@type": "Organization",
+			name: "Wade's Plumbing & Septic",
+			telephone: "+1-831-123-4567",
+			url: "https://www.wadesplumbingandseptic.com",
+			address: {
+				"@type": "PostalAddress",
+				streetAddress: "123 Main St",
+				addressLocality: "Santa Cruz",
+				addressRegion: "CA",
+				postalCode: "95060",
+				addressCountry: "US",
+			},
+		},
+		image: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
+		areaServed: ["Santa Cruz County", "Monterey County", "Santa Clara County"],
+		description: postDetails?.content,
+		url: `https://www.wadesplumbingandseptic.com/services/${postDetails?.slug}`,
+	};
+
 	return {
 		allPosts,
 		postDetails,
 		relatedPosts,
 		pagedData,
+		jsonLd,
 		total,
 	};
 }

@@ -22,6 +22,7 @@ export default async function Page({ searchParams }) {
 
 	return (
 		<section className="bg-gray-50 relative overflow-hidden">
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
 				<div className="mx-auto max-w-7xl">
 					<div className="flex flex-col space-y-6 justify-center items-start">
@@ -43,3 +44,81 @@ export default async function Page({ searchParams }) {
 		</section>
 	);
 }
+
+export const metadata = {
+	title: "Our Services | 24/7 Emergency Plumbing & Septic | Wade's Plumbing & Septic",
+	description: "Explore our wide range of plumbing and septic services available 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. From routine maintenance to emergency repairs, we've got you covered.",
+	generator: "Next.js",
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Plumbing Services", "Septic Services", "Emergency Plumbing", "Santa Cruz", "Monterey", "Santa Clara"],
+	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
+	creator: "Byron Wade",
+	publisher: "Byron Wade",
+	alternates: {},
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	category: "construction",
+	bookmarks: ["https://www.wadesplumbingandseptic.com/services/"],
+	twitter: {
+		card: "summary_large_image",
+		title: "Our Services | 24/7 Emergency Plumbing & Septic | Wade's Plumbing & Septic",
+		description: "Discover the comprehensive plumbing and septic services we offer 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. Your local, reliable plumbing solution.",
+		creator: "@wadesplumbing",
+		images: {
+			url: "https://www.wadesplumbingandseptic.com/social-services.jpg",
+			alt: "Wade's Plumbing & Septic Services",
+		},
+	},
+	openGraph: {
+		title: "Our Services | 24/7 Emergency Plumbing & Septic | Wade's Plumbing & Septic",
+		description: "Explore our wide range of plumbing and septic services available 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. From routine maintenance to emergency repairs, we've got you covered.",
+		url: "https://www.wadesplumbingandseptic.com/services/",
+		siteName: "Wade's Plumbing & Septic",
+		images: [
+			{
+				url: "https://www.wadesplumbingandseptic.com/og-services.jpg",
+				width: 800,
+				height: 600,
+			},
+			{
+				url: "https://www.wadesplumbingandseptic.com/og-services2.jpg",
+				width: 1800,
+				height: 1600,
+				alt: "Wade's Plumbing & Septic Services",
+			},
+		],
+		locale: "en-US",
+		type: "website",
+	},
+};
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Plumbing",
+	name: "Wade's Plumbing & Septic",
+	telephone: "+1-831-123-4567",
+	url: "https://www.wadesplumbingandseptic.com",
+	areaServed: ["Santa Cruz County", "Monterey County", "Santa Clara County"],
+	availableLanguage: "en",
+	image: "https://www.wadesplumbingandseptic.com/og-services.jpg",
+	sameAs: ["https://www.facebook.com/wadesplumbing", "https://www.twitter.com/wadesplumbing", "https://www.linkedin.com/company/wadesplumbing"],
+	logo: "https://www.wadesplumbingandseptic.com/logo.png",
+	description: "Offering a broad range of plumbing and septic services 24/7 across Santa Cruz, Monterey, and Santa Clara Counties. Trust us for routine and emergency plumbing solutions.",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "123 Main St",
+		addressLocality: "Santa Cruz",
+		addressRegion: "CA",
+		postalCode: "95060",
+		addressCountry: "US",
+	},
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: "36.974117",
+		longitude: "-122.030796",
+	},
+	openingHours: "Mo-Su 00:00-23:59",
+};
