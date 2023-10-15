@@ -82,6 +82,8 @@ export default async function Job({ params }) {
 			"@type": "Place",
 			address: {
 				"@type": "PostalAddress",
+				postalCode: "95005",
+				streetAddress: "123 Main St",
 				addressLocality: jobDetails?.location,
 				addressRegion: "CA",
 				addressCountry: "US",

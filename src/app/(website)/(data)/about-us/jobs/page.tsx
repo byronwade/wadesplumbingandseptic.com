@@ -52,52 +52,59 @@ export const metadata = {
 		type: "website",
 	},
 };
-
-const jsonLd = {
-	"@context": "https://schema.org",
-	"@type": "JobPosting",
-	title: "Plumbing Careers at Wade's Plumbing & Septic",
-	description: "Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
-	identifier: {
-		"@type": "PropertyValue",
-		name: "Wade's Plumbing & Septic",
-		value: "Plumbing_Jobs",
-	},
-	jobLocation: {
-		"@type": "Place",
-		address: {
-			"@type": "PostalAddress",
-			streetAddress: "123 Main St",
-			addressLocality: "Santa Cruz",
-			addressRegion: "CA",
-			postalCode: "95060",
-			addressCountry: "US",
-		},
-	},
-	hiringOrganization: {
-		"@type": "Organization",
-		name: "Wade's Plumbing & Septic",
-		sameAs: "https://www.wadesplumbingandseptic.com",
-		logo: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
-	},
-	baseSalary: {
-		"@type": "MonetaryAmount",
-		currency: "USD",
-		value: {
-			"@type": "QuantitativeValue",
-			value: "Competitive",
-			unitText: "YEAR",
-		},
-	},
-	employmentType: "FULL_TIME",
-	validThrough: "2024-12-31",
-	jobPostingURL: "https://www.wadesplumbingandseptic.com/about-us/jobs/",
-};
+  
 
 export default async function Jobs() {
 	const { allJobs, jobDetails } = await fetchData();
 	console.log(jobDetails);
-
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		itemListElement: allJobs?.map((job, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			item: {
+				"@type": "JobPosting",
+				title: job.title,
+				description: job.content, // Assuming each job has a description
+				identifier: {
+					"@type": "PropertyValue",
+					name: "Wade's Plumbing & Septic",
+					value: job.id, // Assuming each job has a unique ID
+				},
+				jobLocation: {
+					"@type": "Place",
+					address: {
+						"@type": "PostalAddress",
+						streetAddress: "123 Main St",
+						addressLocality: "Santa Cruz",
+						addressRegion: "CA",
+						postalCode: "95060",
+						addressCountry: "US",
+					},
+				},
+				hiringOrganization: {
+					"@type": "Organization",
+					name: "Wade's Plumbing & Septic",
+					sameAs: "https://www.wadesplumbingandseptic.com",
+					logo: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+				},
+				baseSalary: {
+					"@type": "MonetaryAmount",
+					currency: "USD",
+					value: {
+						"@type": "QuantitativeValue",
+						value: "Competitive",
+						unitText: "YEAR",
+					},
+				},
+				employmentType: "FULL_TIME",
+				validThrough: "2024-12-31",
+				datePosted: "2023-10-14", // This should be the actual posting date of each job
+				jobPostingURL: `https://www.wadesplumbingandseptic.com/about-us/jobs/${job.slug}`, // Assuming each job has a unique slug
+			},
+		})),
+	};
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />

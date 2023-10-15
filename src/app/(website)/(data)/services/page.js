@@ -21,6 +21,40 @@ export default async function Page({ searchParams }) {
 
 	const serviceMsg = getServiceMessage(search, allServices);
 
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": "https://www.wadesplumbingandseptic.com/services/",
+		},
+		itemListElement: allServices?.map((service, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			item: {
+				"@type": "Service",
+				serviceType: service.type, // Assuming each service has a type
+				name: service.name, // Assuming each service has a name
+				url: `https://www.wadesplumbingandseptic.com/services/${service.slug}`, // Assuming each service has a unique slug
+				description: service.description, // Assuming each service has a description
+				provider: {
+					"@type": "Organization",
+					name: "Wade's Plumbing & Septic",
+					telephone: "+1-831-123-4567",
+					address: {
+						"@type": "PostalAddress",
+						streetAddress: "123 Main St",
+						addressLocality: "Santa Cruz",
+						addressRegion: "CA",
+						postalCode: "95060",
+						addressCountry: "US",
+					},
+				},
+			},
+		})),
+	};
+
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
@@ -96,32 +130,4 @@ export const metadata = {
 		locale: "en-US",
 		type: "website",
 	},
-};
-
-const jsonLd = {
-	"@context": "https://schema.org",
-	"@type": "Plumbing",
-	name: "Wade's Plumbing & Septic",
-	telephone: "+1-831-123-4567",
-	url: "https://www.wadesplumbingandseptic.com",
-	areaServed: ["Santa Cruz County", "Monterey County", "Santa Clara County"],
-	availableLanguage: "en",
-	image: "https://www.wadesplumbingandseptic.com/og-services.jpg",
-	sameAs: ["https://www.facebook.com/wadesplumbing", "https://www.twitter.com/wadesplumbing", "https://www.linkedin.com/company/wadesplumbing"],
-	logo: "https://www.wadesplumbingandseptic.com/logo.png",
-	description: "Offering a broad range of plumbing and septic services 24/7 across Santa Cruz, Monterey, and Santa Clara Counties. Trust us for routine and emergency plumbing solutions.",
-	address: {
-		"@type": "PostalAddress",
-		streetAddress: "123 Main St",
-		addressLocality: "Santa Cruz",
-		addressRegion: "CA",
-		postalCode: "95060",
-		addressCountry: "US",
-	},
-	geo: {
-		"@type": "GeoCoordinates",
-		latitude: "36.974117",
-		longitude: "-122.030796",
-	},
-	openingHours: "Mo-Su 00:00-23:59",
 };

@@ -16,6 +16,42 @@ export default async function Page({ searchParams }) {
 
 	const serviceMsg = searchTerm ? `We ${allPosts.length ? "found " + allPosts.length : "couldn't find any"} expert tips matching "${searchTerm}".` : `We have ${allPosts.length} expert tips.`;
 
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": "https://www.wadesplumbingandseptic.com/expert-tips/",
+		},
+		itemListElement: allPosts?.map((post, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			item: {
+				"@type": "BlogPosting",
+				headline: post.title,
+				description: post.excerpt, // Assuming each post has an excerpt
+				url: `${BASE_URL}/expert-tips/${post.slug}`, // Assuming each post has a unique slug
+				author: {
+					"@type": "Person",
+					name: "Byron Wade",
+				},
+				publisher: {
+					"@type": "Organization",
+					name: "Wade's Plumbing & Septic",
+					logo: {
+						"@type": "ImageObject",
+						url: "https://www.wadesplumbingandseptic.com/logo.png",
+						width: 180,
+						height: 60,
+					},
+				},
+				image: post.featured_image_url, // Assuming each post has a featured image URL
+				datePublished: post.published_at, // Assuming each post has a published_at date
+				dateModified: post.updated_at, // Assuming each post has an updated_at date
+			},
+		})),
+	};
+
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
@@ -90,27 +126,5 @@ export const metadata = {
 		],
 		locale: "en-US",
 		type: "article",
-	},
-};
-
-const jsonLd = {
-	"@context": "https://schema.org",
-	"@type": "Blog",
-	headline: "Expert Tips | Wade's Plumbing & Septic",
-	description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
-	url: "https://www.wadesplumbingandseptic.com/expert-tips/",
-	publisher: {
-		"@type": "Organization",
-		name: "Wade's Plumbing & Septic",
-		logo: {
-			"@type": "ImageObject",
-			url: "https://www.wadesplumbingandseptic.com/logo.png",
-			width: 180,
-			height: 60,
-		},
-	},
-	mainEntity: {
-		"@type": "ItemList",
-		itemListElement: [], // Array of BlogPosting objects, one for each post.
 	},
 };
