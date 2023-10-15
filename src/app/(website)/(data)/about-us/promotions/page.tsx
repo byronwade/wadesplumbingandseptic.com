@@ -1,6 +1,7 @@
 import Image from "next/image";
 import fetchData from "./getPromotions";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
 	title: "Current Promotions & Discounts | Wade's Plumbing & Septic",
@@ -80,7 +81,7 @@ export default async function Discounts() {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
 				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Discounts</h2>

@@ -1,5 +1,6 @@
 import JobForm from "@/components/forms/JobForm";
 import fetchData from "../getJobs";
+import Script from "next/script";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
@@ -99,7 +100,10 @@ export default async function Job({ params }) {
 	};
 	return (
 		<>
-			<script type="application/ld+json">{JSON.stringify(jobPostingJsonLd)}</script>
+			<Script
+          strategy="beforeInteractive"
+          id="my-ldjson-data"
+          type="application/ld+json">{JSON.stringify(jobPostingJsonLd)}</script>
 			<h1>{jobDetails?.title}</h1>
 
 			<ul>

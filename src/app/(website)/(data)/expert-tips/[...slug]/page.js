@@ -6,6 +6,7 @@ import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
 import fetchData from "../getTips";
 import Head from "next/head";
+import Script from "next/script";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
@@ -74,7 +75,7 @@ export default async function BlogPage({ params }) {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<section className="bg-white dark:bg-gray-900">
 				<div className="relative">

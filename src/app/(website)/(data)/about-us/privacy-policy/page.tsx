@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
 	title: "Comprehensive Privacy Policy | Wade's Plumbing & Septic",
@@ -78,7 +79,7 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>

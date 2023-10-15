@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
 	title: "Plumbing Rebates and Savings | Wade's Plumbing & Septic",
@@ -102,7 +103,7 @@ export default function Rebates() {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
 	title: "Industry-Leading Plumbing Warranties | Wade's Plumbing & Septic",
@@ -102,7 +103,7 @@ export default function Warranties() {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<h1>Warranty and Registrations</h1>
 			<p>At Wade&apos;s Plumbing & Septic, we stand behind our work and are committed to providing our customers with the highest quality plumbing and septic services. To ensure your satisfaction and confidence in our work, we offer the following warranty:</p>

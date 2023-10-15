@@ -7,6 +7,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import { Metadata } from "next";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata: Metadata = {
 	title: {
@@ -92,7 +93,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<Script strategy="beforeInteractive" id="my-ldjson-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			</Head>
 			<HeroSection />
 			<Step />
