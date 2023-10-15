@@ -1,5 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import Image from "next/image";
+import Head from "next/head";
 
 export const metadata = {
 	title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
@@ -81,8 +82,12 @@ const jsonLd = {
 
 export default function Example() {
 	return (
+
+		<>
+			<Head>
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
 		<section className="relative flex flex-row">
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="hidden md:block w-full md:w-1/2 relative">
 				<Image placeholder="blur" blurDataURL="/placeholder.webp" className="object-cover h-full w-full brightness-80" src="/trees-river.jpg" width={1500} height={1500} alt="Redwood trees" />
 				<div className="absolute bottom-10 right-10">
@@ -130,5 +135,6 @@ export default function Example() {
 				</div>
 			</div>
 		</section>
+		</>
 	);
 }

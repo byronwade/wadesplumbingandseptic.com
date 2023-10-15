@@ -5,6 +5,7 @@ import RelatedArticlesSection from "@/components/sections/RelatedArticlesSection
 import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
 import fetchData from "../getTips";
+import Head from "next/head";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
@@ -72,8 +73,10 @@ export default async function BlogPage({ params }) {
 
 	return (
 		<>
-			<section className="bg-white dark:bg-gray-900">
+			<Head>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</Head>
+			<section className="bg-white dark:bg-gray-900">
 				<div className="relative">
 					<header className="w-full h-[460px] xl:h-[537px] relative">
 						<Image sizes={postDetails?.featuredimage?.sizes} priority className="w-full object-cover object-center" fill src={postDetails?.featuredImage?.sourceurl ? postDetails.featuredImage.sourceurl : "/placeholder.webp"} alt={postDetails?.featuredImage?.alttext ? postDetails.featuredImage.alttext : "placeholder image"} />
