@@ -28,6 +28,7 @@
 		"@vercel/analytics": "^1.0.1",
 		"@vercel/og": "^0.4.1",
 		"next": "^13.2.3",
+		"next-sitemap": "^4.2.3",
 		"react-device-detect": "^2.2.3",
 		"react-icons": "^4.8.0",
 		"react-parallax": "^3.5.1",
