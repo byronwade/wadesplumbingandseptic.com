@@ -35,7 +35,7 @@ export default function ContactForm() {
 						Phone
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete="phone" placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="Phone" field="phone" errors={state.errors} />
 				</div>
@@ -44,7 +44,15 @@ export default function ContactForm() {
 						Email
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="support@wadesinc.io" required id="email" name="email" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input
+							autoComplete="email"
+							placeholder="support@wadesinc.io"
+							required
+							id="email"
+							name="email"
+							type="text"
+							className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6"
+						/>
 					</div>
 					<ValidationError prefix="Email" field="email" errors={state.errors} />
 				</div>
@@ -53,7 +61,7 @@ export default function ContactForm() {
 						Address
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="Mashroom Kingdom" autoComplete="street-address" required id="address" name="address" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete placeholder="Mashroom Kingdom" autoComplete="street-address" required id="address" name="address" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="Address" field="address" errors={state.errors} />
 				</div>

@@ -7,8 +7,8 @@ export default function HeroSection() {
 	return (
 		<Parallax
 			bgImage="/mountins.jpg" // Replace with your image path
-			strength={300} // Adjust the parallax effect strength as needed
-			style={{ height: "auto" }} // Adjust the container height as needed
+			strength={500} // Adjust the parallax effect strength as needed
+			className="h-auto" // Adjust the container height as needed
 		>
 			<div className="z-20 absolute inset-0 bg-black opacity-60"></div>
 			<section className="z-30 relative overflow-hidden">

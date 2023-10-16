@@ -26,7 +26,7 @@ export default function JobForm() {
 						First name
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="Mario" required type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete placeholder="Mario" required type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="First Name" field="first-name" errors={state.errors} />
 				</div>
@@ -35,7 +35,7 @@ export default function JobForm() {
 						Last name
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="Mario" required type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete placeholder="Mario" required type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="Last Name" field="last-name" errors={state.errors} />
 				</div>
@@ -44,7 +44,7 @@ export default function JobForm() {
 						Phone
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="Phone" field="phone" errors={state.errors} />
 				</div>

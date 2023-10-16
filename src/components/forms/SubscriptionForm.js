@@ -52,7 +52,7 @@ export default function SubscriptionForm() {
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 						</svg>
 					</div>
-					<input placeholder="Type in your email here..." required type="text" name="email" id="email" autoComplete="email" className="border-r-0 block p-3 pl-10 w-full text-base text-gray-900 bg-white rounded-l border border-gray-300 focus:ring-1 focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500" />
+					<input autoComplete placeholder="Type in your email here..." required type="text" name="email" id="email" autoComplete="email" className="border-r-0 block p-3 pl-10 w-full text-base text-gray-900 bg-white rounded-l border border-gray-300 focus:ring-1 focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500" />
 				</div>
 				<button disabled={succeeded} type="submit" className="h-[50px] grow max-w-[10rem] py-3 px-5 w-full text-sm font-medium text-center text-white border cursor-pointer bg-brand border-brand-600 rounded-r hover:bg-brand-600 focus:ring-1 focus:ring-brand-300 dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800">
 					Subscribe
