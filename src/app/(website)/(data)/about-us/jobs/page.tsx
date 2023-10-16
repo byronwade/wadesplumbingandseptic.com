@@ -139,7 +139,7 @@ export default async function Jobs() {
 							);
 						})
 					) : (
-						<div>No promotions available</div>
+						<div>No jobs currently available</div>
 					)}
 				</div>
 			</section>
