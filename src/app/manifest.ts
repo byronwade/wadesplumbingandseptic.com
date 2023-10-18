@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: "Wade&apos;s Plumbing and Septic",
-		short_name: "Wade&apos;s",
+		name: "Wade's Plumbing and Septic",
+		short_name: "Wade's",
 		description: "Plumbing and septic company",
 		start_url: "/",
 		display: "standalone",

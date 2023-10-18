@@ -3,11 +3,11 @@ import fetchData from "./getPromotions";
 import Script from "next/script";
 
 export const metadata = {
-	title: "Current Promotions & Discounts | Wade&apos;s Plumbing & Septic",
-	description: "Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+	title: "Current Promotions & Discounts | Wade's Plumbing & Septic",
+	description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
-	keywords: ["Plumbing Promotions", "Plumbing Discounts", "Special Offers", "Wade&apos;s Plumbing & Septic"],
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Plumbing Promotions", "Plumbing Discounts", "Special Offers", "Wade's Plumbing & Septic"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -21,30 +21,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/promotions/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Current Promotions & Discounts | Wade&apos;s Plumbing & Septic",
-		description: "Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+		title: "Current Promotions & Discounts | Wade's Plumbing & Septic",
+		description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Current Promotions & Discounts | Wade&apos;s Plumbing & Septic",
-		description: "Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+		title: "Current Promotions & Discounts | Wade's Plumbing & Septic",
+		description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/promotions/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Promotions&link=www.wadesplumbingandseptic.com&description=Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -59,13 +59,13 @@ export default async function Discounts() {
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		name: "Wade&apos;s Plumbing & Septic",
+		name: "Wade's Plumbing & Septic",
 		url: "https://www.wadesplumbingandseptic.com",
 		offers: {
 			"@type": "OfferCatalog",
 			name: "Current Promotions & Discounts",
 			url: "https://www.wadesplumbingandseptic.com/about-us/promotions/",
-			description: "Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+			description: "Discover the latest promotions and discounts offered by Wade's Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 			itemListElement: promotions?.map((promotion, index) => ({
 				"@type": "Offer",
 				url: `https://www.wadesplumbingandseptic.com/about-us/promotions/#offer-${index + 1}`,

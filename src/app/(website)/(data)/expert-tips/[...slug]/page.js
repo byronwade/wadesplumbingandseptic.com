@@ -12,15 +12,15 @@ export async function generateMetadata({ params }, parent) {
 	const { postDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 
-	const formattedTitle = postDetails?.title ? `${postDetails.title} | Wade&apos;s Plumbing & Septic` : "Expert Tips | Wade&apos;s Plumbing & Septic";
+	const formattedTitle = postDetails?.title ? `${postDetails.title} | Wade\'s Plumbing & Septic` : "Expert Tips | Wade's Plumbing & Septic";
 
-	const formattedDescription = postDetails?.excerpt ? postDetails.excerpt : "Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.";
+	const formattedDescription = postDetails?.excerpt ? postDetails.excerpt : "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.";
 
 	return {
 		title: formattedTitle,
 		description: formattedDescription,
 		generator: "Next.js",
-		applicationName: "Wade&apos;s Plumbing & Septic",
+		applicationName: "Wade's Plumbing & Septic",
 		keywords: postDetails?.categories.join(", ") || "Next.js, React, JavaScript",
 		authors: [{ name: postDetails?.author?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
 		creator: postDetails?.author?.username || "Byron Wade",
@@ -39,21 +39,21 @@ export async function generateMetadata({ params }, parent) {
 			description: formattedDescription,
 			creator: "@wadesplumbing",
 			images: {
-				url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
-				alt: postDetails?.featuredImage?.alttext || "Wade&apos;s Plumbing & Septic Social Logo",
+				url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+				alt: postDetails?.featuredImage?.alttext || "Wade's Plumbing & Septic Social Logo",
 			},
 		},
 		openGraph: {
 			title: formattedTitle,
 			description: formattedDescription,
 			url: `https://www.wadesplumbingandseptic.com/expert-tips/${postDetails?.slug}`,
-			siteName: "Wade&apos;s Plumbing & Septic",
+			siteName: "Wade's Plumbing & Septic",
 			images: [
 				{
-					url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+					url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 					width: 800,
 					height: 600,
-					alt: postDetails?.featuredImage?.alttext || "Wade&apos;s Plumbing & Septic",
+					alt: postDetails?.featuredImage?.alttext || "Wade's Plumbing & Septic",
 				},
 				...previousImages,
 			],

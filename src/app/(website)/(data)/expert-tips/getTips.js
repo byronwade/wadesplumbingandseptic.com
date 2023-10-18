@@ -83,7 +83,7 @@ export default async function fetchData({ searchTerm = "", slug = "", page = 1, 
 		serviceType: postDetails?.categories.join(", "),
 		provider: {
 			"@type": "Organization",
-			name: "Wade&apos;s Plumbing & Septic",
+			name: "Wade's Plumbing & Septic",
 			telephone: "+1-831-123-4567",
 			url: "https://www.wadesplumbingandseptic.com",
 			address: {

@@ -3,7 +3,7 @@ const serpApi = new SerpApi.GoogleSearchApi(YOUR_API_KEY);
 
 const params = {
 	engine: "google_reviews",
-	q: "Wade&apos;s Plumbing & Septic",
+	q: "Wade's Plumbing & Septic",
 	hl: "en",
 	num: 6,
 	filter: "5",

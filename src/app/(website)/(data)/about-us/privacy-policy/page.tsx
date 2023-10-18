@@ -1,11 +1,11 @@
 import Script from "next/script";
 
 export const metadata = {
-	title: "Comprehensive Privacy Policy | Wade&apos;s Plumbing & Septic",
-	description: "At Wade&apos;s Plumbing & Septic, safeguarding your privacy is our priority. Explore our policy detailing the data collection, usage, and management practices ensuring your privacy.",
+	title: "Comprehensive Privacy Policy | Wade's Plumbing & Septic",
+	description: "At Wade's Plumbing & Septic, safeguarding your privacy is our priority. Explore our policy detailing the data collection, usage, and management practices ensuring your privacy.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
-	keywords: ["Privacy Policy", "Data Protection", "Personal Information Management", "Wade&apos;s Plumbing & Septic"],
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Privacy Policy", "Data Protection", "Personal Information Management", "Wade's Plumbing & Septic"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -19,30 +19,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/privacy-policy/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Comprehensive Privacy Policy | Wade&apos;s Plumbing & Septic",
-		description: "Your privacy is our priority. Explore Wade&apos;s Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
+		title: "Comprehensive Privacy Policy | Wade's Plumbing & Septic",
+		description: "Your privacy is our priority. Explore Wade's Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade&apos;s Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade's Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Comprehensive Privacy Policy | Wade&apos;s Plumbing & Septic",
-		description: "Your privacy is our priority. Explore Wade&apos;s Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
+		title: "Comprehensive Privacy Policy | Wade's Plumbing & Septic",
+		description: "Your privacy is our priority. Explore Wade's Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/privacy-policy/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade&apos;s Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade's Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade&apos;s Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Privacy Policy&link=www.wadesplumbingandseptic.com&description=Your privacy is our priority. Explore Wade's Plumbing & Septic's policy on data collection, usage, and management practices ensuring your privacy.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -54,10 +54,10 @@ const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
 	url: "https://www.wadesplumbingandseptic.com/about-us/privacy-policy/",
-	name: "Comprehensive Privacy Policy of Wade&apos;s Plumbing & Septic",
+	name: "Comprehensive Privacy Policy of Wade's Plumbing & Septic",
 	publisher: {
 		"@type": "Organization",
-		name: "Wade&apos;s Plumbing & Septic",
+		name: "Wade's Plumbing & Septic",
 		url: "https://www.wadesplumbingandseptic.com",
 	},
 	datePublished: "2023-03-23",
@@ -65,12 +65,12 @@ const jsonLd = {
 	about: {
 		"@type": "Thing",
 		name: "Data Protection and Privacy",
-		description: "Detailing the data protection and privacy practices of Wade&apos;s Plumbing & Septic to ensure the confidentiality and security of our customers' information.",
+		description: "Detailing the data protection and privacy practices of Wade's Plumbing & Septic to ensure the confidentiality and security of our customers' information.",
 	},
 	audience: {
 		"@type": "Audience",
 		name: "Customers and Site Visitors",
-		description: "This privacy policy is intended for customers and visitors of Wade&apos;s Plumbing & Septic website.",
+		description: "This privacy policy is intended for customers and visitors of Wade's Plumbing & Septic website.",
 	},
 };
 
@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>
-			<p>Wade&apos;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
+			<p>Wade\'s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
 			<p>By using the Site, you agree to the collection and use of information in accordance with this policy.</p>
 			<ol start={1}>
 				<li>Information Collection and Use</li>

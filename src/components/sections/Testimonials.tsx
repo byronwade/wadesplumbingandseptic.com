@@ -35,7 +35,7 @@ const testimonials = [
 		},
 	},
 	{
-		body: "The guys and gals at Wade&apos;s were fast, professional did everything they said and promised.  They worked with me on different levels and did a great job of replacing our downstairs ejector pump.",
+		body: "The guys and gals at Wade's were fast, professional did everything they said and promised.  They worked with me on different levels and did a great job of replacing our downstairs ejector pump.",
 		author: {
 			name: "Bob Skubis",
 			imageUrl: "https://lh3.googleusercontent.com/a/AGNmyxb7vTCd0CaGSgZ1_qd0B-Ab6ABj_JZYQa3nY8Wb=w120-h120-p-rp-mo-br100",

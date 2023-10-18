@@ -6,15 +6,15 @@ export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
 	const { jobDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
-	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade&apos;s Plumbing & Septic`;
-	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade&apos;s Plumbing & Septic";
+	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade\'s Plumbing & Septic`;
+	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
 	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
 
 	return {
 		title: formattedTitle,
 		description: formattedDescription,
 		generator: "Next.js",
-		applicationName: "Wade&apos;s Plumbing & Septic",
+		applicationName: "Wade's Plumbing & Septic",
 		keywords: "plumbing, septic, job listing, careers",
 		authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 		creator: "Byron Wade",
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }, parent) {
 			title: formattedTitle,
 			description: formattedDescription,
 			url: `https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`,
-			siteName: "Wade&apos;s Plumbing & Septic",
+			siteName: "Wade's Plumbing & Septic",
 			images: [
 				{
 					url: apiOGUrl,
@@ -67,14 +67,14 @@ export default async function Job({ params }) {
 		description: jobDetails?.content,
 		identifier: {
 			"@type": "PropertyValue",
-			name: "Wade&apos;s Plumbing & Septic",
+			name: "Wade's Plumbing & Septic",
 			value: jobDetails?.id,
 		},
 		datePosted: jobDetails?.created_at,
 		employmentType: jobDetails?.job_type,
 		hiringOrganization: {
 			"@type": "Organization",
-			name: "Wade&apos;s Plumbing & Septic",
+			name: "Wade's Plumbing & Septic",
 			sameAs: "https://www.wadesplumbingandseptic.com",
 			logo: "https://www.wadesplumbingandseptic.com/logo.png",
 		},

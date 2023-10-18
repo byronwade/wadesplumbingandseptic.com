@@ -2,11 +2,11 @@ import Image from "next/image";
 import Script from "next/script";
 
 export const metadata = {
-	title: "About Us | Wade&apos;s Plumbing & Septic",
-	description: "Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+	title: "About Us | Wade's Plumbing & Septic",
+	description: "Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
-	keywords: ["Plumbing", "Septic Services", "Local Plumber", "Santa Cruz Plumbing", "Wade&apos;s Plumbing & Septic"],
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Plumbing", "Septic Services", "Local Plumber", "Santa Cruz Plumbing", "Wade's Plumbing & Septic"],
 	link: [{ rel: "canonical", href: "https://www.wadesplumbingandseptic.com/about-us/" }],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
@@ -21,30 +21,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "About Us | Wade&apos;s Plumbing & Septic",
-		description: "Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+		title: "About Us | Wade's Plumbing & Septic",
+		description: "Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "About Us | Wade&apos;s Plumbing & Septic",
-		description: "Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+		title: "About Us | Wade's Plumbing & Septic",
+		description: "Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=About Us&link=www.wadesplumbingandseptic.com&description=Looking for a reliable plumbing company in the local area? Look no further than Wade's Plumbing & Septic. Our experienced team is dedicated to providing top-quality services for all your plumbing needs.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -57,10 +57,10 @@ const jsonLd = {
 	"@type": "WebPage",
 	url: "https://www.wadesplumbingandseptic.com/about-us/",
 	name: "Industry-Leading Plumbing Warranties",
-	description: "Discover comprehensive plumbing and septic service warranties at Wade&apos;s Plumbing & Septic. Your satisfaction is our priority. Explore our warranty offerings now.",
+	description: "Discover comprehensive plumbing and septic service warranties at Wade's Plumbing & Septic. Your satisfaction is our priority. Explore our warranty offerings now.",
 	provider: {
 		"@type": "Organization",
-		name: "Wade&apos;s Plumbing & Septic",
+		name: "Wade's Plumbing & Septic",
 		url: "https://www.wadesplumbingandseptic.com",
 	},
 	datePublished: "2023-10-14",
@@ -204,10 +204,10 @@ export default function Example() {
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our mission</h2>
 						<div className="mt-6 flex flex-col gap-y-20 gap-x-8 lg:flex-row">
 							<div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-								<p className="text-xl leading-8 text-gray-600">At Wade&apos;s Plumbing & Septic, our mission is to provide exceptional, reliable, and affordable plumbing and septic services to our local community. We are committed to delivering the highest level of customer service, emphasizing professionalism, integrity, and personalized solutions for every client.</p>
+								<p className="text-xl leading-8 text-gray-600">At Wade\'s Plumbing & Septic, our mission is to provide exceptional, reliable, and affordable plumbing and septic services to our local community. We are committed to delivering the highest level of customer service, emphasizing professionalism, integrity, and personalized solutions for every client.</p>
 								<div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
 									<p>As a proud local company, we strive to build lasting relationships with our customers and contribute positively to the well-being and sustainability of our community. By continuously enhancing our skills, utilizing the latest technologies, and prioritizing safety, we aim to exceed customer expectations and set new standards for excellence in the plumbing and septic industry.</p>
-									<p className="mt-10">Our dedicated team at Wade&apos;s Plumbing & Septic is passionate about serving you and ensuring that your plumbing and septic systems remain in optimal condition, so you can enjoy the comfort and convenience of your home or business with confidence and peace of mind.</p>
+									<p className="mt-10">Our dedicated team at Wade\'s Plumbing & Septic is passionate about serving you and ensuring that your plumbing and septic systems remain in optimal condition, so you can enjoy the comfort and convenience of your home or business with confidence and peace of mind.</p>
 								</div>
 							</div>
 							<div className="lg:flex lg:flex-auto lg:justify-center">
@@ -250,12 +250,12 @@ export default function Example() {
 					<div className="mx-auto max-w-2xl lg:mx-0">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
 						<p className="mt-6 text-xl leading-8 text-gray-600">
-							At Wade&apos;s Plumbing & Septic, our greatest asset is our dedicated and skilled team of professionals. We take pride in the exceptional talent, experience, and passion that each of our team members brings to their work. Our team consists of licensed and certified plumbers, septic specialists, and support staff, all of whom share a common goal: to provide the highest level of customer service and plumbing solutions for our valued clients.
+							At Wade\'s Plumbing & Septic, our greatest asset is our dedicated and skilled team of professionals. We take pride in the exceptional talent, experience, and passion that each of our team members brings to their work. Our team consists of licensed and certified plumbers, septic specialists, and support staff, all of whom share a common goal: to provide the highest level of customer service and plumbing solutions for our valued clients.
 						</p>
 						<div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
 							<p>
 								Our team members are not only experts in their respective fields, but they are also committed to continuous learning and professional development. This ensures that we stay at the forefront of industry advancements and best practices, enabling us to deliver cutting-edge solutions to our customers. Furthermore, our team is characterized by their friendly, approachable demeanor and strong work ethic, fostering a positive and collaborative work environment that
-								translates to exceptional results for our clients. At Wade&apos;s Plumbing & Septic, we are proud of our team and the outstanding work they do for our community.
+								translates to exceptional results for our clients. At Wade\'s Plumbing & Septic, we are proud of our team and the outstanding work they do for our community.
 							</p>
 						</div>
 					</div>

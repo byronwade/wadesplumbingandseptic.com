@@ -4,11 +4,11 @@ import fetchData from "./getJobs";
 import Script from "next/script";
 
 export const metadata = {
-	title: "Plumbing Careers | Wade&apos;s Plumbing & Septic",
-	description: "Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+	title: "Plumbing Careers | Wade's Plumbing & Septic",
+	description: "Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
-	keywords: ["Plumbing Careers", "Job Openings", "Skilled Plumbers", "Wade&apos;s Plumbing & Septic"],
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Plumbing Careers", "Job Openings", "Skilled Plumbers", "Wade's Plumbing & Septic"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -22,30 +22,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/jobs/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Plumbing Careers | Wade&apos;s Plumbing & Septic",
-		description: "Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+		title: "Plumbing Careers | Wade's Plumbing & Septic",
+		description: "Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Plumbing Careers | Wade&apos;s Plumbing & Septic",
-		description: "Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+		title: "Plumbing Careers | Wade's Plumbing & Septic",
+		description: "Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/jobs/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -68,7 +68,7 @@ export default async function Jobs() {
 				description: job.content, // Assuming each job has a description
 				identifier: {
 					"@type": "PropertyValue",
-					name: "Wade&apos;s Plumbing & Septic",
+					name: "Wade's Plumbing & Septic",
 					value: job.id, // Assuming each job has a unique ID
 				},
 				jobLocation: {
@@ -84,9 +84,9 @@ export default async function Jobs() {
 				},
 				hiringOrganization: {
 					"@type": "Organization",
-					name: "Wade&apos;s Plumbing & Septic",
+					name: "Wade's Plumbing & Septic",
 					sameAs: "https://www.wadesplumbingandseptic.com",
-					logo: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade&apos;s Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
+					logo: "https://www.wadesplumbingandseptic.com/api/og?title=Plumbing Careers&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding career in plumbing with Wade's Plumbing & Septic. Explore our current job openings and apply to join our team of skilled plumbing professionals.",
 				},
 				baseSalary: {
 					"@type": "MonetaryAmount",

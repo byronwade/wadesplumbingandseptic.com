@@ -7,7 +7,7 @@ import fetchData from "./getTips";
 
 const ITEMS_PER_PAGE = 10;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
-//const OG_IMAGE_API = `${BASE_URL}/api/og?title=Expert Tips&link=${BASE_URL}&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.`;
+//const OG_IMAGE_API = `${BASE_URL}/api/og?title=Expert Tips&link=${BASE_URL}&description=Looking for expert plumbing tips in the local area? Look no further than Wade\'s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.`;
 
 export default async function Page({ searchParams }) {
 	const searchTerm = searchParams?.search;
@@ -37,7 +37,7 @@ export default async function Page({ searchParams }) {
 				},
 				publisher: {
 					"@type": "Organization",
-					name: "Wade&apos;s Plumbing & Septic",
+					name: "Wade's Plumbing & Septic",
 					logo: {
 						"@type": "ImageObject",
 						url: "https://www.wadesplumbingandseptic.com/logo.png",
@@ -80,11 +80,11 @@ export default async function Page({ searchParams }) {
 	);
 }
 export const metadata = {
-	title: "Expert Tips | Wade&apos;s Plumbing & Septic",
-	description: "Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+	title: "Expert Tips | Wade's Plumbing & Septic",
+	description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
-	keywords: ["Plumbing", "Tips", "Expert Advice", "Wade&apos;s Plumbing & Septic", "Construction"],
+	applicationName: "Wade's Plumbing & Septic",
+	keywords: ["Plumbing", "Tips", "Expert Advice", "Wade's Plumbing & Septic", "Construction"],
 	authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -98,30 +98,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/expert-tips/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Expert Tips | Wade&apos;s Plumbing & Septic",
-		description: "Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+		title: "Expert Tips | Wade's Plumbing & Septic",
+		description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Expert Tips | Wade&apos;s Plumbing & Septic",
-		description: "Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+		title: "Expert Tips | Wade's Plumbing & Septic",
+		description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 		url: "https://www.wadesplumbingandseptic.com/expert-tips/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Expert Tips&link=www.wadesplumbingandseptic.com&description=Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",

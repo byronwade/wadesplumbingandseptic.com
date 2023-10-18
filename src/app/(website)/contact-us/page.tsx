@@ -3,10 +3,10 @@ import Image from "next/image";
 import Script from "next/script";
 
 export const metadata = {
-	title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade&apos;s Plumbing & Septic",
-	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out to Wade&apos;s Plumbing & Septic for prompt, reliable assistance.",
+	title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
+	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out to Wade's Plumbing & Septic for prompt, reliable assistance.",
 	generator: "Next.js",
-	applicationName: "Wade&apos;s Plumbing & Septic",
+	applicationName: "Wade's Plumbing & Septic",
 	keywords: ["24/7 Emergency Plumbing", "Santa Cruz Plumbing", "Monterey Septic Service", "Santa Clara Plumbing"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
@@ -21,19 +21,19 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/contact-us/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade&apos;s Plumbing & Septic",
+		title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
 		description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out for prompt, reliable assistance.",
 		creator: "@wadesplumbing",
 		images: {
 			url: "https://www.wadesplumbingandseptic.com/social-contact.jpg",
-			alt: "Wade&apos;s Plumbing & Septic Social Logo",
+			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade&apos;s Plumbing & Septic",
-		description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out to Wade&apos;s Plumbing & Septic for prompt, reliable assistance.",
+		title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
+		description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out to Wade's Plumbing & Septic for prompt, reliable assistance.",
 		url: "https://www.wadesplumbingandseptic.com/contact-us/",
-		siteName: "Wade&apos;s Plumbing & Septic",
+		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
 				url: "https://www.wadesplumbingandseptic.com/og-contact.jpg",
@@ -44,7 +44,7 @@ export const metadata = {
 				url: "https://www.wadesplumbingandseptic.com/og-contact2.jpg",
 				width: 1800,
 				height: 1600,
-				alt: "Wade&apos;s Plumbing & Septic",
+				alt: "Wade's Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -55,7 +55,7 @@ export const metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "LocalBusiness",
-	name: "Wade&apos;s Plumbing & Septic",
+	name: "Wade's Plumbing & Septic",
 	telephone: "+1-831-123-4567",
 	url: "https://www.wadesplumbingandseptic.com",
 	areaServed: ["Santa Cruz County", "Monterey County", "Santa Clara County"],
@@ -63,7 +63,7 @@ const jsonLd = {
 	image: "https://www.wadesplumbingandseptic.com/og-contact.jpg",
 	sameAs: ["https://www.facebook.com/wadesplumbing", "https://www.twitter.com/wadesplumbing", "https://www.linkedin.com/company/wadesplumbing"],
 	logo: "https://www.wadesplumbingandseptic.com/logo.png",
-	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact Wade&apos;s Plumbing & Septic for prompt, reliable assistance.",
+	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact Wade's Plumbing & Septic for prompt, reliable assistance.",
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: "123 Main St",
@@ -101,7 +101,7 @@ export default function ContactPage() {
 						<div className="mt-16 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
 							<div className="hidden md:block">
 								<h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Points of contact</h3>
-								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade&apos;s Plumbing & Septic</h4>
+								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade\'s Plumbing & Septic</h4>
 								<address className="text-sm font-normal text-gray-500 non-italic">
 									7737 hwy 9
 									<br />
