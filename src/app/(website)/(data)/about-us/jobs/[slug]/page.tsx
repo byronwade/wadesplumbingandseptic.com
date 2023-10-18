@@ -6,7 +6,7 @@ export async function generateMetadata({ params }, parent) {
 	const slug = params.slug;
 	const { jobDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
-	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade\'s Plumbing & Septic`;
+	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade&apos;s Plumbing & Septic`;
 	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
 	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
 

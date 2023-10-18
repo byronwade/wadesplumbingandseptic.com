@@ -101,7 +101,7 @@ export default function ContactPage() {
 						<div className="mt-16 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
 							<div className="hidden md:block">
 								<h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Points of contact</h3>
-								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade\'s Plumbing & Septic</h4>
+								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade&apos;s Plumbing & Septic</h4>
 								<address className="text-sm font-normal text-gray-500 non-italic">
 									7737 hwy 9
 									<br />

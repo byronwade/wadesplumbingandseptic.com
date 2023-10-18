@@ -82,7 +82,7 @@ export default function Example() {
 			<h1>Financing Your Plumbing Project with WiseStack</h1>
 			<div>
 				<p>Financing Your Plumbing Project with WiseStack</p>
-				<p>At Wade\'s Plumbig & Septic, we understand that plumbing projects can be a significant investment, and we want to make the process as easy as possible for you. That&apos;s why we&apos;ve partnered with WiseStack, a trusted financing partner, to offer flexible and affordable financing options for your plumbing needs.</p>
+				<p>At Wade&apos;s Plumbig & Septic, we understand that plumbing projects can be a significant investment, and we want to make the process as easy as possible for you. That&apos;s why we&apos;ve partnered with WiseStack, a trusted financing partner, to offer flexible and affordable financing options for your plumbing needs.</p>
 				<p>Why Choose WiseStack Financing?</p>
 				<p>
 					<strong>Easy Application Process:</strong> Applying for financing with WiseStack is quick and straightforward. Simply complete the online application form, and you&apos;ll receive a decision within minutes.
@@ -128,7 +128,7 @@ export default function Example() {
 				</ul>
 				<p>To learn more about the specific financing options available through WiseStack, please visit their website or contact our team for further assistance.</p>
 				<p>We&apos;re Here to Help</p>
-				<p>At Wade\'s Plumbing & Septic, our goal is to provide you with the best possible plumbing solutions and support you every step of the way. If you have any questions about financing your project with WiseStack or need assistance with the application process, please don&apos;t hesitate to reach out to our team. We&apos;re here to help make your plumbing upgrades a reality.</p>
+				<p>At Wade&apos;s Plumbing & Septic, our goal is to provide you with the best possible plumbing solutions and support you every step of the way. If you have any questions about financing your project with WiseStack or need assistance with the application process, please don&apos;t hesitate to reach out to our team. We&apos;re here to help make your plumbing upgrades a reality.</p>
 				<p>
 					Financing today at{" "}
 					<a href="tel:8314306011" className="text-brand hover:underline">

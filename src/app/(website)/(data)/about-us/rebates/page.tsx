@@ -105,8 +105,8 @@ export default function Rebates() {
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>
 				<p>
-					At Wade\'s Plumbing & Septic, we understand that upgrading your plumbing system can be a significant investment. That&apos;s why we want to help you save money by informing you about available rebates in the plumbing industry. These financial incentives or discounts are offered on specific products or services by manufacturers, distributors, retailers, or even government agencies. The goal is to encourage the purchase and use of more efficient, environmentally friendly, or
-					technologically advanced plumbing products and services.
+					At Wade&apos;s Plumbing & Septic, we understand that upgrading your plumbing system can be a significant investment. That&apos;s why we want to help you save money by informing you about available rebates in the plumbing industry. These financial incentives or discounts are offered on specific products or services by manufacturers, distributors, retailers, or even government agencies. The goal is to encourage the purchase and use of more efficient, environmentally friendly,
+					or technologically advanced plumbing products and services.
 				</p>
 				<p>How Rebates Work:</p>
 				<ol>

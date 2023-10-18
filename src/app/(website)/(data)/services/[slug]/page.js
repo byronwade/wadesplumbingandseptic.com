@@ -12,7 +12,7 @@ export async function generateMetadata({ params }, parent) {
 	const { postDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 
-	const formattedTitle = postDetails?.title && postDetails?.title.length > 50 ? `${postDetails?.title.substring(0, 47)}... | Wade\'s Plumbing & Septic` : `${postDetails?.title} | Wade\'s Plumbing & Septic`;
+	const formattedTitle = postDetails?.title && postDetails?.title.length > 50 ? `${postDetails?.title.substring(0, 47)}... | Wade&apos;s Plumbing & Septic` : `${postDetails?.title} | Wade&apos;s Plumbing & Septic`;
 
 	const formattedDescription = postDetails?.excerpt && postDetails?.excerpt.length > 160 ? `${postDetails?.excerpt.substring(0, 157)}...` : postDetails?.excerpt;
 

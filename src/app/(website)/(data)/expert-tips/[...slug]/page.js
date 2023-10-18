@@ -12,7 +12,7 @@ export async function generateMetadata({ params }, parent) {
 	const { postDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 
-	const formattedTitle = postDetails?.title ? `${postDetails.title} | Wade\'s Plumbing & Septic` : "Expert Tips | Wade's Plumbing & Septic";
+	const formattedTitle = postDetails?.title ? `${postDetails.title} | Wade&apos;s Plumbing & Septic` : "Expert Tips | Wade's Plumbing & Septic";
 
 	const formattedDescription = postDetails?.excerpt ? postDetails.excerpt : "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.";
 
