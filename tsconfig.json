@@ -39,7 +39,8 @@
 		"src/components/forms/SubscriptionForm.js",
 		"src/app/api/newsletter/route.js",
 		"src/app/(website)/(data)/services/[slug]/page.js",
-		"src/app/(website)/(data)/expert-tips/[...slug]/page.js"
+		"src/app/(website)/(data)/expert-tips/[...slug]/page.js",
+		"src/app/(website)/not-found.js"
 	],
 	"exclude": ["node_modules"]
 }
