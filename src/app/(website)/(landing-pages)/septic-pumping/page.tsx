@@ -9,7 +9,7 @@ export default function Example() {
 					<div className="flex flex-col items-center w-full overflow-hidden bg-white md:flex-row md:rounded justify-between">
 						<div className="flex flex-col w-full p-10 mt-4 text-center md:w-1/2 md:mt-0">
 							<h3 className="text-3xl font-semibold leading-none md:text-4xl">Septic Pumping</h3>
-							<p className="text-xl font-light text-gray-800">Septic tanks should be cleaned and pumped every 3-5 years, depending on the size of the tank and the number of people using it. Let&apos; get yours handled today!</p>
+							<p className="text-xl font-light text-gray-800">Septic tanks should be cleaned and pumped every 3-5 years, depending on the size of the tank and the number of people using it. Let&#39; get yours handled today!</p>
 							<a href="#_" className="flex items-center w-auto mx-auto text-lg leading-tight text-center text-brand-600 hover:underline">
 								<span className="">Learn More</span>
 								<svg className="w-3 h-3 mt-0.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

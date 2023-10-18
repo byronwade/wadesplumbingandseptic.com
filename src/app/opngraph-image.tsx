@@ -31,7 +31,7 @@ export default async function Image() {
 					justifyContent: "center",
 				}}
 			>
-				Wade&apos;s Plumbing & Septic
+				Wade&#39;s Plumbing & Septic
 			</div>
 		),
 		// ImageResponse options

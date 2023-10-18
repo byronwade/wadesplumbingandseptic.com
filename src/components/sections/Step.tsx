@@ -43,7 +43,7 @@ export const Step = () => {
 								</div>
 								<div className="pt-1 pb-8">
 									<p className=" mb-2 text-lg font-bold text-white">We give you a quote.</p>
-									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Once we assess your project, we&apos;ll provide a flat-rate price based on standard industry rates. Our technician will remain onsite to answer any questions you may have and potentially schedule the project for the same day.</p>
+									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Once we assess your project, we&#39;ll provide a flat-rate price based on standard industry rates. Our technician will remain onsite to answer any questions you may have and potentially schedule the project for the same day.</p>
 								</div>
 							</div>
 							<div className="flex">
@@ -77,7 +77,7 @@ export const Step = () => {
 								</div>
 								<div className="pt-1 pb-8">
 									<p className=" mb-2 text-lg font-bold text-white">We scedule the project.</p>
-									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">We strive to provide same-day service whenever possible, based on the size and complexity of your project. If same-day service isn&apos;t feasible, we&apos;ll work with you to schedule a convenient appointment.</p>
+									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">We strive to provide same-day service whenever possible, based on the size and complexity of your project. If same-day service isn&#39;t feasible, we&#39;ll work with you to schedule a convenient appointment.</p>
 								</div>
 							</div>
 							<div className="flex">
@@ -94,7 +94,7 @@ export const Step = () => {
 								</div>
 								<div className="pt-1 pb-8">
 									<p className="mb-2 text-lg font-bold text-white">We send our team.</p>
-									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Once all details are confirmed, our project manager will assemble a team that is tailored to your project&apos;s specific needs. The team will be selected based on the project manager&apos;s discretion, ensuring that the most qualified individuals are assigned to your project.</p>
+									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Once all details are confirmed, our project manager will assemble a team that is tailored to your project&#39;s specific needs. The team will be selected based on the project manager&#39;s discretion, ensuring that the most qualified individuals are assigned to your project.</p>
 								</div>
 							</div>
 							<div className="flex">
@@ -109,7 +109,7 @@ export const Step = () => {
 								</div>
 								<div className="pt-1">
 									<p className=" mb-2 text-lg font-bold text-white">Success</p>
-									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Our team will follow up with you to ensure that everything is in order, and we&apos;ll be available to assist you with any additional needs you may have. This is part of our commitment to providing outstanding customer service and ensuring your complete satisfaction.</p>
+									<p className="mt-2 text-md font-normal text-gray-500 dark:text-gray-400">Our team will follow up with you to ensure that everything is in order, and we&#39;ll be available to assist you with any additional needs you may have. This is part of our commitment to providing outstanding customer service and ensuring your complete satisfaction.</p>
 								</div>
 							</div>
 						</div>

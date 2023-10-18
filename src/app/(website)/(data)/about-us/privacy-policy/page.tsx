@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>
-			<p>Wade&apos;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
+			<p>Wade&#39;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>
 			<p>By using the Site, you agree to the collection and use of information in accordance with this policy.</p>
 			<ol start={1}>
 				<li>Information Collection and Use</li>
@@ -91,11 +91,11 @@ export default function PrivacyPolicy() {
 			<ol start={2}>
 				<li>Log Data</li>
 			</ol>
-			<p>Like many site operators, we collect information that your browser sends whenever you visit our Site (&quot;Log Data&quot;). This Log Data may include information such as your computer&apos;s Internet Protocol (&quot;IP&quot;) address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
+			<p>Like many site operators, we collect information that your browser sends whenever you visit our Site (&quot;Log Data&quot;). This Log Data may include information such as your computer&#39;s Internet Protocol (&quot;IP&quot;) address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</p>
 			<ol start={3}>
 				<li>Cookies</li>
 			</ol>
-			<p>Cookies are files with a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your computer&apos;s hard drive.</p>
+			<p>Cookies are files with a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your computer&#39;s hard drive.</p>
 			<p>Like many websites, we use &quot;cookies&quot; to collect information and improve your experience on our Site. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Site.</p>
 			<ol start={4}>
 				<li>Security</li>
@@ -108,10 +108,10 @@ export default function PrivacyPolicy() {
 			<ol start={6}>
 				<li>Links to Other Sites</li>
 			</ol>
-			<p>Our Site may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party&apos; site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
-			<p>Wade&apos; Plumbing &amp; Septic has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party sites or Privacy Policy.</p>
+			<p>Our Site may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party&#39; site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+			<p>Wade&#39; Plumbing &amp; Septic has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party sites or Privacy Policy.</p>
 			<ol start={7}>
-				<li>Children&apos; Privacy</li>
+				<li>Children&#39; Privacy</li>
 			</ol>
 			<p>
 				Our Site does not address anyone under the age of 13 (&quot;Children&quot;). We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from a child under the age of 13 without verification of parental consent, we will take steps to remove that information from
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
 			</ol>
 			<p>If you have any questions about this Privacy Policy, please contact us at:</p>
 			<p>
-				Wade&apos; Plumbing &amp; Septic Phone: <a href="tel:8314306011">(831) 225-4344</a> Email: <a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
+				Wade&#39; Plumbing &amp; Septic Phone: <a href="tel:8314306011">(831) 225-4344</a> Email: <a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 			</p>
 		</>
 	);

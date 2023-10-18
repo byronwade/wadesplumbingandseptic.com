@@ -103,7 +103,7 @@ export default function Warranties() {
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Warranty and Registrations</h1>
-			<p>At Wade&apos;s Plumbing & Septic, we stand behind our work and are committed to providing our customers with the highest quality plumbing and septic services. To ensure your satisfaction and confidence in our work, we offer the following warranty:</p>
+			<p>At Wade&#39;s Plumbing & Septic, we stand behind our work and are committed to providing our customers with the highest quality plumbing and septic services. To ensure your satisfaction and confidence in our work, we offer the following warranty:</p>
 			<ul>
 				<li>
 					<strong>100% Satisfaction Guarantee:</strong> We strive to provide exceptional customer service and high-quality workmanship. If you are not completely satisfied with our services, please let us know and we will make it right. We will either fix the issue to your satisfaction or provide a full refund for the work performed.
@@ -134,7 +134,7 @@ export default function Warranties() {
 				<li>Generac</li>
 				<li>Honeywell</li>
 			</ul>
-			<p>To activate your generator warranty, please follow the manufacturer&apos;s instructions for warranty registration.</p>
+			<p>To activate your generator warranty, please follow the manufacturer&#39;s instructions for warranty registration.</p>
 			<p>Please note that our warranty is subject to the following limitations:</p>
 			<ul>
 				<li>The warranty is only valid for the original customer and is non-transferable.</li>
@@ -142,9 +142,9 @@ export default function Warranties() {
 				<li>The warranty does not cover damages caused by customer-supplied parts or materials.</li>
 				<li>The warranty does not cover damages caused by work performed on equipment or systems that have been previously modified or repaired by anyone other than our company.</li>
 			</ul>
-			<p>Thank you for choosing Wade&apos;s Plumbing & Septic for your plumbing and septic needs. We are confident in our work and our warranty and look forward to serving you.</p>
+			<p>Thank you for choosing Wade&#39;s Plumbing & Septic for your plumbing and septic needs. We are confident in our work and our warranty and look forward to serving you.</p>
 			<p>
-				Please don&apos;t hesitate to contact us if you have any questions about our warranty or any of our plumbing and septic services. We are always here to help and ensure your satisfaction with our work. <a href="tel:8312254344">831-225-4344.</a>
+				Please don&#39;t hesitate to contact us if you have any questions about our warranty or any of our plumbing and septic services. We are always here to help and ensure your satisfaction with our work. <a href="tel:8312254344">831-225-4344.</a>
 			</p>
 		</>
 	);

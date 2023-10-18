@@ -14,10 +14,10 @@ export default async function fetchData() {
 	// 	"@type": "OfferCatalog",
 	// 	name: "Current Promotions & Discounts",
 	// 	url: "https://www.wadesplumbingandseptic.com/about-us/promotions/",
-	// 	description: "Discover the latest promotions and discounts offered by Wade&apos;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
+	// 	description: "Discover the latest promotions and discounts offered by Wade&#39;s Plumbing & Septic. Save on your next plumbing project with our exclusive deals.",
 	// 	provider: {
 	// 		"@type": "Organization",
-	// 		name: "Wade&apos;s Plumbing & Septic",
+	// 		name: "Wade&#39;s Plumbing & Septic",
 	// 		url: "https://www.wadesplumbingandseptic.com",
 	// 	},
 	// 	// Assuming the promotions data is available in a similar format

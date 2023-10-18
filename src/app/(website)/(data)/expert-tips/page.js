@@ -7,7 +7,7 @@ import fetchData from "./getTips";
 
 const ITEMS_PER_PAGE = 10;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
-//const OG_IMAGE_API = `${BASE_URL}/api/og?title=Expert Tips&link=${BASE_URL}&description=Looking for expert plumbing tips in the local area? Look no further than Wade&apos;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.`;
+//const OG_IMAGE_API = `${BASE_URL}/api/og?title=Expert Tips&link=${BASE_URL}&description=Looking for expert plumbing tips in the local area? Look no further than Wade&#39;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.`;
 
 export default async function Page({ searchParams }) {
 	const searchTerm = searchParams?.search;

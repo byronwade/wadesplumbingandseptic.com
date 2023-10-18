@@ -61,7 +61,7 @@ export default function Footer() {
 					</div>
 					<div className="mt-16 text-center">
 						<p className="text-xs leading-5 text-gray-400">
-							&copy; 2023 Wade&apos;s, Inc. All rights reserved. Designed by{" "}
+							&copy; 2023 Wade&#39;s, Inc. All rights reserved. Designed by{" "}
 							<a className="text-brand hover:underline font-bold" href="https://www.byronwade.com/">
 								Byron Wade
 							</a>{" "}
