@@ -1,27 +1,26 @@
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import "./globals.css";
-//import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import getMenu from "./getMenu";
+import Script from "next/script";
+import Head from "next/head";
 
 export default async function RootLayout({ children, props }: { children: React.ReactNode; props?: any }) {
 	const data = await getMenu();
 	console.log(data);
 	return (
 		<html lang="en">
-			<head>
-				{/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
-				<Script id="google-analytics" strategy="afterInteractive">
-					{`
+			<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
 
 						gtag('config', 'G-6TLN795BRR');
 					`}
-				</Script> */}
-			</head>
+			</Script>
 			<body className="bg-gray-50 text-base">
 				<Header data={data} />
 				{children}

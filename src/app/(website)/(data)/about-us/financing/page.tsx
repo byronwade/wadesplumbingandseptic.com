@@ -1,11 +1,11 @@
 import Script from "next/script";
 
 export const metadata = {
-	title: "Financing Options | Wade's Plumbing & Septic",
-	description: "Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+	title: "Financing Options | Wade&apos;s Plumbing & Septic",
+	description: "Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 	generator: "Next.js",
-	applicationName: "Wade's Plumbing & Septic",
-	keywords: ["Plumbing Financing", "Wade's Plumbing & Septic", "WiseStack Financing", "Plumbing Project Financing", "Local Plumbing Financing"],
+	applicationName: "Wade&apos;s Plumbing & Septic",
+	keywords: ["Plumbing Financing", "Wade&apos;s Plumbing & Septic", "WiseStack Financing", "Plumbing Project Financing", "Local Plumbing Financing"],
 	authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/about-us/financing/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -19,30 +19,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/financing/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Financing Options | Wade's Plumbing & Septic",
-		description: "Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+		title: "Financing Options | Wade&apos;s Plumbing & Septic",
+		description: "Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
-			alt: "Wade's Plumbing & Septic Social Logo",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+			alt: "Wade&apos;s Plumbing & Septic Social Logo",
 		},
 	},
 	openGraph: {
-		title: "Financing Options | Wade's Plumbing & Septic",
-		description: "Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+		title: "Financing Options | Wade&apos;s Plumbing & Septic",
+		description: "Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/financing/",
-		siteName: "Wade's Plumbing & Septic",
+		siteName: "Wade&apos;s Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Financing&link=www.wadesplumbingandseptic.com&description=Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade's Plumbing & Septic",
+				alt: "Wade&apos;s Plumbing & Septic",
 			},
 		],
 		locale: "en-US",
@@ -53,10 +53,10 @@ export const metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "FinancialService",
-	name: "Wade's Plumbing & Septic Financing",
+	name: "Wade&apos;s Plumbing & Septic Financing",
 	url: "https://www.wadesplumbingandseptic.com/about-us/financing/",
 	telephone: "+18314206011",
-	description: "Explore flexible financing options for your plumbing projects with Wade's Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
+	description: "Explore flexible financing options for your plumbing projects with Wade&apos;s Plumbing & Septic. Our partnership with WiseStack offers easy application, competitive rates, and tailored payment plans to meet your needs.",
 	areaServed: {
 		"@type": "GeoShape",
 		address: {

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }, parent) {
 	const { postDetails } = await fetchData({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 
-	const formattedTitle = postDetails?.title && postDetails?.title.length > 50 ? `${postDetails?.title.substring(0, 47)}... | Wade's Plumbing & Septic` : `${postDetails?.title} | Wade's Plumbing & Septic`;
+	const formattedTitle = postDetails?.title && postDetails?.title.length > 50 ? `${postDetails?.title.substring(0, 47)}... | Wade&apos;s Plumbing & Septic` : `${postDetails?.title} | Wade&apos;s Plumbing & Septic`;
 
 	const formattedDescription = postDetails?.excerpt && postDetails?.excerpt.length > 160 ? `${postDetails?.excerpt.substring(0, 157)}...` : postDetails?.excerpt;
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }, parent) {
 		title: formattedTitle,
 		description: formattedDescription,
 		generator: "Next.js",
-		applicationName: "Wade's Plumbing & Septic",
+		applicationName: "Wade&apos;s Plumbing & Septic",
 		keywords: postDetails?.categories.join(", "),
 		authors: [{ name: postDetails?.author?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 		creator: postDetails?.author?.username || "Byron Wade",
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }, parent) {
 			title: formattedTitle,
 			description: formattedDescription,
 			url: `https://www.wadesplumbingandseptic.com/services/${postDetails?.slug}`,
-			siteName: "Wade's Plumbing & Septic",
+			siteName: "Wade&apos;s Plumbing & Septic",
 			images: [
 				{
 					url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",

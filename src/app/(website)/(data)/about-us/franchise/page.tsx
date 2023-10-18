@@ -1,10 +1,10 @@
 import Script from "next/script";
 
 export const metadata = {
-	title: "Franchise Opportunities | Wade's Plumbing & Septic",
-	description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
+	title: "Franchise Opportunities | Wade&apos;s Plumbing & Septic",
+	description: "Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
 	generator: "Next.js",
-	applicationName: "Wade's Plumbing & Septic",
+	applicationName: "Wade&apos;s Plumbing & Septic",
 	keywords: ["Plumbing Franchise", "Septic Services Franchise", "Entrepreneurship", "Business Opportunity", "Franchise System"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
@@ -19,30 +19,30 @@ export const metadata = {
 	bookmarks: ["https://www.wadesplumbingandseptic.com/about-us/franchising/"],
 	twitter: {
 		card: "summary_large_image",
-		title: "Franchise Opportunities | Wade's Plumbing & Septic",
-		description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
+		title: "Franchise Opportunities | Wade&apos;s Plumbing & Septic",
+		description: "Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise.",
-			alt: "Wade's Plumbing & Septic Franchise Opportunity",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise.",
+			alt: "Wade&apos;s Plumbing & Septic Franchise Opportunity",
 		},
 	},
 	openGraph: {
-		title: "Franchise Opportunities | Wade's Plumbing & Septic",
-		description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
+		title: "Franchise Opportunities | Wade&apos;s Plumbing & Septic",
+		description: "Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
 		url: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
-		siteName: "Wade's Plumbing & Septic",
+		siteName: "Wade&apos;s Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise.",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise.",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Franchising&link=www.wadesplumbingandseptic.com&description=Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise.",
 				width: 1800,
 				height: 1600,
-				alt: "Wade's Plumbing & Septic Franchise Opportunity",
+				alt: "Wade&apos;s Plumbing & Septic Franchise Opportunity",
 			},
 		],
 		locale: "en-US",
@@ -53,10 +53,10 @@ export const metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Corporation",
-	name: "Wade's Plumbing & Septic Franchise Opportunities",
+	name: "Wade&apos;s Plumbing & Septic Franchise Opportunities",
 	url: "https://www.wadesplumbingandseptic.com/about-us/franchising/",
 	telephone: "+18314206011",
-	description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
+	description: "Embark on a rewarding entrepreneurial journey with a Wade&apos;s Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
 	location: {
 		"@type": "PostalAddress",
 		addressLocality: "Santa Cruz",
