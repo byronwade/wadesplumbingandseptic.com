@@ -76,14 +76,14 @@ export default async function Job({ params }) {
 			"@type": "Organization",
 			name: "Wade's Plumbing & Septic",
 			sameAs: "https://www.wadesplumbingandseptic.com",
-			logo: "https://www.wadesplumbingandseptic.com/logo.png",
+			logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
 		},
 		jobLocation: {
 			"@type": "Place",
 			address: {
 				"@type": "PostalAddress",
 				postalCode: "95005",
-				streetAddress: "123 Main St",
+				streetAddress: "7737 hwy 9",
 				addressLocality: jobDetails?.location,
 				addressRegion: "CA",
 				addressCountry: "US",

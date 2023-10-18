@@ -61,9 +61,9 @@ const jsonLd = {
 		"@type": "GeoShape",
 		address: {
 			"@type": "PostalAddress",
-			addressLocality: "Santa Cruz",
+			addressLocality: "Ben Lomond",
 			addressRegion: "CA",
-			postalCode: "95060",
+			postalCode: "95005",
 			addressCountry: "US",
 		},
 	},

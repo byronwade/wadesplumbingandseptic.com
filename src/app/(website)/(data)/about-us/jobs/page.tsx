@@ -75,10 +75,10 @@ export default async function Jobs() {
 					"@type": "Place",
 					address: {
 						"@type": "PostalAddress",
-						streetAddress: "123 Main St",
-						addressLocality: "Santa Cruz",
+						streetAddress: "7737 hwy 9",
+						addressLocality: "Ben Lomond",
 						addressRegion: "CA",
-						postalCode: "95060",
+						postalCode: "95005",
 						addressCountry: "US",
 					},
 				},

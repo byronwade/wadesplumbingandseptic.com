@@ -40,7 +40,7 @@ export default async function Page({ searchParams }) {
 					name: "Wade's Plumbing & Septic",
 					logo: {
 						"@type": "ImageObject",
-						url: "https://www.wadesplumbingandseptic.com/logo.png",
+						url: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
 						width: 180,
 						height: 60,
 					},

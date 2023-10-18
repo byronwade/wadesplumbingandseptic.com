@@ -59,9 +59,9 @@ const jsonLd = {
 	description: "Embark on a rewarding entrepreneurial journey with a Wade's Plumbing & Septic franchise. Leverage our established brand, proven business model, and extensive support to build a thriving plumbing business in your local community.",
 	location: {
 		"@type": "PostalAddress",
-		addressLocality: "Santa Cruz",
+		addressLocality: "Ben Lomond",
 		addressRegion: "CA",
-		postalCode: "95060",
+		postalCode: "95005",
 		addressCountry: "US",
 	},
 	contactPoint: {

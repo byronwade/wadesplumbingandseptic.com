@@ -40,13 +40,13 @@ export default async function Page({ searchParams }) {
 				provider: {
 					"@type": "Organization",
 					name: "Wade's Plumbing & Septic",
-					telephone: "+1-831-123-4567",
+					telephone: "+1-831-225-4344",
 					address: {
 						"@type": "PostalAddress",
-						streetAddress: "123 Main St",
-						addressLocality: "Santa Cruz",
+						streetAddress: "7737 hwy 9",
+						addressLocality: "Ben Lomond",
 						addressRegion: "CA",
-						postalCode: "95060",
+						postalCode: "95005",
 						addressCountry: "US",
 					},
 				},
@@ -86,7 +86,7 @@ export const metadata = {
 	description: "Explore our wide range of plumbing and septic services available 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. From routine maintenance to emergency repairs, we've got you covered.",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	keywords: ["Plumbing Services", "Septic Services", "Emergency Plumbing", "Santa Cruz", "Monterey", "Santa Clara"],
+	keywords: ["Plumbing Services", "Septic Services", "Emergency Plumbing", "Ben Lomond", "Monterey", "Santa Clara"],
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
@@ -104,7 +104,7 @@ export const metadata = {
 		description: "Discover the comprehensive plumbing and septic services we offer 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. Your local, reliable plumbing solution.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/social-services.jpg",
+			url: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
 			alt: "Wade's Plumbing & Septic Services",
 		},
 	},
@@ -115,12 +115,12 @@ export const metadata = {
 		siteName: "Wade's Plumbing & Septic",
 		images: [
 			{
-				url: "https://www.wadesplumbingandseptic.com/og-services.jpg",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
 				width: 800,
 				height: 600,
 			},
 			{
-				url: "https://www.wadesplumbingandseptic.com/og-services2.jpg",
+				url: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
 				width: 1800,
 				height: 1600,
 				alt: "Wade's Plumbing & Septic Services",
