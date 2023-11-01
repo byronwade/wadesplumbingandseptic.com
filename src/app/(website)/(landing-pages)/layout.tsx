@@ -1,16 +1,13 @@
-"use client";
-import { usePathname } from "next/navigation";
+import LogoCloud from "@/components/sections/LogoCloud";
+import Testimonials from "@/components/sections/Testimonials";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	const router = usePathname();
+	return (
+		<>
+			{children}
 
-	if (router == "/about-us/jobs") {
-		return <>{children}</>;
-	}
-
-	// if (router.includes("/about-us/jobs")) {
-	// 	return <>{children}</>;
-	// }
-
-	return <>{children}</>;
+			<LogoCloud />
+			<Testimonials />
+		</>
+	);
 }

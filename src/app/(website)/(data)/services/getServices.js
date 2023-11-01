@@ -63,7 +63,7 @@ async function fetchPostDetails(slug) {
 }
 
 function filterAndSortServices(allServices = [], postCategories = []) {
-	return allServices.filter((post) => post.categories && post.categories.some((category) => postCategories.includes(category))).sort((a, b) => (b.categories ? b.categories.filter((category) => postCategories.includes(category)).length : 0) - (a.categories ? a.categories.filter((category) => postCategories.includes(category)).length : 0));
+	return allServices?.filter((post) => post?.categories && post?.categories?.some((category) => postCategories?.includes(category))).sort((a, b) => (b?.categories ? b?.categories.filter((category) => postCategories?.includes(category)).length : 0) - (a?.categories ? a?.categories.filter((category) => postCategories?.includes(category)).length : 0));
 }
 
 export default async function fetchData({ searchTerm = "", slug = "", page = 1, itemsPerPage = 10 } = {}) {

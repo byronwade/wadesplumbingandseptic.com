@@ -67,7 +67,7 @@ export default async function BlogPage({ params }) {
 	const slug = params.slug;
 	const { allServices, postDetails, relatedServices, jsonLd } = await fetchData({ slug });
 
-	const dateObj = new Date(postDetails.created_at);
+	const dateObj = new Date(postDetails?.created_at);
 	const formattedDate = dateObj.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 	const formattedTime = dateObj.toLocaleTimeString([], { hour: "numeric", minute: "numeric", hour12: true });
 
@@ -130,7 +130,7 @@ export default async function BlogPage({ params }) {
 								<ContactForm />
 							</div>
 						</article>
-						{allServices.length > 0 && <Sidebar pathname="/services" data={allServices} />}
+						{allServices?.length > 0 && <Sidebar pathname="/services" data={allServices} />}
 					</div>
 				</div>
 			</section>
