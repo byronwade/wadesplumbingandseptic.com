@@ -20,6 +20,7 @@ export default async function RootLayout({ children, props }: { children: React.
 						gtag('config', 'G-6TLN795BRR');
 					`}
 			</Script>
+			<Script data-project-id="XFjOtiZNrxOwMe6WThuLOII0N5rmeMw02hH3ufeR" src="https://snippet.meticulous.ai/v1/meticulous.js" />
 			<body className="bg-gray-50 text-base">
 				<Header data={data} />
 				{children}
