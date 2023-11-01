@@ -94,7 +94,7 @@ export default function DrainClearing() {
 					<div className="flex flex-col w-full overflow-hidden bg-white md:flex-row md:rounded justify-between">
 						<div className="flex flex-col w-full p-10 mt-4 md:w-1/2 md:mt-0">
 							<h1 className="text-4xl font-bold leading-none md:text-5xl">Expert Drain Clearing Services in Santa Cruz</h1>
-							<p className="mt-4 text-lg font-light text-gray-800">Struggling with a clogged drain in Santa Cruz? Our team at Wade's Plumbing & Septic specializes in fast, efficient, and affordable drain clearing services. Utilizing advanced rooter technology and state-of-the-art drain clearing tools, we ensure your pipes are free from blockages. Whether it's a minor clog or an emergency situation, we offer 24/7 services to tackle all your drain clearing needs.</p>
+							<p className="mt-4 text-lg font-light text-gray-800">Struggling with a clogged drain in Santa Cruz? Our team at Wade&apos;s Plumbing & Septic specializes in fast, efficient, and affordable drain clearing services. Utilizing advanced rooter technology and state-of-the-art drain clearing tools, we ensure your pipes are free from blockages. Whether it&apos;s a minor clog or an emergency situation, we offer 24/7 services to tackle all your drain clearing needs.</p>
 						</div>
 						<div className="w-full mt-7 md:w-2/5 md:mt-0">
 							<div className="p-6">
@@ -104,7 +104,7 @@ export default function DrainClearing() {
 					</div>
 					<div className="flex flex-col md:mt-8 mt-10 w-full overflow-hidden bg-white md:flex-row md:rounded">
 						<div className="flex flex-col w-full p-10 mt-4 md:w-1/2 md:mt-0">
-							<h2 className="mb-4 text-3xl font-medium leading-none">Why Choose Wade's Plumbing & Septic?</h2>
+							<h2 className="mb-4 text-3xl font-medium leading-none">Why Choose Wade&apos;s Plumbing & Septic?</h2>
 							<ul className="text-md text-gray-800">
 								<li className="mb-2">Over two decades of drain clearing expertise</li>
 								<li className="mb-2">Transparent pricing with no hidden fees</li>
@@ -153,8 +153,8 @@ export default function DrainClearing() {
 						<div className="flex flex-col w-full md:w-1/2">
 							<h2 className="text-3xl font-semibold leading-none md:text-4xl">The Importance of Professional Drain Clearing</h2>
 							<p className="mt-4 text-lg text-gray-800">
-								A clogged drain is more than just a nuisance; it can lead to a series of plumbing issues that could potentially damage your property. Water backflow, pipe corrosion, and even flooding are some of the severe consequences of untreated clogged drains. That's why it's crucial to seek professional help as soon as you notice signs of a clogged drain. At Wade's Plumbing & Septic, we use the latest technology to diagnose and treat all types of drain clogs, ensuring that
-								your plumbing system is in optimal condition.
+								A clogged drain is more than just a nuisance; it can lead to a series of plumbing issues that could potentially damage your property. Water backflow, pipe corrosion, and even flooding are some of the severe consequences of untreated clogged drains. That&apos;s why it&apos;s crucial to seek professional help as soon as you notice signs of a clogged drain. At Wade&apos;s Plumbing & Septic, we use the latest technology to diagnose and treat all types of drain clogs,
+								ensuring that your plumbing system is in optimal condition.
 							</p>
 						</div>
 						<div className="flex flex-col w-full mt-10 md:w-1/2 md:mt-0">
@@ -176,7 +176,7 @@ export default function DrainClearing() {
 							<ul className="mt-4 text-lg text-gray-800">
 								<li className="mb-2">- Hydro Jetting: A high-pressure hose with a specialized nozzle is used to blast water through the pipes, effectively clearing any clogs.</li>
 								<li className="mb-2">- Video Camera Inspection: A small camera is sent down the drain to identify the location and nature of the clog, allowing for targeted treatment.</li>
-								<li className="mb-2">- Electric Drain Cleaning: Also known as "drain snaking," this method uses an electric cleaner to break down clogs physically.</li>
+								<li className="mb-2">- Electric Drain Cleaning: Also known as &quot;drain snaking,&quot; this method uses an electric cleaner to break down clogs physically.</li>
 							</ul>
 						</div>
 						<div className="flex flex-col w-full mt-10 md:w-1/2 md:mt-0">
