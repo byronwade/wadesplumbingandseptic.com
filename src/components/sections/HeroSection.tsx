@@ -1,15 +1,17 @@
 "use client";
 import Image from "next/image";
 import ContactForm from "../forms/ContactForm";
-import { Parallax } from "react-parallax";
+import { Background, Parallax } from "react-parallax";
 
 export default function HeroSection() {
 	return (
 		<Parallax
-			bgImage="/mountins.webp" // Replace with your image path
 			strength={500} // Adjust the parallax effect strength as needed
-			className="h-auto" // Adjust the container height as needed
+			className="h-auto relative w-full"
 		>
+			<Background className="w-screen h-screen">
+				<Image className="w-full h-auto object-cover" src="/mountins.webp" height={2200} width={1809} alt="Santa Cruz Mountins" />
+			</Background>
 			<div className="z-20 absolute inset-0 bg-black opacity-60"></div>
 			<section className="z-30 relative overflow-hidden">
 				<Image className="hidden md:block absolute bottom-0 right-10 w-auto h-auto" src="/mario.webp" height={100} width={100} alt="Mario Plumber" />
