@@ -1,6 +1,7 @@
 "use client";
 import { useMemo } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { track } from "@vercel/analytics/react";
 
 export default function Pagination({ total, itemsPerPage }) {
 	const searchParams = useSearchParams();
@@ -32,10 +33,22 @@ export default function Pagination({ total, itemsPerPage }) {
 				<p className="text-sm text-gray-700">{total === 0 ? "No results found" : `Showing ${pageMin} to ${pageMax} of ${total} results`}</p>
 			</div>
 			<div className="flex flex-1 justify-between sm:justify-end">
-				<button onClick={goPreviousPage} className={`${buttonClass} mr-2 ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}>
+				<button
+					onClick={() => {
+						track(`Previous ${pathname}`);
+						goPreviousPage();
+					}}
+					className={`${buttonClass} mr-2 ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+				>
 					Previous
 				</button>
-				<button onClick={goNextPage} className={`${buttonClass} ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}>
+				<button
+					onClick={() => {
+						track(`Next ${pathname}`);
+						goNextPage();
+					}}
+					className={`${buttonClass} ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
+				>
 					Next
 				</button>
 			</div>

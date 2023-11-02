@@ -1,5 +1,6 @@
 "use client";
 import { useForm, ValidationError } from "@formspree/react";
+import { track } from "@vercel/analytics/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -94,7 +95,14 @@ export default function JobForm() {
 				</div> */}
 			</div>
 			<div className="mt-4">
-				<button disabled={state.submitting} type="submit" className="block w-full rounded bg-brand-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">
+				<button
+					onClick={() => {
+						track("Job form Submit");
+					}}
+					disabled={state.submitting}
+					type="submit"
+					className="block w-full rounded bg-brand-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+				>
 					Get a Quote
 				</button>
 			</div>
