@@ -95,7 +95,7 @@ export default async function Discounts() {
 
 								return (
 									<div key={index} className="h-full space-y-4 w-full flex flex-col items-center text-center p-6 bg-white overflow-hidden rounded-xl border-4 border-dashed border-gray-500">
-										<Image priority className="w-auto h-auto" src="/WadesLogo.png" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
+										<Image priority className="w-auto h-auto" src="/WadesLogo.webp" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
 										<div>
 											<h2 className="font-extrabold text-lg">{promotion.title}</h2>
 											<div dangerouslySetInnerHTML={{ __html: promotion.content }} />

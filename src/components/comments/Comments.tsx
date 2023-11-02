@@ -48,7 +48,7 @@ export default function Comments() {
 				<footer className="flex justify-between items-center mb-2">
 					<div className="flex items-center">
 						<p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Michael Gough" />
+							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.webp" alt="Michael Gough" />
 							Michael Gough
 						</p>
 						<p className="text-sm text-gray-600 dark:text-gray-400">
@@ -104,7 +104,7 @@ export default function Comments() {
 				<footer className="flex justify-between items-center mb-2">
 					<div className="flex items-center">
 						<p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Jese Leos" />
+							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.webp" alt="Jese Leos" />
 							Jese Leos
 						</p>
 						<p className="text-sm text-gray-600 dark:text-gray-400">
@@ -160,7 +160,7 @@ export default function Comments() {
 				<footer className="flex justify-between items-center mb-2">
 					<div className="flex items-center">
 						<p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green" />
+							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.webp" alt="Bonnie Green" />
 							Bonnie Green
 						</p>
 						<p className="text-sm text-gray-600 dark:text-gray-400">
@@ -216,7 +216,7 @@ export default function Comments() {
 				<footer className="flex justify-between items-center mb-2">
 					<div className="flex items-center">
 						<p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Helene Engels" />
+							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-4.webp" alt="Helene Engels" />
 							Helene Engels
 						</p>
 						<p className="text-sm text-gray-600 dark:text-gray-400">

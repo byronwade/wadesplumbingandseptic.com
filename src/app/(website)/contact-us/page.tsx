@@ -62,7 +62,7 @@ const jsonLd = {
 	availableLanguage: "en",
 	image: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
-	logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
+	logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
 	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Contact Wade's Plumbing & Septic for prompt, reliable assistance.",
 	address: {
 		"@type": "PostalAddress",
@@ -80,14 +80,13 @@ const jsonLd = {
 	openingHours: "Mo-Su 00:00-23:59",
 };
 
-
 export default function ContactPage() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="relative flex flex-row">
 				<div className="hidden md:block w-full md:w-1/2 relative">
-					<Image placeholder="blur" blurDataURL="/placeholder.webp" className="object-cover h-full w-full brightness-80" src="/trees-river.jpg" width={1500} height={1500} alt="Redwood trees" />
+					<Image placeholder="blur" blurDataURL="/placeholder.webp" className="object-cover h-full w-full brightness-80" src="/trees-river.webp" width={1500} height={1500} alt="Redwood trees" />
 					<div className="absolute bottom-10 right-10">
 						<p className="text-white backdrop-blur-sm bg-white/30 p-2 rounded">
 							Photo by a local resident <span className="underline">Luca Bravo</span>.

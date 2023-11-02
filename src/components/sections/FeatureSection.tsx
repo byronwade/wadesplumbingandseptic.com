@@ -35,7 +35,7 @@ export default function FeatureSection() {
 	return (
 		<section className="bg-gray-50 relative overflow-hidden">
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
-				<Image className="hidden md:block absolute -bottom-5 right-10" src="/gumba.png" height={100} width={100} alt="Gumba Plumber" />
+				<Image className="hidden md:block absolute -bottom-5 right-10" src="/gumba.webp" height={100} width={100} alt="Gumba Plumber" />
 				<div className="mx-auto max-w-7xl">
 					<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Just a few features...</h2>
 					<p className="mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">All-in-One Plumbing Solutions</p>

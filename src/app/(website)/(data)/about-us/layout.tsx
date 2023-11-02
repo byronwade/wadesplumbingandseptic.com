@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<div className="relative z-1 py-16 px-6 sm:py-24 lg:px-8">
 				<div className="mx-auto max-w-7xl">
 					<div className="prose max-w-2xl bg-white p-4 md:p-8 rounded">
-						<Image className="w-auto h-auto" src="/WadesLogo.png" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
+						<Image className="w-auto h-auto" src="/WadesLogo.webp" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
 						{children}
 					</div>
 				</div>

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		description: "Fast and reliable drain clearing services in Santa Cruz, Monterey, and Santa Clara. Available 24/7 for emergencies.",
 		creator: "@wadesplumbing",
 		images: {
-			url: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
+			url: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
 			alt: "Wade's Plumbing & Septic Social Logo",
 		},
 	},
@@ -72,7 +72,7 @@ const jsonLd = {
 	},
 	telephone: "+1-831-225-4344",
 	url: "https://www.wadesplumbingandseptic.com",
-	logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
+	logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
 	image: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Expert%20Drain%20Clearing%20Services",
 	description: "Expert drain clearing services in Santa Cruz, Monterey, and Santa Clara. Fast, reliable, and 24/7 emergency drain unclogging by Wade's Plumbing & Septic.",
 	priceRange: "$$",
@@ -128,7 +128,7 @@ export default function DrainClearing() {
 							</a>
 						</div>
 						<div className="w-full mt-7 md:w-1/2 md:mt-0">
-							<Image className="w-full" src="https://mpop-prod-hls-primary.s3.amazonaws.com/inception-plumbing/img/1646338794-inception-plumbing-16122884_362294677473447_5125232728274370560_n_17870650150047728.jpg" alt="Expert Drain Clearing Services" width={1000} height={1000} />
+							<Image className="w-full" src="https://mpop-prod-hls-primary.s3.amazonaws.com/inception-plumbing/img/1646338794-inception-plumbing-16122884_362294677473447_5125232728274370560_n_17870650150047728.webp" alt="Expert Drain Clearing Services" width={1000} height={1000} />
 						</div>
 					</div>
 					<div className="flex flex-col mt-10 p-10 bg-white md:flex-row md:rounded md:space-x-8">

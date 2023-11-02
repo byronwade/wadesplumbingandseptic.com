@@ -7,7 +7,7 @@ export function NavBar({ open }) {
 	return (
 		<>
 			<Link className="flex items-center space-x-4" href="/">
-				<Image className="w-auto h-auto" src="/WadesLogo.png" width={40} height={40} alt="Wade's Plumbing & Septic Logo" />
+				<Image className="w-auto h-auto" src="/WadesLogo.webp" width={40} height={40} alt="Wade's Plumbing & Septic Logo" />
 				<h1 className="font-bold text-2xl hidden xl:inline-flex">Wades Plumbing & Septic</h1>
 			</Link>
 			<div className="flex font-bold items-center md:hidden">

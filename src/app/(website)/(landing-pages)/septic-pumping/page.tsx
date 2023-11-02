@@ -35,7 +35,7 @@ export default function Example() {
 							</a>
 						</div>
 						<div className="w-full mt-7 md:w-1/2 md:mt-0 relative">
-							<Image src="/landing-pages/septic-pumping/septic-pumping-illistration.png" width={1000} height={800} alt="Septic Pumping illistration" />
+							<Image src="/landing-pages/septic-pumping/septic-pumping-illistration.webp" width={1000} height={800} alt="Septic Pumping illistration" />
 						</div>
 					</div>
 					<div className="flex flex-col mt-10 md:flex-row md:mt-8 md:space-x-8">

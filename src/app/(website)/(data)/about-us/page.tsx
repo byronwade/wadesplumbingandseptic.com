@@ -125,27 +125,27 @@ const team = [
 	{
 		name: "Byron Wade",
 		role: "Owner / CEO",
-		imageUrl: "/team/byron.jpg",
+		imageUrl: "/team/byron.webp",
 	},
 	{
 		name: "Dave Clark",
 		role: "Co-Owner / CFO",
-		imageUrl: "/team/byron.jpg",
+		imageUrl: "/team/byron.webp",
 	},
 	{
 		name: "Hayley Woods",
 		role: "Office Admin",
-		imageUrl: "/team/byron.jpg",
+		imageUrl: "/team/byron.webp",
 	},
 	{
 		name: "Lizzy Clark",
 		role: "CSR",
-		imageUrl: "/team/byron.jpg",
+		imageUrl: "/team/byron.webp",
 	},
 	{
 		name: "Corey Mcclemans",
 		role: "Project Manager / Sales",
-		imageUrl: "/team/byron.jpg",
+		imageUrl: "/team/byron.webp",
 	},
 ];
 
@@ -168,27 +168,27 @@ export default function Example() {
 								<div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
 									<div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
 										<div className="relative">
-											<Image src="/teamGeneric1.png" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+											<Image src="/teamGeneric1.webp" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 											<div className="pointer-events-none absolute inset-0 rounded" />
 										</div>
 									</div>
 									<div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
 										<div className="relative">
-											<Image src="/teamGeneric2.png" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+											<Image src="/teamGeneric2.webp" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 											<div className="pointer-events-none absolute inset-0 rounded" />
 										</div>
 										<div className="relative">
-											<Image src="/walterwhite.png" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+											<Image src="/walterwhite.webp" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 											<div className="pointer-events-none absolute inset-0 rounded" />
 										</div>
 									</div>
 									<div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
 										<div className="relative">
-											<Image src="/plumbers_talking.png" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+											<Image src="/plumbers_talking.webp" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 											<div className="pointer-events-none absolute inset-0 rounded" />
 										</div>
 										<div className="relative">
-											<Image src="/customerservice.png" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
+											<Image src="/customerservice.webp" width={1000} height={1000} alt="Generic plumbing image" className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 											<div className="pointer-events-none absolute inset-0 rounded" />
 										</div>
 									</div>
@@ -226,7 +226,7 @@ export default function Example() {
 
 				{/* Image section */}
 				<div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-					<Image src="/team.jpg" alt="Wades Plumbing & Septic team photo" width={1216} height={486} className="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
+					<Image src="/team.webp" alt="Wades Plumbing & Septic team photo" width={1216} height={486} className="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 				</div>
 
 				{/* Values section */}

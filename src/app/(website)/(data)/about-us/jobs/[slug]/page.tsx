@@ -76,7 +76,7 @@ export default async function Job({ params }) {
 			"@type": "Organization",
 			name: "Wade's Plumbing & Septic",
 			sameAs: "https://www.wadesplumbingandseptic.com",
-			logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.png&w=96&q=75",
+			logo: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
 		},
 		jobLocation: {
 			"@type": "Place",

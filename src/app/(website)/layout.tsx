@@ -4,12 +4,16 @@ import "./globals.css";
 import getMenu from "./getMenu";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
 
 export default async function RootLayout({ children, props }: { children: React.ReactNode; props?: any }) {
 	const data = await getMenu();
 	console.log(data);
 	return (
 		<html lang="en">
+			<Head>
+				<meta name="theme-color" content="#bc6f30" />
+			</Head>
 			<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
 			<Script id="google-analytics" strategy="afterInteractive">
 				{`

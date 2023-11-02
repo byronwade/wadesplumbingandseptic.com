@@ -8,7 +8,7 @@ export const Step = () => {
 	return (
 		<section className="bg-black relative overflow-hidden">
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
-				<Image className="hidden md:block absolute bottom-0 left-10" src="/luigi.png" height={100} width={100} alt="Mario Plumber" />
+				<Image className="hidden md:block absolute bottom-0 left-10" src="/luigi.webp" height={100} width={100} alt="Mario Plumber" />
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Our Process</h2>
 					<p className="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-black">How do we handle our customers?</p>
@@ -116,7 +116,7 @@ export const Step = () => {
 							</div>
 						</div>
 						<div className="relative">
-							<Image className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full" width={1000} height={100} src="/customerservice.png" alt="customer service" />
+							<Image className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full" width={1000} height={100} src="/customerservice.webp" alt="customer service" />
 						</div>
 					</div>
 

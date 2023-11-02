@@ -6,13 +6,13 @@ import { Parallax } from "react-parallax";
 export default function HeroSection() {
 	return (
 		<Parallax
-			bgImage="/mountins.jpg" // Replace with your image path
+			bgImage="/mountins.webp" // Replace with your image path
 			strength={500} // Adjust the parallax effect strength as needed
 			className="h-auto" // Adjust the container height as needed
 		>
 			<div className="z-20 absolute inset-0 bg-black opacity-60"></div>
 			<section className="z-30 relative overflow-hidden">
-				<Image className="hidden md:block absolute bottom-0 right-10 w-auto h-auto" src="/mario.png" height={100} width={100} alt="Mario Plumber" />
+				<Image className="hidden md:block absolute bottom-0 right-10 w-auto h-auto" src="/mario.webp" height={100} width={100} alt="Mario Plumber" />
 				<div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-12 xl:gap-0 lg:py-44 lg:grid-cols-12">
 					<div className="z-10 place-self-center mr-auto mb-10 lg:col-span-7 xl:col-span-8 xl:mb-0 p-4 m:p-6 lg:p-8">
 						<p className="text-sm md:text-lg font-semibold leading-8 tracking-tight inline-flex items-center rounded bg-brand-100 px-2.5 py-0.5 text-brand-800">Local Built Company</p>

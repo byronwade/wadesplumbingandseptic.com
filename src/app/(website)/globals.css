@@ -36,7 +36,7 @@
   }
 
   .parallax-container {
-    background-image: url('/redwoods.jpg');
+    background-image: url('/redwoods.webp');
     background-size: cover; /* Ensure the image covers the container */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-position: center center; /* Center the image horizontally and vertically */
