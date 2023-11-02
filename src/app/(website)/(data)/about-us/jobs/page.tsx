@@ -119,7 +119,7 @@ export default async function Jobs() {
 												<span className="text-brand-800 text-sm">Engineering</span>
 												<h3 className="font-bold mt-px">{job.title}</h3>
 												<div className="flex items-center gap-3 mt-2">
-													<span className="bg-brand-100 text-brand-700 rounded-full px-3 py-1 text-sm">{job.shift_and_schedule}</span>
+													<span className="bg-brand-100 text-black rounded-full px-3 py-1 text-sm">{job.shift_and_schedule}</span>
 													<span className="text-slate-600 text-sm flex gap-1 items-center">
 														<MapPinIcon className="h-4 w-4" />
 														{job.location}

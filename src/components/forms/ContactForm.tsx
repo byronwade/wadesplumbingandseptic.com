@@ -36,7 +36,7 @@ export default function ContactForm() {
 						Phone
 					</label>
 					<div className="mt-2.5">
-						<input autoComplete="phone" placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
+						<input autoComplete="tel" placeholder="831-225-4344" required id="phone" name="phone" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" />
 					</div>
 					<ValidationError prefix="Phone" field="phone" errors={state.errors} />
 				</div>
@@ -78,14 +78,14 @@ export default function ContactForm() {
 					}}
 					disabled={state.submitting}
 					type="submit"
-					className="block w-full rounded bg-brand-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+					className="block w-full rounded bg-brand-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
 				>
 					Get a Quote
 				</button>
 			</div>
 			<p className="mt-4 text-sm leading-6 text-gray-700">
 				By submitting this form, I agree to the{" "}
-				<Link href="/about-us/privacy-policy" className="font-medium text-brand-600 dark:text-brand-500 hover:underline">
+				<Link href="/about-us/privacy-policy" className="font-medium text-brand-700 dark:text-brand-500 hover:underline">
 					privacy policy
 				</Link>
 				.

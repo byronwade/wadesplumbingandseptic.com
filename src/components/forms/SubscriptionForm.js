@@ -60,14 +60,14 @@ export default function SubscriptionForm() {
 					}}
 					disabled={succeeded}
 					type="submit"
-					className="h-[50px] grow max-w-[10rem] py-3 px-5 w-full text-sm font-medium text-center text-white border cursor-pointer bg-brand border-brand-600 rounded-r hover:bg-brand-600 focus:ring-1 focus:ring-brand-300 dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800"
+					className="h-[50px] grow max-w-[10rem] py-3 px-5 w-full text-sm font-medium text-center text-black border cursor-pointer bg-brand border-brand-600 rounded-r hover:bg-brand-600 focus:ring-1 focus:ring-brand-300 dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800"
 				>
 					Subscribe
 				</button>
 			</div>
-			<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
+			<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-800 newsletter-form-footer dark:text-gray-300">
 				We care about the protection of your data.{" "}
-				<Link href="/about-us/privacy-policy" className="font-medium text-brand-600 dark:text-brand-500 hover:underline">
+				<Link href="/about-us/privacy-policy" className="font-medium text-brand-700 dark:text-brand-500 hover:underline">
 					Read our Privacy Policy
 				</Link>
 				.

@@ -104,11 +104,11 @@ export default function Example() {
 				<ol>
 					<li>
 						Contact our support team and we can send an application directly to your email shoot us a call at{" "}
-						<a href="tel:8314306011" className="text-brand hover:underline">
+						<a href="tel:8314306011" className="text-brand-800 hover:underline">
 							(831) 225-4344
 						</a>{" "}
 						or{" "}
-						<a href="mailto:support@wadesinc.io" className="text-brand hover:underline">
+						<a href="mailto:support@wadesinc.io" className="text-brand-800 hover:underline">
 							support@wadesinc.io
 						</a>
 						.
@@ -131,11 +131,11 @@ export default function Example() {
 				<p>At Wade&#39;s Plumbing & Septic, our goal is to provide you with the best possible plumbing solutions and support you every step of the way. If you have any questions about financing your project with WiseStack or need assistance with the application process, please don&#39;t hesitate to reach out to our team. We&#39;re here to help make your plumbing upgrades a reality.</p>
 				<p>
 					Financing today at{" "}
-					<a href="tel:8314306011" className="text-brand hover:underline">
+					<a href="tel:8314306011" className="text-brand-800 hover:underline">
 						(831) 225-4344
 					</a>{" "}
 					or{" "}
-					<a href="mailto:support@wadesinc.io" className="text-brand hover:underline">
+					<a href="mailto:support@wadesinc.io" className="text-brand-800 hover:underline">
 						support@wadesinc.io
 					</a>
 					, or see the rest of our website for more information on how we can assist you with your plumbing needs.

@@ -118,7 +118,7 @@ export default function Warranties() {
 					<strong>Parts Warranty:</strong> We use only high-quality parts and materials in our work, and we stand behind them. We offer a 1 year warranty on all parts and materials we supply. If any of the parts or materials we installed fail within this warranty period, we will replace them at no cost to you. However, this warranty does not cover any parts or materials supplied by the customer or any damages caused by customer-supplied materials.
 				</li>
 			</ul>
-			<h3>Plumbing Warranties:</h3>
+			<h2>Plumbing Warranties:</h2>
 			<ul>
 				<li>Home Water Line Replacement - 15 years</li>
 				<li>Underground Water and Gas Line Replacement - 10 years</li>
@@ -128,7 +128,7 @@ export default function Warranties() {
 				<li>Drain Clogs - 30 days</li>
 			</ul>
 			<p>We guarantee our workmanship on all plumbing projects covered by the warranties above. If any issues arise within the warranty period, we will repair the issue free of charge. Please note that warranties do not cover damages caused by normal wear and tear, misuse, neglect, or acts of God.</p>
-			<h3>Generator Warranties:</h3>
+			<h2>Generator Warranties:</h2>
 			<p>We offer warranty registration services for the following brands of generators:</p>
 			<ul>
 				<li>Generac</li>

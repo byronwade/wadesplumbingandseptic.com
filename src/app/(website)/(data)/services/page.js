@@ -61,11 +61,11 @@ export default async function Page({ searchParams }) {
 				<div className="py-16 px-6 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">
 						<div className="flex flex-col space-y-6 justify-center items-start">
-							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">{serviceMsg}</h2>
+							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-500">{serviceMsg}</h2>
 							<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Search for any service</p>
-							<p className="max-w-2xl text-lg leading-6 text-gray-600">
+							<p className="max-w-2xl text-lg leading-6 text-gray-700">
 								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by
-								<Link href="/contact-us" className="font-semibold text-brand-600 hover:text-brand-500">
+								<Link href="/contact-us" className="font-semibold text-brand-700 hover:text-brand-500">
 									{` sending us an email `}
 								</Link>
 								and we’ll get back to you as soon as we can.

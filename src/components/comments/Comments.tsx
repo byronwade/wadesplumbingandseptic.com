@@ -51,7 +51,7 @@ export default function Comments() {
 							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.webp" alt="Michael Gough" />
 							Michael Gough
 						</p>
-						<p className="text-sm text-gray-600 dark:text-gray-400">
+						<p className="text-sm text-gray-700 dark:text-gray-400">
 							<time dateTime="2022-02-08" title="February 8th, 2022">
 								Feb. 8, 2022
 							</time>
@@ -107,7 +107,7 @@ export default function Comments() {
 							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.webp" alt="Jese Leos" />
 							Jese Leos
 						</p>
-						<p className="text-sm text-gray-600 dark:text-gray-400">
+						<p className="text-sm text-gray-700 dark:text-gray-400">
 							<time dateTime="2022-02-12" title="February 12th, 2022">
 								Feb. 12, 2022
 							</time>
@@ -163,7 +163,7 @@ export default function Comments() {
 							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.webp" alt="Bonnie Green" />
 							Bonnie Green
 						</p>
-						<p className="text-sm text-gray-600 dark:text-gray-400">
+						<p className="text-sm text-gray-700 dark:text-gray-400">
 							<time dateTime="2022-03-12" title="March 12th, 2022">
 								Mar. 12, 2022
 							</time>
@@ -219,7 +219,7 @@ export default function Comments() {
 							<img className="mr-2 w-6 h-6 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-4.webp" alt="Helene Engels" />
 							Helene Engels
 						</p>
-						<p className="text-sm text-gray-600 dark:text-gray-400">
+						<p className="text-sm text-gray-700 dark:text-gray-400">
 							<time dateTime="2022-06-23" title="June 23rd, 2022">
 								Jun. 23, 2022
 							</time>

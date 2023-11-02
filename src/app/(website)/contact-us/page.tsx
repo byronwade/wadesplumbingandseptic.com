@@ -96,12 +96,12 @@ export default function ContactPage() {
 				<div className="w-full md:w-1/2 mx-auto">
 					<div className="py-16 px-6 sm:py-24 lg:px-8">
 						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
-						<p className="mt-2 text-lg leading-8 text-gray-600">We help homeowners and businesses fix thier problems.</p>
+						<p className="mt-2 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
 						<div className="mt-16 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
 							<div className="hidden md:block">
 								<h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Points of contact</h3>
 								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade&#39;s Plumbing & Septic</h4>
-								<address className="text-sm font-normal text-gray-500 non-italic">
+								<address className="text-sm font-normal text-gray-00 non-italic">
 									7737 hwy 9
 									<br />
 									Ben Lomond, CA, 95005
@@ -109,19 +109,19 @@ export default function ContactPage() {
 								<div className="mt-4 space-y-4">
 									<div>
 										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Information &amp; Sales</h4>
-										<p className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-500">
+										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
 											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 										</p>
 									</div>
 									<div>
 										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Support</h4>
-										<p className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-500">
+										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
 											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 										</p>
 									</div>
 									<div>
 										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Verification of Employment</h4>
-										<p className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-500">
+										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
 											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 										</p>
 									</div>

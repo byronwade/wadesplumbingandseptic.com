@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Header({ data: menu }) {
 	return (
-		<>
+		<header>
 			<Disclosure as="nav" className="bg-black text-white sticky top-0 z-50">
 				{({ open, close }) => (
 					<>
@@ -34,6 +34,6 @@ export default function Header({ data: menu }) {
 					</>
 				)}
 			</Disclosure>
-		</>
+		</header>
 	);
 }

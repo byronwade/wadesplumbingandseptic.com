@@ -81,7 +81,7 @@ export default async function Discounts() {
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
-				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Discounts</h2>
+				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-700">Discounts</h2>
 				<p className="mb-6 text-4xl tracking-tight font-extrabold text-black dark:text-white">Promotions for our company</p>
 				<div className="flex flex-col overflow-hidden">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-x-8">
@@ -102,11 +102,11 @@ export default async function Discounts() {
 										</div>
 										<div>
 											Contact us today at{" "}
-											<a href="tel:8314306011" className="text-brand hover:underline">
+											<a href="tel:8314306011" className="text-brand-800 hover:underline">
 												(831) 225-4344
 											</a>{" "}
 											or{" "}
-											<a href="mailto:support@wadesinc.io" className="text-brand hover:underline">
+											<a href="mailto:support@wadesinc.io" className="text-brand-800 hover:underline">
 												support@wadesinc.io
 											</a>
 											<p className="mt-2 text-red font-bold">{promotion.expiration === null ? "This item does not expire" : differenceInDays <= 7 ? `Expiring soon on: ${promotion.expiration}` : `Expires: ${promotion.expiration}`}</p>

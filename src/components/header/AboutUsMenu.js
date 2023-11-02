@@ -63,14 +63,14 @@ export function AboutUsMenu() {
 									className="group relative -mx-3 flex gap-6 rounded p-3 text-sm leading-6 hover:bg-black-600 sm:flex-col sm:p-6"
 								>
 									<div className="flex h-11 w-11 flex-none items-center justify-center rounded bg-black-400 group-hover:bg-white">
-										<item.icon className="h-6 w-6 text-gray-600 group-hover:text-brand-600" aria-hidden="true" />
+										<item.icon className="h-6 w-6 text-gray-700 group-hover:text-brand-600" aria-hidden="true" />
 									</div>
 									<div>
 										<div className="font-semibold text-gray-900">
 											{item.name}
 											<span className="absolute inset-0" />
 										</div>
-										<p className="mt-1 text-gray-600">{item.description}</p>
+										<p className="mt-1 text-gray-700">{item.description}</p>
 									</div>
 								</Link>
 							))}

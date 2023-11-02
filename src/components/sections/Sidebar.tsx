@@ -25,7 +25,7 @@ export default function Sidebar({ data, pathname }) {
 							<div>
 								<h5 className="mb-2 text-lg font-bold leading-tight dark:text-white text-gray-900">{post.title}</h5>
 								<div className="mb-2 font-light text-gray-500 dark:text-gray-400" dangerouslySetInnerHTML={{ __html: truncateString(post.excerpt, 40) }} />
-								<span className="inline-flex items-center font-medium underline underline-offset-4 text-brand-600 dark:text-brand-500 hover:no-underline">Read in {post.readingtime} minutes</span>
+								<span className="inline-flex items-center font-medium underline underline-offset-4 text-brand-800 dark:text-brand-500 hover:no-underline">Read in {post.readingtime} minutes</span>
 							</div>
 						</Link>
 					))}

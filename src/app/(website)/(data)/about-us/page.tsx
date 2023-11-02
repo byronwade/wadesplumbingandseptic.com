@@ -160,7 +160,7 @@ export default function Example() {
 							<div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
 								<div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
 									<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Our team is offering a new customer service.</h1>
-									<p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+									<p className="relative mt-6 text-lg leading-8 text-gray-700 sm:max-w-md lg:max-w-none">
 										At our plumbing and septic business, we are proud to offer exceptional customer service. We believe in going above and beyond to meet the needs of our valued clients. Our team is dedicated to providing you with the highest quality service, and we work tirelessly to ensure that you are completely satisfied with our work. We understand that plumbing and septic issues can be stressful, which is why we strive to make the process as easy and stress-free as
 										possible. Whether you need routine maintenance or emergency repairs, you can count on us to be there when you need us.
 									</p>
@@ -204,7 +204,7 @@ export default function Example() {
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our mission</h2>
 						<div className="mt-6 flex flex-col gap-y-20 gap-x-8 lg:flex-row">
 							<div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-								<p className="text-xl leading-8 text-gray-600">At Wade&#39;s Plumbing & Septic, our mission is to provide exceptional, reliable, and affordable plumbing and septic services to our local community. We are committed to delivering the highest level of customer service, emphasizing professionalism, integrity, and personalized solutions for every client.</p>
+								<p className="text-xl leading-8 text-gray-700">At Wade&#39;s Plumbing & Septic, our mission is to provide exceptional, reliable, and affordable plumbing and septic services to our local community. We are committed to delivering the highest level of customer service, emphasizing professionalism, integrity, and personalized solutions for every client.</p>
 								<div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
 									<p>As a proud local company, we strive to build lasting relationships with our customers and contribute positively to the well-being and sustainability of our community. By continuously enhancing our skills, utilizing the latest technologies, and prioritizing safety, we aim to exceed customer expectations and set new standards for excellence in the plumbing and septic industry.</p>
 									<p className="mt-10">Our dedicated team at Wade&#39;s Plumbing & Septic is passionate about serving you and ensuring that your plumbing and septic systems remain in optimal condition, so you can enjoy the comfort and convenience of your home or business with confidence and peace of mind.</p>
@@ -214,7 +214,7 @@ export default function Example() {
 								<dl className="w-64 space-y-8 xl:w-80">
 									{stats.map((stat, index) => (
 										<div key={index} className="flex flex-col-reverse gap-y-4">
-											<dt className="text-base leading-7 text-gray-600">{stat.label}</dt>
+											<dt className="text-base leading-7 text-gray-700">{stat.label}</dt>
 											<dd className="text-5xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
 										</div>
 									))}
@@ -233,13 +233,13 @@ export default function Example() {
 				<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:mx-0">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our values</h2>
-						<p className="mt-6 text-lg leading-8 text-gray-600">We are driven by a strong commitment to our core values, which shape our approach to delivering exceptional plumbing and septic services.</p>
+						<p className="mt-6 text-lg leading-8 text-gray-700">We are driven by a strong commitment to our core values, which shape our approach to delivering exceptional plumbing and septic services.</p>
 					</div>
 					<dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 						{values.map((value, index) => (
 							<div key={index}>
 								<dt className="font-semibold text-gray-900">{value.name}</dt>
-								<dd className="mt-1 text-gray-600">{value.description}</dd>
+								<dd className="mt-1 text-gray-700">{value.description}</dd>
 							</div>
 						))}
 					</dl>
@@ -249,7 +249,7 @@ export default function Example() {
 				<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:mx-0">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
-						<p className="mt-6 text-xl leading-8 text-gray-600">
+						<p className="mt-6 text-xl leading-8 text-gray-700">
 							At Wade&#39;s Plumbing & Septic, our greatest asset is our dedicated and skilled team of professionals. We take pride in the exceptional talent, experience, and passion that each of our team members brings to their work. Our team consists of licensed and certified plumbers, septic specialists, and support staff, all of whom share a common goal: to provide the highest level of customer service and plumbing solutions for our valued clients.
 						</p>
 						<div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
@@ -264,7 +264,7 @@ export default function Example() {
 							<li key={index}>
 								<Image src={person.imageUrl} width={96} height={96} alt="Photo of Byron Wade" className="mx-auto h-24 w-24 rounded-full" />
 								<h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-								<p className="text-sm leading-6 text-gray-600">{person.role}</p>
+								<p className="text-sm leading-6 text-gray-700">{person.role}</p>
 							</li>
 						))}
 					</ul>

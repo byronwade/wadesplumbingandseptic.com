@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CTA from "./CTA";
 
 const navigation = {
 	main: [
@@ -39,13 +38,12 @@ const navigation = {
 export default function Footer() {
 	return (
 		<>
-			<CTA />
 			<footer className="bg-black text-white">
 				<div className="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
 					<nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
 						{navigation.main.map((item) => (
 							<div key={item.name} className="pb-6">
-								<Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+								<Link href={item.href} className="text-sm leading-6 text-gray-400 hover:text-gray-900">
 									{item.name}
 								</Link>
 							</div>

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-black {
+  color: black!important;
+}
+
+.bg-black {
+  background-color: black!important;
+}
+
   .loader {
     border-top-color: #3498db;
     -webkit-animation: spinner 1.5s linear infinite;

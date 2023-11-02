@@ -10,7 +10,7 @@ export const Step = () => {
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
 				<Image className="hidden md:block absolute bottom-0 left-10" src="/luigi.webp" height={100} width={100} alt="Mario Plumber" />
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-600">Our Process</h2>
+					<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-500">Our Process</h2>
 					<p className="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-black">How do we handle our customers?</p>
 					<div className="mt-10 grid gap-6 row-gap-10 lg:grid-cols-2">
 						<div className="lg:py-6 lg:pr-16">

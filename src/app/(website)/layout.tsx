@@ -5,6 +5,7 @@ import getMenu from "./getMenu";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
+import CTA from "@/components/sections/CTA";
 
 export default async function RootLayout({ children, props }: { children: React.ReactNode; props?: any }) {
 	const data = await getMenu();
@@ -27,7 +28,10 @@ export default async function RootLayout({ children, props }: { children: React.
 			<Script data-project-id="XFjOtiZNrxOwMe6WThuLOII0N5rmeMw02hH3ufeR" src="https://snippet.meticulous.ai/v1/meticulous.js" />
 			<body className="bg-gray-50 text-base">
 				<Header data={data} />
-				{children}
+				<main>
+					{children}
+					<CTA />
+				</main>
 				<Footer />
 				{/* <Script id="ze-snippet" strategy="lazyOnload" src="https://static.zdassets.com/ekr/snippet.js?key=06e45130-bfd2-4b2b-8137-28903b96f527"></Script> */}
 

@@ -24,19 +24,19 @@ export default function SocialBar() {
 			<ToastContainer className="!top-32" />
 			<aside aria-label="Share social media">
 				<div className="space-x-1">
-					<FacebookShareButton url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
+					<FacebookShareButton aria-label="Facebook Share Button" url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
 						<RiFacebookCircleFill className="w-6 h-6 text-gray-500 dark:text-gray-400" />
 					</FacebookShareButton>
-					<TwitterShareButton url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
+					<TwitterShareButton aria-label="Twitter Share Button" url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
 						<RiTwitterFill className="w-6 h-6 text-gray-500 dark:text-gray-400" />
 					</TwitterShareButton>
-					<RedditShareButton url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
+					<RedditShareButton aria-label="Reddit Share Button" url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
 						<RiRedditFill className="w-6 h-6 text-gray-500 dark:text-gray-400" />
 					</RedditShareButton>
-					<LinkedinShareButton url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
+					<LinkedinShareButton aria-label="LinkedIn Share Button" url={url} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
 						<RiLinkedinBoxFill className="w-6 h-6 text-gray-500 dark:text-gray-400" />
 					</LinkedinShareButton>
-					<button onClick={handleCopyLink} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
+					<button aria-label="Copy Link to post button" onClick={handleCopyLink} className="!inline-flex !items-center !p-2 !text-sm !font-medium !text-center !text-gray-500 !bg-white !rounded hover:!bg-gray-100 focus:!ring-4 focus:!outline-none" type="button">
 						<HiLink className="w-6 h-6 text-gray-500 dark:text-gray-400" />
 					</button>
 				</div>
