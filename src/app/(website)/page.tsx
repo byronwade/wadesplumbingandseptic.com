@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
+	robots: "index, follow",
+	viewport: "width=device-width, initial-scale=1.0",
+	themeColor: "#bc6f30",
 	alternates: {},
 	formatDetection: {
 		email: false,

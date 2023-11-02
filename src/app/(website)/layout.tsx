@@ -4,7 +4,6 @@ import "./globals.css";
 import getMenu from "./getMenu";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 import CTA from "@/components/sections/CTA";
 
 export default async function RootLayout({ children, props }: { children: React.ReactNode; props?: any }) {
@@ -12,9 +11,6 @@ export default async function RootLayout({ children, props }: { children: React.
 	console.log(data);
 	return (
 		<html lang="en">
-			<Head>
-				<meta name="theme-color" content="#bc6f30" />
-			</Head>
 			<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6TLN795BRR"></Script>
 			<Script id="google-analytics" strategy="afterInteractive">
 				{`

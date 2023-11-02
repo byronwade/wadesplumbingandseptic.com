@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
     return {
 		name: "Wade's Plumbing and Septic",
-		short_name: "Wade's",
+		short_name: "Wade's Inc.",
 		description: "Expert plumbing and septic services in Santa Cruz, California. Fast, reliable, and tech-forward solutions.",
 		start_url: "/",
 		display: "standalone",
@@ -38,7 +38,7 @@ export default function manifest(): MetadataRoute.Manifest {
 				src: "assets/icons/icon-144x144.png",
 				sizes: "144x144",
 				type: "image/png",
-				purpose: "maskable",
+				purpose: "any",
 			},
 			{
 				src: "assets/icons/icon-152x152.png",
