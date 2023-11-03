@@ -2,18 +2,22 @@ import Image from "next/image";
 import Modal from "../ui/Modal";
 import { truncateString } from "../../helpers/truncate";
 import Link from "next/link";
+import ContactForm from "../forms/ContactForm";
 
 export default function Sidebar({ data, pathname }) {
 	return (
 		<aside className="hidden xl:block" aria-labelledby="sidebar-label">
-			<div className="xl:w-[336px] sticky top-6">
+			<div className="xl:w-[336px]">
 				<h3 id="sidebar-label" className="sr-only">
 					Sidebar
 				</h3>
-				<div className="mb-8">
+				{/* <div className="mb-8">
 					<h4 className="mb-2 text-sm font-bold text-gray-900 dark:text-white uppercase">Get updates every morning</h4>
 					<p className="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">Get all the stories you need-to-know from the most powerful name in plumbing news delivered first thing every morning to your inbox</p>
 					<Modal />
+				</div> */}
+				<div className="mb-8">
+					<ContactForm />
 				</div>
 				<div className="mb-12">
 					<h4 className="mb-4 text-sm font-bold text-gray-900 dark:text-white uppercase">Latest Tips</h4>

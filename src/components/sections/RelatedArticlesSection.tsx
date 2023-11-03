@@ -17,7 +17,7 @@ export default function RelatedArticlesSection({ data, pathname }) {
 					{truncatedPosts?.map((post, index) => (
 						<Link key={index} href={`${pathname}/${post.slug}`}>
 							<article className="flex flex-col xl:flex-row">
-								<div className="h-40 w-40 mr-5 mb-2 xl:mb-0 relative">
+								<div className="h-40 mr-5 mb-2 xl:mb-0 relative w-full">
 									<Image sizes={post?.featuredImage?.sizes} fill src={post?.featuredImage?.sourceurl ? post.featuredImage.sourceurl : "/placeholder.webp"} alt={post?.featuredImage?.alttext ? post.featuredImage.alttext : "/placeholder.webp"} className="w-full object-cover object-center rounded" />
 								</div>
 								<div className="flex flex-col justify-center">
