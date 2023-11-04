@@ -1,5 +1,5 @@
 import ContactForm from "@/components/forms/ContactForm";
-import Image from "next/image";
+import MapBox from "@/components/sections/MapBox";
 import Script from "next/script";
 
 export const metadata = {
@@ -84,54 +84,61 @@ export default function ContactPage() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<section className="relative flex flex-row">
+			{/* <section className="relative flex flex-row">
 				<div className="hidden md:block w-full md:w-1/2 relative">
-					<Image placeholder="blur" blurDataURL="/placeholder.webp" className="object-cover h-full w-full brightness-80" src="/trees-river.webp" width={1500} height={1500} alt="Redwood trees" />
-					<div className="absolute bottom-10 right-10">
-						<p className="text-white backdrop-blur-sm bg-white/30 p-2 rounded">
-							Photo by a local resident <span className="underline">Luca Bravo</span>.
-						</p>
-					</div>
+					<MapBox />
 				</div>
 				<div className="w-full md:w-1/2 mx-auto">
 					<div className="py-16 px-6 sm:py-24 lg:px-8">
 						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
-						<p className="mt-2 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
-						<div className="mt-16 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
-							<div className="hidden md:block">
-								<h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Points of contact</h3>
-								<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Wade&#39;s Plumbing & Septic</h4>
-								<address className="text-sm font-normal text-gray-00 non-italic">
-									7737 hwy 9
-									<br />
-									Ben Lomond, CA, 95005
-								</address>
-								<div className="mt-4 space-y-4">
-									<div>
-										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Information &amp; Sales</h4>
-										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
-											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
-										</p>
-									</div>
-									<div>
-										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Support</h4>
-										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
-											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
-										</p>
-									</div>
-									<div>
-										<h4 className="mb-1 font-medium text-gray-900 dark:text-white">Verification of Employment</h4>
-										<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
-											<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
-										</p>
-									</div>
-								</div>
-							</div>
+						<p className="mt-1 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
+						<div className="mt-10 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
 							<ContactForm />
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
+			<div className="grid lg:grid-cols-6 items-center max-lg:justify-center h-full max-sm:px-4 bg-black">
+				<div className="col-span-3 my-16 mx-auto flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
+					<div className="p-10 bg-white rounded-md">
+						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
+						<p className="mt-1 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
+						<ContactForm />
+					</div>
+					<div className="hidden md:block">
+						<h3 className="mb-4 text-lg font-semibold text-gray-900 text-white">Points of contact</h3>
+						<h4 className="mb-1 font-medium text-gray-900 text-white">Wade&#39;s Plumbing & Septic</h4>
+						<address className="text-sm font-normal text-white non-italic">
+							7737 hwy 9
+							<br />
+							Ben Lomond, CA, 95005
+						</address>
+						<div className="mt-4 space-y-4">
+							<div>
+								<h4 className="mb-1 font-medium text-gray-900 text-white">Information &amp; Sales</h4>
+								<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
+									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
+								</p>
+							</div>
+							<div>
+								<h4 className="mb-1 font-medium text-gray-900 text-white">Support</h4>
+								<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
+									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
+								</p>
+							</div>
+							<div>
+								<h4 className="mb-1 font-medium text-gray-900 text-white">Verification of Employment</h4>
+								<p className="text-sm font-medium text-brand-800 hover:underline dark:text-brand-500">
+									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="overflow-hidden relative lg:col-span-3 h-full w-full">
+					<MapBox />
+				</div>
+			</div>
 		</>
 	);
 }

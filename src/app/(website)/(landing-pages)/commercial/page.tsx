@@ -667,7 +667,7 @@ export default function Example() {
 						</div>
 						<h2 className="mt-8 font-semibold text-sky-500">Component-driven</h2>
 						<p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">Worried about duplication? Don’t&nbsp;be.</p>
-						<p className="mt-4 max-w-3xl space-y-6 ">If you're repeating the same utilities over and over and over again, all you have to do is extract them into a component or template partial and boom — you've got a single source of truth so you can make changes in one place.</p>
+						<p className="mt-4 max-w-3xl space-y-6 ">If you&apos;re repeating the same utilities over and over and over again, all you have to do is extract them into a component or template partial and boom — you&apos;ve got a single source of truth so you can make changes in one place.</p>
 						<a className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-sky-50 text-sky-600 hover:bg-sky-100 hover:text-sky-700 focus:ring-sky-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8" href="/docs/reusing-styles">
 							Learn more<span className="sr-only">, reusing styles</span>
 							<svg className="overflow-visible ml-3 text-sky-300 group-hover:text-sky-400 dark:text-slate-500 dark:group-hover:text-slate-400" width={3} height={6} viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -1260,7 +1260,7 @@ export default function Example() {
 																	<path d="m5.207 16.203 5.072-10.137c.711-1.422 2.736-1.421 3.447 0l5.067 10.137c.642 1.285-.29 2.797-1.723 2.797H6.93c-1.434 0-2.366-1.513-1.723-2.797ZM12 10v2" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
 																	<path d="M12.5 16a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" stroke="currentColor" />
 																</svg>
-																<p className="truncate ml-1">'flex' applies the same CSS property as 'block'.</p>
+																<p className="truncate ml-1">&apos;flex&apos; applies the same CSS property as &apos;block&apos;.</p>
 																<p className="hidden sm:block flex-none text-slate-500">&nbsp;{/* */}cssConflict [1, 20]</p>
 															</li>
 															<li className="flex min-w-0">
@@ -1268,7 +1268,7 @@ export default function Example() {
 																	<path d="m5.207 16.203 5.072-10.137c.711-1.422 2.736-1.421 3.447 0l5.067 10.137c.642 1.285-.29 2.797-1.723 2.797H6.93c-1.434 0-2.366-1.513-1.723-2.797ZM12 10v2" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
 																	<path d="M12.5 16a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" stroke="currentColor" />
 																</svg>
-																<p className="truncate ml-1">'block' applies the same CSS property as 'flex'.</p>
+																<p className="truncate ml-1">&apos;block&apos; applies the same CSS property as &apos;flex&apos;.</p>
 																<p className="hidden sm:block flex-none text-slate-500">&nbsp;{/* */}cssConflict [1, 54]</p>
 															</li>
 														</ul>
