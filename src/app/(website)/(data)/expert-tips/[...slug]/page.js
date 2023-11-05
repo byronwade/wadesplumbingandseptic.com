@@ -67,6 +67,8 @@ export default async function BlogPage({ params }) {
 	const slug = params.slug;
 	const { allPosts, postDetails, relatedPosts, jsonLd } = await fetchData({ slug });
 
+	console.log(postDetails);
+
 	const dateObj = postDetails ? new Date(postDetails.created_at) : new Date();
 	const formattedDate = dateObj.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 	const formattedTime = dateObj.toLocaleTimeString([], { hour: "numeric", minute: "numeric", hour12: true });
@@ -77,8 +79,8 @@ export default async function BlogPage({ params }) {
 			<div className="bg-white dark:bg-gray-900">
 				<div className="relative">
 					<section className="w-full h-[460px] xl:h-[537px] relative">
-						<Image sizes={postDetails?.featuredimage?.sizes} priority className="w-full object-cover object-center" fill src={postDetails?.featuredImage?.sourceurl ? postDetails.featuredImage.sourceurl : "/placeholder.webp"} alt={postDetails?.featuredImage?.alttext ? postDetails.featuredImage.alttext : "placeholder image"} />
-						<div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50" />
+						<Image sizes={postDetails?.featuredImage?.sizes} priority className="w-full object-cover object-center" fill src={postDetails?.featuredImage?.sourceurl ? postDetails.featuredImage.sourceurl : "/placeholder.webp"} alt={postDetails?.featuredImage?.alttext ? postDetails.featuredImage.alttext : "placeholder image"} />
+						<div className="absolute top-0 left-0 w-full h-full bg-black/80" />
 						<div className="absolute top-20 left-1/2 px-4 mx-auto w-full max-w-screen-xl -translate-x-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">
 							<span className="block mb-4 text-gray-500">
 								Published in{" "}
