@@ -54,7 +54,6 @@ export const metadata = {
 
 export default async function Discounts() {
 	const { promotions } = await fetchData();
-	console.log(promotions);
 
 	const jsonLd = {
 		"@context": "https://schema.org",

@@ -2,6 +2,8 @@ import ContactForm from "@/components/forms/ContactForm";
 import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
+import { ArrowLongRightIcon, CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
@@ -83,105 +85,240 @@ const jsonLd = {
 	},
 	openingHours: "Mo-Su 00:00-23:59",
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
+	faqPage: {
+		"@type": "FAQPage",
+		mainEntity: [
+			{
+				"@type": "Question",
+				name: "Why choose Wade's Plumbing & Septic for drain clearing in Santa Cruz?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Wade's Plumbing & Septic offers professional and efficient drain clearing services in Santa Cruz, utilizing advanced technology and eco-friendly methods to ensure your plumbing system is free of clogs and functioning optimally.",
+				},
+			},
+			{
+				"@type": "Question",
+				name: "What drain clearing services do you offer in Santa Cruz?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Our comprehensive drain clearing services include residential and commercial drain cleaning, hydro jetting, sewer drain cleaning, and emergency drain clearing, available 24/7 in Santa Cruz.",
+				},
+			},
+			{
+				"@type": "Question",
+				name: "How can I prevent clogged drains in my Santa Cruz home?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Regular drain maintenance and inspections can prevent clogs. Wade's Plumbing & Septic provides expert drain maintenance services, including eco-friendly solutions and advanced drain cleaning technology in Santa Cruz.",
+				},
+			},
+			{
+				"@type": "Question",
+				name: "Do you offer eco-friendly drain clearing services in Santa Cruz?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Yes, we are committed to protecting the environment with our eco-friendly drain clearing methods. Our services are designed to effectively clear your drains while preserving the integrity of your plumbing and the Santa Cruz ecosystem.",
+				},
+			},
+			{
+				"@type": "Question",
+				name: "What makes Wade's Plumbing & Septic a reliable choice for drain clearing?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Our team of skilled technicians are experts in sewer line cleaning and drain clearing, offering quick, reliable, and affordable services in Santa Cruz. We're equipped to handle any drain issue with the utmost professionalism.",
+				},
+			},
+			{
+				"@type": "Question",
+				name: "How quickly can you respond to a drain emergency in Santa Cruz?",
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: "Wade's Plumbing & Septic provides 24/7 emergency drain clearing assistance in Santa Cruz. We pride ourselves on our quick response times and our ability to resolve most drain issues promptly and effectively.",
+				},
+			},
+			// ... Add more questions and answers if needed
+		],
+	},
 };
+
+const faqs = [
+	{
+		id: 1,
+		question: "Why choose Wade's Plumbing & Septic for drain clearing in Santa Cruz?",
+		answer: "Wade's Plumbing & Septic offers professional and efficient drain clearing services in Santa Cruz, utilizing advanced technology and eco-friendly methods to ensure your plumbing system is free of clogs and functioning optimally.",
+	},
+	{
+		id: 2,
+		question: "What drain clearing services do you offer in Santa Cruz?",
+		answer: "Our comprehensive drain clearing services include residential and commercial drain cleaning, hydro jetting, sewer drain cleaning, and emergency drain clearing, available 24/7 in Santa Cruz.",
+	},
+	{
+		id: 3,
+		question: "How can I prevent clogged drains in my Santa Cruz home?",
+		answer: "Regular drain maintenance and inspections can prevent clogs. Wade's Plumbing & Septic provides expert drain maintenance services, including eco-friendly solutions and advanced drain cleaning technology in Santa Cruz.",
+	},
+	{
+		id: 4,
+		question: "Do you offer eco-friendly drain clearing services in Santa Cruz?",
+		answer: "Yes, we are committed to protecting the environment with our eco-friendly drain clearing methods. Our services are designed to effectively clear your drains while preserving the integrity of your plumbing and the Santa Cruz ecosystem.",
+	},
+	{
+		id: 5,
+		question: "What makes Wade's Plumbing & Septic a reliable choice for drain clearing?",
+		answer: "Our team of skilled technicians are experts in sewer line cleaning and drain clearing, offering quick, reliable, and affordable services in Santa Cruz. We're equipped to handle any drain issue with the utmost professionalism.",
+	},
+	{
+		id: 6,
+		question: "How quickly can you respond to a drain emergency in Santa Cruz?",
+		answer: "Wade's Plumbing & Septic provides 24/7 emergency drain clearing assistance in Santa Cruz. We pride ourselves on our quick response times and our ability to resolve most drain issues promptly and effectively.",
+	},
+];
+
+const featuredPost = {
+	id: 1,
+	title: "We’re incredibly proud to announce we have secured $75m in Series B",
+	href: "#",
+	description: "Libero neque aenean tincidunt nec consequat tempor. Viverra odio id velit adipiscing id. Nisi vestibulum orci eget bibendum dictum. Velit viverra posuere vulputate volutpat nunc. Nunc netus sit faucibus.",
+	date: "Mar 16, 2020",
+	datetime: "2020-03-16",
+	author: {
+		name: "Michael Foster",
+		href: "#",
+		imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+	},
+};
+
+const benefits = ["Over two decades of drain clearing expertise", "Transparent pricing with no hidden fees", "24/7 emergency drain clearing services", "State-of-the-art hydro jetting services", "In-depth video camera inspection for accurate diagnosis", "Routine drain maintenance to prevent future clogs", "Fast response time for all service calls", "Highly trained and certified technicians"];
 
 export default function DrainClearing() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<section className="w-full bg-gray-50">
-				<div className="py-10 mx-auto max-w-7xl md:px-8">
-					<div className="flex flex-col w-full overflow-hidden bg-white md:flex-row md:rounded justify-between">
-						<div className="flex flex-col w-full p-10 mt-4 md:w-1/2 md:mt-0">
-							<h1 className="text-4xl font-bold leading-none md:text-5xl">Expert Drain Clearing Services in Santa Cruz</h1>
-							<p className="mt-4 text-lg font-light text-gray-800">Struggling with a clogged drain in Santa Cruz? Our team at Wade&apos;s Plumbing & Septic specializes in fast, efficient, and affordable drain clearing services. Utilizing advanced rooter technology and state-of-the-art drain clearing tools, we ensure your pipes are free from blockages. Whether it&apos;s a minor clog or an emergency situation, we offer 24/7 services to tackle all your drain clearing needs.</p>
+			<section className="w-full bg-white text-black">
+				<div className="py-20 mx-auto max-w-7xl md:px-8 space-y-20">
+					<div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+						<div className="flex flex-col col-span-2 lg:pb-6">
+							<div className="space-y-6">
+								<h1 className="text-4xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Drain Clearing Services</h1>
+								<p className="text-base leading-7 text-slate-700">Have a clogged drain? Our expert plumbers at Wade&apos;s Plumbing & Septic are ready to clear any blockages, ensuring a smooth flow. Say goodbye to persistent clogs and hello to hassle-free plumbing.</p>
+
+								<div className="flex gap-2 flex-wrap">
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Rooter Drains</span>
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Sewer Line Cleaning</span>
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Hydro Jetting</span>
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Video Camera Inspection</span>
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Video Camera Inspection</span>
+									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Routine Drain Maintenance</span>
+								</div>
+
+								<div className="flex gap-2 flex-wrap">
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#softblockages</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#emergency</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#leachfeilds</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#mainlines</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#kitchendrains</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#commercialdrains</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#retreival</span>
+									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#grease</span>
+								</div>
+							</div>
+							<div className="flex flex-col space-y-4 mt-10">
+								<Link href="tel:+1831-225-4344" className="text-5xl font-black text-brand-800">
+									(831)-225-4344
+								</Link>
+							</div>
 						</div>
-						<div className="w-full mt-7 md:w-2/5 md:mt-0">
-							<div className="p-6">
-								<ContactForm />
+						<div className="relative lg:col-span-2">
+							<ContactForm />
+						</div>
+					</div>
+
+					<div className="bg-white">
+						<div className="mx-auto max-w-7xl">
+							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently asked questions</h2>
+							<p className="mt-6 max-w-2xl text-base leading-7 text-gray-800">
+								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{" "}
+								<a href="/contact-us" className="font-semibold text-brand-800 hover:text-brand-500">
+									sending us an email
+								</a>{" "}
+								and we’ll get back to you as soon as we can.
+							</p>
+							<div className="mt-20">
+								<dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
+									{faqs.map((faq) => (
+										<div key={faq.id}>
+											<dt className="text-base font-semibold leading-7 text-gray-900">{faq.question}</dt>
+											<dd className="mt-2 text-base leading-7 text-gray-800">{faq.answer}</dd>
+										</div>
+									))}
+								</dl>
 							</div>
 						</div>
 					</div>
-					<div className="flex flex-col md:mt-8 mt-10 w-full overflow-hidden bg-white md:flex-row md:rounded">
-						<div className="flex flex-col w-full p-10 mt-4 md:w-1/2 md:mt-0">
-							<h2 className="mb-4 text-3xl font-medium leading-none">Why Choose Wade&apos;s Plumbing & Septic?</h2>
-							<ul className="text-md text-gray-800">
-								<li className="mb-2">Over two decades of drain clearing expertise</li>
-								<li className="mb-2">Transparent pricing with no hidden fees</li>
-								<li className="mb-2">24/7 emergency drain clearing services</li>
-								<li className="mb-2">State-of-the-art hydro jetting services</li>
-								<li className="mb-2">In-depth video camera inspection for accurate diagnosis</li>
-								<li className="mb-2">Routine drain maintenance to prevent future clogs</li>
-								<li className="mb-2">Free estimates for all drain clearing services</li>
-								<li className="mb-2">Fast response time for all service calls</li>
-								<li className="mb-2">Highly trained and certified technicians</li>
-								<li className="mb-2">Customized solutions for unique drain issues</li>
-								<li className="mb-2">Safe and effective cleaning agents</li>
-								<li className="mb-2">Excellent customer service and after-service support</li>
-							</ul>
 
-							<a href="#_" className="flex w-auto mx-auto mt-4 text-lg leading-tight text-brand-600 hover:underline">
-								<span className="">Learn More</span>
-								<svg className="w-3 h-3 mt-0.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-								</svg>
-							</a>
-						</div>
-						<div className="w-full mt-7 md:w-1/2 md:mt-0">
-							<Image className="w-full" src="https://mpop-prod-hls-primary.s3.amazonaws.com/inception-plumbing/img/1646338794-inception-plumbing-16122884_362294677473447_5125232728274370560_n_17870650150047728.webp" alt="Expert Drain Clearing Services" width={1000} height={1000} />
+					<div className="bg-brand-900 p-10 rounded-2xl">
+						<div className="relative isolate">
+							<div className="mx-auto max-w-7xl">
+								<div className="mx-auto flex max-w-2xl flex-col gap-16 lg:max-w-none lg:flex-row lg:items-center xl:gap-x-20">
+									<Image className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="/landing-pages/drain-clearing/drain-clearing.webp" alt="Expert Drain Clearing Services" width={1000} height={1000} />
+									<div className="w-full flex-auto">
+										<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Why Choose Wade&apos;s Plumbing & Septic?</h2>
+										<p className="mt-6 text-lg leading-8 text-white">With over two decades of experience, Wade&apos;s Plumbing & Septic offers unmatched drain clearing expertise in Santa Cruz. Our commitment to transparency, state-of-the-art solutions, and exceptional customer service ensures you receive the best care for your plumbing needs.</p>
+										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
+											{benefits.map((benefit) => (
+												<li key={benefit} className="flex gap-x-3">
+													<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+													{benefit}
+												</li>
+											))}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl" aria-hidden="true">
+								<div
+									className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#000] to-[#000] opacity-25"
+									style={{
+										clipPath: "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+									}}
+								/>
+							</div>
 						</div>
 					</div>
-					<div className="flex flex-col mt-10 p-10 bg-white md:flex-row md:rounded md:space-x-8">
-						<div className="flex flex-col w-full md:w-1/2">
-							<h3 className="text-3xl font-semibold leading-none md:text-4xl">Our Drain Clearing Services</h3>
-							<p className="mt-4 text-lg text-gray-800">We offer a wide range of drain clearing services, including:</p>
-							<ul className="mt-4 text-lg text-gray-800">
-								<li className="mb-2">- Rooter Drains</li>
-								<li className="mb-2">- Sewer Line Cleaning</li>
-								<li className="mb-2">- Hydro Jetting</li>
-								<li className="mb-2">- Video Camera Inspection</li>
-								<li className="mb-2">- Routine Drain Maintenance</li>
-							</ul>
-						</div>
-						<div className="flex flex-col w-full mt-10 md:w-1/2 md:mt-0">
-							<h3 className="text-3xl font-semibold leading-none md:text-4xl">Areas We Serve</h3>
-							<p className="mt-4 text-lg text-gray-800">Proudly serving Santa Cruz, Monterey County, and Santa Clara County.</p>
-						</div>
-					</div>
-					{/* Your HTML content here */}
-					<div className="flex flex-col mt-10 p-10 bg-white md:flex-row md:rounded md:space-x-8">
-						<div className="flex flex-col w-full md:w-1/2">
-							<h2 className="text-3xl font-semibold leading-none md:text-4xl">The Importance of Professional Drain Clearing</h2>
-							<p className="mt-4 text-lg text-gray-800">
-								A clogged drain is more than just a nuisance; it can lead to a series of plumbing issues that could potentially damage your property. Water backflow, pipe corrosion, and even flooding are some of the severe consequences of untreated clogged drains. That&apos;s why it&apos;s crucial to seek professional help as soon as you notice signs of a clogged drain. At Wade&apos;s Plumbing & Septic, we use the latest technology to diagnose and treat all types of drain clogs,
-								ensuring that your plumbing system is in optimal condition.
+
+					{/* Stats */}
+					<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+						<div className="mx-auto max-w-2xl lg:mx-0">
+							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Expert Drain Clearing Services in Santa Cruz</h2>
+							<p className="mt-6 text-base leading-7 text-gray-600">
+								Avoid costly water damage and maintain the health of your plumbing system with Wade&apos;s Plumbing & Septic&apos;s professional drain clearing services. Our team of experts offers the best drain clearing services in Santa Cruz, ensuring your drains are free from clogs and functioning efficiently. Whether you need residential drain cleaning or commercial drain clearing services, we provide affordable and quick solutions tailored to your needs.
 							</p>
 						</div>
-						<div className="flex flex-col w-full mt-10 md:w-1/2 md:mt-0">
-							<h2 className="text-3xl font-semibold leading-none md:text-4xl">Types of Clogs We Handle</h2>
-							<p className="mt-4 text-lg text-gray-800">We handle a variety of clogs, including:</p>
-							<ul className="mt-4 text-lg text-gray-800">
-								<li className="mb-2">- Hair and Soap Scum</li>
-								<li className="mb-2">- Food Particles</li>
-								<li className="mb-2">- Grease and Oil</li>
-								<li className="mb-2">- Tree Roots</li>
-								<li className="mb-2">- Foreign Objects</li>
-							</ul>
-						</div>
-					</div>
-					<div className="flex flex-col mt-10 p-10 bg-white md:flex-row md:rounded md:space-x-8">
-						<div className="flex flex-col w-full md:w-1/2">
-							<h2 className="text-3xl font-semibold leading-none md:text-4xl">Advanced Technology for Drain Clearing</h2>
-							<p className="mt-4 text-lg text-gray-800">We employ various advanced technologies for effective drain clearing:</p>
-							<ul className="mt-4 text-lg text-gray-800">
-								<li className="mb-2">- Hydro Jetting: A high-pressure hose with a specialized nozzle is used to blast water through the pipes, effectively clearing any clogs.</li>
-								<li className="mb-2">- Video Camera Inspection: A small camera is sent down the drain to identify the location and nature of the clog, allowing for targeted treatment.</li>
-								<li className="mb-2">- Electric Drain Cleaning: Also known as &quot;drain snaking,&quot; this method uses an electric cleaner to break down clogs physically.</li>
-							</ul>
-						</div>
-						<div className="flex flex-col w-full mt-10 md:w-1/2 md:mt-0">
-							<h2 className="text-3xl font-semibold leading-none md:text-4xl">Preventive Measures</h2>
-							<p className="mt-4 text-lg text-gray-800">Prevention is better than cure. We offer advice and services that help you prevent future clogs, such as regular maintenance and the use of advanced cleaning agents.</p>
+						<div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+							{/* Drain Clearing Efficiency Stats */}
+							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
+								<p className="flex-none text-3xl font-bold tracking-tight text-gray-900">90%</p>
+								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+									<p className="text-lg font-semibold tracking-tight text-gray-900">Reduction in Blockages</p>
+									<p className="mt-2 text-base leading-7 text-gray-600">Regular drain clearing has been shown to reduce the risk of blockages by up to 90%, preventing emergency plumbing situations.</p>
+								</div>
+							</div>
+							{/* Cost Savings Stats */}
+							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-brand-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+								<p className="flex-none text-3xl font-bold tracking-tight text-white">$500+</p>
+								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+									<p className="text-lg font-semibold tracking-tight text-white">Average Savings</p>
+									<p className="mt-2 text-base leading-7 text-indigo-200">Homeowners can save an average of $500 in unexpected repair costs by opting for routine drain maintenance.</p>
+								</div>
+							</div>
+							{/* Professional Expertise Stats */}
+							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-black p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
+								<p className="flex-none text-3xl font-bold tracking-tight text-white">25+ Years</p>
+								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+									<p className="text-lg font-semibold tracking-tight text-white">Experience in Drain Clearing</p>
+									<p className="mt-2 text-base leading-7 text-gray-400">Our team has over 25 years of experience in drain clearing, ensuring the job is done quickly and effectively.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

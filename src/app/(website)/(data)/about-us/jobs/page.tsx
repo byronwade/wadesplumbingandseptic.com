@@ -55,7 +55,6 @@ export const metadata = {
 
 export default async function Jobs() {
 	const { allJobs, jobDetails } = await fetchData();
-	console.log(jobDetails);
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "ItemList",

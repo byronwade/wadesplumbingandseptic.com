@@ -67,8 +67,6 @@ export default async function BlogPage({ params }) {
 	const slug = params.slug;
 	const { allPosts, postDetails, relatedPosts, jsonLd } = await fetchData({ slug });
 
-	console.log(postDetails);
-
 	const dateObj = postDetails ? new Date(postDetails.created_at) : new Date();
 	const formattedDate = dateObj.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 	const formattedTime = dateObj.toLocaleTimeString([], { hour: "numeric", minute: "numeric", hour12: true });
