@@ -59,6 +59,62 @@ export const metadata: Metadata = {
 	},
 };
 
+const jsonFAQLd = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: [
+		{
+			"@type": "Question",
+			name: "Why choose Wade's Plumbing & Septic for drain clearing in Santa Cruz?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Wade's Plumbing & Septic offers professional and efficient drain clearing services in Santa Cruz, utilizing advanced technology and eco-friendly methods to ensure your plumbing system is free of clogs and functioning optimally.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "What drain clearing services do you offer in Santa Cruz?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Our comprehensive drain clearing services include residential and commercial drain cleaning, hydro jetting, sewer drain cleaning, and emergency drain clearing, available 24/7 in Santa Cruz.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "How can I prevent clogged drains in my Santa Cruz home?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Regular drain maintenance and inspections can prevent clogs. Wade's Plumbing & Septic provides expert drain maintenance services, including eco-friendly solutions and advanced drain cleaning technology in Santa Cruz.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "Do you offer eco-friendly drain clearing services in Santa Cruz?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Yes, we are committed to protecting the environment with our eco-friendly drain clearing methods. Our services are designed to effectively clear your drains while preserving the integrity of your plumbing and the Santa Cruz ecosystem.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "What makes Wade's Plumbing & Septic a reliable choice for drain clearing?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Our team of skilled technicians are experts in sewer line cleaning and drain clearing, offering quick, reliable, and affordable services in Santa Cruz. We're equipped to handle any drain issue with the utmost professionalism.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "How quickly can you respond to a drain emergency in Santa Cruz?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Wade's Plumbing & Septic provides 24/7 emergency drain clearing assistance in Santa Cruz. We pride ourselves on our quick response times and our ability to resolve most drain issues promptly and effectively.",
+			},
+		},
+		// ... Add more questions and answers if needed
+	],
+};
+
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
@@ -85,60 +141,6 @@ const jsonLd = {
 	},
 	openingHours: "Mo-Su 00:00-23:59",
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
-	faqPage: {
-		"@type": "FAQPage",
-		mainEntity: [
-			{
-				"@type": "Question",
-				name: "Why choose Wade's Plumbing & Septic for drain clearing in Santa Cruz?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Wade's Plumbing & Septic offers professional and efficient drain clearing services in Santa Cruz, utilizing advanced technology and eco-friendly methods to ensure your plumbing system is free of clogs and functioning optimally.",
-				},
-			},
-			{
-				"@type": "Question",
-				name: "What drain clearing services do you offer in Santa Cruz?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Our comprehensive drain clearing services include residential and commercial drain cleaning, hydro jetting, sewer drain cleaning, and emergency drain clearing, available 24/7 in Santa Cruz.",
-				},
-			},
-			{
-				"@type": "Question",
-				name: "How can I prevent clogged drains in my Santa Cruz home?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Regular drain maintenance and inspections can prevent clogs. Wade's Plumbing & Septic provides expert drain maintenance services, including eco-friendly solutions and advanced drain cleaning technology in Santa Cruz.",
-				},
-			},
-			{
-				"@type": "Question",
-				name: "Do you offer eco-friendly drain clearing services in Santa Cruz?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Yes, we are committed to protecting the environment with our eco-friendly drain clearing methods. Our services are designed to effectively clear your drains while preserving the integrity of your plumbing and the Santa Cruz ecosystem.",
-				},
-			},
-			{
-				"@type": "Question",
-				name: "What makes Wade's Plumbing & Septic a reliable choice for drain clearing?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Our team of skilled technicians are experts in sewer line cleaning and drain clearing, offering quick, reliable, and affordable services in Santa Cruz. We're equipped to handle any drain issue with the utmost professionalism.",
-				},
-			},
-			{
-				"@type": "Question",
-				name: "How quickly can you respond to a drain emergency in Santa Cruz?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "Wade's Plumbing & Septic provides 24/7 emergency drain clearing assistance in Santa Cruz. We pride ourselves on our quick response times and our ability to resolve most drain issues promptly and effectively.",
-				},
-			},
-			// ... Add more questions and answers if needed
-		],
-	},
 };
 
 const faqs = [
@@ -174,26 +176,13 @@ const faqs = [
 	},
 ];
 
-const featuredPost = {
-	id: 1,
-	title: "We’re incredibly proud to announce we have secured $75m in Series B",
-	href: "#",
-	description: "Libero neque aenean tincidunt nec consequat tempor. Viverra odio id velit adipiscing id. Nisi vestibulum orci eget bibendum dictum. Velit viverra posuere vulputate volutpat nunc. Nunc netus sit faucibus.",
-	date: "Mar 16, 2020",
-	datetime: "2020-03-16",
-	author: {
-		name: "Michael Foster",
-		href: "#",
-		imageUrl: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-	},
-};
-
 const benefits = ["Over two decades of drain clearing expertise", "Transparent pricing with no hidden fees", "24/7 emergency drain clearing services", "State-of-the-art hydro jetting services", "In-depth video camera inspection for accurate diagnosis", "Routine drain maintenance to prevent future clogs", "Fast response time for all service calls", "Highly trained and certified technicians"];
 
 export default function DrainClearing() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
 			<section className="w-full bg-white text-black">
 				<div className="py-20 mx-auto max-w-7xl md:px-8 space-y-20">
 					<div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
