@@ -198,7 +198,7 @@ export default function DrainClearing() {
 						<div className="flex flex-col col-span-2 lg:pb-6">
 							<div className="space-y-6">
 								<h1 className="text-4xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Septic Pumping and Cleaning in Santa Cruz</h1>
-								<p className="text-base leading-7 text-slate-700">Looking for reliable septic pumping or cleaning? Wade's Plumbing & Septic offers top-notch septic services to keep your Santa Cruz property's system running smoothly.</p>
+								<p className="text-base leading-7 text-slate-700">Looking for reliable septic pumping or cleaning? Wade&apos;s Plumbing & Septic offers top-notch septic services to keep your Santa Cruz property&apos;s system running smoothly.</p>
 
 								<div className="flex gap-2 flex-wrap">
 									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Septic Pumping</span>
@@ -257,7 +257,7 @@ export default function DrainClearing() {
 									<Image className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="https://abuqrtstxqryqcvsohkz.supabase.co/storage/v1/object/public/wadesplumbingandseptic.com/wadesplumbingandseptic/posts/septic-pumping.jpg" alt="Septic Pumping and Cleaning" width={1000} height={1000} />
 									<div className="w-full flex-auto">
 										<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Septic Pumping and Cleaning Services in Santa Cruz</h2>
-										<p className="mt-6 text-lg leading-8 text-white">Wade's Plumbing & Septic is your go-to expert for septic pumping and cleaning services in Santa Cruz. We ensure your septic system operates efficiently, providing you with reliable and sanitary waste management.</p>
+										<p className="mt-6 text-lg leading-8 text-white">Wade&apos;s Plumbing & Septic is your go-to expert for septic pumping and cleaning services in Santa Cruz. We ensure your septic system operates efficiently, providing you with reliable and sanitary waste management.</p>
 										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
 											<li className="flex gap-x-3">
 												<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
@@ -287,7 +287,7 @@ export default function DrainClearing() {
 					<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 						<div className="mx-auto max-w-2xl lg:mx-0">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your Trusted Septic Service Specialists in Santa Cruz</h2>
-							<p className="mt-6 text-base leading-7 text-gray-600">At Wade's Plumbing & Septic, we're committed to providing exceptional septic services, from routine maintenance to emergency responses, ensuring Santa Cruz properties maintain a functional and hygienic septic system.</p>
+							<p className="mt-6 text-base leading-7 text-gray-600">At Wade&apos;s Plumbing & Septic, we&apos;re committed to providing exceptional septic services, from routine maintenance to emergency responses, ensuring Santa Cruz properties maintain a functional and hygienic septic system.</p>
 						</div>
 						<div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
 							{/* Response Time Stats */}
@@ -303,7 +303,7 @@ export default function DrainClearing() {
 								<p className="flex-none text-3xl font-bold tracking-tight text-white">500+</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-white">Septic Services Rendered</p>
-									<p className="mt-2 text-base leading-7 text-indigo-200">We've provided over 500 septic services, including pumping, cleaning, and repairs, ensuring the longevity and efficiency of septic systems for our clients.</p>
+									<p className="mt-2 text-base leading-7 text-indigo-200">We&apos;ve provided over 500 septic services, including pumping, cleaning, and repairs, ensuring the longevity and efficiency of septic systems for our clients.</p>
 								</div>
 							</div>
 							{/* Customer Satisfaction Stats */}
