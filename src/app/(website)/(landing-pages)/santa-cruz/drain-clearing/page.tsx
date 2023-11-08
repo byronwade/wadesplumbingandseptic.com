@@ -184,7 +184,7 @@ export default function DrainClearing() {
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
 			<section className="w-full bg-white text-black">
-				<div className="py-20 mx-auto max-w-7xl md:px-8 space-y-20">
+				<div className="py-20 mx-auto max-w-7xl px-8 space-y-20">
 					<div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
 						<div className="flex flex-col col-span-2 lg:pb-6">
 							<div className="space-y-6">
