@@ -66,8 +66,8 @@ function filterAndSortServices(allServices = [], postCategories = []) {
 	return allServices?.filter((post) => post?.categories && post?.categories?.some((category) => postCategories?.includes(category))).sort((a, b) => (b?.categories ? b?.categories.filter((category) => postCategories?.includes(category)).length : 0) - (a?.categories ? a?.categories.filter((category) => postCategories?.includes(category)).length : 0));
 }
 
-export default async function fetchData({ searchTerm = "", slug = "", page = 1, itemsPerPage = 10 } = {}) {
-    const allServices = await fetchAllServices(searchTerm);
+export default async function getServices({ searchTerm = "", slug = "", page = 1, itemsPerPage = 10 } = {}) {
+	const allServices = await fetchAllServices(searchTerm);
 	const postDetails = await fetchPostDetails(slug);
 	const relatedServices = filterAndSortServices(allServices, postDetails?.categories);
 	const total = allServices?.length || 0;

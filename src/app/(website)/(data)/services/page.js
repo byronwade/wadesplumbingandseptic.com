@@ -2,7 +2,7 @@ import Search from "@/components/ui/Search";
 import Pagnation from "@/components/ui/Pagnation";
 import Services from "./Services";
 import Link from "next/link";
-import fetchData from "./getServices";
+import getServices from "./getServices";
 import Script from "next/script";
 
 const ITEMS_PER_PAGE = 6;
@@ -17,7 +17,7 @@ function getServiceMessage(searchTerm, allServices) {
 export default async function Page({ searchParams }) {
 	const { search = "", page = "1" } = searchParams || {};
 	const currentPage = parseInt(page, 10) || 1;
-	const { allServices, pagedData, total } = await fetchData({ searchTerm: search, page: currentPage });
+	const { allServices, pagedData, total } = await getServices({ searchTerm: search, page: currentPage });
 
 	const serviceMsg = getServiceMessage(search, allServices);
 

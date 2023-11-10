@@ -6,7 +6,34 @@ const nextConfig = {
 		nextScriptWorkers: true,
 	},
 	images: {
-		domains: ["mpop-prod-hls-primary.s3.amazonaws.com", "wadesplumbingandseptic.byronw35.sg-host.com", "146.190.186.245", "lh3.googleusercontent.com", "images.unsplash.com", "abuqrtstxqryqcvsohkz.supabase.co"],
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "mpop-prod-hls-primary.s3.amazonaws.com",
+				pathname: "**",
+			},
+			{
+				protocol: "https",
+				hostname: "wadesplumbingandseptic.byronw35.sg-host.com",
+				pathname: "**",
+			},
+			{
+				protocol: "https",
+				hostname: "lh3.googleusercontent.com",
+				pathname: "**",
+			},
+			{
+				protocol: "https",
+				hostname: "images.unsplash.com",
+				pathname: "**",
+			},
+
+			{
+				protocol: "https",
+				hostname: "abuqrtstxqryqcvsohkz.supabase.co",
+				pathname: "**",
+			},
+		],
 	},
 	webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
 		// Enable source maps in production

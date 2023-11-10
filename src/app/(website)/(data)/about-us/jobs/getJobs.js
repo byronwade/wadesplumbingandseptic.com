@@ -66,7 +66,7 @@ async function fetchJobDetails(slug) {
 	return data;
 }
 
-export default async function fetchData({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
+export default async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
 	const allJobs = await fetchAllJobs();
 	const jobDetails = await fetchJobDetails(slug);
 	const total = allJobs?.length || 0;

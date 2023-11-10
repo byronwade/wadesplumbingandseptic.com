@@ -3,7 +3,7 @@ import Pagnation from "@/components/ui/Pagnation";
 import ExpertTips from "./ExpertTips";
 import Link from "next/link";
 import Script from "next/script";
-import fetchData from "./getTips";
+import getTips from "./getTips";
 
 const ITEMS_PER_PAGE = 10;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
@@ -12,7 +12,7 @@ const BASE_URL = "https://www.wadesplumbingandseptic.com";
 export default async function Page({ searchParams }) {
 	const searchTerm = searchParams?.search;
 	const currentPage = parseInt(searchParams?.page) || 1;
-	const { allPosts, pagedData, total } = await fetchData({ searchTerm, page: currentPage });
+	const { allPosts, pagedData, total } = await getTips({ searchTerm, page: currentPage });
 
 	const serviceMsg = searchTerm ? `We ${allPosts.length ? "found " + allPosts.length : "couldn't find any"} expert tips matching "${searchTerm}".` : `We have ${allPosts.length} expert tips.`;
 

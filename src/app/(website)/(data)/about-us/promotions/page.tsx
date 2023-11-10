@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fetchData from "./getPromotions";
+import getPromotions from "./getPromotions";
 import Script from "next/script";
 
 export const metadata = {
@@ -53,7 +53,7 @@ export const metadata = {
 };
 
 export default async function Discounts() {
-	const { promotions } = await fetchData();
+	const { promotions } = await getPromotions();
 
 	const jsonLd = {
 		"@context": "https://schema.org",

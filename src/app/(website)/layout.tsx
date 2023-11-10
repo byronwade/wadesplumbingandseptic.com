@@ -1,11 +1,8 @@
-import Header from "@/components/sections/Header";
-import Footer from "@/components/sections/Footer";
 import "./globals.css";
 import getMenu from "./getMenu";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
-import CTA from "@/components/sections/CTA";
-import { GeistSans } from "geist/font";
+import { GeistSans } from "geist/font/sans";
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const data = await getMenu();

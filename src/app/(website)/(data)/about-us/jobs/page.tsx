@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLongRightIcon, MapPinIcon } from "@heroicons/react/20/solid";
-import fetchData from "./getJobs";
+import getJobs from "./getJobs";
 import Script from "next/script";
 
 export const metadata = {
@@ -54,7 +54,7 @@ export const metadata = {
 };
 
 export default async function Jobs() {
-	const { allJobs, jobDetails } = await fetchData();
+	const { allJobs, jobDetails } = await getJobs();
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "ItemList",
