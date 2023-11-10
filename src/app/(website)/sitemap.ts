@@ -49,7 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	}
 
 	// Santa Cruz
-	const santaCruzSlugs = ["", "septic-pumping", "water-heater-replacement", "commercial-plumbing", "drain-cleaning", "santa-cruz-plumbers-near-me"];
+	const santaCruzSlugs = ["", "septic-pumping", "water-heater-replacment", "commercial-plumbing", "drain-clearing", "santa-cruz-plumbers-near-me"];
 	const santaCruzSitemapEntries = createSitemapEntries("https://wadesplumbingandseptic.com/santa-cruz", santaCruzSlugs, "monthly", 0.5);
 
 	// About Us
