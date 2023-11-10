@@ -4,6 +4,13 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 
+export const viewport = {
+	themeColor: "#bc6f30",
+	width: "device-width",
+	initialScale: 1,
+	maximumScale: 1,
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const data = await getMenu();
 	return (
