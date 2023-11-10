@@ -70,6 +70,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com",
 					"@type": "WebSite",
 					url: "https://www.wadesplumbingandseptic.com",
 					name: "Home",
@@ -79,6 +80,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 2,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com/about-us/rebates/",
 					"@type": "WebPage",
 					url: "https://www.wadesplumbingandseptic.com/about-us/rebates/",
 					name: "Rebates",
@@ -97,6 +99,7 @@ const jsonLd = {
 		description: "Information about available rebates and savings for plumbing services and products.",
 	},
 };
+
 
 export default function Rebates() {
 	return (

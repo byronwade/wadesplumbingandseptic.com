@@ -70,6 +70,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com",
 					"@type": "WebSite",
 					url: "https://www.wadesplumbingandseptic.com",
 					name: "Home",
@@ -79,6 +80,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 2,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com/about-us/warranties/",
 					"@type": "WebPage",
 					url: "https://www.wadesplumbingandseptic.com/about-us/warranties/",
 					name: "Warranties",
@@ -97,6 +99,7 @@ const jsonLd = {
 		description: "Information about the comprehensive warranties offered for plumbing and septic services.",
 	},
 };
+
 
 export default function Warranties() {
 	return (

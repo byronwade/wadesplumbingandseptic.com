@@ -72,6 +72,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com",
 					"@type": "WebSite",
 					url: "https://www.wadesplumbingandseptic.com",
 					name: "Home",
@@ -81,6 +82,7 @@ const jsonLd = {
 				"@type": "ListItem",
 				position: 2,
 				item: {
+					"@id": "https://www.wadesplumbingandseptic.com/about-us/",
 					"@type": "WebPage",
 					url: "https://www.wadesplumbingandseptic.com/about-us/",
 					name: "About Us",
@@ -89,6 +91,7 @@ const jsonLd = {
 		],
 	},
 };
+
 
 const stats = [
 	{ label: "Servicing Santa Cruz Couny and areas", value: "250,000 people" },
