@@ -19,21 +19,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 	// Build links
 	const postLinks = postSlugs.map((slug) => ({
-		url: `https://wadesplumbingandseptic.com/expert-tips/${slug}`,
+		url: `https://www.wadesplumbingandseptic.com/expert-tips/${slug}`,
 		lastModified: new Date(),
 		changeFrequency: "weekly",
 		priority: 0.5,
 	}));
 
 	const serviceLinks = serviceSlugs.map((slug) => ({
-		url: `https://wadesplumbingandseptic.com/services/${slug}`,
+		url: `https://www.wadesplumbingandseptic.com/services/${slug}`,
 		lastModified: new Date(),
 		changeFrequency: "weekly",
 		priority: 0.5,
 	}));
 
 	const jobsLinks = jobSlugs.map((slug) => ({
-		url: `https://wadesplumbingandseptic.com/services/${slug}`,
+		url: `https://www.wadesplumbingandseptic.com/services/${slug}`,
 		lastModified: new Date(),
 		changeFrequency: "monthly",
 		priority: 0.3,
@@ -50,33 +50,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 	// Santa Cruz
 	const santaCruzSlugs = ["", "septic-pumping", "water-heater-replacment", "commercial-plumbing", "drain-clearing", "santa-cruz-plumbers-near-me"];
-	const santaCruzSitemapEntries = createSitemapEntries("https://wadesplumbingandseptic.com/santa-cruz", santaCruzSlugs, "monthly", 0.5);
+	const santaCruzSitemapEntries = createSitemapEntries("https://www.wadesplumbingandseptic.com/santa-cruz", santaCruzSlugs, "monthly", 0.5);
 
 	// About Us
 	const aboutusSlugs = ["", "financing", "franchise", "privacy-policy", "promotions", "rebates", "warranties"];
-	const aboutusSitemapEntries = createSitemapEntries("https://wadesplumbingandseptic.com/about-us", aboutusSlugs, "monthly", 0.5);
+	const aboutusSitemapEntries = createSitemapEntries("https://www.wadesplumbingandseptic.com/about-us", aboutusSlugs, "monthly", 0.5);
 
 	return [
 		{
-			url: "https://wadesplumbingandseptic.com",
+			url: "https://www.wadesplumbingandseptic.com",
 			lastModified: new Date(),
 			changeFrequency: "yearly",
 			priority: 1,
 		},
 		{
-			url: "https://wadesplumbingandseptic.com/expert-tips",
+			url: "https://www.wadesplumbingandseptic.com/expert-tips",
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.5,
 		},
 		{
-			url: "https://wadesplumbingandseptic.com/services",
+			url: "https://www.wadesplumbingandseptic.com/services",
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.5,
 		},
 		{
-			url: "https://wadesplumbingandseptic.com/contact-us",
+			url: "https://www.wadesplumbingandseptic.com/contact-us",
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.5,
