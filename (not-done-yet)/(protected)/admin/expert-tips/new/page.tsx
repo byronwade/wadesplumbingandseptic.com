@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import Tiptap from "@/app/(protected)/components/TipTap";
-import ContentHeader from "@/app/(protected)/components/content/ContentHeader";
-import ContentSidebar from "@/app/(protected)/components/content/ContentSidebar";
+import Tiptap from "../../../components/TipTap";
+import ContentHeader from "../../../components/content/ContentHeader";
+import ContentSidebar from "../../../components/content/ContentSidebar";
 import { Input } from "@/components/ui/input";
 
 import { zodResolver } from "@hookform/resolvers/zod";
