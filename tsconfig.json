@@ -42,5 +42,5 @@
 		"src/app/(website)/(data)/expert-tips/[...slug]/page.js",
 		"src/app/(website)/not-found.js"
 	],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "(not-done-yet)/**"]
 }
