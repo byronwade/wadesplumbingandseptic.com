@@ -29,7 +29,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/app/(protected)/admin/layout.js",
+		"src/app/(protected)/rp-admin/layout.js",
 		"src/app/api/tips/route.js",
 		"src/api/og/route.js",
 		"src/app/(website)/(data)/expert-tips/ExpertTips.js",

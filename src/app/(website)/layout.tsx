@@ -2,6 +2,7 @@ import "./globals.css";
 import getMenu from "./getMenu";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
 
 export const viewport = {
@@ -31,6 +32,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 				{/* <Script id="ze-snippet" strategy="lazyOnload" src="https://static.zdassets.com/ekr/snippet.js?key=06e45130-bfd2-4b2b-8137-28903b96f527"></Script> */}
 
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

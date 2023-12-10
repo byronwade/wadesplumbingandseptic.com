@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import { CheckCircle } from "react-feather";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
@@ -260,19 +260,19 @@ export default function DrainClearing() {
 										<p className="mt-6 text-lg leading-8 text-white">Wade&apos;s Plumbing & Septic is your go-to expert for septic pumping and cleaning services in Santa Cruz. We ensure your septic system operates efficiently, providing you with reliable and sanitary waste management.</p>
 										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
 											<li className="flex gap-x-3">
-												<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+												<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
 												Comprehensive septic system inspections
 											</li>
 											<li className="flex gap-x-3">
-												<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+												<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
 												Regular septic tank pumping and maintenance
 											</li>
 											<li className="flex gap-x-3">
-												<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+												<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
 												Emergency septic service response
 											</li>
 											<li className="flex gap-x-3">
-												<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+												<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
 												Environmentally friendly septic cleaning
 											</li>
 											{/* Add more list items as needed */}

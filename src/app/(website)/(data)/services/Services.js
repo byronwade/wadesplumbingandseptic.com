@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRight } from "react-feather";
 
 export default function Services({ services, itemsPerPage }) {
 	return (
@@ -18,7 +18,7 @@ export default function Services({ services, itemsPerPage }) {
 										<h3 className="text-xl font-medium text-gray-700">{service.title}</h3>
 										<div className="mt-2 text-slate-500" dangerouslySetInnerHTML={{ __html: service.excerpt }} />
 										<span className="group-hover:underline mt-2 inline-flex text-sky-500">
-											Read in {service.readingtime} min <ArrowLongRightIcon className="inline-block self-center ml-3 w-4 h-4" />
+											Read in {service.readingtime} min <ArrowRight className="inline-block self-center ml-3 w-4 h-4" />
 										</span>
 									</div>
 								</Link>
@@ -30,7 +30,7 @@ export default function Services({ services, itemsPerPage }) {
 										<h3 className="text-xl font-medium text-gray-700">{service.title}</h3>
 										<div className="mt-2 text-slate-500" dangerouslySetInnerHTML={{ __html: service.excerpt }} />
 										<span className="group-hover:underline mt-2 inline-flex text-sky-500">
-											Read in {service.readingtime} min <ArrowLongRightIcon className="inline-block self-center ml-3 w-4 h-4" />
+											Read in {service.readingtime} min <ArrowRight className="inline-block self-center ml-3 w-4 h-4" />
 										</span>
 									</div>
 									<div className="relative hidden h-full w-1/3 overflow-hidden lg:block">

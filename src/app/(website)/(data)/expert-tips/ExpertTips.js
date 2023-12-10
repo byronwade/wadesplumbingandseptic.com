@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRight } from "react-feather";
 
 export default async function ExpertTips({ tips, itemsPerPage }) {
 	return (
@@ -16,7 +16,7 @@ export default async function ExpertTips({ tips, itemsPerPage }) {
 										<h2 className="text-xl font-semibold 5 text-white">{tip.title}</h2>
 										<span className="group-hover:underline focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
 											<p className="pr-2 text-sm font-medium leading-none">
-												Read in {tip.readingtime} min <ArrowLongRightIcon className="inline-block self-center ml-3 w-4 h-4" />
+												Read in {tip.readingtime} min <ArrowRight className="inline-block self-center ml-3 w-4 h-4" />
 											</p>
 										</span>
 									</div>
@@ -33,7 +33,7 @@ export default async function ExpertTips({ tips, itemsPerPage }) {
 										<h2 className="text-xl font-semibold 5 text-white">{tip.title}</h2>
 										<span className="group-hover:underline focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
 											<p className="pr-2 text-sm font-medium leading-none">
-												Read in {tip.readingtime} min <ArrowLongRightIcon className="inline-block self-center ml-3 w-4 h-4" />
+												Read in {tip.readingtime} min <ArrowRight className="inline-block self-center ml-3 w-4 h-4" />
 											</p>
 										</span>
 									</div>

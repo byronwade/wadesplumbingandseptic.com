@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/20/solid";
+import { X } from "react-feather";
 
 export function NavBar({ open }) {
 	return (
@@ -13,7 +13,7 @@ export function NavBar({ open }) {
 			<div className="flex font-bold items-center md:hidden">
 				<Disclosure.Button className="inline-flex items-center justify-center rounded p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 					<span className="sr-only">Open main menu</span>
-					{open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6" aria-hidden="true" />}
+					{open ? <X className="block h-6 w-6" aria-hidden="true" /> : <X className="block h-6 w-6" aria-hidden="true" />}
 				</Disclosure.Button>
 			</div>
 		</>

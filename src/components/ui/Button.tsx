@@ -1,76 +1,57 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-function Button({ href, onClick, children, className, variant = "default", size = "medium", disabled = false, loading = false, icon, ...props }) {
-	const baseStyles = "px-4 py-2 rounded"; // common styles
-	let variantStyles;
-	switch (variant) {
-		case "primary":
-			variantStyles = "bg-blue-500 text-white";
-			break;
-		case "secondary":
-			variantStyles = "bg-gray-200 text-gray-800";
-			break;
-		// Add other variants as needed
-		default:
-			variantStyles = "bg-gray-300 text-black";
-	}
+import { cn } from "@/lib/utils"
 
-	let sizeStyles;
-	switch (size) {
-		case "small":
-			sizeStyles = "text-sm";
-			break;
-		case "large":
-			sizeStyles = "text-lg px-6 py-3";
-			break;
-		// Default is medium size, no need to specify
-	}
+const buttonVariants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        outline:
+          "border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
 
-	const combinedClassName = `${baseStyles} ${variantStyles} ${sizeStyles} ${className}`;
-
-	if (loading) {
-		// If the button is in a loading state, disable it
-		disabled = true;
-	}
-
-	const content = loading ? "Loading..." : children; // Adjust this as per your design
-
-	if (href) {
-		return (
-			<Link href={href} {...props} className={combinedClassName} aria-disabled={disabled}>
-				{icon && <span className="mr-2">{icon}</span>}
-				{content}
-			</Link>
-		);
-	}
-
-	return (
-		<button onClick={onClick} className={combinedClassName} disabled={disabled} {...props}>
-			{icon && <span className="mr-2">{icon}</span>}
-			{content}
-		</button>
-	);
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
 }
 
-Button.propTypes = {
-	href: PropTypes.string,
-	onClick: PropTypes.func,
-	children: PropTypes.node.isRequired,
-	className: PropTypes.string,
-	variant: PropTypes.oneOf(["default", "primary", "secondary"]),
-	size: PropTypes.oneOf(["small", "medium", "large"]),
-	disabled: PropTypes.bool,
-	loading: PropTypes.bool,
-	icon: PropTypes.node, // React component for the icon
-};
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
 
-Button.defaultProps = {
-	className: "",
-	variant: "default",
-	size: "medium",
-	disabled: false,
-	loading: false,
-};
-
-export default Button;
+export { Button, buttonVariants }

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { ChevronDownIcon, CurrencyDollarIcon, CheckBadgeIcon, UserCircleIcon, BanknotesIcon, BriefcaseIcon, MegaphoneIcon } from "@heroicons/react/20/solid";
+import { ChevronDown, DollarSign, Award, User, Briefcase, Mic, ShoppingBag } from "react-feather";
 
 export function AboutUsMenu() {
 	const solutions = [
@@ -9,32 +9,32 @@ export function AboutUsMenu() {
 			name: "Team & Company",
 			description: "Get to know our team and company",
 			href: "/about-us",
-			icon: UserCircleIcon,
+			icon: User,
 		},
 		{
 			name: "Warranties",
 			description: "Learn about our warranties",
 			href: "/about-us/warranties",
-			icon: CheckBadgeIcon,
+			icon: Award,
 		},
 		{
 			name: "Rebates",
 			description: "Find some rebates",
 			href: "/about-us/rebates",
-			icon: CurrencyDollarIcon,
+			icon: DollarSign,
 		},
-		{ name: "Financing", description: "Our financing is top notch", href: "/about-us/financing", icon: BanknotesIcon },
+		{ name: "Financing", description: "Our financing is top notch", href: "/about-us/financing", icon: ShoppingBag },
 		{
 			name: "Job Opertunities",
 			description: "Find your dream job",
 			href: "/about-us/jobs",
-			icon: BriefcaseIcon,
+			icon: Briefcase,
 		},
 		{
 			name: "Promotions & Discounts",
 			description: "Find a discount here",
 			href: "/about-us/promotions",
-			icon: MegaphoneIcon,
+			icon: Mic,
 		},
 		// {
 		// 	name: "Reviews",
@@ -47,7 +47,7 @@ export function AboutUsMenu() {
 		<Popover>
 			<Popover.Button className="inline-flex items-center gap-x-1 hover:underline">
 				About Us & More
-				<ChevronDownIcon className="h-6 w-6" aria-hidden="true" />
+				<ChevronDown className="h-6 w-6" aria-hidden="true" />
 			</Popover.Button>
 			<Transition as={Fragment} enter="transition ease-out duration-75" enterFrom="opacity-0 -translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease-in duration-75" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 -translate-y-1">
 				<Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-black pt-[112px] shadow">

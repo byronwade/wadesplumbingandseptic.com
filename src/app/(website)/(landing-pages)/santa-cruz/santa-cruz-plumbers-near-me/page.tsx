@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import { CheckCircle } from "react-feather";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
@@ -252,7 +252,7 @@ export default function DrainClearing() {
 										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
 											{benefits.map((benefit) => (
 												<li key={benefit} className="flex gap-x-3">
-													<CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+													<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
 													{benefit}
 												</li>
 											))}

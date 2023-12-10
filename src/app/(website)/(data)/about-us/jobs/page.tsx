@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLongRightIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import { ArrowRight, MapPin } from "react-feather";
 import getJobs from "./getJobs";
 import Script from "next/script";
 
@@ -120,7 +120,7 @@ export default async function Jobs() {
 												<div className="flex items-center gap-3 mt-2">
 													<span className="bg-brand-100 text-black rounded-full px-3 py-1 text-sm">{job.shift_and_schedule}</span>
 													<span className="text-slate-600 text-sm flex gap-1 items-center">
-														<MapPinIcon className="h-4 w-4" />
+														<MapPin className="h-4 w-4" />
 														{job.location}
 													</span>
 													<span className="text-green-600 text-sm flex gap-1 items-center">{job.pay_range}</span>
@@ -128,7 +128,7 @@ export default async function Jobs() {
 											</div>
 											<div>
 												<Link href={`/about-us/jobs/${job.slug}`} className="bg-brand text-black font-medium px-4 py-2 rounded flex gap-1 items-center">
-													Apply Now <ArrowLongRightIcon className="self-center ml-3 h-4 w-4" />
+													Apply Now <ArrowRight className="self-center ml-3 h-4 w-4" />
 												</Link>
 											</div>
 										</div>

@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLongRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRight } from "react-feather";
 import { track } from "@vercel/analytics/react";
 import Link from "next/link";
 
@@ -63,7 +63,7 @@ export default function FAQ() {
 					</div>
 					<Link onClick={() => track("FAQ - Get a Free Quote")} href="/contact-us" className="mt-10 inline-flex items-center text-white bg-brand-700 hover:bg-brand-800 focus:ring-4 focus:ring-brand-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:focus:ring-brand-900">
 						Get a free quote
-						<ArrowLongRightIcon className="self-center ml-2 -mr-1 w-5 h-5" />
+						<ArrowRight className="self-center ml-2 -mr-1 w-5 h-5" />
 					</Link>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDown } from "react-feather";
 import Link from "next/link";
 
 export function ServicesMenu({ menu }) {
@@ -10,7 +10,7 @@ export function ServicesMenu({ menu }) {
 		<Popover>
 			<Popover.Button className="inline-flex items-center gap-x-1 hover:underline">
 				Services
-				<ChevronDownIcon className="h-6 w-6" aria-hidden="true" />
+				<ChevronDown className="h-6 w-6" aria-hidden="true" />
 			</Popover.Button>
 			<Transition as={Fragment} enter="transition ease-out duration-75" enterFrom="opacity-0 -translate-y-1" enterTo="opacity-100 translate-y-0" leave="transition ease-in duration-75" leaveFrom="opacity-100 translate-y-0" leaveTo="opacity-0 -translate-y-1">
 				<Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-black pt-[112px] shadow">
