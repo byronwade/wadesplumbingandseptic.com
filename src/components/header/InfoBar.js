@@ -1,8 +1,8 @@
 export function InfoBar() {
 	return (
-		<div className="hidden md:block bg-brand text-black font-bold py-1 px-4 shadow">
-			<div className="hidden lg:flex mx-auto max-w-7xl px-6 lg:px-8 p-1 items-center justify-center text-sm space-x-10 pr-4">
-				<div>Mon - Fri 9:00am - 5:00pm (24/7 for emergency work)</div>
+		<div className="hidden px-4 py-1 font-bold text-black shadow md:block bg-brand">
+			<div className="items-center justify-center hidden p-1 px-6 pr-4 mx-auto space-x-10 text-sm lg:flex max-w-7xl lg:px-8">
+				<div>Mon - Fri 9:00am - 5:00pm</div>
 				<a className="text-lg font-extrabold hover:underline" href="tel:+18312254344">
 					831.225.4344
 				</a>
