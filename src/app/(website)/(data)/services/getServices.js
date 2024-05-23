@@ -1,21 +1,26 @@
 import { supabase } from "../../../../utils/supabase";
 
+/**
+ * Fetch all services, optionally filtered by a search term.
+ * @param {string} searchTerm - The term to search for.
+ * @returns {Promise<Object[]>} The fetched services.
+ */
 async function fetchAllServices(searchTerm) {
 	let query = supabase
 		.from("services")
 		.select(
 			`
-id,
-title,
-excerpt,
-slug,
-created_at,
-content,
-readingtime,
-categories,
-author: authors (id, username),
-featuredImage: images (alttext, sourceurl, sizes)
-`,
+			id,
+			title,
+			excerpt,
+			slug,
+			created_at,
+			content,
+			readingtime,
+			categories,
+			author: authors (id, username),
+			featuredImage: images (alttext, sourceurl, sizes)
+		`,
 			{ count: "exact" }
 		)
 		.order("created_at", { ascending: true });
@@ -33,6 +38,11 @@ featuredImage: images (alttext, sourceurl, sizes)
 	return data;
 }
 
+/**
+ * Fetch details for a specific post by slug.
+ * @param {string} slug - The slug of the post.
+ * @returns {Promise<Object|null>} The post details.
+ */
 async function fetchPostDetails(slug) {
 	if (!slug) return null;
 
@@ -40,17 +50,17 @@ async function fetchPostDetails(slug) {
 		.from("services")
 		.select(
 			`
-		id,
-		title,
-		excerpt,
-		slug,
-		created_at,
-		content,
-		readingtime,
-		categories,
-		author: authors (id, username),
-		featuredImage: images (alttext, sourceurl, sizes)
-	  `
+			id,
+			title,
+			excerpt,
+			slug,
+			created_at,
+			content,
+			readingtime,
+			categories,
+			author: authors (id, username),
+			featuredImage: images (alttext, sourceurl, sizes)
+		`
 		)
 		.eq("slug", slug)
 		.single();
@@ -62,10 +72,25 @@ async function fetchPostDetails(slug) {
 	return data;
 }
 
+/**
+ * Filter and sort services based on categories.
+ * @param {Object[]} allServices - The list of all services.
+ * @param {string[]} postCategories - The categories to filter by.
+ * @returns {Object[]} The filtered and sorted services.
+ */
 function filterAndSortServices(allServices = [], postCategories = []) {
-	return allServices?.filter((post) => post?.categories && post?.categories?.some((category) => postCategories?.includes(category))).sort((a, b) => (b?.categories ? b?.categories.filter((category) => postCategories?.includes(category)).length : 0) - (a?.categories ? a?.categories.filter((category) => postCategories?.includes(category)).length : 0));
+	return allServices.filter((post) => post?.categories?.some((category) => postCategories.includes(category))).sort((a, b) => (b.categories?.filter((category) => postCategories.includes(category)).length || 0) - (a.categories?.filter((category) => postCategories.includes(category)).length || 0));
 }
 
+/**
+ * Get services with pagination and related data.
+ * @param {Object} options - The options for fetching services.
+ * @param {string} options.searchTerm - The term to search for.
+ * @param {string} options.slug - The slug of a specific post.
+ * @param {number} options.page - The current page number.
+ * @param {number} options.itemsPerPage - The number of items per page.
+ * @returns {Promise<Object>} The fetched services and related data.
+ */
 export default async function getServices({ searchTerm = "", slug = "", page = 1, itemsPerPage = 10 } = {}) {
 	const allServices = await fetchAllServices(searchTerm);
 	const postDetails = await fetchPostDetails(slug);
@@ -74,7 +99,7 @@ export default async function getServices({ searchTerm = "", slug = "", page = 1
 
 	const startAt = (page - 1) * itemsPerPage;
 	const endAt = startAt + itemsPerPage;
-	let pagedData = allServices?.slice(startAt, endAt);
+	const pagedData = allServices?.slice(startAt, endAt);
 
 	const jsonLd = {
 		"@context": "https://schema.org",

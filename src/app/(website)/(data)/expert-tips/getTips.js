@@ -1,5 +1,10 @@
 import { supabase } from "../../../../utils/supabase";
 
+/**
+ * Fetch all posts, optionally filtered by a search term.
+ * @param {string} searchTerm - The term to search for.
+ * @returns {Promise<Object[]>} The fetched posts.
+ */
 async function fetchAllPosts(searchTerm) {
 	let query = supabase
 		.from("tips")
@@ -24,7 +29,7 @@ featuredImage: images (alttext, sourceurl, sizes)
 		query = query.ilike("title", `%${searchTerm}%`);
 	}
 
-	const { data, count, error } = await query;
+	const { data, error } = await query;
 
 	if (error) {
 		console.error("Error fetching data:", error);
@@ -33,6 +38,11 @@ featuredImage: images (alttext, sourceurl, sizes)
 	return data;
 }
 
+/**
+ * Fetch details for a specific post by slug.
+ * @param {string} slug - The slug of the post.
+ * @returns {Promise<Object|null>} The post details.
+ */
 async function fetchPostDetails(slug) {
 	if (!slug) return null;
 
@@ -62,10 +72,25 @@ async function fetchPostDetails(slug) {
 	return data;
 }
 
+/**
+ * Filter and sort posts based on categories.
+ * @param {Object[]} allPosts - The list of all posts.
+ * @param {string[]} postCategories - The categories to filter by.
+ * @returns {Object[]} The filtered and sorted posts.
+ */
 function filterAndSortPosts(allPosts = [], postCategories = []) {
 	return allPosts.filter((post) => post.categories && post.categories.some((category) => postCategories.includes(category))).sort((a, b) => (b.categories ? b.categories.filter((category) => postCategories.includes(category)).length : 0) - (a.categories ? a.categories.filter((category) => postCategories.includes(category)).length : 0));
 }
 
+/**
+ * Get posts with pagination and related data.
+ * @param {Object} options - The options for fetching posts.
+ * @param {string} options.searchTerm - The term to search for.
+ * @param {string} options.slug - The slug of a specific post.
+ * @param {number} options.page - The current page number.
+ * @param {number} options.itemsPerPage - The number of items per page.
+ * @returns {Promise<Object>} The fetched posts and related data.
+ */
 export default async function getTips({ searchTerm = "", slug = "", page = 1, itemsPerPage = 10 } = {}) {
 	const allPosts = await fetchAllPosts(searchTerm);
 	const postDetails = await fetchPostDetails(slug);
@@ -74,7 +99,7 @@ export default async function getTips({ searchTerm = "", slug = "", page = 1, it
 
 	const startAt = (page - 1) * itemsPerPage;
 	const endAt = startAt + itemsPerPage;
-	let pagedData = allPosts?.slice(startAt, endAt);
+	const pagedData = allPosts?.slice(startAt, endAt);
 
 	const jsonLd = {
 		"@context": "https://schema.org",

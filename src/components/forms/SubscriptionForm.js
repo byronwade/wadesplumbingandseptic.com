@@ -41,18 +41,18 @@ export default function SubscriptionForm() {
 
 	return (
 		<form onSubmit={handleFormSubmit}>
-			<div className="flex items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-				<div className="grow relative w-full items-stretch">
+			<div className="flex items-center max-w-screen-sm mx-auto mb-3 space-y-4 sm:flex sm:space-y-0">
+				<div className="relative items-stretch w-full grow">
 					<label htmlFor="email" className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
 						Email address
 					</label>
-					<div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+					<div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
 						<svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 						</svg>
 					</div>
-					<input placeholder="Type in your email here..." required type="text" name="email" id="email" autoComplete="email" className="border-r-0 block p-3 pl-10 w-full text-base text-gray-900 bg-white rounded-l border border-gray-300 focus:ring-1 focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500" />
+					<input placeholder="Type in your email here..." required type="text" name="email" id="email" autoComplete="email" className="block w-full p-3 pl-10 text-base text-gray-900 bg-white border border-r-0 border-gray-300 rounded-l focus:ring-1 focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500" />
 				</div>
 				<button
 					onClick={() => {
@@ -65,14 +65,14 @@ export default function SubscriptionForm() {
 					Subscribe
 				</button>
 			</div>
-			<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-800 newsletter-form-footer dark:text-gray-300">
+			<div className="max-w-screen-sm mx-auto text-sm text-left text-gray-800 newsletter-form-footer dark:text-gray-300">
 				We care about the protection of your data.{" "}
 				<Link href="/about-us/privacy-policy" className="font-medium text-brand-700 dark:text-brand-500 hover:underline">
 					Read our Privacy Policy
 				</Link>
 				.
 			</div>
-			{error && <div className="text-red-600 dark:text-red-400 font-bold">{error}</div>}
+			{error && <div className="font-bold text-red-600 dark:text-red-400">{error}</div>}
 			{succeeded && (
 				<div>
 					<h1 className="text-lg font-bold text-green">Success</h1>

@@ -1,5 +1,5 @@
 import Search from "@/components/ui/Search";
-import Pagnation from "@/components/ui/Pagnation";
+import Pagination from "@/components/ui/Pagnation";
 import Services from "./Services";
 import Link from "next/link";
 import getServices from "./getServices";
@@ -7,6 +7,12 @@ import Script from "next/script";
 
 const ITEMS_PER_PAGE = 6;
 
+/**
+ * Get the service message based on search term and results.
+ * @param {string} searchTerm - The search term used.
+ * @param {Object[]} allServices - The list of all services.
+ * @returns {string} The service message.
+ */
 function getServiceMessage(searchTerm, allServices) {
 	if (searchTerm) {
 		return allServices.length > 0 ? `We found ${allServices.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`;
@@ -28,15 +34,15 @@ export default async function Page({ searchParams }) {
 			"@type": "WebPage",
 			"@id": "https://www.wadesplumbingandseptic.com/services/",
 		},
-		itemListElement: allServices?.map((service, index) => ({
+		itemListElement: allServices.map((service, index) => ({
 			"@type": "ListItem",
 			position: index + 1,
 			item: {
 				"@type": "Service",
-				serviceType: service.type, // Assuming each service has a type
-				name: service.name, // Assuming each service has a name
-				url: `https://www.wadesplumbingandseptic.com/services/${service.slug}`, // Assuming each service has a unique slug
-				description: service.description, // Assuming each service has a description
+				serviceType: service.type,
+				name: service.name,
+				url: `https://www.wadesplumbingandseptic.com/services/${service.slug}`,
+				description: service.description,
 				provider: {
 					"@type": "Organization",
 					name: "Wade's Plumbing & Septic",
@@ -57,22 +63,22 @@ export default async function Page({ searchParams }) {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<section className="bg-gray-50 relative overflow-hidden">
-				<div className="py-16 px-6 sm:py-24 lg:px-8">
+			<section className="relative overflow-hidden bg-gray-50">
+				<div className="px-6 py-16 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">
-						<div className="flex flex-col space-y-6 justify-center items-start">
+						<div className="flex flex-col items-start justify-center space-y-6">
 							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-500">{serviceMsg}</h2>
 							<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Search for any service</p>
 							<p className="max-w-2xl text-lg leading-6 text-gray-700">
 								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by
 								<Link href="/contact-us" className="font-semibold text-brand-700 hover:text-brand-500">
-									{` sending us an email `}
+									sending us an email
 								</Link>
 								and we’ll get back to you as soon as we can.
 							</p>
 							<Search placeholder="Search for a service..." search={searchParams} />
 							<Services services={pagedData} itemsPerPage={ITEMS_PER_PAGE} />
-							<Pagnation total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+							<Pagination total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
 						</div>
 					</div>
 				</div>

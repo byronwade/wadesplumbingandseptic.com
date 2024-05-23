@@ -1,5 +1,5 @@
 import Search from "@/components/ui/Search";
-import Pagnation from "@/components/ui/Pagnation";
+import Pagination from "@/components/ui/Pagnation";
 import ExpertTips from "./ExpertTips";
 import Link from "next/link";
 import Script from "next/script";
@@ -7,7 +7,6 @@ import getTips from "./getTips";
 
 const ITEMS_PER_PAGE = 10;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
-//const OG_IMAGE_API = `${BASE_URL}/api/og?title=Expert Tips&link=${BASE_URL}&description=Looking for expert plumbing tips in the local area? Look no further than Wade&#39;s Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.`;
 
 export default async function Page({ searchParams }) {
 	const searchTerm = searchParams?.search;
@@ -21,16 +20,16 @@ export default async function Page({ searchParams }) {
 		"@type": "ItemList",
 		mainEntityOfPage: {
 			"@type": "WebPage",
-			"@id": "https://www.wadesplumbingandseptic.com/expert-tips/",
+			"@id": `${BASE_URL}/expert-tips/`,
 		},
-		itemListElement: allPosts?.map((post, index) => ({
+		itemListElement: allPosts.map((post, index) => ({
 			"@type": "ListItem",
 			position: index + 1,
 			item: {
 				"@type": "BlogPosting",
 				headline: post.title,
-				description: post.excerpt, // Assuming each post has an excerpt
-				url: `${BASE_URL}/expert-tips/${post.slug}`, // Assuming each post has a unique slug
+				description: post.excerpt,
+				url: `${BASE_URL}/expert-tips/${post.slug}`,
 				author: {
 					"@type": "Person",
 					name: "Byron Wade",
@@ -40,14 +39,14 @@ export default async function Page({ searchParams }) {
 					name: "Wade's Plumbing & Septic",
 					logo: {
 						"@type": "ImageObject",
-						url: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
+						url: `${BASE_URL}/_next/image?url=%2FWadesLogo.webp&w=96&q=75`,
 						width: 180,
 						height: 60,
 					},
 				},
-				image: post.featured_image_url, // Assuming each post has a featured image URL
-				datePublished: post.published_at, // Assuming each post has a published_at date
-				dateModified: post.updated_at, // Assuming each post has an updated_at date
+				image: post.featuredImage?.sourceurl || "",
+				datePublished: post.created_at,
+				dateModified: post.updated_at,
 			},
 		})),
 	};
@@ -55,10 +54,10 @@ export default async function Page({ searchParams }) {
 	return (
 		<section>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<div className="bg-gray-50 relative overflow-hidden">
-				<div className="py-16 px-6 sm:py-24 lg:px-8">
+			<div className="relative overflow-hidden bg-gray-50">
+				<div className="px-6 py-16 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">
-						<div className="flex flex-col space-y-6 justify-center items-start">
+						<div className="flex flex-col items-start justify-center space-y-6">
 							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-500">{serviceMsg}</h2>
 							<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Tips from experts</p>
 							<p className="max-w-2xl text-lg leading-6 text-gray-700">
@@ -71,7 +70,7 @@ export default async function Page({ searchParams }) {
 							</p>
 							<Search placeholder="Search for a tip..." search={searchParams} />
 							<ExpertTips tips={pagedData} itemsPerPage={ITEMS_PER_PAGE} />
-							<Pagnation total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+							<Pagination total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
 						</div>
 					</div>
 				</div>
@@ -79,6 +78,7 @@ export default async function Page({ searchParams }) {
 		</section>
 	);
 }
+
 export const metadata = {
 	title: "Expert Tips | Wade's Plumbing & Septic",
 	description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
