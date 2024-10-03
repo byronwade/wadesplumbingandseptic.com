@@ -16,14 +16,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 	const data = await getMenu();
 	return (
 		<html lang="en" className={`${GeistSans.variable}`}>
-			<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-DWEF0EY73N"></Script>
+			<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-0XZEMVRJF1"></Script>
 			<Script id="google-analytics" strategy="afterInteractive">
 				{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
+						  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-						gtag('config', 'G-DWEF0EY73N');
+  gtag('config', 'G-0XZEMVRJF1');
 					`}
 			</Script>
 			{/* <Script data-project-id="XFjOtiZNrxOwMe6WThuLOII0N5rmeMw02hH3ufeR" src="https://snippet.meticulous.ai/v1/meticulous.js" /> */}
