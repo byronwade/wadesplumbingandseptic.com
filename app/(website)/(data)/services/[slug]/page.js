@@ -9,7 +9,7 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 import RelatedArticlesSection from "@/components/sections/RelatedArticlesSection";
 import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
-import { getServiceDetails, getRelatedServices } from "../getServices";
+import { getServiceDetails, getRelatedServices } from "@/actions/getServices";
 
 export default async function ServicePage({ params }) {
 	const slug = (await params).slug;

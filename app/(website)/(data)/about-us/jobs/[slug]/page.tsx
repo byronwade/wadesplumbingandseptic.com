@@ -1,17 +1,17 @@
 import JobForm from "@/components/forms/JobForm";
-import fetchData from "../getJobs";
+import { fetchJobDetails } from "@/actions/getJobs";
 import Script from "next/script";
 
 export async function generateMetadata(props, parent) {
-    const params = await props.params;
-    const slug = params.slug;
-    const { jobDetails } = await fetchData({ slug });
-    const previousImages = (await parent).openGraph?.images || [];
-    const formattedTitle = `${jobDetails?.title} | Job Listing | Wade's Plumbing & Septic`;
-    const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
-    const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
+	const params = await props.params;
+	const slug = params.slug;
+	const jobDetails = await fetchJobDetails({ slug });
+	const previousImages = (await parent).openGraph?.images || [];
+	const formattedTitle = `${jobDetails?.title || "Job Listing"} | Wade's Plumbing & Septic`;
+	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
+	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug || slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
 
-    return {
+	return {
 		title: formattedTitle,
 		description: formattedDescription,
 		generator: "Next.js",
@@ -59,10 +59,10 @@ export async function generateMetadata(props, parent) {
 }
 
 export default async function Job(props) {
-    const params = await props.params;
-    const slug = params.slug;
-    const { jobDetails } = await fetchData({ slug });
-    const jsonLd = {
+	const params = await props.params;
+	const slug = params.slug;
+	const jobDetails = await fetchJobDetails({ slug });
+	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "JobPosting",
 		title: jobDetails?.title,
@@ -102,7 +102,7 @@ export default async function Job(props) {
 			},
 		},
 	};
-    return (
+	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>{jobDetails?.title}</h1>
@@ -112,20 +112,16 @@ export default async function Job(props) {
 				<li>Pay Range: {jobDetails?.pay_range}</li>
 				<li>Qualifications: {jobDetails?.qualifications}</li>
 				<li>Shift and Schedule: {jobDetails?.shift_and_schedule}</li>
-				{/* <li>
-					Benefits:
-					<ul>
-						{jobDetails?.benefits?.map((benefit, index) => (
-							<li key={index}>{benefit.name}</li>
-						))}
-					</ul>
-				</li> */}
 			</ul>
 			<div dangerouslySetInnerHTML={{ __html: jobDetails?.content || "<p>no data</p>" }} />
 			<div className="!mt-16">
-				<h1 className="font-extrabold text-black sm:text-3xl lg:text-4xl mb-4">Apply with this form</h1>
+				<h1 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Apply with this form</h1>
 				<JobForm />
 			</div>
 		</>
 	);
 }
+function fetchData(arg0: { slug: any }): { jobDetails: any } | PromiseLike<{ jobDetails: any }> {
+	throw new Error("Function not implemented.");
+}
+

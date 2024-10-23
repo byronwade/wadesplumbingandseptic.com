@@ -1,5 +1,5 @@
 import Image from "next/image";
-import getPromotions from "./getPromotions";
+import getPromotions from "@/actions/getPromotions";
 import Script from "next/script";
 
 export const metadata = {
@@ -79,11 +79,11 @@ export default async function Discounts() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<section className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+			<section className="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
 				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-700">Discounts</h2>
-				<p className="mb-6 text-4xl tracking-tight font-extrabold text-black dark:text-white">Promotions for our company</p>
+				<p className="mb-6 text-4xl font-extrabold tracking-tight text-black dark:text-white">Promotions for our company</p>
 				<div className="flex flex-col overflow-hidden">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-x-8">
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:gap-x-8">
 						{(promotions?.length ?? 0) > 0 ? (
 							promotions?.map((promotion, index) => {
 								const expirationDate = promotion?.expiration;
@@ -93,10 +93,10 @@ export default async function Discounts() {
 								const differenceInDays = differenceInTime / (1000 * 3600 * 24);
 
 								return (
-									<div key={index} className="h-full space-y-4 w-full flex flex-col items-center text-center p-6 bg-white overflow-hidden rounded-xl border-4 border-dashed border-gray-500">
+									<div key={index} className="flex flex-col items-center w-full h-full p-6 space-y-4 overflow-hidden text-center bg-white border-4 border-gray-500 border-dashed rounded-xl">
 										<Image priority className="w-auto h-auto" src="/WadesLogo.webp" width={100} height={100} alt="Wade' Plumbing & Septic Logo" />
 										<div>
-											<h2 className="font-extrabold text-lg">{promotion.title}</h2>
+											<h2 className="text-lg font-extrabold">{promotion.title}</h2>
 											<div dangerouslySetInnerHTML={{ __html: promotion.content }} />
 										</div>
 										<div>
@@ -108,7 +108,7 @@ export default async function Discounts() {
 											<a href="mailto:support@wadesinc.io" className="text-brand-800 hover:underline">
 												support@wadesinc.io
 											</a>
-											<p className="mt-2 text-red font-bold">{promotion.expiration === null ? "This item does not expire" : differenceInDays <= 7 ? `Expiring soon on: ${promotion.expiration}` : `Expires: ${promotion.expiration}`}</p>
+											<p className="mt-2 font-bold text-red">{promotion.expiration === null ? "This item does not expire" : differenceInDays <= 7 ? `Expiring soon on: ${promotion.expiration}` : `Expires: ${promotion.expiration}`}</p>
 										</div>
 									</div>
 								);

@@ -22,7 +22,6 @@ export const metadata: Metadata = {
 	creator: "Byron Wade",
 	publisher: "Byron Wade",
 	robots: "index, follow",
-	viewport: "width=device-width, initial-scale=1.0",
 	alternates: {},
 	formatDetection: {
 		email: false,

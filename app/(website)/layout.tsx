@@ -11,7 +11,7 @@ export const viewport = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" className={GeistSans.className}>
+		<html lang="en" className={GeistSans.className} suppressHydrationWarning>
 			<body className="text-base bg-gray-50">
 				<main>{children}</main>
 				<Analytics />

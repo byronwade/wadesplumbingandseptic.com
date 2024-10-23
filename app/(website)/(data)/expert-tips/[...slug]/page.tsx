@@ -10,7 +10,7 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 import RelatedArticlesSection from "@/components/sections/RelatedArticlesSection";
 import Sidebar from "@/components/sections/Sidebar";
 import SocialBar from "@/components/sections/SocialBar";
-import { getTipDetails } from "../getTips";
+import { getTipDetails } from "@/actions/getTips";
 
 export async function generateMetadata({ params }, parent) {
 	const slug = (await params).slug.join("/");
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }, parent) {
 	return {
 		title: formattedTitle,
 		description: formattedDescription,
-		authors: [{ name: tipDetails.author?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
-		creator: tipDetails.author?.username || "Byron Wade",
+		authors: [{ name: tipDetails.author?.[0]?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/expert-tips/" }],
+		creator: tipDetails.author?.[0]?.username || "Byron Wade",
 		publisher: "Byron Wade",
 		alternates: {
 			canonical: `https://www.wadesplumbingandseptic.com/expert-tips/${tipDetails.slug}`,
@@ -46,10 +46,10 @@ export async function generateMetadata({ params }, parent) {
 			siteName: "Wade's Plumbing & Septic",
 			images: [
 				{
-					url: tipDetails.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og",
+					url: tipDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og",
 					width: 800,
 					height: 600,
-					alt: tipDetails.featuredImage?.alttext || "Wade's Plumbing & Septic",
+					alt: tipDetails.featuredImage?.[0]?.alttext || "Wade's Plumbing & Septic",
 				},
 				...previousImages,
 			],
@@ -63,8 +63,8 @@ export async function generateMetadata({ params }, parent) {
 			creator: "@wadesplumbing",
 			images: [
 				{
-					url: tipDetails.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og",
-					alt: tipDetails.featuredImage?.alttext || "Wade's Plumbing & Septic Social Logo",
+					url: tipDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/api/og",
+					alt: tipDetails.featuredImage?.[0]?.alttext || "Wade's Plumbing & Septic Social Logo",
 				},
 			],
 		},
@@ -95,12 +95,12 @@ export default async function BlogPage({ params }) {
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		headline: postDetails.title,
-		image: postDetails.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
+		image: postDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
 		datePublished: postDetails.created_at,
 		dateModified: postDetails.created_at,
 		author: {
 			"@type": "Person",
-			name: postDetails.author?.username || "Byron Wade",
+			name: postDetails.author?.[0]?.username || "Byron Wade",
 		},
 		publisher: {
 			"@type": "Organization",
@@ -118,7 +118,7 @@ export default async function BlogPage({ params }) {
 			<div className="bg-white dark:bg-gray-900">
 				<div className="relative">
 					<section className="w-full h-[460px] xl:h-[537px] relative">
-						<Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className="object-cover object-center w-full" fill src={postDetails.featuredImage?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.alttext || "placeholder image"} />
+						<Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className="object-cover object-center w-full" fill src={postDetails.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.[0]?.alttext || "placeholder image"} />
 						<div className="absolute top-0 left-0 w-full h-full bg-black/80" />
 						<div className="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">
 							<span className="block mb-4 text-gray-500">
@@ -142,7 +142,7 @@ export default async function BlogPage({ params }) {
 									{postDetails.author && (
 										<>
 											<span>
-												By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author.username}</span>
+												By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author[0]?.username}</span>
 											</span>
 											<span className="w-2 h-2 bg-gray-300 rounded-full dark:bg-gray-400" />
 										</>
@@ -163,11 +163,11 @@ export default async function BlogPage({ params }) {
 								<ContactForm />
 							</div>
 						</article>
-						<Sidebar pathname="/expert-tips" />
+						<Sidebar pathname="/expert-tips" data={undefined} />
 					</section>
 				</div>
 			</div>
-			<RelatedArticlesSection pathname="/expert-tips" />
+			<RelatedArticlesSection pathname="/expert-tips" data={undefined} />
 			<NewsletterSection />
 		</section>
 	);

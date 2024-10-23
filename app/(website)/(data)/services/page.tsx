@@ -4,24 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import { ArrowRight } from "react-feather";
-import { getServices } from "./getServices";
+import { getServices } from "@/actions/getServices";
 
 const ITEMS_PER_PAGE = 6;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
 
-function getServiceMessage(searchTerm, services) {
-	if (searchTerm) {
-		return services.length > 0 ? `We found ${services.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`;
-	}
-	return `We have ${services.length} services.`;
-}
-
 export default async function Page({ searchParams }) {
 	const searchTerm = (await searchParams)?.search ?? "";
 	const currentPage = parseInt((await searchParams)?.page) || 1;
-	const { services, total } = await getServices({ searchTerm, page: currentPage });
+	const { services = [], total = 0 } = await getServices({ searchTerm, page: currentPage });
 
-	const serviceMsg = getServiceMessage(searchTerm, services);
+	const serviceMsg = searchTerm ? (services.length > 0 ? `We found ${services.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`) : `We have ${services.length} services.`;
 
 	const jsonLd = {
 		"@context": "https://schema.org",
@@ -66,19 +59,19 @@ export default async function Page({ searchParams }) {
 							<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-500">{serviceMsg}</h2>
 							<p className="!mt-0 mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white">Our Services</p>
 							<p className="max-w-2xl text-lg leading-6 text-gray-700">
-								Have a different question and can't find the answer you're looking for? Reach out to our support team by
+								Have a different question and can&apos;t find the answer you&apos;re looking for? Reach out to our support team by
 								<Link href="/contact-us" className="font-semibold text-brand-700 hover:text-brand-500">
 									{" "}
 									sending us an email{" "}
 								</Link>
-								and we'll get back to you as soon as we can.
+								and we&apos;ll get back to you as soon as we can.
 							</p>
 							<Search placeholder="Search for a service..." />
 							<div className="flex items-center justify-center w-full mt-10">
-								<div className="container grid max-w-screen-xl gap-8 lg:grid-cols-2 lg:grid-rows-2">
-									{services.length > 0 ? (
-										services.slice(0, ITEMS_PER_PAGE).map((service, index) => (
-											<Link href={`/services/${service.slug}`} key={service.id} className={`max-h-min relative group flex flex-col rounded border border-slate-200 bg-white ${index % 4 === 0 ? "row-span-2" : ""}`}>
+								<div className="container grid max-w-screen-xl gap-8 lg:grid-cols-2">
+									{services && services.length > 0 ? (
+										services.slice(0, ITEMS_PER_PAGE).map((service) => (
+											<Link href={`/services/${service.slug}`} key={service.id} className={`max-h-min relative group flex flex-col rounded border border-slate-200 bg-white`}>
 												<div className="relative h-96">
 													<Image placeholder="blur" blurDataURL={service?.featuredImage?.sourceurl || "/placeholder.webp"} fill sizes={service?.featuredImage?.sizes} src={service?.featuredImage?.sourceurl || "/placeholder.webp"} className="object-cover object-center w-full rounded-t" alt={service?.featuredImage?.alttext || "placeholder text"} />
 												</div>
@@ -96,7 +89,7 @@ export default async function Page({ searchParams }) {
 									)}
 								</div>
 							</div>
-							<Pagination total={total} currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} />
+							<Pagination total={total} itemsPerPage={ITEMS_PER_PAGE} />
 						</div>
 					</div>
 				</div>

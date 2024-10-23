@@ -13,6 +13,6 @@
 		"components": "@/components",
 		"utils": "@/lib/utils",
 		"lib": "@/lib",
-		"actions": "@/app/actions"
+		"actions": "@/actions"
 	}
 }

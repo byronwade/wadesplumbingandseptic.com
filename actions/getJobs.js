@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 
-async function fetchAllJobs() {
+export async function fetchAllJobs() {
 	let query = supabase
 		.from("jobs")
 		.select(
@@ -33,7 +33,7 @@ async function fetchAllJobs() {
 	return data;
 }
 
-async function fetchJobDetails(slug) {
+export async function fetchJobDetails(slug) {
 	if (!slug) return null;
 
 	const { data, error } = await supabase
@@ -66,7 +66,7 @@ async function fetchJobDetails(slug) {
 	return data;
 }
 
-export default async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
+export async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
 	const allJobs = await fetchAllJobs();
 	const jobDetails = await fetchJobDetails(slug);
 	const total = allJobs?.length || 0;
