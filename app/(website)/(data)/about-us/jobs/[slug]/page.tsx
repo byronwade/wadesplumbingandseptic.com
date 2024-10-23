@@ -2,15 +2,16 @@ import JobForm from "@/components/forms/JobForm";
 import fetchData from "../getJobs";
 import Script from "next/script";
 
-export async function generateMetadata({ params }, parent) {
-	const slug = params.slug;
-	const { jobDetails } = await fetchData({ slug });
-	const previousImages = (await parent).openGraph?.images || [];
-	const formattedTitle = `${jobDetails?.title} | Job Listing | Wade's Plumbing & Septic`;
-	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
-	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
+export async function generateMetadata(props, parent) {
+    const params = await props.params;
+    const slug = params.slug;
+    const { jobDetails } = await fetchData({ slug });
+    const previousImages = (await parent).openGraph?.images || [];
+    const formattedTitle = `${jobDetails?.title} | Job Listing | Wade's Plumbing & Septic`;
+    const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
+    const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
 
-	return {
+    return {
 		title: formattedTitle,
 		description: formattedDescription,
 		generator: "Next.js",
@@ -57,10 +58,11 @@ export async function generateMetadata({ params }, parent) {
 	};
 }
 
-export default async function Job({ params }) {
-	const slug = params.slug;
-	const { jobDetails } = await fetchData({ slug });
-	const jsonLd = {
+export default async function Job(props) {
+    const params = await props.params;
+    const slug = params.slug;
+    const { jobDetails } = await fetchData({ slug });
+    const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "JobPosting",
 		title: jobDetails?.title,
@@ -100,7 +102,7 @@ export default async function Job({ params }) {
 			},
 		},
 	};
-	return (
+    return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>{jobDetails?.title}</h1>

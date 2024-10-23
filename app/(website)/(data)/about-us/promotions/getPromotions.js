@@ -1,4 +1,4 @@
-import { supabase } from "../../../../../utils/supabase";
+import { supabase } from "@/lib/supabase";
 
 export default async function getPromotions() {
 	let { data: promotions, error } = await supabase.from("promotions").select("*");

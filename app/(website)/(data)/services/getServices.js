@@ -1,6 +1,6 @@
 "use server";
 
-import { supabase } from "@/utils/supabase";
+import { supabase } from "@/lib/supabase";
 
 const ITEMS_PER_PAGE = 6;
 

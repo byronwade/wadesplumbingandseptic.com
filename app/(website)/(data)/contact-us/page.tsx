@@ -85,28 +85,14 @@ export default function ContactPage() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			{/* <section className="relative flex flex-row">
-				<div className="hidden md:block w-full md:w-1/2 relative">
-					<MapBox />
-				</div>
-				<div className="w-full md:w-1/2 mx-auto">
-					<div className="py-16 px-6 sm:py-24 lg:px-8">
-						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
-						<p className="mt-1 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
-						<div className="mt-10 flex flex-col gap-10 sm:gap-y-20 lg:flex-row">
-							<ContactForm />
-						</div>
-					</div>
-				</div>
-			</section> */}
-			<div className="h-full max-sm:px-4 bg-black relative">
-				<div className="z-20 space-x-6 relitive flex mx-auto max-w-7xl px-6 lg:px-8 py-20">
+			<div className="relative h-full bg-black max-sm:px-4">
+				<div className="z-20 flex px-6 py-20 mx-auto space-x-6 relitive max-w-7xl lg:px-8">
 					<div className="p-10 bg-white rounded-md">
 						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
 						<p className="mt-1 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
 						<ContactForm />
 					</div>
-					<div className="hidden md:flex flex-col text-md md:text-lg leading-6 md:leading-8 text-white backdrop-blur-sm bg-white/10 p-4 rounded">
+					<div className="flex-col hidden p-4 leading-6 text-white rounded md:flex text-md md:text-lg md:leading-8 backdrop-blur-sm bg-white/10">
 						<div className="mb-8">
 							<h4 className="mb-1 font-medium text-white">Wade&#39;s Plumbing & Septic</h4>
 							<Link href="tel:8314306011" className="text-sm font-normal text-brand-500 non-italic">
@@ -120,19 +106,19 @@ export default function ContactPage() {
 						</div>
 						<div className="mt-8 space-y-4">
 							<div>
-								<h4 className="mb-1 font-medium text-gray-900 text-white">Information &amp; Sales</h4>
+								<h4 className="mb-1 font-medium text-white text-gray-900">Information &amp; Sales</h4>
 								<p className="text-sm font-medium text-brand-500 hover:underline dark:text-brand-500">
 									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 								</p>
 							</div>
 							<div>
-								<h4 className="mb-1 font-medium text-gray-900 text-white">Support</h4>
+								<h4 className="mb-1 font-medium text-white text-gray-900">Support</h4>
 								<p className="text-sm font-medium text-brand-500 hover:underline dark:text-brand-500">
 									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 								</p>
 							</div>
 							<div>
-								<h4 className="mb-1 font-medium text-gray-900 text-white">Verification of Employment</h4>
+								<h4 className="mb-1 font-medium text-white text-gray-900">Verification of Employment</h4>
 								<p className="text-sm font-medium text-brand-500 hover:underline dark:text-brand-500">
 									<a href="mailto:support@wadesinc.io">support@wadesinc.io</a>
 								</p>
@@ -140,7 +126,7 @@ export default function ContactPage() {
 						</div>
 					</div>
 				</div>
-				<div className="-z-10 h-full w-1/2 absolute top-0 right-0">
+				<div className="absolute top-0 right-0 w-1/2 h-full -z-10">
 					<MapBox />
 				</div>
 			</div>

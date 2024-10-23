@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { truncateString } from "../../helpers/truncate";
+import { truncateString } from "@/lib/truncate";
 
 export default function RelatedArticlesSection({ data, pathname }) {
 	const truncatedPosts = data?.slice(0, 4);

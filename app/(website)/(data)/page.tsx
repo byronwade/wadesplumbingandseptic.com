@@ -23,7 +23,6 @@ export const metadata: Metadata = {
 	publisher: "Byron Wade",
 	robots: "index, follow",
 	viewport: "width=device-width, initial-scale=1.0",
-	themeColor: "#bc6f30",
 	alternates: {},
 	formatDetection: {
 		email: false,

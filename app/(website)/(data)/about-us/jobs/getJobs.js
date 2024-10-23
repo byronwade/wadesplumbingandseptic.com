@@ -1,4 +1,4 @@
-import { supabase } from "../../../../../utils/supabase";
+import { supabase } from "@/lib/supabase";
 
 async function fetchAllJobs() {
 	let query = supabase
