@@ -1,24 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { truncateString } from "@/lib/truncate";
+import { getTips } from "@/actions/getTips";
 
-export default function RelatedArticlesSection({ data, pathname }) {
-	const truncatedPosts = data?.slice(0, 4);
+export default async function RelatedArticlesSection({ pathname }) {
+	const { tips: relatedTips } = await getTips({ page: 1 });
+	const truncatedPosts = relatedTips?.slice(0, 4);
 
 	if (!truncatedPosts || truncatedPosts.length === 0) {
 		return null;
 	}
 
 	return (
-		<section aria-label="Related articles" className="py-8 bg-white lg:py-24 dark:bg-gray-900">
-			<div className="max-w-screen-xl px-4 mx-auto">
+		<section className="py-8 bg-white lg:py-24 dark:bg-gray-900">
+			<div className="container px-4 mx-auto">
 				<h2 className="mb-6 text-2xl font-bold text-gray-900 lg:mb-8 dark:text-white">Related articles</h2>
 				<div className="grid gap-6 lg:gap-12 md:grid-cols-2">
 					{truncatedPosts?.map((post, index) => (
 						<Link key={index} href={`${pathname}/${post.slug}`}>
 							<article className="flex flex-col xl:flex-row">
 								<div className="relative w-full h-40 mb-2 mr-5 xl:mb-0">
-									<Image sizes={post?.featuredImage?.sizes} fill src={post?.featuredImage?.sourceurl ? post.featuredImage.sourceurl : "/placeholder.webp"} alt={post?.featuredImage?.alttext ? post.featuredImage.alttext : "/placeholder.webp"} className="object-cover object-center w-full rounded" />
+									<Image sizes={post?.featuredImage?.[0]?.sizes} fill src={post?.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} alt={post?.featuredImage?.[0]?.alttext || "placeholder image"} className="object-cover object-center w-full rounded" />
 								</div>
 								<div className="flex flex-col justify-center">
 									<h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">

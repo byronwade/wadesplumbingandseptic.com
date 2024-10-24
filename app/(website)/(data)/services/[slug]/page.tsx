@@ -61,57 +61,61 @@ export default async function ServicePage({ params }) {
 		<section>
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="bg-white dark:bg-gray-900">
-				<div className="px-6 py-16 sm:py-24 lg:px-8">
-					<div className="flex justify-between max-w-screen-xl px-4 mx-auto">
-						<article className="w-full max-w-2xl mx-auto space-y-4 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-							<div className="relative w-full">
-								<Image sizes={postDetails.featuredImage?.sizes} priority className="w-full mb-6 rounded" width={1000} height={1000} src={postDetails.featuredImage?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.alttext || "placeholder text"} />
-								<div className="w-full py-6 mx-auto space-y-1">
-									<span className="block text-gray-800">
-										Published in{" "}
-										<span className="font-semibold text-black">
-											{postDetails.categories?.map((category, index) => (
-												<span key={index}>
-													{category}
-													{index !== postDetails.categories.length - 1 ? ", " : ""}
-												</span>
-											))}
-										</span>
-									</span>
-									<h1 dangerouslySetInnerHTML={{ __html: postDetails.title || "" }} className="max-w-4xl text-2xl font-extrabold leading-none text-black sm:text-3xl lg:text-4xl" />
-								</div>
-							</div>
-							<div className="flex flex-col justify-between lg:flex-row lg:items-center">
-								<div className="flex items-center mb-2 space-x-3 text-base text-gray-800 dark:text-gray-400 lg:mb-0">
-									{postDetails.author && (
-										<>
-											<span>
-												By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author.username || ""}</span>
+				<div className="container relative z-20 px-4 py-16 mx-auto sm:px-6 lg:px-8">
+					<div className="flex flex-col lg:flex-row">
+						<div className="w-full lg:w-2/3">
+							<article className="w-full max-w-none format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+								<div className="relative w-full">
+									<Image sizes={postDetails.featuredImage?.sizes} priority className="w-full mb-6 rounded" width={1000} height={1000} src={postDetails.featuredImage?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.alttext || "placeholder text"} />
+									<div className="w-full py-6 mx-auto space-y-1">
+										<span className="block text-gray-800">
+											Published in{" "}
+											<span className="font-semibold text-black">
+												{postDetails.categories?.map((category, index) => (
+													<span key={index}>
+														{category}
+														{index !== postDetails.categories.length - 1 ? ", " : ""}
+													</span>
+												))}
 											</span>
-											<span className="w-2 h-2 bg-gray-300 rounded-full dark:bg-gray-400" />
-										</>
-									)}
-									<span>
-										<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={postDetails.created_at || ""} title={`${formattedDate} at ${formattedTime}`}>
-											{formattedDate} at {formattedTime}
-										</time>
-									</span>
+										</span>
+										<h1 dangerouslySetInnerHTML={{ __html: postDetails.title || "" }} className="max-w-4xl text-2xl font-extrabold leading-none text-black sm:text-3xl lg:text-4xl" />
+									</div>
 								</div>
-								<SocialBar />
-							</div>
-							<div className="prose">
-								<div dangerouslySetInnerHTML={{ __html: postDetails.content || "" }} />
-							</div>
-							<div className="!mt-16">
-								<h2 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Get a free quote</h2>
-								<ContactForm />
-							</div>
-						</article>
-						<Sidebar pathname="/services" data={relatedServices} />
+								<div className="flex flex-col justify-between lg:flex-row lg:items-center">
+									<div className="flex items-center mb-2 space-x-3 text-base text-gray-800 dark:text-gray-400 lg:mb-0">
+										{postDetails.author && (
+											<>
+												<span>
+													By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author.username || ""}</span>
+												</span>
+												<span className="w-2 h-2 bg-gray-300 rounded-full dark:bg-gray-400" />
+											</>
+										)}
+										<span>
+											<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={postDetails.created_at || ""} title={`${formattedDate} at ${formattedTime}`}>
+												{formattedDate} at {formattedTime}
+											</time>
+										</span>
+									</div>
+									<SocialBar />
+								</div>
+								<div className="prose">
+									<div dangerouslySetInnerHTML={{ __html: postDetails.content || "" }} />
+								</div>
+								<div className="!mt-16">
+									<h2 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Get a free quote</h2>
+									<ContactForm />
+								</div>
+							</article>
+						</div>
+						<div className="w-full mt-8 lg:w-1/3 lg:pl-8">
+							<Sidebar pathname="/services" />
+						</div>
 					</div>
 				</div>
 			</div>
-			<RelatedArticlesSection pathname="/services" data={relatedServices} />
+			<RelatedArticlesSection pathname="/services" />
 			<NewsletterSection />
 		</section>
 	);

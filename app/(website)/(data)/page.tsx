@@ -1,28 +1,42 @@
 import LogoCloud from "@/components/sections/LogoCloud";
 import FAQ from "@/components/sections/FAQ";
-import Testimonials from "@/components/sections/Testimonials";
 import { Step } from "@/components/sections/Step";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import { Metadata } from "next";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+
+const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"));
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
 	title: {
-		default: "Wade's Plumbing & Septic - Santa Cruz, Monterey, Santa Clara",
+		default: "Wade's Plumbing & Septic | Santa Cruz, Monterey, Santa Clara",
 		template: "%s | Wade's Plumbing & Septic",
 	},
-	description: "Wade's Plumbing & Septic offers septic services across Santa Cruz, Monterey, and Santa Clara Counties. Our experienced team is ready to assist you anytime, any day. Contact us for all your plumbing and septic needs!",
+	description: "Expert plumbing and septic services in Santa Cruz, Monterey, and Santa Clara Counties. 24/7 emergency assistance available. Trust Wade's for all your plumbing needs!",
 	generator: "Next.js",
 	applicationName: "Wade's Plumbing & Septic",
-	keywords: ["24/7 Plumbing Service", "Emergency Plumbing", "Plumbing Santa Cruz", "Plumbing Monterey", "Plumbing Santa Clara"],
-	authors: [{ name: "Byron Wade" }, { name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
+	keywords: ["24/7 Plumbing Service", "Emergency Plumbing", "Septic Services", "Plumbing Santa Cruz", "Plumbing Monterey", "Plumbing Santa Clara"],
+	authors: [{ name: "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
 	creator: "Byron Wade",
-	publisher: "Byron Wade",
-	robots: "index, follow",
-	alternates: {},
+	publisher: "Wade's Plumbing & Septic",
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+	alternates: {
+		canonical: "https://www.wadesplumbingandseptic.com",
+	},
 	formatDetection: {
 		email: false,
 		address: false,
@@ -91,7 +105,6 @@ const jsonLd = {
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
 };
 
-
 export default function Home() {
 	return (
 		<>
@@ -100,9 +113,8 @@ export default function Home() {
 			<Step />
 			<FeatureSection />
 			<FAQ />
-			{/* <Testimonials /> */}
 			<LogoCloud />
-			<Testimonials />
+			<DynamicTestimonials />
 			<StatsSection />
 		</>
 	);

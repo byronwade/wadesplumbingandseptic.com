@@ -117,57 +117,57 @@ export default async function BlogPage({ params }) {
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="bg-white dark:bg-gray-900">
 				<div className="relative">
-					<section className="w-full h-[460px] xl:h-[537px] relative">
-						<Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className="object-cover object-center w-full" fill src={postDetails.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.[0]?.alttext || "placeholder image"} />
-						<div className="absolute top-0 left-0 w-full h-full bg-black/80" />
-						<div className="absolute w-full max-w-screen-xl px-4 mx-auto -translate-x-1/2 top-20 left-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">
-							<span className="block mb-4 text-gray-500">
-								Published in{" "}
-								<span className="font-semibold text-white">
-									{postDetails.categories?.map((category, index) => (
-										<span key={index}>
-											{category}
-											{index !== postDetails.categories.length - 1 && ", "}
-										</span>
-									))}
-								</span>
-							</span>
-							<h1 className="max-w-4xl mb-4 text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl">{postDetails.title}</h1>
-						</div>
+					<section className="w-full h-[300px] sm:h-[400px] md:h-[460px] xl:h-[537px] relative">
+						<Image sizes="100vw" priority className="object-cover object-center w-full" fill src={postDetails.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.[0]?.alttext || "placeholder image"} />
 					</section>
-					<section className="relative z-20 flex justify-between max-w-screen-xl p-6 mx-4 bg-white rounded -m-36 dark:bg-gray-800 xl:-m-32 xl:p-9 xl:mx-auto">
-						<article className="xl:w-[828px] w-full max-w-none format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-							<div className="flex flex-col justify-between lg:flex-row lg:items-center">
-								<div className="flex items-center mb-2 space-x-3 text-base text-gray-800 dark:text-gray-400 lg:mb-0">
-									{postDetails.author && (
-										<>
-											<span>
-												By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author[0]?.username}</span>
+					<section className="container relative z-20 px-4 mx-auto sm:px-6 lg:px-8">
+						<div className="flex flex-col lg:flex-row">
+							<div className="w-full lg:w-2/3">
+								<div className="p-6 sm:p-8 md:p-10">
+									<article className="w-full max-w-none format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+										<span className="block mb-2 text-sm text-gray-500 sm:text-base">
+											Published in{" "}
+											<span className="font-semibold">
+												{postDetails.categories?.map((category, index) => (
+													<span key={index}>
+														{category}
+														{index !== postDetails.categories.length - 1 && ", "}
+													</span>
+												))}
 											</span>
-											<span className="w-2 h-2 bg-gray-300 rounded-full dark:bg-gray-400" />
-										</>
-									)}
-									<span>
-										<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={postDetails.created_at} title={`${formattedDate} at ${formattedTime}`}>
-											{formattedDate} at {formattedTime}
-										</time>
-									</span>
+										</span>
+										<h1 className="max-w-4xl mb-4 text-xl font-bold leading-tight sm:text-2xl md:text-3xl lg:text-5xl">{postDetails.title}</h1>
+										<div className="flex flex-col justify-between space-y-4 sm:space-y-0 sm:flex-row sm:items-center">
+											<div className="flex flex-col space-y-2 text-sm text-gray-800 sm:text-base dark:text-gray-400">
+												{postDetails.author && (
+													<span>
+														By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author[0]?.username}</span>
+													</span>
+												)}
+												<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={postDetails.created_at} title={`${formattedDate} at ${formattedTime}`}>
+													{formattedDate} at {formattedTime}
+												</time>
+											</div>
+											<SocialBar />
+										</div>
+										<div className="mt-8 prose sm:prose-sm md:prose-base lg:prose-lg dark:prose-invert">
+											<div dangerouslySetInnerHTML={{ __html: postDetails.content }} />
+										</div>
+										<div className="mt-12 sm:mt-16">
+											<h2 className="mb-4 text-2xl font-bold text-black sm:text-3xl lg:text-4xl dark:text-white">Get a free quote</h2>
+											<ContactForm />
+										</div>
+									</article>
 								</div>
-								<SocialBar />
 							</div>
-							<div className="prose lg:prose-xl">
-								<div dangerouslySetInnerHTML={{ __html: postDetails.content }} />
+							<div className="w-full mt-8 lg:w-1/3 lg:pl-8">
+								<Sidebar pathname="/expert-tips" />
 							</div>
-							<div className="!mt-16">
-								<h2 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Get a free quote</h2>
-								<ContactForm />
-							</div>
-						</article>
-						<Sidebar pathname="/expert-tips" data={undefined} />
+						</div>
 					</section>
 				</div>
 			</div>
-			<RelatedArticlesSection pathname="/expert-tips" data={undefined} />
+			<RelatedArticlesSection pathname="/expert-tips" />
 			<NewsletterSection />
 		</section>
 	);
