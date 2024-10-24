@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "@vercel/og";
-import { dataString } from "@/lib/images";
 export const runtime = "edge";
 
 export async function GET(req) {
@@ -18,7 +17,7 @@ export async function GET(req) {
 			(
 				<div tw="flex flex-col bg-black h-full w-full">
 					<div tw="flex flex-col p-4 align-center">
-						<img tw="absolute top-25 left-25" alt="Vercel" height={100} width={100} src={dataString} />
+						<img tw="absolute top-25 left-25" alt="Vercel" height={100} width={100} src="https://www.wadesplumbingandseptic.com/WadesLogo.png" />
 						<div tw="flex flex-col space-y-6 mt-60 left-25 absolute">
 							<div tw="text-white text-[60px] w-[1000px]">{title}</div>
 							<div tw="text-white text-base mt-2 w-[1000px]">{description}</div>
