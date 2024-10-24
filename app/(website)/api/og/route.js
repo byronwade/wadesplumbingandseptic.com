@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "@vercel/og";
-import { dataString } from "./images";
+import { dataString } from "@/lib/images";
 export const runtime = "edge";
 
 export async function GET(req) {
