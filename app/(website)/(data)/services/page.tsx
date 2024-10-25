@@ -2,21 +2,17 @@ import Search from "@/components/ui/Search";
 import Pagination from "@/components/ui/Pagnation";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import { ArrowRight } from "react-feather";
 import { getServices } from "@/actions/getServices";
+import { cache } from "react";
+
+export const runtime = "edge";
 
 const ITEMS_PER_PAGE = 6;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
 
-export default async function Page({ searchParams }) {
-	const searchTerm = (await searchParams)?.search ?? "";
-	const currentPage = parseInt((await searchParams)?.page) || 1;
-	const { services = [], total = 0 } = await getServices({ searchTerm, page: currentPage });
-
-	const serviceMsg = searchTerm ? (services.length > 0 ? `We found ${services.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`) : `We have ${services.length} services.`;
-
-	const jsonLd = {
+function generateJsonLd(services) {
+	return {
 		"@context": "https://schema.org",
 		"@type": "ItemList",
 		mainEntityOfPage: {
@@ -48,10 +44,30 @@ export default async function Page({ searchParams }) {
 			},
 		})),
 	};
+}
+
+export async function generateStaticParams() {
+	// Implement this function to generate static params for all your service pages
+	// This will enable ISR for your service pages
+	// Example:
+	// const allServices = await getAllServices();
+	// return allServices.map((service) => ({
+	//   searchParams: { search: '', page: '1' }
+	// }));
+}
+
+export default async function ServicesPage({ searchParams }) {
+	const searchTerm = searchParams?.search ?? "";
+	const currentPage = parseInt(searchParams?.page) || 1;
+	const { services = [], total = 0 } = await getServices({ searchTerm, page: currentPage });
+
+	const serviceMsg = searchTerm ? (services.length > 0 ? `We found ${services.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`) : `We have ${services.length} services.`;
+
+	const jsonLd = generateJsonLd(services);
 
 	return (
 		<section>
-			<Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative overflow-hidden bg-gray-50">
 				<div className="px-6 py-16 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">

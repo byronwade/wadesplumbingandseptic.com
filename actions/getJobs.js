@@ -1,84 +1,103 @@
+"use server";
+
 import { supabase } from "@/lib/supabase";
 
-export async function fetchAllJobs() {
-	let query = supabase
-		.from("jobs")
-		.select(
-			`
-			id,
-			title,
-			content,
-			excerpt,
-			created_at,
-			job_type,
-			benefits,
-			location,
-			pay_range,
-			qualifications,
-			shift_and_schedule,
-			categories,
-			tags,
-			slug
-`,
-			{ count: "exact" }
-		)
-		.order("created_at", { ascending: true });
+async function fetchAllJobs() {
+	try {
+		const { data, count, error } = await supabase
+			.from("jobs")
+			.select(
+				`
+        id,
+        title,
+        content,
+        excerpt,
+        created_at,
+        job_type,
+        benefits,
+        location,
+        pay_range,
+        qualifications,
+        shift_and_schedule,
+        categories,
+        tags,
+        slug
+        `,
+				{ count: "exact" }
+			)
+			.order("created_at", { ascending: true });
 
-	const { data, count, error } = await query;
+		if (error) throw error;
 
-	if (error) {
-		console.error("Error fetching data:", error);
-		return null;
+		return { data, count };
+	} catch (error) {
+		console.error("Error fetching all jobs:", error);
+		return { data: null, count: 0, error: error.message };
 	}
-	return data;
 }
 
-export async function fetchJobDetails(slug) {
-	if (!slug) return null;
+async function fetchJobDetails(slug) {
+	if (!slug) return { data: null, error: "No slug provided" };
 
-	const { data, error } = await supabase
-		.from("jobs")
-		.select(
-			`
-			id,
-			title,
-			content,
-			excerpt,
-			created_at,
-			job_type,
-			benefits,
-			location,
-			pay_range,
-			qualifications,
-			shift_and_schedule,
-			categories,
-			tags,
-			slug
-	  `
-		)
-		.eq("slug", slug)
-		.single();
+	try {
+		const { data, error } = await supabase
+			.from("jobs")
+			.select(
+				`
+        id,
+        title,
+        content,
+        excerpt,
+        created_at,
+        job_type,
+        benefits,
+        location,
+        pay_range,
+        qualifications,
+        shift_and_schedule,
+        categories,
+        tags,
+        slug
+        `
+			)
+			.eq("slug", slug)
+			.single();
 
-	if (error) {
+		if (error) throw error;
+
+		return { data };
+	} catch (error) {
 		console.error("Error fetching job details:", error);
-		return null;
+		return { data: null, error: error.message };
 	}
-	return data;
 }
 
 export async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
-	const allJobs = await fetchAllJobs();
-	const jobDetails = await fetchJobDetails(slug);
-	const total = allJobs?.length || 0;
+	try {
+		const { data: allJobs, count: total, error: allJobsError } = await fetchAllJobs();
+		if (allJobsError) throw new Error(allJobsError);
 
-	const startAt = (page - 1) * itemsPerPage;
-	const endAt = startAt + itemsPerPage;
-	let pagedData = allJobs?.slice(startAt, endAt);
+		const { data: jobDetails, error: jobDetailsError } = await fetchJobDetails(slug);
+		if (jobDetailsError && slug) throw new Error(jobDetailsError);
 
-	return {
-		allJobs,
-		jobDetails,
-		pagedData,
-		total,
-	};
+		const startAt = (page - 1) * itemsPerPage;
+		const endAt = startAt + itemsPerPage;
+		const pagedData = allJobs?.slice(startAt, endAt) || [];
+
+		return {
+			allJobs,
+			jobDetails,
+			pagedData,
+			total,
+		};
+	} catch (error) {
+		console.error("Error in getJobs:", error);
+		return {
+			allJobs: [],
+			jobDetails: null,
+			pagedData: [],
+			total: 0,
+			error: error.message,
+		};
+	}
 }

@@ -1,58 +1,65 @@
 "use server";
 
-import { supabase } from "@/lib/supabase";
+import { createServerActionClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 
-const ITEMS_PER_PAGE = 6;
+export async function getServices({ searchTerm = "", page = 1, itemsPerPage = 6 }) {
+	const supabase = createServerActionClient({ cookies });
 
-export async function getServices({ searchTerm = "", page = 1, limit = ITEMS_PER_PAGE }) {
-	let query = supabase.from("services").select("*", { count: "exact" });
+	try {
+		let query = supabase.from("services").select("id, title, excerpt, slug, categories, featuredImage:images(alttext, sourceurl, sizes)", { count: "exact" }).order("created_at", { ascending: false });
 
-	if (searchTerm) {
-		query = query.ilike("title", `%${searchTerm}%`);
-	}
+		if (searchTerm) {
+			query = query.ilike("title", `%${searchTerm}%`);
+		}
 
-	const { data: services, count, error } = await query.range((page - 1) * limit, page * limit - 1).order("created_at", { ascending: false });
+		const { data, count, error } = await query.range((page - 1) * itemsPerPage, page * itemsPerPage - 1);
 
-	if (error) {
+		if (error) throw error;
+
+		return { services: data, total: count };
+	} catch (error) {
 		console.error("Error fetching services:", error);
-		return { services: [], total: 0 };
+		return { services: [], total: 0, error: error.message };
 	}
-
-	return { services, total: count };
 }
 
 export async function getServiceDetails(slug) {
-	const { data, error } = await supabase.from("services").select("*").eq("slug", slug).single();
+	try {
+		const { data, error } = await createServerActionClient({ cookies }).from("services").select("*").eq("slug", slug).single();
 
-	if (error) {
+		if (error) throw error;
+
+		return { service: data };
+	} catch (error) {
 		console.error("Error fetching service details:", error);
-		return null;
+		return { service: null, error: error.message };
 	}
-
-	return data;
 }
 
 export async function getRelatedServices(currentSlug, limit = 3) {
-	const { data, error } = await supabase
-		.from("services")
-		.select(
-			`
-			id,
-			title,
-			excerpt,
-			slug,
-			created_at,
-			categories,
-			featuredImage: images (alttext, sourceurl, sizes)
-		`
-		)
-		.neq("slug", currentSlug)
-		.limit(limit);
+	try {
+		const { data, error } = await createServerActionClient({ cookies })
+			.from("services")
+			.select(
+				`
+        id,
+        title,
+        excerpt,
+        slug,
+        created_at,
+        categories,
+        featuredImage: images (alttext, sourceurl, sizes)
+      `
+			)
+			.neq("slug", currentSlug)
+			.limit(limit);
 
-	if (error) {
+		if (error) throw error;
+
+		return { relatedServices: data };
+	} catch (error) {
 		console.error("Error fetching related services:", error);
-		return [];
+		return { relatedServices: [], error: error.message };
 	}
-
-	return data;
 }

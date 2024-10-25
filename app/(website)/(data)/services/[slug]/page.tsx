@@ -1,38 +1,41 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { cache } from "react";
+
+export const runtime = "edge";
 
 const ContactForm = dynamic(() => import("@/components/forms/ContactForm"), {
 	loading: () => <p>Loading...</p>,
 });
-import NewsletterSection from "@/components/sections/NewsletterSection";
-import RelatedArticlesSection from "@/components/sections/RelatedArticlesSection";
-import Sidebar from "@/components/sections/Sidebar";
-import SocialBar from "@/components/sections/SocialBar";
+const NewsletterSection = dynamic(() => import("@/components/sections/NewsletterSection"));
+const RelatedArticlesSection = dynamic(() => import("@/components/sections/RelatedArticlesSection"));
+const Sidebar = dynamic(() => import("@/components/sections/Sidebar"));
+const SocialBar = dynamic(() => import("@/components/sections/SocialBar"));
+
 import { getServiceDetails, getRelatedServices } from "@/actions/getServices";
 
-export default async function ServicePage({ params }) {
-	const slug = (await params).slug;
-	const postDetails = await getServiceDetails(slug);
-	const relatedServices = await getRelatedServices(slug);
+const cachedGetServiceDetails = cache(getServiceDetails);
+const cachedGetRelatedServices = cache(getRelatedServices);
 
-	if (!postDetails) {
-		notFound();
-	}
+function formatDate(dateString) {
+	const dateObj = new Date(dateString);
+	return {
+		date: dateObj.toLocaleDateString("en-US", {
+			month: "long",
+			day: "numeric",
+			year: "numeric",
+		}),
+		time: dateObj.toLocaleTimeString([], {
+			hour: "numeric",
+			minute: "numeric",
+			hour12: true,
+		}),
+	};
+}
 
-	const dateObj = new Date(postDetails.created_at);
-	const formattedDate = dateObj.toLocaleDateString("en-US", {
-		month: "long",
-		day: "numeric",
-		year: "numeric",
-	});
-	const formattedTime = dateObj.toLocaleTimeString([], {
-		hour: "numeric",
-		minute: "numeric",
-		hour12: true,
-	});
-
-	const jsonLd = {
+function generateJsonLd(postDetails) {
+	return {
 		"@context": "https://schema.org",
 		"@type": "Service",
 		name: postDetails.title,
@@ -56,6 +59,30 @@ export default async function ServicePage({ params }) {
 		description: postDetails.excerpt,
 		url: `https://www.wadesplumbingandseptic.com/services/${postDetails.slug}`,
 	};
+}
+
+export async function generateStaticParams() {
+	// Implement this to generate static params for all services
+	// Example:
+	// const allSlugs = await getAllServiceSlugs();
+	// return allSlugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }) {
+	const { service } = await getServiceDetails(params.slug);
+	// Generate metadata based on service details
+}
+
+export default async function ServicePage({ params }) {
+	const { service } = await getServiceDetails(params.slug);
+	const { relatedServices } = await getRelatedServices(params.slug);
+
+	if (!service) {
+		notFound();
+	}
+
+	const { date: formattedDate, time: formattedTime } = formatDate(service.created_at);
+	const jsonLd = generateJsonLd(service);
 
 	return (
 		<section>
@@ -66,34 +93,34 @@ export default async function ServicePage({ params }) {
 						<div className="w-full lg:w-2/3">
 							<article className="w-full max-w-none format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
 								<div className="relative w-full">
-									<Image sizes={postDetails.featuredImage?.sizes} priority className="w-full mb-6 rounded" width={1000} height={1000} src={postDetails.featuredImage?.sourceurl || "/placeholder.webp"} alt={postDetails.featuredImage?.alttext || "placeholder text"} />
+									<Image sizes={service.featuredImage?.sizes} priority className="w-full mb-6 rounded" width={1000} height={1000} src={service.featuredImage?.sourceurl || "/placeholder.webp"} alt={service.featuredImage?.alttext || "placeholder text"} />
 									<div className="w-full py-6 mx-auto space-y-1">
 										<span className="block text-gray-800">
 											Published in{" "}
 											<span className="font-semibold text-black">
-												{postDetails.categories?.map((category, index) => (
+												{service.categories?.map((category, index) => (
 													<span key={index}>
 														{category}
-														{index !== postDetails.categories.length - 1 ? ", " : ""}
+														{index !== service.categories.length - 1 ? ", " : ""}
 													</span>
 												))}
 											</span>
 										</span>
-										<h1 dangerouslySetInnerHTML={{ __html: postDetails.title || "" }} className="max-w-4xl text-2xl font-extrabold leading-none text-black sm:text-3xl lg:text-4xl" />
+										<h1 dangerouslySetInnerHTML={{ __html: service.title || "" }} className="max-w-4xl text-2xl font-extrabold leading-none text-black sm:text-3xl lg:text-4xl" />
 									</div>
 								</div>
 								<div className="flex flex-col justify-between lg:flex-row lg:items-center">
 									<div className="flex items-center mb-2 space-x-3 text-base text-gray-800 dark:text-gray-400 lg:mb-0">
-										{postDetails.author && (
+										{service.author && (
 											<>
 												<span>
-													By <span className="font-semibold text-black no-underline dark:text-white">{postDetails.author.username || ""}</span>
+													By <span className="font-semibold text-black no-underline dark:text-white">{service.author.username || ""}</span>
 												</span>
 												<span className="w-2 h-2 bg-gray-300 rounded-full dark:bg-gray-400" />
 											</>
 										)}
 										<span>
-											<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={postDetails.created_at || ""} title={`${formattedDate} at ${formattedTime}`}>
+											<time className="font-normal text-gray-800 dark:text-gray-400" dateTime={service.created_at || ""} title={`${formattedDate} at ${formattedTime}`}>
 												{formattedDate} at {formattedTime}
 											</time>
 										</span>
@@ -101,7 +128,7 @@ export default async function ServicePage({ params }) {
 									<SocialBar />
 								</div>
 								<div className="prose">
-									<div dangerouslySetInnerHTML={{ __html: postDetails.content || "" }} />
+									<div dangerouslySetInnerHTML={{ __html: service.content || "" }} />
 								</div>
 								<div className="!mt-16">
 									<h2 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Get a free quote</h2>
@@ -120,58 +147,3 @@ export default async function ServicePage({ params }) {
 		</section>
 	);
 }
-
-export async function generateMetadata({ params }) {
-	const slug = (await params).slug;
-	const postDetails = await getServiceDetails(slug);
-
-	if (!postDetails) {
-		return {
-			title: "Wade's Plumbing & Septic",
-			description: "Reliable plumbing and septic services.",
-		};
-	}
-
-	const formattedTitle = postDetails.title ? `${postDetails.title} | Wade's Plumbing & Septic` : "Services | Wade's Plumbing & Septic";
-	const formattedDescription = postDetails.excerpt?.length > 160 ? `${postDetails.excerpt.substring(0, 157)}...` : postDetails.excerpt;
-
-	return {
-		title: formattedTitle,
-		description: formattedDescription,
-		keywords: postDetails?.categories.join(", "),
-		authors: [{ name: postDetails?.author?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
-		creator: postDetails?.author?.username || "Byron Wade",
-		publisher: "Byron Wade",
-		alternates: {
-			canonical: `https://www.wadesplumbingandseptic.com/services/${postDetails?.slug}`,
-		},
-		openGraph: {
-			title: formattedTitle,
-			description: formattedDescription,
-			url: `https://www.wadesplumbingandseptic.com/services/${postDetails?.slug}`,
-			siteName: "Wade's Plumbing & Septic",
-			images: [
-				{
-					url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
-					width: 800,
-					height: 600,
-					alt: postDetails?.featuredImage?.alttext || "Service Image",
-				},
-			],
-			locale: "en-US",
-			type: "website",
-		},
-		twitter: {
-			card: "summary_large_image",
-			title: formattedTitle,
-			description: formattedDescription,
-			creator: "@wadesplumbing",
-			images: {
-				url: postDetails?.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
-				alt: postDetails?.featuredImage?.alttext || "Service Image",
-			},
-		},
-	};
-}
-
-export const revalidate = 3600; // Revalidate every hour
