@@ -14,6 +14,7 @@ export async function getTips({ searchTerm = "", page = 1 }) {
         title,
         excerpt,
         slug,
+		content,
         created_at,
         readingtime,
         categories,

@@ -7,8 +7,7 @@ import StatsSection from "@/components/sections/StatsSection";
 import { Metadata } from "next";
 import Script from "next/script";
 import dynamic from "next/dynamic";
-
-const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"));
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
@@ -105,17 +104,36 @@ const jsonLd = {
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
 };
 
+export const runtime = "edge";
+export const revalidate = 3600; // Revalidate every hour
+
+const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"));
+
 export default function Home() {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<HeroSection />
-			<Step />
-			<FeatureSection />
-			<FAQ />
-			<LogoCloud />
-			<DynamicTestimonials />
-			<StatsSection />
+			<Suspense fallback={<p>Loading hero...</p>}>
+				<HeroSection />
+			</Suspense>
+			<Suspense fallback={<p>Loading steps...</p>}>
+				<Step />
+			</Suspense>
+			<Suspense fallback={<p>Loading features...</p>}>
+				<FeatureSection />
+			</Suspense>
+			<Suspense fallback={<p>Loading FAQ...</p>}>
+				<FAQ />
+			</Suspense>
+			<Suspense fallback={<p>Loading logo cloud...</p>}>
+				<LogoCloud />
+			</Suspense>
+			<Suspense fallback={<p>Loading testimonials...</p>}>
+				<DynamicTestimonials />
+			</Suspense>
+			<Suspense fallback={<p>Loading stats...</p>}>
+				<StatsSection />
+			</Suspense>
 		</>
 	);
 }

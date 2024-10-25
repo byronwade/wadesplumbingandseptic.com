@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { cache } from "react";
+import { Suspense } from "react";
+import { getServiceDetails, getServices } from "@/actions/getServices";
 
 export const runtime = "edge";
+export const revalidate = 3600; // Revalidate every hour
 
 const ContactForm = dynamic(() => import("@/components/forms/ContactForm"), {
 	loading: () => <p>Loading...</p>,
@@ -12,27 +14,6 @@ const NewsletterSection = dynamic(() => import("@/components/sections/Newsletter
 const RelatedArticlesSection = dynamic(() => import("@/components/sections/RelatedArticlesSection"));
 const Sidebar = dynamic(() => import("@/components/sections/Sidebar"));
 const SocialBar = dynamic(() => import("@/components/sections/SocialBar"));
-
-import { getServiceDetails, getRelatedServices } from "@/actions/getServices";
-
-const cachedGetServiceDetails = cache(getServiceDetails);
-const cachedGetRelatedServices = cache(getRelatedServices);
-
-function formatDate(dateString) {
-	const dateObj = new Date(dateString);
-	return {
-		date: dateObj.toLocaleDateString("en-US", {
-			month: "long",
-			day: "numeric",
-			year: "numeric",
-		}),
-		time: dateObj.toLocaleTimeString([], {
-			hour: "numeric",
-			minute: "numeric",
-			hour12: true,
-		}),
-	};
-}
 
 function generateJsonLd(postDetails) {
 	return {
@@ -61,27 +42,35 @@ function generateJsonLd(postDetails) {
 	};
 }
 
-export async function generateStaticParams() {
-	// Implement this to generate static params for all services
-	// Example:
-	// const allSlugs = await getAllServiceSlugs();
-	// return allSlugs.map((slug) => ({ slug }));
-}
-
 export async function generateMetadata({ params }) {
 	const { service } = await getServiceDetails(params.slug);
-	// Generate metadata based on service details
+	if (!service) return {};
+
+	return {
+		title: service.title,
+		description: service.excerpt,
+		// ... (other metadata)
+	};
 }
 
 export default async function ServicePage({ params }) {
 	const { service } = await getServiceDetails(params.slug);
-	const { relatedServices } = await getRelatedServices(params.slug);
+	const dateObj = new Date(service.created_at);
+	const formattedDate = dateObj.toLocaleDateString("en-US", {
+		month: "long",
+		day: "numeric",
+		year: "numeric",
+	});
+	const formattedTime = dateObj.toLocaleTimeString([], {
+		hour: "numeric",
+		minute: "numeric",
+		hour12: true,
+	});
 
 	if (!service) {
 		notFound();
 	}
 
-	const { date: formattedDate, time: formattedTime } = formatDate(service.created_at);
 	const jsonLd = generateJsonLd(service);
 
 	return (

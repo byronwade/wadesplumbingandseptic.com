@@ -1,7 +1,11 @@
 import ContactForm from "@/components/forms/ContactForm";
-import MapBox from "@/components/sections/MapBox";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import Script from "next/script";
+
+const MapBox = dynamic(() => import("@/components/sections/MapBox"));
+
+export const runtime = "edge";
 
 export const metadata = {
 	title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
@@ -84,13 +88,15 @@ const jsonLd = {
 export default function ContactPage() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative h-full bg-black max-sm:px-4">
 				<div className="z-20 flex px-6 py-20 mx-auto space-x-6 relitive max-w-7xl lg:px-8">
 					<div className="p-10 bg-white rounded-md">
 						<h2 className="text-4xl font-bold tracking-tight text-gray-900">Let’s talk about your project</h2>
 						<p className="mt-1 text-lg leading-8 text-gray-700">We help homeowners and businesses fix thier problems.</p>
-						<ContactForm />
+						<Suspense fallback={<p>Loading contact form...</p>}>
+							<ContactForm />
+						</Suspense>
 					</div>
 					<div className="flex-col hidden p-4 leading-6 text-white rounded md:flex text-md md:text-lg md:leading-8 backdrop-blur-sm bg-white/10">
 						<div className="mb-8">
@@ -126,9 +132,11 @@ export default function ContactPage() {
 						</div>
 					</div>
 				</div>
-				<div className="absolute top-0 right-0 w-1/2 h-full -z-10">
-					<MapBox />
-				</div>
+				<Suspense fallback={<p>Loading map...</p>}>
+					<div className="absolute top-0 right-0 w-1/2 h-full -z-10">
+						<MapBox />
+					</div>
+				</Suspense>
 			</div>
 		</>
 	);
