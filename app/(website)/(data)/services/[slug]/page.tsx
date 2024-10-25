@@ -1,10 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
-import { getServiceDetails, getServices } from "@/actions/getServices";
-
-export const runtime = "edge";
+import { getServiceDetails } from "@/actions/getServices";
 export const revalidate = 3600; // Revalidate every hour
 
 const ContactForm = dynamic(() => import("@/components/forms/ContactForm"), {

@@ -6,8 +6,6 @@ import Script from "next/script";
 import { ArrowRight } from "react-feather";
 import { getTips } from "@/actions/getTips";
 
-export const runtime = "edge";
-
 const ITEMS_PER_PAGE = 10;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
 

@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 
-export const runtime = "edge";
 export const revalidate = 3600; // Revalidate every hour
 
 const ContactForm = dynamic(() => import("@/components/forms/ContactForm"), {

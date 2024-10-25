@@ -5,8 +5,6 @@ import Image from "next/image";
 import { ArrowRight } from "react-feather";
 import { getServices } from "@/actions/getServices";
 
-export const runtime = "edge";
-
 const ITEMS_PER_PAGE = 6;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
 

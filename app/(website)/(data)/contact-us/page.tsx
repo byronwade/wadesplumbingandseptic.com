@@ -5,8 +5,6 @@ import Link from "next/link";
 
 const MapBox = dynamic(() => import("@/components/sections/MapBox"));
 
-export const runtime = "edge";
-
 export const metadata = {
 	title: "Contact Us 24/7 - Emergency Plumbing & Septic | Wade's Plumbing & Septic",
 	description: "Available 24/7 for emergency plumbing and septic services across Santa Cruz, Monterey, and Santa Clara Counties. Reach out to Wade's Plumbing & Septic for prompt, reliable assistance.",
