@@ -84,7 +84,7 @@ const jsonLd = {
 export default function Example() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Franchise Opportunities at Wade&#39;s Plumbing &amp; Septic</h1>
 			<p>Are you an ambitious individual with a passion for plumbing and community service? Wade&#39;s Plumbing &amp; Septic offers a remarkable franchise opportunity that empowers you to own and operate your own plumbing business under our reputable brand. By becoming a franchisee, you&#39;ll gain access to our proven business model, comprehensive training programs, and continuous support from a team of industry experts.</p>
 

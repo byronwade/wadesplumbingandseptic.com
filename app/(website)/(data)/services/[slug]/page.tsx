@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { getServiceDetails } from "@/actions/getServices";
+import Script from "next/script";
 export const revalidate = 3600; // Revalidate every hour
 
 const ContactForm = dynamic(() => import("@/components/forms/ContactForm"), {
@@ -72,7 +73,7 @@ export default async function ServicePage({ params }) {
 
 	return (
 		<section>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script async strategy="worker" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="bg-white dark:bg-gray-900">
 				<div className="container relative z-20 px-4 py-16 mx-auto sm:px-6 lg:px-8">
 					<div className="flex flex-col lg:flex-row">

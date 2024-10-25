@@ -104,7 +104,7 @@ const jsonLd = {
 export default function Rebates() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Rebates: Save Money on Your Plumbing Upgrades</h1>
 			<div>
 				<p>

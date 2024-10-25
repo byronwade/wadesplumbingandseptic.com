@@ -2,6 +2,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Script from "next/script";
 
 const MapBox = dynamic(() => import("@/components/sections/MapBox"));
 
@@ -86,7 +87,7 @@ const jsonLd = {
 export default function ContactPage() {
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script async strategy="worker" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative h-full bg-black max-sm:px-4">
 				<div className="z-20 flex px-6 py-20 mx-auto space-x-6 relitive max-w-7xl lg:px-8">
 					<div className="p-10 bg-white rounded-md">

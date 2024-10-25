@@ -54,7 +54,7 @@ export default async function Page({ searchParams }) {
 
 	return (
 		<section>
-			<Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script async strategy="worker" id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative overflow-hidden bg-gray-50">
 				<div className="px-6 py-16 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">

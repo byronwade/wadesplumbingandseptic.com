@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "react-feather";
 import { getServices } from "@/actions/getServices";
+import Script from "next/script";
 
 const ITEMS_PER_PAGE = 6;
 const BASE_URL = "https://www.wadesplumbingandseptic.com";
@@ -54,7 +55,7 @@ export default async function ServicesPage({ searchParams }) {
 
 	return (
 		<section>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script async strategy="worker" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="relative overflow-hidden bg-gray-50">
 				<div className="px-6 py-16 sm:py-24 lg:px-8">
 					<div className="mx-auto max-w-7xl">

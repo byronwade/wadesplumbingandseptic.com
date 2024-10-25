@@ -105,7 +105,7 @@ export default async function Jobs() {
 	};
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
 				<div className="relative flex flex-col space-y-6 overflow-hidden">
 					{(allJobs?.length ?? 0) > 0 ? (

@@ -78,7 +78,7 @@ const jsonLd = {
 export default function PrivacyPolicy() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Privacy Policy</h1>
 			<p>Effective Date: 3/23/2023</p>
 			<p>Wade&#39;s Plumbing &amp; Septic (&quot;us,&quot; &quot;we,&quot; or &quot;our&quot;) operates the website wadesplumbingandseptic.com (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.</p>

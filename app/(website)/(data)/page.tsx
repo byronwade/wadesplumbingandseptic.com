@@ -110,7 +110,7 @@ const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimon
 export default function Home() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<Suspense fallback={<p>Loading hero...</p>}>
 				<HeroSection />
 			</Suspense>

@@ -15,6 +15,7 @@ const Sidebar = dynamic(() => import("@/components/sections/Sidebar"));
 const SocialBar = dynamic(() => import("@/components/sections/SocialBar"));
 
 import { getTipDetails } from "@/actions/getTips";
+import Script from "next/script";
 
 export async function generateMetadata({ params }, parent) {
 	const awaitSlug = await params.slug;
@@ -87,7 +88,7 @@ function BlogContent({ postDetails }) {
 
 	return (
 		<>
-			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			<Script async strategy="worker" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			<div className="bg-white dark:bg-gray-900">
 				<div className="relative">
 					<section className="w-full h-[300px] sm:h-[400px] md:h-[460px] xl:h-[537px] relative">

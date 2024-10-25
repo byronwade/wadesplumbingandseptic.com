@@ -181,33 +181,33 @@ const benefits = ["Quick access to local plumbing experts", "Rapid response for 
 export default function DrainClearing() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
-			<section className="w-full bg-white text-black">
-				<div className="py-20 mx-auto max-w-7xl px-8 space-y-20">
+			<Script async strategy="worker"  data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker"  data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
+			<section className="w-full text-black bg-white">
+				<div className="px-8 py-20 mx-auto space-y-20 max-w-7xl">
 					<div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
 						<div className="flex flex-col col-span-2 lg:pb-6">
 							<div className="space-y-6">
 								<h1 className="text-4xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Santa Cruz Plumbers Near Me</h1>
 								<p className="text-base leading-7 text-slate-700">Looking for reliable plumbers near you? Wade&apos;s Plumbing & Septic offers rapid, tech-forward plumbing solutions in Santa Cruz to keep your business running smoothly.</p>
 
-								<div className="flex gap-2 flex-wrap">
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Pipe Installation</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Leak Detection</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Backflow Testing</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Water Heater Services</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Preventative Maintenance</span>
+								<div className="flex flex-wrap gap-2">
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Pipe Installation</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Leak Detection</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Backflow Testing</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Water Heater Services</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Preventative Maintenance</span>
 								</div>
 
-								<div className="flex gap-2 flex-wrap">
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#plumbinginnovation</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#techplumbing</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#commercialplumbing</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#plumbingtech</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#efficientsystems</span>
+								<div className="flex flex-wrap gap-2">
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#plumbinginnovation</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#techplumbing</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#commercialplumbing</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#plumbingtech</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#efficientsystems</span>
 								</div>
 							</div>
-							<div className="flex flex-col space-y-4 mt-10">
+							<div className="flex flex-col mt-10 space-y-4">
 								<Link href="tel:+1831-225-4344" className="text-5xl font-black text-brand-800">
 									(831)-225-4344
 								</Link>
@@ -221,7 +221,7 @@ export default function DrainClearing() {
 					<div className="bg-white">
 						<div className="mx-auto max-w-7xl">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
-							<p className="mt-6 max-w-2xl text-base leading-7 text-gray-800">
+							<p className="max-w-2xl mt-6 text-base leading-7 text-gray-800">
 								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{" "}
 								<a href="/contact-us" className="font-semibold text-brand-800 hover:text-brand-500">
 									sending us an email
@@ -241,18 +241,18 @@ export default function DrainClearing() {
 						</div>
 					</div>
 
-					<div className="bg-brand-900 p-10 rounded-2xl">
+					<div className="p-10 bg-brand-900 rounded-2xl">
 						<div className="relative isolate">
 							<div className="mx-auto max-w-7xl">
-								<div className="mx-auto flex max-w-2xl flex-col gap-16 lg:max-w-none lg:flex-row lg:items-center xl:gap-x-20">
-									<Image className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="/landing-pages/santa-cruz-plumbers-near-me/santacruznearme.webp" alt="Santa Cruz Plumbers Near Me" width={1000} height={1000} />
-									<div className="w-full flex-auto">
+								<div className="flex flex-col max-w-2xl gap-16 mx-auto lg:max-w-none lg:flex-row lg:items-center xl:gap-x-20">
+									<Image className="flex-none object-cover w-full shadow-xl h-96 rounded-2xl lg:aspect-square lg:h-auto lg:max-w-sm" src="/landing-pages/santa-cruz-plumbers-near-me/santacruznearme.webp" alt="Santa Cruz Plumbers Near Me" width={1000} height={1000} />
+									<div className="flex-auto w-full">
 										<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Why Choose Wade&apos;s Plumbing & Septic?</h2>
 										<p className="mt-6 text-lg leading-8 text-white">With over two decades of experience, Wade&apos;s Plumbing & Septic offers unmatched expertise in commercial plumbing in Santa Cruz. Our commitment to innovation, state-of-the-art solutions, and exceptional customer service ensures you receive the best care for your business&apos;s plumbing needs.</p>
-										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
+										<ul role="list" className="grid grid-cols-1 mt-10 text-base leading-7 text-white gap-x-8 gap-y-3 sm:grid-cols-2">
 											{benefits.map((benefit) => (
 												<li key={benefit} className="flex gap-x-3">
-													<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
+													<CheckCircle className="flex-none w-5 h-7" aria-hidden="true" />
 													{benefit}
 												</li>
 											))}
@@ -264,14 +264,14 @@ export default function DrainClearing() {
 					</div>
 
 					{/* Stats Section */}
-					<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-						<div className="mx-auto max-w-2xl lg:mx-0">
+					<div className="px-6 mx-auto mt-32 max-w-7xl sm:mt-40 lg:px-8">
+						<div className="max-w-2xl mx-auto lg:mx-0">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Top-Rated Santa Cruz Plumbers Near You</h2>
 							<p className="mt-6 text-base leading-7 text-gray-600">Our Santa Cruz plumbers are dedicated to providing rapid, efficient, and reliable services to address all your plumbing needs. Experience the best in local plumbing solutions with Wade&apos;s Plumbing & Septic.</p>
 						</div>
-						<div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+						<div className="flex flex-col max-w-2xl gap-8 mx-auto mt-16 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
 							{/* Response Time Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
+							<div className="flex flex-col-reverse justify-between p-8 gap-x-16 gap-y-8 rounded-2xl bg-gray-50 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
 								<p className="flex-none text-3xl font-bold tracking-tight text-gray-900">30 Minutes</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-gray-900">Average Response Time</p>
@@ -279,7 +279,7 @@ export default function DrainClearing() {
 								</div>
 							</div>
 							{/* Project Completion Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-brand-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+							<div className="flex flex-col-reverse justify-between p-8 gap-x-16 gap-y-8 rounded-2xl bg-brand-600 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
 								<p className="flex-none text-3xl font-bold tracking-tight text-white">500+</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-white">Plumbing Projects Completed</p>
@@ -287,7 +287,7 @@ export default function DrainClearing() {
 								</div>
 							</div>
 							{/* Customer Satisfaction Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-black p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
+							<div className="flex flex-col-reverse justify-between p-8 bg-black gap-x-16 gap-y-8 rounded-2xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
 								<p className="flex-none text-3xl font-bold tracking-tight text-white">98%</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-white">Customer Satisfaction Rate</p>

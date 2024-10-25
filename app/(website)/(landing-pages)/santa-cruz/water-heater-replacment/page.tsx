@@ -201,33 +201,33 @@ const benefits = [
 export default function DrainClearing() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
-			<section className="w-full bg-white text-black">
-				<div className="py-20 mx-auto max-w-7xl px-8 space-y-20">
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonFAQLd, null, "\t") }} />
+			<section className="w-full text-black bg-white">
+				<div className="px-8 py-20 mx-auto space-y-20 max-w-7xl">
 					<div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
 						<div className="flex flex-col col-span-2 lg:pb-6">
 							<div className="space-y-6">
 								<h1 className="text-4xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Water Heater Services in Santa Cruz</h1>
 								<p className="text-base leading-7 text-slate-700">In need of a water heater replacement or repair? Wade&apos;s Plumbing & Septic is your trusted provider for all water heater services, ensuring your Santa Cruz home stays warm and comfortable.</p>
 
-								<div className="flex gap-2 flex-wrap">
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Water Heater Installation</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Water Heater Repair</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Tankless Water Heaters</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Energy Efficient Models</span>
-									<span className="bg-brand-100 rounded-full px-3 py-1 text-sm font-semibold text-brand-800">Routine Maintenance</span>
+								<div className="flex flex-wrap gap-2">
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Water Heater Installation</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Water Heater Repair</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Tankless Water Heaters</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Energy Efficient Models</span>
+									<span className="px-3 py-1 text-sm font-semibold rounded-full bg-brand-100 text-brand-800">Routine Maintenance</span>
 								</div>
 
-								<div className="flex gap-2 flex-wrap">
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#waterheaterreplacement</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#hotwatersolutions</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#santacruzplumbing</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#plumbingexperts</span>
-									<span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#reliableplumbing</span>
+								<div className="flex flex-wrap gap-2">
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#waterheaterreplacement</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#hotwatersolutions</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#santacruzplumbing</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#plumbingexperts</span>
+									<span className="px-3 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full">#reliableplumbing</span>
 								</div>
 							</div>
-							<div className="flex flex-col space-y-4 mt-10">
+							<div className="flex flex-col mt-10 space-y-4">
 								<Link href="tel:+1831-225-4344" className="text-5xl font-black text-brand-800">
 									(831)-225-4344
 								</Link>
@@ -241,7 +241,7 @@ export default function DrainClearing() {
 					<div className="bg-white">
 						<div className="mx-auto max-w-7xl">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
-							<p className="mt-6 max-w-2xl text-base leading-7 text-gray-800">
+							<p className="max-w-2xl mt-6 text-base leading-7 text-gray-800">
 								Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{" "}
 								<a href="/contact-us" className="font-semibold text-brand-800 hover:text-brand-500">
 									sending us an email
@@ -261,18 +261,18 @@ export default function DrainClearing() {
 						</div>
 					</div>
 
-					<div className="bg-brand-900 p-10 rounded-2xl">
+					<div className="p-10 bg-brand-900 rounded-2xl">
 						<div className="relative isolate">
 							<div className="mx-auto max-w-7xl">
-								<div className="mx-auto flex max-w-2xl flex-col gap-16 lg:max-w-none lg:flex-row lg:items-center xl:gap-x-20">
-									<Image className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="/landing-pages/santa-cruz/water-heater-replacment/water-heater.webp" alt="Expert Water Heater Replacment Services" width={1000} height={1000} />
-									<div className="w-full flex-auto">
+								<div className="flex flex-col max-w-2xl gap-16 mx-auto lg:max-w-none lg:flex-row lg:items-center xl:gap-x-20">
+									<Image className="flex-none object-cover w-full shadow-xl h-96 rounded-2xl lg:aspect-square lg:h-auto lg:max-w-sm" src="/landing-pages/santa-cruz/water-heater-replacment/water-heater.webp" alt="Expert Water Heater Replacment Services" width={1000} height={1000} />
+									<div className="flex-auto w-full">
 										<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Expert Water Heater Services in Santa Cruz</h2>
 										<p className="mt-6 text-lg leading-8 text-white">Wade&apos;s Plumbing & Septic is a leader in water heater installation and repair services in Santa Cruz. We offer efficient, reliable solutions for your water heating needs, ensuring you have access to hot water when you need it most.</p>
-										<ul role="list" className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
+										<ul role="list" className="grid grid-cols-1 mt-10 text-base leading-7 text-white gap-x-8 gap-y-3 sm:grid-cols-2">
 											{benefits.map((benefit) => (
 												<li key={benefit} className="flex gap-x-3">
-													<CheckCircle className="h-7 w-5 flex-none" aria-hidden="true" />
+													<CheckCircle className="flex-none w-5 h-7" aria-hidden="true" />
 													{benefit}
 												</li>
 											))}
@@ -284,14 +284,14 @@ export default function DrainClearing() {
 					</div>
 
 					{/* Stats Section */}
-					<div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-						<div className="mx-auto max-w-2xl lg:mx-0">
+					<div className="px-6 mx-auto mt-32 max-w-7xl sm:mt-40 lg:px-8">
+						<div className="max-w-2xl mx-auto lg:mx-0">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your Trusted Water Heater Specialists in Santa Cruz</h2>
 							<p className="mt-6 text-base leading-7 text-gray-600">At Wade&apos;s Plumbing & Septic, we&apos;re dedicated to providing top-tier water heater services, from emergency repairs to new installations, ensuring Santa Cruz homes and businesses enjoy uninterrupted hot water supply.</p>
 						</div>
-						<div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+						<div className="flex flex-col max-w-2xl gap-8 mx-auto mt-16 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
 							{/* Response Time Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
+							<div className="flex flex-col-reverse justify-between p-8 gap-x-16 gap-y-8 rounded-2xl bg-gray-50 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
 								<p className="flex-none text-3xl font-bold tracking-tight text-gray-900">45 Minutes</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-gray-900">Average Water Heater Service Response</p>
@@ -299,7 +299,7 @@ export default function DrainClearing() {
 								</div>
 							</div>
 							{/* Project Completion Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-brand-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+							<div className="flex flex-col-reverse justify-between p-8 gap-x-16 gap-y-8 rounded-2xl bg-brand-600 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
 								<p className="flex-none text-3xl font-bold tracking-tight text-white">300+</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-white">Water Heater Installations & Repairs</p>
@@ -307,7 +307,7 @@ export default function DrainClearing() {
 								</div>
 							</div>
 							{/* Customer Satisfaction Stats */}
-							<div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-black p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
+							<div className="flex flex-col-reverse justify-between p-8 bg-black gap-x-16 gap-y-8 rounded-2xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
 								<p className="flex-none text-3xl font-bold tracking-tight text-white">99%</p>
 								<div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
 									<p className="text-lg font-semibold tracking-tight text-white">Customer Satisfaction Rate</p>

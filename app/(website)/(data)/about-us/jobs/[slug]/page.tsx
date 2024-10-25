@@ -104,7 +104,7 @@ export default async function Job(props) {
 	};
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>{jobDetails?.data?.title}</h1>
 			<ul>
 				<li>Job Type: {jobDetails?.data?.job_type}</li>

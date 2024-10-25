@@ -78,7 +78,7 @@ const jsonLd = {
 export default function Example() {
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<h1>Financing Your Plumbing Project with WiseStack</h1>
 			<div>
 				<p>Financing Your Plumbing Project with WiseStack</p>

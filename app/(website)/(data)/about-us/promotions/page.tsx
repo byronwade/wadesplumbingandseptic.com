@@ -78,7 +78,7 @@ export default async function Discounts() {
 
 	return (
 		<>
-			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
+			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
 			<section className="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
 				<h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-700">Discounts</h2>
 				<p className="mb-6 text-4xl font-extrabold tracking-tight text-black dark:text-white">Promotions for our company</p>
