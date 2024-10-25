@@ -2,7 +2,7 @@
 
 import { supabase } from "@/lib/supabase";
 
-async function fetchAllJobs() {
+export async function getAllJobs() {
 	try {
 		const { data, count, error } = await supabase
 			.from("jobs")
@@ -36,7 +36,7 @@ async function fetchAllJobs() {
 	}
 }
 
-async function fetchJobDetails(slug) {
+export async function getJobDetails(slug) {
 	if (!slug) return { data: null, error: "No slug provided" };
 
 	try {
@@ -74,10 +74,10 @@ async function fetchJobDetails(slug) {
 
 export async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {
 	try {
-		const { data: allJobs, count: total, error: allJobsError } = await fetchAllJobs();
+		const { data: allJobs, count: total, error: allJobsError } = await getAllJobs();
 		if (allJobsError) throw new Error(allJobsError);
 
-		const { data: jobDetails, error: jobDetailsError } = await fetchJobDetails(slug);
+		const { data: jobDetails, error: jobDetailsError } = await getJobDetails(slug);
 		if (jobDetailsError && slug) throw new Error(jobDetailsError);
 
 		const startAt = (page - 1) * itemsPerPage;

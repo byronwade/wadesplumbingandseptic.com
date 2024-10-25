@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 
 export async function getServices({ searchTerm = "", page = 1, itemsPerPage = 6 }) {
   try {
-    let query = supabase.from("services").select("id, title, excerpt, slug, categories, featuredImage:images(alttext, sourceurl, sizes)", { count: "exact" }).order("created_at", { ascending: false });
+    let query = supabase.from("services").select("id, title, excerpt, slug, categories, readingtime, featuredImage:images(alttext, sourceurl, sizes)", { count: "exact" }).order("created_at", { ascending: false });
 
     if (searchTerm) {
       query = query.ilike("title", `%${searchTerm}%`);

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "react-feather";
 import { getServices } from "@/actions/getServices";
-import { cache } from "react";
 
 export const runtime = "edge";
 
@@ -46,16 +45,6 @@ function generateJsonLd(services) {
 	};
 }
 
-export async function generateStaticParams() {
-	// Implement this function to generate static params for all your service pages
-	// This will enable ISR for your service pages
-	// Example:
-	// const allServices = await getAllServices();
-	// return allServices.map((service) => ({
-	//   searchParams: { search: '', page: '1' }
-	// }));
-}
-
 export default async function ServicesPage({ searchParams }) {
 	const searchTerm = searchParams?.search ?? "";
 	const currentPage = parseInt(searchParams?.page) || 1;
@@ -89,7 +78,7 @@ export default async function ServicesPage({ searchParams }) {
 										services.slice(0, ITEMS_PER_PAGE).map((service) => (
 											<Link href={`/services/${service.slug}`} key={service.id} className={`max-h-min relative group flex flex-col rounded border border-slate-200 bg-white`}>
 												<div className="relative h-96">
-													<Image placeholder="blur" blurDataURL={service?.featuredImage?.sourceurl || "/placeholder.webp"} fill sizes={service?.featuredImage?.sizes} src={service?.featuredImage?.sourceurl || "/placeholder.webp"} className="object-cover object-center w-full rounded-t" alt={service?.featuredImage?.alttext || "placeholder text"} />
+													<Image placeholder="blur" blurDataURL={service?.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} fill sizes={service?.featuredImage?.[0]?.sizes} src={service?.featuredImage?.[0]?.sourceurl || "/placeholder.webp"} className="object-cover object-center w-full rounded-t" alt={service?.featuredImage?.[0]?.alttext || "placeholder text"} />
 												</div>
 												<div className="p-10">
 													<h3 className="text-xl font-medium text-gray-700">{service.title}</h3>

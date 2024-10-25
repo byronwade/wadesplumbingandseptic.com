@@ -1,5 +1,5 @@
 import Image from "next/image";
-import getPromotions from "@/actions/getPromotions";
+import { getPromotions } from "@/actions/getPromotions";
 import Script from "next/script";
 
 export const metadata = {

@@ -1,11 +1,11 @@
 import JobForm from "@/components/forms/JobForm";
-import { fetchJobDetails } from "@/actions/getJobs";
+import { getJobDetails } from "@/actions/getJobs";
 import Script from "next/script";
 
 export async function generateMetadata(props, parent) {
 	const params = await props.params;
 	const slug = params.slug;
-	const jobDetails = await fetchJobDetails({ slug });
+	const jobDetails = await getJobDetails({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 	const formattedTitle = `${jobDetails?.title || "Job Listing"} | Wade's Plumbing & Septic`;
 	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
@@ -61,7 +61,7 @@ export async function generateMetadata(props, parent) {
 export default async function Job(props) {
 	const params = await props.params;
 	const slug = params.slug;
-	const jobDetails = await fetchJobDetails({ slug });
+	const jobDetails = await getJobDetails({ slug });
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "JobPosting",

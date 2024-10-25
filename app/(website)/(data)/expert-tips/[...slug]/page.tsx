@@ -34,10 +34,6 @@ export async function generateMetadata({ params }, parent) {
 	};
 }
 
-export async function generateStaticParams() {
-	// Implement static param generation
-}
-
 export default async function BlogPage({ params }) {
 	const awaitSlug = await params.slug;
 	const slug = Array.isArray(awaitSlug) ? awaitSlug.join("/") : awaitSlug;
