@@ -7,9 +7,9 @@ export async function generateMetadata(props, parent) {
 	const slug = params.slug;
 	const jobDetails = await getJobDetails({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
-	const formattedTitle = `${jobDetails?.title || "Job Listing"} | Wade's Plumbing & Septic`;
-	const formattedDescription = jobDetails?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
-	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug || slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
+	const formattedTitle = `${jobDetails?.data?.title || "Job Listing"} | Wade's Plumbing & Septic`;
+	const formattedDescription = jobDetails?.data?.job_type || "Explore job opportunities at Wade's Plumbing & Septic";
+	const apiOGUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(formattedTitle)}&link=${encodeURIComponent(`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.data?.slug || slug}`)}&description=${encodeURIComponent(formattedDescription)}`;
 
 	return {
 		title: formattedTitle,
@@ -27,7 +27,7 @@ export async function generateMetadata(props, parent) {
 			telephone: false,
 		},
 		category: "construction",
-		bookmarks: [`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`],
+		bookmarks: [`https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.data?.slug}`],
 		twitter: {
 			card: "summary_large_image",
 			title: formattedTitle,
@@ -41,7 +41,7 @@ export async function generateMetadata(props, parent) {
 		openGraph: {
 			title: formattedTitle,
 			description: formattedDescription,
-			url: `https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.slug}`,
+			url: `https://www.wadesplumbingandseptic.com/jobs/${jobDetails?.data?.slug}`,
 			siteName: "Wade's Plumbing & Septic",
 			images: [
 				{
@@ -65,15 +65,15 @@ export default async function Job(props) {
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "JobPosting",
-		title: jobDetails?.title,
-		description: jobDetails?.content,
+		title: jobDetails?.data?.title,
+		description: jobDetails?.data?.content,
 		identifier: {
 			"@type": "PropertyValue",
 			name: "Wade's Plumbing & Septic",
-			value: jobDetails?.id,
+			value: jobDetails?.data?.id,
 		},
-		datePosted: jobDetails?.created_at,
-		employmentType: jobDetails?.job_type,
+		datePosted: jobDetails?.data?.created_at,
+		employmentType: jobDetails?.data?.job_type,
 		hiringOrganization: {
 			"@type": "Organization",
 			name: "Wade's Plumbing & Septic",
@@ -86,7 +86,7 @@ export default async function Job(props) {
 				"@type": "PostalAddress",
 				postalCode: "95005",
 				streetAddress: "7737 hwy 9",
-				addressLocality: jobDetails?.location,
+				addressLocality: jobDetails?.data?.location,
 				addressRegion: "CA",
 				addressCountry: "US",
 			},
@@ -96,8 +96,8 @@ export default async function Job(props) {
 			currency: "USD",
 			value: {
 				"@type": "QuantitativeValue",
-				minValue: jobDetails?.pay_range?.min,
-				maxValue: jobDetails?.pay_range?.max,
+				minValue: jobDetails?.data?.pay_range?.min,
+				maxValue: jobDetails?.data?.pay_range?.max,
 				unitText: "HOUR",
 			},
 		},
@@ -105,15 +105,15 @@ export default async function Job(props) {
 	return (
 		<>
 			<Script data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<h1>{jobDetails?.title}</h1>
+			<h1>{jobDetails?.data?.title}</h1>
 			<ul>
-				<li>Job Type: {jobDetails?.job_type}</li>
-				<li>Location: {jobDetails?.location}</li>
-				<li>Pay Range: {jobDetails?.pay_range}</li>
-				<li>Qualifications: {jobDetails?.qualifications}</li>
-				<li>Shift and Schedule: {jobDetails?.shift_and_schedule}</li>
+				<li>Job Type: {jobDetails?.data?.job_type}</li>
+				<li>Location: {jobDetails?.data?.location}</li>
+				<li>Pay Range: {jobDetails?.data?.pay_range}</li>
+				<li>Qualifications: {jobDetails?.data?.qualifications}</li>
+				<li>Shift and Schedule: {jobDetails?.data?.shift_and_schedule}</li>
 			</ul>
-			<div dangerouslySetInnerHTML={{ __html: jobDetails?.content || "<p>no data</p>" }} />
+			<div dangerouslySetInnerHTML={{ __html: jobDetails?.data?.content || "<p>no data</p>" }} />
 			<div className="!mt-16">
 				<h1 className="mb-4 font-extrabold text-black sm:text-3xl lg:text-4xl">Apply with this form</h1>
 				<JobForm />

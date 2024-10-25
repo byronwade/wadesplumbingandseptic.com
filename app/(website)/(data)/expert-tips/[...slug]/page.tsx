@@ -151,3 +151,4 @@ function BlogContent({ postDetails }) {
 		</>
 	);
 }
+
