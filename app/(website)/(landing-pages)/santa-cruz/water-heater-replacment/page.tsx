@@ -5,6 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { CheckCircle } from "react-feather";
 
+
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
 	title: {
