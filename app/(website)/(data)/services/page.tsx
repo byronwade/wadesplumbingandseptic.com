@@ -45,8 +45,9 @@ function generateJsonLd(services) {
 }
 
 export default async function ServicesPage({ searchParams }) {
-	const searchTerm = searchParams?.search ?? "";
-	const currentPage = parseInt(searchParams?.page) || 1;
+	const nextjs15 = await searchParams;
+	const searchTerm = nextjs15?.search ?? "";
+	const currentPage = parseInt(nextjs15?.page) || 1;
 	const { services = [], total = 0 } = await getServices({ searchTerm, page: currentPage });
 
 	const serviceMsg = searchTerm ? (services.length > 0 ? `We found ${services.length} services matching "${searchTerm}".` : `We couldn't find any services matching "${searchTerm}".`) : `We have ${services.length} services.`;

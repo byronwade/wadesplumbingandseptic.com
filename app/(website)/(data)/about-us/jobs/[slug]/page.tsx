@@ -3,8 +3,8 @@ import { getJobDetails } from "@/actions/getJobs";
 import Script from "next/script";
 
 export async function generateMetadata(props, parent) {
-	const params = await props.params;
-	const slug = params.slug;
+	const nextjs15 = await props;
+	const slug = nextjs15.slug;
 	const jobDetails = await getJobDetails({ slug });
 	const previousImages = (await parent).openGraph?.images || [];
 	const formattedTitle = `${jobDetails?.data?.title || "Job Listing"} | Wade's Plumbing & Septic`;
@@ -59,8 +59,8 @@ export async function generateMetadata(props, parent) {
 }
 
 export default async function Job(props) {
-	const params = await props.params;
-	const slug = params.slug;
+	const nextjs15 = await props;
+	const slug = nextjs15.slug;
 	const jobDetails = await getJobDetails({ slug });
 	const jsonLd = {
 		"@context": "https://schema.org",

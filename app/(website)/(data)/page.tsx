@@ -103,7 +103,6 @@ const jsonLd = {
 	openingHours: "Mo-Su 00:00-23:59",
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
 };
-export const revalidate = 3600; // Revalidate every hour
 
 const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"));
 

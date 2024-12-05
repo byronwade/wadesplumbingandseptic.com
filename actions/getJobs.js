@@ -1,7 +1,7 @@
-"use server";
+"use cache";
 
 import { supabase } from "@/lib/supabase";
-import { unstable_cache } from 'next/cache';
+import { unstable_cache } from "next/cache";
 
 const getAllJobs = unstable_cache(
 	async () => {
@@ -37,8 +37,8 @@ const getAllJobs = unstable_cache(
 			return { data: null, count: 0, error: error.message };
 		}
 	},
-	['all-jobs'],
-	{ tags: ['jobs'], revalidate: 60 } // Cache for 60 seconds
+	["all-jobs"],
+	{ tags: ["jobs"], revalidate: 60 } // Cache for 60 seconds
 );
 
 export const getJobDetails = unstable_cache(
@@ -77,8 +77,8 @@ export const getJobDetails = unstable_cache(
 			return { data: null, error: error.message };
 		}
 	},
-	['job-details'],
-	{ tags: ['jobs'], revalidate: 60 } // Cache for 60 seconds
+	["job-details"],
+	{ tags: ["jobs"], revalidate: 60 } // Cache for 60 seconds
 );
 
 export async function getJobs({ slug = "", page = 1, itemsPerPage = 10 } = {}) {

@@ -29,6 +29,11 @@ const nextConfig = {
 			},
 		],
 	},
+	experimental: {
+		inlineCss: true,
+		ppr: true,
+		dynamicIO: true,
+	},
 };
 
 module.exports = nextConfig;
