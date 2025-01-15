@@ -18,38 +18,24 @@ export default async function Page({ searchParams }) {
 
 	const jsonLd = {
 		"@context": "https://schema.org",
-		"@type": "ItemList",
+		"@type": "Blog",
+		name: "Expert Plumbing Tips | Wade's Plumbing & Septic",
+		description: "Looking for expert plumbing tips in the local area? Look no further than Wade's Plumbing & Septic. Our blog has everything you need to know to keep your plumbing running smoothly.",
+		url: "https://www.wadesplumbingandseptic.com/expert-tips/",
+		publisher: {
+			"@type": "Organization",
+			name: "Wade's Plumbing & Septic",
+			logo: {
+				"@type": "ImageObject",
+				url: "https://www.wadesplumbingandseptic.com/_next/image?url=%2FWadesLogo.webp&w=96&q=75",
+			},
+		},
+		inLanguage: "en-US",
+		copyrightYear: new Date().getFullYear(),
 		mainEntityOfPage: {
 			"@type": "WebPage",
-			"@id": `${BASE_URL}/expert-tips/`,
+			"@id": "https://www.wadesplumbingandseptic.com/expert-tips/",
 		},
-		itemListElement: tips.map((post, index) => ({
-			"@type": "ListItem",
-			position: index + 1,
-			item: {
-				"@type": "BlogPosting",
-				headline: post.title,
-				description: post.excerpt,
-				url: `${BASE_URL}/expert-tips/${post.slug}`,
-				author: {
-					"@type": "Person",
-					name: "Byron Wade",
-				},
-				publisher: {
-					"@type": "Organization",
-					name: "Wade's Plumbing & Septic",
-					logo: {
-						"@type": "ImageObject",
-						url: `${BASE_URL}/_next/image?url=%2FWadesLogo.webp&w=96&q=75`,
-						width: 180,
-						height: 60,
-					},
-				},
-				image: post.featuredImage?.[0]?.sourceurl || "",
-				datePublished: post.created_at,
-				dateModified: post.created_at,
-			},
-		})),
 	};
 
 	return (

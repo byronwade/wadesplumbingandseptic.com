@@ -23,14 +23,69 @@ export async function generateMetadata({ params }, parent) {
 	const tipDetails = await getTipDetails(slug);
 	const previousImages = (await parent).openGraph?.images || [];
 
+	const ogImageUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(tipDetails.title)}&description=${encodeURIComponent(tipDetails.description)}`;
+
 	return {
-		title: tipDetails.title,
+		title: `${tipDetails.title} | Expert Plumbing Tips | Wade's Plumbing & Septic`,
 		description: tipDetails.description,
-		openGraph: {
-			images: [...previousImages, ...(tipDetails.images || [])],
-			// Add other OpenGraph properties as needed
+		generator: "Next.js",
+		applicationName: "Wade's Plumbing & Septic",
+		keywords: [...(tipDetails.categories || []), "Plumbing Tips", "Expert Advice", "Plumbing Guide", tipDetails.title],
+		authors: [{ name: tipDetails.author?.[0]?.username || "Byron Wade", url: "https://www.wadesplumbingandseptic.com/" }],
+		creator: tipDetails.author?.[0]?.username || "Byron Wade",
+		publisher: "Wade's Plumbing & Septic",
+		alternates: {
+			canonical: `https://www.wadesplumbingandseptic.com/expert-tips/${slug}`,
 		},
-		// Add other metadata properties as needed
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				"max-video-preview": -1,
+				"max-image-preview": "large",
+				"max-snippet": -1,
+			},
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${tipDetails.title} | Expert Plumbing Tips`,
+			description: tipDetails.description,
+			creator: "@wadesplumbing",
+			images: {
+				url: ogImageUrl,
+				alt: tipDetails.title,
+			},
+		},
+		openGraph: {
+			title: `${tipDetails.title} | Expert Plumbing Tips`,
+			description: tipDetails.description,
+			url: `https://www.wadesplumbingandseptic.com/expert-tips/${slug}`,
+			siteName: "Wade's Plumbing & Septic",
+			images: [
+				{
+					url: ogImageUrl,
+					width: 800,
+					height: 600,
+					alt: tipDetails.title,
+				},
+				{
+					url: ogImageUrl,
+					width: 1800,
+					height: 1600,
+					alt: tipDetails.title,
+				},
+			],
+			locale: "en-US",
+			type: "article",
+			article: {
+				publishedTime: tipDetails.created_at,
+				modifiedTime: tipDetails.updated_at || tipDetails.created_at,
+				authors: [tipDetails.author?.[0]?.username || "Byron Wade"],
+				tags: tipDetails.categories,
+			},
+		},
 	};
 }
 
@@ -67,12 +122,14 @@ function BlogContent({ postDetails }) {
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		headline: postDetails.title,
+		description: postDetails.excerpt,
 		image: postDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
 		datePublished: postDetails.created_at,
-		dateModified: postDetails.created_at,
+		dateModified: postDetails.updated_at || postDetails.created_at,
 		author: {
 			"@type": "Person",
 			name: postDetails.author?.[0]?.username || "Byron Wade",
+			url: "https://www.wadesplumbingandseptic.com/about-us",
 		},
 		publisher: {
 			"@type": "Organization",
@@ -82,6 +139,14 @@ function BlogContent({ postDetails }) {
 				url: "https://www.wadesplumbingandseptic.com/WadesLogo.webp",
 			},
 		},
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${postDetails.slug}`,
+		},
+		keywords: [...(postDetails.categories || []), "Plumbing Tips", "Expert Advice", "Plumbing Guide"].join(", "),
+		articleSection: postDetails.categories?.[0] || "Plumbing Tips",
+		wordCount: postDetails.content?.split(/\s+/).length || 0,
+		inLanguage: "en-US",
 	};
 
 	console.log(postDetails.content);
