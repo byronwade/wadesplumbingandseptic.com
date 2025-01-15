@@ -53,11 +53,28 @@ function generateJsonLd(postDetails) {
 				},
 			],
 			sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
-			openingHoursSpecification: {
+			openingHoursSpecification: [
+				{
+					"@type": "OpeningHoursSpecification",
+					dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+					opens: "09:00",
+					closes: "17:00",
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					dayOfWeek: ["Saturday", "Sunday"],
+					opens: "00:00",
+					closes: "00:00",
+				},
+			],
+			specialOpeningHoursSpecification: {
 				"@type": "OpeningHoursSpecification",
+				description: "24/7 Emergency Services Available",
 				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
 				opens: "00:00",
 				closes: "23:59",
+				validFrom: "2024-01-01",
+				validThrough: "2024-12-31",
 			},
 		},
 		image: postDetails.featuredImage?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
