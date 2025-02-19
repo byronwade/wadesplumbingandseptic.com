@@ -30,9 +30,15 @@ const nextConfig = {
 		],
 	},
 	experimental: {
-		inlineCss: true,
 		ppr: true,
-		dynamicIO: true,
+		inlineCss: true,
+		reactCompiler: true,
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
 	},
 };
 

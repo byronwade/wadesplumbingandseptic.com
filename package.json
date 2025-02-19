@@ -11,6 +11,7 @@
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@headlessui/react": "^2.1.10",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.0",
     "@next/bundle-analyzer": "^15.0.1",
     "@next/third-parties": "^15.0.1",
@@ -44,6 +45,7 @@
     "@vercel/edge": "^1.1.1",
     "@vercel/og": "^0.6.3",
     "@vercel/speed-insights": "^1.0.13",
+    "babel-plugin-react-compiler": "^19.0.0-beta-21e868a-20250216",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

@@ -8,13 +8,94 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 import { RelatedArticlesSection } from "@/components/sections/RelatedArticlesSection";
 import { Sidebar } from "@/components/sections/Sidebar";
 
+// Types
+interface RelatedArticlesResponse {
+	articles: any[];
+	total: number;
+}
+
+interface SidebarContentResponse {
+	categories: any[];
+	recentPosts: any[];
+	popularPosts: any[];
+}
+
 // Loading Components
 const LoadingPulse = ({ className }: { className: string }) => <div className={`animate-pulse bg-gray-100 rounded-lg ${className}`} />;
 
 interface ServicePageContentProps {
 	service: any;
-	relatedArticles: any;
-	sidebarContent: any;
+	relatedArticles: RelatedArticlesResponse;
+	sidebarContent: SidebarContentResponse;
+	jsonLd: {
+		"@context": string;
+		"@type": string[];
+		name: string;
+		serviceType: string;
+		provider: {
+			"@type": string[];
+			name: string;
+			telephone: string;
+			url: string;
+			address: {
+				"@type": string;
+				streetAddress: string;
+				addressLocality: string;
+				addressRegion: string;
+				postalCode: string;
+				addressCountry: string;
+			};
+			logo: {
+				"@type": string;
+				url: string;
+			};
+			geo: {
+				"@type": string;
+				latitude: string;
+				longitude: string;
+			};
+			areaServed: Array<{
+				"@type": string;
+				geoMidpoint: {
+					"@type": string;
+					latitude: string;
+					longitude: string;
+				};
+				geoRadius: string;
+			}>;
+			sameAs: string[];
+			openingHoursSpecification: Array<{
+				"@type": string;
+				dayOfWeek: string[];
+				opens: string;
+				closes: string;
+			}>;
+		};
+		image: string;
+		description: string;
+		url: string;
+		priceRange: string;
+		availableLanguage: string;
+		isPartOf: {
+			"@type": string;
+			"@id": string;
+			url: string;
+			name: string;
+			description: string;
+			publisher: {
+				"@type": string;
+				name: string;
+				logo: {
+					"@type": string;
+					url: string;
+				};
+			};
+		};
+		mainEntityOfPage: {
+			"@type": string;
+			"@id": string;
+		};
+	};
 }
 
 export default function ServicePageContent({ service, relatedArticles, sidebarContent }: ServicePageContentProps) {

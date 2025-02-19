@@ -1,5 +1,3 @@
-"use cache";
-
 import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
 
@@ -53,32 +51,43 @@ export async function getTips(params) {
 	return getCachedTips(params);
 }
 
-export async function getTipDetails(slug) {
-	try {
-		const { data, error } = await supabase
-			.from("tips")
-			.select(
-				`
-        id,
-        title,
-        excerpt,
-        slug,
-        created_at,
-        content,
-        readingtime,
-        categories,
-        author: authors (id, username),
-        featuredImage: images (alttext, sourceurl, sizes)
-        `
-			)
-			.eq("slug", slug)
-			.single();
+const getCachedTipDetails = unstable_cache(
+	async (slug) => {
+		try {
+			const { data, error } = await supabase
+				.from("tips")
+				.select(
+					`
+					id,
+					title,
+					excerpt,
+					slug,
+					created_at,
+					content,
+					readingtime,
+					categories,
+					author: authors (id, username),
+					featuredImage: images (alttext, sourceurl, sizes)
+					`
+				)
+				.eq("slug", slug)
+				.single();
 
-		if (error) throw error;
+			if (error) throw error;
 
-		return { tip: data };
-	} catch (error) {
-		console.error("Error fetching tip details:", error);
-		return { tip: null, error: error.message, ...runtimeEdge };
+			return { tip: data };
+		} catch (error) {
+			console.error("Error fetching tip details:", error);
+			return { tip: null, error: error.message };
+		}
+	},
+	["tip-details"],
+	{
+		tags: ["tips"],
+		revalidate: 60, // Cache for 60 seconds
 	}
+);
+
+export async function getTipDetails(slug) {
+	return getCachedTipDetails(slug);
 }

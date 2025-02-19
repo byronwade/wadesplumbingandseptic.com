@@ -15,11 +15,28 @@ interface ServicePageContentProps {
 	service: any;
 	relatedArticles: any;
 	sidebarContent: any;
+	jsonLd: {
+		"@context": string;
+		"@type": string[];
+		name: string;
+		serviceType: string;
+		provider: any;
+		image: string;
+		description: string;
+		url: string;
+		priceRange: string;
+		availableLanguage: string;
+		mainEntityOfPage: {
+			"@type": string;
+			"@id": string;
+		};
+	};
 }
 
-export default function ServicePageContent({ service, relatedArticles, sidebarContent }: ServicePageContentProps) {
+export default function ServicePageContent({ service, relatedArticles, sidebarContent, jsonLd }: ServicePageContentProps) {
 	return (
 		<>
+			{jsonLd && <Script id="service-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="worker" />}
 			<div className="bg-white dark:bg-gray-900">
 				<div className="container relative z-20 px-4 mx-auto sm:px-6 lg:px-8">
 					<div className="flex flex-col lg:flex-row">

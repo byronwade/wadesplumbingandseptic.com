@@ -4,7 +4,7 @@ import { track } from "@vercel/analytics/react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Step = () => {
+export default function Step() {
 	return (
 		<section className="bg-black relative overflow-hidden">
 			<div className="py-16 px-6 sm:py-24 lg:px-8">
@@ -128,4 +128,4 @@ export const Step = () => {
 			</div>
 		</section>
 	);
-};
+}

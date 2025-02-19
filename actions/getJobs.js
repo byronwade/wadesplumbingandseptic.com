@@ -1,5 +1,3 @@
-"use cache";
-
 import { supabase } from "@/lib/supabase";
 import { unstable_cache } from "next/cache";
 
