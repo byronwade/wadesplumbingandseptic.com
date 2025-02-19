@@ -1,10 +1,9 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import getMenu from "../getMenu";
-import { unstable_cache } from "next/cache";
-import { headers } from "next/headers";
+import type { Metadata } from "next";
 
-// Loading Components with memoization
+// Loading Components
 const LoadingPulse = ({ className }: { className: string }) => <div className={`animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg ${className}`} />;
 
 // Dynamic imports with loading states and preload hints
@@ -21,23 +20,6 @@ const CTA = dynamic(() => import("@/components/sections/CTA"), {
 	loading: () => <LoadingPulse className="h-48" />,
 });
 
-// Enhanced cache menu data with revalidation
-const getCachedMenuData = unstable_cache(
-	async () => {
-		try {
-			return await getMenu();
-		} catch (error) {
-			console.error("Error fetching menu:", error);
-			return null;
-		}
-	},
-	["menu-data"],
-	{
-		revalidate: 3600, // Revalidate every hour
-		tags: ["menu"],
-	}
-);
-
 // Progressive loading component
 function ProgressiveLoading() {
 	return (
@@ -49,10 +31,34 @@ function ProgressiveLoading() {
 	);
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+	metadataBase: new URL("https://www.wadesplumbingandseptic.com"),
+	title: {
+		template: "%s | Wade's Plumbing & Septic",
+		default: "Wade's Plumbing & Septic - Santa Cruz's Premier Plumbing Service",
+	},
+	description: "Santa Cruz's trusted 24/7 plumbing and septic service. Professional plumbers serving Santa Cruz County with emergency services, repairs, and maintenance.",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		siteName: "Wade's Plumbing & Septic",
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+};
+
+async function LayoutContent() {
 	try {
-		headers(); // Call headers outside the cached function
-		const data = await getCachedMenuData();
+		const data = await getMenu();
 
 		return (
 			<>
@@ -61,7 +67,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 				</Suspense>
 
 				<main className="min-h-screen">
-					<Suspense fallback={<ProgressiveLoading />}>{children}</Suspense>
+					<Suspense fallback={<ProgressiveLoading />}>
+						<div id="content" />
+					</Suspense>
 					<Suspense fallback={<LoadingPulse className="h-48" />}>
 						<CTA />
 					</Suspense>
@@ -73,7 +81,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			</>
 		);
 	} catch (error) {
-		console.error("Error in RootLayout:", error);
+		console.error("Error in LayoutContent:", error);
 		return (
 			<div className="flex items-center justify-center min-h-screen bg-gray-50">
 				<div className="text-center">
@@ -83,4 +91,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			</div>
 		);
 	}
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<>
+			<Suspense fallback={<ProgressiveLoading />}>
+				<LayoutContent />
+			</Suspense>
+			{children}
+		</>
+	);
 }

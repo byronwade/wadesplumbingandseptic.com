@@ -1,29 +1,11 @@
 import { Suspense } from "react";
-import { headers } from "next/headers";
 import { getServices } from "@/actions/getServices";
 import ServicesPageContent from "./components/ServicesPageContent";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { unstable_cache } from "next/cache";
 
-// Loading Components with memoization
+// Loading Components
 const LoadingPulse = ({ className }: { className: string }) => <div className={`animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg ${className}`} />;
-
-// Enhanced caching with revalidation and tags
-const getServicesData = unstable_cache(
-	async (searchParams: { search?: string; page?: string }) => {
-		"use server";
-		headers(); // Stabilize headers for caching
-		const searchTerm = searchParams?.search ?? "";
-		const currentPage = searchParams?.page ? Number(searchParams.page) : 1;
-		return getServices({ searchTerm, page: currentPage });
-	},
-	["services-data"],
-	{
-		revalidate: 3600, // Revalidate every hour
-		tags: ["services"],
-	}
-);
 
 // Pre-computed schema for better performance
 const servicesPageSchema = {
@@ -59,11 +41,6 @@ const servicesPageSchema = {
 	},
 } as const;
 
-interface ServicesResponse {
-	services: any[];
-	total: number | null;
-}
-
 // Progressive loading component
 function ProgressiveLoading() {
 	return (
@@ -78,13 +55,11 @@ function ProgressiveLoading() {
 	);
 }
 
-async function ServicesContent({ searchParams }: { searchParams: Promise<{ search?: string; page?: string }> }) {
-	const resolvedParams = await searchParams;
-
+async function ServicesContent({ searchParams }: { searchParams: { search?: string; page?: string } }) {
 	try {
-		const { services = [], total = 0 }: ServicesResponse = await getServicesData(resolvedParams);
-		const searchTerm = resolvedParams?.search ?? "";
-		const currentPage = resolvedParams?.page ? Number(resolvedParams.page) : 1;
+		const search = searchParams?.search ?? "";
+		const page = searchParams?.page ? Number(searchParams.page) : 1;
+		const { services = [], total = 0 } = await getServices({ searchTerm: search, page });
 
 		if (!Array.isArray(services)) {
 			throw new Error("Invalid services data");
@@ -94,7 +69,7 @@ async function ServicesContent({ searchParams }: { searchParams: Promise<{ searc
 			<>
 				<Script id="services-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesPageSchema) }} strategy="worker" />
 				<Suspense fallback={<ProgressiveLoading />}>
-					<ServicesPageContent services={services} total={total ?? 0} searchTerm={searchTerm} currentPage={currentPage} />
+					<ServicesPageContent services={services} total={total ?? 0} searchTerm={search} currentPage={page} />
 				</Suspense>
 			</>
 		);
@@ -150,7 +125,7 @@ export const metadata: Metadata = {
 	},
 } as const;
 
-export default async function ServicesPage({ searchParams }: { searchParams: Promise<{ search?: string; page?: string }> }) {
+export default async function ServicesPage({ searchParams }: { searchParams: { search?: string; page?: string } }) {
 	return (
 		<Suspense fallback={<ProgressiveLoading />}>
 			<ServicesContent searchParams={searchParams} />

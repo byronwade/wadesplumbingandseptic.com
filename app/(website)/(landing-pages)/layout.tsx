@@ -5,6 +5,32 @@ import ContactPage from "../(data)/contact-us/page";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/sections/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	metadataBase: new URL("https://www.wadesplumbingandseptic.com"),
+	title: {
+		template: "%s | Wade's Plumbing & Septic",
+		default: "Professional Plumbing Services | Wade's Plumbing & Septic",
+	},
+	description: "Expert plumbing services in Santa Cruz, Monterey & Santa Clara Counties. 24/7 emergency service, professional solutions, and guaranteed satisfaction.",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		siteName: "Wade's Plumbing & Septic",
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
