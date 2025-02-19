@@ -23,6 +23,8 @@ interface TipDetails {
 	updated_at: string;
 	author?: Array<{ username: string }>;
 	featuredImage?: Array<{ sourceurl: string; alttext: string }>;
+	slug?: string;
+	categories?: string[];
 }
 
 // Cached data fetching
@@ -41,16 +43,16 @@ const getSidebarContentWithCache = cache(async (pathname: string) => {
 // Format date on the server to avoid hydration mismatch
 function formatDateSafely(dateStr: string | undefined): string {
 	if (!dateStr) {
-		return '2023-01-01T00:00:00.000Z';
+		return "2023-01-01T00:00:00.000Z";
 	}
 	try {
 		const timestamp = Date.parse(dateStr);
 		if (isNaN(timestamp)) {
-			return '2023-01-01T00:00:00.000Z';
+			return "2023-01-01T00:00:00.000Z";
 		}
 		return new Date(timestamp).toISOString();
 	} catch (e) {
-		return '2023-01-01T00:00:00.000Z';
+		return "2023-01-01T00:00:00.000Z";
 	}
 }
 
@@ -65,14 +67,20 @@ export async function generateMetadata(props: { params: Promise<{ slug: string[]
 	const ogImage = tipDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp";
 	const formattedDate = formatDateSafely(tipDetails.created_at);
 
+	const ogImageUrl = `https://www.wadesplumbingandseptic.com/api/og?title=${encodeURIComponent(tipDetails.title)}&description=${encodeURIComponent(tipDetails.description)}`;
+
 	return {
 		metadataBase: new URL("https://www.wadesplumbingandseptic.com"),
 		title: {
 			absolute: `${tipDetails.title} | Wade's Plumbing & Septic Expert Tips`,
 		},
 		description: tipDetails.description || tipDetails.excerpt,
+		generator: "Next.js",
+		applicationName: "Wade's Plumbing & Septic",
 		keywords: ["plumbing tips", "septic maintenance", "plumbing advice", "septic system care", ...(tipDetails.categories || [])],
-		authors: [{ name: tipDetails.author?.[0]?.username || "Wade's Plumbing & Septic" }],
+		authors: [{ name: tipDetails.author?.[0]?.username || "Wade's Plumbing & Septic", url: "https://www.wadesplumbingandseptic.com/" }],
+		creator: tipDetails.author?.[0]?.username || "Byron Wade",
+		publisher: "Wade's Plumbing & Septic",
 		openGraph: {
 			title: tipDetails.title,
 			description: tipDetails.description || tipDetails.excerpt,
@@ -83,6 +91,12 @@ export async function generateMetadata(props: { params: Promise<{ slug: string[]
 					height: 630,
 					alt: tipDetails.title,
 					type: "image/jpeg",
+				},
+				{
+					url: ogImageUrl,
+					width: 1800,
+					height: 1600,
+					alt: tipDetails.title,
 				},
 			],
 			type: "article",
@@ -124,14 +138,66 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 	const params = await props.params;
 	const slug = await Promise.resolve(params.slug);
 	const joinedSlug = Array.isArray(slug) ? slug.join("/") : slug;
-	const [{ tip: postDetails }, relatedArticles, sidebarContent] = await Promise.all([getTipDetailsWithCache(joinedSlug), getRelatedArticlesWithCache("/expert-tips"), getSidebarContentWithCache("/expert-tips")]);
+	const [tipDetails, relatedArticles, sidebarContent] = await Promise.all([getTipDetailsWithCache(joinedSlug), getRelatedArticlesWithCache("/expert-tips"), getSidebarContentWithCache("/expert-tips")]);
 
-	if (!postDetails) {
+	if (!tipDetails?.tip) {
 		notFound();
 	}
 
-	const formattedDate = formatDateSafely(postDetails.created_at);
-	const modifiedDate = formatDateSafely(postDetails.updated_at);
+	return (
+		<section>
+			<BlogContent postDetails={tipDetails.tip} />
+			{sidebarContent && <Sidebar pathname="/expert-tips" data={sidebarContent} />}
+			{relatedArticles && <RelatedArticlesSection pathname="/expert-tips" data={relatedArticles} />}
+		</section>
+	);
+}
+
+function BlogContent({ postDetails }: { postDetails: TipDetails }) {
+	const dateObj = new Date(postDetails.created_at);
+	const formattedDate = dateObj.toLocaleDateString("en-US", {
+		month: "long",
+		day: "numeric",
+		year: "numeric",
+	});
+	const formattedTime = dateObj.toLocaleTimeString([], {
+		hour: "numeric",
+		minute: "numeric",
+		hour12: true,
+	});
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: postDetails.title,
+		description: postDetails.excerpt,
+		image: postDetails.featuredImage?.[0]?.sourceurl || "https://www.wadesplumbingandseptic.com/placeholder.webp",
+		datePublished: postDetails.created_at,
+		dateModified: postDetails.updated_at || postDetails.created_at,
+		author: {
+			"@type": "Person",
+			name: postDetails.author?.[0]?.username || "Byron Wade",
+			url: "https://www.wadesplumbingandseptic.com/about-us",
+		},
+		publisher: {
+			"@type": "Organization",
+			name: "Wade's Plumbing & Septic",
+			logo: {
+				"@type": "ImageObject",
+				url: "https://www.wadesplumbingandseptic.com/WadesLogo.webp",
+			},
+		},
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${postDetails.slug}`,
+		},
+		keywords: [...(postDetails.categories || []), "Plumbing Tips", "Expert Advice", "Plumbing Guide"].join(", "),
+		articleSection: postDetails.categories?.[0] || "Plumbing Tips",
+		wordCount: postDetails.content?.split(/\s+/).length || 0,
+		inLanguage: "en-US",
+	};
+
+	console.log(postDetails.content);
 
 	return (
 		<>
@@ -141,7 +207,7 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 					__html: JSON.stringify({
 						"@context": "https://schema.org",
 						"@type": "Article",
-						"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${joinedSlug}`,
+						"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${postDetails.slug}`,
 						headline: postDetails.title,
 						description: postDetails.description || postDetails.excerpt,
 						image: {
@@ -151,7 +217,7 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 							width: 1200,
 						},
 						datePublished: formattedDate,
-						dateModified: modifiedDate,
+						dateModified: formatDateSafely(postDetails.updated_at),
 						author: {
 							"@type": "Person",
 							name: postDetails.author?.[0]?.username || "Wade's Plumbing & Septic",
@@ -169,7 +235,7 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 						},
 						mainEntityOfPage: {
 							"@type": "WebPage",
-							"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${joinedSlug}`,
+							"@id": `https://www.wadesplumbingandseptic.com/expert-tips/${postDetails.slug}`,
 						},
 						articleBody: postDetails.content.replace(/<[^>]*>/g, ""),
 						keywords: postDetails.categories?.join(", "),
@@ -216,7 +282,7 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 							</div>
 							<div className="prose prose-lg prose-blue max-w-none dark:prose-invert" itemProp="articleBody" dangerouslySetInnerHTML={{ __html: postDetails.content }} />
 							<meta itemProp="datePublished" content={formattedDate} />
-							<meta itemProp="dateModified" content={modifiedDate} />
+							<meta itemProp="dateModified" content={formatDateSafely(postDetails.updated_at)} />
 							<meta itemProp="author" content={postDetails.author?.[0]?.username || "Wade's Plumbing & Septic"} />
 						</article>
 						<aside className="w-full mt-8 lg:w-1/3 lg:mt-0 lg:pl-8">
@@ -232,4 +298,3 @@ export default async function BlogPage(props: { params: Promise<{ slug: string[]
 		</>
 	);
 }
-

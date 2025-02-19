@@ -10,6 +10,32 @@ import type { Metadata } from "next";
 // Loading Components
 const LoadingPulse = ({ className }: { className: string }) => <div className={`animate-pulse bg-gray-100 rounded-lg ${className}`} />;
 
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	additionalType: "http://www.productontology.org/id/Plumbing",
+	name: "Wade's Plumbing & Septic Services",
+	description: "Explore our wide range of plumbing and septic services available 24/7 in Santa Cruz, Monterey, and Santa Clara Counties. From routine maintenance to emergency repairs, we've got you covered.",
+	url: "https://www.wadesplumbingandseptic.com/services/",
+	telephone: "+1-831-225-4344",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: "7737 hwy 9",
+		addressLocality: "Ben Lomond",
+		addressRegion: "CA",
+		postalCode: "95005",
+		addressCountry: "US",
+	},
+	geo: {
+		"@type": "GeoCoordinates",
+		latitude: "37.1426021",
+		longitude: "-121.977974",
+	},
+	openingHours: "Mo-Su 00:00-23:59",
+	priceRange: "$$",
+	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
+};
+
 export default async function ServicesPage({ searchParams }) {
 	const nextjs15 = await searchParams;
 	const searchTerm = nextjs15?.search ?? "";
