@@ -1,13 +1,31 @@
-import LogoCloud from "@/components/sections/LogoCloud";
-import FAQ from "@/components/sections/FAQ";
-import { Step } from "@/components/sections/Step";
-import FeatureSection from "@/components/sections/FeatureSection";
-import HeroSection from "@/components/sections/HeroSection";
-import StatsSection from "@/components/sections/StatsSection";
-import { Metadata } from "next";
+"use server";
+
+import { Suspense } from "react";
+import { headers } from "next/headers";
+import { cache } from "react";
 import Script from "next/script";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import type { Metadata } from "next";
+
+// Client Components
+const LogoCloud = dynamic(() => import("@/components/sections/LogoCloud"), { ssr: true });
+const FAQ = dynamic(() => import("@/components/sections/FAQ"), { ssr: true });
+const Step = dynamic(() => import("@/components/sections/Step"), { ssr: true });
+const FeatureSection = dynamic(() => import("@/components/sections/FeatureSection"), { ssr: true });
+const HeroSection = dynamic(() => import("@/components/sections/HeroSection"), { ssr: true });
+const StatsSection = dynamic(() => import("@/components/sections/StatsSection"), { ssr: true });
+const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"), { ssr: true });
+
+// Loading Components
+const LoadingPulse = ({ className }: { className: string }) => (
+	<div className={`animate-pulse bg-gray-100 rounded-lg ${className}`} />
+);
+
+// Cached data fetching
+const getHomePageData = cache(async () => {
+	headers(); // Stabilize headers for caching
+	return {};
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.wadesplumbingandseptic.com/"),
@@ -61,13 +79,8 @@ export const metadata: Metadata = {
 		images: [
 			{
 				url: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
-				width: 800,
-				height: 600,
-			},
-			{
-				url: "https://www.wadesplumbingandseptic.com/api/og?title=Wade%27s%20Plumbing%20%26%20Septic&description=Where%20quality%20meets%20community",
-				width: 1800,
-				height: 1600,
+				width: 1200,
+				height: 630,
 				alt: "Wade's Plumbing & Septic",
 			},
 		],
@@ -104,33 +117,55 @@ const jsonLd = {
 	sameAs: ["https://www.facebook.com/wadesplumbingandseptic/", "https://www.instagram.com/wadesplumbing/?hl=en"],
 };
 
-const DynamicTestimonials = dynamic(() => import("@/components/sections/Testimonials"));
+export default async function HomePage() {
+	try {
+		await getHomePageData();
 
-export default function Home() {
-	return (
-		<>
-			<Script async strategy="worker" data-testid="ldjson" id="json" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, "\t") }} />
-			<Suspense fallback={<p>Loading hero...</p>}>
-				<HeroSection />
-			</Suspense>
-			<Suspense fallback={<p>Loading steps...</p>}>
-				<Step />
-			</Suspense>
-			<Suspense fallback={<p>Loading features...</p>}>
-				<FeatureSection />
-			</Suspense>
-			<Suspense fallback={<p>Loading FAQ...</p>}>
-				<FAQ />
-			</Suspense>
-			<Suspense fallback={<p>Loading logo cloud...</p>}>
-				<LogoCloud />
-			</Suspense>
-			<Suspense fallback={<p>Loading testimonials...</p>}>
-				<DynamicTestimonials />
-			</Suspense>
-			<Suspense fallback={<p>Loading stats...</p>}>
-				<StatsSection />
-			</Suspense>
-		</>
-	);
+		return (
+			<>
+				<Script 
+					id="json-ld"
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+					strategy="worker"
+				/>
+				<main>
+					<Suspense fallback={<LoadingPulse className="h-[600px]" />}>
+						<HeroSection />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[400px]" />}>
+						<Step />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[600px]" />}>
+						<FeatureSection />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[400px]" />}>
+						<FAQ />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[200px]" />}>
+						<LogoCloud />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[500px]" />}>
+						<DynamicTestimonials />
+					</Suspense>
+					
+					<Suspense fallback={<LoadingPulse className="h-[300px]" />}>
+						<StatsSection />
+					</Suspense>
+				</main>
+			</>
+		);
+	} catch (error) {
+		console.error('Error loading home page:', error);
+		return (
+			<div className="py-10 text-center">
+				<p className="text-red-500">Error loading page. Please try again later.</p>
+			</div>
+		);
+	}
 }

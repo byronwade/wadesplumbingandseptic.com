@@ -1,6 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import Image from "next/image";
-import { Metadata } from "next";
+import type { Metadata } from "next/types";
 import Script from "next/script";
 import Link from "next/link";
 import { CheckCircle } from "react-feather";

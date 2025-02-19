@@ -32,14 +32,14 @@ export default function ContactForm() {
 
   return (
 		<form onSubmit={handleSubmit} className="lg:flex-auto" suppressHydrationWarning>
-			<input type="text" name="pathname" id="pathname" className="hidden" defaultValue={pathname} />
+			<input type="text" name="pathname" id="pathname" className="hidden" defaultValue={pathname} suppressHydrationWarning />
 			<div className="grid grid-cols-1 gap-y-4 gap-x-4 sm:grid-cols-2">
 				<div>
 					<label htmlFor="full-name" className="block text-sm font-semibold leading-6 text-gray-900">
 						Full name
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="Mario Mario" required type="text" name="full-name" id="full-name" autoComplete="given-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData["full-name"]} onChange={handleChange} />
+						<input placeholder="Mario Mario" required type="text" name="full-name" id="full-name" autoComplete="given-name" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData["full-name"]} onChange={handleChange} suppressHydrationWarning />
 					</div>
 					<ValidationError prefix="Full Name" field="full-name" errors={state.errors} />
 				</div>
@@ -48,7 +48,7 @@ export default function ContactForm() {
 						Phone
 					</label>
 					<div className="mt-2.5">
-						<input autoComplete="tel" placeholder="831-225-4344" required id="phone" name="phone" type="tel" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.phone} onChange={handleChange} />
+						<input autoComplete="tel" placeholder="831-225-4344" required id="phone" name="phone" type="tel" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.phone} onChange={handleChange} suppressHydrationWarning />
 					</div>
 					<ValidationError prefix="Phone" field="phone" errors={state.errors} />
 				</div>
@@ -57,7 +57,7 @@ export default function ContactForm() {
 						Email
 					</label>
 					<div className="mt-2.5">
-						<input autoComplete="email" placeholder="support@wadesinc.io" required id="email" name="email" type="email" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.email} onChange={handleChange} />
+						<input autoComplete="email" placeholder="support@wadesinc.io" required id="email" name="email" type="email" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.email} onChange={handleChange} suppressHydrationWarning />
 					</div>
 					<ValidationError prefix="Email" field="email" errors={state.errors} />
 				</div>
@@ -66,7 +66,7 @@ export default function ContactForm() {
 						Address
 					</label>
 					<div className="mt-2.5">
-						<input placeholder="Mushroom Kingdom" autoComplete="street-address" required id="address" name="address" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.address} onChange={handleChange} />
+						<input placeholder="Mushroom Kingdom" autoComplete="street-address" required id="address" name="address" type="text" className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.address} onChange={handleChange} suppressHydrationWarning />
 					</div>
 					<ValidationError prefix="Address" field="address" errors={state.errors} />
 				</div>
@@ -75,7 +75,7 @@ export default function ContactForm() {
 						Message
 					</label>
 					<div className="mt-2.5">
-						<textarea placeholder="Tell us about your project..." required id="message" name="message" rows={4} className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.message} onChange={handleChange} />
+						<textarea placeholder="Tell us about your project..." required id="message" name="message" rows={4} className="block w-full rounded border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-600 text-base sm:leading-6" value={formData.message} onChange={handleChange} suppressHydrationWarning />
 					</div>
 					<ValidationError prefix="Message" field="message" errors={state.errors} />
 				</div>
