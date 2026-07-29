@@ -21,7 +21,7 @@ Septic pumping prices vary because systems and access conditions vary. A useful 
 - Volume and type of material removed
 - Disposal charges
 - Filter cleaning or component inspection
-- Emergency or after-hours scheduling
+- Priority scheduling for urgent issues during business hours
 
 ## Ask what the service includes
 

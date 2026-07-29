@@ -80,7 +80,7 @@ At Wade’s Plumbing & Septic, we proudly serve the entire Santa Cruz County, in
 
 Office Hours: Monday to Friday, 9am–5pm
 
-Emergency Line: Available 24/7
+Phone: 831.225.4344 · Monday–Friday, 9am–5pm
 
 For a complete overview of our service areas, please visit our [service area page](/service-areas/).
 
@@ -95,6 +95,6 @@ Need help with this issue?
 
 ## Talk to a local expert
 
-Tell us what is going on and we will follow up with straight answers and scheduling options. For emergencies, call us directly.
+Tell us what is going on and we will follow up with straight answers and scheduling options. For urgent issues, call us during business hours.
 
 [ Call 831.225.4344 ](tel:8312254344) [Full quote form](/contact/)

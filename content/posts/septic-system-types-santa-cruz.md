@@ -123,6 +123,6 @@ Need help with this issue?
 
 ## Talk to a local expert
 
-Tell us what is going on and we will follow up with straight answers and scheduling options. For emergencies, call us directly.
+Tell us what is going on and we will follow up with straight answers and scheduling options. For urgent issues, call us during business hours.
 
 [ Call 831.225.4344 ](tel:8312254344) [Full quote form](/contact/)

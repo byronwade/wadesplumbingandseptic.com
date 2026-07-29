@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-description: Straight answers about plumbing, septic systems, service areas, pricing, scheduling, licensing, and emergency response.
+description: Straight answers about plumbing, septic systems, service areas, pricing, scheduling, licensing, and urgent repairs.
 eyebrow: Helpful Answers
 order: 4
 ---
@@ -41,7 +41,7 @@ We serve Santa Cruz County, selected Santa Clara County communities, and Pickens
 
 ### How do I schedule service?
 
-Call 831.225.4344 during regular hours, Monday–Friday from 9:00 AM–5:00 PM. Emergency calls are answered 24/7.
+Call 831.225.4344 during regular hours, Monday–Friday from 9:00 AM–5:00 PM.
 
 ### Do you offer financing?
 
@@ -51,9 +51,9 @@ Financing may be available for qualified larger projects. Visit the [financing p
 
 Yes. California CSLB #1087260 includes C-36 plumbing and C-42 sanitation system classifications. Georgia master plumber license MPR108559 is also held.
 
-### Do you provide emergency service?
+### Do you provide urgent repair service?
 
-Yes. Emergency plumbing and septic calls are answered 24/7, including weekends and holidays. Call 831.225.4344 for the fastest response.
+Yes. Call 831.225.4344 during business hours, Monday–Friday from 9:00 AM–5:00 PM, and we will help prioritize time-sensitive leaks, backups, and septic issues.
 
 ### Do you work on engineered or alternative septic systems?
 

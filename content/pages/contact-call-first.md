@@ -19,4 +19,4 @@ For the fastest help, call with:
 
 The team will confirm coverage, recommend the right service path, and provide the next available scheduling options.
 
-Regular office hours are Monday through Friday, 9:00 AM–5:00 PM. Emergency calls are answered 24/7.
+Regular office hours are Monday through Friday, 9:00 AM–5:00 PM. Call 831.225.4344 to schedule service.

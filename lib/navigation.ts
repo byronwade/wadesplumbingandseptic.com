@@ -27,8 +27,9 @@ export const serviceNavLinks: NavLink[] = [
 	},
 	{
 		href: "/service-category/emergency-services",
-		label: "Emergency Service",
-		description: "Urgent leaks, backups, and after-hours response.",
+		label: "Urgent Repairs",
+		description:
+			"Priority help for leaks, backups, and time-sensitive repairs.",
 	},
 ]
 

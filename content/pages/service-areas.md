@@ -1,6 +1,6 @@
 ---
 title: Plumbing & Septic Service Areas
-description: Wade's serves Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia, with emergency availability.
+description: Wade's serves Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.
 eyebrow: Local Coverage
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Coastal redwoods in the Santa Cruz County service area
@@ -93,4 +93,4 @@ Explore the [Pickens County plumbing page](/pickens-county-ga).
 3. **Schedule the right visit.** The team matches the work with the appropriate technician or project lead.
 4. **Get clear options.** The property is evaluated and pricing is provided before authorized work begins.
 
-Regular hours are Monday through Friday, 9:00 AM–5:00 PM. Emergency plumbing and septic calls are answered 24/7.
+Regular hours are Monday through Friday, 9:00 AM–5:00 PM. Call 831.225.4344 to confirm coverage and schedule service.

@@ -92,7 +92,7 @@ At Wade’s Plumbing & Septic, we proudly serve the entire Santa Cruz County are
 
 We are fully licensed and insured, holding a C-42 license in California and a state license in Georgia, which assures our clients of our professional standards and commitment to quality service.
 
-Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also offer an emergency line available 24/7 to address any urgent septic issues you may encounter.
+Our office hours are Monday through Friday, 9am to 5pm. Call 831.225.4344 during business hours for help with urgent septic issues.
 
 For more information on the areas we serve, please visit our [service area overview page](/service-areas/).
 
@@ -107,6 +107,6 @@ Need help with this issue?
 
 ## Talk to a local expert
 
-Tell us what is going on and we will follow up with straight answers and scheduling options. For emergencies, call us directly.
+Tell us what is going on and we will follow up with straight answers and scheduling options. For urgent issues, call us during business hours.
 
 [ Call 831.225.4344 ](tel:8312254344) [Full quote form](/contact/)
