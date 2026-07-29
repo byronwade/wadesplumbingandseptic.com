@@ -13,15 +13,17 @@ Expected CSV files in --input-dir (default: wp-export/):
 Notes:
   - posts.csv from phpMyAdmin may omit post_name; slugs are recovered from
     Yoast permalinks, then slugified titles as a fallback.
-  - Existing Markdown in content/ is often rewritten/shorter than WordPress.
-    Default mode is --only-missing so polished files are not overwritten.
+  - Known WordPress slug renames (see next.config.ts redirects) are written
+    to the canonical Markdown filenames the site actually serves.
+  - Empty WordPress bodies never overwrite an existing non-empty Markdown file.
+  - Use --overwrite to replace content/ with published WordPress copy.
   - Use --outdir tmp/wp-markdown-import to dump a full review copy.
 
 Examples:
-  python3 scripts/migrate-from-wordpress-csv.py --dry-run
-  python3 scripts/migrate-from-wordpress-csv.py --only-missing
+  python3 scripts/migrate-from-wordpress-csv.py --dry-run --overwrite
+  python3 scripts/migrate-from-wordpress-csv.py --overwrite
   python3 scripts/migrate-from-wordpress-csv.py --outdir tmp/wp-markdown-import --status publish
-  python3 scripts/migrate-from-wordpress-csv.py --overwrite --types service
+  python3 scripts/migrate-from-wordpress-csv.py --only-missing
 """
 
 from __future__ import annotations
@@ -68,8 +70,24 @@ SKIP_SLUGS = {
 	"service-areas",
 }
 
+# WordPress slug -> canonical content slug (matches next.config.ts redirects)
+SLUG_ALIASES: dict[str, str] = {
+	"hydro-jetting-for-drain-clearing": "hydro-jetting",
+	"storm-drain-clearing": "storm-drain-cleaning",
+	"shower-head-replacement": "shower-installation-and-repair",
+	"septic-pumping": "septic-tank-cleaning-and-pumping",
+	"septic-installation": "septic-system-installation",
+	"commercial-repairs": "commercial-plumbing-maintenance",
+	"navigating-the-maze-how-to-locate-trustworthy-plumbing-services-nearby": (
+		"how-to-locate-trustworthy-plumbing-services-nearby"
+	),
+}
+
 # Prefer the site's short category names for services
 SERVICE_CATEGORY_PRIORITY = ("Commercial", "Septic", "Plumbing")
+
+# Minimum HTML length required before overwriting an existing file
+MIN_OVERWRITE_HTML_CHARS = 80
 
 POST_CATEGORY_HINTS = [
 	(r"septic", "Septic Maintenance"),
@@ -103,6 +121,52 @@ def unescape(text: str | None) -> str:
 	return html_lib.unescape(nullish(text) or "").strip()
 
 
+def strip_jsonld_blocks(text: str) -> str:
+	"""Remove embedded schema.org JSON objects from converted Markdown."""
+	pattern = re.compile(
+		r"\{\s*(?:\n\s*)?\"@context\"\s*:\s*\"https?://schema\.org\"",
+		re.I,
+	)
+	while True:
+		match = pattern.search(text)
+		if not match:
+			return text
+		start = match.start()
+		depth = 0
+		in_string = False
+		escape = False
+		end = None
+		for index in range(start, len(text)):
+			ch = text[index]
+			if in_string:
+				if escape:
+					escape = False
+				elif ch == "\\":
+					escape = True
+				elif ch == '"':
+					in_string = False
+				continue
+			if ch == '"':
+				in_string = True
+			elif ch == "{":
+				depth += 1
+			elif ch == "}":
+				depth -= 1
+				if depth == 0:
+					end = index + 1
+					break
+		if end is None:
+			# Truncated JSON blob — drop through the next markdown heading or EOF
+			rest = text[start:]
+			heading = re.search(r"\n##\s+", rest)
+			if heading:
+				text = text[:start] + rest[heading.start() + 1 :]
+			else:
+				text = text[:start].rstrip() + "\n"
+			continue
+		text = text[:start] + text[end:]
+
+
 def html_to_markdown(fragment: str) -> str:
 	# Strip Gutenberg block comments before conversion
 	fragment = re.sub(r"<!--\s*/?wp:[\s\S]*?-->", "", fragment)
@@ -111,15 +175,47 @@ def html_to_markdown(fragment: str) -> str:
 	for tag in soup(["script", "style", "noscript", "iframe", "form", "svg"]):
 		tag.decompose()
 
+	# Some posts paste FAQ JSON-LD as visible page content
+	for tag in soup.find_all(["p", "div", "pre", "code"]):
+		text = tag.get_text(" ", strip=True)
+		if '"@context"' in text and "schema.org" in text:
+			tag.decompose()
+
+	# Normalize styled CTA anchors so html2text doesn't leave raw HTML behind
+	for anchor in soup.find_all("a"):
+		href = (anchor.get("href") or "").strip()
+		label = anchor.get_text(" ", strip=True) or href
+		if not href:
+			anchor.unwrap()
+			continue
+		# Drop inline style/class noise; keep a clean link node
+		anchor.attrs = {"href": href}
+		anchor.clear()
+		anchor.append(label)
+
 	converter = html2text.HTML2Text()
 	converter.body_width = 0
 	converter.ignore_images = True
 	converter.ignore_emphasis = False
-	converter.protect_links = True
+	converter.protect_links = False
+	converter.wrap_links = False
 
 	md = converter.handle(str(soup))
 	md = re.sub(r"https?://(?:www\.)?wadesplumbingandseptic\.com", "", md)
 	md = re.sub(r"https?://wadesplumbingandsepticcom\.local", "", md)
+	# html2text sometimes emits ](<url>) — normalize to ](url)
+	md = re.sub(r"\]\(<([^>]+)>\)", r"](\1)", md)
+	# Convert any residual HTML anchors
+	md = re.sub(
+		r'<a\s+[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',
+		lambda match: f"[{re.sub('<[^>]+>', '', match.group(2)).strip() or match.group(1)}]({match.group(1)})",
+		md,
+		flags=re.I | re.S,
+	)
+	# Drop truncated/broken leftover tags from malformed WP HTML
+	md = re.sub(r"</?(?:a|div|span|section|button)[^>\n]*?>", "", md, flags=re.I)
+	md = re.sub(r"</?(?:a|div|span|section|button)[^>\n]*$", "", md, flags=re.I | re.M)
+	md = strip_jsonld_blocks(md)
 	md = re.sub(r"\n{3,}", "\n\n", md)
 	junk_patterns = [
 		r"### Send a message[\s\S]*$",
@@ -177,18 +273,47 @@ def pick_service_category(names: list[str]) -> str | None:
 
 def write_markdown(path: Path, frontmatter: dict, body: str) -> None:
 	path.parent.mkdir(parents=True, exist_ok=True)
+	clean = {k: v for k, v in frontmatter.items() if v is not None and v != "" and v != []}
+	try:
+		import yaml  # type: ignore
+
+		class LiteralDumper(yaml.SafeDumper):
+			pass
+
+		def str_representer(dumper: yaml.SafeDumper, data: str):
+			if "\n" in data:
+				return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
+			return dumper.represent_scalar("tag:yaml.org,2002:str", data)
+
+		LiteralDumper.add_representer(str, str_representer)
+		fm_text = yaml.dump(
+			clean,
+			Dumper=LiteralDumper,
+			default_flow_style=False,
+			allow_unicode=True,
+			sort_keys=False,
+		).rstrip()
+		path.write_text(f"---\n{fm_text}\n---\n\n{body.rstrip()}\n", encoding="utf-8")
+		return
+	except Exception:  # noqa: BLE001
+		pass
+
 	lines = ["---"]
-	for key, value in frontmatter.items():
-		if value is None or value == "" or value == []:
-			continue
+	for key, value in clean.items():
 		if isinstance(value, list):
 			lines.append(f"{key}:")
 			for item in value:
-				item_text = str(item)
-				if any(ch in item_text for ch in [":", "#", '"']):
-					lines.append(f'  - "{item_text.replace(chr(34), chr(92) + chr(34))}"')
+				if isinstance(item, dict):
+					lines.append(f"  - src: {item.get('src', '')}")
+					for nested_key in ("alt", "width", "height", "caption"):
+						if nested_key in item and item[nested_key] is not None:
+							lines.append(f"    {nested_key}: {item[nested_key]}")
 				else:
-					lines.append(f"  - {item_text}")
+					item_text = str(item)
+					if any(ch in item_text for ch in [":", "#", '"']):
+						lines.append(f'  - "{item_text.replace(chr(34), chr(92) + chr(34))}"')
+					else:
+						lines.append(f"  - {item_text}")
 		elif isinstance(value, bool):
 			lines.append(f"{key}: {'true' if value else 'false'}")
 		elif isinstance(value, int):
@@ -296,20 +421,63 @@ def resolve_destination(
 	collection, subdir = mapping
 	if slug in SKIP_SLUGS:
 		return None
+	canonical_slug = SLUG_ALIASES.get(slug, slug)
 	parts = [collection]
 	if subdir:
 		parts.append(subdir)
-	parts.append(f"{slug}.md")
+	parts.append(f"{canonical_slug}.md")
 	return content_root.joinpath(*parts)
 
 
-def title_for(post: dict[str, str], post_type: str, slug: str) -> str:
-	title = unescape(post.get("post_title"))
-	# Services in WP often use long SEO titles; prefer readable slug-based title
-	# when the existing site style is short names — only for brand-new imports.
-	if post_type == "service" and title and " in santa cruz" in title.lower():
-		return slug.replace("-", " ").title().replace(" And ", " and ")
-	return title or slug.replace("-", " ").title()
+def read_existing_frontmatter(path: Path) -> dict:
+	"""Pull selected fields from an existing Markdown file to preserve site assets."""
+	if not path.exists():
+		return {}
+	text = path.read_text(encoding="utf-8")
+	if not text.startswith("---"):
+		return {}
+	end = text.find("\n---", 3)
+	if end < 0:
+		return {}
+	block = text[3:end].strip()
+	keep_keys = {
+		"image",
+		"imageAlt",
+		"featured",
+		"gallery",
+		"order",
+		"eyebrow",
+		"noindex",
+	}
+	try:
+		import yaml  # type: ignore
+
+		parsed = yaml.safe_load(block) or {}
+		if isinstance(parsed, dict):
+			return {k: parsed[k] for k in keep_keys if k in parsed and parsed[k] is not None}
+	except Exception:  # noqa: BLE001
+		pass
+
+	# Scalar-only fallback if PyYAML is unavailable
+	preserved: dict = {}
+	for line in block.splitlines():
+		if ":" not in line or line.startswith(" ") or line.startswith("-"):
+			continue
+		key, raw = line.split(":", 1)
+		key = key.strip()
+		raw = raw.strip().strip('"')
+		if key not in keep_keys or key == "gallery" or raw == "":
+			continue
+		if key in ("featured", "noindex"):
+			preserved[key] = raw.lower() == "true"
+		elif key == "order":
+			try:
+				preserved[key] = int(raw)
+			except ValueError:
+				pass
+		else:
+			preserved[key] = raw
+	return preserved
 
 
 def build_frontmatter(
@@ -321,7 +489,7 @@ def build_frontmatter(
 	description: str,
 	order: int | None,
 ) -> dict:
-	title = title_for(post, post_type, slug)
+	title = unescape(post.get("post_title")) or slug.replace("-", " ").title()
 	fm: dict = {
 		"title": title,
 		"description": description,
@@ -390,15 +558,16 @@ def migrate(args: argparse.Namespace) -> int:
 			continue
 
 		yoast = data["yoast_by_id"].get(post["ID"])
-		slug = resolve_slug(post, yoast)
-		dest = resolve_destination(post_type, slug, content_root)
+		wp_slug = resolve_slug(post, yoast)
+		slug = SLUG_ALIASES.get(wp_slug, wp_slug)
+		dest = resolve_destination(post_type, wp_slug, content_root)
 		if dest is None:
 			stats["skipped"] += 1
-			actions.append(f"SKIP  {post_type:14} {slug or '(empty-slug)'}")
+			actions.append(f"SKIP  {post_type:14} {wp_slug or '(empty-slug)'}")
 			continue
 
 		# When writing into real content/, also check the canonical path for only-missing
-		canonical = resolve_destination(post_type, slug, CONTENT)
+		canonical = resolve_destination(post_type, wp_slug, CONTENT)
 		exists = canonical.exists() if canonical else False
 		if args.only_missing and exists and not args.outdir:
 			stats["exists"] += 1
@@ -413,7 +582,14 @@ def migrate(args: argparse.Namespace) -> int:
 			continue
 
 		raw_html = post.get("post_content") or ""
-		body = html_to_markdown(raw_html) if raw_html.strip() else ""
+		html_len = len(raw_html.strip())
+		body = html_to_markdown(raw_html) if html_len else ""
+
+		# Never wipe a good local page with an empty WordPress body
+		if exists and html_len < MIN_OVERWRITE_HTML_CHARS and not args.outdir:
+			stats["kept_empty_wp"] += 1
+			actions.append(f"KEEP  {post_type:14} {slug} (empty WP body)")
+			continue
 
 		yoast_desc = nullish(yoast.get("description") if yoast else None)
 		meta_desc = nullish(data["meta"].get(post["ID"], {}).get("_yoast_wpseo_metadesc"))
@@ -423,22 +599,48 @@ def migrate(args: argparse.Namespace) -> int:
 			description = unescape(post.get("post_title")) or slug.replace("-", " ")
 
 		terms = data["terms_by_post"].get(post["ID"], [])
-		order = None
-		if post_type in ("service", "service_area", "page", "landing_page", "marketing_page"):
+		existing_fm = read_existing_frontmatter(canonical) if canonical else {}
+		order = existing_fm.get("order")
+		if order is None and post_type in (
+			"service",
+			"service_area",
+			"page",
+			"landing_page",
+			"marketing_page",
+		):
 			order = order_counters[post_type]
 			order_counters[post_type] += 10
 
 		fm = build_frontmatter(post, post_type, slug, yoast, terms, description, order)
+		# Preserve local media / presentation fields WordPress CSVs don't carry well
+		for key in ("image", "imageAlt", "featured", "gallery", "eyebrow", "noindex"):
+			if key in existing_fm and key not in fm:
+				fm[key] = existing_fm[key]
+			elif key in existing_fm and key == "eyebrow" and post_type != "service_area":
+				fm[key] = existing_fm[key]
+		if "eyebrow" in existing_fm and post_type in ("career", "page", "landing_page"):
+			fm["eyebrow"] = existing_fm["eyebrow"]
+		if "featured" in existing_fm:
+			fm["featured"] = existing_fm["featured"]
+		if "image" in existing_fm:
+			fm["image"] = existing_fm["image"]
+		if "imageAlt" in existing_fm:
+			fm["imageAlt"] = existing_fm["imageAlt"]
+		if "gallery" in existing_fm:
+			fm["gallery"] = existing_fm["gallery"]
+		if "noindex" in existing_fm:
+			fm["noindex"] = existing_fm["noindex"]
 
+		alias_note = f" (from {wp_slug})" if wp_slug != slug else ""
 		rel = dest.relative_to(ROOT) if dest.is_relative_to(ROOT) else dest
 		if args.dry_run:
 			stats["would_write"] += 1
-			actions.append(f"WRITE {post_type:14} {rel} ({len(body)} chars)")
+			actions.append(f"WRITE {post_type:14} {rel} ({len(body)} chars){alias_note}")
 			continue
 
 		write_markdown(dest, fm, body or "_Content pending._\n")
 		stats["wrote"] += 1
-		actions.append(f"WROTE {post_type:14} {rel}")
+		actions.append(f"WROTE {post_type:14} {rel}{alias_note}")
 
 	print("WordPress → Markdown migration")
 	print(f"  input:  {input_dir}")
@@ -449,7 +651,7 @@ def migrate(args: argparse.Namespace) -> int:
 		  f"{', only-missing' if args.only_missing else ''}"
 		  f"{', overwrite' if args.overwrite else ''}")
 	print()
-	for key in ("wrote", "would_write", "exists", "skipped"):
+	for key in ("wrote", "would_write", "exists", "kept_empty_wp", "skipped"):
 		if stats[key]:
 			print(f"  {key}: {stats[key]}")
 	print()

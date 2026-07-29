@@ -13,3 +13,4 @@ ops/self-hosted-runners/.env
 # WordPress phpMyAdmin CSV exports / staging dumps (local only)
 wp-export/
 tmp/wp-markdown-import/
+scripts/__pycache__/

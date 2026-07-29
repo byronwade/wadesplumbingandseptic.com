@@ -1,33 +1,62 @@
 ---
-title: Flexible Plumbing & Septic Financing
-description: Explore payment and financing options for urgent repairs, water heaters, repiping, and larger septic projects.
-eyebrow: Payment Options
+title: Financing Options
+description: At Wade's Plumbing & Septic, we understand that plumbing and septic emergencies
+  can create unexpected financial strain. That's why we offer flexible financing…
 order: 5
+eyebrow: Payment Options
 ---
 
-## Quality work should fit a realistic budget
+# Flexible Financing Options
 
-Unexpected plumbing and septic problems can be expensive. Wade's offers clear written pricing and will explain the available payment options before work begins.
+At Wade's Plumbing & Septic, we understand that plumbing and septic emergencies can create unexpected financial strain. That's why we offer flexible financing options to help you address necessary repairs or replacements without delay.
 
-## Available options
+## Available Financing Plans
 
-### Promotional financing
+We partner with reputable financing providers to offer a range of payment plans that can accommodate various budgets and credit situations:
 
-Qualified customers may be eligible for promotional financing on larger repairs and installations. Approval, interest rates, and promotional periods are determined by the financing provider.
+  * 0% interest plans (for qualified applicants)
+  * Low monthly payment options
+  * Extended payment terms
+  * Quick approval process
 
-### Extended monthly payments
+## Financing Process
 
-Longer-term plans may be available for major plumbing, repiping, water heater, and engineered septic projects.
+  1. Discuss your project with our technician
+  2. Review financing options available for your specific needs
+  3. Complete a simple application
+  4. Receive a quick decision
+  5. Proceed with necessary work upon approval
 
-### Traditional payment methods
+## Ready to Get Started?
 
-We accept major credit cards, checks, and cash for completed work.
+Contact us to discuss your plumbing or septic needs and learn more about our current financing options. Our team will guide you through the process and help you find the payment solution that works best for your situation.
 
-## Before you apply
+## Serving Santa Cruz County, CA
 
-- Ask for a written project estimate.
-- Review the full interest rate and any deferred-interest terms.
-- Confirm the total financed amount and monthly payment.
-- Check whether early payoff has a penalty.
+Wade's Plumbing & Septic proudly serves the following communities in Santa Cruz County, California: Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more. Our team is committed to providing top-notch plumbing and septic services throughout the region.
 
-Financing is subject to third-party approval. Wade's does not guarantee approval or a specific rate. [Contact us](/contact) to discuss the project first.
+Contractor License: C-42 license for CA / state license for GA
+
+Office Hours: Monday–Friday 9am–5pm
+
+Emergency Line: Available
+
+Our service area extends across Santa Cruz County, ensuring that residents and businesses have access to reliable and efficient plumbing and septic solutions whenever needed.
+
+## Frequently Asked Questions
+
+### What is the pricing range for plumbing and septic services in Santa Cruz County, CA?
+
+Our pricing for plumbing and septic services varies based on the specific needs of each project. We offer competitive rates and provide a detailed estimate after assessing your requirements.
+
+### What should I expect during the service process with Wade's Plumbing & Septic?
+
+Our team of professionals will conduct a thorough assessment, explain the necessary steps, and keep you informed throughout the service process. We prioritize minimizing disruptions to your daily routine.
+
+### How long does a typical plumbing or septic service take in Santa Cruz County?
+
+Service timelines vary depending on the complexity of the job. Most standard services are completed within a day, while more complex projects may take longer. We ensure timely and efficient service delivery.
+
+### Why choose Wade's Plumbing & Septic for your needs in Santa Cruz County, CA?
+
+Wade's Plumbing & Septic combines local expertise with a commitment to quality and customer satisfaction. Our licensed professionals use the latest technology to deliver reliable and efficient service.

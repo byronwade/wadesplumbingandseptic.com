@@ -1,64 +1,83 @@
 ---
-title: Frequently Asked Questions
-description: Straight answers about plumbing, septic systems, service areas, pricing, scheduling, licensing, and urgent repairs.
-eyebrow: Helpful Answers
+title: FAQ
+description: Find answers to common questions about plumbing, septic systems, and
+  our services. If you don't see your question here, please contact us directly.
 order: 4
+eyebrow: Helpful Answers
 ---
 
-## Septic systems
+# Frequently Asked Questions
 
-### How often should a septic tank be pumped?
+Find answers to common questions about plumbing, septic systems, and our services. If you don't see your question here, please contact us directly.
 
-Most septic tanks should be pumped every 3–5 years. Household size, wastewater volume, tank size, and system design all affect the correct schedule.
+## General Questions
 
-### What are the signs of a failing septic system?
+### What areas do you service?
 
-Slow drains, gurgling fixtures, sewage backups, strong odors, soggy soil, and unusually lush grass near the drain field can all indicate a problem. Call promptly before the damage expands.
+We proudly serve [list of counties/areas]. If you're unsure whether we service your area, please contact us.
 
-### What is the difference between conventional and advanced septic?
+### Do you offer emergency services?
 
-A conventional system uses a septic tank and gravity drain field. Advanced systems can add aerobic treatment, media filtration, pumps, controls, and disinfection for difficult soil, steep slopes, tight lots, or environmentally sensitive locations.
+Yes, we provide emergency plumbing and septic services. Call our emergency line for immediate assistance.
 
-## Plumbing
+### Are your technicians licensed and insured?
 
-### What should I do if I have a water leak?
+Yes, all our technicians are fully licensed, insured, and receive ongoing training to stay current with industry standards.
 
-Shut off the closest fixture valve or the building's main water valve. Keep electricity away from wet areas and call for professional help.
+## Plumbing Questions
 
-### How long does a water heater last?
+### How can I prevent frozen pipes?
 
-Conventional tank water heaters commonly last 8–12 years. Tankless models can last 15–20 years or longer when maintained correctly.
+To prevent frozen pipes, insulate exposed pipes, keep cabinet doors open during cold weather, let faucets drip, and maintain a consistent indoor temperature. For more detailed prevention tips, visit our blog.
 
-### How do I know if my water pressure is wrong?
+### What should I do if I have a pipe leak?
 
-Pressure over 80 PSI can damage fixtures and increase leak risk. Pressure below roughly 40 PSI may cause noticeably weak flow. We can test pressure and recommend the correct regulator or booster solution.
+First, shut off the water supply to that area or at the main valve. Then, call us immediately for professional repair. If safe to do so, place a bucket under the leak to minimize water damage.
 
-## Scheduling and payment
+## Septic Questions
 
-### What areas do you serve?
+### How often should I pump my septic tank?
 
-We serve Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia. [Review the service area list](/service-areas) or call with your ZIP code.
+Most residential septic tanks should be pumped every 3-5 years, depending on household size and water usage. We can help you determine the optimal schedule for your system.
 
-### How do I schedule service?
+### What are signs of septic system problems?
 
-Call 831.225.4344 during regular hours, Monday–Friday from 9:00 AM–5:00 PM.
+Warning signs include slow drains, gurgling sounds in plumbing, sewage odors, wet spots in the yard, unusually lush grass over the drainfield, and backups. If you notice these signs, contact us for an inspection.
 
-### Do you offer financing?
+Santa Cruz County Septic Experts
 
-Financing may be available for qualified larger projects. Visit the [financing page](/financing) or ask during scheduling.
+## Emergency Plumbing & Septic Services Available
 
-### Are you licensed and insured?
+Trust Wade's Plumbing & Septic for rapid, reliable service throughout Santa Cruz County, California.
 
-Yes. California CSLB #1087260 includes C-36 plumbing and C-42 sanitation system classifications. Georgia master plumber license MPR108559 is also held.
+[Call Us Now](tel:+1234567890)[Get a Free Quote](/contact/)
 
-### Do you provide urgent repair service?
+## Serving Santa Cruz County, CA
 
-Yes. Call 831.225.4344 during business hours, Monday–Friday from 9:00 AM–5:00 PM, and we will help prioritize time-sensitive leaks, backups, and septic issues.
+Wade's Plumbing & Septic is proud to serve the entire Santa Cruz County area, including the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team of licensed professionals is equipped to handle all your plumbing and septic needs with expertise and care.
 
-### Do you work on engineered or alternative septic systems?
+Our contractor license number is C-42 for California, ensuring that you receive services from a certified and trusted provider.
 
-Yes. Wade's specializes in engineered and alternative systems for difficult soil, steep slopes, tight lots, high groundwater, and properties where a conventional system is not appropriate.
+Office Hours: Monday to Friday, 9am to 5pm
 
-### Do you provide commercial plumbing?
+For emergencies, our dedicated line is available for emergencies to assist you.
 
-Yes. Commercial services include drain cleaning, grease traps, backflow work, water heaters, maintenance, repairs, code updates, and commercial septic support.
+With our deep local knowledge and commitment to quality, Wade's Plumbing & Septic is your go-to source for reliable plumbing and septic services in Santa Cruz County, CA.
+
+## Frequently Asked Questions
+
+### What is the cost range for emergency plumbing services in Santa Cruz County?
+
+The cost for emergency plumbing services can vary depending on the complexity of the issue. Generally, you can expect to pay between $150 to $500 for most emergency repairs. We offer transparent pricing and provide estimates before starting any work.
+
+### What should I expect during an emergency plumbing service call?
+
+During an emergency plumbing service call, our certified technicians will quickly assess the situation, provide a clear explanation of the issue, and outline the necessary steps for repair. We prioritize efficiency to minimize disruption and restore your plumbing system promptly.
+
+### How quickly can Wade's Plumbing & Septic respond to an emergency in Santa Cruz County?
+
+We understand the urgency of plumbing emergencies and strive to respond as quickly as possible. Typically, our team can arrive at your location within 1 to 2 hours, ensuring timely and effective service to address your needs.
+
+### Why choose Wade's Plumbing & Septic for emergency services in Santa Cruz County?
+
+Wade's Plumbing & Septic is a trusted local provider known for our expertise, reliability, and customer-focused service. Our experienced team is equipped to handle any emergency situation with professionalism and care, ensuring peace of mind for our clients.

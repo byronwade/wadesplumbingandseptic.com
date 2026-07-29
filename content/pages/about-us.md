@@ -1,76 +1,80 @@
 ---
-title: Built On Honest Work and Clear Communication
-description: Founded by Byron Wade and co-led by Dave, Wade's delivers practical plumbing and septic solutions across California and North Georgia.
-eyebrow: About Wade's
+title: About Us
+description: Wade's Plumbing & Septic is a family-owned and operated business delivering
+  reliable plumbing and septic solutions since 2005. We've built our reputation on…
+order: 1
 image: /images/team/byron-working.webp
 imageAlt: Byron Wade working on a plumbing rough-in
-order: 1
 gallery:
-  - src: /images/team/wades-team.webp
-    alt: Wade's Plumbing and Septic team together
-    width: 1440
-    height: 1080
-    caption: The Wade's team
-  - src: /images/team/byron-working.webp
-    alt: Byron Wade working on an underground plumbing rough-in
-    width: 1440
-    height: 1081
-    caption: Field experience informs every company standard
-  - src: /images/team/byron-wade.webp
-    alt: Byron Wade, founder of Wade's Plumbing and Septic
-    width: 445
-    height: 444
-    caption: Byron Wade, founder
-  - src: /images/team/dave.webp
-    alt: Dave, co-owner of Wade's Plumbing and Septic
-    width: 675
-    height: 900
-    caption: Dave, co-owner
+- src: /images/team/wades-team.webp
+  alt: Wade's Plumbing and Septic team together
+  width: 1440
+  height: 1080
+  caption: The Wade's team
+- src: /images/team/byron-working.webp
+  alt: Byron Wade working on an underground plumbing rough-in
+  width: 1440
+  height: 1081
+  caption: Field experience informs every company standard
+- src: /images/team/byron-wade.webp
+  alt: Byron Wade, founder of Wade's Plumbing and Septic
+  width: 445
+  height: 444
+  caption: Byron Wade, founder
+- src: /images/team/dave.webp
+  alt: Dave, co-owner of Wade's Plumbing and Septic
+  width: 675
+  height: 900
+  caption: Dave, co-owner
+eyebrow: About Wade's
 ---
 
-## Where quality meets community
+# About Wade's Plumbing & Septic
 
-Wade's Plumbing & Septic was built around a straightforward promise: provide high-quality plumbing and septic work, communicate clearly, and treat customers like neighbors. We believe dependable service can make a real difference in the communities where we live and work.
+Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2005. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.
 
-The company handles residential plumbing, commercial plumbing, drain and sewer work, water heaters, and conventional or engineered septic systems. That range allows the team to diagnose the complete system instead of looking at one fixture or component in isolation.
+## Our Mission
 
-## A company built to earn trust, not just win jobs
+To provide dependable, high-quality plumbing and septic services that exceed customer expectations while maintaining the highest standards of integrity and professionalism.
 
-Our standard is honest work without sales pressure. We explain what is wrong, show the practical repair or replacement options, provide pricing before authorized work starts, and finish with testing and cleanup.
+## Our Values
 
-That customer-first approach has helped Wade's serve homeowners, property managers, businesses, and real estate professionals with everything from high-level plumbing inspections to large septic and sewer projects.
+  * **Integrity:** We always provide honest assessments and fair pricing.
+  * **Quality:** We never compromise on the quality of our work.
+  * **Reliability:** When we make a commitment, we honor it.
+  * **Expertise:** Our team receives continuous training to stay current with industry advancements.
+  * **Community:** We're proud to support the communities we serve.
 
-## Meet the people behind the standard
+## The Wade's Difference
 
-### Byron Wade — Founder
+What sets us apart is our customer-first approach. We listen to your concerns, explain the issues clearly, and provide options that fit your needs and budget. We're not just fixing plumbing problems; we're building lasting relationships with our customers.
 
-Byron built Wade's Plumbing & Septic around straight answers, quality workmanship, technical problem-solving, and long-term customer trust. His field and company experience spans plumbing service, commercial work, septic installation, advanced treatment systems, product development, and operations.
+## Serving Santa Cruz County, CA
 
-### Dave — Co-Owner
+At Wade's Plumbing & Septic, we proudly serve the diverse communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our commitment to quality and customer satisfaction extends throughout the region.
 
-Dave co-leads operations, project planning, and field execution. He helps keep crews aligned, projects organized, and workmanship consistent from the first call through the final walkthrough.
+We hold a C-42 license for CA and a state license for GA, ensuring our services meet the highest standards of safety and professionalism.
 
-### The Wade's team
+**Office Hours:** Monday–Friday, 9am–5pm
 
-Our plumbers, septic specialists, project leaders, and support staff share one goal: deliver dependable solutions and a better service experience. Continued training and real field experience keep the team current with plumbing codes, diagnostic equipment, treatment technology, and installation methods.
+**Emergency Line:** Available for emergencies
 
-## The values you can feel on every job
+Whether you need trenchless sewer line replacement, expert fixture installation, or certified septic system services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
 
-- **Honest recommendations:** Practical options without quota-driven upselling.
-- **Clear communication:** Scheduling, pricing, scope, and job progress explained in plain language.
-- **Licensed professionals:** Code-compliant work performed by an insured team.
-- **Clean workmanship:** Careful protection of the property and cleanup before completion.
-- **Long-term reliability:** Repairs and systems designed to solve the underlying problem.
-- **Community commitment:** A family-owned company accountable to the people it serves.
+## Frequently Asked Questions
 
-## Licensing
+### What is the cost/pricing range for commercial services at Wade's Plumbing & Septic?
 
-### California
+The cost for commercial plumbing and septic services in Santa Cruz County varies based on the complexity and scope of the project. We offer competitive pricing and provide detailed estimates to ensure transparency and value for our clients.
 
-California CSLB #1087260 with C-36 Plumbing Contractor and C-42 Sanitation System Contractor classifications.
+### What should I expect during a commercial service visit?
 
-### Georgia
+Our professional team will conduct a thorough assessment of your plumbing or septic issue, providing clear communication and expert solutions tailored to your needs. We prioritize minimal disruption to your business operations while delivering efficient and effective service.
 
-Georgia Master Plumber Non-Restricted license MPR108559.
+### What is the typical timeline for completing commercial plumbing or septic services?
 
-Need plumbing or septic service? [View all services](/services), [check your service area](/service-areas), or [contact our team](/contact).
+The timeline for commercial services in Santa Cruz County depends on the service type and complexity. Most projects are completed within a few days, with emergency services available for urgent needs.
+
+### Why choose Wade's Plumbing & Septic for your commercial needs?
+
+Wade's Plumbing & Septic is a trusted provider in Santa Cruz County, known for our expertise, reliability, and commitment to customer satisfaction. Our certified team delivers top-quality service, ensuring your commercial plumbing and septic systems operate smoothly.
