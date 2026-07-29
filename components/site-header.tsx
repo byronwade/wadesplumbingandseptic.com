@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Menu, Phone } from "lucide-react"
 
@@ -26,8 +27,14 @@ export function SiteHeader() {
 					href="/"
 					aria-label="Wade's Plumbing & Septic home"
 				>
-					<span className="bg-primary grid size-11 place-items-center rounded-xl text-lg font-black text-white">
-						W
+					<span className="grid size-12 place-items-center rounded-xl bg-white p-1 shadow-sm">
+						<Image
+							alt=""
+							height={44}
+							priority
+							src="/images/brand/wades-mark.webp"
+							width={44}
+						/>
 					</span>
 					<span className="leading-tight">
 						<span className="block text-base font-black sm:text-lg">

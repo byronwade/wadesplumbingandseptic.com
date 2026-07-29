@@ -6,6 +6,14 @@ import matter from "gray-matter"
 
 export type Collection = "pages" | "services" | "posts"
 
+export type ContentImage = {
+	src: string
+	alt: string
+	width: number
+	height: number
+	caption?: string
+}
+
 export type ContentDocument = {
 	slug: string
 	title: string
@@ -19,6 +27,9 @@ export type ContentDocument = {
 	eyebrow?: string
 	order?: number
 	featured?: boolean
+	gallery?: ContentImage[]
+	tags?: string[]
+	noindex?: boolean
 }
 
 const CONTENT_ROOT = path.join(process.cwd(), "content")
@@ -38,12 +49,21 @@ export function getCollection(collection: Collection): ContentDocument[] {
 
 	if (!fs.existsSync(directory)) return []
 
-	return fs
-		.readdirSync(directory)
-		.filter((file) => file.endsWith(".md"))
+	const files = fs.readdirSync(directory, {
+		recursive: true,
+		withFileTypes: true,
+	})
+
+	return files
+		.filter((file) => file.isFile() && file.name.endsWith(".md"))
 		.map((file) => {
-			const slug = file.replace(/\.md$/, "")
-			const source = fs.readFileSync(path.join(directory, file), "utf8")
+			const absolutePath = path.join(file.parentPath, file.name)
+			const slug = path
+				.relative(directory, absolutePath)
+				.replace(/\.md$/, "")
+				.split(path.sep)
+				.join("/")
+			const source = fs.readFileSync(absolutePath, "utf8")
 			const { data, content } = matter(source)
 
 			return {
@@ -59,6 +79,19 @@ export function getCollection(collection: Collection): ContentDocument[] {
 				eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
 				order: data.order === undefined ? undefined : Number(data.order),
 				featured: Boolean(data.featured),
+				gallery: Array.isArray(data.gallery)
+					? data.gallery.map((image) => ({
+							src: String(image.src),
+							alt: String(image.alt),
+							width: Number(image.width),
+							height: Number(image.height),
+							caption: image.caption ? String(image.caption) : undefined,
+						}))
+					: undefined,
+				tags: Array.isArray(data.tags)
+					? data.tags.map((tag) => String(tag))
+					: undefined,
+				noindex: Boolean(data.noindex),
 			}
 		})
 		.sort((a, b) => {
@@ -80,4 +113,12 @@ export function getDocument(collection: Collection, slug: string) {
 
 export function getPageOrPost(slug: string) {
 	return getDocument("pages", slug) ?? getDocument("posts", slug)
+}
+
+export function taxonomySlug(value: string) {
+	return value
+		.toLowerCase()
+		.replace(/&/g, "and")
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-|-$/g, "")
 }

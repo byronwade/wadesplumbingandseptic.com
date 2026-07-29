@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
 import { getCollection, getDocument } from "@/lib/content"
+import { getServiceImage } from "@/lib/service-images"
 
 export function generateStaticParams() {
 	return getCollection("services").map((service) => ({ slug: service.slug }))
@@ -25,7 +26,7 @@ export async function generateMetadata({
 		openGraph: {
 			title: service.title,
 			description: service.description,
-			images: [service.image ?? "/images/hero-plumber.jpeg"],
+			images: [getServiceImage(service.category, service.image)],
 		},
 	}
 }

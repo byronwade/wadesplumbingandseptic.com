@@ -1,4 +1,5 @@
 import type { Route } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { Phone } from "lucide-react"
 
@@ -44,8 +45,19 @@ export function SiteFooter() {
 			<div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
 				<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 					<div>
-						<Link className="text-xl font-black" href="/">
-							Wade&apos;s Plumbing &amp; Septic
+						<Link
+							className="flex items-center gap-3 text-xl font-black"
+							href="/"
+						>
+							<span className="grid size-14 place-items-center rounded-xl bg-white p-1.5">
+								<Image
+									alt=""
+									height={48}
+									src="/images/brand/wades-mark.webp"
+									width={48}
+								/>
+							</span>
+							<span>Wade&apos;s Plumbing &amp; Septic</span>
 						</Link>
 						<p className="mt-4 text-sm leading-relaxed text-neutral-400">
 							Family-owned plumbing and septic specialists. Honest
@@ -62,6 +74,15 @@ export function SiteFooter() {
 							>
 								<span className="text-sm font-black" aria-hidden="true">
 									f
+								</span>
+							</a>
+							<a
+								className="grid size-10 place-items-center rounded-lg border border-white/10 text-neutral-400 hover:text-white"
+								href={siteConfig.social.linkedin}
+								aria-label="LinkedIn"
+							>
+								<span className="text-xs font-black" aria-hidden="true">
+									in
 								</span>
 							</a>
 							<a

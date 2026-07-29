@@ -3,7 +3,7 @@ title: Commercial Plumbing Maintenance
 description: Planned commercial plumbing maintenance that reduces downtime, protects equipment, and catches small failures before they disrupt operations.
 category: Commercial
 order: 20
-image: /images/commercial-plumbing.jpeg
+image: /images/work/commercial-plumbing-installation.webp
 imageAlt: Commercial plumbing installation
 ---
 

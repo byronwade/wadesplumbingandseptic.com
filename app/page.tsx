@@ -35,7 +35,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = {
 	title: "Honest Plumbing & Septic Service",
 	description:
-		"No sales pressure or upselling. Get licensed plumbing and engineered septic service across Santa Cruz and Santa Clara counties with clear pricing.",
+		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
 	alternates: { canonical: "/" },
 }
 
@@ -48,7 +48,7 @@ const trustItems = [
 const serviceGroups = [
 	{
 		title: "Residential Plumbing",
-		image: "/images/precision-valve.jpeg",
+		image: "/images/work/precision-valve-installation.webp",
 		description:
 			"Repairs and installations completed cleanly, honestly, and to code.",
 		items: [
@@ -60,7 +60,7 @@ const serviceGroups = [
 	},
 	{
 		title: "Commercial Plumbing",
-		image: "/images/commercial-plumbing.jpeg",
+		image: "/images/work/commercial-plumbing-installation.webp",
 		description:
 			"Dependable commercial service that keeps your property operating.",
 		items: [
@@ -72,7 +72,7 @@ const serviceGroups = [
 	},
 	{
 		title: "New Construction",
-		image: "/images/new-construction.jpeg",
+		image: "/images/work/new-construction-rough-in.webp",
 		description:
 			"Code-compliant plumbing planned from rough-in through final testing.",
 		items: [
@@ -83,6 +83,37 @@ const serviceGroups = [
 		],
 	},
 ]
+
+const workGallery = [
+	{
+		src: "/images/work/engineered-retaining-wall.webp",
+		alt: "Engineered septic retaining wall and control panel in Santa Cruz County",
+		caption: "Engineered retaining wall and control panel",
+	},
+	{
+		src: "/images/work/multi-tank-excavation.webp",
+		alt: "Multi-tank septic excavation underway on a hillside property",
+		caption: "Multi-tank excavation in progress",
+	},
+	{
+		src: "/images/work/completed-multi-tank.webp",
+		alt: "Completed multi-tank engineered septic installation",
+		caption: "Completed multi-tank installation",
+	},
+	{
+		src: "/images/work/advanced-septic-control-panel.webp",
+		alt: "Advanced septic control panel and system access points",
+		caption: "Advanced septic control system",
+	},
+] as const
+
+const trustedBrands = [
+	{ src: "/images/partners/bradfordwhite.webp", alt: "Bradford White" },
+	{ src: "/images/partners/navien.webp", alt: "Navien" },
+	{ src: "/images/partners/kohler.webp", alt: "Kohler" },
+	{ src: "/images/partners/grohe.webp", alt: "Grohe" },
+	{ src: "/images/partners/grundfos.webp", alt: "Grundfos" },
+] as const
 
 const faqs = [
 	{
@@ -108,7 +139,7 @@ const faqs = [
 	{
 		question: "What areas do you serve?",
 		answer:
-			"We serve Santa Cruz County and Santa Clara County, California. Call us if you are unsure whether a specific address is inside the current service area.",
+			"We serve Santa Cruz County and selected Santa Clara County communities in California, plus Pickens County, Georgia. Call us if you are unsure whether a specific address is inside the current service area.",
 	},
 ]
 
@@ -173,44 +204,44 @@ export default function HomePage() {
 					<div className="relative hidden h-[32.5rem] items-end gap-4 lg:flex">
 						<div className="relative h-full flex-1 overflow-hidden rounded-2xl shadow-2xl shadow-black/40">
 							<Image
-								alt="Professional plumber at work"
+								alt="Three-tank engineered septic system installed on a hillside property in Santa Cruz County"
 								className="object-cover"
 								fill
 								fetchPriority="high"
 								priority
 								quality={80}
 								sizes="(min-width: 1024px) 38vw, 0px"
-								src="/images/hero-plumber.jpeg"
+								src="/images/work/engineered-septic-hero.webp"
 							/>
 							<div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
 						</div>
 						<div className="flex w-44 shrink-0 flex-col gap-4">
 							<div className="relative h-56 overflow-hidden rounded-2xl shadow-xl">
 								<Image
-									alt="Water heater installation"
+									alt="Tankless water heater installation"
 									className="object-cover"
 									fill
 									quality={75}
 									sizes="176px"
-									src="/images/water-heater.jpeg"
+									src="/images/work/tankless-water-heater-installation.webp"
 								/>
 							</div>
 							<div className="relative h-56 overflow-hidden rounded-2xl shadow-xl">
 								<Image
-									alt="Septic system installation"
+									alt="Precision plumbing valve installation"
 									className="object-cover"
 									fill
 									quality={75}
 									sizes="176px"
-									src="/images/septic-installation.jpeg"
+									src="/images/work/precision-valve-installation.webp"
 								/>
 							</div>
 						</div>
 						<div className="absolute top-6 left-6 rounded-xl border border-white/20 bg-black/30 px-4 py-3 backdrop-blur-md">
 							<p className="text-xs text-neutral-300">Serving</p>
-							<p className="text-sm font-black">California</p>
+							<p className="text-sm font-black">California + Georgia</p>
 							<p className="text-primary text-xs font-bold">
-								Santa Cruz · Santa Clara
+								Santa Cruz · Santa Clara · Pickens
 							</p>
 						</div>
 					</div>
@@ -299,9 +330,53 @@ export default function HomePage() {
 								fill
 								quality={80}
 								sizes="(min-width: 1024px) 45vw, 100vw"
-								src="/images/featured-septic.jpeg"
+								src="/images/work/completed-multi-tank.webp"
 							/>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="border-y bg-[#111] py-20 text-white">
+				<div className="mx-auto max-w-7xl px-4 md:px-8">
+					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+						<div className="max-w-2xl">
+							<Badge>Project Gallery</Badge>
+							<h2 className="mt-5 text-4xl font-black tracking-tight">
+								Real work from the Wade&apos;s team.
+							</h2>
+							<p className="mt-4 text-lg text-neutral-300">
+								Engineered septic installations, excavation, controls, and
+								finished systems completed on challenging Santa Cruz County
+								properties.
+							</p>
+						</div>
+						<Link
+							className={buttonVariants({ variant: "inverse", size: "lg" })}
+							href="/contact"
+						>
+							Discuss your project
+							<ArrowRight />
+						</Link>
+					</div>
+					<div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+						{workGallery.map((image) => (
+							<figure key={image.src}>
+								<div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-900">
+									<Image
+										alt={image.alt}
+										className="object-cover"
+										fill
+										quality={75}
+										sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+										src={image.src}
+									/>
+								</div>
+								<figcaption className="mt-3 text-sm font-bold text-neutral-300">
+									{image.caption}
+								</figcaption>
+							</figure>
+						))}
 					</div>
 				</div>
 			</section>
@@ -361,6 +436,31 @@ export default function HomePage() {
 				</div>
 			</section>
 
+			<section className="border-y bg-white py-12">
+				<div className="mx-auto max-w-7xl px-4 md:px-8">
+					<p className="text-muted-foreground text-center text-xs font-black tracking-[0.18em] uppercase">
+						Experienced with leading plumbing equipment brands
+					</p>
+					<div className="mt-8 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 lg:grid-cols-5">
+						{trustedBrands.map((brand) => (
+							<div
+								className="relative mx-auto h-14 w-full max-w-40 grayscale transition hover:grayscale-0"
+								key={brand.src}
+							>
+								<Image
+									alt={brand.alt}
+									className="object-contain"
+									fill
+									quality={80}
+									sizes="160px"
+									src={brand.src}
+								/>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
 			<section className="py-20">
 				<div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.9fr_1.1fr]">
 					<div>
@@ -399,12 +499,12 @@ export default function HomePage() {
 						<div className="mt-7 space-y-6">
 							{[
 								[
-									"Wade's team was refreshingly honest. They recommended a simple repair that saved me thousands.",
-									"Sarah T. · Santa Cruz, CA",
+									"As a real estate professional, I love working with Wade’s Plumbing. They are courteous, professional, and always make sure my clients are taken care of.",
+									"Bailey Cotrona",
 								],
 								[
-									"They explained every option without pressure. It felt like advice from a knowledgeable neighbor.",
-									"Jennifer L.",
+									"They know their stuff, do great work, and are a pleasure to work with. They made me feel comfortable with a terrible situation that shut down my house.",
+									"Aaron Berger",
 								],
 							].map(([quote, person]) => (
 								<blockquote

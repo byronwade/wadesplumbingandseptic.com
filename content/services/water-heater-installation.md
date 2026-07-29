@@ -3,7 +3,7 @@ title: Water Heater Installation
 description: Install properly sized tank-style gas, electric, and heat-pump water heaters with code-compliant connections and safety components.
 category: Plumbing
 order: 25
-image: /images/water-heater.jpeg
+image: /images/work/water-heater-installation.webp
 imageAlt: Water heater installation
 ---
 

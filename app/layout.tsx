@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 		url: siteConfig.url,
 		images: [
 			{
-				url: "/images/hero-plumber.jpeg",
-				width: 1200,
-				height: 630,
+				url: "/images/locations/santa-cruz-plumber.webp",
+				width: 1280,
+				height: 720,
 				alt: "Wade's Plumbing & Septic",
 			},
 		],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images: ["/images/hero-plumber.jpeg"],
+		images: ["/images/locations/santa-cruz-plumber.webp"],
 	},
 	robots: {
 		index: true,
@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 	},
 	icons: {
 		icon: "/icon.svg",
+		apple: "/images/brand/wades-mark.webp",
 	},
 	manifest: "/manifest.webmanifest",
 }
@@ -73,11 +74,13 @@ const localBusinessSchema = {
 	url: siteConfig.url,
 	telephone: "+18312254344",
 	email: siteConfig.email,
-	image: `${siteConfig.url}/images/hero-plumber.jpeg`,
+	logo: `${siteConfig.url}/images/brand/wades-mark.webp`,
+	image: `${siteConfig.url}/images/locations/santa-cruz-plumber.webp`,
 	priceRange: "$$",
 	areaServed: [
 		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
 		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+		{ "@type": "AdministrativeArea", name: "Pickens County, Georgia" },
 	],
 	openingHoursSpecification: [
 		{
@@ -87,7 +90,11 @@ const localBusinessSchema = {
 			closes: "17:00",
 		},
 	],
-	sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
+	sameAs: [
+		siteConfig.social.facebook,
+		siteConfig.social.instagram,
+		siteConfig.social.linkedin,
+	],
 }
 
 export default function RootLayout({

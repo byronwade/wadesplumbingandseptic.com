@@ -2,7 +2,7 @@
 title: Get in Touch with Wade's Plumbing
 description: Contact Wade's Plumbing & Septic for professional plumbing and septic service across Santa Cruz County and Santa Clara County.
 eyebrow: Available 24/7 for Emergencies
-image: /images/hero-plumber.jpeg
+image: /images/team/wades-team.webp
 imageAlt: Professional Wade's plumber at work
 order: 7
 ---

@@ -8,7 +8,7 @@ import { getCollection } from "@/lib/content"
 export const metadata: Metadata = {
 	title: "Plumbing & Septic Services",
 	description:
-		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz and Santa Clara counties.",
+		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
 	alternates: { canonical: "/services" },
 }
 
@@ -19,9 +19,9 @@ export default function ServicesPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description={`${services.length} plumbing and septic services available across Santa Cruz County and Santa Clara County. Browse by category to find exactly what you need.`}
+				description={`${services.length} plumbing and septic services available across Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia. Browse by category to find exactly what you need.`}
 				eyebrow="Browse Services"
-				image="/images/commercial-plumbing.jpeg"
+				image="/images/work/commercial-plumbing-installation.webp"
 				imageAlt="Professional plumbing installation"
 				title="All Plumbing & Septic Services"
 			/>
