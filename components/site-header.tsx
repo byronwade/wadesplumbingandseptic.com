@@ -8,7 +8,7 @@ export function SiteHeader() {
 	return (
 		<header className="bg-ink sticky top-0 z-50 border-b border-white/15 text-white">
 			<div className="bg-ink-soft hidden border-b border-white/15 sm:block">
-				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-semibold">
+				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-bold">
 					<span>{siteConfig.hours}</span>
 					<Link
 						className="header-muted transition-colors hover:text-white"
@@ -27,15 +27,13 @@ export function SiteHeader() {
 					aria-label="Wade's Plumbing & Septic home"
 					prefetch
 				>
-					<span className="grid size-11 shrink-0 place-items-center rounded-md bg-white p-1">
-						<Image
-							alt=""
-							height={40}
-							priority
-							src="/images/brand/wades-mark.webp"
-							width={40}
-						/>
-					</span>
+					<Image
+						alt=""
+						className="size-11 shrink-0 rounded-md"
+						height={44}
+						src="/images/brand/wades-mark-sm.webp"
+						width={44}
+					/>
 					<span className="leading-none">
 						<span className="block text-base font-extrabold tracking-[-0.03em] text-white sm:text-lg">
 							Wade&apos;s Plumbing

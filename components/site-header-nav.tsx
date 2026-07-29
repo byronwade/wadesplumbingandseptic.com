@@ -159,7 +159,7 @@ export function SiteHeaderNav() {
 								<Image
 									alt=""
 									height={36}
-									src="/images/brand/wades-mark.webp"
+									src="/images/brand/wades-mark-sm.webp"
 									width={36}
 								/>
 							</span>

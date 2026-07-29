@@ -45,6 +45,51 @@ function normalizeDate(value: unknown) {
 	return String(value)
 }
 
+function parseDocument(absolutePath: string, slug: string): ContentDocument {
+	const source = fs.readFileSync(absolutePath, "utf8")
+	const { data, content } = matter(source)
+
+	return {
+		slug,
+		title: String(data.title ?? slug),
+		description: String(data.description ?? ""),
+		content,
+		category: data.category ? String(data.category) : undefined,
+		date: normalizeDate(data.date),
+		updated: normalizeDate(data.updated),
+		image: data.image ? String(data.image) : undefined,
+		imageAlt: data.imageAlt ? String(data.imageAlt) : undefined,
+		eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
+		order: data.order === undefined ? undefined : Number(data.order),
+		featured: Boolean(data.featured),
+		gallery: Array.isArray(data.gallery)
+			? data.gallery.map((image) => ({
+					src: String(image.src),
+					alt: String(image.alt),
+					width: Number(image.width),
+					height: Number(image.height),
+					caption: image.caption ? String(image.caption) : undefined,
+				}))
+			: undefined,
+		tags: Array.isArray(data.tags)
+			? data.tags.map((tag) => String(tag))
+			: undefined,
+		noindex: Boolean(data.noindex),
+	}
+}
+
+function documentPath(collection: Collection, slug: string) {
+	const directory = collectionPath(collection)
+	const absolutePath = path.resolve(directory, `${slug}.md`)
+	const relative = path.relative(directory, absolutePath)
+
+	if (relative.startsWith("..") || path.isAbsolute(relative)) {
+		return null
+	}
+
+	return absolutePath
+}
+
 function readCollection(collection: Collection): ContentDocument[] {
 	const directory = collectionPath(collection)
 
@@ -64,36 +109,7 @@ function readCollection(collection: Collection): ContentDocument[] {
 				.replace(/\.md$/, "")
 				.split(path.sep)
 				.join("/")
-			const source = fs.readFileSync(absolutePath, "utf8")
-			const { data, content } = matter(source)
-
-			return {
-				slug,
-				title: String(data.title ?? slug),
-				description: String(data.description ?? ""),
-				content,
-				category: data.category ? String(data.category) : undefined,
-				date: normalizeDate(data.date),
-				updated: normalizeDate(data.updated),
-				image: data.image ? String(data.image) : undefined,
-				imageAlt: data.imageAlt ? String(data.imageAlt) : undefined,
-				eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
-				order: data.order === undefined ? undefined : Number(data.order),
-				featured: Boolean(data.featured),
-				gallery: Array.isArray(data.gallery)
-					? data.gallery.map((image) => ({
-							src: String(image.src),
-							alt: String(image.alt),
-							width: Number(image.width),
-							height: Number(image.height),
-							caption: image.caption ? String(image.caption) : undefined,
-						}))
-					: undefined,
-				tags: Array.isArray(data.tags)
-					? data.tags.map((tag) => String(tag))
-					: undefined,
-				noindex: Boolean(data.noindex),
-			}
+			return parseDocument(absolutePath, slug)
 		})
 		.sort((a, b) => {
 			if (a.order !== undefined || b.order !== undefined) {
@@ -121,7 +137,13 @@ export async function getDocument(collection: Collection, slug: string) {
 	"use cache"
 	cacheTag(`content:${collection}`, `content:${collection}:${slug}`)
 	cacheLife("max")
-	return readCollection(collection).find((document) => document.slug === slug)
+
+	const absolutePath = documentPath(collection, slug)
+	if (!absolutePath || !fs.existsSync(absolutePath)) {
+		return undefined
+	}
+
+	return parseDocument(absolutePath, slug)
 }
 
 export async function getPageOrPost(slug: string) {

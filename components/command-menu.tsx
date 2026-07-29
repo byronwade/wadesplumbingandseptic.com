@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useState, type ComponentType } from "react"
 import { useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
 import { FileText, Home, MapPin, Moon, Phone, Sun, Wrench } from "lucide-react"
+import type { ComponentType } from "react"
 
 import {
 	CommandDialog,
@@ -27,30 +27,23 @@ const iconByHref: Record<string, ComponentType<{ className?: string }>> = {
 	"/service-areas": MapPin,
 }
 
-export function CommandMenu() {
-	const [open, setOpen] = useState(false)
+export function CommandMenuDialog({
+	open,
+	onOpenChange,
+}: {
+	open: boolean
+	onOpenChange: (open: boolean) => void
+}) {
 	const router = useRouter()
 	const { resolvedTheme, setTheme } = useTheme()
 
-	useEffect(() => {
-		const onKeyDown = (event: KeyboardEvent) => {
-			if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-				event.preventDefault()
-				setOpen((current) => !current)
-			}
-		}
-
-		window.addEventListener("keydown", onKeyDown)
-		return () => window.removeEventListener("keydown", onKeyDown)
-	}, [])
-
 	const runCommand = (command: () => void) => {
-		setOpen(false)
+		onOpenChange(false)
 		command()
 	}
 
 	return (
-		<CommandDialog open={open} onOpenChange={setOpen}>
+		<CommandDialog open={open} onOpenChange={onOpenChange}>
 			<CommandInput placeholder="Search pages and actions..." />
 			<CommandList>
 				<CommandEmpty>No results found.</CommandEmpty>

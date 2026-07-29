@@ -44,14 +44,14 @@ export function ArticleArchive({
 							aria-label={`Read ${post.title}`}
 							className="bg-muted relative block aspect-[16/9] overflow-hidden"
 							href={`/${post.slug}` as Route}
-							prefetch
+							prefetch={false}
 							tabIndex={-1}
 						>
 							<Image
 								alt=""
 								className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 								fill
-								quality={65}
+								quality={60}
 								sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
 								src={
 									post.image ?? "/images/work/precision-valve-installation.webp"
@@ -63,7 +63,7 @@ export function ArticleArchive({
 								{post.category ?? "Expert Tips"}
 							</Badge>
 							<CardTitle className="group-hover:text-primary mt-3">
-								<Link href={`/${post.slug}` as Route} prefetch>
+								<Link href={`/${post.slug}` as Route} prefetch={false}>
 									{post.title}
 								</Link>
 							</CardTitle>
@@ -79,7 +79,7 @@ export function ArticleArchive({
 							<Link
 								className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 								href={`/${post.slug}` as Route}
-								prefetch
+								prefetch={false}
 							>
 								Read guide
 								<ArrowRight className="size-4" />

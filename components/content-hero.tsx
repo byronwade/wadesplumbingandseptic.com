@@ -31,7 +31,7 @@ export function ContentHero({
 						className="object-cover opacity-30"
 						fill
 						priority
-						quality={70}
+						quality={55}
 						sizes="100vw"
 						src={image}
 					/>
@@ -46,7 +46,7 @@ export function ContentHero({
 					<Link
 						className="transition-colors hover:text-white"
 						href="/"
-						prefetch
+						prefetch={false}
 					>
 						Home
 					</Link>
@@ -56,7 +56,7 @@ export function ContentHero({
 							<Link
 								className="transition-colors hover:text-white"
 								href={parent.href}
-								prefetch
+								prefetch={false}
 							>
 								{parent.label}
 							</Link>

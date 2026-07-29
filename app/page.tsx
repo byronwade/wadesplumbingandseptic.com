@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Image from "next/image"
+import Image, { getImageProps } from "next/image"
 import Link from "next/link"
 import {
 	ArrowRight,
@@ -135,38 +135,70 @@ const faqs = [
 	},
 ]
 
+function HomeHeroMedia() {
+	const common = {
+		alt: "Three-tank engineered septic system installed on a hillside property in Santa Cruz County",
+		sizes: "100vw",
+	} as const
+
+	const {
+		props: { srcSet: desktop },
+	} = getImageProps({
+		...common,
+		width: 768,
+		height: 1024,
+		quality: 70,
+		src: "/images/work/engineered-septic-hero.webp",
+	})
+
+	const {
+		props: { srcSet: mobile, ...rest },
+	} = getImageProps({
+		...common,
+		width: 640,
+		height: 400,
+		quality: 65,
+		src: "/images/work/engineered-septic-hero-mobile.webp",
+	})
+
+	return (
+		<picture>
+			<source media="(min-width: 640px)" srcSet={desktop} sizes="100vw" />
+			<img
+				{...rest}
+				srcSet={mobile}
+				alt={common.alt}
+				className="absolute inset-0 size-full object-cover object-center"
+				decoding="async"
+				fetchPriority="high"
+			/>
+		</picture>
+	)
+}
+
 export default function HomePage() {
 	return (
 		<main id="main-content">
 			<section className="surface-dark relative min-h-[min(92vh,52rem)] overflow-hidden">
-				<Image
-					alt="Three-tank engineered septic system installed on a hillside property in Santa Cruz County"
-					className="object-cover object-center"
-					fill
-					fetchPriority="high"
-					priority
-					quality={70}
-					sizes="100vw"
-					src="/images/work/engineered-septic-hero.webp"
-				/>
+				<HomeHeroMedia />
 				<div className="from-ink via-ink/88 to-ink/45 absolute inset-0 bg-linear-to-r" />
 				<div className="from-ink/80 to-ink/35 absolute inset-0 bg-linear-to-t via-transparent" />
 
 				<div className="container-shell relative flex min-h-[min(92vh,52rem)] flex-col justify-end pt-28 pb-16 lg:justify-center lg:pt-20 lg:pb-24">
 					<div className="max-w-3xl">
-						<p className="type-eyebrow motion-fade text-primary-bright">
+						<p className="type-eyebrow text-primary-bright">
 							Wade&apos;s Plumbing &amp; Septic
 						</p>
-						<h1 className="type-display motion-rise mt-5 text-white">
+						<h1 className="type-display mt-5 text-white">
 							Honest plumbing
 							<br />
 							<span className="text-primary-bright">&amp; septic</span>
 						</h1>
-						<p className="type-lead motion-rise motion-delay-1 mt-6 max-w-xl">
+						<p className="type-lead motion-rise mt-6 max-w-xl">
 							No sales pressure. No upselling. Clear pricing before work begins
 							from local licensed professionals.
 						</p>
-						<div className="motion-rise motion-delay-2 mt-8 flex flex-col gap-3 sm:flex-row">
+						<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-3 sm:flex-row">
 							<a
 								className={cn(buttonVariants({ size: "xl" }), "gap-2.5")}
 								href={siteConfig.phoneHref}
@@ -272,7 +304,7 @@ export default function HomePage() {
 								alt="Three-tank septic system installation on hillside property"
 								className="object-cover"
 								fill
-								quality={80}
+								quality={70}
 								sizes="(min-width: 1024px) 45vw, 100vw"
 								src="/images/work/completed-multi-tank.webp"
 							/>
@@ -312,7 +344,7 @@ export default function HomePage() {
 										alt={image.alt}
 										className="object-cover"
 										fill
-										quality={75}
+										quality={65}
 										sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
 										src={image.src}
 									/>
@@ -357,7 +389,7 @@ export default function HomePage() {
 										alt={group.title}
 										className="object-cover"
 										fill
-										quality={70}
+										quality={65}
 										sizes="(min-width: 1024px) 33vw, 100vw"
 										src={group.image}
 									/>
