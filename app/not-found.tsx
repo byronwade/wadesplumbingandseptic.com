@@ -11,18 +11,14 @@ export default function NotFound() {
 			id="main-content"
 		>
 			<div className="max-w-xl text-center">
-				<p className="text-primary text-sm font-black tracking-[0.18em] uppercase">
-					404
-				</p>
-				<h1 className="mt-4 text-5xl font-black tracking-tight">
-					This page could not be found.
-				</h1>
-				<p className="text-muted-foreground mt-5 leading-relaxed">
+				<p className="type-eyebrow justify-center">404</p>
+				<h1 className="type-display mt-4">This page could not be found.</h1>
+				<p className="type-lead mt-5">
 					The page may have moved during our website upgrade. Use the links
 					below or call us and we will point you in the right direction.
 				</p>
 				<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-					<Link className={buttonVariants({ size: "lg" })} href="/">
+					<Link className={buttonVariants({ size: "lg" })} href="/" prefetch>
 						<ArrowLeft />
 						Back Home
 					</Link>
