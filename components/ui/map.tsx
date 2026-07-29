@@ -301,6 +301,9 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
     const styleLoadHandler = () => {
       styleSwapInFlightRef.current = false;
       setIsStyleLoaded(true);
+      // Ready for layers once the style parses — don't block the UI on every
+      // basemap tile finishing (slow/blocked CDNs otherwise leave the loader up).
+      setIsLoaded(true);
     };
     const loadHandler = () => setIsLoaded(true);
 
@@ -402,7 +405,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
         ref={containerRef}
         className={cn("relative h-full w-full", className)}
       >
-        {(!isLoaded || loading) && <DefaultLoader />}
+        {((!isLoaded && !isStyleLoaded) || loading) && <DefaultLoader />}
         {/* SSR-safe: children render only when map is loaded on client */}
         {mapInstance && children}
       </div>

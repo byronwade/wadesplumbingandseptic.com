@@ -1,86 +1,167 @@
 "use client"
 
-import Link from "next/link"
-import { MapPin } from "lucide-react"
+import { useEffect, useState } from "react"
+import type { FillLayerSpecification, LineLayerSpecification } from "maplibre-gl"
 
 import {
 	Map,
 	MapControls,
-	MapMarker,
-	MarkerContent,
-	MarkerPopup,
-	MarkerTooltip,
+	MapGeoJSON,
+	MapPopup,
+	useMap,
 } from "@/components/ui/map"
 import {
-	serviceAreaLocations,
+	serviceAreasGeoJSON,
+	type ServiceAreaFeatureProperties,
+} from "@/lib/service-areas-geojson"
+import {
+	serviceAreaMapBounds,
 	serviceAreaMapCenter,
 	serviceAreaMapZoom,
-	type ServiceAreaLocation,
 } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
-function MarkerPin({ featured }: { featured?: boolean }) {
-	return (
-		<span
-			className={cn(
-				"grid size-8 place-items-center rounded-full border-2 border-white shadow-md",
-				featured ? "bg-primary text-primary-foreground" : "bg-ink text-white",
-			)}
-		>
-			<MapPin className="size-4" aria-hidden="true" />
-		</span>
-	)
-}
+/** Brand tokens from globals.css — MapLibre paint needs concrete colors. */
+const BRAND = {
+	primary: "#8f4a1a",
+	primaryBright: "#e0a15d",
+	ink: "#101214",
+} as const
 
-function LocationPopup({ location }: { location: ServiceAreaLocation }) {
-	return (
-		<div className="min-w-44 space-y-1.5 p-1">
-			<p className="text-sm font-extrabold tracking-[-0.02em]">
-				{location.name}
-			</p>
-			<p className="text-muted-foreground text-xs font-bold">
-				{location.county}
-			</p>
-			<Link
-				className="text-primary text-xs font-extrabold underline-offset-2 hover:underline"
-				href={location.href}
-			>
-				View local services
-			</Link>
-		</div>
-	)
+const fillPaint = {
+	"fill-color": [
+		"match",
+		["get", "tier"],
+		"primary",
+		BRAND.primary,
+		"secondary",
+		BRAND.primaryBright,
+		BRAND.primary,
+	],
+	"fill-opacity": [
+		"match",
+		["get", "tier"],
+		"primary",
+		0.42,
+		"secondary",
+		0.28,
+		0.35,
+	],
+} as FillLayerSpecification["paint"]
+
+const linePaint = {
+	"line-color": [
+		"match",
+		["get", "tier"],
+		"primary",
+		BRAND.primary,
+		"secondary",
+		BRAND.ink,
+		BRAND.primary,
+	],
+	"line-width": 2.25,
+	"line-opacity": 0.92,
+} as LineLayerSpecification["paint"]
+
+const fillHoverPaint = {
+	"fill-opacity": 0.58,
+} as FillLayerSpecification["paint"]
+
+function FitServiceAreaBounds() {
+	const { map, isLoaded } = useMap()
+
+	useEffect(() => {
+		if (!map || !isLoaded) return
+		map.fitBounds(serviceAreaMapBounds, {
+			padding: { top: 56, bottom: 56, left: 48, right: 48 },
+			duration: 0,
+			maxZoom: 10,
+		})
+	}, [map, isLoaded])
+
+	return null
 }
 
 export function ServiceAreasMap() {
+	const [selected, setSelected] = useState<{
+		longitude: number
+		latitude: number
+		properties: ServiceAreaFeatureProperties
+	} | null>(null)
+
 	return (
-		<div className="border-border bg-card h-[min(70vh,36rem)] overflow-hidden rounded-lg border shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]">
-			<Map
-				center={serviceAreaMapCenter}
-				className="size-full"
-				theme="light"
-				zoom={serviceAreaMapZoom}
-			>
-				<MapControls position="bottom-right" showZoom />
-				{serviceAreaLocations.map((location) => (
-					<MapMarker
-						key={location.slug}
-						longitude={location.coordinates[0]}
-						latitude={location.coordinates[1]}
-					>
-						<MarkerContent>
-							<MarkerPin featured={location.featured} />
-						</MarkerContent>
-						{location.featured ? (
-							<MarkerTooltip>
-								<span className="text-xs font-bold">{location.name}</span>
-							</MarkerTooltip>
-						) : null}
-						<MarkerPopup>
-							<LocationPopup location={location} />
-						</MarkerPopup>
-					</MapMarker>
-				))}
-			</Map>
+		<div className="space-y-3">
+			<div className="border-border bg-card relative h-[min(70vh,36rem)] min-h-[22rem] overflow-hidden rounded-lg border shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]">
+				<Map
+					center={serviceAreaMapCenter}
+					className="absolute inset-0 size-full"
+					theme="light"
+					zoom={serviceAreaMapZoom}
+					fadeDuration={0}
+				>
+					<FitServiceAreaBounds />
+					<MapControls position="bottom-right" showZoom showFullscreen />
+					<MapGeoJSON<ServiceAreaFeatureProperties>
+						data={serviceAreasGeoJSON}
+						promoteId="id"
+						interactive
+						fillPaint={fillPaint}
+						linePaint={linePaint}
+						fillHoverPaint={fillHoverPaint}
+						onClick={(event) => {
+							setSelected({
+								longitude: event.longitude,
+								latitude: event.latitude,
+								properties: event.feature.properties,
+							})
+						}}
+					/>
+					{selected ? (
+						<MapPopup
+							longitude={selected.longitude}
+							latitude={selected.latitude}
+							onClose={() => setSelected(null)}
+							closeOnClick={false}
+							focusAfterOpen={false}
+							closeButton
+							className="min-w-52"
+						>
+							<div className="space-y-1.5 p-1">
+								<p className="text-sm font-extrabold tracking-[-0.02em]">
+									{selected.properties.name}
+								</p>
+								<p className="text-muted-foreground text-xs font-bold">
+									{selected.properties.tier === "primary"
+										? "Primary coverage"
+										: "Selected communities"}
+								</p>
+								<p className="text-muted-foreground text-xs leading-relaxed">
+									{selected.properties.description}
+								</p>
+							</div>
+						</MapPopup>
+					) : null}
+				</Map>
+			</div>
+
+			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold">
+				<li className="flex items-center gap-2">
+					<span
+						aria-hidden="true"
+						className={cn("size-3 rounded-sm")}
+						style={{ backgroundColor: BRAND.primary }}
+					/>
+					Santa Cruz County (primary)
+				</li>
+				<li className="flex items-center gap-2">
+					<span
+						aria-hidden="true"
+						className={cn("size-3 rounded-sm")}
+						style={{ backgroundColor: BRAND.primaryBright }}
+					/>
+					Selected Santa Clara communities
+				</li>
+			</ul>
 		</div>
 	)
 }
