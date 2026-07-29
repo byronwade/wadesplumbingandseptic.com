@@ -2,13 +2,11 @@ import type { Metadata, Viewport } from "next"
 import { Manrope } from "next/font/google"
 import { Suspense } from "react"
 
-import { CommandMenu } from "@/components/command-menu"
+import { CommandMenuLoader } from "@/components/command-menu-loader"
 import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { ThemeHotkeys } from "@/components/theme-hotkeys"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/sonner"
 import { siteConfig } from "@/lib/site"
 
 import "./globals.css"
@@ -70,7 +68,7 @@ export const metadata: Metadata = {
 	},
 	icons: {
 		icon: "/icon.svg",
-		apple: "/images/brand/wades-mark.webp",
+		apple: "/images/brand/apple-touch-icon.png",
 	},
 	manifest: "/manifest.webmanifest",
 }
@@ -140,9 +138,7 @@ export default function RootLayout({
 						{children}
 					</Suspense>
 					<SiteFooter />
-					<CommandMenu />
-					<ThemeHotkeys />
-					<Toaster closeButton position="top-center" richColors />
+					<CommandMenuLoader />
 					<JsonLd data={localBusinessSchema} />
 				</ThemeProvider>
 			</body>

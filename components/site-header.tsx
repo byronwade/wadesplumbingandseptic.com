@@ -8,7 +8,7 @@ export function SiteHeader() {
 	return (
 		<header className="bg-ink sticky top-0 z-50 text-white shadow-[0_1px_0_0_rgba(0,0,0,0.45)]">
 			<div className="bg-ink-soft hidden sm:block">
-				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-semibold">
+				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-bold">
 					<span>{siteConfig.hours}</span>
 					<Link
 						className="header-muted transition-colors hover:text-white"
@@ -29,10 +29,9 @@ export function SiteHeader() {
 				>
 					<Image
 						alt=""
-						className="size-10 rounded-md sm:size-11"
+						className="size-10 shrink-0 rounded-md sm:size-11"
 						height={44}
-						priority
-						src="/images/brand/wades-mark.webp"
+						src="/images/brand/wades-mark-sm.webp"
 						width={44}
 					/>
 					<span className="leading-none">

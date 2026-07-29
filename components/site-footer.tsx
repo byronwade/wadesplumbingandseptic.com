@@ -61,7 +61,7 @@ export function SiteFooter() {
 								alt=""
 								className="size-11 shrink-0 rounded-md sm:size-12"
 								height={48}
-								src="/images/brand/wades-mark.webp"
+								src="/images/brand/wades-mark-sm.webp"
 								width={48}
 							/>
 							<span className="leading-tight">
@@ -75,7 +75,7 @@ export function SiteFooter() {
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
-						<p className="mt-4 text-xs font-semibold text-white/45">
+						<p className="mt-4 text-xs font-bold text-white/45">
 							{siteConfig.licenses}
 						</p>
 						<div className="mt-5 flex gap-3">

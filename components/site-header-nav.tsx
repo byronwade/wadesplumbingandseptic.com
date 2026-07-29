@@ -173,7 +173,7 @@ export function SiteHeaderNav() {
 									alt=""
 									className="size-10 rounded-md"
 									height={40}
-									src="/images/brand/wades-mark.webp"
+									src="/images/brand/wades-mark-sm.webp"
 									width={40}
 								/>
 								<div>

@@ -6,7 +6,16 @@ const nextConfig: NextConfig = {
 	poweredByHeader: false,
 	compress: true,
 	experimental: {
-		optimizePackageImports: ["lucide-react", "@radix-ui/react-accordion"],
+		optimizePackageImports: [
+			"lucide-react",
+			"@radix-ui/react-accordion",
+			"@radix-ui/react-dialog",
+			"@radix-ui/react-navigation-menu",
+			"@radix-ui/react-separator",
+			"@radix-ui/react-slot",
+			"cmdk",
+			"next-themes",
+		],
 	},
 	async redirects() {
 		return [
@@ -163,7 +172,7 @@ const nextConfig: NextConfig = {
 	},
 	images: {
 		formats: ["image/avif", "image/webp"],
-		qualities: [60, 70, 75, 80, 85],
+		qualities: [55, 60, 65, 70, 75, 80, 85],
 		minimumCacheTTL: 31_536_000,
 	},
 	async headers() {
