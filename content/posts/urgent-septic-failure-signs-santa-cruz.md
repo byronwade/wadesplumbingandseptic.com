@@ -13,11 +13,11 @@ tags:
 - septic failure signs
 image: /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp
 imageAlt: "Urgent Septic Failure Signs in Santa Cruz County Homes"
----
-
-## Did You Know?
+---## Did You Know?
 
 A well-maintained septic system can potentially last up to 30 years, helping homeowners avoid frequent replacements.
+
+![Advanced septic control panel](/images/work/advanced-septic-control-panel.webp)
 
 **Estimated reading time:** 5 minutes.
 
@@ -65,6 +65,8 @@ Santa Cruz County Plumbing Experts
 
 ## Need Reliable Plumbing Services?
 
+![Completed multi-tank septic system](/images/work/completed-multi-tank.webp)
+
 Trust Wade's Plumbing & Septic for all your plumbing needs in Santa Cruz County, CA. From septic maintenance to drain cleaning, our certified professionals ensure top-quality service.
 
 Get a Free QuoteExplore Our Services
@@ -96,8 +98,6 @@ The timeline for septic failure repair varies depending on the extent of the iss
 ### Why should I choose Wade's Plumbing & Septic for septic failure repairs?
 
 Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, offering reliable and professional septic services with a focus on customer satisfaction and compliance with local regulations.
-
- 
 
 Immediate Attention Required
 

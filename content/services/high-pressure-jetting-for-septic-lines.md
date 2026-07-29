@@ -6,6 +6,9 @@ description: High pressure jetting septic lines is an essential service for home
   removes build-up, and…
 category: Septic
 order: 11
+image: /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
+imageAlt: "Industrial plumbing with pressure gauge"
+
 ---
 
 High pressure jetting septic lines is an essential service for homeowners in Santa Cruz County, California, looking to maintain optimal septic system performance. Using specialized high-pressure water jets, this process effectively clears blockages, removes build-up, and restores proper flow within your septic lines. It's a preventative maintenance strategy that helps avoid costly repairs and prolongs the life of your septic system.

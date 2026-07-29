@@ -15,9 +15,9 @@ tags:
 - septic tank lifespan
 image: /images/wordpress/imagejpeg-0-1.webp
 imageAlt: "Maximize Septic Tank Lifespan in Santa Cruz County Homes"
----
+---Your septic tank is one of the most critical components of your home’s plumbing system. When maintained properly, it works quietly in the background, safely processing waste and protecting your property from backups and environmental hazards. But when neglected, it can lead to foul odors, drainage issues, and costly repairs.
 
-Your septic tank is one of the most critical components of your home’s plumbing system. When maintained properly, it works quietly in the background, safely processing waste and protecting your property from backups and environmental hazards. But when neglected, it can lead to foul odors, drainage issues, and costly repairs.
+![Storm drain covered with debris](/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp)
 
 At Wade’s Plumbing & Septic, we help homeowners throughout Santa Cruz County keep their septic systems running efficiently year-round. Here’s how to take care of your system, prevent problems, and extend the life of your septic tank.
 
@@ -72,6 +72,8 @@ Routine inspections are essential to catch small problems before they become big
 Annual inspections ensure your system stays in top condition and help you plan for future service or upgrades.
 
 5\. Watch What You Flush & Drain
+
+![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 
 Not everything that fits down the drain belongs in your septic system. In fact, many common household items can cause serious clogs and damage over time.
 

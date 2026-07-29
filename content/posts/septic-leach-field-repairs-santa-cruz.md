@@ -10,11 +10,11 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic leach field repair
-image: /images/work/precision-valve-installation.webp
-imageAlt: Santa Cruz Septic Leach Field Repair Guide for Homeowners
----
+image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
+imageAlt: "Warning sign on a wooden post"
+---In This Guide3 min read
 
-In This Guide3 min read
+![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)
 
 ## Did You Know?
 
@@ -57,6 +57,8 @@ Hiring professionals for septic leach field repairs offers several advantages:
   * Protection from potential fines and legal issues
 
 ## How Wade's Plumbing & Septic Can Help
+
+![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
 
 At Wade's Plumbing & Septic, we specialize in comprehensive [septic repair and replacement services](/lp/failed-septic-repair-replacement-santa-cruz-county/) across Santa Cruz County. Our skilled technicians are equipped to handle all aspects of septic leach field repair, ensuring your system functions optimally. We pride ourselves on delivering reliable and efficient solutions tailored to your needs.
 

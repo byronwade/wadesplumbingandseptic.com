@@ -10,11 +10,11 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - toilet keeps running plumbing service
-image: /images/work/precision-valve-installation.webp
-imageAlt: Toilet fill valve and supply line plumbing components
----
+image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: "Bathroom with toilet and sink"
+---In This Guide5 min read
 
-In This Guide5 min read
+![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
 ## Quick Answer for Santa Cruz Homeowners
 
@@ -63,6 +63,8 @@ While DIY monitoring can help address minor issues, persistent problems often re
 Choosing a local service like Wade's Plumbing & Septic ensures you receive personalized and attentive care. Our team is familiar with the plumbing challenges specific to Santa Cruz County and is committed to providing high-quality service. We pride ourselves on our reputation for reliability and expertise in the community.
 
 ### Did You Know?
+
+![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
 
 A running toilet can waste more than 200 gallons of water per day, significantly impacting your water bill and the environment.
 

@@ -15,11 +15,11 @@ tags:
 - septic installation considerations
 image: /images/work/engineered-retaining-wall.webp
 imageAlt: Engineered septic retaining wall and control panel
----
-
-## 1\. What is an Engineered Septic System?
+---## 1\. What is an Engineered Septic System?
 
 An
+
+![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
 
 (also known as an
 
@@ -120,6 +120,8 @@ A
   * **Cost (Install & Long-Term):** Engineered systems cost more upfront; factor in electricity, service contracts, part replacement.
 
 ## 6\. Maintenance Requirements for Engineered Septic Systems
+
+![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
 
   * **Regular Inspection and Servicing:** Typically at least annually; test pumps, floats, blowers, alarms; clean media/distribution as needed.
   * **Septic Tank Pumping:** Commonly every 3ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“5 years; additional tanks/clarifiers may require periodic cleaning.

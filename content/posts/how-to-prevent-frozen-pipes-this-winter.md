@@ -16,11 +16,11 @@ tags:
 - cold weather plumbing
 - prevent pipe freezing
 - plumbing tips santa cruz
-image: /images/locations/river-and-redwoods.webp
-imageAlt: Cold mountain landscape
----
+image: /images/work/new-construction-rough-in.webp
+imageAlt: "New construction plumbing rough-in"
+---Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and expensive repairs. Preventing frozen pipes is much easier and less costly than dealing with the aftermath of a pipe burst. Here's how to protect your home's plumbing during cold weather.
 
-Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and expensive repairs. Preventing frozen pipes is much easier and less costly than dealing with the aftermath of a pipe burst. Here's how to protect your home's plumbing during cold weather.
+![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 
 ## Identify Vulnerable Pipes
 
@@ -72,6 +72,8 @@ Taking these preventative measures can save you from the inconvenience and expen
 Santa Cruz County Septic Experts
 
 ## Emergency Plumbing & Septic Services Available
+
+![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
 
 Count on Wade's Plumbing & Septic for prompt, reliable emergency solutions in Santa Cruz County, California.
 

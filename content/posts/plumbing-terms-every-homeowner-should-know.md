@@ -17,9 +17,9 @@ tags:
 - plumbing basics
 image: /images/wordpress/img-1852.webp
 imageAlt: "Essential Plumbing Terms for Santa Cruz County Homeowners"
----
+---The plumbing world has its own language—and if you’ve ever tried to follow along with a plumber mid-job, you know it can feel like they’re speaking a different dialect. Words like “blackwater,” “blow bag,” or “trap seal” might sound unfamiliar, but understanding them can go a long way in helping you communicate effectively and make informed decisions when repairs or installations are needed.
 
-The plumbing world has its own language—and if you’ve ever tried to follow along with a plumber mid-job, you know it can feel like they’re speaking a different dialect. Words like “blackwater,” “blow bag,” or “trap seal” might sound unfamiliar, but understanding them can go a long way in helping you communicate effectively and make informed decisions when repairs or installations are needed.
+![Septic installation equipment on site](/images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp)
 
 At Wade’s Plumbing & Septic, we believe in educating our customers, not just servicing their homes. Whether you’re preparing for a plumbing appointment or tackling a DIY fix, here’s a breakdown of common plumbing terms that will boost your confidence and save you from second-guessing what your plumber just said.
 
@@ -70,6 +70,8 @@ This is the small amount of water that sits in the U- or S-shaped pipe (the “t
 A tee is a T-shaped fitting used to connect three pipes—usually one horizontal pipe and two that branch off. It’s commonly used when creating junctions in your drain or water lines.
 
 12\. Blow Bag
+
+![Engineered septic systems in Santa Cruz County](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612317.webp)
 
 A blow bag is a plumbing tool designed to clear clogs deep in your drain lines. It attaches to a garden hose, inflates inside the pipe, and releases high-pressure water bursts to break up blockages.
 

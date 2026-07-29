@@ -17,9 +17,9 @@ tags:
 - drain field experts
 image: /images/wordpress/img-2109.webp
 imageAlt: "Santa Cruz County's Trusted Drain Field Repair Experts"
----
+---While many plumbing problems can be solved with basic tools and a little know-how, your septic system’s drain field is not one of them. The drain field—also called a leach field—is one of the most vital parts of your septic system. When it fails, it can lead to sewage backups, slow drains, health hazards, and even costly system replacements.
 
-While many plumbing problems can be solved with basic tools and a little know-how, your septic system’s drain field is not one of them. The drain field—also called a leach field—is one of the most vital parts of your septic system. When it fails, it can lead to sewage backups, slow drains, health hazards, and even costly system replacements.
+![Drain clearing service](/images/services/drain-clearing.webp)
 
 At Wade’s Plumbing & Septic, we provide expert drain field repair and maintenance services throughout Santa Cruz County, helping homeowners identify and resolve issues before they become major problems. Here’s how to recognize when your drain field needs professional attention.
 
@@ -75,6 +75,8 @@ We offer prompt, professional drain field repair services across Santa Cruz, Soq
 Santa Cruz County Septic Experts
 
 ## Repair Your Drain Field in Santa Cruz County Today
+
+![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
 
 Ensure the longevity and efficiency of your septic system with expert repairs from Wade's Plumbing & Septic.
 

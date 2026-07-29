@@ -4,6 +4,9 @@ description: Thorough inspection and assessment of septic systems for property t
   maintenance planning, or early problem detection.
 category: Septic
 order: 2
+image: /images/services/septic-pumping-illustration.webp
+imageAlt: "Septic pumping service"
+
 ---
 
 Updated April 2026In 2026, Santa Cruz County has implemented updated regulations requiring septic tank inspections every three years for residential properties. This change aims to enhance community health and environmental safety by ensuring systems operate efficiently and reduce the risk of costly failures. Additionally, new technology now available allows for more precise detection of potential issues during inspections, utilizing advanced imaging and diagnostic tools to provide a clearer understanding of your system's condition. This cutting-edge equipment helps identify problems early, saving homeowners both time and money in the long run. 

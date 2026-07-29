@@ -5,6 +5,9 @@ description: Properly decommissioning a septic system is crucial for maintaining
   in septic system abandonment in Santa Cruz County, ensuring that outdated or failing…
 category: Septic
 order: 3
+image: /images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp
+imageAlt: "Plumber installing steel pipes"
+
 ---
 
 Properly decommissioning a septic system is crucial for maintaining environmental safety and compliance with local regulations. At Wade's Plumbing & Septic, we specialize in **septic system abandonment in Santa Cruz County** , ensuring that outdated or failing systems are safely managed. This service is essential when transitioning to a municipal sewer system or installing a new septic system, protecting both your property and the local ecosystem.

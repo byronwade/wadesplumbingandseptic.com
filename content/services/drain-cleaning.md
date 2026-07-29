@@ -6,6 +6,9 @@ description: Proper drain cleaning is essential for maintaining a healthy plumbi
 category: Plumbing
 order: 28
 featured: true
+image: /images/services/drain-clearing.webp
+imageAlt: "Drain clearing service"
+
 ---
 
 Proper drain cleaning is essential for maintaining a healthy plumbing system in your home. At Wade's Plumbing & Septic, we offer expert **drain cleaning Santa Cruz** services, ensuring your drains are free from clogs and build-up. Serving Santa Cruz County, California, our professional team is equipped with the latest tools and technology to tackle any drainage issue, providing you with peace of mind and a smoothly running home.
