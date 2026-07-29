@@ -12,7 +12,11 @@ export function ContentGallery({ images }: { images: ContentImage[] }) {
 				>
 					<div className="bg-muted relative aspect-[4/3] overflow-hidden rounded-lg">
 						<Image
-							alt={image.alt}
+							alt={
+								image.alt?.trim() ||
+								image.caption?.trim() ||
+								"Wade's Plumbing & Septic project photo"
+							}
 							className="object-cover"
 							fill
 							quality={75}

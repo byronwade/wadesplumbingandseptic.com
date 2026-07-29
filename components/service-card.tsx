@@ -28,7 +28,9 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 				tabIndex={-1}
 			>
 				<Image
-					alt=""
+					alt={
+						service.imageAlt ?? `${service.title} — Wade's Plumbing & Septic`
+					}
 					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 					fill
 					quality={60}

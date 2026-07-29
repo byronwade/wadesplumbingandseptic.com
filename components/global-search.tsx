@@ -134,7 +134,7 @@ function ResultCard({
 				{hit.image ? (
 					<Image
 						src={hit.image}
-						alt=""
+						alt={hit.title}
 						fill
 						className="object-cover transition-transform duration-150 group-hover:scale-[1.03]"
 						sizes="120px"

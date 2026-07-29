@@ -63,7 +63,7 @@ function ArchiveCard({
 				tabIndex={-1}
 			>
 				<Image
-					alt=""
+					alt={item.imageAlt ?? `${item.title} — Wade's Plumbing & Septic`}
 					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 					fill
 					quality={60}
