@@ -91,21 +91,6 @@ Our office hours are Monday through Friday, 9am to 5pm, and we offer a emergency
 
 With our extensive knowledge and experience, we are committed to providing reliable and trustworthy septic services throughout Santa Cruz County, ensuring your system operates smoothly and efficiently.
 
-## Frequently 
-
-### What Our Customers Say
-
-â˜…â˜…â˜…â˜…â˜… 5-Star Rated Service
-
-"Wade's Plumbing & Septic saved us from a major septic disaster. Their team was professional and efficient!" - John, Santa Cruz
-
-"I highly recommend Wade's for their prompt service and attention to detail. They truly care about their customers." - Emily, Watsonville
-
-"The technicians were knowledgeable and friendly. They addressed all my concerns with ease." - Mike, Scotts Valley
-
-**Licensed Contractor** : C-42 for California
-
-**Fast-Response Guarantee** : Available Monday to Friday, 8 AM to 5 PM
 
 ## Frequently Asked Questions
 
@@ -131,16 +116,5 @@ Stay Ahead of Septic Issues
 
 Identify early warning signs of septic system problems and avoid expensive repairs with our expert guidance.
 
-[Call Us Now](tel:+18005551234) [Get a Free Quote](/contact/) </ 
+[Call Us Now](tel:+18005551234) [Get a Free Quote](/contact/) 
 
-"Wade's Plumbing & Septic saved us from a potential disaster with our septic system. Their quick response and professional service were top-notch!" — Sarah, Santa Cruz
-
-"I couldn't be happier with the service from Wade's. They were prompt, efficient, and solved our septic issue in no time." — John, Capitola
-
-"Highly recommend Wade's Plumbing & Septic! They are knowledgeable and trustworthy. Our go-to for any plumbing needs." — Emily, Scotts Valley
-
-★★★★★ 5-Star Rating
-
-Licensed Contractor: C-42
-
-Fast-Response Guarantee: We're available Monday through Friday from 8 AM to 5 PM.

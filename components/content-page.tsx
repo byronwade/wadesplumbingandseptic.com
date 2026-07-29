@@ -4,6 +4,7 @@ import type { ContentDocument } from "@/lib/content"
 import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
 
 import { ContactCta } from "@/components/contact-cta"
+import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
@@ -71,7 +72,7 @@ export function ContentPage({
 					/>
 				</aside>
 			</article>
-			<ContactCta />
+			<ContentConversionCta conversion={document.conversion} />
 			<JsonLd
 				data={[
 					isPost ? articleJsonLd(document) : webPageJsonLd(document),

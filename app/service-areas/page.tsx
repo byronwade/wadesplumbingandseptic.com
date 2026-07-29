@@ -10,6 +10,7 @@ import { ServiceAreasMap } from "@/components/service-areas-map"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentDocument } from "@/lib/content"
+import { normalizeConversion } from "@/lib/content-conversion"
 import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
 import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -46,6 +47,10 @@ export default function ServiceAreasPage() {
 		description,
 		slug: "service-areas",
 		content: "",
+		conversion: normalizeConversion(null, {
+			title: "Plumbing & Septic Service Areas",
+			description,
+		}),
 	}
 
 	return (
