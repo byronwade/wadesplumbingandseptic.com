@@ -30,7 +30,7 @@ export function SiteFooter() {
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
 					<div>
 						<p className="text-sm font-bold text-white/85">
-							24/7 Emergency Service
+							{siteConfig.hours}
 						</p>
 						<p className="text-2xl font-extrabold tracking-[-0.03em]">
 							{siteConfig.phone}

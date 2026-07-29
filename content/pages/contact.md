@@ -1,7 +1,7 @@
 ---
 title: Get in Touch with Wade's Plumbing
 description: Contact Wade's Plumbing & Septic for professional plumbing and septic service across Santa Cruz County and Santa Clara County.
-eyebrow: Available 24/7 for Emergencies
+eyebrow: Call During Business Hours
 image: /images/team/wades-team.webp
 imageAlt: Professional Wade's plumber at work
 order: 7
@@ -9,7 +9,7 @@ order: 7
 
 ## Let's solve your plumbing or septic problem
 
-We respond during business hours and answer urgent emergency calls around the clock.
+We respond during business hours, Monday through Friday from 9:00 AM to 5:00 PM.
 
 ### Call or text
 
@@ -21,8 +21,7 @@ We respond during business hours and answer urgent emergency calls around the cl
 
 ### Business hours
 
-Monday–Friday, 9:00 AM–5:00 PM  
-24/7 emergency availability
+Monday–Friday, 9:00 AM–5:00 PM
 
 ### Service area
 

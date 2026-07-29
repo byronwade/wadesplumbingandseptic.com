@@ -1,9 +1,9 @@
 ---
 title: Emergency Plumber Near You in Santa Cruz County
 description: Call for immediate triage of burst pipes, active leaks, sewer backups, failed water heaters, and urgent plumbing or septic problems.
-eyebrow: 24/7 Emergency Response
+eyebrow: Urgent Plumbing Help
 image: /images/work/drain-cleaning-equipment.webp
-imageAlt: Exposed emergency plumbing repair
+imageAlt: Exposed plumbing repair work
 noindex: true
 ---
 

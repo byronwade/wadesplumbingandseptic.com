@@ -13,7 +13,7 @@ Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team w
 
 ### Need help right now?
 
-Call or text [831.225.4344](tel:+18312254344). Emergency plumbing and septic calls are answered 24/7.
+Call or text [831.225.4344](tel:+18312254344) during business hours, Monday through Friday from 9:00 AM to 5:00 PM.
 
 ### While you wait
 

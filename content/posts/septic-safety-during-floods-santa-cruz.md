@@ -101,7 +101,7 @@ Contact Wade's Plumbing & Septic for expert advice and services to protect your 
 
 At Wade’s Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos/), [Capitola](/service-area/capitola/), [Santa Cruz](/service-area/santa-cruz/), and [Scotts Valley](/service-area/scotts-valley/). We are licensed under the C-42 classification in California and hold a state license in Georgia, ensuring our expertise and compliance with all local regulations.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available 24/7, providing you with peace of mind no matter the time of day.
+Our office hours are Monday through Friday, from 9am to 5pm. Call 831.225.4344 during business hours for help with urgent septic needs.
 
 For a complete overview of our service areas, please visit our [main service-area page](/service-areas/).
 
@@ -116,6 +116,6 @@ Need help with this issue?
 
 ## Talk to a local expert
 
-Tell us what is going on and we will follow up with straight answers and scheduling options. For emergencies, call us directly.
+Tell us what is going on and we will follow up with straight answers and scheduling options. For urgent issues, call us during business hours.
 
 [ Call 831.225.4344 ](tel:8312254344) [Full quote form](/contact/)

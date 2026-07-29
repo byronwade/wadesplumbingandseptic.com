@@ -80,7 +80,7 @@ Our team holds a C-42 license for California and a state license for Georgia, en
 
 Office Hours: Monday to Friday, 9am–5pm
 
-Emergency Line: Available 24/7 for urgent septic issues
+Phone: 831.225.4344 · Monday–Friday, 9am–5pm
 
 For more information on our service areas, visit our [main service-area overview](/service-areas/).
 
@@ -95,6 +95,6 @@ Need help with this issue?
 
 ## Talk to a local expert
 
-Tell us what is going on and we will follow up with straight answers and scheduling options. For emergencies, call us directly.
+Tell us what is going on and we will follow up with straight answers and scheduling options. For urgent issues, call us during business hours.
 
 [ Call 831.225.4344 ](tel:8312254344) [Full quote form](/contact/)

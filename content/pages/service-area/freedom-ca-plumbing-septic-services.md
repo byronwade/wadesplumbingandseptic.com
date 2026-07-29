@@ -7,7 +7,7 @@ imageAlt: Plumbing and septic service coverage in Freedom, California
 order: 50
 ---
 
-Need trusted plumbing and septic service in Freedom, CA? Wade’s provides fast diagnostics, maintenance, and emergency support for homeowners.
+Need trusted plumbing and septic service in Freedom, CA? Wade’s provides fast diagnostics, maintenance, and repair support for homeowners.
 
 _Service region:_ Santa Cruz County, California
 
@@ -19,7 +19,7 @@ Local homes and businesses call Wade's for:
 - Drain cleaning, hydro-jetting, and camera inspections
 - Water heater and tankless water heater work
 - Fixture, toilet, and shower repairs
-- Emergency plumbing response when available
+- Priority repair scheduling when available
 
 ## Septic services in Freedom
 
