@@ -318,7 +318,26 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
     map.on("move", handleMove);
     setMapInstance(map);
 
+    // MapLibre sizes the canvas from the container at init. If the container
+    // is still 0×0 (common with absolute/flex layouts), the map stays blank
+    // white until resize is called once real dimensions exist.
+    const container = containerRef.current;
+    const resizeObserver =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(() => {
+            if (!container.offsetWidth || !container.offsetHeight) return;
+            map.resize();
+          });
+    resizeObserver?.observe(container);
+    requestAnimationFrame(() => {
+      if (container.offsetWidth && container.offsetHeight) {
+        map.resize();
+      }
+    });
+
     return () => {
+      resizeObserver?.disconnect();
       map.off("load", loadHandler);
       map.off("style.load", styleLoadHandler);
       map.off("move", handleMove);
@@ -1374,11 +1393,13 @@ function MapGeoJSON<
   useEffect(() => {
     if (!isLoaded || !map) return;
 
-    map.addSource(sourceId, {
-      type: "geojson",
-      data,
-      ...(promoteId ? { promoteId } : {}),
-    });
+    if (!map.getSource(sourceId)) {
+      map.addSource(sourceId, {
+        type: "geojson",
+        data,
+        ...(promoteId ? { promoteId } : {}),
+      });
+    }
 
     return () => {
       try {
