@@ -4,10 +4,11 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import * as React from "react"
 import {
+	ArrowUpRight,
 	BookOpen,
+	CornerDownLeft,
 	FileText,
 	Hash,
-	Loader2,
 	MapPin,
 	Phone,
 	Search,
@@ -21,19 +22,19 @@ import {
 	DialogClose,
 	DialogContent,
 	DialogDescription,
-	DialogHeader,
 	DialogTitle,
 } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
+import { getCachedSearchIndex, loadSearchIndex } from "@/lib/search-client"
 import {
 	groupSearchHits,
+	highlightMatches,
 	searchDocuments,
+	suggestSearches,
 	type SearchDocument,
 	type SearchHit,
-	type SearchIndexPayload,
 	type SearchResultType,
 } from "@/lib/search"
-import { loadSearchIndex } from "@/lib/search-client"
 
 const GROUP_ORDER: SearchResultType[] = ["service", "tip", "page", "action"]
 
@@ -47,26 +48,11 @@ const GROUP_META: Record<
 	action: { label: "Quick actions", icon: Sparkles },
 }
 
-const TYPE_BADGE: Record<
-	SearchResultType,
-	{ label: string; className: string }
-> = {
-	service: {
-		label: "Service",
-		className: "bg-accent text-accent-foreground",
-	},
-	tip: {
-		label: "Tip",
-		className: "bg-secondary text-secondary-foreground",
-	},
-	page: {
-		label: "Page",
-		className: "bg-muted text-muted-foreground",
-	},
-	action: {
-		label: "Action",
-		className: "bg-accent text-accent-foreground",
-	},
+const TYPE_BADGE: Record<SearchResultType, string> = {
+	service: "Service",
+	tip: "Tip",
+	page: "Page",
+	action: "Action",
 }
 
 function ResultIcon({ doc }: { doc: SearchDocument }) {
@@ -82,19 +68,42 @@ function ResultIcon({ doc }: { doc: SearchDocument }) {
 	return <FileText className="size-5" aria-hidden />
 }
 
-function ResultRow({
+function HighlightedTitle({ title, query }: { title: string; query: string }) {
+	const parts = query.trim()
+		? highlightMatches(title, query)
+		: [{ text: title, match: false }]
+
+	return (
+		<span>
+			{parts.map((part, index) =>
+				part.match ? (
+					<mark
+						key={`${part.text}-${index}`}
+						className="rounded-sm bg-[color-mix(in_srgb,var(--primary-bright)_28%,transparent)] text-inherit"
+					>
+						{part.text}
+					</mark>
+				) : (
+					<span key={`${part.text}-${index}`}>{part.text}</span>
+				),
+			)}
+		</span>
+	)
+}
+
+function ResultCard({
 	hit,
+	query,
 	active,
 	onHover,
 	onSelect,
 }: {
 	hit: SearchHit
+	query: string
 	active: boolean
 	onHover: () => void
 	onSelect: () => void
 }) {
-	const badge = TYPE_BADGE[hit.type]
-
 	return (
 		<button
 			type="button"
@@ -102,17 +111,21 @@ function ResultRow({
 			role="option"
 			aria-selected={active}
 			onMouseEnter={onHover}
+			onFocus={onHover}
 			onClick={onSelect}
 			className={cn(
-				"grid w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-lg px-2.5 py-2.5 text-left transition-colors sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-4 sm:rounded-md sm:px-3 sm:py-3",
-				"active:bg-muted min-h-16 sm:min-h-0",
-				active ? "bg-muted" : "hover:bg-muted/70",
+				"group grid w-full grid-cols-[5.5rem_minmax(0,1fr)] items-stretch gap-0 overflow-hidden rounded-md text-left transition-[background-color,transform] duration-75 sm:grid-cols-[7.5rem_minmax(0,1fr)]",
+				"bg-white/[0.04] hover:bg-white/[0.07] active:scale-[0.995]",
+				active &&
+					"bg-white/[0.09] ring-1 ring-[color-mix(in_srgb,var(--primary-bright)_55%,transparent)]",
 			)}
 		>
 			<div
 				className={cn(
-					"relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-md sm:size-14",
-					hit.image ? "bg-muted" : "bg-accent text-primary",
+					"relative min-h-[5.5rem] sm:min-h-[7rem]",
+					hit.image
+						? "bg-[#1c2025]"
+						: "bg-[color-mix(in_srgb,var(--primary)_22%,#1c2025)] text-[var(--primary-bright)]",
 				)}
 			>
 				{hit.image ? (
@@ -120,43 +133,38 @@ function ResultRow({
 						src={hit.image}
 						alt=""
 						fill
-						className="object-cover"
-						sizes="56px"
+						className="object-cover transition-transform duration-150 group-hover:scale-[1.03]"
+						sizes="120px"
 					/>
 				) : (
-					<ResultIcon doc={hit} />
+					<div className="absolute inset-0 flex items-center justify-center">
+						<ResultIcon doc={hit} />
+					</div>
 				)}
 			</div>
 
-			<div className="min-w-0">
-				<div className="flex min-w-0 items-center gap-2">
-					<span
-						className={cn(
-							"shrink-0 rounded-sm px-1.5 py-0.5 text-[0.65rem] font-extrabold tracking-[0.12em] uppercase sm:text-[0.68rem] sm:tracking-[0.14em]",
-							badge.className,
-						)}
-					>
-						{badge.label}
+			<div className="flex min-w-0 flex-col justify-center px-3.5 py-3 sm:px-5 sm:py-4">
+				<div className="flex items-center gap-2">
+					<span className="text-[0.65rem] font-extrabold tracking-[0.16em] text-[var(--primary-bright)] uppercase">
+						{TYPE_BADGE[hit.type]}
 					</span>
 					{hit.category ? (
-						<span className="text-muted-foreground truncate text-xs">
+						<span className="truncate text-xs text-white/45">
 							{hit.category}
 						</span>
 					) : null}
 				</div>
-				<p className="text-foreground mt-1 truncate text-base font-extrabold tracking-[-0.02em] sm:text-[1.05rem]">
-					{hit.title}
+				<p className="mt-1.5 text-[1.05rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-[1.2rem]">
+					<HighlightedTitle title={hit.title} query={query} />
 				</p>
-				<p className="text-muted-foreground mt-0.5 line-clamp-1 text-sm leading-snug sm:line-clamp-2">
-					{hit.snippet && hit.matchedOn === "body"
-						? hit.snippet
-						: hit.description}
+				<p className="mt-1 line-clamp-2 text-sm leading-snug text-white/55">
+					{hit.description}
 				</p>
+				<div className="mt-2 flex items-center gap-1 text-xs font-extrabold tracking-[-0.01em] text-white/35 transition-colors group-hover:text-[var(--primary-bright)]">
+					Open
+					<ArrowUpRight className="size-3.5" aria-hidden />
+				</div>
 			</div>
-
-			<span className="text-muted-foreground hidden shrink-0 text-xs sm:inline">
-				{active ? "Enter ↵" : ""}
-			</span>
 		</button>
 	)
 }
@@ -171,7 +179,9 @@ export function GlobalSearch({
 	const router = useRouter()
 	const inputRef = React.useRef<HTMLInputElement>(null)
 	const [query, setQuery] = React.useState("")
-	const [index, setIndex] = React.useState<SearchIndexPayload | null>(null)
+	const [index, setIndex] = React.useState<SearchDocument[] | null>(() =>
+		getCachedSearchIndex(),
+	)
 	const [error, setError] = React.useState<string | null>(null)
 	const [activeIndex, setActiveIndex] = React.useState(0)
 	const loading = open && index === null && error === null
@@ -185,27 +195,25 @@ export function GlobalSearch({
 		onOpenChange(next)
 	}
 
-	React.useEffect(() => {
+	React.useLayoutEffect(() => {
 		if (!open) return
-		const timer = window.setTimeout(() => inputRef.current?.focus(), 30)
-		return () => window.clearTimeout(timer)
+		inputRef.current?.focus({ preventScroll: true })
 	}, [open])
 
 	React.useEffect(() => {
-		if (!open || index) return
+		if (!open) return
+		if (index) return
 
 		let cancelled = false
-
-		void loadSearchIndex()
-			.then((payload) => {
-				if (!cancelled) {
-					setIndex(payload)
-					setError(null)
-				}
-			})
-			.catch(() => {
-				if (!cancelled) setError("Search is temporarily unavailable.")
-			})
+		void loadSearchIndex().then((data) => {
+			if (cancelled) return
+			if (data) {
+				setIndex(data)
+				setError(null)
+				return
+			}
+			setError("Search is temporarily unavailable.")
+		})
 
 		return () => {
 			cancelled = true
@@ -214,21 +222,15 @@ export function GlobalSearch({
 
 	const hits = React.useMemo(() => {
 		if (!index) return [] as SearchHit[]
-		return searchDocuments(
-			index.documents,
-			query,
-			query.trim() ? 24 : 8,
-			index.inverted,
-		)
+		return searchDocuments(index, query, query.trim() ? 28 : 10)
 	}, [index, query])
 
+	const suggestions = React.useMemo(() => suggestSearches(query, 8), [query])
 	const grouped = React.useMemo(() => groupSearchHits(hits), [hits])
-
 	const flatHits = React.useMemo(
 		() => GROUP_ORDER.flatMap((key) => grouped[key]),
 		[grouped],
 	)
-
 	const safeActiveIndex =
 		flatHits.length === 0 ? 0 : Math.min(activeIndex, flatHits.length - 1)
 
@@ -245,6 +247,12 @@ export function GlobalSearch({
 	}
 
 	const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Escape") {
+			event.preventDefault()
+			handleOpenChange(false)
+			return
+		}
+
 		if (!flatHits.length) return
 
 		if (event.key === "ArrowDown") {
@@ -277,190 +285,195 @@ export function GlobalSearch({
 			<DialogContent
 				showCloseButton={false}
 				className={cn(
-					"bg-background text-foreground z-50 flex max-w-none flex-col gap-0 overflow-hidden border-0 p-0 shadow-[0_28px_80px_rgba(16,18,20,0.32)]",
-					// Mobile: full-viewport sheet that keeps the input pinned
-					"inset-0 top-0 left-0 h-[100dvh] max-h-[100dvh] w-full translate-x-0 translate-y-0 rounded-none",
-					// Desktop: large floating palette
-					"sm:inset-auto sm:top-[max(1.25rem,8vh)] sm:left-[50%] sm:h-auto sm:max-h-[min(88vh,52rem)] sm:w-[min(96vw,48rem)] sm:translate-x-[-50%] sm:translate-y-0 sm:rounded-xl",
-					"data-[state=open]:animate-rise",
+					"bg-ink fixed inset-0 top-0 left-0 z-50 flex h-[100dvh] max-h-[100dvh] w-full max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 text-white shadow-none duration-0",
+					"!animate-none data-[state=closed]:!animate-none data-[state=open]:!animate-none",
+					"focus:outline-none",
 				)}
-				overlayClassName="bg-ink/60 backdrop-blur-md supports-backdrop-filter:bg-ink/45"
+				overlayClassName="!animate-none bg-ink/90 duration-0 backdrop-blur-[2px] data-[state=closed]:!animate-none data-[state=open]:!animate-none"
+				onOpenAutoFocus={(event) => {
+					event.preventDefault()
+					inputRef.current?.focus({ preventScroll: true })
+				}}
 			>
-				<DialogHeader className="border-border shrink-0 border-b px-4 pt-[max(0.85rem,env(safe-area-inset-top))] pr-14 pb-3 sm:px-7 sm:pt-6 sm:pr-7 sm:pb-4">
-					<div className="flex items-start justify-between gap-3">
+				<div
+					aria-hidden
+					className="pointer-events-none absolute inset-0"
+					style={{
+						background:
+							"radial-gradient(900px 420px at 12% -8%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 58%), radial-gradient(700px 360px at 92% 8%, color-mix(in srgb, var(--primary-bright) 10%, transparent), transparent 52%), linear-gradient(180deg, #14181d 0%, #101214 48%, #0d1013 100%)",
+					}}
+				/>
+
+				<div className="relative flex h-full min-h-0 flex-col">
+					<header className="flex shrink-0 items-center justify-between gap-3 px-4 pt-[max(0.85rem,env(safe-area-inset-top))] pb-3 sm:px-8 sm:pt-5">
 						<div className="min-w-0">
-							<DialogTitle className="text-xl font-extrabold tracking-[-0.03em] sm:text-[1.85rem]">
-								Search Wade&apos;s
+							<p className="text-[0.68rem] font-extrabold tracking-[0.2em] text-[var(--primary-bright)] uppercase">
+								Wade&apos;s
+							</p>
+							<DialogTitle className="mt-1 text-2xl font-extrabold tracking-[-0.04em] text-white sm:text-3xl">
+								Looking for something?
 							</DialogTitle>
-							<DialogDescription className="text-muted-foreground mt-1 text-sm sm:mt-1.5 sm:text-base">
-								<span className="sm:hidden">
-									Services, tips, and pages on the Central Coast.
-								</span>
-								<span className="hidden sm:inline">
-									Find plumbing &amp; septic services, expert tips, and pages
-									across the Central Coast.
-								</span>
+							<DialogDescription className="sr-only">
+								Search services, expert tips, pages, and quick actions.
 							</DialogDescription>
 						</div>
+
+						<DialogClose className="flex size-11 shrink-0 items-center justify-center rounded-md text-white/70 transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
+							<X className="size-5" />
+							<span className="sr-only">Close search</span>
+						</DialogClose>
+					</header>
+
+					<div className="shrink-0 px-4 sm:px-8">
+						<label className="relative block">
+							<span className="sr-only">Search services and tips</span>
+							<Search
+								className="pointer-events-none absolute top-1/2 left-0 size-6 -translate-y-1/2 text-[var(--primary-bright)] sm:size-7"
+								aria-hidden
+							/>
+							<input
+								ref={inputRef}
+								value={query}
+								onChange={(event) => {
+									const value = event.target.value
+									setActiveIndex(0)
+									setQuery(value)
+								}}
+								onKeyDown={onKeyDown}
+								placeholder="Service, tip, symptom, or city…"
+								autoComplete="off"
+								autoCorrect="off"
+								spellCheck={false}
+								enterKeyHint="search"
+								role="combobox"
+								aria-expanded
+								aria-controls="global-search-results"
+								aria-activedescendant={
+									flatHits[safeActiveIndex]
+										? `search-option-${flatHits[safeActiveIndex].id}`
+										: undefined
+								}
+								className="h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
+							/>
+						</label>
+
+						<div className="mt-3 flex items-center justify-between gap-3">
+							<div className="flex min-w-0 flex-1 [scrollbar-width:none] gap-2 overflow-x-auto [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+								{suggestions.map((suggestion) => (
+									<button
+										key={suggestion}
+										type="button"
+										onClick={() => {
+											setQuery(suggestion)
+											setActiveIndex(0)
+											inputRef.current?.focus()
+										}}
+										className="shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em] text-white/70 transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
+									>
+										{suggestion}
+									</button>
+								))}
+							</div>
+							<p className="hidden shrink-0 items-center gap-1.5 text-xs text-white/35 sm:flex">
+								<span className="inline-flex items-center gap-1 rounded-sm bg-white/[0.05] px-1.5 py-0.5 font-sans">
+									<CornerDownLeft className="size-3" aria-hidden /> Enter
+								</span>
+								<span>to open</span>
+							</p>
+						</div>
 					</div>
-					<DialogClose className="focus-visible:ring-ring text-foreground/70 hover:bg-muted hover:text-foreground absolute top-[max(0.65rem,env(safe-area-inset-top))] right-3 flex size-11 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none sm:top-4 sm:right-4 sm:size-9">
-						<X className="size-5 sm:size-4" />
-						<span className="sr-only">Close</span>
-					</DialogClose>
-				</DialogHeader>
 
-				<div className="border-border shrink-0 border-b px-4 py-3 sm:px-7 sm:py-4">
-					<label className="relative block">
-						<span className="sr-only">Search services and tips</span>
-						<Search
-							className="text-primary pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 sm:left-4"
-							aria-hidden
-						/>
-						<input
-							ref={inputRef}
-							value={query}
-							onChange={(event) => {
-								setQuery(event.target.value)
-								setActiveIndex(0)
-							}}
-							onKeyDown={onKeyDown}
-							placeholder="Search services, tips, pages, or symptoms…"
-							autoComplete="off"
-							autoCorrect="off"
-							spellCheck={false}
-							enterKeyHint="search"
-							role="combobox"
-							aria-expanded
-							aria-controls="global-search-results"
-							aria-activedescendant={
-								flatHits[safeActiveIndex]
-									? `search-option-${flatHits[safeActiveIndex].id}`
-									: undefined
-							}
-							className="border-border bg-card text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-primary/25 h-14 w-full rounded-lg border pr-4 pl-11 text-base outline-none focus-visible:ring-2 sm:h-16 sm:pl-12 sm:text-lg"
-						/>
-					</label>
-					<p className="text-muted-foreground mt-2 hidden text-sm sm:mt-2.5 sm:block">
-						Searches titles and full page content. Synonyms like toilet ↔ clog
-						and septic ↔ pumping. Use ↑ ↓ and Enter.
-					</p>
-					{!query.trim() ? (
-						<div className="mt-2.5 flex [scrollbar-width:none] gap-2 overflow-x-auto pb-0.5 [-ms-overflow-style:none] sm:hidden [&::-webkit-scrollbar]:hidden">
-							{[
-								"clogged drain",
-								"septic pumping",
-								"water heater",
-								"toilet",
-							].map((suggestion) => (
-								<button
-									key={suggestion}
-									type="button"
-									onClick={() => {
-										setQuery(suggestion)
-										setActiveIndex(0)
-										inputRef.current?.focus()
-									}}
-									className="border-border bg-card text-foreground shrink-0 rounded-md border px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em]"
-								>
-									{suggestion}
-								</button>
-							))}
-						</div>
-					) : null}
-				</div>
-
-				<div
-					id="global-search-results"
-					role="listbox"
-					className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-2 sm:max-h-[min(52vh,28rem)] sm:flex-none sm:px-3 sm:py-3"
-				>
-					{loading ? (
-						<div className="text-muted-foreground flex items-center justify-center gap-2 px-4 py-12 text-sm">
-							<Loader2 className="size-4 animate-spin" aria-hidden />
-							Loading search…
-						</div>
-					) : null}
-
-					{error ? (
-						<p className="text-muted-foreground px-4 py-10 text-center text-sm">
-							{error}
-						</p>
-					) : null}
-
-					{showEmpty ? (
-						<div className="px-4 py-10 text-center">
-							<p className="text-foreground text-lg font-extrabold tracking-[-0.02em] sm:text-xl">
-								No matches for “{query.trim()}”
+					<div
+						id="global-search-results"
+						role="listbox"
+						className="mt-5 min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-4 sm:mt-7 sm:px-8 sm:pb-6"
+					>
+						{loading ? (
+							<p className="py-16 text-center text-sm text-white/45">
+								Warming up search…
 							</p>
-							<p className="text-muted-foreground mt-2 text-sm">
-								Try a service name, symptom, city, or tip topic.
-							</p>
-						</div>
-					) : null}
+						) : null}
 
-					{!loading && !error && flatHits.length > 0 ? (
-						<div className="space-y-4 sm:space-y-5">
-							{showPopular ? (
-								<p className="text-muted-foreground px-2.5 text-[0.7rem] font-extrabold tracking-[0.16em] uppercase sm:px-3 sm:text-xs">
-									Popular right now
+						{error ? (
+							<p className="py-16 text-center text-sm text-white/45">{error}</p>
+						) : null}
+
+						{showEmpty ? (
+							<div className="mx-auto max-w-lg py-14 text-center">
+								<p className="text-2xl font-extrabold tracking-[-0.03em] text-white">
+									Nothing for “{query.trim()}”
 								</p>
-							) : null}
+								<p className="mt-2 text-sm text-white/50">
+									Try a symptom, city, or service name — search understands
+									plain homeowner language.
+								</p>
+							</div>
+						) : null}
 
-							{GROUP_ORDER.map((key) => {
-								const groupHits = grouped[key]
-								if (!groupHits.length) return null
-								const meta = GROUP_META[key]
-								const Icon = meta.icon
-								return (
-									<section key={key} aria-label={meta.label}>
-										{!showPopular ? (
-											<div className="mb-1 flex items-center gap-2 px-2.5 sm:mb-1.5 sm:px-3">
-												<Icon className="text-primary size-3.5" aria-hidden />
-												<h3 className="text-muted-foreground text-[0.7rem] font-extrabold tracking-[0.16em] uppercase sm:text-xs">
-													{meta.label}
-												</h3>
-											</div>
-										) : null}
-										<ul className="space-y-0.5">
-											{groupHits.map((hit) => {
-												const flatIndex = flatHits.findIndex(
-													(item) => item.id === hit.id,
-												)
-												return (
-													<li key={hit.id}>
-														<ResultRow
-															hit={hit}
-															active={flatIndex === safeActiveIndex}
-															onHover={() => setActiveIndex(flatIndex)}
-															onSelect={() => runHit(hit)}
-														/>
-													</li>
-												)
-											})}
-										</ul>
-									</section>
-								)
-							})}
-						</div>
-					) : null}
-				</div>
+						{!loading && !error && flatHits.length > 0 ? (
+							<div className="mx-auto max-w-6xl space-y-7">
+								<div className="flex items-end justify-between gap-3">
+									<p className="text-[0.7rem] font-extrabold tracking-[0.18em] text-white/40 uppercase">
+										{showPopular
+											? "Start here"
+											: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
+									</p>
+									<p className="text-xs text-white/30 sm:hidden">
+										Tap a result
+									</p>
+								</div>
 
-				<div className="border-border bg-muted/50 text-muted-foreground flex shrink-0 flex-wrap items-center justify-between gap-2 border-t px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs sm:px-7 sm:pb-3">
-					<span>
-						{flatHits.length
-							? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
-							: "Services · Tips · Pages"}
-					</span>
-					<span className="sm:hidden">Tap a result to open</span>
-					<span className="hidden sm:inline">
-						<kbd className="border-border bg-card rounded-sm border px-1.5 py-0.5 font-sans">
-							Esc
-						</kbd>{" "}
-						to close ·{" "}
-						<kbd className="border-border bg-card rounded-sm border px-1.5 py-0.5 font-sans">
-							⌘K
-						</kbd>
-					</span>
+								{GROUP_ORDER.map((key) => {
+									const groupHits = grouped[key]
+									if (!groupHits.length) return null
+									const meta = GROUP_META[key]
+									const Icon = meta.icon
+									return (
+										<section key={key} aria-label={meta.label}>
+											{!showPopular ? (
+												<div className="mb-2.5 flex items-center gap-2">
+													<Icon
+														className="size-3.5 text-[var(--primary-bright)]"
+														aria-hidden
+													/>
+													<h3 className="text-[0.7rem] font-extrabold tracking-[0.16em] text-white/45 uppercase">
+														{meta.label}
+													</h3>
+												</div>
+											) : null}
+											<ul className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-3">
+												{groupHits.map((hit) => {
+													const flatIndex = flatHits.findIndex(
+														(item) => item.id === hit.id,
+													)
+													return (
+														<li key={hit.id}>
+															<ResultCard
+																hit={hit}
+																query={query}
+																active={flatIndex === safeActiveIndex}
+																onHover={() => setActiveIndex(flatIndex)}
+																onSelect={() => runHit(hit)}
+															/>
+														</li>
+													)
+												})}
+											</ul>
+										</section>
+									)
+								})}
+							</div>
+						) : null}
+					</div>
+
+					<footer className="flex shrink-0 items-center justify-between gap-3 border-t border-white/10 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs text-white/35 sm:px-8">
+						<span>
+							{flatHits.length
+								? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
+								: "Services · Tips · Areas · Actions"}
+						</span>
+						<span className="hidden sm:inline">Esc closes · ⌘K toggles</span>
+					</footer>
 				</div>
 			</DialogContent>
 		</Dialog>

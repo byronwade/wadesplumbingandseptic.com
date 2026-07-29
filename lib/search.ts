@@ -1,5 +1,8 @@
 export type SearchResultType = "service" | "tip" | "page" | "action"
 
+export type SearchIntent =
+	"browse" | "service" | "tip" | "call" | "quote" | "area"
+
 export type SearchDocument = {
 	id: string
 	type: SearchResultType
@@ -9,21 +12,16 @@ export type SearchDocument = {
 	category?: string
 	image?: string
 	keywords: string[]
-	popularity?: number
-	/** Plain-text markdown body for full-content search and snippets. */
+	/** Extra body/excerpt terms — weighted lower than keywords. */
 	body?: string
-}
-
-export type SearchIndexPayload = {
-	documents: SearchDocument[]
-	/** token -> document indices (grep-style inverted index) */
-	inverted: Record<string, number[]>
+	popularity?: number
+	intents?: SearchIntent[]
 }
 
 export type SearchHit = SearchDocument & {
 	score: number
 	matchedOn: "title" | "category" | "keyword" | "description" | "body"
-	snippet?: string
+	matchLabel: string
 }
 
 /** Domain synonyms so casual homeowner language finds the right pages. */
@@ -34,12 +32,18 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 		"drainfield",
 		"drain field",
 		"atu",
-		"ats",
 		"engineered septic",
 		"septic pumping",
-		"septic pump",
+		"septic system",
 	],
-	clog: ["clogged", "backup", "blockage", "slow drain", "stopped up"],
+	clog: [
+		"clogged",
+		"backup",
+		"blockage",
+		"slow drain",
+		"stopped up",
+		"plugged",
+	],
 	drain: ["drains", "sewer", "cleanout", "hydro jetting", "jetting"],
 	"water heater": [
 		"tankless",
@@ -47,9 +51,10 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 		"tankless water heater",
 		"boiler",
 		"water heaters",
+		"no hot water",
 	],
-	leak: ["drip", "burst pipe", "slab leak", "leak detection"],
-	toilet: ["toilets", "commode", "wax ring", "running toilet"],
+	leak: ["drip", "burst pipe", "slab leak", "leak detection", "leaking"],
+	toilet: ["toilets", "commode", "wax ring", "running toilet", "flush"],
 	sink: ["faucet", "garbage disposal", "disposal", "kitchen sink"],
 	urgent: ["emergency", "priority", "same day", "overflow", "flooding"],
 	inspection: ["camera inspection", "video inspection", "assessment"],
@@ -58,8 +63,15 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 	commercial: ["business", "restaurant", "grease trap", "multi-unit"],
 	backflow: ["backflow prevention", "backflow testing", "rpz"],
 	pipe: ["repipe", "pipe replacement", "pipe repair", "trenchless"],
-	camera: ["video inspection", "sewer camera", "locate"],
-	"santa cruz": ["scotts valley", "watsonville", "aptos", "capitola"],
+	camera: ["video inspection", "sewer camera", "locate line"],
+	"santa cruz": [
+		"scotts valley",
+		"watsonville",
+		"aptos",
+		"capitola",
+		"soquel",
+		"felton",
+	],
 	garbage: ["disposal", "garbage disposal", "sink disposal"],
 	faucet: ["tap", "spigot", "kitchen faucet", "bathroom faucet"],
 	sump: ["sump pump", "basement pump"],
@@ -67,7 +79,67 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 	root: ["rooter", "tree roots", "sewer roots"],
 	slab: ["slab leak", "under slab"],
 	tankless: ["tankless water heater", "on demand", "instant hot water"],
+	odor: ["smell", "sewage smell", "rotten egg", "sulfur"],
+	"low pressure": ["weak pressure", "low water pressure", "no pressure"],
+	shower: ["shower valve", "shower head", "shower drain"],
+	water: ["potable", "drinking water", "water line"],
 }
+
+/**
+ * Symptom / intent phrases mapped onto search terms.
+ * These fire only on phrase presence in the query.
+ */
+export const INTENT_PHRASES: Array<{
+	phrases: string[]
+	expand: string[]
+	intent: SearchIntent
+}> = [
+	{
+		phrases: ["no hot water", "cold water only", "water not hot"],
+		expand: ["water heater", "tankless", "hot water"],
+		intent: "service",
+	},
+	{
+		phrases: ["sewage smell", "smells like sewage", "rotten egg smell"],
+		expand: ["odor", "septic", "drain", "vent"],
+		intent: "service",
+	},
+	{
+		phrases: ["slow drain", "drains slow", "water backing up", "backup"],
+		expand: ["clog", "drain", "sewer", "septic"],
+		intent: "service",
+	},
+	{
+		phrases: ["gurgling", "bubbling toilet", "toilet bubbles"],
+		expand: ["drain", "sewer", "vent", "clog"],
+		intent: "service",
+	},
+	{
+		phrases: ["yellow water", "brown water", "rusty water", "hard water"],
+		expand: ["water", "softener", "filtration", "heater"],
+		intent: "service",
+	},
+	{
+		phrases: ["how to", "diy", "guide", "tips", "what causes", "why is"],
+		expand: ["tips", "guide", "maintenance"],
+		intent: "tip",
+	},
+	{
+		phrases: ["cost", "price", "how much", "estimate", "quote"],
+		expand: ["quote", "estimate", "contact"],
+		intent: "quote",
+	},
+	{
+		phrases: ["call", "phone", "schedule", "book appointment"],
+		expand: ["call", "phone", "schedule"],
+		intent: "call",
+	},
+	{
+		phrases: ["near me", "service area", "do you serve", "in my area"],
+		expand: ["service areas", "santa cruz", "area"],
+		intent: "area",
+	},
+]
 
 const STOP_WORDS = new Set([
 	"a",
@@ -91,7 +163,25 @@ const STOP_WORDS = new Set([
 	"do",
 	"i",
 	"we",
+	"can",
+	"you",
+	"me",
+	"it",
+	"this",
+	"that",
+	"from",
+	"get",
+	"need",
+	"help",
 ])
+
+const MATCH_LABELS: Record<SearchHit["matchedOn"], string> = {
+	title: "Title match",
+	category: "Category match",
+	keyword: "Related topic",
+	description: "Description match",
+	body: "In article",
+}
 
 function normalize(value: string) {
 	return value
@@ -110,30 +200,29 @@ export function tokenize(query: string) {
 		.filter((token) => token.length > 1 && !STOP_WORDS.has(token))
 }
 
-/** Strip markdown/HTML noise into plain searchable text. */
-export function plainTextFromMarkdown(markdown: string) {
-	return markdown
-		.replace(/```[\s\S]*?```/g, " ")
-		.replace(/`[^`]*`/g, " ")
-		.replace(/!\[[^\]]*]\([^)]*\)/g, " ")
-		.replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
-		.replace(/<[^>]+>/g, " ")
-		.replace(/[#>*_~|]/g, " ")
-		.replace(/\{\s*"@context"[\s\S]*$/g, " ")
-		.replace(/\s+/g, " ")
-		.trim()
-}
-
 function familyTerms(canonical: string, aliases: string[]) {
 	return [canonical, ...aliases].map(normalize)
+}
+
+function lightStem(token: string) {
+	if (token.length < 5) return token
+	if (token.endsWith("ies") && token.length > 5) return `${token.slice(0, -3)}y`
+	if (token.endsWith("ing") && token.length > 6) return token.slice(0, -3)
+	if (token.endsWith("ers") && token.length > 5) return token.slice(0, -1)
+	if (token.endsWith("ed") && token.length > 5) return token.slice(0, -2)
+	if (token.endsWith("es") && token.length > 5) return token.slice(0, -2)
+	if (token.endsWith("s") && !token.endsWith("ss")) return token.slice(0, -1)
+	return token
 }
 
 function tokenMatchesTerm(token: string, term: string) {
 	if (token === term) return true
 	if (token.length < 3) return false
 
-	// Light plural/stem tolerance without substring false positives
-	// (e.g. "drain" must not match "drainfield").
+	const stemToken = lightStem(token)
+	const stemTerm = lightStem(term)
+	if (stemToken === stemTerm) return true
+
 	if (token === `${term}s` || term === `${token}s`) return true
 	if (token.endsWith("ed") && token.slice(0, -2) === term) return true
 	if (term.endsWith("ed") && term.slice(0, -2) === token) return true
@@ -143,16 +232,48 @@ function tokenMatchesTerm(token: string, term: string) {
 	return false
 }
 
+function ngrams(tokens: string[], size: number) {
+	if (tokens.length < size) return [] as string[]
+	const grams: string[] = []
+	for (let i = 0; i <= tokens.length - size; i += 1) {
+		grams.push(tokens.slice(i, i + size).join(" "))
+	}
+	return grams
+}
+
+export type ParsedQuery = {
+	raw: string
+	tokens: string[]
+	phrase: string
+	expanded: string[]
+	original: Set<string>
+	bigrams: string[]
+	intents: Set<SearchIntent>
+	prefix: string | null
+}
+
 /**
- * Expand query tokens with synonyms.
+ * Expand query tokens with synonyms + intent phrases.
  * Uses exact/phrase matching — never bare substring includes — so "drain"
  * does not activate the septic "drainfield" family.
  */
-export function expandQuery(query: string) {
+export function expandQuery(query: string): ParsedQuery {
 	const tokens = tokenize(query)
 	const phrase = normalize(query)
 	const expanded = new Set(tokens)
 	const original = new Set(tokens)
+	const intents = new Set<SearchIntent>()
+
+	for (const rule of INTENT_PHRASES) {
+		if (rule.phrases.some((item) => phrase.includes(normalize(item)))) {
+			intents.add(rule.intent)
+			for (const term of rule.expand) {
+				for (const part of normalize(term).split(" ")) {
+					if (part.length > 2 && !STOP_WORDS.has(part)) expanded.add(part)
+				}
+			}
+		}
+	}
 
 	for (const [canonical, aliases] of Object.entries(SEARCH_SYNONYMS)) {
 		const family = familyTerms(canonical, aliases)
@@ -164,7 +285,6 @@ export function expandQuery(query: string) {
 		const tokenHit = tokens.some((token) =>
 			family.some((term) => {
 				if (term.includes(" ")) {
-					// Multi-word alias: require all parts present in the query.
 					const parts = term.split(" ").filter((part) => part.length > 1)
 					return parts.every(
 						(part) =>
@@ -178,6 +298,15 @@ export function expandQuery(query: string) {
 
 		if (!phraseHit && !tokenHit) continue
 
+		if (
+			canonical === "septic" ||
+			canonical === "drain" ||
+			canonical === "water heater" ||
+			canonical === "clog"
+		) {
+			intents.add("service")
+		}
+
 		for (const term of family) {
 			for (const part of term.split(" ")) {
 				if (part.length > 2 && !STOP_WORDS.has(part)) expanded.add(part)
@@ -185,11 +314,17 @@ export function expandQuery(query: string) {
 		}
 	}
 
+	const prefix = tokens.length > 0 ? (tokens[tokens.length - 1] ?? null) : null
+
 	return {
+		raw: query,
 		tokens,
 		phrase,
 		expanded: [...expanded],
 		original,
+		bigrams: ngrams(tokens, 2),
+		intents,
+		prefix: prefix && prefix.length >= 2 ? prefix : null,
 	}
 }
 
@@ -223,6 +358,11 @@ function fuzzyIncludes(haystack: string, needle: string) {
 	})
 }
 
+function prefixMatchesField(field: string, prefix: string) {
+	if (!prefix || prefix.length < 2) return false
+	return field.split(" ").some((word) => word.startsWith(prefix))
+}
+
 function scoreTokenAgainstDocument(
 	token: string,
 	fields: {
@@ -234,82 +374,83 @@ function scoreTokenAgainstDocument(
 	},
 ): { score: number; matchedOn: SearchHit["matchedOn"] } | null {
 	const { title, description, category, keywords, body } = fields
+	const titleWords = title.split(" ")
 
-	if (title === token) return { score: 120, matchedOn: "title" }
-	if (title.startsWith(`${token} `) || title.startsWith(token)) {
-		return { score: 95, matchedOn: "title" }
+	if (title === token) return { score: 130, matchedOn: "title" }
+	if (title.startsWith(`${token} `) || title === token) {
+		return { score: 100, matchedOn: "title" }
 	}
-	if (title.split(" ").includes(token) || title.includes(` ${token} `)) {
-		return { score: 80, matchedOn: "title" }
+	if (titleWords.includes(token)) return { score: 88, matchedOn: "title" }
+	if (titleWords.some((word) => lightStem(word) === lightStem(token))) {
+		return { score: 78, matchedOn: "title" }
 	}
-	if (title.includes(token)) return { score: 70, matchedOn: "title" }
-	if (category.includes(token)) return { score: 55, matchedOn: "category" }
+	if (title.includes(token)) return { score: 68, matchedOn: "title" }
+	if (
+		category.includes(token) ||
+		lightStem(category).includes(lightStem(token))
+	) {
+		return { score: 58, matchedOn: "category" }
+	}
 	if (keywords.includes(token) || fuzzyIncludes(keywords, token)) {
-		return { score: 45, matchedOn: "keyword" }
+		return { score: 48, matchedOn: "keyword" }
 	}
 	if (description.includes(token) || fuzzyIncludes(description, token)) {
-		return { score: 25, matchedOn: "description" }
-	}
-	if (body.includes(` ${token} `) || body.startsWith(`${token} `) || body.endsWith(` ${token}`) || body === token) {
-		return { score: 18, matchedOn: "body" }
+		return { score: 28, matchedOn: "description" }
 	}
 	if (body.includes(token)) return { score: 14, matchedOn: "body" }
-	if (fuzzyIncludes(title, token)) return { score: 50, matchedOn: "title" }
+	if (fuzzyIncludes(title, token)) return { score: 52, matchedOn: "title" }
 
 	return null
 }
 
-function preferMatch(
-	current: SearchHit["matchedOn"],
-	next: SearchHit["matchedOn"],
-): SearchHit["matchedOn"] {
-	const rank: Record<SearchHit["matchedOn"], number> = {
-		title: 5,
-		category: 4,
-		keyword: 3,
-		description: 2,
-		body: 1,
-	}
-	return rank[next] > rank[current] ? next : current
-}
+function intentBoost(document: SearchDocument, intents: Set<SearchIntent>) {
+	if (intents.size === 0) return 0
 
-function makeSnippet(body: string, needles: string[], limit = 140): string | undefined {
-	if (!body) return undefined
-	const lower = body.toLowerCase()
-	let at = -1
-	let matched = ""
-	for (const needle of needles) {
-		if (needle.length < 2) continue
-		const index = lower.indexOf(needle)
-		if (index >= 0 && (at < 0 || index < at)) {
-			at = index
-			matched = needle
-		}
-	}
-	if (at < 0) return undefined
+	let boost = 0
+	const docIntents = new Set(document.intents ?? [])
 
-	const start = Math.max(0, at - 36)
-	const end = Math.min(body.length, at + matched.length + 90)
-	let snippet = body.slice(start, end).trim()
-	if (start > 0) snippet = `…${snippet}`
-	if (end < body.length) snippet = `${snippet}…`
-	if (snippet.length > limit) {
-		snippet = `${snippet.slice(0, limit - 1).trimEnd()}…`
+	if (
+		intents.has("call") &&
+		document.type === "action" &&
+		document.id.includes("call")
+	) {
+		boost += 80
 	}
-	return snippet
+	if (
+		intents.has("quote") &&
+		(document.href.includes("contact") || document.id.includes("contact"))
+	) {
+		boost += 70
+	}
+	if (intents.has("tip") && document.type === "tip") boost += 36
+	if (intents.has("service") && document.type === "service") boost += 28
+	if (
+		intents.has("area") &&
+		(document.category === "Service Area" ||
+			document.href.includes("service-area"))
+	) {
+		boost += 55
+	}
+
+	for (const intent of intents) {
+		if (docIntents.has(intent)) boost += 18
+	}
+
+	return boost
 }
 
 function scoreDocument(
 	document: SearchDocument,
-	query: ReturnType<typeof expandQuery>,
+	query: ParsedQuery,
 ): SearchHit | null {
-	const { tokens, phrase, expanded, original } = query
+	const { tokens, phrase, expanded, original, bigrams, intents, prefix } = query
 
 	if (tokens.length === 0) {
 		return {
 			...document,
 			score: document.popularity ?? 0,
 			matchedOn: "title",
+			matchLabel: "Popular",
 		}
 	}
 
@@ -322,27 +463,40 @@ function scoreDocument(
 	}
 
 	let score = 0
-	let matchedOn: SearchHit["matchedOn"] = "body"
+	let matchedOn: SearchHit["matchedOn"] = "description"
 	let matchedOriginal = 0
 	let matchedExpanded = 0
 
 	if (phrase.length > 3) {
 		if (fields.title.includes(phrase)) {
-			score += 160
+			score += 180
 			matchedOn = "title"
 			matchedOriginal += 1
 		} else if (fields.keywords.includes(phrase)) {
-			score += 80
+			score += 90
 			matchedOn = "keyword"
 			matchedOriginal += 1
 		} else if (fields.description.includes(phrase)) {
-			score += 45
-			matchedOn = "description"
+			score += 50
 			matchedOriginal += 1
 		} else if (fields.body.includes(phrase)) {
-			score += 30
+			score += 24
 			matchedOn = "body"
 			matchedOriginal += 1
+		}
+	}
+
+	for (const gram of bigrams) {
+		if (fields.title.includes(gram)) {
+			score += 70
+			matchedOn = "title"
+			matchedOriginal += 0.5
+		} else if (
+			fields.keywords.includes(gram) ||
+			fields.description.includes(gram)
+		) {
+			score += 36
+			matchedOriginal += 0.25
 		}
 	}
 
@@ -351,101 +505,96 @@ function scoreDocument(
 		if (!hit) continue
 
 		const isOriginal = original.has(token)
-		const weight = isOriginal ? 1 : 0.55
+		const weight = isOriginal ? 1 : 0.5
 		score += hit.score * weight
 		matchedExpanded += 1
 		if (isOriginal) matchedOriginal += 1
-		matchedOn = preferMatch(matchedOn, hit.matchedOn)
-	}
 
-	if (matchedExpanded === 0) return null
-
-	// Require at least some original-token or phrase signal when synonyms fire,
-	// unless every original token matched through stemming in the expanded set.
-	const originalCoverage = matchedOriginal / tokens.length
-	if (originalCoverage === 0 && score < 80) return null
-
-	score *= 0.6 + Math.min(1, originalCoverage) * 0.4
-	score += (document.popularity ?? 0) * 1.5
-
-	if (document.type === "service") score += 8
-	if (document.type === "tip") score += 4
-
-	const snippet =
-		matchedOn === "body" || matchedOn === "description"
-			? makeSnippet(document.body || document.description, [
-					...original,
-					...expanded,
-				])
-			: undefined
-
-	return { ...document, score, matchedOn, snippet }
-}
-
-/** Build an inverted index for O(tokens) candidate lookup. */
-export function buildInvertedIndex(
-	documents: SearchDocument[],
-): Record<string, number[]> {
-	const inverted: Record<string, number[]> = {}
-
-	documents.forEach((document, index) => {
-		const tokens = new Set(
-			tokenize(
-				[
-					document.title,
-					document.description,
-					document.category ?? "",
-					document.keywords.join(" "),
-					document.body ?? "",
-				].join(" "),
-			),
-		)
-
-		for (const token of tokens) {
-			const bucket = inverted[token]
-			if (bucket) bucket.push(index)
-			else inverted[token] = [index]
+		const rank: SearchHit["matchedOn"][] = [
+			"title",
+			"category",
+			"keyword",
+			"description",
+			"body",
+		]
+		if (rank.indexOf(hit.matchedOn) < rank.indexOf(matchedOn)) {
+			matchedOn = hit.matchedOn
 		}
-	})
+	}
 
-	return inverted
+	if (prefix && prefixMatchesField(fields.title, prefix)) {
+		score += 22
+		if (matchedOn === "description" || matchedOn === "body") matchedOn = "title"
+	} else if (prefix && prefixMatchesField(fields.keywords, prefix)) {
+		score += 10
+	}
+
+	if (matchedExpanded === 0 && score === 0) return null
+
+	const originalCoverage = matchedOriginal / Math.max(tokens.length, 1)
+	if (originalCoverage === 0 && score < 90 && intents.size === 0) return null
+
+	score *= 0.58 + Math.min(1, originalCoverage) * 0.42
+	score += (document.popularity ?? 0) * 1.35
+	score += intentBoost(document, intents)
+
+	if (document.type === "service") score += 10
+	if (document.type === "tip") score += 5
+	if (
+		document.type === "action" &&
+		!intents.has("call") &&
+		!intents.has("quote")
+	) {
+		score -= 8
+	}
+
+	return {
+		...document,
+		score,
+		matchedOn,
+		matchLabel: MATCH_LABELS[matchedOn],
+	}
 }
 
-function candidateIndices(
-	documents: SearchDocument[],
-	inverted: Record<string, number[]> | undefined,
-	tokens: string[],
-): number[] {
-	if (!tokens.length) {
-		return documents.map((_, index) => index)
+/** Diversify top results so one type doesn't dominate the first screen. */
+function diversifyHits(hits: SearchHit[], limit: number) {
+	if (hits.length <= limit) return hits
+
+	const selected: SearchHit[] = []
+	const remaining = [...hits]
+	const typeCounts: Record<string, number> = {}
+
+	while (selected.length < limit && remaining.length > 0) {
+		let pickIndex = 0
+		for (let i = 0; i < remaining.length; i += 1) {
+			const candidate = remaining[i]
+			if (!candidate) continue
+			const count = typeCounts[candidate.type] ?? 0
+			const leader = remaining[pickIndex]
+			if (!leader) {
+				pickIndex = i
+				continue
+			}
+			const leaderCount = typeCounts[leader.type] ?? 0
+			// Prefer under-represented types when scores are close.
+			if (count < leaderCount && candidate.score >= leader.score * 0.82) {
+				pickIndex = i
+			}
+		}
+
+		const [picked] = remaining.splice(pickIndex, 1)
+		if (!picked) break
+		selected.push(picked)
+		typeCounts[picked.type] = (typeCounts[picked.type] ?? 0) + 1
 	}
 
-	if (!inverted || Object.keys(inverted).length === 0) {
-		return documents.map((_, index) => index)
-	}
-
-	const sets = tokens
-		.map((token) => inverted[token])
-		.filter((list): list is number[] => Boolean(list?.length))
-
-	if (!sets.length) {
-		// Fall back to full scan when inverted misses (stem/synonym-only tokens)
-		return documents.map((_, index) => index)
-	}
-
-	// Union of posting lists — scoring enforces relevance afterward
-	const seen = new Set<number>()
-	for (const list of sets) {
-		for (const index of list) seen.add(index)
-	}
-	return [...seen]
+	return selected
 }
 
 export function searchDocuments(
 	documents: SearchDocument[],
 	query: string,
 	limit = 24,
-	inverted?: Record<string, number[]>,
 ): SearchHit[] {
 	const parsed = expandQuery(query)
 
@@ -460,19 +609,16 @@ export function searchDocuments(
 				...document,
 				score: document.popularity ?? 0,
 				matchedOn: "title" as const,
+				matchLabel: "Popular",
 			}))
 	}
 
-	const indices = candidateIndices(documents, inverted, parsed.expanded)
-
-	return indices
-		.map((index) => {
-			const document = documents[index]
-			return document ? scoreDocument(document, parsed) : null
-		})
+	const ranked = documents
+		.map((document) => scoreDocument(document, parsed))
 		.filter((hit): hit is SearchHit => hit !== null)
 		.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
-		.slice(0, limit)
+
+	return diversifyHits(ranked, limit)
 }
 
 export function groupSearchHits(hits: SearchHit[]) {
@@ -490,10 +636,77 @@ export function groupSearchHits(hits: SearchHit[]) {
 	return groups
 }
 
-export function isSearchIndexPayload(
-	value: unknown,
-): value is SearchIndexPayload {
-	if (!value || typeof value !== "object") return false
-	const record = value as SearchIndexPayload
-	return Array.isArray(record.documents) && typeof record.inverted === "object"
+/** Adaptive suggestion chips from the current query + synonym families. */
+export function suggestSearches(query: string, limit = 6): string[] {
+	const phrase = normalize(query)
+	const tokens = tokenize(query)
+	const suggestions = new Set<string>()
+
+	const defaults = [
+		"clogged drain",
+		"septic pumping",
+		"water heater",
+		"toilet repair",
+		"leak detection",
+		"hydro jetting",
+	]
+
+	if (!phrase) return defaults.slice(0, limit)
+
+	for (const [canonical, aliases] of Object.entries(SEARCH_SYNONYMS)) {
+		const family = familyTerms(canonical, aliases)
+		const related = family.some(
+			(term) =>
+				phrase.includes(term) ||
+				term.includes(phrase) ||
+				tokens.some((token) =>
+					tokenMatchesTerm(token, term.split(" ")[0] ?? ""),
+				),
+		)
+		if (!related) continue
+		suggestions.add(canonical)
+		for (const alias of aliases.slice(0, 2)) suggestions.add(alias)
+	}
+
+	for (const item of defaults) {
+		if (item.includes(phrase) || phrase.length < 3) suggestions.add(item)
+	}
+
+	return [...suggestions].filter((item) => item !== phrase).slice(0, limit)
+}
+
+/** Highlight query terms inside a title for rich results. */
+export function highlightMatches(
+	text: string,
+	query: string,
+): Array<{
+	text: string
+	match: boolean
+}> {
+	const tokens = [...new Set(expandQuery(query).tokens.map(lightStem))].filter(
+		(token) => token.length > 1,
+	)
+	if (!tokens.length) return [{ text, match: false }]
+
+	const pattern = new RegExp(
+		`(${tokens
+			.map((token) => token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+			.join("|")})`,
+		"ig",
+	)
+
+	const parts: Array<{ text: string; match: boolean }> = []
+	let lastIndex = 0
+	for (const match of text.matchAll(pattern)) {
+		const index = match.index ?? 0
+		if (index > lastIndex) {
+			parts.push({ text: text.slice(lastIndex, index), match: false })
+		}
+		parts.push({ text: match[0] ?? "", match: true })
+		lastIndex = index + (match[0]?.length ?? 0)
+	}
+	if (lastIndex < text.length) {
+		parts.push({ text: text.slice(lastIndex), match: false })
+	}
+	return parts.length ? parts : [{ text, match: false }]
 }

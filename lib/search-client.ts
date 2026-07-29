@@ -1,45 +1,22 @@
-"use client"
+import type { SearchDocument } from "@/lib/search"
 
-import {
-	isSearchIndexPayload,
-	type SearchIndexPayload,
-} from "@/lib/search"
+let cachedIndex: SearchDocument[] | null = null
+let inflight: Promise<SearchDocument[]> | null = null
 
-let cachedIndex: SearchIndexPayload | null = null
-let inflight: Promise<SearchIndexPayload> | null = null
-
-async function fetchSearchIndex(): Promise<SearchIndexPayload> {
-	const response = await fetch("/api/search-index")
-	if (!response.ok) {
-		throw new Error("Could not load search index")
-	}
-
-	const data: unknown = await response.json()
-
-	if (isSearchIndexPayload(data)) {
-		return data
-	}
-
-	// Backward-compatible: older array-only payloads
-	if (Array.isArray(data)) {
-		const { buildInvertedIndex } = await import("@/lib/search")
-		return {
-			documents: data,
-			inverted: buildInvertedIndex(data),
-		}
-	}
-
-	throw new Error("Unexpected search index shape")
+export function getCachedSearchIndex() {
+	return cachedIndex
 }
 
-/** Warm the search index in the background (idle / hover). */
 export function prefetchSearchIndex() {
-	if (cachedIndex || inflight) return inflight
+	if (cachedIndex) return Promise.resolve(cachedIndex)
+	if (inflight) return inflight
 
-	inflight = fetchSearchIndex()
-		.then((payload) => {
-			cachedIndex = payload
-			return payload
+	inflight = fetch("/api/search-index")
+		.then(async (response) => {
+			if (!response.ok) throw new Error("Could not load search index")
+			const data = (await response.json()) as SearchDocument[]
+			cachedIndex = Array.isArray(data) ? data : []
+			return cachedIndex
 		})
 		.finally(() => {
 			inflight = null
@@ -48,15 +25,10 @@ export function prefetchSearchIndex() {
 	return inflight
 }
 
-export function getCachedSearchIndex() {
-	return cachedIndex
-}
-
 export async function loadSearchIndex() {
-	if (cachedIndex) return cachedIndex
-	if (inflight) return inflight
-
-	const payload = await fetchSearchIndex()
-	cachedIndex = payload
-	return payload
+	try {
+		return await prefetchSearchIndex()
+	} catch {
+		return null
+	}
 }

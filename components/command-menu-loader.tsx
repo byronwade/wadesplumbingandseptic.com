@@ -7,22 +7,45 @@ import { useTheme } from "next-themes"
 import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
 import { prefetchSearchIndex } from "@/lib/search-client"
 
-const CommandMenuDialog = dynamic(
-	() =>
-		import("@/components/command-menu").then((mod) => mod.CommandMenuDialog),
-	{ ssr: false },
-)
+const loadSearchDialog = () =>
+	import("@/components/command-menu").then((mod) => mod.CommandMenuDialog)
+
+const CommandMenuDialog = dynamic(loadSearchDialog, { ssr: false })
 
 export function CommandMenuLoader() {
 	const [open, setOpen] = useState(false)
-	const [mounted, setMounted] = useState(false)
+	const [ready, setReady] = useState(false)
 	const { resolvedTheme, setTheme } = useTheme()
 
 	useEffect(() => {
-		const openSearch = () => {
-			setMounted(true)
-			setOpen(true)
+		const warm = () => {
+			void loadSearchDialog()
 			void prefetchSearchIndex()
+			setReady(true)
+		}
+
+		const idleWindow = window as Window & {
+			requestIdleCallback?: (
+				callback: IdleRequestCallback,
+				options?: IdleRequestOptions,
+			) => number
+			cancelIdleCallback?: (handle: number) => void
+		}
+
+		if (idleWindow.requestIdleCallback) {
+			const id = idleWindow.requestIdleCallback(warm, { timeout: 1200 })
+			return () => idleWindow.cancelIdleCallback?.(id)
+		}
+
+		const timer = globalThis.setTimeout(warm, 200)
+		return () => globalThis.clearTimeout(timer)
+	}, [])
+
+	useEffect(() => {
+		const openSearch = () => {
+			setReady(true)
+			void prefetchSearchIndex()
+			setOpen(true)
 		}
 
 		const onKeyDown = (event: KeyboardEvent) => {
@@ -36,9 +59,9 @@ export function CommandMenuLoader() {
 
 			if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
 				event.preventDefault()
-				setMounted(true)
-				setOpen((current) => !current)
+				setReady(true)
 				void prefetchSearchIndex()
+				setOpen((current) => !current)
 				return
 			}
 
@@ -51,33 +74,15 @@ export function CommandMenuLoader() {
 			}
 		}
 
-		const warmIndex = () => {
-			void prefetchSearchIndex()
-		}
-
 		window.addEventListener("keydown", onKeyDown)
 		window.addEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
-
-		// Prefetch on idle so ⌘K / search opens instantly with full-content index
-		let idleId: number | undefined
-		let timeoutId: number | undefined
-		if (typeof window.requestIdleCallback === "function") {
-			idleId = window.requestIdleCallback(warmIndex, { timeout: 2500 })
-		} else {
-			timeoutId = window.setTimeout(warmIndex, 1200)
-		}
-
 		return () => {
 			window.removeEventListener("keydown", onKeyDown)
 			window.removeEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
-			if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
-				window.cancelIdleCallback(idleId)
-			}
-			if (timeoutId !== undefined) window.clearTimeout(timeoutId)
 		}
 	}, [resolvedTheme, setTheme])
 
-	if (!mounted) return null
+	if (!ready) return null
 
 	return <CommandMenuDialog open={open} onOpenChange={setOpen} />
 }

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import { Manrope } from "next/font/google"
 import { Suspense } from "react"
 
@@ -140,6 +141,7 @@ export default function RootLayout({
 					<SiteFooter />
 					<CommandMenuLoader />
 					<JsonLd data={localBusinessSchema} />
+					<Analytics />
 				</ThemeProvider>
 			</body>
 		</html>
