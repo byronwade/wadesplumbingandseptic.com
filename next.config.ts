@@ -5,6 +5,138 @@ const nextConfig: NextConfig = {
 	typedRoutes: true,
 	poweredByHeader: false,
 	compress: true,
+	async redirects() {
+		return [
+			{ source: "/about", destination: "/about-us", permanent: true },
+			{ source: "/blog", destination: "/expert-tips", permanent: true },
+			{ source: "/contact-us", destination: "/contact", permanent: true },
+			{
+				source: "/service-area",
+				destination: "/service-areas",
+				permanent: true,
+			},
+			{
+				source: "/video-tutorials",
+				destination: "/videos",
+				permanent: true,
+			},
+			{
+				source: "/field-shorts",
+				destination: "/shorts",
+				permanent: true,
+			},
+			{
+				source: "/about-us/financing",
+				destination: "/financing",
+				permanent: true,
+			},
+			{
+				source: "/about-us/privacy-policy",
+				destination: "/privacy-policy",
+				permanent: true,
+			},
+			{
+				source: "/about-us/jobs",
+				destination: "/careers",
+				permanent: true,
+			},
+			{
+				source: "/about-us/warranties",
+				destination: "/warranties",
+				permanent: true,
+			},
+			{
+				source: "/about-us/promotions",
+				destination: "/promotions",
+				permanent: true,
+			},
+			{
+				source: "/about-us/rebates",
+				destination: "/rebates",
+				permanent: true,
+			},
+			{
+				source: "/about-us/franchise",
+				destination: "/franchise",
+				permanent: true,
+			},
+			{
+				source: "/santa-cruz/water-heater-replacement",
+				destination: "/santa-cruz/water-heater-replacment",
+				permanent: true,
+			},
+			{
+				source: "/services/categories/:slug",
+				destination: "/service-category/:slug",
+				permanent: true,
+			},
+			{
+				source: "/services/plumbing",
+				destination: "/service-category/plumbing",
+				permanent: true,
+			},
+			{
+				source: "/services/septic",
+				destination: "/service-category/septic",
+				permanent: true,
+			},
+			{
+				source: "/services/commercial",
+				destination: "/service-category/commercial",
+				permanent: true,
+			},
+			{
+				source: "/service-category",
+				destination: "/services",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings",
+				destination: "/services",
+				permanent: true,
+			},
+			{
+				source: "/homeowner-portal",
+				destination: "/maintenance-guide",
+				permanent: true,
+			},
+			{
+				source: "/wp-sitemap.xml",
+				destination: "/sitemap.xml",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/hydro-jetting-for-drain-clearing",
+				destination: "/service-offerings/hydro-jetting",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/storm-drain-clearing",
+				destination: "/service-offerings/storm-drain-cleaning",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/shower-head-replacement",
+				destination: "/service-offerings/shower-installation-and-repair",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/septic-pumping",
+				destination: "/service-offerings/septic-tank-cleaning-and-pumping",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/septic-installation",
+				destination: "/service-offerings/septic-system-installation",
+				permanent: true,
+			},
+			{
+				source: "/service-offerings/commercial-repairs",
+				destination: "/service-offerings/commercial-plumbing-maintenance",
+				permanent: true,
+			},
+		]
+	},
 	images: {
 		formats: ["image/avif", "image/webp"],
 		qualities: [60, 70, 75, 80, 85],

@@ -37,7 +37,7 @@ Pressure over 80 PSI can damage fixtures and increase leak risk. Pressure below 
 
 ### What areas do you serve?
 
-We serve Santa Cruz County and Santa Clara County, California. [Review the service area list](/service-areas) or call with your ZIP code.
+We serve Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia. [Review the service area list](/service-areas) or call with your ZIP code.
 
 ### How do I schedule service?
 
@@ -50,3 +50,15 @@ Financing may be available for qualified larger projects. Visit the [financing p
 ### Are you licensed and insured?
 
 Yes. California CSLB #1087260 includes C-36 plumbing and C-42 sanitation system classifications. Georgia master plumber license MPR108559 is also held.
+
+### Do you provide emergency service?
+
+Yes. Emergency plumbing and septic calls are answered 24/7, including weekends and holidays. Call 831.225.4344 for the fastest response.
+
+### Do you work on engineered or alternative septic systems?
+
+Yes. Wade's specializes in engineered and alternative systems for difficult soil, steep slopes, tight lots, high groundwater, and properties where a conventional system is not appropriate.
+
+### Do you provide commercial plumbing?
+
+Yes. Commercial services include drain cleaning, grease traps, backflow work, water heaters, maintenance, repairs, code updates, and commercial septic support.

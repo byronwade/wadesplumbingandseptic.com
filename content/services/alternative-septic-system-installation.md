@@ -4,7 +4,7 @@ description: Advanced and alternative septic systems for steep slopes, poor soil
 category: Septic
 featured: true
 order: 15
-image: /images/featured-septic.jpeg
+image: /images/work/completed-multi-tank.webp
 imageAlt: Engineered multi-tank septic system installed on a hillside
 ---
 

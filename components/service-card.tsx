@@ -1,4 +1,5 @@
 import type { Route } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -11,12 +12,28 @@ import {
 	CardTitle,
 } from "@/components/ui/card"
 import type { ContentDocument } from "@/lib/content"
+import { getServiceImage } from "@/lib/service-images"
 
 export function ServiceCard({ service }: { service: ContentDocument }) {
 	const href = `/service-offerings/${service.slug}` as Route
+	const image = getServiceImage(service.category, service.image)
 
 	return (
-		<Card className="group hover:border-primary/40 flex h-full flex-col transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+		<Card className="group hover:border-primary/40 flex h-full flex-col overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+			<Link
+				className="relative block aspect-[16/9] overflow-hidden bg-neutral-100"
+				href={href}
+				tabIndex={-1}
+			>
+				<Image
+					alt=""
+					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+					fill
+					quality={65}
+					sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+					src={image}
+				/>
+			</Link>
 			<CardHeader>
 				<Badge className="w-fit">{service.category}</Badge>
 				<CardTitle className="group-hover:text-primary mt-3 transition-colors">

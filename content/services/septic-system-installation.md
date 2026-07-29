@@ -3,7 +3,7 @@ title: Septic System Installation
 description: Complete conventional and advanced septic-system installation from approved plans through inspection, testing, and startup.
 category: Septic
 order: 18
-image: /images/septic-installation.jpeg
+image: /images/work/engineered-septic-hero.webp
 imageAlt: New septic system installation
 ---
 

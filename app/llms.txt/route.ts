@@ -27,6 +27,9 @@ ${services}
 - [Service Areas](${siteConfig.url}/service-areas)
 - [About Us](${siteConfig.url}/about-us)
 - [Expert Tips](${siteConfig.url}/expert-tips)
+- [Warranties](${siteConfig.url}/warranties)
+- [Financing](${siteConfig.url}/financing)
+- [Downloads](${siteConfig.url}/downloads)
 - [Contact](${siteConfig.url}/contact)
 `
 

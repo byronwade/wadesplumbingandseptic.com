@@ -1,6 +1,7 @@
 import type { ContentDocument } from "@/lib/content"
 
 import { ContactCta } from "@/components/contact-cta"
+import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
 import { MarkdownContent } from "@/components/markdown-content"
 
@@ -38,6 +39,9 @@ export function ContentPage({
 							</time>
 							{document.updated ? ` · Updated ${document.updated}` : null}
 						</p>
+					) : null}
+					{document.gallery?.length ? (
+						<ContentGallery images={document.gallery} />
 					) : null}
 					<MarkdownContent content={document.content} />
 				</div>

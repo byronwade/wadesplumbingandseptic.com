@@ -4,7 +4,7 @@ description: Size and install gas or electric tankless water heaters for efficie
 category: Plumbing
 featured: true
 order: 46
-image: /images/water-heater.jpeg
+image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Tankless water heater installation
 ---
 

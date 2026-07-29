@@ -11,6 +11,7 @@ High-performance marketing and SEO site for
 - shadcn/ui primitives
 - Local Markdown content
 - Vercel-ready static generation
+- Real Wade's project, team, location, and partner media
 
 There is no external CMS, application database, or server-side language
 runtime dependency.
@@ -24,12 +25,13 @@ npm run dev
 
 ## Content
 
-- `content/pages` contains company and resource pages.
+- `content/pages` contains company, location, campaign, and resource pages.
 - `content/services` contains service landing pages.
 - `content/posts` contains expert tips and homeowner guides.
 
 Each Markdown file uses YAML frontmatter for titles, descriptions, dates,
-categories, and image metadata. Routes are generated during `next build`.
+categories, tags, image metadata, and optional project galleries. Nested
+folders preserve nested legacy routes. Routes are generated during `next build`.
 
 ## Verification
 

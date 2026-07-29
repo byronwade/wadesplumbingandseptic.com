@@ -4,7 +4,7 @@ description: Understand site evaluation, system selection, permitting, installat
 category: Septic Guidance
 date: 2025-05-11
 featured: true
-image: /images/featured-septic.jpeg
+image: /images/work/engineered-septic-hero.webp
 imageAlt: Advanced septic system installation
 ---
 

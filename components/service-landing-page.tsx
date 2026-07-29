@@ -5,9 +5,11 @@ import { ContentHero } from "@/components/content-hero"
 import { MarkdownContent } from "@/components/markdown-content"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { ContentDocument } from "@/lib/content"
+import { getServiceImage } from "@/lib/service-images"
 import { siteConfig } from "@/lib/site"
 
 export function ServiceLandingPage({ service }: { service: ContentDocument }) {
+	const image = getServiceImage(service.category, service.image)
 	const schema = {
 		"@context": "https://schema.org",
 		"@type": "Service",
@@ -18,6 +20,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 		areaServed: [
 			"Santa Cruz County, California",
 			"Santa Clara County, California",
+			"Pickens County, Georgia",
 		],
 		provider: {
 			"@type": "Plumber",
@@ -32,7 +35,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 			<ContentHero
 				description={service.description}
 				eyebrow={service.category ?? "Service"}
-				image={service.image ?? "/images/hero-plumber.jpeg"}
+				image={image}
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
 				title={service.title}

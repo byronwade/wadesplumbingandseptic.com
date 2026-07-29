@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import type { Route } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CalendarDays } from "lucide-react"
 
@@ -30,7 +31,7 @@ export default function ExpertTipsPage() {
 			<ContentHero
 				description="Practical plumbing and septic education from the people doing the work. Straight answers, useful maintenance guidance, and local insight."
 				eyebrow="Homeowner Resources"
-				image="/images/water-heater.jpeg"
+				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
 				title="Expert Tips & Homeowner Guides"
 			/>
@@ -38,7 +39,27 @@ export default function ExpertTipsPage() {
 			<section className="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:py-20">
 				<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 					{posts.map((post) => (
-						<Card className="group flex h-full flex-col" key={post.slug}>
+						<Card
+							className="group flex h-full flex-col overflow-hidden"
+							key={post.slug}
+						>
+							<Link
+								className="relative block aspect-[16/9] overflow-hidden bg-neutral-100"
+								href={`/${post.slug}` as Route}
+								tabIndex={-1}
+							>
+								<Image
+									alt=""
+									className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+									fill
+									quality={65}
+									sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+									src={
+										post.image ??
+										"/images/work/precision-valve-installation.webp"
+									}
+								/>
+							</Link>
 							<CardHeader>
 								<Badge className="w-fit">
 									{post.category ?? "Expert Tips"}
