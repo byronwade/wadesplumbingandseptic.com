@@ -1,45 +1,37 @@
 ---
-title: Customer Testimonials
-description: Read why homeowners, businesses, and real estate professionals choose Wade's for responsive, knowledgeable plumbing and septic service.
-eyebrow: Real People, Real Results
+title: 'Customer Testimonials: Trusted Plumbing in Santa Cruz County'
+description: At Wade's Plumbing & Septic, we proudly serve the vibrant communities
+  of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley…
+order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
-order: 3
+eyebrow: Real People, Real Results
 ---
 
-## Service customers remember
+## Serving Santa Cruz County, CA
 
-> “As a real estate professional, I love working with Wade’s Plumbing! They will always make sure you are taken care of and have always been super courteous and professional to my clients. I have often used them for high-level plumbing inspections for buyers during contingency periods. I’ve also had them work on my own home. Totally recommend.”
+At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is committed to providing top-notch plumbing and septic services to both residential and commercial clients throughout the region.
 
-**Bailey Cotrona**
+Our contractors are licensed under C-42 for California and state license for Georgia, ensuring the highest standards of service and expertise.
 
-> “These guys are top notch. It’s my third time using them, with definitely the largest problem yet, and I can’t recommend them enough. They know their stuff, do great work, and are a pleasure to work with. I got to see them in action with a large septic main-line repair, complete with a trenchless pull. They were pros with a great attitude and made me feel comfortable with a terrible situation that shut down my house.”
+Office Hours: Monday to Friday, 9am to 5pm
 
-**Aaron Berger**
+For emergencies, our dedicated line is available for emergencies to address urgent plumbing and septic issues promptly.
 
-> “Our house flooded on New Year’s Eve, causing our sewage ejector pump and basin to fill with silt and debris. After playing phone tag with a few other companies, I was able to get ahold of someone at Wade’s right away. They understood my situation and responded the same afternoon. I work in construction and was extremely pleased with how responsive and professional everyone was—from the office staff and project manager to the team in the field.”
+## Frequently Asked Questions
 
-**Shawn Moresco**
+### What is the cost range for plumbing services in Santa Cruz County?
 
-> “Corey came by for the job walk. He was very knowledgeable and quoted me a very fair price. The crew performed all of their work to a very high standard. This company is excellent at communicating and creating a personal experience. Highly recommend!”
+The cost for plumbing services at Wade's Plumbing & Septic varies depending on the complexity of the job. We offer competitive pricing and provide detailed estimates to ensure transparency for all projects in Santa Cruz County, California.
 
-**Google customer review**
+### What should I expect during a service appointment?
 
-> “The team at Wade’s was fast, professional, and did everything they said and promised. They worked with me on different levels and did a great job replacing our downstairs ejector pump.”
+During a service appointment, our professional team will arrive on time, assess the situation, and explain the process before starting any work. We prioritize clear communication and ensure the job is completed efficiently and tidily.
 
-**Bob Skubis**
+### How long does a typical plumbing service take?
 
-> “My water heater was leaking and I had some corroded pipes. Corey came and took a look and told me the truth about what they could do for us. Miguel and Benjamin fixed our problem and other foreseeable problems within a reasonable time. They were punctual and courteous. We highly recommend them and will use them for future projects.”
+The timeline for plumbing services can vary based on the specific needs of the project. Most standard services are completed within a few hours, while more complex jobs may require additional time. Our team will provide an estimated timeline before starting work.
 
-**Henry Padilla**
+### Why should I choose Wade's Plumbing & Septic?
 
-## Why customers choose Wade's
-
-- Responsive communication when a plumbing or septic problem cannot wait.
-- Knowledgeable diagnosis and clear explanations.
-- Practical options and pricing before work begins.
-- Professional field crews who respect the property.
-- Experience with residential, commercial, sewer, and advanced septic work.
-- Follow-through from the initial call to final testing.
-
-Read more public feedback on [Google](https://www.google.com/search?q=Wades+Plumbing+and+Septic+reviews), [Facebook](https://www.facebook.com/wadesplumbingandseptic/), and [Instagram](https://www.instagram.com/wadesplumbing/).
+Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, offering reliable and professional plumbing and septic services. Our commitment to quality, customer satisfaction, and transparent communication sets us apart in the community.

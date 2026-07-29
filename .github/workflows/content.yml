@@ -1,0 +1,65 @@
+name: Content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "lib/content.ts"
+      - "app/**"
+      - "scripts/ci/**"
+      - ".github/workflows/content.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "lib/content.ts"
+      - "app/**"
+      - "scripts/ci/**"
+      - ".github/workflows/content.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: content-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate-markdown:
+    name: Validate Markdown content
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Content frontmatter + route integrity
+        run: node scripts/ci/validate-content.mjs
+
+  route-manifest:
+    name: Route manifest smoke
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Build for route generation
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: Assert expected content collections exist
+        run: |
+          test -d content/pages
+          test -d content/posts
+          test -d content/services
+          test "$(find content -name '*.md' | wc -l)" -gt 50

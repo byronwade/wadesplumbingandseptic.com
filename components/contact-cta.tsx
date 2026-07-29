@@ -31,9 +31,11 @@ export function ContactCta({
 				<div className="max-w-2xl">
 					<p className="type-eyebrow mb-3">Wade&apos;s Plumbing &amp; Septic</p>
 					<h2 className="type-title text-white">{title}</h2>
-					<p className="type-lead mt-3">{description}</p>
+					<p className="mt-3 text-base leading-relaxed text-[#e8e8e4] sm:text-lg">
+						{description}
+					</p>
 					{!compact ? (
-						<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
+						<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75">
 							<span className="inline-flex items-center gap-2">
 								<Clock className="text-primary-bright size-4" />
 								{siteConfig.hours}
@@ -51,12 +53,15 @@ export function ContactCta({
 
 				<div
 					className={cn(
-						"mt-7 flex flex-col gap-3 sm:flex-row",
-						!compact && "md:mt-0 md:shrink-0",
+						"mt-7 flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-center",
+						!compact && "md:mt-0 md:max-w-none md:shrink-0",
 					)}
 				>
 					<a
-						className={cn(buttonVariants({ size: "xl" }), "gap-2")}
+						className={cn(
+							buttonVariants({ size: "xl" }),
+							"w-full gap-2 sm:w-auto",
+						)}
 						href={siteConfig.phoneHref}
 					>
 						<Phone className="size-5" />
@@ -65,9 +70,10 @@ export function ContactCta({
 					<Link
 						className={cn(
 							buttonVariants({ variant: "inverse", size: "xl" }),
-							"gap-2",
+							"w-full justify-start gap-2 sm:w-auto sm:justify-center",
 						)}
 						href="/contact"
+						prefetch
 					>
 						Send a Message
 						<ArrowRight />

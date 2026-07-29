@@ -1,0 +1,22 @@
+name: Setup Node on self-hosted runner
+description: Install Node.js and restore the npm cache on a self-hosted runner
+
+inputs:
+  node-version:
+    description: Node.js version
+    required: false
+    default: "22"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: npm
+        cache-dependency-path: package-lock.json
+
+    - name: Install dependencies
+      shell: bash
+      run: npm ci --prefer-offline --no-audit --fund=false

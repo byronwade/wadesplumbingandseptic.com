@@ -1,6 +1,6 @@
 ---
 title: Homeowner Plumbing & Septic Downloads
-description: Save practical Wade's maintenance checklists, emergency information, and project preparation guidance.
+description: Save practical Wade's maintenance checklists, urgent-repair guidance, and project preparation tips.
 eyebrow: Useful Resources
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping and maintenance illustration
@@ -10,7 +10,7 @@ imageAlt: Septic pumping and maintenance illustration
 
 This resource center collects the same core guidance used throughout our homeowner articles.
 
-### Emergency plumbing checklist
+### Urgent plumbing checklist
 
 1. Shut off water at the nearest working valve or the building main.
 2. Keep people and electricity away from wet areas.

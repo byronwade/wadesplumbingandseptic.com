@@ -1,0 +1,37 @@
+name: Runner health
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping-ci:
+    name: Ping CI pool
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 5
+    steps:
+      - name: Runner identity
+        run: |
+          echo "runner=${RUNNER_NAME:-unknown}"
+          echo "os=$(uname -a)"
+          echo "node=$(node -v || true)"
+          echo "npm=$(npm -v || true)"
+          echo "cwd=$PWD"
+          df -h .
+          free -h || true
+
+  ping-quality:
+    name: Ping quality pool
+    runs-on: [self-hosted, linux, x64, wades, wades-quality]
+    timeout-minutes: 5
+    steps:
+      - name: Runner identity
+        run: |
+          echo "runner=${RUNNER_NAME:-unknown}"
+          echo "os=$(uname -a)"
+          command -v google-chrome || command -v chromium || command -v chromium-browser || echo "no chrome binary listed"
+          df -h .

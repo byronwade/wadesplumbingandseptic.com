@@ -17,7 +17,7 @@ Local homes and businesses call Wade's for:
 - Drain cleaning, hydro-jetting, and camera inspections
 - Water heater and tankless water heater work
 - Fixture, toilet, and shower repairs
-- Emergency plumbing response when available
+- Priority repair scheduling when available
 
 ## Septic services in Saratoga
 

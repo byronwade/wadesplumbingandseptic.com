@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import { Manrope } from "next/font/google"
 import { Suspense } from "react"
 
+import { CommandMenuLoader } from "@/components/command-menu-loader"
 import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
+import { ThemeProvider } from "@/components/theme-provider"
 import { siteConfig } from "@/lib/site"
 
 import "./globals.css"
@@ -66,7 +69,7 @@ export const metadata: Metadata = {
 	},
 	icons: {
 		icon: "/icon.svg",
-		apple: "/images/brand/wades-mark.webp",
+		apple: "/images/brand/apple-touch-icon.png",
 	},
 	manifest: "/manifest.webmanifest",
 }
@@ -74,7 +77,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
-	themeColor: "#101214",
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "#f7f7f5" },
+		{ media: "(prefers-color-scheme: dark)", color: "#101214" },
+	],
 }
 
 const localBusinessSchema = {
@@ -112,22 +118,31 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en" className={manrope.variable}>
+		<html lang="en" className={manrope.variable} suppressHydrationWarning>
 			<body className={manrope.className}>
-				<a
-					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-					href="#main-content"
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="light"
+					enableSystem
+					disableTransitionOnChange
 				>
-					Skip to content
-				</a>
-				<SiteHeader />
-				<Suspense
-					fallback={<main id="main-content" className="min-h-[40vh]" />}
-				>
-					{children}
-				</Suspense>
-				<SiteFooter />
-				<JsonLd data={localBusinessSchema} />
+					<a
+						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+						href="#main-content"
+					>
+						Skip to content
+					</a>
+					<SiteHeader />
+					<Suspense
+						fallback={<main id="main-content" className="min-h-[40vh]" />}
+					>
+						{children}
+					</Suspense>
+					<SiteFooter />
+					<CommandMenuLoader />
+					<JsonLd data={localBusinessSchema} />
+					<Analytics />
+				</ThemeProvider>
 			</body>
 		</html>
 	)

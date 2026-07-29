@@ -18,7 +18,7 @@ export default function NotFound() {
 					below or call us and we will point you in the right direction.
 				</p>
 				<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-					<Link className={buttonVariants({ size: "lg" })} href="/">
+					<Link className={buttonVariants({ size: "lg" })} href="/" prefetch>
 						<ArrowLeft />
 						Back Home
 					</Link>

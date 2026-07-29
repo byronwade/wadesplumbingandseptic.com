@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Image from "next/image"
+import Image, { getImageProps } from "next/image"
 import Link from "next/link"
 import {
 	ArrowRight,
@@ -135,50 +135,89 @@ const faqs = [
 	},
 ]
 
+function HomeHeroMedia() {
+	const common = {
+		alt: "Three-tank engineered septic system installed on a hillside property in Santa Cruz County",
+		sizes: "100vw",
+	} as const
+
+	const {
+		props: { srcSet: desktop },
+	} = getImageProps({
+		...common,
+		width: 768,
+		height: 1024,
+		quality: 70,
+		src: "/images/work/engineered-septic-hero.webp",
+	})
+
+	const {
+		props: { srcSet: mobile, ...rest },
+	} = getImageProps({
+		...common,
+		width: 640,
+		height: 400,
+		quality: 65,
+		src: "/images/work/engineered-septic-hero-mobile.webp",
+	})
+
+	return (
+		<picture>
+			<source media="(min-width: 640px)" srcSet={desktop} sizes="100vw" />
+			<img
+				{...rest}
+				srcSet={mobile}
+				alt={common.alt}
+				className="absolute inset-0 size-full object-cover object-center"
+				decoding="async"
+				fetchPriority="high"
+			/>
+		</picture>
+	)
+}
+
 export default function HomePage() {
 	return (
 		<main id="main-content">
-			<section className="surface-dark relative min-h-[min(92vh,52rem)] overflow-hidden">
-				<Image
-					alt="Three-tank engineered septic system installed on a hillside property in Santa Cruz County"
-					className="object-cover object-center"
-					fill
-					fetchPriority="high"
-					priority
-					quality={70}
-					sizes="100vw"
-					src="/images/work/engineered-septic-hero.webp"
-				/>
-				<div className="from-ink via-ink/88 to-ink/45 absolute inset-0 bg-linear-to-r" />
-				<div className="from-ink/80 to-ink/35 absolute inset-0 bg-linear-to-t via-transparent" />
+			<section className="surface-dark relative min-h-[min(78vh,44rem)] overflow-hidden sm:min-h-[min(92vh,52rem)]">
+				<HomeHeroMedia />
+				<div className="bg-ink/55 sm:bg-ink/40 absolute inset-0" />
+				<div className="from-ink via-ink/90 to-ink/55 absolute inset-0 bg-linear-to-r" />
+				<div className="from-ink via-ink/70 to-ink/25 absolute inset-0 bg-linear-to-t" />
 
-				<div className="container-shell relative flex min-h-[min(92vh,52rem)] flex-col justify-end pt-28 pb-16 lg:justify-center lg:pt-20 lg:pb-24">
+				<div className="container-shell relative flex min-h-[min(78vh,44rem)] flex-col justify-end pt-24 pb-12 sm:min-h-[min(92vh,52rem)] sm:pt-28 sm:pb-16 lg:justify-center lg:pt-20 lg:pb-24">
 					<div className="max-w-3xl">
-						<p className="type-eyebrow motion-fade text-primary-bright">
+						<p className="type-eyebrow text-primary-bright">
 							Wade&apos;s Plumbing &amp; Septic
 						</p>
-						<h1 className="type-display motion-rise mt-5 text-white">
+						<h1 className="type-display mt-4 text-white sm:mt-5">
 							Honest plumbing
 							<br />
 							<span className="text-primary-bright">&amp; septic</span>
 						</h1>
-						<p className="type-lead motion-rise motion-delay-1 mt-6 max-w-xl">
+						<p className="motion-rise motion-delay-1 mt-5 max-w-xl text-base leading-relaxed text-[#ececea] sm:mt-6 sm:text-lg">
 							No sales pressure. No upselling. Clear pricing before work begins
 							from local licensed professionals.
 						</p>
-						<div className="motion-rise motion-delay-2 mt-8 flex flex-col gap-3 sm:flex-row">
+						<div className="motion-rise motion-delay-2 mt-7 flex w-full max-w-md flex-col items-stretch gap-4 sm:mt-8 sm:max-w-none sm:flex-row sm:items-center">
 							<a
-								className={cn(buttonVariants({ size: "xl" }), "gap-2.5")}
+								className={cn(
+									buttonVariants({ size: "xl" }),
+									"w-full gap-2.5 sm:w-auto",
+								)}
 								href={siteConfig.phoneHref}
 							>
 								<Phone className="size-5" />
 								Call {siteConfig.phone}
 							</a>
 							<Link
-								className={buttonVariants({
-									variant: "inverse",
-									size: "xl",
-								})}
+								className={cn(
+									buttonVariants({
+										variant: "inverse",
+										size: "xl",
+									}),
+									"w-full justify-start sm:w-auto sm:justify-center",
+								)}
 								href="/services"
 								prefetch
 							>
@@ -190,15 +229,18 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-border bg-card border-b">
-				<div className="container-shell text-muted-foreground grid grid-cols-2 gap-4 py-5 text-sm font-bold md:grid-cols-4">
+			<section className="bg-card shadow-[inset_0_-1px_0_0_var(--border)]">
+				<div className="container-shell text-muted-foreground grid grid-cols-1 gap-3 py-4 text-sm font-bold sm:grid-cols-2 sm:gap-4 sm:py-5 md:grid-cols-4">
 					{[
 						"Family Owned & Operated",
 						"Licensed & Insured",
 						"Satisfaction Guaranteed",
 						"★★★★★ 4.9 Local Rating",
 					].map((item) => (
-						<span className="flex items-center justify-center gap-2" key={item}>
+						<span
+							className="flex items-center gap-2 sm:justify-center"
+							key={item}
+						>
 							<BadgeCheck className="text-primary size-4 shrink-0" />
 							{item}
 						</span>
@@ -272,7 +314,7 @@ export default function HomePage() {
 								alt="Three-tank septic system installation on hillside property"
 								className="object-cover"
 								fill
-								quality={80}
+								quality={70}
 								sizes="(min-width: 1024px) 45vw, 100vw"
 								src="/images/work/completed-multi-tank.webp"
 							/>
@@ -285,7 +327,7 @@ export default function HomePage() {
 				<div className="container-shell">
 					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
 						<div className="max-w-2xl">
-							<Badge tone="inverse">Project Gallery</Badge>
+							<Badge tone="bright">Project Gallery</Badge>
 							<h2 className="type-title mt-5 text-white">
 								Real work from the Wade&apos;s team.
 							</h2>
@@ -296,8 +338,12 @@ export default function HomePage() {
 							</p>
 						</div>
 						<Link
-							className={buttonVariants({ variant: "inverse", size: "lg" })}
+							className={cn(
+								buttonVariants({ variant: "inverse", size: "lg" }),
+								"w-full justify-start sm:w-auto sm:justify-center",
+							)}
 							href="/contact"
+							prefetch
 						>
 							Discuss your project
 							<ArrowRight />
@@ -311,7 +357,7 @@ export default function HomePage() {
 										alt={image.alt}
 										className="object-cover"
 										fill
-										quality={75}
+										quality={65}
 										sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
 										src={image.src}
 									/>
@@ -341,6 +387,7 @@ export default function HomePage() {
 						<Link
 							className={buttonVariants({ variant: "outline", size: "lg" })}
 							href="/services"
+							prefetch
 						>
 							View all services
 							<ArrowRight />
@@ -355,7 +402,7 @@ export default function HomePage() {
 										alt={group.title}
 										className="object-cover"
 										fill
-										quality={70}
+										quality={65}
 										sizes="(min-width: 1024px) 33vw, 100vw"
 										src={group.image}
 									/>
@@ -452,7 +499,7 @@ export default function HomePage() {
 								],
 							].map(([quote, person]) => (
 								<blockquote
-									className="border-b border-white/10 pb-6 last:border-0 last:pb-0"
+									className="pb-6 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.08)] last:pb-0 last:shadow-none"
 									key={person}
 								>
 									<div className="text-primary-bright" aria-label="5 stars">
@@ -470,9 +517,10 @@ export default function HomePage() {
 						<Link
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
-								"mt-8",
+								"mt-8 w-full justify-start sm:w-auto sm:justify-center",
 							)}
 							href="/testimonials"
+							prefetch
 						>
 							Read customer stories
 							<ArrowRight />

@@ -76,8 +76,43 @@
 	--type-lead: clamp(1.05rem, 1.5vw, 1.2rem);
 }
 
-* {
-	border-color: var(--border);
+.dark {
+	--ink: #0b0d10;
+	--ink-soft: #14181d;
+	--panel: #0b0d10;
+	--panel-elevated: #1a1f26;
+	--background: #101214;
+	--foreground: #f2f2ef;
+	--card: #171a1f;
+	--card-foreground: #f2f2ef;
+	--popover: #171a1f;
+	--popover-foreground: #f2f2ef;
+	--primary: #c56a2e;
+	--primary-foreground: #ffffff;
+	--primary-bright: #e0a15d;
+	--secondary: #1c2128;
+	--secondary-foreground: #e8e8e4;
+	--muted: #1c2128;
+	--muted-foreground: #a7adb6;
+	--accent: #2a2118;
+	--accent-foreground: #e0a15d;
+	--destructive: #ef6c3a;
+	--border: #2a3038;
+	--input: #2a3038;
+	--ring: #e0a15d;
+	--shadow-edge: 0 0 0 1px color-mix(in srgb, white 8%, transparent);
+}
+
+/*
+  Must stay in @layer base. An unlayered `* { border-color }` rule beats
+  Tailwind utilities (border-transparent, border-white/*, etc.) and forces
+  the light --border token (#dddcd7) onto every bordered control — which
+  reads as harsh white outlines on dark ink/hero surfaces.
+*/
+@layer base {
+	* {
+		border-color: var(--border);
+	}
 }
 
 html {
@@ -135,6 +170,9 @@ summary {
 }
 
 .surface-dark {
+	/* Keep hairlines soft on ink panels even while the page theme is light */
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 	background:
 		radial-gradient(
 			800px 360px at 85% -20%,
@@ -146,8 +184,16 @@ summary {
 }
 
 .surface-dark-soft {
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 	background: var(--ink-soft);
 	color: #f4f4f2;
+}
+
+.bg-ink,
+.bg-panel {
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 }
 
 .surface-panel {
@@ -198,17 +244,20 @@ summary {
 
 .surface-dark .type-lead,
 .surface-dark-soft .type-lead {
-	color: #d4d4d0;
+	color: #e4e5e7;
+}
+
+/* Dark-surface text floors for WCAG AA on ink/panel backgrounds */
+.header-muted {
+	color: #d5d7db;
 }
 
 /* ——— Motion ——— */
 @keyframes rise {
 	from {
-		opacity: 0;
-		transform: translateY(14px);
+		transform: translateY(12px);
 	}
 	to {
-		opacity: 1;
 		transform: translateY(0);
 	}
 }

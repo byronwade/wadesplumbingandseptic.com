@@ -23,7 +23,7 @@ Wade's serves Santa Cruz, Capitola, Soquel, Aptos, Scotts Valley, Watsonville, t
 
 ## Plumbing services
 
-Drain cleaning, hydro jetting, leak detection, pipe repair, water heaters, fixtures, water treatment, sewer cameras, trenchless replacement, remodel plumbing, commercial service, and emergency response.
+Drain cleaning, hydro jetting, leak detection, pipe repair, water heaters, fixtures, water treatment, sewer cameras, trenchless replacement, remodel plumbing, commercial service, and urgent repairs.
 
 ## Septic services
 

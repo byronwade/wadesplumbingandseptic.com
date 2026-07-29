@@ -1,23 +1,29 @@
 import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
 export const buttonVariants = cva(
-	"inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-bold whitespace-nowrap transition-[color,background-color,border-color,transform] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
+	"inline-flex shrink-0 items-center justify-center gap-2 rounded-md border-0 shadow-none text-sm font-bold whitespace-nowrap transition-[color,background-color,transform,opacity] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
 	{
 		variants: {
 			variant: {
 				default:
-					"bg-primary text-primary-foreground hover:bg-[color-mix(in_srgb,var(--primary)_88%,black)]",
+					"bg-primary text-primary-foreground shadow-[inset_0_0_0_1px_rgba(0,0,0,0.22)] hover:bg-[color-mix(in_srgb,var(--primary)_88%,black)]",
 				secondary:
 					"bg-secondary text-secondary-foreground hover:bg-[color-mix(in_srgb,var(--secondary)_85%,var(--ink))]",
 				outline:
 					"border border-border bg-card text-foreground hover:border-foreground/25 hover:bg-muted",
-				ghost: "text-foreground hover:bg-muted",
-				link: "text-primary underline-offset-4 hover:underline",
+				ghost:
+					"bg-transparent text-foreground hover:bg-transparent hover:text-primary",
+				link: "bg-transparent text-primary underline-offset-4 hover:underline",
+				/**
+				 * Dark-surface secondary CTA. No fill plate — light translucent
+				 * backgrounds create hard edges that read as white borders on ink.
+				 */
 				inverse:
-					"border border-white/25 bg-white/8 text-white hover:border-white/40 hover:bg-white/14",
+					"bg-transparent px-0 text-white hover:bg-transparent hover:text-primary-bright focus-visible:ring-offset-ink",
 			},
 			size: {
 				default: "h-11 px-4 py-2",
@@ -34,12 +40,22 @@ export const buttonVariants = cva(
 	},
 )
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-	VariantProps<typeof buttonVariants>
+export type ButtonProps = React.ComponentProps<"button"> &
+	VariantProps<typeof buttonVariants> & {
+		asChild?: boolean
+	}
 
-export function Button({ className, variant, size, ...props }: ButtonProps) {
+export function Button({
+	className,
+	variant,
+	size,
+	asChild = false,
+	...props
+}: ButtonProps) {
+	const Comp = asChild ? Slot : "button"
+
 	return (
-		<button
+		<Comp
 			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
 		/>

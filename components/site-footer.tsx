@@ -26,11 +26,11 @@ const serviceLinks = [
 export function SiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
-			<div className="bg-primary border-b border-white/10">
+			<div className="bg-primary shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.18)]">
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
 					<div>
-						<p className="text-sm font-bold text-white/80">
-							24/7 Emergency Service
+						<p className="text-sm font-bold text-white/85">
+							{siteConfig.hours}
 						</p>
 						<p className="text-2xl font-extrabold tracking-[-0.03em]">
 							{siteConfig.phone}
@@ -39,7 +39,7 @@ export function SiteFooter() {
 					<a
 						className={cn(
 							buttonVariants({ variant: "secondary", size: "lg" }),
-							"text-foreground gap-2 bg-white hover:bg-white/90",
+							"text-foreground w-full gap-2 bg-white hover:bg-white/90 sm:w-auto",
 						)}
 						href={siteConfig.phoneHref}
 					>
@@ -49,28 +49,33 @@ export function SiteFooter() {
 				</div>
 			</div>
 
-			<div className="container-shell py-16">
+			<div className="container-shell py-14 sm:py-16">
 				<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 					<div>
 						<Link
 							className="flex items-center gap-3 text-lg font-extrabold tracking-[-0.03em]"
 							href="/"
+							prefetch
 						>
-							<span className="grid size-12 place-items-center rounded-md bg-white p-1.5">
-								<Image
-									alt=""
-									height={40}
-									src="/images/brand/wades-mark.webp"
-									width={40}
-								/>
+							<Image
+								alt=""
+								className="size-11 shrink-0 rounded-md sm:size-12"
+								height={48}
+								src="/images/brand/wades-mark-sm.webp"
+								width={48}
+							/>
+							<span className="leading-tight">
+								Wade&apos;s Plumbing
+								<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
+									&amp; Septic
+								</span>
 							</span>
-							<span>Wade&apos;s Plumbing &amp; Septic</span>
 						</Link>
-						<p className="mt-4 text-sm leading-relaxed text-white/60">
+						<p className="mt-4 text-sm leading-relaxed text-white/65">
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
-						<p className="mt-4 text-xs font-semibold text-white/45">
+						<p className="mt-4 text-xs font-bold text-white/45">
 							{siteConfig.licenses}
 						</p>
 						<div className="mt-5 flex gap-3">
@@ -92,7 +97,7 @@ export function SiteFooter() {
 								},
 							].map((item) => (
 								<a
-									className="grid size-10 place-items-center rounded-md border border-white/12 text-white/55 transition-colors hover:border-white/30 hover:text-white"
+									className="hover:text-primary-bright grid size-10 place-items-center text-white/60 transition-colors"
 									href={item.href}
 									aria-label={item.label}
 									key={item.label}
@@ -110,24 +115,27 @@ export function SiteFooter() {
 					<FooterColumn title="Resources" links={resourceNavigation} />
 				</div>
 
-				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+				<div className="mt-14 flex flex-col gap-4 pt-7 text-xs text-white/45 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
 					<div className="flex gap-5">
 						<Link
 							className="transition-colors hover:text-white"
 							href="/privacy-policy"
+							prefetch
 						>
 							Privacy Policy
 						</Link>
 						<Link
 							className="transition-colors hover:text-white"
 							href="/terms-of-service"
+							prefetch
 						>
 							Terms
 						</Link>
 						<Link
 							className="transition-colors hover:text-white"
 							href="/sitemap.xml"
+							prefetch
 						>
 							Sitemap
 						</Link>
@@ -156,6 +164,7 @@ function FooterColumn({
 						<Link
 							className="hover:text-primary-bright transition-colors"
 							href={link.href as Route}
+							prefetch
 						>
 							{link.label}
 						</Link>

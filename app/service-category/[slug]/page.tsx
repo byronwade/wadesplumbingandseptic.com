@@ -20,7 +20,7 @@ const categories = {
 		label: "Residential Plumbing",
 		contentCategory: "Plumbing",
 		description:
-			"Complete plumbing service for homes, including repairs, replacements, maintenance, and emergency response.",
+			"Complete plumbing service for homes, including repairs, replacements, maintenance, and urgent repairs.",
 		image: "/images/services/drain-clearing.webp",
 	},
 	commercial: {
@@ -52,10 +52,10 @@ const categories = {
 		image: "/images/work/completed-multi-tank.webp",
 	},
 	"emergency-services": {
-		label: "Emergency Services",
+		label: "Urgent Repairs",
 		contentCategory: "Plumbing",
 		description:
-			"Call-first support for active leaks, burst pipes, sewer backups, failed water heaters, and urgent plumbing problems.",
+			"Call-first support during business hours for active leaks, burst pipes, sewer backups, failed water heaters, and other time-sensitive plumbing problems.",
 		image: "/images/work/drain-cleaning-equipment.webp",
 	},
 	"specialty-services": {

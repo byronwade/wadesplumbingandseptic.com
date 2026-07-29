@@ -26,30 +26,35 @@ export const metadata: Metadata = buildPageMetadata({
 	image: "/images/team/byron-working.webp",
 })
 
+const FEATURED_COUNT = 9
+
 async function TipsGrid() {
 	"use cache"
 
 	const posts = await getCollection("posts")
+	const featured = posts.slice(0, FEATURED_COUNT)
+	const remaining = posts.slice(FEATURED_COUNT)
 
 	return (
 		<section className="container-shell section-y">
 			<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{posts.map((post) => (
+				{featured.map((post) => (
 					<Card
 						className="group flex h-full flex-col overflow-hidden"
 						key={post.slug}
 					>
 						<Link
+							aria-label={`Read ${post.title}`}
 							className="bg-muted relative block aspect-[16/9] overflow-hidden"
 							href={`/${post.slug}` as Route}
-							prefetch
+							prefetch={false}
 							tabIndex={-1}
 						>
 							<Image
 								alt=""
 								className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 								fill
-								quality={65}
+								quality={60}
 								sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
 								src={
 									post.image ?? "/images/work/precision-valve-installation.webp"
@@ -61,7 +66,7 @@ async function TipsGrid() {
 								{post.category ?? "Expert Tips"}
 							</Badge>
 							<CardTitle className="group-hover:text-primary mt-3">
-								<Link href={`/${post.slug}` as Route} prefetch>
+								<Link href={`/${post.slug}` as Route} prefetch={false}>
 									{post.title}
 								</Link>
 							</CardTitle>
@@ -77,7 +82,7 @@ async function TipsGrid() {
 							<Link
 								className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 								href={`/${post.slug}` as Route}
-								prefetch
+								prefetch={false}
 							>
 								Read guide
 								<ArrowRight className="size-4" />
@@ -86,6 +91,31 @@ async function TipsGrid() {
 					</Card>
 				))}
 			</div>
+
+			{remaining.length > 0 ? (
+				<div className="mt-12">
+					<h2 className="type-title text-2xl">More guides</h2>
+					<ul className="mt-6 divide-y divide-[var(--border)] border-y border-[var(--border)]">
+						{remaining.map((post) => (
+							<li key={post.slug}>
+								<Link
+									className="hover:bg-muted/60 flex flex-col gap-1 py-4 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+									href={`/${post.slug}` as Route}
+									prefetch={false}
+								>
+									<span className="font-extrabold tracking-[-0.02em]">
+										{post.title}
+									</span>
+									<span className="text-muted-foreground text-sm">
+										{post.category ?? "Expert Tips"}
+										{post.date ? ` · ${post.date}` : ""}
+									</span>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			) : null}
 		</section>
 	)
 }

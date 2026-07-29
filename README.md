@@ -45,7 +45,16 @@ python3 -u scripts/migrate-from-wayback.py
 
 ```bash
 npm run check
+npm run ci:content
+npm run ci:self-hosted-policy
 ```
+
+## CI (self-hosted only)
+
+GitHub Actions workflows run exclusively on **local self-hosted runners** — not
+GitHub-hosted `ubuntu-latest` machines. See
+[`ops/self-hosted-runners/README.md`](ops/self-hosted-runners/README.md) to
+bring up the Docker fleet (`wades-ci` + `wades-quality` pools).
 
 ## Deploying to Vercel
 

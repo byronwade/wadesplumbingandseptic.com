@@ -21,16 +21,17 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 	return (
 		<Card className="group hover:border-primary/35 flex h-full flex-col overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5">
 			<Link
+				aria-label={`View ${service.title}`}
 				className="bg-muted relative block aspect-[16/9] overflow-hidden"
 				href={href}
-				prefetch
+				prefetch={false}
 				tabIndex={-1}
 			>
 				<Image
 					alt=""
 					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 					fill
-					quality={65}
+					quality={60}
 					sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
 					src={image}
 				/>
@@ -40,7 +41,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 					{service.category}
 				</Badge>
 				<CardTitle className="group-hover:text-primary mt-3 transition-colors">
-					<Link href={href} prefetch>
+					<Link href={href} prefetch={false}>
 						{service.title}
 					</Link>
 				</CardTitle>
@@ -50,7 +51,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 				<Link
 					className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 					href={href}
-					prefetch
+					prefetch={false}
 				>
 					Learn more
 					<ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
