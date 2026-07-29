@@ -3,9 +3,10 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Menu, Phone } from "lucide-react"
+import { Menu, Phone, Search } from "lucide-react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
+import { openGlobalSearch } from "@/lib/search-events"
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -132,7 +133,17 @@ export function SiteHeaderNav() {
 				</NavigationMenuList>
 			</NavigationMenu>
 
-			<div className="hidden items-center gap-3 sm:flex">
+			<div className="hidden items-center gap-2 sm:flex">
+				<Button
+					type="button"
+					variant="ghost"
+					size="icon"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
+					aria-label="Search services and tips"
+					onClick={openGlobalSearch}
+				>
+					<Search aria-hidden="true" className="size-5" />
+				</Button>
 				<Button asChild size="lg">
 					<a className="gap-2" href={siteConfig.phoneHref}>
 						<Phone aria-hidden="true" />
@@ -142,6 +153,16 @@ export function SiteHeaderNav() {
 			</div>
 
 			<div className="flex items-center lg:hidden">
+				<Button
+					type="button"
+					variant="ghost"
+					size="icon"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
+					aria-label="Search services and tips"
+					onClick={openGlobalSearch}
+				>
+					<Search aria-hidden="true" className="size-5" />
+				</Button>
 				<Button
 					asChild
 					variant="ghost"
