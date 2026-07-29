@@ -1392,7 +1392,6 @@ function MapGeoJSON<
   // Add source on mount.
   useEffect(() => {
     if (!isLoaded || !map) return;
-    if (!map.isStyleLoaded()) return;
 
     if (!map.getSource(sourceId)) {
       map.addSource(sourceId, {
