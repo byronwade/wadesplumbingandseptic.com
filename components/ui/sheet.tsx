@@ -88,7 +88,7 @@ export function SheetFooter({
 	return (
 		<div
 			className={cn(
-				"border-border mt-auto flex flex-col gap-3 border-t p-5",
+				"mt-auto flex flex-col gap-3 p-5 shadow-[inset_0_1px_0_0_var(--border)]",
 				className,
 			)}
 			{...props}

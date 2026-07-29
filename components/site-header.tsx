@@ -6,8 +6,8 @@ import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
 	return (
-		<header className="bg-ink sticky top-0 z-50 border-b border-white/15 text-white">
-			<div className="bg-ink-soft hidden border-b border-white/15 sm:block">
+		<header className="bg-ink sticky top-0 z-50 text-white shadow-[0_1px_0_0_rgba(0,0,0,0.45)]">
+			<div className="bg-ink-soft hidden sm:block">
 				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-semibold">
 					<span>{siteConfig.hours}</span>
 					<Link
@@ -20,27 +20,26 @@ export function SiteHeader() {
 				</div>
 			</div>
 
-			<div className="container-shell flex h-18 items-center justify-between gap-4">
+			<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
 				<Link
-					className="flex min-w-0 items-center gap-3"
+					className="flex min-w-0 items-center gap-2.5 sm:gap-3"
 					href="/"
 					aria-label="Wade's Plumbing & Septic home"
 					prefetch
 				>
-					<span className="grid size-11 shrink-0 place-items-center rounded-md bg-white p-1">
-						<Image
-							alt=""
-							height={40}
-							priority
-							src="/images/brand/wades-mark.webp"
-							width={40}
-						/>
-					</span>
+					<Image
+						alt=""
+						className="size-10 rounded-md sm:size-11"
+						height={44}
+						priority
+						src="/images/brand/wades-mark.webp"
+						width={44}
+					/>
 					<span className="leading-none">
-						<span className="block text-base font-extrabold tracking-[-0.03em] text-white sm:text-lg">
+						<span className="block text-[0.95rem] font-extrabold tracking-[-0.03em] text-white sm:text-lg">
 							Wade&apos;s Plumbing
 						</span>
-						<span className="text-primary-bright mt-1 block text-[0.68rem] font-extrabold tracking-[0.18em] uppercase">
+						<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
 							&amp; Septic
 						</span>
 					</span>
