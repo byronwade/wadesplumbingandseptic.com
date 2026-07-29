@@ -19,6 +19,12 @@ We are interested in experienced plumbers, septic installers, helpers, customer 
 - Clear notes and communication
 - A willingness to keep learning
 
+## Open roles
+
+- [Licensed Plumber](/careers/licensed-plumber)
+- [Septic System Installer](/careers/septic-system-installer)
+- [Customer Service Representative](/careers/customer-service-representative)
+
 ## Introduce yourself
 
 Email a short introduction and work history to [support@wadesinc.io](mailto:support@wadesinc.io). Include the role you are interested in, relevant licenses or experience, and the best way to reach you.

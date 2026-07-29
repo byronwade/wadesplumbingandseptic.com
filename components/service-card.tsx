@@ -23,6 +23,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 			<Link
 				className="relative block aspect-[16/9] overflow-hidden bg-neutral-100"
 				href={href}
+				prefetch
 				tabIndex={-1}
 			>
 				<Image
@@ -37,7 +38,9 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 			<CardHeader>
 				<Badge className="w-fit">{service.category}</Badge>
 				<CardTitle className="group-hover:text-primary mt-3 transition-colors">
-					<Link href={href}>{service.title}</Link>
+					<Link href={href} prefetch>
+						{service.title}
+					</Link>
 				</CardTitle>
 				<CardDescription>{service.description}</CardDescription>
 			</CardHeader>
@@ -45,6 +48,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 				<Link
 					className="text-primary inline-flex items-center gap-2 text-sm font-black"
 					href={href}
+					prefetch
 				>
 					Learn more
 					<ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

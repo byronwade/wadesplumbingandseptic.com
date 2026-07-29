@@ -1,11 +1,29 @@
-import { getCollection } from "@/lib/content"
+import { getAllRoutes } from "@/lib/content"
 import { siteConfig } from "@/lib/site"
 
-export function GET() {
-	const services = getCollection("services")
+export async function GET() {
+	const { services, posts, pages } = await getAllRoutes()
+
+	const serviceLines = services
 		.map(
 			(service) =>
 				`- [${service.title}](${siteConfig.url}/service-offerings/${service.slug}): ${service.description}`,
+		)
+		.join("\n")
+
+	const tipLines = posts
+		.slice(0, 40)
+		.map(
+			(post) =>
+				`- [${post.title}](${siteConfig.url}/${post.slug}): ${post.description}`,
+		)
+		.join("\n")
+
+	const areaLines = pages
+		.filter((page) => page.slug.startsWith("service-area/"))
+		.map(
+			(page) =>
+				`- [${page.title}](${siteConfig.url}/${page.slug}): ${page.description}`,
 		)
 		.join("\n")
 
@@ -19,7 +37,15 @@ Service area: ${siteConfig.serviceArea}
 
 ## Services
 
-${services}
+${serviceLines}
+
+## Expert tips
+
+${tipLines}
+
+## Service areas
+
+${areaLines}
 
 ## Important pages
 

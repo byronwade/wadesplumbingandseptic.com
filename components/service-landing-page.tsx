@@ -2,10 +2,12 @@ import { Check, Clock, Phone, ShieldCheck } from "lucide-react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
+import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { ContentDocument } from "@/lib/content"
 import { getServiceImage } from "@/lib/service-images"
+import { breadcrumbJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 export function ServiceLandingPage({ service }: { service: ContentDocument }) {
@@ -95,9 +97,18 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 			<ContactCta
 				description={`Contact us today for professional ${service.title.toLowerCase()} service.`}
 			/>
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+			<JsonLd
+				data={[
+					schema,
+					breadcrumbJsonLd([
+						{ name: "Home", path: "/" },
+						{ name: "Services", path: "/services" },
+						{
+							name: service.title,
+							path: `/service-offerings/${service.slug}`,
+						},
+					]),
+				]}
 			/>
 		</main>
 	)

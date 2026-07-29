@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
 	typedRoutes: true,
 	poweredByHeader: false,
 	compress: true,
+	experimental: {
+		optimizePackageImports: ["lucide-react", "@radix-ui/react-accordion"],
+	},
 	async redirects() {
 		return [
 			{ source: "/about", destination: "/about-us", permanent: true },
@@ -133,6 +136,27 @@ const nextConfig: NextConfig = {
 			{
 				source: "/service-offerings/commercial-repairs",
 				destination: "/service-offerings/commercial-plumbing-maintenance",
+				permanent: true,
+			},
+			{
+				source: "/lp/:slug",
+				destination: "/:slug",
+				permanent: true,
+			},
+			{
+				source: "/marketing/service-areas",
+				destination: "/service-areas",
+				permanent: true,
+			},
+			{
+				source: "/expert-tips/:slug",
+				destination: "/:slug",
+				permanent: true,
+			},
+			{
+				source:
+					"/navigating-the-maze-how-to-locate-trustworthy-plumbing-services-nearby",
+				destination: "/how-to-locate-trustworthy-plumbing-services-nearby",
 				permanent: true,
 			},
 		]
