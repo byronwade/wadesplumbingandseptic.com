@@ -5,10 +5,10 @@ This repo intentionally **does not use GitHub-hosted runners**
 
 All workflows in `.github/workflows/` target local runner labels:
 
-| Pool | Labels | Used by |
-| --- | --- | --- |
-| CI | `self-hosted, linux, x64, wades, wades-ci` | lint, typecheck, format, build, content |
-| Quality | `self-hosted, linux, x64, wades, wades-quality` | lighthouse, shadscan, npm audit |
+| Pool    | Labels                                          | Used by                                 |
+| ------- | ----------------------------------------------- | --------------------------------------- |
+| CI      | `self-hosted, linux, x64, wades, wades-ci`      | lint, typecheck, format, build, content |
+| Quality | `self-hosted, linux, x64, wades, wades-quality` | lighthouse, shadscan, npm audit         |
 
 ## Quick start (Docker fleet)
 
