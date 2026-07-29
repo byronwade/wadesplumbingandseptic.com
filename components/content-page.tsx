@@ -42,7 +42,7 @@ export function ContentPage({
 				parent={parent}
 				title={document.title}
 			/>
-			<article className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:py-20">
+			<article className="container-shell section-y grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
 				<div>
 					{isPost && document.date ? (
 						<p className="text-muted-foreground mb-8 text-sm font-bold">

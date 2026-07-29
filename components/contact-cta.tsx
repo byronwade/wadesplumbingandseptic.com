@@ -17,39 +17,36 @@ export function ContactCta({
 	return (
 		<section
 			className={cn(
-				"relative overflow-hidden bg-[#111] text-white",
-				compact ? "rounded-2xl p-7 sm:p-9" : "py-16",
+				"surface-dark relative overflow-hidden",
+				compact ? "rounded-lg p-7 sm:p-9" : "section-y",
 			)}
 		>
-			<div className="bg-primary/15 pointer-events-none absolute -top-24 -right-24 size-72 rounded-full blur-3xl" />
 			<div
 				className={cn(
 					"relative",
 					!compact &&
-						"mx-auto flex max-w-7xl flex-col gap-8 px-4 md:flex-row md:items-center md:justify-between md:px-8",
+						"container-shell flex flex-col gap-8 md:flex-row md:items-center md:justify-between",
 				)}
 			>
 				<div className="max-w-2xl">
-					<p className="text-primary-bright mb-2 text-xs font-black tracking-[0.18em] uppercase">
-						Wade&apos;s Plumbing &amp; Septic
-					</p>
-					<h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-						{title}
-					</h2>
-					<p className="mt-3 leading-relaxed text-neutral-200">{description}</p>
-					<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-300">
-						<span className="inline-flex items-center gap-2">
-							<Clock className="text-primary-bright size-4" />
-							{siteConfig.hours}
-						</span>
-						<a
-							className="inline-flex items-center gap-2 hover:text-white"
-							href={`mailto:${siteConfig.email}`}
-						>
-							<Mail className="text-primary-bright size-4" />
-							{siteConfig.email}
-						</a>
-					</div>
+					<p className="type-eyebrow mb-3">Wade&apos;s Plumbing &amp; Septic</p>
+					<h2 className="type-title text-white">{title}</h2>
+					<p className="type-lead mt-3">{description}</p>
+					{!compact ? (
+						<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
+							<span className="inline-flex items-center gap-2">
+								<Clock className="size-4 text-primary-bright" />
+								{siteConfig.hours}
+							</span>
+							<a
+								className="inline-flex items-center gap-2 transition-colors hover:text-white"
+								href={`mailto:${siteConfig.email}`}
+							>
+								<Mail className="size-4 text-primary-bright" />
+								{siteConfig.email}
+							</a>
+						</div>
+					) : null}
 				</div>
 
 				<div
