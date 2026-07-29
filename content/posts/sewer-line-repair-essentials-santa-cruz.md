@@ -1,7 +1,7 @@
 ---
 title: Top Sewer Line Repair for Santa Cruz County Homes
 description: In This Guide4 min read1.Did You Know?2.Quick Answer for Santa Cruz Homeowners3.Understanding
-  Common Sewer Line Problems4.Signs Your Sewer Line Needs Repai…
+ Common Sewer Line Problems4.Signs Your Sewer Line Needs Repai…
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
@@ -24,11 +24,11 @@ Did you know that trenchless sewer repair can be completed in a fraction of the 
 
 Sewer line repair is essential for maintaining the integrity and functionality of your home's plumbing system in Santa Cruz County. Understanding the essentials can help you address issues promptly and effectively.
 
-  * Regular sewer line inspections can prevent costly repairs.
-  * Look for signs of sewer line issues, such as slow drains or foul odors.
-  * Professional repairs ensure compliance with local regulations.
-  * Trenchless repair options minimize disruption to your property.
-  * Timely repairs can prevent environmental hazards and health risks.
+- Regular sewer line inspections can prevent costly repairs.
+- Look for signs of sewer line issues, such as slow drains or foul odors.
+- Professional repairs ensure compliance with local regulations.
+- Trenchless repair options minimize disruption to your property.
+- Timely repairs can prevent environmental hazards and health risks.
 
 ## Understanding Common Sewer Line Problems
 
@@ -62,13 +62,13 @@ While DIY monitoring can help you spot minor issues, professional services provi
 
 ## Homeowner Action Checklist
 
-  * Schedule regular sewer line inspections with a professional.
-  * Monitor for signs of sewer line issues like unusual sounds or odors.
-  * Consult with a licensed plumber for any suspected sewer line problems.
-  * Consider trenchless repair methods to minimize landscape disruption.
-  * Ensure all repairs comply with Santa Cruz County regulations.
-  * Keep records of all inspections and repairs for future reference.
-  * Discuss preventive maintenance options with your plumber.
+- Schedule regular sewer line inspections with a professional.
+- Monitor for signs of sewer line issues like unusual sounds or odors.
+- Consult with a licensed plumber for any suspected sewer line problems.
+- Consider trenchless repair methods to minimize landscape disruption.
+- Ensure all repairs comply with Santa Cruz County regulations.
+- Keep records of all inspections and repairs for future reference.
+- Discuss preventive maintenance options with your plumber.
 
 ## Need Help Now?
 
@@ -76,13 +76,13 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 
 ## Sources & Local References
 
-  * [Plumbing & septic service areas overview](/service-areas/)
-  * [Plumbing Repair Services - Santa Cruz County](/lp/plumbing-repair-services-santa-cruz-county/)
+- [Plumbing & septic service areas overview](/service-areas/)
+- [Plumbing Repair Services - Santa Cruz County](/lp/plumbing-repair-services-santa-cruz-county/)
 
 ## Sources & Local References
 
-  * [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
-  * [Two rivers, one lifeline: Reclaiming the Santa Cruz across borders - AZPM News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5)
+- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
+- [Two rivers, one lifeline: Reclaiming the Santa Cruz across borders - AZPM News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5)
 
 ## Seasonal Tip
 

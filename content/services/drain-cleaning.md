@@ -1,8 +1,8 @@
 ---
 title: Ensure Optimal Drain Flow in Santa Cruz County, CA
 description: Proper drain cleaning is essential for maintaining a healthy plumbing
-  system in your home. At Wade's Plumbing & Septic, we offer expert drain cleaning
-  Santa Cruz services, ensuring your drains are free from clogs and build-up.…
+ system in your home. At Wade's Plumbing & Septic, we offer expert drain cleaning
+ Santa Cruz services, ensuring your drains are free from clogs and build-up.…
 category: Plumbing
 order: 28
 featured: true
@@ -17,19 +17,19 @@ Proper drain cleaning is essential for maintaining a healthy plumbing system in 
 
 Recognizing the signs that your drains need cleaning can save you from costly repairs and extensive damage. Here are some common indicators:
 
-  * **Slow Draining:** Water taking longer than usual to drain from sinks, tubs, or showers.
-  * **Unpleasant Odors:** Foul smells emanating from your drains could indicate a blockage.
-  * **Frequent Clogs:** Regular clogs in your plumbing system are a sign that a professional cleaning is necessary.
-  * **Gurgling Sounds:** Strange noises when water is draining could mean there's air in the pipes caused by a blockage.
+- **Slow Draining:** Water taking longer than usual to drain from sinks, tubs, or showers.
+- **Unpleasant Odors:** Foul smells emanating from your drains could indicate a blockage.
+- **Frequent Clogs:** Regular clogs in your plumbing system are a sign that a professional cleaning is necessary.
+- **Gurgling Sounds:** Strange noises when water is draining could mean there's air in the pipes caused by a blockage.
 
 ## Common Causes of Drain Blockages
 
 Understanding the root causes of clogged drains helps in prevention and timely intervention. Here are some typical culprits:
 
-  * **Hair Buildup:** Common in bathroom drains, hair can create significant blockages over time.
-  * **Grease Accumulation:** Kitchen sinks often suffer from grease build-up, which hardens and narrows the pipes.
-  * **Foreign Objects:** Items such as sanitary products, wipes, and small toys can easily cause blockages.
-  * **Mineral Build-up:** Hard water can lead to mineral deposits, causing pipes to narrow and clog.
+- **Hair Buildup:** Common in bathroom drains, hair can create significant blockages over time.
+- **Grease Accumulation:** Kitchen sinks often suffer from grease build-up, which hardens and narrows the pipes.
+- **Foreign Objects:** Items such as sanitary products, wipes, and small toys can easily cause blockages.
+- **Mineral Build-up:** Hard water can lead to mineral deposits, causing pipes to narrow and clog.
 
 ## Our Drain Cleaning Process
 
@@ -37,9 +37,9 @@ At Wade's Plumbing & Septic, we follow a thorough process to ensure effective [d
 
 ### Step-by-Step Execution
 
-  * **Inspection:** We begin with a comprehensive inspection to identify the clog's nature and location.
-  * **Safe Cleaning Methods:** Using eco-friendly and safe techniques, we clear the blockages without harming your pipes.
-  * **Verification:** Post-cleaning, we verify the effectiveness of our service to ensure your satisfaction.
+- **Inspection:** We begin with a comprehensive inspection to identify the clog's nature and location.
+- **Safe Cleaning Methods:** Using eco-friendly and safe techniques, we clear the blockages without harming your pipes.
+- **Verification:** Post-cleaning, we verify the effectiveness of our service to ensure your satisfaction.
 
 ## Timeline and Cost Factors
 
@@ -49,9 +49,9 @@ The timeline for drain cleaning varies based on the severity of the blockage, bu
 
 Prevention is key to maintaining a healthy plumbing system. Here are some tips to keep your drains clear:
 
-  * **Regular Maintenance:** Schedule routine [drain cleaning and maintenance](/service-offerings/commercial-plumbing-maintenance/) to prevent build-up.
-  * **Mindful Disposal:** Avoid pouring grease down the sink and dispose of waste properly.
-  * **Use Drain Guards:** Install guards to catch hair and debris in showers and sinks.
+- **Regular Maintenance:** Schedule routine [drain cleaning and maintenance](/service-offerings/commercial-plumbing-maintenance/) to prevent build-up.
+- **Mindful Disposal:** Avoid pouring grease down the sink and dispose of waste properly.
+- **Use Drain Guards:** Install guards to catch hair and debris in showers and sinks.
 
 ## Frequently Asked Questions
 

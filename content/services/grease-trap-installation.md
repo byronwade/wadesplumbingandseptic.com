@@ -1,9 +1,9 @@
 ---
 title: Grease Trap Installation for Santa Cruz County Businesses
 description: Grease trap installation is an essential service for restaurants, commercial
-  kitchens, and food processing facilities in Santa Cruz County, California. These
-  systems play a critical role in preventing fats, oils, and grease (FOG) from entering
-  the…
+ kitchens, and food processing facilities in Santa Cruz County, California. These
+ systems play a critical role in preventing fats, oils, and grease (FOG) from entering
+ the…
 category: Commercial
 order: 23
 image: /images/services/commercial-plumbing.webp
@@ -21,19 +21,19 @@ A properly installed grease trap is vital for any commercial kitchen to maintain
 
 Recognizing the signs that you need a grease trap installation can save your business from severe plumbing issues. Some common indicators include:
 
-  * Frequent drain clogs or slow drainage
-  * Unpleasant odors emanating from drains
-  * Backups in sinks or other fixtures
-  * Increased need for [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/)
+- Frequent drain clogs or slow drainage
+- Unpleasant odors emanating from drains
+- Backups in sinks or other fixtures
+- Increased need for [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/)
 
 ## Our Grease Trap Installation Process
 
 Wade's Plumbing & Septic offers a comprehensive grease trap installation process tailored to the unique needs of your facility. Our team handles every aspect, from sizing and selection to installation and initial maintenance training. Our process includes:
 
-  1. **Assessment:** We evaluate your kitchen's FOG output to determine the appropriate grease trap size.
-  2. **Selection:** Based on your needs, we recommend under-sink units for smaller operations or larger in-ground interceptors for high-volume businesses.
-  3. **Installation:** Our licensed technicians ensure the grease trap is installed correctly and complies with all local codes and regulations.
-  4. **Training:** We provide initial maintenance training to help your staff manage routine cleaning and upkeep.
+ 1. **Assessment:** We evaluate your kitchen's FOG output to determine the appropriate grease trap size.
+ 2. **Selection:** Based on your needs, we recommend under-sink units for smaller operations or larger in-ground interceptors for high-volume businesses.
+ 3. **Installation:** Our licensed technicians ensure the grease trap is installed correctly and complies with all local codes and regulations.
+ 4. **Training:** We provide initial maintenance training to help your staff manage routine cleaning and upkeep.
 
 ### Timeline and Cost Factors
 

@@ -1,7 +1,7 @@
 ---
 title: Water Main & Sewer Line Repair - Santa Cruz County
 description: High-ticket water main and sewer line campaign page for inspection and
-  repair calls.
+ repair calls.
 order: 30
 image: /images/team/byron-working.webp
 imageAlt: Underground plumbing installation and excavation
@@ -21,16 +21,16 @@ Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 ### What We Help With
 
-  * Water Main Leak Repair
-  * Service Line Replacement
-  * Sewer Line Repair Options
-  * Camera Inspection Scheduling
+- Water Main Leak Repair
+- Service Line Replacement
+- Sewer Line Repair Options
+- Camera Inspection Scheduling
 
 ### What Happens Next
 
-  * Phone triage and symptom capture
-  * Inspection booking and diagnostic plan
-  * Repair options with clear scope and next steps
+- Phone triage and symptom capture
+- Inspection booking and diagnostic plan
+- Repair options with clear scope and next steps
 
 #### Prefer A Call Back?
 

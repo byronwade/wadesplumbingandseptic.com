@@ -204,6 +204,16 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
+				source: "/pickens-county-ga",
+				destination: "/service-areas",
+				permanent: true,
+			},
+			{
+				source: "/pickens-county-ga/:path*",
+				destination: "/service-areas",
+				permanent: true,
+			},
+			{
 				source: "/expert-tips/:slug",
 				destination: "/:slug",
 				permanent: true,

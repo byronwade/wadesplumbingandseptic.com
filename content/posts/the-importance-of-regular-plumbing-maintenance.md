@@ -1,8 +1,8 @@
 ---
 title: Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County
 description: Maintaining your home’s plumbing system is one of the smartest ways to
-  avoid unexpected issues and keep everything running smoothly. From leaks and clogs
-  to…
+ avoid unexpected issues and keep everything running smoothly. From leaks and clogs
+ to…
 category: Plumbing Tips
 date: '2025-05-13'
 tags:
@@ -68,11 +68,11 @@ While every home is different, we recommend an annual plumbing inspection for mo
 
 During a professional inspection, we:
 
-  * Check for leaks, corrosion, or pipe weaknesses
-  * Inspect your water heater for efficiency and safety
-  * Test water pressure and fixture operation
-  * Clean drains and remove early blockages
-  * Examine exposed and hidden pipes for signs of trouble
+- Check for leaks, corrosion, or pipe weaknesses
+- Inspect your water heater for efficiency and safety
+- Test water pressure and fixture operation
+- Clean drains and remove early blockages
+- Examine exposed and hidden pipes for signs of trouble
 
 Additionally, services like water heater flushing, drain cleaning, and sewer camera inspections should be performed regularly as part of a long-term plumbing maintenance routine.
 

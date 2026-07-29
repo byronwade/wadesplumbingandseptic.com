@@ -97,7 +97,6 @@ const localBusinessSchema = {
 	areaServed: [
 		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
 		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
-		{ "@type": "AdministrativeArea", name: "Pickens County, Georgia" },
 	],
 	openingHoursSpecification: [
 		{

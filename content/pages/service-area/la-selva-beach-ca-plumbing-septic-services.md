@@ -1,7 +1,7 @@
 ---
 title: La Selva Beach, CA Plumbing & Septic Services
 description: Need trusted plumbing and septic service in La Selva Beach, CA? Wade's
-  provides fast diagnostics, maintenance, and emergency support for homeowners.
+ provides fast diagnostics, maintenance, and emergency support for homeowners.
 eyebrow: La Selva Beach
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp

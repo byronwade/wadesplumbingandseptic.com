@@ -1,9 +1,9 @@
 ---
 title: Efficient Water Heater Installations in Santa Cruz County
 description: Water heater installation is an essential service for homeowners seeking
-  efficient and reliable hot water systems. Whether your current unit is outdated
-  or you're upgrading to a more energy-efficient model, proper installation is crucial.
-  At Wade's…
+ efficient and reliable hot water systems. Whether your current unit is outdated
+ or you're upgrading to a more energy-efficient model, proper installation is crucial.
+ At Wade's…
 category: Plumbing
 order: 25
 image: /images/work/water-heater-installation.webp
@@ -30,10 +30,10 @@ Recognizing the signs that your water heater may need replacement can save you f
 
 Our expert technicians follow a comprehensive process to ensure your new water heater is installed correctly:
 
-  * **Assessment:** We evaluate your current system and discuss your needs to recommend the best water heater for your home.
-  * **Removal:** Our team safely removes the old unit, minimizing disruption to your household.
-  * **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
-  * **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
+- **Assessment:** We evaluate your current system and discuss your needs to recommend the best water heater for your home.
+- **Removal:** Our team safely removes the old unit, minimizing disruption to your household.
+- **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
+- **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
 
 ## Factors Affecting Water Heater Installation Costs
 

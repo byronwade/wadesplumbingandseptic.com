@@ -1,8 +1,8 @@
 ---
 title: Top-Quality Drainfield Repair for Santa Cruz Homes
 description: In Santa Cruz County, a reliable septic system is essential for maintaining
-  a healthy and functional home. When issues arise, it’s crucial to address them promptly
-  with professional drainfield repair services. At Wade’s Plumbing & Septic,…
+ a healthy and functional home. When issues arise, it’s crucial to address them promptly
+ with professional drainfield repair services. At Wade’s Plumbing & Septic,…
 category: Septic
 order: 17
 image: /images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp
@@ -16,10 +16,10 @@ In Santa Cruz County, a reliable septic system is essential for maintaining a he
 
 Recognizing the signs of a failing drainfield can save homeowners from costly repairs. Common indicators include:
 
-  * Persistent foul odors around your property
-  * Slow draining sinks, toilets, and showers
-  * Pooling water or soggy patches in your yard
-  * Unusually lush or green patches of grass over the drainfield
+- Persistent foul odors around your property
+- Slow draining sinks, toilets, and showers
+- Pooling water or soggy patches in your yard
+- Unusually lush or green patches of grass over the drainfield
 
 If you notice any of these signs, it may be time to consult our team for a [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/).
 
@@ -29,10 +29,10 @@ If you notice any of these signs, it may be time to consult our team for a [sept
 
 Several factors can lead to drainfield failure, necessitating a thorough inspection to determine the root cause. Common causes include:
 
-  * Soil compaction or improper installation
-  * Excessive water usage overwhelming the system
-  * Intrusion by tree roots
-  * Accumulation of solid waste due to infrequent [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/)
+- Soil compaction or improper installation
+- Excessive water usage overwhelming the system
+- Intrusion by tree roots
+- Accumulation of solid waste due to infrequent [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/)
 
 Our team at Wade's Plumbing & Septic offers expert [failed septic repair and replacement](/lp/failed-septic-repair-replacement-santa-cruz-county/) solutions to address these issues efficiently.
 
@@ -40,10 +40,10 @@ Our team at Wade's Plumbing & Septic offers expert [failed septic repair and rep
 
 When you choose Wade’s Plumbing & Septic for drainfield repair in Santa Cruz, you’re opting for a comprehensive service that includes:
 
-  * Thorough inspection and diagnosis of the problem
-  * Permitting and excavation preparation
-  * Installation of new drainage components, if necessary
-  * Final grading and system reconnection
+- Thorough inspection and diagnosis of the problem
+- Permitting and excavation preparation
+- Installation of new drainage components, if necessary
+- Final grading and system reconnection
 
 We ensure that every step of the process is handled with precision, leveraging our extensive experience and local expertise.
 

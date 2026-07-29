@@ -1,8 +1,8 @@
 ---
 title: Expert Sewer Inspections for Santa Cruz County Homes
 description: Maintaining a healthy plumbing system is crucial for any homeowner, and
-  a comprehensive sewer line inspection is an essential part of this process. At Wade's
-  Plumbing & Septic, we offer advanced inspection services to homeowners in…
+ a comprehensive sewer line inspection is an essential part of this process. At Wade's
+ Plumbing & Septic, we offer advanced inspection services to homeowners in…
 category: Plumbing
 order: 43
 image: /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
@@ -16,10 +16,10 @@ Maintaining a healthy plumbing system is crucial for any homeowner, and a compre
 
 Sewer line inspections are a proactive measure to prevent costly repairs and ensure the longevity of your plumbing system. By detecting issues early, homeowners can avoid major disruptions and costly emergencies. Regular inspections help identify:
 
-  * Blockages and clogs
-  * Cracks or collapses in the pipes
-  * Tree root intrusions
-  * Offset joints
+- Blockages and clogs
+- Cracks or collapses in the pipes
+- Tree root intrusions
+- Offset joints
 
 Choosing Wade's Plumbing & Septic for your [sewer line inspection](/service-offerings/sewer-line-inspection/) in Santa Cruz County means trusting a team with extensive experience and local expertise.
 
@@ -27,11 +27,11 @@ Choosing Wade's Plumbing & Septic for your [sewer line inspection](/service-offe
 
 Recognizing the signs of sewer line issues can save you from significant damage and expenses. If you notice any of the following symptoms, it may be time for an inspection:
 
-  * Slow draining sinks or tubs
-  * Frequent clogs in your drains
-  * Unpleasant odors from drains or the yard
-  * Unexplained patches of lush grass in your yard
-  * Gurgling sounds from the pipes
+- Slow draining sinks or tubs
+- Frequent clogs in your drains
+- Unpleasant odors from drains or the yard
+- Unexplained patches of lush grass in your yard
+- Gurgling sounds from the pipes
 
 Our team is equipped to handle these issues efficiently, ensuring peace of mind for homeowners across Santa Cruz County.
 
@@ -55,9 +55,9 @@ After the inspection, we provide a comprehensive report, complete with video evi
 
 The cost of a sewer line inspection can vary based on several factors:
 
-  * The length and accessibility of the sewer line
-  * The complexity of the inspection process
-  * Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning/) or pipe repair
+- The length and accessibility of the sewer line
+- The complexity of the inspection process
+- Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning/) or pipe repair
 
 Wade's Plumbing & Septic offers competitive pricing, ensuring quality service at an affordable rate for residents of Santa Cruz County.
 
@@ -65,9 +65,9 @@ Wade's Plumbing & Septic offers competitive pricing, ensuring quality service at
 
 Regular maintenance and preventive measures can prolong the life of your sewer lines. Consider the following tips:
 
-  * Schedule regular [drain line inspections](/service-offerings/drain-line-inspection/)
-  * Avoid flushing non-biodegradable items
-  * Monitor and manage tree roots near sewer lines
+- Schedule regular [drain line inspections](/service-offerings/drain-line-inspection/)
+- Avoid flushing non-biodegradable items
+- Monitor and manage tree roots near sewer lines
 
 By following these steps, you can minimize the risk of severe sewer line problems.
 
@@ -87,7 +87,7 @@ For reliable and professional sewer line inspection services in Santa Cruz Count
 
 At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and the surrounding areas in Santa Cruz County, California. Our team is committed to ensuring your home's safety with comprehensive sewer inspections.
 
-We hold a C-42 license for California and a state license for Georgia, ensuring that our services meet the highest standards of quality and professionalism.
+We holds a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and professionalism.
 
 Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we also offer an emergency line available to address any urgent plumbing or septic needs.
 

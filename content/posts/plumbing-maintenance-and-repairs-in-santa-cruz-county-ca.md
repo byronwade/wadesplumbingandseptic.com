@@ -6,9 +6,9 @@ date: 2025-05-11
 image: /images/services/water-heater-service.webp
 imageAlt: "Water heater service"
 tags:
-  - Santa Cruz plumbing
-  - plumbing maintenance
----Routine observation helps Santa Cruz County homeowners find problems before they damage the property.
+- Santa Cruz plumbing
+- plumbing maintenance
+---
 
 ![Water heater installation](/images/work/water-heater-installation.webp)
 

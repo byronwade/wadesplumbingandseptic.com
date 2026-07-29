@@ -1,9 +1,9 @@
 ---
 title: Expert Septic Tank Design in Santa Cruz County, CA
 description: Septic tank design is an essential service for homeowners in Santa Cruz
-  County, California, who seek efficient and environmentally-friendly waste management
-  solutions. At Wade's Plumbing & Septic, we specialize in creating custom septic
-  systems tailored to…
+ County, California, who seek efficient and environmentally-friendly waste management
+ solutions. At Wade's Plumbing & Septic, we specialize in creating custom septic
+ systems tailored to…
 category: Septic
 order: 8
 image: /images/work/engineered-retaining-wall.webp
@@ -21,10 +21,10 @@ Our septic tank design service is engineered to address various challenges that 
 
 Recognizing when you need septic tank design services is crucial. Here are some signs:
 
-  * Frequent sewage backups or slow drains
-  * Unpleasant odors around your property
-  * Wet spots or lush vegetation over the drain field
-  * Outdated or non-compliant septic systems
+- Frequent sewage backups or slow drains
+- Unpleasant odors around your property
+- Wet spots or lush vegetation over the drain field
+- Outdated or non-compliant septic systems
 
 ## The Process of Septic Tank Design
 
@@ -46,10 +46,10 @@ Proactive maintenance is key to avoiding costly repairs. Regular [septic tank in
 
 ## Frequently Asked Questions
 
-**What types of septic systems do you design?**  
+**What types of septic systems do you design?** 
 We design conventional, alternative, and advanced treatment systems tailored to site-specific needs.
 
-**How often should a septic system be inspected?**  
+**How often should a septic system be inspected?** 
 Regular inspections are recommended every 1-3 years to ensure optimal performance and compliance.
 
 To learn more about our septic tank design services and how we can assist you, [contact Wade's Plumbing & Septic](/contact) today. Our team is ready to provide the expertise and support you need to ensure a reliable and efficient septic system for your property in Santa Cruz County, California.

@@ -22,7 +22,6 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 		areaServed: [
 			"Santa Cruz County, California",
 			"Santa Clara County, California",
-			"Pickens County, Georgia",
 		],
 		provider: {
 			"@type": "Plumber",

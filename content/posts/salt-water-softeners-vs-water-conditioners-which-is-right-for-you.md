@@ -1,7 +1,7 @@
 ---
 title: Choose the Best Water Softener for Your Santa Cruz Home
 description: 'When it comes to water softening systems, homeowners have two main options:
-  salt-based water softeners and saltless water softeners. Both types of systems…'
+ salt-based water softeners and saltless water softeners. Both types of systems…'
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -25,10 +25,10 @@ Salt-based water softeners are the most common type of water softener on the mar
 
 One of the biggest pros of a salt-based water softener is that it effectively removes hard water minerals, resulting in 'softer' water. This can lead to a number of benefits, such as:
 
-  * Improved lathering and sudsing of soap and shampoo
-  * Easier cleaning of dishes and laundry
-  * Longer lifespan of appliances that use water (such as dishwashers and washing machines)
-  * Reduced buildup of scale in pipes and fixtures
+- Improved lathering and sudsing of soap and shampoo
+- Easier cleaning of dishes and laundry
+- Longer lifespan of appliances that use water (such as dishwashers and washing machines)
+- Reduced buildup of scale in pipes and fixtures
 
 However, there are also some cons to consider. One is that salt-based water softeners require regular maintenance, including adding salt to the system and cleaning the resin tank. Additionally, the discharge water from a salt-based water softener can contain a high amount of salt, which can be harmful to plants and septic systems. If you're on a municipal sewage system, the high level of sodium in the discharge water can also be harmful to the environment.
 
@@ -48,12 +48,12 @@ If you are considering purchasing a water softener, it is recommended to consult
 
 Sources:
 
-  * [Water Softener Buying Guide](https://www.consumerreports.org/cro/water-softeners/buying-guide/)
-  * [Salt-Based vs. Salt-Free Water Softeners](https://www.angieslist.com/articles/salt-based-vs-salt-free-water-soft)
+- [Water Softener Buying Guide](https://www.consumerreports.org/cro/water-softeners/buying-guide/)
+- [Salt-Based vs. Salt-Free Water Softeners](https://www.angieslist.com/articles/salt-based-vs-salt-free-water-soft)
 
 Santa Cruz County Septic Experts
 
-## Don't WaitÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂImprove Your Water Quality Today
+## Don't Wait—Improve Your Water Quality Today
 
 ![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
 

@@ -1,8 +1,8 @@
 ---
 title: Find Reliable Plumbing Services in Santa Cruz County, CA
 description: In the hustle and bustle of modern life, finding trustworthy plumbing
-  services nearby can often feel like navigating a maze. Whether it's a sudden leak,
-  a…
+ services nearby can often feel like navigating a maze. Whether it's a sudden leak,
+ a…
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -118,7 +118,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area,
 
 Our office hours are Monday through Friday, from 9am to 5pm. For any plumbing emergencies, we offer a emergency line to ensure you have access to reliable assistance whenever you need it.
 
-Wade's Plumbing & Septic holds a C-42 contractor license for California and a state license for Georgia, ensuring our services meet all regulatory standards and provide peace of mind to our valued customers.
+Wade's Plumbing & Septic holds a C-42 contractor license for California, ensuring our services meet all regulatory standards and provide peace of mind to our valued customers.
 
 ## Frequently Asked Questions
 

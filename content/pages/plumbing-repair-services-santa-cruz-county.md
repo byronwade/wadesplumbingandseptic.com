@@ -20,16 +20,16 @@ Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 ### What We Help With
 
-  * Drain Cleaning & Clogs
-  * Leak Detection & Repair
-  * Water Heater Repair
-  * Toilet & Fixture Repairs
+- Drain Cleaning & Clogs
+- Leak Detection & Repair
+- Water Heater Repair
+- Toilet & Fixture Repairs
 
 ### What Happens Next
 
-  * Brief phone diagnosis
-  * Service-area and schedule confirmation
-  * Technician appointment and arrival window
+- Brief phone diagnosis
+- Service-area and schedule confirmation
+- Technician appointment and arrival window
 
 #### Prefer A Call Back?
 

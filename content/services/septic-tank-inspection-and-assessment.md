@@ -1,7 +1,7 @@
 ---
 title: Reliable Septic Inspections in Santa Cruz County
 description: Thorough inspection and assessment of septic systems for property transfers,
-  maintenance planning, or early problem detection.
+ maintenance planning, or early problem detection.
 category: Septic
 order: 2
 image: /images/services/septic-pumping-illustration.webp
@@ -29,11 +29,11 @@ We perform a **full evaluation of your septic system’s key components** , focu
 
 ### **Complete System Check Includes:**
 
-  * **Septic Tank Condition** We inspect the tank for structural issues, deterioration, or signs of failure.
-  * **Baffle & Outlet Tee Inspection** These protect your drainfield from solids. If they fail, your system is at risk—we make sure they’re intact and doing their job.
-  * **Sludge & Scum Level Measurement** We measure buildup inside the tank to determine if pumping is needed and evaluate overall system health.
-  * **Drainfield Evaluation** We check for warning signs like standing water, slow absorption, or odors that indicate problems below the surface.
-  * **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield—critical for long-term performance.
+- **Septic Tank Condition** We inspect the tank for structural issues, deterioration, or signs of failure.
+- **Baffle & Outlet Tee Inspection** These protect your drainfield from solids. If they fail, your system is at risk—we make sure they’re intact and doing their job.
+- **Sludge & Scum Level Measurement** We measure buildup inside the tank to determine if pumping is needed and evaluate overall system health.
+- **Drainfield Evaluation** We check for warning signs like standing water, slow absorption, or odors that indicate problems below the surface.
+- **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield—critical for long-term performance.
 
 
 
@@ -45,17 +45,17 @@ The problem is, without a proper inspection, you won’t know there’s an issue
 
 This service helps you:
 
-  * **Avoid costly system failures**
-  * **Catch problems early while they’re still manageable**
-  * **Understand exactly what you’re buying (for real estate transactions)**
-  * **Plan maintenance instead of dealing with emergencies**
-  * **Protect your property value**
+- **Avoid costly system failures**
+- **Catch problems early while they’re still manageable**
+- **Understand exactly what you’re buying (for real estate transactions)**
+- **Plan maintenance instead of dealing with emergencies**
+- **Protect your property value**
 
 
 
 ## **Perfect For**
 
-  * **
+- **
 
 ## Frequently Asked Questions
 

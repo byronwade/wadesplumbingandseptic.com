@@ -1,8 +1,8 @@
 ---
 title: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
 description: The holiday season is one of the busiest times of the year—and the last
-  thing you need during family gatherings, dinner parties, or overnight guests is
-  a…
+ thing you need during family gatherings, dinner parties, or overnight guests is
+ a…
 category: Plumbing Tips
 date: '2025-12-17'
 tags:
@@ -30,10 +30,10 @@ If you’re prepping for a holiday trip, the last thing you want is a broken was
 
 Prevent this by:
 
-  * Running a monthly cycle with washing machine cleaner to eliminate residue buildup
-  * Inspecting hoses regularly for cracks or wear
-  * Having a plumber check your laundry connections during routine maintenance
-  * Cleaning your dryer lint trap frequently to avoid fire hazards
+- Running a monthly cycle with washing machine cleaner to eliminate residue buildup
+- Inspecting hoses regularly for cracks or wear
+- Having a plumber check your laundry connections during routine maintenance
+- Cleaning your dryer lint trap frequently to avoid fire hazards
 
 2\. Dishwasher Failures Can Mean Piles of Holiday Dishes
 
@@ -41,10 +41,10 @@ The dishwasher is one of the most-used appliances during the holidays. Between f
 
 Avoid a holiday dishwasher disaster by:
 
-  * Not overloading it with dishes, especially large pots and pans
-  * Scraping off food before loading to avoid drain clogs
-  * Regularly checking and cleaning the drain and spray arms
-  * Scheduling pre-holiday maintenance to ensure it’s running efficiently
+- Not overloading it with dishes, especially large pots and pans
+- Scraping off food before loading to avoid drain clogs
+- Regularly checking and cleaning the drain and spray arms
+- Scheduling pre-holiday maintenance to ensure it’s running efficiently
 
 3\. Clogged Toilets Can Disrupt the Festivities
 
@@ -52,19 +52,19 @@ With extra guests using your bathrooms, toilets will be flushing more often—an
 
 To prevent backups and overflows:
 
-  * Place small wastebaskets in each bathroom to discourage improper flushing
-  * Post a friendly sign about what not to flush (e.g., wipes, feminine products, paper towels)
-  * Keep a plunger accessible near every toilet for quick fixes
-  * Schedule a drain inspection if you’ve had clog issues in the past
+- Place small wastebaskets in each bathroom to discourage improper flushing
+- Post a friendly sign about what not to flush (e.g., wipes, feminine products, paper towels)
+- Keep a plunger accessible near every toilet for quick fixes
+- Schedule a drain inspection if you’ve had clog issues in the past
 
 4\. Water Heater Failures Can Leave Guests in the Cold
 
 No one wants to face a cold shower on a chilly holiday morning. With more people showering, cooking, and cleaning, your water heater is under added stress. If it’s nearing the end of its lifespan or showing signs of failure, it may not keep up.
 
-  * Have your water heater inspected and flushed before the holidays
-  * Check for rust, leaks, or unusual noises
-  * Ask your plumber if your tank’s capacity matches your home’s holiday demand
-  * Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
+- Have your water heater inspected and flushed before the holidays
+- Check for rust, leaks, or unusual noises
+- Ask your plumber if your tank’s capacity matches your home’s holiday demand
+- Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
 
 Be Proactive—Avoid Holiday Plumbing Emergencies
 
@@ -84,7 +84,7 @@ Ensure peace of mind this festive season with expert plumbing services in Santa 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area, including the vibrant communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to ensuring your home is prepared for the holiday season with reliable plumbing services.
 
-Our company holds a C-42 license for California, ensuring that all our services meet the highest standards of quality and safety. We are also state licensed in Georgia.
+Our team holds a C-42 license for California, ensuring professional and certified service.
 
 Our office is open Monday through Friday from 9am to 5pm. For urgent plumbing needs, our emergency line is available to provide you with peace of mind.
 
@@ -108,6 +108,6 @@ The timeline usually ranges from 1 to 3 hours, depending on the complexity of th
 
 Wade's Plumbing & Septic is a trusted local authority with years of experience, providing reliable and efficient plumbing solutions tailored to the unique needs of Santa Cruz County residents.
 
-## Skip the DIY Ã¢â‚¬â€ Get It Done Right
+## Skip the DIY — Get It Done Right
 
 At Wade's Plumbing & Septic, we understand the unique challenges of maintaining plumbing systems in Santa Cruz County homes, especially during the holiday season. Trust our team of licensed professionals to handle your plumbing needs efficiently and reliably.

@@ -1,9 +1,9 @@
 ---
 title: Reliable Water Softener Maintenance in Santa Cruz County
 description: Regular water softener maintenance is crucial for ensuring the longevity
-  and efficiency of your water treatment system. Wade's Plumbing & Septic, serving
-  Santa Cruz County, California, offers comprehensive services that include inspecting
-  all components and cleaning…
+ and efficiency of your water treatment system. Wade's Plumbing & Septic, serving
+ Santa Cruz County, California, offers comprehensive services that include inspecting
+ all components and cleaning…
 category: Plumbing
 order: 39
 image: /images/work/tankless-water-heater-installation.webp
@@ -17,10 +17,10 @@ Regular water softener maintenance is crucial for ensuring the longevity and eff
 
 Recognizing the signs that your water softener requires maintenance can prevent costly repairs. Common indicators include:
 
-  * Hard water spots on dishes and fixtures
-  * Reduced water pressure
-  * Soap not lathering properly
-  * Unusual salty taste in water
+- Hard water spots on dishes and fixtures
+- Reduced water pressure
+- Soap not lathering properly
+- Unusual salty taste in water
 
 These signs suggest that your system may not be functioning optimally and could benefit from professional attention.
 
@@ -28,9 +28,9 @@ These signs suggest that your system may not be functioning optimally and could 
 
 Several factors can contribute to water softener problems, including:
 
-  * **Salt bridges:** Hardened salt can form a crust, preventing proper regeneration.
-  * **Resin bed contamination:** Over time, the resin bed may become clogged with minerals.
-  * **Component wear:** Parts like the venturi valve may wear out and need cleaning or replacement.
+- **Salt bridges:** Hardened salt can form a crust, preventing proper regeneration.
+- **Resin bed contamination:** Over time, the resin bed may become clogged with minerals.
+- **Component wear:** Parts like the venturi valve may wear out and need cleaning or replacement.
 
 ## Our Water Softener Maintenance Process
 
@@ -38,11 +38,11 @@ At Wade's Plumbing & Septic, our water softener maintenance service involves a t
 
 ### Step-by-Step Maintenance
 
-  * **Inspection:** We start by inspecting all system components for wear and damage.
-  * **Tank Cleaning:** The brine tank is emptied and cleaned to prevent salt bridges.
-  * **Venturi Valve Cleaning:** We clean the venturi valve to ensure effective water flow.
-  * **Cycle Testing:** All cycle times are tested to confirm proper operation.
-  * **Resin Bed Sanitization:** The resin bed is sanitized to maintain efficiency.
+- **Inspection:** We start by inspecting all system components for wear and damage.
+- **Tank Cleaning:** The brine tank is emptied and cleaned to prevent salt bridges.
+- **Venturi Valve Cleaning:** We clean the venturi valve to ensure effective water flow.
+- **Cycle Testing:** All cycle times are tested to confirm proper operation.
+- **Resin Bed Sanitization:** The resin bed is sanitized to maintain efficiency.
 
 ## Maintenance Timeline and Cost Factors
 

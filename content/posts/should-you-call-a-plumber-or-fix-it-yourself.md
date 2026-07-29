@@ -1,8 +1,8 @@
 ---
 title: 'Plumber vs DIY: Your Santa Cruz County Guide'
 description: 'When a plumbing issue pops up, your first thought might be: Should I
-  try to fix this myself or call a plumber? It’s a valid question—and the answer depends
-  on…'
+ try to fix this myself or call a plumber? It’s a valid question—and the answer depends
+ on…'
 category: Plumbing Tips
 date: '2025-05-20'
 tags:
@@ -30,9 +30,9 @@ If you’ve never dealt with a plumbing issue before or aren’t familiar with t
 
 On the other hand, if you’ve got experience and you’ve successfully handled similar plumbing problems in the past, a basic repair might be within reach. Common DIY-friendly jobs include:
 
-  * Replacing a faucet washer
-  * Unclogging a sink with a plunger
-  * Tightening a loose supply line
+- Replacing a faucet washer
+- Unclogging a sink with a plunger
+- Tightening a loose supply line
 
 But when in doubt, it’s better to call the pros at Wade’s Plumbing & Septic to avoid causing unnecessary damage.
 
@@ -55,9 +55,9 @@ DIY plumbing may save you on labor costs, but it’s not always the cheapest rou
 
 Ask yourself:
 
-  * How much is my time worth?
-  * Do I have the right tools?
-  * What happens if I make it worse?
+- How much is my time worth?
+- Do I have the right tools?
+- What happens if I make it worse?
 
 In many cases, hiring a professional plumber not only gets the job done faster, but also ensures the repair is done correctly the first time—saving you money, stress, and repeat visits to the hardware store.
 

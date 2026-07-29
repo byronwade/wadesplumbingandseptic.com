@@ -1,8 +1,8 @@
 ---
 title: Septic System Replacement in Santa Cruz County
 description: Complete septic system replacement in Santa Cruz County. Failed perc
-  tests, aging systems, and full replacements — get a free assessment from Wade's
-  Plumbing & Septic.
+ tests, aging systems, and full replacements — get a free assessment from Wade's
+ Plumbing & Septic.
 order: 60
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Septic System Replacement in Santa Cruz County
@@ -29,24 +29,24 @@ Phone calls are prioritized for fastest response and scheduling.
 
 ### What We Help With
 
-  * Full System Replacement
-  * Failed Perc Test Consultation
-  * Permit & Timeline Planning
-  * Repair vs. Replace Assessment
+- Full System Replacement
+- Failed Perc Test Consultation
+- Permit & Timeline Planning
+- Repair vs. Replace Assessment
 
 
 
 ### What Happens Next
 
-  1. Phone qualification call
-  2. On-site evaluation and soil/permit review
-  3. Written proposal with options and timeline
+ 1. Phone qualification call
+ 2. On-site evaluation and soil/permit review
+ 3. Written proposal with options and timeline
 
 #### Ready to Get Started?
 
-  * What city is the property in?
-  * Is this urgent or scheduled work?
-  * Plumbing, sewer, or septic issue?
+- What city is the property in?
+- Is this urgent or scheduled work?
+- Plumbing, sewer, or septic issue?
 
 [Call 831.225.4344](tel:8312254344)
 
@@ -54,10 +54,10 @@ Phone calls are prioritized for fastest response and scheduling.
 
 ##### FAQ
 
-**How much does a septic system replacement cost?**  
+**How much does a septic system replacement cost?** 
 Costs vary significantly based on system type, soil conditions, lot constraints, and permitting requirements. Call us for a site-specific assessment.
 
-**Do I need a permit to replace a septic system?**  
+**Do I need a permit to replace a septic system?** 
 Yes. In Santa Cruz County, septic system replacements require permits through the County Environmental Health division. Wade's handles permitting coordination.
 
 ### Ready to Schedule?

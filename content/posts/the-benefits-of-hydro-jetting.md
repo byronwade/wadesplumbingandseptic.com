@@ -1,10 +1,10 @@
 ---
 title: Experience Superior Hydro-Jetting in Santa Cruz County
 description: Clogged drains can cause odors and costly damage, often requiring more
-  than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting,
-  a high-pressure water technique that thoroughly cleans pipes without chemicals.
-  This effective, non-invasive solution prevents future clogs and is a long-term savings
-  investment for plumbing maintenance in Santa Cruz County.
+ than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting,
+ a high-pressure water technique that thoroughly cleans pipes without chemicals.
+ This effective, non-invasive solution prevents future clogs and is a long-term savings
+ investment for plumbing maintenance in Santa Cruz County.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -67,13 +67,13 @@ Compared to frequent snaking or using chemical drain cleaners, hydro-jetting is 
 **What types of systems can be hydro-jetted?**  
 Hydro-jetting is safe and effective for most plumbing systems including **PVC, cast iron, and clay pipes** found in residential, commercial, and industrial settings.
 
-**How is hydro-jetting different from traditional snaking?**  
+**How is hydro-jetting different from traditional snaking?** 
 Unlike snaking, which only breaks up a portion of the blockage, hydro-jetting **completely clears the pipe walls** , preventing debris from sticking and forming new clogs.
 
-**Is hydro-jetting safe for older pipes?**  
+**Is hydro-jetting safe for older pipes?** 
 Yes—but it must be done by experienced professionals. At Wade’s Plumbing & Septic, we inspect the pipes before jetting and adjust water pressure accordingly to **avoid damaging fragile or aging pipes**.
 
-**How often should I schedule hydro-jetting?**  
+**How often should I schedule hydro-jetting?** 
 We recommend scheduling **annual or bi-annual hydro-jetting** to maintain your plumbing system, especially if you deal with recurring clogs or have older pipes.
 
 ## A Game-Changer in Plumbing Maintenance
@@ -94,13 +94,13 @@ Experience the pinnacle of efficiency with our superior hydro-jetting solutions 
 
 ## Experience Superior Hydro-Jetting in Santa Cruz County
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-star rating from satisfied customers
+★★★★★ 5-star rating from satisfied customers
 
-"Wade's Plumbing & Septic cleared our stubborn clogs with ease. Highly recommend their hydro-jetting service!" ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Emily, Santa Cruz
+"Wade's Plumbing & Septic cleared our stubborn clogs with ease. Highly recommend their hydro-jetting service!" — Emily, Santa Cruz
 
-"Fast and efficient service! Our drains have never worked better. Thank you, Wade's!" ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Mike, Watsonville
+"Fast and efficient service! Our drains have never worked better. Thank you, Wade's!" — Mike, Watsonville
 
-"Professional and reliable. The team at Wade's Plumbing & Septic really know their stuff." ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Sarah, Aptos
+"Professional and reliable. The team at Wade's Plumbing & Septic really know their stuff." — Sarah, Aptos
 
 Licensed Contractor: C-42
 

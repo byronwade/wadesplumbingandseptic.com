@@ -370,7 +370,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 			id: "action:areas",
 			type: "action",
 			title: "View service areas",
-			description: "See the Central Coast and Georgia communities we serve.",
+			description: "See the Central Coast communities we serve on the map.",
 			href: "/service-areas",
 			category: "Action",
 			keywords: keywordsFromText(

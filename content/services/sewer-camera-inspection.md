@@ -1,9 +1,9 @@
 ---
 title: Swift Sewer Camera Inspections in Santa Cruz County Homes
 description: Experiencing plumbing issues can be a homeowner’s nightmare, but a professional
-  sewer camera inspection can help diagnose the problem swiftly and accurately. At
-  Wade's Plumbing & Septic, we provide top-notch sewer camera inspection services
-  throughout Santa…
+ sewer camera inspection can help diagnose the problem swiftly and accurately. At
+ Wade's Plumbing & Septic, we provide top-notch sewer camera inspection services
+ throughout Santa…
 category: Plumbing
 order: 42
 featured: true
@@ -22,10 +22,10 @@ When you suspect a problem with your sewer line, whether it's a clogged drain or
 
 Knowing when to schedule a sewer camera inspection can save you time and money. Here are some common signs:
 
-  * Frequent drain clogs or slow drainage
-  * Unpleasant odors coming from drains
-  * Unexplained wet patches in your yard
-  * Gurgling noises in your plumbing system
+- Frequent drain clogs or slow drainage
+- Unpleasant odors coming from drains
+- Unexplained wet patches in your yard
+- Gurgling noises in your plumbing system
 
 If you experience any of these issues, it may be time to contact us for a thorough [drain line inspection](/service-offerings/drain-line-inspection/) or a comprehensive sewer camera inspection.
 
@@ -33,10 +33,10 @@ If you experience any of these issues, it may be time to contact us for a thorou
 
 Sewer line issues can arise from a variety of sources. Common causes include:
 
-  * Tree root intrusion
-  * Corroded or deteriorating pipes
-  * Grease buildup and debris
-  * Misaligned pipe segments
+- Tree root intrusion
+- Corroded or deteriorating pipes
+- Grease buildup and debris
+- Misaligned pipe segments
 
 Understanding these common causes can help in taking preventive measures and scheduling regular maintenance.
 

@@ -1,7 +1,7 @@
 ---
 title: Maximize Septic Tank Lifespan in Santa Cruz County Homes
 description: Your septic tank is one of the most critical components of your home’s
-  plumbing system. When maintained properly, it works quietly in the background, safely…
+ plumbing system. When maintained properly, it works quietly in the background, safely…
 category: Plumbing Tips
 date: '2025-08-12'
 tags:
@@ -31,9 +31,9 @@ Most homes benefit from pumping every 1–3 years, depending on tank size and ho
 
 Benefits:
 
-  * Prevents backups and overflows
-  * Extends the life of your septic system
-  * Protects your property and surrounding soil
+- Prevents backups and overflows
+- Extends the life of your septic system
+- Protects your property and surrounding soil
 
 2\. Use High-Pressure Water Jetting to Clear Pipes
 
@@ -45,9 +45,9 @@ Schedule high-pressure water jetting every 5 years to clean the inside of your s
 
 Why it matters:
 
-  * Prevents costly pipe repairs and drain field replacement
-  * Keeps the entire septic system functioning efficiently
-  * Helps reduce odors and slow drains
+- Prevents costly pipe repairs and drain field replacement
+- Keeps the entire septic system functioning efficiently
+- Helps reduce odors and slow drains
 
 3\. Add Beneficial Bacteria to Support Waste Breakdown
 
@@ -63,11 +63,11 @@ Tip: Use only products approved for septic systems to avoid further disruption.
 
 Routine inspections are essential to catch small problems before they become big ones. During a professional inspection, your plumber will:
 
-  * Check sludge and scum levels
-  * Inspect baffles and filters
-  * Test drain field function
-  * Identify leaks or signs of wear
-  * Recommend necessary repairs
+- Check sludge and scum levels
+- Inspect baffles and filters
+- Test drain field function
+- Identify leaks or signs of wear
+- Recommend necessary repairs
 
 Annual inspections ensure your system stays in top condition and help you plan for future service or upgrades.
 
@@ -79,11 +79,11 @@ Not everything that fits down the drain belongs in your septic system. In fact, 
 
 Avoid flushing or draining:
 
-  * Grease, fats, or cooking oils
-  * Coffee grounds and eggshells
-  * Paper towels, tissues, and wipes (even if “flushable”)
-  * Feminine hygiene products and diapers
-  * Harsh chemicals, bleach, or antifreeze
+- Grease, fats, or cooking oils
+- Coffee grounds and eggshells
+- Paper towels, tissues, and wipes (even if “flushable”)
+- Feminine hygiene products and diapers
+- Harsh chemicals, bleach, or antifreeze
 
 Use septic-safe toilet paper and limit garbage disposal use to prevent debris from accumulating in your tank.
 

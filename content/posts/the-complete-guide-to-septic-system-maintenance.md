@@ -1,8 +1,8 @@
 ---
 title: Septic System Maintenance Made Easy in Santa Cruz County
 description: Learn how to properly maintain your septic system to maximize its lifespan
-  and avoid costly repairs. This comprehensive guide covers pumping schedules, water
-  conservation, proper waste disposal, and warning signs of potential problems.
+ and avoid costly repairs. This comprehensive guide covers pumping schedules, water
+ conservation, proper waste disposal, and warning signs of potential problems.
 category: Septic Maintenance
 date: '2025-05-11'
 tags:
@@ -24,8 +24,8 @@ imageAlt: Engineered septic system access points
 
 Most residential septic systems consist of two main parts:
 
-  * **Septic Tank:** A buried, watertight container where solids settle and begin to break down
-  * **Drainfield:** A shallow, covered area where pretreated wastewater filters into the soil
+- **Septic Tank:** A buried, watertight container where solids settle and begin to break down
+- **Drainfield:** A shallow, covered area where pretreated wastewater filters into the soil
 
 Knowing the location, size, and type of your system is essential for proper maintenance. If you don't have this information, our team can help locate your system components and provide detailed documentation.
 
@@ -33,10 +33,10 @@ Knowing the location, size, and type of your system is essential for proper main
 
 The most important maintenance task is regular pumping of your septic tank. The frequency depends on:
 
-  * Household size
-  * Tank size
-  * Volume of wastewater generated
-  * Amount of solids in wastewater
+- Household size
+- Tank size
+- Volume of wastewater generated
+- Amount of solids in wastewater
 
 For most households, pumping every 3-5 years is recommended. However, homes with garbage disposals, water softeners, or many occupants may need more frequent pumping. During pumping, a professional should inspect the tank, baffles, and effluent filter.
 
@@ -44,49 +44,49 @@ For most households, pumping every 3-5 years is recommended. However, homes with
 
 Reducing water use helps prevent system overload:
 
-  * Fix leaky faucets and running toilets promptly
-  * Install high-efficiency toilets, faucets, and showerheads
-  * Spread laundry loads throughout the week
-  * Run dishwashers and washing machines only when full
-  * Consider installing a water softener that recharges based on water usage rather than a timer
+- Fix leaky faucets and running toilets promptly
+- Install high-efficiency toilets, faucets, and showerheads
+- Spread laundry loads throughout the week
+- Run dishwashers and washing machines only when full
+- Consider installing a water softener that recharges based on water usage rather than a timer
 
 ## Proper Waste Disposal
 
 What goes down your drains affects your septic system. Avoid flushing or draining:
 
-  * Cooking grease or oil
-  * "Flushable" wipes (which don't break down properly)
-  * Paper towels, feminine hygiene products, or diapers
-  * Coffee grounds, eggshells, or other food waste
-  * Household chemicals, paints, or solvents
-  * Pharmaceuticals
+- Cooking grease or oil
+- "Flushable" wipes (which don't break down properly)
+- Paper towels, feminine hygiene products, or diapers
+- Coffee grounds, eggshells, or other food waste
+- Household chemicals, paints, or solvents
+- Pharmaceuticals
 
 ## Drainfield Protection
 
 To maintain a healthy drainfield:
 
-  * Never park or drive over the drainfield
-  * Don't plant trees or shrubs with aggressive roots near the drainfield
-  * Direct roof drains, sump pumps, and other rainwater drainage away from the drainfield
-  * Maintain a grass cover over the drainfield to prevent erosion
+- Never park or drive over the drainfield
+- Don't plant trees or shrubs with aggressive roots near the drainfield
+- Direct roof drains, sump pumps, and other rainwater drainage away from the drainfield
+- Maintain a grass cover over the drainfield to prevent erosion
 
 ## Warning Signs of Problems
 
 Contact us immediately if you notice:
 
-  * Slow drains or backups
-  * Gurgling sounds in the plumbing
-  * Sewage odors inside or outside
-  * Wet, spongy ground around the septic tank or drainfield
-  * Lush, green grass over the drainfield when the rest of the lawn is dry
-  * High levels of nitrates or bacteria in well water tests
+- Slow drains or backups
+- Gurgling sounds in the plumbing
+- Sewage odors inside or outside
+- Wet, spongy ground around the septic tank or drainfield
+- Lush, green grass over the drainfield when the rest of the lawn is dry
+- High levels of nitrates or bacteria in well water tests
 
 ## Professional Inspections
 
 We recommend professional inspections:
 
-  * Every 1-3 years for systems with mechanical components or pumps
-  * Every 3-5 years for conventional systems during pumping
+- Every 1-3 years for systems with mechanical components or pumps
+- Every 3-5 years for conventional systems during pumping
 
 Our technicians use specialized equipment to thoroughly assess all components of your septic system and can identify potential issues before they become serious problems.
 
@@ -130,7 +130,7 @@ Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County with 
 
 ### Septic System Maintenance Made Easy in Santa Cruz County
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-star rating from satisfied customers throughout Santa Cruz County, CA
+★★★★★ 5-star rating from satisfied customers throughout Santa Cruz County, CA
 
 "Wade's Plumbing & Septic made the entire process stress-free. Highly recommend!" - Sarah, Capitola
 

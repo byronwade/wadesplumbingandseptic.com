@@ -1,7 +1,7 @@
 ---
 title: 'Customer Testimonials: Trusted Plumbing in Santa Cruz County'
 description: At Wade's Plumbing & Septic, we proudly serve the vibrant communities
-  of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley…
+ of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley…
 order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
@@ -12,7 +12,7 @@ eyebrow: Real People, Real Results
 
 At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is committed to providing top-notch plumbing and septic services to both residential and commercial clients throughout the region.
 
-Our contractors are licensed under C-42 for California and state license for Georgia, ensuring the highest standards of service and expertise.
+Our contractors are licensed under C-42 for California and C-42 license for California, ensuring the highest standards of service and expertise.
 
 Office Hours: Monday to Friday, 9am to 5pm
 

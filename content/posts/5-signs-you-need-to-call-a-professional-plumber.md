@@ -1,8 +1,8 @@
 ---
 title: Top 5 Septic Warning Signs in Santa Cruz County
 description: Learn to recognize the warning signs that indicate it's time to call
-  a professional plumber instead of attempting DIY repairs. From persistent low water
-  pressure to multiple clogged drains, these symptoms require expert attention.
+ a professional plumber instead of attempting DIY repairs. From persistent low water
+ pressure to multiple clogged drains, these symptoms require expert attention.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -56,7 +56,7 @@ Get expert septic service from Wade's Plumbing & Septic, your trusted local prof
 
 At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz County, including Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is dedicated to providing top-notch septic and plumbing services to keep your systems running smoothly.
 
-We hold a C-42 license for California and a state license for Georgia, ensuring that our work meets the highest standards of quality and safety.
+We holds a C-42 contractor license for California, ensuring that our work meets the highest standards of quality and safety.
 
 Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available to assist you with any plumbing or septic emergencies.
 

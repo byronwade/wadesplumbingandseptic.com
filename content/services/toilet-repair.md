@@ -1,8 +1,8 @@
 ---
 title: Reliable Septic Toilet Repair in Santa Cruz County
 description: When it comes to reliable toilet repair services in Santa Cruz County,
-  Wade's Plumbing & Septic is your go-to choice. Our expert technicians address a
-  wide range of toilet issues, ensuring your bathroom fixtures operate efficiently…
+ Wade's Plumbing & Septic is your go-to choice. Our expert technicians address a
+ wide range of toilet issues, ensuring your bathroom fixtures operate efficiently…
 category: Plumbing
 order: 37
 image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
@@ -16,10 +16,10 @@ When it comes to reliable toilet repair services in Santa Cruz County, Wade's Pl
 
 Identifying the signs of a faulty toilet early can save you from costly repairs down the line. Here are some common indicators that you might need professional toilet repair:
 
-  * Persistent leaks around the base of the toilet
-  * Constantly running water or weak flushes
-  * Unusual noises like hissing or gurgling
-  * Frequent clogs or slow drainage
+- Persistent leaks around the base of the toilet
+- Constantly running water or weak flushes
+- Unusual noises like hissing or gurgling
+- Frequent clogs or slow drainage
 
 If you notice any of these issues, it may be time to contact our team for a comprehensive inspection and repair.
 
@@ -45,17 +45,17 @@ Our team is committed to providing competitive pricing without compromising on q
 
 Regular maintenance is key to preventing future toilet issues. Here are a few tips to keep your toilets in top condition:
 
-  * Schedule routine inspections to catch problems early
-  * Avoid flushing non-flushable items to prevent clogs
-  * Use water softeners to reduce mineral buildup
+- Schedule routine inspections to catch problems early
+- Avoid flushing non-flushable items to prevent clogs
+- Use water softeners to reduce mineral buildup
 
 By following these simple steps, you can extend the lifespan of your toilet and reduce the need for repairs.
 
 ## Frequently Asked Questions
 
-  * **How long does a toilet repair take?** Most minor repairs are completed within a few hours.
-  * **What if my toilet keeps clogging?** Frequent clogs may indicate a larger issue, such as problems with the [drain line](/service-offerings/drain-cleaning/) or septic system.
-  * **Can I fix a leaky toilet myself?** While some minor fixes can be DIY, it's best to consult a professional to avoid further damage.
+- **How long does a toilet repair take?** Most minor repairs are completed within a few hours.
+- **What if my toilet keeps clogging?** Frequent clogs may indicate a larger issue, such as problems with the [drain line](/service-offerings/drain-cleaning/) or septic system.
+- **Can I fix a leaky toilet myself?** While some minor fixes can be DIY, it's best to consult a professional to avoid further damage.
 
 Choosing Wade's Plumbing & Septic for your toilet repair needs means choosing experience, trust, and a commitment to quality. Our licensed professionals are ready to assist homeowners in Santa Cruz County with all their plumbing concerns. Whether you're dealing with a simple leak or need a comprehensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/), we're here to help. Contact us today and let us restore your bathroom's functionality with our top-notch services.
 
@@ -63,13 +63,13 @@ Choosing Wade's Plumbing & Septic for your toilet repair needs means choosing ex
 
 At Wade's Plumbing & Septic, we proudly offer expert toilet repair for septic systems throughout Santa Cruz County, California. Our dedicated team is ready to assist residents in the following communities:
 
-  * Santa Cruz
-  * Watsonville
-  * Scotts Valley
-  * Capitola
-  * Aptos
-  * Felton
-  * Boulder Creek
+- Santa Cruz
+- Watsonville
+- Scotts Valley
+- Capitola
+- Aptos
+- Felton
+- Boulder Creek
 
 We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday through Friday, from 9am to 5pm, and we offer a 24/7 emergency line to handle urgent plumbing and septic needs.
 

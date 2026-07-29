@@ -1,10 +1,10 @@
 ---
 title: Install a Toilet Flange Easily in Santa Cruz County, CA
 description: This guide from Wade’s Plumbing & Septic simplifies toilet flange installation,
-  covering preparation, required tools, and step-by-step instructions. It emphasizes
-  the importance of a proper seal in preventing leaks and advises when to call professionals
-  for assistance. The guide aims to save time and money for homeowners tackling plumbing
-  tasks.
+ covering preparation, required tools, and step-by-step instructions. It emphasizes
+ the importance of a proper seal in preventing leaks and advises when to call professionals
+ for assistance. The guide aims to save time and money for homeowners tackling plumbing
+ tasks.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -36,69 +36,69 @@ A toilet flange (also called a closet flange) connects your toilet to the drainp
 
 Before you begin, make sure you have the following on hand:
 
-  * New toilet flange
-  * Adjustable wrench
-  * Wax ring or bowl seal
-  * Flathead and Phillips screwdrivers
-  * Closet bolts (T-bolts)
-  * Hammer
-  * Chisel or pry bar
-  * Putty knife
-  * Old rags or towels
-  * Hacksaw (for rusty bolts)
-  * PVC cement (for PVC systems)
-  * Adhesive remover (if needed)
-  * Dremel tool (for cutting stuck flanges)
+- New toilet flange
+- Adjustable wrench
+- Wax ring or bowl seal
+- Flathead and Phillips screwdrivers
+- Closet bolts (T-bolts)
+- Hammer
+- Chisel or pry bar
+- Putty knife
+- Old rags or towels
+- Hacksaw (for rusty bolts)
+- PVC cement (for PVC systems)
+- Adhesive remover (if needed)
+- Dremel tool (for cutting stuck flanges)
 
 ✅ **Tip:** If you're in Santa Cruz County and something goes wrong during installation, call Wade’s Plumbing & Septic. We're available for emergency repairs.
 
 ### 2\. Prepare the Work Area
 
-  * Turn off the water supply to the toilet.
-  * Flush the toilet and soak up remaining water with rags.
-  * Disconnect the water supply line.
-  * Remove bolts from the tank and carefully lift it off.
-  * Unscrew the bolts holding the toilet base to the floor.
-  * Gently rock the toilet to break the wax seal and lift the bowl straight up.
-  * Set it aside on a towel or soft surface.
+- Turn off the water supply to the toilet.
+- Flush the toilet and soak up remaining water with rags.
+- Disconnect the water supply line.
+- Remove bolts from the tank and carefully lift it off.
+- Unscrew the bolts holding the toilet base to the floor.
+- Gently rock the toilet to break the wax seal and lift the bowl straight up.
+- Set it aside on a towel or soft surface.
 
 ### 3\. Remove the Old Wax Ring and Clean the Area
 
-  * Scrape away the wax residue from both the base of the toilet and the floor flange using a putty knife.
-  * Inspect the flange and drain pipe for cracks or damage.
-  * Plug the pipe with a rag to block sewer gases.
+- Scrape away the wax residue from both the base of the toilet and the floor flange using a putty knife.
+- Inspect the flange and drain pipe for cracks or damage.
+- Plug the pipe with a rag to block sewer gases.
 
 ### 4\. Take Out the Old Toilet Flange
 
-  * Unscrew the old flange from the floor.
-  * If it’s stuck, try using a wrench or apply adhesive remover.
-  * Use a hammer and chisel or a Dremel tool if necessary.
-  * Clear debris and prepare the area for the new flange.
+- Unscrew the old flange from the floor.
+- If it’s stuck, try using a wrench or apply adhesive remover.
+- Use a hammer and chisel or a Dremel tool if necessary.
+- Clear debris and prepare the area for the new flange.
 
 ### 5\. Insert the T-Bolts into the New Flange
 
-  * Place the T-bolts into the slots of the new flange.
-  * Ensure the bolts are aligned equally from the back wall so the toilet sits straight.
+- Place the T-bolts into the slots of the new flange.
+- Ensure the bolts are aligned equally from the back wall so the toilet sits straight.
 
 ### 6\. Position the New Toilet Flange
 
-  * Press the flange into the drain opening.
-  * The top of the flange should sit **¼ inch above** the finished floor—not flush.
-  * Ensure the bolts are straight and evenly spaced.
+- Press the flange into the drain opening.
+- The top of the flange should sit **¼ inch above** the finished floor—not flush.
+- Ensure the bolts are straight and evenly spaced.
 
 ### 7\. Secure the Flange to the Floor
 
-  * Use screws or bolts to attach the flange securely.
-  * Make sure the fasteners don’t protrude above the top of the flange.
+- Use screws or bolts to attach the flange securely.
+- Make sure the fasteners don’t protrude above the top of the flange.
 
 ### 8\. Install the Wax Ring and Reconnect the Toilet
 
-  * Press the wax ring onto the flange.
-  * Carefully lower the toilet bowl onto the bolts.
-  * Push down firmly to compress the seal.
-  * Tighten the nuts evenly on both sides.
-  * Reconnect the water supply and tank.
-  * Turn on the water and test for leaks.
+- Press the wax ring onto the flange.
+- Carefully lower the toilet bowl onto the bolts.
+- Push down firmly to compress the seal.
+- Tighten the nuts evenly on both sides.
+- Reconnect the water supply and tank.
+- Turn on the water and test for leaks.
 
 ## When to Call a Professional Plumber
 
@@ -106,28 +106,28 @@ Even the most confident DIYers can run into unexpected issues. If you notice cra
 
 We provide expert toilet flange installation and toilet repairs throughout:
 
-  * Santa Cruz
-  * Capitola
-  * Soquel
-  * Aptos
-  * Watsonville
-  * Surrounding areas
+- Santa Cruz
+- Capitola
+- Soquel
+- Aptos
+- Watsonville
+- Surrounding areas
 
-📞 **Call now: (831) 225-4344**  
+📞 **Call now: (831) 225-4344** 
 We don’t offer online booking—just fast, friendly phone service!
 
 ## Toilet Flange FAQs
 
-**Should a toilet flange sit on top of the finished floor?**  
+**Should a toilet flange sit on top of the finished floor?** 
 Yes, the flange should be installed approximately ¼ inch above the finished flooring to avoid leaks.
 
-**Do I put the wax ring on the flange or the toilet?**  
+**Do I put the wax ring on the flange or the toilet?** 
 Always install the wax ring on the flange before setting the toilet.
 
-**Can I install a toilet flange myself?**  
+**Can I install a toilet flange myself?** 
 Yes, if the pipe and subfloor are in good condition and you have the proper tools. Otherwise, contact a licensed plumber.
 
-**What if the old flange is glued in?**  
+**What if the old flange is glued in?** 
 A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to avoid damaging the pipe.
 
 ## Need Help With Toilet Repairs?
@@ -136,7 +136,7 @@ A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to
 
 Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
 
-📞 **(831) 225-4344**  
+📞 **(831) 225-4344** 
 We’re here to help—fast, reliable, and local plumbing service in Santa Cruz County!
 
 Santa Cruz County Septic Experts
@@ -149,9 +149,9 @@ Experience hassle-free toilet flange installation with our expert team in Santa 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, California area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our expert team is ready to assist you with toilet flange installation and other plumbing needs.
 
-Our contractors are licensed with a C-42 license for California and a state license for Georgia, ensuring you receive professional and reliable service.
+Our contractors are licensed with a C-42 license for California, ensuring you receive professional and reliable service.
 
-Office Hours: MondayÃ¢â‚¬â€œFriday, 9amÃ¢â‚¬â€œ5pm
+Office Hours: Monday–Friday, 9am–5pm
 
 Emergency Line: Available
 
@@ -177,7 +177,7 @@ Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, known f
 
 ### What Our Customers Say
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-Star Rating
+★★★★★ 5-Star Rating
 
 "Wade's Plumbing & Septic made installing our toilet flange a breeze! Highly recommend their services." - Sarah, Santa Cruz
 
@@ -189,6 +189,6 @@ Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available 7 AM - 7 PM, Monday through Saturday
 
-## Skip the DIY Ã¢â‚¬â€ Get It Done Right
+## Skip the DIY — Get It Done Right
 
 While installing a toilet flange might seem straightforward, it can quickly become complex without the right expertise. Trust Wade's Plumbing & Septic in Santa Cruz County, CA, to handle your plumbing needs with precision and care.

@@ -1,8 +1,8 @@
 ---
 title: 'Safe Water Assurance: Backflow Testing in Santa Cruz County'
 description: Backflow prevention testing is a crucial service to ensure the safety
-  and purity of your drinking water. At Wade's Plumbing & Septic, we provide comprehensive
-  testing services to safeguard your water system from contamination. Our certified…
+ and purity of your drinking water. At Wade's Plumbing & Septic, we provide comprehensive
+ testing services to safeguard your water system from contamination. Our certified…
 category: Plumbing
 order: 30
 image: /images/wordpress/industrial-building-facade-with-large-machinery-components-and-pipes-visible-314393.webp
@@ -20,11 +20,11 @@ Backflow occurs when water flows in the reverse direction, potentially introduci
 
 Several indicators suggest it might be time to schedule a backflow prevention test:
 
-  * Unusual taste or odor in your water
-  * Discoloration of water
-  * Decrease in water pressure
-  * Visible debris or particles in your water
-  * Recent plumbing work or changes in water pressure
+- Unusual taste or odor in your water
+- Discoloration of water
+- Decrease in water pressure
+- Visible debris or particles in your water
+- Recent plumbing work or changes in water pressure
 
 ### Causes of Backflow Issues
 
@@ -34,10 +34,10 @@ Backflow can be caused by backpressure or backsiphonage. Backpressure occurs whe
 
 At Wade's Plumbing & Septic, our backflow prevention testing process is thorough and efficient. Our technicians will:
 
-  * Inspect and assess your current backflow prevention devices
-  * Perform standardized tests to ensure functionality
-  * Provide detailed documentation of test results
-  * Offer recommendations for repairs or replacements if necessary
+- Inspect and assess your current backflow prevention devices
+- Perform standardized tests to ensure functionality
+- Provide detailed documentation of test results
+- Offer recommendations for repairs or replacements if necessary
 
 ### Timeline and Cost Factors
 
