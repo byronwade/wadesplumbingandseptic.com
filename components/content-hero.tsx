@@ -28,7 +28,7 @@ export function ContentHero({
 			{image ? (
 				<>
 					<Image
-						alt={imageAlt ?? ""}
+						alt={imageAlt?.trim() || title}
 						className="object-cover opacity-40"
 						fill
 						priority

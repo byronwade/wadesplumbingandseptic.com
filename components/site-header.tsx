@@ -28,7 +28,7 @@ export function SiteHeader() {
 					prefetch
 				>
 					<Image
-						alt=""
+						alt="Wade's Plumbing & Septic logo"
 						className="size-10 shrink-0 rounded-md sm:size-11"
 						height={44}
 						src="/images/brand/wades-mark-sm.webp"

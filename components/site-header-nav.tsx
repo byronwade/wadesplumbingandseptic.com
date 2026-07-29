@@ -196,7 +196,7 @@ export function SiteHeaderNav() {
 						<SheetHeader className="shadow-[inset_0_-1px_0_0_var(--border)]">
 							<div className="flex items-center gap-3">
 								<Image
-									alt=""
+									alt="Wade's Plumbing & Septic logo"
 									className="size-10 rounded-md"
 									height={40}
 									src="/images/brand/wades-mark-sm.webp"

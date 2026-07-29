@@ -4,13 +4,7 @@ import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
-function MarkdownImage({
-	src,
-	alt,
-}: {
-	src?: string
-	alt?: string
-}) {
+function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	if (!src) return null
 
 	const isLocal = src.startsWith("/")
@@ -31,7 +25,7 @@ function MarkdownImage({
 	return (
 		<figure className="bg-muted my-8 overflow-hidden rounded-lg">
 			<Image
-				alt={alt ?? ""}
+				alt={alt?.trim() || "Wade's Plumbing & Septic project photo"}
 				className="h-auto w-full object-cover"
 				height={900}
 				sizes="(min-width: 1024px) 48rem, 100vw"
@@ -64,7 +58,10 @@ export function MarkdownContent({ content }: { content: string }) {
 						)
 					},
 					img: ({ src, alt }) => (
-						<MarkdownImage alt={alt} src={typeof src === "string" ? src : undefined} />
+						<MarkdownImage
+							alt={alt}
+							src={typeof src === "string" ? src : undefined}
+						/>
 					),
 				}}
 			>
