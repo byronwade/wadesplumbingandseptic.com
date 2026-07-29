@@ -14,8 +14,8 @@ tags:
 - plumbing tips
 - prevent water damage
 - california plumbing services
-image: /images/work/precision-valve-installation.webp
-imageAlt: Professional plumbing valve and leak repair
+image: /images/wordpress/img-1011.webp
+imageAlt: "Detect Hidden Water Leaks in Santa Cruz County Homes"
 ---
 
 Water leaks are one of the most damaging and costly problems a homeowner can face. According to national studies, the average home wastes up to 180 gallons of water per week—adding up to more than 9,000 gallons of water lost per year due to undetected leaks. These leaks can lead to high water bills, structural damage, mold growth, and expensive repairs.

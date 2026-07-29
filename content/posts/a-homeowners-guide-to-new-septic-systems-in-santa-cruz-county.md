@@ -13,8 +13,8 @@ tags:
 - septic technology upgrades
 - santa cruz septic guide
 - septic system changes
-image: /images/work/engineered-septic-hero.webp
-imageAlt: Advanced septic system installation
+image: /images/wordpress/image-1.webp
+imageAlt: "Discover Advanced Septic Systems in Santa Cruz County"
 featured: true
 ---
 

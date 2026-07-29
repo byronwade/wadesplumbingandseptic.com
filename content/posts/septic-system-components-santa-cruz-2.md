@@ -11,8 +11,8 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic system components septic service
-image: /images/work/precision-valve-installation.webp
-imageAlt: Septic System Components Septic Service Santa Cruz Guide
+image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1-4.webp
+imageAlt: "Santa Cruz County Septic System Components Guide"
 ---
 
 In This Guide4 min read

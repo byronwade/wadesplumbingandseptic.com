@@ -13,8 +13,8 @@ tags:
 - septic tank maintenance
 - home plumbing tips
 - septic tank lifespan
-image: /images/services/septic-pumping-illustration.webp
-imageAlt: Septic pumping and maintenance illustration
+image: /images/wordpress/imagejpeg-0-1.webp
+imageAlt: "Maximize Septic Tank Lifespan in Santa Cruz County Homes"
 ---
 
 Your septic tank is one of the most critical components of your home’s plumbing system. When maintained properly, it works quietly in the background, safely processing waste and protecting your property from backups and environmental hazards. But when neglected, it can lead to foul odors, drainage issues, and costly repairs.

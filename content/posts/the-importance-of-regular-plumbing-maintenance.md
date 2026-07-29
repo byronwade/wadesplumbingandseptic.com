@@ -14,8 +14,8 @@ tags:
 - water heater efficiency
 - plumbing inspection
 - plumbing repairs
-image: /images/work/precision-valve-installation.webp
-imageAlt: The Importance of Regular Plumbing Maintenance
+image: /images/wordpress/img-0503.webp
+imageAlt: "Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County"
 ---
 
 Maintaining your home’s plumbing system is one of the smartest ways to avoid unexpected issues and keep everything running smoothly. From leaks and clogs to water heater inefficiencies, regular plumbing maintenance helps prevent costly repairs, protect your property from water damage, and extend the life of your plumbing system.

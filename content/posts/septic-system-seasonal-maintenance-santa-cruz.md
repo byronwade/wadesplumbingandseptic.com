@@ -10,8 +10,8 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic maintenance Santa Cruz
-image: /images/work/precision-valve-installation.webp
-imageAlt: Optimize Septic Maintenance Santa Cruz for System Health
+image: /images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp
+imageAlt: "Optimize Septic System Health with Seasonal Maintenance in Santa Cruz"
 ---
 
 ## Quick Answer for Santa Cruz Homeowners

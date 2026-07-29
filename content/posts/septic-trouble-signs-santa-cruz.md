@@ -10,8 +10,8 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic warning signs septic service
-image: /images/work/precision-valve-installation.webp
-imageAlt: Septic Warning Signs Septic Service for Santa Cruz Homes
+image: /images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp
+imageAlt: "Early Septic Detection for Santa Cruz County Homes"
 ---
 
 In This Guide4 min read

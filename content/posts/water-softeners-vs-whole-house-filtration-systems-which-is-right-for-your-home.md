@@ -14,8 +14,8 @@ tags:
 - whole-house filtration
 - hard water solutions
 - Wade's Plumbing services
-image: /images/work/water-heater-installation.webp
-imageAlt: Clean mechanical-room plumbing installation
+image: /images/wordpress/img-1206.webp
+imageAlt: "Choose the Best Home Water System in Santa Cruz County"
 ---
 
 If your tap water smells off, tastes strange, or leaves behind stains, it may be time to install a filtration solution. In Santa Cruz County, hard water and other water quality issues are common. That’s why many homeowners choose to install either a whole-house filtration system, a water softener, or both. But which is the right fit for your home?

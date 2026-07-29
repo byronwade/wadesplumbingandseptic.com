@@ -13,8 +13,8 @@ tags:
 - home plumbing solutions
 - cost-effective plumbing
 - hot water issues
-image: /images/work/precision-valve-installation.webp
-imageAlt: Should You Repair or Replace Your Water Heater?
+image: /images/wordpress/img-1295-1.webp
+imageAlt: "Top Water Heater Services for Santa Cruz County Homes"
 ---
 
 A broken water heater can quickly disrupt your home life—no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
