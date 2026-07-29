@@ -115,12 +115,12 @@ export default async function ServiceCategoryPage({
 			/>
 			<Suspense
 				fallback={
-					<section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+					<section className="container-shell section-y">
 						Loading services…
 					</section>
 				}
 			>
-				<section className="mx-auto grid max-w-7xl gap-5 px-4 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-20">
+				<section className="container-shell section-y grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 					{services.map((service) => (
 						<ServiceCard key={service.slug} service={service} />
 					))}

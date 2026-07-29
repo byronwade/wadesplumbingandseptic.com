@@ -32,7 +32,7 @@ async function TipsGrid() {
 	const posts = await getCollection("posts")
 
 	return (
-		<section className="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:py-20">
+		<section className="container-shell section-y">
 			<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{posts.map((post) => (
 					<Card
@@ -40,7 +40,7 @@ async function TipsGrid() {
 						key={post.slug}
 					>
 						<Link
-							className="relative block aspect-[16/9] overflow-hidden bg-neutral-100"
+							className="bg-muted relative block aspect-[16/9] overflow-hidden"
 							href={`/${post.slug}` as Route}
 							prefetch
 							tabIndex={-1}
@@ -57,7 +57,9 @@ async function TipsGrid() {
 							/>
 						</Link>
 						<CardHeader>
-							<Badge className="w-fit">{post.category ?? "Expert Tips"}</Badge>
+							<Badge className="w-fit" tone="muted">
+								{post.category ?? "Expert Tips"}
+							</Badge>
 							<CardTitle className="group-hover:text-primary mt-3">
 								<Link href={`/${post.slug}` as Route} prefetch>
 									{post.title}
@@ -73,7 +75,7 @@ async function TipsGrid() {
 								</p>
 							) : null}
 							<Link
-								className="text-primary inline-flex items-center gap-2 text-sm font-black"
+								className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 								href={`/${post.slug}` as Route}
 								prefetch
 							>
@@ -101,7 +103,7 @@ export default function ExpertTipsPage() {
 
 			<Suspense
 				fallback={
-					<section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+					<section className="container-shell section-y">
 						Loading guides…
 					</section>
 				}

@@ -22,7 +22,7 @@ async function ServiceDirectory() {
 	const categories = ["Septic", "Plumbing", "Commercial"] as const
 
 	return (
-		<div className="mx-auto max-w-7xl space-y-16 px-4 py-16 md:px-8 lg:py-20">
+		<div className="container-shell section-y space-y-16">
 			{categories.map((category) => {
 				const categoryServices = services.filter(
 					(service) => service.category === category,
@@ -32,12 +32,12 @@ async function ServiceDirectory() {
 
 				return (
 					<section key={category}>
-						<div className="mb-7 flex items-end justify-between gap-5 border-b pb-5">
+						<div className="border-border mb-7 flex items-end justify-between gap-5 border-b pb-5">
 							<div>
-								<p className="text-primary text-sm font-black tracking-wider uppercase">
+								<p className="type-eyebrow">
 									{categoryServices.length} services
 								</p>
-								<h2 className="mt-1 text-3xl font-black tracking-tight">
+								<h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">
 									{category}
 								</h2>
 							</div>
@@ -67,9 +67,7 @@ export default function ServicesPage() {
 
 			<Suspense
 				fallback={
-					<div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
-						Loading services…
-					</div>
+					<div className="container-shell section-y">Loading services…</div>
 				}
 			>
 				<ServiceDirectory />

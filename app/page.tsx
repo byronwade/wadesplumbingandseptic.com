@@ -37,12 +37,6 @@ export const metadata: Metadata = buildPageMetadata({
 	image: "/images/locations/santa-cruz-plumber.webp",
 })
 
-const trustItems = [
-	"Licensed & insured",
-	"Flat-rate pricing",
-	"Satisfaction guaranteed",
-]
-
 const serviceGroups = [
 	{
 		title: "Residential Plumbing",
@@ -144,35 +138,35 @@ const faqs = [
 export default function HomePage() {
 	return (
 		<main id="main-content">
-			<section className="relative overflow-hidden bg-[#111] text-white">
-				<div className="bg-primary/12 pointer-events-none absolute -top-48 -right-40 size-[38rem] rounded-full blur-3xl" />
-				<div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 md:px-8 lg:grid-cols-2 lg:gap-16 lg:py-24">
-					<div className="relative z-10">
-						<Badge className="border-primary-bright/40 bg-primary-bright/15 text-primary-bright mb-6">
-							<span className="bg-primary-bright mr-2 size-1.5 rounded-full" />
-							{siteConfig.serviceArea}
-						</Badge>
-						<h1 className="text-5xl leading-[0.95] font-black tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-							Honest
-							<br />
-							Plumbing
-							<br />
-							<span className="text-primary-bright">&amp; Septic</span>
-						</h1>
-						<p className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-200">
-							No sales pressure. No upselling. Quality workmanship from local
-							professionals you can count on—with clear pricing before work
-							begins.
+			<section className="surface-dark relative min-h-[min(92vh,52rem)] overflow-hidden">
+				<Image
+					alt="Three-tank engineered septic system installed on a hillside property in Santa Cruz County"
+					className="object-cover object-center"
+					fill
+					fetchPriority="high"
+					priority
+					quality={70}
+					sizes="100vw"
+					src="/images/work/engineered-septic-hero.webp"
+				/>
+				<div className="from-ink via-ink/88 to-ink/45 absolute inset-0 bg-linear-to-r" />
+				<div className="from-ink/80 to-ink/35 absolute inset-0 bg-linear-to-t via-transparent" />
+
+				<div className="container-shell relative flex min-h-[min(92vh,52rem)] flex-col justify-end pt-28 pb-16 lg:justify-center lg:pt-20 lg:pb-24">
+					<div className="max-w-3xl">
+						<p className="type-eyebrow motion-fade text-primary-bright">
+							Wade&apos;s Plumbing &amp; Septic
 						</p>
-						<div className="mt-7 grid gap-3 text-sm text-neutral-200 sm:grid-cols-3">
-							{trustItems.map((item) => (
-								<span className="flex items-center gap-2" key={item}>
-									<Check className="text-primary-bright size-4 shrink-0" />
-									{item}
-								</span>
-							))}
-						</div>
-						<div className="mt-8 flex flex-col gap-3 sm:flex-row">
+						<h1 className="type-display motion-rise mt-5 text-white">
+							Honest plumbing
+							<br />
+							<span className="text-primary-bright">&amp; septic</span>
+						</h1>
+						<p className="type-lead motion-rise motion-delay-1 mt-6 max-w-xl">
+							No sales pressure. No upselling. Clear pricing before work begins
+							from local licensed professionals.
+						</p>
+						<div className="motion-rise motion-delay-2 mt-8 flex flex-col gap-3 sm:flex-row">
 							<a
 								className={cn(buttonVariants({ size: "xl" }), "gap-2.5")}
 								href={siteConfig.phoneHref}
@@ -192,63 +186,12 @@ export default function HomePage() {
 								<ArrowRight />
 							</Link>
 						</div>
-						<div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-neutral-200">
-							<span className="text-amber-300" aria-label="5 stars">
-								★★★★★
-							</span>
-							<span>4.9 local reputation · Family owned since 2021</span>
-						</div>
-					</div>
-
-					<div className="relative hidden h-[32.5rem] items-end gap-4 lg:flex">
-						<div className="relative h-full flex-1 overflow-hidden rounded-2xl shadow-2xl shadow-black/40">
-							<Image
-								alt="Three-tank engineered septic system installed on a hillside property in Santa Cruz County"
-								className="object-cover"
-								fill
-								fetchPriority="high"
-								priority
-								quality={65}
-								sizes="(min-width: 1024px) 38vw, 1px"
-								src="/images/work/engineered-septic-hero.webp"
-							/>
-							<div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
-						</div>
-						<div className="flex w-44 shrink-0 flex-col gap-4">
-							<div className="relative h-56 overflow-hidden rounded-2xl shadow-xl">
-								<Image
-									alt="Tankless water heater installation"
-									className="object-cover"
-									fill
-									quality={75}
-									sizes="176px"
-									src="/images/work/tankless-water-heater-installation.webp"
-								/>
-							</div>
-							<div className="relative h-56 overflow-hidden rounded-2xl shadow-xl">
-								<Image
-									alt="Precision plumbing valve installation"
-									className="object-cover"
-									fill
-									quality={75}
-									sizes="176px"
-									src="/images/work/precision-valve-installation.webp"
-								/>
-							</div>
-						</div>
-						<div className="absolute top-6 left-6 rounded-xl border border-white/20 bg-black/30 px-4 py-3 backdrop-blur-md">
-							<p className="text-xs text-neutral-300">Serving</p>
-							<p className="text-sm font-black">California + Georgia</p>
-							<p className="text-primary-bright text-xs font-bold">
-								Santa Cruz · Santa Clara · Pickens
-							</p>
-						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="border-b bg-white">
-				<div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 text-sm font-bold text-neutral-600 md:grid-cols-4 md:px-8">
+			<section className="border-border bg-card border-b">
+				<div className="container-shell text-muted-foreground grid grid-cols-2 gap-4 py-5 text-sm font-bold md:grid-cols-4">
 					{[
 						"Family Owned & Operated",
 						"Licensed & Insured",
@@ -263,14 +206,14 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="py-20">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
+			<section className="section-y">
+				<div className="container-shell">
 					<div className="mx-auto max-w-3xl text-center">
 						<Badge>Our Core Specialty</Badge>
-						<h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">
-							Engineered <span className="text-primary">Septic Systems</span>
+						<h2 className="type-title mt-5">
+							Engineered <span className="text-primary">septic systems</span>
 						</h2>
-						<p className="text-muted-foreground mt-5 text-lg leading-relaxed">
+						<p className="type-lead mt-5">
 							When a standard system will not work—steep slopes, difficult soil,
 							tight lots, or sensitive environments—that is exactly where we
 							excel.
@@ -301,15 +244,17 @@ export default function HomePage() {
 									text: "We tell you what can work before money changes hands.",
 								},
 							].map(({ icon: Icon, title, text }) => (
-								<Card className="bg-neutral-50 shadow-none" key={title}>
-									<CardHeader>
-										<span className="bg-primary/10 text-primary grid size-10 place-items-center rounded-xl">
-											<Icon className="size-5" />
-										</span>
-										<CardTitle className="mt-3 text-lg">{title}</CardTitle>
-										<CardDescription>{text}</CardDescription>
-									</CardHeader>
-								</Card>
+								<div className="surface-panel p-5" key={title}>
+									<span className="bg-accent text-accent-foreground grid size-10 place-items-center rounded-md">
+										<Icon className="size-5" />
+									</span>
+									<h3 className="mt-4 text-lg font-extrabold tracking-[-0.02em]">
+										{title}
+									</h3>
+									<p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+										{text}
+									</p>
+								</div>
 							))}
 							<a
 								className={cn(
@@ -322,7 +267,7 @@ export default function HomePage() {
 								Call to Schedule — {siteConfig.phone}
 							</a>
 						</div>
-						<div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+						<div className="relative aspect-[4/3] overflow-hidden rounded-lg">
 							<Image
 								alt="Three-tank septic system installation on hillside property"
 								className="object-cover"
@@ -336,17 +281,15 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-y bg-[#111] py-20 text-white">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
+			<section className="surface-dark section-y">
+				<div className="container-shell">
 					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
 						<div className="max-w-2xl">
-							<Badge className="border-primary-bright/40 bg-primary-bright/15 text-primary-bright">
-								Project Gallery
-							</Badge>
-							<h2 className="mt-5 text-4xl font-black tracking-tight">
+							<Badge tone="inverse">Project Gallery</Badge>
+							<h2 className="type-title mt-5 text-white">
 								Real work from the Wade&apos;s team.
 							</h2>
-							<p className="mt-4 text-lg text-neutral-300">
+							<p className="type-lead mt-4">
 								Engineered septic installations, excavation, controls, and
 								finished systems completed on challenging Santa Cruz County
 								properties.
@@ -363,7 +306,7 @@ export default function HomePage() {
 					<div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 						{workGallery.map((image) => (
 							<figure key={image.src}>
-								<div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-900">
+								<div className="bg-panel-elevated relative aspect-[4/5] overflow-hidden rounded-lg">
 									<Image
 										alt={image.alt}
 										className="object-cover"
@@ -373,7 +316,7 @@ export default function HomePage() {
 										src={image.src}
 									/>
 								</div>
-								<figcaption className="mt-3 text-sm font-bold text-neutral-300">
+								<figcaption className="mt-3 text-sm font-bold text-white/65">
 									{image.caption}
 								</figcaption>
 							</figure>
@@ -382,15 +325,15 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="bg-neutral-50 py-20">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
+			<section className="section-y bg-secondary/60">
+				<div className="container-shell">
 					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
 						<div className="max-w-2xl">
 							<Badge>What We Do</Badge>
-							<h2 className="mt-5 text-4xl font-black tracking-tight">
-								Plumbing &amp; Septic Services
+							<h2 className="type-title mt-5">
+								Plumbing &amp; septic services
 							</h2>
-							<p className="text-muted-foreground mt-4 text-lg">
+							<p className="type-lead mt-4">
 								From routine maintenance to complex installations, our licensed
 								team handles it cleanly, honestly, and on time.
 							</p>
@@ -422,7 +365,7 @@ export default function HomePage() {
 									<CardDescription>{group.description}</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<ul className="space-y-2 text-sm text-neutral-600">
+									<ul className="text-muted-foreground space-y-2 text-sm">
 										{group.items.map((item) => (
 											<li className="flex items-center gap-2" key={item}>
 												<Check className="text-primary size-4" />
@@ -437,9 +380,9 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-y bg-white py-12">
-				<div className="mx-auto max-w-7xl px-4 md:px-8">
-					<p className="text-muted-foreground text-center text-xs font-black tracking-[0.18em] uppercase">
+			<section className="border-border bg-card border-y py-12">
+				<div className="container-shell">
+					<p className="text-muted-foreground text-center text-xs font-extrabold tracking-[0.16em] uppercase">
 						Experienced with leading plumbing equipment brands
 					</p>
 					<div className="mt-8 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 lg:grid-cols-5">
@@ -462,14 +405,14 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="py-20">
-				<div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.9fr_1.1fr]">
+			<section className="section-y">
+				<div className="container-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
 					<div>
 						<Badge>Why Choose Wade&apos;s</Badge>
-						<h2 className="mt-5 text-4xl font-black tracking-tight">
+						<h2 className="type-title mt-5">
 							Real people. Honest recommendations.
 						</h2>
-						<p className="text-muted-foreground mt-5 text-lg leading-relaxed">
+						<p className="type-lead mt-5">
 							We are not corporate plumbers trying to hit an upsell quota. We
 							explain the issue, show you practical options, and do quality work
 							at a fair price.
@@ -484,19 +427,19 @@ export default function HomePage() {
 									"Repairs and systems designed to last.",
 								],
 							].map(([title, text]) => (
-								<div className="rounded-xl border p-5" key={title}>
+								<div className="surface-panel p-5" key={title}>
 									<Wrench className="text-primary size-5" />
-									<h3 className="mt-3 font-black">{title}</h3>
+									<h3 className="mt-3 font-extrabold tracking-[-0.02em]">
+										{title}
+									</h3>
 									<p className="text-muted-foreground mt-1 text-sm">{text}</p>
 								</div>
 							))}
 						</div>
 					</div>
 
-					<div className="rounded-3xl bg-[#111] p-7 text-white sm:p-10">
-						<p className="text-primary-bright text-sm font-black tracking-wider uppercase">
-							Real People, Real Results
-						</p>
+					<div className="surface-dark rounded-lg p-7 sm:p-10">
+						<p className="type-eyebrow">Real People, Real Results</p>
 						<div className="mt-7 space-y-6">
 							{[
 								[
@@ -512,9 +455,13 @@ export default function HomePage() {
 									className="border-b border-white/10 pb-6 last:border-0 last:pb-0"
 									key={person}
 								>
-									<div className="text-amber-400">★★★★★</div>
-									<p className="mt-3 text-lg leading-relaxed">“{quote}”</p>
-									<footer className="mt-3 text-sm font-bold text-neutral-400">
+									<div className="text-primary-bright" aria-label="5 stars">
+										★★★★★
+									</div>
+									<p className="mt-3 text-lg leading-relaxed text-white">
+										“{quote}”
+									</p>
+									<footer className="mt-3 text-sm font-bold text-white/50">
 										{person}
 									</footer>
 								</blockquote>
@@ -534,14 +481,14 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-y bg-neutral-50 py-20">
-				<div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.8fr_1.2fr]">
+			<section className="section-y border-border bg-secondary/60 border-y">
+				<div className="container-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
 					<div>
 						<Badge>Frequently Asked Questions</Badge>
-						<h2 className="mt-5 text-4xl font-black tracking-tight">
+						<h2 className="type-title mt-5">
 							Straight answers to common questions.
 						</h2>
-						<p className="text-muted-foreground mt-4">
+						<p className="type-lead mt-4">
 							Do not see your question? Call and talk to someone who understands
 							the work.
 						</p>
