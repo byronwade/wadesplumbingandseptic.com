@@ -141,88 +141,102 @@ export function SiteHeaderNav() {
 				</Button>
 			</div>
 
-			<Sheet>
-				<SheetTrigger asChild>
-					<Button
-						variant="inverse"
-						size="icon"
-						className="lg:hidden"
-						aria-label="Open main menu"
+			<div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+				<Button
+					asChild
+					variant="ghost"
+					size="icon"
+					className="focus-visible:ring-offset-ink text-white hover:bg-white/10 hover:text-white sm:hidden"
+				>
+					<a
+						href={siteConfig.phoneHref}
+						aria-label={`Call ${siteConfig.phone}`}
 					>
-						<Menu aria-hidden="true" />
-					</Button>
-				</SheetTrigger>
-				<SheetContent side="right" className="bg-card">
-					<SheetHeader className="border-border border-b">
-						<div className="flex items-center gap-3">
-							<span className="border-border grid size-10 place-items-center rounded-md border bg-white p-1">
+						<Phone aria-hidden="true" className="size-5" />
+					</a>
+				</Button>
+				<Sheet>
+					<SheetTrigger asChild>
+						<Button
+							variant="ghost"
+							size="icon"
+							className="focus-visible:ring-offset-ink text-white hover:bg-white/10 hover:text-white"
+							aria-label="Open main menu"
+						>
+							<Menu aria-hidden="true" className="size-5" />
+						</Button>
+					</SheetTrigger>
+					<SheetContent side="right" className="bg-card">
+						<SheetHeader className="shadow-[inset_0_-1px_0_0_var(--border)]">
+							<div className="flex items-center gap-3">
 								<Image
 									alt=""
-									height={36}
+									className="size-10 rounded-md"
+									height={40}
 									src="/images/brand/wades-mark-sm.webp"
-									width={36}
+									width={40}
 								/>
-							</span>
-							<div>
-								<SheetTitle>Wade&apos;s Plumbing &amp; Septic</SheetTitle>
-								<SheetDescription>Menu · {siteConfig.hours}</SheetDescription>
+								<div>
+									<SheetTitle>Wade&apos;s Plumbing &amp; Septic</SheetTitle>
+									<SheetDescription>Menu · {siteConfig.hours}</SheetDescription>
+								</div>
 							</div>
-						</div>
-					</SheetHeader>
+						</SheetHeader>
 
-					<nav
-						className="flex-1 overflow-y-auto px-2 py-3"
-						aria-label="Mobile navigation"
-					>
-						<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-							Explore
-						</p>
-						{primaryNavLinks.map((item) => (
-							<MobileNavLink key={item.href} {...item} />
-						))}
-
-						<Separator className="my-3" />
-
-						<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-							Services
-						</p>
-						{serviceNavLinks.map((item) => (
-							<MobileNavLink key={item.href} {...item} />
-						))}
-
-						<Separator className="my-3" />
-
-						<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-							Company
-						</p>
-						{companyNavLinks.map((item) => (
-							<MobileNavLink key={item.href} {...item} />
-						))}
-					</nav>
-
-					<SheetFooter>
-						<a
-							className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
-							href={siteConfig.phoneHref}
+						<nav
+							className="flex-1 overflow-y-auto px-2 py-3"
+							aria-label="Mobile navigation"
 						>
-							<Phone aria-hidden="true" />
-							Call {siteConfig.phone}
-						</a>
-						<SheetClose asChild>
-							<Link
-								className={cn(
-									buttonVariants({ variant: "outline", size: "lg" }),
-									"w-full",
-								)}
-								href={"/contact" as Route}
-								prefetch
+							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
+								Explore
+							</p>
+							{primaryNavLinks.map((item) => (
+								<MobileNavLink key={item.href} {...item} />
+							))}
+
+							<Separator className="my-3" />
+
+							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
+								Services
+							</p>
+							{serviceNavLinks.map((item) => (
+								<MobileNavLink key={item.href} {...item} />
+							))}
+
+							<Separator className="my-3" />
+
+							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
+								Company
+							</p>
+							{companyNavLinks.map((item) => (
+								<MobileNavLink key={item.href} {...item} />
+							))}
+						</nav>
+
+						<SheetFooter>
+							<a
+								className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
+								href={siteConfig.phoneHref}
 							>
-								Get a Free Quote
-							</Link>
-						</SheetClose>
-					</SheetFooter>
-				</SheetContent>
-			</Sheet>
+								<Phone aria-hidden="true" />
+								Call {siteConfig.phone}
+							</a>
+							<SheetClose asChild>
+								<Link
+									className={cn(
+										buttonVariants({ variant: "outline", size: "lg" }),
+										"w-full",
+									)}
+									href={"/contact" as Route}
+									prefetch
+								>
+									Get a Free Quote
+								</Link>
+							</SheetClose>
+						</SheetFooter>
+					</SheetContent>
+				</Sheet>
+			</div>
 		</>
 	)
 }
