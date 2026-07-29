@@ -7,3 +7,5 @@ out/
 *.tsbuildinfo
 .env*
 !.env.example
+!**/.env.example
+ops/self-hosted-runners/.env
