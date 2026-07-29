@@ -81,10 +81,10 @@ function FitServiceAreaBounds() {
 
 		const frame = requestAnimationFrame(() => {
 			map.resize()
-			map.fitBounds(serviceAreaMapBounds, {
+					map.fitBounds(serviceAreaMapBounds, {
 				padding: { top: 56, bottom: 56, left: 48, right: 48 },
 				duration: 0,
-				maxZoom: 10,
+				maxZoom: 11,
 			})
 		})
 
@@ -137,18 +137,18 @@ export function ServiceAreasMap() {
 							closeOnClick={false}
 							focusAfterOpen={false}
 							closeButton
-							className="min-w-52"
+							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
-							<div className="space-y-1.5 p-1">
-								<p className="text-sm font-extrabold tracking-[-0.02em]">
+							<div className="space-y-2.5 pr-6">
+								<p className="text-lg font-extrabold tracking-[-0.03em]">
 									{selected.properties.name}
 								</p>
-								<p className="text-muted-foreground text-xs font-bold">
+								<p className="text-primary text-sm font-extrabold tracking-[-0.01em]">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
-										: "Selected communities"}
+										: "Selected coverage — confirm address"}
 								</p>
-								<p className="text-muted-foreground text-xs leading-relaxed">
+								<p className="text-muted-foreground text-base leading-relaxed">
 									{selected.properties.description}
 								</p>
 							</div>
@@ -157,22 +157,22 @@ export function ServiceAreasMap() {
 				</Map>
 			</div>
 
-			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold">
-				<li className="flex items-center gap-2">
+			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-bold">
+				<li className="flex items-center gap-2.5">
 					<span
 						aria-hidden="true"
-						className={cn("size-3 rounded-sm")}
+						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
 					Santa Cruz County (primary)
 				</li>
-				<li className="flex items-center gap-2">
+				<li className="flex items-center gap-2.5">
 					<span
 						aria-hidden="true"
-						className={cn("size-3 rounded-sm")}
+						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primaryBright }}
 					/>
-					Selected Santa Clara communities
+					Los Gatos &amp; Saratoga (selected)
 				</li>
 			</ul>
 		</div>

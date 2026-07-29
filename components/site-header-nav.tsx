@@ -42,15 +42,15 @@ function ListItem({ href, label, description }: NavLink) {
 		<li>
 			<NavigationMenuLink asChild>
 				<Link
-					className="hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring block rounded-md p-3 transition-colors outline-none focus-visible:ring-2"
+					className="hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring block rounded-md px-4 py-3.5 transition-colors outline-none focus-visible:ring-2"
 					href={href as Route}
 					prefetch
 				>
-					<span className="text-foreground text-sm font-extrabold tracking-[-0.01em]">
+					<span className="text-foreground text-base font-extrabold tracking-[-0.02em]">
 						{label}
 					</span>
 					{description ? (
-						<span className="text-muted-foreground mt-1 block text-sm leading-snug">
+						<span className="text-muted-foreground mt-1.5 block text-sm leading-relaxed">
 							{description}
 						</span>
 					) : null}
@@ -109,7 +109,7 @@ export function SiteHeaderNav() {
 							Services
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
-							<ul className="grid w-[22rem] gap-1 p-3 md:w-[28rem] md:grid-cols-2">
+							<ul className="grid w-[min(40rem,calc(100vw-2rem))] gap-2 p-4 md:w-[40rem] md:grid-cols-2">
 								{serviceNavLinks.map((item) => (
 									<ListItem key={item.href} {...item} />
 								))}
@@ -139,7 +139,7 @@ export function SiteHeaderNav() {
 							Company
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
-							<ul className="grid w-[20rem] gap-1 p-3">
+							<ul className="grid w-[min(26rem,calc(100vw-2rem))] gap-2 p-4 md:w-[26rem]">
 								{companyNavLinks.map((item) => (
 									<ListItem key={item.href} {...item} />
 								))}
