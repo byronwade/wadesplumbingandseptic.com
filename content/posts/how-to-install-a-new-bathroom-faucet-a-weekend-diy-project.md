@@ -1,8 +1,6 @@
 ---
 title: Install Your New Bathroom Faucet in Santa Cruz County, CA
-description: Transform your bathroom with this easy-to-follow guide for replacing
-  an outdated faucet. Learn how to select the right replacement, remove your old fixture,
-  and install a new one properly with basic tools in just a few hours.
+description: Transform your bathroom with this easy-to-follow guide for replacing an outdated faucet. Learn how to select the right replacement, remove your old fixture, and install a new one properly with basic tools in just a few hours.
 category: DIY Projects
 date: '2025-05-11'
 tags:
@@ -22,16 +20,16 @@ Replacing an old or outdated bathroom faucet is a relatively simple DIY project 
 
 ## Tools and Materials You'll Need
 
-  * New bathroom faucet kit
-  * Adjustable wrench
-  * Basin wrench or channel-lock pliers
-  * Bucket or small container
-  * Towels or rags
-  * Plumber's putty or silicone caulk
-  * Teflon tape
-  * Flashlight
-  * Safety glasses
-  * Penetrating oil (like WD-40) for stubborn nuts
+- New bathroom faucet kit
+- Adjustable wrench
+- Basin wrench or channel-lock pliers
+- Bucket or small container
+- Towels or rags
+- Plumber's putty or silicone caulk
+- Teflon tape
+- Flashlight
+- Safety glasses
+- Penetrating oil (like WD-40) for stubborn nuts
 
 ## Before You Begin
 
@@ -95,19 +93,19 @@ Many new faucets come with a matching drain assembly. If yours does:
 
 ## Troubleshooting Common Issues
 
-  * **Leaking from connection points:** Usually requires tightening or reapplying Teflon tape
-  * **Leaking from faucet base:** May need more plumber's putty or tightening of mounting nuts
-  * **Low water pressure:** Check if aerator is clogged or supply valves aren't fully open
-  * **Handles not aligned:** Most handles can be removed and repositioned without affecting function
+- **Leaking from connection points:** Usually requires tightening or reapplying Teflon tape
+- **Leaking from faucet base:** May need more plumber's putty or tightening of mounting nuts
+- **Low water pressure:** Check if aerator is clogged or supply valves aren't fully open
+- **Handles not aligned:** Most handles can be removed and repositioned without affecting function
 
 ## When to Call a Professional
 
 While faucet installation is generally DIY-friendly, consider calling Wade's Plumbing & Septic if:
 
-  * You discover corroded or damaged pipes that need replacement
-  * You need to modify your plumbing to accommodate the new faucet
-  * You encounter persistent leaks that you can't resolve
-  * Your home has complex plumbing or non-standard installations
+- You discover corroded or damaged pipes that need replacement
+- You need to modify your plumbing to accommodate the new faucet
+- You encounter persistent leaks that you can't resolve
+- Your home has complex plumbing or non-standard installations
 
 Installing a new bathroom faucet is a satisfying DIY project that most homeowners can complete in 2-3 hours. With proper installation, your new faucet should provide years of reliable service while enhancing your bathroom's appearance.
 
@@ -121,14 +119,14 @@ Transform your bathroom with expert faucet installation services in Santa Cruz C
 
 Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz County, including:
 
-  * Santa Cruz
-  * Capitola
-  * Scotts Valley
-  * Watsonville
-  * Aptos
-  * Felton
-  * Boulder Creek
-  * Ben Lomond
+- Santa Cruz
+- Capitola
+- Scotts Valley
+- Watsonville
+- Aptos
+- Felton
+- Boulder Creek
+- Ben Lomond
 
 Our team holds a C-42 license for California and a state license for Georgia, ensuring top-quality service and compliance with all regulatory standards.
 
@@ -155,3 +153,7 @@ A standard bathroom faucet installation usually takes between 1 to 2 hours. Howe
 ### Why choose Wade's Plumbing & Septic for your faucet installation in Santa Cruz County, CA?
 
 Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County, CA. Our professional team is committed to delivering high-quality service and ensuring customer satisfaction.
+
+## Related services
+
+- [Fixture installation](/service-offerings/fixture-installation)

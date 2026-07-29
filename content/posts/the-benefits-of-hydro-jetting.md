@@ -1,10 +1,6 @@
 ---
 title: Experience Superior Hydro-Jetting in Santa Cruz County
-description: Clogged drains can cause odors and costly damage, often requiring more
-  than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting,
-  a high-pressure water technique that thoroughly cleans pipes without chemicals.
-  This effective, non-invasive solution prevents future clogs and is a long-term savings
-  investment for plumbing maintenance in Santa Cruz County.
+description: Clogged drains can cause odors and costly damage, often requiring more than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting, a high-pressure water technique that thoroughly cleans pipes without chemicals. This effective, non-invasive solution prevents future clogs and is a long-term savings investment for plumbing maintenance in Santa Cruz County.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -24,15 +20,11 @@ Clogged drains are more than just an inconvenience—they can lead to foul odors
 
 At **Wade’s Plumbing & Septic**, we offer powerful, effective hydro-jetting services to homeowners and businesses throughout **Santa Cruz County**. This advanced technique uses high-pressure water to thoroughly clean and clear your pipes—safely, quickly, and without the need for chemicals or digging.
 
-
-
 ## What Is Hydro-Jetting and How Does It Work?
 
 Hydro-jetting involves using a specialized hose that blasts water at pressures up to 4,000 PSI through your plumbing system. This high-pressure stream scours the interior of the pipes, removing grease, sludge, tree roots, mineral buildup, and other debris.
 
 Before performing a hydro-jetting service, our licensed plumbers perform a **camera inspection** to evaluate the condition of the pipes and identify the source of the clog. This ensures targeted cleaning and prevents potential damage.
-
-
 
 ## 7 Major Benefits of Hydro-Jetting
 
@@ -64,8 +56,6 @@ Routine hydro-jetting acts as **preventative maintenance** , helping avoid futur
 
 Compared to frequent snaking or using chemical drain cleaners, hydro-jetting is a **long-term investment** in your plumbing system. While prices vary, **hydro-jetting typically costs $350–$600** , which is far more affordable than major pipe repairs that can run $1,200 or more.
 
-
-
 ## Frequently Asked Questions About Hydro-Jetting
 
 **What types of systems can be hydro-jetted?**  
@@ -80,15 +70,11 @@ Yes—but it must be done by experienced professionals. At Wade’s Plumbing & S
 **How often should I schedule hydro-jetting?**  
 We recommend scheduling **annual or bi-annual hydro-jetting** to maintain your plumbing system, especially if you deal with recurring clogs or have older pipes.
 
-
-
 ## A Game-Changer in Plumbing Maintenance
 
 Hydro-jetting has become a preferred method for drain cleaning because of its **speed, power, and reliability**. Whether you’re dealing with a stubborn clog or looking to prevent future plumbing disasters, hydro-jetting is a smart and efficient choice.
 
 Don’t wait for your drains to back up—**get ahead of the problem** with professional hydro-jetting from Wade’s Plumbing & Septic.
-
-
 
 📍 Serving: Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas  
 🔧 Services: Sewer cleaning, drain clearing, hydro-jetting, plumbing inspections, and more  
@@ -113,3 +99,8 @@ Experience the pinnacle of efficiency with our superior hydro-jetting solutions 
 Licensed Contractor: C-42
 
 Fast-response guarantee: Available for emergencies to serve Santa Cruz County, CA
+
+## Related services
+
+- [Hydro jetting](/service-offerings/hydro-jetting)
+- [Drain cleaning](/service-offerings/drain-cleaning)

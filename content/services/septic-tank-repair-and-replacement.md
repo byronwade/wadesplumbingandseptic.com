@@ -1,8 +1,6 @@
 ---
 title: Premium Septic Solutions for Santa Cruz County Homes
-description: If you’re experiencing issues with your septic system, it may be time
-  for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic,
-  we specialize in diagnosing and addressing all your septic tank…
+description: If you’re experiencing issues with your septic system, it may be time for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic.
 category: Septic
 order: 7
 ---
@@ -13,19 +11,19 @@ If you’re experiencing issues with your septic system, it may be time for a pr
 
 Recognizing the early signs of septic tank issues can save you from more significant problems down the road. Look for these common indicators:
 
-  * Slow drains or gurgling sounds in pipes
-  * Foul odors around your property or septic tank area
-  * Lush, green grass growing rapidly over the drainfield
-  * Standing water or damp spots near your septic system
+- Slow drains or gurgling sounds in pipes
+- Foul odors around your property or septic tank area
+- Lush, green grass growing rapidly over the drainfield
+- Standing water or damp spots near your septic system
 
 ## Causes of Septic Tank Problems
 
 Understanding what leads to septic tank issues can help in prevention. Common causes include:
 
-  * Poor maintenance practices
-  * Tree root intrusion into pipes
-  * Flushing inappropriate items down the toilet
-  * Excessive water usage overwhelming the system
+- Poor maintenance practices
+- Tree root intrusion into pipes
+- Flushing inappropriate items down the toilet
+- Excessive water usage overwhelming the system
 
 ## Our Septic Tank Repair Process
 
@@ -51,10 +49,10 @@ The timeline for a septic tank repair or replacement can vary based on the compl
 
 Prevention is key to avoiding costly repairs. Consider the following tips:
 
-  * Regularly schedule [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/)
-  * Avoid flushing non-biodegradable items
-  * Be mindful of water usage and fix leaks promptly
-  * Consider installing a [septic tank alarm](/service-offerings/septic-tank-alarm-installation/) for early warning of potential issues
+- Regularly schedule [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/)
+- Avoid flushing non-biodegradable items
+- Be mindful of water usage and fix leaks promptly
+- Consider installing a [septic tank alarm](/service-offerings/septic-tank-alarm-installation/) for early warning of potential issues
 
 ## FAQs About Septic Tank Repair in Santa Cruz
 
@@ -80,7 +78,7 @@ Fast & Reliable Service
 
 Ensure your septic system is in top condition with our expert repair and replacement services.
 
-[Call Us Now](tel:1234567890) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a free quote](/contact)
 
 ★★★★★ 5-Star Rating
 
@@ -93,3 +91,8 @@ Ensure your septic system is in top condition with our expert repair and replace
 Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available Monday to Friday, 8 AM - 5 PM
+
+## Related expert tips
+
+- [Complete septic maintenance guide](/the-complete-guide-to-septic-system-maintenance)
+- [Septic warning signs](/why-you-should-never-ignore-septic-system-warning-signs)

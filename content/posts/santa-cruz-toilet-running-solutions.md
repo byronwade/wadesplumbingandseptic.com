@@ -1,7 +1,6 @@
 ---
 title: 'Why Your Santa Cruz Toilet Keeps Running: Solutions & Tips'
-description: In This Guide5 min read1.Quick Answer for Santa Cruz Homeowners2.Understanding
-  Why Your Toilet Keeps Running3.Common Causes of a Running Toilet4.DIY Fixes …
+description: A running toilet can be a nuisance, leading to increased water bills and potential plumbing issues. Learn how to address this common problem with.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
@@ -14,17 +13,15 @@ image: /images/work/precision-valve-installation.webp
 imageAlt: Toilet fill valve and supply line plumbing components
 ---
 
-In This Guide5 min read
-
 ## Quick Answer for Santa Cruz Homeowners
 
 A running toilet can be a nuisance, leading to increased water bills and potential plumbing issues. Learn how to address this common problem with effective solutions and tips tailored for Santa Cruz County homeowners.
 
-  * Identify the root cause of a running toilet to prevent water waste.
-  * Regular maintenance can help avoid costly repairs.
-  * Consider professional plumbing services for persistent issues.
-  * A running toilet might indicate other underlying plumbing problems.
-  * Timely repairs can enhance the efficiency of your home's plumbing system.
+- Identify the root cause of a running toilet to prevent water waste.
+- Regular maintenance can help avoid costly repairs.
+- Consider professional plumbing services for persistent issues.
+- A running toilet might indicate other underlying plumbing problems.
+- Timely repairs can enhance the efficiency of your home's plumbing system.
 
 ## Understanding Why Your Toilet Keeps Running
 
@@ -36,9 +33,9 @@ There are several reasons why your toilet might keep running. The most common cu
 
 ## DIY Fixes for a Running Toilet
 
-  * **Check the Flapper:** Ensure the flapper is sealing properly. If it's worn or damaged, replacing it is a simple fix.
-  * **Adjust the Float:** If the water level is too high, adjust the float to stop the water at the correct level.
-  * **Inspect the Fill Valve:** If the fill valve is faulty, it may need cleaning or replacement.
+- **Check the Flapper:** Ensure the flapper is sealing properly. If it's worn or damaged, replacing it is a simple fix.
+- **Adjust the Float:** If the water level is too high, adjust the float to stop the water at the correct level.
+- **Inspect the Fill Valve:** If the fill valve is faulty, it may need cleaning or replacement.
 
 These DIY solutions can be effective for minor issues; however, if the problem persists, it might be time to seek professional assistance.
 
@@ -88,8 +85,8 @@ Hiring a professional ensures accurate diagnosis and long-lasting solutions, pre
 
 ## Sources & Local References
 
-  * [Competitor gap: Why Does My Toilet Keep Running Randomly?](https://plumbtreeplumbing.com/why-does-my-toilet-keep-running-randomly/)
-  * [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
+- [Competitor gap: Why Does My Toilet Keep Running Randomly?](https://plumbtreeplumbing.com/why-does-my-toilet-keep-running-randomly/)
+- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 
 ## Seasonal Tip
 
@@ -97,14 +94,18 @@ Check your toilet's components for wear and tear before the holiday season to av
 
 ## Homeowner Action Checklist
 
-  * Check the flapper for wear and replace if necessary.
-  * Inspect the fill valve for proper operation and adjust as needed.
-  * Ensure the float arm is not sticking or set too high.
-  * Test for leaks by adding food coloring to the tank and checking the bowl.
-  * Adjust the chain length if it's too short or too long.
-  * Clean mineral deposits from the tank components.
-  * Contact a professional plumber if the problem persists.
+- Check the flapper for wear and replace if necessary.
+- Inspect the fill valve for proper operation and adjust as needed.
+- Ensure the float arm is not sticking or set too high.
+- Test for leaks by adding food coloring to the tank and checking the bowl.
+- Adjust the chain length if it's too short or too long.
+- Clean mineral deposits from the tank components.
+- Contact a professional plumber if the problem persists.
 
 ## Need Help Now?
 
 Contact Wade's Plumbing & Septic for expert toilet repair services in Santa Cruz County.
+
+## Related services
+
+- [Toilet repair](/service-offerings/toilet-repair)

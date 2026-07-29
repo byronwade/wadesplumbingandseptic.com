@@ -14,22 +14,22 @@ Call-First Campaign Landing Page
 
 Call-first plumbing repair page for homeowners needing fast scheduling and clear options before work starts.
 
-[Call Now 831.225.4344](tel:8312254344)
+[Call Now 831.225.4344](tel:+18312254344)
 
 Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 ### What We Help With
 
-  * Drain Cleaning & Clogs
-  * Leak Detection & Repair
-  * Water Heater Repair
-  * Toilet & Fixture Repairs
+- Drain Cleaning & Clogs
+- Leak Detection & Repair
+- Water Heater Repair
+- Toilet & Fixture Repairs
 
 ### What Happens Next
 
-  * Brief phone diagnosis
-  * Service-area and schedule confirmation
-  * Technician appointment and arrival window
+- Brief phone diagnosis
+- Service-area and schedule confirmation
+- Technician appointment and arrival window
 
 #### Prefer A Call Back?
 

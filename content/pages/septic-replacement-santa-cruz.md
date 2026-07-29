@@ -1,8 +1,6 @@
 ---
 title: Septic System Replacement in Santa Cruz County
-description: Complete septic system replacement in Santa Cruz County. Failed perc
-  tests, aging systems, and full replacements — get a free assessment from Wade's
-  Plumbing & Septic.
+description: Complete septic system replacement in Santa Cruz County. Failed perc tests, aging systems, and full replacements — get a free assessment from Wade's Plumbing & Septic.
 order: 60
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Septic System Replacement in Santa Cruz County
@@ -15,7 +13,7 @@ eyebrow: Santa Cruz County
 
 Failing systems, failed perc tests, or aging conventional septic. Wade's delivers honest assessments and complete replacement planning in Santa Cruz County.
 
-[Call Now · 831.225.4344](tel:8312254344)
+[Call Now · 831.225.4344](tel:+18312254344)
 
 [Request A Free Estimate](/contact/)
 
@@ -29,12 +27,10 @@ Phone calls are prioritized for fastest response and scheduling.
 
 ### What We Help With
 
-  * Full System Replacement
-  * Failed Perc Test Consultation
-  * Permit & Timeline Planning
-  * Repair vs. Replace Assessment
-
-
+- Full System Replacement
+- Failed Perc Test Consultation
+- Permit & Timeline Planning
+- Repair vs. Replace Assessment
 
 ### What Happens Next
 
@@ -44,11 +40,11 @@ Phone calls are prioritized for fastest response and scheduling.
 
 #### Ready to Get Started?
 
-  * What city is the property in?
-  * Is this urgent or scheduled work?
-  * Plumbing, sewer, or septic issue?
+- What city is the property in?
+- Is this urgent or scheduled work?
+- Plumbing, sewer, or septic issue?
 
-[Call 831.225.4344](tel:8312254344)
+[Call 831.225.4344](tel:+18312254344)
 
 [Request a Free Estimate](/contact/)
 
@@ -64,4 +60,4 @@ Yes. In Santa Cruz County, septic system replacements require permits through th
 
 Call our team first so we can confirm your service area and get you booked quickly.
 
-[Call 831.225.4344](tel:8312254344)
+[Call 831.225.4344](tel:+18312254344)

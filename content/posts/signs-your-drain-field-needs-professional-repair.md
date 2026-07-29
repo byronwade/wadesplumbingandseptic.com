@@ -1,7 +1,6 @@
 ---
 title: Santa Cruz County's Trusted Drain Field Repair Experts
-description: While many plumbing problems can be solved with basic tools and a little
-  know-how, your septic system’s drain field is not one of them. The drain field—also…
+description: While many plumbing problems can be solved with basic tools and a little know-how, your septic system’s drain field is not one of them. The drain.
 category: Septic Maintenance
 date: '2025-07-08'
 tags:
@@ -16,7 +15,7 @@ tags:
 - local septic repair
 - drain field experts
 image: /images/wordpress/img-2109.webp
-imageAlt: "Santa Cruz County's Trusted Drain Field Repair Experts"
+imageAlt: Santa Cruz County's Trusted Drain Field Repair Experts
 ---
 
 While many plumbing problems can be solved with basic tools and a little know-how, your septic system’s drain field is not one of them. The drain field—also called a leach field—is one of the most vital parts of your septic system. When it fails, it can lead to sewage backups, slow drains, health hazards, and even costly system replacements.
@@ -31,10 +30,10 @@ When a drain field becomes saturated or clogged, excess sewage can seep into the
 
 Keep an eye out for:
 
-  * Bright green strips or patches on your lawn
-  * Mushy or wet areas around the drain field
-  * Foul or musty odors in the yard
-  * Black, slimy sludge near the surface
+- Bright green strips or patches on your lawn
+- Mushy or wet areas around the drain field
+- Foul or musty odors in the yard
+- Black, slimy sludge near the surface
 
 These are all signs that your septic system is not processing wastewater properly and needs immediate professional inspection.
 
@@ -58,11 +57,11 @@ What Causes Drain Field Failure?
 
 Drain field problems often stem from:
 
-  * Excessive water use, which overwhelms the system
-  * Lack of septic pumping, allowing solids to reach the field
-  * Compacted soil from heavy vehicles or foot traffic over the field
-  * Tree roots invading and clogging drain pipes
-  * Old or damaged pipes due to corrosion or poor installation
+- Excessive water use, which overwhelms the system
+- Lack of septic pumping, allowing solids to reach the field
+- Compacted soil from heavy vehicles or foot traffic over the field
+- Tree roots invading and clogging drain pipes
+- Old or damaged pipes due to corrosion or poor installation
 
 Routine inspections and proper septic system care are the best ways to prevent these issues.
 
@@ -108,4 +107,9 @@ Wade's Plumbing & Septic is a trusted name in Santa Cruz County, known for our e
 
 Ensure the efficiency and longevity of your septic system with our specialized drain field repair services.
 
-[Call Us Now](tel:1234567890)
+[Call Us Now](tel:+18312254344)
+
+## Related services
+
+- [Drainfield repair](/service-offerings/drainfield-repair-and-replacement)
+- [Leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement)

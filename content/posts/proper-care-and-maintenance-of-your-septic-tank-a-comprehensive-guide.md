@@ -1,8 +1,6 @@
 ---
 title: 'Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide'
-description: Taking care of your septic tank is an important task that should not
-  be overlooked. A septic tank is a self-contained underground chamber that is designed
-  to…
+description: Taking care of your septic tank is an important task that should not be overlooked. A septic tank is a self-contained underground chamber that is.
 category: Septic Maintenance
 date: '2025-05-11'
 tags:
@@ -85,3 +83,7 @@ Wade's Plumbing & Septic offers expert services backed by years of experience in
 Licensed Contractor: C-42 for California
 
 Fast-Response Guarantee: Available for Santa Cruz County, CA
+
+## Related services
+
+- [Septic tank cleaning and pumping](/service-offerings/septic-tank-cleaning-and-pumping)

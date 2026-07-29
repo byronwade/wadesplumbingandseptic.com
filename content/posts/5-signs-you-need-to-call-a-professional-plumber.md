@@ -1,8 +1,6 @@
 ---
 title: Top 5 Septic Warning Signs in Santa Cruz County
-description: Learn to recognize the warning signs that indicate it's time to call
-  a professional plumber instead of attempting DIY repairs. From persistent low water
-  pressure to multiple clogged drains, these symptoms require expert attention.
+description: Learn to recognize the warning signs that indicate it's time to call a professional plumber instead of attempting DIY repairs. From persistent low water pressure to multiple clogged drains, these symptoms require expert attention.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -86,7 +84,7 @@ Stay Ahead of Septic Issues
 
 Recognizing early warning signs can save you from costly repairs and ensure your septic system runs smoothly.
 
-[Call Us Now](tel:+18315555555) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a free quote](/contact)
 
 ### Trusted by Homeowners in Santa Cruz County
 
@@ -103,3 +101,8 @@ Recognizing early warning signs can save you from costly repairs and ensure your
 **Licensed Contractor:** C-42 License for California
 
 **Fast-Response Guarantee:** Available for service calls Monday to Friday, 8 AM - 6 PM
+
+## Related services
+
+- [Septic tank cleaning and pumping](/service-offerings/septic-tank-cleaning-and-pumping)
+- [Septic tank maintenance](/service-offerings/septic-tank-maintenance-and-care)

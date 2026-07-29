@@ -1,8 +1,6 @@
 ---
 title: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
-description: The holiday season is one of the busiest times of the year—and the last
-  thing you need during family gatherings, dinner parties, or overnight guests is
-  a…
+description: The holiday season is one of the busiest times of the year—and the last thing you need during family gatherings, dinner parties, or overnight guests is a.
 category: Plumbing Tips
 date: '2025-12-17'
 tags:
@@ -17,54 +15,54 @@ tags:
 - plumbing preparation
 - santa cruz county homes
 image: /images/wordpress/img-1839-1.webp
-imageAlt: "Prevent Holiday Plumbing Issues in Santa Cruz County Homes"
+imageAlt: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
 ---
 
 The holiday season is one of the busiest times of the year—and the last thing you need during family gatherings, dinner parties, or overnight guests is a plumbing emergency. When your home is full and your plumbing system is working overtime, even a small issue can snowball into a major disruption.
 
 At Wade’s Plumbing & Septic, we help homeowners throughout Santa Cruz County prepare their plumbing systems for the holidays. Whether it’s routine maintenance or emergency repairs, our team is ready to keep your holidays running smoothly. Here’s how to prevent some of the most common plumbing problems during the festive season.
 
-1\. Broken Washing Machines Can Disrupt Travel Plans
+1. Broken Washing Machines Can Disrupt Travel Plans
 
 If you’re prepping for a holiday trip, the last thing you want is a broken washing machine just as you start packing. Leaks or malfunctions can leave you scrambling for clean clothes—and possibly stuck at a laundromat while others are celebrating.
 
 Prevent this by:
 
-  * Running a monthly cycle with washing machine cleaner to eliminate residue buildup
-  * Inspecting hoses regularly for cracks or wear
-  * Having a plumber check your laundry connections during routine maintenance
-  * Cleaning your dryer lint trap frequently to avoid fire hazards
+- Running a monthly cycle with washing machine cleaner to eliminate residue buildup
+- Inspecting hoses regularly for cracks or wear
+- Having a plumber check your laundry connections during routine maintenance
+- Cleaning your dryer lint trap frequently to avoid fire hazards
 
-2\. Dishwasher Failures Can Mean Piles of Holiday Dishes
+2. Dishwasher Failures Can Mean Piles of Holiday Dishes
 
 The dishwasher is one of the most-used appliances during the holidays. Between family dinners and parties, it’s working hard—and can easily break down under heavy use.
 
 Avoid a holiday dishwasher disaster by:
 
-  * Not overloading it with dishes, especially large pots and pans
-  * Scraping off food before loading to avoid drain clogs
-  * Regularly checking and cleaning the drain and spray arms
-  * Scheduling pre-holiday maintenance to ensure it’s running efficiently
+- Not overloading it with dishes, especially large pots and pans
+- Scraping off food before loading to avoid drain clogs
+- Regularly checking and cleaning the drain and spray arms
+- Scheduling pre-holiday maintenance to ensure it’s running efficiently
 
-3\. Clogged Toilets Can Disrupt the Festivities
+3. Clogged Toilets Can Disrupt the Festivities
 
 With extra guests using your bathrooms, toilets will be flushing more often—and that increases the chance of blockages.
 
 To prevent backups and overflows:
 
-  * Place small wastebaskets in each bathroom to discourage improper flushing
-  * Post a friendly sign about what not to flush (e.g., wipes, feminine products, paper towels)
-  * Keep a plunger accessible near every toilet for quick fixes
-  * Schedule a drain inspection if you’ve had clog issues in the past
+- Place small wastebaskets in each bathroom to discourage improper flushing
+- Post a friendly sign about what not to flush (e.g., wipes, feminine products, paper towels)
+- Keep a plunger accessible near every toilet for quick fixes
+- Schedule a drain inspection if you’ve had clog issues in the past
 
-4\. Water Heater Failures Can Leave Guests in the Cold
+4. Water Heater Failures Can Leave Guests in the Cold
 
 No one wants to face a cold shower on a chilly holiday morning. With more people showering, cooking, and cleaning, your water heater is under added stress. If it’s nearing the end of its lifespan or showing signs of failure, it may not keep up.
 
-  * Have your water heater inspected and flushed before the holidays
-  * Check for rust, leaks, or unusual noises
-  * Ask your plumber if your tank’s capacity matches your home’s holiday demand
-  * Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
+- Have your water heater inspected and flushed before the holidays
+- Check for rust, leaks, or unusual noises
+- Ask your plumber if your tank’s capacity matches your home’s holiday demand
+- Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
 
 Be Proactive—Avoid Holiday Plumbing Emergencies
 
@@ -109,3 +107,8 @@ Wade's Plumbing & Septic is a trusted local authority with years of experience, 
 ## Skip the DIY Ã¢â‚¬â€ Get It Done Right
 
 At Wade's Plumbing & Septic, we understand the unique challenges of maintaining plumbing systems in Santa Cruz County homes, especially during the holiday season. Trust our team of licensed professionals to handle your plumbing needs efficiently and reliably.
+
+## Related services
+
+- [Drain cleaning](/service-offerings/drain-cleaning)
+- [Toilet repair](/service-offerings/toilet-repair)

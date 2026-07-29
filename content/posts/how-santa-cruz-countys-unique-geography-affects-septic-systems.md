@@ -1,8 +1,6 @@
 ---
 title: Efficient Septic Solutions for Santa Cruz County Homes
-description: Santa Cruz County's unique geography presents both beautiful landscapes
-  and challenges for homeowners, particularly when it comes to maintaining septic
-  systems. The varied terrain and proximity to the coast can…
+description: Santa Cruz County's unique geography presents both beautiful landscapes and challenges for homeowners, particularly when it comes to maintaining septic.
 category: Plumbing Tips
 date: '2026-04-11'
 tags:
@@ -30,9 +28,9 @@ These geographical factors necessitate a tailored approach in septic system mana
 
 The unique landscape of Santa Cruz County can lead to several challenges for septic systems. Recognizing these issues early can prevent costly repairs and system failures.
 
-  * **Coastal Erosion:** Erosion can undermine septic tanks and leach fields, leading to system failures.
-  * **Soil Composition:** Dense clay or sandy soils can affect the absorption and filtration of wastewater.
-  * **High Water Tables:** These can cause flooding of septic systems, especially during heavy rains.
+- **Coastal Erosion:** Erosion can undermine septic tanks and leach fields, leading to system failures.
+- **Soil Composition:** Dense clay or sandy soils can affect the absorption and filtration of wastewater.
+- **High Water Tables:** These can cause flooding of septic systems, especially during heavy rains.
 
 Understanding septic system types suitable for different terrains is crucial. For instance, engineered septic systems are often needed in areas with poor drainage to ensure optimal functionality.
 
@@ -74,13 +72,13 @@ Signs include slow drains, sewage odors, and wet spots in the yard. These can be
 
 At Wade's Plumbing & Septic, we proudly provide efficient septic solutions to the vibrant communities of Santa Cruz County, California. Our services extend to the following cities and communities:
 
-  * [Aptos](/service-area/aptos-ca/)
-  * [Ben Lomond](/service-area/ben-lomond-ca/)
-  * [Boulder Creek](/service-area/boulder-creek-ca/)
-  * [Capitola](/service-area/capitola-ca/)
-  * [Felton](/service-area/felton-ca/)
-  * [Soquel](/service-area/soquel-ca/)
-  * [Watsonville](/service-area/watsonville-ca/)
+- [Aptos](/service-area/aptos-ca/)
+- [Ben Lomond](/service-area/ben-lomond-ca/)
+- [Boulder Creek](/service-area/boulder-creek-ca/)
+- [Capitola](/service-area/capitola-ca/)
+- [Felton](/service-area/felton-ca/)
+- [Soquel](/service-area/soquel-ca/)
+- [Watsonville](/service-area/watsonville-ca/)
 
 Our team holds a C-42 license for California and a state license for Georgia, ensuring you receive expert and compliant service every time.
 
@@ -96,7 +94,7 @@ Efficient Septic Solutions
 
 Ensure your septic system operates smoothly with our expert solutions.
 
-[Call Us Now](tel:+18315551234) 
+[Call Us Now](tel:+18312254344) 
 
 ### What Our Customers Say
 
@@ -111,3 +109,7 @@ Ensure your septic system operates smoothly with our expert solutions.
 Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available for all your septic needs.
+
+## Related services
+
+- [Septic tank cleaning and pumping](/service-offerings/septic-tank-cleaning-and-pumping)

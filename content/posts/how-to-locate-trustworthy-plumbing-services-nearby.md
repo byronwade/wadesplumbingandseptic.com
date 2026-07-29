@@ -1,8 +1,6 @@
 ---
 title: Find Reliable Plumbing Services in Santa Cruz County, CA
-description: In the hustle and bustle of modern life, finding trustworthy plumbing
-  services nearby can often feel like navigating a maze. Whether it's a sudden leak,
-  a…
+description: In the hustle and bustle of modern life, finding trustworthy plumbing services nearby can often feel like navigating a maze. Whether it's a sudden leak.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -135,3 +133,8 @@ The timeline for plumbing services varies based on the complexity of the job. Si
 ### Why should I choose Wade's Plumbing & Septic for my plumbing needs?
 
 Wade's Plumbing & Septic is a trusted provider in Santa Cruz County, CA, known for our professional, friendly, and reliable service. Our team of certified experts is committed to delivering top-quality solutions with a focus on customer satisfaction and local expertise.
+
+## Related services
+
+- [Browse all services](/services)
+- [Contact Wade's](/contact)

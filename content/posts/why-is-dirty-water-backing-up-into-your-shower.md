@@ -1,8 +1,6 @@
 ---
 title: Solve Shower Backup Issues in Santa Cruz County Homes
-description: Few things are more alarming than seeing dirty water rising into your
-  shower. This usually signals a blockage in your home’s main sewer line. When any
-  of your…
+description: Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of.
 category: Plumbing Tips
 date: '2025-06-03'
 tags:
@@ -16,8 +14,7 @@ tags:
 - shower drainage
 - blocked drain repair
 image: /images/wordpress/img-0073.webp
-imageAlt: "Solve Shower Backup Issues in Santa Cruz County Homes"
-
+imageAlt: Solve Shower Backup Issues in Santa Cruz County Homes
 ---
 
 Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures—like the toilet, bathroom sink, dishwasher, or washing machine—experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.
@@ -34,14 +31,14 @@ Common Causes of Main Sewer Line Clogs
 
 There are several typical reasons for main drain and sewer line blockages:
 
-  * Broken, collapsed, or sagging sewer pipes
-  * Tree roots growing into the pipe and blocking flow
-  * Improper items flushed down the toilet, such as:  
+- Broken, collapsed, or sagging sewer pipes
+- Tree roots growing into the pipe and blocking flow
+- Improper items flushed down the toilet, such as:  
 
     * Baby wipes and diapers
     * Feminine hygiene products
     * Paper towels and napkins
-  *   * Pouring fats, grease, or oil down the drain, which solidifies and causes blockages over time
+-   * Pouring fats, grease, or oil down the drain, which solidifies and causes blockages over time
 
 Can Toilet Paper Clog Sewer Lines?
 
@@ -102,3 +99,8 @@ Most shower backup issues can be resolved within a few hours. However, the timel
 ### Why should I choose Wade's Plumbing & Septic for my shower backup issues?
 
 Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, CA, with a reputation for reliable, efficient service. Our skilled professionals are dedicated to providing top-quality solutions tailored to your needs.
+
+## Related services
+
+- [Hydro jetting](/service-offerings/hydro-jetting)
+- [Sewer camera inspection](/service-offerings/sewer-camera-inspection)

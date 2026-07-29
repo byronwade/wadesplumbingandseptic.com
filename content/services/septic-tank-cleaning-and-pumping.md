@@ -26,3 +26,8 @@ The appropriate service interval depends on tank capacity, number of occupants, 
 Pumping does not by itself certify the drain field or prove every buried component is working correctly. Slow drains, alarms, odors, surfacing wastewater, or repeated backups may require additional diagnostics.
 
 Keep pumping and inspection records with the property. Call before an emergency develops if the prior service date is unknown.
+
+## Related expert tips
+
+- [How to maintain your septic tank](/how-to-maintain-your-septic-tank-for-long-term-performance)
+- [Septic pumping costs in Santa Cruz County](/understanding-the-cost-of-septic-pumping-in-santa-cruz-county)

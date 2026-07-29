@@ -1,8 +1,6 @@
 ---
 title: Choose the Perfect Toilet for Your Home in Santa Cruz County
-description: Shopping for a new toilet may seem straightforward, but with so many
-  options available, it can quickly become overwhelming. From water-saving models
-  to…
+description: Shopping for a new toilet may seem straightforward, but with so many options available, it can quickly become overwhelming. From water-saving models to.
 category: Plumbing Tips
 date: '2025-07-15'
 tags:
@@ -17,14 +15,14 @@ tags:
 - toilet installation
 - bathroom fixtures
 image: /images/wordpress/img-1315.webp
-imageAlt: "Choose the Perfect Toilet for Your Home in Santa Cruz County"
+imageAlt: Choose the Perfect Toilet for Your Home in Santa Cruz County
 ---
 
 Shopping for a new toilet may seem straightforward, but with so many options available, it can quickly become overwhelming. From water-saving models to high-tech touchless designs, choosing the right toilet depends on your home’s needs, preferences, and budget.
 
 At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County select and install the perfect toilet for their bathrooms. Below, we’ve broken down five popular types of toilets—plus tips on what to consider when making your final decision.
 
-1\. Water-Saving Toilets: Efficient & Eco-Friendly
+1. Water-Saving Toilets: Efficient & Eco-Friendly
 
 If you’re looking to reduce water usage and save on your monthly bill, water-saving toilets are a smart investment. These toilets use significantly less water per flush than older models—often just 1.28 gallons compared to the older 3.5-gallon standard.
 
@@ -32,59 +30,59 @@ Look for toilets with the EPA WaterSense® label, which certifies that the fixtu
 
 Benefits:
 
-  * Lower utility bills
-  * Environmentally responsible
-  * Often qualify for rebates or incentives
+- Lower utility bills
+- Environmentally responsible
+- Often qualify for rebates or incentives
 
-2\. Push-Button Flush Toilets: Sleek & Low Maintenance
+2. Push-Button Flush Toilets: Sleek & Low Maintenance
 
 Push-button flush toilets offer a modern look and simple functionality. Instead of a traditional lever, these toilets feature one or two buttons (often located on the tank lid) for flushing. Many push-button models are also dual-flush, helping you save water depending on the type of waste.
 
 Why Homeowners Love Them:
 
-  * Contemporary, stylish appearance
-  * Easy to clean and disinfect
-  * Reliable with fewer moving parts than lever-based systems
+- Contemporary, stylish appearance
+- Easy to clean and disinfect
+- Reliable with fewer moving parts than lever-based systems
 
-3\. Single-Flush Toilets: The Classic Choice
+3. Single-Flush Toilets: The Classic Choice
 
 The most traditional toilet design is the single-flush model. It uses the same amount of water—typically 1.6 gallons—for every flush, regardless of the waste. These toilets are simple to operate, cost-effective, and easy to maintain.
 
 Best For:
 
-  * Families with multiple bathrooms
-  * Homeowners looking for reliability over features
-  * Budget-conscious renovations
+- Families with multiple bathrooms
+- Homeowners looking for reliability over features
+- Budget-conscious renovations
 
-4\. Dual-Flush Toilets: Optimized for Water Efficiency
+4. Dual-Flush Toilets: Optimized for Water Efficiency
 
 Dual-flush toilets offer two flush options: one for liquid waste (usually 0.8 gallons) and one for solid waste (around 1.6 gallons). The flush buttons are typically located on top of the tank and are color-coded or labeled for clarity.
 
 Advantages:
 
-  * Saves water by giving users control over each flush
-  * Reduces your monthly water bill
-  * Ideal for eco-conscious households
+- Saves water by giving users control over each flush
+- Reduces your monthly water bill
+- Ideal for eco-conscious households
 
-5\. Touchless-Flush Toilets: High-Tech & Hygienic
+5. Touchless-Flush Toilets: High-Tech & Hygienic
 
 Touchless-flush toilets use motion sensors to activate the flush mechanism. These smart toilets reduce the spread of germs by eliminating the need to touch the toilet after use.
 
 Perfect For:
 
-  * Homes with children, elderly, or immunocompromised individuals
-  * High-traffic bathrooms
-  * Anyone looking for a clean, hands-free experience
+- Homes with children, elderly, or immunocompromised individuals
+- High-traffic bathrooms
+- Anyone looking for a clean, hands-free experience
 
 What to Consider When Choosing a Toilet
 
 A toilet is a long-term fixture, so it’s worth taking the time to evaluate all the features that will impact your comfort and convenience. Consider the following before making your purchase:
 
-  * Seat Height: Standard vs. comfort height (ADA-compliant options available)
-  * Bowl Shape: Round bowls fit smaller bathrooms; elongated bowls offer more comfort
-  * Flushing Technology: Gravity-fed, pressure-assisted, or dual-flush
-  * Style: Two-piece, one-piece, or wall-mounted designs
-  * Color & Finish: Match your bathroom’s design aesthetic
+- Seat Height: Standard vs. comfort height (ADA-compliant options available)
+- Bowl Shape: Round bowls fit smaller bathrooms; elongated bowls offer more comfort
+- Flushing Technology: Gravity-fed, pressure-assisted, or dual-flush
+- Style: Two-piece, one-piece, or wall-mounted designs
+- Color & Finish: Match your bathroom’s design aesthetic
 
 Think about your family’s needs, water usage habits, and how much maintenance you’re willing to take on.
 
@@ -131,3 +129,8 @@ Wade's Plumbing & Septic offers expert service with a focus on customer satisfac
 ### Skip the DIY Ã¢â‚¬â€ Get It Done Right
 
 Trust Wade's Plumbing & Septic to expertly install your new toilet in Santa Cruz County, CA. Our friendly, professional team ensures a hassle-free experience, saving you time and potential headaches.
+
+## Related services
+
+- [Toilet repair](/service-offerings/toilet-repair)
+- [Fixture installation](/service-offerings/fixture-installation)

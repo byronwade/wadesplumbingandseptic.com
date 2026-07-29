@@ -1,7 +1,6 @@
 ---
 title: FAQ
-description: Find answers to common questions about plumbing, septic systems, and
-  our services. If you don't see your question here, please contact us directly.
+description: Find answers to common questions about plumbing, septic systems, and our services. If you don't see your question here, please contact us directly.
 order: 4
 eyebrow: Helpful Answers
 ---
@@ -50,7 +49,7 @@ Santa Cruz County Septic Experts
 
 Trust Wade's Plumbing & Septic for rapid, reliable service throughout Santa Cruz County, California.
 
-[Call Us Now](tel:+1234567890)[Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344)[Get a free quote](/contact)
 
 ## Serving Santa Cruz County, CA
 

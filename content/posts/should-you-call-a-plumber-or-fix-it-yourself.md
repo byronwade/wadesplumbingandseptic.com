@@ -1,8 +1,6 @@
 ---
 title: 'Plumber vs DIY: Your Santa Cruz County Guide'
-description: 'When a plumbing issue pops up, your first thought might be: Should I
-  try to fix this myself or call a plumber? It’s a valid question—and the answer depends
-  on…'
+description: 'When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question—and the answer.'
 category: Plumbing Tips
 date: '2025-05-20'
 tags:
@@ -15,7 +13,7 @@ tags:
 - local plumbing guide
 - plumbing repair
 image: /images/wordpress/img-1669.webp
-imageAlt: "Plumber vs DIY: Your Santa Cruz County Guide"
+imageAlt: 'Plumber vs DIY: Your Santa Cruz County Guide'
 ---
 
 When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question—and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
@@ -30,9 +28,9 @@ If you’ve never dealt with a plumbing issue before or aren’t familiar with t
 
 On the other hand, if you’ve got experience and you’ve successfully handled similar plumbing problems in the past, a basic repair might be within reach. Common DIY-friendly jobs include:
 
-  * Replacing a faucet washer
-  * Unclogging a sink with a plunger
-  * Tightening a loose supply line
+- Replacing a faucet washer
+- Unclogging a sink with a plunger
+- Tightening a loose supply line
 
 But when in doubt, it’s better to call the pros at Wade’s Plumbing & Septic to avoid causing unnecessary damage.
 
@@ -55,9 +53,9 @@ DIY plumbing may save you on labor costs, but it’s not always the cheapest rou
 
 Ask yourself:
 
-  * How much is my time worth?
-  * Do I have the right tools?
-  * What happens if I make it worse?
+- How much is my time worth?
+- Do I have the right tools?
+- What happens if I make it worse?
 
 In many cases, hiring a professional plumber not only gets the job done faster, but also ensures the repair is done correctly the first time—saving you money, stress, and repeat visits to the hardware store.
 
@@ -100,3 +98,8 @@ The timeline for plumbing services can vary, but most residential jobs are compl
 ### Why should I choose Wade's Plumbing & Septic for my plumbing needs in Santa Cruz County?
 
 Wade's Plumbing & Septic is a locally trusted provider known for its expertise, reliability, and commitment to customer satisfaction. Our licensed professionals are equipped to handle a wide range of plumbing and septic services with the utmost care.
+
+## Related services
+
+- [Browse all services](/services)
+- [Contact Wade's](/contact)

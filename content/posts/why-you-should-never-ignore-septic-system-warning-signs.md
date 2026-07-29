@@ -1,8 +1,6 @@
 ---
 title: Prevent Costly Septic Issues in Santa Cruz County Homes
-description: Learn to recognize the critical warning signs of septic system problems
-  and why addressing them promptly can save you thousands in repairs. From slow drains
-  to unusual odors, these symptoms require immediate professional attention.
+description: Learn to recognize the critical warning signs of septic system problems and why addressing them promptly can save you thousands in repairs. From slow drains to unusual odors, these symptoms require immediate professional attention.
 category: Septic Maintenance
 date: '2025-05-11'
 tags:
@@ -68,10 +66,10 @@ A failing septic system can dramatically reduce your property value and complica
 
 If you've noticed any of these warning signs, don't wait for the problem to worsen. Contact Wade's Plumbing & Septic for a thorough inspection. Our certified technicians can:
 
-  * Accurately diagnose the specific issue affecting your system
-  * Provide clear, upfront pricing for necessary repairs
-  * Recommend preventative maintenance to avoid future problems
-  * Complete repairs efficiently with minimal disruption to your property
+- Accurately diagnose the specific issue affecting your system
+- Provide clear, upfront pricing for necessary repairs
+- Recommend preventative maintenance to avoid future problems
+- Complete repairs efficiently with minimal disruption to your property
 
 Remember, addressing septic issues early is always less expensive and less disruptive than waiting for complete system failure. Schedule your inspection today and protect your home, health, and property value.
 
@@ -131,9 +129,7 @@ Stay Ahead of Septic Issues
 
 Identify early warning signs of septic system problems and avoid expensive repairs with our expert guidance.
 
-[Call Us Now](tel:+18005551234) [Get a Free Quote](/contact/) </ 
-
-"Wade's Plumbing & Septic saved us from a potential disaster with our septic system. Their quick response and professional service were top-notch!" — Sarah, Santa Cruz
+[Call Us Now](tel:+18312254344) [Get a free quote](/contact) "Wade's Plumbing & Septic saved us from a potential disaster with our septic system. Their quick response and professional service were top-notch!" — Sarah, Santa Cruz
 
 "I couldn't be happier with the service from Wade's. They were prompt, efficient, and solved our septic issue in no time." — John, Capitola
 
@@ -144,3 +140,8 @@ Identify early warning signs of septic system problems and avoid expensive repai
 Licensed Contractor: C-42
 
 Fast-Response Guarantee: We're available Monday through Friday from 8 AM to 5 PM.
+
+## Related services
+
+- [Septic tank troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services)
+- [Septic tank cleaning and pumping](/service-offerings/septic-tank-cleaning-and-pumping)

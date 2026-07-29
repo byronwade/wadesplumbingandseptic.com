@@ -1,7 +1,6 @@
 ---
 title: About Us
-description: Wade's Plumbing & Septic is a family-owned and operated business delivering
-  reliable plumbing and septic solutions since 2005. We've built our reputation on…
+description: Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2005. We've built our reputation.
 order: 1
 image: /images/team/byron-working.webp
 imageAlt: Byron Wade working on a plumbing rough-in
@@ -39,11 +38,11 @@ To provide dependable, high-quality plumbing and septic services that exceed cus
 
 ## Our Values
 
-  * **Integrity:** We always provide honest assessments and fair pricing.
-  * **Quality:** We never compromise on the quality of our work.
-  * **Reliability:** When we make a commitment, we honor it.
-  * **Expertise:** Our team receives continuous training to stay current with industry advancements.
-  * **Community:** We're proud to support the communities we serve.
+- **Integrity:** We always provide honest assessments and fair pricing.
+- **Quality:** We never compromise on the quality of our work.
+- **Reliability:** When we make a commitment, we honor it.
+- **Expertise:** Our team receives continuous training to stay current with industry advancements.
+- **Community:** We're proud to support the communities we serve.
 
 ## The Wade's Difference
 

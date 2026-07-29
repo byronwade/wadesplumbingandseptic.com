@@ -1,7 +1,6 @@
 ---
 title: Privacy Policy
-description: In 2026, Santa Cruz County has implemented new regulations requiring
-  more frequent septic system inspections to ensure environmental safety and compliance…
+description: In 2026, Santa Cruz County has implemented new regulations requiring more frequent septic system inspections to ensure environmental safety and.
 order: 11
 eyebrow: Legal
 ---
@@ -20,40 +19,40 @@ Wade's Plumbing & Septic ("we," "us," or "our") is committed to protecting your 
 
 We may collect the following types of information:
 
-  * **Personal Information:** Name, email address, phone number, and address when you request services, contact us, or create an account.
-  * **Service Information:** Details about your plumbing or septic system when you request service.
-  * **Payment Information:** Credit card or other payment details when you pay for services (processed securely through our payment processors).
-  * **Usage Information:** How you interact with our website, including pages visited and features used.
-  * **Device Information:** IP address, browser type, and operating system.
+- **Personal Information:** Name, email address, phone number, and address when you request services, contact us, or create an account.
+- **Service Information:** Details about your plumbing or septic system when you request service.
+- **Payment Information:** Credit card or other payment details when you pay for services (processed securely through our payment processors).
+- **Usage Information:** How you interact with our website, including pages visited and features used.
+- **Device Information:** IP address, browser type, and operating system.
 
 ## How We Use Your Information
 
 We use the information we collect to:
 
-  * Provide and improve our services
-  * Process transactions and send related information
-  * Respond to your inquiries and requests
-  * Send service updates and promotional materials
-  * Maintain and improve our website
-  * Comply with legal obligations
+- Provide and improve our services
+- Process transactions and send related information
+- Respond to your inquiries and requests
+- Send service updates and promotional materials
+- Maintain and improve our website
+- Comply with legal obligations
 
 ## Information Sharing
 
 We do not sell your personal information. We may share information with:
 
-  * Service providers who assist in our operations
-  * Professional advisors such as lawyers and accountants
-  * Legal authorities when required by law
-  * Business partners with your consent
+- Service providers who assist in our operations
+- Professional advisors such as lawyers and accountants
+- Legal authorities when required by law
+- Business partners with your consent
 
 ## Your Choices
 
 You can:
 
-  * Opt-out of marketing communications
-  * Request access to your personal information
-  * Request correction or deletion of your information
-  * Set your browser to refuse cookies
+- Opt-out of marketing communications
+- Request access to your personal information
+- Request correction or deletion of your information
+- Set your browser to refuse cookies
 
 ## Security
 

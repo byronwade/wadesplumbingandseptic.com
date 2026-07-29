@@ -1,7 +1,6 @@
 ---
 title: Santa Cruz County's Trusted Guide for Plumbing Emergencies
-description: As a homeowner, it's important to be prepared for emergencies, especially
-  when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency…
+description: As a homeowner, it's important to be prepared for emergencies, especially when it comes to plumbing. From clogged drains to burst pipes, a plumbing.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -19,8 +18,6 @@ imageAlt: 'From Clogs to Catastrophes: A Plumber’s Guide to Home Emergencies'
 ---
 
 As a homeowner, it's important to be prepared for emergencies, especially when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency can quickly turn into a catastrophic situation if not handled promptly and properly. In this guide, we'll discuss some common plumbing emergencies and what you can do to prevent them and minimize damage.
-
-
 
 ## Common Plumbing Emergencies
 
@@ -126,3 +123,9 @@ Whether you need a routine check-up or urgent repairs, Wade's Plumbing & Septic 
 Licensed Contractor: C-42 for CA
 
 Fast-Response Guarantee: Available for all your plumbing emergencies in Santa Cruz County, CA
+
+## Related services
+
+- [Drain cleaning](/service-offerings/drain-cleaning)
+- [Leak detection](/service-offerings/leak-detection)
+- [Contact Wade's](/contact)

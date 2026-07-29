@@ -1,7 +1,6 @@
 ---
 title: 'Customer Testimonials: Trusted Plumbing in Santa Cruz County'
-description: At Wade's Plumbing & Septic, we proudly serve the vibrant communities
-  of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley…
+description: At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley.
 order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team

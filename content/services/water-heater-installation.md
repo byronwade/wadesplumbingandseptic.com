@@ -1,9 +1,6 @@
 ---
 title: Efficient Water Heater Installations in Santa Cruz County
-description: Water heater installation is an essential service for homeowners seeking
-  efficient and reliable hot water systems. Whether your current unit is outdated
-  or you're upgrading to a more energy-efficient model, proper installation is crucial.
-  At Wade's…
+description: Water heater installation is an essential service for homeowners seeking efficient and reliable hot water systems. Whether your current unit is outdated.
 category: Plumbing
 order: 25
 image: /images/work/water-heater-installation.webp
@@ -30,10 +27,10 @@ Recognizing the signs that your water heater may need replacement can save you f
 
 Our expert technicians follow a comprehensive process to ensure your new water heater is installed correctly:
 
-  * **Assessment:** We evaluate your current system and discuss your needs to recommend the best water heater for your home.
-  * **Removal:** Our team safely removes the old unit, minimizing disruption to your household.
-  * **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
-  * **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
+- **Assessment:** We evaluate your current system and discuss your needs to recommend the best water heater for your home.
+- **Removal:** Our team safely removes the old unit, minimizing disruption to your household.
+- **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
+- **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
 
 ## Factors Affecting Water Heater Installation Costs
 
@@ -52,3 +49,7 @@ Regular maintenance and timely repairs can extend the lifespan of your water hea
 **What types of water heaters do you install?** We install both traditional tank water heaters and tankless models, working with all major brands to meet your specific needs.
 
 Choosing the right water heater installation service is crucial for ensuring long-term reliability and efficiency. At Wade's Plumbing & Septic, we are committed to providing top-quality service to residents of Santa Cruz County, California. For more information or to schedule a consultation, [contact us today](/service-offerings/fixture-installation/). We also offer a range of plumbing services, including [drain cleaning](/service-offerings/drain-cleaning/) and [alternative septic system installation](/service-offerings/alternative-septic-system-installation/), ensuring your home’s plumbing systems are in top shape.
+
+## Related expert tips
+
+- [Repair or replace your water heater?](/should-you-repair-or-replace-your-water-heater)
