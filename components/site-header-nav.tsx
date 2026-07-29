@@ -93,7 +93,7 @@ export function SiteHeaderNav() {
 								<Link
 									className={cn(
 										navigationMenuTriggerStyle(),
-										"bg-transparent text-white hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10",
+										"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent",
 									)}
 									href={item.href as Route}
 									prefetch
@@ -105,7 +105,7 @@ export function SiteHeaderNav() {
 					))}
 
 					<NavigationMenuItem>
-						<NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[state=open]:bg-white/12 data-[state=open]:text-white">
+						<NavigationMenuTrigger className="hover:text-primary-bright focus:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
 							Services
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
@@ -118,7 +118,7 @@ export function SiteHeaderNav() {
 					</NavigationMenuItem>
 
 					<NavigationMenuItem>
-						<NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[state=open]:bg-white/12 data-[state=open]:text-white">
+						<NavigationMenuTrigger className="hover:text-primary-bright focus:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
 							Company
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
@@ -141,12 +141,12 @@ export function SiteHeaderNav() {
 				</Button>
 			</div>
 
-			<div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+			<div className="flex items-center lg:hidden">
 				<Button
 					asChild
 					variant="ghost"
 					size="icon"
-					className="focus-visible:ring-offset-ink text-white hover:bg-white/10 hover:text-white sm:hidden"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
 				>
 					<a
 						href={siteConfig.phoneHref}
@@ -160,7 +160,7 @@ export function SiteHeaderNav() {
 						<Button
 							variant="ghost"
 							size="icon"
-							className="focus-visible:ring-offset-ink text-white hover:bg-white/10 hover:text-white"
+							className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
 							aria-label="Open main menu"
 						>
 							<Menu aria-hidden="true" className="size-5" />

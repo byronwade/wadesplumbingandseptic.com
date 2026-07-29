@@ -72,7 +72,7 @@ export function ContentHero({
 				<p className="mt-4 max-w-3xl text-base leading-relaxed text-[#e4e5e7] sm:mt-5 sm:text-lg">
 					{description}
 				</p>
-				<div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+				<div className="mt-7 flex flex-col items-stretch gap-4 sm:mt-8 sm:flex-row sm:items-center">
 					<a
 						className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
 						href={siteConfig.phoneHref}
@@ -83,7 +83,7 @@ export function ContentHero({
 					<Link
 						className={cn(
 							buttonVariants({ variant: "inverse", size: "xl" }),
-							"w-full sm:w-auto",
+							"w-full justify-start sm:w-auto sm:justify-center",
 						)}
 						href="/contact"
 						prefetch
