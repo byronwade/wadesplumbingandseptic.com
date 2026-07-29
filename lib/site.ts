@@ -2,14 +2,14 @@ export const siteConfig = {
 	name: "Wade's Plumbing & Septic",
 	shortName: "Wade's",
 	description:
-		"Family-owned plumbing and septic specialists serving Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
+		"Family-owned plumbing and septic specialists serving Santa Cruz County and selected Santa Clara County communities in California.",
 	url: "https://wadesplumbingandseptic.com",
 	phone: "831.225.4344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
 	hours: "Mon - Fri 9:00am - 5:00pm",
-	licenses: "CA: CSLB #1087260 · GA: MPR108559",
-	serviceArea: "Santa Cruz County, CA · Pickens County, GA",
+	licenses: "CA: CSLB #1087260",
+	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
 	social: {
 		facebook: "https://www.facebook.com/wadesplumbingandseptic/",
 		instagram: "https://www.instagram.com/wadesplumbing/",

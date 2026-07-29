@@ -6,4 +6,12 @@ export default defineConfig([
 	...nextVitals,
 	...nextTypescript,
 	globalIgnores([".next/**", "out/**", "next-env.d.ts"]),
+	{
+		// mapcn-generated MapLibre wrapper updates callback refs during render.
+		files: ["components/ui/map.tsx"],
+		rules: {
+			"react-hooks/refs": "off",
+			"react-hooks/set-state-in-effect": "off",
+		},
+	},
 ])

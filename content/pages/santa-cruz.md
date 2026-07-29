@@ -1,20 +1,21 @@
 ---
+
 title: Santa Cruz County Plumbing & Septic Experts
 description: Residential, commercial, emergency, sewer, water-heater, and advanced septic service throughout Santa Cruz County.
 eyebrow: Local California Service
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwoods in Santa Cruz County, California
 gallery:
-  - src: /images/locations/santa-cruz-plumber.webp
-    alt: Santa Cruz plumbing service graphic
-    width: 1280
-    height: 720
-    caption: Local plumbing and septic support
-  - src: /images/team/wades-team.webp
-    alt: Wade's Plumbing and Septic team
-    width: 1440
-    height: 1080
-    caption: A family-owned local team
+- src: /images/locations/santa-cruz-plumber.webp
+  alt: Santa Cruz plumbing service graphic
+  width: 1280
+  height: 720
+  caption: Local plumbing and septic support
+- src: /images/team/wades-team.webp
+  alt: Wade's Plumbing and Septic team
+  width: 1440
+  height: 1080
+  caption: A family-owned local team
 ---
 
 ## Local service for the complete property

@@ -1,7 +1,7 @@
 ---
 title: Contact Us
 description: We're here to help with all your plumbing and septic needs. Reach out
-  to our team for prompt, professional service.
+ to our team for prompt, professional service.
 order: 7
 image: /images/team/wades-team.webp
 imageAlt: Professional Wade's plumber at work
@@ -26,15 +26,15 @@ For plumbing emergencies, please call our emergency line for immediate assistanc
 
 ## Our Office
 
-123 Main Street  
-Anytown, USA 12345  
-Phone: (555) 123-4567  
+123 Main Street 
+Anytown, USA 12345 
+Phone: (555) 123-4567 
 Email: info@wadesplumbing.com 
 
 ## Hours of Operation
 
-Monday - Friday: 7:00 AM - 6:00 PM  
-Saturday: 8:00 AM - 2:00 PM  
+Monday - Friday: 7:00 AM - 6:00 PM 
+Saturday: 8:00 AM - 2:00 PM 
 Sunday: Closed (Emergency Services Available)
 
 ## Serving Santa Cruz County, CA

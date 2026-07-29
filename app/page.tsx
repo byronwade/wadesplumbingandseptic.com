@@ -32,7 +32,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = buildPageMetadata({
 	title: "Honest Plumbing & Septic Service",
 	description:
-		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
+		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities.",
 	pathname: "/",
 	image: "/images/locations/santa-cruz-plumber.webp",
 })
@@ -131,7 +131,7 @@ const faqs = [
 	{
 		question: "What areas do you serve?",
 		answer:
-			"We serve Santa Cruz County and selected Santa Clara County communities in California, plus Pickens County, Georgia. Call us if you are unsure whether a specific address is inside the current service area.",
+			"We serve Santa Cruz County and selected Santa Clara County communities in California. Call us if you are unsure whether a specific address is inside the current service area.",
 	},
 ]
 

@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz County's Trusted Guide for Plumbing Emergencies
 description: As a homeowner, it's important to be prepared for emergencies, especially
-  when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency…
+ when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency…
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -19,8 +19,6 @@ imageAlt: 'From Clogs to Catastrophes: A Plumber’s Guide to Home Emergencies'
 ---
 
 As a homeowner, it's important to be prepared for emergencies, especially when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency can quickly turn into a catastrophic situation if not handled promptly and properly. In this guide, we'll discuss some common plumbing emergencies and what you can do to prevent them and minimize damage.
-
-
 
 ## Common Plumbing Emergencies
 
@@ -86,16 +84,16 @@ Plumbing emergencies can be stressful and costly, but with proper prevention and
 
 ## FAQs
 
-  1. What should I do if my toilet overflows? 
-     * Shut off the water supply to the toilet and try to unclog the toilet using a plunger. If the problem persists, call a plumber.
-  2. How often should I have my plumbing system inspected? 
-     * It's recommended to have your plumbing system inspected annually by a professional plumber.
-  3. Can I use chemical drain cleaners to unclog my drains? 
-     * It's not recommended to use chemical drain cleaners as they can corrode pipes and harm the environment. Use a plunger or plumbing snake instead.
-  4. How can I prevent sewer line blockages? 
-     * Avoid flushing inappropriate items down the toilet, such as baby wipes and feminine products. Dispose of grease and food scraps properly, and have your sewer line inspected by a professional plumber.
-  5. What should I do if I have a leaky faucet? 
-     * Contact a plumber to repair or replace the faulty components. A leaky faucet can waste water and result in higher water bills.
+ 1. What should I do if my toilet overflows? 
+- Shut off the water supply to the toilet and try to unclog the toilet using a plunger. If the problem persists, call a plumber.
+ 2. How often should I have my plumbing system inspected? 
+- It's recommended to have your plumbing system inspected annually by a professional plumber.
+ 3. Can I use chemical drain cleaners to unclog my drains? 
+- It's not recommended to use chemical drain cleaners as they can corrode pipes and harm the environment. Use a plunger or plumbing snake instead.
+ 4. How can I prevent sewer line blockages? 
+- Avoid flushing inappropriate items down the toilet, such as baby wipes and feminine products. Dispose of grease and food scraps properly, and have your sewer line inspected by a professional plumber.
+ 5. What should I do if I have a leaky faucet? 
+- Contact a plumber to repair or replace the faulty components. A leaky faucet can waste water and result in higher water bills.
 
 Santa Cruz County Septic Experts
 
@@ -107,7 +105,7 @@ Count on Wade's Plumbing & Septic for immediate, reliable service in Santa Cruz 
 
 Wade's Plumbing & Septic is proud to serve the beautiful communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, Aptos, and Live Oak. Our team is dedicated to providing top-notch plumbing and septic services to all our neighbors in these areas.
 
-We are fully licensed and insured, holding a C-42 contractor license for California and a state license for Georgia, ensuring that you receive the highest quality service from certified professionals.
+We are fully licensed and insured, holding a C-42 contractor license for California, ensuring that you receive the highest quality service from certified professionals.
 
 Our office hours are Monday through Friday, from 9am to 5pm. For plumbing emergencies, our emergency line is available to provide you with immediate assistance.
 

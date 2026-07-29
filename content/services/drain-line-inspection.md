@@ -1,8 +1,8 @@
 ---
 title: Reliable Drain Inspections for Santa Cruz County Homes
 description: When it comes to maintaining the integrity of your home's plumbing system,
-  a professional drain line inspection is crucial. In Santa Cruz County, California,
-  homeowners trust Wade's Plumbing & Septic for expert inspection services that ensure…
+ a professional drain line inspection is crucial. In Santa Cruz County, California,
+ homeowners trust Wade's Plumbing & Septic for expert inspection services that ensure…
 category: Plumbing
 order: 44
 ---
@@ -17,11 +17,11 @@ A drain line inspection involves using specialized cameras to look inside your p
 
 Knowing when to schedule a drain line inspection can prevent major plumbing issues. Here are some signs that indicate your drain lines need attention:
 
-  * Frequent clogs or slow drains
-  * Backed up or overflowing toilets
-  * Unpleasant odors from drains
-  * Mold or mildew growth in the home
-  * Unexplained increases in water bills
+- Frequent clogs or slow drains
+- Backed up or overflowing toilets
+- Unpleasant odors from drains
+- Mold or mildew growth in the home
+- Unexplained increases in water bills
 
 If you notice any of these signs, it's time to consider a professional inspection to avoid more severe issues down the line.
 
@@ -29,10 +29,10 @@ If you notice any of these signs, it's time to consider a professional inspectio
 
 Understanding the causes of drain line issues can help in prevention. Common causes include:
 
-  * Tree root intrusion
-  * Accumulation of grease, hair, or other debris
-  * Corrosion or aging pipes
-  * Improper installation or shifting soil
+- Tree root intrusion
+- Accumulation of grease, hair, or other debris
+- Corrosion or aging pipes
+- Improper installation or shifting soil
 
 These issues can lead to severe blockages, leaks, and even pipe bursts if not addressed promptly.
 
@@ -60,10 +60,10 @@ The duration of a drain line inspection depends on the complexity of your plumbi
 
 Regular maintenance and inspections are key to preventing future issues. Here are some tips:
 
-  * Schedule routine inspections and cleanings
-  * Avoid flushing non-degradable items
-  * Install drain screens to catch debris
-  * Be mindful of what goes down your drains
+- Schedule routine inspections and cleanings
+- Avoid flushing non-degradable items
+- Install drain screens to catch debris
+- Be mindful of what goes down your drains
 
 ## Frequently Asked Questions About Drain Line Inspection
 
@@ -85,14 +85,14 @@ Preserve the health and efficiency of your plumbing system with our comprehensiv
 
 Wade's Plumbing & Septic proudly offers expert drain line inspection services to the residents of Santa Cruz County, CA. Our service area includes, but is not limited to, the following communities:
 
-  * Santa Cruz
-  * Watsonville
-  * Scotts Valley
-  * Aptos
-  * Capitola
-  * Felton
-  * Soquel
-  * Ben Lomond
+- Santa Cruz
+- Watsonville
+- Scotts Valley
+- Aptos
+- Capitola
+- Felton
+- Soquel
+- Ben Lomond
 
 Our team is fully licensed with a C-42 license for California, ensuring you receive professional and reliable service. Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available to assist you.
 

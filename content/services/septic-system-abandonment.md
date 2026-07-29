@@ -1,8 +1,8 @@
 ---
 title: Effortless Septic Abandonment in Santa Cruz County, CA
 description: Properly decommissioning a septic system is crucial for maintaining environmental
-  safety and compliance with local regulations. At Wade's Plumbing & Septic, we specialize
-  in septic system abandonment in Santa Cruz County, ensuring that outdated or failing…
+ safety and compliance with local regulations. At Wade's Plumbing & Septic, we specialize
+ in septic system abandonment in Santa Cruz County, ensuring that outdated or failing…
 category: Septic
 order: 3
 ---
@@ -21,11 +21,11 @@ There are several signs that indicate a septic system may need decommissioning, 
 
 The abandonment process typically involves pumping out the tank, crushing or removing it, and filling the area with suitable materials to prevent future hazards. Documentation is crucial to ensure compliance with local health department regulations. Our team handles every step of the process, providing peace of mind that the job is done correctly and safely.
 
-  * Pumping the septic tank
-  * Removing or crushing the tank
-  * Filling the void with sand or gravel
-  * Documenting the abandonment
-  * Ensuring regulatory compliance
+- Pumping the septic tank
+- Removing or crushing the tank
+- Filling the void with sand or gravel
+- Documenting the abandonment
+- Ensuring regulatory compliance
 
 ## Cost Factors and Timeline
 

@@ -1,8 +1,8 @@
 ---
 title: Effortless Septic Riser Installs in Santa Cruz County, CA
 description: Septic tank riser installation is an essential service for homeowners
-  looking to simplify the maintenance and inspection of their septic systems. By bringing
-  the tank access points to the surface, risers eliminate the need for labor-intensive…
+ looking to simplify the maintenance and inspection of their septic systems. By bringing
+ the tank access points to the surface, risers eliminate the need for labor-intensive…
 category: Septic
 order: 4
 ---
@@ -17,9 +17,9 @@ Septic tank risers are invaluable for homeowners who want to avoid the hassle of
 
 Consider installing a septic tank riser if you frequently encounter the following issues:
 
-  * Difficulty locating your septic tank access point
-  * High costs due to repeated excavation for maintenance
-  * Frequent septic system challenges such as backups or slow drainage
+- Difficulty locating your septic tank access point
+- High costs due to repeated excavation for maintenance
+- Frequent septic system challenges such as backups or slow drainage
 
 If you're experiencing any of these signs, our team in Santa Cruz County is ready to assist with professional riser installation, ensuring your system operates smoothly.
 
@@ -43,9 +43,9 @@ The complete installation usually takes a few hours, depending on the site condi
 
 Several factors influence the cost of installing septic tank risers, including:
 
-  * The depth of the septic tank below ground
-  * The number of risers required
-  * Material choices for risers and lids
+- The depth of the septic tank below ground
+- The number of risers required
+- Material choices for risers and lids
 
 Our team offers transparent pricing and detailed estimates, ensuring you understand every aspect of the cost involved.
 

@@ -1,8 +1,8 @@
 ---
 title: Choose the Best Home Water System in Santa Cruz County
 description: If your tap water smells off, tastes strange, or leaves behind stains,
-  it may be time to install a filtration solution. In Santa Cruz County, hard water
-  and…
+ it may be time to install a filtration solution. In Santa Cruz County, hard water
+ and…
 category: Plumbing Tips
 date: '2025-07-01'
 tags:
@@ -28,10 +28,10 @@ A whole-house filtration system is designed to purify all the water that enters 
 
 Common filtration technologies include:
 
-  * Reverse Osmosis: Uses a semi-permeable membrane to remove up to 99% of contaminants like lead, arsenic, and fluoride.
-  * Ion Exchange: Swaps unwanted ions (like heavy metals) for more desirable ones, commonly used in softening and purification.
-  * Catalytic Conversion: Alters harmful compounds like chloramines into non-toxic forms.
-  * Oxidation: Breaks down contaminants like iron, sulfur, and manganese.
+- Reverse Osmosis: Uses a semi-permeable membrane to remove up to 99% of contaminants like lead, arsenic, and fluoride.
+- Ion Exchange: Swaps unwanted ions (like heavy metals) for more desirable ones, commonly used in softening and purification.
+- Catalytic Conversion: Alters harmful compounds like chloramines into non-toxic forms.
+- Oxidation: Breaks down contaminants like iron, sulfur, and manganese.
 
 Whole-house filters remove chlorine, heavy metals, VOCs (volatile organic compounds), sediments, and more, making your water safer for drinking, bathing, and cooking. This option is ideal for homes with noticeable water odor, discoloration, or known water quality concerns.
 
@@ -39,29 +39,29 @@ What Is a Water Softener?
 
 A water softener is a specialized filtration device focused solely on removing hard water minerals, primarily calcium and magnesium. These minerals don’t pose a health risk, but they do:
 
-  * Cause scale buildup in pipes
-  * Shorten the lifespan of appliances
-  * Leave spots on dishes and glassware
-  * Dry out skin and hair
-  * Make soap and detergents less effective
+- Cause scale buildup in pipes
+- Shorten the lifespan of appliances
+- Leave spots on dishes and glassware
+- Dry out skin and hair
+- Make soap and detergents less effective
 
 There are two main types of water softeners:
 
-  * Salt-Based Softeners: Use sodium or potassium ions to replace calcium and magnesium. Effective but may raise sodium levels in drinking water.
-  * Salt-Free Softeners: Use a conditioning process to prevent scale buildup without adding sodium—an excellent choice for people with dietary or health concerns.
+- Salt-Based Softeners: Use sodium or potassium ions to replace calcium and magnesium. Effective but may raise sodium levels in drinking water.
+- Salt-Free Softeners: Use a conditioning process to prevent scale buildup without adding sodium—an excellent choice for people with dietary or health concerns.
 
 Installing a water softener helps preserve your plumbing system, extend appliance life, and reduce maintenance costs over time.
 
 Water Filters vs. Water Softeners: Key Differences
 
-**Feature**| **Water Filter**| **Water Softener**  
----|---|---  
-Primary Function| Removes contaminants and chemicals| Removes hard minerals  
-Improves Taste/Odor| Yes| No  
-Protects Plumbing| Yes| Yes  
-Safe for Drinking Water| Yes| Salt-based may increase sodium  
-Best For| Bad taste, smell, discoloration, chlorine| Mineral scale, cloudy dishes, soap inefficiency  
-  
+**Feature**| **Water Filter**| **Water Softener** 
+---|---|--- 
+Primary Function| Removes contaminants and chemicals| Removes hard minerals 
+Improves Taste/Odor| Yes| No 
+Protects Plumbing| Yes| Yes 
+Safe for Drinking Water| Yes| Salt-based may increase sodium 
+Best For| Bad taste, smell, discoloration, chlorine| Mineral scale, cloudy dishes, soap inefficiency 
+ 
 While water softeners are a type of water filter, they serve a very specific purpose. In contrast, whole-house filters address a wider range of contaminants.
 
 Should You Install Both?
@@ -74,12 +74,12 @@ When to Consider a Filtration or Softening System
 
 You may need a water filtration or softening system if:
 
-  * Your water smells like chlorine, sulfur, or metal
-  * You see rust-colored stains in toilets or sinks
-  * Your dishes come out cloudy or spotty
-  * Your skin feels dry after showering
-  * You’ve had to replace water-using appliances prematurely
-  * You’re on well water or have poor city water quality
+- Your water smells like chlorine, sulfur, or metal
+- You see rust-colored stains in toilets or sinks
+- Your dishes come out cloudy or spotty
+- Your skin feels dry after showering
+- You’ve had to replace water-using appliances prematurely
+- You’re on well water or have poor city water quality
 
 Upgrade Your Water Quality With Confidence
 
@@ -97,7 +97,7 @@ Experience enhanced water quality with our expert solutions in Santa Cruz County
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA area, including the communities of Santa Cruz, Scotts Valley, Capitola, Watsonville, and Aptos. Our team is equipped to handle all your home water system needs with professionalism and expertise.
 
-Our contractors are fully licensed and certified, holding a C-42 license for California and a state license for Georgia, ensuring compliance with all state regulations and standards.
+Our contractors are fully licensed and certified, holding a C-42 contractor license for California, ensuring compliance with all state regulations and standards.
 
 Office Hours: MondayÃ¢â‚¬â€œFriday, 9amÃ¢â‚¬â€œ5pm
 

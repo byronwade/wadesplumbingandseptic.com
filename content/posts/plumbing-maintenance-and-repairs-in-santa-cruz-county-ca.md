@@ -6,8 +6,8 @@ date: 2025-05-11
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Santa Cruz County redwood landscape
 tags:
-  - Santa Cruz plumbing
-  - plumbing maintenance
+- Santa Cruz plumbing
+- plumbing maintenance
 ---
 
 Routine observation helps Santa Cruz County homeowners find problems before they damage the property.

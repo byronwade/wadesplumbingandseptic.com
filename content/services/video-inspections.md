@@ -1,8 +1,8 @@
 ---
 title: 'Clear Pipes Guaranteed: Video Inspections in Santa Cruz'
 description: Maintaining a healthy plumbing system is crucial for any homeowner, and
-  a sewer line video inspection is an invaluable service to ensure everything is functioning
-  optimally. At Wade's Plumbing & Septic, we offer state-of-the-art video inspections…
+ a sewer line video inspection is an invaluable service to ensure everything is functioning
+ optimally. At Wade's Plumbing & Septic, we offer state-of-the-art video inspections…
 category: Septic
 order: 1
 ---
@@ -13,10 +13,10 @@ Maintaining a healthy plumbing system is crucial for any homeowner, and a sewer 
 
 Recognizing when to schedule a sewer line video inspection can save you time, money, and stress. Common indicators include:
 
-  * Frequent drain clogs or slow drainage
-  * Unpleasant odors emanating from your drains
-  * Unexplained patches of lush grass or water pooling in your yard
-  * Sudden increase in water bills
+- Frequent drain clogs or slow drainage
+- Unpleasant odors emanating from your drains
+- Unexplained patches of lush grass or water pooling in your yard
+- Sudden increase in water bills
 
 If you notice any of these signs, a video inspection can pinpoint the root cause, allowing for targeted repairs.
 
@@ -24,10 +24,10 @@ If you notice any of these signs, a video inspection can pinpoint the root cause
 
 Sewer line problems can arise from various sources. Common causes include:
 
-  * **Tree Root Intrusion:** Roots can penetrate and obstruct pipes, leading to blockages and damage.
-  * **Pipe Age and Deterioration:** Older pipes are more susceptible to cracks and breaks.
-  * **Ground Shifting:** Natural shifts in the earth can misalign pipes or cause structural damage.
-  * **Poor Installation:** Incorrectly installed pipes can lead to a range of issues over time.
+- **Tree Root Intrusion:** Roots can penetrate and obstruct pipes, leading to blockages and damage.
+- **Pipe Age and Deterioration:** Older pipes are more susceptible to cracks and breaks.
+- **Ground Shifting:** Natural shifts in the earth can misalign pipes or cause structural damage.
+- **Poor Installation:** Incorrectly installed pipes can lead to a range of issues over time.
 
 ## Our Sewer Line Video Inspection Process
 

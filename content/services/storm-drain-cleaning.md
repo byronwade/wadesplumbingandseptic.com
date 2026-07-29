@@ -1,8 +1,8 @@
 ---
 title: Ensure Reliable Storm Drain Clearing in Santa Cruz County
 description: Storm drain cleaning is a crucial service for homeowners in Santa Cruz
-  County, California, ensuring your property remains safe from flooding and water
-  damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to…
+ County, California, ensuring your property remains safe from flooding and water
+ damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to…
 category: Plumbing
 order: 29
 ---
@@ -13,10 +13,10 @@ Storm [drain cleaning](/service-offerings/drain-cleaning/) is a crucial service 
 
 Identifying when your storm drains need cleaning can save you from future headaches. Common signs include:
 
-  * Water pooling around drains or in your yard
-  * Unpleasant odors emanating from drains
-  * Slow water drainage during heavy rains
-  * Visible debris build-up in or around drains
+- Water pooling around drains or in your yard
+- Unpleasant odors emanating from drains
+- Slow water drainage during heavy rains
+- Visible debris build-up in or around drains
 
 If you notice any of these issues, it's time to consider [our professional drain cleaning services](/service-offerings/drain-cleaning/).
 
@@ -24,10 +24,10 @@ If you notice any of these issues, it's time to consider [our professional drain
 
 Storm drain blockages can result from a variety of sources. Common causes include:
 
-  * Accumulated leaves and organic debris
-  * Sediment and dirt build-up
-  * Litter and non-degradable waste
-  * Tree root intrusion
+- Accumulated leaves and organic debris
+- Sediment and dirt build-up
+- Litter and non-degradable waste
+- Tree root intrusion
 
 Understanding these causes helps in taking preventive measures and ensuring regular storm drain cleaning is part of your property's maintenance plan.
 
@@ -51,9 +51,9 @@ Post-cleaning, we provide tailored maintenance advice to prevent future issues, 
 
 The timeline for storm drain cleaning varies based on the extent of blockages and system complexity, typically ranging from a few hours to a full day. Cost factors include:
 
-  * The severity of blockages
-  * The size and complexity of the drainage system
-  * Equipment and techniques required
+- The severity of blockages
+- The size and complexity of the drainage system
+- Equipment and techniques required
 
 Our team offers transparent pricing and detailed estimates before commencing any work, ensuring no surprises.
 
@@ -61,10 +61,10 @@ Our team offers transparent pricing and detailed estimates before commencing any
 
 To maintain optimal drainage, consider these preventative measures:
 
-  * Regularly clear leaves and debris from your property
-  * Schedule periodic professional inspections
-  * Install grates or covers to minimize debris entry
-  * Consider [backflow prevention installations](/service-offerings/backflow-prevention-installation/)
+- Regularly clear leaves and debris from your property
+- Schedule periodic professional inspections
+- Install grates or covers to minimize debris entry
+- Consider [backflow prevention installations](/service-offerings/backflow-prevention-installation/)
 
 ## Frequently Asked Questions
 

@@ -1,26 +1,27 @@
 ---
+
 title: Plumbing & Septic Service Areas
-description: Wade's serves Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.
+description: Wade's serves Santa Cruz County and selected Santa Clara County communities in California.
 eyebrow: Local Coverage
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Coastal redwoods in the Santa Cruz County service area
 order: 2
 gallery:
-  - src: /images/locations/santa-cruz-redwoods.webp
-    alt: Coastal redwood forest in Santa Cruz County
-    width: 1800
-    height: 1350
-    caption: Santa Cruz County, California
-  - src: /images/locations/river-and-redwoods.webp
-    alt: Mountain river surrounded by forest
-    width: 1800
-    height: 1242
-    caption: Serving mountain and rural properties
-  - src: /images/locations/santa-cruz-plumber.webp
-    alt: Wade's Plumbing and Septic Santa Cruz service graphic
-    width: 1280
-    height: 720
-    caption: Local plumbing and septic service
+- src: /images/locations/santa-cruz-redwoods.webp
+  alt: Coastal redwood forest in Santa Cruz County
+  width: 1800
+  height: 1350
+  caption: Santa Cruz County, California
+- src: /images/locations/river-and-redwoods.webp
+  alt: Mountain river surrounded by forest
+  width: 1800
+  height: 1242
+  caption: Serving mountain and rural properties
+- src: /images/locations/santa-cruz-plumber.webp
+  alt: Wade's Plumbing and Septic Santa Cruz service graphic
+  width: 1280
+  height: 720
+  caption: Local plumbing and septic service
 ---
 
 ## Local knowledge matters
@@ -71,20 +72,6 @@ Selected plumbing and project work may be available in:
 - Communities near the Santa Cruz County line
 
 Availability depends on project type and scheduling. Call with the property address so the team can confirm coverage.
-
-## Pickens County, Georgia
-
-Wade's Georgia service presence is supported by Master Plumber Non-Restricted license MPR108559. Coverage includes:
-
-- Jasper
-- Talking Rock
-- Tate
-- Nelson
-- Marble Hill
-- Bent Tree
-- Big Canoe and nearby communities
-
-Explore the [Pickens County plumbing page](/pickens-county-ga).
 
 ## How service works in your area
 

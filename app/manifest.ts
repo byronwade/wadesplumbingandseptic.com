@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		name: "Wade's Plumbing & Septic",
 		short_name: "Wade's",
 		description:
-			"Plumbing and septic service in Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
+			"Plumbing and septic service in Santa Cruz County and selected Santa Clara County communities.",
 		start_url: "/",
 		display: "standalone",
 		background_color: "#ffffff",

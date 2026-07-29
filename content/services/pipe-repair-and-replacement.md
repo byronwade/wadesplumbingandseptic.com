@@ -1,9 +1,9 @@
 ---
 title: Expert Pipe Repair & Replacement in Santa Cruz County
 description: At Wade's Plumbing & Septic, we understand the urgency and importance
-  of maintaining a reliable plumbing system. Our specialized pipe repair and replacement
-  services cater to residents and businesses throughout Santa Cruz County, ensuring
-  that your…
+ of maintaining a reliable plumbing system. Our specialized pipe repair and replacement
+ services cater to residents and businesses throughout Santa Cruz County, ensuring
+ that your…
 category: Plumbing
 order: 31
 ---
@@ -14,11 +14,11 @@ At Wade's Plumbing & Septic, we understand the urgency and importance of maintai
 
 Recognizing the signs of pipe deterioration early can prevent significant damage and costly repairs. Some common indicators include:
 
-  * Unexplained increase in water bills
-  * Visible rust or corrosion on pipes
-  * Discolored water from taps
-  * Low water pressure
-  * Unusual noises from plumbing
+- Unexplained increase in water bills
+- Visible rust or corrosion on pipes
+- Discolored water from taps
+- Low water pressure
+- Unusual noises from plumbing
 
 If you notice any of these signs, it’s crucial to seek professional [drain line inspection](/service-offerings/drain-line-inspection/) services to assess the condition of your pipes.
 
@@ -38,10 +38,10 @@ We also offer related services like [drain cleaning](/service-offerings/drain-cl
 
 The cost of pipe repair and replacement can vary based on several factors:
 
-  * Extent of damage
-  * Type of pipe material
-  * Accessibility of the affected area
-  * Scope of work required
+- Extent of damage
+- Type of pipe material
+- Accessibility of the affected area
+- Scope of work required
 
 We provide transparent pricing and detailed estimates to help you make informed decisions without any hidden surprises.
 
@@ -69,11 +69,11 @@ At Wade's Plumbing & Septic, we are committed to delivering exceptional service 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, offering top-quality pipe repair and replacement services to communities including:
 
-  * [Aptos](/service-area/aptos/)
-  * [Capitola](/service-area/capitola/)
-  * [Scotts Valley](/service-area/scotts-valley/)
-  * [Watsonville](/service-area/watsonville/)
-  * [Santa Cruz](/service-area/santa-cruz/)
+- [Aptos](/service-area/aptos/)
+- [Capitola](/service-area/capitola/)
+- [Scotts Valley](/service-area/scotts-valley/)
+- [Watsonville](/service-area/watsonville/)
+- [Santa Cruz](/service-area/santa-cruz/)
 
 Our team is fully licensed and insured, holding a C-42 license for California. We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
 

@@ -1,8 +1,8 @@
 ---
 title: Solve Shower Backup Issues in Santa Cruz County Homes
 description: Few things are more alarming than seeing dirty water rising into your
-  shower. This usually signals a blockage in your home’s main sewer line. When any
-  of your…
+ shower. This usually signals a blockage in your home’s main sewer line. When any
+ of your…
 category: Plumbing Tips
 date: '2025-06-03'
 tags:
@@ -34,14 +34,14 @@ Common Causes of Main Sewer Line Clogs
 
 There are several typical reasons for main drain and sewer line blockages:
 
-  * Broken, collapsed, or sagging sewer pipes
-  * Tree roots growing into the pipe and blocking flow
-  * Improper items flushed down the toilet, such as:  
+- Broken, collapsed, or sagging sewer pipes
+- Tree roots growing into the pipe and blocking flow
+- Improper items flushed down the toilet, such as: 
 
-    * Baby wipes and diapers
-    * Feminine hygiene products
-    * Paper towels and napkins
-  *   * Pouring fats, grease, or oil down the drain, which solidifies and causes blockages over time
+- Baby wipes and diapers
+- Feminine hygiene products
+- Paper towels and napkins
+- * Pouring fats, grease, or oil down the drain, which solidifies and causes blockages over time
 
 Can Toilet Paper Clog Sewer Lines?
 

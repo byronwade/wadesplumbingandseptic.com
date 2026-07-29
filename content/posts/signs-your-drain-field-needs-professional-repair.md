@@ -1,7 +1,7 @@
 ---
 title: Santa Cruz County's Trusted Drain Field Repair Experts
 description: While many plumbing problems can be solved with basic tools and a little
-  know-how, your septic system’s drain field is not one of them. The drain field—also…
+ know-how, your septic system’s drain field is not one of them. The drain field—also…
 category: Septic Maintenance
 date: '2025-07-08'
 tags:
@@ -31,10 +31,10 @@ When a drain field becomes saturated or clogged, excess sewage can seep into the
 
 Keep an eye out for:
 
-  * Bright green strips or patches on your lawn
-  * Mushy or wet areas around the drain field
-  * Foul or musty odors in the yard
-  * Black, slimy sludge near the surface
+- Bright green strips or patches on your lawn
+- Mushy or wet areas around the drain field
+- Foul or musty odors in the yard
+- Black, slimy sludge near the surface
 
 These are all signs that your septic system is not processing wastewater properly and needs immediate professional inspection.
 
@@ -58,11 +58,11 @@ What Causes Drain Field Failure?
 
 Drain field problems often stem from:
 
-  * Excessive water use, which overwhelms the system
-  * Lack of septic pumping, allowing solids to reach the field
-  * Compacted soil from heavy vehicles or foot traffic over the field
-  * Tree roots invading and clogging drain pipes
-  * Old or damaged pipes due to corrosion or poor installation
+- Excessive water use, which overwhelms the system
+- Lack of septic pumping, allowing solids to reach the field
+- Compacted soil from heavy vehicles or foot traffic over the field
+- Tree roots invading and clogging drain pipes
+- Old or damaged pipes due to corrosion or poor installation
 
 Routine inspections and proper septic system care are the best ways to prevent these issues.
 

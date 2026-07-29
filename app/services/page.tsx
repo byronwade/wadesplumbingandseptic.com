@@ -11,7 +11,7 @@ import { buildPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildPageMetadata({
 	title: "Plumbing & Septic Services",
 	description:
-		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
+		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities.",
 	pathname: "/services",
 	image: "/images/work/commercial-plumbing-installation.webp",
 })
@@ -44,7 +44,7 @@ export default function ServicesPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia."
+				description="Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities."
 				eyebrow="Browse Services"
 				image="/images/work/commercial-plumbing-installation.webp"
 				imageAlt="Professional plumbing installation"

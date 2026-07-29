@@ -1,8 +1,8 @@
 ---
 title: Prevent Costly Septic Issues in Santa Cruz County Homes
 description: Learn to recognize the critical warning signs of septic system problems
-  and why addressing them promptly can save you thousands in repairs. From slow drains
-  to unusual odors, these symptoms require immediate professional attention.
+ and why addressing them promptly can save you thousands in repairs. From slow drains
+ to unusual odors, these symptoms require immediate professional attention.
 category: Septic Maintenance
 date: '2025-05-11'
 tags:
@@ -68,10 +68,10 @@ A failing septic system can dramatically reduce your property value and complica
 
 If you've noticed any of these warning signs, don't wait for the problem to worsen. Contact Wade's Plumbing & Septic for a thorough inspection. Our certified technicians can:
 
-  * Accurately diagnose the specific issue affecting your system
-  * Provide clear, upfront pricing for necessary repairs
-  * Recommend preventative maintenance to avoid future problems
-  * Complete repairs efficiently with minimal disruption to your property
+- Accurately diagnose the specific issue affecting your system
+- Provide clear, upfront pricing for necessary repairs
+- Recommend preventative maintenance to avoid future problems
+- Complete repairs efficiently with minimal disruption to your property
 
 Remember, addressing septic issues early is always less expensive and less disruptive than waiting for complete system failure. Schedule your inspection today and protect your home, health, and property value.
 

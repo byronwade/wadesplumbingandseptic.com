@@ -1,7 +1,7 @@
 ---
 title: Boost Shower Pressure in Santa Cruz County Homes
 description: We recently helped a homeowner in Santa Cruz, CA who was dealing with
-  an unpredictable shower—fluctuating temperatures, inconsistent pressure, and a…
+ an unpredictable shower—fluctuating temperatures, inconsistent pressure, and a…
 category: Plumbing Tips
 date: '2025-08-05'
 tags:
@@ -31,11 +31,11 @@ Common Signs Your Shower Valve Needs to Be Replaced
 
 If you’re experiencing any of the following issues, your shower valve may be to blame:
 
-  * Water temperature is slow to change when you adjust the handle
-  * Sudden pressure drops when someone flushes a toilet or runs the dishwasher
-  * Fluctuating temperatures while showering (e.g., switching from hot to cold without warning)
-  * Dripping water or leaks behind the wall, which could lead to mold or mildew buildup
-  * Lack of response when adjusting from tub to shower or vice versa
+- Water temperature is slow to change when you adjust the handle
+- Sudden pressure drops when someone flushes a toilet or runs the dishwasher
+- Fluctuating temperatures while showering (e.g., switching from hot to cold without warning)
+- Dripping water or leaks behind the wall, which could lead to mold or mildew buildup
+- Lack of response when adjusting from tub to shower or vice versa
 
 A malfunctioning valve not only disrupts your daily routine, but can also cause hidden water damage if it leaks behind walls.
 
@@ -45,17 +45,17 @@ For our Santa Cruz client, we decided to install a new pressure-balancing shower
 
 Depending on your setup, other valve options may include:
 
-  * Thermostatic Valves: Offer precise temperature control using heat-sensitive materials. More expensive, but ideal for homes with advanced or custom shower systems.
-  * Transfer Valves: Allow switching between showerheads, hand showers, or tub spouts—ideal for multi-function systems or combo setups.
+- Thermostatic Valves: Offer precise temperature control using heat-sensitive materials. More expensive, but ideal for homes with advanced or custom shower systems.
+- Transfer Valves: Allow switching between showerheads, hand showers, or tub spouts—ideal for multi-function systems or combo setups.
 
 Why a Faulty Shower Valve Needs Prompt Attention
 
 Ignoring a shower valve issue doesn’t just make for a frustrating shower—it can lead to:
 
-  * Water waste, raising your utility bills
-  * Inconsistent water temperatures, posing a safety hazard
-  * Leaks behind walls, leading to drywall damage and mold growth
-  * Unnecessary wear on plumbing systems
+- Water waste, raising your utility bills
+- Inconsistent water temperatures, posing a safety hazard
+- Leaks behind walls, leading to drywall damage and mold growth
+- Unnecessary wear on plumbing systems
 
 Replacing a shower valve often requires opening part of the wall, so it’s best to let a licensed plumber handle the job to avoid further damage or incorrect installation.
 
@@ -75,25 +75,25 @@ Enhance your home's water efficiency with expert shower valve replacement servic
 
 At Wade's Plumbing & Septic, we are dedicated to optimizing shower water flow for homeowners throughout Santa Cruz County, California. Our expert services ensure that your residential plumbing system delivers consistent and efficient water flow, enhancing your daily shower experience. We proudly serve the following cities and communities within the county:
 
-  * Aptos
-  * Ben Lomond
-  * Boulder Creek
-  * Capitola
-  * Corralitos
-  * Davenport
-  * Felton
-  * Freedom
-  * La Selva Beach
-  * Lompico
+- Aptos
+- Ben Lomond
+- Boulder Creek
+- Capitola
+- Corralitos
+- Davenport
+- Felton
+- Freedom
+- La Selva Beach
+- Lompico
 
-  * Mount Hermon
-  * Pajaro Dunes
-  * Rio Del Mar
-  * Santa Cruz
-  * Scotts Valley
-  * Soquel
-  * Watsonville
-  * Zayante
+- Mount Hermon
+- Pajaro Dunes
+- Rio Del Mar
+- Santa Cruz
+- Scotts Valley
+- Soquel
+- Watsonville
+- Zayante
 
 ## Frequently Asked Questions
 
@@ -127,23 +127,23 @@ Experience a revitalized shower experience with our expert plumbing solutions.
 
 At Wade's Plumbing & Septic, we specialize in optimizing your home's shower flow to ensure a refreshing and consistent water experience. Our services are available to residential customers throughout Santa Cruz County, California. Whether you're experiencing low pressure or inconsistent flow, our expert team is here to help enhance your shower experience.
 
-  * Aptos
-  * Ben Lomond
-  * Boulder Creek
-  * Capitola
-  * Corralitos
-  * Davenport
-  * Felton
-  * Freedom
-  * La Selva Beach
-  * Live Oak
+- Aptos
+- Ben Lomond
+- Boulder Creek
+- Capitola
+- Corralitos
+- Davenport
+- Felton
+- Freedom
+- La Selva Beach
+- Live Oak
 
-  * Lompico
-  * Mount Hermon
-  * Pajaro Dunes
-  * Rio Del Mar
-  * Santa Cruz
-  * Scotts Valley
-  * Soquel
-  * Watsonville
-  * Zayante
+- Lompico
+- Mount Hermon
+- Pajaro Dunes
+- Rio Del Mar
+- Santa Cruz
+- Scotts Valley
+- Soquel
+- Watsonville
+- Zayante

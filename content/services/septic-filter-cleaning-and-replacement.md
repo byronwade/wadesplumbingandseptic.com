@@ -1,8 +1,8 @@
 ---
 title: Optimize Septic Filter Cleaning in Santa Cruz County
 description: Septic systems are vital to maintaining a healthy and functional household,
-  especially in areas like Santa Cruz County, California. A crucial component of these
-  systems is the effluent filter, which ensures that solids do not enter…
+ especially in areas like Santa Cruz County, California. A crucial component of these
+ systems is the effluent filter, which ensures that solids do not enter…
 category: Septic
 order: 10
 ---
@@ -17,10 +17,10 @@ Septic filters play a pivotal role in maintaining the longevity of your septic s
 
 Recognizing the signs of a clogged or failing septic filter can save you from extensive repairs. Common indicators include:
 
-  * Slow draining sinks and toilets
-  * Unpleasant odors around your septic tank or drainfield
-  * Gurgling sounds in the plumbing system
-  * Standing water near the septic area
+- Slow draining sinks and toilets
+- Unpleasant odors around your septic tank or drainfield
+- Gurgling sounds in the plumbing system
+- Standing water near the septic area
 
 If you notice any of these signs, it's crucial to get in touch with a professional for [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment/) immediately.
 
@@ -52,10 +52,10 @@ The timeline for septic filter cleaning varies based on the extent of the work r
 
 Regular maintenance is key to preventing septic system failures. Here are some tips to keep your system running smoothly:
 
-  * Schedule regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/).
-  * Avoid flushing non-biodegradable items.
-  * Monitor water usage to prevent overloading the system.
-  * Arrange for periodic inspections and cleaning.
+- Schedule regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/).
+- Avoid flushing non-biodegradable items.
+- Monitor water usage to prevent overloading the system.
+- Arrange for periodic inspections and cleaning.
 
 By following these guidelines, you can significantly reduce the risk of requiring extensive [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/).
 

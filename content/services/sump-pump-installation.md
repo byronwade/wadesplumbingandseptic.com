@@ -1,8 +1,8 @@
 ---
 title: Reliable Sump Pump Installations in Santa Cruz County
 description: Protecting your home from basement flooding is essential, and a reliable
-  sump pump installation can be your first line of defense. At Wade's Plumbing & Septic,
-  we offer expert sump pump installation services to homeowners in…
+ sump pump installation can be your first line of defense. At Wade's Plumbing & Septic,
+ we offer expert sump pump installation services to homeowners in…
 category: Plumbing
 order: 38
 ---
@@ -17,10 +17,10 @@ Sump pumps play a critical role in managing water accumulation in basements or l
 
 Recognizing the signs that indicate a need for sump pump installation can save you from costly repairs. Common indicators include:
 
-  * Frequent basement flooding or dampness.
-  * Visible water stains on basement walls or floors.
-  * Mold or mildew growth in the basement.
-  * Persistent musty odors.
+- Frequent basement flooding or dampness.
+- Visible water stains on basement walls or floors.
+- Mold or mildew growth in the basement.
+- Persistent musty odors.
 
 ## Our Sump Pump Installation Process
 
@@ -32,10 +32,10 @@ We begin with a thorough assessment of your basement and surrounding landscape t
 
 ### Installation Steps
 
-  * Excavating a pit for the sump pump basin.
-  * Placing the sump pump in the basin and connecting discharge pipes.
-  * Installing check valves to prevent backflow.
-  * Connecting the system to your home's electrical supply.
+- Excavating a pit for the sump pump basin.
+- Placing the sump pump in the basin and connecting discharge pipes.
+- Installing check valves to prevent backflow.
+- Connecting the system to your home's electrical supply.
 
 ## Timeline and Cost Factors
 

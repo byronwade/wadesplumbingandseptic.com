@@ -1,7 +1,7 @@
 ---
 title: Failed Septic Repair & Replacement - Santa Cruz County
 description: Septic failure landing page for backups, drain field issues, and system
-  replacement calls.
+ replacement calls.
 order: 40
 image: /images/work/multi-tank-excavation.webp
 imageAlt: Excavation for a replacement septic system
@@ -21,16 +21,16 @@ Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 ### What We Help With
 
-  * Septic Backup Response
-  * Drain Field Diagnostics
-  * Failed System Assessments
-  * Repair vs Replacement Guidance
+- Septic Backup Response
+- Drain Field Diagnostics
+- Failed System Assessments
+- Repair vs Replacement Guidance
 
 ### What Happens Next
 
-  * Gather symptoms and property details
-  * Schedule on-site assessment
-  * Deliver practical repair/replacement options
+- Gather symptoms and property details
+- Schedule on-site assessment
+- Deliver practical repair/replacement options
 
 #### Prefer A Call Back?
 

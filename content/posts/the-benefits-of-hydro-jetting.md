@@ -1,10 +1,10 @@
 ---
 title: Experience Superior Hydro-Jetting in Santa Cruz County
 description: Clogged drains can cause odors and costly damage, often requiring more
-  than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting,
-  a high-pressure water technique that thoroughly cleans pipes without chemicals.
-  This effective, non-invasive solution prevents future clogs and is a long-term savings
-  investment for plumbing maintenance in Santa Cruz County.
+ than traditional cleaning methods. Wade’s Plumbing & Septic offers hydro-jetting,
+ a high-pressure water technique that thoroughly cleans pipes without chemicals.
+ This effective, non-invasive solution prevents future clogs and is a long-term savings
+ investment for plumbing maintenance in Santa Cruz County.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -68,16 +68,16 @@ Compared to frequent snaking or using chemical drain cleaners, hydro-jetting is 
 
 ## Frequently Asked Questions About Hydro-Jetting
 
-**What types of systems can be hydro-jetted?**  
+**What types of systems can be hydro-jetted?** 
 Hydro-jetting is safe and effective for most plumbing systems including **PVC, cast iron, and clay pipes** found in residential, commercial, and industrial settings.
 
-**How is hydro-jetting different from traditional snaking?**  
+**How is hydro-jetting different from traditional snaking?** 
 Unlike snaking, which only breaks up a portion of the blockage, hydro-jetting **completely clears the pipe walls** , preventing debris from sticking and forming new clogs.
 
-**Is hydro-jetting safe for older pipes?**  
+**Is hydro-jetting safe for older pipes?** 
 Yes—but it must be done by experienced professionals. At Wade’s Plumbing & Septic, we inspect the pipes before jetting and adjust water pressure accordingly to **avoid damaging fragile or aging pipes**.
 
-**How often should I schedule hydro-jetting?**  
+**How often should I schedule hydro-jetting?** 
 We recommend scheduling **annual or bi-annual hydro-jetting** to maintain your plumbing system, especially if you deal with recurring clogs or have older pipes.
 
 
@@ -90,8 +90,8 @@ Don’t wait for your drains to back up—**get ahead of the problem** with prof
 
 
 
-📍 Serving: Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas  
-🔧 Services: Sewer cleaning, drain clearing, hydro-jetting, plumbing inspections, and more  
+📍 Serving: Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas 
+🔧 Services: Sewer cleaning, drain clearing, hydro-jetting, plumbing inspections, and more 
 📞 **Call us today at (831) 225-4344** to schedule your hydro-jetting service
 
 Santa Cruz County Septic Experts

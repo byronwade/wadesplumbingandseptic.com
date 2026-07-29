@@ -1,8 +1,8 @@
 ---
 title: Emergency Drain & Sewer Solutions in Santa Cruz County, CA
 description: Plumbing problems in your home can range from a quick fix with a plunger
-  to a major issue requiring professional help. While some clogs are manageable on
-  your…
+ to a major issue requiring professional help. While some clogs are manageable on
+ your…
 category: Plumbing Tips
 date: '2025-06-10'
 tags:
@@ -24,9 +24,9 @@ Early Warning Signs of a Clog
 
 Drain clogs are a common issue in households and are typically caused by hair, grease, soap buildup, tree roots, or dirt. Knowing how to spot the signs early can help you avoid larger problems. Watch for:
 
-  * Foul odors coming from your sinks or drains
-  * Water draining slowly from tubs or sinks
-  * Gurgling noises in your plumbing system
+- Foul odors coming from your sinks or drains
+- Water draining slowly from tubs or sinks
+- Gurgling noises in your plumbing system
 
 These symptoms usually indicate a developing clog in one of three areas: directly beneath a sink, deeper in the drain pipes, or in the main sewer line.
 
@@ -44,19 +44,19 @@ What You Need for DIY Main Drain Cleaning
 
 If you want to attempt main drain cleaning yourself, gather the following tools and gear:
 
-  * Waterproof gloves
-  * Waterproof boots
-  * Long water hose
-  * Wrench
-  * Drain snake or plumbing auger
+- Waterproof gloves
+- Waterproof boots
+- Long water hose
+- Wrench
+- Drain snake or plumbing auger
 
 Step-by-Step Cleaning Process
 
-  1. Locate and Open the Cleanout Pipe  
+ 1. Locate and Open the Cleanout Pipe 
 Look for a short pipe with a cap—usually found in the yard or basement. This gives you access to the sewer line. Open the cap slowly and cautiously, allowing any backed-up wastewater to drain. Be prepared for potential spray or overflow.
-  2. Use the Drain Snake or Auger  
+ 2. Use the Drain Snake or Auger 
 Once the water subsides, feed the auger into the pipe. Follow the instructions specific to your equipment. Continue until the resistance disappears, indicating that the blockage has cleared. Keep the auger running for a few more minutes to break up any lingering debris.
-  3. Flush With Water  
+ 3. Flush With Water 
 With the auger still in the pipe, run water through the system using your hose. This helps remove loose debris from both the tool and the pipes. After flushing, remove the snake, replace the cleanout cap, and thoroughly clean your tools.
 
 Still Dealing With a Clog? Let the Experts Handle It
@@ -73,7 +73,7 @@ Trust Wade's Plumbing & Septic for prompt, reliable service in Santa Cruz County
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing top-notch emergency drain and sewer solutions to residents and businesses throughout the region.
 
-We are fully licensed and insured, holding a C-42 license for California and a state license for Georgia, ensuring that our services meet the highest standards of quality and safety.
+We are fully licensed and insured, holding a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and safety.
 
 Our office hours are Monday through Friday, from 9am to 5pm. For emergencies, our dedicated emergency line is available to assist you with any urgent plumbing or septic issues.
 

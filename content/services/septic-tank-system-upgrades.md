@@ -1,9 +1,9 @@
 ---
 title: Upgrade Your Septic System in Santa Cruz County Homes
 description: In Santa Cruz County, California, maintaining a reliable septic system
-  is crucial for homeowners. Septic system upgrades enhance your existing system's
-  performance, increase its capacity, and add advanced treatment capabilities, ensuring
-  long-term efficiency and compliance with…
+ is crucial for homeowners. Septic system upgrades enhance your existing system's
+ performance, increase its capacity, and add advanced treatment capabilities, ensuring
+ long-term efficiency and compliance with…
 category: Septic
 order: 19
 ---
@@ -18,10 +18,10 @@ Septic system upgrades are essential for homeowners looking to improve their sys
 
 Recognizing the signs that your septic system requires an upgrade can save you from unexpected failures. Common indicators include:
 
-  * Slow draining sinks and toilets
-  * Frequent backups or sewage smells in your home
-  * Pooling water or lush patches in your yard
-  * Algae growth in nearby water bodies
+- Slow draining sinks and toilets
+- Frequent backups or sewage smells in your home
+- Pooling water or lush patches in your yard
+- Algae growth in nearby water bodies
 
 If you notice any of these issues, it's time to consult with professionals like Wade's Plumbing & Septic.
 

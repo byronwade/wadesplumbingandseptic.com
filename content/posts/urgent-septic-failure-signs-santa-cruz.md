@@ -1,8 +1,8 @@
 ---
 title: Urgent Septic Failure Signs in Santa Cruz County Homes
 description: 'Did You Know? A well-maintained septic system can potentially last up
-  to 30 years, helping homeowners avoid frequent replacements. Estimated reading time:
-  …'
+ to 30 years, helping homeowners avoid frequent replacements. Estimated reading time:
+ …'
 category: Plumbing Tips
 date: '2026-04-11'
 tags:
@@ -27,11 +27,11 @@ A well-maintained septic system can potentially last up to 30 years, helping hom
 
 Septic issues can pose challenges for homeowners in Santa Cruz County. Recognizing early signs of septic problems is important to help prevent extensive repairs and environmental concerns.
 
-  * Unpleasant odors around your property might suggest septic issues.
-  * Slow drains or frequent backups can indicate a septic system problem.
-  * Lush patches of grass over the drainfield may suggest septic leakage.
-  * Gurgling sounds in plumbing fixtures can be a potential warning sign of septic trouble.
-  * Pooling water in your yard, especially near the septic system, is a concern.
+- Unpleasant odors around your property might suggest septic issues.
+- Slow drains or frequent backups can indicate a septic system problem.
+- Lush patches of grass over the drainfield may suggest septic leakage.
+- Gurgling sounds in plumbing fixtures can be a potential warning sign of septic trouble.
+- Pooling water in your yard, especially near the septic system, is a concern.
 
 ## Understanding Septic Systems in Santa Cruz County
 
@@ -41,19 +41,19 @@ In Santa Cruz County, California, septic systems are crucial for managing househ
 
 Septic failures can occur due to several factors, including:
 
-  * **Improper Maintenance:** Skipping regular inspections and cleanings can lead to system overload and potential failure.
-  * **Excessive Water Use:** Overloading the system with too much water can cause it to fail, especially if the drain field cannot handle the excess.
-  * **Flushing Non-Biodegradable Items:** Items like wipes, diapers, and sanitary products can clog the system, leading to blockages and failures.
-  * **Tree Root Intrusion:** Roots can invade the septic system, causing cracks and blockages in the pipes.
+- **Improper Maintenance:** Skipping regular inspections and cleanings can lead to system overload and potential failure.
+- **Excessive Water Use:** Overloading the system with too much water can cause it to fail, especially if the drain field cannot handle the excess.
+- **Flushing Non-Biodegradable Items:** Items like wipes, diapers, and sanitary products can clog the system, leading to blockages and failures.
+- **Tree Root Intrusion:** Roots can invade the septic system, causing cracks and blockages in the pipes.
 
 ## Urgent Signs Your Septic System is Failing
 
 Recognizing the signs of septic failure early can help prevent costly repairs and environmental damage. Look out for these urgent signs:
 
-  * **Slow Drains:** If sinks, toilets, or showers are draining slowly, it could indicate a blockage in the system.
-  * **Unpleasant Odors:** Foul smells in or around your home can be a sign of septic tank issues.
-  * **Lush Grass Over Drain Field:** Unusually green or lush grass over the drain field may indicate a leak.
-  * **Standing Water:** Puddles or wet spots near the septic tank or drain field suggest a malfunction.
+- **Slow Drains:** If sinks, toilets, or showers are draining slowly, it could indicate a blockage in the system.
+- **Unpleasant Odors:** Foul smells in or around your home can be a sign of septic tank issues.
+- **Lush Grass Over Drain Field:** Unusually green or lush grass over the drain field may indicate a leak.
+- **Standing Water:** Puddles or wet spots near the septic tank or drain field suggest a malfunction.
 
 ## Environmental Impact of Septic Failures in Santa Cruz
 

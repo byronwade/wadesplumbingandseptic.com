@@ -1,8 +1,8 @@
 ---
 title: Santa Cruz County Septic System Components Guide
 description: 'In This Guide4 min read1.Did You Know?2.Quick Answer for Santa Cruz
-  Homeowners3.Understanding Your Septic System: An Overview4.The Septic Tank: Heart
-  of Yo…'
+ Homeowners3.Understanding Your Septic System: An Overview4.The Septic Tank: Heart
+ of Yo…'
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
@@ -25,11 +25,11 @@ Did you know that a well-maintained septic system can last up to 30 years or mor
 
 Understanding septic system components is essential for maintaining your system's efficiency and longevity. Santa Cruz homeowners should be aware of how each part functions and when to seek professional septic service.
 
-  * A septic system consists of a septic tank, distribution box, and leach field.
-  * Regular maintenance can prevent costly repairs and environmental hazards.
-  * Septic tank alarms can alert you to potential issues before they become serious.
-  * Professional inspections are essential for ensuring system compliance with local regulations.
-  * Proper design and installation are key to a long-lasting septic system.
+- A septic system consists of a septic tank, distribution box, and leach field.
+- Regular maintenance can prevent costly repairs and environmental hazards.
+- Septic tank alarms can alert you to potential issues before they become serious.
+- Professional inspections are essential for ensuring system compliance with local regulations.
+- Proper design and installation are key to a long-lasting septic system.
 
 ## Understanding Your Septic System: An Overview
 
@@ -61,15 +61,15 @@ While some homeowners may choose to monitor their septic systems themselves, pro
 
 ## Homeowner Action Checklist
 
-  * Schedule regular septic tank maintenance and pumping.
-  * Install a septic tank alarm for early issue detection.
-  * Ensure your system design meets local regulatory standards.
-  * Inspect the distribution box and leach field for signs of wear or 
+- Schedule regular septic tank maintenance and pumping.
+- Install a septic tank alarm for early issue detection.
+- Ensure your system design meets local regulatory standards.
+- Inspect the distribution box and leach field for signs of wear or 
 
 ## Sources & Local References
 
-    * [Santa Cruz County opens seasonal groundwater testing window - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
-    * [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
+- [Santa Cruz County opens seasonal groundwater testing window - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
+- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 
 ## Seasonal Tip
 

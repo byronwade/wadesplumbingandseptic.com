@@ -1,9 +1,9 @@
 ---
 title: Prevent Frozen Pipes This Winter in Santa Cruz County, CA
 description: Protect your home from costly water damage with these essential tips
-  for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
-  properly insulate them, and maintain adequate heating to avoid expensive emergency
-  repairs.
+ for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
+ properly insulate them, and maintain adequate heating to avoid expensive emergency
+ repairs.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
@@ -26,27 +26,27 @@ Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and 
 
 Start by identifying which pipes in your home are most at risk. These typically include:
 
-  * Pipes in unheated areas like basements, attics, and garages
-  * Pipes running along exterior walls
-  * Outdoor spigots and irrigation systems
-  * Pipes in cabinets under sinks on exterior walls
+- Pipes in unheated areas like basements, attics, and garages
+- Pipes running along exterior walls
+- Outdoor spigots and irrigation systems
+- Pipes in cabinets under sinks on exterior walls
 
 ## Insulate Exposed Pipes
 
 One of the most effective preventative measures is insulating vulnerable pipes:
 
-  * Use foam pipe insulation sleeves, which are inexpensive and easy to install
-  * Apply heat tape or thermostatically-controlled heat cables for pipes at high risk
-  * Seal leaks that allow cold air to enter where pipes are located
-  * Consider adding insulation to areas like basements and crawl spaces
+- Use foam pipe insulation sleeves, which are inexpensive and easy to install
+- Apply heat tape or thermostatically-controlled heat cables for pipes at high risk
+- Seal leaks that allow cold air to enter where pipes are located
+- Consider adding insulation to areas like basements and crawl spaces
 
 ## Maintain Consistent Heat
 
 Keep your home heated to at least 55Â°F, even when you're away. This consistent temperature helps prevent interior pipes from freezing. If you'll be away for an extended period during winter, consider these additional steps:
 
-  * Ask a friend or neighbor to check your house regularly
-  * Shut off and drain the water system
-  * Install a smart thermostat that alerts you to temperature drops
+- Ask a friend or neighbor to check your house regularly
+- Shut off and drain the water system
+- Install a smart thermostat that alerts you to temperature drops
 
 ## Allow Faucets to Drip
 
@@ -60,10 +60,10 @@ Open kitchen and bathroom cabinet doors to allow warmer air to circulate around 
 
 If you turn on a faucet and only a trickle comes out, you likely have a frozen pipe. Some steps to take:
 
-  * Keep the faucet open as you treat the frozen pipe
-  * Apply heat to the frozen section using an electric heating pad, hair dryer, or portable space heater (never use open flame devices)
-  * Continue applying heat until full water pressure is restored
-  * Check all other faucets for additional frozen pipes
+- Keep the faucet open as you treat the frozen pipe
+- Apply heat to the frozen section using an electric heating pad, hair dryer, or portable space heater (never use open flame devices)
+- Continue applying heat until full water pressure is restored
+- Check all other faucets for additional frozen pipes
 
 If you cannot locate the frozen area, if the frozen area is not accessible, or if you cannot thaw the pipe, call Wade's Plumbing & Septic immediately. We provide emergency services to help protect your home from water damage.
 
@@ -81,7 +81,7 @@ Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz, Watson
 
 Our office hours are Monday through Friday, 9am to 5pm, but our emergency line is available to assist you with any urgent plumbing issues.
 
-We hold a C-42 license for California and a state license for Georgia, ensuring you receive professional and certified service every time.
+We holds a C-42 contractor license for California, ensuring you receive professional and certified service every time.
 
 ## Frequently Asked Questions
 

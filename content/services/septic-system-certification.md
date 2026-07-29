@@ -1,9 +1,9 @@
 ---
 title: Septic Certification Compliance in Santa Cruz County
 description: When it comes to ensuring your septic system operates efficiently, septic
-  system certification is crucial, especially in Santa Cruz County. This service not
-  only guarantees that your system complies with local regulations but also provides
-  peace…
+ system certification is crucial, especially in Santa Cruz County. This service not
+ only guarantees that your system complies with local regulations but also provides
+ peace…
 category: Septic
 order: 5
 ---
@@ -16,19 +16,19 @@ Septic system certification involves a thorough inspection to assess the conditi
 
 ### Signs Your Septic System May Need Certification
 
-  * Property transactions such as buying or selling
-  * Seeking a mortgage refinance
-  * Regulatory compliance requirements
-  * System performance issues or suspected failures
+- Property transactions such as buying or selling
+- Seeking a mortgage refinance
+- Regulatory compliance requirements
+- System performance issues or suspected failures
 
 ## The Septic System Certification Process
 
 Our process for septic system certification in Santa Cruz County is both thorough and efficient:
 
-  * **Initial Consultation:** Contact Wade's Plumbing & Septic to schedule an evaluation.
-  * **Comprehensive Inspection:** We inspect all components, including the tank, leach field, and distribution box.
-  * **Flow Testing:** Conduct tests to ensure optimal water flow and system functionality.
-  * **Detailed Reporting:** Provide a comprehensive report with findings and recommendations.
+- **Initial Consultation:** Contact Wade's Plumbing & Septic to schedule an evaluation.
+- **Comprehensive Inspection:** We inspect all components, including the tank, leach field, and distribution box.
+- **Flow Testing:** Conduct tests to ensure optimal water flow and system functionality.
+- **Detailed Reporting:** Provide a comprehensive report with findings and recommendations.
 
 Our team is licensed and experienced, ensuring that every aspect of your septic system is evaluated to the highest standards.
 
@@ -36,9 +36,9 @@ Our team is licensed and experienced, ensuring that every aspect of your septic 
 
 The cost of septic system certification can vary based on several factors:
 
-  * **System Size and Type:** Larger or more complex systems may require more extensive evaluation.
-  * **Condition of the System:** Systems in need of repair or maintenance may incur additional costs.
-  * **Local Regulations:** Specific requirements in Santa Cruz County may influence costs.
+- **System Size and Type:** Larger or more complex systems may require more extensive evaluation.
+- **Condition of the System:** Systems in need of repair or maintenance may incur additional costs.
+- **Local Regulations:** Specific requirements in Santa Cruz County may influence costs.
 
 ### Prevention and Maintenance Tips
 
@@ -50,8 +50,8 @@ With years of experience serving Santa Cruz County, Wade's Plumbing & Septic sta
 
 ### Frequently Asked Questions
 
-  * **How often should septic system certification be done?** Typically, certification is required during property transactions or refinancing, but regular inspections are recommended.
-  * **What happens if my system fails certification?** We can assist with necessary repairs or [system abandonment](/service-offerings/septic-system-abandonment/) if required.
+- **How often should septic system certification be done?** Typically, certification is required during property transactions or refinancing, but regular inspections are recommended.
+- **What happens if my system fails certification?** We can assist with necessary repairs or [system abandonment](/service-offerings/septic-system-abandonment/) if required.
 
 For reliable septic system certification in Santa Cruz County, trust Wade's Plumbing & Septic. Contact us today to schedule your inspection and experience our trustworthy service firsthand. Our team is ready to assist with all your septic needs, ensuring your system is compliant and efficient.
 

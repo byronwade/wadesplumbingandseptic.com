@@ -1,25 +1,26 @@
 ---
+
 title: Conventional & Engineered Septic Solutions
 description: Explore septic inspections, maintenance, repairs, permitting, conventional installations, and advanced treatment systems.
 eyebrow: Wade's Core Specialty
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Three-tank engineered septic installation on a hillside
 gallery:
-  - src: /images/work/multi-tank-excavation.webp
-    alt: Excavation for a multi-tank septic system
-    width: 360
-    height: 480
-    caption: Multi-tank excavation
-  - src: /images/work/completed-multi-tank.webp
-    alt: Finished concrete pad and multi-tank septic system
-    width: 480
-    height: 360
-    caption: Completed system installation
-  - src: /images/work/advanced-septic-control-panel.webp
-    alt: Advanced septic treatment controls and access points
-    width: 768
-    height: 1024
-    caption: Advanced treatment controls
+- src: /images/work/multi-tank-excavation.webp
+  alt: Excavation for a multi-tank septic system
+  width: 360
+  height: 480
+  caption: Multi-tank excavation
+- src: /images/work/completed-multi-tank.webp
+  alt: Finished concrete pad and multi-tank septic system
+  width: 480
+  height: 360
+  caption: Completed system installation
+- src: /images/work/advanced-septic-control-panel.webp
+  alt: Advanced septic treatment controls and access points
+  width: 768
+  height: 1024
+  caption: Advanced treatment controls
 ---
 
 ## One team for the complete septic system

@@ -1,33 +1,33 @@
 ---
 title: Expert Septic Troubleshooting in Santa Cruz County
 description: When your septic system isn't working as it should, the need for expert
-  septic tank troubleshooting becomes critical. In Santa Cruz County, California,
-  and Pickens County, Georgia, Wade's Plumbing & Septic provides comprehensive diagnostic
-  services to…
+ septic tank troubleshooting becomes critical. In Santa Cruz County, California,
+ , Wade's Plumbing & Septic provides comprehensive diagnostic
+ services to…
 category: Septic
 order: 9
 ---
 
-When your septic system isn't working as it should, the need for expert septic tank troubleshooting becomes critical. In Santa Cruz County, California, and Pickens County, Georgia, Wade's Plumbing & Septic provides comprehensive diagnostic services to swiftly identify and resolve septic issues. Our licensed and experienced team uses state-of-the-art techniques to ensure your system operates smoothly and efficiently, preventing costly repairs and health hazards.
+When your septic system isn't working as it should, the need for expert septic tank troubleshooting becomes critical. In Santa Cruz County, California,, Wade's Plumbing & Septic provides comprehensive diagnostic services to swiftly identify and resolve septic issues. Our licensed and experienced team uses state-of-the-art techniques to ensure your system operates smoothly and efficiently, preventing costly repairs and health hazards.
 
 ## Signs You Need Septic Tank Troubleshooting
 
 Recognizing the early signs of septic problems can save you time and money. If you notice any of the following, it's time to seek professional help:
 
-  * Foul odors emanating from drains or the septic tank area.
-  * Slow draining sinks, tubs, or toilets.
-  * Unusual gurgling sounds in plumbing.
-  * Standing water or damp spots in the yard near the septic area.
-  * Overflowing or backflow in toilets and other fixtures.
+- Foul odors emanating from drains or the septic tank area.
+- Slow draining sinks, tubs, or toilets.
+- Unusual gurgling sounds in plumbing.
+- Standing water or damp spots in the yard near the septic area.
+- Overflowing or backflow in toilets and other fixtures.
 
 ## Causes of Septic System Failures
 
 Several factors can lead to septic system challenges, including:
 
-  * Clogs due to non-biodegradable items being flushed.
-  * Tree root intrusion damaging pipes and tanks.
-  * System overload from excessive water use.
-  * Improper maintenance and care.
+- Clogs due to non-biodegradable items being flushed.
+- Tree root intrusion damaging pipes and tanks.
+- System overload from excessive water use.
+- Improper maintenance and care.
 
 Understanding these causes can help in preventative efforts and reduce the need for [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/).
 

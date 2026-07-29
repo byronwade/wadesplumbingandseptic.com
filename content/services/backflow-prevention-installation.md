@@ -1,9 +1,9 @@
 ---
 title: 'Protect Your Home: Backflow Prevention in Santa Cruz'
 description: Ensuring the safety and purity of your water supply is paramount, which
-  is why our professional backflow prevention installation service is essential for
-  homeowners in Santa Cruz County, California. Backflow prevention devices protect
-  your water system…
+ is why our professional backflow prevention installation service is essential for
+ homeowners in Santa Cruz County, California. Backflow prevention devices protect
+ your water system…
 category: Plumbing
 order: 40
 ---
@@ -18,10 +18,10 @@ Backflow prevention is a critical component of any plumbing system, designed to 
 
 Recognizing the signs that you need a backflow prevention device is crucial in maintaining a safe water supply. Common indicators include:
 
-  * Discolored water coming from your faucets
-  * Unusual tastes or odors in your water
-  * Visible debris or sediments in your water
-  * Sudden changes in water pressure
+- Discolored water coming from your faucets
+- Unusual tastes or odors in your water
+- Visible debris or sediments in your water
+- Sudden changes in water pressure
 
 If you notice any of these signs, it's imperative to contact a professional for an assessment.
 
@@ -29,8 +29,8 @@ If you notice any of these signs, it's imperative to contact a professional for 
 
 Backflow can be caused by various factors, including:
 
-  * **Backpressure:** Occurs when the pressure in your plumbing system exceeds that of the water supply, pushing water back into the mains.
-  * **Backsiphonage:** Happens when a drop in supply pressure causes a vacuum effect, pulling contaminants into the water system.
+- **Backpressure:** Occurs when the pressure in your plumbing system exceeds that of the water supply, pushing water back into the mains.
+- **Backsiphonage:** Happens when a drop in supply pressure causes a vacuum effect, pulling contaminants into the water system.
 
 Understanding these causes can help in implementing effective preventive measures.
 

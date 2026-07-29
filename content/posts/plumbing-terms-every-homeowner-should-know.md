@@ -1,7 +1,7 @@
 ---
 title: Essential Plumbing Terms for Santa Cruz County Homeowners
 description: The plumbing world has its own language—and if you’ve ever tried to follow
-  along with a plumber mid-job, you know it can feel like they’re speaking a…
+ along with a plumber mid-job, you know it can feel like they’re speaking a…
 category: Plumbing Tips
 date: '2025-06-24'
 tags:
@@ -85,11 +85,11 @@ Why Plumbing Knowledge Matters
 
 Understanding these terms allows you to:
 
-  * Better describe issues when calling a plumber
-  * Know what to expect during a repair or installation
-  * Avoid misunderstandings or miscommunication
-  * Ask informed questions about services and pricing
-  * Feel more confident about DIY tasks or maintenance
+- Better describe issues when calling a plumber
+- Know what to expect during a repair or installation
+- Avoid misunderstandings or miscommunication
+- Ask informed questions about services and pricing
+- Feel more confident about DIY tasks or maintenance
 
 Plus, being familiar with plumbing lingo helps you spot signs of trouble earlier—before a minor annoyance becomes a major problem.
 

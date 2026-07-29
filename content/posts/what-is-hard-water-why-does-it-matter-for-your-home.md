@@ -1,8 +1,8 @@
 ---
 title: 'Understanding Hard Water: Impact on Santa Cruz County Homes'
 description: When you turn on the tap, you probably aren’t thinking about what’s in
-  your water—just that it’s flowing. But beyond the basics of hydration and hygiene,
-  the…
+ your water—just that it’s flowing. But beyond the basics of hydration and hygiene,
+ the…
 category: Plumbing Tips
 date: '2025-07-29'
 tags:
@@ -33,11 +33,11 @@ Why Is Hard Water a Problem?
 
 While calcium and magnesium are essential nutrients for our bodies, they’re not so great for your pipes and appliances. Here’s why hard water can create problems in your home:
 
-  * Scale Buildup in Pipes: Over time, minerals accumulate on the inner walls of your plumbing, narrowing the passageways and reducing water pressure.
-  * Shorter Appliance Lifespan: Water heaters, dishwashers, and washing machines become less efficient and more prone to failure due to scale buildup.
-  * Stains on Fixtures and Dishes: White or cloudy spots on your glassware, shower doors, and faucets are caused by mineral residue left behind when the water evaporates.
-  * Soap Scum & Reduced Cleaning Power: Hard water interferes with soaps and detergents, causing more residue and requiring more product to get the job done.
-  * Dry Skin & Hair: Hard water strips away natural oils, leaving skin and hair feeling dry or irritated after showers.
+- Scale Buildup in Pipes: Over time, minerals accumulate on the inner walls of your plumbing, narrowing the passageways and reducing water pressure.
+- Shorter Appliance Lifespan: Water heaters, dishwashers, and washing machines become less efficient and more prone to failure due to scale buildup.
+- Stains on Fixtures and Dishes: White or cloudy spots on your glassware, shower doors, and faucets are caused by mineral residue left behind when the water evaporates.
+- Soap Scum & Reduced Cleaning Power: Hard water interferes with soaps and detergents, causing more residue and requiring more product to get the job done.
+- Dry Skin & Hair: Hard water strips away natural oils, leaving skin and hair feeling dry or irritated after showers.
 
 If left untreated, hard water can result in costly plumbing repairs, premature appliance replacement, and higher utility bills due to poor energy efficiency.
 
@@ -47,11 +47,11 @@ Installing a water softener can drastically improve your home’s water quality.
 
 Benefits of Water Softeners:
 
-  * Prevent mineral buildup in pipes and appliances
-  * Extend the life of water heaters, washing machines, and dishwashers
-  * Improve soap and detergent performance
-  * Eliminate cloudy spots and scale from fixtures
-  * Make your skin and hair feel softer and cleaner
+- Prevent mineral buildup in pipes and appliances
+- Extend the life of water heaters, washing machines, and dishwashers
+- Improve soap and detergent performance
+- Eliminate cloudy spots and scale from fixtures
+- Make your skin and hair feel softer and cleaner
 
 Water softeners also help reduce your overall energy usage—especially in water heaters—because they allow systems to heat water more efficiently without working through layers of scale.
 
@@ -61,15 +61,15 @@ While soft water can solve many household problems, it’s not always perfect fo
 
 Pros:
 
-  * No mineral stains on dishes or fixtures
-  * Better soap and shampoo performance
-  * Increased appliance efficiency
-  * Reduced maintenance and plumbing costs
+- No mineral stains on dishes or fixtures
+- Better soap and shampoo performance
+- Increased appliance efficiency
+- Reduced maintenance and plumbing costs
 
 Cons:
 
-  * Higher sodium content: Softened water contains small amounts of sodium, which may not be ideal for those with high blood pressure or on low-sodium diets.
-  * Not ideal for plants: Soft water can affect plant health due to its sodium content, especially when used for frequent watering.
+- Higher sodium content: Softened water contains small amounts of sodium, which may not be ideal for those with high blood pressure or on low-sodium diets.
+- Not ideal for plants: Soft water can affect plant health due to its sodium content, especially when used for frequent watering.
 
 If health concerns are an issue, salt-free water conditioning systems may be a better choice, providing similar benefits without increasing sodium levels.
 

@@ -1,9 +1,9 @@
 ---
 title: Top Commercial Plumbing in Santa Cruz County, CA
 description: Maintaining a well-functioning commercial plumbing system is essential
-  for the smooth operation of your business. Our commercial plumbing maintenance programs
-  at Wade's Plumbing & Septic ensure that your plumbing infrastructure remains in
-  top condition, preventing costly…
+ for the smooth operation of your business. Our commercial plumbing maintenance programs
+ at Wade's Plumbing & Septic ensure that your plumbing infrastructure remains in
+ top condition, preventing costly…
 category: Commercial
 order: 20
 image: /images/work/commercial-plumbing-installation.webp
@@ -16,30 +16,30 @@ Maintaining a well-functioning commercial plumbing system is essential for the s
 
 Recognizing the signs of plumbing issues early can save time and money. Here are some indicators that it's time for a professional assessment:
 
-  * Unusual noises from pipes or fixtures
-  * Slow drains or frequent clogs
-  * Unexplained increases in water bills
-  * Water discoloration or poor water pressure
-  * Persistent odors from drains
+- Unusual noises from pipes or fixtures
+- Slow drains or frequent clogs
+- Unexplained increases in water bills
+- Water discoloration or poor water pressure
+- Persistent odors from drains
 
 ## Common Causes of Commercial Plumbing Problems
 
 Understanding the common causes of plumbing issues can help in preventing them. Frequent causes include:
 
-  * **Clogged drains:** Build-up of grease, food particles, or foreign objects can lead to blockages.
-  * **Corroded pipes:** Aging pipes may corrode, leading to leaks or bursts.
-  * **Backflow issues:** Faulty backflow preventers can cause contamination of clean water supplies.
-  * **High water pressure:** Excessive pressure can damage pipes and fixtures.
+- **Clogged drains:** Build-up of grease, food particles, or foreign objects can lead to blockages.
+- **Corroded pipes:** Aging pipes may corrode, leading to leaks or bursts.
+- **Backflow issues:** Faulty backflow preventers can cause contamination of clean water supplies.
+- **High water pressure:** Excessive pressure can damage pipes and fixtures.
 
 ## Our Commercial Plumbing Maintenance Process
 
 At Wade's Plumbing & Septic, our comprehensive maintenance process includes:
 
-  * **Inspection:** Thorough inspection of all plumbing fixtures, water heaters, and drainage systems.
-  * **[Backflow prevention testing](/service-offerings/backflow-prevention-testing/):** Ensuring backflow preventers are functioning correctly to prevent contamination.
-  * **Cleaning:** Regular [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) to maintain flow and prevent clogs.
-  * **Repairs:** Immediate addressing of any detected issues such as leaks or faulty fixtures.
-  * **Customized scheduling:** Maintenance schedules are tailored to your business's specific needs.
+- **Inspection:** Thorough inspection of all plumbing fixtures, water heaters, and drainage systems.
+- **[Backflow prevention testing](/service-offerings/backflow-prevention-testing/):** Ensuring backflow preventers are functioning correctly to prevent contamination.
+- **Cleaning:** Regular [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) to maintain flow and prevent clogs.
+- **Repairs:** Immediate addressing of any detected issues such as leaks or faulty fixtures.
+- **Customized scheduling:** Maintenance schedules are tailored to your business's specific needs.
 
 ## Timeline and Cost Factors
 
@@ -49,17 +49,17 @@ Regular maintenance should be scheduled annually, but high-usage facilities migh
 
 The cost of **commercial plumbing maintenance** can vary based on several factors, including:
 
-  * Size and complexity of the plumbing system
-  * Frequency of maintenance visits
-  * Specific services required during each visit
+- Size and complexity of the plumbing system
+- Frequency of maintenance visits
+- Specific services required during each visit
 
 ## Preventing Plumbing Issues
 
 Preventative measures are crucial in avoiding costly repairs. Here are some tips to maintain your plumbing system:
 
-  * Regularly schedule [drain line inspections](/service-offerings/drain-line-inspection/) to catch issues early.
-  * Ensure employees are aware of proper disposal practices to prevent clogs.
-  * Consider installing [backflow prevention devices](/service-offerings/backflow-prevention-installation/) to safeguard your water supply.
+- Regularly schedule [drain line inspections](/service-offerings/drain-line-inspection/) to catch issues early.
+- Ensure employees are aware of proper disposal practices to prevent clogs.
+- Consider installing [backflow prevention devices](/service-offerings/backflow-prevention-installation/) to safeguard your water supply.
 
 ## FAQs About Commercial Plumbing Maintenance
 

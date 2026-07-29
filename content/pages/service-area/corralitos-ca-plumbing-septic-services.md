@@ -1,7 +1,7 @@
 ---
 title: Corralitos, CA Plumbing & Septic Services
 description: Need trusted plumbing and septic service in Corralitos, CA? Wade's provides
-  fast diagnostics, maintenance, and emergency support for homeowners.
+ fast diagnostics, maintenance, and emergency support for homeowners.
 eyebrow: Corralitos
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp

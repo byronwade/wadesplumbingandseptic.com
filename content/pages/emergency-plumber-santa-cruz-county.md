@@ -1,7 +1,7 @@
 ---
 title: Emergency Plumber Near You - Santa Cruz County
 description: Emergency plumbing landing page focused on immediate calls and rapid
-  triage.
+ triage.
 order: 10
 image: /images/work/drain-cleaning-equipment.webp
 imageAlt: Exposed plumbing repair work
@@ -21,16 +21,16 @@ Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 ### What We Help With
 
-  * Burst Pipe Repair
-  * Active Leak Triage
-  * Mainline Backup Support
-  * Urgent Same-Day Prioritization
+- Burst Pipe Repair
+- Active Leak Triage
+- Mainline Backup Support
+- Urgent Same-Day Prioritization
 
 ### What Happens Next
 
-  * Confirm service city and issue type
-  * Walk through immediate shutoff/safety steps
-  * Book fastest available dispatch window
+- Confirm service city and issue type
+- Walk through immediate shutoff/safety steps
+- Book fastest available dispatch window
 
 #### Prefer A Call Back?
 
@@ -74,16 +74,16 @@ Wade's Plumbing & Septic offers reliable, efficient, and professional services b
 
 When plumbing emergencies strike, Wade's Plumbing & Septic is here to provide fast and reliable emergency plumbing services across Santa Cruz County, California. Our expert team is equipped to handle both residential and commercial plumbing issues, ensuring that your home or business is back to normal in no time. We proudly serve the following cities and communities:
 
-  * Santa Cruz
-  * Watsonville
-  * Scotts Valley
-  * Capitola
-  * Felton
-  * Ben Lomond
+- Santa Cruz
+- Watsonville
+- Scotts Valley
+- Capitola
+- Felton
+- Ben Lomond
 
-  * Boulder Creek
-  * Aptos
-  * Soquel
-  * Live Oak
-  * Corralitos
-  * La Selva Beach
+- Boulder Creek
+- Aptos
+- Soquel
+- Live Oak
+- Corralitos
+- La Selva Beach

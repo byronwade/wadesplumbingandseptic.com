@@ -1,8 +1,8 @@
 ---
 title: Top Alternative Septic Systems in Santa Cruz County
 description: For homeowners in Santa Cruz County seeking reliable solutions for challenging
-  septic system conditions, our alternative septic system installation santa cruz
-  county service is designed to meet your needs. At Wade's Plumbing & Septic, we specialize…
+ septic system conditions, our alternative septic system installation santa cruz
+ county service is designed to meet your needs. At Wade's Plumbing & Septic, we specialize…
 category: Septic
 order: 15
 image: /images/work/completed-multi-tank.webp
@@ -28,10 +28,10 @@ The installation of an alternative septic system involves a comprehensive assess
 
 The cost of an **alternative septic system installation santa cruz county** can vary based on several factors. Site conditions, system type, and local compliance requirements all play a role in determining the final cost. At Wade's Plumbing & Septic, we provide transparent pricing and detailed estimates, helping you make informed decisions about your investment.
 
-  * Site Evaluation: Assessing soil and environmental factors
-  * System Design: Tailoring the system to your specific needs
-  * Installation: Professional setup by licensed experts
-  * Compliance: Ensuring adherence to local regulations
+- Site Evaluation: Assessing soil and environmental factors
+- System Design: Tailoring the system to your specific needs
+- Installation: Professional setup by licensed experts
+- Compliance: Ensuring adherence to local regulations
 
 ## Why Choose Wade's Plumbing & Septic?
 
@@ -45,11 +45,11 @@ If you are experiencing septic system challenges or have questions about maintai
 
 Wade's Plumbing & Septic proudly serves the communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our commitment to providing premium alternative septic systems ensures that residents across the county receive top-quality service and solutions tailored to their needs.
 
-  * Santa Cruz
-  * Capitola
-  * Scotts Valley
-  * Watsonville
-  * Aptos
+- Santa Cruz
+- Capitola
+- Scotts Valley
+- Watsonville
+- Aptos
 
 Our team is fully licensed and insured, holding a C-42 license for California, ensuring that all work is performed to the highest standards of safety and quality.
 
