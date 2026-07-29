@@ -103,8 +103,16 @@
 	--shadow-edge: 0 0 0 1px color-mix(in srgb, white 8%, transparent);
 }
 
-* {
-	border-color: var(--border);
+/*
+  Must stay in @layer base. An unlayered `* { border-color }` rule beats
+  Tailwind utilities (border-transparent, border-white/*, etc.) and forces
+  the light --border token (#dddcd7) onto every bordered control — which
+  reads as harsh white outlines on dark ink/hero surfaces.
+*/
+@layer base {
+	* {
+		border-color: var(--border);
+	}
 }
 
 html {
@@ -162,6 +170,9 @@ summary {
 }
 
 .surface-dark {
+	/* Keep hairlines soft on ink panels even while the page theme is light */
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 	background:
 		radial-gradient(
 			800px 360px at 85% -20%,
@@ -173,8 +184,16 @@ summary {
 }
 
 .surface-dark-soft {
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 	background: var(--ink-soft);
 	color: #f4f4f2;
+}
+
+.bg-ink,
+.bg-panel {
+	--border: color-mix(in srgb, white 10%, transparent);
+	--input: color-mix(in srgb, white 10%, transparent);
 }
 
 .surface-panel {
