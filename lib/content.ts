@@ -3,6 +3,7 @@ import "server-only"
 import fs from "node:fs"
 import path from "node:path"
 import matter from "gray-matter"
+import { cacheLife, cacheTag } from "next/cache"
 
 export type Collection = "pages" | "services" | "posts"
 
@@ -44,7 +45,7 @@ function normalizeDate(value: unknown) {
 	return String(value)
 }
 
-export function getCollection(collection: Collection): ContentDocument[] {
+function readCollection(collection: Collection): ContentDocument[] {
 	const directory = collectionPath(collection)
 
 	if (!fs.existsSync(directory)) return []
@@ -107,12 +108,26 @@ export function getCollection(collection: Collection): ContentDocument[] {
 		})
 }
 
-export function getDocument(collection: Collection, slug: string) {
-	return getCollection(collection).find((document) => document.slug === slug)
+export async function getCollection(
+	collection: Collection,
+): Promise<ContentDocument[]> {
+	"use cache"
+	cacheTag(`content:${collection}`)
+	cacheLife("max")
+	return readCollection(collection)
 }
 
-export function getPageOrPost(slug: string) {
-	return getDocument("pages", slug) ?? getDocument("posts", slug)
+export async function getDocument(collection: Collection, slug: string) {
+	"use cache"
+	cacheTag(`content:${collection}`, `content:${collection}:${slug}`)
+	cacheLife("max")
+	return readCollection(collection).find((document) => document.slug === slug)
+}
+
+export async function getPageOrPost(slug: string) {
+	return (
+		(await getDocument("pages", slug)) ?? (await getDocument("posts", slug))
+	)
 }
 
 export function taxonomySlug(value: string) {
@@ -121,4 +136,18 @@ export function taxonomySlug(value: string) {
 		.replace(/&/g, "and")
 		.replace(/[^a-z0-9]+/g, "-")
 		.replace(/^-|-$/g, "")
+}
+
+export async function getAllRoutes() {
+	"use cache"
+	cacheTag("content:routes")
+	cacheLife("max")
+
+	const [pages, services, posts] = await Promise.all([
+		getCollection("pages"),
+		getCollection("services"),
+		getCollection("posts"),
+	])
+
+	return { pages, services, posts }
 }

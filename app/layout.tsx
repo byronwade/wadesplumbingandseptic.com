@@ -1,10 +1,21 @@
 import type { Metadata, Viewport } from "next"
+import { Manrope } from "next/font/google"
+import { Suspense } from "react"
 
+import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { siteConfig } from "@/lib/site"
 
 import "./globals.css"
+
+const manrope = Manrope({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-manrope",
+	preload: true,
+	weight: ["400", "700", "800"],
+})
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteConfig.url),
@@ -101,8 +112,8 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en">
-			<body>
+		<html lang="en" className={manrope.variable}>
+			<body className={manrope.className}>
 				<a
 					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
 					href="#main-content"
@@ -110,14 +121,13 @@ export default function RootLayout({
 					Skip to content
 				</a>
 				<SiteHeader />
-				{children}
+				<Suspense
+					fallback={<main id="main-content" className="min-h-[40vh]" />}
+				>
+					{children}
+				</Suspense>
 				<SiteFooter />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(localBusinessSchema),
-					}}
-				/>
+				<JsonLd data={localBusinessSchema} />
 			</body>
 		</html>
 	)

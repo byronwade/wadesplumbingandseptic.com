@@ -40,7 +40,7 @@ export function SiteHeader() {
 						<span className="block text-base font-black sm:text-lg">
 							Wade&apos;s Plumbing
 						</span>
-						<span className="text-primary block text-xs font-bold tracking-[0.18em] uppercase">
+						<span className="text-primary-bright block text-xs font-bold tracking-[0.18em] uppercase">
 							&amp; Septic
 						</span>
 					</span>
@@ -52,9 +52,10 @@ export function SiteHeader() {
 				>
 					{primaryNavigation.map((item) => (
 						<Link
-							className="hover:text-primary text-sm font-bold text-neutral-200 transition-colors"
+							className="hover:text-primary-bright text-sm font-bold text-neutral-200 transition-colors"
 							href={item.href}
 							key={item.href}
+							prefetch
 						>
 							{item.label}
 						</Link>
@@ -82,9 +83,10 @@ export function SiteHeader() {
 					>
 						{primaryNavigation.map((item) => (
 							<Link
-								className="hover:text-primary block rounded-lg px-4 py-3 font-bold hover:bg-white/5"
+								className="hover:text-primary-bright block rounded-lg px-4 py-3 font-bold hover:bg-white/5"
 								href={item.href}
 								key={item.href}
+								prefetch
 							>
 								{item.label}
 							</Link>
