@@ -56,8 +56,13 @@ export const companyNavLinks: NavLink[] = [
 	},
 ]
 
+/** Top-level links shown after Services and before Company. */
+export const midNavLinks: NavLink[] = [
+	{ href: "/service-areas", label: "Service Area" },
+	{ href: "/expert-tips", label: "Expert Tips" },
+]
+
 export const primaryNavLinks: NavLink[] = [
 	{ href: "/", label: "Home" },
-	{ href: "/expert-tips", label: "Expert Tips" },
-	{ href: "/service-areas", label: "Service Areas" },
+	...midNavLinks,
 ]
