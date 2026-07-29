@@ -22,6 +22,11 @@ import { X, Minus, Plus, Locate, Maximize, Loader2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
+// MapLibre v6 resolves its worker via import.meta.url, which Next's bundler
+// does not emit. Without an explicit same-origin worker URL the browser loads
+// the SPA HTML fallback and fails with a MIME type error — blank white map.
+MapLibreGL.setWorkerUrl("/maplibre-gl/maplibre-gl-worker.mjs");
+
 const defaultStyles = {
   dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
   light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
