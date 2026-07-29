@@ -28,6 +28,12 @@ const BRAND = {
 	ink: "#101214",
 } as const
 
+/** OpenFreeMap — reliable free vector basemap (Carto tiles often leave a blank white canvas). */
+const mapStyles = {
+	light: "https://tiles.openfreemap.org/styles/positron",
+	dark: "https://tiles.openfreemap.org/styles/dark",
+} as const
+
 const fillPaint = {
 	"fill-color": [
 		"match",
@@ -42,12 +48,12 @@ const fillPaint = {
 		"match",
 		["get", "tier"],
 		"primary",
-		0.42,
+		0.45,
 		"secondary",
-		0.28,
-		0.35,
+		0.32,
+		0.4,
 	],
-} as FillLayerSpecification["paint"]
+} satisfies FillLayerSpecification["paint"]
 
 const linePaint = {
 	"line-color": [
@@ -60,23 +66,29 @@ const linePaint = {
 		BRAND.primary,
 	],
 	"line-width": 2.25,
-	"line-opacity": 0.92,
-} as LineLayerSpecification["paint"]
+	"line-opacity": 0.95,
+} satisfies LineLayerSpecification["paint"]
 
 const fillHoverPaint = {
-	"fill-opacity": 0.58,
-} as FillLayerSpecification["paint"]
+	"fill-opacity": 0.62,
+} satisfies FillLayerSpecification["paint"]
 
 function FitServiceAreaBounds() {
 	const { map, isLoaded } = useMap()
 
 	useEffect(() => {
 		if (!map || !isLoaded) return
-		map.fitBounds(serviceAreaMapBounds, {
-			padding: { top: 56, bottom: 56, left: 48, right: 48 },
-			duration: 0,
-			maxZoom: 10,
+
+		const frame = requestAnimationFrame(() => {
+			map.resize()
+			map.fitBounds(serviceAreaMapBounds, {
+				padding: { top: 56, bottom: 56, left: 48, right: 48 },
+				duration: 0,
+				maxZoom: 10,
+			})
 		})
+
+		return () => cancelAnimationFrame(frame)
 	}, [map, isLoaded])
 
 	return null
@@ -91,11 +103,12 @@ export function ServiceAreasMap() {
 
 	return (
 		<div className="space-y-3">
-			<div className="border-border bg-card relative h-[min(70vh,36rem)] min-h-[22rem] overflow-hidden rounded-lg border shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]">
+			<div className="border-border bg-muted/40 relative h-[min(70vh,36rem)] min-h-[22rem] w-full overflow-hidden rounded-lg border shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]">
 				<Map
 					center={serviceAreaMapCenter}
-					className="absolute inset-0 size-full"
+					className="h-full w-full"
 					theme="light"
+					styles={mapStyles}
 					zoom={serviceAreaMapZoom}
 					fadeDuration={0}
 				>
