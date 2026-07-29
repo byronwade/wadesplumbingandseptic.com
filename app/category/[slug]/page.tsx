@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
+import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
 const aliases: Record<string, string[]> = {
@@ -69,11 +70,22 @@ export default async function CategoryPage({
 	if (!posts.length) notFound()
 
 	const label = aliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
+	const related = await getRelatedForTopic(
+		{
+			label,
+			description: `Practical ${label.toLowerCase()} from Wade's field experience.`,
+			categories: aliases[slug] ?? [label],
+			keywords: [label, slug.replaceAll("-", " ")],
+			excludeSlugs: posts.map((post) => post.slug),
+		},
+		{ posts: 3, services: 3 },
+	)
 
 	return (
 		<ArticleArchive
 			description={`Practical ${label.toLowerCase()} from Wade's field experience.`}
 			posts={posts}
+			related={related}
 			title={label}
 		/>
 	)

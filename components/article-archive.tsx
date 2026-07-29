@@ -3,17 +3,21 @@ import { Suspense } from "react"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { FilterableArchive } from "@/components/filterable-archive"
+import { RelatedContentSections } from "@/components/related-content"
 import { toArchiveItem } from "@/lib/archive"
 import type { ContentDocument } from "@/lib/content"
+import type { RelatedContent } from "@/lib/related-content"
 
 export function ArticleArchive({
 	title,
 	description,
 	posts,
+	related,
 }: {
 	title: string
 	description: string
 	posts: ContentDocument[]
+	related?: RelatedContent
 }) {
 	const items = posts.map((post) =>
 		toArchiveItem(post, `/${post.slug}`, post.category ?? "Expert Tips"),
@@ -46,6 +50,13 @@ export function ArticleArchive({
 					variant="tip"
 				/>
 			</Suspense>
+			{related ? (
+				<RelatedContentSections
+					postsTitle="More related guides"
+					related={related}
+					servicesTitle="Related services"
+				/>
+			) : null}
 			<ContactCta title="Need professional help?" />
 		</main>
 	)
