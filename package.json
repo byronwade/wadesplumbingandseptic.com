@@ -13,6 +13,7 @@
 		"ci:content": "node scripts/ci/validate-content.mjs",
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
+		"migrate:wordpress": "python3 -u scripts/migrate-from-wordpress-csv.py",
 		"check": "npm run lint && npm run typecheck && npm run format:check && npm run build"
 	},
 	"dependencies": {
