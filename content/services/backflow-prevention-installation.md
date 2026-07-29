@@ -6,6 +6,9 @@ description: Ensuring the safety and purity of your water supply is paramount, w
   your water system…
 category: Plumbing
 order: 40
+image: /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
+imageAlt: "Industrial plumbing system"
+
 ---
 
 Ensuring the safety and purity of your water supply is paramount, which is why our professional backflow prevention installation service is essential for homeowners in Santa Cruz County, California. Backflow prevention devices protect your water system from contamination by preventing the reverse flow of water, which can carry harmful pollutants into your clean water supply. At Wade's Plumbing & Septic, our certified technicians are experienced in installing various types of backflow preventers, such as pressure vacuum breakers, double-check valves, and reduced pressure zone devices, ensuring compliance with local plumbing codes and manufacturer specifications.

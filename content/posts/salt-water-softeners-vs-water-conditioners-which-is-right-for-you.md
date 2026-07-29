@@ -13,11 +13,11 @@ tags:
 - salt-based systems
 - saltless systems
 - water treatment
-image: /images/work/precision-valve-installation.webp
-imageAlt: 'Salt Water Softeners vs Water Conditioners: Which is Right for You?'
----
+image: /images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp
+imageAlt: "Water treatment tank system"
+---When it comes to water softening systems, homeowners have two main options: salt-based water softeners and saltless water softeners. Both types of systems have their own pros and cons, and it's important to understand the differences between them in order to make an informed decision.
 
-When it comes to water softening systems, homeowners have two main options: salt-based water softeners and saltless water softeners. Both types of systems have their own pros and cons, and it's important to understand the differences between them in order to make an informed decision.
+![Outdoor plumbing pipe system](/images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp)
 
 ### Salt-Based Water Softeners
 
@@ -54,6 +54,8 @@ Sources:
 Santa Cruz County Septic Experts
 
 ## Don't WaitÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂImprove Your Water Quality Today
+
+![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
 
 Enhance your Santa Cruz home's water quality with our expert water softener solutions.
 

@@ -16,11 +16,11 @@ tags:
 - plumbing system
 - water line repair
 - fixture installation
-image: /images/work/precision-valve-installation.webp
-imageAlt: 'The Ultimate Guide to Plumbing: Maintenance, Repairs, and Upgrades'
----
+image: /images/work/new-construction-rough-in.webp
+imageAlt: "New construction plumbing rough-in"
+---As a homeowner, you know that maintaining your home is essential to keep it in good condition and avoid costly repairs. One of the most important systems in your home is the plumbing system. This system is responsible for providing clean water and removing waste, and it's essential to your daily life. In this guide, we'll cover everything you need to know about plumbing maintenance, repairs, and upgrades.
 
-As a homeowner, you know that maintaining your home is essential to keep it in good condition and avoid costly repairs. One of the most important systems in your home is the plumbing system. This system is responsible for providing clean water and removing waste, and it's essential to your daily life. In this guide, we'll cover everything you need to know about plumbing maintenance, repairs, and upgrades.
+![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 
 ## Plumbing Maintenance
 
@@ -68,6 +68,8 @@ Santa Cruz County Septic Experts
 Ensure your plumbing system operates smoothly with our expert maintenance and repair services in Santa Cruz County, CA.
 
 ## Serving Santa Cruz County, CA
+
+![Pressure gauge on an industrial pipe](/images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp)
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing top-notch plumbing maintenance and repair services to all residents and businesses in these areas.
 

@@ -193,9 +193,25 @@ def html_to_markdown(fragment: str) -> str:
 		anchor.clear()
 		anchor.append(label)
 
+	# Rewrite WP upload <img> srcs to local WebP paths before Markdown conversion
+	for img in soup.find_all("img"):
+		src = (img.get("src") or "").strip()
+		if "/wp-content/uploads/" not in src and "/uploads/" not in src:
+			# Drop decorative theme/plugin images that are not media-library uploads
+			if src and not src.startswith("/images/"):
+				img.decompose()
+			continue
+		filename = Path(src.split("?", 1)[0]).name
+		stem = re.sub(r"-scaled$", "", Path(filename).stem.lower())
+		stem = re.sub(r"[^a-z0-9]+", "-", stem).strip("-") or "image"
+		img["src"] = f"/images/wordpress/{stem}.webp"
+		# Prefer alt text; fall back to filename words
+		if not (img.get("alt") or "").strip():
+			img["alt"] = stem.replace("-", " ")
+
 	converter = html2text.HTML2Text()
 	converter.body_width = 0
-	converter.ignore_images = True
+	converter.ignore_images = False
 	converter.ignore_emphasis = False
 	converter.protect_links = False
 	converter.wrap_links = False

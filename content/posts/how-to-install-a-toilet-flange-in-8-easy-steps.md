@@ -17,19 +17,18 @@ tags:
 - wade's plumbing tips
 - toilet repair santa cruz
 - flange replacement guide
----
+image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: "Bathroom with toilet and sink"
 
-Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
+---Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
+
+![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
 
 In this guide, the pros at Wade’s Plumbing & Septic help you. They walk you through the essential steps to a successful toilet flange installation. We’ll also cover common issues, must-have tools, and when to call a professional for help.
-
-
 
 ## What Is a Toilet Flange?
 
 A toilet flange (also called a closet flange) connects your toilet to the drainpipe and secures it to the floor. A proper flange ensures a tight seal, preventing water leaks and foul sewer gas odors from entering your home.
-
-
 
 ## Step-by-Step Guide to Replace a Toilet Flange
 
@@ -53,8 +52,6 @@ Before you begin, make sure you have the following on hand:
 
 ✅ **Tip:** If you're in Santa Cruz County and something goes wrong during installation, call Wade’s Plumbing & Septic. We're available for emergency repairs.
 
-
-
 ### 2\. Prepare the Work Area
 
   * Turn off the water supply to the toilet.
@@ -65,15 +62,11 @@ Before you begin, make sure you have the following on hand:
   * Gently rock the toilet to break the wax seal and lift the bowl straight up.
   * Set it aside on a towel or soft surface.
 
-
-
 ### 3\. Remove the Old Wax Ring and Clean the Area
 
   * Scrape away the wax residue from both the base of the toilet and the floor flange using a putty knife.
   * Inspect the flange and drain pipe for cracks or damage.
   * Plug the pipe with a rag to block sewer gases.
-
-
 
 ### 4\. Take Out the Old Toilet Flange
 
@@ -82,14 +75,10 @@ Before you begin, make sure you have the following on hand:
   * Use a hammer and chisel or a Dremel tool if necessary.
   * Clear debris and prepare the area for the new flange.
 
-
-
 ### 5\. Insert the T-Bolts into the New Flange
 
   * Place the T-bolts into the slots of the new flange.
   * Ensure the bolts are aligned equally from the back wall so the toilet sits straight.
-
-
 
 ### 6\. Position the New Toilet Flange
 
@@ -97,14 +86,10 @@ Before you begin, make sure you have the following on hand:
   * The top of the flange should sit **¼ inch above** the finished floor—not flush.
   * Ensure the bolts are straight and evenly spaced.
 
-
-
 ### 7\. Secure the Flange to the Floor
 
   * Use screws or bolts to attach the flange securely.
   * Make sure the fasteners don’t protrude above the top of the flange.
-
-
 
 ### 8\. Install the Wax Ring and Reconnect the Toilet
 
@@ -114,8 +99,6 @@ Before you begin, make sure you have the following on hand:
   * Tighten the nuts evenly on both sides.
   * Reconnect the water supply and tank.
   * Turn on the water and test for leaks.
-
-
 
 ## When to Call a Professional Plumber
 
@@ -133,8 +116,6 @@ We provide expert toilet flange installation and toilet repairs throughout:
 📞 **Call now: (831) 225-4344**  
 We don’t offer online booking—just fast, friendly phone service!
 
-
-
 ## Toilet Flange FAQs
 
 **Should a toilet flange sit on top of the finished floor?**  
@@ -149,9 +130,9 @@ Yes, if the pipe and subfloor are in good condition and you have the proper tool
 **What if the old flange is glued in?**  
 A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to avoid damaging the pipe.
 
-
-
 ## Need Help With Toilet Repairs?
+
+![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
 Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
 

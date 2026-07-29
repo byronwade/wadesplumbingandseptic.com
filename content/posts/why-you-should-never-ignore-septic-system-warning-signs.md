@@ -16,9 +16,9 @@ tags:
 - early warning signs
 image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic system controls and access
----
+---Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can save you thousands of dollars and protect your property value.
 
-Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can save you thousands of dollars and protect your property value.
+![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 
 ## Early Warning Signs You Shouldn't Ignore
 
@@ -83,6 +83,8 @@ Protect your home and wallet by addressing septic warning signs promptly in Sant
 
 ## Serving Santa Cruz County, CA
 
+![Engineered septic systems in Santa Cruz County](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612317.webp)
+
 Wade's Plumbing & Septic is proud to serve all of Santa Cruz County, including the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team is fully licensed and insured, holding a C-42 license for California.
 
 Our office hours are Monday through Friday, 9am to 5pm, and we offer a emergency line to address urgent needs promptly.
@@ -122,8 +124,6 @@ The timeline for septic repairs can vary depending on the complexity of the issu
 ### Why choose Wade's Plumbing & Septic for septic repairs in Santa Cruz County?
 
 Wade's Plumbing & Septic is a trusted local expert with extensive experience in Santa Cruz County. Our commitment to quality service and customer satisfaction ensures your septic system is in capable hands.
-
- 
 
 Stay Ahead of Septic Issues
 

@@ -14,11 +14,11 @@ tags:
 - faucet replacement guide
 - plumbing tools and materials
 - bathroom upgrade ideas
-image: /images/work/precision-valve-installation.webp
-imageAlt: Clean plumbing fixture connections
----
+image: /images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp
+imageAlt: "Chrome bathroom faucet"
+---Replacing an old or outdated bathroom faucet is a relatively simple DIY project that can dramatically improve the look and functionality of your bathroom. With basic tools and a few hours of time, you can install a new faucet and save on plumbing service costs. This guide walks you through the process step by step.
 
-Replacing an old or outdated bathroom faucet is a relatively simple DIY project that can dramatically improve the look and functionality of your bathroom. With basic tools and a few hours of time, you can install a new faucet and save on plumbing service costs. This guide walks you through the process step by step.
+![Water flowing from a bathroom faucet](/images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp)
 
 ## Tools and Materials You'll Need
 
@@ -114,6 +114,8 @@ Installing a new bathroom faucet is a satisfying DIY project that most homeowner
 Santa Cruz County Septic Experts
 
 ## Upgrade Your Bathroom Faucet Today
+
+![Pressure gauge on an industrial pipe](/images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp)
 
 Transform your bathroom with expert faucet installation services in Santa Cruz County, CA.
 

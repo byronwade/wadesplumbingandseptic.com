@@ -16,9 +16,9 @@ tags:
 - plumbing safety
 image: /images/services/drain-clearing.webp
 imageAlt: Professional drain-clearing machine
----
+---Clogged drains are one of the most common household plumbing issues. While severe clogs may require professional help, many can be cleared with the right approach and tools. This guide will walk you through safe and effective methods to clear different types of clogged drains.
 
-Clogged drains are one of the most common household plumbing issues. While severe clogs may require professional help, many can be cleared with the right approach and tools. This guide will walk you through safe and effective methods to clear different types of clogged drains.
+![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
 
 ## Before You Start: Safety First
 
@@ -113,6 +113,8 @@ For more stubborn clogs deeper in the pipes:
   5. Once engaged with the clog, crank counterclockwise while pulling out to retrieve the debris
   6. Repeat if necessary until the drain flows freely
   7. Run hot water for several minutes to clear any remaining debris
+
+![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 
 ## When to Call Wade's Plumbing & Septic
 

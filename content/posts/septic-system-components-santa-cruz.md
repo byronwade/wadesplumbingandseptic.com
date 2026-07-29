@@ -12,9 +12,9 @@ tags:
 - septic system components septic service
 image: /images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7-1.webp
 imageAlt: "Understanding Septic System Components in Santa Cruz County"
----
+---In This Guide4 min read
 
-In This Guide4 min read
+![Santa Cruz County engineered septic system](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp)
 
 ## Did You Know?
 
@@ -58,6 +58,8 @@ The distribution box evenly distributes effluent from the septic tank to the lea
 For more detailed advice, check out our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance/).
 
 ## Signs Your Septic System Needs Attention
+
+![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
 
   * Slow drains and toilets.
   * Unpleasant odors around the septic tank or leach field.
