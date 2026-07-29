@@ -1,6 +1,7 @@
 import { Check, Clock, Phone, ShieldCheck } from "lucide-react"
 
 import { ContactCta } from "@/components/contact-cta"
+import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
@@ -93,9 +94,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 				</aside>
 			</section>
 
-			<ContactCta
-				description={`Contact us today for professional ${service.title.toLowerCase()} service.`}
-			/>
+			<ContentConversionCta conversion={service.conversion} />
 			<JsonLd
 				data={[
 					schema,

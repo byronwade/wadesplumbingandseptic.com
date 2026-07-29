@@ -5,6 +5,11 @@ import path from "node:path"
 import matter from "gray-matter"
 import { cacheLife, cacheTag } from "next/cache"
 
+import {
+	extractContentConversion,
+	type ContentConversion,
+} from "@/lib/content-conversion"
+
 export type Collection = "pages" | "services" | "posts"
 
 export type ContentImage = {
@@ -20,6 +25,8 @@ export type ContentDocument = {
 	title: string
 	description: string
 	content: string
+	/** Page-specific end CTA parsed from WordPress-era markdown blocks. */
+	conversion: ContentConversion
 	category?: string
 	date?: string
 	updated?: string
@@ -48,12 +55,19 @@ function normalizeDate(value: unknown) {
 function parseDocument(absolutePath: string, slug: string): ContentDocument {
 	const source = fs.readFileSync(absolutePath, "utf8")
 	const { data, content } = matter(source)
+	const title = String(data.title ?? slug)
+	const description = String(data.description ?? "")
+	const { content: articleContent, conversion } = extractContentConversion(
+		content,
+		{ title, description },
+	)
 
 	return {
 		slug,
-		title: String(data.title ?? slug),
-		description: String(data.description ?? ""),
-		content,
+		title,
+		description,
+		content: articleContent,
+		conversion,
 		category: data.category ? String(data.category) : undefined,
 		date: normalizeDate(data.date),
 		updated: normalizeDate(data.updated),
