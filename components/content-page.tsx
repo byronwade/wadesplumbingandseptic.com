@@ -1,8 +1,12 @@
+import type { Route } from "next"
+
 import type { ContentDocument } from "@/lib/content"
+import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
+import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 
 export function ContentPage({
@@ -12,6 +16,22 @@ export function ContentPage({
 	document: ContentDocument
 	isPost?: boolean
 }) {
+	const breadcrumbs = [
+		{ name: "Home", path: "/" },
+		...(isPost
+			? [{ name: "Expert Tips", path: "/expert-tips" }]
+			: document.slug.startsWith("service-area/")
+				? [{ name: "Service Areas", path: "/service-areas" }]
+				: []),
+		{ name: document.title, path: `/${document.slug}` },
+	]
+
+	const parent = isPost
+		? { href: "/expert-tips" as Route, label: "Expert Tips" }
+		: document.slug.startsWith("service-area/")
+			? { href: "/service-areas" as Route, label: "Service Areas" }
+			: undefined
+
 	return (
 		<main id="main-content">
 			<ContentHero
@@ -19,9 +39,7 @@ export function ContentPage({
 				eyebrow={document.eyebrow ?? document.category}
 				image={document.image}
 				imageAlt={document.imageAlt}
-				parent={
-					isPost ? { href: "/expert-tips", label: "Expert Tips" } : undefined
-				}
+				parent={parent}
 				title={document.title}
 			/>
 			<article className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:py-20">
@@ -54,6 +72,12 @@ export function ContentPage({
 				</aside>
 			</article>
 			<ContactCta />
+			<JsonLd
+				data={[
+					isPost ? articleJsonLd(document) : webPageJsonLd(document),
+					breadcrumbJsonLd(breadcrumbs),
+				]}
+			/>
 		</main>
 	)
 }

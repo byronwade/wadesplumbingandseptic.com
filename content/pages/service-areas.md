@@ -31,33 +31,34 @@ Mountain roads, coastal soils, older piping, steep lots, private water systems, 
 
 We provide residential plumbing, commercial plumbing, septic diagnostics, conventional septic work, and engineered septic services throughout Santa Cruz County.
 
-- Amesti
-- Aptos
-- Aptos Hills-Larkin Valley
-- Ben Lomond
-- Bonny Doon
-- Boulder Creek
-- Brookdale
-- Capitola
-- Corralitos
-- Davenport
-- Day Valley
-- Felton
-- Freedom
-- Interlaken
-- La Selva Beach
-- Live Oak
-- Lompico
-- Mount Hermon
-- Paradise Park
-- Pasatiempo
-- Rio Del Mar
-- Santa Cruz
-- Scotts Valley
-- Soquel
-- Twin Lakes
-- Watsonville
-- Zayante
+- [Amesti](/service-area/amesti-ca-plumbing-septic-services)
+- [Aptos](/service-area/aptos-ca-plumbing-septic-services)
+- [Aptos Hills-Larkin Valley](/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services)
+- [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services)
+- [Bonny Doon](/service-area/bonny-doon-ca-plumbing-septic-services)
+- [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services)
+- [Brookdale](/service-area/brookdale-ca-plumbing-septic-services)
+- [Capitola](/service-area/capitola-ca-plumbing-septic-services)
+- [Corralitos](/service-area/corralitos-ca-plumbing-septic-services)
+- [Davenport](/service-area/davenport-ca-plumbing-septic-services)
+- [Day Valley](/service-area/day-valley-ca-plumbing-septic-services)
+- [Felton](/service-area/felton-ca-plumbing-septic-services)
+- [Freedom](/service-area/freedom-ca-plumbing-septic-services)
+- [Interlaken](/service-area/interlaken-ca-plumbing-septic-services)
+- [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services)
+- [Las Lomas](/service-area/las-lomas-ca-plumbing-septic-services)
+- [Live Oak](/service-area/live-oak-ca-plumbing-septic-services)
+- [Lompico](/service-area/lompico-ca-plumbing-septic-services)
+- [Mount Hermon](/service-area/mount-hermon-ca-plumbing-septic-services)
+- [Paradise Park](/service-area/paradise-park-ca-plumbing-septic-services)
+- [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services)
+- [Rio Del Mar](/service-area/rio-del-mar-ca-plumbing-septic-services)
+- [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services)
+- [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
+- [Soquel](/service-area/soquel-ca-plumbing-septic-services)
+- [Twin Lakes](/service-area/twin-lakes-ca-plumbing-septic-services)
+- [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
+- [Zayante](/service-area/zayante-ca-plumbing-septic-services)
 
 Explore our [Santa Cruz County plumbing and septic page](/santa-cruz).
 
@@ -65,8 +66,8 @@ Explore our [Santa Cruz County plumbing and septic page](/santa-cruz).
 
 Selected plumbing and project work may be available in:
 
-- Los Gatos
-- Saratoga
+- [Los Gatos](/service-area/los-gatos-ca-plumbing-septic-services)
+- [Saratoga](/service-area/saratoga-ca-plumbing-septic-services)
 - Communities near the Santa Cruz County line
 
 Availability depends on project type and scheduling. Call with the property address so the team can confirm coverage.

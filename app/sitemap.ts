@@ -1,32 +1,64 @@
 import type { MetadataRoute } from "next"
 
-import { getCollection, taxonomySlug } from "@/lib/content"
+import { getAllRoutes, taxonomySlug } from "@/lib/content"
 import { siteConfig } from "@/lib/site"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-	const fixed = ["", "/services", "/expert-tips"]
-	const pages = getCollection("pages")
+const CHUNK_SIZE = 100
+
+type SitemapEntry = MetadataRoute.Sitemap[number]
+
+function entry(
+	route: string,
+	lastModified?: string,
+	priority = 0.7,
+): SitemapEntry {
+	return {
+		url: `${siteConfig.url}${route}`,
+		lastModified: lastModified ?? "2026-07-29",
+		changeFrequency: route === "" ? "weekly" : "monthly",
+		priority: route === "" ? 1 : priority,
+	}
+}
+
+async function buildSitemapEntries(): Promise<SitemapEntry[]> {
+	"use cache"
+
+	const { pages, services, posts } = await getAllRoutes()
+
+	const fixed = [
+		entry("", undefined, 1),
+		entry("/services", undefined, 0.9),
+		entry("/expert-tips", undefined, 0.9),
+	]
+
+	const pageEntries = pages
 		.filter((page) => !page.noindex)
-		.map((page) => `/${page.slug}`)
-	const services = getCollection("services").map(
-		(service) => `/service-offerings/${service.slug}`,
+		.map((page) => entry(`/${page.slug}`, page.updated ?? page.date, 0.75))
+
+	const serviceEntries = services.map((service) =>
+		entry(
+			`/service-offerings/${service.slug}`,
+			service.updated ?? service.date,
+			0.85,
+		),
 	)
-	const posts = getCollection("posts").map((post) => `/${post.slug}`)
-	const postDocuments = getCollection("posts")
+
+	const postEntries = posts.map((post) =>
+		entry(`/${post.slug}`, post.updated ?? post.date, 0.7),
+	)
+
 	const categories = [
 		...new Set(
-			postDocuments.map(
-				(post) => `/category/${taxonomySlug(post.category ?? "Expert Tips")}`,
-			),
+			posts.map((post) => taxonomySlug(post.category ?? "Expert Tips")),
 		),
-	]
+	].map((slug) => entry(`/category/${slug}`, undefined, 0.6))
+
 	const tags = [
 		...new Set(
-			postDocuments.flatMap(
-				(post) => post.tags?.map((tag) => `/tag/${taxonomySlug(tag)}`) ?? [],
-			),
+			posts.flatMap((post) => post.tags?.map((tag) => taxonomySlug(tag)) ?? []),
 		),
-	]
+	].map((slug) => entry(`/tag/${slug}`, undefined, 0.5))
+
 	const serviceCategories = [
 		"/service-category/plumbing",
 		"/service-category/residential-plumbing",
@@ -36,21 +68,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		"/service-category/septic-services",
 		"/service-category/emergency-services",
 		"/service-category/specialty-services",
-	]
+	].map((route) => entry(route, undefined, 0.8))
 
 	return [
 		...fixed,
-		...pages,
-		...services,
-		...posts,
+		...pageEntries,
+		...serviceEntries,
+		...postEntries,
 		...categories,
 		...tags,
 		...serviceCategories,
-	].map((route) => ({
-		url: `${siteConfig.url}${route}`,
-		lastModified: "2026-07-29",
-		changeFrequency: route === "" ? ("weekly" as const) : ("monthly" as const),
-		priority:
-			route === "" ? 1 : route.startsWith("/service-offerings") ? 0.8 : 0.7,
-	}))
+	]
+}
+
+export async function generateSitemaps() {
+	const entries = await buildSitemapEntries()
+	const count = Math.max(1, Math.ceil(entries.length / CHUNK_SIZE))
+	return Array.from({ length: count }, (_, id) => ({ id }))
+}
+
+export default async function sitemap(props: {
+	id: Promise<string> | string
+}): Promise<MetadataRoute.Sitemap> {
+	const idValue = await props.id
+	const id = Number(idValue)
+	const entries = await buildSitemapEntries()
+	const start = id * CHUNK_SIZE
+	return entries.slice(start, start + CHUNK_SIZE)
 }

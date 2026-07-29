@@ -1,13 +1,20 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ContentPage } from "@/components/content-page"
 import { getCollection, getDocument, getPageOrPost } from "@/lib/content"
+import { buildPageMetadata } from "@/lib/seo"
 
-export function generateStaticParams() {
-	return [...getCollection("pages"), ...getCollection("posts")].map(
-		(document) => ({ slug: document.slug.split("/") }),
-	)
+export async function generateStaticParams() {
+	const [pages, posts] = await Promise.all([
+		getCollection("pages"),
+		getCollection("posts"),
+	])
+
+	return [...pages, ...posts].map((document) => ({
+		slug: document.slug.split("/"),
+	}))
 }
 
 export async function generateMetadata({
@@ -17,22 +24,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { slug: slugParts } = await params
 	const slug = slugParts.join("/")
-	const document = getPageOrPost(slug)
+	const document = await getPageOrPost(slug)
 
 	if (!document) return {}
 
-	return {
+	const isPost = Boolean(await getDocument("posts", slug))
+
+	return buildPageMetadata({
 		title: document.title,
 		description: document.description,
-		alternates: { canonical: `/${document.slug}` },
-		openGraph: {
-			title: document.title,
-			description: document.description,
-			type: getDocument("posts", slug) ? "article" : "website",
-			images: [document.image ?? "/images/brand/wades-mark.webp"],
-		},
-		robots: document.noindex ? { index: false, follow: false } : undefined,
-	}
+		pathname: `/${document.slug}`,
+		image: document.image,
+		type: isPost ? "article" : "website",
+		noindex: document.noindex,
+	})
 }
 
 export default async function MarkdownPage({
@@ -42,14 +47,16 @@ export default async function MarkdownPage({
 }) {
 	const { slug: slugParts } = await params
 	const slug = slugParts.join("/")
-	const document = getPageOrPost(slug)
+	const [document, post] = await Promise.all([
+		getPageOrPost(slug),
+		getDocument("posts", slug),
+	])
 
 	if (!document) notFound()
 
 	return (
-		<ContentPage
-			document={document}
-			isPost={Boolean(getDocument("posts", slug))}
-		/>
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<ContentPage document={document} isPost={Boolean(post)} />
+		</Suspense>
 	)
 }

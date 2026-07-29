@@ -30,23 +30,23 @@ export function ContactCta({
 				)}
 			>
 				<div className="max-w-2xl">
-					<p className="text-primary mb-2 text-xs font-black tracking-[0.18em] uppercase">
+					<p className="text-primary-bright mb-2 text-xs font-black tracking-[0.18em] uppercase">
 						Wade&apos;s Plumbing &amp; Septic
 					</p>
 					<h2 className="text-3xl font-black tracking-tight sm:text-4xl">
 						{title}
 					</h2>
-					<p className="mt-3 leading-relaxed text-neutral-300">{description}</p>
-					<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-400">
+					<p className="mt-3 leading-relaxed text-neutral-200">{description}</p>
+					<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-300">
 						<span className="inline-flex items-center gap-2">
-							<Clock className="text-primary size-4" />
+							<Clock className="text-primary-bright size-4" />
 							{siteConfig.hours}
 						</span>
 						<a
 							className="inline-flex items-center gap-2 hover:text-white"
 							href={`mailto:${siteConfig.email}`}
 						>
-							<Mail className="text-primary size-4" />
+							<Mail className="text-primary-bright size-4" />
 							{siteConfig.email}
 						</a>
 					</div>

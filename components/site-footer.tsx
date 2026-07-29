@@ -63,7 +63,7 @@ export function SiteFooter() {
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
-						<p className="mt-4 text-xs font-semibold text-neutral-500">
+						<p className="mt-4 text-xs font-semibold text-neutral-400">
 							{siteConfig.licenses}
 						</p>
 						<div className="mt-5 flex gap-3">
@@ -102,12 +102,18 @@ export function SiteFooter() {
 					<FooterColumn title="Resources" links={resourceNavigation} />
 				</div>
 
-				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
+				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-neutral-400 sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
 					<div className="flex gap-5">
-						<Link href="/privacy-policy">Privacy Policy</Link>
-						<Link href="/terms-of-service">Terms</Link>
-						<Link href="/sitemap.xml">Sitemap</Link>
+						<Link className="hover:text-white" href="/privacy-policy">
+							Privacy Policy
+						</Link>
+						<Link className="hover:text-white" href="/terms-of-service">
+							Terms
+						</Link>
+						<Link className="hover:text-white" href="/sitemap.xml">
+							Sitemap
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { ServiceCard } from "@/components/service-card"
 import { getCollection } from "@/lib/content"
+import { buildPageMetadata } from "@/lib/seo"
 
 const categories = {
 	plumbing: {
@@ -79,11 +81,12 @@ export async function generateMetadata({
 
 	if (!category) return {}
 
-	return {
+	return buildPageMetadata({
 		title: `${category.label} Services`,
 		description: category.description,
-		alternates: { canonical: `/service-category/${slug}` },
-	}
+		pathname: `/service-category/${slug}`,
+		image: category.image,
+	})
 }
 
 export default async function ServiceCategoryPage({
@@ -96,7 +99,7 @@ export default async function ServiceCategoryPage({
 
 	if (!category) notFound()
 
-	const services = getCollection("services").filter(
+	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
 
@@ -110,11 +113,19 @@ export default async function ServiceCategoryPage({
 				parent={{ href: "/services", label: "Services" }}
 				title={`${category.label} Services`}
 			/>
-			<section className="mx-auto grid max-w-7xl gap-5 px-4 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-20">
-				{services.map((service) => (
-					<ServiceCard key={service.slug} service={service} />
-				))}
-			</section>
+			<Suspense
+				fallback={
+					<section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+						Loading services…
+					</section>
+				}
+			>
+				<section className="mx-auto grid max-w-7xl gap-5 px-4 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-20">
+					{services.map((service) => (
+						<ServiceCard key={service.slug} service={service} />
+					))}
+				</section>
+			</Suspense>
 			<ContactCta />
 		</main>
 	)

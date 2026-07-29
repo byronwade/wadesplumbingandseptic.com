@@ -56,7 +56,11 @@ export function ContentHero({
 						</>
 					) : null}
 				</nav>
-				{eyebrow ? <Badge>{eyebrow}</Badge> : null}
+				{eyebrow ? (
+					<Badge className="border-primary-bright/40 bg-primary-bright/15 text-primary-bright">
+						{eyebrow}
+					</Badge>
+				) : null}
 				<h1 className="mt-5 max-w-4xl text-4xl leading-tight font-black tracking-[-0.04em] text-balance sm:text-5xl lg:text-6xl">
 					{title}
 				</h1>

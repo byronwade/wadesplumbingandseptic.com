@@ -1,12 +1,15 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
 import { getCollection, getDocument } from "@/lib/content"
 import { getServiceImage } from "@/lib/service-images"
+import { buildPageMetadata } from "@/lib/seo"
 
-export function generateStaticParams() {
-	return getCollection("services").map((service) => ({ slug: service.slug }))
+export async function generateStaticParams() {
+	const services = await getCollection("services")
+	return services.map((service) => ({ slug: service.slug }))
 }
 
 export async function generateMetadata({
@@ -15,20 +18,16 @@ export async function generateMetadata({
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	const service = getDocument("services", slug)
+	const service = await getDocument("services", slug)
 
 	if (!service) return {}
 
-	return {
+	return buildPageMetadata({
 		title: service.title,
 		description: service.description,
-		alternates: { canonical: `/service-offerings/${service.slug}` },
-		openGraph: {
-			title: service.title,
-			description: service.description,
-			images: [getServiceImage(service.category, service.image)],
-		},
-	}
+		pathname: `/service-offerings/${service.slug}`,
+		image: getServiceImage(service.category, service.image),
+	})
 }
 
 export default async function ServiceOfferingPage({
@@ -37,9 +36,13 @@ export default async function ServiceOfferingPage({
 	params: Promise<{ slug: string }>
 }) {
 	const { slug } = await params
-	const service = getDocument("services", slug)
+	const service = await getDocument("services", slug)
 
 	if (!service) notFound()
 
-	return <ServiceLandingPage service={service} />
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<ServiceLandingPage service={service} />
+		</Suspense>
+	)
 }

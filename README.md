@@ -5,11 +5,12 @@ High-performance marketing and SEO site for
 
 ## Stack
 
-- Next.js 16 App Router with Cache Components
+- Next.js 16.3 preview App Router with Cache Components / PPR
 - React 19
 - Tailwind CSS 4
 - shadcn/ui primitives
-- Local Markdown content
+- Local Markdown content with `use cache` data access
+- Chunked `app/sitemap.ts` + Metadata / JSON-LD SEO
 - Vercel-ready static generation
 - Real Wade's project, team, location, and partner media
 
@@ -25,13 +26,20 @@ npm run dev
 
 ## Content
 
-- `content/pages` contains company, location, campaign, and resource pages.
+- `content/pages` contains company, location, campaign, service-area, career, and resource pages.
 - `content/services` contains service landing pages.
 - `content/posts` contains expert tips and homeowner guides.
 
 Each Markdown file uses YAML frontmatter for titles, descriptions, dates,
 categories, tags, image metadata, and optional project galleries. Nested
 folders preserve nested legacy routes. Routes are generated during `next build`.
+
+To backfill missing legacy WordPress URLs from the Wayback Machine:
+
+```bash
+# Requires beautifulsoup4 + html2text
+python3 -u scripts/migrate-from-wayback.py
+```
 
 ## Verification
 

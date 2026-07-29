@@ -14,12 +14,8 @@ import {
 } from "lucide-react"
 
 import { ContactCta } from "@/components/contact-cta"
-import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/components/ui/accordion"
+import { HomeFaq } from "@/components/home-faq"
+import { JsonLd } from "@/components/json-ld"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import {
@@ -29,15 +25,17 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card"
+import { buildPageMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
 	title: "Honest Plumbing & Septic Service",
 	description:
 		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County, selected Santa Clara County communities, and Pickens County, Georgia.",
-	alternates: { canonical: "/" },
-}
+	pathname: "/",
+	image: "/images/locations/santa-cruz-plumber.webp",
+})
 
 const trustItems = [
 	"Licensed & insured",
@@ -150,8 +148,8 @@ export default function HomePage() {
 				<div className="bg-primary/12 pointer-events-none absolute -top-48 -right-40 size-[38rem] rounded-full blur-3xl" />
 				<div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 md:px-8 lg:grid-cols-2 lg:gap-16 lg:py-24">
 					<div className="relative z-10">
-						<Badge className="border-primary/40 bg-primary/15 mb-6">
-							<span className="bg-primary mr-2 size-1.5 rounded-full" />
+						<Badge className="border-primary-bright/40 bg-primary-bright/15 text-primary-bright mb-6">
+							<span className="bg-primary-bright mr-2 size-1.5 rounded-full" />
 							{siteConfig.serviceArea}
 						</Badge>
 						<h1 className="text-5xl leading-[0.95] font-black tracking-[-0.055em] sm:text-6xl lg:text-7xl">
@@ -159,17 +157,17 @@ export default function HomePage() {
 							<br />
 							Plumbing
 							<br />
-							<span className="text-primary">&amp; Septic</span>
+							<span className="text-primary-bright">&amp; Septic</span>
 						</h1>
-						<p className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-300">
+						<p className="mt-7 max-w-xl text-lg leading-relaxed text-neutral-200">
 							No sales pressure. No upselling. Quality workmanship from local
 							professionals you can count on—with clear pricing before work
 							begins.
 						</p>
-						<div className="mt-7 grid gap-3 text-sm text-neutral-300 sm:grid-cols-3">
+						<div className="mt-7 grid gap-3 text-sm text-neutral-200 sm:grid-cols-3">
 							{trustItems.map((item) => (
 								<span className="flex items-center gap-2" key={item}>
-									<Check className="text-primary size-4 shrink-0" />
+									<Check className="text-primary-bright size-4 shrink-0" />
 									{item}
 								</span>
 							))}
@@ -188,13 +186,14 @@ export default function HomePage() {
 									size: "xl",
 								})}
 								href="/services"
+								prefetch
 							>
 								Our Services
 								<ArrowRight />
 							</Link>
 						</div>
-						<div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-neutral-300">
-							<span className="text-amber-400" aria-label="5 stars">
+						<div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 text-sm text-neutral-200">
+							<span className="text-amber-300" aria-label="5 stars">
 								★★★★★
 							</span>
 							<span>4.9 local reputation · Family owned since 2021</span>
@@ -209,8 +208,8 @@ export default function HomePage() {
 								fill
 								fetchPriority="high"
 								priority
-								quality={80}
-								sizes="(min-width: 1024px) 38vw, 0px"
+								quality={65}
+								sizes="(min-width: 1024px) 38vw, 1px"
 								src="/images/work/engineered-septic-hero.webp"
 							/>
 							<div className="absolute inset-0 bg-linear-to-t from-black/55 via-transparent to-transparent" />
@@ -240,7 +239,7 @@ export default function HomePage() {
 						<div className="absolute top-6 left-6 rounded-xl border border-white/20 bg-black/30 px-4 py-3 backdrop-blur-md">
 							<p className="text-xs text-neutral-300">Serving</p>
 							<p className="text-sm font-black">California + Georgia</p>
-							<p className="text-primary text-xs font-bold">
+							<p className="text-primary-bright text-xs font-bold">
 								Santa Cruz · Santa Clara · Pickens
 							</p>
 						</div>
@@ -341,7 +340,9 @@ export default function HomePage() {
 				<div className="mx-auto max-w-7xl px-4 md:px-8">
 					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
 						<div className="max-w-2xl">
-							<Badge>Project Gallery</Badge>
+							<Badge className="border-primary-bright/40 bg-primary-bright/15 text-primary-bright">
+								Project Gallery
+							</Badge>
 							<h2 className="mt-5 text-4xl font-black tracking-tight">
 								Real work from the Wade&apos;s team.
 							</h2>
@@ -493,7 +494,7 @@ export default function HomePage() {
 					</div>
 
 					<div className="rounded-3xl bg-[#111] p-7 text-white sm:p-10">
-						<p className="text-primary text-sm font-black tracking-wider uppercase">
+						<p className="text-primary-bright text-sm font-black tracking-wider uppercase">
 							Real People, Real Results
 						</p>
 						<div className="mt-7 space-y-6">
@@ -552,18 +553,25 @@ export default function HomePage() {
 							{siteConfig.phone}
 						</a>
 					</div>
-					<Accordion type="single" collapsible>
-						{faqs.map((faq, index) => (
-							<AccordionItem key={faq.question} value={`faq-${index}`}>
-								<AccordionTrigger>{faq.question}</AccordionTrigger>
-								<AccordionContent>{faq.answer}</AccordionContent>
-							</AccordionItem>
-						))}
-					</Accordion>
+					<HomeFaq faqs={faqs} />
 				</div>
 			</section>
 
 			<ContactCta />
+			<JsonLd
+				data={{
+					"@context": "https://schema.org",
+					"@type": "FAQPage",
+					mainEntity: faqs.map((faq) => ({
+						"@type": "Question",
+						name: faq.question,
+						acceptedAnswer: {
+							"@type": "Answer",
+							text: faq.answer,
+						},
+					})),
+				}}
+			/>
 		</main>
 	)
 }
