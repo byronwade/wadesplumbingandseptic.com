@@ -15,6 +15,9 @@ tags:
 - main sewer line
 - shower drainage
 - blocked drain repair
+image: /images/wordpress/img-0073.webp
+imageAlt: "Solve Shower Backup Issues in Santa Cruz County Homes"
+
 ---
 
 Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures—like the toilet, bathroom sink, dishwasher, or washing machine—experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.

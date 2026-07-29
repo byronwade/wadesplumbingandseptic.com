@@ -15,8 +15,8 @@ tags:
 - septic solutions
 - local septic repair
 - drain field experts
-image: /images/work/completed-multi-tank.webp
-imageAlt: Completed engineered septic system
+image: /images/wordpress/img-2109.webp
+imageAlt: "Santa Cruz County's Trusted Drain Field Repair Experts"
 ---
 
 While many plumbing problems can be solved with basic tools and a little know-how, your septic system’s drain field is not one of them. The drain field—also called a leach field—is one of the most vital parts of your septic system. When it fails, it can lead to sewage backups, slow drains, health hazards, and even costly system replacements.

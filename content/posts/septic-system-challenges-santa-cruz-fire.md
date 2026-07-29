@@ -11,6 +11,9 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic system issues
+image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
+imageAlt: "Efficient Septic Recovery Services in Santa Cruz County"
+
 ---
 
 **Estimated reading time:** 5 minutes.

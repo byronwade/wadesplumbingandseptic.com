@@ -11,8 +11,8 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic failure signs
-image: /images/work/precision-valve-installation.webp
-imageAlt: Urgent Septic Failure Signs for Santa Cruz County Homes
+image: /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp
+imageAlt: "Urgent Septic Failure Signs in Santa Cruz County Homes"
 ---
 
 ## Did You Know?

@@ -10,8 +10,8 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic system types
-image: /images/work/precision-valve-installation.webp
-imageAlt: Understanding Septic System Types for Santa Cruz Homes
+image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1-3.webp
+imageAlt: "Understanding Septic System Types for Santa Cruz Homes"
 ---
 
 ## Quick Answer for Santa Cruz Homeowners

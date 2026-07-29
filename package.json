@@ -15,6 +15,7 @@
 		"ci:search": "npx --yes tsx scripts/ci/test-search.ts",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
 		"migrate:wordpress": "python3 -u scripts/migrate-from-wordpress-csv.py",
+		"migrate:wordpress-images": "python3 -u scripts/migrate-wordpress-images.py",
 		"check": "npm run lint && npm run typecheck && npm run format:check && npm run ci:search && npm run build"
 	},
 	"dependencies": {

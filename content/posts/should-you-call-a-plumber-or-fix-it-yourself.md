@@ -14,8 +14,8 @@ tags:
 - plumbing advice
 - local plumbing guide
 - plumbing repair
-image: /images/work/precision-valve-installation.webp
-imageAlt: Should You Call a Plumber or Fix It Yourself?
+image: /images/wordpress/img-1669.webp
+imageAlt: "Plumber vs DIY: Your Santa Cruz County Guide"
 ---
 
 When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question—and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.

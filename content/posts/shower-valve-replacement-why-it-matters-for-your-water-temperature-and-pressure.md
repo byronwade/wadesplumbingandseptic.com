@@ -13,8 +13,8 @@ tags:
 - bathroom plumbing repair
 - shower pressure issues
 - local plumbing experts
-image: /images/work/precision-valve-installation.webp
-imageAlt: Professional shower valve piping installation
+image: /images/wordpress/img-1840-1.webp
+imageAlt: "Boost Shower Pressure in Santa Cruz County Homes"
 ---
 
 We recently helped a homeowner in Santa Cruz, CA who was dealing with an unpredictable shower—fluctuating temperatures, inconsistent pressure, and a less-than-relaxing experience. After a thorough inspection, we discovered the issue: a faulty shower valve. Once we replaced it, their shower was working perfectly again.

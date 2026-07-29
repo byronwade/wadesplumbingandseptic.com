@@ -10,6 +10,9 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - memorial day plumbing
+image: /images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp
+imageAlt: "Get Capitola Plumbing Ready for Memorial Day, Santa Cruz"
+
 ---
 
 In This Guide4 min read
