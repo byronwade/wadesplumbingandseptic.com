@@ -63,34 +63,38 @@ export default function ServiceAreasPage() {
 				title="Plumbing & septic service areas"
 			/>
 
-			<section className="container-shell section-y">
-				<div className="mx-auto max-w-3xl text-center">
-					<Badge>Coverage Map</Badge>
-					<h2 className="type-title mt-5">
-						See where Wade&apos;s{" "}
-						<span className="text-primary">serves on the Central Coast</span>
-					</h2>
-					<p className="type-lead mt-5">
-						Mountain roads, coastal soils, older piping, steep lots, and septic
-						regulations change how a job should be diagnosed. The map shows Santa
-						Cruz County plus Los Gatos and Saratoga — tap a shaded area or browse
-						the communities below to confirm local service.
-					</p>
+			<section className="section-y overflow-x-clip">
+				<div className="container-shell">
+					<div className="mx-auto max-w-3xl text-center">
+						<Badge>Coverage Map</Badge>
+						<h2 className="type-title mt-5">
+							See where Wade&apos;s{" "}
+							<span className="text-primary">serves on the Central Coast</span>
+						</h2>
+						<p className="type-lead mt-5">
+							Mountain roads, coastal soils, older piping, steep lots, and septic
+							regulations change how a job should be diagnosed. The map shows Santa
+							Cruz County plus Los Gatos and Saratoga — tap a shaded area or browse
+							the communities below to confirm local service.
+						</p>
+					</div>
 				</div>
 
+				{/* Full-bleed on mobile; map component constrains itself from md up. */}
 				<div className="mt-10">
 					<ServiceAreasMap />
-					<p className="text-muted-foreground mt-4 text-center text-sm font-bold">
-						{serviceAreaLocations.length} communities listed · Call{" "}
-						<a
-							className="text-primary underline-offset-2 hover:underline"
-							href={siteConfig.phoneHref}
-						>
-							{siteConfig.phone}
-						</a>{" "}
-						to confirm your address
-					</p>
 				</div>
+
+				<p className="text-muted-foreground container-shell mt-4 text-center text-sm font-bold">
+					{serviceAreaLocations.length} communities listed · Call{" "}
+					<a
+						className="text-primary underline-offset-2 hover:underline"
+						href={siteConfig.phoneHref}
+					>
+						{siteConfig.phone}
+					</a>{" "}
+					to confirm your address
+				</p>
 			</section>
 
 			<section className="border-border bg-card border-y">
