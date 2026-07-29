@@ -1,0 +1,165 @@
+name: Quality
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    # Nightly quality sweep on the local runner fleet (UTC).
+    - cron: "15 7 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_COLOR: "1"
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  shadscan:
+    name: shadscan UI audit
+    runs-on: [self-hosted, linux, x64, wades, wades-quality]
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Run shadscan
+        run: npx --yes @shadscan/cli@0.7.0 --json > shadscan-report.json
+
+      - name: Summarize score
+        run: |
+          node -e "
+          const r = require('./shadscan-report.json');
+          console.log('score', r.score, 'grade', r.grade);
+          console.log('workItems', (r.workItems || []).length);
+          "
+
+      - name: Upload shadscan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: shadscan-${{ github.sha }}
+          path: shadscan-report.json
+          retention-days: 14
+
+  lighthouse:
+    name: Lighthouse homepage
+    runs-on: [self-hosted, linux, x64, wades, wades-quality]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Build
+        run: npm run build
+
+      - name: Ensure Chromium for Lighthouse
+        run: |
+          if command -v google-chrome >/dev/null || command -v chromium-browser >/dev/null || command -v chromium >/dev/null; then
+            echo "Chrome/Chromium already available"
+            exit 0
+          fi
+          if command -v apt-get >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends chromium-browser || sudo apt-get install -y --no-install-recommends chromium
+          else
+            echo "No Chrome/Chromium found and apt-get unavailable" >&2
+            exit 1
+          fi
+
+      - name: Start production server
+        run: |
+          npm run start -- -p 3010 &
+          echo $! > /tmp/next-server.pid
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3010/ >/dev/null; then
+              echo "server ready"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "server failed to start" >&2
+          exit 1
+
+      - name: Lighthouse (desktop)
+        run: |
+          mkdir -p artifacts/lighthouse
+          CHROME_PATH="$(command -v google-chrome || command -v chromium-browser || command -v chromium)"
+          npx --yes lighthouse@12 http://127.0.0.1:3010/ \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --preset=desktop \
+            --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
+            --chrome-path="$CHROME_PATH" \
+            --output=json \
+            --output=html \
+            --output-path=artifacts/lighthouse/desktop \
+            --quiet
+
+      - name: Assert desktop budgets
+        run: |
+          node <<'NODE'
+          const fs = require("node:fs");
+          const path = "artifacts/lighthouse/desktop.report.json";
+          const report = JSON.parse(fs.readFileSync(path, "utf8"));
+          const scores = Object.fromEntries(
+            Object.entries(report.categories).map(([k, v]) => [k, Math.round((v.score || 0) * 100)]),
+          );
+          console.log(scores);
+          const ttfb = report.audits["server-response-time"]?.numericValue ?? Infinity;
+          console.log("ttfbMs", ttfb);
+          const failures = [];
+          for (const [key, min] of Object.entries({
+            performance: 90,
+            accessibility: 95,
+            "best-practices": 95,
+            seo: 95,
+          })) {
+            if ((scores[key] ?? 0) < min) failures.push(`${key}=${scores[key]} < ${min}`);
+          }
+          if (ttfb > 500) failures.push(`ttfb=${ttfb}ms > 500ms`);
+          if (failures.length) {
+            console.error("Budget failures:", failures.join(", "));
+            process.exit(1);
+          }
+          NODE
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/next-server.pid ]; then
+            kill "$(cat /tmp/next-server.pid)" || true
+          fi
+
+      - name: Upload Lighthouse report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-${{ github.sha }}
+          path: artifacts/lighthouse/
+          retention-days: 14
+
+  npm-audit:
+    name: npm audit
+    runs-on: [self-hosted, linux, x64, wades, wades-quality]
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high

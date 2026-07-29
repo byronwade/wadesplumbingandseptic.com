@@ -1,0 +1,65 @@
+# Local GitHub Actions runner fleet for wades-plumbing-and-septic.
+# These runners replace GitHub-hosted ubuntu-*/windows-*/macos-* machines.
+#
+# Required env (see .env.example):
+#   ACCESS_TOKEN  GitHub PAT with admin:repo_hook (classic) or fine-grained
+#                 Administration: Read & write on Actions/Runners for the repo
+#   — or —
+#   RUNNER_TOKEN  short-lived registration token from:
+#                 Settings → Actions → Runners → New self-hosted runner
+#
+# Start a 2+2 fleet:
+#   cp .env.example .env
+#   ./up.sh
+#
+# Stop:
+#   ./down.sh
+
+name: wades-gh-runners
+
+services:
+  runner-ci:
+    image: myoung34/github-runner:ubuntu-noble
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      REPO_URL: ${REPO_URL:-https://github.com/byronwade/wades-plumbing-and-septic}
+      RUNNER_SCOPE: ${RUNNER_SCOPE:-repo}
+      RUNNER_WORKDIR: /tmp/runner-work
+      RUNNER_NAME_PREFIX: wades-ci
+      LABELS: self-hosted,linux,x64,wades,wades-ci
+      DISABLE_AUTO_UPDATE: "false"
+      EPHEMERAL: ${EPHEMERAL:-true}
+      ACCESS_TOKEN: ${ACCESS_TOKEN:-}
+      RUNNER_TOKEN: ${RUNNER_TOKEN:-}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ci-work:/tmp/runner-work
+    security_opt:
+      - label:disable
+
+  runner-quality:
+    image: myoung34/github-runner:ubuntu-noble
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      REPO_URL: ${REPO_URL:-https://github.com/byronwade/wades-plumbing-and-septic}
+      RUNNER_SCOPE: ${RUNNER_SCOPE:-repo}
+      RUNNER_WORKDIR: /tmp/runner-work
+      RUNNER_NAME_PREFIX: wades-quality
+      LABELS: self-hosted,linux,x64,wades,wades-quality
+      DISABLE_AUTO_UPDATE: "false"
+      EPHEMERAL: ${EPHEMERAL:-true}
+      ACCESS_TOKEN: ${ACCESS_TOKEN:-}
+      RUNNER_TOKEN: ${RUNNER_TOKEN:-}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - quality-work:/tmp/runner-work
+    security_opt:
+      - label:disable
+
+volumes:
+  ci-work:
+  quality-work:

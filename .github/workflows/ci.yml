@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_COLOR: "1"
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  # Hard rule: never use GitHub-hosted labels (ubuntu-latest, windows-latest, macos-*).
+  policy:
+    name: Self-hosted policy
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assert no GitHub-hosted runners
+        run: node scripts/ci/assert-self-hosted-only.mjs
+
+  lint:
+    name: Lint
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: ESLint
+        run: npm run lint
+
+  typecheck:
+    name: Typecheck
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: TypeScript
+        run: npm run typecheck
+
+  format:
+    name: Format
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Prettier
+        run: npm run format:check
+
+  build:
+    name: Build
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Next.js production build
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build-${{ github.sha }}
+          path: |
+            .next
+            public
+          retention-days: 3
+          if-no-files-found: error
+
+  gate:
+    name: CI gate
+    needs: [policy, lint, typecheck, format, build]
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 5
+    steps:
+      - name: All required checks passed
+        run: echo "policy, lint, typecheck, format, and build succeeded on self-hosted runners"
