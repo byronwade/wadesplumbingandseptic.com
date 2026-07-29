@@ -14,6 +14,7 @@
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
 		"ci:search": "npx --yes tsx scripts/ci/test-search.ts",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
+		"migrate:wordpress": "python3 -u scripts/migrate-from-wordpress-csv.py",
 		"check": "npm run lint && npm run typecheck && npm run format:check && npm run ci:search && npm run build"
 	},
 	"dependencies": {

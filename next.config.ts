@@ -1,5 +1,39 @@
 import type { NextConfig } from "next"
 
+/** Short city URLs from WordPress content → canonical service-area pages. */
+const SERVICE_AREA_CITIES = [
+	"amesti",
+	"aptos",
+	"aptos-hills-larkin-valley",
+	"ben-lomond",
+	"bonny-doon",
+	"boulder-creek",
+	"brookdale",
+	"capitola",
+	"corralitos",
+	"davenport",
+	"day-valley",
+	"felton",
+	"freedom",
+	"interlaken",
+	"la-selva-beach",
+	"las-lomas",
+	"live-oak",
+	"lompico",
+	"los-gatos",
+	"mount-hermon",
+	"paradise-park",
+	"pasatiempo",
+	"rio-del-mar",
+	"santa-cruz",
+	"saratoga",
+	"scotts-valley",
+	"soquel",
+	"twin-lakes",
+	"watsonville",
+	"zayante",
+] as const
+
 const nextConfig: NextConfig = {
 	cacheComponents: true,
 	typedRoutes: true,
@@ -27,6 +61,18 @@ const nextConfig: NextConfig = {
 				destination: "/service-areas",
 				permanent: true,
 			},
+			...SERVICE_AREA_CITIES.flatMap((city) => [
+				{
+					source: `/service-area/${city}`,
+					destination: `/service-area/${city}-ca-plumbing-septic-services`,
+					permanent: true,
+				},
+				{
+					source: `/service-area/${city}-ca`,
+					destination: `/service-area/${city}-ca-plumbing-septic-services`,
+					permanent: true,
+				},
+			]),
 			{
 				source: "/video-tutorials",
 				destination: "/videos",

@@ -57,7 +57,10 @@ function stripMarkdown(value: string) {
 		.trim()
 }
 
-function bodyExcerpt(content: string, maxChars = 480) {
+/** Utility pages that should not appear in site search. */
+const SEARCH_EXCLUDE_SLUGS = new Set(["thank-you", "contact-call-first"])
+
+function bodyExcerpt(content: string, maxChars = 2400) {
 	const cleaned = stripMarkdown(content)
 	if (cleaned.length <= maxChars) return cleaned
 	return cleaned.slice(0, maxChars)
@@ -129,7 +132,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				...(service.tags ?? []),
 				...serviceBoostKeywords(service.title, service.category),
 			),
-			body: bodyExcerpt(service.content),
+			body: bodyExcerpt(service.content, 3200),
 			popularity: boost + featuredBoost + orderBoost,
 			intents: CATEGORY_INTENTS[service.category ?? ""] ?? ["service"],
 		}
@@ -158,13 +161,13 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"tips",
 				"how to",
 			),
-			body: bodyExcerpt(post.content, 560),
+			body: bodyExcerpt(post.content, 3200),
 			popularity: Math.max(1, 28 - index) + topicBoost,
 			intents: ["tip"],
 		}
 	})
 
-	const pageAllowlist = new Set([
+	const priorityPages = new Set([
 		"about-us",
 		"contact",
 		"service-areas",
@@ -179,13 +182,12 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 	])
 
 	const pageDocs: SearchDocument[] = pages
-		.filter(
-			(page) =>
-				pageAllowlist.has(page.slug) || page.slug.startsWith("service-area/"),
-		)
+		.filter((page) => !SEARCH_EXCLUDE_SLUGS.has(page.slug))
 		.map((page, index) => {
 			const isArea = page.slug.startsWith("service-area/")
+			const isCareer = page.slug.startsWith("careers/")
 			const city = isArea ? cityFromAreaSlug(page.slug) : ""
+			const isPriority = priorityPages.has(page.slug)
 
 			return {
 				id: `page:${page.slug}`,
@@ -193,7 +195,11 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				title: page.title,
 				description: page.description,
 				href: `/${page.slug}`,
-				category: isArea ? "Service Area" : (page.eyebrow ?? "Page"),
+				category: isArea
+					? "Service Area"
+					: isCareer
+						? "Careers"
+						: (page.eyebrow ?? "Page"),
 				image: page.image,
 				keywords: keywordsFromText(
 					page.title,
@@ -202,14 +208,23 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 					page.slug.replaceAll("-", " ").replaceAll("/", " "),
 					city,
 					isArea ? "near me service area city" : "",
+					isCareer ? "job careers hiring" : "",
 				),
-				body: bodyExcerpt(page.content, 320),
-				popularity: isArea ? 12 : pageAllowlist.has(page.slug) ? 22 - index : 5,
+				body: bodyExcerpt(page.content, 2400),
+				popularity: isPriority
+					? 22 - Math.min(index, 20)
+					: isArea
+						? 12
+						: isCareer
+							? 14
+							: 10,
 				intents: isArea
 					? (["area", "service"] as SearchIntent[])
 					: page.slug === "contact"
 						? (["quote", "call"] as SearchIntent[])
-						: (["browse"] as SearchIntent[]),
+						: isCareer
+							? (["browse"] as SearchIntent[])
+							: (["browse"] as SearchIntent[]),
 			}
 		})
 
