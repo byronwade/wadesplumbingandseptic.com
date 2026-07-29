@@ -67,15 +67,16 @@ export default function ServiceAreasPage() {
 					</h2>
 					<p className="type-lead mt-5">
 						Mountain roads, coastal soils, older piping, steep lots, and septic
-						regulations change how a job should be diagnosed. Tap a pin or
-						browse the communities below to confirm local coverage.
+						regulations change how a job should be diagnosed. The map shows our
+						coverage counties — tap a shaded area or browse the communities
+						below to confirm local service.
 					</p>
 				</div>
 
 				<div className="mt-10">
 					<ServiceAreasMap />
 					<p className="text-muted-foreground mt-3 text-center text-xs font-bold">
-						{serviceAreaLocations.length} communities mapped · Call{" "}
+						{serviceAreaLocations.length} communities listed · Call{" "}
 						<a
 							className="text-primary underline-offset-2 hover:underline"
 							href={siteConfig.phoneHref}

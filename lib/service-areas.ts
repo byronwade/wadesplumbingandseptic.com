@@ -234,8 +234,14 @@ export const serviceAreaLocations: ServiceAreaLocation[] = [
 	},
 ]
 
-export const serviceAreaMapCenter: [number, number] = [-122.0, 37.02]
-export const serviceAreaMapZoom = 9.35
+export const serviceAreaMapCenter: [number, number] = [-121.85, 37.12]
+export const serviceAreaMapZoom = 9
+
+/** Southwest → northeast bounds covering Santa Cruz + Santa Clara polygons. */
+export const serviceAreaMapBounds: [[number, number], [number, number]] = [
+	[-122.32, 36.85],
+	[-121.21, 37.49],
+]
 
 export function locationsByCounty(county: ServiceAreaCounty) {
 	return serviceAreaLocations.filter((location) => location.county === county)
