@@ -97,7 +97,7 @@ export function SiteFooter() {
 								},
 							].map((item) => (
 								<a
-									className="grid size-10 place-items-center rounded-md bg-white/8 text-white/60 transition-colors hover:bg-white/14 hover:text-white"
+									className="hover:text-primary-bright grid size-10 place-items-center text-white/60 transition-colors"
 									href={item.href}
 									aria-label={item.label}
 									key={item.label}

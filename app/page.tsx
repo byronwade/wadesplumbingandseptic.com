@@ -199,7 +199,7 @@ export default function HomePage() {
 							No sales pressure. No upselling. Clear pricing before work begins
 							from local licensed professionals.
 						</p>
-						<div className="motion-rise motion-delay-2 mt-7 flex w-full max-w-md flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row">
+						<div className="motion-rise motion-delay-2 mt-7 flex w-full max-w-md flex-col items-stretch gap-4 sm:mt-8 sm:max-w-none sm:flex-row sm:items-center">
 							<a
 								className={cn(
 									buttonVariants({ size: "xl" }),
@@ -216,7 +216,7 @@ export default function HomePage() {
 										variant: "inverse",
 										size: "xl",
 									}),
-									"w-full sm:w-auto",
+									"w-full justify-start sm:w-auto sm:justify-center",
 								)}
 								href="/services"
 								prefetch
@@ -340,7 +340,7 @@ export default function HomePage() {
 						<Link
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
-								"w-full sm:w-auto",
+								"w-full justify-start sm:w-auto sm:justify-center",
 							)}
 							href="/contact"
 							prefetch
@@ -517,7 +517,7 @@ export default function HomePage() {
 						<Link
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
-								"mt-8 w-full sm:w-auto",
+								"mt-8 w-full justify-start sm:w-auto sm:justify-center",
 							)}
 							href="/testimonials"
 							prefetch

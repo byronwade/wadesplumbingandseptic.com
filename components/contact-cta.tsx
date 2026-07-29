@@ -53,7 +53,7 @@ export function ContactCta({
 
 				<div
 					className={cn(
-						"mt-7 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row",
+						"mt-7 flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-center",
 						!compact && "md:mt-0 md:max-w-none md:shrink-0",
 					)}
 				>
@@ -70,7 +70,7 @@ export function ContactCta({
 					<Link
 						className={cn(
 							buttonVariants({ variant: "inverse", size: "xl" }),
-							"w-full gap-2 sm:w-auto",
+							"w-full justify-start gap-2 sm:w-auto sm:justify-center",
 						)}
 						href="/contact"
 						prefetch
