@@ -43,7 +43,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 				title={service.title}
 			/>
 
-			<section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-8 lg:grid-cols-[minmax(0,1fr)_21rem] lg:py-20">
+			<section className="container-shell section-y grid gap-10 lg:grid-cols-[minmax(0,1fr)_21rem]">
 				<article>
 					<MarkdownContent content={service.content} />
 
@@ -55,10 +55,10 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 							"Testing and cleanup before completion",
 						].map((item) => (
 							<div
-								className="flex items-center gap-3 rounded-xl border bg-neutral-50 p-4 text-sm font-bold"
+								className="border-border bg-secondary/50 flex items-center gap-3 rounded-lg border p-4 text-sm font-bold"
 								key={item}
 							>
-								<span className="bg-primary/10 text-primary grid size-8 shrink-0 place-items-center rounded-full">
+								<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
 									<Check className="size-4" />
 								</span>
 								{item}
@@ -82,7 +82,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 								<span>{siteConfig.licenses}</span>
 							</div>
 							<a
-								className="text-primary flex items-center gap-3 font-black"
+								className="text-primary flex items-center gap-3 font-extrabold"
 								href={siteConfig.phoneHref}
 							>
 								<Phone className="size-5" />

@@ -34,15 +34,17 @@ export function ArticleArchive({
 				parent={{ href: "/expert-tips", label: "Expert Tips" }}
 				title={title}
 			/>
-			<section className="mx-auto grid max-w-7xl gap-5 px-4 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-20">
+			<section className="container-shell section-y grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 				{posts.map((post) => (
 					<Card
 						className="group flex h-full flex-col overflow-hidden"
 						key={post.slug}
 					>
 						<Link
-							className="relative block aspect-[16/9] overflow-hidden bg-neutral-100"
+							aria-label={`Read ${post.title}`}
+							className="bg-muted relative block aspect-[16/9] overflow-hidden"
 							href={`/${post.slug}` as Route}
+							prefetch
 							tabIndex={-1}
 						>
 							<Image
@@ -57,9 +59,13 @@ export function ArticleArchive({
 							/>
 						</Link>
 						<CardHeader>
-							<Badge className="w-fit">{post.category ?? "Expert Tips"}</Badge>
+							<Badge className="w-fit" tone="muted">
+								{post.category ?? "Expert Tips"}
+							</Badge>
 							<CardTitle className="group-hover:text-primary mt-3">
-								<Link href={`/${post.slug}` as Route}>{post.title}</Link>
+								<Link href={`/${post.slug}` as Route} prefetch>
+									{post.title}
+								</Link>
 							</CardTitle>
 							<CardDescription>{post.description}</CardDescription>
 						</CardHeader>
@@ -71,8 +77,9 @@ export function ArticleArchive({
 								</p>
 							) : null}
 							<Link
-								className="text-primary inline-flex items-center gap-2 text-sm font-black"
+								className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 								href={`/${post.slug}` as Route}
+								prefetch
 							>
 								Read guide
 								<ArrowRight className="size-4" />

@@ -3,7 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Phone } from "lucide-react"
 
+import { buttonVariants } from "@/components/ui/button"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
+import { cn } from "@/lib/utils"
 
 const serviceLinks = [
 	{ href: "/service-offerings/drain-cleaning", label: "Drain Cleaning" },
@@ -23,17 +25,22 @@ const serviceLinks = [
 
 export function SiteFooter() {
 	return (
-		<footer className="bg-[#0b0b0b] text-white">
+		<footer className="bg-ink text-white">
 			<div className="bg-primary border-b border-white/10">
-				<div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-center sm:flex-row sm:text-left md:px-8">
+				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
 					<div>
 						<p className="text-sm font-bold text-white/80">
 							24/7 Emergency Service
 						</p>
-						<p className="text-2xl font-black">{siteConfig.phone}</p>
+						<p className="text-2xl font-extrabold tracking-[-0.03em]">
+							{siteConfig.phone}
+						</p>
 					</div>
 					<a
-						className="inline-flex h-12 items-center gap-2 rounded-lg bg-white px-6 font-black text-neutral-950 hover:bg-neutral-100"
+						className={cn(
+							buttonVariants({ variant: "secondary", size: "lg" }),
+							"text-foreground gap-2 bg-white hover:bg-white/90",
+						)}
 						href={siteConfig.phoneHref}
 					>
 						<Phone className="size-4" aria-hidden="true" />
@@ -42,58 +49,60 @@ export function SiteFooter() {
 				</div>
 			</div>
 
-			<div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+			<div className="container-shell py-16">
 				<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 					<div>
 						<Link
-							className="flex items-center gap-3 text-xl font-black"
+							className="flex items-center gap-3 text-lg font-extrabold tracking-[-0.03em]"
 							href="/"
+							prefetch
 						>
-							<span className="grid size-14 place-items-center rounded-xl bg-white p-1.5">
+							<span className="grid size-12 place-items-center rounded-md bg-white p-1.5">
 								<Image
 									alt=""
-									height={48}
+									height={40}
 									src="/images/brand/wades-mark.webp"
-									width={48}
+									width={40}
 								/>
 							</span>
 							<span>Wade&apos;s Plumbing &amp; Septic</span>
 						</Link>
-						<p className="mt-4 text-sm leading-relaxed text-neutral-400">
+						<p className="mt-4 text-sm leading-relaxed text-white/60">
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
-						<p className="mt-4 text-xs font-semibold text-neutral-400">
+						<p className="mt-4 text-xs font-semibold text-white/45">
 							{siteConfig.licenses}
 						</p>
 						<div className="mt-5 flex gap-3">
-							<a
-								className="grid size-10 place-items-center rounded-lg border border-white/10 text-neutral-400 hover:text-white"
-								href={siteConfig.social.facebook}
-								aria-label="Facebook"
-							>
-								<span className="text-sm font-black" aria-hidden="true">
-									f
-								</span>
-							</a>
-							<a
-								className="grid size-10 place-items-center rounded-lg border border-white/10 text-neutral-400 hover:text-white"
-								href={siteConfig.social.linkedin}
-								aria-label="LinkedIn"
-							>
-								<span className="text-xs font-black" aria-hidden="true">
-									in
-								</span>
-							</a>
-							<a
-								className="grid size-10 place-items-center rounded-lg border border-white/10 text-neutral-400 hover:text-white"
-								href={siteConfig.social.instagram}
-								aria-label="Instagram"
-							>
-								<span className="text-sm font-black" aria-hidden="true">
-									i
-								</span>
-							</a>
+							{[
+								{
+									href: siteConfig.social.facebook,
+									label: "Facebook",
+									mark: "f",
+								},
+								{
+									href: siteConfig.social.linkedin,
+									label: "LinkedIn",
+									mark: "in",
+								},
+								{
+									href: siteConfig.social.instagram,
+									label: "Instagram",
+									mark: "i",
+								},
+							].map((item) => (
+								<a
+									className="grid size-10 place-items-center rounded-md border border-white/12 text-white/55 transition-colors hover:border-white/30 hover:text-white"
+									href={item.href}
+									aria-label={item.label}
+									key={item.label}
+								>
+									<span className="text-xs font-extrabold" aria-hidden="true">
+										{item.mark}
+									</span>
+								</a>
+							))}
 						</div>
 					</div>
 
@@ -102,16 +111,28 @@ export function SiteFooter() {
 					<FooterColumn title="Resources" links={resourceNavigation} />
 				</div>
 
-				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-neutral-400 sm:flex-row sm:items-center sm:justify-between">
+				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
 					<div className="flex gap-5">
-						<Link className="hover:text-white" href="/privacy-policy">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/privacy-policy"
+							prefetch
+						>
 							Privacy Policy
 						</Link>
-						<Link className="hover:text-white" href="/terms-of-service">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/terms-of-service"
+							prefetch
+						>
 							Terms
 						</Link>
-						<Link className="hover:text-white" href="/sitemap.xml">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/sitemap.xml"
+							prefetch
+						>
 							Sitemap
 						</Link>
 					</div>
@@ -130,13 +151,16 @@ function FooterColumn({
 }) {
 	return (
 		<div>
-			<h2 className="text-sm font-black tracking-wider uppercase">{title}</h2>
-			<ul className="mt-4 space-y-3 text-sm text-neutral-400">
+			<h2 className="text-xs font-extrabold tracking-[0.16em] uppercase">
+				{title}
+			</h2>
+			<ul className="mt-4 space-y-3 text-sm text-white/55">
 				{links.map((link) => (
 					<li key={link.href}>
 						<Link
-							className="hover:text-primary transition-colors"
+							className="hover:text-primary-bright transition-colors"
 							href={link.href as Route}
+							prefetch
 						>
 							{link.label}
 						</Link>
