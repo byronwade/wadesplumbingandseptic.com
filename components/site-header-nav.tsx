@@ -30,7 +30,7 @@ import {
 } from "@/components/ui/sheet"
 import {
 	companyNavLinks,
-	primaryNavLinks,
+	midNavLinks,
 	serviceNavLinks,
 	type NavLink,
 } from "@/lib/navigation"
@@ -89,7 +89,35 @@ export function SiteHeaderNav() {
 				aria-label="Primary navigation"
 			>
 				<NavigationMenuList>
-					{primaryNavLinks.map((item) => (
+					<NavigationMenuItem>
+						<NavigationMenuLink asChild>
+							<Link
+								className={cn(
+									navigationMenuTriggerStyle(),
+									"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent",
+								)}
+								href={"/" as Route}
+								prefetch
+							>
+								Home
+							</Link>
+						</NavigationMenuLink>
+					</NavigationMenuItem>
+
+					<NavigationMenuItem>
+						<NavigationMenuTrigger className="hover:text-primary-bright focus:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
+							Services
+						</NavigationMenuTrigger>
+						<NavigationMenuContent>
+							<ul className="grid w-[22rem] gap-1 p-3 md:w-[28rem] md:grid-cols-2">
+								{serviceNavLinks.map((item) => (
+									<ListItem key={item.href} {...item} />
+								))}
+							</ul>
+						</NavigationMenuContent>
+					</NavigationMenuItem>
+
+					{midNavLinks.map((item) => (
 						<NavigationMenuItem key={item.href}>
 							<NavigationMenuLink asChild>
 								<Link
@@ -105,19 +133,6 @@ export function SiteHeaderNav() {
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 					))}
-
-					<NavigationMenuItem>
-						<NavigationMenuTrigger className="hover:text-primary-bright focus:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
-							Services
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="grid w-[22rem] gap-1 p-3 md:w-[28rem] md:grid-cols-2">
-								{serviceNavLinks.map((item) => (
-									<ListItem key={item.href} {...item} />
-								))}
-							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
 
 					<NavigationMenuItem>
 						<NavigationMenuTrigger className="hover:text-primary-bright focus:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
@@ -213,12 +228,7 @@ export function SiteHeaderNav() {
 							className="flex-1 overflow-y-auto px-2 py-3"
 							aria-label="Mobile navigation"
 						>
-							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-								Explore
-							</p>
-							{primaryNavLinks.map((item) => (
-								<MobileNavLink key={item.href} {...item} />
-							))}
+							<MobileNavLink href="/" label="Home" />
 
 							<Separator className="my-3" />
 
@@ -226,6 +236,12 @@ export function SiteHeaderNav() {
 								Services
 							</p>
 							{serviceNavLinks.map((item) => (
+								<MobileNavLink key={item.href} {...item} />
+							))}
+
+							<Separator className="my-3" />
+
+							{midNavLinks.map((item) => (
 								<MobileNavLink key={item.href} {...item} />
 							))}
 

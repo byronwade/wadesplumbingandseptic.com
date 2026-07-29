@@ -20,15 +20,14 @@ export const siteConfig = {
 export const primaryNavigation = [
 	{ href: "/", label: "Home" },
 	{ href: "/services", label: "Services" },
+	{ href: "/service-areas", label: "Service Area" },
 	{ href: "/expert-tips", label: "Expert Tips" },
-	{ href: "/service-areas", label: "Service Areas" },
 	{ href: "/about-us", label: "About Us" },
 ] as const
 
 export const companyNavigation = [
 	{ href: "/about-us", label: "About Us" },
 	{ href: "/testimonials", label: "Customer Reviews" },
-	{ href: "/service-areas", label: "Service Areas" },
 	{ href: "/faq", label: "FAQ" },
 	{ href: "/financing", label: "Financing" },
 	{ href: "/warranties", label: "Warranties" },
