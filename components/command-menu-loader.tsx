@@ -4,6 +4,8 @@ import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
+import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
+
 const CommandMenuDialog = dynamic(
 	() =>
 		import("@/components/command-menu").then((mod) => mod.CommandMenuDialog),
@@ -16,6 +18,11 @@ export function CommandMenuLoader() {
 	const { resolvedTheme, setTheme } = useTheme()
 
 	useEffect(() => {
+		const openSearch = () => {
+			setMounted(true)
+			setOpen(true)
+		}
+
 		const onKeyDown = (event: KeyboardEvent) => {
 			const target = event.target
 			const typing =
@@ -42,7 +49,11 @@ export function CommandMenuLoader() {
 		}
 
 		window.addEventListener("keydown", onKeyDown)
-		return () => window.removeEventListener("keydown", onKeyDown)
+		window.addEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
+		return () => {
+			window.removeEventListener("keydown", onKeyDown)
+			window.removeEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
+		}
 	}, [resolvedTheme, setTheme])
 
 	if (!mounted) return null
