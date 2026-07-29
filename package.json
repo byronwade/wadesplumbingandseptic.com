@@ -12,8 +12,9 @@
 		"format:check": "prettier --check .",
 		"ci:content": "node scripts/ci/validate-content.mjs",
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
+		"ci:search": "npx --yes tsx scripts/ci/test-search.ts",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
-		"check": "npm run lint && npm run typecheck && npm run format:check && npm run build"
+		"check": "npm run lint && npm run typecheck && npm run format:check && npm run ci:search && npm run build"
 	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "1.2.20",

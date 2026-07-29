@@ -27,7 +27,9 @@ import {
 import { cn } from "@/lib/utils"
 import {
 	groupSearchHits,
+	highlightMatches,
 	searchDocuments,
+	suggestSearches,
 	type SearchDocument,
 	type SearchHit,
 	type SearchResultType,
@@ -54,7 +56,7 @@ const TYPE_BADGE: Record<
 		className: "bg-accent text-accent-foreground",
 	},
 	tip: {
-		label: "Tip",
+		label: "Expert Tip",
 		className: "bg-secondary text-secondary-foreground",
 	},
 	page: {
@@ -80,13 +82,38 @@ function ResultIcon({ doc }: { doc: SearchDocument }) {
 	return <FileText className="size-5" aria-hidden />
 }
 
+function HighlightedTitle({ title, query }: { title: string; query: string }) {
+	const parts = query.trim()
+		? highlightMatches(title, query)
+		: [{ text: title, match: false }]
+
+	return (
+		<span className="truncate">
+			{parts.map((part, index) =>
+				part.match ? (
+					<mark
+						key={`${part.text}-${index}`}
+						className="bg-accent text-accent-foreground rounded-sm px-0.5"
+					>
+						{part.text}
+					</mark>
+				) : (
+					<span key={`${part.text}-${index}`}>{part.text}</span>
+				),
+			)}
+		</span>
+	)
+}
+
 function ResultRow({
 	hit,
+	query,
 	active,
 	onHover,
 	onSelect,
 }: {
 	hit: SearchHit
+	query: string
 	active: boolean
 	onHover: () => void
 	onSelect: () => void
@@ -141,9 +168,14 @@ function ResultRow({
 							{hit.category}
 						</span>
 					) : null}
+					{query.trim() && hit.matchLabel !== "Popular" ? (
+						<span className="text-muted-foreground hidden truncate text-xs sm:inline">
+							· {hit.matchLabel}
+						</span>
+					) : null}
 				</div>
 				<p className="text-foreground mt-1 truncate text-base font-extrabold tracking-[-0.02em] sm:text-[1.05rem]">
-					{hit.title}
+					<HighlightedTitle title={hit.title} query={query} />
 				</p>
 				<p className="text-muted-foreground mt-0.5 line-clamp-1 text-sm leading-snug sm:line-clamp-2">
 					{hit.description}
@@ -214,6 +246,8 @@ export function GlobalSearch({
 		if (!index) return [] as SearchHit[]
 		return searchDocuments(index, query, query.trim() ? 24 : 8)
 	}, [index, query])
+
+	const suggestions = React.useMemo(() => suggestSearches(query, 6), [query])
 
 	const grouped = React.useMemo(() => groupSearchHits(hits), [hits])
 
@@ -334,17 +368,12 @@ export function GlobalSearch({
 						/>
 					</label>
 					<p className="text-muted-foreground mt-2 hidden text-sm sm:mt-2.5 sm:block">
-						Smart matching understands synonyms like toilet ↔ clog and septic ↔
-						pumping. Use ↑ ↓ and Enter.
+						Understands symptoms, synonyms, and intent — try “no hot water”,
+						“sewage smell”, or “quote”. Use ↑ ↓ and Enter.
 					</p>
-					{!query.trim() ? (
-						<div className="mt-2.5 flex [scrollbar-width:none] gap-2 overflow-x-auto pb-0.5 [-ms-overflow-style:none] sm:hidden [&::-webkit-scrollbar]:hidden">
-							{[
-								"clogged drain",
-								"septic pumping",
-								"water heater",
-								"toilet",
-							].map((suggestion) => (
+					{suggestions.length ? (
+						<div className="mt-2.5 flex [scrollbar-width:none] gap-2 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+							{suggestions.map((suggestion) => (
 								<button
 									key={suggestion}
 									type="button"
@@ -353,7 +382,7 @@ export function GlobalSearch({
 										setActiveIndex(0)
 										inputRef.current?.focus()
 									}}
-									className="border-border bg-card text-foreground shrink-0 rounded-md border px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em]"
+									className="border-border bg-card text-foreground hover:border-primary/40 shrink-0 rounded-md border px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em]"
 								>
 									{suggestion}
 								</button>
@@ -386,8 +415,26 @@ export function GlobalSearch({
 								No matches for “{query.trim()}”
 							</p>
 							<p className="text-muted-foreground mt-2 text-sm">
-								Try a service name, symptom, city, or tip topic.
+								Try a symptom (“slow drain”), city, or service name.
 							</p>
+							{suggestions.length ? (
+								<div className="mt-4 flex flex-wrap justify-center gap-2">
+									{suggestions.slice(0, 4).map((suggestion) => (
+										<button
+											key={suggestion}
+											type="button"
+											onClick={() => {
+												setQuery(suggestion)
+												setActiveIndex(0)
+												inputRef.current?.focus()
+											}}
+											className="border-border bg-card text-foreground rounded-md border px-3 py-1.5 text-xs font-extrabold"
+										>
+											Try “{suggestion}”
+										</button>
+									))}
+								</div>
+							) : null}
 						</div>
 					) : null}
 
@@ -423,6 +470,7 @@ export function GlobalSearch({
 													<li key={hit.id}>
 														<ResultRow
 															hit={hit}
+															query={query}
 															active={flatIndex === safeActiveIndex}
 															onHover={() => setActiveIndex(flatIndex)}
 															onSelect={() => runHit(hit)}
