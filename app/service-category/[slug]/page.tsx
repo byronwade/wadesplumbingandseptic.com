@@ -4,7 +4,8 @@ import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
-import { ServiceCard } from "@/components/service-card"
+import { FilterableArchive } from "@/components/filterable-archive"
+import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -120,11 +121,21 @@ export default async function ServiceCategoryPage({
 					</section>
 				}
 			>
-				<section className="container-shell section-y grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-					{services.map((service) => (
-						<ServiceCard key={service.slug} service={service} />
-					))}
-				</section>
+				<FilterableArchive
+					allLabel={`${category.label} services`}
+					emptyLabel="No services in this category."
+					items={services.map((service) =>
+						toArchiveItem(
+							service,
+							`/service-offerings/${service.slug}`,
+							service.category ?? category.contentCategory,
+						),
+					)}
+					noun={{ singular: "service", plural: "services" }}
+					pageSize={12}
+					showFilters={false}
+					variant="service"
+				/>
 			</Suspense>
 			<ContactCta />
 		</main>

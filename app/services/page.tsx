@@ -3,7 +3,8 @@ import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
-import { ServiceCard } from "@/components/service-card"
+import { FilterableArchive } from "@/components/filterable-archive"
+import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -19,38 +20,23 @@ async function ServiceDirectory() {
 	"use cache"
 
 	const services = await getCollection("services")
-	const categories = ["Septic", "Plumbing", "Commercial"] as const
+	const items = services.map((service) =>
+		toArchiveItem(
+			service,
+			`/service-offerings/${service.slug}`,
+			service.category ?? "Plumbing",
+		),
+	)
 
 	return (
-		<div className="container-shell section-y space-y-16">
-			{categories.map((category) => {
-				const categoryServices = services.filter(
-					(service) => service.category === category,
-				)
-
-				if (!categoryServices.length) return null
-
-				return (
-					<section key={category}>
-						<div className="border-border mb-7 flex items-end justify-between gap-5 border-b pb-5">
-							<div>
-								<p className="type-eyebrow">
-									{categoryServices.length} services
-								</p>
-								<h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">
-									{category}
-								</h2>
-							</div>
-						</div>
-						<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-							{categoryServices.map((service) => (
-								<ServiceCard key={service.slug} service={service} />
-							))}
-						</div>
-					</section>
-				)
-			})}
-		</div>
+		<FilterableArchive
+			allLabel="All services"
+			emptyLabel="No services in this category."
+			items={items}
+			noun={{ singular: "service", plural: "services" }}
+			pageSize={12}
+			variant="service"
+		/>
 	)
 }
 
