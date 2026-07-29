@@ -4,13 +4,21 @@ import { cacheLife, cacheTag } from "next/cache"
 
 import { getCollection } from "@/lib/content"
 import { getServiceImage } from "@/lib/service-images"
-import type { SearchDocument } from "@/lib/search"
+import {
+	buildInvertedIndex,
+	plainTextFromMarkdown,
+	type SearchDocument,
+	type SearchIndexPayload,
+} from "@/lib/search"
 import {
 	companyNavigation,
 	primaryNavigation,
 	resourceNavigation,
 	siteConfig,
 } from "@/lib/site"
+
+/** Utility pages that should not appear in site search. */
+const SEARCH_EXCLUDE_SLUGS = new Set(["thank-you", "contact-call-first"])
 
 function keywordsFromText(...parts: Array<string | undefined>) {
 	const values = parts
@@ -24,7 +32,17 @@ function keywordsFromText(...parts: Array<string | undefined>) {
 	return [...new Set(values)]
 }
 
-export async function getSearchIndex(): Promise<SearchDocument[]> {
+function withBody(
+	document: Omit<SearchDocument, "body">,
+	markdown?: string,
+): SearchDocument {
+	return {
+		...document,
+		body: markdown ? plainTextFromMarkdown(markdown) : "",
+	}
+}
+
+export async function getSearchIndex(): Promise<SearchIndexPayload> {
 	"use cache"
 	cacheTag("content:search-index")
 	cacheLife("max")
@@ -35,92 +53,110 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		getCollection("pages"),
 	])
 
-	const serviceDocs: SearchDocument[] = services.map((service, index) => ({
-		id: `service:${service.slug}`,
-		type: "service",
-		title: service.title,
-		description: service.description,
-		href: `/service-offerings/${service.slug}`,
-		category: service.category ?? "Service",
-		image: getServiceImage(service.category, service.image),
-		keywords: keywordsFromText(
-			service.title,
-			service.description,
-			service.category,
-			service.slug.replaceAll("-", " "),
-			...(service.tags ?? []),
+	const serviceDocs: SearchDocument[] = services.map((service, index) =>
+		withBody(
+			{
+				id: `service:${service.slug}`,
+				type: "service",
+				title: service.title,
+				description: service.description,
+				href: `/service-offerings/${service.slug}`,
+				category: service.category ?? "Service",
+				image: getServiceImage(service.category, service.image),
+				keywords: keywordsFromText(
+					service.title,
+					service.description,
+					service.category,
+					service.slug.replaceAll("-", " "),
+					...(service.tags ?? []),
+				),
+				popularity: Math.max(1, 40 - index),
+			},
+			service.content,
 		),
-		popularity: Math.max(1, 40 - index),
-	}))
+	)
 
-	const tipDocs: SearchDocument[] = posts.map((post, index) => ({
-		id: `tip:${post.slug}`,
-		type: "tip",
-		title: post.title,
-		description: post.description,
-		href: `/${post.slug}`,
-		category: post.category ?? "Expert Tip",
-		image: post.image ?? "/images/team/byron-working.webp",
-		keywords: keywordsFromText(
-			post.title,
-			post.description,
-			post.category,
-			post.slug.replaceAll("-", " "),
-			...(post.tags ?? []),
+	const tipDocs: SearchDocument[] = posts.map((post, index) =>
+		withBody(
+			{
+				id: `tip:${post.slug}`,
+				type: "tip",
+				title: post.title,
+				description: post.description,
+				href: `/${post.slug}`,
+				category: post.category ?? "Expert Tip",
+				image: post.image ?? "/images/team/byron-working.webp",
+				keywords: keywordsFromText(
+					post.title,
+					post.description,
+					post.category,
+					post.slug.replaceAll("-", " "),
+					...(post.tags ?? []),
+				),
+				popularity: Math.max(1, 30 - index),
+			},
+			post.content,
 		),
-		popularity: Math.max(1, 30 - index),
-	}))
-
-	const pageAllowlist = new Set([
-		"about-us",
-		"contact",
-		"service-areas",
-		"faq",
-		"financing",
-		"warranties",
-		"careers",
-		"septic-solutions",
-		"maintenance-guide",
-		"testimonials",
-		"emergency-plumber-santa-cruz-county",
-	])
+	)
 
 	const pageDocs: SearchDocument[] = pages
-		.filter(
-			(page) =>
-				pageAllowlist.has(page.slug) || page.slug.startsWith("service-area/"),
-		)
-		.map((page, index) => ({
-			id: `page:${page.slug}`,
-			type: "page" as const,
-			title: page.title,
-			description: page.description,
-			href: `/${page.slug}`,
-			category: page.eyebrow ?? "Page",
-			image: page.image,
-			keywords: keywordsFromText(
-				page.title,
-				page.description,
-				page.eyebrow,
-				page.slug.replaceAll("-", " ").replaceAll("/", " "),
-			),
-			popularity: pageAllowlist.has(page.slug) ? 20 - index : 5,
-		}))
+		.filter((page) => !SEARCH_EXCLUDE_SLUGS.has(page.slug))
+		.map((page, index) => {
+			const isServiceArea = page.slug.startsWith("service-area/")
+			const isCareer = page.slug.startsWith("careers/")
+			const isPriority =
+				!isServiceArea &&
+				!isCareer &&
+				[
+					"about-us",
+					"contact",
+					"service-areas",
+					"faq",
+					"financing",
+					"warranties",
+					"careers",
+					"septic-solutions",
+					"maintenance-guide",
+					"testimonials",
+				].includes(page.slug)
+
+			return withBody(
+				{
+					id: `page:${page.slug}`,
+					type: "page" as const,
+					title: page.title,
+					description: page.description,
+					href: `/${page.slug}`,
+					category: page.eyebrow ?? (isServiceArea ? "Service Area" : isCareer ? "Careers" : "Page"),
+					image: page.image,
+					keywords: keywordsFromText(
+						page.title,
+						page.description,
+						page.eyebrow,
+						page.slug.replaceAll("-", " ").replaceAll("/", " "),
+					),
+					popularity: isPriority ? 22 - Math.min(index, 20) : isServiceArea ? 8 : 10,
+				},
+				page.content,
+			)
+		})
 
 	const navDocs: SearchDocument[] = [
 		...primaryNavigation,
 		...companyNavigation,
 		...resourceNavigation,
-	].map((item, index) => ({
-		id: `nav:${item.href}`,
-		type: "page" as const,
-		title: item.label,
-		description: `Browse ${item.label} on Wade's Plumbing & Septic.`,
-		href: item.href,
-		category: "Navigation",
-		keywords: keywordsFromText(item.label, item.href.replaceAll("/", " ")),
-		popularity: 18 - index,
-	}))
+	].map((item, index) =>
+		withBody({
+			id: `nav:${item.href}`,
+			type: "page" as const,
+			title: item.label,
+			description: `Browse ${item.label} on Wade's Plumbing & Septic.`,
+			href: item.href,
+			category: "Navigation",
+			keywords: keywordsFromText(item.label, item.href.replaceAll("/", " ")),
+			popularity: 18 - index,
+		}),
+	)
 
 	const actionDocs: SearchDocument[] = [
 		{
@@ -139,6 +175,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				siteConfig.phone,
 			),
 			popularity: 50,
+			body: "call phone schedule book appointment speak with dispatcher",
 		},
 		{
 			id: "action:contact",
@@ -155,6 +192,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"price",
 			),
 			popularity: 45,
+			body: "free quote estimate contact message pricing request proposal",
 		},
 		{
 			id: "action:services",
@@ -165,6 +203,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 			category: "Action",
 			keywords: keywordsFromText("services", "menu", "plumbing", "septic"),
 			popularity: 42,
+			body: "all services plumbing septic commercial menu offerings",
 		},
 		{
 			id: "action:tips",
@@ -181,6 +220,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"articles",
 			),
 			popularity: 40,
+			body: "expert tips blog guides articles homeowner advice",
 		},
 	]
 
@@ -197,5 +237,9 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		}
 	}
 
-	return [...deduped.values()]
+	const documents = [...deduped.values()]
+	return {
+		documents,
+		inverted: buildInvertedIndex(documents),
+	}
 }

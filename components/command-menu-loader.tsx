@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
 import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
+import { prefetchSearchIndex } from "@/lib/search-client"
 
 const CommandMenuDialog = dynamic(
 	() =>
@@ -21,6 +22,7 @@ export function CommandMenuLoader() {
 		const openSearch = () => {
 			setMounted(true)
 			setOpen(true)
+			void prefetchSearchIndex()
 		}
 
 		const onKeyDown = (event: KeyboardEvent) => {
@@ -36,6 +38,7 @@ export function CommandMenuLoader() {
 				event.preventDefault()
 				setMounted(true)
 				setOpen((current) => !current)
+				void prefetchSearchIndex()
 				return
 			}
 
@@ -48,11 +51,29 @@ export function CommandMenuLoader() {
 			}
 		}
 
+		const warmIndex = () => {
+			void prefetchSearchIndex()
+		}
+
 		window.addEventListener("keydown", onKeyDown)
 		window.addEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
+
+		// Prefetch on idle so ⌘K / search opens instantly with full-content index
+		let idleId: number | undefined
+		let timeoutId: number | undefined
+		if (typeof window.requestIdleCallback === "function") {
+			idleId = window.requestIdleCallback(warmIndex, { timeout: 2500 })
+		} else {
+			timeoutId = window.setTimeout(warmIndex, 1200)
+		}
+
 		return () => {
 			window.removeEventListener("keydown", onKeyDown)
 			window.removeEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
+			if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
+				window.cancelIdleCallback(idleId)
+			}
+			if (timeoutId !== undefined) window.clearTimeout(timeoutId)
 		}
 	}, [resolvedTheme, setTheme])
 

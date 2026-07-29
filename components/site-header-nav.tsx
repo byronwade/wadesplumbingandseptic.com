@@ -7,6 +7,7 @@ import { Menu, Phone, Search } from "lucide-react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import { openGlobalSearch } from "@/lib/search-events"
+import { prefetchSearchIndex } from "@/lib/search-client"
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -139,7 +140,9 @@ export function SiteHeaderNav() {
 					variant="ghost"
 					size="icon"
 					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
-					aria-label="Search services and tips"
+					aria-label="Search services, tips, and pages"
+					onMouseEnter={() => void prefetchSearchIndex()}
+					onFocus={() => void prefetchSearchIndex()}
 					onClick={openGlobalSearch}
 				>
 					<Search aria-hidden="true" className="size-5" />
@@ -158,7 +161,9 @@ export function SiteHeaderNav() {
 					variant="ghost"
 					size="icon"
 					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
-					aria-label="Search services and tips"
+					aria-label="Search services, tips, and pages"
+					onMouseEnter={() => void prefetchSearchIndex()}
+					onFocus={() => void prefetchSearchIndex()}
 					onClick={openGlobalSearch}
 				>
 					<Search aria-hidden="true" className="size-5" />

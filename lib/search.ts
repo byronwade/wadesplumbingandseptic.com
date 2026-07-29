@@ -10,11 +10,20 @@ export type SearchDocument = {
 	image?: string
 	keywords: string[]
 	popularity?: number
+	/** Plain-text markdown body for full-content search and snippets. */
+	body?: string
+}
+
+export type SearchIndexPayload = {
+	documents: SearchDocument[]
+	/** token -> document indices (grep-style inverted index) */
+	inverted: Record<string, number[]>
 }
 
 export type SearchHit = SearchDocument & {
 	score: number
-	matchedOn: "title" | "category" | "keyword" | "description"
+	matchedOn: "title" | "category" | "keyword" | "description" | "body"
+	snippet?: string
 }
 
 /** Domain synonyms so casual homeowner language finds the right pages. */
@@ -99,6 +108,20 @@ export function tokenize(query: string) {
 	return normalize(query)
 		.split(" ")
 		.filter((token) => token.length > 1 && !STOP_WORDS.has(token))
+}
+
+/** Strip markdown/HTML noise into plain searchable text. */
+export function plainTextFromMarkdown(markdown: string) {
+	return markdown
+		.replace(/```[\s\S]*?```/g, " ")
+		.replace(/`[^`]*`/g, " ")
+		.replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+		.replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
+		.replace(/<[^>]+>/g, " ")
+		.replace(/[#>*_~|]/g, " ")
+		.replace(/\{\s*"@context"[\s\S]*$/g, " ")
+		.replace(/\s+/g, " ")
+		.trim()
 }
 
 function familyTerms(canonical: string, aliases: string[]) {
@@ -207,9 +230,10 @@ function scoreTokenAgainstDocument(
 		description: string
 		category: string
 		keywords: string
+		body: string
 	},
 ): { score: number; matchedOn: SearchHit["matchedOn"] } | null {
-	const { title, description, category, keywords } = fields
+	const { title, description, category, keywords, body } = fields
 
 	if (title === token) return { score: 120, matchedOn: "title" }
 	if (title.startsWith(`${token} `) || title.startsWith(token)) {
@@ -226,9 +250,53 @@ function scoreTokenAgainstDocument(
 	if (description.includes(token) || fuzzyIncludes(description, token)) {
 		return { score: 25, matchedOn: "description" }
 	}
+	if (body.includes(` ${token} `) || body.startsWith(`${token} `) || body.endsWith(` ${token}`) || body === token) {
+		return { score: 18, matchedOn: "body" }
+	}
+	if (body.includes(token)) return { score: 14, matchedOn: "body" }
 	if (fuzzyIncludes(title, token)) return { score: 50, matchedOn: "title" }
 
 	return null
+}
+
+function preferMatch(
+	current: SearchHit["matchedOn"],
+	next: SearchHit["matchedOn"],
+): SearchHit["matchedOn"] {
+	const rank: Record<SearchHit["matchedOn"], number> = {
+		title: 5,
+		category: 4,
+		keyword: 3,
+		description: 2,
+		body: 1,
+	}
+	return rank[next] > rank[current] ? next : current
+}
+
+function makeSnippet(body: string, needles: string[], limit = 140): string | undefined {
+	if (!body) return undefined
+	const lower = body.toLowerCase()
+	let at = -1
+	let matched = ""
+	for (const needle of needles) {
+		if (needle.length < 2) continue
+		const index = lower.indexOf(needle)
+		if (index >= 0 && (at < 0 || index < at)) {
+			at = index
+			matched = needle
+		}
+	}
+	if (at < 0) return undefined
+
+	const start = Math.max(0, at - 36)
+	const end = Math.min(body.length, at + matched.length + 90)
+	let snippet = body.slice(start, end).trim()
+	if (start > 0) snippet = `…${snippet}`
+	if (end < body.length) snippet = `${snippet}…`
+	if (snippet.length > limit) {
+		snippet = `${snippet.slice(0, limit - 1).trimEnd()}…`
+	}
+	return snippet
 }
 
 function scoreDocument(
@@ -250,10 +318,11 @@ function scoreDocument(
 		description: normalize(document.description),
 		category: normalize(document.category ?? ""),
 		keywords: normalize(document.keywords.join(" ")),
+		body: normalize(document.body ?? ""),
 	}
 
 	let score = 0
-	let matchedOn: SearchHit["matchedOn"] = "description"
+	let matchedOn: SearchHit["matchedOn"] = "body"
 	let matchedOriginal = 0
 	let matchedExpanded = 0
 
@@ -268,6 +337,11 @@ function scoreDocument(
 			matchedOriginal += 1
 		} else if (fields.description.includes(phrase)) {
 			score += 45
+			matchedOn = "description"
+			matchedOriginal += 1
+		} else if (fields.body.includes(phrase)) {
+			score += 30
+			matchedOn = "body"
 			matchedOriginal += 1
 		}
 	}
@@ -281,13 +355,7 @@ function scoreDocument(
 		score += hit.score * weight
 		matchedExpanded += 1
 		if (isOriginal) matchedOriginal += 1
-		if (
-			hit.matchedOn === "title" ||
-			(hit.matchedOn === "category" && matchedOn === "description") ||
-			(hit.matchedOn === "keyword" && matchedOn === "description")
-		) {
-			matchedOn = hit.matchedOn
-		}
+		matchedOn = preferMatch(matchedOn, hit.matchedOn)
 	}
 
 	if (matchedExpanded === 0) return null
@@ -303,13 +371,81 @@ function scoreDocument(
 	if (document.type === "service") score += 8
 	if (document.type === "tip") score += 4
 
-	return { ...document, score, matchedOn }
+	const snippet =
+		matchedOn === "body" || matchedOn === "description"
+			? makeSnippet(document.body || document.description, [
+					...original,
+					...expanded,
+				])
+			: undefined
+
+	return { ...document, score, matchedOn, snippet }
+}
+
+/** Build an inverted index for O(tokens) candidate lookup. */
+export function buildInvertedIndex(
+	documents: SearchDocument[],
+): Record<string, number[]> {
+	const inverted: Record<string, number[]> = {}
+
+	documents.forEach((document, index) => {
+		const tokens = new Set(
+			tokenize(
+				[
+					document.title,
+					document.description,
+					document.category ?? "",
+					document.keywords.join(" "),
+					document.body ?? "",
+				].join(" "),
+			),
+		)
+
+		for (const token of tokens) {
+			const bucket = inverted[token]
+			if (bucket) bucket.push(index)
+			else inverted[token] = [index]
+		}
+	})
+
+	return inverted
+}
+
+function candidateIndices(
+	documents: SearchDocument[],
+	inverted: Record<string, number[]> | undefined,
+	tokens: string[],
+): number[] {
+	if (!tokens.length) {
+		return documents.map((_, index) => index)
+	}
+
+	if (!inverted || Object.keys(inverted).length === 0) {
+		return documents.map((_, index) => index)
+	}
+
+	const sets = tokens
+		.map((token) => inverted[token])
+		.filter((list): list is number[] => Boolean(list?.length))
+
+	if (!sets.length) {
+		// Fall back to full scan when inverted misses (stem/synonym-only tokens)
+		return documents.map((_, index) => index)
+	}
+
+	// Union of posting lists — scoring enforces relevance afterward
+	const seen = new Set<number>()
+	for (const list of sets) {
+		for (const index of list) seen.add(index)
+	}
+	return [...seen]
 }
 
 export function searchDocuments(
 	documents: SearchDocument[],
 	query: string,
 	limit = 24,
+	inverted?: Record<string, number[]>,
 ): SearchHit[] {
 	const parsed = expandQuery(query)
 
@@ -327,8 +463,13 @@ export function searchDocuments(
 			}))
 	}
 
-	return documents
-		.map((document) => scoreDocument(document, parsed))
+	const indices = candidateIndices(documents, inverted, parsed.expanded)
+
+	return indices
+		.map((index) => {
+			const document = documents[index]
+			return document ? scoreDocument(document, parsed) : null
+		})
 		.filter((hit): hit is SearchHit => hit !== null)
 		.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
 		.slice(0, limit)
@@ -347,4 +488,12 @@ export function groupSearchHits(hits: SearchHit[]) {
 	}
 
 	return groups
+}
+
+export function isSearchIndexPayload(
+	value: unknown,
+): value is SearchIndexPayload {
+	if (!value || typeof value !== "object") return false
+	const record = value as SearchIndexPayload
+	return Array.isArray(record.documents) && typeof record.inverted === "object"
 }

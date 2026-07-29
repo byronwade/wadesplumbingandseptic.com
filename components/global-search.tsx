@@ -30,8 +30,10 @@ import {
 	searchDocuments,
 	type SearchDocument,
 	type SearchHit,
+	type SearchIndexPayload,
 	type SearchResultType,
 } from "@/lib/search"
+import { loadSearchIndex } from "@/lib/search-client"
 
 const GROUP_ORDER: SearchResultType[] = ["service", "tip", "page", "action"]
 
@@ -146,7 +148,9 @@ function ResultRow({
 					{hit.title}
 				</p>
 				<p className="text-muted-foreground mt-0.5 line-clamp-1 text-sm leading-snug sm:line-clamp-2">
-					{hit.description}
+					{hit.snippet && hit.matchedOn === "body"
+						? hit.snippet
+						: hit.description}
 				</p>
 			</div>
 
@@ -167,7 +171,7 @@ export function GlobalSearch({
 	const router = useRouter()
 	const inputRef = React.useRef<HTMLInputElement>(null)
 	const [query, setQuery] = React.useState("")
-	const [index, setIndex] = React.useState<SearchDocument[] | null>(null)
+	const [index, setIndex] = React.useState<SearchIndexPayload | null>(null)
 	const [error, setError] = React.useState<string | null>(null)
 	const [activeIndex, setActiveIndex] = React.useState(0)
 	const loading = open && index === null && error === null
@@ -192,12 +196,10 @@ export function GlobalSearch({
 
 		let cancelled = false
 
-		void fetch("/api/search-index")
-			.then(async (response) => {
-				if (!response.ok) throw new Error("Could not load search index")
-				const data = (await response.json()) as SearchDocument[]
+		void loadSearchIndex()
+			.then((payload) => {
 				if (!cancelled) {
-					setIndex(Array.isArray(data) ? data : [])
+					setIndex(payload)
 					setError(null)
 				}
 			})
@@ -212,7 +214,12 @@ export function GlobalSearch({
 
 	const hits = React.useMemo(() => {
 		if (!index) return [] as SearchHit[]
-		return searchDocuments(index, query, query.trim() ? 24 : 8)
+		return searchDocuments(
+			index.documents,
+			query,
+			query.trim() ? 24 : 8,
+			index.inverted,
+		)
 	}, [index, query])
 
 	const grouped = React.useMemo(() => groupSearchHits(hits), [hits])
@@ -317,7 +324,7 @@ export function GlobalSearch({
 								setActiveIndex(0)
 							}}
 							onKeyDown={onKeyDown}
-							placeholder="Search services or tips…"
+							placeholder="Search services, tips, pages, or symptoms…"
 							autoComplete="off"
 							autoCorrect="off"
 							spellCheck={false}
@@ -334,8 +341,8 @@ export function GlobalSearch({
 						/>
 					</label>
 					<p className="text-muted-foreground mt-2 hidden text-sm sm:mt-2.5 sm:block">
-						Smart matching understands synonyms like toilet ↔ clog and septic ↔
-						pumping. Use ↑ ↓ and Enter.
+						Searches titles and full page content. Synonyms like toilet ↔ clog
+						and septic ↔ pumping. Use ↑ ↓ and Enter.
 					</p>
 					{!query.trim() ? (
 						<div className="mt-2.5 flex [scrollbar-width:none] gap-2 overflow-x-auto pb-0.5 [-ms-overflow-style:none] sm:hidden [&::-webkit-scrollbar]:hidden">
