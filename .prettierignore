@@ -1,11 +1,4 @@
-# Ignore all files:
-*.*
-
-# Negate the above pattern for CSS files in the `tailwind` folder and for
-# all JavaScript files:
-!tailwind/**/*.css
-!*.js
-!*.mjs
-
-# Ignore minified JavaScript:
-*.min.js
+.next/
+node_modules/
+public/images/
+package-lock.json
