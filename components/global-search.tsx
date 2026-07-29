@@ -38,6 +38,9 @@ import {
 
 const GROUP_ORDER: SearchResultType[] = ["service", "tip", "page", "action"]
 
+/** Shared column so header, input, results, and footer share one edge. */
+const SEARCH_SHELL = "mx-auto w-full max-w-[90rem] px-4 sm:px-8 lg:px-10"
+
 const GROUP_META: Record<
 	SearchResultType,
 	{ label: string; icon: React.ComponentType<{ className?: string }> }
@@ -305,174 +308,194 @@ export function GlobalSearch({
 				/>
 
 				<div className="relative flex h-full min-h-0 flex-col">
-					<header className="flex shrink-0 items-center justify-between gap-3 px-4 pt-[max(0.85rem,env(safe-area-inset-top))] pb-3 sm:px-8 sm:pt-5">
-						<div className="min-w-0">
-							<p className="text-[0.68rem] font-extrabold tracking-[0.2em] text-[var(--primary-bright)] uppercase">
-								Wade&apos;s
-							</p>
-							<DialogTitle className="mt-1 text-2xl font-extrabold tracking-[-0.04em] text-white sm:text-3xl">
-								Looking for something?
-							</DialogTitle>
-							<DialogDescription className="sr-only">
-								Search services, expert tips, pages, and quick actions.
-							</DialogDescription>
-						</div>
+					<header className="shrink-0 pt-[max(0.85rem,env(safe-area-inset-top))] sm:pt-5">
+						<div
+							className={cn(
+								SEARCH_SHELL,
+								"flex items-center justify-between gap-3 pb-3",
+							)}
+						>
+							<div className="min-w-0">
+								<p className="text-[0.68rem] font-extrabold tracking-[0.2em] text-[var(--primary-bright)] uppercase">
+									Wade&apos;s
+								</p>
+								<DialogTitle className="mt-1 text-2xl font-extrabold tracking-[-0.04em] text-white sm:text-3xl">
+									Looking for something?
+								</DialogTitle>
+								<DialogDescription className="sr-only">
+									Search services, expert tips, pages, and quick actions.
+								</DialogDescription>
+							</div>
 
-						<DialogClose className="flex size-11 shrink-0 items-center justify-center rounded-md text-white/70 transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
-							<X className="size-5" />
-							<span className="sr-only">Close search</span>
-						</DialogClose>
+							<DialogClose className="flex size-11 shrink-0 items-center justify-center rounded-md text-white/70 transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
+								<X className="size-5" />
+								<span className="sr-only">Close search</span>
+							</DialogClose>
+						</div>
 					</header>
 
-					<div className="shrink-0 px-4 sm:px-8">
-						<label className="relative block">
-							<span className="sr-only">Search services and tips</span>
-							<Search
-								className="pointer-events-none absolute top-1/2 left-0 size-6 -translate-y-1/2 text-[var(--primary-bright)] sm:size-7"
-								aria-hidden
-							/>
-							<input
-								ref={inputRef}
-								value={query}
-								onChange={(event) => {
-									const value = event.target.value
-									setActiveIndex(0)
-									setQuery(value)
-								}}
-								onKeyDown={onKeyDown}
-								placeholder="Service, tip, symptom, or city…"
-								autoComplete="off"
-								autoCorrect="off"
-								spellCheck={false}
-								enterKeyHint="search"
-								role="combobox"
-								aria-expanded
-								aria-controls="global-search-results"
-								aria-activedescendant={
-									flatHits[safeActiveIndex]
-										? `search-option-${flatHits[safeActiveIndex].id}`
-										: undefined
-								}
-								className="h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
-							/>
-						</label>
+					<div className="shrink-0">
+						<div className={SEARCH_SHELL}>
+							<label className="relative block">
+								<span className="sr-only">Search services and tips</span>
+								<Search
+									className="pointer-events-none absolute top-1/2 left-0 size-6 -translate-y-1/2 text-[var(--primary-bright)] sm:size-7"
+									aria-hidden
+								/>
+								<input
+									ref={inputRef}
+									value={query}
+									onChange={(event) => {
+										const value = event.target.value
+										setActiveIndex(0)
+										setQuery(value)
+									}}
+									onKeyDown={onKeyDown}
+									placeholder="Service, tip, symptom, or city…"
+									autoComplete="off"
+									autoCorrect="off"
+									spellCheck={false}
+									enterKeyHint="search"
+									role="combobox"
+									aria-expanded
+									aria-controls="global-search-results"
+									aria-activedescendant={
+										flatHits[safeActiveIndex]
+											? `search-option-${flatHits[safeActiveIndex].id}`
+											: undefined
+									}
+									className="h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
+								/>
+							</label>
 
-						<div className="mt-3 flex items-center justify-between gap-3">
-							<div className="flex min-w-0 flex-1 [scrollbar-width:none] gap-2 overflow-x-auto [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-								{suggestions.map((suggestion) => (
-									<button
-										key={suggestion}
-										type="button"
-										onClick={() => {
-											setQuery(suggestion)
-											setActiveIndex(0)
-											inputRef.current?.focus()
-										}}
-										className="shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em] text-white/70 transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
-									>
-										{suggestion}
-									</button>
-								))}
+							<div className="mt-3 flex items-center justify-between gap-3">
+								<div className="flex min-w-0 flex-1 [scrollbar-width:none] gap-2 overflow-x-auto [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+									{suggestions.map((suggestion) => (
+										<button
+											key={suggestion}
+											type="button"
+											onClick={() => {
+												setQuery(suggestion)
+												setActiveIndex(0)
+												inputRef.current?.focus()
+											}}
+											className="shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em] text-white/70 transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
+										>
+											{suggestion}
+										</button>
+									))}
+								</div>
+								<p className="hidden shrink-0 items-center gap-1.5 text-xs text-white/35 sm:flex">
+									<span className="inline-flex items-center gap-1 rounded-sm bg-white/[0.05] px-1.5 py-0.5 font-sans">
+										<CornerDownLeft className="size-3" aria-hidden /> Enter
+									</span>
+									<span>to open</span>
+								</p>
 							</div>
-							<p className="hidden shrink-0 items-center gap-1.5 text-xs text-white/35 sm:flex">
-								<span className="inline-flex items-center gap-1 rounded-sm bg-white/[0.05] px-1.5 py-0.5 font-sans">
-									<CornerDownLeft className="size-3" aria-hidden /> Enter
-								</span>
-								<span>to open</span>
-							</p>
 						</div>
 					</div>
 
 					<div
 						id="global-search-results"
 						role="listbox"
-						className="mt-5 min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-4 sm:mt-7 sm:px-8 sm:pb-6"
+						className="mt-5 min-h-0 flex-1 overflow-y-auto overscroll-contain pb-4 sm:mt-7 sm:pb-6"
 					>
-						{loading ? (
-							<p className="py-16 text-center text-sm text-white/45">
-								Warming up search…
-							</p>
-						) : null}
-
-						{error ? (
-							<p className="py-16 text-center text-sm text-white/45">{error}</p>
-						) : null}
-
-						{showEmpty ? (
-							<div className="mx-auto max-w-lg py-14 text-center">
-								<p className="text-2xl font-extrabold tracking-[-0.03em] text-white">
-									Nothing for “{query.trim()}”
+						<div className={SEARCH_SHELL}>
+							{loading ? (
+								<p className="py-16 text-center text-sm text-white/45">
+									Warming up search…
 								</p>
-								<p className="mt-2 text-sm text-white/50">
-									Try a symptom, city, or service name — search understands
-									plain homeowner language.
-								</p>
-							</div>
-						) : null}
+							) : null}
 
-						{!loading && !error && flatHits.length > 0 ? (
-							<div className="mx-auto max-w-6xl space-y-7">
-								<div className="flex items-end justify-between gap-3">
-									<p className="text-[0.7rem] font-extrabold tracking-[0.18em] text-white/40 uppercase">
-										{showPopular
-											? "Start here"
-											: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
+							{error ? (
+								<p className="py-16 text-center text-sm text-white/45">
+									{error}
+								</p>
+							) : null}
+
+							{showEmpty ? (
+								<div className="mx-auto max-w-lg py-14 text-center">
+									<p className="text-2xl font-extrabold tracking-[-0.03em] text-white">
+										Nothing for “{query.trim()}”
 									</p>
-									<p className="text-xs text-white/30 sm:hidden">
-										Tap a result
+									<p className="mt-2 text-sm text-white/50">
+										Try a symptom, city, or service name — search understands
+										plain homeowner language.
 									</p>
 								</div>
+							) : null}
 
-								{GROUP_ORDER.map((key) => {
-									const groupHits = grouped[key]
-									if (!groupHits.length) return null
-									const meta = GROUP_META[key]
-									const Icon = meta.icon
-									return (
-										<section key={key} aria-label={meta.label}>
-											{!showPopular ? (
-												<div className="mb-2.5 flex items-center gap-2">
-													<Icon
-														className="size-3.5 text-[var(--primary-bright)]"
-														aria-hidden
-													/>
-													<h3 className="text-[0.7rem] font-extrabold tracking-[0.16em] text-white/45 uppercase">
-														{meta.label}
-													</h3>
-												</div>
-											) : null}
-											<ul className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-3">
-												{groupHits.map((hit) => {
-													const flatIndex = flatHits.findIndex(
-														(item) => item.id === hit.id,
-													)
-													return (
-														<li key={hit.id}>
-															<ResultCard
-																hit={hit}
-																query={query}
-																active={flatIndex === safeActiveIndex}
-																onHover={() => setActiveIndex(flatIndex)}
-																onSelect={() => runHit(hit)}
-															/>
-														</li>
-													)
-												})}
-											</ul>
-										</section>
-									)
-								})}
-							</div>
-						) : null}
+							{!loading && !error && flatHits.length > 0 ? (
+								<div className="space-y-7">
+									<div className="flex items-end justify-between gap-3">
+										<p className="text-[0.7rem] font-extrabold tracking-[0.18em] text-white/40 uppercase">
+											{showPopular
+												? "Start here"
+												: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
+										</p>
+										<p className="text-xs text-white/30 sm:hidden">
+											Tap a result
+										</p>
+									</div>
+
+									{GROUP_ORDER.map((key) => {
+										const groupHits = grouped[key]
+										if (!groupHits.length) return null
+										const meta = GROUP_META[key]
+										const Icon = meta.icon
+										return (
+											<section key={key} aria-label={meta.label}>
+												{!showPopular ? (
+													<div className="mb-2.5 flex items-center gap-2">
+														<Icon
+															className="size-3.5 text-[var(--primary-bright)]"
+															aria-hidden
+														/>
+														<h3 className="text-[0.7rem] font-extrabold tracking-[0.16em] text-white/45 uppercase">
+															{meta.label}
+														</h3>
+													</div>
+												) : null}
+												<ul className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-3">
+													{groupHits.map((hit) => {
+														const flatIndex = flatHits.findIndex(
+															(item) => item.id === hit.id,
+														)
+														return (
+															<li key={hit.id}>
+																<ResultCard
+																	hit={hit}
+																	query={query}
+																	active={flatIndex === safeActiveIndex}
+																	onHover={() => setActiveIndex(flatIndex)}
+																	onSelect={() => runHit(hit)}
+																/>
+															</li>
+														)
+													})}
+												</ul>
+											</section>
+										)
+									})}
+								</div>
+							) : null}
+						</div>
 					</div>
 
-					<footer className="flex shrink-0 items-center justify-between gap-3 border-t border-white/10 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs text-white/35 sm:px-8">
-						<span>
-							{flatHits.length
-								? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
-								: "Services · Tips · Areas · Actions"}
-						</span>
-						<span className="hidden sm:inline">Esc closes · ⌘K toggles</span>
+					<footer className="shrink-0 border-t border-white/10">
+						<div
+							className={cn(
+								SEARCH_SHELL,
+								"flex items-center justify-between gap-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs text-white/35",
+							)}
+						>
+							<span>
+								{flatHits.length
+									? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
+									: "Services · Tips · Areas · Actions"}
+							</span>
+							<span className="hidden sm:inline">Esc closes · ⌘K toggles</span>
+						</div>
 					</footer>
 				</div>
 			</DialogContent>
