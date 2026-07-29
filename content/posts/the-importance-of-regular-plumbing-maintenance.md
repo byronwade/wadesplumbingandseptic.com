@@ -16,9 +16,9 @@ tags:
 - plumbing repairs
 image: /images/wordpress/img-0503.webp
 imageAlt: "Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County"
----
+---Maintaining your home’s plumbing system is one of the smartest ways to avoid unexpected issues and keep everything running smoothly. From leaks and clogs to water heater inefficiencies, regular plumbing maintenance helps prevent costly repairs, protect your property from water damage, and extend the life of your plumbing system.
 
-Maintaining your home’s plumbing system is one of the smartest ways to avoid unexpected issues and keep everything running smoothly. From leaks and clogs to water heater inefficiencies, regular plumbing maintenance helps prevent costly repairs, protect your property from water damage, and extend the life of your plumbing system.
+![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
 
 At Wade’s Plumbing & Septic, we provide reliable plumbing inspections and preventive maintenance services for homeowners and businesses across Santa Cruz County. Here’s why routine maintenance is essential—and how it can save you time, money, and frustration in the long run.
 
@@ -61,6 +61,8 @@ A burst pipe or backed-up sewer line can lead to thousands in emergency repair c
 Our team ensures your plumbing system meets local regulations and safety codes. We spot outdated materials or installations that could cause issues during home sales or renovations.
 
 **How Often Should You Schedule Plumbing Maintenance?**
+
+![Advanced septic control panel](/images/work/advanced-septic-control-panel.webp)
 
 While every home is different, we recommend an annual plumbing inspection for most households. The frequency may vary depending on the age of your plumbing system, your water quality, and your home’s location.
 

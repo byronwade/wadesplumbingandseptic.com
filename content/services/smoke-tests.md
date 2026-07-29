@@ -5,6 +5,9 @@ description: When it comes to maintaining the integrity of your plumbing system,
  leaks, breaks, and improper connections in sewer systems and drain…
 category: Plumbing
 order: 34
+image: /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
+imageAlt: "Leaking water pipe outdoors"
+
 ---
 
 When it comes to maintaining the integrity of your plumbing system, a smoke test plumbing service is an invaluable tool. This technique is used to locate leaks, breaks, and improper connections in sewer systems and drain lines. At Wade's Plumbing & Septic, we introduce non-toxic, odorless smoke into the system, which escapes through defects, making them easy to identify. Whether you're dealing with unpleasant odors or looking for infiltration points, our smoke tests offer a non-invasive, efficient solution for homeowners in Santa Cruz County, California.

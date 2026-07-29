@@ -5,6 +5,9 @@ description: Septic systems are vital to maintaining a healthy and functional ho
  systems is the effluent filter, which ensures that solids do not enter…
 category: Septic
 order: 10
+image: /images/services/septic-pumping-illustration.webp
+imageAlt: "Septic filter cleaning and maintenance"
+
 ---
 
 Septic systems are vital to maintaining a healthy and functional household, especially in areas like Santa Cruz County, California. A crucial component of these systems is the effluent filter, which ensures that solids do not enter the drainfield and cause blockages. At Wade's Plumbing & Septic, our **septic filter cleaning Santa Cruz** services are designed to keep your septic system running efficiently and prevent costly repairs.

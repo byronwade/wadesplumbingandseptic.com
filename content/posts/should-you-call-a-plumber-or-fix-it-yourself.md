@@ -16,9 +16,9 @@ tags:
 - plumbing repair
 image: /images/wordpress/img-1669.webp
 imageAlt: "Plumber vs DIY: Your Santa Cruz County Guide"
----
+---When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question—and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
 
-When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question—and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
+![Completed multi-tank septic system](/images/work/completed-multi-tank.webp)
 
 At Wade’s Plumbing & Septic, we’ve seen it all—from successful DIY fixes to costly damage caused by well-meaning homeowners. Let’s break down when it makes sense to tackle a plumbing job yourself—and when it’s best to bring in the professionals.
 
@@ -40,13 +40,13 @@ But when in doubt, it’s better to call the pros at Wade’s Plumbing & Septic 
 
 Not all plumbing problems are created equal. Some minor issues can be handled with a wrench and a little know-how. Others, however, require specialized tools, training, and safety precautions.
 
-**DIY-Friendly**| **Call a Plumber** 
----|--- 
-Dripping faucet| Burst pipe 
-Slow drain| Sewage backup 
-Running toilet| Water heater failure 
-Low water pressure| Main line blockage 
- 
+**DIY-Friendly**| **Call a Plumber**  
+---|---  
+Dripping faucet| Burst pipe  
+Slow drain| Sewage backup  
+Running toilet| Water heater failure  
+Low water pressure| Main line blockage  
+
 Trying to fix serious problems—like a broken pipe or backflow issue—on your own can be risky and expensive. A licensed plumber will know how to handle these situations safely and effectively.
 
 **3\. Weigh the Time and Cost**
@@ -72,6 +72,8 @@ We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and nearby co
 Santa Cruz County Septic Experts
 
 ## Don't Risk Costly Mistakes
+
+![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
 
 Trust Wade's Plumbing & Septic for expert solutions in Santa Cruz County, CA.
 

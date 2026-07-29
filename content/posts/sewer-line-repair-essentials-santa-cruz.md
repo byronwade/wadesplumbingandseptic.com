@@ -10,11 +10,11 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - sewer line repair
-image: /images/work/precision-valve-installation.webp
-imageAlt: Sewer Line Repair Essentials for Santa Cruz Homes
----
+image: /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
+imageAlt: "Stacked concrete pipes ready for installation"
+---In This Guide4 min read
 
-In This Guide4 min read
+![Sewer and drain service equipment](/images/work/drain-cleaning-equipment.webp)
 
 ## Did You Know?
 
@@ -51,6 +51,8 @@ Timely sewer line repairs can prevent small issues from escalating into costly r
 When it comes to selecting a professional for sewer line repair, consider their experience, reviews, and service offerings. A trusted local service like Wade's Plumbing & Septic provides reliable and efficient solutions tailored to Santa Cruz County homes. Our team is equipped with the latest technology to handle any sewer line issue with precision and care.
 
 ## Why Santa Cruz Homeowners Trust Wade's Plumbing & Septic
+
+![Concrete sewer and drain pipes](/images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp)
 
 Santa Cruz homeowners trust Wade's Plumbing & Septic for our commitment to quality and customer satisfaction. Our locally-based team understands the unique challenges of the area, providing customized solutions for each home. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services/) or [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services/), we are here to help keep your plumbing system running smoothly.
 

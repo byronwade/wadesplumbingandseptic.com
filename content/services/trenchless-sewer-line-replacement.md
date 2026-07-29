@@ -6,6 +6,9 @@ description: When sewer issues arise, the disruption can be a major inconvenienc
  addressing damaged or…
 category: Plumbing
 order: 26
+image: /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
+imageAlt: "Stacked concrete pipes ready for installation"
+
 ---
 
 When sewer issues arise, the disruption can be a major inconvenience for homeowners. Fortunately, our trenchless sewer line replacement service in Santa Cruz County offers a solution that minimizes property disruption while effectively addressing damaged or deteriorated sewer pipes. By utilizing innovative techniques such as pipe bursting or pipe lining technology, we can install new sewer lines without extensive excavation, preserving your landscaping and hardscaping.

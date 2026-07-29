@@ -5,6 +5,9 @@ description: When it comes to reliable toilet repair services in Santa Cruz Coun
  wide range of toilet issues, ensuring your bathroom fixtures operate efficiently…
 category: Plumbing
 order: 37
+image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: "Bathroom with toilet and sink"
+
 ---
 
 When it comes to reliable toilet repair services in Santa Cruz County, Wade's Plumbing & Septic is your go-to choice. Our expert technicians address a wide range of toilet issues, ensuring your bathroom fixtures operate efficiently and reliably. From leaks and running toilets to weak flushes and clogs, our team is equipped to handle it all with precision and speed. Our commitment to quality service in Santa Cruz County, California, sets us apart as the trusted partner for all your plumbing needs.

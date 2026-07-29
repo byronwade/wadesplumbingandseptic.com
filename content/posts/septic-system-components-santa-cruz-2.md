@@ -13,9 +13,9 @@ tags:
 - septic system components septic service
 image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1-4.webp
 imageAlt: "Santa Cruz County Septic System Components Guide"
----
+---In This Guide4 min read
 
-In This Guide4 min read
+![Pressure gauge on an industrial pipe](/images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp)
 
 ## Did You Know?
 
@@ -56,6 +56,8 @@ Regular maintenance is vital to the longevity and efficiency of your septic syst
 Be alert to signs that your septic system may require professional attention. These include slow drains, unpleasant odors, pooling water in the drain field, and unusually lush grass over the septic area. If you notice any of these symptoms, it's time to contact a professional for a thorough inspection and possible [septic repair](/lp/failed-septic-repair-replacement-santa-cruz-county/).
 
 ## DIY Monitoring vs. Calling a Professional
+
+![Outdoor water treatment tanks](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
 
 While some homeowners may choose to monitor their septic systems themselves, professional services provide the expertise and equipment necessary for thorough maintenance and repairs. Professionals can identify issues early, preventing costly damage and ensuring your system complies with local regulations.
 

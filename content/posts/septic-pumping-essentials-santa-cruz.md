@@ -10,11 +10,11 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic pumping santa cruz
-image: /images/work/precision-valve-installation.webp
-imageAlt: 'Septic Pumping Santa Cruz: Essential Guide for Homeowners'
----
+image: /images/services/septic-pumping-illustration.webp
+imageAlt: "Septic pumping service"
+---In This Guide4 min read
 
-In This Guide4 min read
+![Septic installation equipment on site](/images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp)
 
 ## Did You Know?
 
@@ -77,6 +77,8 @@ Let's debunk some common myths:
 Signs of a full septic tank include slow drains, gurgling sounds, and water pooling in the yard. If you notice these, consider scheduling a service.
 
 ### What happens if I don't maintain my septic tank regularly?
+
+![Engineered septic systems in Santa Cruz County](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612317.webp)
 
 Neglecting regular maintenance can lead to overflows, backups, and system failure, resulting in costly repairs and environmental damage.
 

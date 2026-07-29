@@ -10,11 +10,11 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - septic safety floods septic service
-image: /images/work/precision-valve-installation.webp
-imageAlt: Septic Safety Floods Septic Service in Santa Cruz Homes
----
+image: /images/work/completed-multi-tank.webp
+imageAlt: "Completed multi-tank septic system"
+---In This Guide4 min read
 
-In This Guide4 min read
+![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
 
 Did you know? Proper septic maintenance can turn the tides on flood damage, keeping your home safe and dry!
 
@@ -73,6 +73,8 @@ Look for slow drains, gurgling sounds, sewage odors, and standing water around y
 A sump pump removes excess water from your home's basement or crawl space, reducing the risk of water damage and stress on your septic system.
 
 ### When should I call a professional for septic services?
+
+![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 
 Contact a professional if you notice any signs of distress or after a flood to ensure your system is functioning correctly.
 

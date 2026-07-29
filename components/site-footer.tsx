@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Phone } from "lucide-react"
 
+import { CompanyLogo } from "@/components/company-logos"
 import { buttonVariants } from "@/components/ui/button"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -79,32 +80,34 @@ export function SiteFooter() {
 							{siteConfig.licenses}
 						</p>
 						<div className="mt-5 flex gap-3">
-							{[
-								{
-									href: siteConfig.social.facebook,
-									label: "Facebook",
-									mark: "f",
-								},
-								{
-									href: siteConfig.social.linkedin,
-									label: "LinkedIn",
-									mark: "in",
-								},
-								{
-									href: siteConfig.social.instagram,
-									label: "Instagram",
-									mark: "i",
-								},
-							].map((item) => (
+							{(
+								[
+									{
+										href: siteConfig.social.facebook,
+										label: "Facebook",
+										logo: "facebook",
+									},
+									{
+										href: siteConfig.social.linkedin,
+										label: "LinkedIn",
+										logo: "linkedin",
+									},
+									{
+										href: siteConfig.social.instagram,
+										label: "Instagram",
+										logo: "instagram",
+									},
+								] as const
+							).map((item) => (
 								<a
-									className="hover:text-primary-bright grid size-10 place-items-center text-white/60 transition-colors"
+									className="grid size-10 place-items-center rounded-md bg-white/8 opacity-80 transition-opacity hover:opacity-100"
 									href={item.href}
 									aria-label={item.label}
 									key={item.label}
+									rel="noopener noreferrer"
+									target="_blank"
 								>
-									<span className="text-xs font-extrabold" aria-hidden="true">
-										{item.mark}
-									</span>
+									<CompanyLogo className="size-5" name={item.logo} />
 								</a>
 							))}
 						</div>

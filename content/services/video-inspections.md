@@ -5,6 +5,9 @@ description: Maintaining a healthy plumbing system is crucial for any homeowner,
  optimally. At Wade's Plumbing & Septic, we offer state-of-the-art video inspections…
 category: Septic
 order: 1
+image: /images/work/drain-cleaning-equipment.webp
+imageAlt: "Sewer and drain service equipment"
+
 ---
 
 Maintaining a healthy plumbing system is crucial for any homeowner, and a sewer line video inspection is an invaluable service to ensure everything is functioning optimally. At Wade's Plumbing & Septic, we offer state-of-the-art video inspections in Santa Cruz County, California, using advanced waterproof cameras to diagnose and resolve issues within your sewer and septic systems efficiently and effectively.

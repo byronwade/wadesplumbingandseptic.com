@@ -16,9 +16,9 @@ tags:
 - california plumbing services
 image: /images/wordpress/img-1011.webp
 imageAlt: "Detect Hidden Water Leaks in Santa Cruz County Homes"
----
+---Water leaks are one of the most damaging and costly problems a homeowner can face. According to national studies, the average home wastes up to 180 gallons of water per week—adding up to more than 9,000 gallons of water lost per year due to undetected leaks. These leaks can lead to high water bills, structural damage, mold growth, and expensive repairs.
 
-Water leaks are one of the most damaging and costly problems a homeowner can face. According to national studies, the average home wastes up to 180 gallons of water per week—adding up to more than 9,000 gallons of water lost per year due to undetected leaks. These leaks can lead to high water bills, structural damage, mold growth, and expensive repairs.
+![Warning sign on a wooden post](/images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp)
 
 Identifying the signs of a leak early can help you avoid major plumbing disasters. Here are six warning signs your home may have a hidden water leak.
 
@@ -56,6 +56,8 @@ Santa Cruz County Septic Experts
 
 ## Act Now for Reliable Septic Solutions
 
+![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
+
 Our expert team at Wade's Plumbing & Septic is ready to detect hidden water leaks in your Santa Cruz County home.
 
 ## Serving Santa Cruz County, CA
@@ -81,8 +83,6 @@ The timeline for detecting water leaks can vary depending on the complexity of t
 ### Why choose Wade's Plumbing & Septic for water leak detection in Santa Cruz County?
 
 Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, known for our expertise and reliable service. Our commitment to customer satisfaction and use of cutting-edge technology makes us the ideal choice for leak detection.
-
- 
 
 Protect Your Home
 

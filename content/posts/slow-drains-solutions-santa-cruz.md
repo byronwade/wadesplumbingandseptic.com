@@ -10,9 +10,12 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - slow drains santa cruz drain cleaning service
----
+image: /images/services/drain-clearing.webp
+imageAlt: "Drain clearing service"
 
-In This Guide4 min read
+---In This Guide4 min read
+
+![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
 
 ## Did You Know?
 
@@ -67,6 +70,8 @@ At Wade's Plumbing & Septic, we offer expert [drain cleaning services](/service-
 Our satisfied customers in Santa Cruz County have experienced the benefits of our services firsthand. From swift solutions to personalized care, homeowners trust us for all their plumbing needs. Visit our [Customer Testimonials](/testimonials/) page to read more about their experiences.
 
 ### FAQ
+
+![Storm drain covered with debris](/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp)
 
 ### What are common causes of slow drains in homes?
 

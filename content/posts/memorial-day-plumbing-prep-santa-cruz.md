@@ -13,9 +13,9 @@ tags:
 image: /images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp
 imageAlt: "Get Capitola Plumbing Ready for Memorial Day, Santa Cruz"
 
----
+---In This Guide4 min read
 
-In This Guide4 min read
+![Stacked concrete pipes ready for installation](/images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp)
 
  1. 1\. Quick Answer for Santa Cruz Homeowners
  2. 2\. Understanding the Importance of Pre-Holiday Plumbing Checks
@@ -82,6 +82,8 @@ Common issues include clogged toilets, backed-up drains, and low water pressure 
 Schedule a septic inspection and perform regular maintenance to ensure your system can handle the extra load.
 
 ### Is it necessary to have a professional inspection before Memorial Day?
+
+![Sewer and drain service equipment](/images/work/drain-cleaning-equipment.webp)
 
 While not mandatory, a professional inspection can help identify potential issues and prevent costly repairs during your holiday gathering.
 

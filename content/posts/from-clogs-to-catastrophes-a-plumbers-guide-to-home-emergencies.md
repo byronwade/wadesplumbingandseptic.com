@@ -14,11 +14,14 @@ tags:
 - burst pipes
 - emergency plumbing guide
 - home plumbing maintenance
-image: /images/work/precision-valve-installation.webp
-imageAlt: 'From Clogs to Catastrophes: A Plumber’s Guide to Home Emergencies'
+image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
+imageAlt: "Warning sign on a wooden post"
 ---
 
+
 As a homeowner, it's important to be prepared for emergencies, especially when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency can quickly turn into a catastrophic situation if not handled promptly and properly. In this guide, we'll discuss some common plumbing emergencies and what you can do to prevent them and minimize damage.
+
+![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)
 
 ## Common Plumbing Emergencies
 
@@ -68,6 +71,8 @@ The first step in handling any plumbing emergency is to shut off the water suppl
 
 ### Locate the Source of the Problem
 
+![Plumbing emergency warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)
+
 Once the water is shut off, locate the source of the problem. For a burst pipe or water heater malfunction, it's usually easy to identify the source of the problem. However, for a clogged drain or sewer line blockage, it may require some investigation. Check all the fixtures in your home to see if they are affected, and listen for any gurgling sounds.
 
 ### Call a Professional
@@ -113,7 +118,7 @@ Whether you need a routine check-up or urgent repairs, Wade's Plumbing & Septic 
 
 ## Santa Cruz County's Trusted Guide for Plumbing Emergencies
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-star rating from our satisfied customers
+★★★★★ 5-star rating from our satisfied customers
 
 "Wade's Plumbing & Septic quickly resolved our emergency leak. Highly recommend!" - Sarah, Santa Cruz
 

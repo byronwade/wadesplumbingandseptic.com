@@ -12,9 +12,9 @@ tags:
 - septic warning signs septic service
 image: /images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp
 imageAlt: "Early Septic Detection for Santa Cruz County Homes"
----
+---In This Guide4 min read
 
-In This Guide4 min read
+![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 
 ## Did You Know?
 
@@ -60,6 +60,8 @@ If you notice any warning signs or suspect septic trouble, it's crucial to conta
 Preventative maintenance is key to avoiding septic issues. Schedule regular inspections and pumping services to keep your system in top condition. Avoid flushing non-biodegradable items and limit water usage to prevent overloading the system. By taking these steps, you can ensure the longevity and efficiency of your septic system.
 
 ## Homeowner Action Checklist
+
+![Chrome sink drain close-up](/images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp)
 
 - Monitor for unusual odors near septic areas.
 - Check for slow drainage in sinks and tubs.

@@ -16,9 +16,9 @@ tags:
 - local septic experts
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Engineered septic system access points
----
+---A properly maintained septic system can last 25-30 years or more, while a neglected one may fail in just a few years, leading to expensive repairs or replacement. This comprehensive guide covers everything homeowners need to know about maintaining their septic systems.
 
-A properly maintained septic system can last 25-30 years or more, while a neglected one may fail in just a few years, leading to expensive repairs or replacement. This comprehensive guide covers everything homeowners need to know about maintaining their septic systems.
+![Storm drain covered with debris](/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp)
 
 ## Understanding Your Septic System
 
@@ -92,6 +92,8 @@ Our technicians use specialized equipment to thoroughly assess all components of
 
 ## Schedule Your Maintenance Today
 
+![Chrome sink drain close-up](/images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp)
+
 Regular maintenance is far less expensive than repairing or replacing a failed septic system. Contact Wade's Plumbing & Septic to schedule your professional septic system inspection and pumping. Our experienced technicians will ensure your system continues to function properly for years to come.
 
 Santa Cruz County Septic Experts
@@ -128,7 +130,7 @@ Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County with 
 
 ### Septic System Maintenance Made Easy in Santa Cruz County
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-star rating from satisfied customers throughout Santa Cruz County, CA
+★★★★★ 5-star rating from satisfied customers throughout Santa Cruz County, CA
 
 "Wade's Plumbing & Septic made the entire process stress-free. Highly recommend!" - Sarah, Capitola
 

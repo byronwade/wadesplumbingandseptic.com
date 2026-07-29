@@ -14,11 +14,11 @@ tags:
 - professional plumbing
 - wade's plumbing
 - plumbing signs
-image: /images/team/byron-working.webp
-imageAlt: Licensed plumbing professional working in the field
----
+image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
+imageAlt: "Warning sign on a wooden post"
+---When it comes to plumbing issues, knowing when to call a professional can save you time, money, and prevent major damage to your home. While some minor problems can be handled with DIY solutions, others require expert attention. Here are five clear signs it's time to call Wade's Plumbing & Septic.
 
-When it comes to plumbing issues, knowing when to call a professional can save you time, money, and prevent major damage to your home. While some minor problems can be handled with DIY solutions, others require expert attention. Here are five clear signs it's time to call Wade's Plumbing & Septic.
+![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
 
 ## 1\. Persistent Low Water Pressure
 
@@ -63,6 +63,8 @@ Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, o
 Whether you need routine maintenance or emergency services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
 
 ## Frequently Asked Questions
+
+![Outdoor water treatment tanks](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
 
 ### What is the cost range for septic services in Santa Cruz County, CA?
 

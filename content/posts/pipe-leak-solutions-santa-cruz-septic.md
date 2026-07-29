@@ -10,9 +10,12 @@ tags:
 - plumbing
 - septic issues in Santa Cruz County
 - pipe leak repair
----
+image: /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
+imageAlt: "Outdoor plumbing pipes with gauges"
 
-In This Guide4 min read
+---In This Guide4 min read
+
+![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
 
 ## Did You Know?
 
@@ -43,6 +46,8 @@ Several factors can contribute to pipe leaks in septic systems. Common causes in
 Regular inspections can help identify these issues early, preventing more severe damage.
 
 ## Signs Your Septic System May Have a Pipe Leak
+
+![Advanced septic control panel](/images/work/advanced-septic-control-panel.webp)
 
 Detecting a pipe leak early can save you from costly repairs. Look for these signs:
 

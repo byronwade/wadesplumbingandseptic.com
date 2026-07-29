@@ -17,9 +17,12 @@ tags:
 - wade's plumbing tips
 - toilet repair santa cruz
 - flange replacement guide
----
+image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: "Bathroom with toilet and sink"
 
-Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
+---Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
+
+![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
 
 In this guide, the pros at Wade’s Plumbing & Septic help you. They walk you through the essential steps to a successful toilet flange installation. We’ll also cover common issues, must-have tools, and when to call a professional for help.
 
@@ -129,6 +132,8 @@ A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to
 
 ## Need Help With Toilet Repairs?
 
+![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
+
 Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
 
 📞 **(831) 225-4344** 
@@ -146,7 +151,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our contractors are licensed with a C-42 license for California, ensuring you receive professional and reliable service.
 
-Office Hours: MondayÃ¢â‚¬â€œFriday, 9amÃ¢â‚¬â€œ5pm
+Office Hours: Monday–Friday, 9am–5pm
 
 Emergency Line: Available
 
@@ -172,7 +177,7 @@ Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, known f
 
 ### What Our Customers Say
 
-Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦ 5-Star Rating
+★★★★★ 5-Star Rating
 
 "Wade's Plumbing & Septic made installing our toilet flange a breeze! Highly recommend their services." - Sarah, Santa Cruz
 
@@ -184,6 +189,6 @@ Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available 7 AM - 7 PM, Monday through Saturday
 
-## Skip the DIY Ã¢â‚¬â€ Get It Done Right
+## Skip the DIY — Get It Done Right
 
 While installing a toilet flange might seem straightforward, it can quickly become complex without the right expertise. Trust Wade's Plumbing & Septic in Santa Cruz County, CA, to handle your plumbing needs with precision and care.

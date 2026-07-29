@@ -18,6 +18,8 @@ imageAlt: "Understanding Septic System Types for Santa Cruz Homes"
 
 Understanding the different septic system types available for Santa Cruz homes is essential for choosing the right solution for your property. With various options designed to meet diverse environmental and regulatory needs, selecting the appropriate system can enhance efficiency and compliance.
 
+![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
+
 - Septic systems are crucial for effective wastewater management in Santa Cruz County.
 - Different types of septic systems cater to various soil and site conditions.
 - Regular maintenance is key to prolonging the lifespan of any septic system.
@@ -64,6 +66,8 @@ Regular maintenance is key to extending the lifespan of your septic system. Sche
 Traditional systems with a septic tank and leach field are prevalent. However, alternative systems like aerobic treatment units are also common in areas with challenging conditions.
 
 ### How do alternative septic systems differ from traditional ones?
+
+![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 
 Alternative systems often include additional treatment components or technologies to improve wastewater processing, making them suitable for areas with poor soil conditions or limited space.
 

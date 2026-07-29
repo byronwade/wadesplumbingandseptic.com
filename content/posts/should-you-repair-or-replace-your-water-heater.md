@@ -15,9 +15,9 @@ tags:
 - hot water issues
 image: /images/wordpress/img-1295-1.webp
 imageAlt: "Top Water Heater Services for Santa Cruz County Homes"
----
+---A broken water heater can quickly disrupt your home life—no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
 
-A broken water heater can quickly disrupt your home life—no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
+![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 
 At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County make informed, cost-effective choices about their plumbing systems. Here’s what you need to know about diagnosing water heater issues, estimating repair costs, and deciding whether it’s time for an upgrade.
 
@@ -72,6 +72,8 @@ Today’s market offers a variety of advanced systems that may qualify for feder
 - Heat pump water heaters – Extract heat from the air to warm water, using up to 60% less electricity
 - Solar water heaters – Use sunlight to preheat or heat your water, offering long-term energy savings and eco-benefits
 
+![Water heater installation](/images/work/water-heater-installation.webp)
+
 Though these options often require a higher upfront investment, many homeowners find the long-term energy savings and rebates make them well worth the upgrade.
 
 Water Heater Repair: When It’s Still Worth Fixing
@@ -113,8 +115,6 @@ A standard water heater installation usually takes between 2 to 4 hours, dependi
 ### Why choose Wade's Plumbing & Septic for water heater solutions?
 
 Wade's Plumbing & Septic is a trusted local provider in Santa Cruz County, offering expert installation and maintenance services. Our team is dedicated to ensuring your home's plumbing systems operate efficiently and safely.
-
- 
 
 Serving Santa Cruz County Homes
 
