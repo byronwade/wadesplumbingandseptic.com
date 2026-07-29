@@ -35,7 +35,7 @@ export function ContentHero({
 						sizes="100vw"
 						src={image}
 					/>
-					<div className="absolute inset-0 bg-linear-to-r from-ink via-ink/90 to-ink/55" />
+					<div className="from-ink via-ink/90 to-ink/55 absolute inset-0 bg-linear-to-r" />
 				</>
 			) : null}
 			<div className="container-shell relative py-16 lg:py-20">

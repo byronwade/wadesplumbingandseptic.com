@@ -26,7 +26,7 @@ const serviceLinks = [
 export function SiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
-			<div className="border-b border-white/10 bg-primary">
+			<div className="bg-primary border-b border-white/10">
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
 					<div>
 						<p className="text-sm font-bold text-white/80">
@@ -39,7 +39,7 @@ export function SiteFooter() {
 					<a
 						className={cn(
 							buttonVariants({ variant: "secondary", size: "lg" }),
-							"gap-2 bg-white text-foreground hover:bg-white/90",
+							"text-foreground gap-2 bg-white hover:bg-white/90",
 						)}
 						href={siteConfig.phoneHref}
 					>
@@ -75,8 +75,16 @@ export function SiteFooter() {
 						</p>
 						<div className="mt-5 flex gap-3">
 							{[
-								{ href: siteConfig.social.facebook, label: "Facebook", mark: "f" },
-								{ href: siteConfig.social.linkedin, label: "LinkedIn", mark: "in" },
+								{
+									href: siteConfig.social.facebook,
+									label: "Facebook",
+									mark: "f",
+								},
+								{
+									href: siteConfig.social.linkedin,
+									label: "LinkedIn",
+									mark: "in",
+								},
 								{
 									href: siteConfig.social.instagram,
 									label: "Instagram",
@@ -105,13 +113,22 @@ export function SiteFooter() {
 				<div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
 					<div className="flex gap-5">
-						<Link className="transition-colors hover:text-white" href="/privacy-policy">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/privacy-policy"
+						>
 							Privacy Policy
 						</Link>
-						<Link className="transition-colors hover:text-white" href="/terms-of-service">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/terms-of-service"
+						>
 							Terms
 						</Link>
-						<Link className="transition-colors hover:text-white" href="/sitemap.xml">
+						<Link
+							className="transition-colors hover:text-white"
+							href="/sitemap.xml"
+						>
 							Sitemap
 						</Link>
 					</div>
@@ -137,7 +154,7 @@ function FooterColumn({
 				{links.map((link) => (
 					<li key={link.href}>
 						<Link
-							className="transition-colors hover:text-primary-bright"
+							className="hover:text-primary-bright transition-colors"
 							href={link.href as Route}
 						>
 							{link.label}

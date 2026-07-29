@@ -35,14 +35,14 @@ export function ContactCta({
 					{!compact ? (
 						<div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
 							<span className="inline-flex items-center gap-2">
-								<Clock className="size-4 text-primary-bright" />
+								<Clock className="text-primary-bright size-4" />
 								{siteConfig.hours}
 							</span>
 							<a
 								className="inline-flex items-center gap-2 transition-colors hover:text-white"
 								href={`mailto:${siteConfig.email}`}
 							>
-								<Mail className="size-4 text-primary-bright" />
+								<Mail className="text-primary-bright size-4" />
 								{siteConfig.email}
 							</a>
 						</div>

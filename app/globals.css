@@ -101,7 +101,9 @@ body {
 		var(--background);
 	color: var(--foreground);
 	font-family: var(--font-sans);
-	font-feature-settings: "ss01" on, "kern" on;
+	font-feature-settings:
+		"ss01" on,
+		"kern" on;
 	-webkit-font-smoothing: antialiased;
 }
 

@@ -19,9 +19,9 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 	const image = getServiceImage(service.category, service.image)
 
 	return (
-		<Card className="group flex h-full flex-col overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-primary/35">
+		<Card className="group hover:border-primary/35 flex h-full flex-col overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5">
 			<Link
-				className="relative block aspect-[16/9] overflow-hidden bg-muted"
+				className="bg-muted relative block aspect-[16/9] overflow-hidden"
 				href={href}
 				prefetch
 				tabIndex={-1}
@@ -39,7 +39,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 				<Badge className="w-fit" tone="muted">
 					{service.category}
 				</Badge>
-				<CardTitle className="mt-3 transition-colors group-hover:text-primary">
+				<CardTitle className="group-hover:text-primary mt-3 transition-colors">
 					<Link href={href} prefetch>
 						{service.title}
 					</Link>
@@ -48,7 +48,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 			</CardHeader>
 			<CardContent className="mt-auto">
 				<Link
-					className="inline-flex items-center gap-2 text-sm font-extrabold text-primary"
+					className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 					href={href}
 					prefetch
 				>

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 
 export function SiteHeader() {
 	return (
-		<header className="sticky top-0 z-50 border-b border-white/10 bg-ink/95 text-white backdrop-blur-md">
+		<header className="bg-ink/95 sticky top-0 z-50 border-b border-white/10 text-white backdrop-blur-md">
 			<div className="hidden border-b border-white/10 bg-black/40 sm:block">
 				<div className="container-shell flex items-center justify-between py-2 text-xs text-white/65">
 					<span>{siteConfig.hours}</span>
@@ -40,7 +40,7 @@ export function SiteHeader() {
 						<span className="block text-base font-extrabold tracking-[-0.03em] sm:text-lg">
 							Wade&apos;s Plumbing
 						</span>
-						<span className="mt-1 block text-[0.68rem] font-extrabold tracking-[0.18em] text-primary-bright uppercase">
+						<span className="text-primary-bright mt-1 block text-[0.68rem] font-extrabold tracking-[0.18em] uppercase">
 							&amp; Septic
 						</span>
 					</span>
@@ -52,7 +52,7 @@ export function SiteHeader() {
 				>
 					{primaryNavigation.map((item) => (
 						<Link
-							className="text-sm font-bold text-white/80 transition-colors hover:text-primary-bright"
+							className="hover:text-primary-bright text-sm font-bold text-white/80 transition-colors"
 							href={item.href}
 							key={item.href}
 							prefetch
@@ -78,12 +78,12 @@ export function SiteHeader() {
 						<span className="sr-only">Open main menu</span>
 					</summary>
 					<nav
-						className="absolute top-14 right-0 w-[min(20rem,calc(100vw-2rem))] rounded-lg border border-white/10 bg-panel-elevated p-2"
+						className="bg-panel-elevated absolute top-14 right-0 w-[min(20rem,calc(100vw-2rem))] rounded-lg border border-white/10 p-2"
 						aria-label="Mobile navigation"
 					>
 						{primaryNavigation.map((item) => (
 							<Link
-								className="block rounded-md px-4 py-3 font-bold transition-colors hover:bg-white/5 hover:text-primary-bright"
+								className="hover:text-primary-bright block rounded-md px-4 py-3 font-bold transition-colors hover:bg-white/5"
 								href={item.href}
 								key={item.href}
 								prefetch

@@ -10,7 +10,7 @@ export function ContentGallery({ images }: { images: ContentImage[] }) {
 					className={index === 0 && images.length % 2 ? "sm:col-span-2" : ""}
 					key={image.src}
 				>
-					<div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
+					<div className="bg-muted relative aspect-[4/3] overflow-hidden rounded-lg">
 						<Image
 							alt={image.alt}
 							className="object-cover"

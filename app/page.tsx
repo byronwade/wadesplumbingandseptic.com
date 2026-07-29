@@ -149,10 +149,10 @@ export default function HomePage() {
 					sizes="100vw"
 					src="/images/work/engineered-septic-hero.webp"
 				/>
-				<div className="absolute inset-0 bg-linear-to-r from-ink via-ink/88 to-ink/45" />
-				<div className="absolute inset-0 bg-linear-to-t from-ink/80 via-transparent to-ink/35" />
+				<div className="from-ink via-ink/88 to-ink/45 absolute inset-0 bg-linear-to-r" />
+				<div className="from-ink/80 to-ink/35 absolute inset-0 bg-linear-to-t via-transparent" />
 
-				<div className="container-shell relative flex min-h-[min(92vh,52rem)] flex-col justify-end pb-16 pt-28 lg:justify-center lg:pb-24 lg:pt-20">
+				<div className="container-shell relative flex min-h-[min(92vh,52rem)] flex-col justify-end pt-28 pb-16 lg:justify-center lg:pt-20 lg:pb-24">
 					<div className="max-w-3xl">
 						<p className="type-eyebrow motion-fade text-primary-bright">
 							Wade&apos;s Plumbing &amp; Septic
@@ -190,8 +190,8 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-b border-border bg-card">
-				<div className="container-shell grid grid-cols-2 gap-4 py-5 text-sm font-bold text-muted-foreground md:grid-cols-4">
+			<section className="border-border bg-card border-b">
+				<div className="container-shell text-muted-foreground grid grid-cols-2 gap-4 py-5 text-sm font-bold md:grid-cols-4">
 					{[
 						"Family Owned & Operated",
 						"Licensed & Insured",
@@ -199,7 +199,7 @@ export default function HomePage() {
 						"★★★★★ 4.9 Local Rating",
 					].map((item) => (
 						<span className="flex items-center justify-center gap-2" key={item}>
-							<BadgeCheck className="size-4 shrink-0 text-primary" />
+							<BadgeCheck className="text-primary size-4 shrink-0" />
 							{item}
 						</span>
 					))}
@@ -245,13 +245,13 @@ export default function HomePage() {
 								},
 							].map(({ icon: Icon, title, text }) => (
 								<div className="surface-panel p-5" key={title}>
-									<span className="grid size-10 place-items-center rounded-md bg-accent text-accent-foreground">
+									<span className="bg-accent text-accent-foreground grid size-10 place-items-center rounded-md">
 										<Icon className="size-5" />
 									</span>
 									<h3 className="mt-4 text-lg font-extrabold tracking-[-0.02em]">
 										{title}
 									</h3>
-									<p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+									<p className="text-muted-foreground mt-2 text-sm leading-relaxed">
 										{text}
 									</p>
 								</div>
@@ -306,7 +306,7 @@ export default function HomePage() {
 					<div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 						{workGallery.map((image) => (
 							<figure key={image.src}>
-								<div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-panel-elevated">
+								<div className="bg-panel-elevated relative aspect-[4/5] overflow-hidden rounded-lg">
 									<Image
 										alt={image.alt}
 										className="object-cover"
@@ -330,7 +330,9 @@ export default function HomePage() {
 					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
 						<div className="max-w-2xl">
 							<Badge>What We Do</Badge>
-							<h2 className="type-title mt-5">Plumbing &amp; septic services</h2>
+							<h2 className="type-title mt-5">
+								Plumbing &amp; septic services
+							</h2>
 							<p className="type-lead mt-4">
 								From routine maintenance to complex installations, our licensed
 								team handles it cleanly, honestly, and on time.
@@ -363,10 +365,10 @@ export default function HomePage() {
 									<CardDescription>{group.description}</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<ul className="space-y-2 text-sm text-muted-foreground">
+									<ul className="text-muted-foreground space-y-2 text-sm">
 										{group.items.map((item) => (
 											<li className="flex items-center gap-2" key={item}>
-												<Check className="size-4 text-primary" />
+												<Check className="text-primary size-4" />
 												{item}
 											</li>
 										))}
@@ -378,9 +380,9 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-y border-border bg-card py-12">
+			<section className="border-border bg-card border-y py-12">
 				<div className="container-shell">
-					<p className="text-center text-xs font-extrabold tracking-[0.16em] text-muted-foreground uppercase">
+					<p className="text-muted-foreground text-center text-xs font-extrabold tracking-[0.16em] uppercase">
 						Experienced with leading plumbing equipment brands
 					</p>
 					<div className="mt-8 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 lg:grid-cols-5">
@@ -426,11 +428,11 @@ export default function HomePage() {
 								],
 							].map(([title, text]) => (
 								<div className="surface-panel p-5" key={title}>
-									<Wrench className="size-5 text-primary" />
+									<Wrench className="text-primary size-5" />
 									<h3 className="mt-3 font-extrabold tracking-[-0.02em]">
 										{title}
 									</h3>
-									<p className="mt-1 text-sm text-muted-foreground">{text}</p>
+									<p className="text-muted-foreground mt-1 text-sm">{text}</p>
 								</div>
 							))}
 						</div>
@@ -479,7 +481,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="section-y border-y border-border bg-secondary/60">
+			<section className="section-y border-border bg-secondary/60 border-y">
 				<div className="container-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
 					<div>
 						<Badge>Frequently Asked Questions</Badge>

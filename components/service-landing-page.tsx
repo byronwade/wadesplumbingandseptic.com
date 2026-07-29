@@ -55,10 +55,10 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 							"Testing and cleanup before completion",
 						].map((item) => (
 							<div
-								className="flex items-center gap-3 rounded-lg border border-border bg-secondary/50 p-4 text-sm font-bold"
+								className="border-border bg-secondary/50 flex items-center gap-3 rounded-lg border p-4 text-sm font-bold"
 								key={item}
 							>
-								<span className="grid size-8 shrink-0 place-items-center rounded-md bg-accent text-accent-foreground">
+								<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
 									<Check className="size-4" />
 								</span>
 								{item}
@@ -82,7 +82,7 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 								<span>{siteConfig.licenses}</span>
 							</div>
 							<a
-								className="flex items-center gap-3 font-extrabold text-primary"
+								className="text-primary flex items-center gap-3 font-extrabold"
 								href={siteConfig.phoneHref}
 							>
 								<Phone className="size-5" />

@@ -41,7 +41,7 @@ export function ArticleArchive({
 						key={post.slug}
 					>
 						<Link
-							className="relative block aspect-[16/9] overflow-hidden bg-muted"
+							className="bg-muted relative block aspect-[16/9] overflow-hidden"
 							href={`/${post.slug}` as Route}
 							tabIndex={-1}
 						>
@@ -60,20 +60,20 @@ export function ArticleArchive({
 							<Badge className="w-fit" tone="muted">
 								{post.category ?? "Expert Tips"}
 							</Badge>
-							<CardTitle className="mt-3 group-hover:text-primary">
+							<CardTitle className="group-hover:text-primary mt-3">
 								<Link href={`/${post.slug}` as Route}>{post.title}</Link>
 							</CardTitle>
 							<CardDescription>{post.description}</CardDescription>
 						</CardHeader>
 						<CardContent className="mt-auto">
 							{post.date ? (
-								<p className="mb-4 flex items-center gap-2 text-xs font-bold text-muted-foreground">
-									<CalendarDays className="size-4 text-primary" />
+								<p className="text-muted-foreground mb-4 flex items-center gap-2 text-xs font-bold">
+									<CalendarDays className="text-primary size-4" />
 									{post.date}
 								</p>
 							) : null}
 							<Link
-								className="inline-flex items-center gap-2 text-sm font-extrabold text-primary"
+								className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
 								href={`/${post.slug}` as Route}
 							>
 								Read guide

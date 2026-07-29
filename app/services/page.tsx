@@ -32,7 +32,7 @@ async function ServiceDirectory() {
 
 				return (
 					<section key={category}>
-						<div className="mb-7 flex items-end justify-between gap-5 border-b border-border pb-5">
+						<div className="border-border mb-7 flex items-end justify-between gap-5 border-b pb-5">
 							<div>
 								<p className="type-eyebrow">
 									{categoryServices.length} services
@@ -67,9 +67,7 @@ export default function ServicesPage() {
 
 			<Suspense
 				fallback={
-					<div className="container-shell section-y">
-						Loading services…
-					</div>
+					<div className="container-shell section-y">Loading services…</div>
 				}
 			>
 				<ServiceDirectory />
