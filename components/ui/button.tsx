@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 export const buttonVariants = cva(
-	"inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-bold whitespace-nowrap transition-[color,background-color,border-color,transform] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
+	"inline-flex shrink-0 items-center justify-center gap-2 rounded-md border border-transparent text-sm font-bold whitespace-nowrap transition-[color,background-color,border-color,transform] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
 	{
 		variants: {
 			variant: {
@@ -14,11 +14,11 @@ export const buttonVariants = cva(
 				secondary:
 					"bg-secondary text-secondary-foreground hover:bg-[color-mix(in_srgb,var(--secondary)_85%,var(--ink))]",
 				outline:
-					"border border-border bg-card text-foreground hover:border-foreground/25 hover:bg-muted",
+					"border-border bg-card text-foreground hover:border-foreground/25 hover:bg-muted",
 				ghost: "text-foreground hover:bg-muted",
 				link: "text-primary underline-offset-4 hover:underline",
 				inverse:
-					"border border-white/35 bg-white/12 text-white hover:border-white/55 hover:bg-white/18",
+					"border-transparent bg-white/12 text-white hover:bg-white/18 focus-visible:ring-offset-ink",
 			},
 			size: {
 				default: "h-11 px-4 py-2",
