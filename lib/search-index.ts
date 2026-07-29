@@ -4,7 +4,7 @@ import { cacheLife, cacheTag } from "next/cache"
 
 import { getCollection } from "@/lib/content"
 import { getServiceImage } from "@/lib/service-images"
-import type { SearchDocument } from "@/lib/search"
+import type { SearchDocument, SearchIntent } from "@/lib/search"
 import {
 	companyNavigation,
 	primaryNavigation,
@@ -12,7 +12,28 @@ import {
 	siteConfig,
 } from "@/lib/site"
 
-function keywordsFromText(...parts: Array<string | undefined>) {
+const SERVICE_POPULARITY: Record<string, number> = {
+	"drain-cleaning": 48,
+	"septic-tank-cleaning-and-pumping": 47,
+	"hydro-jetting": 45,
+	"leak-detection": 44,
+	"sewer-camera-inspection": 43,
+	"tankless-water-heater-installation": 42,
+	"water-heater-installation": 41,
+	"toilet-repair": 40,
+	"garbage-disposal-installation": 38,
+	"septic-tank-inspection-and-assessment": 37,
+	"trenchless-sewer-line-replacement": 36,
+	"backflow-prevention-testing": 34,
+}
+
+const CATEGORY_INTENTS: Record<string, SearchIntent[]> = {
+	Plumbing: ["service"],
+	Septic: ["service"],
+	Commercial: ["service"],
+}
+
+function keywordsFromText(...parts: Array<string | undefined | null>) {
 	const values = parts
 		.filter(Boolean)
 		.join(" ")
@@ -22,6 +43,55 @@ function keywordsFromText(...parts: Array<string | undefined>) {
 		.filter((token) => token.length > 2)
 
 	return [...new Set(values)]
+}
+
+function stripMarkdown(value: string) {
+	return value
+		.replace(/```[\s\S]*?```/g, " ")
+		.replace(/`[^`]*`/g, " ")
+		.replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+		.replace(/\[[^\]]*]\([^)]*\)/g, " ")
+		.replace(/^#{1,6}\s+/gm, " ")
+		.replace(/[*_>~-]+/g, " ")
+		.replace(/\s+/g, " ")
+		.trim()
+}
+
+function bodyExcerpt(content: string, maxChars = 480) {
+	const cleaned = stripMarkdown(content)
+	if (cleaned.length <= maxChars) return cleaned
+	return cleaned.slice(0, maxChars)
+}
+
+function cityFromAreaSlug(slug: string) {
+	const leaf = slug.split("/").pop() ?? slug
+	return leaf
+		.replace(/-ca-plumbing-septic-services$/i, "")
+		.replace(/-/g, " ")
+		.trim()
+}
+
+function serviceBoostKeywords(title: string, category?: string) {
+	const haystack = `${title} ${category ?? ""}`.toLowerCase()
+	const extras: string[] = []
+
+	if (haystack.includes("drain"))
+		extras.push("clog", "clogged", "backup", "slow")
+	if (haystack.includes("septic"))
+		extras.push("tank", "pumping", "leach", "odor")
+	if (haystack.includes("heater"))
+		extras.push("hot water", "tankless", "no hot water")
+	if (haystack.includes("leak")) extras.push("drip", "burst", "slab")
+	if (haystack.includes("toilet")) extras.push("flush", "running", "commode")
+	if (haystack.includes("camera") || haystack.includes("inspection")) {
+		extras.push("video", "diagnose", "locate")
+	}
+	if (haystack.includes("jetting")) extras.push("hydro", "pressure", "roots")
+	if (haystack.includes("grease"))
+		extras.push("restaurant", "commercial", "interceptor")
+	if (haystack.includes("backflow")) extras.push("testing", "rpz", "prevention")
+
+	return extras
 }
 
 export async function getSearchIndex(): Promise<SearchDocument[]> {
@@ -35,41 +105,64 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		getCollection("pages"),
 	])
 
-	const serviceDocs: SearchDocument[] = services.map((service, index) => ({
-		id: `service:${service.slug}`,
-		type: "service",
-		title: service.title,
-		description: service.description,
-		href: `/service-offerings/${service.slug}`,
-		category: service.category ?? "Service",
-		image: getServiceImage(service.category, service.image),
-		keywords: keywordsFromText(
-			service.title,
-			service.description,
-			service.category,
-			service.slug.replaceAll("-", " "),
-			...(service.tags ?? []),
-		),
-		popularity: Math.max(1, 40 - index),
-	}))
+	const serviceDocs: SearchDocument[] = services.map((service, index) => {
+		const boost = SERVICE_POPULARITY[service.slug] ?? Math.max(1, 34 - index)
+		const featuredBoost = service.featured ? 8 : 0
+		const orderBoost =
+			service.order !== undefined
+				? Math.max(0, 12 - Math.floor(service.order / 5))
+				: 0
 
-	const tipDocs: SearchDocument[] = posts.map((post, index) => ({
-		id: `tip:${post.slug}`,
-		type: "tip",
-		title: post.title,
-		description: post.description,
-		href: `/${post.slug}`,
-		category: post.category ?? "Expert Tip",
-		image: post.image ?? "/images/team/byron-working.webp",
-		keywords: keywordsFromText(
-			post.title,
-			post.description,
-			post.category,
-			post.slug.replaceAll("-", " "),
-			...(post.tags ?? []),
-		),
-		popularity: Math.max(1, 30 - index),
-	}))
+		return {
+			id: `service:${service.slug}`,
+			type: "service",
+			title: service.title,
+			description: service.description,
+			href: `/service-offerings/${service.slug}`,
+			category: service.category ?? "Service",
+			image: getServiceImage(service.category, service.image),
+			keywords: keywordsFromText(
+				service.title,
+				service.description,
+				service.category,
+				service.slug.replaceAll("-", " "),
+				...(service.tags ?? []),
+				...serviceBoostKeywords(service.title, service.category),
+			),
+			body: bodyExcerpt(service.content),
+			popularity: boost + featuredBoost + orderBoost,
+			intents: CATEGORY_INTENTS[service.category ?? ""] ?? ["service"],
+		}
+	})
+
+	const tipDocs: SearchDocument[] = posts.map((post, index) => {
+		// Prefer tagged / categorized guides slightly without using Date.now()
+		// (keeps the cached index deterministic).
+		const topicBoost = (post.tags?.length ?? 0) > 0 ? 3 : 0
+
+		return {
+			id: `tip:${post.slug}`,
+			type: "tip",
+			title: post.title,
+			description: post.description,
+			href: `/${post.slug}`,
+			category: post.category ?? "Expert Tip",
+			image: post.image ?? "/images/team/byron-working.webp",
+			keywords: keywordsFromText(
+				post.title,
+				post.description,
+				post.category,
+				post.slug.replaceAll("-", " "),
+				...(post.tags ?? []),
+				"guide",
+				"tips",
+				"how to",
+			),
+			body: bodyExcerpt(post.content, 560),
+			popularity: Math.max(1, 28 - index) + topicBoost,
+			intents: ["tip"],
+		}
+	})
 
 	const pageAllowlist = new Set([
 		"about-us",
@@ -90,22 +183,89 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 			(page) =>
 				pageAllowlist.has(page.slug) || page.slug.startsWith("service-area/"),
 		)
-		.map((page, index) => ({
-			id: `page:${page.slug}`,
-			type: "page" as const,
-			title: page.title,
-			description: page.description,
-			href: `/${page.slug}`,
-			category: page.eyebrow ?? "Page",
-			image: page.image,
+		.map((page, index) => {
+			const isArea = page.slug.startsWith("service-area/")
+			const city = isArea ? cityFromAreaSlug(page.slug) : ""
+
+			return {
+				id: `page:${page.slug}`,
+				type: "page" as const,
+				title: page.title,
+				description: page.description,
+				href: `/${page.slug}`,
+				category: isArea ? "Service Area" : (page.eyebrow ?? "Page"),
+				image: page.image,
+				keywords: keywordsFromText(
+					page.title,
+					page.description,
+					page.eyebrow,
+					page.slug.replaceAll("-", " ").replaceAll("/", " "),
+					city,
+					isArea ? "near me service area city" : "",
+				),
+				body: bodyExcerpt(page.content, 320),
+				popularity: isArea ? 12 : pageAllowlist.has(page.slug) ? 22 - index : 5,
+				intents: isArea
+					? (["area", "service"] as SearchIntent[])
+					: page.slug === "contact"
+						? (["quote", "call"] as SearchIntent[])
+						: (["browse"] as SearchIntent[]),
+			}
+		})
+
+	const categoryDocs: SearchDocument[] = [
+		{
+			id: "category:plumbing",
+			type: "page",
+			title: "Plumbing Services",
+			description: "Browse residential and commercial plumbing services.",
+			href: "/service-category/plumbing",
+			category: "Category",
 			keywords: keywordsFromText(
-				page.title,
-				page.description,
-				page.eyebrow,
-				page.slug.replaceAll("-", " ").replaceAll("/", " "),
+				"plumbing",
+				"drains",
+				"pipes",
+				"fixtures",
+				"water heater",
 			),
-			popularity: pageAllowlist.has(page.slug) ? 20 - index : 5,
-		}))
+			popularity: 32,
+			intents: ["service", "browse"],
+		},
+		{
+			id: "category:septic",
+			type: "page",
+			title: "Septic Services",
+			description:
+				"Pumping, inspections, repairs, and engineered septic systems.",
+			href: "/service-category/septic",
+			category: "Category",
+			keywords: keywordsFromText(
+				"septic",
+				"tank",
+				"pumping",
+				"leach field",
+				"drainfield",
+			),
+			popularity: 31,
+			intents: ["service", "browse"],
+		},
+		{
+			id: "category:commercial",
+			type: "page",
+			title: "Commercial Plumbing",
+			description: "Grease traps, backflow, and commercial maintenance.",
+			href: "/service-category/commercial",
+			category: "Category",
+			keywords: keywordsFromText(
+				"commercial",
+				"restaurant",
+				"grease trap",
+				"business",
+			),
+			popularity: 26,
+			intents: ["service", "browse"],
+		},
+	]
 
 	const navDocs: SearchDocument[] = [
 		...primaryNavigation,
@@ -119,7 +279,8 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		href: item.href,
 		category: "Navigation",
 		keywords: keywordsFromText(item.label, item.href.replaceAll("/", " ")),
-		popularity: 18 - index,
+		popularity: 16 - index,
+		intents: ["browse"] as SearchIntent[],
 	}))
 
 	const actionDocs: SearchDocument[] = [
@@ -136,9 +297,11 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"phone",
 				"schedule",
 				"book",
+				"appointment",
 				siteConfig.phone,
 			),
-			popularity: 50,
+			popularity: 55,
+			intents: ["call"],
 		},
 		{
 			id: "action:contact",
@@ -153,8 +316,10 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"contact",
 				"message",
 				"price",
+				"cost",
 			),
-			popularity: 45,
+			popularity: 50,
+			intents: ["quote"],
 		},
 		{
 			id: "action:services",
@@ -164,7 +329,8 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 			href: "/services",
 			category: "Action",
 			keywords: keywordsFromText("services", "menu", "plumbing", "septic"),
-			popularity: 42,
+			popularity: 44,
+			intents: ["browse", "service"],
 		},
 		{
 			id: "action:tips",
@@ -179,20 +345,41 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"guides",
 				"advice",
 				"articles",
+				"how to",
+				"diy",
+			),
+			popularity: 42,
+			intents: ["tip", "browse"],
+		},
+		{
+			id: "action:areas",
+			type: "action",
+			title: "View service areas",
+			description: "See the Central Coast and Georgia communities we serve.",
+			href: "/service-areas",
+			category: "Action",
+			keywords: keywordsFromText(
+				"service areas",
+				"near me",
+				"santa cruz",
+				"coverage",
 			),
 			popularity: 40,
+			intents: ["area", "browse"],
 		},
 	]
 
 	const deduped = new Map<string, SearchDocument>()
 	for (const document of [
 		...actionDocs,
+		...categoryDocs,
 		...serviceDocs,
 		...tipDocs,
 		...pageDocs,
 		...navDocs,
 	]) {
-		if (!deduped.has(document.href)) {
+		const existing = deduped.get(document.href)
+		if (!existing || (document.popularity ?? 0) > (existing.popularity ?? 0)) {
 			deduped.set(document.href, document)
 		}
 	}
