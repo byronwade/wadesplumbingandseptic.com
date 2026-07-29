@@ -130,13 +130,19 @@ export function FilterableArchive({
 		[filtered, requestedPage, pageSize],
 	)
 
+	function hrefWithParams(params: URLSearchParams) {
+		const query = params.toString()
+		// Query-string URLs aren't in the typed Routes union; pathname is always a
+		// known archive route (/services, /expert-tips, etc.).
+		return (query ? `${pathname}?${query}` : pathname) as Route
+	}
+
 	useEffect(() => {
 		if (requestedPage === page) return
 		const params = new URLSearchParams(searchParams.toString())
 		if (page <= 1) params.delete("page")
 		else params.set("page", String(page))
-		const query = params.toString()
-		router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false })
+		router.replace(hrefWithParams(params), { scroll: false })
 	}, [page, pathname, requestedPage, router, searchParams])
 
 	function updateParams(
@@ -156,11 +162,8 @@ export function FilterableArchive({
 			else params.set("page", String(next.page))
 		}
 
-		const query = params.toString()
 		startTransition(() => {
-			router.replace(query ? `${pathname}?${query}` : pathname, {
-				scroll: false,
-			})
+			router.replace(hrefWithParams(params), { scroll: false })
 			if (options?.scrollToFilters) {
 				document
 					.getElementById("archive-filters")
