@@ -76,7 +76,12 @@ export function ServiceLandingPage({
 					</div>
 				</article>
 
-				<aside className="space-y-[var(--space-grid)] lg:sticky lg:top-[var(--header-offset)] lg:self-start">
+				{/*
+				  Desktop sticky rail only. Mobile already has the hero CTAs plus the
+				  end conversion band; stacking another Call/Request block here felt
+				  spammy on short viewports.
+				*/}
+				<aside className="hidden space-y-[var(--space-grid)] lg:sticky lg:top-[var(--header-offset)] lg:block lg:self-start">
 					<div className="surface-float rounded-xl p-[var(--space-card)]">
 						<p className="spec-label">Fast local response</p>
 						<ul className="text-on-dark-muted mt-5 space-y-0 text-sm">
