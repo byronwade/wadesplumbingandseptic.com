@@ -2,8 +2,8 @@ import { Check } from "@/components/icons"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
+import { ContentSectionBands } from "@/components/content-section-bands"
 import { JsonLd } from "@/components/json-ld"
-import { MarkdownContent } from "@/components/markdown-content"
 import { RelatedContentSections } from "@/components/related-content"
 import type { ContentDocument } from "@/lib/content"
 import type { RelatedContent } from "@/lib/related-content"
@@ -62,26 +62,36 @@ export function ServiceLandingPage({
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
 				title={service.title}
+				variant="marketing"
 			/>
 
-			<section className="article-shell section-y">
-				<article>
-					<MarkdownContent content={service.content} demoteH1 />
+			<ContentSectionBands content={service.content} />
 
-					<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+			<section className="surface-sunken border-border border-y">
+				<div className="container-shell section-y">
+					<div className="section-head reveal mx-auto max-w-3xl text-center">
+						<p className="spec-label spec-label-center">What you can expect</p>
+						<h2 className="type-title">Clear process, clean finish</h2>
+						<p className="type-lead">
+							Whether the visit is a diagnosis or a full install, the standard
+							stays the same: explain the options, do the work right, and leave
+							the site better than we found it.
+						</p>
+					</div>
+					<ul className="reveal mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
 						{promises.map((item) => (
-							<div
-								className="surface-panel flex items-center gap-3 p-4 text-sm font-bold"
+							<li
+								className="surface-panel flex items-center gap-3 p-[var(--space-card)] text-sm font-bold"
 								key={item}
 							>
 								<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
-									<Check className="size-4" aria-hidden="true" />
+									<Check aria-hidden="true" className="size-4" />
 								</span>
 								{item}
-							</div>
+							</li>
 						))}
-					</div>
-				</article>
+					</ul>
+				</div>
 			</section>
 
 			{related ? (
