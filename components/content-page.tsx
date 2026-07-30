@@ -11,6 +11,7 @@ import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
+import { PageViewTracker } from "@/components/page-view-tracker"
 import { RelatedContentSections } from "@/components/related-content"
 
 export function ContentPage({
@@ -40,6 +41,7 @@ export function ContentPage({
 
 	return (
 		<main id="main-content">
+			{isPost ? <PageViewTracker kind="tip" slug={document.slug} /> : null}
 			<ContentHero
 				description={document.description}
 				eyebrow={document.eyebrow ?? document.category}

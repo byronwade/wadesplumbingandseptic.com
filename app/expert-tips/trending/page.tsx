@@ -7,26 +7,28 @@ import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { RankedContentArchive } from "@/components/ranked-content-archive"
 import { buttonVariants } from "@/components/ui/button"
+import { PAGE_VIEW_TREND_DAYS } from "@/lib/page-views/types"
 import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Expert Plumbing & Septic Tips",
+	title: "Trending Expert Tips",
 	description:
-		"Practical plumbing and septic education for Santa Cruz County homeowners from Wade's licensed local team.",
-	pathname: "/expert-tips",
+		"Guides homeowners are reading most right now, ranked by unique views over the last week.",
+	pathname: "/expert-tips/trending",
 	image: "/images/team/byron-working.webp",
 })
 
-export default function ExpertTipsPage() {
+export default function TrendingTipsPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Practical plumbing and septic education from the people doing the work. Straight answers, useful maintenance guidance, and local insight."
-				eyebrow="Homeowner Resources"
+				description={`Ranked by unique readers in the last ${PAGE_VIEW_TREND_DAYS} days. A fast way to see what neighbors are researching this week.`}
+				eyebrow="Trending now"
 				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
-				title="Expert Tips & Homeowner Guides"
+				parent={{ href: "/expert-tips" as Route, label: "Expert Tips" }}
+				title="Trending Guides"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">
@@ -39,11 +41,18 @@ export default function ExpertTipsPage() {
 						Most popular
 					</Link>
 					<Link
-						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						className={cn(buttonVariants({ size: "sm" }))}
 						href={"/expert-tips/trending" as Route}
 						prefetch
 					>
 						Trending now
+					</Link>
+					<Link
+						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						href={"/expert-tips" as Route}
+						prefetch
+					>
+						All guides
 					</Link>
 				</div>
 			</section>
@@ -56,10 +65,12 @@ export default function ExpertTipsPage() {
 				}
 			>
 				<RankedContentArchive
-					allLabel="All guides"
+					allLabel="Trending guides"
 					emptyLabel="No guides in this category."
+					lockedSort
 					noun={{ singular: "guide", plural: "guides" }}
 					pageSize={9}
+					sort="trending"
 					variant="tip"
 				/>
 			</Suspense>

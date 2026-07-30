@@ -21,8 +21,21 @@ import {
 	filterArchiveItems,
 	paginateArchiveItems,
 } from "@/lib/archive"
+import {
+	parseArchiveSort,
+	sortArchiveItems,
+	type ArchiveSort,
+	type RankedArchiveItem,
+} from "@/lib/page-views/ranking"
 import { getServiceImage } from "@/lib/service-images"
 import { cn } from "@/lib/utils"
+
+const SORT_OPTIONS: Array<{ value: ArchiveSort; label: string }> = [
+	{ value: "default", label: "Default" },
+	{ value: "popular", label: "Most popular" },
+	{ value: "trending", label: "Trending" },
+	{ value: "newest", label: "Newest" },
+]
 
 const DEFAULT_PAGE_SIZE = 12
 
@@ -79,6 +92,11 @@ function FilterChip({
 	)
 }
 
+function formatUniqueViews(count: number | undefined) {
+	if (!count || count < 1) return null
+	return new Intl.NumberFormat("en-US").format(count)
+}
+
 function ArchiveCard({
 	item,
 	variant,
@@ -90,6 +108,7 @@ function ArchiveCard({
 		variant === "service"
 			? getServiceImage(item.category, item.image)
 			: (item.image ?? "/images/work/precision-valve-installation.webp")
+	const uniqueLabel = formatUniqueViews(item.uniqueViews)
 
 	/*
 	 * .card-rail makes this a flex column and pins .card-body to the bottom, so
@@ -126,15 +145,23 @@ function ArchiveCard({
 				<CardDescription>{item.description}</CardDescription>
 			</CardHeader>
 			<CardContent className="flex flex-col items-start justify-end gap-3">
-				{variant === "tip" && item.date ? (
-					<p className="type-meta flex items-center gap-2 font-bold">
-						<CalendarDays
-							aria-hidden="true"
-							className="text-primary size-4 shrink-0"
-						/>
-						{item.date}
-					</p>
-				) : null}
+				<div className="type-meta flex flex-wrap items-center gap-x-3 gap-y-1 font-bold">
+					{variant === "tip" && item.date ? (
+						<p className="inline-flex items-center gap-2">
+							<CalendarDays
+								aria-hidden="true"
+								className="text-primary size-4 shrink-0"
+							/>
+							{item.date}
+						</p>
+					) : null}
+					{uniqueLabel ? (
+						<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+							{uniqueLabel} unique{" "}
+							{item.uniqueViews === 1 ? "view" : "views"}
+						</p>
+					) : null}
+				</div>
 				<Link
 					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
 					href={item.href as Route}
@@ -159,6 +186,8 @@ export function FilterableArchive({
 	emptyLabel = "No results in this filter.",
 	noun = { singular: "item", plural: "items" },
 	showFilters = true,
+	showSort = false,
+	lockedSort = false,
 }: {
 	items: ArchiveItem[]
 	variant: "service" | "tip"
@@ -167,6 +196,8 @@ export function FilterableArchive({
 	emptyLabel?: string
 	noun?: { singular: string; plural: string }
 	showFilters?: boolean
+	showSort?: boolean
+	lockedSort?: boolean
 }) {
 	const router = useRouter()
 	const pathname = usePathname()
@@ -174,12 +205,30 @@ export function FilterableArchive({
 
 	const activeCategory = searchParams.get("category")
 	const requestedPage = parsePage(searchParams.get("page"))
+	const activeSort = lockedSort
+		? parseArchiveSort(
+				pathname.endsWith("/trending")
+					? "trending"
+					: pathname.endsWith("/popular")
+						? "popular"
+						: searchParams.get("sort"),
+			)
+		: parseArchiveSort(searchParams.get("sort"))
 
 	const filters = useMemo(() => buildArchiveFilters(items), [items])
 	const canFilter = showFilters && filters.length > 1
+	const sorted = useMemo(() => {
+		const ranked = items.map((item) => ({
+			...item,
+			uniqueViews: item.uniqueViews ?? 0,
+			totalViews: item.totalViews ?? 0,
+			trendingScore: item.trendingScore ?? 0,
+		})) satisfies RankedArchiveItem[]
+		return sortArchiveItems(ranked, activeSort)
+	}, [items, activeSort])
 	const filtered = useMemo(
-		() => (canFilter ? filterArchiveItems(items, activeCategory) : items),
-		[items, activeCategory, canFilter],
+		() => (canFilter ? filterArchiveItems(sorted, activeCategory) : sorted),
+		[sorted, activeCategory, canFilter],
 	)
 	const { page, pageCount, pageItems, total } = useMemo(
 		() => paginateArchiveItems(filtered, requestedPage, pageSize),
@@ -195,7 +244,11 @@ export function FilterableArchive({
 	}, [page, pathname, requestedPage, router, searchParams])
 
 	function updateParams(
-		next: { category?: string | null; page?: number },
+		next: {
+			category?: string | null
+			page?: number
+			sort?: ArchiveSort | null
+		},
 		options?: { scrollToFilters?: boolean },
 	) {
 		const params = new URLSearchParams(searchParams.toString())
@@ -203,6 +256,12 @@ export function FilterableArchive({
 		if ("category" in next) {
 			if (!next.category || next.category === "all") params.delete("category")
 			else params.set("category", next.category)
+			params.delete("page")
+		}
+
+		if ("sort" in next) {
+			if (!next.sort || next.sort === "default") params.delete("sort")
+			else params.set("sort", next.sort)
 			params.delete("page")
 		}
 
@@ -225,6 +284,7 @@ export function FilterableArchive({
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
 
 	const allSelected = !activeCategory || activeCategory === "all"
+	const sortVisible = showSort && !lockedSort
 
 	return (
 		<section className="container-shell section-y">
@@ -239,12 +299,37 @@ export function FilterableArchive({
 							{activeFilter && canFilter ? activeFilter.label : allLabel}
 						</h2>
 					</div>
-					{canFilter ? (
+					{canFilter || sortVisible ? (
 						<p className="type-meta md:max-w-xs md:text-right">
-							Filter instantly, then page through results.
+							{sortVisible
+								? "Sort by popularity or filter by category."
+								: "Filter instantly, then page through results."}
 						</p>
 					) : null}
 				</div>
+
+				{sortVisible ? (
+					<div className="mt-6 flex flex-wrap items-center gap-2">
+						<p className="spec-tag mr-1">Sort</p>
+						{SORT_OPTIONS.filter((option) =>
+							variant === "service" ? option.value !== "newest" : true,
+						).map((option) => (
+							<button
+								className={cn(
+									"focus-visible:ring-ring inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
+									activeSort === option.value
+										? "border-primary bg-primary text-primary-foreground"
+										: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
+								)}
+								key={option.value}
+								onClick={() => updateParams({ sort: option.value })}
+								type="button"
+							>
+								{option.label}
+							</button>
+						))}
+					</div>
+				) : null}
 
 				{canFilter ? (
 					<div

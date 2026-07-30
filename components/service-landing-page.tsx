@@ -5,6 +5,7 @@ import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
+import { PageViewTracker } from "@/components/page-view-tracker"
 import { RelatedContentSections } from "@/components/related-content"
 import type { ContentDocument } from "@/lib/content"
 import type { RelatedContent } from "@/lib/related-content"
@@ -48,6 +49,7 @@ export function ServiceLandingPage({
 
 	return (
 		<main id="main-content">
+			<PageViewTracker kind="service" slug={service.slug} />
 			<ContentHero
 				description={service.description}
 				eyebrow={service.category ?? "Service"}

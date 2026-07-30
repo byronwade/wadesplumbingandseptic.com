@@ -11,28 +11,29 @@ import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Expert Plumbing & Septic Tips",
+	title: "Most Popular Expert Tips",
 	description:
-		"Practical plumbing and septic education for Santa Cruz County homeowners from Wade's licensed local team.",
-	pathname: "/expert-tips",
+		"Homeowner guides with the most unique readers from Wade's plumbing and septic library.",
+	pathname: "/expert-tips/popular",
 	image: "/images/team/byron-working.webp",
 })
 
-export default function ExpertTipsPage() {
+export default function PopularTipsPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Practical plumbing and septic education from the people doing the work. Straight answers, useful maintenance guidance, and local insight."
-				eyebrow="Homeowner Resources"
+				description="Ranked by unique readers. Each browser counts once, so the list reflects real interest rather than refresh spam."
+				eyebrow="Most popular"
 				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
-				title="Expert Tips & Homeowner Guides"
+				parent={{ href: "/expert-tips" as Route, label: "Expert Tips" }}
+				title="Most Popular Guides"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">
 				<div className="flex flex-wrap gap-2">
 					<Link
-						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						className={cn(buttonVariants({ size: "sm" }))}
 						href={"/expert-tips/popular" as Route}
 						prefetch
 					>
@@ -45,6 +46,13 @@ export default function ExpertTipsPage() {
 					>
 						Trending now
 					</Link>
+					<Link
+						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						href={"/expert-tips" as Route}
+						prefetch
+					>
+						All guides
+					</Link>
 				</div>
 			</section>
 
@@ -56,10 +64,12 @@ export default function ExpertTipsPage() {
 				}
 			>
 				<RankedContentArchive
-					allLabel="All guides"
+					allLabel="Most popular guides"
 					emptyLabel="No guides in this category."
+					lockedSort
 					noun={{ singular: "guide", plural: "guides" }}
 					pageSize={9}
+					sort="popular"
 					variant="tip"
 				/>
 			</Suspense>
