@@ -55,8 +55,5 @@ export const resourceNavigation = [
 	{ href: "/glossary", label: "Plumbing & Septic Glossary" },
 	{ href: "/glossary/plumbing", label: "Plumbing Glossary" },
 	{ href: "/glossary/septic", label: "Septic Glossary" },
-	{ href: "/videos", label: "Video Tutorials" },
-	{ href: "/shorts", label: "Field Shorts" },
-	{ href: "/downloads", label: "Downloads" },
 	{ href: "/septic-solutions", label: "Septic Solutions" },
 ] as const
