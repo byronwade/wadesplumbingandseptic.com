@@ -1,6 +1,5 @@
-import { Check, Clock, Phone, ShieldCheck } from "@/components/icons"
+import { Check } from "@/components/icons"
 
-import { ContactCta } from "@/components/contact-cta"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
@@ -33,16 +32,24 @@ export function ServiceLandingPage({
 		name: service.title,
 		description: service.description,
 		url: `${siteConfig.url}/service-offerings/${service.slug}`,
+		serviceType: service.category ?? "Plumbing",
 		category: service.category,
 		areaServed: [
-			"Santa Cruz County, California",
-			"Santa Clara County, California",
+			{
+				"@type": "AdministrativeArea",
+				name: "Santa Cruz County, California",
+			},
+			{
+				"@type": "AdministrativeArea",
+				name: "Santa Clara County, California",
+			},
 		],
 		provider: {
-			"@type": "Plumber",
 			"@id": `${siteConfig.url}/#business`,
+		},
+		brand: {
+			"@type": "Brand",
 			name: siteConfig.name,
-			telephone: "+18312254344",
 		},
 	}
 
@@ -57,9 +64,9 @@ export function ServiceLandingPage({
 				title={service.title}
 			/>
 
-			<section className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
-				<article className="min-w-0">
-					<MarkdownContent content={service.content} />
+			<section className="article-shell section-y">
+				<article>
+					<MarkdownContent content={service.content} demoteH1 />
 
 					<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
 						{promises.map((item) => (
@@ -75,38 +82,6 @@ export function ServiceLandingPage({
 						))}
 					</div>
 				</article>
-
-				<aside className="space-y-[var(--space-grid)] lg:sticky lg:top-[var(--header-offset)] lg:self-start">
-					<div className="surface-float rounded-xl p-[var(--space-card)]">
-						<p className="spec-label">Fast local response</p>
-						<ul className="text-on-dark-muted mt-5 space-y-0 text-sm">
-							<li className="flex gap-3 border-b border-white/10 py-3.5">
-								<Clock
-									className="text-primary-bright size-5 shrink-0"
-									aria-hidden="true"
-								/>
-								{siteConfig.hours}
-							</li>
-							<li className="flex gap-3 border-b border-white/10 py-3.5">
-								<ShieldCheck
-									className="text-primary-bright size-5 shrink-0"
-									aria-hidden="true"
-								/>
-								{siteConfig.licenses}
-							</li>
-							<li className="pt-3.5">
-								<a
-									className="text-primary-bright flex items-center gap-3 font-bold transition-colors hover:text-white"
-									href={siteConfig.phoneHref}
-								>
-									<Phone className="size-5 shrink-0" aria-hidden="true" />
-									{siteConfig.phone}
-								</a>
-							</li>
-						</ul>
-					</div>
-					<ContactCta compact title="Request service" />
-				</aside>
 			</section>
 
 			{related ? (

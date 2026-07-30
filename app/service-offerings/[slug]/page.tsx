@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
-import { getCollection, getDocument } from "@/lib/content"
+import { getCollection, getDocument, type ContentDocument } from "@/lib/content"
 import { getRelatedForService } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { buildPageMetadata } from "@/lib/seo"
@@ -31,11 +32,11 @@ export async function generateMetadata({
 	})
 }
 
-async function RelatedServicePage({
-	service,
-}: {
-	service: NonNullable<Awaited<ReturnType<typeof getDocument>>>
-}) {
+async function RelatedServicePage({ service }: { service: ContentDocument }) {
+	"use cache"
+	cacheTag("content:services", `content:services:${service.slug}`)
+	cacheLife("max")
+
 	const related = await getRelatedForService(service)
 	return <ServiceLandingPage related={related} service={service} />
 }

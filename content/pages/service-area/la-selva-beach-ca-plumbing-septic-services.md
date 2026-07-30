@@ -1,12 +1,13 @@
 ---
-title: La Selva Beach, CA Plumbing & Septic Services
-description: 'La Selva Beach plumbing & septic for quiet coastal homes, older septics & Watsonville-area soils. Wade''s 831.225.4344, CSLB #1087260.'
-eyebrow: La Selva Beach, CA
+title: 'La Selva Beach, CA Plumbing & Septic Services'
+description: >-
+  La Selva Beach plumbing & septic for quiet coastal homes, older septics &
+  Watsonville-area soils. Wade's 831.225.4344, CSLB #1087260.
+eyebrow: 'La Selva Beach, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: La Selva Beach coastal community with wooded residential lots
 ---
-
 La Selva Beach trades boardwalk crowds for a quieter rhythm, surf in the morning, fog by afternoon, and neighborhoods where people know which streets flood first when January rains arrive. The community stretches from beach-adjacent homes near San Andreas Road to wooded lots blending toward Corralitos and Watsonville. Housing ranges from mid-century beach houses to larger parcels where the septic tank is as important as the water heater.
 
 Wade's Plumbing & Septic is family-owned, licensed (CSLB #1087260), and serves La Selva Beach homeowners who want a contractor familiar with rural-coastal overlap, not a Santa Clara Valley franchise reading from a script.
@@ -32,8 +33,8 @@ We help with:
 - Routine pumping based on tank size and household occupancy, not a generic reminder card
 - Inspections that note baffle condition, liquid levels, and signs of drainfield stress
 - Troubleshooting for backups, odors, and wet spots that appear days after heavy laundry use
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when age or soil conditions require a new design
-- [Engineered septic systems](/engineered-septic-systems-santa-cruz-county) for parcels with poor percolation or tight setbacks near creeks
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when age or soil conditions require a new design
+- [Engineered septic systems](/service-offerings/engineered-septic-system-installation) for parcels with poor percolation or tight setbacks near creeks
 
 Agricultural land nearby means some properties share fence lines with fields and orchards. Dust, irrigation runoff, and occasional rodent activity near crawlspaces are real factors. We note environmental context when advising on line protection and venting.
 

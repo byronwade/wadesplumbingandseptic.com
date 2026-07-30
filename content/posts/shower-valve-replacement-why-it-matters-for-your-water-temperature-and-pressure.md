@@ -1,21 +1,23 @@
 ---
 title: Boost Shower Pressure in Santa Cruz County Homes
-description: We recently helped a homeowner in Santa Cruz, CA who was dealing with
- an unpredictable shower, fluctuating temperatures, inconsistent pressure, and a…
+description: >-
+  We recently helped a homeowner in Santa Cruz, CA who was dealing with an
+  unpredictable shower, fluctuating temperatures, inconsistent pressure, and a.
 category: Plumbing Tips
 date: '2025-08-05'
 tags:
-- santa cruz county
-- plumbing services
-- shower valve replacement
-- water flow optimization
-- santa cruz plumbing
-- bathroom plumbing repair
-- shower pressure issues
-- local plumbing experts
+  - santa cruz county
+  - plumbing services
+  - shower valve replacement
+  - water flow optimization
+  - santa cruz plumbing
+  - bathroom plumbing repair
+  - shower pressure issues
+  - local plumbing experts
 image: /images/wordpress/img-1840-1.webp
-imageAlt: "Boost Shower Pressure in Santa Cruz County Homes"
----We recently helped a homeowner in Santa Cruz, CA who was dealing with an unpredictable shower, fluctuating temperatures, inconsistent pressure, and a less-than-relaxing experience. After a thorough inspection, we discovered the issue: a faulty shower valve. Once we replaced it, their shower was working perfectly again.
+imageAlt: Boost Shower Pressure in Santa Cruz County Homes
+---
+We recently helped a homeowner in Santa Cruz, CA who was dealing with an unpredictable shower, fluctuating temperatures, inconsistent pressure, and a less-than-relaxing experience. After a thorough inspection, we discovered the issue: a faulty shower valve. Once we replaced it, their shower was working perfectly again.
 
 ![Chrome shower faucet](/images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp)
 

@@ -46,9 +46,12 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 export function MarkdownContent({
 	className,
 	content,
+	/** Pages that already render an H1 in ContentHero should demote markdown #. */
+	demoteH1 = false,
 }: {
 	className?: string
 	content: string
+	demoteH1?: boolean
 }) {
 	return (
 		<div className={cn("prose", className)}>
@@ -76,6 +79,13 @@ export function MarkdownContent({
 							src={typeof src === "string" ? src : undefined}
 						/>
 					),
+					...(demoteH1
+						? {
+								h1: ({ children, ...props }) => (
+									<h2 {...props}>{children}</h2>
+								),
+							}
+						: {}),
 					// Wide tables scroll inside their own box instead of pushing the
 					// page sideways on narrow screens.
 					table: ({ children, ...props }) => (

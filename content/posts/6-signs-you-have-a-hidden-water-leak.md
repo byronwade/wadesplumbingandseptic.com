@@ -1,22 +1,23 @@
 ---
 title: Detect Hidden Water Leaks in Santa Cruz County Homes
-description: Water leaks are one of the most damaging and costly problems a homeowner
- can face. According to national studies, the average home wastes up to 180 gallons
- of…
+description: >-
+  Water leaks are one of the most damaging and costly problems a homeowner can
+  face. According to national studies, the average home wastes up to 180.
 category: Plumbing Tips
 date: '2025-05-27'
 tags:
-- santa cruz plumbing
-- water leak detection
-- hidden leaks
-- home water leaks
-- leak detection services
-- plumbing tips
-- prevent water damage
-- california plumbing services
+  - santa cruz plumbing
+  - water leak detection
+  - hidden leaks
+  - home water leaks
+  - leak detection services
+  - plumbing tips
+  - prevent water damage
+  - california plumbing services
 image: /images/wordpress/img-1011.webp
-imageAlt: "Detect Hidden Water Leaks in Santa Cruz County Homes"
----Water leaks are one of the most damaging and costly problems a homeowner can face. According to national studies, the average home wastes up to 180 gallons of water per week, adding up to more than 9,000 gallons of water lost per year due to undetected leaks. These leaks can lead to high water bills, structural damage, mold growth, and expensive repairs.
+imageAlt: Detect Hidden Water Leaks in Santa Cruz County Homes
+---
+Water leaks are one of the most damaging and costly problems a homeowner can face. According to national studies, the average home wastes up to 180 gallons of water per week, adding up to more than 9,000 gallons of water lost per year due to undetected leaks. These leaks can lead to high water bills, structural damage, mold growth, and expensive repairs.
 
 ![Warning sign on a wooden post](/images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp)
 

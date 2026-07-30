@@ -1,22 +1,23 @@
 ---
 title: Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County
-description: Maintaining your home’s plumbing system is one of the smartest ways to
- avoid unexpected issues and keep everything running smoothly. From leaks and clogs
- to…
+description: >-
+  Maintaining your home’s plumbing system is one of the smartest ways to avoid
+  unexpected issues and keep everything running smoothly. From leaks and clogs.
 category: Plumbing Tips
 date: '2025-05-13'
 tags:
-- santa cruz plumbing
-- local plumbing experts
-- septic services
-- plumbing maintenance
-- leak prevention
-- water heater efficiency
-- plumbing inspection
-- plumbing repairs
+  - santa cruz plumbing
+  - local plumbing experts
+  - septic services
+  - plumbing maintenance
+  - leak prevention
+  - water heater efficiency
+  - plumbing inspection
+  - plumbing repairs
 image: /images/wordpress/img-0503.webp
-imageAlt: "Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County"
----Maintaining your home’s plumbing system is one of the smartest ways to avoid unexpected issues and keep everything running smoothly. From leaks and clogs to water heater inefficiencies, regular plumbing maintenance helps prevent costly repairs, protect your property from water damage, and extend the life of your plumbing system.
+imageAlt: Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz County
+---
+Maintaining your home’s plumbing system is one of the smartest ways to avoid unexpected issues and keep everything running smoothly. From leaks and clogs to water heater inefficiencies, regular plumbing maintenance helps prevent costly repairs, protect your property from water damage, and extend the life of your plumbing system.
 
 ![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -38,16 +39,12 @@ export async function generateMetadata({
 	})
 }
 
-export default async function ServiceCategoryPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
-	const { slug } = await params
-	const category = serviceCategories[slug as ServiceCategorySlug]
+async function ServiceCategoryBody({ slug }: { slug: ServiceCategorySlug }) {
+	"use cache"
+	cacheTag("content:services", `content:service-category:${slug}`)
+	cacheLife("max")
 
-	if (!category) notFound()
-
+	const category = serviceCategories[slug]
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
@@ -106,5 +103,22 @@ export default async function ServiceCategoryPage({
 			/>
 			<ContactCta />
 		</main>
+	)
+}
+
+export default async function ServiceCategoryPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>
+}) {
+	const { slug } = await params
+	const category = serviceCategories[slug as ServiceCategorySlug]
+
+	if (!category) notFound()
+
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<ServiceCategoryBody slug={slug as ServiceCategorySlug} />
+		</Suspense>
 	)
 }

@@ -169,9 +169,23 @@ export async function getDocument(collection: Collection, slug: string) {
 }
 
 export async function getPageOrPost(slug: string) {
-	return (
-		(await getDocument("pages", slug)) ?? (await getDocument("posts", slug))
-	)
+	const [page, post] = await Promise.all([
+		getDocument("pages", slug),
+		getDocument("posts", slug),
+	])
+	return page ?? post
+}
+
+/** Resolve a page or post once, including which collection matched. */
+export async function resolvePageOrPost(slug: string) {
+	const [page, post] = await Promise.all([
+		getDocument("pages", slug),
+		getDocument("posts", slug),
+	])
+
+	if (page) return { document: page, isPost: false as const }
+	if (post) return { document: post, isPost: true as const }
+	return undefined
 }
 
 export function taxonomySlug(value: string) {

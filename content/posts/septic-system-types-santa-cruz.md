@@ -1,19 +1,20 @@
 ---
 title: Understanding Septic System Types for Santa Cruz Homes
-description: In This Guide5 min read1.Quick Answer for Santa Cruz Homeowners2.Understanding
- Septic System Types for Santa Cruz Homes3.Introduction to Septic Systems4.Tr…
+description: >-
+  Understanding the different septic system types available for Santa Cruz homes
+  is essential for choosing the right solution for your property. With.
 category: Plumbing Tips
 date: '2026-04-09'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic system types
-image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1-3.webp
-imageAlt: "Understanding Septic System Types for Santa Cruz Homes"
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic system types
+image: >-
+  /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1-3.webp
+imageAlt: Understanding Septic System Types for Santa Cruz Homes
 ---
-
 ## Quick Answer for Santa Cruz Homeowners
 
 Understanding the different septic system types available for Santa Cruz homes is essential for choosing the right solution for your property. With various options designed to meet diverse environmental and regulatory needs, selecting the appropriate system can enhance efficiency and compliance.

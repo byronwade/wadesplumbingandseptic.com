@@ -1,12 +1,13 @@
 ---
-title: Boulder Creek, CA Plumbing & Septic Services
-description: 'Upstream San Lorenzo Valley plumbing and septic, fire rebuilds, remote wells, failing drainfields on steep lots. Wade''s Plumbing & Septic: 831.225.4344.'
-eyebrow: Boulder Creek, CA
+title: 'Boulder Creek, CA Plumbing & Septic Services'
+description: >-
+  Upstream San Lorenzo Valley plumbing and septic, fire rebuilds, remote wells,
+  failing drainfields on steep lots. Wade's Plumbing & Septic: 831.225.4344.
+eyebrow: 'Boulder Creek, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Boulder Creek redwood canyon and San Lorenzo River upstream of Felton
 ---
-
 Highway 9 keeps climbing past Ben Lomond, the air cools, and Boulder Creek feels like the point where the San Lorenzo Valley turns genuinely rural. Mailboxes spaced farther apart. Driveways that switchback. Wells instead of water mains. Septic tanks you sometimes find on a pad you poured yourself because the original installer is three owners back in the chain of title.
 
 Wade's Plumbing & Septic works Boulder Creek properties as they are, not as blueprints wish they were. Family-owned and rooted in Santa Cruz County, we've helped homeowners from downtown Boulder Creek out toward Brookdale, Bonny Doon Road, and the ridges that burned in the CZU Lightning Complex. Rebuilds brought new plumbing codes, new septic setbacks, and new questions about what the county will sign off on a steep lot.
@@ -39,7 +40,7 @@ If you're on city sewer in Boulder Creek, you're the exception. Most parcels dep
 
 **Failed or failing drainfields.** Boulder Creek's combination of clay, rock, and slope pushes effluent where it shouldn't go. Surfacing in the yard, odors after laundry, or backups when the dishwasher runs are warning signs, not quirks to live with.
 
-**Permits and engineered systems.** When a standard leach field won't fit or won't perk, Santa Cruz County often requires an engineered alternative. We work with [engineered septic system](/engineered-septic-systems-santa-cruz-county) designers and installers who understand mountain lots, not flat farmland specs copied onto a hillside.
+**Permits and engineered systems.** When a standard leach field won't fit or won't perk, Santa Cruz County often requires an engineered alternative. We work with [engineered septic system](/service-offerings/engineered-septic-system-installation) designers and installers who understand mountain lots, not flat farmland specs copied onto a hillside.
 
 **Real estate and compliance.** Buying or selling? We provide inspections and certifications that reflect what inspectors actually look for in the SLV.
 

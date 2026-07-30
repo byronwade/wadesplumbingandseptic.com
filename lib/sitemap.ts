@@ -56,9 +56,6 @@ const PATH_PRIORITY: Record<string, number> = {
 	"/maintenance-guide": 0.65,
 	"/septic-solutions": 0.7,
 	"/glossary": 0.55,
-	"/videos": 0.55,
-	"/shorts": 0.5,
-	"/downloads": 0.5,
 }
 
 const PATH_CHANGE_FREQUENCY: Record<string, ChangeFrequency> = {

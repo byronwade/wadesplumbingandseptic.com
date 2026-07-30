@@ -1,17 +1,15 @@
 ---
 title: Hydro Jetting for Clear Drains in Santa Cruz County
-description: Are you experiencing recurring drain clogs or slow drainage in your home?
- Our hydro jetting drain cleaning service, available throughout Santa Cruz County,
- California, is the ultimate solution to ensure your plumbing system remains clear
- and…
+description: >-
+  Are you experiencing recurring drain clogs or slow drainage in your home? Our
+  hydro jetting drain cleaning service, available throughout Santa Cruz.
 category: Plumbing
 order: 32
 featured: true
-image: /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
-imageAlt: "Industrial plumbing with pressure gauge"
-
+image: >-
+  /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
+imageAlt: Industrial plumbing with pressure gauge
 ---
-
 Are you experiencing recurring drain clogs or slow drainage in your home? Our hydro jetting [drain cleaning](/service-offerings/drain-cleaning/) service, available throughout Santa Cruz County, California, is the ultimate solution to ensure your plumbing system remains clear and efficient. This advanced method employs high-pressure water jets to thoroughly clean your drains and sewer lines, providing a more comprehensive solution than traditional snaking methods. 
 
 ## Why Choose Hydro Jetting Drain Cleaning?
