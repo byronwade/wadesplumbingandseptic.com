@@ -2,9 +2,7 @@ import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-import { CallButton } from "@/components/call-button"
 import { CompanyLogo } from "@/components/company-logos"
-import { contactInfo } from "@/lib/contact"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
 
 const serviceLinks = [
@@ -33,24 +31,10 @@ export function SiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
 			{/*
-			  One dial CTA in the strip — phone number is the label. No save-contact
-			  here; that lives only on the contact page card as a quiet secondary.
+			  No Call strip here. Page-level ContactCta / conversion bands already
+			  offer Call + hours; stacking another dial bar on the footer reads as
+			  two identical CTAs back-to-back.
 			*/}
-			<div className="bg-primary shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.18)]">
-				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
-					<p className="font-mono text-[0.6875rem] font-semibold tracking-[0.14em] text-white/80 uppercase">
-						{siteConfig.hours}
-					</p>
-					<CallButton
-						className="text-ink w-full bg-white hover:bg-white/90 sm:w-auto"
-						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-						prefer="dial"
-						size="lg"
-						variant="secondary"
-					/>
-				</div>
-			</div>
-
 			<div className="container-shell py-[var(--space-section-y-tight)]">
 				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
