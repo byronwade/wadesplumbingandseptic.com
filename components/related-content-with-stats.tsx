@@ -1,10 +1,13 @@
-import { Suspense } from "react"
-
 import { RelatedContentSections } from "@/components/related-content"
 import { withRelatedViewStats } from "@/lib/page-views/attach-related"
 import type { RelatedContent } from "@/lib/related-content"
 
-async function RelatedContentSectionsLive({
+/**
+ * Related rails with minute-cached view stats.
+ * Stats refresh via cacheLife("minutes") without opting the page into
+ * request-time `connection()` (which broke mobile RSC navigations).
+ */
+export async function RelatedContentSectionsWithStats({
 	related,
 	servicesTitle,
 	postsTitle,
@@ -20,37 +23,5 @@ async function RelatedContentSectionsLive({
 			related={relatedWithStats}
 			servicesTitle={servicesTitle}
 		/>
-	)
-}
-
-/**
- * Prerender related rails without live view stats, then upgrade at request time.
- * Keeps Cache Components happy: utcDayNow() must not run during static prerender.
- */
-export function RelatedContentSectionsWithStats({
-	related,
-	servicesTitle,
-	postsTitle,
-}: {
-	related: RelatedContent
-	servicesTitle?: string
-	postsTitle?: string
-}) {
-	return (
-		<Suspense
-			fallback={
-				<RelatedContentSections
-					postsTitle={postsTitle}
-					related={related}
-					servicesTitle={servicesTitle}
-				/>
-			}
-		>
-			<RelatedContentSectionsLive
-				postsTitle={postsTitle}
-				related={related}
-				servicesTitle={servicesTitle}
-			/>
-		</Suspense>
 	)
 }

@@ -3,6 +3,7 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
 import { ArrowRight, Phone } from "@/components/icons"
@@ -10,7 +11,6 @@ import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import {
 	Sheet,
-	SheetClose,
 	SheetContent,
 	SheetDescription,
 	SheetFooter,
@@ -32,32 +32,43 @@ function MobileNavLink({
 	label,
 	description,
 	compact = false,
-}: NavLink & { compact?: boolean }) {
+	onNavigate,
+}: NavLink & { compact?: boolean; onNavigate: () => void }) {
+	const router = useRouter()
+
 	return (
-		<SheetClose asChild>
-			<Link
+		<Link
+			className={cn(
+				"hover:bg-muted focus-visible:ring-ring block rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
+				compact ? "py-2" : "py-2.5",
+			)}
+			href={href as Route}
+			prefetch
+			onClick={(event) => {
+				/*
+				  Radix SheetClose + Next Link races the dialog unmount against
+				  soft navigation, so many taps close the menu and go nowhere.
+				  Close first, then push explicitly.
+				*/
+				event.preventDefault()
+				onNavigate()
+				router.push(href as Route)
+			}}
+		>
+			<span
 				className={cn(
-					"hover:bg-muted focus-visible:ring-ring block rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
-					compact ? "py-2" : "py-2.5",
+					"text-foreground block font-bold tracking-[-0.02em]",
+					compact ? "text-[0.9375rem]" : "text-base",
 				)}
-				href={href as Route}
-				prefetch
 			>
-				<span
-					className={cn(
-						"text-foreground block font-bold tracking-[-0.02em]",
-						compact ? "text-[0.9375rem]" : "text-base",
-					)}
-				>
-					{label}
+				{label}
+			</span>
+			{description && !compact ? (
+				<span className="text-muted-foreground mt-0.5 block text-sm leading-snug">
+					{description}
 				</span>
-				{description && !compact ? (
-					<span className="text-muted-foreground mt-0.5 block text-sm leading-snug">
-						{description}
-					</span>
-				) : null}
-			</Link>
-		</SheetClose>
+			) : null}
+		</Link>
 	)
 }
 
@@ -94,10 +105,17 @@ export function SiteHeaderMobileMenu({
 	open: boolean
 	onOpenChange: (open: boolean) => void
 }) {
+	const router = useRouter()
+	const closeMenu = () => onOpenChange(false)
+
 	return (
 		<Sheet open={open} onOpenChange={onOpenChange}>
-			<SheetContent side="right" className="bg-card gap-0">
-				<SheetHeader className="shadow-[inset_0_-1px_0_0_var(--border)]">
+			{/*
+			  h-dvh + min-h-0 keeps the scroll region between header/footer so
+			  lower links are not trapped under the sticky CTA bar.
+			*/}
+			<SheetContent side="right" className="bg-card h-dvh gap-0 overflow-hidden">
+				<SheetHeader className="shrink-0 shadow-[inset_0_-1px_0_0_var(--border)]">
 					<div className="flex items-center gap-3">
 						<Image
 							alt="Wade's Plumbing & Septic logo"
@@ -123,7 +141,7 @@ export function SiteHeaderMobileMenu({
 				  Descriptions are omitted so the sheet stays scannable.
 				*/}
 				<nav
-					className="flex-1 overflow-y-auto px-2 pb-4"
+					className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 pb-4"
 					aria-label="Mobile navigation"
 				>
 					<section className="pt-2">
@@ -131,7 +149,11 @@ export function SiteHeaderMobileMenu({
 						<ul>
 							{mobilePrimaryLinks.map((item) => (
 								<li key={item.href}>
-									<MobileNavLink compact {...item} />
+									<MobileNavLink
+										compact
+										onNavigate={closeMenu}
+										{...item}
+									/>
 								</li>
 							))}
 						</ul>
@@ -147,20 +169,22 @@ export function SiteHeaderMobileMenu({
 										compact
 										href={item.href}
 										label={item.label}
+										onNavigate={closeMenu}
 									/>
 								</li>
 							))}
 							<li>
-								<SheetClose asChild>
-									<Link
-										className="text-primary hover:bg-muted focus-visible:ring-ring flex items-center gap-1.5 rounded-md px-3 py-2 text-[0.9375rem] font-bold outline-none focus-visible:ring-2"
-										href={"/services" as Route}
-										prefetch
-									>
-										Browse all services
-										<ArrowRight aria-hidden="true" className="size-3.5" />
-									</Link>
-								</SheetClose>
+								<button
+									type="button"
+									className="text-primary hover:bg-muted focus-visible:ring-ring flex w-full items-center gap-1.5 rounded-md px-3 py-2 text-left text-[0.9375rem] font-bold outline-none focus-visible:ring-2"
+									onClick={() => {
+										closeMenu()
+										router.push("/services")
+									}}
+								>
+									Browse all services
+									<ArrowRight aria-hidden="true" className="size-3.5" />
+								</button>
 							</li>
 						</ul>
 					</MobileNavSection>
@@ -175,6 +199,7 @@ export function SiteHeaderMobileMenu({
 											compact
 											href={item.href}
 											label={item.label}
+											onNavigate={closeMenu}
 										/>
 									</li>
 								))}
@@ -185,14 +210,19 @@ export function SiteHeaderMobileMenu({
 						<ul className="grid grid-cols-2 gap-x-1">
 							{mobileCompanyLinks.map((item) => (
 								<li key={item.href}>
-									<MobileNavLink compact href={item.href} label={item.label} />
+									<MobileNavLink
+										compact
+										href={item.href}
+										label={item.label}
+										onNavigate={closeMenu}
+									/>
 								</li>
 							))}
 						</ul>
 					</MobileNavSection>
 				</nav>
 
-				<SheetFooter className="gap-2">
+				<SheetFooter className="shrink-0 gap-2">
 					<a
 						className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
 						href={siteConfig.phoneHref}
@@ -200,18 +230,19 @@ export function SiteHeaderMobileMenu({
 						<Phone aria-hidden="true" />
 						Call {siteConfig.phone}
 					</a>
-					<SheetClose asChild>
-						<Link
-							className={cn(
-								buttonVariants({ variant: "outline", size: "lg" }),
-								"w-full",
-							)}
-							href={"/contact" as Route}
-							prefetch
-						>
-							Get a Free Quote
-						</Link>
-					</SheetClose>
+					<button
+						type="button"
+						className={cn(
+							buttonVariants({ variant: "outline", size: "lg" }),
+							"w-full",
+						)}
+						onClick={() => {
+							closeMenu()
+							router.push("/contact")
+						}}
+					>
+						Get a Free Quote
+					</button>
 				</SheetFooter>
 			</SheetContent>
 		</Sheet>

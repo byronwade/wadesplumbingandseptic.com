@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
-import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -10,11 +9,8 @@ import { FilterableArchive } from "@/components/filterable-archive"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection, type ContentDocument } from "@/lib/content"
-import { getPageViewStoreCached } from "@/lib/page-views"
-import { attachViewStats } from "@/lib/page-views/ranking"
-import { utcDayNow } from "@/lib/page-views/stats"
+import { rankItemsWithLiveStats } from "@/lib/page-views/live"
 import { getRelatedForTopic } from "@/lib/related-content"
-import type { RelatedContent } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 import {
 	serviceCategories,
@@ -80,10 +76,7 @@ async function RankedCategoryArchive({
 	contentCategory: string
 	services: ContentDocument[]
 }) {
-	await connection()
-	const today = utcDayNow()
-	const store = await getPageViewStoreCached()
-	const items = attachViewStats(
+	const items = await rankItemsWithLiveStats(
 		services.map((service) =>
 			toArchiveItem(
 				service,
@@ -91,9 +84,7 @@ async function RankedCategoryArchive({
 				service.category ?? contentCategory,
 			),
 		),
-		store,
 		"service",
-		today,
 	)
 
 	return (
@@ -106,48 +97,6 @@ async function RankedCategoryArchive({
 			showFilters={false}
 			variant="service"
 		/>
-	)
-}
-
-async function ServiceCategoryBody({
-	category,
-	services,
-	related,
-}: {
-	category: (typeof serviceCategories)[ServiceCategorySlug]
-	services: ContentDocument[]
-	related: RelatedContent
-}) {
-	return (
-		<main id="main-content">
-			<ContentHero
-				description={category.description}
-				eyebrow={`${services.length} services`}
-				image={category.image}
-				imageAlt={category.label}
-				parent={{ href: "/services", label: "Services" }}
-				title={`${category.label} Services`}
-			/>
-			<Suspense
-				fallback={
-					<section className="container-shell section-y">
-						Loading services…
-					</section>
-				}
-			>
-				<RankedCategoryArchive
-					contentCategory={category.contentCategory}
-					label={category.label}
-					services={services}
-				/>
-			</Suspense>
-			<RelatedContentSectionsWithStats
-				postsTitle="Related expert tips"
-				related={related}
-				servicesTitle="Related services"
-			/>
-			<ContactCta />
-		</main>
 	)
 }
 
@@ -164,12 +113,34 @@ export default async function ServiceCategoryPage({
 	const data = await getServiceCategoryData(slug as ServiceCategorySlug)
 
 	return (
-		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<ServiceCategoryBody
-				category={data.category}
-				related={data.related}
-				services={data.services}
+		<main id="main-content">
+			<ContentHero
+				description={data.category.description}
+				eyebrow={`${data.services.length} services`}
+				image={data.category.image}
+				imageAlt={data.category.label}
+				parent={{ href: "/services", label: "Services" }}
+				title={`${data.category.label} Services`}
 			/>
-		</Suspense>
+			<Suspense
+				fallback={
+					<section className="container-shell section-y">
+						Loading services…
+					</section>
+				}
+			>
+				<RankedCategoryArchive
+					contentCategory={data.category.contentCategory}
+					label={data.category.label}
+					services={data.services}
+				/>
+			</Suspense>
+			<RelatedContentSectionsWithStats
+				postsTitle="Related expert tips"
+				related={data.related}
+				servicesTitle="Related services"
+			/>
+			<ContactCta />
+		</main>
 	)
 }

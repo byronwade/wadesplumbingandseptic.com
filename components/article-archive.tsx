@@ -1,4 +1,3 @@
-import { connection } from "next/server"
 import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
@@ -7,9 +6,7 @@ import { FilterableArchive } from "@/components/filterable-archive"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import type { ContentDocument } from "@/lib/content"
-import { getPageViewStoreCached } from "@/lib/page-views"
-import { attachViewStats } from "@/lib/page-views/ranking"
-import { utcDayNow } from "@/lib/page-views/stats"
+import { rankItemsWithLiveStats } from "@/lib/page-views/live"
 import type { RelatedContent } from "@/lib/related-content"
 
 async function RankedArticleArchive({
@@ -19,16 +16,11 @@ async function RankedArticleArchive({
 	title: string
 	posts: ContentDocument[]
 }) {
-	await connection()
-	const today = utcDayNow()
-	const store = await getPageViewStoreCached()
-	const items = attachViewStats(
+	const items = await rankItemsWithLiveStats(
 		posts.map((post) =>
 			toArchiveItem(post, `/${post.slug}`, post.category ?? "Expert Tips"),
 		),
-		store,
 		"tip",
-		today,
 	)
 
 	return (
@@ -44,7 +36,7 @@ async function RankedArticleArchive({
 	)
 }
 
-export async function ArticleArchive({
+export function ArticleArchive({
 	title,
 	description,
 	posts,

@@ -1,15 +1,13 @@
-import { connection } from "next/server"
+import { Suspense } from "react"
 
 import { FilterableArchive } from "@/components/filterable-archive"
 import { toArchiveItem, type ArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
-import { getPageViewStoreCached } from "@/lib/page-views"
 import {
-	attachViewStats,
 	sortArchiveItems,
 	type ArchiveSort,
 } from "@/lib/page-views/ranking"
-import { utcDayNow } from "@/lib/page-views/stats"
+import { rankItemsWithLiveStats } from "@/lib/page-views/live"
 
 async function serviceItems() {
 	const services = await getCollection("services")
@@ -29,7 +27,46 @@ async function tipItems() {
 	)
 }
 
-export async function RankedContentArchive({
+async function RankedArchiveBody({
+	variant,
+	sort = "default",
+	pageSize,
+	allLabel,
+	emptyLabel,
+	noun,
+	showFilters = true,
+	lockedSort = false,
+}: {
+	variant: "service" | "tip"
+	sort?: ArchiveSort
+	pageSize: number
+	allLabel: string
+	emptyLabel: string
+	noun: { singular: string; plural: string }
+	showFilters?: boolean
+	lockedSort?: boolean
+}) {
+	const items: ArchiveItem[] =
+		variant === "service" ? await serviceItems() : await tipItems()
+	const withStats = await rankItemsWithLiveStats(items, variant)
+	const ranked = lockedSort ? sortArchiveItems(withStats, sort) : withStats
+
+	return (
+		<FilterableArchive
+			allLabel={allLabel}
+			emptyLabel={emptyLabel}
+			items={ranked}
+			lockedSort={lockedSort}
+			noun={noun}
+			pageSize={pageSize}
+			showFilters={showFilters}
+			showSort={!lockedSort}
+			variant={variant}
+		/>
+	)
+}
+
+export function RankedContentArchive({
 	variant,
 	sort = "default",
 	pageSize,
@@ -49,29 +86,24 @@ export async function RankedContentArchive({
 	/** When true, hide the sort control (dedicated popular/trending pages). */
 	lockedSort?: boolean
 }) {
-	/* View stats and trending windows are request-time (live JSON + utc day). */
-	await connection()
-	const today = utcDayNow()
-
-	const items: ArchiveItem[] =
-		variant === "service" ? await serviceItems() : await tipItems()
-	const store = await getPageViewStoreCached()
-	const withStats = attachViewStats(items, store, variant, today)
-	const ranked = lockedSort
-		? sortArchiveItems(withStats, sort)
-		: withStats
-
+	/* Suspense is required for FilterableArchive's useSearchParams, but must
+	   not wrap the page hero (empty-main shells broke mobile navigation). */
 	return (
-		<FilterableArchive
-			allLabel={allLabel}
-			emptyLabel={emptyLabel}
-			items={ranked}
-			lockedSort={lockedSort}
-			noun={noun}
-			pageSize={pageSize}
-			showFilters={showFilters}
-			showSort={!lockedSort}
-			variant={variant}
-		/>
+		<Suspense
+			fallback={
+				<section className="container-shell section-y">Loading…</section>
+			}
+		>
+			<RankedArchiveBody
+				allLabel={allLabel}
+				emptyLabel={emptyLabel}
+				lockedSort={lockedSort}
+				noun={noun}
+				pageSize={pageSize}
+				showFilters={showFilters}
+				sort={sort}
+				variant={variant}
+			/>
+		</Suspense>
 	)
 }

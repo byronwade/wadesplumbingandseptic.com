@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
-import { Suspense } from "react"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
@@ -98,9 +97,5 @@ export default async function TagPage({
 
 	if (!matched.length) notFound()
 
-	return (
-		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<TagArchive slug={slug} />
-		</Suspense>
-	)
+	return <TagArchive slug={slug} />
 }
