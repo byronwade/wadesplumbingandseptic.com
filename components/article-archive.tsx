@@ -1,3 +1,5 @@
+import { Suspense } from "react"
+
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { FilterableArchive } from "@/components/filterable-archive"
@@ -34,7 +36,7 @@ async function RankedArticleArchive({
 	)
 }
 
-export async function ArticleArchive({
+export function ArticleArchive({
 	title,
 	description,
 	posts,
@@ -55,7 +57,15 @@ export async function ArticleArchive({
 				parent={{ href: "/expert-tips", label: "Expert Tips" }}
 				title={title}
 			/>
-			<RankedArticleArchive posts={posts} title={title} />
+			<Suspense
+				fallback={
+					<section className="container-shell section-y">
+						Loading guides…
+					</section>
+				}
+			>
+				<RankedArticleArchive posts={posts} title={title} />
+			</Suspense>
 			{related ? (
 				<RelatedContentSectionsWithStats
 					postsTitle="More related guides"

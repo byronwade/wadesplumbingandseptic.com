@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
@@ -121,11 +122,19 @@ export default async function ServiceCategoryPage({
 				parent={{ href: "/services", label: "Services" }}
 				title={`${data.category.label} Services`}
 			/>
-			<RankedCategoryArchive
-				contentCategory={data.category.contentCategory}
-				label={data.category.label}
-				services={data.services}
-			/>
+			<Suspense
+				fallback={
+					<section className="container-shell section-y">
+						Loading services…
+					</section>
+				}
+			>
+				<RankedCategoryArchive
+					contentCategory={data.category.contentCategory}
+					label={data.category.label}
+					services={data.services}
+				/>
+			</Suspense>
 			<RelatedContentSectionsWithStats
 				postsTitle="Related expert tips"
 				related={data.related}
