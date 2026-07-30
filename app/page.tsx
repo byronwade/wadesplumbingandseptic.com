@@ -189,16 +189,23 @@ const faqs = [
 ]
 
 /*
- * Art-directed pair: a landscape crop for the framed plate on wide screens, a
- * shorter crop on phones. `sizes` reflects the framed column (about 45vw from lg
- * up) rather than the old full-bleed 100vw, so the browser stops fetching a
- * viewport-width file for a half-width slot.
+ * Art direction for the cinematic frame. The viewport is landscape on desktop
+ * and portrait on a phone, so the two orientations get different photographs
+ * rather than one image cropped badly at both ends.
+ *
+ * Desktop is the blue-hour rough-in: 1280px wide against a 1440px band, so it
+ * upscales ~1.1x and stays sharp. The old pairing had this backwards, serving a
+ * 768x1024 portrait to desktop (a 1.9x upscale) and a 640x400 landscape to
+ * phones.
+ *
+ * One alt for both sources, since <picture> has a single <img>: it has to be
+ * true of whichever photograph is served.
  */
-const HERO_SIZES = "(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
+const HERO_SIZES = "100vw"
 
 function HomeHeroMedia() {
 	const common = {
-		alt: "Three-tank engineered septic system installed on a hillside property in Santa Cruz County",
+		alt: "Recent Wade's Plumbing & Septic work on a Santa Cruz County property",
 		sizes: HERO_SIZES,
 	} as const
 
@@ -206,20 +213,20 @@ function HomeHeroMedia() {
 		props: { srcSet: desktop },
 	} = getImageProps({
 		...common,
-		width: 900,
-		height: 720,
-		quality: 72,
-		src: "/images/work/engineered-septic-hero.webp",
+		width: 1280,
+		height: 961,
+		quality: 74,
+		src: "/images/team/byron-working.webp",
 	})
 
 	const {
-		props: { srcSet: mobile, ...rest },
+		props: { srcSet: portrait, ...rest },
 	} = getImageProps({
 		...common,
-		width: 640,
-		height: 480,
-		quality: 68,
-		src: "/images/work/engineered-septic-hero-mobile.webp",
+		width: 768,
+		height: 1024,
+		quality: 70,
+		src: "/images/work/engineered-septic-hero.webp",
 	})
 
 	return (
@@ -227,9 +234,9 @@ function HomeHeroMedia() {
 			<source media="(min-width: 640px)" srcSet={desktop} sizes={HERO_SIZES} />
 			<img
 				{...rest}
-				srcSet={mobile}
+				srcSet={portrait}
 				alt={common.alt}
-				className="absolute inset-0 size-full object-cover object-center"
+				className="absolute inset-0 size-full object-cover object-[50%_62%]"
 				decoding="async"
 				fetchPriority="high"
 			/>
@@ -241,32 +248,48 @@ export default function HomePage() {
 	return (
 		<main id="main-content">
 			{/*
-			  The photo used to be a full-bleed background under three stacked
-			  scrims, which flattened the best asset on the site into grey mush and
-			  left the copy floating on an empty field.
+			  Cinematic frame. Full-bleed work photograph sized to the visible
+			  viewport, with the headline set at --type-cinematic and anchored low so
+			  the picture carries the top of the frame and the type carries the
+			  bottom. Structure follows the pattern used by Lightship and Locomotive:
+			  minimal chrome, one oversized statement, credentials pinned to the
+			  bottom edge as a hairline bar.
 
-			  It is now a framed object in its own column: a spec plate, captioned
-			  the way a permit photo is, with the job's real numbers under it. The
-			  copy column keeps the ink and textures, so the two halves read as
-			  "pitch" and "proof" instead of "text on a picture".
+			  The photograph is the argument here, so it is not boxed, tinted, or
+			  reduced to texture. Only motion in the band is the slow drift on the
+			  frame itself.
 			*/}
-			<section className="surface-hero tex-grid tex-glow overflow-hidden">
-				<div className="container-shell grid items-center gap-10 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-14 lg:pt-24 lg:pb-20">
-					<div>
-						<div className="section-head max-w-xl">
-							<p className="spec-label motion-fade">Santa Cruz County, CA</p>
-							<h1 className="type-display motion-rise text-white">
-								Honest plumbing
-								<br />
-								<span className="text-primary-bright">&amp; septic</span>
-							</h1>
-							<p className="motion-rise motion-delay-1 type-lead text-on-dark-muted">
-								No sales pressure. No upselling. Clear pricing before work
-								begins from local licensed professionals.
-							</p>
-						</div>
+			<section className="hero-cinematic">
+				<div className="absolute inset-0 -z-20">
+					<div className="media-drift relative size-full">
+						<HomeHeroMedia />
+					</div>
+				</div>
 
-						<div className="motion-rise motion-delay-2 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+				{/* Top line: where we are, and the scroll cue's counterpart. */}
+				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
+					<p className="spec-label motion-fade text-primary-bright">
+						Santa Cruz County, CA
+					</p>
+					<p className="text-on-dark-subtle motion-fade hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
+						Est. family owned
+					</p>
+				</div>
+
+				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
+					<h1 className="type-cinematic motion-rise text-white">
+						Honest plumbing
+						<br />
+						<span className="text-primary-bright">&amp; septic</span>
+					</h1>
+
+					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+						<p className="type-lead text-on-dark-muted max-w-md">
+							No sales pressure. No upselling. Clear pricing before work begins
+							from local licensed professionals.
+						</p>
+
+						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
 							<a
 								className={cn(
 									buttonVariants({ size: "xl" }),
@@ -289,53 +312,35 @@ export default function HomePage() {
 								<ArrowRight aria-hidden="true" />
 							</Link>
 						</div>
+					</div>
+				</div>
 
-						{/* Credentials as data, not as another row of chips. */}
-						<dl className="motion-fade motion-delay-2 mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
+				{/*
+				  Credential bar on the bottom edge. Keeps the licence numbers in the
+				  first frame without adding another row of chips, and gives the
+				  photograph a hard bottom rule to sit on.
+				*/}
+				<div className="relative border-t border-white/12 bg-black/35 backdrop-blur-sm">
+					<div className="container-shell flex items-center justify-between gap-6 py-3.5">
+						<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
 							{heroStats.map(({ label, value }) => (
-								<div key={label}>
-									<dt className="text-on-dark-subtle font-mono text-[0.6875rem] tracking-[0.14em] uppercase">
+								<div className="flex items-baseline gap-2" key={label}>
+									<dt className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
 										{label}
 									</dt>
-									<dd className="font-display mt-1 text-[0.9375rem] font-bold tracking-[-0.01em] text-white">
+									<dd className="text-[0.8125rem] font-bold text-white">
 										{value}
 									</dd>
 								</div>
 							))}
 						</dl>
-					</div>
-
-					<figure className="motion-rise motion-delay-1 relative">
-						{/* Copper bloom behind the plate, so it lifts off the band. */}
-						<div
+						{/* Centred in the bar, not hanging below it, where overflow: clip
+						    cut it off and it read as a stray hairline. */}
+						<span
 							aria-hidden="true"
-							className="bg-primary/25 absolute -inset-6 -z-10 rounded-full blur-3xl"
+							className="scroll-cue hidden shrink-0 self-center lg:block"
 						/>
-						<div className="surface-raised overflow-hidden rounded-xl p-2">
-							<div className="relative aspect-4/3 overflow-hidden rounded-lg lg:aspect-5/4">
-								<HomeHeroMedia />
-								<span className="surface-float absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase backdrop-blur-sm">
-									Engineered ATU
-								</span>
-							</div>
-							<figcaption className="flex items-end justify-between gap-4 px-2 pt-3 pb-1">
-								<span className="text-[0.8125rem] leading-snug font-bold text-white">
-									Three-tank engineered septic system
-									<span className="text-on-dark-subtle block font-normal">
-										Hillside property, Santa Cruz Mountains
-									</span>
-								</span>
-								<Link
-									className="text-primary-bright inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
-									href="/service-category/septic"
-									prefetch
-								>
-									Septic work
-									<ArrowRight aria-hidden="true" className="size-3.5" />
-								</Link>
-							</figcaption>
-						</div>
-					</figure>
+					</div>
 				</div>
 			</section>
 
@@ -421,16 +426,43 @@ export default function HomePage() {
 								</Link>
 							</div>
 						</div>
-						<div className="bg-muted relative aspect-4/3 overflow-hidden rounded-lg lg:aspect-auto lg:min-h-[26rem]">
-							<Image
-								alt="Three-tank septic system installation on hillside property"
-								className="object-cover"
-								fill
-								quality={70}
-								sizes="(min-width: 1024px) 45vw, 100vw"
-								src="/images/work/completed-multi-tank.webp"
-							/>
-						</div>
+						{/*
+						  The spec-plate treatment lives here now that the hero is a
+						  full-bleed frame. A captioned, framed photo still earns its place
+						  next to the capability list, where it reads as evidence for the
+						  claims beside it.
+						*/}
+						<figure className="surface-panel flex flex-col overflow-hidden p-2">
+							<div className="bg-muted relative aspect-4/3 overflow-hidden rounded-md lg:aspect-auto lg:min-h-[24rem] lg:flex-1">
+								<Image
+									alt="Completed three-tank septic system installation on a hillside property"
+									className="object-cover"
+									fill
+									quality={70}
+									sizes="(min-width: 1024px) 45vw, 100vw"
+									src="/images/work/completed-multi-tank.webp"
+								/>
+								<span className="bg-ink/80 absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase backdrop-blur-sm">
+									Engineered ATU
+								</span>
+							</div>
+							<figcaption className="flex items-end justify-between gap-4 px-2 pt-3 pb-1">
+								<span className="text-[0.8125rem] leading-snug font-bold">
+									Three-tank engineered septic system
+									<span className="text-muted-foreground block font-normal">
+										Hillside property, Santa Cruz Mountains
+									</span>
+								</span>
+								<Link
+									className="text-primary inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
+									href="/service-category/septic"
+									prefetch
+								>
+									Septic work
+									<ArrowRight aria-hidden="true" className="size-3.5" />
+								</Link>
+							</figcaption>
+						</figure>
 					</div>
 				</div>
 			</section>
