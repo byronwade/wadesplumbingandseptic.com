@@ -750,6 +750,74 @@
 		box-shadow: var(--hairline-all), var(--shadow-float);
 	}
 
+	/*
+	  Dark surfaces must remap light-theme text tokens. Without this, nested
+	  .prose / text-foreground / strong keep --prose-body and --foreground from
+	  :root (dark charcoal on charcoal) and fail contrast, especially inside
+	  service timeline panels that put MarkdownContent on surface-float.
+	*/
+	.surface-float,
+	.surface-hero,
+	.surface-dark,
+	.surface-dark-soft,
+	.surface-raised,
+	.hero-cinematic,
+	.bg-ink,
+	.bg-panel {
+		--foreground: var(--on-dark);
+		--card-foreground: var(--on-dark);
+		--popover-foreground: var(--on-dark);
+		--secondary-foreground: var(--on-dark);
+		--muted-foreground: var(--on-dark-muted);
+		--prose-body: var(--on-dark-muted);
+		--prose-quote: var(--on-dark-muted);
+		--prose-quote-bg: color-mix(in srgb, white 7%, transparent);
+		--prose-code-bg: color-mix(in srgb, white 9%, transparent);
+	}
+
+	.surface-float .prose a,
+	.surface-hero .prose a,
+	.surface-dark .prose a,
+	.surface-dark-soft .prose a,
+	.surface-raised .prose a,
+	.hero-cinematic .prose a,
+	.bg-ink .prose a,
+	.bg-panel .prose a {
+		color: var(--primary-bright);
+	}
+
+	/*
+	  Light cards nested on a dark band must restore light-theme text tokens.
+	  Use concrete light values (not var(--card-foreground)): the parent dark
+	  surface already remapped --card-foreground to on-dark.
+	*/
+	.surface-float .surface-panel,
+	.surface-hero .surface-panel,
+	.surface-dark .surface-panel,
+	.surface-dark-soft .surface-panel,
+	.hero-cinematic .surface-panel,
+	.bg-ink .surface-panel,
+	.bg-panel .surface-panel {
+		--foreground: oklch(0.2 0.007 68);
+		--card-foreground: oklch(0.2 0.007 68);
+		--muted-foreground: oklch(0.49 0.011 68);
+		--prose-body: oklch(0.385 0.01 68);
+		--prose-quote: oklch(0.432 0.01 68);
+		--prose-quote-bg: oklch(0.954 0.005 85);
+		--prose-code-bg: oklch(0.943 0.004 85);
+		color: oklch(0.2 0.007 68);
+	}
+
+	.surface-float .surface-panel .prose a,
+	.surface-hero .surface-panel .prose a,
+	.surface-dark .surface-panel .prose a,
+	.surface-dark-soft .surface-panel .prose a,
+	.hero-cinematic .surface-panel .prose a,
+	.bg-ink .surface-panel .prose a,
+	.bg-panel .surface-panel .prose a {
+		color: var(--primary);
+	}
+
 	/* A card resting on a floating panel. */
 	.surface-raised {
 		background: var(--dark-3);
