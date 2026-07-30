@@ -22,10 +22,12 @@ export default function ExpertTipsPage() {
 		<main id="main-content">
 			<ContentHero
 				description="Practical plumbing and septic education from the people doing the work. Straight answers, useful maintenance guidance, and local insight."
-				eyebrow="Homeowner Resources"
+				eyebrow="Homeowner guides"
 				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
-				title="Expert Tips & Homeowner Guides"
+				indexKind="tip"
+				title="Expert Tips"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">

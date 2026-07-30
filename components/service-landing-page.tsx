@@ -68,24 +68,17 @@ export function ServiceLandingPage({
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
 				title={service.title}
-				variant="marketing"
+				variant="service"
 			/>
 
-			{viewStats ? (
-				<div className="container-shell pt-[var(--space-section)]">
-					<div className="border-border mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
-						<p className="spec-label">Page interest</p>
-						{viewStats.unique > 0 || viewStats.views > 0 ? (
-							<PageViewsStat
-								totalViews={viewStats.views}
-								trendingScore={viewStats.trending}
-								uniqueViews={viewStats.unique}
-							/>
-						) : (
-							<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
-								New on the site · your visit counts
-							</p>
-						)}
+			{viewStats && (viewStats.unique > 0 || viewStats.views > 0) ? (
+				<div className="container-shell pt-6">
+					<div className="border-border flex flex-wrap items-center justify-end gap-x-4 gap-y-2 border-b pb-4">
+						<PageViewsStat
+							totalViews={viewStats.views}
+							trendingScore={viewStats.trending}
+							uniqueViews={viewStats.unique}
+						/>
 					</div>
 				</div>
 			) : null}

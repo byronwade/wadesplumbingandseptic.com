@@ -119,8 +119,10 @@ export default async function ServiceCategoryPage({
 				eyebrow={`${data.services.length} services`}
 				image={data.category.image}
 				imageAlt={data.category.label}
+				indexKind="service"
 				parent={{ href: "/services", label: "Services" }}
 				title={`${data.category.label} Services`}
+				variant="index"
 			/>
 			<Suspense
 				fallback={

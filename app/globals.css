@@ -657,6 +657,60 @@
 	}
 
 	/*
+	  Interior heroes (not the home cinematic). Each template owns a distinct
+	  first viewport so services, tips, and utility pages do not share one dark
+	  washed slab.
+	*/
+	.hero-article {
+		background:
+			radial-gradient(
+				ellipse 70% 55% at 0% 0%,
+				color-mix(in srgb, var(--primary) 8%, transparent),
+				transparent 70%
+			),
+			var(--background);
+	}
+
+	.hero-article-media {
+		width: 100%;
+		border-block: 1px solid var(--border);
+		background: var(--muted);
+	}
+
+	.hero-service {
+		background: var(--background);
+	}
+
+	.hero-service-media {
+		border-block: 1px solid var(--border);
+		background: var(--ink);
+	}
+
+	.hero-index-tip {
+		background:
+			radial-gradient(
+				ellipse 55% 70% at 100% 0%,
+				color-mix(in srgb, var(--primary) 7%, transparent),
+				transparent 65%
+			),
+			var(--sunken);
+	}
+
+	.hero-index-service {
+		background:
+			linear-gradient(
+				135deg,
+				color-mix(in srgb, var(--ink) 4%, var(--background)) 0%,
+				var(--background) 55%,
+				color-mix(in srgb, var(--primary) 5%, var(--background)) 100%
+			);
+	}
+
+	.hero-page {
+		background: var(--sunken);
+	}
+
+	/*
 	  Cinematic hero. Sized to the visible viewport minus the header, so the whole
 	  frame is on screen at once instead of being cropped by the sticky bar.
 

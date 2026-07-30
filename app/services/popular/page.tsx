@@ -25,8 +25,10 @@ export default function PopularServicesPage() {
 				eyebrow="Most popular"
 				image="/images/work/commercial-plumbing-installation.webp"
 				imageAlt="Professional plumbing installation"
+				indexKind="service"
 				parent={{ href: "/services" as Route, label: "Services" }}
 				title="Most Popular Services"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">

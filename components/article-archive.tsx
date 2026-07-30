@@ -54,8 +54,10 @@ export function ArticleArchive({
 				eyebrow={`${posts.length} homeowner guides`}
 				image="/images/team/byron-working.webp"
 				imageAlt="Wade's field experience"
+				indexKind="tip"
 				parent={{ href: "/expert-tips", label: "Expert Tips" }}
 				title={title}
+				variant="index"
 			/>
 			<Suspense
 				fallback={

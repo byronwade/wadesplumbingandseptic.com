@@ -25,6 +25,15 @@ import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 
+function formatPostDate(date: string) {
+	return new Intl.DateTimeFormat("en-US", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+		timeZone: "UTC",
+	}).format(new Date(`${date}T00:00:00Z`))
+}
+
 export function ContentPage({
 	document,
 	isPost = false,
@@ -71,19 +80,12 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
-	const postMeta = isPost ? (
-		<div className="border-border mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
+	const articleMeta = isPost ? (
+		<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 			{document.date ? (
 				<p className="type-meta font-bold">
 					Published{" "}
-					<time dateTime={document.date}>
-						{new Intl.DateTimeFormat("en-US", {
-							year: "numeric",
-							month: "long",
-							day: "numeric",
-							timeZone: "UTC",
-						}).format(new Date(`${document.date}T00:00:00Z`))}
-					</time>
+					<time dateTime={document.date}>{formatPostDate(document.date)}</time>
 					{document.updated ? ` · Updated ${document.updated}` : null}
 				</p>
 			) : (
@@ -113,9 +115,11 @@ export function ContentPage({
 				eyebrow={document.eyebrow ?? document.category}
 				image={document.image}
 				imageAlt={document.imageAlt}
+				meta={articleMeta}
 				parent={parent}
+				showActions={!isPost}
 				title={document.title}
-				variant={marketing ? "marketing" : "default"}
+				variant={isPost ? "article" : "page"}
 			/>
 
 			{marketing ? (
@@ -123,16 +127,10 @@ export function ContentPage({
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} variant="rail" />
 					) : null}
-					{isPost ? (
-						<div className="container-shell pt-[var(--space-section)]">
-							{postMeta}
-						</div>
-					) : null}
 					<ContentSectionBands content={document.content} />
 				</>
 			) : (
 				<article className="article-shell section-y">
-					{postMeta}
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />
 					) : null}

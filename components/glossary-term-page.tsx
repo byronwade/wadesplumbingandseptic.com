@@ -64,6 +64,7 @@ export function GlossaryTermPage({
 				}
 				imageAlt={term.term}
 				title={term.term}
+				variant="article"
 			/>
 
 			<article className="article-shell section-y space-y-8">

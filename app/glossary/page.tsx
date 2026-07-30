@@ -94,10 +94,12 @@ export default function GlossaryIndexPage() {
 		<main id="main-content">
 			<ContentHero
 				description="Plain-English plumbing and septic definitions written for Santa Cruz County homeowners and property managers."
-				eyebrow="Learn the Language"
+				eyebrow="Reference"
 				image="/images/work/precision-valve-installation.webp"
 				imageAlt="Professional plumbing workmanship"
+				showActions={false}
 				title="Plumbing & Septic Glossary"
+				variant="page"
 			/>
 			<GlossaryIndexBody />
 			<ContactCta

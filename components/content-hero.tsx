@@ -1,6 +1,7 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import type { ReactNode } from "react"
 import { ChevronRight, Phone } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
@@ -12,6 +13,15 @@ export type HeroBreadcrumb = {
 	/** Omit on the current page crumb (rendered as plain text). */
 	href?: Route
 }
+
+export type ContentHeroVariant =
+	| "page"
+	| "service"
+	| "article"
+	| "index"
+	/** @deprecated Prefer `page`. Kept so older call sites keep compiling. */
+	| "default"
+	| "marketing"
 
 function buildBreadcrumbs({
 	title,
@@ -31,11 +41,22 @@ function buildBreadcrumbs({
 	]
 }
 
-function BreadcrumbTrail({ items }: { items: HeroBreadcrumb[] }) {
+function BreadcrumbTrail({
+	items,
+	tone = "dark",
+}: {
+	items: HeroBreadcrumb[]
+	tone?: "dark" | "light"
+}) {
+	const light = tone === "light"
+
 	return (
 		<nav
 			aria-label="Breadcrumb"
-			className="text-on-dark-subtle mb-6 flex flex-wrap items-center gap-1.5 font-mono text-[0.6875rem] tracking-[0.1em] uppercase"
+			className={cn(
+				"mb-6 flex flex-wrap items-center gap-1.5 font-mono text-[0.6875rem] tracking-[0.1em] uppercase",
+				light ? "text-muted-foreground" : "text-on-dark-subtle",
+			)}
 		>
 			<ol className="flex flex-wrap items-center gap-1.5">
 				{items.map((item, index) => {
@@ -53,7 +74,10 @@ function BreadcrumbTrail({ items }: { items: HeroBreadcrumb[] }) {
 							) : null}
 							{item.href && !isCurrent ? (
 								<Link
-									className="transition-colors hover:text-white"
+									className={cn(
+										"transition-colors",
+										light ? "hover:text-foreground" : "hover:text-white",
+									)}
 									href={item.href}
 									prefetch={false}
 								>
@@ -64,7 +88,11 @@ function BreadcrumbTrail({ items }: { items: HeroBreadcrumb[] }) {
 									aria-current={isCurrent ? "page" : undefined}
 									className={cn(
 										"min-w-0 truncate",
-										isCurrent ? "text-white/90" : undefined,
+										isCurrent
+											? light
+												? "text-foreground"
+												: "text-white/90"
+											: undefined,
 									)}
 									title={item.label}
 								>
@@ -79,6 +107,36 @@ function BreadcrumbTrail({ items }: { items: HeroBreadcrumb[] }) {
 	)
 }
 
+function HeroCallLink({
+	className,
+	label,
+}: {
+	className?: string
+	label?: string
+}) {
+	return (
+		<a className={className} href={siteConfig.phoneHref}>
+			<Phone aria-hidden="true" />
+			{label ?? `Call ${siteConfig.phone}`}
+		</a>
+	)
+}
+
+function normalizeVariant(
+	variant: ContentHeroVariant,
+): "page" | "service" | "article" | "index" {
+	if (variant === "default" || variant === "marketing") return "page"
+	return variant
+}
+
+/**
+ * Interior page heroes. The homepage cinematic hero is separate on purpose.
+ *
+ * - article: editorial / blog post intro (light, featured image, no CTAs)
+ * - service: work-photo band under a quiet title row (one call action)
+ * - index: compact catalog intro for /services and /expert-tips
+ * - page: quieter utility / company / area landing intro
+ */
 export function ContentHero({
 	title,
 	description,
@@ -87,127 +145,243 @@ export function ContentHero({
 	imageAlt,
 	parent,
 	breadcrumbs,
-	variant = "default",
+	variant = "page",
+	indexKind,
+	meta,
+	showActions,
 }: {
 	title: string
 	description: string
 	eyebrow?: string
 	image?: string
 	imageAlt?: string
-	/** Optional middle crumb (e.g. Services, Expert Tips, Service Areas). */
 	parent?: { href: Route; label: string }
-	/** Full trail override. Last item is treated as the current page. */
 	breadcrumbs?: HeroBreadcrumb[]
-	/** Marketing pages get a stronger photo plane closer to the home hero. */
-	variant?: "default" | "marketing"
+	variant?: ContentHeroVariant
+	/** Nuance for catalog pages (tips read softer than services). */
+	indexKind?: "tip" | "service"
+	/** Optional meta row under the dek (dates, views). Used by article heroes. */
+	meta?: ReactNode
+	/** Override default CTA visibility for the variant. */
+	showActions?: boolean
 }) {
+	const kind = normalizeVariant(variant)
 	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
-	const marketing = variant === "marketing"
 
-	/*
-	 * Sizes at --type-headline, not --type-display. Display belongs to the home
-	 * hero alone; run through here it set titles like "Ensure Optimal Drain Flow
-	 * in Santa Cruz County, CA" at 68px and pushed them to four cramped lines.
-	 *
-	 * .surface-hero puts this on the --dark-1 elevation with a top hairline, plus
-	 * the grid and glow textures. Previously it shared the header's flat ink, so
-	 * the header and the hero read as one slab with no visible boundary. The
-	 * photo sits as atmosphere on the right; marketing pages raise opacity so the
-	 * image reads as real work rather than a faint texture.
-	 */
+	if (kind === "article") {
+		return (
+			<header className="hero-article border-border border-b">
+				<div className="article-shell pt-10 pb-8 sm:pt-14 sm:pb-10">
+					<BreadcrumbTrail items={trail} tone="light" />
+					<div className="section-head max-w-3xl">
+						{eyebrow ? (
+							<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+								{eyebrow}
+							</p>
+						) : null}
+						<h1 className="type-headline motion-rise text-foreground">
+							{title}
+						</h1>
+						<p className="type-lead motion-rise motion-delay-1 text-muted-foreground max-w-2xl">
+							{description}
+						</p>
+					</div>
+					{meta ? (
+						<div className="motion-fade motion-delay-2 text-muted-foreground mt-6">
+							{meta}
+						</div>
+					) : null}
+				</div>
+
+				{image ? (
+					<figure className="hero-article-media motion-rise motion-delay-2">
+						<div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[2/1]">
+							<Image
+								alt={imageAlt?.trim() || title}
+								className="object-cover"
+								fill
+								priority
+								quality={75}
+								sizes="100vw"
+								src={image}
+							/>
+						</div>
+					</figure>
+				) : null}
+			</header>
+		)
+	}
+
+	if (kind === "service") {
+		const actions = showActions ?? true
+
+		return (
+			<header className="hero-service">
+				<div className="container-shell pt-10 pb-8 sm:pt-12 sm:pb-10">
+					<BreadcrumbTrail items={trail} tone="light" />
+					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+						<div className="section-head max-w-2xl">
+							{eyebrow ? (
+								<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+									{eyebrow}
+								</p>
+							) : null}
+							<h1 className="type-headline motion-rise text-foreground">
+								{title}
+							</h1>
+							<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
+								{description}
+							</p>
+						</div>
+						{actions ? (
+							<div className="motion-rise motion-delay-2 flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+								<HeroCallLink
+									className={cn(
+										buttonVariants({ size: "xl" }),
+										"w-full sm:w-auto",
+									)}
+								/>
+								<Link
+									className={cn(
+										buttonVariants({ variant: "outline", size: "xl" }),
+										"w-full sm:w-auto",
+									)}
+									href="/contact"
+									prefetch
+								>
+									Request service
+								</Link>
+							</div>
+						) : null}
+					</div>
+				</div>
+
+				{image ? (
+					<div className="hero-service-media motion-fade">
+						<div className="relative h-[min(52vw,22rem)] w-full sm:h-[min(42vw,28rem)] lg:h-[32rem]">
+							<Image
+								alt={imageAlt?.trim() || title}
+								className="object-cover"
+								fill
+								priority
+								quality={70}
+								sizes="100vw"
+								src={image}
+							/>
+							<div
+								aria-hidden="true"
+								className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent"
+							/>
+						</div>
+					</div>
+				) : null}
+			</header>
+		)
+	}
+
+	if (kind === "index") {
+		const tip = indexKind === "tip"
+
+		return (
+			<header
+				className={cn(
+					"hero-index border-border border-b",
+					tip ? "hero-index-tip" : "hero-index-service",
+				)}
+			>
+				<div className="container-shell py-12 sm:py-16 lg:py-20">
+					<BreadcrumbTrail items={trail} tone="light" />
+					<div
+						className={cn(
+							"grid items-end gap-8",
+							image ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]" : undefined,
+						)}
+					>
+						<div className="section-head max-w-2xl">
+							{eyebrow ? (
+								<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+									{eyebrow}
+								</p>
+							) : null}
+							<h1 className="type-headline motion-rise text-foreground">
+								{title}
+							</h1>
+							<p className="type-lead motion-rise motion-delay-1 text-muted-foreground max-w-xl">
+								{description}
+							</p>
+						</div>
+						{image ? (
+							<div className="motion-rise motion-delay-2 relative hidden aspect-[4/3] overflow-hidden rounded-md lg:block">
+								<Image
+									alt={imageAlt?.trim() || title}
+									className="object-cover"
+									fill
+									priority
+									quality={65}
+									sizes="22rem"
+									src={image}
+								/>
+							</div>
+						) : null}
+					</div>
+				</div>
+			</header>
+		)
+	}
+
+	/* Quiet utility / company / area page hero. Less CTA noise than before. */
+	const actions = showActions ?? true
+
 	return (
-		<section className="surface-hero tex-grid tex-glow overflow-hidden">
+		<header className="hero-page border-border relative overflow-hidden border-b">
 			{image ? (
 				<div
 					aria-hidden="true"
-					className={cn(
-						"pointer-events-none absolute inset-y-0 right-0 -z-10 w-full",
-						marketing ? "lg:w-2/3" : "lg:w-3/5",
-					)}
+					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-[0.14] lg:w-1/2"
 				>
 					<Image
 						alt=""
-						className={cn(
-							"object-cover",
-							marketing ? "opacity-45" : "opacity-30",
-						)}
+						className="object-cover"
 						fill
 						priority
-						quality={marketing ? 65 : 55}
-						sizes="(min-width: 1024px) 60vw, 100vw"
+						quality={50}
+						sizes="50vw"
 						src={image}
 					/>
-					<div className="from-dark-1 via-dark-1/70 absolute inset-0 bg-linear-to-r to-transparent" />
-					<div className="from-dark-1 absolute inset-0 bg-linear-to-t to-transparent" />
+					<div className="from-background via-background/80 absolute inset-0 bg-linear-to-r to-transparent" />
+					<div className="from-background absolute inset-0 bg-linear-to-t to-transparent" />
 				</div>
 			) : null}
 
-			{/* Alt text lives on a real, non-decorative image only when it carries
-			    meaning; the background copy above is aria-hidden. */}
 			{image ? (
 				<span className="sr-only">{imageAlt?.trim() || title}</span>
 			) : null}
 
-			<div
-				className={cn(
-					"container-shell relative",
-					marketing ? "py-16 sm:py-20 lg:py-24" : "py-14 sm:py-16 lg:py-20",
-				)}
-			>
-				<BreadcrumbTrail items={trail} />
-
-				<div className="section-head max-w-3xl">
-					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
-					<h1 className="type-headline text-white">{title}</h1>
-					<p className="type-lead text-on-dark-muted max-w-2xl">
+			<div className="container-shell relative py-12 sm:py-16 lg:py-20">
+				<BreadcrumbTrail items={trail} tone="light" />
+				<div className="section-head max-w-2xl">
+					{eyebrow ? (
+						<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+							{eyebrow}
+						</p>
+					) : null}
+					<h1 className="type-headline motion-rise text-foreground">{title}</h1>
+					<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
 						{description}
 					</p>
 				</div>
-
-				{/*
-				  Mobile header already exposes a phone icon, so the hero leads with
-				  Quote there and keeps the big Call button from sm up.
-				*/}
-				<div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-					<a
-						className={cn(
-							buttonVariants({ size: "xl" }),
-							"hidden w-full sm:inline-flex sm:w-auto",
-						)}
-						href={siteConfig.phoneHref}
-					>
-						<Phone aria-hidden="true" />
-						Call {siteConfig.phone}
-					</a>
-					<Link
-						className={cn(
-							buttonVariants({ size: "xl" }),
-							"w-full sm:hidden",
-						)}
-						href="/contact"
-						prefetch
-					>
-						Get a Free Quote
-					</Link>
-					<Link
-						className={cn(
-							buttonVariants({ variant: "inverse", size: "xl" }),
-							"hidden w-full sm:inline-flex sm:w-auto",
-						)}
-						href="/contact"
-						prefetch
-					>
-						Get a Free Quote
-					</Link>
-					<a
-						className="text-on-dark-muted hover:text-primary-bright inline-flex items-center justify-center gap-2 text-sm font-bold transition-colors sm:hidden"
-						href={siteConfig.phoneHref}
-					>
-						<Phone className="size-4" aria-hidden="true" />
-						Or call {siteConfig.phone}
-					</a>
-				</div>
+				{actions ? (
+					<div className="motion-rise motion-delay-2 mt-8">
+						<Link
+							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
+							href="/contact"
+							prefetch
+						>
+							Get in touch
+						</Link>
+					</div>
+				) : null}
 			</div>
-		</section>
+		</header>
 	)
 }

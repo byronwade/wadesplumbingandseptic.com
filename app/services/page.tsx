@@ -21,11 +21,13 @@ export default function ServicesPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities."
-				eyebrow="Browse Services"
+				description="Residential plumbing, commercial plumbing, and septic work across Santa Cruz County and selected Santa Clara County communities."
+				eyebrow="What we do"
 				image="/images/work/commercial-plumbing-installation.webp"
 				imageAlt="Professional plumbing installation"
-				title="All Plumbing & Septic Services"
+				indexKind="service"
+				title="Plumbing & Septic Services"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">

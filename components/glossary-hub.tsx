@@ -53,7 +53,9 @@ export function GlossaryTopicHub({
 				eyebrow={hub.eyebrow}
 				image={hub.image}
 				imageAlt={hub.imageAlt}
+				showActions={false}
 				title={hub.title}
+				variant="page"
 			/>
 
 			<section className="container-shell section-y space-y-[var(--space-block)]">

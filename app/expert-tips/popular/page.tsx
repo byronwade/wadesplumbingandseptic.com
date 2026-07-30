@@ -25,8 +25,10 @@ export default function PopularTipsPage() {
 				eyebrow="Most popular"
 				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
+				indexKind="tip"
 				parent={{ href: "/expert-tips" as Route, label: "Expert Tips" }}
 				title="Most Popular Guides"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">
