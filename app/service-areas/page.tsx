@@ -50,6 +50,8 @@ export default function ServiceAreasPage() {
 		conversion: normalizeConversion(null, {
 			title: "Plumbing & Septic Service Areas",
 			description,
+			slug: "service-areas",
+			eyebrow: "Local Coverage",
 		}),
 	}
 
