@@ -6,6 +6,7 @@ on:
     paths:
       - "content/**"
       - "lib/content.ts"
+      - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
       - ".github/workflows/content.yml"
@@ -14,6 +15,7 @@ on:
     paths:
       - "content/**"
       - "lib/content.ts"
+      - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
       - ".github/workflows/content.yml"
@@ -40,6 +42,9 @@ jobs:
 
       - name: Content frontmatter + route integrity
         run: node scripts/ci/validate-content.mjs
+
+      - name: Glossary term integrity
+        run: node scripts/ci/validate-glossary.mjs
 
   route-manifest:
     name: Route manifest smoke
