@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
@@ -18,6 +19,8 @@ export const metadata: Metadata = buildPageMetadata({
 
 async function ServiceDirectory() {
 	"use cache"
+	cacheTag("content:services")
+	cacheLife("max")
 
 	const services = await getCollection("services")
 	const items = services.map((service) =>
