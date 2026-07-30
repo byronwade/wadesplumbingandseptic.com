@@ -178,11 +178,6 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/sitemap/:id(\\d+).xml",
-				destination: "/sitemap.xml",
-				permanent: true,
-			},
-			{
 				source: "/service-offerings/hydro-jetting-for-drain-clearing",
 				destination: "/service-offerings/hydro-jetting",
 				permanent: true,
