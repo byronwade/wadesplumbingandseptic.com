@@ -96,7 +96,11 @@ export function ContentPage({
 					) : null}
 					<MarkdownContent content={document.content} demoteH1 />
 				</div>
-				<aside className="lg:sticky lg:top-[var(--header-offset)] lg:self-start">
+				{/*
+				  Desktop-only sidebar. On mobile this sat between the article and the
+				  end conversion CTA, so Call / Request / Call stacked back to back.
+				*/}
+				<aside className="hidden lg:sticky lg:top-[var(--header-offset)] lg:block lg:self-start">
 					<ContactCta
 						compact
 						description="Tell us what is happening and get practical options from a local licensed team."
