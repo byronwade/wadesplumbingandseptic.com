@@ -55,10 +55,12 @@ export default function ServiceAreasPage() {
 		<main id="main-content">
 			<ContentHero
 				description={description}
-				eyebrow="Local Coverage"
+				eyebrow="Local coverage"
 				image="/images/locations/santa-cruz-redwoods.webp"
 				imageAlt="Coastal redwoods in the Santa Cruz County service area"
+				showActions={false}
 				title="Plumbing & septic service areas"
+				variant="page"
 			/>
 
 			<section className="section-y overflow-x-clip">

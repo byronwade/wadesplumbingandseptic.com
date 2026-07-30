@@ -26,8 +26,10 @@ export default function TrendingServicesPage() {
 				eyebrow="Trending now"
 				image="/images/work/drain-cleaning-equipment.webp"
 				imageAlt="Drain cleaning equipment on a job site"
+				indexKind="service"
 				parent={{ href: "/services" as Route, label: "Services" }}
 				title="Trending Services"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">

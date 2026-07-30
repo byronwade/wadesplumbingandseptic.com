@@ -26,8 +26,10 @@ export default function TrendingTipsPage() {
 				eyebrow="Trending now"
 				image="/images/team/byron-working.webp"
 				imageAlt="Professional plumbing maintenance"
+				indexKind="tip"
 				parent={{ href: "/expert-tips" as Route, label: "Expert Tips" }}
 				title="Trending Guides"
+				variant="index"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">

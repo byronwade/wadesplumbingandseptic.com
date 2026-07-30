@@ -18,6 +18,7 @@ tags:
 image: /images/wordpress/img-1838-1.webp
 imageAlt: 'Understanding Hard Water: Impact on Santa Cruz County Homes'
 ---
+
 When you turn on the tap, you probably aren’t thinking about what’s in your water, just that it’s flowing. But beyond the basics of hydration and hygiene, the quality of your water can significantly impact your home, plumbing, and health. If your water contains high levels of calcium and magnesium, it’s known as hard water, and it could be silently damaging your plumbing and appliances.
 
 ![Water treatment tank system](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
@@ -102,7 +103,7 @@ At Wade's Plumbing & Septic, we are committed to being your trusted local expert
 
 ### How much does it cost to address hard water issues in Santa Cruz County homes?
 
-The cost to address hard water issues in Santa Cruz County can vary depending on the specific solutions required. Generally, prices range from $500 to $2,500 for water softening systems. Wade's Plumbing & Septic provides a detailed estimate after assessing your homeÃ¢â‚¬â„¢s needs.
+The cost to address hard water issues in Santa Cruz County can vary depending on the specific solutions required. Generally, prices range from $500 to $2,500 for water softening systems. Wade's Plumbing & Septic provides a detailed estimate after assessing your home's needs.
 
 ### What should I expect during a hard water service appointment?
 
@@ -110,8 +111,8 @@ During a hard water service appointment, our team will assess your water quality
 
 ### How long does it typically take to resolve hard water problems?
 
-Resolving hard water problems can typically take one to two days, depending on the complexity of the installation or repairs needed. Our experienced technicians work efficiently to ensure your homeÃ¢â‚¬â„¢s water quality is enhanced promptly.
+Resolving hard water problems can typically take one to two days, depending on the complexity of the installation or repairs needed. Our experienced technicians work efficiently to ensure your home's water quality is enhanced promptly.
 
 ### Why choose Wade's Plumbing & Septic for hard water solutions in Santa Cruz County?
 
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. We offer customized solutions, reliable service, and a commitment to improving your homeÃ¢â‚¬â„¢s water quality with professionalism and care.
+Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. We offer customized solutions, reliable service, and a commitment to improving your home's water quality with professionalism and care.

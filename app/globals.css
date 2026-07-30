@@ -508,31 +508,13 @@
 	}
 
 	/*
-	  Filter chips. Scrolls with snap points on narrow screens rather than
-	  wrapping to three ragged lines, and wraps normally once there is room.
+	  Filter chips (desktop archive UI). Mobile uses labeled selects instead,
+	  so this rail always wraps rather than horizontal-snapping.
 	*/
 	.chip-rail {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
-		overflow-x: auto;
-		padding-bottom: 0.25rem;
-		scroll-snap-type: x proximity;
-		scrollbar-width: none;
-	}
-
-	.chip-rail::-webkit-scrollbar {
-		display: none;
-	}
-
-	.chip-rail > * {
-		scroll-snap-align: start;
-	}
-
-	@media (width >= 48rem) {
-		.chip-rail {
-			flex-wrap: wrap;
-			overflow-x: visible;
-		}
 	}
 
 	/*
@@ -654,6 +636,68 @@
 		background: var(--dark-1);
 		color: var(--on-dark);
 		box-shadow: var(--hairline-top);
+	}
+
+	/*
+	  Interior heroes (not the home cinematic). Each template owns a distinct
+	  first viewport so services, tips, and utility pages do not share one dark
+	  washed slab.
+	*/
+	.hero-article {
+		background:
+			radial-gradient(
+				ellipse 70% 55% at 0% 0%,
+				color-mix(in srgb, var(--primary) 8%, transparent),
+				transparent 70%
+			),
+			var(--background);
+	}
+
+	/*
+	  Featured media stays inside the same shell as the title/copy so mobile
+	  and desktop share one aligned column instead of breaking to viewport edges.
+	*/
+	.hero-article-media,
+	.hero-service-media {
+		width: 100%;
+		background: var(--muted);
+	}
+
+	.hero-service {
+		background: var(--background);
+	}
+
+	.footer-credit {
+		background:
+			linear-gradient(
+				180deg,
+				color-mix(in srgb, black 35%, var(--ink)) 0%,
+				oklch(0.12 0.008 68) 100%
+			);
+	}
+
+	.hero-index-tip {
+		background:
+			radial-gradient(
+				ellipse 55% 70% at 100% 0%,
+				color-mix(in srgb, var(--primary) 7%, transparent),
+				transparent 65%
+			),
+			var(--sunken);
+	}
+
+	.hero-index-service {
+		background:
+			linear-gradient(
+				135deg,
+				color-mix(in srgb, var(--ink) 4%, var(--background)) 0%,
+				var(--background) 55%,
+				color-mix(in srgb, var(--primary) 5%, var(--background)) 100%
+			);
+	}
+
+	.hero-page {
+		background: var(--sunken);
 	}
 
 	/*

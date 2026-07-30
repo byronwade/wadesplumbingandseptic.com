@@ -15,7 +15,6 @@ image: >-
   /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
 imageAlt: Warning sign on a wooden post
 ---
-In This Guide3 min read
 
 ![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)
 

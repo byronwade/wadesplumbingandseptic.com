@@ -152,6 +152,48 @@ export function SiteFooter() {
 					</div>
 				</div>
 			</div>
+
+			<div className="footer-credit relative overflow-hidden">
+				<div
+					aria-hidden="true"
+					className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_120%_at_50%_-20%,color-mix(in_srgb,var(--primary)_28%,transparent),transparent_55%)]"
+				/>
+				<div
+					aria-hidden="true"
+					className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
+				/>
+				<div className="container-shell relative flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-3.5 sm:py-10">
+					<p className="text-primary-bright/90 font-mono text-[0.625rem] font-semibold tracking-[0.22em] uppercase">
+						Also a tech company
+					</p>
+					<p className="max-w-[22rem] text-[0.9375rem] leading-snug text-pretty text-white/78 sm:max-w-lg sm:text-base sm:leading-relaxed">
+						Wade&apos;s Plumbing &amp; Septic and Wade&apos;s Inc. were developed
+						and designed by{" "}
+						<a
+							className="font-semibold text-white underline decoration-white/25 underline-offset-[0.2em] transition-colors hover:text-primary-bright hover:decoration-primary-bright/50"
+							href="https://byronwade.com"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							Byron Wade
+						</a>
+					</p>
+					<p className="flex items-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
+						<span>Made with 🩷</span>
+						<span aria-hidden="true" className="text-white/20">
+							·
+						</span>
+						<a
+							className="transition-colors hover:text-white"
+							href="https://byronwade.com"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							byronwade.com
+						</a>
+					</p>
+				</div>
+			</div>
 		</footer>
 	)
 }

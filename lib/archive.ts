@@ -93,6 +93,21 @@ export function buildArchiveFilters(items: ArchiveItem[]): ArchiveFilter[] {
 		.sort((a, b) => b.count - a.count || a.label.localeCompare(b.label))
 }
 
+/**
+ * Resolve a URL category param against the filters built from the current
+ * inventory. Unknown keys (typos, stale bookmarks) fall back to "all" so the
+ * archive does not render an empty, unselectable state.
+ */
+export function resolveArchiveCategory(
+	filters: ArchiveFilter[],
+	categoryKey: string | null | undefined,
+): string | null {
+	if (!categoryKey || categoryKey === "all") return null
+	return filters.some((filter) => filter.key === categoryKey)
+		? categoryKey
+		: null
+}
+
 export function filterArchiveItems(
 	items: ArchiveItem[],
 	categoryKey: string | null,

@@ -15,7 +15,6 @@ image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
 imageAlt: Stacked concrete pipes ready for installation
 ---
-In This Guide4 min read
 
 ![Sewer and drain service equipment](/images/work/drain-cleaning-equipment.webp)
 

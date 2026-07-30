@@ -17,6 +17,7 @@ tags:
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping service illustration
 ---
+
 For homeowners in Santa Cruz County, understanding septic pumping costs is crucial for maintaining an efficient and trouble-free septic system. Regular pumping not only prevents system failures but also helps you avoid expensive repairs and replacements. By ensuring your septic system is well-maintained, you can steer clear of extensive repair needs, such as
 
 ![Plumbing emergency warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)

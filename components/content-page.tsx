@@ -13,6 +13,12 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
+import {
+	estimateReadingMinutes,
+	formatReadingTime,
+} from "@/lib/reading-time"
+import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
+
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -23,6 +29,15 @@ import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { VirtualBusinessCard } from "@/components/virtual-business-card"
+
+function formatPostDate(date: string) {
+	return new Intl.DateTimeFormat("en-US", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+		timeZone: "UTC",
+	}).format(new Date(`${date}T00:00:00Z`))
+}
 
 export function ContentPage({
 	document,
@@ -70,36 +85,47 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
-	const postMeta = isPost ? (
-		<div className="border-border mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
-			{document.date ? (
-				<p className="type-meta font-bold">
-					Published{" "}
-					<time dateTime={document.date}>
-						{new Intl.DateTimeFormat("en-US", {
-							year: "numeric",
-							month: "long",
-							day: "numeric",
-							timeZone: "UTC",
-						}).format(new Date(`${document.date}T00:00:00Z`))}
-					</time>
-					{document.updated ? ` · Updated ${document.updated}` : null}
-				</p>
-			) : (
-				<span />
-			)}
-			{viewStats ? (
-				viewStats.unique > 0 || viewStats.views > 0 ? (
-					<PageViewsStat
-						totalViews={viewStats.views}
-						trendingScore={viewStats.trending}
-						uniqueViews={viewStats.unique}
-					/>
-				) : (
-					<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
-						New guide · your visit counts
-					</p>
-				)
+	const articleBody =
+		isPost && document.image
+			? stripLeadingMarkdownImage(document.content)
+			: document.content
+
+	const readingTime = isPost
+		? formatReadingTime(estimateReadingMinutes(articleBody))
+		: null
+
+	const articleMeta = isPost ? (
+		<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+			<p className="type-meta text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-bold">
+				{document.date ? (
+					<span>
+						Published{" "}
+						<time dateTime={document.date}>
+							{formatPostDate(document.date)}
+						</time>
+					</span>
+				) : null}
+				{document.date && readingTime ? (
+					<span aria-hidden="true" className="text-border">
+						·
+					</span>
+				) : null}
+				{readingTime ? <span>{readingTime}</span> : null}
+				{document.updated ? (
+					<>
+						<span aria-hidden="true" className="text-border">
+							·
+						</span>
+						<span>Updated {document.updated}</span>
+					</>
+				) : null}
+			</p>
+			{viewStats && (viewStats.unique > 0 || viewStats.views > 0) ? (
+				<PageViewsStat
+					totalViews={viewStats.views}
+					trendingScore={viewStats.trending}
+					uniqueViews={viewStats.unique}
+				/>
 			) : null}
 		</div>
 	) : null
@@ -112,9 +138,16 @@ export function ContentPage({
 				eyebrow={document.eyebrow ?? document.category}
 				image={document.image}
 				imageAlt={document.imageAlt}
+				meta={articleMeta}
+				pageCta={
+					document.slug === "contact" || document.slug === "contact-call-first"
+						? "call"
+						: "contact"
+				}
 				parent={parent}
+				showActions={!isPost}
 				title={document.title}
-				variant={marketing ? "marketing" : "default"}
+				variant={isPost ? "article" : "page"}
 			/>
 
 			{document.slug === "contact" ? (
@@ -136,20 +169,20 @@ export function ContentPage({
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} variant="rail" />
 					) : null}
-					{isPost ? (
-						<div className="container-shell pt-[var(--space-section)]">
-							{postMeta}
-						</div>
-					) : null}
-					<ContentSectionBands content={document.content} />
+					<ContentSectionBands content={articleBody} />
 				</>
 			) : (
-				<article className="article-shell section-y">
-					{postMeta}
+				<article
+					className={
+						isPost
+							? "article-shell pb-[var(--space-section-y)] pt-8 sm:pt-10"
+							: "article-shell section-y"
+					}
+				>
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />
 					) : null}
-					<MarkdownContent content={document.content} demoteH1 />
+					<MarkdownContent content={articleBody} demoteH1 />
 				</article>
 			)}
 

@@ -17,7 +17,7 @@
 		"ci:glossary": "node scripts/ci/validate-glossary.mjs",
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
 		"ci:search": "npx --yes tsx scripts/ci/test-search.ts",
-		"ci:archive": "npx --yes tsx scripts/ci/test-archive.ts",
+		"ci:archive": "npx --yes tsx scripts/ci/test-archive.ts && npx --yes tsx scripts/ci/audit-archive-filters.ts",
 		"ci:related": "npx --yes tsx scripts/ci/test-related-content.ts",
 		"ci:page-views": "npx --yes tsx scripts/ci/test-page-views.ts",
 		"ci:sitemap": "npx --yes tsx scripts/ci/test-sitemap.ts",

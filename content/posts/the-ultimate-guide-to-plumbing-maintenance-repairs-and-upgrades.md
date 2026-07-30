@@ -19,6 +19,7 @@ tags:
 image: /images/work/new-construction-rough-in.webp
 imageAlt: New construction plumbing rough-in
 ---
+
 As a homeowner, you know that maintaining your home is essential to keep it in good condition and avoid costly repairs. One of the most important systems in your home is the plumbing system. This system is responsible for providing clean water and removing waste, and it's essential to your daily life. In this guide, we'll cover everything you need to know about plumbing maintenance, repairs, and upgrades.
 
 ![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
@@ -102,7 +103,7 @@ Wade's Plumbing & Septic is a trusted local provider with extensive experience i
 
 "Our go-to plumbing experts in Santa Cruz County. Always a job well done!" (Emily, Watsonville)
 
-ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ 5-star rating
+★★★★★ 5-star rating
 
 Licensed Contractor: C-42 for California
 

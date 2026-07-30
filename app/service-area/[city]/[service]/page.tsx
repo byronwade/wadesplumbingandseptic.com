@@ -106,6 +106,7 @@ export default async function CityServicePage({
 				image={image}
 				imageAlt={`${page.serviceTitle} in ${location.name}`}
 				title={`${page.serviceTitle} in ${location.name}`}
+				variant="service"
 			/>
 
 			<section className="container-shell section-y">

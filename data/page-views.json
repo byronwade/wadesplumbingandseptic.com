@@ -1,89 +1,127 @@
 {
 	"version": 1,
-	"updatedAt": "2026-07-30T03:58:46.923Z",
+	"updatedAt": "2026-07-30T12:50:00.000Z",
 	"pages": {
 		"service:backflow-prevention-installation": {
 			"unique": 18,
 			"views": 40,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 1,
+				"2026-07-29": 1,
+				"2026-07-28": 1
 			}
 		},
 		"service:backflow-prevention-testing": {
 			"unique": 25,
 			"views": 51,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 2,
+				"2026-07-29": 2,
+				"2026-07-28": 1
 			}
 		},
 		"service:commercial-drain-cleaning": {
 			"unique": 32,
 			"views": 62,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 8,
+				"2026-07-29": 7,
+				"2026-07-28": 6
 			}
 		},
 		"service:commercial-plumbing-maintenance": {
 			"unique": 39,
 			"views": 73,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 3,
+				"2026-07-29": 2,
+				"2026-07-28": 2
 			}
 		},
 		"service:commercial-septic-services": {
 			"unique": 46,
 			"views": 84,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 4,
+				"2026-07-29": 3,
+				"2026-07-28": 2
 			}
 		},
 		"service:drain-cleaning": {
 			"unique": 53,
 			"views": 95,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 2,
+				"2026-07-29": 2,
+				"2026-07-28": 1
+			}
+		},
+		"service:video-inspections": {
+			"unique": 12,
+			"views": 22,
+			"daily": {
+				"2026-07-30": 10,
+				"2026-07-29": 9,
+				"2026-07-28": 8
 			}
 		},
 		"tip:5-signs-you-need-to-call-a-professional-plumber": {
 			"unique": 12,
 			"views": 25,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 9,
+				"2026-07-29": 8,
+				"2026-07-28": 7
 			}
 		},
 		"tip:5-types-of-toilets-how-to-choose-the-right-one-for-your-home": {
 			"unique": 21,
 			"views": 39,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 1,
+				"2026-07-29": 1
 			}
 		},
 		"tip:6-signs-you-have-a-hidden-water-leak": {
 			"unique": 30,
 			"views": 53,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 2,
+				"2026-07-29": 2,
+				"2026-07-28": 1
 			}
 		},
 		"tip:a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county": {
 			"unique": 39,
 			"views": 67,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 3,
+				"2026-07-29": 2
 			}
 		},
 		"tip:efficient-water-filtration-santa-cruz": {
 			"unique": 48,
 			"views": 81,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 2,
+				"2026-07-29": 1
 			}
 		},
 		"tip:emergency-septic-solutions-santa-cruz": {
 			"unique": 57,
 			"views": 95,
 			"daily": {
-				"2026-07-30": 9
+				"2026-07-30": 1,
+				"2026-07-29": 1
+			}
+		},
+		"tip:slow-drains-solutions-santa-cruz": {
+			"unique": 9,
+			"views": 14,
+			"daily": {
+				"2026-07-30": 8,
+				"2026-07-29": 7,
+				"2026-07-28": 6
 			}
 		}
 	}

@@ -14,7 +14,6 @@ tags:
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank septic system
 ---
-In This Guide4 min read
 
 ![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
 

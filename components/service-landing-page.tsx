@@ -69,7 +69,7 @@ export function ServiceLandingPage({
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
 				title={service.title}
-				variant="marketing"
+				variant="service"
 			/>
 
 			<section className="border-border bg-card border-b">
