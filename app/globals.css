@@ -145,6 +145,12 @@
 	   headline → content + service hero h1 (was misusing display)
 	   title    → section h2
 	   subtitle → sub-section h2/h3 (the step that was missing entirely) */
+	/*
+	  Cinematic step, above display. Sized off vw so the headline scales to the
+	  measure of the viewport and reads edge to edge rather than sitting as a
+	  block of text on a photo.
+	*/
+	--type-cinematic: clamp(3.25rem, 13vw, 9rem);
 	--type-display: clamp(2.35rem, 5.4vw, 4.25rem);
 	--type-headline: clamp(1.95rem, 3.6vw, 3rem);
 	--type-title: clamp(1.65rem, 2.6vw, 2.25rem);
@@ -179,6 +185,9 @@
 	--measure: 60ch;
 	--sidebar-w: 20.5rem;
 	--header-offset: 6.5rem;
+	/* Visible header height, used to size the cinematic hero to the viewport.
+	   Matches the 64px bar on phones; the utility bar adds 28px from sm up. */
+	--header-h: 4rem;
 
 	/* Focus-ring offset colour. Surfaces override it so rings never halo
 	   white on ink panels. Consumed by the button/control base classes. */
@@ -234,6 +243,18 @@
 	--dark-1: oklch(0.195 0.008 68);
 	--dark-2: oklch(0.232 0.009 68);
 	--dark-3: oklch(0.268 0.01 68);
+}
+
+/*
+  Must stay unlayered. Declared inside @layer base it lost to the unlayered
+  :root block above, so --header-h stayed at the phone value and the cinematic
+  hero came out 40px taller than the viewport, clipping its bottom bar.
+*/
+@media (width >= 40rem) {
+	:root {
+		/* Utility bar (28px) + main bar (72px) + hairline. */
+		--header-h: 6.5rem;
+	}
 }
 
 /*
@@ -608,6 +629,89 @@
 	}
 
 	/*
+	  Cinematic hero. Sized to the visible viewport minus the header, so the whole
+	  frame is on screen at once instead of being cropped by the sticky bar.
+
+	  svh, not vh or dvh: vh ignores mobile browser chrome and overflows, dvh
+	  changes as the URL bar hides and makes the headline resize while you scroll.
+	  svh is the small (chrome-visible) viewport, which is stable.
+	*/
+	.hero-cinematic {
+		--border: color-mix(in srgb, white 12%, transparent);
+		--muted-foreground: var(--on-dark-muted);
+		--ring-offset: oklch(0 0 0);
+		position: relative;
+		isolation: isolate;
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100svh - var(--header-h));
+		overflow: clip;
+		background: var(--ink);
+		color: var(--on-dark);
+	}
+
+	/*
+	  Bottom-weighted scrim. Two stops rather than a flat overlay: the top of the
+	  frame stays open so the photograph reads as a photograph, and the weight
+	  gathers only where the type sits.
+	*/
+	.hero-cinematic::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background:
+			linear-gradient(
+				to top,
+				oklch(0 0 0 / 0.88) 0%,
+				oklch(0 0 0 / 0.62) 26%,
+				oklch(0 0 0 / 0.18) 58%,
+				oklch(0 0 0 / 0.32) 100%
+			),
+			linear-gradient(to right, oklch(0 0 0 / 0.45) 0%, transparent 55%);
+	}
+
+	/*
+	  Slow drift on the hero photograph. Cinematic movement comes from the frame,
+	  not from elements sliding in, so this is the only motion in the band.
+	*/
+	.media-drift {
+		will-change: transform;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.media-drift {
+			animation: drift 28s ease-in-out infinite alternate;
+		}
+	}
+
+	/* Scroll cue: a hairline that pulses down the page. */
+	.scroll-cue {
+		position: relative;
+		display: block;
+		width: 1px;
+		height: 1.75rem;
+		overflow: hidden;
+		background: color-mix(in srgb, white 18%, transparent);
+	}
+
+	.scroll-cue::after {
+		content: "";
+		position: absolute;
+		inset-inline: 0;
+		top: 0;
+		height: 45%;
+		background: var(--primary-bright);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.scroll-cue::after {
+			animation: cue 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+		}
+	}
+
+	/*
 	  Floating dark panel: mega menu, popovers. --dark-2 with a full hairline and
 	  a real drop shadow, so it reads as sitting above the page rather than being
 	  cut out of the header.
@@ -713,6 +817,7 @@
 	}
 
 	/* Type */
+	.type-cinematic,
 	.type-display,
 	.type-headline,
 	.type-title,
@@ -730,12 +835,25 @@
 	  headings keep their normal half-leading.
 	*/
 	@supports (text-box: trim-both cap alphabetic) {
+		.type-cinematic,
 		.type-display,
 		.type-headline,
 		.type-title,
 		.type-subtitle {
 			text-box: trim-both cap alphabetic;
 		}
+	}
+
+	/*
+	  Cinematic headline. Very tight leading and negative tracking so stacked
+	  lines lock into a single mass, the way a title card does. text-wrap is left
+	  alone here: at this size the line breaks are authored with <br>, and balance
+	  would fight them.
+	*/
+	.type-cinematic {
+		font-size: var(--type-cinematic);
+		line-height: 0.9;
+		letter-spacing: -0.045em;
 	}
 
 	.type-display {
@@ -995,6 +1113,26 @@
 	}
 	to {
 		height: 0;
+	}
+}
+
+/* Ken Burns drift on the hero frame. */
+@keyframes drift {
+	from {
+		transform: scale(1.06) translate3d(0, 0, 0);
+	}
+	to {
+		transform: scale(1.16) translate3d(-1.5%, -1.5%, 0);
+	}
+}
+
+@keyframes cue {
+	0% {
+		transform: translateY(-100%);
+	}
+	60%,
+	100% {
+		transform: translateY(340%);
 	}
 }
 
