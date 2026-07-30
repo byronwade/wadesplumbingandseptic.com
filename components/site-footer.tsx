@@ -76,6 +76,9 @@ export function SiteFooter() {
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
+						<p className="mt-4 text-sm leading-relaxed text-white/65">
+							{siteConfig.address.display}
+						</p>
 						<p className="mt-4 text-xs font-bold text-white/45">
 							{siteConfig.licenses}
 						</p>

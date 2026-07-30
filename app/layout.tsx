@@ -94,6 +94,14 @@ const localBusinessSchema = {
 	logo: `${siteConfig.url}/images/brand/wades-mark.webp`,
 	image: `${siteConfig.url}/images/locations/santa-cruz-plumber.webp`,
 	priceRange: "$$",
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: siteConfig.address.street,
+		addressLocality: siteConfig.address.city,
+		addressRegion: siteConfig.address.region,
+		postalCode: siteConfig.address.postalCode,
+		addressCountry: "US",
+	},
 	areaServed: [
 		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
 		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },

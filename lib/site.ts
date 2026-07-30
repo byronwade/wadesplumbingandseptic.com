@@ -7,8 +7,15 @@ export const siteConfig = {
 	phone: "831.225.4344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
-	hours: "Mon - Fri 9:00am - 5:00pm",
-	licenses: "CA: CSLB #1087260",
+	hours: "Mon to Fri 9:00am to 5:00pm",
+	address: {
+		street: "7737 Highway 9",
+		city: "Ben Lomond",
+		region: "CA",
+		postalCode: "95005",
+		display: "7737 Highway 9, Ben Lomond, CA 95005",
+	},
+	licenses: "CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
 	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
 	social: {
 		facebook: "https://www.facebook.com/wadesplumbingandseptic/",
