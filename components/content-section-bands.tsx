@@ -24,7 +24,10 @@ function extractBulletItems(body: string) {
 }
 
 function classifyBand(heading: string, body: string): BandKind {
-	if (/\bfaqs?\b|frequently asked/i.test(heading) || extractFaqPairs(body).length >= 2) {
+	if (
+		/\bfaqs?\b|frequently asked/i.test(heading) ||
+		extractFaqPairs(body).length >= 2
+	) {
 		return "faq"
 	}
 
@@ -54,9 +57,7 @@ function BulletPanels({ items }: { items: string[] }) {
 						<Check aria-hidden="true" className="size-4" />
 					</span>
 					<span className="leading-snug">
-						{item
-							.replace(/\*\*/g, "")
-							.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
+						{item.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
 					</span>
 				</li>
 			))}
@@ -79,24 +80,24 @@ function SectionBand({
 	return (
 		<section className={cn("section-y", surface)}>
 			<div className="container-shell">
-				<div className="section-head reveal mx-auto max-w-3xl text-center">
+				<div className="section-head reveal max-w-3xl">
 					<h2 className="type-title">{heading}</h2>
 				</div>
 
 				{kind === "bullets" ? (
-					<div className="reveal mx-auto max-w-5xl">
+					<div className="reveal max-w-5xl">
 						<BulletPanels items={extractBulletItems(body)} />
 					</div>
 				) : null}
 
 				{kind === "faq" ? (
-					<div className="reveal mx-auto mt-[var(--space-block)] max-w-3xl">
+					<div className="reveal mt-[var(--space-block)] max-w-3xl">
 						<HomeFaq faqs={extractFaqPairs(body)} />
 					</div>
 				) : null}
 
 				{kind === "prose" ? (
-					<div className="reveal mx-auto mt-[var(--space-block)] max-w-3xl">
+					<div className="reveal mt-[var(--space-block)] max-w-3xl">
 						<MarkdownContent content={body} demoteH1 />
 					</div>
 				) : null}
@@ -129,7 +130,7 @@ export function ContentSectionBands({ content }: { content: string }) {
 			{intro ? (
 				<section className="section-y">
 					<div className="container-shell">
-						<div className="reveal mx-auto max-w-3xl">
+						<div className="reveal max-w-3xl">
 							<MarkdownContent content={intro} demoteH1 />
 						</div>
 					</div>

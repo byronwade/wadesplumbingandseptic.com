@@ -1,12 +1,12 @@
-import { Check } from "@/components/icons"
+import { BadgeCheck } from "@/components/icons"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
-import { ContentSectionBands } from "@/components/content-section-bands"
 import { JsonLd } from "@/components/json-ld"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
+import { ServiceContentSections } from "@/components/service-content-sections"
 import type { ContentDocument } from "@/lib/content"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
@@ -14,11 +14,11 @@ import { getServiceImage } from "@/lib/service-images"
 import { breadcrumbJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
-const promises = [
-	"Clear recommendations before work begins",
-	"Licensed and insured local professionals",
-	"Code-compliant materials and workmanship",
-	"Testing and cleanup before completion",
+const trustPoints = [
+	"Family owned and operated",
+	"Licensed and insured",
+	"Clear options before work",
+	"4.9 local rating",
 ] as const
 
 export function ServiceLandingPage({
@@ -31,13 +31,14 @@ export function ServiceLandingPage({
 	viewStats?: PageViewStats
 }) {
 	const image = getServiceImage(service.category, service.image)
+	const category = service.category ?? "Service"
 	const schema = {
 		"@context": "https://schema.org",
 		"@type": "Service",
 		name: service.title,
 		description: service.description,
 		url: `${siteConfig.url}/service-offerings/${service.slug}`,
-		serviceType: service.category ?? "Plumbing",
+		serviceType: category,
 		category: service.category,
 		areaServed: [
 			{
@@ -63,7 +64,7 @@ export function ServiceLandingPage({
 			<PageViewTracker kind="service" slug={service.slug} />
 			<ContentHero
 				description={service.description}
-				eyebrow={service.category ?? "Service"}
+				eyebrow={category}
 				image={image}
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
@@ -71,9 +72,26 @@ export function ServiceLandingPage({
 				variant="marketing"
 			/>
 
+			<section className="border-border bg-card border-b">
+				<ul className="container-shell grid grid-cols-1 gap-x-8 gap-y-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
+					{trustPoints.map((item) => (
+						<li
+							className="text-muted-foreground flex items-center gap-2.5 text-sm font-bold"
+							key={item}
+						>
+							<BadgeCheck
+								aria-hidden="true"
+								className="text-primary size-4 shrink-0"
+							/>
+							{item}
+						</li>
+					))}
+				</ul>
+			</section>
+
 			{viewStats ? (
-				<div className="container-shell pt-[var(--space-section)]">
-					<div className="border-border mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
+				<div className="container-shell pt-[var(--space-section-y-tight)]">
+					<div className="border-border flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-4">
 						<p className="spec-label">Page interest</p>
 						{viewStats.unique > 0 || viewStats.views > 0 ? (
 							<PageViewsStat
@@ -90,34 +108,16 @@ export function ServiceLandingPage({
 				</div>
 			) : null}
 
-			<ContentSectionBands content={service.content} />
-
-			<section className="surface-sunken border-border border-y">
-				<div className="container-shell section-y">
-					<div className="section-head reveal mx-auto max-w-3xl text-center">
-						<p className="spec-label spec-label-center">What you can expect</p>
-						<h2 className="type-title">Clear process, clean finish</h2>
-						<p className="type-lead">
-							Whether the visit is a diagnosis or a full install, the standard
-							stays the same: explain the options, do the work right, and leave
-							the site better than we found it.
-						</p>
-					</div>
-					<ul className="reveal mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
-						{promises.map((item) => (
-							<li
-								className="surface-panel flex items-center gap-3 p-[var(--space-card)] text-sm font-bold"
-								key={item}
-							>
-								<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
-									<Check aria-hidden="true" className="size-4" />
-								</span>
-								{item}
-							</li>
-						))}
-					</ul>
-				</div>
-			</section>
+			<ServiceContentSections
+				asideBody={
+					category.toLowerCase().includes("septic")
+						? "Clear recommendations before work begins. Careful septic work that protects your tank, filter, and drainfield."
+						: "Clear recommendations before work begins. Licensed local crews, honest options, and a clean finish."
+				}
+				asideTitle={`Licensed ${category.toLowerCase()} work across Santa Cruz County`}
+				category={category}
+				content={service.content}
+			/>
 
 			{related ? (
 				<RelatedContentSectionsWithStats
