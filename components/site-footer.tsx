@@ -1,7 +1,7 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Phone } from "lucide-react"
+import { Phone } from "@/components/icons"
 
 import { CompanyLogo } from "@/components/company-logos"
 import { buttonVariants } from "@/components/ui/button"
@@ -24,6 +24,12 @@ const serviceLinks = [
 	},
 ]
 
+const socialLinks = [
+	{ href: siteConfig.social.facebook, label: "Facebook", logo: "facebook" },
+	{ href: siteConfig.social.linkedin, label: "LinkedIn", logo: "linkedin" },
+	{ href: siteConfig.social.instagram, label: "Instagram", logo: "instagram" },
+] as const
+
 export function SiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
@@ -33,74 +39,64 @@ export function SiteFooter() {
 						<p className="text-sm font-bold text-white/85">
 							{siteConfig.hours}
 						</p>
-						<p className="text-2xl font-extrabold tracking-[-0.03em]">
+						<p className="font-display text-2xl font-extrabold tracking-[-0.03em]">
 							{siteConfig.phone}
 						</p>
 					</div>
+					{/*
+					  Explicit ink text on the white plate. This used to inherit
+					  text-foreground, which in dark mode resolves to near-white - an
+					  invisible label on a white button.
+					*/}
 					<a
 						className={cn(
 							buttonVariants({ variant: "secondary", size: "lg" }),
-							"text-foreground w-full gap-2 bg-white hover:bg-white/90 sm:w-auto",
+							"text-ink w-full bg-white hover:bg-white/90 sm:w-auto",
 						)}
 						href={siteConfig.phoneHref}
 					>
-						<Phone className="size-4" aria-hidden="true" />
-						Call Now
+						<Phone aria-hidden="true" />
+						Call now
 					</a>
 				</div>
 			</div>
 
-			<div className="container-shell py-14 sm:py-16">
-				<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+			<div className="container-shell py-[var(--space-section-y-tight)]">
+				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
 						<Link
-							className="flex items-center gap-3 text-lg font-extrabold tracking-[-0.03em]"
+							className="flex items-center gap-3"
 							href="/"
 							prefetch
+							aria-label="Wade's Plumbing & Septic home"
 						>
 							<Image
 								alt="Wade's Plumbing & Septic logo"
-								className="size-11 shrink-0 rounded-md sm:size-12"
-								height={48}
+								className="size-11 shrink-0 rounded-md"
+								height={44}
 								src="/images/brand/wades-mark-sm.webp"
-								width={48}
+								width={44}
 							/>
-							<span className="leading-tight">
-								Wade&apos;s Plumbing
-								<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
+							<span>
+								<span className="font-display block text-lg leading-tight font-extrabold tracking-[-0.03em]">
+									Wade&apos;s Plumbing
+								</span>
+								<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
 									&amp; Septic
 								</span>
 							</span>
 						</Link>
-						<p className="mt-4 text-sm leading-relaxed text-white/65">
+						<p className="text-on-dark-muted mt-5 max-w-xs text-sm leading-relaxed">
 							Family-owned plumbing and septic specialists. Honest
 							recommendations, clear pricing, and quality workmanship.
 						</p>
-						<p className="mt-4 text-xs font-bold text-white/45">
+						<p className="text-on-dark-subtle mt-4 font-mono text-xs tracking-[0.06em]">
 							{siteConfig.licenses}
 						</p>
-						<div className="mt-5 flex gap-3">
-							{(
-								[
-									{
-										href: siteConfig.social.facebook,
-										label: "Facebook",
-										logo: "facebook",
-									},
-									{
-										href: siteConfig.social.linkedin,
-										label: "LinkedIn",
-										logo: "linkedin",
-									},
-									{
-										href: siteConfig.social.instagram,
-										label: "Instagram",
-										logo: "instagram",
-									},
-								] as const
-							).map((item) => (
+						<div className="mt-6 flex gap-2">
+							{socialLinks.map((item) => (
 								<a
-									className="grid size-10 place-items-center rounded-md bg-white/8 opacity-80 transition-opacity hover:opacity-100"
+									className="focus-visible:ring-ring grid size-10 place-items-center rounded-md bg-white/8 opacity-80 transition-opacity outline-none hover:opacity-100 focus-visible:ring-2"
 									href={item.href}
 									aria-label={item.label}
 									key={item.label}
@@ -118,9 +114,9 @@ export function SiteFooter() {
 					<FooterColumn title="Resources" links={resourceNavigation} />
 				</div>
 
-				<div className="mt-14 flex flex-col gap-4 pt-7 text-xs text-white/45 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] sm:flex-row sm:items-center sm:justify-between">
+				<div className="text-on-dark-subtle mt-[var(--space-block)] flex flex-col gap-4 border-t border-white/10 pt-7 text-xs sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
-					<div className="flex gap-5">
+					<div className="flex flex-wrap gap-x-6 gap-y-2">
 						<Link
 							className="transition-colors hover:text-white"
 							href="/privacy-policy"
@@ -158,10 +154,8 @@ function FooterColumn({
 }) {
 	return (
 		<div>
-			<h2 className="text-xs font-extrabold tracking-[0.16em] uppercase">
-				{title}
-			</h2>
-			<ul className="mt-4 space-y-3 text-sm text-white/55">
+			<h2 className="spec-label text-primary-bright">{title}</h2>
+			<ul className="text-on-dark-muted mt-5 space-y-3 text-sm">
 				{links.map((link) => (
 					<li key={link.href}>
 						<Link

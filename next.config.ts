@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
 	compress: true,
 	experimental: {
 		optimizePackageImports: [
-			"lucide-react",
+			"@phosphor-icons/react",
 			"@radix-ui/react-accordion",
 			"@radix-ui/react-dialog",
 			"@radix-ui/react-navigation-menu",

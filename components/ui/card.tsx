@@ -14,18 +14,24 @@ export function Card({ className, ...props }: React.ComponentProps<"div">) {
 	)
 }
 
+/*
+ * Padding and title size live in globals.css under `@container card`, so a card
+ * scales from its own width instead of the viewport's. That lets the same card
+ * sit in a three-up rail and in a full-width column without a per-usage
+ * breakpoint ladder. --space-card is the shared inset with panels and CTA boxes.
+ */
 export function CardHeader({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
-	return <div className={cn("p-5 pb-2", className)} {...props} />
+	return <div className={cn("card-head", className)} {...props} />
 }
 
 export function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
 	return (
 		<h3
 			className={cn(
-				"text-lg font-extrabold tracking-[-0.02em] text-balance",
+				"card-title font-display leading-snug font-extrabold tracking-[-0.02em] text-balance",
 				className,
 			)}
 			{...props}
@@ -40,7 +46,7 @@ export function CardDescription({
 	return (
 		<p
 			className={cn(
-				"text-muted-foreground mt-2 text-sm leading-relaxed",
+				"text-muted-foreground mt-2 text-sm leading-relaxed text-pretty",
 				className,
 			)}
 			{...props}
@@ -52,5 +58,5 @@ export function CardContent({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
-	return <div className={cn("p-5 pt-2", className)} {...props} />
+	return <div className={cn("card-body", className)} {...props} />
 }

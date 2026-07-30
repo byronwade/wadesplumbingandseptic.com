@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { X } from "lucide-react"
+import { X } from "@/components/icons"
 
 import { cn } from "@/lib/utils"
 
@@ -76,7 +76,10 @@ export function DialogTitle({
 }: React.ComponentProps<typeof DialogPrimitive.Title>) {
 	return (
 		<DialogPrimitive.Title
-			className={cn("text-lg font-extrabold tracking-[-0.02em]", className)}
+			className={cn(
+				"font-display text-lg font-extrabold tracking-[-0.02em]",
+				className,
+			)}
 			{...props}
 		/>
 	)

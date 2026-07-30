@@ -4,6 +4,8 @@ import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
+import { cn } from "@/lib/utils"
+
 function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	if (!src) return null
 
@@ -28,7 +30,7 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 				alt={alt?.trim() || "Wade's Plumbing & Septic project photo"}
 				className="h-auto w-full object-cover"
 				height={900}
-				sizes="(min-width: 1024px) 48rem, 100vw"
+				sizes="(min-width: 1024px) 40rem, 100vw"
 				src={src}
 				width={1600}
 			/>
@@ -36,9 +38,20 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	)
 }
 
-export function MarkdownContent({ content }: { content: string }) {
+/*
+ * The measure comes from .prose (--measure, ~75 characters a line). It used to
+ * carry max-w-none, so body copy ran the full width of the article column -
+ * around 95 characters a line on desktop.
+ */
+export function MarkdownContent({
+	className,
+	content,
+}: {
+	className?: string
+	content: string
+}) {
 	return (
-		<div className="prose prose-neutral max-w-none">
+		<div className={cn("prose", className)}>
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
 				components={{
@@ -62,6 +75,13 @@ export function MarkdownContent({ content }: { content: string }) {
 							alt={alt}
 							src={typeof src === "string" ? src : undefined}
 						/>
+					),
+					// Wide tables scroll inside their own box instead of pushing the
+					// page sideways on narrow screens.
+					table: ({ children, ...props }) => (
+						<div className="table-scroll">
+							<table {...props}>{children}</table>
+						</div>
 					),
 				}}
 			>

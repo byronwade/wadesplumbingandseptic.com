@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from "@/components/icons"
 
 import { cn } from "@/lib/utils"
 
@@ -88,6 +88,16 @@ export function NavigationMenuContent({
 
 export const NavigationMenuLink = NavigationMenuPrimitive.Link
 
+/*
+ * Full-bleed drawer, deliberately. What made the old version look wrong was not
+ * the width, it was that it was painted in the same ink as the header, so an open
+ * menu read as the header silently growing taller.
+ *
+ * It stays edge to edge, but on the --dark-2 plane with a lit top edge and a
+ * downward shadow onto the page, so it reads as a drawer sliding out from under
+ * the header rather than as part of it. Inner content is held to the page shell,
+ * so the panel bleeds while the links stay on the page grid.
+ */
 function NavigationMenuViewport({
 	className,
 	...props
@@ -96,8 +106,7 @@ function NavigationMenuViewport({
 		<div className="absolute inset-x-0 top-full z-50 flex justify-center">
 			<NavigationMenuPrimitive.Viewport
 				className={cn(
-					// Match header ink so the mega menu reads as one continuous bar
-					"bg-ink relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-top overflow-hidden text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_22px_48px_-28px_rgba(0,0,0,0.65)] transition-[height] duration-200",
+					"surface-float data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=open]:slide-in-from-top-2 relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-top overflow-hidden rounded-b-xl transition-[height] duration-200",
 					className,
 				)}
 				{...props}

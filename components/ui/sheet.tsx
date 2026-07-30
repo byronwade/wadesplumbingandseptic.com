@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
-import { X } from "lucide-react"
+import { X } from "@/components/icons"
 
 import { cn } from "@/lib/utils"
 
@@ -103,7 +103,7 @@ export function SheetTitle({
 	return (
 		<SheetPrimitive.Title
 			className={cn(
-				"text-foreground text-lg font-extrabold tracking-[-0.02em]",
+				"text-foreground font-display text-lg font-extrabold tracking-[-0.02em]",
 				className,
 			)}
 			{...props}
