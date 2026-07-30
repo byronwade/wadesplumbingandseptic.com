@@ -127,8 +127,8 @@ function ResultCard({
 				className={cn(
 					"relative min-h-[5.5rem] sm:min-h-[7rem]",
 					hit.image
-						? "bg-[#1c2025]"
-						: "bg-[color-mix(in_srgb,var(--primary)_22%,#1c2025)] text-[var(--primary-bright)]",
+						? "bg-dark-2"
+						: "bg-[color-mix(in_srgb,var(--primary)_22%,var(--dark-2))] text-[var(--primary-bright)]",
 				)}
 			>
 				{hit.image ? (
@@ -304,11 +304,7 @@ export function GlobalSearch({
 			>
 				<div
 					aria-hidden
-					className="pointer-events-none absolute inset-0"
-					style={{
-						background:
-							"radial-gradient(900px 420px at 12% -8%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 58%), radial-gradient(700px 360px at 92% 8%, color-mix(in srgb, var(--primary-bright) 10%, transparent), transparent 52%), linear-gradient(180deg, #14181d 0%, #101214 48%, #0d1013 100%)",
-					}}
+					className="tex-glow pointer-events-none absolute inset-0 bg-ink"
 				/>
 
 				<div className="relative flex h-full min-h-0 flex-col">
@@ -371,7 +367,7 @@ export function GlobalSearch({
 							</label>
 
 							<div className="mt-3 flex items-center justify-between gap-3">
-								<div className="flex min-w-0 flex-1 [scrollbar-width:none] gap-2 overflow-x-auto [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+								<div className="chip-rail min-w-0 flex-1">
 									{suggestions.map((suggestion) => (
 										<button
 											key={suggestion}
@@ -381,7 +377,7 @@ export function GlobalSearch({
 												setActiveIndex(0)
 												inputRef.current?.focus()
 											}}
-											className="text-on-dark-muted shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-bold transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
+											className="spec-tag text-on-dark-muted hover:text-primary-bright shrink-0 border border-white/10 bg-white/[0.04] px-3 py-1.5 transition-colors duration-75 hover:border-white/20 hover:bg-white/[0.07]"
 										>
 											{suggestion}
 										</button>
@@ -416,11 +412,11 @@ export function GlobalSearch({
 							) : null}
 
 							{showEmpty ? (
-								<div className="mx-auto max-w-lg py-14 text-center">
-									<p className="font-display text-2xl font-extrabold tracking-[-0.03em] text-white">
+								<div className="section-head mx-auto max-w-lg py-14 text-center">
+									<p className="type-title text-white">
 										Nothing for “{query.trim()}”
 									</p>
-									<p className="mt-2 text-sm text-white/50">
+									<p className="type-lead text-on-dark-muted">
 										Try a symptom, city, or service name. Typos are OK; we
 										surface the closest matches when we can.
 									</p>

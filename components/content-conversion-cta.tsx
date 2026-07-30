@@ -1,6 +1,6 @@
 import type { Route } from "next"
 import Link from "next/link"
-import { ArrowRight, BadgeCheck, Clock, Phone, Star } from "@/components/icons"
+import { ArrowRight, Phone } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
@@ -37,15 +37,15 @@ export function ContentConversionCta({
 		<section className="surface-hero tex-grid tex-glow overflow-hidden">
 			<div className="container-shell section-y relative">
 				<div className="mx-auto max-w-3xl text-center">
-					<p className="spec-label spec-label-center reveal">
-						{conversion.eyebrow}
-					</p>
-					<h2 className="type-title reveal mt-4 text-white">
-						{conversion.title}
-					</h2>
-					<p className="type-lead reveal text-on-dark-muted mx-auto mt-5 max-w-2xl">
-						{conversion.description}
-					</p>
+					<div className="section-head reveal items-center text-center">
+						<p className="spec-label spec-label-center">
+							{conversion.eyebrow}
+						</p>
+						<h2 className="type-title text-white">{conversion.title}</h2>
+						<p className="type-lead text-on-dark-muted mx-auto max-w-2xl">
+							{conversion.description}
+						</p>
+					</div>
 
 					<div className="reveal mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
 						<a
@@ -58,7 +58,7 @@ export function ContentConversionCta({
 						{secondaryIsExternal ? (
 							<a className={secondaryClassName} href={secondary.href}>
 								{secondary.label}
-								<ArrowRight />
+								<ArrowRight aria-hidden="true" />
 							</a>
 						) : (
 							<Link
@@ -67,42 +67,10 @@ export function ContentConversionCta({
 								prefetch
 							>
 								{secondary.label}
-								<ArrowRight />
+								<ArrowRight aria-hidden="true" />
 							</Link>
 						)}
 					</div>
-
-					<ul className="text-on-dark-muted reveal mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold">
-						<li className="inline-flex items-center gap-2">
-							<span
-								className="text-primary-bright inline-flex items-center gap-0.5"
-								aria-label="5 star rated"
-							>
-								{Array.from({ length: 5 }).map((_, index) => (
-									<Star
-										className="size-3.5 fill-current"
-										key={index}
-										aria-hidden="true"
-									/>
-								))}
-							</span>
-							5-star local reviews
-						</li>
-						<li className="inline-flex items-center gap-2">
-							<BadgeCheck
-								className="text-primary-bright size-4"
-								aria-hidden="true"
-							/>
-							{siteConfig.licenses}
-						</li>
-						<li className="inline-flex items-center gap-2">
-							<Clock
-								className="text-primary-bright size-4"
-								aria-hidden="true"
-							/>
-							{siteConfig.hours}
-						</li>
-					</ul>
 				</div>
 
 				{conversion.testimonials.length > 0 ? (
@@ -110,8 +78,6 @@ export function ContentConversionCta({
 						<p className="spec-label spec-label-center mb-7">
 							What neighbors say
 						</p>
-						{/* No manual delays: scroll-driven reveals stagger on their own,
-						    since each column crosses the viewport edge in turn. */}
 						<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
 							{conversion.testimonials.map((testimonial, index) => (
 								<li
@@ -137,6 +103,25 @@ export function ContentConversionCta({
 						</ul>
 					</div>
 				) : null}
+			</div>
+
+			{/*
+			  Credential bar mirrors the home cinematic hero: one hairline row
+			  instead of a wrap cluster of stars and chips.
+			*/}
+			<div className="relative border-t border-white/12 bg-black/25">
+				<div className="container-shell flex flex-wrap items-center justify-center gap-x-7 gap-y-2 py-3.5 sm:justify-between">
+					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
+						<span className="text-primary-bright">★★★★★</span>
+						<span className="ml-2 text-white/85">5-star local reviews</span>
+					</p>
+					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
+						{siteConfig.licenses}
+					</p>
+					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
+						{siteConfig.hours}
+					</p>
+				</div>
 			</div>
 		</section>
 	)

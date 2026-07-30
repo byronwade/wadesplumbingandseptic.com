@@ -6,7 +6,6 @@ import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { RelatedContentSections } from "@/components/related-content"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { ContentDocument } from "@/lib/content"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
@@ -65,7 +64,7 @@ export function ServiceLandingPage({
 					<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
 						{promises.map((item) => (
 							<div
-								className="border-border surface-sunken flex items-center gap-3 rounded-lg border p-4 text-sm font-bold"
+								className="surface-panel flex items-center gap-3 p-4 text-sm font-bold"
 								key={item}
 							>
 								<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
@@ -78,34 +77,34 @@ export function ServiceLandingPage({
 				</article>
 
 				<aside className="space-y-[var(--space-grid)] lg:sticky lg:top-[var(--header-offset)] lg:self-start">
-					<Card className="border-primary/25 bg-primary/5">
-						<CardHeader>
-							<CardTitle>Fast local response</CardTitle>
-						</CardHeader>
-						<CardContent className="text-muted-foreground space-y-4 text-sm">
-							<p className="flex gap-3">
+					<div className="surface-float rounded-xl p-[var(--space-card)]">
+						<p className="spec-label">Fast local response</p>
+						<ul className="text-on-dark-muted mt-5 space-y-0 text-sm">
+							<li className="flex gap-3 border-b border-white/10 py-3.5">
 								<Clock
-									className="text-primary size-5 shrink-0"
+									className="text-primary-bright size-5 shrink-0"
 									aria-hidden="true"
 								/>
 								{siteConfig.hours}
-							</p>
-							<p className="flex gap-3">
+							</li>
+							<li className="flex gap-3 border-b border-white/10 py-3.5">
 								<ShieldCheck
-									className="text-primary size-5 shrink-0"
+									className="text-primary-bright size-5 shrink-0"
 									aria-hidden="true"
 								/>
 								{siteConfig.licenses}
-							</p>
-							<a
-								className="text-primary flex items-center gap-3 font-bold"
-								href={siteConfig.phoneHref}
-							>
-								<Phone className="size-5 shrink-0" aria-hidden="true" />
-								{siteConfig.phone}
-							</a>
-						</CardContent>
-					</Card>
+							</li>
+							<li className="pt-3.5">
+								<a
+									className="text-primary-bright flex items-center gap-3 font-bold transition-colors hover:text-white"
+									href={siteConfig.phoneHref}
+								>
+									<Phone className="size-5 shrink-0" aria-hidden="true" />
+									{siteConfig.phone}
+								</a>
+							</li>
+						</ul>
+					</div>
 					<ContactCta compact title="Request service" />
 				</aside>
 			</section>

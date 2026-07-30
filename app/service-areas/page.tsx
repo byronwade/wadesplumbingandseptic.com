@@ -1,20 +1,16 @@
 import type { Metadata } from "next"
 import type { Route } from "next"
 import Link from "next/link"
-import { MapPinned, Phone } from "@/components/icons"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { ServiceAreasMap } from "@/components/service-areas-map"
-import { Badge } from "@/components/ui/badge"
-import { buttonVariants } from "@/components/ui/button"
 import type { ContentDocument } from "@/lib/content"
 import { normalizeConversion } from "@/lib/content-conversion"
 import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
 import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
-import { cn } from "@/lib/utils"
 
 const description =
 	"Interactive map of Wade's Plumbing & Septic coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga, generally west of Highway 101."
@@ -67,13 +63,13 @@ export default function ServiceAreasPage() {
 
 			<section className="section-y overflow-x-clip">
 				<div className="container-shell">
-					<div className="mx-auto max-w-3xl text-center">
-						<Badge>Coverage Map</Badge>
-						<h2 className="type-title mt-5">
+					<div className="section-head reveal mx-auto max-w-3xl text-center">
+						<p className="spec-label spec-label-center">Coverage map</p>
+						<h2 className="type-title">
 							See where Wade&apos;s{" "}
 							<span className="text-primary">serves on the Central Coast</span>
 						</h2>
-						<p className="type-lead mt-5">
+						<p className="type-lead">
 							Mountain roads, coastal soils, older piping, steep lots, and
 							septic regulations change how a job should be diagnosed. The map
 							shows our approximate coverage: Santa Cruz County and the west
@@ -84,7 +80,7 @@ export default function ServiceAreasPage() {
 				</div>
 
 				{/* Full-bleed on mobile; map component constrains itself from md up. */}
-				<div className="mt-10">
+				<div className="mt-[var(--space-block)]">
 					<ServiceAreasMap />
 				</div>
 
@@ -100,25 +96,23 @@ export default function ServiceAreasPage() {
 				</p>
 			</section>
 
-			<section className="border-border bg-card border-y">
-				<div className="container-shell section-y space-y-16">
+			<section className="surface-sunken border-border border-y">
+				<div className="container-shell section-y space-y-[var(--space-block)]">
 					{counties.map((county) => (
-						<div key={county.title}>
-							<div className="max-w-3xl">
+						<div className="reveal" key={county.title}>
+							<div className="section-head max-w-3xl">
+								<p className="spec-label">County coverage</p>
 								<h2 className="type-title">{county.title}</h2>
-								<p className="type-lead mt-4">{county.summary}</p>
+								<p className="type-lead">{county.summary}</p>
 							</div>
-							<ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+							<ul className="mt-8 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
 										<Link
-											className="border-border bg-background hover:border-primary/40 flex items-center gap-4 rounded-lg border px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
+											className="bg-background hover:bg-muted flex h-full items-center px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
 											href={location.href as Route}
 											prefetch
 										>
-											<span className="bg-accent text-accent-foreground grid size-10 shrink-0 place-items-center rounded-md">
-												<MapPinned className="size-5" aria-hidden="true" />
-											</span>
 											{location.name}
 										</Link>
 									</li>
@@ -129,24 +123,10 @@ export default function ServiceAreasPage() {
 				</div>
 			</section>
 
-			<section className="container-shell section-y">
-				<div className="surface-panel mx-auto max-w-3xl p-8 text-center sm:p-10">
-					<h2 className="type-title">Not sure if we cover your address?</h2>
-					<p className="type-lead mt-4">
-						Call with the city, ZIP code, and type of work. A real person will
-						confirm coverage and schedule the right visit.
-					</p>
-					<a
-						className={cn(buttonVariants({ size: "xl" }), "mt-7 gap-2")}
-						href={siteConfig.phoneHref}
-					>
-						<Phone className="size-5" />
-						Call {siteConfig.phone}
-					</a>
-				</div>
-			</section>
-
-			<ContactCta />
+			<ContactCta
+				description="Call with the city, ZIP code, and type of work. A real person will confirm coverage and schedule the right visit."
+				title="Not sure if we cover your address?"
+			/>
 			<JsonLd
 				data={[
 					webPageJsonLd(document),
