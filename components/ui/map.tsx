@@ -702,7 +702,7 @@ function MarkerPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
+        "bg-popover text-popover-foreground font-sans relative max-w-sm rounded-lg border p-5 text-base leading-relaxed font-normal tracking-normal antialiased shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}
@@ -1113,7 +1113,7 @@ function MapPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
+        "bg-popover text-popover-foreground font-sans relative max-w-sm rounded-lg border p-5 text-base leading-relaxed font-normal tracking-normal antialiased shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}
@@ -1460,6 +1460,20 @@ function MapGeoJSON<
       );
     } else if (!showLine && map.getLayer(lineLayerId)) {
       map.removeLayer(lineLayerId);
+    }
+
+    // Keep coverage under basemap labels when `beforeId` resolves after mount.
+    if (beforeId && map.getLayer(beforeId)) {
+      try {
+        if (showFill && map.getLayer(fillLayerId)) {
+          map.moveLayer(fillLayerId, beforeId);
+        }
+        if (showLine && map.getLayer(lineLayerId)) {
+          map.moveLayer(lineLayerId, beforeId);
+        }
+      } catch {
+        // beforeId may be mid-reload
+      }
     }
 
     if (showFill && map.getLayer(fillLayerId)) {

@@ -132,6 +132,36 @@
     @apply bg-transparent! dark:invert;
 	}
 
+	/*
+	  MapLibre sets `font: 12px/20px Helvetica Neue…` on `.maplibregl-map`.
+	  That shorthand inherits into popups/controls and makes brand UI type look
+	  thin, condensed, and jagged. Keep canvas glyphs alone; reset HTML overlays
+	  to the site Manrope stack.
+	*/
+	.maplibregl-map {
+		font-family: var(--font-sans) !important;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.maplibregl-popup,
+	.maplibregl-popup-content {
+		font-family: var(--font-sans) !important;
+		font-size: 1rem !important;
+		font-weight: 400 !important;
+		line-height: 1.5 !important;
+		letter-spacing: normal !important;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
+
+	.maplibregl-ctrl-group button,
+	.maplibregl-ctrl-attrib,
+	.maplibregl-ctrl-attrib a {
+		font-family: var(--font-sans) !important;
+	}
+
 	/* Cooperative gestures: one-finger page scroll on mobile; brand the hint. */
 	.maplibregl-cooperative-gesture-screen {
 		background: color-mix(in srgb, var(--ink) 55%, transparent);
@@ -141,6 +171,7 @@
 		letter-spacing: -0.02em;
 		text-align: center;
 		padding-inline: 1.25rem;
+		-webkit-font-smoothing: antialiased;
 	}
 }
 
