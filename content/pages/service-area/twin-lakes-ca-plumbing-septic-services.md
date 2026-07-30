@@ -1,12 +1,13 @@
 ---
-title: Twin Lakes, CA Plumbing & Septic Services
-description: 'Twin Lakes beach-area plumbing & septic, narrow lots, salt air, sewer & hillside septics. Wade''s 831.225.4344, CSLB #1087260.'
-eyebrow: Twin Lakes, CA
+title: 'Twin Lakes, CA Plumbing & Septic Services'
+description: >-
+  Twin Lakes beach-area plumbing & septic, narrow lots, salt air, sewer &
+  hillside septics. Wade's 831.225.4344, CSLB #1087260.
+eyebrow: 'Twin Lakes, CA'
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Twin Lakes coastal community between Santa Cruz and Capitola
 ---
-
 Twin Lakes is easy to miss on a commute, until a winter storm pushes surf close to the beach flats or a summer rental week ends with a plumbing surprise. Sandwiched between Santa Cruz and Capitola, this small beach neighborhood mixes narrow ocean-side lots, modest single-story homes, and a few properties climbing the bluff where wastewater setups change with elevation.
 
 Wade's Plumbing & Septic is family-owned and licensed in California (CSLB #1087260). We respond to Twin Lakes homeowners, long-term renters, and property managers who need a county team that understands tight lot lines and coastal hardware wear.
@@ -32,8 +33,8 @@ We provide:
 - Sewer lateral camera inspection when backups repeat after snaking
 - Septic pumping with sludge-level notes useful for property managers tracking maintenance
 - Drainfield evaluation when odors or wet patches show above the tank
-- Paths to [failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when county review requires upgrades
-- [Engineered septic guidance](/engineered-septic-systems-santa-cruz-county) for steep or limited replacement areas on hillside lots
+- Paths to [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county review requires upgrades
+- [Engineered septic guidance](/service-offerings/engineered-septic-system-installation) for steep or limited replacement areas on hillside lots
 
 Mixing up sewer and septic symptoms costs time. We verify connection type on site before quoting major excavation.
 

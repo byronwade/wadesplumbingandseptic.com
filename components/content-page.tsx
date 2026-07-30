@@ -2,7 +2,15 @@ import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
 import type { RelatedContent } from "@/lib/related-content"
-import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
+import {
+	articleJsonLd,
+	breadcrumbJsonLd,
+	cityNameFromServiceArea,
+	extractFaqPairs,
+	faqPageJsonLd,
+	serviceAreaJsonLd,
+	webPageJsonLd,
+} from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 import { ContactCta } from "@/components/contact-cta"
@@ -22,21 +30,38 @@ export function ContentPage({
 	isPost?: boolean
 	related?: RelatedContent
 }) {
+	const isServiceArea = document.slug.startsWith("service-area/")
+	const isFaq = document.slug === "faq"
+
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
 		...(isPost
 			? [{ name: "Expert Tips", path: "/expert-tips" }]
-			: document.slug.startsWith("service-area/")
+			: isServiceArea
 				? [{ name: "Service Areas", path: "/service-areas" }]
-				: []),
+				: isFaq
+					? [{ name: "Company", path: "/about-us" }]
+					: []),
 		{ name: document.title, path: `/${document.slug}` },
 	]
 
 	const parent = isPost
 		? { href: "/expert-tips" as Route, label: "Expert Tips" }
-		: document.slug.startsWith("service-area/")
+		: isServiceArea
 			? { href: "/service-areas" as Route, label: "Service Areas" }
 			: undefined
+
+	const faqPairs = isFaq ? extractFaqPairs(document.content) : []
+
+	const jsonLd = [
+		isPost
+			? articleJsonLd(document)
+			: isServiceArea
+				? serviceAreaJsonLd(document, cityNameFromServiceArea(document))
+				: webPageJsonLd(document),
+		breadcrumbJsonLd(breadcrumbs),
+		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
+	]
 
 	return (
 		<main id="main-content">
@@ -69,7 +94,7 @@ export function ContentPage({
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />
 					) : null}
-					<MarkdownContent content={document.content} />
+					<MarkdownContent content={document.content} demoteH1 />
 				</div>
 				<aside className="lg:sticky lg:top-[var(--header-offset)] lg:self-start">
 					<ContactCta
@@ -92,12 +117,7 @@ export function ContentPage({
 						: undefined
 				}
 			/>
-			<JsonLd
-				data={[
-					isPost ? articleJsonLd(document) : webPageJsonLd(document),
-					breadcrumbJsonLd(breadcrumbs),
-				]}
-			/>
+			<JsonLd data={jsonLd} />
 		</main>
 	)
 }

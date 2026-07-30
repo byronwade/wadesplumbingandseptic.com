@@ -1,12 +1,14 @@
 ---
-title: Paradise Park, CA Plumbing & Septic Services
-description: 'San Lorenzo River cabin community plumbing and septic, seasonal homes, flood-zone awareness, aging systems near Felton. Wade''s Plumbing & Septic: 831.225.4344.'
-eyebrow: Paradise Park, CA
+title: 'Paradise Park, CA Plumbing & Septic Services'
+description: >-
+  San Lorenzo River cabin community plumbing and septic, seasonal homes,
+  flood-zone awareness, aging systems near Felton. Wade's Plumbing & Septic:
+  831.225.4344.
+eyebrow: 'Paradise Park, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
-imageAlt: San Lorenzo River and redwood cabin community near Paradise Park, California
+imageAlt: 'San Lorenzo River and redwood cabin community near Paradise Park, California'
 ---
-
 Paradise Park follows the San Lorenzo River, a narrow ribbon of homes and cabins between Felton and the forest, where the road shares space with redwoods and the sound of water is never far away. Some places are year-round residences; many are weekend retreats that wake up in summer and go quiet in winter. That pattern shapes every plumbing and septic decision Wade's Plumbing & Septic makes here.
 
 We're a family-owned Santa Cruz County company. Paradise Park isn't a volume market for us. It's a community where one backed-up toilet can ruin a holiday, and a septic tank that wasn't pumped before the rainy season can turn a river-adjacent lot into a problem nobody wants.
@@ -33,7 +35,7 @@ Paradise Park is entirely on **onsite septic**. Proximity to the river corridor 
 
 **Wet winters.** Saturated soils reduce drainfield capacity. Slow drains in February aren't always a clog. They can be a full leach line. We distinguish septic failure from plumbing blockage.
 
-**Permits and upgrades.** When replacement is unavoidable, Santa Cruz County reviews designs carefully near sensitive drainage. We work with [engineered septic system](/engineered-septic-systems-santa-cruz-county) options when standard layouts won't clear.
+**Permits and upgrades.** When replacement is unavoidable, Santa Cruz County reviews designs carefully near sensitive drainage. We work with [engineered septic system](/service-offerings/engineered-septic-system-installation) options when standard layouts won't clear.
 
 Services include pumping, cleaning, inspections, certifications, filter service, riser installs, drainfield evaluation, and system repair or replacement.
 

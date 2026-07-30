@@ -1,6 +1,8 @@
 ---
-title: Plumbing Repair Services, Santa Cruz County
-description: Core plumbing campaign page for repairs, clogs, and water heater issues.
+title: 'Plumbing Repair Services, Santa Cruz County'
+description: >-
+  Call-first plumbing repair page for homeowners needing fast scheduling and
+  clear options before work starts.
 order: 20
 image: /images/work/precision-valve-installation.webp
 imageAlt: Professional valve and piping repair
@@ -10,7 +12,7 @@ noindex: true
 
 Call-First Campaign Landing Page
 
-# Plumbing Service & Repairs in Santa Cruz County
+## Plumbing Service & Repairs in Santa Cruz County
 
 Call-first plumbing repair page for homeowners needing fast scheduling and clear options before work starts.
 

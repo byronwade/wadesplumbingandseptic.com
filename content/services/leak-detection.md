@@ -1,17 +1,15 @@
 ---
-title: Swift Septic Leak Detection in Santa Cruz County, CA
-description: Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive
- leak detection services in Santa Cruz County, California. Our cutting-edge techniques
- and state-of-the-art equipment ensure that we pinpoint leaks quickly and efficiently,
- saving you time…
+title: 'Swift Septic Leak Detection in Santa Cruz County, CA'
+description: >-
+  Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive leak
+  detection services in Santa Cruz County, California. Our cutting-edge.
 category: Plumbing
 order: 41
 featured: true
-image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
-imageAlt: "Pressure gauge on an industrial pipe"
-
+image: >-
+  /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
+imageAlt: Pressure gauge on an industrial pipe
 ---
-
 Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive leak detection services in Santa Cruz County, California. Our cutting-edge techniques and state-of-the-art equipment ensure that we pinpoint leaks quickly and efficiently, saving you time and money. Whether it's a hidden leak behind your walls or under your floors, our team is equipped to find it using non-invasive methods. Prompt leak detection prevents costly water damage and reduces your utility bills, making it an essential service for homeowners.
 
 ## Signs You Might Need Leak Detection in Santa Cruz

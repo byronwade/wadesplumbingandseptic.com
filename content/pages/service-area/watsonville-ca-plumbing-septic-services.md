@@ -1,12 +1,13 @@
 ---
-title: Watsonville, CA Plumbing & Septic Services
-description: 'Watsonville & Pajaro Valley plumbing, septic & ag-property wastewater. Wade''s family-owned, CSLB #1087260. Emergency line 831.225.4344.'
-eyebrow: Watsonville, CA
+title: 'Watsonville, CA Plumbing & Septic Services'
+description: >-
+  Watsonville & Pajaro Valley plumbing, septic & ag-property wastewater. Wade's
+  family-owned, CSLB #1087260. Emergency line 831.225.4344.
+eyebrow: 'Watsonville, CA'
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Watsonville Pajaro Valley area homes served by Wade's Plumbing and Septic
 ---
-
 Watsonville sits at the broad end of the Pajaro Valley, where agriculture, established neighborhoods, and newer subdivisions share the same groundwater basin. Downtown Victorians near Main Street, post-war homes south of Lake Watsonville, and rural parcels toward Freedom and Corralitos each carry different pipe materials, foundation types, and wastewater rules.
 
 Wade's Plumbing & Septic is family-owned and licensed (CSLB #1087260). We work across Santa Cruz County, including Watsonville properties that need a contractor comfortable with older municipal laterals, agricultural-adjacent septics, and the occasional bilingual household coordinating repairs for extended family.
@@ -32,8 +33,8 @@ We help with:
 - Sewer lateral diagnosis when multiple fixtures back up at once
 - Septic tank pumping and condition notes for real estate transactions
 - Drainfield failure signs, persistent odors, wet strips in the yard, gurgling after laundry
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when county standards require an upgrade
-- [Engineered septic options](/engineered-septic-systems-santa-cruz-county) for challenging soils or tight setbacks on agricultural parcels
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county standards require an upgrade
+- [Engineered septic options](/service-offerings/engineered-septic-system-installation) for challenging soils or tight setbacks on agricultural parcels
 
 If your property supports a shop, guest house, or converted garage, flow calculations matter. We align recommendations with how the system is actually used, not just how it was permitted decades ago.
 

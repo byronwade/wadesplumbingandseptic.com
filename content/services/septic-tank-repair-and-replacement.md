@@ -1,15 +1,15 @@
 ---
 title: Premium Septic Solutions for Santa Cruz County Homes
-description: If you’re experiencing issues with your septic system, it may be time
- for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic,
- we specialize in diagnosing and addressing all your septic tank…
+description: >-
+  If you’re experiencing issues with your septic system, it may be time for a
+  professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic,
+  we.
 category: Septic
 order: 7
-image: /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp
-imageAlt: "Stacked concrete pipes for underground systems"
-
+image: >-
+  /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp
+imageAlt: Stacked concrete pipes for underground systems
 ---
-
 If you’re experiencing issues with your septic system, it may be time for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic, we specialize in diagnosing and addressing all your septic tank needs, ensuring your system operates efficiently. Our expert team is ready to handle repairs or replacements with precision and care, minimizing disruption to your Santa Cruz County home.
 
 ## Signs You Need Septic Tank Repair in Santa Cruz
@@ -83,7 +83,7 @@ Fast & Reliable Service
 
 Ensure your septic system is in top condition with our expert repair and replacement services.
 
-[Call Us Now](tel:1234567890) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ★★★★★ 5-Star Rating
 

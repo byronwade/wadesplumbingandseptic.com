@@ -1,15 +1,14 @@
 ---
 title: Reliable Sump Pump Installations in Santa Cruz County
-description: Protecting your home from basement flooding is essential, and a reliable
- sump pump installation can be your first line of defense. At Wade's Plumbing & Septic,
- we offer expert sump pump installation services to homeowners in…
+description: >-
+  Protecting your home from basement flooding is essential, and a reliable sump
+  pump installation can be your first line of defense. At Wade's Plumbing &.
 category: Plumbing
 order: 38
-image: /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
-imageAlt: "Outdoor plumbing pipes with gauges"
-
+image: >-
+  /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
+imageAlt: Outdoor plumbing pipes with gauges
 ---
-
 Protecting your home from basement flooding is essential, and a reliable sump pump installation can be your first line of defense. At Wade's Plumbing & Septic, we offer expert sump pump installation services to homeowners in Santa Cruz County, California. Our comprehensive approach ensures your property remains safe and dry, even during heavy rains or unexpected water leaks.
 
 ## Why a Sump Pump Installation is Essential

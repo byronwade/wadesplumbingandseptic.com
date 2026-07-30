@@ -8,6 +8,8 @@ import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { getCollection } from "@/lib/content"
+import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 import "./globals.css"
@@ -96,47 +98,18 @@ export const viewport: Viewport = {
 	],
 }
 
-const localBusinessSchema = {
-	"@context": "https://schema.org",
-	"@type": ["Plumber", "LocalBusiness"],
-	"@id": `${siteConfig.url}/#business`,
-	name: siteConfig.name,
-	url: siteConfig.url,
-	telephone: "+18312254344",
-	email: siteConfig.email,
-	logo: `${siteConfig.url}/images/brand/wades-mark.webp`,
-	image: `${siteConfig.url}/images/locations/santa-cruz-plumber.webp`,
-	priceRange: "$$",
-	address: {
-		"@type": "PostalAddress",
-		streetAddress: siteConfig.address.street,
-		addressLocality: siteConfig.address.city,
-		addressRegion: siteConfig.address.region,
-		postalCode: siteConfig.address.postalCode,
-		addressCountry: "US",
-	},
-	areaServed: [
-		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
-		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
-	],
-	openingHoursSpecification: [
-		{
-			"@type": "OpeningHoursSpecification",
-			dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-			opens: "09:00",
-			closes: "17:00",
-		},
-	],
-	sameAs: [
-		siteConfig.social.facebook,
-		siteConfig.social.instagram,
-		siteConfig.social.linkedin,
-	],
-}
-
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
+	const services = await getCollection("services")
+	const organizationSchema = localBusinessJsonLd(
+		services.map((service) => ({
+			slug: service.slug,
+			title: service.title,
+			description: service.description,
+		})),
+	)
+
 	return (
 		<html
 			lang="en"
@@ -164,7 +137,7 @@ export default function RootLayout({
 					</Suspense>
 					<SiteFooter />
 					<CommandMenuLoader />
-					<JsonLd data={localBusinessSchema} />
+					<JsonLd data={[websiteJsonLd(), organizationSchema]} />
 					<Analytics />
 				</ThemeProvider>
 			</body>

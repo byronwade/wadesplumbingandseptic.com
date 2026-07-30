@@ -119,8 +119,8 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/santa-cruz/water-heater-replacement",
-				destination: "/santa-cruz/water-heater-replacment",
+				source: "/santa-cruz/water-heater-replacment",
+				destination: "/santa-cruz/water-heater-replacement",
 				permanent: true,
 			},
 			{

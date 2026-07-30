@@ -33,16 +33,24 @@ export function ServiceLandingPage({
 		name: service.title,
 		description: service.description,
 		url: `${siteConfig.url}/service-offerings/${service.slug}`,
+		serviceType: service.category ?? "Plumbing",
 		category: service.category,
 		areaServed: [
-			"Santa Cruz County, California",
-			"Santa Clara County, California",
+			{
+				"@type": "AdministrativeArea",
+				name: "Santa Cruz County, California",
+			},
+			{
+				"@type": "AdministrativeArea",
+				name: "Santa Clara County, California",
+			},
 		],
 		provider: {
-			"@type": "Plumber",
 			"@id": `${siteConfig.url}/#business`,
+		},
+		brand: {
+			"@type": "Brand",
 			name: siteConfig.name,
-			telephone: "+18312254344",
 		},
 	}
 
@@ -59,7 +67,7 @@ export function ServiceLandingPage({
 
 			<section className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
 				<article className="min-w-0">
-					<MarkdownContent content={service.content} />
+					<MarkdownContent content={service.content} demoteH1 />
 
 					<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
 						{promises.map((item) => (

@@ -15,7 +15,14 @@ export const siteConfig = {
 		postalCode: "95005",
 		display: "7737 Highway 9, Ben Lomond, CA 95005",
 	},
+	/** WGS84 for LocalBusiness geo / map links. */
+	geo: {
+		latitude: 37.0891,
+		longitude: -122.0864,
+	},
 	licenses: "CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
+	licenseNumber: "1087260",
+	googleMapsUrl: "https://maps.google.com/?q=7737+Highway+9,+Ben+Lomond,+CA+95005",
 	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
 	social: {
 		facebook: "https://www.facebook.com/wadesplumbingandseptic/",

@@ -1,12 +1,13 @@
 ---
-title: Scotts Valley, CA Plumbing & Septic Services
-description: 'Scotts Valley plumbing & septic, Granite Creek, Skypark, hillside septics & suburban sewers. Wade''s 831.225.4344, CSLB #1087260.'
-eyebrow: Scotts Valley, CA
+title: 'Scotts Valley, CA Plumbing & Septic Services'
+description: >-
+  Scotts Valley plumbing & septic, Granite Creek, Skypark, hillside septics &
+  suburban sewers. Wade's 831.225.4344, CSLB #1087260.
+eyebrow: 'Scotts Valley, CA'
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwood hillside near Scotts Valley residential neighborhoods
 ---
-
 Scotts Valley reads suburban on a map but behaves like a mountain town once you leave the Highway 17 corridor. Granite Creek, Skypark, and the neighborhoods threading toward Mount Hermon and Felton mix 1970s tract homes, 1990s builds, and wooded lots where the sewer main ends and septic responsibility begins. Elevation and pine-redwood root systems shape plumbing problems as much as pipe age.
 
 Wade's Plumbing & Septic is family-owned, Santa Cruz County-based, and licensed (CSLB #1087260). We serve Scotts Valley homeowners who want clear explanations (not upsells), when a pressure issue might be a PRV, a partially closed valve, or a line compromised by roots.
@@ -32,8 +33,8 @@ Our wastewater services include:
 - Lateral inspections before listing a home or after recurring backups
 - Septic pumping with realistic intervals based on tank size and occupancy
 - Drainfield assessments when lawns stay soggy long after rain stops
-- Guidance through [failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when systems age out
-- [Engineered septic designs](/engineered-septic-systems-santa-cruz-county) for steep or rocky sites common on hillside lots
+- Guidance through [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when systems age out
+- [Engineered septic designs](/service-offerings/engineered-septic-system-installation) for steep or rocky sites common on hillside lots
 
 Knowing your connection type before a kitchen expansion saves rework. We help owners map tank locations, cleanouts, and lateral paths when records are thin.
 

@@ -1,12 +1,13 @@
 ---
-title: Santa Cruz, CA Plumbing & Septic Services
-description: 'Santa Cruz plumbing & septic for Westside, Seabright, downtown & hillside homes. Wade''s, family-owned, CSLB #1087260. Call 831.225.4344.'
-eyebrow: Santa Cruz, CA
+title: 'Santa Cruz, CA Plumbing & Septic Services'
+description: >-
+  Santa Cruz plumbing & septic for Westside, Seabright, downtown & hillside
+  homes. Wade's, family-owned, CSLB #1087260. Call 831.225.4344.
+eyebrow: 'Santa Cruz, CA'
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwood-lined hillside near Santa Cruz with residential plumbing service area
 ---
-
 From the Westside flats along Mission Street to the redwood pockets above UC Santa Cruz, Santa Cruz homes sit in a tight band between ocean fog and canyon runoff. Wade's Plumbing & Septic has worked this town long enough to know that a Seabright bungalow from the 1920s and a Harvey West condo built in the 2000s rarely fail for the same reason, and that matters when you're standing in a wet hallway at 10 p.m.
 
 We are a family-owned Santa Cruz County contractor (CSLB #1087260) serving owner-occupied homes, rentals near the boardwalk, and properties tucked into the hills around Pasatiempo and the upper Westside. Whether you are dealing with a slow kitchen drain in the Beach Flats or a backed-up line on the Eastside near Branciforte, we diagnose first and explain what we find before recommending work.
@@ -32,8 +33,8 @@ We help Santa Cruz homeowners with:
 - Sewer lateral troubleshooting when backups affect one fixture versus the whole house
 - Septic tank pumping schedules suited to household size, not a one-size-fits-all calendar
 - Drainfield assessments when wet spots appear uphill from the tank or odors persist after pumping
-- Guidance on [engineered septic systems](/engineered-septic-systems-santa-cruz-county) when slope or setback limits standard designs
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when an aging system can no longer meet county requirements
+- Guidance on [engineered septic systems](/service-offerings/engineered-septic-system-installation) when slope or setback limits standard designs
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when an aging system can no longer meet county requirements
 
 If you are buying or remodeling, knowing whether you are on sewer or septic changes budget and timeline. We can clarify what is on your parcel before you commit to a major project.
 
