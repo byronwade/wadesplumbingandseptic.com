@@ -22,7 +22,7 @@ A properly installed septic system is essential for effective waste management a
 - Drainfield installation to ensure efficient wastewater dispersion.
 - Connections that integrate seamlessly with your property.
 
-We specialize in installing various types of systems, including conventional systems, aerobic treatment units, and [alternative septic systems](/service-offerings/alternative-septic-system-installation/), customized to meet the unique demands of your property.
+We specialize in installing various types of systems, including conventional systems, aerobic treatment units, and [alternative septic systems](/service-offerings/engineered-septic-system-installation/), customized to meet the unique demands of your property.
 
 ## Signs You Need a New Septic System
 

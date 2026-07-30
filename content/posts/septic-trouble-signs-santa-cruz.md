@@ -98,7 +98,7 @@ Early Detection Matters
 
 Ensure your septic system runs smoothly with our expert inspection services, preventing costly repairs down the line.
 
-[Call Us](tel:+1-555-555-5555) 
+[Call Us](tel:+18312254344) 
 
 ## Serving Santa Cruz County, CA
 

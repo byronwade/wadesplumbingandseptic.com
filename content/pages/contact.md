@@ -1,68 +1,87 @@
 ---
 title: Contact Us
-description: We're here to help with all your plumbing and septic needs. Reach out
- to our team for prompt, professional service.
+description: >-
+  Call or text 831.225.4344, email support@wadesinc.io, or request service online.
+  Family-owned plumbing and septic for Santa Cruz County and selected Santa Clara
+  County communities. CSLB #1087260.
 order: 7
 image: /images/team/wades-team.webp
-imageAlt: Professional Wade's plumber at work
-eyebrow: Call During Business Hours
+imageAlt: Wade's Plumbing & Septic team ready for service calls
+eyebrow: Call or Text 831.225.4344
 ---
 
 # Contact Wade's Plumbing & Septic
 
-We're here to help with all your plumbing and septic needs. Reach out to our team for prompt, professional service.
+Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Call or text **[831.225.4344](tel:+18312254344)**, email **[support@wadesinc.io](mailto:support@wadesinc.io)**, or use the request options on this page. We confirm your address, triage the issue, and get you on the schedule.
 
-Updated July 2026
+## Call or text
 
-As summer unfolds in Santa Cruz County, California, it's crucial to remember that regular maintenance of septic systems can prevent costly issues down the line. The warm season is an ideal time to schedule a professional septic inspection to ensure your system operates efficiently. Our team is ready to assist with comprehensive septic maintenance services, helping to safeguard your home and the environment. For more information on our septic maintenance services, visit the [service area page](/service-areas/).
+**[831.225.4344](tel:+18312254344)**
 
-## Request Service
+Use this number for scheduling, questions, and urgent plumbing or septic problems. Texting works when you cannot talk. Have ready:
 
-For service requests, questions, or to schedule an appointment, call us or fill out the form below. Our team will respond promptly to address your needs.
+- City or ZIP for the property
+- Whether the issue is plumbing, septic, or commercial
+- Which fixtures or equipment are affected
+- When the problem started
+- Whether water or sewage is actively causing damage
 
-## Emergency Service
+For the fastest intake path, see our [call-first checklist](/contact-call-first).
 
-For plumbing emergencies, please call our emergency line for immediate assistance. We provide emergency service throughout our service areas.
+## Email
 
-## Our Office
+**[support@wadesinc.io](mailto:support@wadesinc.io)**
 
-123 Main Street 
-Anytown, USA 12345 
-Phone: (555) 123-4567 
-Email: info@wadesplumbing.com 
+Best for photos, permit questions, and non-urgent follow-up. Include the property address and a short description of what is happening.
 
-## Hours of Operation
+## Office
 
-Monday to Friday: 7:00 AM to 6:00 PM 
-Saturday: 8:00 AM to 2:00 PM 
-Sunday: Closed (Emergency Services Available)
+**Wade's Plumbing & Septic**  
+7737 Highway 9  
+Ben Lomond, CA 95005
 
-## Serving Santa Cruz County, CA
+We are based in the San Lorenzo Valley and dispatch across Santa Cruz County and selected Santa Clara County foothill communities (including Los Gatos and Saratoga, generally west of Highway 101). Confirm coverage when you call. Browse the [service area map](/service-areas) for approximate coverage.
 
-Wade's Plumbing & Septic is proud to offer our expert services to the communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing reliable plumbing and septic solutions to residents and businesses throughout the area.
+## Hours
 
-Contractor License: C-42 (CA) / State License (GA)
+- **Monday through Friday:** 9:00 AM to 5:00 PM
+- **Saturday and Sunday:** Closed for routine scheduling
 
-Office Hours: Monday to Friday, 9am to 5pm
+Call **[831.225.4344](tel:+18312254344)** during office hours to book service. If you reach us outside those hours, leave a message or text and we will return contact on the next business day.
 
-Emergency Line: Available
+## Licensing
 
-Our service area extends across Santa Cruz County, ensuring that you receive the highest quality plumbing and septic services right in your community.
+- **California CSLB #1087260**
+- Classifications include **C-36** (Plumbing) and **C-42** (Sanitation System)
 
-## Frequently Asked Questions
+Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx) before you hire. We are family-owned, licensed, and insured for the work we perform in California.
 
-### What is the cost range for plumbing and septic services in Santa Cruz County, CA?
+## Service area
 
-Our pricing varies based on the service required. For a detailed estimate, contact us directly, and we’ll provide a transparent quote tailored to your specific needs in Santa Cruz County.
+We regularly serve communities across Santa Cruz County (including Santa Cruz, Capitola, Scotts Valley, Aptos, Watsonville, Felton, Ben Lomond, Boulder Creek, and nearby towns) plus selected Santa Clara County foothill addresses. If you are unsure whether your property is in range, call with the street address and we will tell you straight.
 
-### What should I expect during a service visit from Wade's Plumbing & Septic?
+## Request service
 
-Our professional team will arrive on time, assess your situation, and provide efficient solutions. We prioritize minimizing disruption to your daily activities while ensuring top-quality service.
+Tell us what is going on and we will point you to the right next step: inspection, repair, pumping, water heater work, drain clearing, or engineered septic options. Clear pricing before work begins. No sales pressure.
 
-### What is the typical timeline for completing a plumbing or septic service?
+## Frequently asked questions
 
-The timeline depends on the complexity of the job. Most services are completed within a day, but we’ll provide a more accurate timeframe during our initial assessment.
+### How do I get a quote?
 
-### Why should I choose Wade's Plumbing & Septic for services in Santa Cruz County, CA?
+Call or text **831.225.4344** or email **support@wadesinc.io** with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
 
-Wade's Plumbing & Septic offers expert, reliable service with a deep understanding of local needs. Our commitment to quality and customer satisfaction sets us apart as a trusted provider in Santa Cruz County.
+### Do you offer emergency plumbing help?
+
+Call **831.225.4344**. During office hours we triage urgent leaks, backups, and septic alarms as quickly as the schedule allows. Outside office hours, leave a message or text with the address and what is happening so we can respond as soon as we are available.
+
+### What should I expect on a service visit?
+
+We confirm the address and issue when you book, arrive ready to diagnose, explain what we find in plain language, and complete agreed work with testing and cleanup. You get clear recommendations, not a hard sell.
+
+### How long does a typical job take?
+
+Many drain, fixture, and water heater visits finish the same day. Septic inspections, pumping, and engineered system work depend on site conditions, permits, and parts. We give a realistic timeframe after we understand the job.
+
+### Why choose Wade's?
+
+We are local, family-owned, and licensed for plumbing and onsite wastewater work (CSLB #1087260). We know Santa Cruz County soils, older mountain plumbing, coastal rentals, and county septic expectations. Honest assessment first; then the right fix.

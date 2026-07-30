@@ -55,19 +55,19 @@ export const serviceNavLinks: MegaNavItem[] = [
 
 export const serviceMegaHighlights = [
 	{
-		href: "/service-offerings/video-inspections",
-		label: "Video Inspections",
-		description: "See exactly what’s happening inside the line.",
-	},
-	{
-		href: "/service-offerings/hydro-jetting",
-		label: "Hydro Jetting",
-		description: "High-pressure clearing for stubborn drain buildup.",
+		href: "/service-offerings/engineered-septic-system-installation",
+		label: "Engineered Septic Systems",
+		description: "ATUs, mounds, and advanced installs for hard sites.",
 	},
 	{
 		href: "/service-offerings/septic-tank-cleaning-and-pumping",
 		label: "Septic Pumping",
 		description: "Keep your system healthy before problems start.",
+	},
+	{
+		href: "/service-offerings/hydro-jetting",
+		label: "Hydro Jetting",
+		description: "High-pressure clearing for stubborn drain buildup.",
 	},
 ] as const
 

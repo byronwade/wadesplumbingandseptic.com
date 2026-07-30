@@ -194,6 +194,48 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
+				source: "/service-offerings/alternative-septic-system-installation",
+				destination:
+					"/service-offerings/engineered-septic-system-installation",
+				permanent: true,
+			},
+			{
+				source: "/engineered-septic-systems-santa-cruz-county",
+				destination:
+					"/service-offerings/engineered-septic-system-installation",
+				permanent: true,
+			},
+			{
+				source: "/seasonal-septic-maintenance-santa-cruz",
+				destination: "/septic-system-seasonal-maintenance-santa-cruz",
+				permanent: true,
+			},
+			{
+				source: "/expert-tips/seasonal-septic-maintenance-santa-cruz",
+				destination: "/septic-system-seasonal-maintenance-santa-cruz",
+				permanent: true,
+			},
+			{
+				source: "/septic-system-components-santa-cruz-2",
+				destination: "/septic-system-components-santa-cruz",
+				permanent: true,
+			},
+			{
+				source: "/expert-tips/septic-system-components-santa-cruz-2",
+				destination: "/septic-system-components-santa-cruz",
+				permanent: true,
+			},
+			{
+				source: "/urgent-septic-failure-signs-santa-cruz",
+				destination: "/septic-trouble-signs-santa-cruz",
+				permanent: true,
+			},
+			{
+				source: "/expert-tips/urgent-septic-failure-signs-santa-cruz",
+				destination: "/septic-trouble-signs-santa-cruz",
+				permanent: true,
+			},
+			{
 				source: "/lp/:slug",
 				destination: "/:slug",
 				permanent: true,

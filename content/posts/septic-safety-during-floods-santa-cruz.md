@@ -109,7 +109,7 @@ Stay Prepared
 
 Ensure your septic system remains safe and functional during flood conditions with our expert services.
 
-[Call Us](tel:+1-831-555-1234) 
+[Call Us](tel:+18312254344) 
 
 ## Serving Santa Cruz County, CA
 

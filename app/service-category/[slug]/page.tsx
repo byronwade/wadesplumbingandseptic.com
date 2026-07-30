@@ -5,8 +5,10 @@ import { Suspense } from "react"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { FilterableArchive } from "@/components/filterable-archive"
+import { RelatedContentSections } from "@/components/related-content"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
+import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
 const categories = {
@@ -103,6 +105,20 @@ export default async function ServiceCategoryPage({
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
+	const related = await getRelatedForTopic(
+		{
+			label: category.label,
+			description: category.description,
+			categories: [category.contentCategory],
+			keywords: [
+				category.label,
+				category.contentCategory,
+				slug.replaceAll("-", " "),
+			],
+			excludeSlugs: services.map((service) => service.slug),
+		},
+		{ posts: 3, services: 3 },
+	)
 
 	return (
 		<main id="main-content">
@@ -137,6 +153,11 @@ export default async function ServiceCategoryPage({
 					variant="service"
 				/>
 			</Suspense>
+			<RelatedContentSections
+				postsTitle="Related expert tips"
+				related={related}
+				servicesTitle="Related services"
+			/>
 			<ContactCta />
 		</main>
 	)

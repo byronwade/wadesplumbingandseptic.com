@@ -50,7 +50,7 @@ Preventative measures are key to maintaining a healthy septic system. Regular ma
 
 **How can I prevent septic system failures?** Regular maintenance and timely upgrades are crucial. Consider reading our [comprehensive guide on proper care and maintenance](/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide/) for additional tips.
 
-Choosing Wade's Plumbing & Septic means selecting a team with extensive experience and dedication to serving the Santa Cruz County community. Our licensed professionals are committed to delivering high-quality service, from simple maintenance to complex [alternative septic system installation](/service-offerings/alternative-septic-system-installation/). Contact us today to schedule an assessment and discover how we can enhance your septic system's performance. Let us help you safeguard your home with reliable septic system upgrades.
+Choosing Wade's Plumbing & Septic means selecting a team with extensive experience and dedication to serving the Santa Cruz County community. Our licensed professionals are committed to delivering high-quality service, from simple maintenance to complex [alternative septic system installation](/service-offerings/engineered-septic-system-installation/). Contact us today to schedule an assessment and discover how we can enhance your septic system's performance. Let us help you safeguard your home with reliable septic system upgrades.
 
 Santa Cruz County Septic Upgrades
 
