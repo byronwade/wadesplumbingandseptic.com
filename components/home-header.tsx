@@ -52,7 +52,8 @@ export function HomeHeader() {
 						/>
 						<span className="min-w-0 leading-none">
 							<span className="font-display block truncate text-[0.875rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
-								Wade&apos;s Plumbing
+								<span className="sm:hidden">Wade&apos;s</span>
+								<span className="hidden sm:inline">Wade&apos;s Plumbing</span>
 							</span>
 							<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
 								&amp; Septic
@@ -98,12 +99,16 @@ export function HomeHeader() {
 							>
 								<Menu aria-hidden="true" className="size-5" />
 							</summary>
-							<div className="border-border bg-card text-foreground absolute top-[calc(100%+0.35rem)] right-0 z-50 w-[min(16.5rem,calc(100vw-1.5rem))] overflow-hidden rounded-lg border shadow-[var(--shadow-panel)]">
+							{/*
+							  Reset inherited header text-white so the panel stays
+							  readable on the light card surface.
+							*/}
+							<div className="border-border absolute top-[calc(100%+0.35rem)] right-0 z-50 w-[min(16.5rem,calc(100vw-1.5rem))] overflow-hidden rounded-lg border bg-white text-black shadow-[var(--shadow-panel)]">
 								<ul className="py-1.5">
 									{mobileNavLinks.map((item) => (
 										<li key={item.href}>
 											<Link
-												className="hover:bg-muted block px-4 py-3 text-sm font-bold"
+												className="block px-4 py-3 text-sm font-bold text-black hover:bg-black/5"
 												href={item.href}
 												prefetch
 											>

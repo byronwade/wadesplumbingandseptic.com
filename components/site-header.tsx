@@ -43,7 +43,8 @@ export function SiteHeader() {
 						/>
 						<span className="min-w-0 leading-none">
 							<span className="font-display block truncate text-[0.875rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
-								Wade&apos;s Plumbing
+								<span className="sm:hidden">Wade&apos;s</span>
+								<span className="hidden sm:inline">Wade&apos;s Plumbing</span>
 							</span>
 							<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
 								&amp; Septic
