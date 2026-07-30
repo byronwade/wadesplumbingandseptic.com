@@ -29,9 +29,9 @@ import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Honest Plumbing & Septic Service",
+	title: "Santa Cruz Plumbing & Septic",
 	description:
-		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities.",
+		"Licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities. Clear pricing, no upselling. Call 831.225.4344.",
 	pathname: "/",
 	image: "/images/locations/santa-cruz-plumber.webp",
 })
@@ -278,15 +278,16 @@ export default function HomePage() {
 
 				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
 					<h1 className="type-cinematic motion-rise text-white">
-						Honest plumbing
+						Santa Cruz plumbing
 						<br />
-						<span className="text-primary-bright">&amp; septic</span>
+						<span className="text-primary-bright">and septic</span>
 					</h1>
 
 					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
-							No sales pressure. No upselling. Clear pricing before work begins
-							from local licensed professionals.
+							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
+							upselling, and clear pricing before work begins from local
+							licensed professionals.
 						</p>
 
 						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">

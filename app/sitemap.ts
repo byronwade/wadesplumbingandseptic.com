@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 
+import { cityServicePages, cityServicePath } from "@/lib/city-service-pages"
 import { getAllRoutes, taxonomySlug } from "@/lib/content"
 import { siteConfig } from "@/lib/site"
-
-const CHUNK_SIZE = 100
 
 type SitemapEntry = MetadataRoute.Sitemap[number]
 
@@ -21,9 +20,20 @@ function entry(
 	}
 }
 
+/**
+ * Single sitemap at /sitemap.xml (no generateSitemaps chunks).
+ * Tag archives are intentionally omitted: thin taxonomy URLs dilute crawl budget.
+ * Category hubs stay; they are few and map to real content groupings.
+ */
 async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 	"use cache"
-	cacheTag("content:routes", "content:pages", "content:services", "content:posts")
+	cacheTag(
+		"content:routes",
+		"content:pages",
+		"content:services",
+		"content:posts",
+		"content:city-service",
+	)
 	cacheLife("max")
 
 	const { pages, services, posts } = await getAllRoutes()
@@ -71,12 +81,6 @@ async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 		),
 	].map((slug) => entry(`/category/${slug}`, undefined, 0.6))
 
-	const tags = [
-		...new Set(
-			posts.flatMap((post) => post.tags?.map((tag) => taxonomySlug(tag)) ?? []),
-		),
-	].map((slug) => entry(`/tag/${slug}`, undefined, 0.5))
-
 	const serviceCategories = [
 		"/service-category/plumbing",
 		"/service-category/residential-plumbing",
@@ -88,29 +92,21 @@ async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 		"/service-category/specialty-services",
 	].map((route) => entry(route, undefined, 0.8))
 
+	const cityServiceEntries = cityServicePages.map((page) =>
+		entry(cityServicePath(page.citySlug, page.serviceSlug), undefined, 0.7),
+	)
+
 	return [
 		...fixed,
 		...pageEntries,
 		...serviceEntries,
 		...postEntries,
 		...categories,
-		...tags,
 		...serviceCategories,
+		...cityServiceEntries,
 	]
 }
 
-export async function generateSitemaps() {
-	const entries = await buildSitemapEntries()
-	const count = Math.max(1, Math.ceil(entries.length / CHUNK_SIZE))
-	return Array.from({ length: count }, (_, id) => ({ id }))
-}
-
-export default async function sitemap(props: {
-	id: Promise<string> | string
-}): Promise<MetadataRoute.Sitemap> {
-	const idValue = await props.id
-	const id = Number(idValue)
-	const entries = await buildSitemapEntries()
-	const start = id * CHUNK_SIZE
-	return entries.slice(start, start + CHUNK_SIZE)
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+	return buildSitemapEntries()
 }

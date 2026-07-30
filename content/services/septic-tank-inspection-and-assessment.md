@@ -1,12 +1,13 @@
 ---
-title: Reliable Septic Inspections in Santa Cruz County
+title: Septic Tank Inspection in Santa Cruz County
 description: >-
-  Thorough inspection and assessment of septic systems for property transfers,
-  maintenance planning, or early problem detection.
+  Thorough septic tank inspection and assessment for home sales, maintenance,
+  and early problem detection in Santa Cruz County. Call 831.225.4344.
 category: Septic
 order: 2
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping service
+updated: '2026-07-30'
 ---
 Updated April 2026In 2026, Santa Cruz County has implemented updated regulations requiring septic tank inspections every three years for residential properties. This change aims to enhance community health and environmental safety by ensuring systems operate efficiently and reduce the risk of costly failures. Additionally, new technology now available allows for more precise detection of potential issues during inspections, utilizing advanced imaging and diagnostic tools to provide a clearer understanding of your system's condition. This cutting-edge equipment helps identify problems early, saving homeowners both time and money in the long run. 
 

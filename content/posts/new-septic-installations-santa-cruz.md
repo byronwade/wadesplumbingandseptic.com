@@ -1,8 +1,8 @@
 ---
-title: Optimize Your Septic System in Santa Cruz County Now!
+title: New Septic System Installations in Santa Cruz County
 description: >-
-  Enhancing your Santa Cruz home with a modern septic solution can significantly
-  improve waste management efficiency and property value. At Wade's Plumbing.
+  What Santa Cruz County homeowners should know before a new septic installation,
+  including site constraints, permits, and when engineered systems are needed.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-13'
 tags:

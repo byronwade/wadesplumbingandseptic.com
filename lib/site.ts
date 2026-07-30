@@ -3,7 +3,8 @@ export const siteConfig = {
 	shortName: "Wade's",
 	description:
 		"Family-owned plumbing and septic specialists serving Santa Cruz County and selected Santa Clara County communities in California.",
-	url: "https://wadesplumbingandseptic.com",
+	/** Preferred host matches production redirects (apex → www). */
+	url: "https://www.wadesplumbingandseptic.com",
 	phone: "831.225.4344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
@@ -22,7 +23,8 @@ export const siteConfig = {
 	},
 	licenses: "CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
 	licenseNumber: "1087260",
-	googleMapsUrl: "https://maps.google.com/?q=7737+Highway+9,+Ben+Lomond,+CA+95005",
+	googleMapsUrl:
+		"https://maps.google.com/?q=7737+Highway+9,+Ben+Lomond,+CA+95005",
 	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
 	social: {
 		facebook: "https://www.facebook.com/wadesplumbingandseptic/",
@@ -53,5 +55,9 @@ export const resourceNavigation = [
 	{ href: "/expert-tips", label: "Expert Tips & Blog" },
 	{ href: "/maintenance-guide", label: "Maintenance Guide" },
 	{ href: "/glossary", label: "Plumbing Glossary" },
+	{
+		href: "/compare/conventional-vs-engineered-septic",
+		label: "Septic System Comparison",
+	},
 	{ href: "/septic-solutions", label: "Septic Solutions" },
 ] as const

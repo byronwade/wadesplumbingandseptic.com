@@ -1,13 +1,14 @@
 ---
-title: 'Upgrade with Premium Fixtures in Santa Cruz County, CA'
+title: Plumbing Fixture Installation in Santa Cruz County
 description: >-
-  When it comes to fixture installation in Santa Cruz County, ensuring expert
-  service is essential for long-lasting performance and efficiency. Whether.
+  Sink, faucet, toilet, and fixture installation for Santa Cruz County homes.
+  Clean workmanship and code-compliant connections. Call 831.225.4344.
 category: Plumbing
 order: 27
 image: >-
   /images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp
 imageAlt: Water flowing from a bathroom faucet
+updated: '2026-07-30'
 ---
 When it comes to fixture installation in Santa Cruz County, ensuring expert service is essential for long-lasting performance and efficiency. Whether you're upgrading your kitchen faucet, installing a new showerhead, or replacing an outdated toilet, Wade's Plumbing & Septic is your trusted partner for professional plumbing solutions.
 

@@ -1,12 +1,13 @@
 ---
-title: Septic Compliance Experts for Santa Cruz County Homes
+title: Septic Compliance and Permitting in Santa Cruz County
 description: >-
-  Understanding the intricacies of septic system permitting is crucial for
-  homeowners in Santa Cruz County, California. This process ensures that your.
+  Help with septic permits, compliance, and county requirements for Santa Cruz
+  County properties. Call 831.225.4344.
 category: Septic
 order: 14
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank septic system
+updated: '2026-07-30'
 ---
 Understanding the intricacies of septic system permitting is crucial for homeowners in Santa Cruz County, California. This process ensures that your septic system complies with local, state, and federal regulations, helping you avoid potential legal issues and costly delays. At Wade's Plumbing & Septic, our dedicated team offers a comprehensive septic system compliance and permitting service to streamline this often complex process for you.
 

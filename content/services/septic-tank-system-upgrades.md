@@ -1,12 +1,13 @@
 ---
-title: Upgrade Your Septic System in Santa Cruz County Homes
+title: Septic System Upgrades in Santa Cruz County
 description: >-
-  In Santa Cruz County, California, maintaining a reliable septic system is
-  crucial for homeowners. Septic system upgrades enhance your existing system's.
+  Septic system upgrades for capacity, treatment, and compliance on Santa Cruz
+  County properties. Call 831.225.4344.
 category: Septic
 order: 19
 image: /images/work/multi-tank-excavation.webp
 imageAlt: Multi-tank septic excavation
+updated: '2026-07-30'
 ---
 In Santa Cruz County, California, maintaining a reliable septic system is crucial for homeowners. Septic system upgrades enhance your existing system's performance, increase its capacity, and add advanced treatment capabilities, ensuring long-term efficiency and compliance with local regulations. At Wade's Plumbing & Septic, we specialize in providing customized solutions that cater to your specific needs, improving both the functionality and lifespan of your septic system.
 

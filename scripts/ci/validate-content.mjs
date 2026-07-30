@@ -93,6 +93,17 @@ for (const collection of COLLECTIONS) {
 			}
 		}
 
+		const title = String(data.title ?? "")
+		if (
+			/Effortless|Optimize Your|Top-Quality|Ensure Optimal|Boost Business|Clear Pipes Guaranteed|Transform Your/i.test(
+				title,
+			)
+		) {
+			errors.push(
+				`${file}: spammy/AI-ish title pattern; lead with the service noun and geo (e.g. "Drain Cleaning in Santa Cruz County")`,
+			)
+		}
+
 		const description = String(data.description ?? "")
 		if (/In This Guide/i.test(description) || /min read/i.test(description)) {
 			errors.push(
