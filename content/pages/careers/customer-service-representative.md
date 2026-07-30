@@ -42,4 +42,4 @@ Wade's Plumbing & Septic is an equal opportunity employer committed to creating 
 
 ## How to Apply
 
-Submit your resume and cover letter through our online application form or email careers@wadesplumbing.com.
+Submit your resume and cover letter through our online application form or email support@wadesinc.io.

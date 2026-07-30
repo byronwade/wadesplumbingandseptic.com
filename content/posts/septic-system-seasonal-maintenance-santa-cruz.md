@@ -60,7 +60,7 @@ Common issues include clogs, leaks, and system overloads. Regular maintenance an
 
 ## How Wade's Plumbing & Septic Can Help
 
-At Wade's Plumbing & Septic, we offer comprehensive services to keep your system in top shape. From routine inspections to [alternative septic system installations](/service-offerings/alternative-septic-system-installation/), our team is equipped to handle all your septic needs. Our locally trusted services ensure that your system is compliant with Santa Cruz County regulations and operates efficiently.
+At Wade's Plumbing & Septic, we offer comprehensive services to keep your system in top shape. From routine inspections to [alternative septic system installations](/service-offerings/engineered-septic-system-installation/), our team is equipped to handle all your septic needs. Our locally trusted services ensure that your system is compliant with Santa Cruz County regulations and operates efficiently.
 
 ## DIY Monitoring vs. Professional Maintenance
 

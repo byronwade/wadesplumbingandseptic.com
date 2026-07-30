@@ -1,6 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import type { RelatedContent } from "@/lib/related-content"
 import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
@@ -10,13 +11,16 @@ import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
+import { RelatedContentSections } from "@/components/related-content"
 
 export function ContentPage({
 	document,
 	isPost = false,
+	related,
 }: {
 	document: ContentDocument
 	isPost?: boolean
+	related?: RelatedContent
 }) {
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
@@ -75,6 +79,7 @@ export function ContentPage({
 					/>
 				</aside>
 			</article>
+			{related ? <RelatedContentSections related={related} /> : null}
 			<ContentConversionCta
 				conversion={document.conversion}
 				secondaryAction={

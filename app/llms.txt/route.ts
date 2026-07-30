@@ -32,7 +32,10 @@ export async function GET() {
 > ${siteConfig.description}
 
 Phone: ${siteConfig.phone}
+Email: ${siteConfig.email}
+Address: ${siteConfig.address.display}
 Hours: ${siteConfig.hours}
+License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
 
 ## Services

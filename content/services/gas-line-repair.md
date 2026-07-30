@@ -89,7 +89,7 @@ Ensure Safety and Functionality
 
 Trust Wade's Plumbing & Septic for expert gas line repair services, ensuring the safety and efficiency of your home in Santa Cruz County.
 
-[Call Us](tel:+1-555-555-5555) 
+[Call Us](tel:+18312254344) 
 
 ### What Our Santa Cruz County Customers Are Saying
 

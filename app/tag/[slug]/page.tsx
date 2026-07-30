@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
+import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
 export async function generateStaticParams() {
@@ -53,10 +54,22 @@ export default async function TagPage({
 		matched[0]?.tags?.find((tag) => taxonomySlug(tag) === slug) ??
 		slug.replaceAll("-", " ")
 
+	const related = await getRelatedForTopic(
+		{
+			label,
+			description: `Helpful Wade's articles filed under ${label}.`,
+			tags: [label],
+			keywords: [label, slug.replaceAll("-", " ")],
+			excludeSlugs: matched.map((post) => post.slug),
+		},
+		{ posts: 3, services: 3 },
+	)
+
 	return (
 		<ArticleArchive
 			description={`Helpful Wade's articles filed under ${label}.`}
 			posts={matched}
+			related={related}
 			title={label}
 		/>
 	)

@@ -7,6 +7,78 @@ import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
+export type HeroBreadcrumb = {
+	label: string
+	/** Omit on the current page crumb (rendered as plain text). */
+	href?: Route
+}
+
+function buildBreadcrumbs({
+	title,
+	parent,
+	breadcrumbs,
+}: {
+	title: string
+	parent?: { href: Route; label: string }
+	breadcrumbs?: HeroBreadcrumb[]
+}): HeroBreadcrumb[] {
+	if (breadcrumbs?.length) return breadcrumbs
+
+	return [
+		{ href: "/" as Route, label: "Home" },
+		...(parent ? [{ href: parent.href, label: parent.label }] : []),
+		{ label: title },
+	]
+}
+
+function BreadcrumbTrail({ items }: { items: HeroBreadcrumb[] }) {
+	return (
+		<nav
+			aria-label="Breadcrumb"
+			className="text-on-dark-subtle mb-6 flex flex-wrap items-center gap-1.5 font-mono text-[0.6875rem] tracking-[0.1em] uppercase"
+		>
+			<ol className="flex flex-wrap items-center gap-1.5">
+				{items.map((item, index) => {
+					const isCurrent = index === items.length - 1
+					return (
+						<li
+							key={`${item.label}-${index}`}
+							className="flex min-w-0 items-center gap-1.5"
+						>
+							{index > 0 ? (
+								<ChevronRight
+									aria-hidden="true"
+									className="size-3 shrink-0 opacity-60"
+								/>
+							) : null}
+							{item.href && !isCurrent ? (
+								<Link
+									className="transition-colors hover:text-white"
+									href={item.href}
+									prefetch={false}
+								>
+									{item.label}
+								</Link>
+							) : (
+								<span
+									aria-current={isCurrent ? "page" : undefined}
+									className={cn(
+										"min-w-0 truncate",
+										isCurrent ? "text-white/90" : undefined,
+									)}
+									title={item.label}
+								>
+									{item.label}
+								</span>
+							)}
+						</li>
+					)
+				})}
+			</ol>
+		</nav>
+	)
+}
+
 export function ContentHero({
 	title,
 	description,
@@ -14,14 +86,20 @@ export function ContentHero({
 	image,
 	imageAlt,
 	parent,
+	breadcrumbs,
 }: {
 	title: string
 	description: string
 	eyebrow?: string
 	image?: string
 	imageAlt?: string
+	/** Optional middle crumb (e.g. Services, Expert Tips, Service Areas). */
 	parent?: { href: Route; label: string }
+	/** Full trail override. Last item is treated as the current page. */
+	breadcrumbs?: HeroBreadcrumb[]
 }) {
+	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
+
 	/*
 	 * Sizes at --type-headline, not --type-display. Display belongs to the home
 	 * hero alone; run through here it set titles like "Ensure Optimal Drain Flow
@@ -61,30 +139,7 @@ export function ContentHero({
 			) : null}
 
 			<div className="container-shell relative py-14 sm:py-16 lg:py-20">
-				<nav
-					className="text-on-dark-subtle mb-6 flex flex-wrap items-center gap-1.5 font-mono text-[0.6875rem] tracking-[0.1em] uppercase"
-					aria-label="Breadcrumb"
-				>
-					<Link
-						className="transition-colors hover:text-white"
-						href="/"
-						prefetch={false}
-					>
-						Home
-					</Link>
-					{parent ? (
-						<>
-							<ChevronRight className="size-3 opacity-60" aria-hidden="true" />
-							<Link
-								className="transition-colors hover:text-white"
-								href={parent.href}
-								prefetch={false}
-							>
-								{parent.label}
-							</Link>
-						</>
-					) : null}
-				</nav>
+				<BreadcrumbTrail items={trail} />
 
 				<div className="section-head max-w-3xl">
 					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}

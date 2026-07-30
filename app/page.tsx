@@ -398,16 +398,28 @@ export default function HomePage() {
 									</p>
 								</div>
 							))}
-							<a
-								className={cn(
-									buttonVariants({ size: "xl" }),
-									"w-full sm:col-span-2",
-								)}
-								href={siteConfig.phoneHref}
-							>
-								<Phone aria-hidden="true" />
-								Call to schedule: {siteConfig.phone}
-							</a>
+							<div className="flex w-full flex-col gap-3 sm:col-span-2 sm:flex-row">
+								<a
+									className={cn(
+										buttonVariants({ size: "xl" }),
+										"w-full sm:w-auto",
+									)}
+									href={siteConfig.phoneHref}
+								>
+									<Phone aria-hidden="true" />
+									Call to schedule: {siteConfig.phone}
+								</a>
+								<Link
+									className={cn(
+										buttonVariants({ variant: "outline", size: "xl" }),
+										"w-full sm:w-auto",
+									)}
+									href="/service-offerings/engineered-septic-system-installation"
+									prefetch
+								>
+									Engineered Septic Services
+								</Link>
+							</div>
 						</div>
 						<div className="bg-muted relative aspect-4/3 overflow-hidden rounded-lg lg:aspect-auto lg:min-h-[26rem]">
 							<Image

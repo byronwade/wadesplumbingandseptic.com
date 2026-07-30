@@ -33,8 +33,18 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 		"drain field",
 		"atu",
 		"engineered septic",
+		"alternative septic",
+		"mound system",
 		"septic pumping",
 		"septic system",
+	],
+	"engineered septic": [
+		"engineered septic system",
+		"alternative septic",
+		"atu",
+		"aerobic treatment",
+		"mound system",
+		"advanced septic",
 	],
 	clog: [
 		"clogged",

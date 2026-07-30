@@ -5,8 +5,10 @@ import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
+import { RelatedContentSections } from "@/components/related-content"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { ContentDocument } from "@/lib/content"
+import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { breadcrumbJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -18,7 +20,13 @@ const promises = [
 	"Testing and cleanup before completion",
 ] as const
 
-export function ServiceLandingPage({ service }: { service: ContentDocument }) {
+export function ServiceLandingPage({
+	service,
+	related,
+}: {
+	service: ContentDocument
+	related?: RelatedContent
+}) {
 	const image = getServiceImage(service.category, service.image)
 	const schema = {
 		"@context": "https://schema.org",
@@ -102,6 +110,13 @@ export function ServiceLandingPage({ service }: { service: ContentDocument }) {
 				</aside>
 			</section>
 
+			{related ? (
+				<RelatedContentSections
+					postsTitle="Related expert tips"
+					related={related}
+					servicesTitle="Related services"
+				/>
+			) : null}
 			<ContentConversionCta conversion={service.conversion} />
 			<JsonLd
 				data={[

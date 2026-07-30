@@ -69,7 +69,7 @@ Serving Santa Cruz County Businesses
 
 Ensure your kitchen runs smoothly with expert grease trap installation from Wade's Plumbing & Septic.
 
-[Call Us: (831) 555-5555](tel:+18315555555) 
+[Call Us](tel:+18312254344) 
 
 ## Trusted by Local Businesses in Santa Cruz County
 

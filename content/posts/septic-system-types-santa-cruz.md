@@ -40,7 +40,7 @@ Traditional septic systems are the most common type used in residential properti
 
 ## Alternative Septic Systems: Options for Challenging Conditions
 
-In areas where traditional systems may not be suitable due to soil conditions or space limitations, alternative septic systems can provide a solution. These systems use advanced technology to treat wastewater more efficiently. Options such as aerobic treatment units and sand filters are designed to handle challenging conditions. If you're considering an alternative system, our [premium alternative septic systems in Santa Cruz County](/service-offerings/alternative-septic-system-installation/) might be the right choice for you.
+In areas where traditional systems may not be suitable due to soil conditions or space limitations, alternative septic systems can provide a solution. These systems use advanced technology to treat wastewater more efficiently. Options such as aerobic treatment units and sand filters are designed to handle challenging conditions. If you're considering an alternative system, our [premium alternative septic systems in Santa Cruz County](/service-offerings/engineered-septic-system-installation/) might be the right choice for you.
 
 ## Components of a Septic System: What You Need to Know
 

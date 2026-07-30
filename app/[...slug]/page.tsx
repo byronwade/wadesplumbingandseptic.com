@@ -4,6 +4,7 @@ import { Suspense } from "react"
 
 import { ContentPage } from "@/components/content-page"
 import { getCollection, getDocument, getPageOrPost } from "@/lib/content"
+import { getRelatedForPost, getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
 export async function generateStaticParams() {
@@ -40,6 +41,35 @@ export async function generateMetadata({
 	})
 }
 
+async function RelatedMarkdownPage({
+	document,
+	isPost,
+}: {
+	document: NonNullable<Awaited<ReturnType<typeof getPageOrPost>>>
+	isPost: boolean
+}) {
+	const related = isPost
+		? await getRelatedForPost(document)
+		: document.slug.startsWith("service-area/")
+			? await getRelatedForTopic(
+					{
+						label: document.title,
+						description: document.description,
+						keywords: [
+							document.slug.replaceAll("-", " "),
+							"plumbing",
+							"septic",
+							...(document.slug.includes("santa-cruz") ? ["santa cruz"] : []),
+						],
+						excludeSlugs: [document.slug],
+					},
+					{ posts: 3, services: 3 },
+				)
+			: undefined
+
+	return <ContentPage document={document} isPost={isPost} related={related} />
+}
+
 export default async function MarkdownPage({
 	params,
 }: {
@@ -56,7 +86,7 @@ export default async function MarkdownPage({
 
 	return (
 		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<ContentPage document={document} isPost={Boolean(post)} />
+			<RelatedMarkdownPage document={document} isPost={Boolean(post)} />
 		</Suspense>
 	)
 }

@@ -13,6 +13,7 @@ import {
 } from "@/lib/site"
 
 const SERVICE_POPULARITY: Record<string, number> = {
+	"engineered-septic-system-installation": 52,
 	"drain-cleaning": 48,
 	"septic-tank-cleaning-and-pumping": 47,
 	"hydro-jetting": 45,
@@ -24,6 +25,7 @@ const SERVICE_POPULARITY: Record<string, number> = {
 	"garbage-disposal-installation": 38,
 	"septic-tank-inspection-and-assessment": 37,
 	"trenchless-sewer-line-replacement": 36,
+	"septic-tank-design-and-engineering": 35,
 	"backflow-prevention-testing": 34,
 }
 

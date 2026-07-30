@@ -4,6 +4,7 @@ import { Suspense } from "react"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
 import { getCollection, getDocument } from "@/lib/content"
+import { getRelatedForService } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -30,6 +31,15 @@ export async function generateMetadata({
 	})
 }
 
+async function RelatedServicePage({
+	service,
+}: {
+	service: NonNullable<Awaited<ReturnType<typeof getDocument>>>
+}) {
+	const related = await getRelatedForService(service)
+	return <ServiceLandingPage related={related} service={service} />
+}
+
 export default async function ServiceOfferingPage({
 	params,
 }: {
@@ -42,7 +52,7 @@ export default async function ServiceOfferingPage({
 
 	return (
 		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<ServiceLandingPage service={service} />
+			<RelatedServicePage service={service} />
 		</Suspense>
 	)
 }
