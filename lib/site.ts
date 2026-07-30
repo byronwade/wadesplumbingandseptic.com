@@ -54,7 +54,9 @@ export const companyNavigation = [
 export const resourceNavigation = [
 	{ href: "/expert-tips", label: "Expert Tips & Blog" },
 	{ href: "/maintenance-guide", label: "Maintenance Guide" },
-	{ href: "/glossary", label: "Plumbing Glossary" },
+	{ href: "/glossary", label: "Plumbing & Septic Glossary" },
+	{ href: "/glossary/plumbing", label: "Plumbing Glossary" },
+	{ href: "/glossary/septic", label: "Septic Glossary" },
 	{
 		href: "/compare/conventional-vs-engineered-septic",
 		label: "Septic System Comparison",

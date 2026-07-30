@@ -47,8 +47,7 @@ const nextConfig: NextConfig = {
 			"@radix-ui/react-navigation-menu",
 			"@radix-ui/react-separator",
 			"@radix-ui/react-slot",
-			"cmdk",
-			"next-themes",
+			"@radix-ui/react-tooltip",
 		],
 	},
 	async redirects() {

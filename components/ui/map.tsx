@@ -808,7 +808,7 @@ function MarkerLabel({
     <div
       className={cn(
         "absolute left-1/2 -translate-x-1/2 whitespace-nowrap",
-        "text-foreground text-[10px] font-medium",
+        "text-foreground text-[10px] font-bold",
         positionClasses[position],
         className,
       )}

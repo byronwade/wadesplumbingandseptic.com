@@ -30,6 +30,11 @@ export type ContentDocument = {
 	category?: string
 	date?: string
 	updated?: string
+	/**
+	 * ISO timestamp from the markdown file mtime. Used for sitemap lastmod when
+	 * frontmatter has no `updated` / `date`.
+	 */
+	sourceModified?: string
 	image?: string
 	imageAlt?: string
 	eyebrow?: string
@@ -62,6 +67,7 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 		content,
 		{ title, description, slug, eyebrow },
 	)
+	const sourceModified = fs.statSync(absolutePath).mtime.toISOString()
 
 	return {
 		slug,
@@ -72,6 +78,7 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 		category: data.category ? String(data.category) : undefined,
 		date: normalizeDate(data.date),
 		updated: normalizeDate(data.updated),
+		sourceModified,
 		image: data.image ? String(data.image) : undefined,
 		imageAlt: data.imageAlt ? String(data.imageAlt) : undefined,
 		eyebrow,

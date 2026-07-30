@@ -7,6 +7,7 @@ on:
       - "content/**"
       - "lib/content.ts"
       - "lib/city-service-pages.ts"
+      - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
       - ".github/workflows/content.yml"
@@ -16,6 +17,7 @@ on:
       - "content/**"
       - "lib/content.ts"
       - "lib/city-service-pages.ts"
+      - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
       - ".github/workflows/content.yml"
@@ -42,6 +44,9 @@ jobs:
 
       - name: Content frontmatter + route integrity
         run: node scripts/ci/validate-content.mjs
+
+      - name: Glossary term integrity
+        run: node scripts/ci/validate-glossary.mjs
 
       - name: City × service uniqueness
         run: npm run ci:city-service
