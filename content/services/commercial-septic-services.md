@@ -98,7 +98,7 @@ Wade's Plumbing & Septic proudly offers reliable commercial septic maintenance s
 
 We are a licensed contractor in California (C-42) (state license), ensuring professional and compliant services.
 
-Our office hours are Monday through Friday, 9 am to 5 pm, but our emergency line is available to address urgent needs.
+Our office hours are Monday through Friday, 9 am to 5 pm, but our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas/).
 

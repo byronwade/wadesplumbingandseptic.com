@@ -93,7 +93,7 @@ Our contractors are fully licensed and certified, holding a C-42 license in Cali
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For a complete overview of our service areas, please visit our [main service-area overview](/service-areas/).
 
@@ -103,7 +103,7 @@ Santa Cruz County's Trusted Experts
 
 Protect your property from flooding and water damage with our expert storm drain cleaning services.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ### Customer Testimonials
 

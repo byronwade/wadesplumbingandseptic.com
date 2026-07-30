@@ -78,7 +78,7 @@ Santa Cruz County Septic Experts
 
 Ensure your septic system's integrity with our professional smoke testing services.
 
-[Call Us Now](tel:+18315551234)
+[Call Us Now](tel:+18312254344)
 
 ## Serving Santa Cruz County, CA
 
@@ -95,7 +95,7 @@ At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests acros
 - [Soquel](/service-area/soquel/)
 - [Watsonville](/service-area/watsonville/)
 
-Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9am to 5pm, with an emergency line available for urgent situations. For more details on our service areas, visit our [main service-area overview](/service-areas/).
+Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9am to 5pm, We do not offer 24/7 or after-hours emergency dispatch. For more details on our service areas, visit our [main service-area overview](/service-areas/).
 
 ## Why Santa Cruz County Trusts Us for Septic Optimization
 

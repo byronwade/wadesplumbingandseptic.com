@@ -66,7 +66,7 @@ Contractor License: C-42 for California
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more information on the areas we serve, please visit our [service area overview](/service-areas/).
 
@@ -76,4 +76,4 @@ Ensure Your Plumbing Runs Smoothly
 
 Keep your plumbing system in top condition with our expert main line cleanout services.
 
-[Call Us Now](tel:+18315551234) [Get a Free ★★★★★ 5-Star Rated Service "Wade's Plumbing & Septic quickly resolved our main line issue with professionalism and care. Highly recommend!" (Sarah, Aptos "Fantastic service! The team was prompt and efficient, leaving our plumbing system in perfect condition."), Mike, Santa Cruz "I was impressed by their expertise and fast response. Our main line is now running smoothly!" (Lisa, Watsonville Licensed Contractor: C-42 Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call Us Now](tel:+18312254344) [Get a Free ★★★★★ 5-Star Rated Service "Wade's Plumbing & Septic quickly resolved our main line issue with professionalism and care. Highly recommend!" (Sarah, Aptos "Fantastic service! The team was prompt and efficient, leaving our plumbing system in perfect condition."), Mike, Santa Cruz "I was impressed by their expertise and fast response. Our main line is now running smoothly!" (Lisa, Watsonville Licensed Contractor: C-42 Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))

@@ -89,7 +89,7 @@ At Wade's Plumbing & Septic, we proudly offer expert fixture installation servic
 
 We are fully licensed and insured, holding a C-42 contractor license for California, ensuring compliance and quality in every project.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our emergency line is available, ensuring you have access to reliable service whenever you need it.
+Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumbing & Septic is your trusted partner for all fixture installation needs in Santa Cruz County, CA.
 
@@ -99,4 +99,4 @@ Transform Your Living Space
 
 Enhance the functionality and aesthetics of your home with our professional fixture installation services, tailored for Santa Cruz County, CA.
 
-[Call Us Now](tel:+18315551234) [Get a Free Upgrade with Confidence in Santa Cruz County, CA ★★★★★ 5-star rated service "Wade's team upgraded our fixtures seamlessly! Highly recommend their expertise." (Sarah, Santa Cruz "Professional and efficient service from start to finish. Love our new fixtures!"), John, Capitola "Exceptional service and top-quality fixtures. Couldn't be happier!" (Emily, Watsonville Licensed Contractor: C-42 Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call Us Now](tel:+18312254344) [Get a Free Upgrade with Confidence in Santa Cruz County, CA ★★★★★ 5-star rated service "Wade's team upgraded our fixtures seamlessly! Highly recommend their expertise." (Sarah, Santa Cruz "Professional and efficient service from start to finish. Love our new fixtures!"), John, Capitola "Exceptional service and top-quality fixtures. Couldn't be happier!" (Emily, Watsonville Licensed Contractor: C-42 Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))

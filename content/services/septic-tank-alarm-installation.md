@@ -52,7 +52,7 @@ Stay Alert with Confidence
 
 Ensure the smooth operation of your septic system with our reliable alarm installations.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote](/contact/) </ 
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/) </ 
 
 ## Trusted by Homeowners in Santa Cruz County
 

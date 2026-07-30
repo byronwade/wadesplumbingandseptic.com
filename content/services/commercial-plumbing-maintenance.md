@@ -74,7 +74,7 @@ Professional Solutions for Your Business
 
 Ensure your business operates smoothly with our reliable commercial plumbing solutions in Santa Cruz County.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote](/contact/) 
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/) 
 
 "Wade's Plumbing & Septic has been a lifesaver for our restaurant. Their team is always professional and efficient." (Sarah, Santa Cruz)
 

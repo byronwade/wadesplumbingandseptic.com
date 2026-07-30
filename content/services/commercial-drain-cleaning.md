@@ -62,4 +62,4 @@ Ensure uninterrupted operations with our expert drain cleaning services tailored
 
 Licensed Contractor: C-42
 
-Fast-response guarantee: Available for emergencies to meet your plumbing needs.
+Scheduling: Monday through Friday, 9:00am to 5:00pm.

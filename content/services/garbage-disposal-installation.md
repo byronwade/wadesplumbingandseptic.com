@@ -81,7 +81,7 @@ Contractor License: C-42 license for California
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available 24/7 for immediate assistance
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more details on our service areas, visit our [main service-area overview](/service-areas/).
 

@@ -162,7 +162,7 @@ export const cityServicePages: CityServicePage[] = [
 			"Rusty tanks in damp garages near the ocean",
 			"Undersized units after ADU additions",
 			"Venting limits on tankless retrofits",
-			"Same-day failures leaving a household without hot water",
+			"Unexpected heater failures that leave a household without hot water",
 		],
 		nearbySlugs: ["live-oak", "capitola", "scotts-valley"],
 	},

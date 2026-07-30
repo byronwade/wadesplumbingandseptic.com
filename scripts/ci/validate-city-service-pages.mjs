@@ -55,7 +55,7 @@ async function main() {
 		}
 
 		const banned =
-			/\u2014|\u2013|Effortless|Optimize Your|Top-Quality|Ensure Optimal/i
+			/\u2014|\u2013|Effortless|Optimize Your|Top-Quality|Ensure Optimal|24\/7|emergency line|after-hours emergency/i
 		const haystack = [
 			page.serviceTitle,
 			page.localAngle,
@@ -64,7 +64,9 @@ async function main() {
 			...(page.faq ?? []).flatMap((item) => [item.question, item.answer]),
 		].join("\n")
 		if (banned.test(haystack)) {
-			errors.push(`${key}: banned dash or spammy marketing phrase`)
+			errors.push(
+				`${key}: banned dash, spammy phrase, or 24/7/emergency-line claim`,
+			)
 		}
 	}
 

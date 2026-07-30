@@ -91,7 +91,7 @@ At Wade's Plumbing & Septic, we proudly offer expert septic box repair services 
 
 Our contractors are fully licensed and equipped to handle all your septic needs. We holds a C-42 contractor license for California, ensuring compliance with all local regulations.
 
-Our office is open Monday through Friday from 9am to 5pm. For urgent issues, our emergency line is available to provide immediate assistance.
+Our office is open Monday through Friday from 9am to 5pm. For urgent issues, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 For more information on our service coverage, visit our [main service-area overview](/service-areas/).
 
@@ -101,7 +101,7 @@ Expert Septic Solutions
 
 Ensure the optimal functioning of your septic system with our professional repair services.
 
-[Call Us](tel:+18315551234) 
+[Call Us](tel:+18312254344) 
 
 ### What Our Customers Are Saying
 

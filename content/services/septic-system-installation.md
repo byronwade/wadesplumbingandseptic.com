@@ -64,7 +64,7 @@ Wade's Plumbing & Septic is proud to offer premium septic system installation se
 
 As a fully licensed contractor (C-42 license for CA), we ensure that every project meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available to provide immediate assistance.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 Septic Installations Made Easy
 

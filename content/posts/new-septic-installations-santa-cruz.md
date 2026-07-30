@@ -122,7 +122,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our commitment to quality is backed by our C-42 contractor license in California, ensuring that all our installations meet the highest standards of safety and efficiency.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For emergencies, our line is available to address any urgent needs you may have.
+Our office hours are Monday through Friday, from 9am to 5pm. For time-sensitive issues during business hours, call 831.225.4344. We do not offer 24/7 dispatch.
 
 For more information on our service areas, please visit our [main service-area overview](/service-areas/).
 
@@ -132,4 +132,4 @@ Transform Your Waste Management
 
 Ensure efficient and eco-friendly wastewater management with our top-tier septic system installations.
 
-[Call Us](tel:+18315551234)
+[Call Us](tel:+18312254344)

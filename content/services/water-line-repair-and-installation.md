@@ -83,7 +83,7 @@ At Wade's Plumbing & Septic, we proudly offer Premium Water Line Solutions to th
 
 As a licensed contractor, we hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our emergency line is available to provide immediate assistance.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 Reliable Water Line Services
 
@@ -91,7 +91,7 @@ Reliable Water Line Services
 
 Ensure the integrity of your water supply with our expert solutions tailored for Santa Cruz County homeowners.
 
-[Call Us Today](tel:+18315551234) 
+[Call Us Today](tel:+18312254344) 
 
 ### Why Santa Cruz County Trusts Wade's Plumbing & Septic
 

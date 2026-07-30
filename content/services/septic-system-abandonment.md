@@ -58,7 +58,7 @@ Our contractor license information: C-42 license for California.
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, you can trust our local expertise to handle your septic system needs efficiently and effectively.
 
@@ -68,7 +68,7 @@ Septic System Abandonment
 
 Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cruz County, ensuring environmental safety and regulatory compliance.
 
-[Call Us](tel:+18315555555) 
+[Call Us](tel:+18312254344) 
 
 ### Effortless Septic Abandonment in Santa Cruz County, CA
 

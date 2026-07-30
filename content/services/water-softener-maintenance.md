@@ -66,7 +66,7 @@ Maintain Your System's Efficiency
 
 Ensure your water treatment system operates at peak performance with our expert maintenance services in Santa Cruz County.
 
-[Call Us](tel:+18335551234) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ### What Our Customers Say
 
@@ -80,4 +80,4 @@ Ensure your water treatment system operates at peak performance with our expert 
 
 Licensed Contractor: C-42 for California
 
-Fast-Response Guarantee: Available 24/7 for all your plumbing needs.
+Scheduling: Monday through Friday, 9:00am to 5:00pm.

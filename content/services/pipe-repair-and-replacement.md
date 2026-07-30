@@ -81,7 +81,7 @@ Our team is fully licensed and insured, holding a C-42 license for California. W
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more information on our service areas, visit our [service area overview](/service-areas/).
 
@@ -91,4 +91,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/))
+[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Scheduling: Monday through Friday, 9:00am to 5:00pm.

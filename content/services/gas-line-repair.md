@@ -79,7 +79,7 @@ Choosing Wade's Plumbing & Septic for your gas line repair in Santa Cruz County 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing expert gas line repair services with the utmost professionalism and care.
 
-We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday through Friday from 9am to 5pm, and we offer an emergency line available to ensure your safety and peace of mind.
+We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for reliable and prompt gas line repair services.
 
