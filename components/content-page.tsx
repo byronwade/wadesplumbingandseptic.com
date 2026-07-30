@@ -156,8 +156,8 @@ export function ContentPage({
 						<p className="spec-label">Reach us</p>
 						<h2 className="type-title">Call, text, or email Wade&apos;s</h2>
 						<p className="type-lead">
-							The number and email are right on the card. You can also save it
-							to your phone if that helps later.
+							Phone and email are on the card below. Saving the contact is
+							optional — calling is the fastest way to get help.
 						</p>
 					</div>
 					<VirtualBusinessCard id="contact-business-card" />

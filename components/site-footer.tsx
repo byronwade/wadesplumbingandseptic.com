@@ -4,8 +4,7 @@ import Link from "next/link"
 
 import { CallButton } from "@/components/call-button"
 import { CompanyLogo } from "@/components/company-logos"
-import { ProtectedPhoneText } from "@/components/protected-contact"
-import { VirtualBusinessCard } from "@/components/virtual-business-card"
+import { contactInfo } from "@/lib/contact"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
 
 const serviceLinks = [
@@ -33,24 +32,18 @@ const socialLinks = [
 export function SiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
+			{/*
+			  One dial CTA in the strip — phone number is the label. No save-contact
+			  here; that lives only on the contact page card as a quiet secondary.
+			*/}
 			<div className="bg-primary shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.18)]">
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
-					<div>
-						<p className="font-mono text-[0.6875rem] font-semibold tracking-[0.14em] text-white/80 uppercase">
-							{siteConfig.hours}
-						</p>
-						<p className="type-subtitle mt-1 text-white">
-							<ProtectedPhoneText className="text-inherit hover:text-white" />
-						</p>
-					</div>
-					{/*
-					  Explicit ink text on the white plate. This used to inherit
-					  text-foreground, which in dark mode resolves to near-white - an
-					  invisible label on a white button.
-					*/}
+					<p className="font-mono text-[0.6875rem] font-semibold tracking-[0.14em] text-white/80 uppercase">
+						{siteConfig.hours}
+					</p>
 					<CallButton
 						className="text-ink w-full bg-white hover:bg-white/90 sm:w-auto"
-						desktopLabel="Call now"
+						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						prefer="dial"
 						size="lg"
 						variant="secondary"
@@ -59,17 +52,6 @@ export function SiteFooter() {
 			</div>
 
 			<div className="container-shell py-[var(--space-section-y-tight)]">
-				<div className="mb-[var(--space-block)]">
-					<p className="text-primary-bright mb-3 font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-						Keep us handy
-					</p>
-					<p className="text-on-dark-muted mb-5 max-w-xl text-sm leading-relaxed">
-						Save Wade&apos;s to your phone, then call or text whenever you need
-						plumbing or septic help.
-					</p>
-					<VirtualBusinessCard id="footer-business-card" tone="dark" />
-				</div>
-
 				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
 						<Link

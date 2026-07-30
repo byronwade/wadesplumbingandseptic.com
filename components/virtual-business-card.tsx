@@ -13,9 +13,8 @@ import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 /**
- * Virtual business card: one clean contact composition with save + call.
- * Mobile keeps a single vertical flow (no icon-tile grid). Desktop adds a
- * side action column.
+ * Contact-page card only. Call is the primary action; save-contact is a quiet
+ * text link so it does not compete with dialing.
  */
 export function VirtualBusinessCard({
 	tone = "light",
@@ -57,7 +56,7 @@ export function VirtualBusinessCard({
 									dark ? "text-primary-bright" : "text-primary",
 								)}
 							>
-								Virtual business card
+								Contact card
 							</p>
 							<h2
 								className={cn(
@@ -143,7 +142,6 @@ export function VirtualBusinessCard({
 						</div>
 					</div>
 
-					{/* Call first; save-contact stays secondary so we don't oversell it. */}
 					<div className="grid gap-2 sm:hidden">
 						<CallButton
 							className="w-full"
@@ -151,27 +149,31 @@ export function VirtualBusinessCard({
 							prefer="dial"
 							size="lg"
 						/>
-						<SaveContactButton
-							className="w-full"
-							size="lg"
-							variant={dark ? "inverse" : "outline"}
-						>
-							Save to contacts
-						</SaveContactButton>
 						<ProtectedContactLink
 							ariaLabel={`Email us at ${contactInfo.email}`}
 							className={cn(
-								buttonVariants({ variant: "ghost", size: "lg" }),
+								buttonVariants({ variant: "outline", size: "lg" }),
 								"w-full",
-								dark
-									? "text-on-dark-muted hover:text-white"
-									: "text-muted-foreground",
+								dark ? "border-white/20 text-white" : undefined,
 							)}
 							kind="email"
 						>
 							<Mail aria-hidden="true" />
 							Email us
 						</ProtectedContactLink>
+						<SaveContactButton
+							className={cn(
+								"w-full justify-center text-sm font-bold underline-offset-2 hover:underline",
+								dark
+									? "text-on-dark-muted hover:text-white"
+									: "text-muted-foreground hover:text-foreground",
+							)}
+							showIcon={false}
+							size="sm"
+							variant="ghost"
+						>
+							Save to contacts
+						</SaveContactButton>
 					</div>
 				</div>
 
@@ -187,8 +189,8 @@ export function VirtualBusinessCard({
 							dark ? "text-on-dark-muted" : "text-muted-foreground",
 						)}
 					>
-						Call us anytime. Prefer one tap later? Save the card with our
-						number, email, and address.
+						Call or email anytime. You can also save this card if you want the
+						number handy later.
 					</p>
 					<CallButton
 						className="w-full"
@@ -196,27 +198,31 @@ export function VirtualBusinessCard({
 						prefer="dial"
 						size="lg"
 					/>
-					<SaveContactButton
-						className="w-full"
-						size="lg"
-						variant={dark ? "inverse" : "outline"}
-					>
-						Save to contacts
-					</SaveContactButton>
 					<ProtectedContactLink
 						ariaLabel={`Email us at ${contactInfo.email}`}
 						className={cn(
-							buttonVariants({ variant: "ghost", size: "lg" }),
+							buttonVariants({ variant: "outline", size: "lg" }),
 							"w-full",
-							dark
-								? "text-on-dark-muted hover:text-white"
-								: "text-muted-foreground",
+							dark ? "border-white/20 text-white" : undefined,
 						)}
 						kind="email"
 					>
 						<Mail aria-hidden="true" />
 						Email us
 					</ProtectedContactLink>
+					<SaveContactButton
+						className={cn(
+							"w-full justify-center text-sm font-bold underline-offset-2 hover:underline",
+							dark
+								? "text-on-dark-muted hover:text-white"
+								: "text-muted-foreground hover:text-foreground",
+						)}
+						showIcon={false}
+						size="sm"
+						variant="ghost"
+					>
+						Save to contacts
+					</SaveContactButton>
 				</div>
 			</div>
 		</section>
