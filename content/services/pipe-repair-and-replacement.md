@@ -1,16 +1,14 @@
 ---
 title: Expert Pipe Repair & Replacement in Santa Cruz County
-description: At Wade's Plumbing & Septic, we understand the urgency and importance
- of maintaining a reliable plumbing system. Our specialized pipe repair and replacement
- services cater to residents and businesses throughout Santa Cruz County, ensuring
- that your…
+description: >-
+  At Wade's Plumbing & Septic, we understand the urgency and importance of
+  maintaining a reliable plumbing system.
 category: Plumbing
 order: 31
-image: /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
-imageAlt: "Leaking water pipe outdoors"
-
+image: >-
+  /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
+imageAlt: Leaking water pipe outdoors
 ---
-
 At Wade's Plumbing & Septic, we understand the urgency and importance of maintaining a reliable plumbing system. Our specialized pipe repair and replacement services cater to residents and businesses throughout Santa Cruz County, ensuring that your piping infrastructure remains in optimal condition. Whether you're dealing with a minor leak or require extensive repiping, our expert team is equipped to handle all types of pipe materials, including copper, PEX, PVC, and galvanized steel. With our comprehensive approach, we can address your "pipe repair Santa Cruz County" needs efficiently and effectively.
 
 ## Signs You Need Pipe Repair in Santa Cruz County
@@ -52,7 +50,7 @@ We provide transparent pricing and detailed estimates to help you make informed 
 
 Regular maintenance and timely repairs are key to preventing future pipe issues. Scheduling routine inspections can help identify potential problems before they escalate. Our team can also advise on best practices for pipe maintenance to ensure longevity and reliability.
 
-For those dealing with more complex plumbing challenges, consider exploring our [failed septic repair & replacement](/lp/failed-septic-repair-replacement-santa-cruz-county/) services to address broader issues.
+For those dealing with more complex plumbing challenges, consider exploring our [failed septic repair & replacement](/service-offerings/septic-tank-repair-and-replacement) services to address broader issues.
 
 ## Frequently Asked Questions
 
@@ -92,4 +90,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call Us](tel:+1234567890) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/))
+[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/))

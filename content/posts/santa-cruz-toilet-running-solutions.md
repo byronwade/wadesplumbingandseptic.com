@@ -1,18 +1,21 @@
 ---
 title: 'Why Your Santa Cruz Toilet Keeps Running: Solutions & Tips'
-description: In This Guide5 min read1.Quick Answer for Santa Cruz Homeowners2.Understanding
- Why Your Toilet Keeps Running3.Common Causes of a Running Toilet4.DIY Fixes …
+description: >-
+  A running toilet can be a nuisance, leading to increased water bills and
+  potential plumbing issues.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- toilet keeps running plumbing service
-image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
-imageAlt: "Bathroom with toilet and sink"
----In This Guide5 min read
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - toilet keeps running plumbing service
+image: >-
+  /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: Bathroom with toilet and sink
+---
+In This Guide5 min read
 
 ![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
@@ -89,9 +92,6 @@ Hiring a professional ensures accurate diagnosis and long-lasting solutions, pre
 ## Sources &
 
 ## Sources & Local References
-
-- [Competitor gap: Why Does My Toilet Keep Running Randomly?](https://plumbtreeplumbing.com/why-does-my-toilet-keep-running-randomly/)
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 
 ## Seasonal Tip
 

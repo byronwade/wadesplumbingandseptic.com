@@ -1,6 +1,8 @@
 ---
 title: Plumbing & Septic Video Tutorials
-description: Practical video resources and field explanations from Wade's Plumbing & Septic.
+description: >-
+  We are organizing field explanations, homeowner maintenance tips, and project
+  walkthroughs into this resource center.
 eyebrow: Watch & Learn
 order: 10
 ---

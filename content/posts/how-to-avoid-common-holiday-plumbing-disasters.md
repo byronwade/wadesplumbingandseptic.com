@@ -1,24 +1,25 @@
 ---
 title: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
-description: The holiday season is one of the busiest times of the year, and the last
- thing you need during family gatherings, dinner parties, or overnight guests is
- a…
+description: >-
+  The holiday season is one of the busiest times of the year, and the last thing
+  you need during family gatherings, dinner parties, or overnight guests is a.
 category: Plumbing Tips
 date: '2025-12-17'
 tags:
-- septic system care
-- santa cruz plumbing
-- plumbing emergencies
-- holiday plumbing tips
-- plumbing maintenance
-- prevent plumbing issues
-- family gatherings plumbing
-- plumbing system care
-- plumbing preparation
-- santa cruz county homes
+  - septic system care
+  - santa cruz plumbing
+  - plumbing emergencies
+  - holiday plumbing tips
+  - plumbing maintenance
+  - prevent plumbing issues
+  - family gatherings plumbing
+  - plumbing system care
+  - plumbing preparation
+  - santa cruz county homes
 image: /images/wordpress/img-1839-1.webp
-imageAlt: "Prevent Holiday Plumbing Issues in Santa Cruz County Homes"
----The holiday season is one of the busiest times of the year, and the last thing you need during family gatherings, dinner parties, or overnight guests is a plumbing emergency. When your home is full and your plumbing system is working overtime, even a small issue can snowball into a major disruption.
+imageAlt: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
+---
+The holiday season is one of the busiest times of the year, and the last thing you need during family gatherings, dinner parties, or overnight guests is a plumbing emergency. When your home is full and your plumbing system is working overtime, even a small issue can snowball into a major disruption.
 
 ![Warning sign on a wooden post](/images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp)
 

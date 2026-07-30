@@ -1,15 +1,14 @@
 ---
 title: Top-Quality Drainfield Repair for Santa Cruz Homes
-description: In Santa Cruz County, a reliable septic system is essential for maintaining
- a healthy and functional home. When issues arise, it’s crucial to address them promptly
- with professional drainfield repair services. At Wade’s Plumbing & Septic,…
+description: >-
+  In Santa Cruz County, a reliable septic system is essential for maintaining a
+  healthy and functional home. When issues arise, it’s crucial to address them.
 category: Septic
 order: 17
-image: /images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp
-imageAlt: "Chrome sink drain close-up"
-
+image: >-
+  /images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp
+imageAlt: Chrome sink drain close-up
 ---
-
 In Santa Cruz County, a reliable septic system is essential for maintaining a healthy and functional home. When issues arise, it’s crucial to address them promptly with professional drainfield repair services. At Wade’s Plumbing & Septic, our expert team offers comprehensive drainfield repair in Santa Cruz to restore your septic system’s efficiency and longevity.
 
 ## Signs You Need Drainfield Repair in Santa Cruz
@@ -34,7 +33,7 @@ Several factors can lead to drainfield failure, necessitating a thorough inspect
 - Intrusion by tree roots
 - Accumulation of solid waste due to infrequent [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/)
 
-Our team at Wade's Plumbing & Septic offers expert [failed septic repair and replacement](/lp/failed-septic-repair-replacement-santa-cruz-county/) solutions to address these issues efficiently.
+Our team at Wade's Plumbing & Septic offers expert [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) solutions to address these issues efficiently.
 
 ## The Drainfield Repair Process
 

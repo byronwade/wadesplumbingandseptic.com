@@ -1,12 +1,13 @@
 ---
-title: Capitola, CA Plumbing & Septic Services
-description: 'Capitola Village to Upper Capitola plumbing & septic, salt-air corrosion, older beach homes, vacation rentals. Wade''s 831.225.4344, CSLB #1087260.'
-eyebrow: Capitola, CA
+title: 'Capitola, CA Plumbing & Septic Services'
+description: >-
+  Capitola Village to Upper Capitola plumbing & septic, salt-air corrosion,
+  older beach homes, vacation rentals. Wade's 831.225.4344, CSLB #1087260.
+eyebrow: 'Capitola, CA'
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Capitola coastal neighborhood served by Wade's Plumbing and Septic
 ---
-
 Capitola packs a lot of plumbing personality into a small footprint. The Village and Esplanade sit a few blocks from the wharf, where cottages and duplexes date to eras when pipes were smaller and bathrooms were added one at a time. Climb toward Upper Capitola and Capitola Road, and you find 1960s to 80s ranches on larger lots, some on city sewer, some still on septic as you approach the Soquel border.
 
 Wade's Plumbing & Septic is family-owned, licensed in California (CSLB #1087260), and based in Santa Cruz County. We work with year-round residents, HOA-managed complexes near the lagoon, and short-term rental owners who need reliable turnarounds between guests.
@@ -33,7 +34,7 @@ Our wastewater work includes:
 - Septic pumping with notes on scum and sludge levels, useful if you are tracking system health
 - Drainfield wet-spot evaluation after heavy winter rains
 - Repairs and replacements aligned with Santa Cruz County environmental health requirements
-- Referrals to [engineered septic designs](/engineered-septic-systems-santa-cruz-county) when setback or soil limits rule out a standard layout
+- Referrals to [engineered septic designs](/service-offerings/engineered-septic-system-installation) when setback or soil limits rule out a standard layout
 
 Honest assessment matters here. A sewer backup in the Village is a different fix than a saturated drainfield above New Brighton, confusing the two wastes money.
 
@@ -49,4 +50,4 @@ For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+
 
 **Nearby service areas:** [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Failed septic repair](/failed-septic-repair-replacement-santa-cruz-county) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Failed septic repair](/service-offerings/septic-tank-repair-and-replacement) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

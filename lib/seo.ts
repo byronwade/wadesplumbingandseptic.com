@@ -56,6 +56,99 @@ export function buildPageMetadata({
 	}
 }
 
+export function websiteJsonLd() {
+	return {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"@id": `${siteConfig.url}/#website`,
+		name: siteConfig.name,
+		url: siteConfig.url,
+		description: siteConfig.description,
+		publisher: { "@id": `${siteConfig.url}/#business` },
+		inLanguage: "en-US",
+	}
+}
+
+export function localBusinessJsonLd(
+	services: Array<{ slug: string; title: string; description: string }> = [],
+) {
+	const offerCatalog =
+		services.length > 0
+			? {
+					"@type": "OfferCatalog",
+					name: "Plumbing and septic services",
+					itemListElement: services.slice(0, 48).map((service) => ({
+						"@type": "Offer",
+						itemOffered: {
+							"@type": "Service",
+							name: service.title,
+							description: service.description,
+							url: absoluteUrl(`/service-offerings/${service.slug}`),
+							provider: { "@id": `${siteConfig.url}/#business` },
+						},
+					})),
+				}
+			: undefined
+
+	return {
+		"@context": "https://schema.org",
+		"@type": ["Plumber", "LocalBusiness", "HomeAndConstructionBusiness"],
+		"@id": `${siteConfig.url}/#business`,
+		name: siteConfig.name,
+		url: siteConfig.url,
+		telephone: "+18312254344",
+		email: siteConfig.email,
+		logo: absoluteUrl("/images/brand/wades-mark.webp"),
+		image: absoluteUrl("/images/locations/santa-cruz-plumber.webp"),
+		priceRange: "$$",
+		description: siteConfig.description,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: siteConfig.address.street,
+			addressLocality: siteConfig.address.city,
+			addressRegion: siteConfig.address.region,
+			postalCode: siteConfig.address.postalCode,
+			addressCountry: "US",
+		},
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: siteConfig.geo.latitude,
+			longitude: siteConfig.geo.longitude,
+		},
+		hasMap: siteConfig.googleMapsUrl,
+		identifier: {
+			"@type": "PropertyValue",
+			name: "CA CSLB License",
+			value: siteConfig.licenseNumber,
+		},
+		areaServed: [
+			{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
+			{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+		],
+		openingHoursSpecification: [
+			{
+				"@type": "OpeningHoursSpecification",
+				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				opens: "09:00",
+				closes: "17:00",
+			},
+		],
+		sameAs: [
+			siteConfig.social.facebook,
+			siteConfig.social.instagram,
+			siteConfig.social.linkedin,
+		],
+		knowsAbout: [
+			"Plumbing repair",
+			"Septic systems",
+			"Drain cleaning",
+			"Water heaters",
+			"Engineered septic systems",
+		],
+		...(offerCatalog ? { hasOfferCatalog: offerCatalog } : {}),
+	}
+}
+
 export function articleJsonLd(document: ContentDocument) {
 	return {
 		"@context": "https://schema.org",
@@ -92,9 +185,7 @@ export function webPageJsonLd(document: ContentDocument) {
 		description: document.description,
 		url: absoluteUrl(`/${document.slug}`),
 		isPartOf: {
-			"@type": "WebSite",
-			name: siteConfig.name,
-			url: siteConfig.url,
+			"@id": `${siteConfig.url}/#website`,
 		},
 		about: {
 			"@id": `${siteConfig.url}/#business`,
@@ -113,4 +204,84 @@ export function breadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
 			item: absoluteUrl(item.path),
 		})),
 	}
+}
+
+export function faqPageJsonLd(
+	faqs: Array<{ question: string; answer: string }>,
+) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		mainEntity: faqs.map((faq) => ({
+			"@type": "Question",
+			name: faq.question,
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: faq.answer,
+			},
+		})),
+	}
+}
+
+/** Pull ### Question / answer pairs from markdown for FAQPage schema. */
+export function extractFaqPairs(markdown: string) {
+	const pairs: Array<{ question: string; answer: string }> = []
+	const blocks = markdown.split(/^###\s+/m).slice(1)
+
+	for (const block of blocks) {
+		const newline = block.indexOf("\n")
+		if (newline === -1) continue
+		const question = block.slice(0, newline).trim()
+		const answer = block
+			.slice(newline + 1)
+			.split(/\n##\s+/)[0]
+			?.replace(/\[([^\]]+)]\([^)]+\)/g, "$1")
+			.replace(/[#>*_`]/g, "")
+			.replace(/\s+/g, " ")
+			.trim()
+		if (question && answer && answer.length > 20) {
+			pairs.push({ question, answer })
+		}
+	}
+
+	return pairs
+}
+
+export function serviceAreaJsonLd(
+	document: ContentDocument,
+	cityName: string,
+) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		name: `${document.title}`,
+		description: document.description,
+		url: absoluteUrl(`/${document.slug}`),
+		serviceType: "Plumbing and septic services",
+		provider: { "@id": `${siteConfig.url}/#business` },
+		areaServed: {
+			"@type": "City",
+			name: cityName,
+			containedInPlace: {
+				"@type": "AdministrativeArea",
+				name: "Santa Cruz County, California",
+			},
+		},
+	}
+}
+
+/** Best-effort city label from service-area slug or title. */
+export function cityNameFromServiceArea(document: ContentDocument) {
+	const fromSlug = document.slug
+		.replace(/^service-area\//, "")
+		.replace(/-ca-plumbing-septic-services$/, "")
+		.split("-")
+		.map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+		.join(" ")
+	if (fromSlug && fromSlug.length > 2) return fromSlug
+
+	const titleMatch = document.title.match(
+		/^(.+?)\s+(?:Plumbing|CA|California)/i,
+	)
+	return titleMatch?.[1]?.trim() || document.title
 }

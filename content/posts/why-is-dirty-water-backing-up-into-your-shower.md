@@ -1,24 +1,24 @@
 ---
 title: Solve Shower Backup Issues in Santa Cruz County Homes
-description: Few things are more alarming than seeing dirty water rising into your
- shower. This usually signals a blockage in your home’s main sewer line. When any
- of your…
+description: >-
+  Few things are more alarming than seeing dirty water rising into your shower.
+  This usually signals a blockage in your home’s main sewer line. When any of.
 category: Plumbing Tips
 date: '2025-06-03'
 tags:
-- santa cruz county
-- plumbing issues
-- shower backup
-- sewer line blockage
-- home drainage problems
-- plumbing solutions
-- main sewer line
-- shower drainage
-- blocked drain repair
+  - santa cruz county
+  - plumbing issues
+  - shower backup
+  - sewer line blockage
+  - home drainage problems
+  - plumbing solutions
+  - main sewer line
+  - shower drainage
+  - blocked drain repair
 image: /images/wordpress/img-0073.webp
-imageAlt: "Solve Shower Backup Issues in Santa Cruz County Homes"
-
----Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures (like the toilet, bathroom sink, dishwasher, or washing machine), experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.
+imageAlt: Solve Shower Backup Issues in Santa Cruz County Homes
+---
+Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures (like the toilet, bathroom sink, dishwasher, or washing machine), experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.
 
 ![Chrome bathroom faucet](/images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp)
 

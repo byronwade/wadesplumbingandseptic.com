@@ -1,7 +1,8 @@
 ---
-title: Emergency Plumber Near You, Santa Cruz County
-description: Emergency plumbing landing page focused on immediate calls and rapid
- triage.
+title: 'Emergency Plumber Near You, Santa Cruz County'
+description: >-
+  Burst pipes, active leaks, backups, and urgent plumbing issues.  Call now for
+  immediate triage and dispatch availability.
 order: 10
 image: /images/work/drain-cleaning-equipment.webp
 imageAlt: Exposed plumbing repair work
@@ -11,7 +12,7 @@ noindex: true
 
 Call-First Campaign Landing Page
 
-# Emergency Plumber Near You
+## Emergency Plumber Near You
 
 Burst pipes, active leaks, backups, and urgent plumbing issues. Call now for immediate triage and dispatch availability.
 

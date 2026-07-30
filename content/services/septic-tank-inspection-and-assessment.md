@@ -1,14 +1,13 @@
 ---
 title: Reliable Septic Inspections in Santa Cruz County
-description: Thorough inspection and assessment of septic systems for property transfers,
- maintenance planning, or early problem detection.
+description: >-
+  Thorough inspection and assessment of septic systems for property transfers,
+  maintenance planning, or early problem detection.
 category: Septic
 order: 2
 image: /images/services/septic-pumping-illustration.webp
-imageAlt: "Septic pumping service"
-
+imageAlt: Septic pumping service
 ---
-
 Updated April 2026In 2026, Santa Cruz County has implemented updated regulations requiring septic tank inspections every three years for residential properties. This change aims to enhance community health and environmental safety by ensuring systems operate efficiently and reduce the risk of costly failures. Additionally, new technology now available allows for more precise detection of potential issues during inspections, utilizing advanced imaging and diagnostic tools to provide a clearer understanding of your system's condition. This cutting-edge equipment helps identify problems early, saving homeowners both time and money in the long run. 
 
 ## **Septic Tank Inspection & Assessment**
@@ -21,8 +20,6 @@ Our inspection service gives you a **clear, honest understanding** of your syste
 
 Whether you're buying a home, planning maintenance, or noticing early warning signs, we help you get answers you can trust.
 
-
-
 ## **What We Do**
 
 We perform a **full evaluation of your septic system’s key components** , focusing on performance, condition, and risk factors.
@@ -34,8 +31,6 @@ We perform a **full evaluation of your septic system’s key components** , focu
 - **Sludge & Scum Level Measurement** We measure buildup inside the tank to determine if pumping is needed and evaluate overall system health.
 - **Drainfield Evaluation** We check for warning signs like standing water, slow absorption, or odors that indicate problems below the surface.
 - **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield, critical for long-term performance.
-
-
 
 ## **Why This Service Matters**
 
@@ -50,8 +45,6 @@ This service helps you:
 - **Understand exactly what you’re buying (for real estate transactions)**
 - **Plan maintenance instead of dealing with emergencies**
 - **Protect your property value**
-
-
 
 ## **Perfect For**
 
@@ -83,7 +76,7 @@ Ensure Your System's Health
 
 Guarantee the reliability and efficiency of your septic system with our expert inspection services.
 
-[Call Us Today](tel:+1234567890) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
 
 </ 
 
