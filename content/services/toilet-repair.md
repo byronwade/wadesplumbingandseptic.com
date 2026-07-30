@@ -1,13 +1,14 @@
 ---
-title: Reliable Septic Toilet Repair in Santa Cruz County
+title: Toilet Repair in Santa Cruz County
 description: >-
-  When it comes to reliable toilet repair services in Santa Cruz County, Wade's
-  Plumbing & Septic is your go-to choice.
+  Toilet repair for running, leaking, and clogged toilets in Santa Cruz County
+  homes. Fast, clean fixes. Call 831.225.4344.
 category: Plumbing
 order: 37
 image: >-
   /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
 imageAlt: Bathroom with toilet and sink
+updated: '2026-07-30'
 ---
 When it comes to reliable toilet repair services in Santa Cruz County, Wade's Plumbing & Septic is your go-to choice. Our expert technicians address a wide range of toilet issues, ensuring your bathroom fixtures operate efficiently and reliably. From leaks and running toilets to weak flushes and clogs, our team is equipped to handle it all with precision and speed. Our commitment to quality service in Santa Cruz County, California, sets us apart as the trusted partner for all your plumbing needs.
 
@@ -70,7 +71,7 @@ At Wade's Plumbing & Septic, we proudly offer expert toilet repair for septic sy
 - Felton
 - Boulder Creek
 
-We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday through Friday, from 9am to 5pm, and we offer a 24/7 emergency line to handle urgent plumbing and septic needs.
+We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday through Friday, from 9am to 5pm, and we schedule service during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 Whether you are in the heart of Santa Cruz or in the surrounding areas, you can trust Wade's Plumbing & Septic for reliable and professional service.
 

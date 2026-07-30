@@ -1,13 +1,14 @@
 ---
-title: Upgrade Water Lines for Superior Flow in Santa Cruz County
+title: Water Line Repair and Installation in Santa Cruz County
 description: >-
-  At Wade's Plumbing & Septic, we understand the critical role that your water
-  line plays in supplying clean, potable water to your home or business. If.
+  Water main and supply line repair or replacement for Santa Cruz County homes.
+  Call 831.225.4344.
 category: Plumbing
 order: 48
 image: >-
   /images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp
 imageAlt: Outdoor water treatment tanks
+updated: '2026-07-30'
 ---
 At Wade's Plumbing & Septic, we understand the critical role that your water line plays in supplying clean, potable water to your home or business. If you're experiencing issues with your water line, our expert team offers comprehensive **water line repair in Santa Cruz** County, California. Whether you're dealing with a leak, break, or need a complete installation, our licensed professionals are here to ensure your water supply remains uninterrupted and functioning efficiently.
 
@@ -82,7 +83,7 @@ At Wade's Plumbing & Septic, we proudly offer Premium Water Line Solutions to th
 
 As a licensed contractor, we hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our emergency line is available to provide immediate assistance.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 Reliable Water Line Services
 

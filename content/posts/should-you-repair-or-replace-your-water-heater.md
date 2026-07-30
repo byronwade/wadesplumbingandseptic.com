@@ -97,7 +97,7 @@ At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa C
 
 Our team is fully licensed and certified, holding a C-42 contractor license for California, ensuring reliable and professional service for all your water heater needs.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent issues, our emergency line is available, providing peace of mind whenever you need us.
+Our office hours are Monday through Friday, 9am to 5pm. For urgent issues, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 For a comprehensive overview of our service areas, please visit our [service area overview](/service-areas/).
 

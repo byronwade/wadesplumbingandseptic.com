@@ -117,7 +117,7 @@ Ensure your septic system remains safe and functional during flood conditions wi
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos/), [Capitola](/service-area/capitola/), [Santa Cruz](/service-area/santa-cruz/), and [Scotts Valley](/service-area/scotts-valley/). We are licensed under the C-42 classification in California, ensuring our expertise and compliance with all local regulations.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available, providing you with peace of mind no matter the time of day.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 For a complete overview of our service areas, please visit our [main service-area page](/service-areas/).
 

@@ -2,6 +2,11 @@ import "server-only"
 
 import { cacheLife, cacheTag } from "next/cache"
 
+import {
+	cityServicePages,
+	cityServicePath,
+	getCityLocation,
+} from "@/lib/city-service-pages"
 import { getCollection } from "@/lib/content"
 import { getAllGlossaryEntries } from "@/lib/glossary"
 import { getServiceImage } from "@/lib/service-images"
@@ -343,6 +348,41 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		intents: ["browse"] as SearchIntent[],
 	}))
 
+	const cityServiceDocs: SearchDocument[] = cityServicePages.flatMap(
+		(page, index) => {
+			const location = getCityLocation(page.citySlug)
+			if (!location) return []
+
+			return [
+				{
+					id: `city-service:${page.citySlug}:${page.serviceSlug}`,
+					type: "page" as const,
+					title: `${page.serviceTitle} in ${location.name}`,
+					description: page.localAngle.slice(0, 158),
+					href: cityServicePath(page.citySlug, page.serviceSlug),
+					category: "City Service",
+					image: "/images/locations/santa-cruz-plumber.webp",
+					keywords: keywordsFromText(
+						page.serviceTitle,
+						location.name,
+						location.county,
+						page.citySlug.replaceAll("-", " "),
+						page.serviceSlug.replaceAll("-", " "),
+						...page.commonIssues,
+						"near me",
+					),
+					body: [
+						page.localAngle,
+						...page.commonIssues,
+						page.permitNote ?? "",
+					].join(" "),
+					popularity: Math.max(8, 20 - Math.floor(index / 3)),
+					intents: ["area", "service"] as SearchIntent[],
+				},
+			]
+		},
+	)
+
 	const actionDocs: SearchDocument[] = [
 		{
 			id: "action:call",
@@ -437,6 +477,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		...serviceDocs,
 		...tipDocs,
 		...pageDocs,
+		...cityServiceDocs,
 		...navDocs,
 	]) {
 		const existing = deduped.get(document.href)

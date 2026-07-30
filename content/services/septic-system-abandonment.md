@@ -1,14 +1,14 @@
 ---
-title: 'Effortless Septic Abandonment in Santa Cruz County, CA'
+title: Septic System Abandonment in Santa Cruz County
 description: >-
-  Properly decommissioning a septic system is crucial for maintaining
-  environmental safety and compliance with local regulations. At Wade's Plumbing
-  &.
+  Proper septic system abandonment and decommissioning when connecting to sewer
+  or replacing systems in Santa Cruz County. Call 831.225.4344.
 category: Septic
 order: 3
 image: >-
   /images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp
 imageAlt: Plumber installing steel pipes
+updated: '2026-07-30'
 ---
 Properly decommissioning a septic system is crucial for maintaining environmental safety and compliance with local regulations. At Wade's Plumbing & Septic, we specialize in **septic system abandonment in Santa Cruz County** , ensuring that outdated or failing systems are safely managed. This service is essential when transitioning to a municipal sewer system or installing a new septic system, protecting both your property and the local ecosystem.
 
@@ -58,7 +58,7 @@ Our contractor license information: C-42 license for California.
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, you can trust our local expertise to handle your septic system needs efficiently and effectively.
 

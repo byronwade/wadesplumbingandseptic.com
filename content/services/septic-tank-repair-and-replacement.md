@@ -1,14 +1,14 @@
 ---
-title: Premium Septic Solutions for Santa Cruz County Homes
+title: Septic Tank Repair and Replacement in Santa Cruz County
 description: >-
-  If you’re experiencing issues with your septic system, it may be time for a
-  professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic,
-  we.
+  Septic tank repair and replacement for cracked, outdated, or failing tanks in
+  Santa Cruz County. Call 831.225.4344.
 category: Septic
 order: 7
 image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp
 imageAlt: Stacked concrete pipes for underground systems
+updated: '2026-07-30'
 ---
 If you’re experiencing issues with your septic system, it may be time for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic, we specialize in diagnosing and addressing all your septic tank needs, ensuring your system operates efficiently. Our expert team is ready to handle repairs or replacements with precision and care, minimizing disruption to your Santa Cruz County home.
 
@@ -75,7 +75,7 @@ Choosing Wade's Plumbing & Septic means partnering with a trusted local expert i
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our team is committed to providing top-notch septic tank repair and replacement services to keep your systems running smoothly.
 
-We hold a C-42 license for California, ensuring that our work meets all state regulations and standards. Our office is open Monday through Friday from 9am to 5pm, and we offer a emergency line for any urgent septic service needs.
+We hold a C-42 license for California, ensuring that our work meets all state regulations and standards. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch.
 
 Fast & Reliable Service
 

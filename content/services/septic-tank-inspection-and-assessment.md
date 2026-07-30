@@ -1,9 +1,8 @@
 ---
-title: Septic Tank Inspection and Assessment in Santa Cruz County
+title: Septic Tank Inspection in Santa Cruz County
 description: >-
-  Thorough septic tank inspection and assessment for home sales, maintenance
-  planning, and early problem detection in Santa Cruz County. Licensed Wade's
-  Plumbing & Septic. Call 831.225.4344.
+  Thorough septic tank inspection and assessment for home sales, maintenance,
+  and early problem detection in Santa Cruz County. Call 831.225.4344.
 category: Septic
 order: 2
 image: /images/services/septic-pumping-illustration.webp

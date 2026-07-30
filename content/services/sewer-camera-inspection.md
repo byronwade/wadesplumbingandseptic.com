@@ -1,15 +1,15 @@
 ---
-title: Swift Sewer Camera Inspections in Santa Cruz County Homes
+title: Sewer Camera Inspection in Santa Cruz County
 description: >-
-  Experiencing plumbing issues can be a homeowner’s nightmare, but a
-  professional sewer camera inspection can help diagnose the problem swiftly and
-  accurately.
+  Sewer camera inspection to locate roots, offsets, and collapses in Santa Cruz
+  County sewer lines. Call 831.225.4344.
 category: Plumbing
 order: 42
 featured: true
 image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
 imageAlt: Stacked concrete pipes ready for installation
+updated: '2026-07-30'
 ---
 Experiencing plumbing issues can be a homeowner’s nightmare, but a professional sewer camera inspection can help diagnose the problem swiftly and accurately. At Wade's Plumbing & Septic, we provide top-notch sewer camera inspection services throughout Santa Cruz County, California, ensuring your plumbing and sewer systems function smoothly without unnecessary disruptions.
 
@@ -73,7 +73,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including 
 
 We hold a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available to assist with any plumbing or septic emergencies you may encounter.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
 
 Quick & Accurate Diagnostics
 

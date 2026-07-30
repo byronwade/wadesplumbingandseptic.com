@@ -93,6 +93,17 @@ for (const collection of COLLECTIONS) {
 			}
 		}
 
+		const title = String(data.title ?? "")
+		if (
+			/Effortless|Optimize Your|Top-Quality|Ensure Optimal|Boost Business|Clear Pipes Guaranteed|Transform Your/i.test(
+				title,
+			)
+		) {
+			errors.push(
+				`${file}: spammy/AI-ish title pattern; lead with the service noun and geo (e.g. "Drain Cleaning in Santa Cruz County")`,
+			)
+		}
+
 		const description = String(data.description ?? "")
 		if (/In This Guide/i.test(description) || /min read/i.test(description)) {
 			errors.push(
@@ -117,6 +128,28 @@ for (const collection of COLLECTIONS) {
 		) {
 			errors.push(
 				`${file}: unresolved content placeholder (e.g. [Current Date])`,
+			)
+		}
+
+		const fakePhones =
+			source.match(
+				/tel:\+?(?:1(?:800|831|833)555\d{4}|18315556677|19876543210)/gi,
+			) ?? []
+		for (const phone of fakePhones) {
+			errors.push(
+				`${file}: fake phone link "${phone}"; use tel:+18312254344`,
+			)
+		}
+
+		// Business-hours only: no 24/7 or "emergency line" claims.
+		if (/emergency line/i.test(source)) {
+			errors.push(
+				`${file}: claims an "emergency line"; Wade's does not offer 24/7 or after-hours dispatch`,
+			)
+		}
+		if (/24\/7/i.test(source) && !/do not offer 24\/7/i.test(source)) {
+			errors.push(
+				`${file}: claims 24/7 availability; use business hours (Mon to Fri 9:00am to 5:00pm) or explicit "do not offer 24/7"`,
 			)
 		}
 

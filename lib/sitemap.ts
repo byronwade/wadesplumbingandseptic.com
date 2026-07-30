@@ -4,6 +4,10 @@ import type { MetadataRoute } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 
 import {
+	cityServicePages,
+	cityServicePath,
+} from "@/lib/city-service-pages"
+import {
 	getAllRoutes,
 	taxonomySlug,
 	type ContentDocument,
@@ -108,6 +112,7 @@ function pagePriority(slug: string) {
 	const pathname = normalizePathname(`/${slug}`)
 	if (PATH_PRIORITY[pathname] !== undefined) return PATH_PRIORITY[pathname]
 	if (slug.startsWith("service-area/")) return 0.85
+	if (slug.startsWith("compare/")) return 0.7
 	if (slug.startsWith("careers/")) return 0.55
 	if (slug.startsWith("santa-cruz/")) return 0.7
 	return 0.7
@@ -157,7 +162,7 @@ function isIndexable(document: ContentDocument) {
  */
 export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 	"use cache"
-	cacheTag("content:sitemap", "content:routes")
+	cacheTag("content:sitemap", "content:routes", "content:city-service")
 	cacheLife("max")
 
 	const { pages, services, posts } = await getAllRoutes()
@@ -316,6 +321,14 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		upsertEntry(entries, {
 			pathname: `/glossary/${topic}/${term.slug}`,
 			priority: 0.65,
+			changeFrequency: "monthly",
+		})
+	}
+
+	for (const page of cityServicePages) {
+		upsertEntry(entries, {
+			pathname: cityServicePath(page.citySlug, page.serviceSlug),
+			priority: 0.78,
 			changeFrequency: "monthly",
 		})
 	}

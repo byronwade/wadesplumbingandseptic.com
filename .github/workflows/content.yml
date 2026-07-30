@@ -6,6 +6,7 @@ on:
     paths:
       - "content/**"
       - "lib/content.ts"
+      - "lib/city-service-pages.ts"
       - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
@@ -15,6 +16,7 @@ on:
     paths:
       - "content/**"
       - "lib/content.ts"
+      - "lib/city-service-pages.ts"
       - "lib/glossary/**"
       - "app/**"
       - "scripts/ci/**"
@@ -45,6 +47,9 @@ jobs:
 
       - name: Glossary term integrity
         run: node scripts/ci/validate-glossary.mjs
+
+      - name: City × service uniqueness
+        run: npm run ci:city-service
 
   route-manifest:
     name: Route manifest smoke

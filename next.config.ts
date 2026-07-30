@@ -178,6 +178,11 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
+				source: "/sitemap/:id(\\d+).xml",
+				destination: "/sitemap.xml",
+				permanent: true,
+			},
+			{
 				source: "/service-offerings/hydro-jetting-for-drain-clearing",
 				destination: "/service-offerings/hydro-jetting",
 				permanent: true,
@@ -209,14 +214,12 @@ const nextConfig: NextConfig = {
 			},
 			{
 				source: "/service-offerings/alternative-septic-system-installation",
-				destination:
-					"/service-offerings/engineered-septic-system-installation",
+				destination: "/service-offerings/engineered-septic-system-installation",
 				permanent: true,
 			},
 			{
 				source: "/engineered-septic-systems-santa-cruz-county",
-				destination:
-					"/service-offerings/engineered-septic-system-installation",
+				destination: "/service-offerings/engineered-septic-system-installation",
 				permanent: true,
 			},
 			{

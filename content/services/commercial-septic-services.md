@@ -1,13 +1,14 @@
 ---
-title: Dependable Septic Maintenance in Santa Cruz County
+title: Commercial Septic Services in Santa Cruz County
 description: >-
-  In Santa Cruz County, California, businesses of all sizes rely on efficient
-  septic systems to manage waste effectively. Wade's Plumbing & Septic offers.
+  Commercial septic pumping, inspection, and repair for Santa Cruz County
+  businesses. Licensed C-42 septic support. Call 831.225.4344.
 category: Commercial
 order: 24
 image: >-
   /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
 imageAlt: Industrial plumbing system
+updated: '2026-07-30'
 ---
 In Santa Cruz County, California, businesses of all sizes rely on efficient septic systems to manage waste effectively. Wade's Plumbing & Septic offers comprehensive **commercial septic services** to ensure that your business runs smoothly, without the disruption of septic system failures. Our expertise covers system design, installation, pumping, repairs, and maintenance, tailored to meet the specific demands of commercial properties.
 
@@ -97,7 +98,7 @@ Wade's Plumbing & Septic proudly offers reliable commercial septic maintenance s
 
 We are a licensed contractor in California (C-42) (state license), ensuring professional and compliant services.
 
-Our office hours are Monday through Friday, 9 am to 5 pm, but our emergency line is available to address urgent needs.
+Our office hours are Monday through Friday, 9 am to 5 pm, but our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas/).
 

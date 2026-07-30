@@ -2,8 +2,8 @@
 title: FAQ
 description: >-
   Answers to common plumbing and septic questions for Santa Cruz County and
-  selected Santa Clara County homeowners, from service areas to emergencies
-  and tank pumping.
+  selected Santa Clara County homeowners, including service areas, business
+  hours, and tank pumping.
 order: 4
 eyebrow: Helpful Answers
 ---
@@ -16,9 +16,9 @@ Find answers to common questions about plumbing, septic systems, and our service
 
 We serve Santa Cruz County and selected Santa Clara County communities, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, Live Oak, Soquel, Felton, Ben Lomond, Boulder Creek, and nearby mountain and coastal towns. See our full [service areas](/service-areas) list, or call us if you are unsure.
 
-### Do you offer urgent repairs?
+### Do you offer 24/7 or after-hours emergency service?
 
-Yes. Call [831.225.4344](tel:+18312254344) during business hours for active leaks, backups, failed water heaters, and other time-sensitive plumbing or septic problems. We prioritize calls that risk property damage or health hazards.
+No. Wade's is open Monday through Friday, 9:00am to 5:00pm. Call [831.225.4344](tel:+18312254344) during those hours for active leaks, backups, failed water heaters, and other time-sensitive plumbing or septic problems. We do not offer 24/7 or after-hours dispatch.
 
 ### Are your technicians licensed and insured?
 
@@ -32,7 +32,7 @@ Insulate exposed pipes, keep cabinet doors open during cold snaps, let faucets d
 
 ### What should I do if I have a pipe leak?
 
-Shut off water to the fixture or at the main valve, contain the water if it is safe to do so, then call us at [831.225.4344](tel:+18312254344). Avoid DIY electrical work near standing water.
+Shut off water to the fixture or at the main valve, contain the water if it is safe to do so, then call us at [831.225.4344](tel:+18312254344) during business hours. Avoid DIY electrical work near standing water.
 
 ## Septic Questions
 
@@ -44,19 +44,19 @@ Most residential tanks need pumping every 3 to 5 years, depending on household s
 
 Slow drains, gurgling fixtures, sewage odors, soggy spots over the drainfield, unusually green grass in one area, and backups are common warnings. Contact us for an inspection before a small issue becomes a full system failure.
 
-## Emergency Service Questions
+## Scheduling and time-sensitive work
 
-### What is the cost range for urgent plumbing repairs in Santa Cruz County?
+### What is the cost range for time-sensitive plumbing repairs in Santa Cruz County?
 
-Costs vary with diagnosis, access, and parts. Many urgent repairs fall in a few hundred dollars once the issue is clear; larger line or septic work costs more. We explain options and pricing before work begins.
+Costs vary with diagnosis, access, and parts. Many repairs fall in a few hundred dollars once the issue is clear; larger line or septic work costs more. We explain options and pricing before work begins.
 
-### What should I expect during an urgent service call?
+### What should I expect during a service call?
 
-We assess the problem, explain what we found in plain language, outline repair options, and get your approval before proceeding. Our goal is to stop damage quickly and leave the system working safely.
+We assess the problem, explain what we found in plain language, outline repair options, and get your approval before proceeding. Our goal is to fix the issue correctly and leave the system working safely.
 
 ### How quickly can you respond in Santa Cruz County?
 
-Response time depends on call volume and your location. During business hours we aim to reach local jobs as soon as a tech is available, often the same day for active leaks and backups.
+Response time depends on call volume and your location. During business hours we prioritize active leaks and backups as the schedule allows. We do not promise after-hours or overnight emergency response.
 
 ### Why choose Wade's for plumbing and septic help?
 

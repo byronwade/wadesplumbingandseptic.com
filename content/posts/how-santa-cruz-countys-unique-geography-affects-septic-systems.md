@@ -90,7 +90,7 @@ Our team holds a C-42 contractor license for California, ensuring you receive ex
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available for urgent septic issues
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more information on our service areas, visit our [main service-area overview](/service-areas/).
 
