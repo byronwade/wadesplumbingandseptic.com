@@ -88,7 +88,7 @@ Stay Ahead of Septic Issues
 
 Recognizing early warning signs can save you from costly repairs and ensure your septic system runs smoothly.
 
-[Call Us Now](tel:+18315555555) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ### Trusted by Homeowners in Santa Cruz County
 

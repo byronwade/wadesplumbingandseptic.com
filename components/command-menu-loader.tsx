@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
-import { useTheme } from "next-themes"
 
 import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
 import { prefetchSearchIndex } from "@/lib/search-client"
@@ -12,34 +11,14 @@ const loadSearchDialog = () =>
 
 const CommandMenuDialog = dynamic(loadSearchDialog, { ssr: false })
 
+/**
+ * Search stays cold until the user asks for it. Prefetching the dialog chunk
+ * and ~search index on idle was costing every page hundreds of KB of JS/JSON
+ * in the first couple seconds after load.
+ */
 export function CommandMenuLoader() {
 	const [open, setOpen] = useState(false)
 	const [ready, setReady] = useState(false)
-	const { resolvedTheme, setTheme } = useTheme()
-
-	useEffect(() => {
-		const warm = () => {
-			void loadSearchDialog()
-			void prefetchSearchIndex()
-			setReady(true)
-		}
-
-		const idleWindow = window as Window & {
-			requestIdleCallback?: (
-				callback: IdleRequestCallback,
-				options?: IdleRequestOptions,
-			) => number
-			cancelIdleCallback?: (handle: number) => void
-		}
-
-		if (idleWindow.requestIdleCallback) {
-			const id = idleWindow.requestIdleCallback(warm, { timeout: 1200 })
-			return () => idleWindow.cancelIdleCallback?.(id)
-		}
-
-		const timer = globalThis.setTimeout(warm, 200)
-		return () => globalThis.clearTimeout(timer)
-	}, [])
 
 	useEffect(() => {
 		const openSearch = () => {
@@ -49,28 +28,11 @@ export function CommandMenuLoader() {
 		}
 
 		const onKeyDown = (event: KeyboardEvent) => {
-			const target = event.target
-			const typing =
-				target instanceof HTMLElement &&
-				(target.tagName === "INPUT" ||
-					target.tagName === "TEXTAREA" ||
-					target.tagName === "SELECT" ||
-					target.isContentEditable)
-
 			if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
 				event.preventDefault()
 				setReady(true)
 				void prefetchSearchIndex()
 				setOpen((current) => !current)
-				return
-			}
-
-			if (typing || event.metaKey || event.ctrlKey || event.altKey) {
-				return
-			}
-
-			if (event.key.toLowerCase() === "d") {
-				setTheme(resolvedTheme === "dark" ? "light" : "dark")
 			}
 		}
 
@@ -80,7 +42,7 @@ export function CommandMenuLoader() {
 			window.removeEventListener("keydown", onKeyDown)
 			window.removeEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
 		}
-	}, [resolvedTheme, setTheme])
+	}, [])
 
 	if (!ready) return null
 

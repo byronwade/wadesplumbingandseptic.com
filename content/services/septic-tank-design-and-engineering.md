@@ -69,7 +69,7 @@ Custom Septic Solutions
 
 Tailored septic systems for efficient and environmentally-friendly waste management.
 
-[Call Us Now](tel:+18315551234) 
+[Call Us Now](tel:+18312254344) 
 
 ## Trusted Septic Tank Design in Santa Cruz County, CA
 

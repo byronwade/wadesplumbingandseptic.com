@@ -11,70 +11,14 @@ import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
 import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
-
-const categories = {
-	plumbing: {
-		label: "Plumbing",
-		contentCategory: "Plumbing",
-		description:
-			"Residential plumbing repairs, drains, water heaters, fixtures, piping, sewers, and specialty diagnostics.",
-		image: "/images/work/precision-valve-installation.webp",
-	},
-	"residential-plumbing": {
-		label: "Residential Plumbing",
-		contentCategory: "Plumbing",
-		description:
-			"Complete plumbing service for homes, including repairs, replacements, maintenance, and urgent repairs.",
-		image: "/images/services/drain-clearing.webp",
-	},
-	commercial: {
-		label: "Commercial",
-		contentCategory: "Commercial",
-		description:
-			"Commercial repairs, maintenance, drains, grease traps, backflow devices, water heaters, and septic support.",
-		image: "/images/services/commercial-plumbing.webp",
-	},
-	"commercial-plumbing": {
-		label: "Commercial Plumbing",
-		contentCategory: "Commercial",
-		description:
-			"Professional plumbing service that helps businesses minimize downtime and maintain safe, code-compliant systems.",
-		image: "/images/work/commercial-plumbing-installation.webp",
-	},
-	septic: {
-		label: "Septic",
-		contentCategory: "Septic",
-		description:
-			"Septic inspections, diagnostics, repairs, maintenance, permitting, installation, and engineered treatment systems.",
-		image: "/images/work/engineered-septic-hero.webp",
-	},
-	"septic-services": {
-		label: "Septic Services",
-		contentCategory: "Septic",
-		description:
-			"Complete conventional and advanced septic support for tanks, pumps, controls, treatment, and drain fields.",
-		image: "/images/work/completed-multi-tank.webp",
-	},
-	"emergency-services": {
-		label: "Urgent Repairs",
-		contentCategory: "Plumbing",
-		description:
-			"Call-first support during business hours for active leaks, burst pipes, sewer backups, failed water heaters, and other time-sensitive plumbing problems.",
-		image: "/images/work/drain-cleaning-equipment.webp",
-	},
-	"specialty-services": {
-		label: "Specialty Services",
-		contentCategory: "Plumbing",
-		description:
-			"Advanced inspection, hydro jetting, trenchless work, smoke testing, water treatment, and difficult plumbing diagnostics.",
-		image: "/images/work/new-construction-rough-in.webp",
-	},
-} as const
-
-type CategorySlug = keyof typeof categories
+import {
+	serviceCategories,
+	serviceCategorySlugs,
+	type ServiceCategorySlug,
+} from "@/lib/service-categories"
 
 export function generateStaticParams() {
-	return Object.keys(categories).map((slug) => ({ slug }))
+	return serviceCategorySlugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({
@@ -83,7 +27,7 @@ export async function generateMetadata({
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	const category = categories[slug as CategorySlug]
+	const category = serviceCategories[slug as ServiceCategorySlug]
 
 	if (!category) return {}
 
@@ -95,12 +39,12 @@ export async function generateMetadata({
 	})
 }
 
-async function ServiceCategoryBody({ slug }: { slug: CategorySlug }) {
+async function ServiceCategoryBody({ slug }: { slug: ServiceCategorySlug }) {
 	"use cache"
 	cacheTag("content:services", `content:service-category:${slug}`)
 	cacheLife("max")
 
-	const category = categories[slug]
+	const category = serviceCategories[slug]
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
@@ -168,13 +112,13 @@ export default async function ServiceCategoryPage({
 	params: Promise<{ slug: string }>
 }) {
 	const { slug } = await params
-	const category = categories[slug as CategorySlug]
+	const category = serviceCategories[slug as ServiceCategorySlug]
 
 	if (!category) notFound()
 
 	return (
 		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<ServiceCategoryBody slug={slug as CategorySlug} />
+			<ServiceCategoryBody slug={slug as ServiceCategorySlug} />
 		</Suspense>
 	)
 }

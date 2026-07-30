@@ -1,24 +1,63 @@
 "use client"
 
 import dynamic from "next/dynamic"
+import { useEffect, useRef, useState } from "react"
 
 const ServiceAreasMap = dynamic(
 	() =>
-		import("@/components/service-areas-map").then(
-			(mod) => mod.ServiceAreasMap,
-		),
+		import("@/components/service-areas-map").then((mod) => mod.ServiceAreasMap),
 	{
 		ssr: false,
 		loading: () => (
 			<div
-				aria-hidden
-				className="bg-muted mx-auto min-h-[min(70vh,36rem)] w-full max-w-6xl animate-pulse rounded-lg md:min-h-[28rem]"
+				aria-hidden="true"
+				className="bg-muted/50 border-border h-[min(62vh,30rem)] w-full animate-pulse rounded-lg border"
 			/>
 		),
 	},
 )
 
-/** Lazy MapLibre entry so the service-areas shell can paint without the map chunk. */
+/**
+ * MapLibre is ~550KB. Keep it out of the initial service-areas graph and only
+ * mount once the map shell is near the viewport.
+ */
 export function ServiceAreasMapLazy() {
-	return <ServiceAreasMap />
+	const shellRef = useRef<HTMLDivElement>(null)
+	const [shouldLoad, setShouldLoad] = useState(false)
+
+	useEffect(() => {
+		const node = shellRef.current
+		if (!node || shouldLoad) return
+
+		if (typeof IntersectionObserver === "undefined") {
+			const timer = window.setTimeout(() => setShouldLoad(true), 0)
+			return () => window.clearTimeout(timer)
+		}
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries.some((entry) => entry.isIntersecting)) {
+					setShouldLoad(true)
+					observer.disconnect()
+				}
+			},
+			{ rootMargin: "240px 0px" },
+		)
+
+		observer.observe(node)
+		return () => observer.disconnect()
+	}, [shouldLoad])
+
+	return (
+		<div ref={shellRef}>
+			{shouldLoad ? (
+				<ServiceAreasMap />
+			) : (
+				<div
+					aria-hidden="true"
+					className="bg-muted/50 border-border h-[min(62vh,30rem)] w-full rounded-lg border"
+				/>
+			)}
+		</div>
+	)
 }

@@ -1,21 +1,20 @@
 ---
-title: 'Why Your Santa Cruz Toilet Keeps Running: Solutions & Tips'
+title: "Why Your Santa Cruz Toilet Keeps Running: Solutions & Tips"
 description: >-
-  A running toilet can be a nuisance, leading to increased water bills and
-  potential plumbing issues.
+  Why Santa Cruz toilets keep running, common flapper and fill-valve causes,
+  DIY checks that help, and when to call Wade's Plumbing & Septic for a lasting
+  repair.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
   - plumbing
   - septic issues in Santa Cruz County
   - toilet keeps running plumbing service
-image: >-
-  /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
-imageAlt: Bathroom with toilet and sink
+image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
+imageAlt: "Bathroom with toilet and sink"
 ---
-In This Guide5 min read
 
 ![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
@@ -88,10 +87,6 @@ Temporarily stop a running toilet by adjusting the float or ensuring the flapper
 ### Why should I hire a professional for toilet repairs?
 
 Hiring a professional ensures accurate diagnosis and long-lasting solutions, preventing further damage and saving money in the long run.
-
-## Sources &
-
-## Sources & Local References
 
 ## Seasonal Tip
 

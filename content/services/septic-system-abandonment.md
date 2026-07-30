@@ -68,7 +68,7 @@ Septic System Abandonment
 
 Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cruz County, ensuring environmental safety and regulatory compliance.
 
-[Call Us](tel:+18315555555) 
+[Call Us](tel:+18312254344) 
 
 ### Effortless Septic Abandonment in Santa Cruz County, CA
 
