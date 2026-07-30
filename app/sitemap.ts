@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 
 import { getAllRoutes, taxonomySlug } from "@/lib/content"
 import { siteConfig } from "@/lib/site"
@@ -22,6 +23,8 @@ function entry(
 
 async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 	"use cache"
+	cacheTag("content:routes", "content:pages", "content:services", "content:posts")
+	cacheLife("max")
 
 	const { pages, services, posts } = await getAllRoutes()
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
@@ -18,6 +19,8 @@ export const metadata: Metadata = buildPageMetadata({
 
 async function TipsGrid() {
 	"use cache"
+	cacheTag("content:posts")
+	cacheLife("max")
 
 	const posts = await getCollection("posts")
 	const items = posts.map((post) =>

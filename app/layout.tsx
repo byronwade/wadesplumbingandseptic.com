@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next"
-import { Analytics } from "@vercel/analytics/next"
 import { Archivo, Manrope } from "next/font/google"
+import { cacheLife, cacheTag } from "next/cache"
 import { Suspense } from "react"
 
+import { AnalyticsLoader } from "@/components/analytics-loader"
 import { CommandMenuLoader } from "@/components/command-menu-loader"
 import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
@@ -98,9 +99,11 @@ export const viewport: Viewport = {
 	],
 }
 
-export default async function RootLayout({
-	children,
-}: Readonly<{ children: React.ReactNode }>) {
+async function RootJsonLd() {
+	"use cache"
+	cacheTag("content:services")
+	cacheLife("max")
+
 	const services = await getCollection("services")
 	const organizationSchema = localBusinessJsonLd(
 		services.map((service) => ({
@@ -110,6 +113,12 @@ export default async function RootLayout({
 		})),
 	)
 
+	return <JsonLd data={[websiteJsonLd(), organizationSchema]} />
+}
+
+export default function RootLayout({
+	children,
+}: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html
 			lang="en"
@@ -137,8 +146,10 @@ export default async function RootLayout({
 					</Suspense>
 					<SiteFooter />
 					<CommandMenuLoader />
-					<JsonLd data={[websiteJsonLd(), organizationSchema]} />
-					<Analytics />
+					<Suspense fallback={null}>
+						<RootJsonLd />
+					</Suspense>
+					<AnalyticsLoader />
 				</ThemeProvider>
 			</body>
 		</html>

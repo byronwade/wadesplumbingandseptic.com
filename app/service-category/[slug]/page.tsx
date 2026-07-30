@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -70,6 +71,8 @@ const categories = {
 	},
 } as const
 
+type CategorySlug = keyof typeof categories
+
 export function generateStaticParams() {
 	return Object.keys(categories).map((slug) => ({ slug }))
 }
@@ -80,7 +83,7 @@ export async function generateMetadata({
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	const category = categories[slug as keyof typeof categories]
+	const category = categories[slug as CategorySlug]
 
 	if (!category) return {}
 
@@ -92,16 +95,12 @@ export async function generateMetadata({
 	})
 }
 
-export default async function ServiceCategoryPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
-	const { slug } = await params
-	const category = categories[slug as keyof typeof categories]
+async function ServiceCategoryBody({ slug }: { slug: CategorySlug }) {
+	"use cache"
+	cacheTag("content:services", `content:service-category:${slug}`)
+	cacheLife("max")
 
-	if (!category) notFound()
-
+	const category = categories[slug]
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
@@ -160,5 +159,22 @@ export default async function ServiceCategoryPage({
 			/>
 			<ContactCta />
 		</main>
+	)
+}
+
+export default async function ServiceCategoryPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>
+}) {
+	const { slug } = await params
+	const category = categories[slug as CategorySlug]
+
+	if (!category) notFound()
+
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<ServiceCategoryBody slug={slug as CategorySlug} />
+		</Suspense>
 	)
 }
