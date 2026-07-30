@@ -184,16 +184,13 @@
 
 	--content-max: 78rem;
 	/*
-	  Article templates run narrower than marketing sections. At the full
-	  78rem the body column measured 876px while the prose capped at its 68ch
-	  measure, leaving a ~170px void between the copy and the sidebar. 67rem
-	  lands the column on the measure so the two columns actually meet.
+	  Single-column article templates. Sized to the prose measure plus a little
+	  room for galleries and two-up promise cards on service pages.
 	*/
-	--content-max-article: 62rem;
+	--content-max-article: 48rem;
 	/* ch measures the "0" glyph, which is wider than average lowercase, so
 	   60ch lands around 75 real characters a line. */
 	--measure: 60ch;
-	--sidebar-w: 20.5rem;
 	--header-offset: 6.5rem;
 	/* Visible header height, used to size the cinematic hero to the viewport.
 	   Matches the 64px bar on phones; the utility bar adds 28px from sm up. */
@@ -400,7 +397,7 @@
 		margin-inline: auto;
 	}
 
-	/* Body-copy + sidebar templates. */
+	/* Single-column body-copy templates. */
 	.article-shell {
 		width: min(100% - (var(--space-page-x) * 2), var(--content-max-article));
 		margin-inline: auto;
