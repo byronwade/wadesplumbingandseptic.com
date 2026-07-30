@@ -153,11 +153,11 @@ export function ContentPage({
 			{document.slug === "contact" ? (
 				<section className="container-shell section-y-tight">
 					<div className="section-head mb-6 max-w-2xl">
-						<p className="spec-label">Start here</p>
-						<h2 className="type-title">Save our contact, then reach out</h2>
+						<p className="spec-label">Reach us</p>
+						<h2 className="type-title">Call, text, or email Wade&apos;s</h2>
 						<p className="type-lead">
-							Add Wade&apos;s to your phone with one tap. After you save, you
-							can call or email from the same card.
+							The number and email are right on the card. You can also save it
+							to your phone if that helps later.
 						</p>
 					</div>
 					<VirtualBusinessCard id="contact-business-card" />

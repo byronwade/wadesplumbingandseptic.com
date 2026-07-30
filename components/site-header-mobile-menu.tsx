@@ -242,7 +242,7 @@ export function SiteHeaderMobileMenu({
 							router.push("/contact")
 						}}
 					>
-						Get a Free Quote
+						Request service
 					</button>
 				</SheetFooter>
 			</SheetContent>

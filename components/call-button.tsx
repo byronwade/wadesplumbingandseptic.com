@@ -89,8 +89,12 @@ export function CallButton({
 			className={styles}
 			kind="phone"
 		>
-			{showIcon ? <Phone aria-hidden="true" /> : null}
-			{dialLabel}
+			{showIcon ? <Phone aria-hidden="true" className="shrink-0" /> : null}
+			{typeof dialLabel === "string" ? (
+				<span className="truncate">{dialLabel}</span>
+			) : (
+				dialLabel
+			)}
 		</ProtectedContactLink>
 	)
 }

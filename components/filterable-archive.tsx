@@ -407,11 +407,11 @@ export function FilterableArchive({
 							{Math.min(page * pageSize, total)} of {total}
 						</span>
 					</p>
-					<div className="flex items-center gap-2">
+					<div className="flex w-full items-center gap-2 sm:w-auto">
 						<button
 							className={cn(
 								buttonVariants({ variant: "outline", size: "sm" }),
-								"min-w-28",
+								"min-w-0 flex-1 sm:min-w-28 sm:flex-none",
 							)}
 							disabled={page <= 1}
 							onClick={() =>
@@ -425,7 +425,7 @@ export function FilterableArchive({
 						<button
 							className={cn(
 								buttonVariants({ variant: "outline", size: "sm" }),
-								"min-w-28",
+								"min-w-0 flex-1 sm:min-w-28 sm:flex-none",
 							)}
 							disabled={page >= pageCount}
 							onClick={() =>

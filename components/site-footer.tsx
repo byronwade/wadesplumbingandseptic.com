@@ -162,7 +162,7 @@ export function SiteFooter() {
 					aria-hidden="true"
 					className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
 				/>
-				<div className="container-shell relative flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-3.5 sm:py-10">
+				<div className="container-shell relative flex flex-col items-center gap-3 py-8 text-center sm:gap-3.5 sm:py-10">
 					<p className="text-primary-bright/90 font-mono text-[0.625rem] font-semibold tracking-[0.22em] uppercase">
 						Also a tech company
 					</p>

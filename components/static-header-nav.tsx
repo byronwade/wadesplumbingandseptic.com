@@ -12,7 +12,7 @@ export function StaticHeaderNav() {
 	return (
 		<nav
 			aria-label="Primary"
-			className="flex items-center gap-2 sm:gap-3"
+			className="flex shrink-0 items-center gap-1.5 sm:gap-3"
 		>
 			<div className="hidden items-center gap-1 lg:flex">
 				<Link
@@ -48,7 +48,7 @@ export function StaticHeaderNav() {
 				aria-label={`Call ${contactInfo.phoneDisplay}`}
 				className={cn(
 					buttonVariants({ size: "sm", variant: "default" }),
-					"inline-flex max-w-[11.5rem] gap-1.5 truncate px-2.5 sm:max-w-none sm:gap-2 sm:px-3",
+					"inline-flex max-w-[10.75rem] gap-1.5 truncate px-2.5 text-xs sm:max-w-none sm:gap-2 sm:px-3 sm:text-sm",
 				)}
 				href={contactInfo.phoneHref}
 			>

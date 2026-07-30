@@ -143,16 +143,21 @@ export function VirtualBusinessCard({
 						</div>
 					</div>
 
-					{/* Mobile actions live in the main flow so the card reads as one unit. */}
+					{/* Call first; save-contact stays secondary so we don't oversell it. */}
 					<div className="grid gap-2 sm:hidden">
-						<SaveContactButton className="w-full" size="lg" />
 						<CallButton
 							className="w-full"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 							prefer="dial"
 							size="lg"
-							variant={dark ? "inverse" : "outline"}
 						/>
+						<SaveContactButton
+							className="w-full"
+							size="lg"
+							variant={dark ? "inverse" : "outline"}
+						>
+							Save to contacts
+						</SaveContactButton>
 						<ProtectedContactLink
 							ariaLabel={`Email us at ${contactInfo.email}`}
 							className={cn(
@@ -182,17 +187,22 @@ export function VirtualBusinessCard({
 							dark ? "text-on-dark-muted" : "text-muted-foreground",
 						)}
 					>
-						Save our card to your phone with the logo, number, email, and
-						address ready. After you save, you can call right away.
+						Call us anytime. Prefer one tap later? Save the card with our
+						number, email, and address.
 					</p>
-					<SaveContactButton className="w-full" size="lg" />
 					<CallButton
 						className="w-full"
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						prefer="dial"
 						size="lg"
-						variant={dark ? "inverse" : "outline"}
 					/>
+					<SaveContactButton
+						className="w-full"
+						size="lg"
+						variant={dark ? "inverse" : "outline"}
+					>
+						Save to contacts
+					</SaveContactButton>
 					<ProtectedContactLink
 						ariaLabel={`Email us at ${contactInfo.email}`}
 						className={cn(

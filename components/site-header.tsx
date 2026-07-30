@@ -26,9 +26,9 @@ export function SiteHeader() {
 
 			{/* Relative shell so mega-menu viewports span the full header width */}
 			<div className="relative">
-				<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
+				<div className="container-shell flex h-16 items-center justify-between gap-2 sm:h-18 sm:gap-3">
 					<Link
-						className="flex min-w-0 items-center gap-2.5 sm:gap-3"
+						className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3"
 						href="/"
 						aria-label="Wade's Plumbing & Septic home"
 						prefetch
@@ -41,8 +41,8 @@ export function SiteHeader() {
 							src="/images/brand/wades-mark-sm.webp"
 							width={44}
 						/>
-						<span className="leading-none">
-							<span className="font-display block truncate text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
+						<span className="min-w-0 leading-none">
+							<span className="font-display block truncate text-[0.875rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
 								Wade&apos;s Plumbing
 							</span>
 							<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">

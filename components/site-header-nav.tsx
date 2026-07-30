@@ -332,12 +332,12 @@ export function SiteHeaderNav() {
 				/>
 			</div>
 
-			<div className="flex items-center gap-1 lg:hidden">
+			<div className="flex shrink-0 items-center gap-0.5 lg:hidden">
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink size-10 text-white hover:bg-transparent sm:hidden"
 					aria-label="Search services, tips, and pages"
 					onMouseEnter={() => void prefetchSearchIndex()}
 					onFocus={() => void prefetchSearchIndex()}
@@ -346,16 +346,17 @@ export function SiteHeaderNav() {
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
 				<CallButton
-					className="max-w-[9.75rem] gap-1.5 truncate px-2.5 text-xs sm:hidden"
+					className="max-w-[10.5rem] gap-1 truncate px-2.5 text-xs sm:hidden"
 					desktopLabel={contactInfo.phoneDisplay}
 					prefer="dial"
 					size="sm"
+					showIcon
 				/>
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink size-10 text-white hover:bg-transparent"
 					aria-label="Open main menu"
 					onClick={openMobileMenu}
 				>
