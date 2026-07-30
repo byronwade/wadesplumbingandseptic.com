@@ -234,13 +234,16 @@ export const serviceAreaLocations: ServiceAreaLocation[] = [
 	},
 ]
 
-export const serviceAreaMapCenter: [number, number] = [-121.95, 37.08]
-export const serviceAreaMapZoom = 9.4
+export const serviceAreaMapCenter: [number, number] = [-121.95, 37.1]
+export const serviceAreaMapZoom = 9.2
 
-/** Southwest → northeast bounds covering Santa Cruz County + Los Gatos & Saratoga. */
+/**
+ * Southwest → northeast bounds for continuous coverage:
+ * Santa Cruz County + foothills through Los Gatos / Saratoga, west of Hwy 101.
+ */
 export const serviceAreaMapBounds: [[number, number], [number, number]] = [
-	[-122.35, 36.84],
-	[-121.55, 37.32],
+	[-122.36, 36.84],
+	[-121.52, 37.36],
 ]
 
 export function locationsByCounty(county: ServiceAreaCounty) {

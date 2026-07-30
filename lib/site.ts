@@ -7,7 +7,7 @@ export const siteConfig = {
 	phone: "831.225.4344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
-	hours: "Mon - Fri 9:00am - 5:00pm",
+	hours: "Mon to Fri 9:00am to 5:00pm",
 	licenses: "CA: CSLB #1087260",
 	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
 	social: {

@@ -42,4 +42,4 @@ if (failed) {
 	process.exit(1)
 }
 
-console.log(`Checked ${files.length} workflow files — self-hosted only ✓`)
+console.log(`Checked ${files.length} workflow files - self-hosted only ✓`)

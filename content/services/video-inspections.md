@@ -82,14 +82,14 @@ Experience peace of mind with our state-of-the-art video inspections, ensuring y
 
 ### What Our Customers Say
 
-"The video inspection service was quick and efficient. I was impressed by their professionalism!" - Sarah, Santa Cruz
+"The video inspection service was quick and efficient. I was impressed by their professionalism!" (Sarah, Santa Cruz)
 
-"Wade's Plumbing & Septic helped us identify a hidden issue. Their service saved us time and hassle." - Mike, Capitola
+"Wade's Plumbing & Septic helped us identify a hidden issue. Their service saved us time and hassle." (Mike, Capitola)
 
-"Highly recommend their video inspection service. It provided peace of mind knowing everything was clear." - Emma, Watsonville
+"Highly recommend their video inspection service. It provided peace of mind knowing everything was clear." (Emma, Watsonville)
 
 ★★★★★ 5-Star Rated
 
 Licensed Contractor: C-42
 
-Fast Response Guarantee: Available 7 AM - 7 PM, Monday to Saturday
+Fast Response Guarantee: Available 7 AM to 7 PM, Monday to Saturday

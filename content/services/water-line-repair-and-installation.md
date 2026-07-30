@@ -97,11 +97,11 @@ Ensure the integrity of your water supply with our expert solutions tailored for
 
 ★★★★★ 5-Star Rating
 
-"Wade's team upgraded our water lines, and the difference is incredible! Highly recommend their services." - Sarah, Aptos
+"Wade's team upgraded our water lines, and the difference is incredible! Highly recommend their services." (Sarah, Aptos)
 
-"Professional and efficient service. Our water flow has never been better!" - Mike, Scotts Valley
+"Professional and efficient service. Our water flow has never been better!" (Mike, Scotts Valley)
 
-"Fast and reliable! Wade's Plumbing took care of our water line upgrade with no hassle." - Emily, Capitola
+"Fast and reliable! Wade's Plumbing took care of our water line upgrade with no hassle." (Emily, Capitola)
 
 Licensed Contractor: C-42 for California
 

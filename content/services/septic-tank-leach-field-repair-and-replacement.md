@@ -89,7 +89,7 @@ Wade's Plumbing & Septic is proud to offer Expert Septic Leach Field Repair serv
 
 Our team is fully licensed and insured, holding a C-42 license for California, ensuring that your septic needs are handled by qualified professionals.
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available for urgent septic issues
 
@@ -121,14 +121,14 @@ Our certified team ensures your septic system operates efficiently, preventing c
 
 </ 
 
-"Wade's Plumbing & Septic saved my yard from a disaster. Quick and professional service!" - Sarah, Aptos
+"Wade's Plumbing & Septic saved my yard from a disaster. Quick and professional service!" (Sarah, Aptos)
 
-"Highly recommend their leach field repair service. They know what they're doing!" - Mike, Scotts Valley
+"Highly recommend their leach field repair service. They know what they're doing!" (Mike, Scotts Valley)
 
-"Fast response and excellent service. My septic system is working perfectly now!" - Emily, Watsonville
+"Fast response and excellent service. My septic system is working perfectly now!" (Emily, Watsonville)
 
 ★★★★★ 5-Star Rating 
 
 Licensed Contractor: C-42 for California 
 
-Fast-Response Guarantee: Available Monday to Friday, 8 AM - 5 PM
+Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

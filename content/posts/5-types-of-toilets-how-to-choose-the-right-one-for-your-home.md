@@ -22,11 +22,11 @@ imageAlt: "Choose the Perfect Toilet for Your Home in Santa Cruz County"
 
 ![Bathroom with toilet and sink](/images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp)
 
-At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County select and install the perfect toilet for their bathrooms. Below, we’ve broken down five popular types of toilets—plus tips on what to consider when making your final decision.
+At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County select and install the perfect toilet for their bathrooms. Below, we’ve broken down five popular types of toilets, plus tips on what to consider when making your final decision.
 
 1\. Water-Saving Toilets: Efficient & Eco-Friendly
 
-If you’re looking to reduce water usage and save on your monthly bill, water-saving toilets are a smart investment. These toilets use significantly less water per flush than older models—often just 1.28 gallons compared to the older 3.5-gallon standard.
+If you’re looking to reduce water usage and save on your monthly bill, water-saving toilets are a smart investment. These toilets use significantly less water per flush than older models, often just 1.28 gallons compared to the older 3.5-gallon standard.
 
 Look for toilets with the EPA WaterSense® label, which certifies that the fixture meets strict efficiency and performance standards. Water-saving toilets are especially ideal for homes in drought-prone areas or those trying to reduce their environmental footprint.
 
@@ -48,7 +48,7 @@ Why Homeowners Love Them:
 
 3\. Single-Flush Toilets: The Classic Choice
 
-The most traditional toilet design is the single-flush model. It uses the same amount of water—typically 1.6 gallons—for every flush, regardless of the waste. These toilets are simple to operate, cost-effective, and easy to maintain.
+The most traditional toilet design is the single-flush model. It uses the same amount of water (typically 1.6 gallons), for every flush, regardless of the waste. These toilets are simple to operate, cost-effective, and easy to maintain.
 
 Best For:
 
@@ -90,7 +90,7 @@ Think about your family’s needs, water usage habits, and how much maintenance 
 
 Need Help Choosing or Installing a Toilet? We’ve Got You Covered
 
-Choosing the right toilet is just the first step—installing it correctly is equally important. At Wade’s Plumbing & Septic, we offer professional toilet installation services throughout Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and the surrounding areas. Our team can help you select the ideal model for your space and handle every part of the installation with precision and care.
+Choosing the right toilet is just the first step, installing it correctly is equally important. At Wade’s Plumbing & Septic, we offer professional toilet installation services throughout Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and the surrounding areas. Our team can help you select the ideal model for your space and handle every part of the installation with precision and care.
 
 Whether you’re remodeling a bathroom or replacing an old, inefficient toilet, we’re here to help you make a smart, long-lasting investment in your home.
 
@@ -130,6 +130,6 @@ A standard toilet installation usually takes about 1 to 2 hours. However, if add
 
 Wade's Plumbing & Septic offers expert service with a focus on customer satisfaction. Our licensed professionals bring years of experience and a commitment to quality, ensuring your toilet installation is done right the first time.
 
-### Skip the DIY — Get It Done Right
+### Skip the DIY, Get It Done Right
 
 Trust Wade's Plumbing & Septic to expertly install your new toilet in Santa Cruz County, CA. Our friendly, professional team ensures a hassle-free experience, saving you time and potential headaches.

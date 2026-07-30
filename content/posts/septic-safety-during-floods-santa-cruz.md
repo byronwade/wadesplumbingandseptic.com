@@ -82,7 +82,7 @@ Contact a professional if you notice any signs of distress or after a flood to e
 
 ## Sources & Local References
 
-- [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5)
+- [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5)
 - [Reference from wadesplumbingandseptic.com](/service-areas/)
 
 ## Seasonal Tip
@@ -123,11 +123,11 @@ For a complete overview of our service areas, please visit our [main service-are
 
 ★★★★★ 5-star rating from satisfied customers
 
-> "Wade's Plumbing & Septic was a lifesaver when our septic system needed urgent attention. Their team was knowledgeable and efficient!" - Sarah, Santa Cruz 
+> "Wade's Plumbing & Septic was a lifesaver when our septic system needed urgent attention. Their team was knowledgeable and efficient!" (Sarah, Santa Cruz) 
 
-> "Fast, reliable, and professional service. I couldn't be happier with the results!" - Mike, Watsonville 
+> "Fast, reliable, and professional service. I couldn't be happier with the results!" (Mike, Watsonville) 
 
-> "The technicians were prompt and addressed all our concerns with great expertise." - Emily, Scotts Valley 
+> "The technicians were prompt and addressed all our concerns with great expertise." (Emily, Scotts Valley) 
 
 Licensed Contractor: C-42
 

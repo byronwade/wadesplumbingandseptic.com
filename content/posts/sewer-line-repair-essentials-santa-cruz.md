@@ -77,12 +77,12 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 ## Sources & Local References
 
 - [Plumbing & septic service areas overview](/service-areas/)
-- [Plumbing Repair Services - Santa Cruz County](/lp/plumbing-repair-services-santa-cruz-county/)
+- [Plumbing Repair Services, Santa Cruz County](/lp/plumbing-repair-services-santa-cruz-county/)
 
 ## Sources & Local References
 
 - [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
-- [Two rivers, one lifeline: Reclaiming the Santa Cruz across borders - AZPM News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5)
+- [Two rivers, one lifeline: Reclaiming the Santa Cruz across borders, AZPM News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5)
 
 ## Seasonal Tip
 

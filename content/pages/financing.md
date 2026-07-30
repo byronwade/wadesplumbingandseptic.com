@@ -37,7 +37,7 @@ Wade's Plumbing & Septic proudly serves the following communities in Santa Cruz 
 
 Contractor License: C-42 license for CA / state license for GA
 
-Office Hours: Monday–Friday 9am–5pm
+Office Hours: Monday to Friday 9am to 5pm
 
 Emergency Line: Available
 

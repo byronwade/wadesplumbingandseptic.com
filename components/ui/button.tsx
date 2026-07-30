@@ -19,7 +19,7 @@ export const buttonVariants = cva(
 					"bg-transparent text-foreground hover:bg-transparent hover:text-primary",
 				link: "bg-transparent text-primary underline-offset-4 hover:underline",
 				/**
-				 * Dark-surface secondary CTA. No fill plate — light translucent
+				 * Dark-surface secondary CTA. No fill plate - light translucent
 				 * backgrounds create hard edges that read as white borders on ink.
 				 */
 				inverse:

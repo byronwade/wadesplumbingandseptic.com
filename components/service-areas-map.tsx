@@ -21,14 +21,14 @@ import {
 } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
-/** Brand tokens from globals.css — MapLibre paint needs concrete colors. */
+/** Brand tokens from globals.css - MapLibre paint needs concrete colors. */
 const BRAND = {
 	primary: "#8f4a1a",
 	primaryBright: "#e0a15d",
 	ink: "#101214",
 } as const
 
-/** OpenFreeMap — reliable free vector basemap (Carto tiles often leave a blank white canvas). */
+/** OpenFreeMap - reliable free vector basemap (Carto tiles often leave a blank white canvas). */
 const mapStyles = {
 	light: "https://tiles.openfreemap.org/styles/positron",
 	dark: "https://tiles.openfreemap.org/styles/dark",
@@ -108,6 +108,83 @@ function FitServiceAreaBounds() {
 	return null
 }
 
+/**
+ * Insert coverage fill/line under basemap label layers so city names stay
+ * crisp (not copper-tinted through a translucent fill sitting on top).
+ */
+function useBasemapLabelLayerId() {
+	const { map, isLoaded } = useMap()
+	const [beforeId, setBeforeId] = useState<string | undefined>()
+	const [ready, setReady] = useState(false)
+
+	useEffect(() => {
+		if (!map || !isLoaded) return
+
+		const resolve = (forceReady = false) => {
+			const layers = map.getStyle()?.layers
+			if (!layers?.length) return
+			const firstSymbol = layers.find((layer) => layer.type === "symbol")
+			if (firstSymbol) {
+				setBeforeId(firstSymbol.id)
+				setReady(true)
+				return
+			}
+			// Style loaded but no labels yet - wait unless idle already fired.
+			if (forceReady) {
+				setBeforeId(undefined)
+				setReady(true)
+			}
+		}
+
+		const onStyleData = () => resolve()
+		const onIdle = () => resolve(true)
+
+		resolve()
+		map.on("styledata", onStyleData)
+		map.once("idle", onIdle)
+
+		return () => {
+			map.off("styledata", onStyleData)
+			map.off("idle", onIdle)
+		}
+	}, [map, isLoaded])
+
+	return { beforeId, ready }
+}
+
+function CoverageLayers({
+	onSelect,
+}: {
+	onSelect: (event: {
+		longitude: number
+		latitude: number
+		properties: ServiceAreaFeatureProperties
+	}) => void
+}) {
+	const { beforeId, ready } = useBasemapLabelLayerId()
+
+	if (!ready) return null
+
+	return (
+		<MapGeoJSON<ServiceAreaFeatureProperties>
+			data={serviceAreasGeoJSON}
+			promoteId="id"
+			interactive
+			beforeId={beforeId}
+			fillPaint={fillPaint}
+			linePaint={linePaint}
+			fillHoverPaint={fillHoverPaint}
+			onClick={(event) => {
+				onSelect({
+					longitude: event.longitude,
+					latitude: event.latitude,
+					properties: event.feature.properties,
+				})
+			}}
+		/>
+	)
+}
+
 export function ServiceAreasMap() {
 	const [selected, setSelected] = useState<{
 		longitude: number
@@ -131,7 +208,7 @@ export function ServiceAreasMap() {
 			>
 				<Map
 					center={serviceAreaMapCenter}
-					className="h-full w-full"
+					className="h-full w-full font-sans antialiased"
 					theme="light"
 					styles={mapStyles}
 					zoom={serviceAreaMapZoom}
@@ -140,21 +217,7 @@ export function ServiceAreasMap() {
 				>
 					<FitServiceAreaBounds />
 					<MapControls position="bottom-right" showZoom showFullscreen />
-					<MapGeoJSON<ServiceAreaFeatureProperties>
-						data={serviceAreasGeoJSON}
-						promoteId="id"
-						interactive
-						fillPaint={fillPaint}
-						linePaint={linePaint}
-						fillHoverPaint={fillHoverPaint}
-						onClick={(event) => {
-							setSelected({
-								longitude: event.longitude,
-								latitude: event.latitude,
-								properties: event.feature.properties,
-							})
-						}}
-					/>
+					<CoverageLayers onSelect={setSelected} />
 					{selected ? (
 						<MapPopup
 							longitude={selected.longitude}
@@ -165,16 +228,16 @@ export function ServiceAreasMap() {
 							closeButton
 							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
-							<div className="space-y-2.5 pr-6">
-								<p className="text-lg font-extrabold tracking-[-0.03em]">
+							<div className="font-sans space-y-2.5 pr-6 antialiased">
+								<p className="text-foreground text-lg leading-snug font-extrabold tracking-tight">
 									{selected.properties.name}
 								</p>
-								<p className="text-primary text-sm font-extrabold tracking-[-0.01em]">
+								<p className="text-primary text-sm font-bold tracking-normal">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
-										: "Selected coverage — confirm address"}
+										: "Selected coverage: confirm address"}
 								</p>
-								<p className="text-muted-foreground text-base leading-relaxed">
+								<p className="text-muted-foreground text-[0.95rem] leading-relaxed font-normal tracking-normal">
 									{selected.properties.description}
 								</p>
 							</div>
@@ -190,15 +253,11 @@ export function ServiceAreasMap() {
 						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
-					Santa Cruz County (primary)
+					Service coverage: Santa Cruz County &amp; west foothills
 				</li>
-				<li className="flex items-center gap-2.5">
-					<span
-						aria-hidden="true"
-						className={cn("size-3.5 rounded-sm")}
-						style={{ backgroundColor: BRAND.primaryBright }}
-					/>
-					Los Gatos &amp; Saratoga (selected)
+				<li className="max-w-xl text-center text-sm font-medium leading-relaxed">
+					Approximate area including Los Gatos &amp; Saratoga; generally west of
+					Highway 101. Call to confirm your address.
 				</li>
 			</ul>
 		</div>

@@ -1,7 +1,7 @@
 ---
 title: 'Understanding Hard Water: Impact on Santa Cruz County Homes'
 description: When you turn on the tap, you probably aren’t thinking about what’s in
- your water—just that it’s flowing. But beyond the basics of hydration and hygiene,
+ your water, just that it’s flowing. But beyond the basics of hydration and hygiene,
  the…
 category: Plumbing Tips
 date: '2025-07-29'
@@ -17,7 +17,7 @@ tags:
 image: /images/wordpress/img-1838-1.webp
 imageAlt: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 
----When you turn on the tap, you probably aren’t thinking about what’s in your water—just that it’s flowing. But beyond the basics of hydration and hygiene, the quality of your water can significantly impact your home, plumbing, and health. If your water contains high levels of calcium and magnesium, it’s known as hard water—and it could be silently damaging your plumbing and appliances.
+---When you turn on the tap, you probably aren’t thinking about what’s in your water, just that it’s flowing. But beyond the basics of hydration and hygiene, the quality of your water can significantly impact your home, plumbing, and health. If your water contains high levels of calcium and magnesium, it’s known as hard water, and it could be silently damaging your plumbing and appliances.
 
 ![Water treatment tank system](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
 
@@ -25,7 +25,7 @@ At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County test 
 
 How Does Water Become “Hard”?
 
-Rainwater is naturally soft when it falls. But as it travels through the ground, it picks up minerals like calcium and magnesium, especially when it flows through areas rich in limestone or chalk. By the time it reaches reservoirs and water supplies, it may carry high levels of these minerals—making the water “hard.”
+Rainwater is naturally soft when it falls. But as it travels through the ground, it picks up minerals like calcium and magnesium, especially when it flows through areas rich in limestone or chalk. By the time it reaches reservoirs and water supplies, it may carry high levels of these minerals, making the water “hard.”
 
 The exact hardness level of water depends on your region’s natural landscape and underground water sources. Even if water appears clear and tastes fine, high mineral content can still cause serious long-term issues.
 
@@ -53,7 +53,7 @@ Benefits of Water Softeners:
 - Eliminate cloudy spots and scale from fixtures
 - Make your skin and hair feel softer and cleaner
 
-Water softeners also help reduce your overall energy usage—especially in water heaters—because they allow systems to heat water more efficiently without working through layers of scale.
+Water softeners also help reduce your overall energy usage (especially in water heaters), because they allow systems to heat water more efficiently without working through layers of scale.
 
 Soft Water: Pros and Cons
 
@@ -77,7 +77,7 @@ Worried About Hard Water? We Can Help.
 
 If you’ve noticed scale buildup, water spots, low water pressure, or dry skin, you could be dealing with hard water. At Wade’s Plumbing & Septic, we offer professional water testing, softener installation, and custom water treatment solutions tailored to your household’s specific needs.
 
-We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding areas with trusted local plumbing expertise. Let us help you improve your water quality—so your home, plumbing, and appliances can perform at their best.
+We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding areas with trusted local plumbing expertise. Let us help you improve your water quality, so your home, plumbing, and appliances can perform at their best.
 
 Santa Cruz County Septic Experts
 

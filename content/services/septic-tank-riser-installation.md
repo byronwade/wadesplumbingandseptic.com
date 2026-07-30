@@ -82,11 +82,11 @@ Simplify maintenance and inspections with our professional septic riser installa
 
 [Call Us Today](tel:+18315551234) [Get a Free Quote](/contact/)
 
-"Wade's Plumbing & Septic made the septic riser installation process so easy and hassle-free. Highly recommend!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic made the septic riser installation process so easy and hassle-free. Highly recommend!" (Sarah, Santa Cruz)
 
-"Professional and efficient service. The team was knowledgeable and friendly." - Mike, Watsonville
+"Professional and efficient service. The team was knowledgeable and friendly." (Mike, Watsonville)
 
-"Great experience from start to finish. The risers have made maintenance much simpler." - Emily, Capitola
+"Great experience from start to finish. The risers have made maintenance much simpler." (Emily, Capitola)
 
 ★★★★★ 5-star service 
 

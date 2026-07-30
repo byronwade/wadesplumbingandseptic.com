@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 
 // MapLibre v6 resolves its worker via import.meta.url, which Next's bundler
 // does not emit. Without an explicit same-origin worker URL the browser loads
-// the SPA HTML fallback and fails with a MIME type error — blank white map.
+// the SPA HTML fallback and fails with a MIME type error - blank white map.
 MapLibreGL.setWorkerUrl("/maplibre-gl/maplibre-gl-worker.mjs");
 
 const defaultStyles = {
@@ -189,7 +189,7 @@ type MapProps = {
   };
   /**
    * Use a transparent, tile-less basemap instead of the default Carto street
-   * basemap — a blank canvas. Used alone it renders nothing; add your own
+   * basemap - a blank canvas. Used alone it renders nothing; add your own
    * layers on top (`<MapGeoJSON>`, `<MapArc>`, markers, etc.). Ideal for data
    * visualizations (choropleths, arcs, dot maps).
    * Ignored when an explicit `styles` prop is provided.
@@ -306,7 +306,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
     const styleLoadHandler = () => {
       styleSwapInFlightRef.current = false;
       setIsStyleLoaded(true);
-      // Ready for layers once the style parses — don't block the UI on every
+      // Ready for layers once the style parses - don't block the UI on every
       // basemap tile finishing (slow/blocked CDNs otherwise leave the loader up).
       setIsLoaded(true);
     };
@@ -702,7 +702,7 @@ function MarkerPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
+        "bg-popover text-popover-foreground font-sans relative max-w-sm rounded-lg border p-5 text-base leading-relaxed font-normal tracking-normal antialiased shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}
@@ -1113,7 +1113,7 @@ function MapPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
+        "bg-popover text-popover-foreground font-sans relative max-w-sm rounded-lg border p-5 text-base leading-relaxed font-normal tracking-normal antialiased shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}
@@ -1345,7 +1345,7 @@ const GEOJSON_DEFAULT_COLORS = {
 
 /**
  * Renders arbitrary GeoJSON as fill + outline layers on the map. Composes like
- * `MapRoute` / `MapArc` — drop it inside `<Map>` (typically with `blank`) for
+ * `MapRoute` / `MapArc` - drop it inside `<Map>` (typically with `blank`) for
  * choropleths and region/data maps. For full control over expressions and
  * multiple layers, manage layers directly via `useMap()` instead.
  */
@@ -1460,6 +1460,20 @@ function MapGeoJSON<
       );
     } else if (!showLine && map.getLayer(lineLayerId)) {
       map.removeLayer(lineLayerId);
+    }
+
+    // Keep coverage under basemap labels when `beforeId` resolves after mount.
+    if (beforeId && map.getLayer(beforeId)) {
+      try {
+        if (showFill && map.getLayer(fillLayerId)) {
+          map.moveLayer(fillLayerId, beforeId);
+        }
+        if (showLine && map.getLayer(lineLayerId)) {
+          map.moveLayer(lineLayerId, beforeId);
+        }
+      } catch {
+        // beforeId may be mid-reload
+      }
     }
 
     if (showFill && map.getLayer(fillLayerId)) {

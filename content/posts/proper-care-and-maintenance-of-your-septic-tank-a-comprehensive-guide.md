@@ -76,11 +76,11 @@ A standard septic tank maintenance service in Santa Cruz County usually takes be
 
 Wade's Plumbing & Septic offers expert services backed by years of experience in Santa Cruz County. Our commitment to quality and customer satisfaction ensures your septic system is in the best hands.
 
-"Wade's Plumbing & Septic made maintaining our septic tank effortless. Their expertise is unmatched!" - Sarah, Aptos
+"Wade's Plumbing & Septic made maintaining our septic tank effortless. Their expertise is unmatched!" (Sarah, Aptos)
 
-"Fast and reliable service every time. Highly recommend for septic care!" - John, Santa Cruz
+"Fast and reliable service every time. Highly recommend for septic care!" (John, Santa Cruz)
 
-"The teamÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s knowledge and professionalism put my mind at ease. Thank you, Wade's!" - Emily, Watsonville
+"The teamÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s knowledge and professionalism put my mind at ease. Thank you, Wade's!" (Emily, Watsonville)
 
 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ 5-star rating
 

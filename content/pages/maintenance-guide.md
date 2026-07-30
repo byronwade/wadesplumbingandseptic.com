@@ -29,7 +29,7 @@ order: 8
 
 ## Septic pumping and inspections
 
-Many residential septic tanks need pumping every 3–5 years, but the correct interval depends on tank size, occupancy, usage, and system type. Advanced systems may require more frequent inspection or manufacturer-specific service.
+Many residential septic tanks need pumping every 3 to 5 years, but the correct interval depends on tank size, occupancy, usage, and system type. Advanced systems may require more frequent inspection or manufacturer-specific service.
 
 ## Call before a small issue grows
 

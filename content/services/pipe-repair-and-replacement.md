@@ -80,7 +80,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, offe
 
 Our team is fully licensed and insured, holding a C-42 license for California. We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
 
-Office Hours: Monday – Friday, 9am – 5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 
@@ -92,4 +92,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call Us](tel:+1234567890) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" - Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!" - John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" - Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/)
+[Call Us](tel:+1234567890) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/))

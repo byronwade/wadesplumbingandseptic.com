@@ -63,7 +63,7 @@ function ArchiveCard({
 				tabIndex={-1}
 			>
 				<Image
-					alt={item.imageAlt ?? `${item.title} — Wade's Plumbing & Septic`}
+					alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
 					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 					fill
 					quality={60}
@@ -277,7 +277,7 @@ export function FilterableArchive({
 						Page {page} of {pageCount}
 						<span className="text-muted-foreground/80 font-medium">
 							{" "}
-							· showing {(page - 1) * pageSize + 1}–
+							· showing {(page - 1) * pageSize + 1} to{" "}
 							{Math.min(page * pageSize, total)} of {total}
 						</span>
 					</p>

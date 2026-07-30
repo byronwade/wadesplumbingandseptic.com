@@ -86,17 +86,17 @@ At Wade's Plumbing & Septic, we offer expert shower transformation services for 
 - Scotts Valley
 - Watsonville
 
-"Wade's Plumbing & Septic transformed our bathroom with a stunning new shower. The installation was seamless!" - Emily, Capitola
+"Wade's Plumbing & Septic transformed our bathroom with a stunning new shower. The installation was seamless!" (Emily, Capitola)
 
-"Exceptional service and attention to detail. We love our new shower!" - Michael, Watsonville
+"Exceptional service and attention to detail. We love our new shower!" (Michael, Watsonville)
 
-"Highly recommend Wade's for any plumbing upgrades. Our shower looks fantastic!" - Sarah, Santa Cruz
+"Highly recommend Wade's for any plumbing upgrades. Our shower looks fantastic!" (Sarah, Santa Cruz)
 
 Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ 5-star rating
 
 Licensed Contractor: C-42 for California
 
-Fast-response guarantee: Available Monday to Friday, 8 AM - 5 PM
+Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM
 
 ## Upgrade Your Shower Experience in Santa Cruz County
 
@@ -129,4 +129,4 @@ Transform Your Bathroom
 
 Experience the ultimate in comfort and style with our premium shower installations, tailored to enhance your bathroom's elegance.
 
-[Call Us Today](tel:1234567890) [Get Upgrade Your Shower in Santa Cruz County Today At Wade's Plumbing & Septic, we proudly offer expert water heater installations and tankless water heater installations to homeowners across Santa Cruz County, California. Our services are tailored to meet the needs of residential properties, ensuring you enjoy efficient and reliable hot water systems. Discover our comprehensive service area below and find out how we can help enhance your home's plumbing. Aptos Ben Lomond Boulder Creek Brookdale Capitola Davenport Felton Freedom La Selva Beach Live Oak Mount Hermon Pleasure Point Rio Del Mar Santa Cruz Scotts Valley Soquel Watsonville Transform Your Shower Experience in Santa Cruz County ★★★★★ 5-star rating "Wade's Plumbing & Septic turned our outdated shower into a spa-like retreat. Highly recommend their services!" - Sarah, Santa Cruz "Professional and efficient. The team at Wade's made the entire process seamless." - John, Capitola "Our new shower is fantastic! Exceptional service from start to finish." - Emily, Watsonville Licensed Contractor: C-42 for California Fast Response Guarantee: Available Monday to Friday, 8 AM - 5 PM](/contact/)
+[Call Us Today](tel:1234567890) [Get Upgrade Your Shower in Santa Cruz County Today At Wade's Plumbing & Septic, we proudly offer expert water heater installations and tankless water heater installations to homeowners across Santa Cruz County, California. Our services are tailored to meet the needs of residential properties, ensuring you enjoy efficient and reliable hot water systems. Discover our comprehensive service area below and find out how we can help enhance your home's plumbing. Aptos Ben Lomond Boulder Creek Brookdale Capitola Davenport Felton Freedom La Selva Beach Live Oak Mount Hermon Pleasure Point Rio Del Mar Santa Cruz Scotts Valley Soquel Watsonville Transform Your Shower Experience in Santa Cruz County ★★★★★ 5-star rating "Wade's Plumbing & Septic turned our outdated shower into a spa-like retreat. Highly recommend their services!" (Sarah, Santa Cruz "Professional and efficient. The team at Wade's made the entire process seamless."), John, Capitola "Our new shower is fantastic! Exceptional service from start to finish." (Emily, Watsonville Licensed Contractor: C-42 for California Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))

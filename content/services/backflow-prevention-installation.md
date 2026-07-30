@@ -85,11 +85,11 @@ Ensure the safety and purity of your water supply with our professional backflow
 
 ★★★★★ 5-Star Rated Service
 
-"Wade's Plumbing & Septic provided exceptional service when installing our backflow prevention device. Highly recommend!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided exceptional service when installing our backflow prevention device. Highly recommend!" (Sarah, Santa Cruz)
 
-"Fast, reliable, and professional. I trust Wade's for all my plumbing needs." - Mike, Watsonville
+"Fast, reliable, and professional. I trust Wade's for all my plumbing needs." (Mike, Watsonville)
 
-"The peace of mind knowing my water supply is safe is invaluable. Thank you, Wade's!" - Emily, Scotts Valley
+"The peace of mind knowing my water supply is safe is invaluable. Thank you, Wade's!" (Emily, Scotts Valley)
 
 Licensed Contractor: C-42
 

@@ -60,7 +60,7 @@ At Wade's Plumbing & Septic, we are proud to offer expert septic tank design ser
 
 Our licensed contractors, holding a C-42 license for California, ensure that every project is handled with the utmost professionalism and expertise.
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 
@@ -78,11 +78,11 @@ Tailored septic systems for efficient and environmentally-friendly waste managem
 
 ★★★★★ 5-Star Rated Service
 
-"Wade's Plumbing & Septic designed our septic system with precision and care. We couldn't be happier!" - Sarah, Aptos
+"Wade's Plumbing & Septic designed our septic system with precision and care. We couldn't be happier!" (Sarah, Aptos)
 
-"The team was professional and knowledgeable, making the process seamless from start to finish." - Mike, Santa Cruz
+"The team was professional and knowledgeable, making the process seamless from start to finish." (Mike, Santa Cruz)
 
-"Our new septic system works flawlessly, thanks to Wade's expert design services." - Emily, Scotts Valley
+"Our new septic system works flawlessly, thanks to Wade's expert design services." (Emily, Scotts Valley)
 
 Licensed Contractor: C-42 for California
 

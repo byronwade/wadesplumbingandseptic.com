@@ -29,7 +29,7 @@ export function ServiceCard({ service }: { service: ContentDocument }) {
 			>
 				<Image
 					alt={
-						service.imageAlt ?? `${service.title} — Wade's Plumbing & Septic`
+						service.imageAlt ?? `${service.title}, Wade's Plumbing & Septic`
 					}
 					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 					fill

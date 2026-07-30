@@ -109,11 +109,11 @@ Ensure the optimal functioning of your septic system with our professional repai
 
 ★★★★★ 5-Star Rating
 
-> "Wade's Plumbing & Septic provided exceptional service when optimizing our septic box. Their team was professional and efficient!" - Sarah, Santa Cruz
+> "Wade's Plumbing & Septic provided exceptional service when optimizing our septic box. Their team was professional and efficient!" (Sarah, Santa Cruz)
 
-> "I highly recommend Wade's for their expertise in septic systems. They made the whole process seamless and stress-free." - John, Watsonville
+> "I highly recommend Wade's for their expertise in septic systems. They made the whole process seamless and stress-free." (John, Watsonville)
 
-> "The team at Wade's Plumbing & Septic is knowledgeable and reliable. Our septic system has never worked better!" - Emily, Aptos
+> "The team at Wade's Plumbing & Septic is knowledgeable and reliable. Our septic system has never worked better!" (Emily, Aptos)
 
 Licensed Contractor: C-42
 

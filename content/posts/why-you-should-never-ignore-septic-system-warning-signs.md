@@ -24,7 +24,7 @@ imageAlt: Advanced septic system controls and access
 
 ### 1\. Slow Drains Throughout Your Home
 
-When multiple drains in your home begin draining slowly, particularly if this affects toilets and floor drains, it's often a sign that your septic system is reaching capacity or experiencing blockages. This isn't something that will resolve itself - it typically worsens over time until a complete backup occurs.
+When multiple drains in your home begin draining slowly, particularly if this affects toilets and floor drains, it's often a sign that your septic system is reaching capacity or experiencing blockages. This isn't something that will resolve itself. It typically worsens over time until a complete backup occurs.
 
 ### 2\. Gurgling Sounds in Plumbing
 
@@ -46,7 +46,7 @@ Pools of water or consistently soggy ground around your septic tank or drainfiel
 
 ### System Failure and Expensive Repairs
 
-Minor issues inevitably progress to complete system failure if left unaddressed. What might have been a simple repair can quickly escalate to needing a full system replacement - transforming a few hundred dollar repair into a $10,000+ project.
+Minor issues inevitably progress to complete system failure if left unaddressed. What might have been a simple repair can quickly escalate to needing a full system replacement, transforming a few hundred dollar repair into a $10,000+ project.
 
 ### Property Damage
 

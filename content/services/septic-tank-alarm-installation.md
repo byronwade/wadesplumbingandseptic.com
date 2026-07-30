@@ -59,11 +59,11 @@ Ensure the smooth operation of your septic system with our reliable alarm instal
 
 ★★★★★ 5-Star Rated Service
 
-"Wade's Plumbing & Septic installed our septic tank alarm quickly and efficiently. We feel much more secure now!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic installed our septic tank alarm quickly and efficiently. We feel much more secure now!" (Sarah, Santa Cruz)
 
-"Professional and reliable service. The team at Wade's made sure everything was up to code." - Mike, Watsonville
+"Professional and reliable service. The team at Wade's made sure everything was up to code." (Mike, Watsonville)
 
-"Great experience from start to finish. The alarm system works perfectly!" - Emily, Scotts Valley
+"Great experience from start to finish. The alarm system works perfectly!" (Emily, Scotts Valley)
 
 Licensed Contractor: C-42
 

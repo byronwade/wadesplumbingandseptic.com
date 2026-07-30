@@ -9,7 +9,7 @@ noindex: true
 
 ## We got your message
 
-Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team will review what you sent and follow up during business hours—or sooner if the issue is urgent.
+Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team will review what you sent and follow up during business hours, or sooner if the issue is urgent.
 
 ### Need help right now?
 

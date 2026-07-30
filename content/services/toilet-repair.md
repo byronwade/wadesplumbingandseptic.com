@@ -87,11 +87,11 @@ Ensure your bathroom fixtures operate efficiently with our trusted repair servic
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic quickly fixed our toilet issues. Their service was prompt and professional!" – Sarah, Santa Cruz
+"Wade's Plumbing & Septic quickly fixed our toilet issues. Their service was prompt and professional!" (Sarah, Santa Cruz)
 
-"I couldn't be happier with the fast response and quality repair. Highly recommend!" – Tom, Watsonville
+"I couldn't be happier with the fast response and quality repair. Highly recommend!" (Tom, Watsonville)
 
-"Reliable and efficient service every time. Wade's is our go-to for plumbing needs." – Emily, Scotts Valley
+"Reliable and efficient service every time. Wade's is our go-to for plumbing needs." (Emily, Scotts Valley)
 
 Licensed Contractor: C-42 (CA)
 

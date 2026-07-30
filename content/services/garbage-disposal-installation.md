@@ -80,7 +80,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 Contractor License: C-42 license for California
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available 24/7 for immediate assistance
 
@@ -98,15 +98,15 @@ Experience seamless waste management with our expert installation services, ensu
 
 > "Wade's Plumbing & Septic transformed our kitchen with their disposal installation. Fast and professional service!"
 > 
-> – Emily, Santa Cruz
+>, Emily, Santa Cruz
 
 > "Highly recommend their kitchen disposal upgrade service. The team was knowledgeable and efficient!"
 > 
-> – Alex, Watsonville
+>, Alex, Watsonville
 
 > "Our new kitchen disposal works like a charm. Wade's team was prompt and courteous throughout the process."
 > 
-> – Jordan, Capitola
+>, Jordan, Capitola
 
 ★★★★★ 5-Star Rating from Our Satisfied Customers
 

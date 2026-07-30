@@ -26,7 +26,7 @@ Always prioritize safety when attempting any plumbing repair:
 
 - Wear rubber gloves to protect your hands from chemicals and bacteria
 - Use eye protection when using plungers, augers, or chemical cleaners
-- Never mix different drain cleaners - this can create dangerous chemical reactions
+- Never mix different drain cleaners. This can create dangerous chemical reactions
 - Always read and follow manufacturer instructions for any products used
 
 ## Method 1: The Plunger Technique
@@ -163,17 +163,17 @@ Wade's Plumbing & Septic is a trusted local provider with a reputation for relia
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic quickly cleared our stubborn drain. Highly recommend!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic quickly cleared our stubborn drain. Highly recommend!" (Sarah, Santa Cruz)
 
-"Professional and fast service. My go-to for all plumbing needs." - Mike, Capitola
+"Professional and fast service. My go-to for all plumbing needs." (Mike, Capitola)
 
-"Efficient and friendly team. They handled our drain issue with ease." - Lisa, Watsonville
+"Efficient and friendly team. They handled our drain issue with ease." (Lisa, Watsonville)
 
 Licensed Contractor: C-42 for CA
 
 Fast Response Guarantee: Available for emergencies to serve Santa Cruz County, CA
 
-## Skip the DIY — Get It Done Right
+## Skip the DIY, Get It Done Right
 
 Trust Wade's Plumbing & Septic for professional drain cleaning services in Santa Cruz County, CA. Our expert team ensures your drains are cleared efficiently and effectively, saving you time and hassle.
 

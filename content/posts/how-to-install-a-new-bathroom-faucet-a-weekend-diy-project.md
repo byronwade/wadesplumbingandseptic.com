@@ -44,9 +44,9 @@ imageAlt: "Chrome bathroom faucet"
 
  1. Place a bucket under the water lines to catch any remaining water
  2. Disconnect the water supply lines from the faucet by unscrewing the nuts connecting them (use the adjustable wrench)
- 3. Locate the mounting nuts that secure the faucet to the sink - these are usually located underneath the sink and might require a basin wrench to reach
+ 3. Locate the mounting nuts that secure the faucet to the sink. These are usually located underneath the sink and might require a basin wrench to reach
  4. Unscrew and remove these mounting nuts
- 5. Lift the old faucet from above the sink - you may need to wiggle it a bit if caulk or mineral deposits are holding it in place
+ 5. Lift the old faucet from above the sink. You may need to wiggle it a bit if caulk or mineral deposits are holding it in place
  6. Clean the sink surface thoroughly, removing any old putty, caulk, or debris
 
 ## Step 2: Prepare the New Faucet
@@ -62,7 +62,7 @@ imageAlt: "Chrome bathroom faucet"
 
  1. Feed the faucet's supply lines and mounting hardware through the holes in the sink
  2. Position the faucet so it's straight and centered
- 3. From underneath, secure the faucet by screwing on the mounting nuts - tighten by hand first, then use a wrench for the final tightening, but be careful not to overtighten
+ 3. From underneath, secure the faucet by screwing on the mounting nuts, tighten by hand first, then use a wrench for the final tightening, but be careful not to overtighten
  4. Wipe away any excess putty that squeezed out from under the faucet
 
 ## Step 4: Connect the Water Supply Lines
@@ -87,7 +87,7 @@ Many new faucets come with a matching drain assembly. If yours does:
 
  1. Turn the water supply back on by turning the shut-off valves counterclockwise
  2. Turn on the faucet and check for leaks: 
-- Check all connections - under the sink, around the base of the faucet, and at the drain
+- Check all connections, under the sink, around the base of the faucet, and at the drain
 - Look for any dripping or moisture
 - If you find leaks, turn off the water and tighten the connections slightly
  3. Run both hot and cold water to ensure proper operation
@@ -134,7 +134,7 @@ Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz
 
 Our team holds a C-42 contractor license for California, ensuring top-quality service and compliance with all regulatory standards.
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 

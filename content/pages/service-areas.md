@@ -80,4 +80,4 @@ Availability depends on project type and scheduling. Call with the property addr
 3. **Schedule the right visit.** The team matches the work with the appropriate technician or project lead.
 4. **Get clear options.** The property is evaluated and pricing is provided before authorized work begins.
 
-Regular hours are Monday through Friday, 9:00 AM–5:00 PM. Call 831.225.4344 to confirm coverage and schedule service.
+Regular hours are Monday through Friday, 9:00 AM to 5:00 PM. Call 831.225.4344 to confirm coverage and schedule service.

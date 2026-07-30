@@ -91,7 +91,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our contractors are fully licensed and certified, holding a C-42 license in California, ensuring that all services are performed to the highest standards of quality and safety.
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 
@@ -107,14 +107,14 @@ Protect your property from flooding and water damage with our expert storm drain
 
 ### Customer Testimonials
 
-"Wade's Plumbing & Septic provided exceptional service when we needed our storm drain cleared. Their team was professional and efficient." - Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided exceptional service when we needed our storm drain cleared. Their team was professional and efficient." (Sarah, Santa Cruz)
 
-"I was impressed with how quickly they responded to my call. They cleared our storm drain in no time and the service was top-notch!" - Mike, Capitola
+"I was impressed with how quickly they responded to my call. They cleared our storm drain in no time and the service was top-notch!" (Mike, Capitola)
 
-"Reliable and friendly service. Wade's Plumbing & Septic is my go-to for any plumbing needs." - Emily, Watsonville
+"Reliable and friendly service. Wade's Plumbing & Septic is my go-to for any plumbing needs." (Emily, Watsonville)
 
 ★★★★★ 5-Star Rating
 
 Licensed Contractor: C-42 for California
 
-Fast-Response Guarantee: Available Monday to Friday, 8 AM - 5 PM
+Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

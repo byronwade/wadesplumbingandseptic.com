@@ -77,11 +77,11 @@ Ensure your business operates smoothly with our reliable commercial plumbing sol
 
 [Call Us Now](tel:+18315551234) [Get a Free Quote](/contact/) 
 
-"Wade's Plumbing & Septic has been a lifesaver for our restaurant. Their team is always professional and efficient." — Sarah, Santa Cruz
+"Wade's Plumbing & Septic has been a lifesaver for our restaurant. Their team is always professional and efficient." (Sarah, Santa Cruz)
 
-"Exceptional service! They quickly resolved our plumbing issues with minimal disruption to our business." — Mike, Capitola
+"Exceptional service! They quickly resolved our plumbing issues with minimal disruption to our business." (Mike, Capitola)
 
-"Highly recommend Wade's for any commercial plumbing needs. Their expertise and reliability are unmatched." — Linda, Watsonville
+"Highly recommend Wade's for any commercial plumbing needs. Their expertise and reliability are unmatched." (Linda, Watsonville)
 
 ★★★★★ 5-star rating 
 
