@@ -180,7 +180,7 @@ export function ContentHero({
 
 	if (kind === "article") {
 		return (
-			<header className="hero-article border-border border-b">
+			<header className="hero-article overflow-x-clip border-border border-b">
 				<div className="article-shell pt-10 pb-8 sm:pt-14 sm:pb-10">
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="section-head max-w-3xl">
@@ -204,8 +204,8 @@ export function ContentHero({
 				</div>
 
 				{image ? (
-					<figure className="hero-article-media motion-rise motion-delay-2">
-						<div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[2/1]">
+					<figure className="hero-media-bleed hero-article-media motion-rise motion-delay-2">
+						<div className="relative aspect-[5/4] w-full overflow-hidden sm:aspect-[2/1] lg:aspect-[21/9]">
 							<Image
 								alt={imageAlt?.trim() || title}
 								className="object-cover"
@@ -214,6 +214,10 @@ export function ContentHero({
 								quality={75}
 								sizes="100vw"
 								src={image}
+							/>
+							<div
+								aria-hidden="true"
+								className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/10 sm:from-black/25 sm:to-transparent"
 							/>
 						</div>
 					</figure>
@@ -226,7 +230,7 @@ export function ContentHero({
 		const actions = showActions ?? true
 
 		return (
-			<header className="hero-service">
+			<header className="hero-service overflow-x-clip">
 				<div className="container-shell pt-10 pb-8 sm:pt-12 sm:pb-10">
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
@@ -267,8 +271,8 @@ export function ContentHero({
 				</div>
 
 				{image ? (
-					<div className="hero-service-media motion-fade">
-						<div className="relative h-[min(52vw,22rem)] w-full sm:h-[min(42vw,28rem)] lg:h-[32rem]">
+					<div className="hero-media-bleed hero-service-media motion-fade">
+						<div className="relative h-[min(62svh,28rem)] w-full sm:h-[min(42vw,28rem)] lg:h-[32rem]">
 							<Image
 								alt={imageAlt?.trim() || title}
 								className="object-cover"
@@ -280,7 +284,7 @@ export function ContentHero({
 							/>
 							<div
 								aria-hidden="true"
-								className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent"
+								className="absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-black/15 sm:from-black/35 sm:to-transparent"
 							/>
 						</div>
 					</div>
