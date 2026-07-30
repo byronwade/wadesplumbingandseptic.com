@@ -42,4 +42,4 @@ Wade's works on the tank, distribution components, pumps, alarms, treatment equi
 
 Steep slopes, limited usable area, poor soil, high groundwater, environmental setbacks, and newer treatment standards may require more than a conventional gravity system. Wade's can help move a project from site evaluation through design coordination, permitting, installation, startup, and maintenance planning.
 
-[Browse every septic service](/services) or [request a project consultation](/contact).
+[Engineered septic systems](/service-offerings/engineered-septic-system-installation) · [Browse every septic service](/services) · [Request a project consultation](/contact)
