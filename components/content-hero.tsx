@@ -87,6 +87,7 @@ export function ContentHero({
 	imageAlt,
 	parent,
 	breadcrumbs,
+	variant = "default",
 }: {
 	title: string
 	description: string
@@ -97,8 +98,11 @@ export function ContentHero({
 	parent?: { href: Route; label: string }
 	/** Full trail override. Last item is treated as the current page. */
 	breadcrumbs?: HeroBreadcrumb[]
+	/** Marketing pages get a stronger photo plane closer to the home hero. */
+	variant?: "default" | "marketing"
 }) {
 	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
+	const marketing = variant === "marketing"
 
 	/*
 	 * Sizes at --type-headline, not --type-display. Display belongs to the home
@@ -108,22 +112,28 @@ export function ContentHero({
 	 * .surface-hero puts this on the --dark-1 elevation with a top hairline, plus
 	 * the grid and glow textures. Previously it shared the header's flat ink, so
 	 * the header and the hero read as one slab with no visible boundary. The
-	 * photo sits at low opacity as a texture on the right rather than a scrim
-	 * across the whole band, which is what made every page look identical.
+	 * photo sits as atmosphere on the right; marketing pages raise opacity so the
+	 * image reads as real work rather than a faint texture.
 	 */
 	return (
 		<section className="surface-hero tex-grid tex-glow overflow-hidden">
 			{image ? (
 				<div
 					aria-hidden="true"
-					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full lg:w-3/5"
+					className={cn(
+						"pointer-events-none absolute inset-y-0 right-0 -z-10 w-full",
+						marketing ? "lg:w-2/3" : "lg:w-3/5",
+					)}
 				>
 					<Image
 						alt=""
-						className="object-cover opacity-30"
+						className={cn(
+							"object-cover",
+							marketing ? "opacity-45" : "opacity-30",
+						)}
 						fill
 						priority
-						quality={55}
+						quality={marketing ? 65 : 55}
 						sizes="(min-width: 1024px) 60vw, 100vw"
 						src={image}
 					/>
@@ -138,7 +148,12 @@ export function ContentHero({
 				<span className="sr-only">{imageAlt?.trim() || title}</span>
 			) : null}
 
-			<div className="container-shell relative py-14 sm:py-16 lg:py-20">
+			<div
+				className={cn(
+					"container-shell relative",
+					marketing ? "py-16 sm:py-20 lg:py-24" : "py-14 sm:py-16 lg:py-20",
+				)}
+			>
 				<BreadcrumbTrail items={trail} />
 
 				<div className="section-head max-w-3xl">

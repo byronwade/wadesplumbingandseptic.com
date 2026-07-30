@@ -1,6 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import { resolveContentLayout } from "@/lib/content-layout"
 import type { RelatedContent } from "@/lib/related-content"
 import {
 	articleJsonLd,
@@ -13,10 +14,10 @@ import {
 } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
-import { ContactCta } from "@/components/contact-cta"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
+import { ContentSectionBands } from "@/components/content-section-bands"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { RelatedContentSections } from "@/components/related-content"
@@ -32,6 +33,8 @@ export function ContentPage({
 }) {
 	const isServiceArea = document.slug.startsWith("service-area/")
 	const isFaq = document.slug === "faq"
+	const layout = resolveContentLayout(document, { isPost })
+	const marketing = layout === "marketing"
 
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
@@ -72,11 +75,18 @@ export function ContentPage({
 				imageAlt={document.imageAlt}
 				parent={parent}
 				title={document.title}
+				variant={marketing ? "marketing" : "default"}
 			/>
-			{/* Sidebar width comes from --sidebar-w so this template and the service
-			    template share one measurement (they were 20rem and 21rem). */}
-			<article className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
-				<div className="min-w-0">
+
+			{marketing ? (
+				<>
+					{document.gallery?.length ? (
+						<ContentGallery images={document.gallery} variant="rail" />
+					) : null}
+					<ContentSectionBands content={document.content} />
+				</>
+			) : (
+				<article className="article-shell section-y">
 					{isPost && document.date ? (
 						<p className="type-meta border-border mb-8 border-b pb-5 font-bold">
 							Published{" "}
@@ -95,19 +105,9 @@ export function ContentPage({
 						<ContentGallery images={document.gallery} />
 					) : null}
 					<MarkdownContent content={document.content} demoteH1 />
-				</div>
-				{/*
-				  Desktop-only sidebar. On mobile this sat between the article and the
-				  end conversion CTA, so Call / Request / Call stacked back to back.
-				*/}
-				<aside className="hidden lg:sticky lg:top-[var(--header-offset)] lg:block lg:self-start">
-					<ContactCta
-						compact
-						description="Tell us what is happening and get practical options from a local licensed team."
-						title="Need help with this?"
-					/>
-				</aside>
-			</article>
+				</article>
+			)}
+
 			{related ? <RelatedContentSections related={related} /> : null}
 			<ContentConversionCta
 				conversion={document.conversion}
