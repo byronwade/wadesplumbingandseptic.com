@@ -4,9 +4,33 @@ import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import { siteConfig } from "@/lib/site"
 
+/** Google often truncates meta descriptions near this length. */
+export const META_DESCRIPTION_MAX = 155
+/** Social previews (and opengraph.xyz) prefer ~125 characters. */
+export const OG_DESCRIPTION_MAX = 125
+
 export function absoluteUrl(pathname: string) {
 	if (pathname.startsWith("http")) return pathname
 	return `${siteConfig.url}${pathname.startsWith("/") ? pathname : `/${pathname}`}`
+}
+
+/**
+ * Trim copy for meta/OG slots at a word boundary. Keeps previews readable
+ * instead of cutting mid-word when content descriptions run long.
+ */
+export function clampDescription(text: string, max: number): string {
+	const normalized = text.replace(/\s+/g, " ").trim()
+	if (normalized.length <= max) return normalized
+
+	const budget = Math.max(1, max - 1)
+	const slice = normalized.slice(0, budget)
+	const boundary = Math.max(
+		slice.lastIndexOf(" "),
+		slice.lastIndexOf(","),
+		slice.lastIndexOf(";"),
+	)
+	const cut = boundary > budget * 0.55 ? slice.slice(0, boundary) : slice
+	return `${cut.replace(/[.,;:\s]+$/u, "")}…`
 }
 
 export function buildPageMetadata({
@@ -28,19 +52,22 @@ export function buildPageMetadata({
 	noindex?: boolean
 }): Metadata {
 	const url = absoluteUrl(pathname)
+	const metaDescription = clampDescription(description, META_DESCRIPTION_MAX)
+	const socialDescription = clampDescription(description, OG_DESCRIPTION_MAX)
 	const ogImage = buildOgImagePath({
 		title,
 		eyebrow: eyebrow ?? defaultOgEyebrow(type),
 		image: image ?? "/images/work/precision-valve-installation.webp",
 	})
+	const ogAlt = `${title}. Call ${siteConfig.phone} for service.`
 
 	return {
 		title,
-		description,
+		description: metaDescription,
 		alternates: { canonical: pathname },
 		openGraph: {
 			title,
-			description,
+			description: socialDescription,
 			url,
 			type,
 			siteName: siteConfig.name,
@@ -50,14 +77,14 @@ export function buildPageMetadata({
 					url: ogImage,
 					width: 1200,
 					height: 630,
-					alt: title,
+					alt: ogAlt,
 				},
 			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title,
-			description,
+			description: socialDescription,
 			images: [ogImage],
 		},
 		robots: noindex ? { index: false, follow: false } : undefined,

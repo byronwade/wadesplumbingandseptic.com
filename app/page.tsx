@@ -36,7 +36,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = buildPageMetadata({
 	title: "Santa Cruz Plumbing & Septic",
 	description:
-		"Licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities. Clear pricing, no upselling. Call 831.225.4344.",
+		"Licensed plumbing and septic for Santa Cruz County. Clear pricing, no upselling. Call 831.225.4344.",
 	pathname: "/",
 	image: "/images/locations/santa-cruz-redwoods.webp",
 	eyebrow: "Family owned · Local crew",
