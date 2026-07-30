@@ -39,6 +39,9 @@ export async function generateMetadata({
 		description: resolved.document.description,
 		pathname: `/${resolved.document.slug}`,
 		image: resolved.document.image,
+		eyebrow: resolved.isPost
+			? (resolved.document.category ?? "Expert Tip")
+			: (resolved.document.eyebrow ?? undefined),
 		type: resolved.isPost ? "article" : "website",
 		noindex: resolved.document.noindex,
 	})

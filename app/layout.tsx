@@ -68,20 +68,11 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		url: siteConfig.url,
-		images: [
-			{
-				url: "/images/locations/santa-cruz-plumber.webp",
-				width: 1280,
-				height: 720,
-				alt: "Wade's Plumbing & Septic",
-			},
-		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images: ["/images/locations/santa-cruz-plumber.webp"],
 	},
 	robots: {
 		index: true,
