@@ -154,7 +154,7 @@ export function VirtualBusinessCard({
 							variant={dark ? "inverse" : "outline"}
 						/>
 						<ProtectedContactLink
-							ariaLabel={`Email ${contactInfo.email}`}
+							ariaLabel={`Email us at ${contactInfo.email}`}
 							className={cn(
 								buttonVariants({ variant: "ghost", size: "lg" }),
 								"w-full",
@@ -194,7 +194,7 @@ export function VirtualBusinessCard({
 						variant={dark ? "inverse" : "outline"}
 					/>
 					<ProtectedContactLink
-						ariaLabel={`Email ${contactInfo.email}`}
+						ariaLabel={`Email us at ${contactInfo.email}`}
 						className={cn(
 							buttonVariants({ variant: "ghost", size: "lg" }),
 							"w-full",

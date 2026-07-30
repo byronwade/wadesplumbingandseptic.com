@@ -35,11 +35,21 @@ export function CallButton({
 }) {
 	const styles = cn(buttonVariants({ size, variant }), className)
 	const dialLabel = desktopLabel ?? `Call ${contactInfo.phoneDisplay}`
+	/*
+	  Accessible name must include visible label text (axe label-content-name-
+	  mismatch). Keep the phone number when the visible label is a short CTA.
+	*/
+	const dialAria =
+		typeof dialLabel === "string"
+			? dialLabel.includes(contactInfo.phoneDisplay)
+				? dialLabel
+				: `${dialLabel} ${contactInfo.phoneDisplay}`
+			: `Call ${contactInfo.phoneDisplay}`
 
 	if (prefer === "dial") {
 		return (
 			<ProtectedContactLink
-				ariaLabel={`Call ${contactInfo.phoneDisplay}`}
+				ariaLabel={dialAria}
 				className={styles}
 				kind="phone"
 			>
@@ -65,7 +75,7 @@ export function CallButton({
 				</SaveContactButton>
 			</span>
 			<ProtectedContactLink
-				ariaLabel={`Call ${contactInfo.phoneDisplay}`}
+				ariaLabel={dialAria}
 				className={cn(styles, "hidden sm:inline-flex")}
 				kind="phone"
 			>

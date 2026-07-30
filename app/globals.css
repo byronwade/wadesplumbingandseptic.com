@@ -2,9 +2,10 @@
 @import "./typeset.css";
 
 .typeset-docs {
-	--typeset-font-body: var(--font-geist);
-	--typeset-font-heading: var(--font-geist);
-	--typeset-font-mono: var(--font-geist-mono);
+	/* Reuse site fonts so we do not ship a third/fourth face on every page. */
+	--typeset-font-body: var(--font-manrope);
+	--typeset-font-heading: var(--font-archivo), var(--font-manrope);
+	--typeset-font-mono: var(--font-mono);
 	--typeset-size: 15px;
 	--typeset-leading: 1.75;
 	--typeset-flow: 1.25em;
@@ -1063,7 +1064,12 @@
 
 	.surface-dark .spec-label,
 	.surface-dark-soft .spec-label,
-	.bg-ink .spec-label {
+	.surface-float .spec-label,
+	.surface-hero .spec-label,
+	.surface-raised .spec-label,
+	.hero-cinematic .spec-label,
+	.bg-ink .spec-label,
+	.bg-panel .spec-label {
 		color: var(--primary-bright);
 	}
 

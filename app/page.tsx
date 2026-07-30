@@ -220,8 +220,8 @@ function HomeHeroMedia() {
 	} = getImageProps({
 		...common,
 		width: 1280,
-		height: 961,
-		quality: 62,
+		height: 960,
+		quality: 55,
 		src: "/images/team/byron-working.webp",
 	})
 
@@ -230,24 +230,51 @@ function HomeHeroMedia() {
 	} = getImageProps({
 		...common,
 		/* Match the compressed source; avoid asking the optimizer for 768px. */
-		width: 640,
-		height: 853,
-		quality: 52,
+		width: 720,
+		height: 960,
+		quality: 48,
 		src: "/images/work/engineered-septic-hero-portrait.webp",
 	})
 
+	/*
+	  getImageProps defaults loading="lazy". That makes the LCP hero compete with
+	  below-the-fold images and tanks mobile LCP under Slow 4G. Force eager + high.
+	*/
 	return (
-		<picture>
-			<source media="(min-width: 640px)" srcSet={desktop} sizes={HERO_SIZES} />
-			<img
-				{...rest}
-				srcSet={portrait}
-				alt={common.alt}
-				className="absolute inset-0 size-full object-cover object-[50%_62%]"
-				decoding="async"
+		<>
+			<link
+				rel="preload"
+				as="image"
+				imageSrcSet={portrait}
+				imageSizes={HERO_SIZES}
+				media="(max-width: 639px)"
 				fetchPriority="high"
 			/>
-		</picture>
+			<link
+				rel="preload"
+				as="image"
+				imageSrcSet={desktop}
+				imageSizes={HERO_SIZES}
+				media="(min-width: 640px)"
+				fetchPriority="high"
+			/>
+			<picture>
+				<source
+					media="(min-width: 640px)"
+					srcSet={desktop}
+					sizes={HERO_SIZES}
+				/>
+				<img
+					{...rest}
+					srcSet={portrait}
+					alt={common.alt}
+					className="absolute inset-0 size-full object-cover object-[50%_62%]"
+					decoding="async"
+					fetchPriority="high"
+					loading="eager"
+				/>
+			</picture>
+		</>
 	)
 }
 
@@ -438,9 +465,10 @@ export default function HomePage() {
 									alt="Completed three-tank septic system installation on a hillside property"
 									className="object-cover"
 									fill
-									quality={60}
+									quality={58}
 									sizes="(min-width: 1024px) 45vw, 100vw"
 									src="/images/work/completed-multi-tank.webp"
+									loading="lazy"
 								/>
 								<span className="bg-ink/85 absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase">
 									Engineered ATU
@@ -501,8 +529,8 @@ export default function HomePage() {
 										alt={image.alt}
 										className="object-cover"
 										fill
-										quality={58}
-										sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+										quality={55}
+										sizes="(min-width: 1024px) 25vw, 285px"
 										src={image.src}
 										loading="lazy"
 									/>
@@ -548,9 +576,10 @@ export default function HomePage() {
 										alt={group.title}
 										className="object-cover"
 										fill
-										quality={65}
-										sizes="(min-width: 1024px) 33vw, 100vw"
+										quality={60}
+										sizes="(min-width: 1024px) 400px, 100vw"
 										src={group.image}
+										loading="lazy"
 									/>
 								</div>
 								<CardHeader>

@@ -208,11 +208,11 @@ function FooterColumn({
 	return (
 		<div>
 			<h2 className="spec-label text-primary-bright">{title}</h2>
-			<ul className="text-on-dark-muted mt-5 space-y-3 text-sm">
+			<ul className="text-on-dark-muted mt-5 space-y-1 text-sm">
 				{links.map((link) => (
 					<li key={link.href}>
 						<Link
-							className="hover:text-primary-bright transition-colors"
+							className="hover:text-primary-bright inline-flex min-h-6 items-center py-1 transition-colors"
 							href={link.href as Route}
 							prefetch
 						>

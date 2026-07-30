@@ -73,10 +73,14 @@ export function SaveContactButton({
 		}, 2200)
 	}
 
+	const visibleLabel =
+		typeof children === "string" ? children : "Save contact"
+	const ariaLabel = `${visibleLabel} for Wade's Plumbing & Septic`
+
 	return (
 		<>
 			<ProtectedContactLink
-				ariaLabel="Save Wade's Plumbing & Septic to your contacts"
+				ariaLabel={ariaLabel}
 				className={cn(buttonVariants({ size, variant }), className)}
 				kind="vcard"
 				onClick={armPrompt}
