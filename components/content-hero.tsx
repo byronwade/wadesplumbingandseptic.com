@@ -159,6 +159,7 @@ export function ContentHero({
 	indexKind,
 	meta,
 	showActions,
+	pageCta = "contact",
 }: {
 	title: string
 	description: string
@@ -174,6 +175,11 @@ export function ContentHero({
 	meta?: ReactNode
 	/** Override default CTA visibility for the variant. */
 	showActions?: boolean
+	/**
+	 * Page-hero primary CTA. Defaults to a Contact link. Use "call" on the
+	 * contact page itself so the button does not navigate nowhere.
+	 */
+	pageCta?: "contact" | "call"
 }) {
 	const kind = normalizeVariant(variant)
 	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
@@ -382,13 +388,25 @@ export function ContentHero({
 				</div>
 				{actions ? (
 					<div className="motion-rise motion-delay-2 mt-8">
-						<Link
-							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
-							href="/contact"
-							prefetch
-						>
-							Get in touch
-						</Link>
+						{pageCta === "call" ? (
+							<HeroCallLink
+								className={cn(
+									buttonVariants({ size: "lg" }),
+									"w-full sm:w-auto",
+								)}
+							/>
+						) : (
+							<Link
+								className={cn(
+									buttonVariants({ size: "lg" }),
+									"w-full sm:w-auto",
+								)}
+								href="/contact"
+								prefetch
+							>
+								Get in touch
+							</Link>
+						)}
 					</div>
 				) : null}
 			</div>

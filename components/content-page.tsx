@@ -139,6 +139,11 @@ export function ContentPage({
 				image={document.image}
 				imageAlt={document.imageAlt}
 				meta={articleMeta}
+				pageCta={
+					document.slug === "contact" || document.slug === "contact-call-first"
+						? "call"
+						: "contact"
+				}
 				parent={parent}
 				showActions={!isPost}
 				title={document.title}
