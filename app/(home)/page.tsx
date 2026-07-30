@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, BadgeCheck, Phone } from "@/components/icons"
+import { ArrowRight, BadgeCheck } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
 import { HomeBelowFold } from "@/components/home-below-fold"
+import { HomeHeroMedia } from "@/components/home-hero-media"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
@@ -19,162 +21,107 @@ export const metadata: Metadata = buildPageMetadata({
 	eyebrow: "Family owned · Local crew",
 })
 
-const HERO_TITLE_STYLE = {
-	margin: 0,
-	color: "#ffffff",
-	fontWeight: 800,
-	fontSize: "clamp(3.25rem, 13vw, 9rem)",
-	lineHeight: 0.9,
-	letterSpacing: "-0.045em",
-	fontFamily:
-		'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-} as const
-
 export default function HomePage() {
 	return (
 		<main id="main-content">
-			<link
-				rel="preload"
-				as="image"
-				href="/images/work/hero-mobile.avif"
-				type="image/avif"
-				media="(max-width: 767px)"
-				fetchPriority="high"
-			/>
-			<link
-				rel="preload"
-				as="image"
-				href="/images/work/hero-desktop.avif"
-				type="image/avif"
-				media="(min-width: 768px)"
-				fetchPriority="high"
-			/>
-			<style>{`
-				.hero-cinematic[data-lcp] {
-					position: relative;
-					isolation: isolate;
-					overflow: hidden;
-					background: #0c0b0a;
-					color: #f7f7f5;
-				}
-				.hero-cinematic[data-lcp] img {
-					display: block;
-					width: 100%;
-					height: auto;
-					border: 0;
-					aspect-ratio: 3 / 4;
-				}
-				@media (min-width: 768px) {
-					.hero-cinematic[data-lcp] img {
-						aspect-ratio: 16 / 9;
-					}
-				}
-			`}</style>
-			<section className="hero-cinematic" data-lcp="">
-				<picture>
-					<source
-						media="(min-width: 768px)"
-						srcSet="/images/work/hero-desktop.avif"
-						type="image/avif"
-					/>
-					<source
-						media="(min-width: 768px)"
-						srcSet="/images/work/hero-desktop.webp"
-						type="image/webp"
-					/>
-					<source srcSet="/images/work/hero-mobile.avif" type="image/avif" />
-					<img
-						alt=""
-						width={750}
-						height={1000}
-						decoding="sync"
-						fetchPriority="high"
-						src="/images/work/hero-mobile.webp"
-					/>
-				</picture>
-				<div
-					style={{
-						position: "absolute",
-						inset: 0,
-						zIndex: 2,
-						display: "flex",
-						flexDirection: "column",
-						background:
-							"linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.2) 58%, rgba(0,0,0,0.35) 100%)",
-					}}
-				>
-					<div className="container-shell flex items-start justify-between gap-6 pt-8 sm:pt-10">
-						<p className="spec-label text-primary-bright">
-							Santa Cruz County, CA
-						</p>
-						<p className="text-on-dark-subtle hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
-							Est. family owned
-						</p>
+			{/*
+			  Cinematic frame. Full-bleed work photograph sized to the visible
+			  viewport, with the headline set at --type-cinematic and anchored low so
+			  the picture carries the top of the frame and the type carries the
+			  bottom. Structure follows the pattern used by Lightship and Locomotive:
+			  minimal chrome, one oversized statement, credentials pinned to the
+			  bottom edge as a hairline bar.
+
+			  The photograph is the argument here, so it is not boxed, tinted, or
+			  reduced to texture. Only motion in the band is the slow drift on the
+			  frame itself.
+			*/}
+			<section className="hero-cinematic">
+				<div className="absolute inset-0 -z-20">
+					<div className="media-drift relative size-full">
+						<HomeHeroMedia />
 					</div>
+				</div>
 
-					<div className="container-shell mt-auto pb-8 sm:pb-10">
-						<h1 className="type-cinematic text-white" style={HERO_TITLE_STYLE}>
-							Santa Cruz plumbing
-							<br />
-							<span className="text-primary-bright">and septic</span>
-						</h1>
+				{/* Top line: where we are, and the scroll cue's counterpart. */}
+				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
+					<p className="spec-label motion-fade text-primary-bright">
+						Santa Cruz County, CA
+					</p>
+					<p className="text-on-dark-subtle motion-fade hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
+						Est. family owned
+					</p>
+				</div>
 
-						<div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-							<p className="type-lead text-on-dark-muted max-w-md">
-								Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
-								upselling, and clear pricing before work begins from local
-								licensed professionals.
-							</p>
+				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
+					<h1 className="type-cinematic motion-rise text-white">
+						Santa Cruz plumbing
+						<br />
+						<span className="text-primary-bright">and septic</span>
+					</h1>
 
-							<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-								<a
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"inline-flex w-full gap-2 sm:w-auto",
-									)}
-									href={contactInfo.phoneHref}
-								>
-									<Phone aria-hidden="true" className="size-5" />
-									Call {contactInfo.phoneDisplay}
-								</a>
-								<Link
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"w-full border border-white/35 bg-white/10 text-white hover:bg-white/16 sm:w-auto",
-									)}
-									href="/services"
-									prefetch
-								>
-									Our Services
-									<ArrowRight aria-hidden="true" />
-								</Link>
-							</div>
-						</div>
-					</div>
+					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+						<p className="type-lead text-on-dark-muted max-w-md">
+							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
+							upselling, and clear pricing before work begins from local
+							licensed professionals.
+						</p>
 
-					<div className="border-t border-white/12 bg-black/55">
-						<div className="container-shell flex items-center justify-between gap-6 py-3.5">
-							<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
-								{heroStats.map(({ label, value }) => (
-									<div className="flex items-baseline gap-2" key={label}>
-										<dt className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-											{label}
-										</dt>
-										<dd className="text-[0.8125rem] font-bold text-white">
-											{value}
-										</dd>
-									</div>
-								))}
-							</dl>
-							<span
-								aria-hidden="true"
-								className="scroll-cue hidden shrink-0 self-center lg:block"
+						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								size="xl"
 							/>
+							<Link
+								className={cn(
+									buttonVariants({ variant: "inverse", size: "xl" }),
+									"w-full sm:w-auto",
+								)}
+								href="/services"
+								prefetch
+							>
+								Our Services
+								<ArrowRight aria-hidden="true" />
+							</Link>
 						</div>
+					</div>
+				</div>
+
+				{/*
+				  Credential bar on the bottom edge. Keeps the licence numbers in the
+				  first frame without adding another row of chips, and gives the
+				  photograph a hard bottom rule to sit on.
+				*/}
+				<div className="relative border-t border-white/12 bg-black/55">
+					<div className="container-shell flex items-center justify-between gap-6 py-3.5">
+						<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
+							{heroStats.map(({ label, value }) => (
+								<div className="flex items-baseline gap-2" key={label}>
+									<dt className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
+										{label}
+									</dt>
+									<dd className="text-[0.8125rem] font-bold text-white">
+										{value}
+									</dd>
+								</div>
+							))}
+						</dl>
+						{/* Centred in the bar, not hanging below it, where overflow: clip
+						    cut it off and it read as a stray hairline. */}
+						<span
+							aria-hidden="true"
+							className="scroll-cue hidden shrink-0 self-center lg:block"
+						/>
 					</div>
 				</div>
 			</section>
 
+			{/*
+			  Trust strip. Every item is left-aligned in its own column so the four
+			  labels share a baseline grid; centring each item individually made the
+			  row read ragged at the two-column breakpoint.
+			*/}
 			<section className="border-border bg-card border-b">
 				<ul className="container-shell grid grid-cols-1 gap-x-8 gap-y-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
 					{trustPoints.map((item) => (

@@ -16,7 +16,7 @@ const AnalyticsLoader = dynamic(
 	{ ssr: false },
 )
 
-/** Interior-route client islands (search + analytics). Not mounted on `/`. */
+/** Client islands for search + analytics (mounted with site chrome). */
 export function ChromeExtras() {
 	return (
 		<>

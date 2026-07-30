@@ -191,16 +191,10 @@
 	   white on ink panels. Consumed by the button/control base classes. */
 	--ring-offset: var(--background);
 
-	/*
-	  Self-hosted system stacks only: next/font Google faces were injecting
-	  ~20 @font-face rules into the render-blocking sheet and delaying Lantern
-	  LCP by seconds under Slow 4G. Avenir / Helvetica Neue still read branded
-	  on Apple; Segoe / system-ui cover the rest.
-	*/
 	--font-sans:
-		"Avenir Next", "Segoe UI", system-ui, -apple-system, Helvetica, sans-serif;
+		var(--font-manrope), "Avenir Next", "Segoe UI", Helvetica, sans-serif;
 	--font-display:
-		"Helvetica Neue", "Arial Black", "Segoe UI", system-ui, sans-serif;
+		var(--font-archivo), var(--font-manrope), "Helvetica Neue", sans-serif;
 	--font-mono:
 		ui-monospace, "SF Mono", SFMono-Regular, Menlo, "Roboto Mono", monospace;
 }
@@ -711,6 +705,9 @@
 		--ring-offset: oklch(0 0 0);
 		position: relative;
 		isolation: isolate;
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100svh - var(--header-h));
 		overflow: clip;
 		background: var(--ink);
 		color: var(--on-dark);
@@ -731,11 +728,7 @@
 		content: "";
 		position: absolute;
 		inset: 0;
-		/*
-		  Keep the photo at z-index 0 (never negative). Negative-z LCP images
-		  incur multi-second render delay in Chromium / Lighthouse.
-		*/
-		z-index: 1;
+		z-index: -1;
 		pointer-events: none;
 		background:
 			linear-gradient(
@@ -748,20 +741,14 @@
 			linear-gradient(to right, oklch(0 0 0 / 0.45) 0%, transparent 55%);
 	}
 
-	/* Homepage LCP hero inlines its own scrim so paint does not wait on CSS. */
-	.hero-cinematic[data-lcp]::before {
-		content: none;
-		display: none;
-	}
-
 	/*
 	  Slow drift on the hero photograph. Cinematic movement comes from the frame,
 	  not from elements sliding in, so this is the only motion in the band.
 	*/
 	@media (prefers-reduced-motion: no-preference) {
 		.media-drift {
-			/* Delay compositing work until after LCP has a chance to paint. */
-			animation: drift 28s ease-in-out 2s infinite alternate;
+			will-change: transform;
+			animation: drift 28s ease-in-out infinite alternate;
 		}
 	}
 
