@@ -294,6 +294,36 @@ export async function renderOgImage({
 						{displayTitle}
 					</div>
 
+					{/* Conversion CTA: opengraph.xyz flags cards without one. */}
+					<div
+						style={{
+							display: "flex",
+							marginTop: 28,
+							flexDirection: "row",
+							alignItems: "center",
+						}}
+					>
+						<div
+							style={{
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+								backgroundColor: COPPER,
+								color: PAPER,
+								fontFamily: "Manrope",
+								fontSize: 22,
+								fontWeight: 700,
+								paddingTop: 14,
+								paddingBottom: 14,
+								paddingLeft: 22,
+								paddingRight: 22,
+								borderRadius: 8,
+							}}
+						>
+							{`Call now · ${siteConfig.phone}`}
+						</div>
+					</div>
+
 					<div style={{ display: "flex", flexGrow: 1 }} />
 
 					<div
@@ -310,43 +340,13 @@ export async function renderOgImage({
 						<div
 							style={{
 								display: "flex",
-								flexDirection: "row",
-								alignItems: "center",
+								fontFamily: "Manrope",
+								fontSize: 16,
+								fontWeight: 500,
+								color: MUTED,
 							}}
 						>
-							<div
-								style={{
-									display: "flex",
-									fontFamily: "Manrope",
-									fontSize: 18,
-									fontWeight: 700,
-									color: COPPER_BRIGHT,
-								}}
-							>
-								{siteConfig.phone}
-							</div>
-							<div
-								style={{
-									display: "flex",
-									width: 6,
-									height: 6,
-									marginLeft: 16,
-									marginRight: 16,
-									borderRadius: 3,
-									backgroundColor: COPPER,
-								}}
-							/>
-							<div
-								style={{
-									display: "flex",
-									fontFamily: "Manrope",
-									fontSize: 16,
-									fontWeight: 500,
-									color: MUTED,
-								}}
-							>
-								Santa Cruz County, CA
-							</div>
+							Santa Cruz County, CA
 						</div>
 						<div
 							style={{

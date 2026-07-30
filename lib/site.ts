@@ -2,7 +2,7 @@ export const siteConfig = {
 	name: "Wade's Plumbing & Septic",
 	shortName: "Wade's",
 	description:
-		"Family-owned plumbing and septic specialists serving Santa Cruz County and selected Santa Clara County communities in California.",
+		"Family-owned plumbing and septic specialists serving Santa Cruz County and nearby Santa Clara foothill communities.",
 	/** Preferred host matches production redirects (apex → www). */
 	url: "https://www.wadesplumbingandseptic.com",
 	phone: "831.225.4344",
