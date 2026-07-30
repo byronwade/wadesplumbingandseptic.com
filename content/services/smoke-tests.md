@@ -78,7 +78,7 @@ Santa Cruz County Septic Experts
 
 Ensure your septic system's integrity with our professional smoke testing services.
 
-[Call Us Now](tel:+18315551234)
+[Call Us Now](tel:+18312254344)
 
 ## Serving Santa Cruz County, CA
 

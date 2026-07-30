@@ -86,7 +86,6 @@ Neglecting regular maintenance can lead to overflows, backups, and system failur
 
 ## Sources & Local References
 
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 - [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5)
 - [Reference from news.google.com](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQl)
 
@@ -114,7 +113,7 @@ Keep Your Septic System Running Smoothly
 
 Ensure the efficiency and longevity of your septic system with our professional pumping services in Santa Cruz County.
 
-[Call Us Now](tel:+18315555555) 
+[Call Us Now](tel:+18312254344) 
 
 ## Serving Santa Cruz County, CA
 

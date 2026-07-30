@@ -110,4 +110,4 @@ Wade's Plumbing & Septic is a trusted name in Santa Cruz County, known for our e
 
 Ensure the efficiency and longevity of your septic system with our specialized drain field repair services.
 
-[Call Us Now](tel:1234567890)
+[Call Us Now](tel:+18312254344)

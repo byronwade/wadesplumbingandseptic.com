@@ -90,8 +90,6 @@ Hiring a professional ensures accurate diagnosis and long-lasting solutions, pre
 
 ## Sources & Local References
 
-- [Competitor gap: Why Does My Toilet Keep Running Randomly?](https://plumbtreeplumbing.com/why-does-my-toilet-keep-running-randomly/)
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 
 ## Seasonal Tip
 

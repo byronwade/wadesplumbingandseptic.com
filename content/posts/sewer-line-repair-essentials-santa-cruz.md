@@ -81,7 +81,6 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 
 ## Sources & Local References
 
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 - [Two rivers, one lifeline: Reclaiming the Santa Cruz across borders, AZPM News](https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5)
 
 ## Seasonal Tip
@@ -94,4 +93,4 @@ Expert Sewer Solutions
 
 Ensure your home's plumbing system operates smoothly with our professional sewer line repair services in Santa Cruz County, CA.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote
+[Call Us Now](tel:+18312254344) [Get a Free Quote

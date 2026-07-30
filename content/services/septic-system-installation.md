@@ -73,7 +73,7 @@ Septic Installations Made Easy
 
 Experience seamless and efficient septic installations with Wade's Plumbing & Septic, your trusted local experts.
 
-[Call Us Now](tel:+11234567890) 
+[Call Us Now](tel:+18312254344) 
 
 "Wade's Plumbing & Septic provided exceptional service when installing our new septic system. Their team was professional and efficient!" (Sarah, Aptos)
 

@@ -92,7 +92,7 @@ Upgrade Your Kitchen Efficiency
 
 Experience seamless waste management with our expert installation services, ensuring your kitchen runs smoothly and efficiently.
 
-[Call Us Now](tel:+1234567890) 
+[Call Us Now](tel:+18312254344) 
 
 ## What Our Customers Are Saying
 

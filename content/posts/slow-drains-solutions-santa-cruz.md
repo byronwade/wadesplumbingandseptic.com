@@ -81,8 +81,6 @@ Common causes include hair, soap scum, grease build-up, and foreign objects lodg
 
 ## Sources & Local References
 
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
-- [Competitor gap: Garbage Disposal Making Loud Grinding Noises? Here’s Why and How to Fix It](https://plumbtreeplumbing.com/garbage-disposal-making-loud-grinding-noises-heres-why-and-how-to-fix-it/)
 - [5 years later: Taking stock of the ongoing CZU Lightning Complex recovery, Santa Cruz Sentinel](https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5)
 
 ## Seasonal Tip
@@ -107,7 +105,7 @@ Keep Your Drains Flowing Smoothly
 
 Ensure your home's plumbing system remains efficient and trouble-free with our professional drain maintenance services.
 
-[Call Us Now](tel:+1234567890) 
+[Call Us Now](tel:+18312254344) 
 
 ## Serving Santa Cruz County, CA
 

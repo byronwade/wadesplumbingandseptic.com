@@ -57,7 +57,7 @@ At Wade's Plumbing & Septic, we are committed to delivering reliable and efficie
 
 ## Clear Your Drains Today with Expert Hydro Jetting!
 
-Experience fast and effective drain clearing with our professional hydro jetting services in Santa Cruz County, California. [Call Us Now](tel:+18315555555) [Get a Free Quote](/contact/)
+Experience fast and effective drain clearing with our professional hydro jetting services in Santa Cruz County, California. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ## Frequently Asked Questions
 

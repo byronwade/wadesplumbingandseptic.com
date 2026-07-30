@@ -77,8 +77,6 @@ While homeowners can monitor their septic systems for signs
 ## Sources & Local References
 
 - [Reference from wadesplumbingandseptic.com](/service-areas/)
-- [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
-- [Competitor gap: Transformative Fixture Upgrades for a Luxe Bathroom Look](https://plumbtreeplumbing.com/transformative-fixture-upgrades-for-a-luxe-bathroom-look/)
 
 ## Seasonal Tip
 
@@ -94,4 +92,4 @@ Need Immediate Septic Leach Field Repair?
 
 Trust Wade's Plumbing & Septic for expert solutions that restore your septic system's efficiency.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote
+[Call Us Now](tel:+18312254344) [Get a Free Quote

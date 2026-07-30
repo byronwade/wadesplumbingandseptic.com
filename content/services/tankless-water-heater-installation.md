@@ -77,7 +77,7 @@ Upgrade Your Home's Efficiency
 
 Experience the benefits of endless hot water and reduced energy bills with our expert tankless water heater installations in Santa Cruz County.
 
-[Call Us](tel:+18315551234) 
+[Call Us](tel:+18312254344) 
 
 ### What Our Customers Are Saying
 

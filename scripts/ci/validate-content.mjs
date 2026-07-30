@@ -92,6 +92,42 @@ for (const collection of COLLECTIONS) {
 				)
 			}
 		}
+
+		if (
+			/\[Current Date\]/i.test(source) ||
+			/\[Insert[^\]]*\]/i.test(source) ||
+			/TODO:?\s*replace/i.test(source)
+		) {
+			errors.push(
+				`${file}: unresolved content placeholder (e.g. [Current Date])`,
+			)
+		}
+
+		if (
+			/Updated (January|February|March|April|May|June|July|August|September|October|November|December) \d{4}/.test(
+				source,
+			)
+		) {
+			errors.push(
+				`${file}: "Updated Month Year" filler copy; use frontmatter updated: YYYY-MM-DD and real body prose`,
+			)
+		}
+
+		if (/Competitor gap:/i.test(source)) {
+			errors.push(
+				`${file}: "Competitor gap" research notes must not ship in published content`,
+			)
+		}
+
+		const fakePhones =
+			source.match(
+				/tel:\+?(?:11234567890|1234567890|1831555\d{4}|19876543210)/gi,
+			) ?? []
+		for (const phone of fakePhones) {
+			errors.push(
+				`${file}: fake phone link "${phone}"; use tel:+18312254344`,
+			)
+		}
 	}
 }
 

@@ -58,6 +58,4 @@ To find out more about our service areas, visit our
 
 ## Sources & Local References
 
-- [Competitor gap: Is It Better to Invest in Water Filtration or Drink From Water Bottles?](https://plumbtreeplumbing.com/is-it-better-to-invest-in-water-filtration-or-drink-from-water-bottles/)
-- [Competitor gap: What Homeowners Should Know About Reverse Osmosis Filtration](https://plumbtreeplumbing.com/what-homeowners-should-know-about-reverse-osmosis-filtration/)
 - [Reference from wadesplumbingandseptic.com](/service-areas/)

@@ -73,7 +73,7 @@ Our team is fully licensed and certified
 
 Safeguard your home's drinking water with our expert backflow testing services in Santa Cruz County.
 
-[Call Us](tel:1234567890) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 

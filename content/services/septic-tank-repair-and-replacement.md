@@ -83,7 +83,7 @@ Fast & Reliable Service
 
 Ensure your septic system is in top condition with our expert repair and replacement services.
 
-[Call Us Now](tel:1234567890) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ★★★★★ 5-Star Rating
 
