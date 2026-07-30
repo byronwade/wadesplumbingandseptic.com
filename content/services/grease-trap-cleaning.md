@@ -1,13 +1,14 @@
 ---
-title: Efficient Grease Trap Cleaning in Santa Cruz County
+title: Grease Trap Cleaning in Santa Cruz County
 description: >-
-  Grease trap cleaning is a critical service for any food establishment or
-  household kitchen in Santa Cruz County, California.
+  Grease trap cleaning for Santa Cruz County restaurants and commercial
+  kitchens. Keep drains clear and inspections simple. Call 831.225.4344.
 category: Commercial
 order: 22
 image: >-
   /images/wordpress/industrial-building-facade-with-large-machinery-components-and-pipes-visible-314393.webp
 imageAlt: Industrial building with machinery and pipes
+updated: '2026-07-30'
 ---
 Grease trap cleaning is a critical service for any food establishment or household kitchen in Santa Cruz County, California. The process involves the meticulous removal of fats, oils, and grease (FOG) that accumulate in grease traps, ensuring compliance with local regulations and preventing potential plumbing issues. Our professional **grease trap cleaning Santa Cruz** service is designed to maintain the efficiency of your kitchen drainage systems, eliminate odors, and avoid costly emergency repairs.
 
@@ -84,6 +85,6 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including 
 
 As a licensed contractor (C-42 license for California), we guarantee quality and reliability in every job we undertake.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our emergency line is available to assist you.
+Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
 
 From the bustling streets of Santa Cruz to the serene neighborhoods of Aptos, Wade's Plumbing & Septic is your trusted partner for all plumbing and septic needs in Santa Cruz County, CA.

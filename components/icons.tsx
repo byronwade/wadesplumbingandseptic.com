@@ -18,6 +18,7 @@ import {
 	Crosshair,
 	Drop,
 	Envelope,
+	Eye as PhEye,
 	FileText as PhFileText,
 	Gauge as PhGauge,
 	Hash as PhHash,
@@ -72,6 +73,7 @@ export const BookOpen = duotone(PhBookOpen, "BookOpen")
 export const Briefcase = duotone(PhBriefcase, "Briefcase")
 export const Check = duotone(PhCheck, "Check")
 export const Clock = duotone(PhClock, "Clock")
+export const Eye = duotone(PhEye, "Eye")
 export const FileText = duotone(PhFileText, "FileText")
 export const Gauge = duotone(PhGauge, "Gauge")
 export const Hash = duotone(PhHash, "Hash")

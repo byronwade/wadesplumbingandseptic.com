@@ -61,7 +61,7 @@ function isConversionSection(heading: string, body: string) {
 	return isSoftClosingCta(heading, body)
 }
 
-function splitH2Sections(content: string): H2Section[] {
+export function splitH2Sections(content: string): H2Section[] {
 	const matches = [...content.matchAll(/^## .+$/gm)]
 	return matches.map((match, index) => {
 		const start = match.index ?? 0
@@ -76,6 +76,22 @@ function splitH2Sections(content: string): H2Section[] {
 			body: content.slice(bodyStart, end),
 		}
 	})
+}
+
+/** Intro copy before the first H2, plus each H2 section for banded layouts. */
+export function splitContentBands(content: string) {
+	const sections = splitH2Sections(content)
+	const intro = (
+		sections.length > 0 ? content.slice(0, sections[0]!.start) : content
+	).trim()
+
+	return {
+		intro,
+		sections: sections.map(({ heading, body }) => ({
+			heading,
+			body: body.trim(),
+		})),
+	}
 }
 
 function orphanEyebrowBefore(content: string, sectionStart: number) {

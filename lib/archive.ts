@@ -7,6 +7,12 @@ export type ArchiveItem = {
 	image?: string
 	imageAlt?: string
 	date?: string
+	/** Lifetime unique viewers when view stats are attached. */
+	uniqueViews?: number
+	/** Lifetime loads when view stats are attached. */
+	totalViews?: number
+	/** Trailing-window unique viewers when view stats are attached. */
+	trendingScore?: number
 }
 
 export type ArchiveFilter = {

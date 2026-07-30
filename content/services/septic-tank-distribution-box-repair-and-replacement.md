@@ -1,13 +1,13 @@
 ---
-title: Optimize Septic Box in Santa Cruz County for Efficiency
+title: Septic Distribution Box Repair in Santa Cruz County
 description: >-
-  Ensuring the optimal functioning of your septic system is crucial for any
-  homeowner in Santa Cruz County, California. One essential component that
-  demands.
+  Distribution box repair and replacement to restore even flow to Santa Cruz
+  County drainfields. Call 831.225.4344.
 category: Septic
 order: 13
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Septic distribution box and drain field work
+updated: '2026-07-30'
 ---
 Ensuring the optimal functioning of your septic system is crucial for any homeowner in Santa Cruz County, California. One essential component that demands attention is the distribution box. Our **septic tank distribution box repair** service is designed to address issues that can disrupt the even distribution of wastewater across your drainfield lines. At Wade's Plumbing & Septic, our experts are skilled in locating, evaluating, and repairing or replacing this critical part to maintain your septic system's efficiency and prevent potential failures.
 
@@ -91,7 +91,7 @@ At Wade's Plumbing & Septic, we proudly offer expert septic box repair services 
 
 Our contractors are fully licensed and equipped to handle all your septic needs. We holds a C-42 contractor license for California, ensuring compliance with all local regulations.
 
-Our office is open Monday through Friday from 9am to 5pm. For urgent issues, our emergency line is available to provide immediate assistance.
+Our office is open Monday through Friday from 9am to 5pm. For urgent issues, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 For more information on our service coverage, visit our [main service-area overview](/service-areas/).
 
@@ -101,7 +101,7 @@ Expert Septic Solutions
 
 Ensure the optimal functioning of your septic system with our professional repair services.
 
-[Call Us](tel:+18315551234) 
+[Call Us](tel:+18312254344) 
 
 ### What Our Customers Are Saying
 

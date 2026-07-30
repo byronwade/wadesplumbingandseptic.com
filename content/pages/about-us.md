@@ -57,7 +57,7 @@ We hold a C-42 license for CA and a state license for GA, ensuring our services 
 
 **Office Hours:** Monday to Friday, 9am to 5pm
 
-**Emergency Line:** Available for emergencies
+**Office hours:** Monday through Friday, 9:00am to 5:00pm. We do not offer 24/7 dispatch.
 
 Whether you need trenchless sewer line replacement, expert fixture installation, or certified septic system services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
 

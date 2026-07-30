@@ -2,7 +2,13 @@ import "server-only"
 
 import { cacheLife, cacheTag } from "next/cache"
 
+import {
+	cityServicePages,
+	cityServicePath,
+	getCityLocation,
+} from "@/lib/city-service-pages"
 import { getCollection } from "@/lib/content"
+import { getAllGlossaryEntries } from "@/lib/glossary"
 import { getServiceImage } from "@/lib/service-images"
 import type { SearchDocument, SearchIntent } from "@/lib/search"
 import {
@@ -62,7 +68,7 @@ function stripMarkdown(value: string) {
 /** Utility pages that should not appear in site search. */
 const SEARCH_EXCLUDE_SLUGS = new Set(["thank-you", "contact-call-first"])
 
-function bodyExcerpt(content: string, maxChars = 2400) {
+function bodyExcerpt(content: string, maxChars = 320) {
 	const cleaned = stripMarkdown(content)
 	if (cleaned.length <= maxChars) return cleaned
 	return cleaned.slice(0, maxChars)
@@ -104,10 +110,11 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 	cacheTag("content:search-index")
 	cacheLife("max")
 
-	const [services, posts, pages] = await Promise.all([
+	const [services, posts, pages, glossaryEntries] = await Promise.all([
 		getCollection("services"),
 		getCollection("posts"),
 		getCollection("pages"),
+		getAllGlossaryEntries(),
 	])
 
 	const serviceDocs: SearchDocument[] = services.map((service, index) => {
@@ -134,7 +141,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				...(service.tags ?? []),
 				...serviceBoostKeywords(service.title, service.category),
 			),
-			body: bodyExcerpt(service.content, 3200),
+			body: bodyExcerpt(service.content, 400),
 			popularity: boost + featuredBoost + orderBoost,
 			intents: CATEGORY_INTENTS[service.category ?? ""] ?? ["service"],
 		}
@@ -163,7 +170,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"tips",
 				"how to",
 			),
-			body: bodyExcerpt(post.content, 3200),
+			body: bodyExcerpt(post.content, 400),
 			popularity: Math.max(1, 28 - index) + topicBoost,
 			intents: ["tip"],
 		}
@@ -212,7 +219,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 					isArea ? "near me service area city" : "",
 					isCareer ? "job careers hiring" : "",
 				),
-				body: bodyExcerpt(page.content, 2400),
+				body: bodyExcerpt(page.content, 280),
 				popularity: isPriority
 					? 22 - Math.min(index, 20)
 					: isArea
@@ -284,6 +291,47 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		},
 	]
 
+	const glossaryDocs: SearchDocument[] = [
+		{
+			id: "glossary:index",
+			type: "page",
+			title: "Plumbing & Septic Glossary",
+			description:
+				"Plain-English plumbing and septic definitions for Santa Cruz County homeowners.",
+			href: "/glossary",
+			category: "Glossary",
+			keywords: keywordsFromText(
+				"glossary",
+				"plumbing terms",
+				"septic terms",
+				"definitions",
+				"dictionary",
+			),
+			popularity: 28,
+			intents: ["browse", "tip"],
+		},
+		...glossaryEntries.map(({ topic, term }, index) => ({
+			id: `glossary:${topic}:${term.slug}`,
+			type: "page" as const,
+			title: term.term,
+			description: term.shortDefinition,
+			href: `/glossary/${topic}/${term.slug}`,
+			category: topic === "plumbing" ? "Plumbing Glossary" : "Septic Glossary",
+			keywords: keywordsFromText(
+				term.term,
+				term.shortDefinition,
+				topic,
+				"glossary",
+				"definition",
+				...(term.alsoKnownAs ?? []),
+				term.slug.replaceAll("-", " "),
+			),
+			body: [term.definition, term.localContext, term.homeownerTip].join(" "),
+			popularity: Math.max(8, 22 - Math.floor(index / 8)),
+			intents: ["tip", "browse"] as SearchIntent[],
+		})),
+	]
+
 	const navDocs: SearchDocument[] = [
 		...primaryNavigation,
 		...companyNavigation,
@@ -299,6 +347,41 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		popularity: 16 - index,
 		intents: ["browse"] as SearchIntent[],
 	}))
+
+	const cityServiceDocs: SearchDocument[] = cityServicePages.flatMap(
+		(page, index) => {
+			const location = getCityLocation(page.citySlug)
+			if (!location) return []
+
+			return [
+				{
+					id: `city-service:${page.citySlug}:${page.serviceSlug}`,
+					type: "page" as const,
+					title: `${page.serviceTitle} in ${location.name}`,
+					description: page.localAngle.slice(0, 158),
+					href: cityServicePath(page.citySlug, page.serviceSlug),
+					category: "City Service",
+					image: "/images/locations/santa-cruz-plumber.webp",
+					keywords: keywordsFromText(
+						page.serviceTitle,
+						location.name,
+						location.county,
+						page.citySlug.replaceAll("-", " "),
+						page.serviceSlug.replaceAll("-", " "),
+						...page.commonIssues,
+						"near me",
+					),
+					body: [
+						page.localAngle,
+						...page.commonIssues,
+						page.permitNote ?? "",
+					].join(" "),
+					popularity: Math.max(8, 20 - Math.floor(index / 3)),
+					intents: ["area", "service"] as SearchIntent[],
+				},
+			]
+		},
+	)
 
 	const actionDocs: SearchDocument[] = [
 		{
@@ -390,9 +473,11 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 	for (const document of [
 		...actionDocs,
 		...categoryDocs,
+		...glossaryDocs,
 		...serviceDocs,
 		...tipDocs,
 		...pageDocs,
+		...cityServiceDocs,
 		...navDocs,
 	]) {
 		const existing = deduped.get(document.href)

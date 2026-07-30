@@ -1,13 +1,15 @@
 ---
-title: Septic Tank Cleaning and Pumping
-description: Remove accumulated solids and inspect accessible tank components to protect system function and reduce drain-field risk.
+title: Septic Tank Cleaning and Pumping in Santa Cruz County
+description: >-
+  Septic tank pumping and cleaning for Santa Cruz County homes. Remove solids
+  and protect your drainfield. Call 831.225.4344.
 category: Septic
 featured: true
 order: 20
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping and maintenance service
+updated: '2026-07-30'
 ---
-
 ## Scheduled septic pumping protects the system
 
 Solids and scum accumulate even in a healthy septic tank. If too much material builds up, it can reduce treatment volume, block components, or move toward the drain field.

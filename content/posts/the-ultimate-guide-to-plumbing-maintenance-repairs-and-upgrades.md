@@ -76,7 +76,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA a
 
 Our contractors are fully licensed, holding a C-42 contractor license for California, ensuring that all work is performed to the highest standards of safety and quality.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our emergency line is available, ensuring you have access to reliable assistance whenever you need it.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 ## Frequently Asked Questions
 

@@ -1,13 +1,14 @@
 ---
-title: Enhance Water Quality in Santa Cruz County Homes
+title: Water Filtration System Installation in Santa Cruz County
 description: >-
-  Enhance the quality of your home's water with our expert water filtration
-  system installation in Santa Cruz County.
+  Whole-home and point-of-use water filtration installation for Santa Cruz
+  County water quality concerns. Call 831.225.4344.
 category: Plumbing
 order: 33
 image: >-
   /images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp
 imageAlt: Water filtration and treatment tank system
+updated: '2026-07-30'
 ---
 Enhance the quality of your home's water with our expert **water filtration system installation in Santa Cruz County**. At Wade's Plumbing & Septic, we understand the importance of clean, safe drinking water for you and your family. Our comprehensive solutions range from whole-house systems to point-of-use filters, ensuring that your water is free from contaminants. Whether you're looking to address specific issues like hard water or require specialized filtration, our seasoned professionals have you covered.
 
@@ -56,7 +57,7 @@ Improve your water quality today with our trusted **water filtration system inst
 
 At Wade's Plumbing & Septic, we proudly serve the communities within Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our expertise in enhancing home water quality is backed by our commitment to providing top-notch services across the region.
 
-Our team is fully licensed, holding a C-42 license for California, ensuring professional and reliable service. We are available to assist you during our regular office hours, Monday through Friday, from 9am to 5pm. For urgent matters, our emergency line is reachable to address any immediate plumbing or septic concerns.
+Our team is fully licensed, holding a C-42 license for California, ensuring professional and reliable service. We are available to assist you during our regular office hours, Monday through Friday, from 9am to 5pm. For urgent matters, you can reach us during business hours at 831.225.4344.
 
 Wade's Plumbing & Septic is dedicated to improving water quality for homes throughout Santa Cruz County, CA, with a focus on delivering trusted and efficient solutions tailored to your needs.
 
@@ -66,7 +67,7 @@ Water Quality Solutions
 
 Experience the benefits of clean, safe drinking water with our expert water filtration system installation in Santa Cruz County.
 
-[Call Us Now](tel:+18315551234) 
+[Call Us Now](tel:+18312254344) 
 
 ### What Our Customers Say
 

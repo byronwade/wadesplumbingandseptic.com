@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
+import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -9,6 +10,11 @@ import {
 	resolvePageOrPost,
 	type ContentDocument,
 } from "@/lib/content"
+import {
+	getPageViewStoreCached,
+	getStatsForSlug,
+} from "@/lib/page-views"
+import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForPost, getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -44,13 +50,10 @@ export async function generateMetadata({
 	})
 }
 
-async function RelatedMarkdownPage({
-	document,
-	isPost,
-}: {
-	document: ContentDocument
-	isPost: boolean
-}) {
+async function getRelatedForDocument(
+	document: ContentDocument,
+	isPost: boolean,
+) {
 	"use cache"
 	cacheTag(
 		`content:${isPost ? "posts" : "pages"}`,
@@ -58,26 +61,50 @@ async function RelatedMarkdownPage({
 	)
 	cacheLife("max")
 
-	const related = isPost
-		? await getRelatedForPost(document)
-		: document.slug.startsWith("service-area/")
-			? await getRelatedForTopic(
-					{
-						label: document.title,
-						description: document.description,
-						keywords: [
-							document.slug.replaceAll("-", " "),
-							"plumbing",
-							"septic",
-							...(document.slug.includes("santa-cruz") ? ["santa cruz"] : []),
-						],
-						excludeSlugs: [document.slug],
-					},
-					{ posts: 3, services: 3 },
-				)
-			: undefined
+	if (isPost) return getRelatedForPost(document)
+	if (document.slug.startsWith("service-area/")) {
+		return getRelatedForTopic(
+			{
+				label: document.title,
+				description: document.description,
+				keywords: [
+					document.slug.replaceAll("-", " "),
+					"plumbing",
+					"septic",
+					...(document.slug.includes("santa-cruz") ? ["santa cruz"] : []),
+				],
+				excludeSlugs: [document.slug],
+			},
+			{ posts: 3, services: 3 },
+		)
+	}
+	return undefined
+}
 
-	return <ContentPage document={document} isPost={isPost} related={related} />
+async function RelatedMarkdownPage({
+	document,
+	isPost,
+}: {
+	document: ContentDocument
+	isPost: boolean
+}) {
+	const related = await getRelatedForDocument(document, isPost)
+
+	await connection()
+	const today = utcDayNow()
+	const store = await getPageViewStoreCached()
+	const viewStats = isPost
+		? getStatsForSlug(store, "tip", document.slug, today)
+		: undefined
+
+	return (
+		<ContentPage
+			document={document}
+			isPost={isPost}
+			related={related}
+			viewStats={viewStats}
+		/>
+	)
 }
 
 export default async function MarkdownPage({

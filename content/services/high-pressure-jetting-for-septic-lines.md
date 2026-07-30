@@ -1,13 +1,14 @@
 ---
-title: Optimize Your Septic with High-Pressure Jetting in Santa Cruz
+title: High-Pressure Jetting for Septic Lines in Santa Cruz County
 description: >-
-  High pressure jetting septic lines is an essential service for homeowners in
-  Santa Cruz County, California, looking to maintain optimal septic system.
+  High-pressure jetting to clear septic and effluent lines in Santa Cruz County.
+  Safer than harsh chemicals. Call 831.225.4344.
 category: Septic
 order: 11
 image: >-
   /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
 imageAlt: Industrial plumbing with pressure gauge
+updated: '2026-07-30'
 ---
 High pressure jetting septic lines is an essential service for homeowners in Santa Cruz County, California, looking to maintain optimal septic system performance. Using specialized high-pressure water jets, this process effectively clears blockages, removes build-up, and restores proper flow within your septic lines. It's a preventative maintenance strategy that helps avoid costly repairs and prolongs the life of your septic system.
 
@@ -83,6 +84,6 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 We are a licensed contractor with a C-42 license for California, ensuring that you receive the highest quality service from certified professionals.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our emergency line is available to provide immediate assistance.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumbing & Septic is your trusted partner for all septic services.

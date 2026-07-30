@@ -79,7 +79,7 @@ export default function ServiceAreasPage() {
 					</div>
 				</div>
 
-				{/* Full-bleed on mobile; map chunk loads after the static shell. */}
+				{/* Full-bleed on mobile; map JS loads only when this shell nears view. */}
 				<div className="mt-[var(--space-block)]">
 					<ServiceAreasMapLazy />
 				</div>

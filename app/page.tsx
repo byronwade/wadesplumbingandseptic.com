@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Image, { getImageProps } from "next/image"
 import Link from "next/link"
 import {
@@ -14,8 +15,11 @@ import {
 } from "@/components/icons"
 
 import { ContactCta } from "@/components/contact-cta"
-import { HomeFaq } from "@/components/home-faq"
 import { JsonLd } from "@/components/json-ld"
+
+const HomeFaq = dynamic(() =>
+	import("@/components/home-faq").then((mod) => mod.HomeFaq),
+)
 import { buttonVariants } from "@/components/ui/button"
 import {
 	Card,
@@ -29,9 +33,9 @@ import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Honest Plumbing & Septic Service",
+	title: "Santa Cruz Plumbing & Septic",
 	description:
-		"No sales pressure or upselling. Get licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities.",
+		"Licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities. Clear pricing, no upselling. Call 831.225.4344.",
 	pathname: "/",
 	image: "/images/locations/santa-cruz-plumber.webp",
 })
@@ -215,7 +219,7 @@ function HomeHeroMedia() {
 		...common,
 		width: 1280,
 		height: 961,
-		quality: 74,
+		quality: 62,
 		src: "/images/team/byron-working.webp",
 	})
 
@@ -223,10 +227,11 @@ function HomeHeroMedia() {
 		props: { srcSet: portrait, ...rest },
 	} = getImageProps({
 		...common,
-		width: 768,
-		height: 1024,
-		quality: 70,
-		src: "/images/work/engineered-septic-hero.webp",
+		/* Match the compressed source; avoid asking the optimizer for 768px. */
+		width: 640,
+		height: 853,
+		quality: 52,
+		src: "/images/work/engineered-septic-hero-portrait.webp",
 	})
 
 	return (
@@ -278,15 +283,16 @@ export default function HomePage() {
 
 				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
 					<h1 className="type-cinematic motion-rise text-white">
-						Honest plumbing
+						Santa Cruz plumbing
 						<br />
-						<span className="text-primary-bright">&amp; septic</span>
+						<span className="text-primary-bright">and septic</span>
 					</h1>
 
 					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
-							No sales pressure. No upselling. Clear pricing before work begins
-							from local licensed professionals.
+							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
+							upselling, and clear pricing before work begins from local
+							licensed professionals.
 						</p>
 
 						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
@@ -320,7 +326,7 @@ export default function HomePage() {
 				  first frame without adding another row of chips, and gives the
 				  photograph a hard bottom rule to sit on.
 				*/}
-				<div className="relative border-t border-white/12 bg-black/35 backdrop-blur-sm">
+				<div className="relative border-t border-white/12 bg-black/55">
 					<div className="container-shell flex items-center justify-between gap-6 py-3.5">
 						<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
 							{heroStats.map(({ label, value }) => (
@@ -438,11 +444,11 @@ export default function HomePage() {
 									alt="Completed three-tank septic system installation on a hillside property"
 									className="object-cover"
 									fill
-									quality={70}
+									quality={60}
 									sizes="(min-width: 1024px) 45vw, 100vw"
 									src="/images/work/completed-multi-tank.webp"
 								/>
-								<span className="bg-ink/80 absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase backdrop-blur-sm">
+								<span className="bg-ink/85 absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase">
 									Engineered ATU
 								</span>
 							</div>
@@ -501,9 +507,10 @@ export default function HomePage() {
 										alt={image.alt}
 										className="object-cover"
 										fill
-										quality={65}
+										quality={58}
 										sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
 										src={image.src}
+										loading="lazy"
 									/>
 								</div>
 								<figcaption className="text-on-dark-subtle mt-3 text-sm font-bold">

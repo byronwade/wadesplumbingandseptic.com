@@ -1,13 +1,14 @@
 ---
-title: Expert Sewer Inspections for Santa Cruz County Homes
+title: Sewer Line Inspection in Santa Cruz County
 description: >-
-  Maintaining a healthy plumbing system is crucial for any homeowner, and a
-  comprehensive sewer line inspection is an essential part of this process.
+  Sewer line inspection for Santa Cruz County homes before repair, sale, or
+  major landscaping. Call 831.225.4344.
 category: Plumbing
 order: 43
 image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
 imageAlt: Stacked concrete pipes ready for installation
+updated: '2026-07-30'
 ---
 Maintaining a healthy plumbing system is crucial for any homeowner, and a comprehensive **sewer line inspection** is an essential part of this process. At Wade's Plumbing & Septic, we offer advanced inspection services to homeowners in Santa Cruz County, California, ensuring that your sewer lines are in optimal condition. Our expert team utilizes state-of-the-art camera technology to identify potential issues, such as blockages, cracks, or tree root intrusions, providing you with a detailed report and video evidence for informed decision-making.
 
@@ -88,7 +89,7 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz, Cap
 
 We holds a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and professionalism.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we also offer an emergency line available to address any urgent plumbing or septic needs.
+Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we also take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
 
 Stay Ahead of Plumbing Issues
 
