@@ -249,16 +249,16 @@ export function ServiceAreasMap() {
 				</Map>
 			</div>
 
-			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-[var(--space-page-x)] text-sm font-bold">
-				<li className="flex items-center gap-2.5">
+			<ul className="text-muted-foreground flex flex-col items-center gap-2 px-[var(--space-page-x)] text-center text-sm sm:gap-2.5">
+				<li className="flex items-center justify-center gap-2.5 font-bold">
 					<span
 						aria-hidden="true"
-						className={cn("size-3.5 rounded-sm")}
+						className={cn("size-3.5 shrink-0 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
 					Service coverage: Santa Cruz County &amp; west foothills
 				</li>
-				<li className="max-w-xl text-center text-sm leading-relaxed font-normal">
+				<li className="max-w-xl text-sm leading-relaxed font-normal">
 					Approximate area including Los Gatos &amp; Saratoga; generally west of
 					Highway 101. Call to confirm your address.
 				</li>

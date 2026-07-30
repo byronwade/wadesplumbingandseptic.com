@@ -240,6 +240,7 @@ export function ContentHero({
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
 									size="xl"
 								/>
 								<Link
@@ -377,6 +378,7 @@ export function ContentHero({
 							<CallButton
 								className="w-full sm:w-auto"
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								prefer="dial"
 								size="lg"
 							/>
 						) : (

@@ -6,10 +6,12 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
-import { ArrowRight } from "@/components/icons"
+import { ArrowRight, Search } from "@/components/icons"
 import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
+import { openGlobalSearch } from "@/lib/search-events"
+import { prefetchSearchIndex } from "@/lib/search-client"
 import { Separator } from "@/components/ui/separator"
 import {
 	Sheet,
@@ -146,7 +148,26 @@ export function SiteHeaderMobileMenu({
 					className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 pb-4"
 					aria-label="Mobile navigation"
 				>
-					<section className="pt-2">
+					<div className="pt-2 px-1">
+						<button
+							type="button"
+							className={cn(
+								buttonVariants({ variant: "outline", size: "lg" }),
+								"w-full justify-start gap-2",
+							)}
+							aria-label="Search services, tips, and pages"
+							onMouseEnter={() => void prefetchSearchIndex()}
+							onFocus={() => void prefetchSearchIndex()}
+							onClick={() => {
+								closeMenu()
+								openGlobalSearch()
+							}}
+						>
+							<Search aria-hidden="true" className="size-5" />
+							Search the site
+						</button>
+					</div>
+					<section className="pt-4">
 						<p className="spec-tag px-3 pb-1.5">Main</p>
 						<ul>
 							{mobilePrimaryLinks.map((item) => (
@@ -228,7 +249,7 @@ export function SiteHeaderMobileMenu({
 					<CallButton
 						className="w-full gap-2"
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-						mobileLabel="Save contact"
+						prefer="dial"
 						size="lg"
 					/>
 					<button
@@ -242,7 +263,7 @@ export function SiteHeaderMobileMenu({
 							router.push("/contact")
 						}}
 					>
-						Get a Free Quote
+						Request service
 					</button>
 				</SheetFooter>
 			</SheetContent>

@@ -162,7 +162,7 @@ export function SiteFooter() {
 					aria-hidden="true"
 					className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
 				/>
-				<div className="container-shell relative flex flex-col items-center gap-3 px-5 py-8 text-center sm:gap-3.5 sm:py-10">
+				<div className="container-shell relative flex flex-col items-center gap-3 py-8 text-center sm:gap-3.5 sm:py-10">
 					<p className="text-primary-bright/90 font-mono text-[0.625rem] font-semibold tracking-[0.22em] uppercase">
 						Also a tech company
 					</p>
@@ -208,11 +208,11 @@ function FooterColumn({
 	return (
 		<div>
 			<h2 className="spec-label text-primary-bright">{title}</h2>
-			<ul className="text-on-dark-muted mt-5 space-y-3 text-sm">
+			<ul className="text-on-dark-muted mt-5 space-y-1 text-sm">
 				{links.map((link) => (
 					<li key={link.href}>
 						<Link
-							className="hover:text-primary-bright transition-colors"
+							className="hover:text-primary-bright inline-flex min-h-6 items-center py-1 transition-colors"
 							href={link.href as Route}
 							prefetch
 						>

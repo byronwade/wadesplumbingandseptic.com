@@ -55,7 +55,7 @@ export function ContentConversionCta({
 						<CallButton
 							className="w-full sm:w-auto"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							mobileLabel="Save contact"
+							prefer="dial"
 							size="xl"
 						/>
 						{secondary.contact ? (

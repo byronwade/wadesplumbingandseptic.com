@@ -2,4 +2,4 @@ export {
 	generateMetadata,
 	generateStaticParams,
 	default,
-} from "@/app/service-offerings/[slug]/page"
+} from "@/app/(site)/service-offerings/[slug]/page"

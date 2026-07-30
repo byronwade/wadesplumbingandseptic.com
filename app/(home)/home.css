@@ -1,4 +1,20 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+/* Root skip-link lives in app/layout.tsx — must be sourced or .sr-only never ships. */
+@source "../../app/layout.tsx";
+@source "../../components/home-header.tsx";
+@source "../../components/static-site-footer.tsx";
+@source "../../components/static-header-nav.tsx";
+@source "../../components/icons.tsx";
+@source "../../components/company-logos.tsx";
+@source "../../components/ui/button.tsx";
+@source "../../components/home-below-fold.tsx";
+@source "../../components/home-faq.tsx";
+@source "../../components/json-ld.tsx";
+@source "./page.tsx";
+@source "../../lib/utils.ts";
+@source "../../lib/home-content.ts";
+@source "../../lib/contact.ts";
+@source "../../lib/site.ts";
 /* typeset.css is imported from content layouts only — keep it off the homepage CSS. */
 
 @theme inline {
@@ -205,49 +221,6 @@
 		ui-monospace, "SF Mono", SFMono-Regular, Menlo, "Roboto Mono", monospace;
 }
 
-.dark {
-	--ink: oklch(0.13 0.006 68);
-	--ink-soft: oklch(0.185 0.008 68);
-	--panel: oklch(0.205 0.009 68);
-	--panel-elevated: oklch(0.255 0.01 68);
-	--background: oklch(0.165 0.007 68);
-	--foreground: oklch(0.96 0.004 85);
-	--card: oklch(0.205 0.008 68);
-	--card-foreground: oklch(0.96 0.004 85);
-	--popover: oklch(0.205 0.008 68);
-	--popover-foreground: oklch(0.96 0.004 85);
-	--primary: oklch(0.619 0.1364 50.7);
-	--primary-foreground: oklch(1 0 0);
-	--primary-bright: oklch(0.7557 0.1133 66.7);
-	--secondary: oklch(0.235 0.009 68);
-	--secondary-foreground: oklch(0.93 0.005 85);
-	--muted: oklch(0.235 0.009 68);
-	--muted-foreground: oklch(0.745 0.012 78);
-	--accent: oklch(0.2554 0.0212 66.6);
-	--accent-foreground: oklch(0.7557 0.1133 66.7);
-	--destructive: oklch(0.6828 0.1741 40.3);
-	--border: oklch(0.295 0.01 68);
-	--border-strong: oklch(0.365 0.012 68);
-	--input: oklch(0.295 0.01 68);
-	--ring: oklch(0.7557 0.1133 66.7);
-	--shadow-edge: 0 0 0 1px color-mix(in srgb, white 8%, transparent);
-	--shadow-panel:
-		0 1px 2px color-mix(in srgb, black 30%, transparent),
-		0 8px 24px -12px color-mix(in srgb, black 45%, transparent);
-
-	--sunken: oklch(0.195 0.008 68);
-
-	--prose-body: oklch(0.83 0.01 80);
-	--prose-quote: oklch(0.864 0.009 80);
-	--prose-quote-bg: oklch(0.228 0.009 68);
-	--prose-code-bg: oklch(0.25 0.01 68);
-
-	/* Dark theme starts lower, so the ramp shifts down with it and keeps the
-	   same ~0.035 L separation between levels. */
-	--dark-1: oklch(0.195 0.008 68);
-	--dark-2: oklch(0.232 0.009 68);
-	--dark-3: oklch(0.268 0.01 68);
-}
 
 /*
   Must stay unlayered. Declared inside @layer base it lost to the unlayered
@@ -1232,120 +1205,11 @@
 }
 
 /* Motion */
-@keyframes rise {
-	from {
-		transform: translateY(12px);
-	}
-	to {
-		transform: translateY(0);
-	}
-}
-
-@keyframes fade {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes accordion-down {
-	from {
-		height: 0;
-	}
-	to {
-		height: var(--radix-accordion-content-height);
-	}
-}
-
-@keyframes accordion-up {
-	from {
-		height: var(--radix-accordion-content-height);
-	}
-	to {
-		height: 0;
-	}
-}
-
-/* Ken Burns drift on the hero frame. */
-@keyframes drift {
-	from {
-		transform: scale(1.06) translate3d(0, 0, 0);
-	}
-	to {
-		transform: scale(1.16) translate3d(-1.5%, -1.5%, 0);
-	}
-}
-
-@keyframes cue {
-	0% {
-		transform: translateY(-100%);
-	}
-	60%,
-	100% {
-		transform: translateY(340%);
-	}
-}
-
-@keyframes reveal {
-	from {
-		opacity: 0;
-		transform: translateY(1.5rem);
-	}
-	to {
-		opacity: 1;
-		transform: none;
-	}
-}
-
-@layer components {
-	/* Load-time motion. Correct for the hero, which is on screen at paint. */
-	.motion-rise {
-		animation: var(--animate-rise);
-	}
-
-	.motion-fade {
-		animation: var(--animate-fade);
-	}
-
-	.motion-delay-1 {
-		animation-delay: 90ms;
-	}
-
-	.motion-delay-2 {
-		animation-delay: 180ms;
-	}
-
-	/*
-	  Scroll-driven reveal for everything below the fold. The old approach ran
-	  load-time animations on off-screen sections, so the whole page had already
-	  finished animating before you scrolled to any of it. Tying the animation to
-	  the element's own view() progress means it plays when it is actually seen -
-	  no observers, no JS, and grids stagger naturally because each card crosses
-	  the viewport edge at a different moment.
-
-	  No fallback branch on purpose: without support the content is simply
-	  visible, which is the correct resting state.
-	*/
-	@supports (animation-timeline: view()) {
-		@media (prefers-reduced-motion: no-preference) {
-			.reveal {
-				animation: reveal linear both;
-				animation-timeline: view();
-				animation-range: entry 15% cover 32%;
-			}
-		}
-	}
-}
 
 @media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		scroll-behavior: auto !important;
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-	}
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
