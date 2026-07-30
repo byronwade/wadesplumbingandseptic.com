@@ -7,7 +7,6 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { ArrowLeft, ArrowRight, CalendarDays } from "@/components/icons"
 import { startTransition, useEffect, useMemo } from "react"
 
-import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import {
 	Card,
@@ -98,7 +97,7 @@ function ArchiveCard({
 	 * card's own container width - see `@container card` in globals.css.
 	 */
 	return (
-		<Card className="group hover:border-primary/40 h-full overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5">
+		<Card className="group hover:border-border-strong h-full overflow-hidden transition-colors duration-200">
 			<Link
 				aria-label={
 					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
@@ -118,7 +117,7 @@ function ArchiveCard({
 				/>
 			</Link>
 			<CardHeader>
-				<Badge tone="muted">{item.category}</Badge>
+				<p className="spec-tag">{item.category}</p>
 				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
 					<Link href={item.href as Route} prefetch={false}>
 						{item.title}

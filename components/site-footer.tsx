@@ -36,10 +36,10 @@ export function SiteFooter() {
 			<div className="bg-primary shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.18)]">
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
 					<div>
-						<p className="text-sm font-bold text-white/85">
+						<p className="spec-label text-white/80">
 							{siteConfig.hours}
 						</p>
-						<p className="font-display text-2xl font-extrabold tracking-[-0.03em]">
+						<p className="type-subtitle mt-1 text-white">
 							{siteConfig.phone}
 						</p>
 					</div>
