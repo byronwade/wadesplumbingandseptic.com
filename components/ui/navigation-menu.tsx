@@ -10,18 +10,22 @@ import { cn } from "@/lib/utils"
 export function NavigationMenu({
 	className,
 	children,
+	viewport = true,
 	...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Root>) {
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
+	viewport?: boolean
+}) {
 	return (
 		<NavigationMenuPrimitive.Root
+			data-viewport={viewport}
 			className={cn(
-				"relative z-10 flex max-w-max flex-1 items-center justify-center",
+				"group/navigation-menu relative z-10 flex max-w-max flex-1 items-center justify-center",
 				className,
 			)}
 			{...props}
 		>
 			{children}
-			<NavigationMenuViewport />
+			{viewport ? <NavigationMenuViewport /> : null}
 		</NavigationMenuPrimitive.Root>
 	)
 }
@@ -73,8 +77,8 @@ export function NavigationMenuContent({
 	return (
 		<NavigationMenuPrimitive.Content
 			className={cn(
-				"top-0 left-0 w-full md:absolute md:w-auto",
-				"data-[motion^=from-]:animate-fade data-[motion^=to-]:animate-fade",
+				"top-0 left-0 w-full",
+				"data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-4 data-[motion=from-start]:slide-in-from-left-4 data-[motion=to-end]:slide-out-to-right-4 data-[motion=to-start]:slide-out-to-left-4",
 				className,
 			)}
 			{...props}
@@ -89,10 +93,11 @@ function NavigationMenuViewport({
 	...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
 	return (
-		<div className="absolute top-full left-0 flex w-full justify-center md:w-auto">
+		<div className="absolute inset-x-0 top-full z-50 flex justify-center">
 			<NavigationMenuPrimitive.Viewport
 				className={cn(
-					"origin-top-center border-border bg-popover text-popover-foreground relative mt-2 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-lg border shadow-[var(--shadow-edge)] md:w-[var(--radix-navigation-menu-viewport-width)]",
+					// Match header ink so the mega menu reads as one continuous bar
+					"bg-ink relative h-[var(--radix-navigation-menu-viewport-height)] w-full origin-top overflow-hidden text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_22px_48px_-28px_rgba(0,0,0,0.65)] transition-[height] duration-200",
 					className,
 				)}
 				{...props}
