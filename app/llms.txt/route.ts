@@ -61,7 +61,6 @@ ${areaLines}
 - [Septic Glossary](${siteConfig.url}/glossary/septic)
 - [Warranties](${siteConfig.url}/warranties)
 - [Financing](${siteConfig.url}/financing)
-- [Downloads](${siteConfig.url}/downloads)
 - [Contact](${siteConfig.url}/contact)
 `
 
