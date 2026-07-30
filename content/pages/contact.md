@@ -1,16 +1,16 @@
 ---
 title: Contact Us
 description: >-
-  Call or text 831.225.4344, email support@wadesinc.io, or request service online.
-  Family-owned plumbing and septic for Santa Cruz County and selected Santa Clara
-  County communities. CSLB #1087260.
+  Call or text 831.225.4344, email support@wadesinc.io, or request service
+  online. Family-owned plumbing and septic for Santa Cruz County and selected
+  Santa Clara County communities. CSLB #1087260.
 order: 7
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing & Septic team ready for service calls
 eyebrow: Call or Text 831.225.4344
 ---
 
-# Contact Wade's Plumbing & Septic
+## Contact Wade's Plumbing & Septic
 
 Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Call or text **[831.225.4344](tel:+18312254344)**, email **[support@wadesinc.io](mailto:support@wadesinc.io)**, or use the request options on this page. We confirm your address, triage the issue, and get you on the schedule.
 

@@ -1,12 +1,14 @@
 ---
-title: Mount Hermon, CA Plumbing & Septic Services
-description: 'Mount Hermon plumbing and septic for conference-area homes, seasonal occupancy, private wells, and forested lots near Scotts Valley. Wade''s: 831.225.4344.'
-eyebrow: Mount Hermon, CA
+title: 'Mount Hermon, CA Plumbing & Septic Services'
+description: >-
+  Mount Hermon plumbing and septic for conference-area homes, seasonal
+  occupancy, private wells, and forested lots near Scotts Valley. Wade's:
+  831.225.4344.
+eyebrow: 'Mount Hermon, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Forested residential roads near Mount Hermon and Scotts Valley border
 ---
-
 Mount Hermon is its own pocket of the Santa Cruz Mountains, tucked off Graham Hill Road between Scotts Valley and the San Lorenzo Valley, shaded by second-growth redwoods, known to most outsiders for the conference grounds and to residents for quiet roads, dark nights, and infrastructure that doesn't behave like town.
 
 Wade's Plumbing & Septic serves Mount Hermon homeowners who live here full-time and those who maintain a home that sits partially empty between seasons. Both situations stress plumbing and septic differently. A system that works fine in July can struggle in a rainy February when the drainfield is saturated and the house has had guests for a week straight.
@@ -36,7 +38,7 @@ We provide:
 - **Riser and access improvements** so future pumping doesn't require landscape demolition
 - **Effluent filter cleaning** and alarm checks on newer installs
 - **Drainfield troubleshooting** when surfacing, odors, or whole-house backups point to leach failure
-- **Repairs and replacements**, including paths toward [engineered septic systems](/engineered-septic-systems-santa-cruz-county) when Mount Hermon setbacks or soil data limit conventional options
+- **Repairs and replacements**, including paths toward [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Mount Hermon setbacks or soil data limit conventional options
 
 Redwood root balls don't stop at the property pin on the map. We've replaced lateral sections where roots cracked pipe a foot from a healthy-looking tree you'd never suspect.
 

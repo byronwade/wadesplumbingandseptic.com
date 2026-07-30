@@ -92,6 +92,55 @@ for (const collection of COLLECTIONS) {
 				)
 			}
 		}
+
+		const description = String(data.description ?? "")
+		if (/In This Guide/i.test(description) || /min read/i.test(description)) {
+			errors.push(
+				`${file}: description looks like a table-of-contents leak; rewrite the meta description`,
+			)
+		}
+		if (/…/.test(description) || /\.\.\.$/.test(description.trim())) {
+			errors.push(
+				`${file}: description is truncated with an ellipsis; finish the sentence`,
+			)
+		}
+		if (description.trim().length > 0 && description.trim().length < 70) {
+			warnings.push(
+				`${file}: description is short (${description.trim().length} chars); aim for ~120-158`,
+			)
+		}
+
+		if (/tel:\+?1234567890/i.test(source)) {
+			errors.push(
+				`${file}: placeholder phone tel:+1234567890; use tel:+18312254344`,
+			)
+		}
+
+		if (
+			/Competitor gap|redwoodpipeanddrain\.com|plumbtreeplumbing\.com/i.test(
+				source,
+			)
+		) {
+			errors.push(
+				`${file}: competitor-gap migration leftover; remove outbound competitor links/notes`,
+			)
+		}
+
+		if (
+			/\/(?:lp\/)?(?:engineered-septic-systems|failed-septic-repair|emergency-plumber|plumbing-repair-services|water-main-sewer-line-repair)-santa-cruz-county/i.test(
+				source,
+			)
+		) {
+			errors.push(
+				`${file}: links to a noindex campaign LP; point to /service-offerings/... instead`,
+			)
+		}
+
+		if (/water-heater-replacment/.test(source)) {
+			errors.push(
+				`${file}: typo slug water-heater-replacment; use water-heater-replacement`,
+			)
+		}
 	}
 }
 

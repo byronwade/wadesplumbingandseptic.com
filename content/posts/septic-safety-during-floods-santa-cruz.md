@@ -1,18 +1,20 @@
 ---
-title: Flood-Proof Your Septic System in Santa Cruz County, CA
-description: In This Guide4 min read1.Quick Answer for Santa Cruz Homeowners2.Understanding
- the Impact of Floods on Septic Systems3.Signs of Septic System Distress Duri…
+title: 'Flood-Proof Your Septic System in Santa Cruz County, CA'
+description: >-
+  Did you know? Proper septic maintenance can turn the tides on flood damage,
+  keeping your home safe and dry!
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic safety floods septic service
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic safety floods septic service
 image: /images/work/completed-multi-tank.webp
-imageAlt: "Completed multi-tank septic system"
----In This Guide4 min read
+imageAlt: Completed multi-tank septic system
+---
+In This Guide4 min read
 
 ![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
 

@@ -1,6 +1,8 @@
 ---
 title: Wade's Franchise Information
-description: Information about future Wade's Plumbing & Septic franchise opportunities.
+description: >-
+  Wade's Plumbing & Septic is focused on building a reliable, service-first
+  company around honest recommendations, clear pricing, and quality workmanship.
 eyebrow: Company
 image: /images/team/wades-team.webp
 imageAlt: The Wade's Plumbing & Septic team

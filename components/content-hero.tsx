@@ -149,9 +149,16 @@ export function ContentHero({
 					</p>
 				</div>
 
+				{/*
+				  Mobile header already exposes a phone icon, so the hero leads with
+				  Quote there and keeps the big Call button from sm up.
+				*/}
 				<div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
 					<a
-						className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
+						className={cn(
+							buttonVariants({ size: "xl" }),
+							"hidden w-full sm:inline-flex sm:w-auto",
+						)}
 						href={siteConfig.phoneHref}
 					>
 						<Phone aria-hidden="true" />
@@ -159,14 +166,31 @@ export function ContentHero({
 					</a>
 					<Link
 						className={cn(
-							buttonVariants({ variant: "inverse", size: "xl" }),
-							"w-full sm:w-auto",
+							buttonVariants({ size: "xl" }),
+							"w-full sm:hidden",
 						)}
 						href="/contact"
 						prefetch
 					>
 						Get a Free Quote
 					</Link>
+					<Link
+						className={cn(
+							buttonVariants({ variant: "inverse", size: "xl" }),
+							"hidden w-full sm:inline-flex sm:w-auto",
+						)}
+						href="/contact"
+						prefetch
+					>
+						Get a Free Quote
+					</Link>
+					<a
+						className="text-on-dark-muted hover:text-primary-bright inline-flex items-center justify-center gap-2 text-sm font-bold transition-colors sm:hidden"
+						href={siteConfig.phoneHref}
+					>
+						<Phone className="size-4" aria-hidden="true" />
+						Or call {siteConfig.phone}
+					</a>
 				</div>
 			</div>
 		</section>

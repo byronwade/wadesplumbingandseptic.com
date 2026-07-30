@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
@@ -59,15 +61,13 @@ export async function generateMetadata({
 	})
 }
 
-export default async function CategoryPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
-	const { slug } = await params
-	const posts = await postsForCategory(slug)
+async function getCategoryArchiveData(slug: string) {
+	"use cache"
+	cacheTag("content:posts", `content:category:${slug}`)
+	cacheLife("max")
 
-	if (!posts.length) notFound()
+	const posts = await postsForCategory(slug)
+	if (!posts.length) return null
 
 	const label = aliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
 	const related = await getRelatedForTopic(
@@ -81,12 +81,36 @@ export default async function CategoryPage({
 		{ posts: 3, services: 3 },
 	)
 
+	return { posts, label, related }
+}
+
+async function CategoryArchive({ slug }: { slug: string }) {
+	const data = await getCategoryArchiveData(slug)
+	if (!data) return null
+
 	return (
 		<ArticleArchive
-			description={`Practical ${label.toLowerCase()} from Wade's field experience.`}
-			posts={posts}
-			related={related}
-			title={label}
+			description={`Practical ${data.label.toLowerCase()} from Wade's field experience.`}
+			posts={data.posts}
+			related={data.related}
+			title={data.label}
 		/>
+	)
+}
+
+export default async function CategoryPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>
+}) {
+	const { slug } = await params
+	const posts = await postsForCategory(slug)
+
+	if (!posts.length) notFound()
+
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<CategoryArchive slug={slug} />
+		</Suspense>
 	)
 }

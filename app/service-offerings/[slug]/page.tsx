@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
-import { getCollection, getDocument } from "@/lib/content"
+import { getCollection, getDocument, type ContentDocument } from "@/lib/content"
 import {
 	getPageViewStoreCached,
 	getStatsForSlug,
 } from "@/lib/page-views"
-import { withRelatedViewStats } from "@/lib/page-views/attach-related"
 import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForService } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
@@ -38,22 +38,25 @@ export async function generateMetadata({
 	})
 }
 
-async function RelatedServicePage({
-	service,
-}: {
-	service: NonNullable<Awaited<ReturnType<typeof getDocument>>>
-}) {
+async function getRelatedCached(service: ContentDocument) {
+	"use cache"
+	cacheTag("content:services", `content:services:${service.slug}`)
+	cacheLife("max")
+
+	return getRelatedForService(service)
+}
+
+async function RelatedServicePage({ service }: { service: ContentDocument }) {
+	const related = await getRelatedCached(service)
+
 	await connection()
 	const today = utcDayNow()
-	const [related, store] = await Promise.all([
-		getRelatedForService(service),
-		getPageViewStoreCached(),
-	])
+	const store = await getPageViewStoreCached()
 	const viewStats = getStatsForSlug(store, "service", service.slug, today)
-	const relatedWithStats = await withRelatedViewStats(related)
+
 	return (
 		<ServiceLandingPage
-			related={relatedWithStats}
+			related={related}
 			service={service}
 			viewStats={viewStats}
 		/>

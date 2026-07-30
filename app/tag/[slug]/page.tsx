@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
@@ -13,22 +15,34 @@ export async function generateStaticParams() {
 	return [...new Set(slugs)].map((slug) => ({ slug }))
 }
 
+async function postsForTag(slug: string) {
+	const posts = await getCollection("posts")
+	return posts.filter((post) =>
+		post.tags?.some((tag) => taxonomySlug(tag) === slug),
+	)
+}
+
+function labelForTag(
+	slug: string,
+	matched: Awaited<ReturnType<typeof postsForTag>>,
+) {
+	return (
+		matched[0]?.tags?.find((tag) => taxonomySlug(tag) === slug) ??
+		slug.replaceAll("-", " ")
+	)
+}
+
 export async function generateMetadata({
 	params,
 }: {
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	const posts = await getCollection("posts")
-	const matched = posts.filter((post) =>
-		post.tags?.some((tag) => taxonomySlug(tag) === slug),
-	)
+	const matched = await postsForTag(slug)
 
 	if (!matched.length) return {}
 
-	const label =
-		matched[0]?.tags?.find((tag) => taxonomySlug(tag) === slug) ??
-		slug.replaceAll("-", " ")
+	const label = labelForTag(slug, matched)
 
 	return buildPageMetadata({
 		title: `${label} Guides`,
@@ -37,23 +51,15 @@ export async function generateMetadata({
 	})
 }
 
-export default async function TagPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
-	const { slug } = await params
-	const posts = await getCollection("posts")
-	const matched = posts.filter((post) =>
-		post.tags?.some((tag) => taxonomySlug(tag) === slug),
-	)
+async function getTagArchiveData(slug: string) {
+	"use cache"
+	cacheTag("content:posts", `content:tag:${slug}`)
+	cacheLife("max")
 
-	if (!matched.length) notFound()
+	const matched = await postsForTag(slug)
+	if (!matched.length) return null
 
-	const label =
-		matched[0]?.tags?.find((tag) => taxonomySlug(tag) === slug) ??
-		slug.replaceAll("-", " ")
-
+	const label = labelForTag(slug, matched)
 	const related = await getRelatedForTopic(
 		{
 			label,
@@ -65,12 +71,36 @@ export default async function TagPage({
 		{ posts: 3, services: 3 },
 	)
 
+	return { matched, label, related }
+}
+
+async function TagArchive({ slug }: { slug: string }) {
+	const data = await getTagArchiveData(slug)
+	if (!data) return null
+
 	return (
 		<ArticleArchive
-			description={`Helpful Wade's articles filed under ${label}.`}
-			posts={matched}
-			related={related}
-			title={label}
+			description={`Helpful Wade's articles filed under ${data.label}.`}
+			posts={data.matched}
+			related={data.related}
+			title={data.label}
 		/>
+	)
+}
+
+export default async function TagPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>
+}) {
+	const { slug } = await params
+	const matched = await postsForTag(slug)
+
+	if (!matched.length) notFound()
+
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<TagArchive slug={slug} />
+		</Suspense>
 	)
 }

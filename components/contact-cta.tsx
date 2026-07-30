@@ -9,10 +9,13 @@ export function ContactCta({
 	title = "Ready to get started?",
 	description = "Talk to a local licensed professional and get clear options with no pressure.",
 	compact = false,
+	/** Big Call button. Off by default in compact sidebars so pages do not stack Call on Call. */
+	showCall,
 }: {
 	title?: string
 	description?: string
 	compact?: boolean
+	showCall?: boolean
 }) {
 	/*
 	 * Two shapes, one component. The banner is a grid rather than a
@@ -20,7 +23,12 @@ export function ContactCta({
 	 * shrinkage against the shrink-0 button group and collapsed to its longest
 	 * word. The compact shape stays stacked at every width - it lives in a
 	 * 20.5rem sidebar, where side-by-side xl buttons overflowed the card.
+	 *
+	 * Compact sidebars omit the Call button by default: content/service pages
+	 * already offer Call in the hero and again in the end conversion band, and
+	 * on mobile the sidebar stacks right above that band.
 	 */
+	const includeCall = showCall ?? !compact
 	const actionWidth = compact ? "w-full" : "w-full sm:w-auto"
 
 	return (
@@ -49,7 +57,15 @@ export function ContactCta({
 					>
 						{description}
 					</p>
-					{!compact ? (
+					{compact ? (
+						<a
+							className="text-primary-bright inline-flex items-center gap-2 text-sm font-bold transition-colors hover:text-white"
+							href={siteConfig.phoneHref}
+						>
+							<Phone className="size-4 shrink-0" aria-hidden="true" />
+							{siteConfig.phone}
+						</a>
+					) : (
 						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
 							<span className="inline-flex items-center gap-2">
 								<Clock className="text-primary-bright size-4 shrink-0" />
@@ -63,29 +79,31 @@ export function ContactCta({
 								{siteConfig.email}
 							</a>
 						</div>
-					) : null}
+					)}
 				</div>
 
 				<div
 					className={cn(
 						"flex flex-col items-stretch gap-3",
-						compact ? "mt-6" : "sm:flex-row sm:items-center md:shrink-0",
+						compact ? "mt-5" : "sm:flex-row sm:items-center md:shrink-0",
 					)}
 				>
-					<a
-						className={cn(
-							buttonVariants({ size: compact ? "lg" : "xl" }),
-							actionWidth,
-						)}
-						href={siteConfig.phoneHref}
-					>
-						<Phone aria-hidden="true" />
-						Call {siteConfig.phone}
-					</a>
+					{includeCall ? (
+						<a
+							className={cn(
+								buttonVariants({ size: compact ? "lg" : "xl" }),
+								actionWidth,
+							)}
+							href={siteConfig.phoneHref}
+						>
+							<Phone aria-hidden="true" />
+							Call {siteConfig.phone}
+						</a>
+					) : null}
 					<Link
 						className={cn(
 							buttonVariants({
-								variant: "inverse",
+								variant: includeCall ? "inverse" : "default",
 								size: compact ? "lg" : "xl",
 							}),
 							actionWidth,
@@ -93,7 +111,7 @@ export function ContactCta({
 						href="/contact"
 						prefetch
 					>
-						Send a Message
+						{compact ? "Request service" : "Send a Message"}
 						<ArrowRight aria-hidden="true" />
 					</Link>
 				</div>
