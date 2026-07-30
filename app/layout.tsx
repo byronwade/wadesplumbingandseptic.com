@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { Archivo, Geist, Geist_Mono, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
 import { Suspense } from "react"
 
@@ -6,6 +7,39 @@ import { JsonLd } from "@/components/json-ld"
 import { getCollection } from "@/lib/content"
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
+
+const manrope = Manrope({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-manrope",
+	preload: true,
+	weight: ["400", "700"],
+})
+
+/*
+  Display face. A squared grotesque against Manrope's humanist body - the
+  contrast is what gives headings their own voice instead of running the body
+  face at weight 800. Only the two display weights are loaded.
+*/
+const archivo = Archivo({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-archivo",
+	/* Body font covers first paint; Archivo is for display headings. */
+	preload: false,
+	weight: ["700", "800"],
+})
+
+/* Typeset markdown surfaces (shadcn/typeset). Site UI keeps Manrope/Archivo. */
+const geist = Geist({
+	subsets: ["latin"],
+	variable: "--font-geist",
+})
+
+const geistMono = Geist_Mono({
+	subsets: ["latin"],
+	variable: "--font-geist-mono",
+})
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteConfig.url),
@@ -79,10 +113,13 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en">
-			<body>
+		<html
+			lang="en"
+			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
+		>
+			<body className={manrope.className}>
 				<a
-					className="sr-only z-[100] bg-white text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:rounded-br-lg focus:p-3"
+					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
 					href="#main-content"
 				>
 					Skip to content

@@ -9,7 +9,6 @@
 import { writeFileSync, existsSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { createRequire } from "node:module"
-import { fileURLToPath } from "node:url"
 
 const require = createRequire(import.meta.url)
 const nextPkg = require.resolve("next/package.json")

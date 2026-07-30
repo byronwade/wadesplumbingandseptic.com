@@ -1,16 +1,18 @@
-import { HomeHeader } from "@/components/home-header"
-import { StaticSiteFooter } from "@/components/static-site-footer"
+import { ChromeExtras } from "@/components/chrome-extras"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 
-import "./home.css"
+import "../globals.css"
 
 export default function HomeLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<>
-			<HomeHeader />
+			<SiteHeader />
 			{children}
-			<StaticSiteFooter />
+			<SiteFooter />
+			<ChromeExtras />
 		</>
 	)
 }

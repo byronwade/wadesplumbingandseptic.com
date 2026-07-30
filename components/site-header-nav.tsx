@@ -24,7 +24,7 @@ import {
 	type IconComponent,
 } from "@/components/icons"
 
-import { CallButton } from "@/components/call-button"
+import { CallButton, CallIconButton } from "@/components/call-button"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { openGlobalSearch } from "@/lib/search-events"
@@ -332,23 +332,25 @@ export function SiteHeaderNav() {
 				/>
 			</div>
 
-			<div className="flex shrink-0 items-center gap-1 lg:hidden">
-				{/*
-				  Phone number stays visible; search lives in the sheet so the
-				  bar does not crush the brand mark on ~390px viewports.
-				*/}
-				<CallButton
-					className="max-w-[10.5rem] gap-1.5 truncate px-2.5 text-xs sm:hidden"
-					desktopLabel={contactInfo.phoneDisplay}
-					prefer="dial"
-					size="sm"
-					showIcon
-				/>
+			<div className="flex items-center lg:hidden">
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink size-11 text-white hover:bg-transparent"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
+					aria-label="Search services, tips, and pages"
+					onMouseEnter={() => void prefetchSearchIndex()}
+					onFocus={() => void prefetchSearchIndex()}
+					onClick={openGlobalSearch}
+				>
+					<Search aria-hidden="true" className="size-5" />
+				</Button>
+				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink inline-flex size-11 items-center justify-center rounded-md text-white hover:bg-transparent sm:hidden" />
+				<Button
+					type="button"
+					variant="ghost"
+					size="icon"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
 					aria-label="Open main menu"
 					onClick={openMobileMenu}
 				>

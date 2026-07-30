@@ -6,7 +6,6 @@
 		"dev": "next dev",
 		"prebuild": "node scripts/sync-maplibre-worker.mjs && node scripts/strip-next-polyfills.mjs",
 		"build": "next build",
-		"postbuild": "node scripts/strip-home-js.mjs",
 		"start": "next start",
 		"postinstall": "node scripts/sync-maplibre-worker.mjs",
 		"lint": "eslint . --max-warnings=0",
