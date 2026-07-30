@@ -4,11 +4,10 @@ import { Suspense } from "react"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { FilterableArchive } from "@/components/filterable-archive"
-import { RelatedContentSections } from "@/components/related-content"
+import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import type { ContentDocument } from "@/lib/content"
 import { getPageViewStoreCached } from "@/lib/page-views"
-import { withRelatedViewStats } from "@/lib/page-views/attach-related"
 import { attachViewStats } from "@/lib/page-views/ranking"
 import { utcDayNow } from "@/lib/page-views/stats"
 import type { RelatedContent } from "@/lib/related-content"
@@ -56,10 +55,6 @@ export async function ArticleArchive({
 	posts: ContentDocument[]
 	related?: RelatedContent
 }) {
-	const relatedWithStats = related
-		? await withRelatedViewStats(related)
-		: undefined
-
 	return (
 		<main id="main-content">
 			<ContentHero
@@ -79,10 +74,10 @@ export async function ArticleArchive({
 			>
 				<RankedArticleArchive posts={posts} title={title} />
 			</Suspense>
-			{relatedWithStats ? (
-				<RelatedContentSections
+			{related ? (
+				<RelatedContentSectionsWithStats
 					postsTitle="More related guides"
-					related={relatedWithStats}
+					related={related}
 					servicesTitle="Related services"
 				/>
 			) : null}

@@ -6,11 +6,10 @@ import { Suspense } from "react"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { FilterableArchive } from "@/components/filterable-archive"
-import { RelatedContentSections } from "@/components/related-content"
+import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
 import { getPageViewStoreCached } from "@/lib/page-views"
-import { withRelatedViewStats } from "@/lib/page-views/attach-related"
 import { attachViewStats } from "@/lib/page-views/ranking"
 import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForTopic } from "@/lib/related-content"
@@ -148,21 +147,19 @@ export default async function ServiceCategoryPage({
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
-	const related = await withRelatedViewStats(
-		await getRelatedForTopic(
-			{
-				label: category.label,
-				description: category.description,
-				categories: [category.contentCategory],
-				keywords: [
-					category.label,
-					category.contentCategory,
-					slug.replaceAll("-", " "),
-				],
-				excludeSlugs: services.map((service) => service.slug),
-			},
-			{ posts: 3, services: 3 },
-		),
+	const related = await getRelatedForTopic(
+		{
+			label: category.label,
+			description: category.description,
+			categories: [category.contentCategory],
+			keywords: [
+				category.label,
+				category.contentCategory,
+				slug.replaceAll("-", " "),
+			],
+			excludeSlugs: services.map((service) => service.slug),
+		},
+		{ posts: 3, services: 3 },
 	)
 
 	return (
@@ -188,7 +185,7 @@ export default async function ServiceCategoryPage({
 					services={services}
 				/>
 			</Suspense>
-			<RelatedContentSections
+			<RelatedContentSectionsWithStats
 				postsTitle="Related expert tips"
 				related={related}
 				servicesTitle="Related services"
