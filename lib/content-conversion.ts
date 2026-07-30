@@ -158,13 +158,171 @@ function parseConversionBundle(
 	}
 }
 
-function fallbackTitle(title: string) {
-	const cleaned = title.replace(/\?$/, "").trim()
-	// Avoid "Ready for help with Ensure Optimal..." when titles already read as CTAs.
-	if (SOFT_CTA_HEADING.test(cleaned) || /^(get|need|want)\b/i.test(cleaned)) {
+export type ConversionFallback = {
+	title: string
+	description: string
+	slug?: string
+	eyebrow?: string
+}
+
+type PageKind =
+	| "career"
+	| "contact"
+	| "about"
+	| "area"
+	| "tip"
+	| "service"
+	| "general"
+
+/** Section headings that should never become the designed CTA title. */
+const WEAK_CONVERSION_TITLE =
+	/^(how to apply|request service|next steps|learn more|get started|contact us|apply now|more information|serving [\w\s,.&'-]+|our office|hours of operation|frequently asked questions|coverage by .+|why .+ matters)$/i
+
+/** Broken template from the old "Get local help with {Page Title}" fallback. */
+const BROKEN_TEMPLATE_TITLE = /^get local help with\b/i
+
+/** Headings that read as intentional end-of-page CTAs written in markdown. */
+const INTENTIONAL_CTA_TITLE =
+	/^(get|need|want|ready|join|call|schedule|act|skip|upgrade|protect|ensure|don'?t|book|trust|choose|clear|stop|fix|replace|install)\b/i
+
+function detectPageKind(fallback: ConversionFallback): PageKind {
+	const slug = (fallback.slug ?? "").toLowerCase()
+	const title = fallback.title.trim().toLowerCase()
+	const eyebrow = (fallback.eyebrow ?? "").toLowerCase()
+	const description = fallback.description.toLowerCase()
+	const haystack = `${slug} ${title} ${eyebrow} ${description}`
+
+	if (
+		slug.startsWith("careers") ||
+		eyebrow === "careers" ||
+		/\b(join our team|job description|how to apply|resume|hiring|equal opportunity employer)\b/.test(
+			haystack,
+		)
+	) {
+		return "career"
+	}
+	if (slug === "contact" || title === "contact us" || title === "contact") {
+		return "contact"
+	}
+	if (
+		slug === "about-us" ||
+		slug.startsWith("about") ||
+		title === "about us" ||
+		/\bour (mission|values|story)\b/.test(haystack)
+	) {
+		return "about"
+	}
+	if (
+		slug.startsWith("service-area") ||
+		slug === "service-areas" ||
+		/\bplumbing\s*&\s*septic services\b/.test(title) ||
+		/\bca plumbing\b/.test(title)
+	) {
+		return "area"
+	}
+	if (
+		/\b(guide|tips?|how to|what is|why |signs |maintenance)\b/.test(title) ||
+		/\bhomeowner\b/.test(haystack)
+	) {
+		return "tip"
+	}
+	// Service offerings and most service-named pages.
+	if (
+		slug.includes("/") === false &&
+		(description.includes("santa cruz") ||
+			/\b(repair|installation|inspection|pumping|cleaning|replacement|septic|plumbing|drain|heater)\b/.test(
+				haystack,
+			))
+	) {
+		return "service"
+	}
+	return "general"
+}
+
+type KindCta = {
+	eyebrow: string
+	title: string
+	description: string
+}
+
+function kindCta(kind: PageKind, fallback: ConversionFallback): KindCta {
+	const pageDescription = fallback.description.trim()
+
+	switch (kind) {
+		case "career":
+			return {
+				eyebrow: "We're hiring",
+				title: "Ready to join the Wade's team?",
+				description:
+					pageDescription ||
+					"Send your resume to support@wadesinc.io with the role you want and the best way to reach you.",
+			}
+		case "contact":
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Ready to schedule service?",
+				description:
+					"Call or text 831.225.4344. We confirm your address, triage the issue, and get you on the schedule.",
+			}
+		case "about":
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Need a local licensed team you can trust?",
+				description:
+					pageDescription ||
+					"Family-owned plumbing and septic specialists. Clear options, honest pricing, and work done the right way.",
+			}
+		case "area":
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Need plumbing or septic help near you?",
+				description:
+					pageDescription ||
+					"Call 831.225.4344 with the property address. We will confirm coverage and the right next step.",
+			}
+		case "tip":
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Need this handled by a pro?",
+				description:
+					"Talk with Wade's for clear options and honest pricing. Call 831.225.4344 or request service online.",
+			}
+		case "service":
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Ready for clear options and honest pricing?",
+				description:
+					pageDescription ||
+					"Call 831.225.4344. A local licensed team will help you decide the right next step before work begins.",
+			}
+		default:
+			return {
+				eyebrow: "Local · Licensed · Responsive",
+				title: "Ready to talk with Wade's?",
+				description:
+					pageDescription ||
+					"Call 831.225.4344 for plumbing and septic help across Santa Cruz County and selected Santa Clara County communities.",
+			}
+	}
+}
+
+function resolveConversionTitle(
+	candidate: string | undefined,
+	kindDefaults: KindCta,
+): string {
+	const cleaned = candidate?.trim() ?? ""
+	if (
+		!cleaned ||
+		WEAK_CONVERSION_TITLE.test(cleaned) ||
+		BROKEN_TEMPLATE_TITLE.test(cleaned)
+	) {
+		return kindDefaults.title
+	}
+	// Keep intentional CTA headlines already written in markdown.
+	if (INTENTIONAL_CTA_TITLE.test(cleaned) || /\btoday\??$/i.test(cleaned)) {
 		return cleaned
 	}
-	return `Get local help with ${cleaned}`
+	return kindDefaults.title
 }
 
 /**
@@ -173,7 +331,7 @@ function fallbackTitle(title: string) {
  */
 export function extractContentConversion(
 	content: string,
-	fallback: { title: string; description: string },
+	fallback: ConversionFallback,
 ): { content: string; conversion: ContentConversion } {
 	const sections = splitH2Sections(content)
 	const removals: Array<{ start: number; end: number }> = []
@@ -229,11 +387,13 @@ export function extractContentConversion(
 		parsedSections.map((section) => section.body).join("\n"),
 	)
 
+	const defaults = kindCta(detectPageKind(fallback), fallback)
+
 	// Testimonials were nested under FAQ with no separate CTA heading.
 	if (!conversion && parsedSections.length > 0) {
 		conversion = {
-			title: fallbackTitle(fallback.title),
-			description: fallback.description.trim(),
+			title: defaults.title,
+			description: defaults.description,
 			testimonials: allQuotes,
 		}
 	} else if (conversion && allQuotes.length > conversion.testimonials.length) {
@@ -248,33 +408,35 @@ export function extractContentConversion(
 
 export function normalizeConversion(
 	conversion: ContentConversion | null | undefined,
-	fallback: { title: string; description: string },
+	fallback: ConversionFallback,
 ): ContentConversion {
-	const title = conversion?.title?.trim() || fallbackTitle(fallback.title)
+	const defaults = kindCta(detectPageKind(fallback), fallback)
+	const rawTitle = conversion?.title?.trim()
+	const titleIsWeak = !rawTitle || WEAK_CONVERSION_TITLE.test(rawTitle)
+	const title = resolveConversionTitle(rawTitle, defaults)
 
+	const rawDescription = conversion?.description?.trim() ?? ""
 	const description =
-		conversion?.description?.trim() ||
-		fallback.description.trim() ||
-		"Talk with a local licensed team for clear options, honest pricing, and work done the right way."
+		!titleIsWeak && rawDescription ? rawDescription : defaults.description
 
 	const testimonials =
 		conversion?.testimonials && conversion.testimonials.length > 0
 			? conversion.testimonials
-			: defaultTestimonialsFor(fallback.title)
+			: defaultTestimonials()
 
 	return {
-		eyebrow: conversion?.eyebrow?.trim() || "Local · Licensed · Responsive",
+		eyebrow: conversion?.eyebrow?.trim() || defaults.eyebrow,
 		title,
 		description,
 		testimonials,
 	}
 }
 
-function defaultTestimonialsFor(topic: string): ContentTestimonial[] {
-	const focus = topic.replace(/\s+/g, " ").trim() || "plumbing and septic work"
+function defaultTestimonials(): ContentTestimonial[] {
 	return [
 		{
-			quote: `Clear communication and solid workmanship. The team made ${focus.toLowerCase()} straightforward from the first call.`,
+			quote:
+				"Clear communication and solid workmanship. The team made the whole job straightforward from the first call.",
 			name: "Sarah",
 			location: "Santa Cruz",
 		},

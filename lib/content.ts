@@ -57,9 +57,10 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 	const { data, content } = matter(source)
 	const title = String(data.title ?? slug)
 	const description = String(data.description ?? "")
+	const eyebrow = data.eyebrow ? String(data.eyebrow) : undefined
 	const { content: articleContent, conversion } = extractContentConversion(
 		content,
-		{ title, description },
+		{ title, description, slug, eyebrow },
 	)
 
 	return {
@@ -73,7 +74,7 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 		updated: normalizeDate(data.updated),
 		image: data.image ? String(data.image) : undefined,
 		imageAlt: data.imageAlt ? String(data.imageAlt) : undefined,
-		eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
+		eyebrow,
 		order: data.order === undefined ? undefined : Number(data.order),
 		featured: Boolean(data.featured),
 		gallery: Array.isArray(data.gallery)

@@ -1,3 +1,4 @@
+import type { Route } from "next"
 import Link from "next/link"
 import { ArrowRight, BadgeCheck, Clock, Phone, Star } from "lucide-react"
 
@@ -8,9 +9,30 @@ import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
 	conversion,
+	secondaryAction,
 }: {
 	conversion: ContentConversion
+	/** Override the secondary CTA (defaults to Contact / Get a Free Quote). */
+	secondaryAction?: {
+		href: string
+		label: string
+		external?: boolean
+	}
 }) {
+	const secondary = secondaryAction ?? {
+		href: "/contact",
+		label: "Get a Free Quote",
+		external: false,
+	}
+	const secondaryClassName = cn(
+		buttonVariants({ variant: "inverse", size: "xl" }),
+		"w-full justify-center gap-2 sm:w-auto",
+	)
+	const secondaryIsExternal =
+		secondary.external ||
+		secondary.href.startsWith("mailto:") ||
+		secondary.href.startsWith("tel:")
+
 	return (
 		<section className="surface-dark relative overflow-hidden">
 			<div
@@ -52,17 +74,21 @@ export function ContentConversionCta({
 							<Phone className="size-5" />
 							Call {siteConfig.phone}
 						</a>
-						<Link
-							className={cn(
-								buttonVariants({ variant: "inverse", size: "xl" }),
-								"w-full justify-center gap-2 sm:w-auto",
-							)}
-							href="/contact"
-							prefetch
-						>
-							Get a Free Quote
-							<ArrowRight />
-						</Link>
+						{secondaryIsExternal ? (
+							<a className={secondaryClassName} href={secondary.href}>
+								{secondary.label}
+								<ArrowRight />
+							</a>
+						) : (
+							<Link
+								className={secondaryClassName}
+								href={secondary.href as Route}
+								prefetch
+							>
+								{secondary.label}
+								<ArrowRight />
+							</Link>
+						)}
 					</div>
 
 					<ul className="text-white/70 motion-fade motion-delay-2 mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold">
@@ -95,38 +121,40 @@ export function ContentConversionCta({
 					</ul>
 				</div>
 
-				<div className="mx-auto mt-14 max-w-5xl">
-					<p className="text-primary-bright mb-6 text-center text-xs font-extrabold tracking-[0.18em] uppercase">
-						What neighbors say
-					</p>
-					<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
-						{conversion.testimonials.map((testimonial, index) => (
-							<li
-								key={`${testimonial.name}-${index}`}
-								className={cn(
-									"motion-rise relative",
-									index === 1 && "motion-delay-1",
-									index >= 2 && "motion-delay-2",
-								)}
-							>
-								<blockquote className="border-white/10 border-t pt-5">
-									<p className="text-[0.95rem] leading-relaxed text-[#e8e8e4]">
-										&ldquo;{testimonial.quote}&rdquo;
-									</p>
-									<footer className="mt-4 text-sm font-extrabold text-white">
-										{testimonial.name}
-										{testimonial.location ? (
-											<span className="text-white/55 font-bold">
-												{" "}
-												· {testimonial.location}
-											</span>
-										) : null}
-									</footer>
-								</blockquote>
-							</li>
-						))}
-					</ul>
-				</div>
+				{conversion.testimonials.length > 0 ? (
+					<div className="mx-auto mt-14 max-w-5xl">
+						<p className="text-primary-bright mb-6 text-center text-xs font-extrabold tracking-[0.18em] uppercase">
+							What neighbors say
+						</p>
+						<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
+							{conversion.testimonials.map((testimonial, index) => (
+								<li
+									key={`${testimonial.name}-${index}`}
+									className={cn(
+										"motion-rise relative",
+										index === 1 && "motion-delay-1",
+										index >= 2 && "motion-delay-2",
+									)}
+								>
+									<blockquote className="border-white/10 border-t pt-5">
+										<p className="text-[0.95rem] leading-relaxed text-[#e8e8e4]">
+											&ldquo;{testimonial.quote}&rdquo;
+										</p>
+										<footer className="mt-4 text-sm font-extrabold text-white">
+											{testimonial.name}
+											{testimonial.location ? (
+												<span className="text-white/55 font-bold">
+													{" "}
+													· {testimonial.location}
+												</span>
+											) : null}
+										</footer>
+									</blockquote>
+								</li>
+							))}
+						</ul>
+					</div>
+				) : null}
 			</div>
 		</section>
 	)
