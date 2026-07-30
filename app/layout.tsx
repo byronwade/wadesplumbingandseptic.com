@@ -7,7 +7,6 @@ import { CommandMenuLoader } from "@/components/command-menu-loader"
 import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { ThemeProvider } from "@/components/theme-provider"
 import { siteConfig } from "@/lib/site"
 
 import "./globals.css"
@@ -90,10 +89,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "#f7f7f5" },
-		{ media: "(prefers-color-scheme: dark)", color: "#101214" },
-	],
+	themeColor: "#f7f7f5",
 }
 
 const localBusinessSchema = {
@@ -138,35 +134,24 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html
-			lang="en"
-			className={`${manrope.variable} ${archivo.variable}`}
-			suppressHydrationWarning
-		>
+		<html lang="en" className={`${manrope.variable} ${archivo.variable}`}>
 			<body className={manrope.className}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="light"
-					enableSystem
-					disableTransitionOnChange
+				<a
+					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+					href="#main-content"
 				>
-					<a
-						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-						href="#main-content"
-					>
-						Skip to content
-					</a>
-					<SiteHeader />
-					<Suspense
-						fallback={<main id="main-content" className="min-h-[40vh]" />}
-					>
-						{children}
-					</Suspense>
-					<SiteFooter />
-					<CommandMenuLoader />
-					<JsonLd data={localBusinessSchema} />
-					<Analytics />
-				</ThemeProvider>
+					Skip to content
+				</a>
+				<SiteHeader />
+				<Suspense
+					fallback={<main id="main-content" className="min-h-[40vh]" />}
+				>
+					{children}
+				</Suspense>
+				<SiteFooter />
+				<CommandMenuLoader />
+				<JsonLd data={localBusinessSchema} />
+				<Analytics />
 			</body>
 		</html>
 	)

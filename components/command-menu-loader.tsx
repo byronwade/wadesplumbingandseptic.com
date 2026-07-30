@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
-import { useTheme } from "next-themes"
 
 import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
 import { prefetchSearchIndex } from "@/lib/search-client"
@@ -12,10 +11,13 @@ const loadSearchDialog = () =>
 
 const CommandMenuDialog = dynamic(loadSearchDialog, { ssr: false })
 
+/**
+ * Site command menu (global search). Loads on demand via Cmd/Ctrl+K or the
+ * header search control. Light-only product: no theme hotkey.
+ */
 export function CommandMenuLoader() {
 	const [open, setOpen] = useState(false)
 	const [ready, setReady] = useState(false)
-	const { resolvedTheme, setTheme } = useTheme()
 
 	useEffect(() => {
 		const warm = () => {
@@ -49,28 +51,11 @@ export function CommandMenuLoader() {
 		}
 
 		const onKeyDown = (event: KeyboardEvent) => {
-			const target = event.target
-			const typing =
-				target instanceof HTMLElement &&
-				(target.tagName === "INPUT" ||
-					target.tagName === "TEXTAREA" ||
-					target.tagName === "SELECT" ||
-					target.isContentEditable)
-
 			if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
 				event.preventDefault()
 				setReady(true)
 				void prefetchSearchIndex()
 				setOpen((current) => !current)
-				return
-			}
-
-			if (typing || event.metaKey || event.ctrlKey || event.altKey) {
-				return
-			}
-
-			if (event.key.toLowerCase() === "d") {
-				setTheme(resolvedTheme === "dark" ? "light" : "dark")
 			}
 		}
 
@@ -80,7 +65,7 @@ export function CommandMenuLoader() {
 			window.removeEventListener("keydown", onKeyDown)
 			window.removeEventListener(OPEN_GLOBAL_SEARCH_EVENT, openSearch)
 		}
-	}, [resolvedTheme, setTheme])
+	}, [])
 
 	if (!ready) return null
 

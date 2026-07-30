@@ -48,7 +48,6 @@ const nextConfig: NextConfig = {
 			"@radix-ui/react-separator",
 			"@radix-ui/react-slot",
 			"cmdk",
-			"next-themes",
 		],
 	},
 	async redirects() {
