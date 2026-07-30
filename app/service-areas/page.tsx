@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
-import { ServiceAreasMap } from "@/components/service-areas-map"
+import { ServiceAreasMapLazy } from "@/components/service-areas-map-lazy"
 import type { ContentDocument } from "@/lib/content"
 import { normalizeConversion } from "@/lib/content-conversion"
 import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
@@ -79,9 +79,9 @@ export default function ServiceAreasPage() {
 					</div>
 				</div>
 
-				{/* Full-bleed on mobile; map component constrains itself from md up. */}
+				{/* Full-bleed on mobile; map JS loads only when this shell nears view. */}
 				<div className="mt-[var(--space-block)]">
-					<ServiceAreasMap />
+					<ServiceAreasMapLazy />
 				</div>
 
 				<p className="text-muted-foreground container-shell mt-4 text-center text-sm font-bold">

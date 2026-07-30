@@ -62,7 +62,7 @@ function stripMarkdown(value: string) {
 /** Utility pages that should not appear in site search. */
 const SEARCH_EXCLUDE_SLUGS = new Set(["thank-you", "contact-call-first"])
 
-function bodyExcerpt(content: string, maxChars = 2400) {
+function bodyExcerpt(content: string, maxChars = 320) {
 	const cleaned = stripMarkdown(content)
 	if (cleaned.length <= maxChars) return cleaned
 	return cleaned.slice(0, maxChars)
@@ -134,7 +134,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				...(service.tags ?? []),
 				...serviceBoostKeywords(service.title, service.category),
 			),
-			body: bodyExcerpt(service.content, 3200),
+			body: bodyExcerpt(service.content, 400),
 			popularity: boost + featuredBoost + orderBoost,
 			intents: CATEGORY_INTENTS[service.category ?? ""] ?? ["service"],
 		}
@@ -163,7 +163,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 				"tips",
 				"how to",
 			),
-			body: bodyExcerpt(post.content, 3200),
+			body: bodyExcerpt(post.content, 400),
 			popularity: Math.max(1, 28 - index) + topicBoost,
 			intents: ["tip"],
 		}
@@ -212,7 +212,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 					isArea ? "near me service area city" : "",
 					isCareer ? "job careers hiring" : "",
 				),
-				body: bodyExcerpt(page.content, 2400),
+				body: bodyExcerpt(page.content, 280),
 				popularity: isPriority
 					? 22 - Math.min(index, 20)
 					: isArea

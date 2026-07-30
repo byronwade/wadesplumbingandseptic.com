@@ -676,12 +676,9 @@
 	  Slow drift on the hero photograph. Cinematic movement comes from the frame,
 	  not from elements sliding in, so this is the only motion in the band.
 	*/
-	.media-drift {
-		will-change: transform;
-	}
-
 	@media (prefers-reduced-motion: no-preference) {
 		.media-drift {
+			will-change: transform;
 			animation: drift 28s ease-in-out infinite alternate;
 		}
 	}
