@@ -1,22 +1,12 @@
 import { getAllRoutes } from "@/lib/content"
-import { useLogger, withEvlog } from "@/lib/evlog"
 import { siteConfig } from "@/lib/site"
 
-export const GET = withEvlog(async () => {
-	const log = useLogger()
+export async function GET() {
 	const { services, posts, pages } = await getAllRoutes()
 
 	const serviceAreas = pages.filter((page) =>
 		page.slug.startsWith("service-area/"),
 	)
-
-	log.set({
-		llmsTxt: {
-			serviceCount: services.length,
-			tipCount: Math.min(posts.length, 40),
-			serviceAreaCount: serviceAreas.length,
-		},
-	})
 
 	const serviceLines = services
 		.map(
@@ -83,4 +73,4 @@ ${areaLines}
 			"Cache-Control": "public, max-age=3600, s-maxage=86400",
 		},
 	})
-})
+}
