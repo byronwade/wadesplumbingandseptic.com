@@ -12,13 +12,11 @@ eyebrow: Call or Text 831.225.4344
 
 ## Contact Wade's Plumbing & Septic
 
-Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Call or text **[831.225.4344](tel:+18312254344)**, email **[support@wadesinc.io](mailto:support@wadesinc.io)**, or use the request options on this page. We confirm your address, triage the issue, and get you on the schedule.
+Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Use the virtual business card above to save our number, email, address, and logo to your phone, or call and text from there. We confirm your address, triage the issue, and get you on the schedule.
 
 ## Call or text
 
-**[831.225.4344](tel:+18312254344)**
-
-Use this number for scheduling, questions, and urgent plumbing or septic problems. Texting works when you cannot talk. Have ready:
+Use the number on the card for scheduling, questions, and urgent plumbing or septic problems. Texting works when you cannot talk. Have ready:
 
 - City or ZIP for the property
 - Whether the issue is plumbing, septic, or commercial
@@ -30,9 +28,7 @@ For the fastest intake path, see our [call-first checklist](/contact-call-first)
 
 ## Email
 
-**[support@wadesinc.io](mailto:support@wadesinc.io)**
-
-Best for photos, permit questions, and non-urgent follow-up. Include the property address and a short description of what is happening.
+Best for photos, permit questions, and non-urgent follow-up. Include the property address and a short description of what is happening. Tap Email us on the card above when you are ready.
 
 ## Office
 
@@ -47,7 +43,7 @@ We are based in the San Lorenzo Valley and dispatch across Santa Cruz County and
 - **Monday through Friday:** 9:00 AM to 5:00 PM
 - **Saturday and Sunday:** Closed for routine scheduling
 
-Call **[831.225.4344](tel:+18312254344)** during office hours to book service. If you reach us outside those hours, leave a message or text and we will return contact on the next business day.
+Call during office hours to book service. If you reach us outside those hours, leave a message or text and we will return contact on the next business day.
 
 ## Licensing
 
@@ -68,20 +64,16 @@ Tell us what is going on and we will point you to the right next step: inspectio
 
 ### How do I get a quote?
 
-Call or text **831.225.4344** or email **support@wadesinc.io** with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
+Call or text, or email us with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
 
 ### Do you offer emergency plumbing help?
 
-Call **831.225.4344**. During office hours we triage urgent leaks, backups, and septic alarms as quickly as the schedule allows. Outside office hours, leave a message or text with the address and what is happening so we can respond as soon as we are available.
+Call the number on the card. During office hours we triage urgent leaks, backups, and septic alarms as quickly as the schedule allows. Outside office hours, leave a message or text with the address and what is happening so we can respond as soon as we are available.
 
 ### What should I expect on a service visit?
 
 We confirm the address and issue when you book, arrive ready to diagnose, explain what we find in plain language, and complete agreed work with testing and cleanup. You get clear recommendations, not a hard sell.
 
-### How long does a typical job take?
+### Can I save your contact on my phone?
 
-Many drain, fixture, and water heater visits finish the same day. Septic inspections, pumping, and engineered system work depend on site conditions, permits, and parts. We give a realistic timeframe after we understand the job.
-
-### Why choose Wade's?
-
-We are local, family-owned, and licensed for plumbing and onsite wastewater work (CSLB #1087260). We know Santa Cruz County soils, older mountain plumbing, coastal rentals, and county septic expectations. Honest assessment first; then the right fix.
+Yes. Tap Save to phone on the virtual business card. It opens a contact card with our logo, phone, email, address, website, and license notes so you can call us later without hunting for the number.

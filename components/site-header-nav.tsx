@@ -24,7 +24,9 @@ import {
 	type IconComponent,
 } from "@/components/icons"
 
+import { CallButton, CallIconButton } from "@/components/call-button"
 import { Button, buttonVariants } from "@/components/ui/button"
+import { contactInfo } from "@/lib/contact"
 import { openGlobalSearch } from "@/lib/search-events"
 import { prefetchSearchIndex } from "@/lib/search-client"
 import {
@@ -124,13 +126,11 @@ function MegaFooter({
 				<span>{siteConfig.hours}</span>
 			</p>
 			<div className="flex shrink-0 items-center gap-2">
-				<a
-					className={buttonVariants({ size: "sm" })}
-					href={siteConfig.phoneHref}
-				>
-					<Phone aria-hidden="true" />
-					{siteConfig.phone}
-				</a>
+				<CallButton
+					desktopLabel={contactInfo.phoneDisplay}
+					prefer="dial"
+					size="sm"
+				/>
 				<NavigationMenuLink asChild>
 					<Link
 						className={buttonVariants({ variant: "inverse", size: "sm" })}
@@ -324,12 +324,12 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<Button asChild size="lg">
-					<a className="gap-2" href={siteConfig.phoneHref}>
-						<Phone aria-hidden="true" />
-						{siteConfig.phone}
-					</a>
-				</Button>
+				<CallButton
+					className="gap-2"
+					desktopLabel={contactInfo.phoneDisplay}
+					prefer="dial"
+					size="lg"
+				/>
 			</div>
 
 			<div className="flex items-center lg:hidden">
@@ -345,19 +345,7 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<Button
-					asChild
-					variant="ghost"
-					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
-				>
-					<a
-						href={siteConfig.phoneHref}
-						aria-label={`Call ${siteConfig.phone}`}
-					>
-						<Phone aria-hidden="true" className="size-5" />
-					</a>
-				</Button>
+				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink inline-flex size-11 items-center justify-center rounded-md text-white hover:bg-transparent sm:hidden" />
 				<Button
 					type="button"
 					variant="ghost"

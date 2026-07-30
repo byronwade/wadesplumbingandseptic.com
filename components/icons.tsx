@@ -23,6 +23,7 @@ import {
 	Gauge as PhGauge,
 	Hash as PhHash,
 	House,
+	IdentificationCard as PhIdentificationCard,
 	List,
 	MagnifyingGlass,
 	MapPin as PhMapPin,
@@ -77,6 +78,10 @@ export const Eye = duotone(PhEye, "Eye")
 export const FileText = duotone(PhFileText, "FileText")
 export const Gauge = duotone(PhGauge, "Gauge")
 export const Hash = duotone(PhHash, "Hash")
+export const IdentificationCard = duotone(
+	PhIdentificationCard,
+	"IdentificationCard",
+)
 export const MapPin = duotone(PhMapPin, "MapPin")
 export const Minus = duotone(PhMinus, "Minus")
 export const Phone = duotone(PhPhone, "Phone")

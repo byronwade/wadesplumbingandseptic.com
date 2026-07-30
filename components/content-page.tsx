@@ -13,8 +13,6 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
-
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -24,6 +22,7 @@ import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
+import { VirtualBusinessCard } from "@/components/virtual-business-card"
 
 export function ContentPage({
 	document,
@@ -118,6 +117,20 @@ export function ContentPage({
 				variant={marketing ? "marketing" : "default"}
 			/>
 
+			{document.slug === "contact" ? (
+				<section className="container-shell section-y-tight">
+					<div className="section-head mb-6 max-w-2xl">
+						<p className="spec-label">Start here</p>
+						<h2 className="type-title">Save our contact, then reach out</h2>
+						<p className="type-lead">
+							Add Wade&apos;s to your phone with one tap. After you save, you
+							can call or email from the same card.
+						</p>
+					</div>
+					<VirtualBusinessCard id="contact-business-card" />
+				</section>
+			) : null}
+
 			{marketing ? (
 				<>
 					{document.gallery?.length ? (
@@ -144,13 +157,11 @@ export function ContentPage({
 			<ContentConversionCta
 				conversion={document.conversion}
 				secondaryAction={
-					document.slug === "contact" || document.slug.startsWith("careers")
-						? {
-								href: `mailto:${siteConfig.email}`,
-								label: "Email Us",
-								external: true,
-							}
-						: undefined
+					document.slug === "contact"
+						? { label: "Email Us", contact: "email" }
+						: document.slug.startsWith("careers")
+							? { label: "Email Us", contact: "email" }
+							: undefined
 				}
 			/>
 			<JsonLd data={jsonLd} />

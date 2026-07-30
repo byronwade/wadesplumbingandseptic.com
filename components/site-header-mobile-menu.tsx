@@ -6,8 +6,10 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
-import { ArrowRight, Phone } from "@/components/icons"
+import { ArrowRight } from "@/components/icons"
+import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
+import { contactInfo } from "@/lib/contact"
 import { Separator } from "@/components/ui/separator"
 import {
 	Sheet,
@@ -223,13 +225,12 @@ export function SiteHeaderMobileMenu({
 				</nav>
 
 				<SheetFooter className="shrink-0 gap-2">
-					<a
-						className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
-						href={siteConfig.phoneHref}
-					>
-						<Phone aria-hidden="true" />
-						Call {siteConfig.phone}
-					</a>
+					<CallButton
+						className="w-full gap-2"
+						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+						mobileLabel="Save contact"
+						size="lg"
+					/>
 					<button
 						type="button"
 						className={cn(

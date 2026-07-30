@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
+import { ProtectedPhoneText } from "@/components/protected-contact"
 import {
 	glossaryHubPath,
 	glossaryTermPath,
@@ -13,8 +14,6 @@ import {
 	breadcrumbJsonLd,
 	definedTermJsonLd,
 } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
-
 function paragraphs(text: string) {
 	return text
 		.split(/\n\n+/)
@@ -154,12 +153,7 @@ export function GlossaryTermPage({
 							: "Septic Glossary"}
 					</Link>{" "}
 					or call{" "}
-					<a
-						className="text-primary font-bold underline-offset-2 hover:underline"
-						href={siteConfig.phoneHref}
-					>
-						{siteConfig.phone}
-					</a>{" "}
+					<ProtectedPhoneText className="text-primary font-bold underline-offset-2 hover:underline" />{" "}
 					with questions about your property.
 				</p>
 			</article>
