@@ -19,6 +19,7 @@ image: >-
   /images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp
 imageAlt: Water treatment tank system
 ---
+
 When it comes to water softening systems, homeowners have two main options: salt-based water softeners and saltless water softeners. Both types of systems have their own pros and cons, and it's important to understand the differences between them in order to make an informed decision.
 
 ![Outdoor plumbing pipe system](/images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp)

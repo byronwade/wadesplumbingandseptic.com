@@ -64,7 +64,7 @@ Call Us NowGet a Free Quote
 
 ### Transform Your Shower in Santa Cruz County Today
 
-Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ 5-star rating from satisfied customers across Santa Cruz County, CA.
+★ ★ ★ ★ ★ 5-star rating from satisfied customers across Santa Cruz County, CA.
 
 Licensed Contractor: C-42 for California.
 
@@ -92,7 +92,7 @@ At Wade's Plumbing & Septic, we offer expert shower transformation services for 
 
 "Highly recommend Wade's for any plumbing upgrades. Our shower looks fantastic!" (Sarah, Santa Cruz)
 
-Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ Ã¢ÂÂ 5-star rating
+★ ★ ★ ★ ★ 5-star rating
 
 Licensed Contractor: C-42 for California
 

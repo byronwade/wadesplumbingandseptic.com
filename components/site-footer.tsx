@@ -144,6 +144,25 @@ export function SiteFooter() {
 					</div>
 				</div>
 			</div>
+
+			<div className="border-t border-white/10 bg-black/35">
+				<div className="container-shell py-4 text-center text-[0.75rem] leading-relaxed text-white/55">
+					<p>
+						Wade&apos;s Plumbing &amp; Septic is also a tech company. Wade&apos;s
+						Inc. and Wade&apos;s Plumbing &amp; Septic were developed and designed
+						by{" "}
+						<a
+							className="text-white/75 underline-offset-2 transition-colors hover:text-white hover:underline"
+							href="https://byronwade.com"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							Byron Wade
+						</a>
+						. Made with 🩷
+					</p>
+				</div>
+			</div>
 		</footer>
 	)
 }

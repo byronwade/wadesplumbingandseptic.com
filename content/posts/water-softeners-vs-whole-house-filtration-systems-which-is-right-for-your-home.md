@@ -17,6 +17,7 @@ tags:
 image: /images/wordpress/img-1206.webp
 imageAlt: Choose the Best Home Water System in Santa Cruz County
 ---
+
 If your tap water smells off, tastes strange, or leaves behind stains, it may be time to install a filtration solution. In Santa Cruz County, hard water and other water quality issues are common. That’s why many homeowners choose to install either a whole-house filtration system, a water softener, or both. But which is the right fit for your home?
 
 ![Santa Cruz County engineered septic system](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp)

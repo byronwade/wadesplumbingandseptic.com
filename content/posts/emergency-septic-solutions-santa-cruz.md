@@ -15,7 +15,6 @@ image: >-
   /images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp
 imageAlt: Treated wastewater warning near waterway
 ---
-In This Guide3 min read
 
 ![Plumbing emergency warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)
 

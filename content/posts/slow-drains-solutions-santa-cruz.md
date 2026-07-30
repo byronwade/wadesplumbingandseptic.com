@@ -14,7 +14,6 @@ tags:
 image: /images/services/drain-clearing.webp
 imageAlt: Drain clearing service
 ---
-In This Guide4 min read
 
 ![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
 

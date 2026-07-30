@@ -14,7 +14,6 @@ tags:
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping service
 ---
-In This Guide4 min read
 
 ![Septic installation equipment on site](/images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp)
 

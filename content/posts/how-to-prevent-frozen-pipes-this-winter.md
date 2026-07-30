@@ -42,7 +42,7 @@ One of the most effective preventative measures is insulating vulnerable pipes:
 
 ## Maintain Consistent Heat
 
-Keep your home heated to at least 55Â°F, even when you're away. This consistent temperature helps prevent interior pipes from freezing. If you'll be away for an extended period during winter, consider these additional steps:
+Keep your home heated to at least 55°F, even when you're away. This consistent temperature helps prevent interior pipes from freezing. If you'll be away for an extended period during winter, consider these additional steps:
 
 - Ask a friend or neighbor to check your house regularly
 - Shut off and drain the water system

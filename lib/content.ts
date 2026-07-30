@@ -9,6 +9,7 @@ import {
 	extractContentConversion,
 	type ContentConversion,
 } from "@/lib/content-conversion"
+import { sanitizeArticleContent } from "@/lib/sanitize-content"
 
 export type Collection = "pages" | "services" | "posts"
 
@@ -64,7 +65,7 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 	const description = String(data.description ?? "")
 	const eyebrow = data.eyebrow ? String(data.eyebrow) : undefined
 	const { content: articleContent, conversion } = extractContentConversion(
-		content,
+		sanitizeArticleContent(content),
 		{ title, description, slug, eyebrow },
 	)
 	const sourceModified = fs.statSync(absolutePath).mtime.toISOString()

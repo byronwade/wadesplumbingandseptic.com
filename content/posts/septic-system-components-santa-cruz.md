@@ -15,7 +15,6 @@ image: >-
   /images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7-1.webp
 imageAlt: Understanding Septic System Components in Santa Cruz County
 ---
-In This Guide4 min read
 
 ![Santa Cruz County engineered septic system](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp)
 

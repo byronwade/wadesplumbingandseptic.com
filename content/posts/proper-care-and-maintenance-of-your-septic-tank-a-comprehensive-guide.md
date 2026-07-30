@@ -21,6 +21,7 @@ image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp
 imageAlt: Concrete sewer and drain pipes
 ---
+
 Taking care of your septic tank is an important task that should not be overlooked. A septic tank is a self-contained underground chamber that is designed to hold and treat sewage. It is a crucial component of any home or business that is not connected to a municipal sewer system. Unfortunately, many people are unaware of the proper maintenance and care required for their septic tank, which can lead to costly repairs and replacements. In this blog post, we will discuss the importance of regular septic tank maintenance and provide tips on how to properly care for your septic tank.
 
 ![Stacked concrete pipes ready for installation](/images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp)
@@ -83,9 +84,9 @@ Wade's Plumbing & Septic offers expert services backed by years of experience in
 
 "Fast and reliable service every time. Highly recommend for septic care!" (John, Santa Cruz)
 
-"The teamÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s knowledge and professionalism put my mind at ease. Thank you, Wade's!" (Emily, Watsonville)
+"The team's knowledge and professionalism put my mind at ease. Thank you, Wade's!" (Emily, Watsonville)
 
-ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ 5-star rating
+★★★★★ 5-star rating
 
 Licensed Contractor: C-42 for California
 

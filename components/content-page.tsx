@@ -13,6 +13,10 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
+import {
+	estimateReadingMinutes,
+	formatReadingTime,
+} from "@/lib/reading-time"
 import { siteConfig } from "@/lib/site"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -80,29 +84,42 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
+	const readingTime = isPost
+		? formatReadingTime(estimateReadingMinutes(document.content))
+		: null
+
 	const articleMeta = isPost ? (
 		<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-			{document.date ? (
-				<p className="type-meta font-bold">
-					Published{" "}
-					<time dateTime={document.date}>{formatPostDate(document.date)}</time>
-					{document.updated ? ` · Updated ${document.updated}` : null}
-				</p>
-			) : (
-				<span />
-			)}
-			{viewStats ? (
-				viewStats.unique > 0 || viewStats.views > 0 ? (
-					<PageViewsStat
-						totalViews={viewStats.views}
-						trendingScore={viewStats.trending}
-						uniqueViews={viewStats.unique}
-					/>
-				) : (
-					<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
-						New guide · your visit counts
-					</p>
-				)
+			<p className="type-meta text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-bold">
+				{document.date ? (
+					<span>
+						Published{" "}
+						<time dateTime={document.date}>
+							{formatPostDate(document.date)}
+						</time>
+					</span>
+				) : null}
+				{document.date && readingTime ? (
+					<span aria-hidden="true" className="text-border">
+						·
+					</span>
+				) : null}
+				{readingTime ? <span>{readingTime}</span> : null}
+				{document.updated ? (
+					<>
+						<span aria-hidden="true" className="text-border">
+							·
+						</span>
+						<span>Updated {document.updated}</span>
+					</>
+				) : null}
+			</p>
+			{viewStats && (viewStats.unique > 0 || viewStats.views > 0) ? (
+				<PageViewsStat
+					totalViews={viewStats.views}
+					trendingScore={viewStats.trending}
+					uniqueViews={viewStats.unique}
+				/>
 			) : null}
 		</div>
 	) : null

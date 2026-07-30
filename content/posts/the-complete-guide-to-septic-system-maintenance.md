@@ -98,7 +98,7 @@ Regular maintenance is far less expensive than repairing or replacing a failed s
 
 Santa Cruz County Septic Experts
 
-## DonÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢t Delay Your Septic Maintenance
+## Don't Delay Your Septic Maintenance
 
 Ensure your system runs smoothly with our expert services in Santa Cruz County, CA.
 

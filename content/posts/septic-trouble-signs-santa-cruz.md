@@ -15,7 +15,6 @@ image: >-
   /images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp
 imageAlt: Early Septic Detection for Santa Cruz County Homes
 ---
-In This Guide4 min read
 
 ![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 

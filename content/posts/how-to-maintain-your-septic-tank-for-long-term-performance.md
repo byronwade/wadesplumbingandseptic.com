@@ -18,6 +18,7 @@ tags:
 image: /images/wordpress/imagejpeg-0-1.webp
 imageAlt: Maximize Septic Tank Lifespan in Santa Cruz County Homes
 ---
+
 Your septic tank is one of the most critical components of your home’s plumbing system. When maintained properly, it works quietly in the background, safely processing waste and protecting your property from backups and environmental hazards. But when neglected, it can lead to foul odors, drainage issues, and costly repairs.
 
 ![Storm drain covered with debris](/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp)
@@ -108,7 +109,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, incl
 
 We hold a C-42 license for California, ensuring that our work meets the highest standards of quality and compliance.
 
-Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch. Whether youÃ¢â‚¬â„¢re in the heart of Santa Cruz or the surrounding areas, we're here to help you maintain a reliable septic system.
+Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch. Whether you're in the heart of Santa Cruz or the surrounding areas, we're here to help you maintain a reliable septic system.
 
 ## Frequently Asked Questions
 

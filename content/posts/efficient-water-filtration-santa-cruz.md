@@ -14,7 +14,6 @@ tags:
 image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Whole-home water equipment
 ---
-In This Guide3 min read
 
 ![Precision plumbing valve installation](/images/work/precision-valve-installation.webp)
 

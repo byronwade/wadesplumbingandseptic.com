@@ -49,59 +49,69 @@ function BreadcrumbTrail({
 	tone?: "dark" | "light"
 }) {
 	const light = tone === "light"
+	/*
+	  Mobile: ancestors only. The current page title is the H1 directly below,
+	  so repeating a truncated all-caps crumb looked broken on narrow screens.
+	  From sm up, include the current crumb and let it wrap instead of ellipsis.
+	*/
+	const ancestors = items.slice(0, -1)
+	const current = items[items.length - 1]
 
 	return (
 		<nav
 			aria-label="Breadcrumb"
 			className={cn(
-				"mb-6 flex flex-wrap items-center gap-1.5 font-mono text-[0.6875rem] tracking-[0.1em] uppercase",
+				"mb-5 text-[0.8125rem] leading-snug sm:mb-6",
 				light ? "text-muted-foreground" : "text-on-dark-subtle",
 			)}
 		>
-			<ol className="flex flex-wrap items-center gap-1.5">
-				{items.map((item, index) => {
-					const isCurrent = index === items.length - 1
-					return (
-						<li
-							key={`${item.label}-${index}`}
-							className="flex min-w-0 items-center gap-1.5"
-						>
-							{index > 0 ? (
-								<ChevronRight
-									aria-hidden="true"
-									className="size-3 shrink-0 opacity-60"
-								/>
-							) : null}
-							{item.href && !isCurrent ? (
-								<Link
-									className={cn(
-										"transition-colors",
-										light ? "hover:text-foreground" : "hover:text-white",
-									)}
-									href={item.href}
-									prefetch={false}
-								>
-									{item.label}
-								</Link>
-							) : (
-								<span
-									aria-current={isCurrent ? "page" : undefined}
-									className={cn(
-										"min-w-0 truncate",
-										isCurrent
-											? light
-												? "text-foreground"
-												: "text-white/90"
-											: undefined,
-									)}
-									title={item.label}
-								>
-									{item.label}
-								</span>
+			<ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+				{ancestors.map((item, index) => (
+					<li
+						key={`${item.label}-${index}`}
+						className="flex items-center gap-1.5"
+					>
+						{index > 0 ? (
+							<ChevronRight
+								aria-hidden="true"
+								className="size-3.5 shrink-0 opacity-50"
+							/>
+						) : null}
+						{item.href ? (
+							<Link
+								className={cn(
+									"transition-colors",
+									light ? "hover:text-foreground" : "hover:text-white",
+								)}
+								href={item.href}
+								prefetch={false}
+							>
+								{item.label}
+							</Link>
+						) : (
+							<span>{item.label}</span>
+						)}
+					</li>
+				))}
+				{current ? (
+					<li className="hidden min-w-0 items-center gap-1.5 sm:flex">
+						{ancestors.length > 0 ? (
+							<ChevronRight
+								aria-hidden="true"
+								className="size-3.5 shrink-0 opacity-50"
+							/>
+						) : null}
+						<span
+							aria-current="page"
+							className={cn(
+								"min-w-0 text-pretty break-words",
+								light ? "text-foreground/80" : "text-white/85",
 							)}
-						</li>
-					)
-				})}
+						>
+							{current.label}
+						</span>
+					</li>
+				) : null}
 			</ol>
 		</nav>
 	)

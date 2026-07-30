@@ -15,11 +15,8 @@ image: >-
   /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
 imageAlt: Efficient Septic Recovery Services in Santa Cruz County
 ---
-**Estimated reading time:** 5 minutes.
 
 ![Chrome sink drain close-up](/images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp)
-
-## In This Guide
 
 ## Quick Answer for Santa Cruz Homeowners
 
@@ -33,7 +30,7 @@ The 2020 Santa Cruz Mountains Fire has exacerbated septic system issues for many
 
 ## Understanding the Impact of the 2020 Santa Cruz Mountains Fire on Septic Systems
 
-Did you know? A well-maintained septic system can withstand the heatâ€”literally! Discover how to fireproof your septic system today. The 2020 Santa Cruz Mountains Fire was a devastating event for many homeowners in Santa Cruz County, California. While the immediate focus was on property and environmental damage, many residents are now dealing with the long-term effects on their septic systems. These underground systems are not immune to the consequences of wildfires, and understanding these impacts is crucial for homeowners.
+Did you know? A well-maintained septic system can withstand the heat, literally! Discover how to fireproof your septic system today. The 2020 Santa Cruz Mountains Fire was a devastating event for many homeowners in Santa Cruz County, California. While the immediate focus was on property and environmental damage, many residents are now dealing with the long-term effects on their septic systems. These underground systems are not immune to the consequences of wildfires, and understanding these impacts is crucial for homeowners.
 
 ## Common Septic System Issues Arising Post-Fire
 
