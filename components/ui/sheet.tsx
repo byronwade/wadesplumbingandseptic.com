@@ -103,7 +103,7 @@ export function SheetTitle({
 	return (
 		<SheetPrimitive.Title
 			className={cn(
-				"text-foreground text-lg font-extrabold tracking-[-0.02em]",
+				"text-foreground font-display text-lg font-extrabold tracking-[-0.02em]",
 				className,
 			)}
 			{...props}

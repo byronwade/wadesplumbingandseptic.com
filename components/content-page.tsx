@@ -44,10 +44,12 @@ export function ContentPage({
 				parent={parent}
 				title={document.title}
 			/>
-			<article className="container-shell section-y grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
-				<div>
+			{/* Sidebar width comes from --sidebar-w so this template and the service
+			    template share one measurement (they were 20rem and 21rem). */}
+			<article className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
+				<div className="min-w-0">
 					{isPost && document.date ? (
-						<p className="text-muted-foreground mb-8 text-sm font-bold">
+						<p className="type-meta border-border mb-8 border-b pb-5 font-bold">
 							Published{" "}
 							<time dateTime={document.date}>
 								{new Intl.DateTimeFormat("en-US", {
@@ -65,7 +67,7 @@ export function ContentPage({
 					) : null}
 					<MarkdownContent content={document.content} />
 				</div>
-				<aside className="lg:sticky lg:top-28 lg:self-start">
+				<aside className="lg:sticky lg:top-[var(--header-offset)] lg:self-start">
 					<ContactCta
 						compact
 						description="Tell us what is happening and get practical options from a local licensed team."

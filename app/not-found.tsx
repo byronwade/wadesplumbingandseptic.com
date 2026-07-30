@@ -3,30 +3,38 @@ import { ArrowLeft, Phone } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
+import { cn } from "@/lib/utils"
 
 export default function NotFound() {
 	return (
 		<main
-			className="grid min-h-[65vh] place-items-center px-4 py-20"
+			className="container-shell grid min-h-[60vh] place-items-center py-[var(--space-section-y)]"
 			id="main-content"
 		>
-			<div className="max-w-xl text-center">
-				<p className="type-eyebrow justify-center">404</p>
-				<h1 className="type-display mt-4">This page could not be found.</h1>
-				<p className="type-lead mt-5">
+			<div className="section-head max-w-xl text-center">
+				<p className="spec-label spec-label-center">Error 404</p>
+				<h1 className="type-headline">This page could not be found.</h1>
+				<p className="type-lead">
 					The page may have moved during our website upgrade. Use the links
 					below or call us and we will point you in the right direction.
 				</p>
-				<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-					<Link className={buttonVariants({ size: "lg" })} href="/" prefetch>
-						<ArrowLeft />
-						Back Home
+				<div className="flex flex-col justify-center gap-3 pt-3 sm:flex-row">
+					<Link
+						className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
+						href="/"
+						prefetch
+					>
+						<ArrowLeft aria-hidden="true" />
+						Back home
 					</Link>
 					<a
-						className={buttonVariants({ variant: "outline", size: "lg" })}
+						className={cn(
+							buttonVariants({ variant: "outline", size: "lg" }),
+							"w-full sm:w-auto",
+						)}
 						href={siteConfig.phoneHref}
 					>
-						<Phone />
+						<Phone aria-hidden="true" />
 						{siteConfig.phone}
 					</a>
 				</div>

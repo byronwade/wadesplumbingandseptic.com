@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
-import { Manrope } from "next/font/google"
+import { Archivo, Manrope } from "next/font/google"
 import { Suspense } from "react"
 
 import { CommandMenuLoader } from "@/components/command-menu-loader"
@@ -17,7 +17,20 @@ const manrope = Manrope({
 	display: "swap",
 	variable: "--font-manrope",
 	preload: true,
-	weight: ["400", "700", "800"],
+	weight: ["400", "500", "700"],
+})
+
+/*
+  Display face. A squared grotesque against Manrope's humanist body - the
+  contrast is what gives headings their own voice instead of running the body
+  face at weight 800. Only the two display weights are loaded.
+*/
+const archivo = Archivo({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-archivo",
+	preload: true,
+	weight: ["700", "800"],
 })
 
 export const metadata: Metadata = {
@@ -117,7 +130,11 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en" className={manrope.variable} suppressHydrationWarning>
+		<html
+			lang="en"
+			className={`${manrope.variable} ${archivo.variable}`}
+			suppressHydrationWarning
+		>
 			<body className={manrope.className}>
 				<ThemeProvider
 					attribute="class"

@@ -39,6 +39,47 @@ function hrefWithParams(pathname: string, params: URLSearchParams) {
 	return (query ? `${pathname}?${query}` : pathname) as Route
 }
 
+/*
+ * One chip, both call sites. The "all" chip and the per-category chips were
+ * separate copies of the same 20 lines of classes, so they drifted apart.
+ */
+function FilterChip({
+	label,
+	count,
+	selected,
+	onSelect,
+}: {
+	label: string
+	count: number
+	selected: boolean
+	onSelect: () => void
+}) {
+	return (
+		<button
+			aria-selected={selected}
+			className={cn(
+				"focus-visible:ring-ring inline-flex shrink-0 items-center gap-2 rounded-md border px-3.5 py-2 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
+				selected
+					? "border-ink bg-ink text-white"
+					: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
+			)}
+			onClick={onSelect}
+			role="tab"
+			type="button"
+		>
+			{label}
+			<span
+				className={cn(
+					"font-mono text-[0.6875rem] tabular-nums",
+					selected ? "text-white/60" : "text-muted-foreground",
+				)}
+			>
+				{count}
+			</span>
+		</button>
+	)
+}
+
 function ArchiveCard({
 	item,
 	variant,
@@ -51,13 +92,18 @@ function ArchiveCard({
 			? getServiceImage(item.category, item.image)
 			: (item.image ?? "/images/work/precision-valve-installation.webp")
 
+	/*
+	 * .card-rail makes this a flex column and pins .card-body to the bottom, so
+	 * the action links line up across a row. Padding and title size come from the
+	 * card's own container width - see `@container card` in globals.css.
+	 */
 	return (
-		<Card className="group hover:border-primary/35 flex h-full flex-col overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5">
+		<Card className="group hover:border-primary/40 h-full overflow-hidden transition-[border-color,transform] duration-200 hover:-translate-y-0.5">
 			<Link
 				aria-label={
 					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
 				}
-				className="bg-muted relative block aspect-[16/9] overflow-hidden"
+				className="bg-muted relative block aspect-16/9 overflow-hidden"
 				href={item.href as Route}
 				prefetch={false}
 				tabIndex={-1}
@@ -72,30 +118,34 @@ function ArchiveCard({
 				/>
 			</Link>
 			<CardHeader>
-				<Badge className="w-fit" tone="muted">
-					{item.category}
-				</Badge>
-				<CardTitle className="group-hover:text-primary mt-3 transition-colors">
+				<Badge tone="muted">{item.category}</Badge>
+				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
 					<Link href={item.href as Route} prefetch={false}>
 						{item.title}
 					</Link>
 				</CardTitle>
 				<CardDescription>{item.description}</CardDescription>
 			</CardHeader>
-			<CardContent className="mt-auto">
+			<CardContent className="flex flex-col items-start justify-end gap-3">
 				{variant === "tip" && item.date ? (
-					<p className="text-muted-foreground mb-4 flex items-center gap-2 text-xs font-bold">
-						<CalendarDays className="text-primary size-4" />
+					<p className="type-meta flex items-center gap-2 font-bold">
+						<CalendarDays
+							aria-hidden="true"
+							className="text-primary size-4 shrink-0"
+						/>
 						{item.date}
 					</p>
 				) : null}
 				<Link
-					className="text-primary inline-flex items-center gap-2 text-sm font-extrabold"
+					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
 					href={item.href as Route}
 					prefetch={false}
 				>
 					{variant === "service" ? "Learn more" : "Read guide"}
-					<ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+					<ArrowRight
+						aria-hidden="true"
+						className="size-4 transition-transform group-hover:translate-x-1"
+					/>
 				</Link>
 			</CardContent>
 		</Card>
@@ -175,18 +225,23 @@ export function FilterableArchive({
 	const countLabel = `${total} ${total === 1 ? noun.singular : noun.plural}`
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
 
+	const allSelected = !activeCategory || activeCategory === "all"
+
 	return (
 		<section className="container-shell section-y">
-			<div className="border-border mb-8 border-b pb-5" id="archive-filters">
-				<div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-					<div>
-						<p className="type-eyebrow">{countLabel}</p>
-						<h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em]">
+			<div
+				className="border-border mb-[var(--space-block)] border-b pb-5"
+				id="archive-filters"
+			>
+				<div className="section-head-row">
+					<div className="section-head">
+						<p className="spec-label">{countLabel}</p>
+						<h2 className="type-title">
 							{activeFilter && canFilter ? activeFilter.label : allLabel}
 						</h2>
 					</div>
 					{canFilter ? (
-						<p className="text-muted-foreground text-sm lg:max-w-sm lg:text-right">
+						<p className="type-meta md:max-w-xs md:text-right">
 							Filter instantly, then page through results.
 						</p>
 					) : null}
@@ -195,69 +250,30 @@ export function FilterableArchive({
 				{canFilter ? (
 					<div
 						aria-label="Filter by category"
-						className="mt-5 flex [scrollbar-width:none] gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+						className="chip-rail mt-6"
 						role="tablist"
 					>
-						<button
-							aria-selected={!activeCategory || activeCategory === "all"}
-							className={cn(
-								"inline-flex shrink-0 items-center gap-2 rounded-md border px-3 py-1.5 text-sm font-bold transition-colors",
-								!activeCategory || activeCategory === "all"
-									? "border-ink bg-ink text-white"
-									: "border-border bg-card text-foreground hover:border-foreground/25 hover:bg-muted",
-							)}
-							onClick={() => updateParams({ category: "all" })}
-							role="tab"
-							type="button"
-						>
-							{allLabel}
-							<span
-								className={cn(
-									"rounded px-1.5 py-0.5 text-xs font-extrabold tabular-nums",
-									!activeCategory || activeCategory === "all"
-										? "bg-white/15 text-white"
-										: "bg-muted text-muted-foreground",
-								)}
-							>
-								{items.length}
-							</span>
-						</button>
-						{filters.map((filter) => {
-							const selected = activeCategory === filter.key
-							return (
-								<button
-									aria-selected={selected}
-									className={cn(
-										"inline-flex shrink-0 items-center gap-2 rounded-md border px-3 py-1.5 text-sm font-bold transition-colors",
-										selected
-											? "border-ink bg-ink text-white"
-											: "border-border bg-card text-foreground hover:border-foreground/25 hover:bg-muted",
-									)}
-									key={filter.key}
-									onClick={() => updateParams({ category: filter.key })}
-									role="tab"
-									type="button"
-								>
-									{filter.label}
-									<span
-										className={cn(
-											"rounded px-1.5 py-0.5 text-xs font-extrabold tabular-nums",
-											selected
-												? "bg-white/15 text-white"
-												: "bg-muted text-muted-foreground",
-										)}
-									>
-										{filter.count}
-									</span>
-								</button>
-							)
-						})}
+						<FilterChip
+							count={items.length}
+							label={allLabel}
+							onSelect={() => updateParams({ category: "all" })}
+							selected={allSelected}
+						/>
+						{filters.map((filter) => (
+							<FilterChip
+								count={filter.count}
+								key={filter.key}
+								label={filter.label}
+								onSelect={() => updateParams({ category: filter.key })}
+								selected={activeCategory === filter.key}
+							/>
+						))}
 					</div>
 				) : null}
 			</div>
 
 			{pageItems.length ? (
-				<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+				<div className="card-rail defer-paint">
 					{pageItems.map((item) => (
 						<ArchiveCard item={item} key={item.slug} variant={variant} />
 					))}
@@ -271,9 +287,9 @@ export function FilterableArchive({
 			{pageCount > 1 ? (
 				<nav
 					aria-label="Pagination"
-					className="border-border mt-10 flex flex-col items-stretch justify-between gap-4 border-t pt-6 sm:flex-row sm:items-center"
+					className="border-border mt-[var(--space-block)] flex flex-col items-stretch justify-between gap-4 border-t pt-6 sm:flex-row sm:items-center"
 				>
-					<p className="text-muted-foreground text-sm font-bold tabular-nums">
+					<p className="type-meta font-bold tabular-nums">
 						Page {page} of {pageCount}
 						<span className="text-muted-foreground/80 font-medium">
 							{" "}

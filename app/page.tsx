@@ -16,7 +16,6 @@ import {
 import { ContactCta } from "@/components/contact-cta"
 import { HomeFaq } from "@/components/home-faq"
 import { JsonLd } from "@/components/json-ld"
-import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import {
 	Card,
@@ -107,6 +106,54 @@ const trustedBrands = [
 	{ src: "/images/partners/grundfos.webp", alt: "Grundfos" },
 ] as const
 
+const trustPoints = [
+	"Family owned & operated",
+	"Licensed & insured",
+	"Satisfaction guaranteed",
+	"4.9 local rating",
+] as const
+
+const specialtyPoints = [
+	{
+		icon: ShieldCheck,
+		title: "Licensed & code-compliant",
+		text: "Properly planned and permitted for the property.",
+	},
+	{
+		icon: Home,
+		title: "Family-owned & local",
+		text: "Not a franchise. We know these counties and codes.",
+	},
+	{
+		icon: Gauge,
+		title: "Advanced ATU systems",
+		text: "For sites conventional contractors turn down.",
+	},
+	{
+		icon: Droplets,
+		title: "Free site consultations",
+		text: "We tell you what can work before money changes hands.",
+	},
+] as const
+
+const reasons = [
+	["No-pressure advice", "Only the work your property needs."],
+	["Transparent pricing", "Clear pricing before work begins."],
+	["Clean workmanship", "Respectful service and a clean finish."],
+	["Long-term reliability", "Repairs and systems designed to last."],
+] as const
+
+const testimonials = [
+	[
+		"As a real estate professional, I love working with Wade’s Plumbing. They are courteous, professional, and always make sure my clients are taken care of.",
+		"Bailey Cotrona",
+	],
+	[
+		"They know their stuff, do great work, and are a pleasure to work with. They made me feel comfortable with a terrible situation that shut down my house.",
+		"Aaron Berger",
+	],
+] as const
+
 const faqs = [
 	{
 		question: "How often should I have my septic tank pumped?",
@@ -179,118 +226,106 @@ function HomeHeroMedia() {
 export default function HomePage() {
 	return (
 		<main id="main-content">
-			<section className="surface-dark relative min-h-[min(78vh,44rem)] overflow-hidden sm:min-h-[min(92vh,52rem)]">
+			{/*
+			  Hero height is bounded in rem, not 92vh. At viewport height the copy
+			  sat marooned in the bottom third of a very tall panel. Two scrims
+			  instead of the previous three stacked layers: a horizontal one to
+			  hold the copy, a short vertical one to seat the buttons - enough
+			  contrast for AA without crushing the work photo to near-black.
+			*/}
+			<section className="surface-dark relative flex min-h-[32rem] items-end overflow-hidden pt-20 pb-14 sm:min-h-[36rem] sm:pb-16 lg:min-h-[40rem] lg:items-center lg:pt-24 lg:pb-20">
 				<HomeHeroMedia />
-				<div className="bg-ink/55 sm:bg-ink/40 absolute inset-0" />
-				<div className="from-ink via-ink/90 to-ink/55 absolute inset-0 bg-linear-to-r" />
-				<div className="from-ink via-ink/70 to-ink/25 absolute inset-0 bg-linear-to-t" />
+				<div className="from-ink via-ink/92 to-ink/25 absolute inset-0 bg-linear-to-r" />
+				<div className="from-ink/80 to-ink/0 absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t" />
 
-				<div className="container-shell relative flex min-h-[min(78vh,44rem)] flex-col justify-end pt-24 pb-12 sm:min-h-[min(92vh,52rem)] sm:pt-28 sm:pb-16 lg:justify-center lg:pt-20 lg:pb-24">
-					<div className="max-w-3xl">
-						<p className="type-eyebrow text-primary-bright">
-							Wade&apos;s Plumbing &amp; Septic
-						</p>
-						<h1 className="type-display mt-4 text-white sm:mt-5">
+				<div className="container-shell relative">
+					<div className="section-head max-w-2xl">
+						<p className="spec-label">Santa Cruz County, CA</p>
+						<h1 className="type-display text-white">
 							Honest plumbing
 							<br />
 							<span className="text-primary-bright">&amp; septic</span>
 						</h1>
-						<p className="motion-rise motion-delay-1 mt-5 max-w-xl text-base leading-relaxed text-[#ececea] sm:mt-6 sm:text-lg">
+						<p className="motion-rise motion-delay-1 type-lead text-on-dark-muted max-w-xl">
 							No sales pressure. No upselling. Clear pricing before work begins
 							from local licensed professionals.
 						</p>
-						<div className="motion-rise motion-delay-2 mt-7 flex w-full max-w-md flex-col items-stretch gap-4 sm:mt-8 sm:max-w-none sm:flex-row sm:items-center">
-							<a
-								className={cn(
-									buttonVariants({ size: "xl" }),
-									"w-full gap-2.5 sm:w-auto",
-								)}
-								href={siteConfig.phoneHref}
-							>
-								<Phone className="size-5" />
-								Call {siteConfig.phone}
-							</a>
-							<Link
-								className={cn(
-									buttonVariants({
-										variant: "inverse",
-										size: "xl",
-									}),
-									"w-full justify-start sm:w-auto sm:justify-center",
-								)}
-								href="/services"
-								prefetch
-							>
-								Our Services
-								<ArrowRight />
-							</Link>
-						</div>
+					</div>
+					<div className="motion-rise motion-delay-2 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+						<a
+							className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
+							href={siteConfig.phoneHref}
+						>
+							<Phone aria-hidden="true" />
+							Call {siteConfig.phone}
+						</a>
+						<Link
+							className={cn(
+								buttonVariants({ variant: "inverse", size: "xl" }),
+								"w-full sm:w-auto",
+							)}
+							href="/services"
+							prefetch
+						>
+							Our Services
+							<ArrowRight aria-hidden="true" />
+						</Link>
 					</div>
 				</div>
 			</section>
 
-			<section className="bg-card shadow-[inset_0_-1px_0_0_var(--border)]">
-				<div className="container-shell text-muted-foreground grid grid-cols-1 gap-3 py-4 text-sm font-bold sm:grid-cols-2 sm:gap-4 sm:py-5 md:grid-cols-4">
-					{[
-						"Family Owned & Operated",
-						"Licensed & Insured",
-						"Satisfaction Guaranteed",
-						"★★★★★ 4.9 Local Rating",
-					].map((item) => (
-						<span
-							className="flex items-center gap-2 sm:justify-center"
+			{/*
+			  Trust strip. Every item is left-aligned in its own column so the four
+			  labels share a baseline grid; centring each item individually made the
+			  row read ragged at the two-column breakpoint.
+			*/}
+			<section className="border-border bg-card border-b">
+				<ul className="container-shell grid grid-cols-1 gap-x-8 gap-y-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
+					{trustPoints.map((item) => (
+						<li
+							className="text-muted-foreground flex items-center gap-2.5 text-sm font-bold"
 							key={item}
 						>
-							<BadgeCheck className="text-primary size-4 shrink-0" />
+							<BadgeCheck
+								className="text-primary size-4 shrink-0"
+								aria-hidden="true"
+							/>
 							{item}
-						</span>
+						</li>
 					))}
-				</div>
+				</ul>
 			</section>
 
 			<section className="section-y">
 				<div className="container-shell">
-					<div className="mx-auto max-w-3xl text-center">
-						<Badge>Our Core Specialty</Badge>
-						<h2 className="type-title mt-5">
+					<div className="section-head reveal mx-auto max-w-2xl text-center">
+						<p className="spec-label spec-label-center">Our core specialty</p>
+						<h2 className="type-title">
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
-						<p className="type-lead mt-5">
+						<p className="type-lead">
 							When a standard system will not work (steep slopes, difficult soil,
 							tight lots, or sensitive environments), that is exactly where we
 							excel.
 						</p>
 					</div>
 
-					<div className="mt-14 grid items-center gap-10 lg:grid-cols-2">
-						<div className="grid gap-4 sm:grid-cols-2">
-							{[
-								{
-									icon: ShieldCheck,
-									title: "Licensed & Code-Compliant",
-									text: "Properly planned and permitted for the property.",
-								},
-								{
-									icon: Home,
-									title: "Family-Owned & Local",
-									text: "Not a franchise. We know these counties and codes.",
-								},
-								{
-									icon: Gauge,
-									title: "Advanced ATU Systems",
-									text: "For sites conventional contractors turn down.",
-								},
-								{
-									icon: Droplets,
-									title: "Free Site Consultations",
-									text: "We tell you what can work before money changes hands.",
-								},
-							].map(({ icon: Icon, title, text }) => (
-								<div className="surface-panel p-5" key={title}>
+					{/*
+					  items-stretch, not items-center: with the image vertically centred
+					  against a taller card column its top and bottom edges lined up with
+					  nothing on the left.
+					*/}
+					<div className="reveal mt-[var(--space-block)] grid items-stretch gap-[var(--space-grid)] lg:grid-cols-2">
+						<div className="grid content-start gap-[var(--space-grid)] sm:grid-cols-2">
+							{specialtyPoints.map(({ icon: Icon, title, text }) => (
+								<div
+									className="surface-panel p-[var(--space-card)]"
+									key={title}
+								>
 									<span className="bg-accent text-accent-foreground grid size-10 place-items-center rounded-md">
-										<Icon className="size-5" />
+										<Icon className="size-5" aria-hidden="true" />
 									</span>
-									<h3 className="mt-4 text-lg font-extrabold tracking-[-0.02em]">
+									<h3 className="type-subtitle mt-4 text-[1.0625rem]">
 										{title}
 									</h3>
 									<p className="text-muted-foreground mt-2 text-sm leading-relaxed">
@@ -301,15 +336,15 @@ export default function HomePage() {
 							<a
 								className={cn(
 									buttonVariants({ size: "xl" }),
-									"mt-2 sm:col-span-2",
+									"w-full sm:col-span-2",
 								)}
 								href={siteConfig.phoneHref}
 							>
-								<Phone />
-								Call to Schedule: {siteConfig.phone}
+								<Phone aria-hidden="true" />
+								Call to schedule: {siteConfig.phone}
 							</a>
 						</div>
-						<div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+						<div className="bg-muted relative aspect-4/3 overflow-hidden rounded-lg lg:aspect-auto lg:min-h-[26rem]">
 							<Image
 								alt="Three-tank septic system installation on hillside property"
 								className="object-cover"
@@ -325,13 +360,13 @@ export default function HomePage() {
 
 			<section className="surface-dark section-y">
 				<div className="container-shell">
-					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-						<div className="max-w-2xl">
-							<Badge tone="bright">Project Gallery</Badge>
-							<h2 className="type-title mt-5 text-white">
+					<div className="section-head-row reveal">
+						<div className="section-head max-w-2xl">
+							<p className="spec-label">Project gallery</p>
+							<h2 className="type-title text-white">
 								Real work from the Wade&apos;s team.
 							</h2>
-							<p className="type-lead mt-4">
+							<p className="type-lead text-on-dark-muted">
 								Engineered septic installations, excavation, controls, and
 								finished systems completed on challenging Santa Cruz County
 								properties.
@@ -340,19 +375,19 @@ export default function HomePage() {
 						<Link
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
-								"w-full justify-start sm:w-auto sm:justify-center",
+								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/contact"
 							prefetch
 						>
 							Discuss your project
-							<ArrowRight />
+							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
-					<div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+					<div className="snap-rail mt-[var(--space-block)]">
 						{workGallery.map((image) => (
 							<figure key={image.src}>
-								<div className="bg-panel-elevated relative aspect-[4/5] overflow-hidden rounded-lg">
+								<div className="bg-panel-elevated relative aspect-4/5 overflow-hidden rounded-lg">
 									<Image
 										alt={image.alt}
 										className="object-cover"
@@ -362,7 +397,7 @@ export default function HomePage() {
 										src={image.src}
 									/>
 								</div>
-								<figcaption className="mt-3 text-sm font-bold text-white/65">
+								<figcaption className="text-on-dark-subtle mt-3 text-sm font-bold">
 									{image.caption}
 								</figcaption>
 							</figure>
@@ -371,33 +406,34 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="section-y bg-secondary/60">
+			<section className="section-y surface-sunken">
 				<div className="container-shell">
-					<div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-						<div className="max-w-2xl">
-							<Badge>What We Do</Badge>
-							<h2 className="type-title mt-5">
-								Plumbing &amp; septic services
-							</h2>
-							<p className="type-lead mt-4">
+					<div className="section-head-row reveal">
+						<div className="section-head max-w-2xl">
+							<p className="spec-label">What we do</p>
+							<h2 className="type-title">Plumbing &amp; septic services</h2>
+							<p className="type-lead">
 								From routine maintenance to complex installations, our licensed
 								team handles it cleanly, honestly, and on time.
 							</p>
 						</div>
 						<Link
-							className={buttonVariants({ variant: "outline", size: "lg" })}
+							className={cn(
+								buttonVariants({ variant: "outline", size: "lg" }),
+								"w-full shrink-0 sm:w-auto",
+							)}
 							href="/services"
 							prefetch
 						>
 							View all services
-							<ArrowRight />
+							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
 
-					<div className="mt-10 grid gap-6 lg:grid-cols-3">
+					<div className="card-rail mt-[var(--space-block)]">
 						{serviceGroups.map((group) => (
-							<Card className="overflow-hidden" key={group.title}>
-								<div className="relative aspect-[16/10]">
+							<Card className="reveal h-full overflow-hidden" key={group.title}>
+								<div className="bg-muted relative aspect-16/10">
 									<Image
 										alt={group.title}
 										className="object-cover"
@@ -414,8 +450,11 @@ export default function HomePage() {
 								<CardContent>
 									<ul className="text-muted-foreground space-y-2 text-sm">
 										{group.items.map((item) => (
-											<li className="flex items-center gap-2" key={item}>
-												<Check className="text-primary size-4" />
+											<li className="flex items-start gap-2" key={item}>
+												<Check
+													className="text-primary mt-0.5 size-4 shrink-0"
+													aria-hidden="true"
+												/>
 												{item}
 											</li>
 										))}
@@ -427,15 +466,15 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="border-border bg-card border-y py-12">
+			<section className="border-border bg-card section-y-tight border-y">
 				<div className="container-shell">
-					<p className="text-muted-foreground text-center text-xs font-extrabold tracking-[0.16em] uppercase">
-						Experienced with leading plumbing equipment brands
+					<p className="spec-label spec-label-center">
+						Experienced with leading equipment brands
 					</p>
-					<div className="mt-8 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 lg:grid-cols-5">
+					<div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
 						{trustedBrands.map((brand) => (
 							<div
-								className="relative mx-auto h-14 w-full max-w-40 grayscale transition hover:grayscale-0"
+								className="relative mx-auto h-12 w-full max-w-36 opacity-70 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
 								key={brand.src}
 							>
 								<Image
@@ -443,7 +482,7 @@ export default function HomePage() {
 									className="object-contain"
 									fill
 									quality={80}
-									sizes="160px"
+									sizes="144px"
 									src={brand.src}
 								/>
 							</div>
@@ -453,62 +492,53 @@ export default function HomePage() {
 			</section>
 
 			<section className="section-y">
-				<div className="container-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+				<div className="container-shell grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
 					<div>
-						<Badge>Why Choose Wade&apos;s</Badge>
-						<h2 className="type-title mt-5">
-							Real people. Honest recommendations.
-						</h2>
-						<p className="type-lead mt-5">
-							We are not corporate plumbers trying to hit an upsell quota. We
-							explain the issue, show you practical options, and do quality work
-							at a fair price.
-						</p>
-						<div className="mt-8 grid gap-4 sm:grid-cols-2">
-							{[
-								["No-Pressure Advice", "Only the work your property needs."],
-								["Transparent Pricing", "Clear pricing before work begins."],
-								["Clean Workmanship", "Respectful service and a clean finish."],
-								[
-									"Long-Term Reliability",
-									"Repairs and systems designed to last.",
-								],
-							].map(([title, text]) => (
-								<div className="surface-panel p-5" key={title}>
-									<Wrench className="text-primary size-5" />
-									<h3 className="mt-3 font-extrabold tracking-[-0.02em]">
-										{title}
-									</h3>
-									<p className="text-muted-foreground mt-1 text-sm">{text}</p>
+						<div className="section-head">
+							<p className="spec-label">Why choose Wade&apos;s</p>
+							<h2 className="type-title">
+								Real people. Honest recommendations.
+							</h2>
+							<p className="type-lead">
+								We are not corporate plumbers trying to hit an upsell quota. We
+								explain the issue, show you practical options, and do quality
+								work at a fair price.
+							</p>
+						</div>
+						<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+							{reasons.map(([title, text]) => (
+								<div
+									className="surface-panel p-[var(--space-card)]"
+									key={title}
+								>
+									<Wrench className="text-primary size-5" aria-hidden="true" />
+									<h3 className="mt-3 font-bold tracking-[-0.02em]">{title}</h3>
+									<p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
+										{text}
+									</p>
 								</div>
 							))}
 						</div>
 					</div>
 
-					<div className="surface-dark rounded-lg p-7 sm:p-10">
-						<p className="type-eyebrow">Real People, Real Results</p>
-						<div className="mt-7 space-y-6">
-							{[
-								[
-									"As a real estate professional, I love working with Wade’s Plumbing. They are courteous, professional, and always make sure my clients are taken care of.",
-									"Bailey Cotrona",
-								],
-								[
-									"They know their stuff, do great work, and are a pleasure to work with. They made me feel comfortable with a terrible situation that shut down my house.",
-									"Aaron Berger",
-								],
-							].map(([quote, person]) => (
+					<div className="surface-dark rounded-lg p-7 sm:p-9">
+						<p className="spec-label">Real people, real results</p>
+						<div className="mt-8 space-y-7">
+							{testimonials.map(([quote, person]) => (
 								<blockquote
-									className="pb-6 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.08)] last:pb-0 last:shadow-none"
+									className="border-b border-white/10 pb-7 last:border-0 last:pb-0"
 									key={person}
 								>
-									<div className="text-primary-bright" aria-label="5 stars">
+									<p
+										className="text-primary-bright text-sm tracking-[0.2em]"
+										aria-label="Rated 5 out of 5"
+									>
 										★★★★★
-									</div>
-									<p className="mt-3 text-lg leading-relaxed text-white">
+									</p>
+									<p className="mt-3 text-[1.0625rem] leading-relaxed text-pretty text-white">
 										“{quote}”
 									</p>
-									<footer className="mt-3 text-sm font-bold text-white/50">
+									<footer className="text-on-dark-subtle mt-3 text-sm font-bold">
 										{person}
 									</footer>
 								</blockquote>
@@ -517,34 +547,34 @@ export default function HomePage() {
 						<Link
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
-								"mt-8 w-full justify-start sm:w-auto sm:justify-center",
+								"mt-8 w-full sm:w-auto",
 							)}
 							href="/testimonials"
 							prefetch
 						>
 							Read customer stories
-							<ArrowRight />
+							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
 				</div>
 			</section>
 
-			<section className="section-y border-border bg-secondary/60 border-y">
-				<div className="container-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-					<div>
-						<Badge>Frequently Asked Questions</Badge>
-						<h2 className="type-title mt-5">
+			<section className="section-y border-border surface-sunken border-y">
+				<div className="container-shell grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)]">
+					<div className="section-head">
+						<p className="spec-label">Frequently asked</p>
+						<h2 className="type-title">
 							Straight answers to common questions.
 						</h2>
-						<p className="type-lead mt-4">
+						<p className="type-lead">
 							Do not see your question? Call and talk to someone who understands
 							the work.
 						</p>
 						<a
-							className={cn(buttonVariants({ size: "lg" }), "mt-6")}
+							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
 							href={siteConfig.phoneHref}
 						>
-							<Phone />
+							<Phone aria-hidden="true" />
 							{siteConfig.phone}
 						</a>
 					</div>

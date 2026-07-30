@@ -20,32 +20,35 @@ export default function Error({
 
 	return (
 		<main
-			className="grid min-h-[65vh] place-items-center px-4 py-20"
+			className="container-shell grid min-h-[60vh] place-items-center py-[var(--space-section-y)]"
 			id="main-content"
 		>
-			<div className="max-w-xl text-center" role="alert">
-				<p className="type-eyebrow justify-center">Something went wrong</p>
-				<h1 className="type-title mt-4">We hit an unexpected error.</h1>
-				<p className="type-lead mt-5">
+			<div className="section-head max-w-xl text-center" role="alert">
+				<p className="spec-label spec-label-center">Something went wrong</p>
+				<h1 className="type-headline">We hit an unexpected error.</h1>
+				<p className="type-lead">
 					Try again, or head home and keep browsing. If this keeps happening,
 					give us a call and we will help.
 				</p>
-				<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+				<div className="flex flex-col justify-center gap-3 pt-3 sm:flex-row">
 					<button
-						className={cn(buttonVariants({ size: "lg" }), "gap-2")}
+						className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
 						onClick={reset}
 						type="button"
 					>
-						<RotateCcw className="size-4" />
+						<RotateCcw aria-hidden="true" />
 						Try again
 					</button>
 					<Link
-						className={buttonVariants({ variant: "outline", size: "lg" })}
+						className={cn(
+							buttonVariants({ variant: "outline", size: "lg" }),
+							"w-full sm:w-auto",
+						)}
 						href="/"
 						prefetch
 					>
-						<ArrowLeft />
-						Back Home
+						<ArrowLeft aria-hidden="true" />
+						Back home
 					</Link>
 				</div>
 			</div>
