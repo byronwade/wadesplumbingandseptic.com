@@ -115,7 +115,7 @@ Keep Your Septic System Running Smoothly
 
 Ensure the efficiency and longevity of your septic system with our professional pumping services in Santa Cruz County.
 
-[Call Us Now](tel:+18315555555) 
+[Call Us Now](tel:+18312254344) 
 
 ## Serving Santa Cruz County, CA
 

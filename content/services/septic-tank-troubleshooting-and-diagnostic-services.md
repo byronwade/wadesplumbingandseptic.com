@@ -67,7 +67,7 @@ Septic System Acting Up?
 
 Trust our certified professionals to quickly diagnose and resolve any septic issues, ensuring peace of mind for your home.
 
-[Call Us Today](tel:+18315556677) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
 
 ### Customer Trust and Satisfaction
 
