@@ -1,7 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 
-import { SiteHeaderNav } from "@/components/site-header-nav"
+import { StaticHeaderNav } from "@/components/static-header-nav"
 import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
@@ -29,13 +28,15 @@ export function SiteHeader() {
 						aria-label="Wade's Plumbing & Septic home"
 						prefetch
 					>
-						<Image
+						{/* Plain img: next/image client runtime is unused on the script-free homepage. */}
+						<img
 							alt="Wade's Plumbing & Septic logo"
 							className="size-10 shrink-0 rounded-md sm:size-11"
 							height={44}
-							priority
-							src="/images/brand/wades-mark-sm.webp"
 							width={44}
+							decoding="async"
+							fetchPriority="low"
+							src="/images/brand/wades-mark-sm.webp"
 						/>
 						<span className="leading-none">
 							<span className="font-display block truncate text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
@@ -47,7 +48,7 @@ export function SiteHeader() {
 						</span>
 					</Link>
 
-					<SiteHeaderNav />
+					<StaticHeaderNav />
 				</div>
 			</div>
 		</header>

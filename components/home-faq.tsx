@@ -1,25 +1,32 @@
-"use client"
-
-import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/components/ui/accordion"
-
+/**
+ * Server-rendered FAQ. Radix accordion was a client island on the homepage
+ * and pulled hydration into the LCP critical path under Lantern Slow 4G.
+ */
 export function HomeFaq({
 	faqs,
 }: {
 	faqs: Array<{ question: string; answer: string }>
 }) {
 	return (
-		<Accordion type="single" collapsible>
-			{faqs.map((faq, index) => (
-				<AccordionItem key={faq.question} value={`faq-${index}`}>
-					<AccordionTrigger>{faq.question}</AccordionTrigger>
-					<AccordionContent>{faq.answer}</AccordionContent>
-				</AccordionItem>
+		<div className="divide-border border-border divide-y rounded-xl border">
+			{faqs.map((faq) => (
+				<details className="group px-5 py-1" key={faq.question}>
+					<summary className="cursor-pointer list-none py-4 text-sm font-bold tracking-[-0.02em] outline-none marker:content-none [&::-webkit-details-marker]:hidden">
+						<span className="flex items-center justify-between gap-4">
+							{faq.question}
+							<span
+								aria-hidden="true"
+								className="text-muted-foreground text-lg leading-none transition group-open:rotate-45"
+							>
+								+
+							</span>
+						</span>
+					</summary>
+					<p className="text-muted-foreground pb-4 text-sm leading-relaxed">
+						{faq.answer}
+					</p>
+				</details>
 			))}
-		</Accordion>
+		</div>
 	)
 }
