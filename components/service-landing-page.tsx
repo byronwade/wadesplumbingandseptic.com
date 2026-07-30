@@ -6,8 +6,10 @@ import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
+import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSections } from "@/components/related-content"
 import type { ContentDocument } from "@/lib/content"
+import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { breadcrumbJsonLd } from "@/lib/seo"
@@ -23,9 +25,11 @@ const promises = [
 export function ServiceLandingPage({
 	service,
 	related,
+	viewStats,
 }: {
 	service: ContentDocument
 	related?: RelatedContent
+	viewStats?: PageViewStats
 }) {
 	const image = getServiceImage(service.category, service.image)
 	const schema = {
@@ -79,6 +83,27 @@ export function ServiceLandingPage({
 				</article>
 
 				<aside className="space-y-[var(--space-grid)] lg:sticky lg:top-[var(--header-offset)] lg:self-start">
+					{viewStats ? (
+						<div className="border-border bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)] rounded-lg border p-[var(--space-card)] shadow-[var(--shadow-edge)]">
+							<p className="spec-label">Page interest</p>
+							<p className="type-title mt-3 text-[1.35rem]">
+								Homeowners check this service
+							</p>
+							<div className="mt-4">
+								{viewStats.unique > 0 || viewStats.views > 0 ? (
+									<PageViewsStat
+										totalViews={viewStats.views}
+										trendingScore={viewStats.trending}
+										uniqueViews={viewStats.unique}
+									/>
+								) : (
+									<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+										New on the site · your visit counts
+									</p>
+								)}
+							</div>
+						</div>
+					) : null}
 					<div className="surface-float rounded-xl p-[var(--space-card)]">
 						<p className="spec-label">Fast local response</p>
 						<ul className="text-on-dark-muted mt-5 space-y-0 text-sm">

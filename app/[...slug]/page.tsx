@@ -1,9 +1,16 @@
 import type { Metadata } from "next"
+import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import { ContentPage } from "@/components/content-page"
 import { getCollection, getDocument, getPageOrPost } from "@/lib/content"
+import {
+	getPageViewStoreCached,
+	getStatsForSlug,
+} from "@/lib/page-views"
+import { withRelatedViewStats } from "@/lib/page-views/attach-related"
+import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForPost, getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -48,7 +55,14 @@ async function RelatedMarkdownPage({
 	document: NonNullable<Awaited<ReturnType<typeof getPageOrPost>>>
 	isPost: boolean
 }) {
-	const related = isPost
+	await connection()
+	const today = utcDayNow()
+	const store = await getPageViewStoreCached()
+	const viewStats = isPost
+		? getStatsForSlug(store, "tip", document.slug, today)
+		: undefined
+
+	const relatedRaw = isPost
 		? await getRelatedForPost(document)
 		: document.slug.startsWith("service-area/")
 			? await getRelatedForTopic(
@@ -67,7 +81,18 @@ async function RelatedMarkdownPage({
 				)
 			: undefined
 
-	return <ContentPage document={document} isPost={isPost} related={related} />
+	const related = relatedRaw
+		? await withRelatedViewStats(relatedRaw)
+		: undefined
+
+	return (
+		<ContentPage
+			document={document}
+			isPost={isPost}
+			related={related}
+			viewStats={viewStats}
+		/>
+	)
 }
 
 export default async function MarkdownPage({

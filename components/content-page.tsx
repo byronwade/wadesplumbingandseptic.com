@@ -1,6 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -12,16 +13,19 @@ import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
+import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSections } from "@/components/related-content"
 
 export function ContentPage({
 	document,
 	isPost = false,
 	related,
+	viewStats,
 }: {
 	document: ContentDocument
 	isPost?: boolean
 	related?: RelatedContent
+	viewStats?: PageViewStats
 }) {
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
@@ -54,19 +58,40 @@ export function ContentPage({
 			    template share one measurement (they were 20rem and 21rem). */}
 			<article className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
 				<div className="min-w-0">
-					{isPost && document.date ? (
-						<p className="type-meta border-border mb-8 border-b pb-5 font-bold">
-							Published{" "}
-							<time dateTime={document.date}>
-								{new Intl.DateTimeFormat("en-US", {
-									year: "numeric",
-									month: "long",
-									day: "numeric",
-									timeZone: "UTC",
-								}).format(new Date(`${document.date}T00:00:00Z`))}
-							</time>
-							{document.updated ? ` · Updated ${document.updated}` : null}
-						</p>
+					{isPost ? (
+						<div className="border-border mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
+							{document.date ? (
+								<p className="type-meta font-bold">
+									Published{" "}
+									<time dateTime={document.date}>
+										{new Intl.DateTimeFormat("en-US", {
+											year: "numeric",
+											month: "long",
+											day: "numeric",
+											timeZone: "UTC",
+										}).format(new Date(`${document.date}T00:00:00Z`))}
+									</time>
+									{document.updated
+										? ` · Updated ${document.updated}`
+										: null}
+								</p>
+							) : (
+								<span />
+							)}
+							{viewStats ? (
+								viewStats.unique > 0 || viewStats.views > 0 ? (
+									<PageViewsStat
+										totalViews={viewStats.views}
+										trendingScore={viewStats.trending}
+										uniqueViews={viewStats.unique}
+									/>
+								) : (
+									<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+										New guide · your visit counts
+									</p>
+								)
+							) : null}
+						</div>
 					) : null}
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />

@@ -1,20 +1,12 @@
 "use client"
 
 import type { Route } from "next"
-import Image from "next/image"
-import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ArrowLeft, ArrowRight, CalendarDays } from "@/components/icons"
+import { ArrowLeft, ArrowRight } from "@/components/icons"
 import { startTransition, useEffect, useMemo } from "react"
 
+import { ContentCard } from "@/components/content-card"
 import { buttonVariants } from "@/components/ui/button"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
 import {
 	type ArchiveItem,
 	buildArchiveFilters,
@@ -27,7 +19,6 @@ import {
 	type ArchiveSort,
 	type RankedArchiveItem,
 } from "@/lib/page-views/ranking"
-import { getServiceImage } from "@/lib/service-images"
 import { cn } from "@/lib/utils"
 
 const SORT_OPTIONS: Array<{ value: ArchiveSort; label: string }> = [
@@ -89,92 +80,6 @@ function FilterChip({
 				{count}
 			</span>
 		</button>
-	)
-}
-
-function formatUniqueViews(count: number | undefined) {
-	if (!count || count < 1) return null
-	return new Intl.NumberFormat("en-US").format(count)
-}
-
-function ArchiveCard({
-	item,
-	variant,
-}: {
-	item: ArchiveItem
-	variant: "service" | "tip"
-}) {
-	const image =
-		variant === "service"
-			? getServiceImage(item.category, item.image)
-			: (item.image ?? "/images/work/precision-valve-installation.webp")
-	const uniqueLabel = formatUniqueViews(item.uniqueViews)
-
-	/*
-	 * .card-rail makes this a flex column and pins .card-body to the bottom, so
-	 * the action links line up across a row. Padding and title size come from the
-	 * card's own container width - see `@container card` in globals.css.
-	 */
-	return (
-		<Card className="group hover:border-border-strong h-full overflow-hidden transition-colors duration-200">
-			<Link
-				aria-label={
-					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
-				}
-				className="bg-muted relative block aspect-16/9 overflow-hidden"
-				href={item.href as Route}
-				prefetch={false}
-				tabIndex={-1}
-			>
-				<Image
-					alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
-					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-					fill
-					quality={60}
-					sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-					src={image}
-				/>
-			</Link>
-			<CardHeader>
-				<p className="spec-tag">{item.category}</p>
-				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
-					<Link href={item.href as Route} prefetch={false}>
-						{item.title}
-					</Link>
-				</CardTitle>
-				<CardDescription>{item.description}</CardDescription>
-			</CardHeader>
-			<CardContent className="flex flex-col items-start justify-end gap-3">
-				<div className="type-meta flex flex-wrap items-center gap-x-3 gap-y-1 font-bold">
-					{variant === "tip" && item.date ? (
-						<p className="inline-flex items-center gap-2">
-							<CalendarDays
-								aria-hidden="true"
-								className="text-primary size-4 shrink-0"
-							/>
-							{item.date}
-						</p>
-					) : null}
-					{uniqueLabel ? (
-						<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
-							{uniqueLabel} unique{" "}
-							{item.uniqueViews === 1 ? "view" : "views"}
-						</p>
-					) : null}
-				</div>
-				<Link
-					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
-					href={item.href as Route}
-					prefetch={false}
-				>
-					{variant === "service" ? "Learn more" : "Read guide"}
-					<ArrowRight
-						aria-hidden="true"
-						className="size-4 transition-transform group-hover:translate-x-1"
-					/>
-				</Link>
-			</CardContent>
-		</Card>
 	)
 }
 
@@ -359,7 +264,12 @@ export function FilterableArchive({
 			{pageItems.length ? (
 				<div className="card-rail defer-paint">
 					{pageItems.map((item) => (
-						<ArchiveCard item={item} key={item.slug} variant={variant} />
+						<ContentCard
+							item={item}
+							key={item.slug}
+							preferTrending={activeSort === "trending"}
+							variant={variant}
+						/>
 					))}
 				</div>
 			) : (

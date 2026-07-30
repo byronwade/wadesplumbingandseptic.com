@@ -1,9 +1,16 @@
 import type { Metadata } from "next"
+import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
 import { ServiceLandingPage } from "@/components/service-landing-page"
 import { getCollection, getDocument } from "@/lib/content"
+import {
+	getPageViewStoreCached,
+	getStatsForSlug,
+} from "@/lib/page-views"
+import { withRelatedViewStats } from "@/lib/page-views/attach-related"
+import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForService } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { buildPageMetadata } from "@/lib/seo"
@@ -36,8 +43,21 @@ async function RelatedServicePage({
 }: {
 	service: NonNullable<Awaited<ReturnType<typeof getDocument>>>
 }) {
-	const related = await getRelatedForService(service)
-	return <ServiceLandingPage related={related} service={service} />
+	await connection()
+	const today = utcDayNow()
+	const [related, store] = await Promise.all([
+		getRelatedForService(service),
+		getPageViewStoreCached(),
+	])
+	const viewStats = getStatsForSlug(store, "service", service.slug, today)
+	const relatedWithStats = await withRelatedViewStats(related)
+	return (
+		<ServiceLandingPage
+			related={relatedWithStats}
+			service={service}
+			viewStats={viewStats}
+		/>
+	)
 }
 
 export default async function ServiceOfferingPage({

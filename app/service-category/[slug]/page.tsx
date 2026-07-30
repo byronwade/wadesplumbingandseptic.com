@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { connection } from "next/server"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -8,6 +9,10 @@ import { FilterableArchive } from "@/components/filterable-archive"
 import { RelatedContentSections } from "@/components/related-content"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
+import { getPageViewStoreCached } from "@/lib/page-views"
+import { withRelatedViewStats } from "@/lib/page-views/attach-related"
+import { attachViewStats } from "@/lib/page-views/ranking"
+import { utcDayNow } from "@/lib/page-views/stats"
 import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -92,6 +97,44 @@ export async function generateMetadata({
 	})
 }
 
+async function RankedCategoryArchive({
+	label,
+	contentCategory,
+	services,
+}: {
+	label: string
+	contentCategory: string
+	services: Awaited<ReturnType<typeof getCollection>>
+}) {
+	await connection()
+	const today = utcDayNow()
+	const store = await getPageViewStoreCached()
+	const items = attachViewStats(
+		services.map((service) =>
+			toArchiveItem(
+				service,
+				`/service-offerings/${service.slug}`,
+				service.category ?? contentCategory,
+			),
+		),
+		store,
+		"service",
+		today,
+	)
+
+	return (
+		<FilterableArchive
+			allLabel={`${label} services`}
+			emptyLabel="No services in this category."
+			items={items}
+			noun={{ singular: "service", plural: "services" }}
+			pageSize={12}
+			showFilters={false}
+			variant="service"
+		/>
+	)
+}
+
 export default async function ServiceCategoryPage({
 	params,
 }: {
@@ -105,19 +148,21 @@ export default async function ServiceCategoryPage({
 	const services = (await getCollection("services")).filter(
 		(service) => service.category === category.contentCategory,
 	)
-	const related = await getRelatedForTopic(
-		{
-			label: category.label,
-			description: category.description,
-			categories: [category.contentCategory],
-			keywords: [
-				category.label,
-				category.contentCategory,
-				slug.replaceAll("-", " "),
-			],
-			excludeSlugs: services.map((service) => service.slug),
-		},
-		{ posts: 3, services: 3 },
+	const related = await withRelatedViewStats(
+		await getRelatedForTopic(
+			{
+				label: category.label,
+				description: category.description,
+				categories: [category.contentCategory],
+				keywords: [
+					category.label,
+					category.contentCategory,
+					slug.replaceAll("-", " "),
+				],
+				excludeSlugs: services.map((service) => service.slug),
+			},
+			{ posts: 3, services: 3 },
+		),
 	)
 
 	return (
@@ -137,20 +182,10 @@ export default async function ServiceCategoryPage({
 					</section>
 				}
 			>
-				<FilterableArchive
-					allLabel={`${category.label} services`}
-					emptyLabel="No services in this category."
-					items={services.map((service) =>
-						toArchiveItem(
-							service,
-							`/service-offerings/${service.slug}`,
-							service.category ?? category.contentCategory,
-						),
-					)}
-					noun={{ singular: "service", plural: "services" }}
-					pageSize={12}
-					showFilters={false}
-					variant="service"
+				<RankedCategoryArchive
+					contentCategory={category.contentCategory}
+					label={category.label}
+					services={services}
 				/>
 			</Suspense>
 			<RelatedContentSections

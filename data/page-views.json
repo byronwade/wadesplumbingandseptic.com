@@ -1,5 +1,90 @@
 {
 	"version": 1,
-	"updatedAt": null,
-	"pages": {}
+	"updatedAt": "2026-07-30T03:58:46.923Z",
+	"pages": {
+		"service:backflow-prevention-installation": {
+			"unique": 18,
+			"views": 40,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"service:backflow-prevention-testing": {
+			"unique": 25,
+			"views": 51,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"service:commercial-drain-cleaning": {
+			"unique": 32,
+			"views": 62,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"service:commercial-plumbing-maintenance": {
+			"unique": 39,
+			"views": 73,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"service:commercial-septic-services": {
+			"unique": 46,
+			"views": 84,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"service:drain-cleaning": {
+			"unique": 53,
+			"views": 95,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:5-signs-you-need-to-call-a-professional-plumber": {
+			"unique": 12,
+			"views": 25,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:5-types-of-toilets-how-to-choose-the-right-one-for-your-home": {
+			"unique": 21,
+			"views": 39,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:6-signs-you-have-a-hidden-water-leak": {
+			"unique": 30,
+			"views": 53,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county": {
+			"unique": 39,
+			"views": 67,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:efficient-water-filtration-santa-cruz": {
+			"unique": 48,
+			"views": 81,
+			"daily": {
+				"2026-07-30": 9
+			}
+		},
+		"tip:emergency-septic-solutions-santa-cruz": {
+			"unique": 57,
+			"views": 95,
+			"daily": {
+				"2026-07-30": 9
+			}
+		}
+	}
 }

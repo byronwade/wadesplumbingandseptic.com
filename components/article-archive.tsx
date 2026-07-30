@@ -1,3 +1,4 @@
+import { connection } from "next/server"
 import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
@@ -6,9 +7,45 @@ import { FilterableArchive } from "@/components/filterable-archive"
 import { RelatedContentSections } from "@/components/related-content"
 import { toArchiveItem } from "@/lib/archive"
 import type { ContentDocument } from "@/lib/content"
+import { getPageViewStoreCached } from "@/lib/page-views"
+import { withRelatedViewStats } from "@/lib/page-views/attach-related"
+import { attachViewStats } from "@/lib/page-views/ranking"
+import { utcDayNow } from "@/lib/page-views/stats"
 import type { RelatedContent } from "@/lib/related-content"
 
-export function ArticleArchive({
+async function RankedArticleArchive({
+	title,
+	posts,
+}: {
+	title: string
+	posts: ContentDocument[]
+}) {
+	await connection()
+	const today = utcDayNow()
+	const store = await getPageViewStoreCached()
+	const items = attachViewStats(
+		posts.map((post) =>
+			toArchiveItem(post, `/${post.slug}`, post.category ?? "Expert Tips"),
+		),
+		store,
+		"tip",
+		today,
+	)
+
+	return (
+		<FilterableArchive
+			allLabel={title}
+			emptyLabel="No guides in this category."
+			items={items}
+			noun={{ singular: "guide", plural: "guides" }}
+			pageSize={9}
+			showFilters={false}
+			variant="tip"
+		/>
+	)
+}
+
+export async function ArticleArchive({
 	title,
 	description,
 	posts,
@@ -19,9 +56,9 @@ export function ArticleArchive({
 	posts: ContentDocument[]
 	related?: RelatedContent
 }) {
-	const items = posts.map((post) =>
-		toArchiveItem(post, `/${post.slug}`, post.category ?? "Expert Tips"),
-	)
+	const relatedWithStats = related
+		? await withRelatedViewStats(related)
+		: undefined
 
 	return (
 		<main id="main-content">
@@ -40,20 +77,12 @@ export function ArticleArchive({
 					</section>
 				}
 			>
-				<FilterableArchive
-					allLabel={title}
-					emptyLabel="No guides in this category."
-					items={items}
-					noun={{ singular: "guide", plural: "guides" }}
-					pageSize={9}
-					showFilters={false}
-					variant="tip"
-				/>
+				<RankedArticleArchive posts={posts} title={title} />
 			</Suspense>
-			{related ? (
+			{relatedWithStats ? (
 				<RelatedContentSections
 					postsTitle="More related guides"
-					related={related}
+					related={relatedWithStats}
 					servicesTitle="Related services"
 				/>
 			) : null}
