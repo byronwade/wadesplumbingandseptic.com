@@ -12,7 +12,7 @@ eyebrow: Call or Text 831.225.4344
 
 ## Contact Wade's Plumbing & Septic
 
-Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Use the virtual business card above to save our number, email, address, and logo to your phone, or call and text from there. We confirm your address, triage the issue, and get you on the schedule.
+Need a plumber or septic tech in Santa Cruz County or nearby foothill communities? Call or text the number on the card above. We confirm your address, triage the issue, and get you on the schedule.
 
 ## Call or text
 
@@ -76,4 +76,4 @@ We confirm the address and issue when you book, arrive ready to diagnose, explai
 
 ### Can I save your contact on my phone?
 
-Yes. Tap Save to phone on the virtual business card. It opens a contact card with our logo, phone, email, address, website, and license notes so you can call us later without hunting for the number.
+Yes. Under the call and email actions on the card there is an optional “Save to contacts” link. It opens a contact card with our logo, phone, email, and address if you want the number handy later.

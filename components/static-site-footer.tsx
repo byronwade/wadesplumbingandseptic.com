@@ -34,39 +34,25 @@ const socialLinks = [
 export function StaticSiteFooter() {
 	return (
 		<footer className="bg-ink text-white">
+			{/*
+			  Single dial action. Do not stack the phone number, a Call button,
+			  and save-contact in the same strip — that reads as spammy on mobile.
+			*/}
 			<div className="bg-primary shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.18)]">
 				<div className="container-shell flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
-					<div>
-						<p className="font-mono text-[0.6875rem] font-semibold tracking-[0.14em] text-white/80 uppercase">
-							{siteConfig.hours}
-						</p>
-						<p className="type-subtitle mt-1 text-white">
-							<a
-								aria-label={`Call ${contactInfo.phoneDisplay}`}
-								className="hover:text-white inline-flex min-h-11 items-center text-inherit"
-								href={contactInfo.phoneHref}
-							>
-								{contactInfo.phoneDisplay}
-							</a>
-						</p>
-					</div>
-					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
-						<a
-							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
-								"bg-white text-ink hover:bg-white/90 inline-flex w-full gap-2 sm:w-auto",
-							)}
-							href={contactInfo.phoneHref}
-						>
-							Call {contactInfo.phoneDisplay}
-						</a>
-						<a
-							className="text-center text-sm font-bold text-white/85 underline-offset-2 hover:text-white hover:underline sm:text-right"
-							href={contactInfo.vcardPath}
-						>
-							Save to contacts
-						</a>
-					</div>
+					<p className="font-mono text-[0.6875rem] font-semibold tracking-[0.14em] text-white/80 uppercase">
+						{siteConfig.hours}
+					</p>
+					<a
+						aria-label={`Call ${contactInfo.phoneDisplay}`}
+						className={cn(
+							buttonVariants({ variant: "inverse", size: "lg" }),
+							"bg-white text-ink hover:bg-white/90 inline-flex w-full gap-2 sm:w-auto",
+						)}
+						href={contactInfo.phoneHref}
+					>
+						Call {contactInfo.phoneDisplay}
+					</a>
 				</div>
 			</div>
 
