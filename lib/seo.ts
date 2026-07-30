@@ -270,6 +270,54 @@ export function serviceAreaJsonLd(
 	}
 }
 
+export function definedTermJsonLd({
+	name,
+	description,
+	url,
+	inDefinedTermSet,
+}: {
+	name: string
+	description: string
+	url: string
+	inDefinedTermSet: string
+}) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "DefinedTerm",
+		name,
+		description,
+		url: absoluteUrl(url),
+		inDefinedTermSet: absoluteUrl(inDefinedTermSet),
+	}
+}
+
+export function definedTermSetJsonLd({
+	name,
+	description,
+	url,
+	terms,
+}: {
+	name: string
+	description: string
+	url: string
+	terms: Array<{ name: string; description: string; url: string }>
+}) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "DefinedTermSet",
+		name,
+		description,
+		url: absoluteUrl(url),
+		hasDefinedTerm: terms.map((term) => ({
+			"@type": "DefinedTerm",
+			name: term.name,
+			description: term.description,
+			url: absoluteUrl(term.url),
+			inDefinedTermSet: absoluteUrl(url),
+		})),
+	}
+}
+
 /** Best-effort city label from service-area slug or title. */
 export function cityNameFromServiceArea(document: ContentDocument) {
 	const fromSlug = document.slug

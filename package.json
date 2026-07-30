@@ -13,6 +13,7 @@
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"ci:content": "node scripts/ci/validate-content.mjs",
+		"ci:glossary": "node scripts/ci/validate-glossary.mjs",
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
 		"ci:search": "npx --yes tsx scripts/ci/test-search.ts",
 		"ci:archive": "npx --yes tsx scripts/ci/test-archive.ts",
@@ -21,7 +22,7 @@
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
 		"migrate:wordpress": "python3 -u scripts/migrate-from-wordpress-csv.py",
 		"migrate:wordpress-images": "python3 -u scripts/migrate-wordpress-images.py",
-		"check": "npm run lint && npm run typecheck && npm run format:check && npm run ci:search && npm run ci:archive && npm run ci:related && npm run ci:sitemap && npm run build",
+		"check": "npm run lint && npm run typecheck && npm run format:check && npm run ci:glossary && npm run ci:search && npm run ci:archive && npm run ci:related && npm run ci:sitemap && npm run build",
 		"seo:hygiene": "node scripts/seo/fix-content-hygiene.mjs"
 	},
 	"dependencies": {

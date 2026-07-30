@@ -8,6 +8,7 @@ import {
 	taxonomySlug,
 	type ContentDocument,
 } from "@/lib/content"
+import { getAllGlossaryEntries } from "@/lib/glossary"
 import { postCategoryAliases } from "@/lib/post-categories"
 import { absoluteUrl } from "@/lib/seo"
 import {
@@ -55,7 +56,9 @@ const PATH_PRIORITY: Record<string, number> = {
 	"/careers": 0.65,
 	"/maintenance-guide": 0.65,
 	"/septic-solutions": 0.7,
-	"/glossary": 0.55,
+	"/glossary": 0.8,
+	"/glossary/plumbing": 0.72,
+	"/glossary/septic": 0.72,
 }
 
 const PATH_CHANGE_FREQUENCY: Record<string, ChangeFrequency> = {
@@ -294,6 +297,26 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 			pathname: `/tag/${slug}`,
 			priority: 0.45,
 			lastModified: maxTimestamp(taggedPosts.map(contentLastModified)),
+		})
+	}
+
+	upsertEntry(entries, {
+		pathname: "/glossary/plumbing",
+		priority: 0.72,
+		changeFrequency: "monthly",
+	})
+	upsertEntry(entries, {
+		pathname: "/glossary/septic",
+		priority: 0.72,
+		changeFrequency: "monthly",
+	})
+
+	const glossaryEntries = await getAllGlossaryEntries()
+	for (const { topic, term } of glossaryEntries) {
+		upsertEntry(entries, {
+			pathname: `/glossary/${topic}/${term.slug}`,
+			priority: 0.65,
+			changeFrequency: "monthly",
 		})
 	}
 

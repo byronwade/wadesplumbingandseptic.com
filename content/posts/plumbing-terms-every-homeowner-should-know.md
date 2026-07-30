@@ -107,7 +107,7 @@ Santa Cruz County Septic Experts
 
 ## Act Now for Reliable Septic Solutions
 
-Understanding plumbing terms is crucial for effective home maintenance in Santa Cruz County, CA.
+Understanding plumbing terms is crucial for effective home maintenance in Santa Cruz County, CA. For a fuller A to Z reference, browse Wade's [plumbing glossary](/glossary/plumbing) and [septic glossary](/glossary/septic).
 
 ## Frequently Asked Questions
 
