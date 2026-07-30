@@ -132,12 +132,12 @@ Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County with 
 
 ★★★★★ 5-star rating from satisfied customers throughout Santa Cruz County, CA
 
-"Wade's Plumbing & Septic made the entire process stress-free. Highly recommend!" - Sarah, Capitola
+"Wade's Plumbing & Septic made the entire process stress-free. Highly recommend!" (Sarah, Capitola)
 
-"Fast, reliable, and professional service every time. My go-to for septic maintenance." - Mike, Watsonville
+"Fast, reliable, and professional service every time. My go-to for septic maintenance." (Mike, Watsonville)
 
-"Exceptional service and attention to detail. Never had a better experience!" - Laura, Santa Cruz
+"Exceptional service and attention to detail. Never had a better experience!" (Laura, Santa Cruz)
 
 Licensed Contractor: C-42
 
-Fast-response guarantee: Available 7 days a week, 8 AM - 6 PM
+Fast-response guarantee: Available 7 days a week, 8 AM to 6 PM

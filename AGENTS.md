@@ -2,20 +2,41 @@
 
 Rules for coding agents working in this repository.
 
-## Typography: no em dashes
+## Typography: no dash punctuation
 
-**Never use the em dash character (Unicode U+2014) in any content.**
+**Never use dashes as punctuation in user-facing copy.**
+
+Banned characters and patterns:
+
+- Em dash (Unicode U+2014), including `&mdash;` and `&#8212;`
+- En dash (Unicode U+2013), including `&ndash;` and `&#8211;`
+- Spaced hyphen asides: ` - ` (space, hyphen, space) used like a dash
 
 This includes:
 
 - Markdown under `content/` (pages, posts, services)
 - UI copy in `app/`, `components/`, and `lib/`
 - Meta descriptions, titles, alt text, and JSON-LD strings
-- README and other docs meant for humans
-- Generated GeoJSON / data strings shown to users
+- GeoJSON / data strings shown to users
 
-Use a normal hyphen with spaces (` - `), a comma, a colon, or a new sentence instead.
+### Use real punctuation instead
 
-Also avoid HTML entities that render as an em dash (`&mdash;`, `&#8212;`).
+| Instead of | Prefer |
+| --- | --- |
+| `work - steep slopes - that is` | `work (steep slopes), that is` |
+| `property - and most of it` | `property, and most of it` |
+| `suddenly - they build` | `suddenly. They build` |
+| `Call to Schedule - 831…` | `Call to Schedule: 831…` |
+| `Monday - Friday` / `Monday–Friday` | `Monday to Friday` or `Monday through Friday` |
+| `9am - 5pm` / `9am–5pm` | `9am to 5pm` |
+| `3–5 years` | `3 to 5 years` |
+| `"Great work!" - Sarah, Aptos` | `"Great work!" (Sarah, Aptos)` |
 
-CI validates markdown under `content/` and fails if an em dash is present.
+### Still allowed
+
+- Compound words and hyphenated modifiers with **no spaces**: `family-owned`, `well-fed`, `drain-field`
+- Markdown list markers: `- item`
+- Frontmatter fences: `---`
+- Mathematical minus in code: `a - b`
+
+CI validates markdown under `content/` and fails if banned dash punctuation is present.

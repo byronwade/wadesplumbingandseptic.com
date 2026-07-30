@@ -1,19 +1,19 @@
 ---
 title: Freedom, CA Plumbing & Septic Services
-description: Plumbing and septic service in Freedom, CA - ag lands, rural lots, and Freedom Blvd corridor. Wade's serves south Santa Cruz County. Call 831.225.4344.
+description: 'Plumbing and septic service in Freedom, CA: ag lands, rural lots, and Freedom Blvd corridor. Wade''s serves south Santa Cruz County. Call 831.225.4344.'
 eyebrow: Freedom, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural south Santa Cruz County landscape near Freedom, California
 ---
 
-Freedom sits in the heart of south Santa Cruz County farm country - flat Pajaro Valley bottomlands mixed with older residential pockets along Freedom Boulevard and scattered rural parcels west toward the foothills. Most properties here are not on municipal sewer. Wells, septic systems, and agricultural water lines are everyday infrastructure, and when something fails, you need a crew that understands how this corridor actually works.
+Freedom sits in the heart of south Santa Cruz County farm country, flat Pajaro Valley bottomlands mixed with older residential pockets along Freedom Boulevard and scattered rural parcels west toward the foothills. Most properties here are not on municipal sewer. Wells, septic systems, and agricultural water lines are everyday infrastructure, and when something fails, you need a crew that understands how this corridor actually works.
 
 Wade's Plumbing & Septic serves Freedom homeowners, renters, and small commercial properties throughout Santa Cruz County. We diagnose problems on-site, explain what we find in plain language, and complete repairs without upselling work you do not need.
 
 ## Plumbing services in Freedom
 
-Freedom homes range from mid-century ranch houses near the Watsonville border to farmworker housing, small shops, and larger acreage with outbuildings. That variety means plumbing problems show up in different forms - galvanized supply lines corroding in older walls, irrigation cross-connections affecting domestic water, or guest-unit plumbing added without proper venting.
+Freedom homes range from mid-century ranch houses near the Watsonville border to farmworker housing, small shops, and larger acreage with outbuildings. That variety means plumbing problems show up in different forms, galvanized supply lines corroding in older walls, irrigation cross-connections affecting domestic water, or guest-unit plumbing added without proper venting.
 
 We regularly help Freedom customers with:
 
@@ -24,7 +24,7 @@ We regularly help Freedom customers with:
 - Re-piping sections of aging copper or galvanized pipe
 - Backflow and hose-bib issues tied to yard irrigation or ag-adjacent plumbing
 
-Because many Freedom properties rely on private wells, we pay attention to pressure fluctuations, sediment in lines, and how pump cycling affects fixtures - symptoms that look like a plumbing problem but sometimes trace back to the well system.
+Because many Freedom properties rely on private wells, we pay attention to pressure fluctuations, sediment in lines, and how pump cycling affects fixtures, symptoms that look like a plumbing problem but sometimes trace back to the well system.
 
 ## Septic services in Freedom
 
@@ -46,7 +46,7 @@ Freedom's mix of agricultural zoning and residential use creates specific challe
 
 Hard water from local wells is common, which accelerates scale buildup in water heaters and fixtures. Tree roots from windbreak plantings and orchard edges occasionally invade sewer laterals and septic lines on larger lots.
 
-We factor these conditions into every Freedom service call - not generic advice, but recommendations shaped by what we see in south county every week.
+We factor these conditions into every Freedom service call, not generic advice, but recommendations shaped by what we see in south county every week.
 
 ## Schedule service in Freedom
 

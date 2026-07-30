@@ -113,11 +113,11 @@ Gain peace of mind with our thorough drain inspections, ensuring optimal perform
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic provided a thorough drain inspection and saved us from a potential disaster. Highly recommend!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided a thorough drain inspection and saved us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz)
 
-"The team was professional and efficient. Our drains are now running smoothly thanks to their expert service." - Tom, Watsonville
+"The team was professional and efficient. Our drains are now running smoothly thanks to their expert service." (Tom, Watsonville)
 
-"Quick response and excellent service. Wade's Plumbing & Septic is my go-to for any plumbing needs!" - Lisa, Capitola
+"Quick response and excellent service. Wade's Plumbing & Septic is my go-to for any plumbing needs!" (Lisa, Capitola)
 
 Licensed Contractor: C-42
 

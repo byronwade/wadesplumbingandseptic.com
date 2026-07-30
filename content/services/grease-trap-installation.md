@@ -91,4 +91,4 @@ Our grease trap installation services are trusted by businesses across Santa Cru
 
 Licensed Contractor: C-42 for California
 
-Fast-Response Guarantee: Available Monday to Friday, 8 AM - 6 PM
+Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

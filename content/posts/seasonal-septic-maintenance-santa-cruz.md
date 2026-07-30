@@ -77,7 +77,7 @@ When selecting a service provider for your septic maintenance, consider local ex
 
 ## Sources & Local References
 
-- [Santa Cruz County opens seasonal groundwater testing window - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
+- [Santa Cruz County opens seasonal groundwater testing window, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
 - [Reference from news.google.com](https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHl)
 
 ## Seasonal Tip

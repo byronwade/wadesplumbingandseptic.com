@@ -56,7 +56,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area,
 
 Our contractor license information: C-42 license for California.
 
-Office Hours: Monday to Friday, 9am – 5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 
@@ -74,11 +74,11 @@ Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cru
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic made the process smooth and stress-free. Highly recommend!" - Emily, Santa Cruz
+"Wade's Plumbing & Septic made the process smooth and stress-free. Highly recommend!" (Emily, Santa Cruz)
 
-"Professional and efficient service. Couldn't be happier with the results." - John, Watsonville
+"Professional and efficient service. Couldn't be happier with the results." (John, Watsonville)
 
-"The team was knowledgeable and courteous, ensuring everything was handled properly." - Sarah, Capitola
+"The team was knowledgeable and courteous, ensuring everything was handled properly." (Sarah, Capitola)
 
 Licensed Contractor: C-42 License for California
 

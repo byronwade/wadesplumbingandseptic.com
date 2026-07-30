@@ -74,4 +74,4 @@ Protect Your Home
 
 Ensure your Santa Cruz County home stays dry and safe with our reliable sump pump installation services.
 
-[Call Us Today](tel:+18315551234) [Get a Free Quote What Our Customers Say ★★★★★ 5-Star Rated Service "Wade's team installed our sump pump quickly and efficiently. No more flooding worries!" – Sarah, Santa Cruz "Professional service and great advice on maintaining our new sump pump." – Tom, Aptos "Fast and reliable installation. Highly recommend Wade's Plumbing & Septic!" – Emily, Watsonville Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/)
+[Call Us Today](tel:+18315551234) [Get a Free Quote What Our Customers Say ★★★★★ 5-Star Rated Service "Wade's team installed our sump pump quickly and efficiently. No more flooding worries!" (Sarah, Santa Cruz "Professional service and great advice on maintaining our new sump pump."), Tom, Aptos "Fast and reliable installation. Highly recommend Wade's Plumbing & Septic!" (Emily, Watsonville Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))

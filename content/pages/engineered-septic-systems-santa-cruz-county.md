@@ -1,11 +1,11 @@
 ---
 
-title: Engineered Septic Systems - Santa Cruz County
+title: Engineered Septic Systems, Santa Cruz County
 description: Engineered septic landing page for advanced system installs and high-value
  replacements.
 order: 50
 image: /images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp
-imageAlt: "Engineered Septic Systems - Santa Cruz County"
+imageAlt: "Engineered Septic Systems, Santa Cruz County"
 gallery:
 - src: /images/work/engineered-retaining-wall.webp
   alt: Retaining wall and advanced septic controls

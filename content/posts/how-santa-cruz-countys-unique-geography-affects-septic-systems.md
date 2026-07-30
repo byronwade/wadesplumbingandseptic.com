@@ -86,7 +86,7 @@ At Wade's Plumbing & Septic, we proudly provide efficient septic solutions to th
 
 Our team holds a C-42 contractor license for California, ensuring you receive expert and compliant service every time.
 
-Office Hours: Monday to Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available for urgent septic issues
 
@@ -102,11 +102,11 @@ Ensure your septic system operates smoothly with our expert solutions.
 
 ### What Our Customers Say
 
-"Wade's Plumbing & Septic provided excellent service and solved our septic issues quickly. Highly recommend!" – Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided excellent service and solved our septic issues quickly. Highly recommend!" (Sarah, Santa Cruz)
 
-"Professional and reliable. They really know their stuff when it comes to septic systems." – Mike, Watsonville
+"Professional and reliable. They really know their stuff when it comes to septic systems." (Mike, Watsonville)
 
-"Fast and efficient service. Our septic system has never worked better!" – Emily, Scotts Valley
+"Fast and efficient service. Our septic system has never worked better!" (Emily, Scotts Valley)
 
 ★★★★★ 5-Star Rating 
 

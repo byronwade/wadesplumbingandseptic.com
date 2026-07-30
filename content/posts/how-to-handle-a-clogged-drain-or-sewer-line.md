@@ -32,7 +32,7 @@ These symptoms usually indicate a developing clog in one of three areas: directl
 
 Basic Cleaning Methods
 
-If the clog is close to the fixture, you might be able to clear it using a plunger or a mild, non-corrosive drain cleaner. Avoid harsh chemicals - they can corrode your pipes and pose health risks.
+If the clog is close to the fixture, you might be able to clear it using a plunger or a mild, non-corrosive drain cleaner. Avoid harsh chemicals. They can corrode your pipes and pose health risks.
 
 For deeper blockages, a drain snake or auger may be necessary. Instead of using low-quality versions from the store, consider renting professional-grade tools from your local hardware shop. Or, for guaranteed results, hire a certified plumber to clear the line effectively.
 
@@ -53,7 +53,7 @@ If you want to attempt main drain cleaning yourself, gather the following tools 
 Step-by-Step Cleaning Process
 
  1. Locate and Open the Cleanout Pipe 
-Look for a short pipe with a cap - usually found in the yard or basement. This gives you access to the sewer line. Open the cap slowly and cautiously, allowing any backed-up wastewater to drain. Be prepared for potential spray or overflow.
+Look for a short pipe with a cap, usually found in the yard or basement. This gives you access to the sewer line. Open the cap slowly and cautiously, allowing any backed-up wastewater to drain. Be prepared for potential spray or overflow.
  2. Use the Drain Snake or Auger 
 Once the water subsides, feed the auger into the pipe. Follow the instructions specific to your equipment. Continue until the resistance disappears, indicating that the blockage has cleared. Keep the auger running for a few more minutes to break up any lingering debris.
  3. Flush With Water 
@@ -61,7 +61,7 @@ With the auger still in the pipe, run water through the system using your hose. 
 
 Still Dealing With a Clog? Let the Experts Handle It
 
-If the drainage hasn’t improved after your cleaning efforts, it may be time to call in professionals. At Wade’s Plumbing & Septic, we offer advanced hydro jetting services that handle even the most stubborn blockages. Our expert technicians will restore your plumbing system quickly, safely, and efficiently - so you can enjoy smooth-flowing drains without the stress.
+If the drainage hasn’t improved after your cleaning efforts, it may be time to call in professionals. At Wade’s Plumbing & Septic, we offer advanced hydro jetting services that handle even the most stubborn blockages. Our expert technicians will restore your plumbing system quickly, safely, and efficiently, so you can enjoy smooth-flowing drains without the stress.
 
 Santa Cruz County Septic Experts
 

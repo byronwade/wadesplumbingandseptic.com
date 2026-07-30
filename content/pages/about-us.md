@@ -56,7 +56,7 @@ At Wade's Plumbing & Septic, we proudly serve the diverse communities of Santa C
 
 We hold a C-42 license for CA and a state license for GA, ensuring our services meet the highest standards of safety and professionalism.
 
-**Office Hours:** Monday–Friday, 9am–5pm
+**Office Hours:** Monday to Friday, 9am to 5pm
 
 **Emergency Line:** Available for emergencies
 

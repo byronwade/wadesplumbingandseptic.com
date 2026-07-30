@@ -64,11 +64,11 @@ Enhance your home's efficiency and compliance with our expert septic system upgr
 
 ★★★★★ 5-Star Rated Service
 
-"Wade's Plumbing & Septic transformed our septic system with efficiency and skill. Highly recommend!" - Sarah, Aptos
+"Wade's Plumbing & Septic transformed our septic system with efficiency and skill. Highly recommend!" (Sarah, Aptos)
 
-"The team was professional and knowledgeable throughout the entire upgrade process. Excellent service!" - Mark, Santa Cruz
+"The team was professional and knowledgeable throughout the entire upgrade process. Excellent service!" (Mark, Santa Cruz)
 
-"Fast, reliable, and top-notch quality. Couldn't be happier with the results." - Emily, Scotts Valley
+"Fast, reliable, and top-notch quality. Couldn't be happier with the results." (Emily, Scotts Valley)
 
 Licensed Contractor: C-42 License for California
 

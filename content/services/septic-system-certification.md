@@ -68,11 +68,11 @@ Ensure your septic system complies with local regulations and operates efficient
 
 ## Trusted by Santa Cruz County Residents for Septic Certification Compliance
 
-"Wade's Plumbing & Septic made the septic certification process a breeze. Highly recommend!" - Sarah, Aptos
+"Wade's Plumbing & Septic made the septic certification process a breeze. Highly recommend!" (Sarah, Aptos)
 
-"Professional and efficient service. They ensured our system met all the local regulations." - Mike, Santa Cruz
+"Professional and efficient service. They ensured our system met all the local regulations." (Mike, Santa Cruz)
 
-"Great experience with Wade's team. Fast and reliable service!" - Lisa, Watsonville
+"Great experience with Wade's team. Fast and reliable service!" (Lisa, Watsonville)
 
 ★★★★★ 5-Star Rating
 

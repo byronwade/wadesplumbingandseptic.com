@@ -235,7 +235,7 @@ export function ServiceAreasMap() {
 								<p className="text-primary text-sm font-bold tracking-normal">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
-										: "Selected coverage - confirm address"}
+										: "Selected coverage: confirm address"}
 								</p>
 								<p className="text-muted-foreground text-[0.95rem] leading-relaxed font-normal tracking-normal">
 									{selected.properties.description}
@@ -253,7 +253,7 @@ export function ServiceAreasMap() {
 						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
-					Service coverage - Santa Cruz County &amp; west foothills
+					Service coverage: Santa Cruz County &amp; west foothills
 				</li>
 				<li className="max-w-xl text-center text-sm font-medium leading-relaxed">
 					Approximate area including Los Gatos &amp; Saratoga; generally west of

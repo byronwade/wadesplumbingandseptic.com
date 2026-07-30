@@ -1,5 +1,5 @@
 ---
-title: Emergency Plumber Near You - Santa Cruz County
+title: Emergency Plumber Near You, Santa Cruz County
 description: Emergency plumbing landing page focused on immediate calls and rapid
  triage.
 order: 10
@@ -64,13 +64,13 @@ Wade's Plumbing & Septic offers reliable, efficient, and professional services b
 
 **Fast-Response Guarantee:** Available for emergencies
 
-"Wade's Plumbing saved us during a late-night leak. Truly the best in Santa Cruz!" - Sarah, Santa Cruz
+"Wade's Plumbing saved us during a late-night leak. Truly the best in Santa Cruz!" (Sarah, Santa Cruz)
 
-"Fast, reliable, and professional service. Highly recommend!" - Mike, Watsonville
+"Fast, reliable, and professional service. Highly recommend!" (Mike, Watsonville)
 
-"Excellent service and friendly staff. My go-to plumbers!" - Lisa, Scotts Valley
+"Excellent service and friendly staff. My go-to plumbers!" (Lisa, Scotts Valley)
 
-## Emergency Plumber Near You - Santa Cruz County
+## Emergency Plumber Near You, Santa Cruz County
 
 When plumbing emergencies strike, Wade's Plumbing & Septic is here to provide fast and reliable emergency plumbing services across Santa Cruz County, California. Our expert team is equipped to handle both residential and commercial plumbing issues, ensuring that your home or business is back to normal in no time. We proudly serve the following cities and communities:
 

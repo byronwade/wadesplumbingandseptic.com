@@ -42,7 +42,7 @@ If you find yourself repeatedly dealing with the same plumbing problem despite a
 
 ## When to Call Wade's Plumbing & Septic
 
-Our team of licensed professionals is available for emergency services and can handle everything from routine maintenance to complex repairs. Don't wait until a minor issue becomes a major problem - contact us at the first sign of these warning indicators.
+Our team of licensed professionals is available for emergency services and can handle everything from routine maintenance to complex repairs. Don't wait until a minor issue becomes a major problem, contact us at the first sign of these warning indicators.
 
 Remember, proper maintenance is the best way to avoid serious plumbing emergencies. Schedule regular inspections of your home's plumbing system to catch potential problems before they require expensive repairs.
 
@@ -96,12 +96,12 @@ Recognizing early warning signs can save you from costly repairs and ensure your
 
 **Testimonials:**
 
-> "Wade's Plumbing & Septic quickly identified and resolved our septic issue. Highly recommend!" - Sarah, Aptos
+> "Wade's Plumbing & Septic quickly identified and resolved our septic issue. Highly recommend!" (Sarah, Aptos)
 
-> "Professional and efficient service. Our septic system is running smoothly again thanks to Wade's!" - John, Watsonville
+> "Professional and efficient service. Our septic system is running smoothly again thanks to Wade's!" (John, Watsonville)
 
-> "Fast response and excellent service. Wade's team knows their stuff!" - Emma, Santa Cruz
+> "Fast response and excellent service. Wade's team knows their stuff!" (Emma, Santa Cruz)
 
 **Licensed Contractor:** C-42 License for California
 
-**Fast-Response Guarantee:** Available for service calls Monday to Friday, 8 AM - 6 PM
+**Fast-Response Guarantee:** Available for service calls Monday to Friday, 8 AM to 6 PM

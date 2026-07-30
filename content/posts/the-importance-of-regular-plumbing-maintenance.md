@@ -20,7 +20,7 @@ imageAlt: "Ensure Reliable Plumbing with Regular Maintenance in Santa Cruz Count
 
 ![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
 
-At Wade’s Plumbing & Septic, we provide reliable plumbing inspections and preventive maintenance services for homeowners and businesses across Santa Cruz County. Here’s why routine maintenance is essential - and how it can save you time, money, and frustration in the long run.
+At Wade’s Plumbing & Septic, we provide reliable plumbing inspections and preventive maintenance services for homeowners and businesses across Santa Cruz County. Here’s why routine maintenance is essential, and how it can save you time, money, and frustration in the long run.
 
 **6 Major Benefits of Plumbing Maintenance**
 
@@ -28,13 +28,13 @@ At Wade’s Plumbing & Septic, we provide reliable plumbing inspections and prev
 
 **Save Water, Save Money**
 
-Even a small leak can waste up to 10,000 gallons of water per year, driving up your utility bills and stressing your plumbing system. Regular inspections help identify leaks early - before they become costly problems.
+Even a small leak can waste up to 10,000 gallons of water per year, driving up your utility bills and stressing your plumbing system. Regular inspections help identify leaks early, before they become costly problems.
 
 **2.**
 
 **Extend the Life of Your Plumbing System**
 
-Your plumbing system is a long-term investment. By maintaining it regularly - flushing water heaters, inspecting pipe joints, testing pressure - you can significantly prolong its lifespan and avoid premature replacement.
+Your plumbing system is a long-term investment. By maintaining it regularly (flushing water heaters, inspecting pipe joints, testing pressure), you can significantly prolong its lifespan and avoid premature replacement.
 
 **3.**
 
@@ -46,7 +46,7 @@ Slow leaks, corroded pipes, or sewer backups can lead to water damage, mold grow
 
 **Improve Plumbing Performance**
 
-Routine cleaning and adjustments keep everything flowing properly. With clear drains, properly functioning fixtures, and optimal water pressure, your system works better - and you notice the difference every day.
+Routine cleaning and adjustments keep everything flowing properly. With clear drains, properly functioning fixtures, and optimal water pressure, your system works better, and you notice the difference every day.
 
 **5.**
 
@@ -80,7 +80,7 @@ Additionally, services like water heater flushing, drain cleaning, and sewer cam
 
 We’ve been trusted by families and businesses across Santa Cruz, Capitola, Soquel, Aptos, and Watsonville for decades. Our skilled team uses advanced diagnostics, professional-grade tools, and deep plumbing experience to catch small problems before they become big ones.
 
-Some plumbing issues - like slow leaks, hairline cracks, or internal corrosion - aren’t visible to the naked eye. Our inspections help you avoid surprise failures, costly water damage, and DIY mistakes, all while keeping your home compliant with local plumbing codes.
+Some plumbing issues (like slow leaks, hairline cracks, or internal corrosion), aren’t visible to the naked eye. Our inspections help you avoid surprise failures, costly water damage, and DIY mistakes, all while keeping your home compliant with local plumbing codes.
 
 **Schedule Your Plumbing Maintenance Today**
 

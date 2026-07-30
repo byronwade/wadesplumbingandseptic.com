@@ -423,7 +423,7 @@ export function GlobalSearch({
 										Nothing for “{query.trim()}”
 									</p>
 									<p className="mt-2 text-sm text-white/50">
-										Try a symptom, city, or service name. Typos are OK - we
+										Try a symptom, city, or service name. Typos are OK; we
 										surface the closest matches when we can.
 									</p>
 								</div>

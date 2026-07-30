@@ -87,12 +87,12 @@ Ensure your septic system is in top condition with our expert repair and replace
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic provided exceptional service when our septic system needed urgent attention. Highly recommend!" - Sarah, Aptos
+"Wade's Plumbing & Septic provided exceptional service when our septic system needed urgent attention. Highly recommend!" (Sarah, Aptos)
 
-"The team was professional and efficient, resolving our septic issues quickly. We're very satisfied with their work." - John, Scotts Valley
+"The team was professional and efficient, resolving our septic issues quickly. We're very satisfied with their work." (John, Scotts Valley)
 
-"Reliable and knowledgeable, Wade's Plumbing & Septic is our go-to for all septic needs." - Emily, Capitola
+"Reliable and knowledgeable, Wade's Plumbing & Septic is our go-to for all septic needs." (Emily, Capitola)
 
 Licensed Contractor: C-42
 
-Fast-Response Guarantee: Available Monday to Friday, 8 AM - 5 PM
+Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

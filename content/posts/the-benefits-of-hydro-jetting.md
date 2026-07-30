@@ -18,11 +18,11 @@ tags:
 - property damage prevention
 image: /images/wordpress/close-up-view-of-an-industrial-plumbing-system-featuring-a-pressure-gauge-and-steel-pipes-040c6c.webp
 imageAlt: "Industrial plumbing with pressure gauge"
----Clogged drains are more than just an inconvenience - they can lead to foul odors, water backups, and expensive property damage. Traditional methods like plungers and drain snakes may provide short-term relief. However, they often fail to address the underlying cause of the problem. That’s where **hydro-jetting** comes in.
+---Clogged drains are more than just an inconvenience. They can lead to foul odors, water backups, and expensive property damage. Traditional methods like plungers and drain snakes may provide short-term relief. However, they often fail to address the underlying cause of the problem. That’s where **hydro-jetting** comes in.
 
 ![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
 
-At **Wade’s Plumbing & Septic**, we offer powerful, effective hydro-jetting services to homeowners and businesses throughout **Santa Cruz County**. This advanced technique uses high-pressure water to thoroughly clean and clear your pipes - safely, quickly, and without the need for chemicals or digging.
+At **Wade’s Plumbing & Septic**, we offer powerful, effective hydro-jetting services to homeowners and businesses throughout **Santa Cruz County**. This advanced technique uses high-pressure water to thoroughly clean and clear your pipes, safely, quickly, and without the need for chemicals or digging.
 
 ## What Is Hydro-Jetting and How Does It Work?
 
@@ -34,7 +34,7 @@ Before performing a hydro-jetting service, our licensed plumbers perform a **cam
 
 ### 1\. **Versatility**
 
-Hydro-jetting is ideal for both **residential and commercial plumbing systems**. Whether it’s a kitchen sink, bathroom drain, or a complex main sewer line, hydro-jetting handles it all - no matter the pipe material.
+Hydro-jetting is ideal for both **residential and commercial plumbing systems**. Whether it’s a kitchen sink, bathroom drain, or a complex main sewer line, hydro-jetting handles it all, no matter the pipe material.
 
 ### 2\. **Non-Invasive Solution**
 
@@ -42,7 +42,7 @@ Unlike traditional methods that may require digging up your yard or breaking thr
 
 ### 3\. **Environmentally Friendly**
 
-Hydro-jetting uses only water - no harsh chemicals or toxic cleaners - making it one of the **greenest drain cleaning methods** available. It’s safe for your pipes, your home, and the environment.
+Hydro-jetting uses only water (no harsh chemicals or toxic cleaners), making it one of the **greenest drain cleaning methods** available. It’s safe for your pipes, your home, and the environment.
 
 ### 4\. **Extremely Effective**
 
@@ -58,7 +58,7 @@ Routine hydro-jetting acts as **preventative maintenance** , helping avoid futur
 
 ### 7\. **Cost-Effective and Long-Lasting**
 
-Compared to frequent snaking or using chemical drain cleaners, hydro-jetting is a **long-term investment** in your plumbing system. While prices vary, **hydro-jetting typically costs $350–$600** , which is far more affordable than major pipe repairs that can run $1,200 or more.
+Compared to frequent snaking or using chemical drain cleaners, hydro-jetting is a **long-term investment** in your plumbing system. While prices vary, **hydro-jetting typically costs $350 to $600** , which is far more affordable than major pipe repairs that can run $1,200 or more.
 
 ## Frequently Asked Questions About Hydro-Jetting
 
@@ -71,7 +71,7 @@ Hydro-jetting is safe and effective for most plumbing systems including **PVC, c
 Unlike snaking, which only breaks up a portion of the blockage, hydro-jetting **completely clears the pipe walls** , preventing debris from sticking and forming new clogs.
 
 **Is hydro-jetting safe for older pipes?** 
-Yes - but it must be done by experienced professionals. At Wade’s Plumbing & Septic, we inspect the pipes before jetting and adjust water pressure accordingly to **avoid damaging fragile or aging pipes**.
+Yes, but it must be done by experienced professionals. At Wade’s Plumbing & Septic, we inspect the pipes before jetting and adjust water pressure accordingly to **avoid damaging fragile or aging pipes**.
 
 **How often should I schedule hydro-jetting?** 
 We recommend scheduling **annual or bi-annual hydro-jetting** to maintain your plumbing system, especially if you deal with recurring clogs or have older pipes.
@@ -80,7 +80,7 @@ We recommend scheduling **annual or bi-annual hydro-jetting** to maintain your p
 
 Hydro-jetting has become a preferred method for drain cleaning because of its **speed, power, and reliability**. Whether you’re dealing with a stubborn clog or looking to prevent future plumbing disasters, hydro-jetting is a smart and efficient choice.
 
-Don’t wait for your drains to back up - **get ahead of the problem** with professional hydro-jetting from Wade’s Plumbing & Septic.
+Don’t wait for your drains to back up, **get ahead of the problem** with professional hydro-jetting from Wade’s Plumbing & Septic.
 
 📍 Serving: Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas  
 🔧 Services: Sewer cleaning, drain clearing, hydro-jetting, plumbing inspections, and more  
@@ -96,11 +96,11 @@ Experience the pinnacle of efficiency with our superior hydro-jetting solutions 
 
 ★★★★★ 5-star rating from satisfied customers
 
-"Wade's Plumbing & Septic cleared our stubborn clogs with ease. Highly recommend their hydro-jetting service!" - Emily, Santa Cruz
+"Wade's Plumbing & Septic cleared our stubborn clogs with ease. Highly recommend their hydro-jetting service!" (Emily, Santa Cruz)
 
-"Fast and efficient service! Our drains have never worked better. Thank you, Wade's!" - Mike, Watsonville
+"Fast and efficient service! Our drains have never worked better. Thank you, Wade's!" (Mike, Watsonville)
 
-"Professional and reliable. The team at Wade's Plumbing & Septic really know their stuff." - Sarah, Aptos
+"Professional and reliable. The team at Wade's Plumbing & Septic really know their stuff." (Sarah, Aptos)
 
 Licensed Contractor: C-42
 

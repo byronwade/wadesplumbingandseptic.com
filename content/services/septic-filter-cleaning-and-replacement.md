@@ -88,12 +88,12 @@ Ensure your septic system's efficiency and longevity with our expert filter clea
 
 ★★★★★ 5-Star Rated Service
 
-"Wade's team did an excellent job cleaning our septic filter. Their professionalism and attention to detail were top-notch!" - Sarah, Santa Cruz
+"Wade's team did an excellent job cleaning our septic filter. Their professionalism and attention to detail were top-notch!" (Sarah, Santa Cruz)
 
-"I was impressed by how quickly they responded to my call. The service was efficient and thorough. Highly recommend!" - John, Aptos
+"I was impressed by how quickly they responded to my call. The service was efficient and thorough. Highly recommend!" (John, Aptos)
 
-"Friendly service and expert advice. Our septic system is running smoothly thanks to Wade's Plumbing & Septic." - Emily, Watsonville
+"Friendly service and expert advice. Our septic system is running smoothly thanks to Wade's Plumbing & Septic." (Emily, Watsonville)
 
 Licensed Contractor: C-42
 
-Fast-Response Guarantee: Available Monday to Friday, 8 AM - 6 PM, and Saturday, 9 AM - 3 PM
+Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM, and Saturday, 9 AM to 3 PM

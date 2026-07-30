@@ -95,14 +95,14 @@ A standard plumbing maintenance service usually takes between 1 to 3 hours, depe
 
 Wade's Plumbing & Septic is a trusted local provider with extensive experience in Santa Cruz County, CA. Our professional team is dedicated to delivering reliable, high-quality plumbing maintenance services tailored to your needs.
 
-"Wade's Plumbing & Septic provided excellent service when our pipes needed urgent attention. Fast and reliable!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided excellent service when our pipes needed urgent attention. Fast and reliable!" (Sarah, Santa Cruz)
 
-"Professional and efficient. I highly recommend them for any plumbing issues." - Mike, Capitola
+"Professional and efficient. I highly recommend them for any plumbing issues." (Mike, Capitola)
 
-"Our go-to plumbing experts in Santa Cruz County. Always a job well done!" - Emily, Watsonville
+"Our go-to plumbing experts in Santa Cruz County. Always a job well done!" (Emily, Watsonville)
 
 ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ÃƒÂ¢Ã‹Å“Ã¢â‚¬Â¦ 5-star rating
 
 Licensed Contractor: C-42 for California
 
-Guaranteed fast response during business hours: Mon-Fri 8:00 AM - 6:00 PM
+Guaranteed fast response during business hours: Mon-Fri 8:00 AM to 6:00 PM

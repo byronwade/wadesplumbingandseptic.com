@@ -56,14 +56,31 @@ for (const collection of COLLECTIONS) {
 			}
 		}
 
-		// Em dashes are banned site-wide (see AGENTS.md).
+		// Dash punctuation is banned site-wide (see AGENTS.md).
 		if (
 			source.includes("\u2014") ||
 			source.includes("&mdash;") ||
 			source.includes("&#8212;")
 		) {
 			errors.push(
-				`${file}: em dash (U+2014) is not allowed; use " - ", a comma, or a colon`,
+				`${file}: em dash (U+2014) is not allowed; use parentheses, a comma, a colon, or a new sentence`,
+			)
+		}
+
+		if (
+			source.includes("\u2013") ||
+			source.includes("&ndash;") ||
+			source.includes("&#8211;")
+		) {
+			errors.push(
+				`${file}: en dash (U+2013) is not allowed; use "to"/"through" for ranges, or other real punctuation`,
+			)
+		}
+
+		// Spaced hyphen asides ("word - word"), excluding markdown list markers.
+		if (/(?<=\S) - (?=\S)/.test(source)) {
+			errors.push(
+				`${file}: spaced hyphen aside (" - ") is not allowed; use parentheses, a comma, a colon, or a new sentence`,
 			)
 		}
 	}

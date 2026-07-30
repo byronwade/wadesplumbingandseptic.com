@@ -7,9 +7,9 @@ image: /images/locations/river-and-redwoods.webp
 imageAlt: La Selva Beach coastal community with wooded residential lots
 ---
 
-La Selva Beach trades boardwalk crowds for a quieter rhythm - surf in the morning, fog by afternoon, and neighborhoods where people know which streets flood first when January rains arrive. The community stretches from beach-adjacent homes near San Andreas Road to wooded lots blending toward Corralitos and Watsonville. Housing ranges from mid-century beach houses to larger parcels where the septic tank is as important as the water heater.
+La Selva Beach trades boardwalk crowds for a quieter rhythm, surf in the morning, fog by afternoon, and neighborhoods where people know which streets flood first when January rains arrive. The community stretches from beach-adjacent homes near San Andreas Road to wooded lots blending toward Corralitos and Watsonville. Housing ranges from mid-century beach houses to larger parcels where the septic tank is as important as the water heater.
 
-Wade's Plumbing & Septic is family-owned, licensed (CSLB #1087260), and serves La Selva Beach homeowners who want a contractor familiar with rural-coastal overlap - not a Santa Clara Valley franchise reading from a script.
+Wade's Plumbing & Septic is family-owned, licensed (CSLB #1087260), and serves La Selva Beach homeowners who want a contractor familiar with rural-coastal overlap, not a Santa Clara Valley franchise reading from a script.
 
 ## Quiet Streets, Varied Foundations
 
@@ -29,21 +29,21 @@ Unlike central Santa Cruz, La Selva Beach relies heavily on septic systems. Sewe
 
 We help with:
 
-- Routine pumping based on tank size and household occupancy - not a generic reminder card
+- Routine pumping based on tank size and household occupancy, not a generic reminder card
 - Inspections that note baffle condition, liquid levels, and signs of drainfield stress
 - Troubleshooting for backups, odors, and wet spots that appear days after heavy laundry use
 - [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when age or soil conditions require a new design
 - [Engineered septic systems](/engineered-septic-systems-santa-cruz-county) for parcels with poor percolation or tight setbacks near creeks
 
-Agricultural land nearby means some properties share fence lines with fields and orchards. Dust, irrigation runoff, and occasional rodent activity near crawlspaces are real factors - we note environmental context when advising on line protection and venting.
+Agricultural land nearby means some properties share fence lines with fields and orchards. Dust, irrigation runoff, and occasional rodent activity near crawlspaces are real factors. We note environmental context when advising on line protection and venting.
 
 ## Storms, Groundwater, and Second-Home Cycles
 
-La Selva Beach sits low enough that winter storms raise local groundwater and test drainfields that performed fine in September. Owners who rent seasonally or visit monthly often discover problems on arrival - stagnant traps, dried seals, or a septic alarm that tripped while the house sat empty.
+La Selva Beach sits low enough that winter storms raise local groundwater and test drainfields that performed fine in September. Owners who rent seasonally or visit monthly often discover problems on arrival, stagnant traps, dried seals, or a septic alarm that tripped while the house sat empty.
 
 Wooded inland lots face different stress: root growth, debris-filled gutters, and downspouts that discharge too close to tank lids or D-boxes. We recommend maintenance schedules tied to how the home is used, not an arbitrary calendar.
 
-La Selva Beach's proximity to Watsonville and Corralitos also means some owners commute south for work while maintaining a coastal lifestyle here. That split schedule can delay noticing slow leaks or septic alarms until a Friday arrival - another reason we prioritize clear written summaries after each visit.
+La Selva Beach's proximity to Watsonville and Corralitos also means some owners commute south for work while maintaining a coastal lifestyle here. That split schedule can delay noticing slow leaks or septic alarms until a Friday arrival. Another reason we prioritize clear written summaries after each visit.
 
 ## La Selva Beach Contact
 

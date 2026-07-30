@@ -75,11 +75,11 @@ Experience seamless and efficient septic installations with Wade's Plumbing & Se
 
 [Call Us Now](tel:+11234567890) 
 
-"Wade's Plumbing & Septic provided exceptional service when installing our new septic system. Their team was professional and efficient!" - Sarah, Aptos
+"Wade's Plumbing & Septic provided exceptional service when installing our new septic system. Their team was professional and efficient!" (Sarah, Aptos)
 
-"From start to finish, the installation process was seamless. Highly recommend Wade's for any septic needs." - John, Santa Cruz
+"From start to finish, the installation process was seamless. Highly recommend Wade's for any septic needs." (John, Santa Cruz)
 
-"The crew was knowledgeable and courteous. Our new septic system works perfectly!" - Emily, Watsonville
+"The crew was knowledgeable and courteous. Our new septic system works perfectly!" (Emily, Watsonville)
 
 ★★★★★ 5-Star Rating 
 

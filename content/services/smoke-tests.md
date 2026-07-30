@@ -103,12 +103,12 @@ Our team is licensed under C-42 for California, ensuring professional and reliab
 
 **Customer Testimonials:**
 
-> "Wade's Plumbing & Septic transformed our septic system with their expert service. Highly recommend!" - Sarah, Santa Cruz
+> "Wade's Plumbing & Septic transformed our septic system with their expert service. Highly recommend!" (Sarah, Santa Cruz)
 
-> "Quick, efficient, and reliable! Our septic issues are a thing of the past thanks to Wade's." - Tom, Watsonville
+> "Quick, efficient, and reliable! Our septic issues are a thing of the past thanks to Wade's." (Tom, Watsonville)
 
-> "Professional service with a friendly touch. Wade's team knows their stuff!" - Emily, Capitola
+> "Professional service with a friendly touch. Wade's team knows their stuff!" (Emily, Capitola)
 
 **Licensed Contractor:** C-42 License for California
 
-**Fast-Response Guarantee:** Available Monday to Friday, 8 AM - 5 PM
+**Fast-Response Guarantee:** Available Monday to Friday, 8 AM to 5 PM

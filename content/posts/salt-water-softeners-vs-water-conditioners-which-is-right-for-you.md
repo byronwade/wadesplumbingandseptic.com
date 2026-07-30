@@ -53,7 +53,7 @@ Sources:
 
 Santa Cruz County Septic Experts
 
-## Don't Wait - Improve Your Water Quality Today
+## Don't Wait, Improve Your Water Quality Today
 
 ![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
 

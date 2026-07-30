@@ -74,11 +74,11 @@ Ensure your water treatment system operates at peak performance with our expert 
 
 ★★★★★ 5-Star Rating
 
-"Wade's Plumbing & Septic provided exceptional water softener maintenance. My system has never worked better!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided exceptional water softener maintenance. My system has never worked better!" (Sarah, Santa Cruz)
 
-"Fast, reliable, and professional service. Highly recommend for anyone in Santa Cruz County!" - John, Capitola
+"Fast, reliable, and professional service. Highly recommend for anyone in Santa Cruz County!" (John, Capitola)
 
-"Their team was knowledgeable and friendly. I trust Wade's with all my plumbing needs." - Emily, Watsonville
+"Their team was knowledgeable and friendly. I trust Wade's with all my plumbing needs." (Emily, Watsonville)
 
 Licensed Contractor: C-42 for California
 

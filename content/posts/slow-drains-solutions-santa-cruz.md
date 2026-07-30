@@ -83,7 +83,7 @@ Common causes include hair, soap scum, grease build-up, and foreign objects lodg
 
 - [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 - [Competitor gap: Garbage Disposal Making Loud Grinding Noises? Here’s Why and How to Fix It](https://plumbtreeplumbing.com/garbage-disposal-making-loud-grinding-noises-heres-why-and-how-to-fix-it/)
-- [5 years later: Taking stock of the ongoing CZU Lightning Complex recovery - Santa Cruz Sentinel](https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5)
+- [5 years later: Taking stock of the ongoing CZU Lightning Complex recovery, Santa Cruz Sentinel](https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5)
 
 ## Seasonal Tip
 
@@ -115,7 +115,7 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz Coun
 
 Our team holds a C-42 contractor license for California, ensuring that all work meets state standards and regulations.
 
-Office Hours: Monday–Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 

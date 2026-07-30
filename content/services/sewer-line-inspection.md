@@ -103,11 +103,11 @@ Safeguard your home with our advanced sewer inspection services, identifying pot
 
 ★★★★★ 5-Star Rating
 
-> "Wade's Plumbing & Septic was thorough and professional. They quickly identified the issue, giving us peace of mind." - Sarah, Santa Cruz
+> "Wade's Plumbing & Septic was thorough and professional. They quickly identified the issue, giving us peace of mind." (Sarah, Santa Cruz)
 
-> "Their sewer inspection service was top-notch. I highly recommend them for any plumbing needs!" - Mike, Capitola
+> "Their sewer inspection service was top-notch. I highly recommend them for any plumbing needs!" (Mike, Capitola)
 
-> "Fast and reliable service with friendly staff. I couldn't be happier with the results." - Emily, Watsonville
+> "Fast and reliable service with friendly staff. I couldn't be happier with the results." (Emily, Watsonville)
 
 Licensed Contractor: C-42
 

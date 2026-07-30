@@ -6,7 +6,7 @@ image: /images/services/septic-pumping-illustration.webp
 imageAlt: Illustration of a septic pumping service
 ---
 
-## Pumping is maintenance - not a complete diagnosis
+## Pumping is maintenance, not a complete diagnosis
 
 Regular removal of accumulated solids protects the tank and drain field. The right interval depends on tank size, household use, system type, garbage-disposal use, and prior measurements.
 

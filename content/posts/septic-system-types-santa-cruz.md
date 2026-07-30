@@ -97,7 +97,7 @@ Choosing a locally trusted provider like Wade's Plumbing & Septic ensures that y
 
 ## Sources & Local References
 
-- [Lookout Santa Cruzâ€™s growing impact - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5)
+- [Lookout Santa Cruzâ€™s growing impact, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5)
 - [Reference from news.google.com](https://news.google.com/rss/articles/CBMipAFBVV95cUxPZXZKME9oLVBCZERsQ19aY3YwNVZrNXNXSGRIcEhGeW1pdjAxXzRzQ3dVSE9QZS15R01vV2hiQ1U2QW1PZGU3bV9EMTNmaU1YUW5zRmEzNnNNR1JlNHplZkpNcmh4c0ZaNVFFX2NXYVFNdUF5bDc4aHF2b0pLTVVhUmlmTGtaR2UzT05MTzNiTVI5VnRfd0RlZXBRQW00)
 
 ## Seasonal Tip

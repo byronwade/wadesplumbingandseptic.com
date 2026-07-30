@@ -62,7 +62,7 @@ today. Our knowledgeable, local professionals are eager to assist you with all y
 
 Santa Cruz County Septic Experts
 
-## Don't Delay - Ensure Your Septic System's Health Today
+## Don't Delay, Ensure Your Septic System's Health Today
 
 ![Outdoor plumbing pipe system](/images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp)
 

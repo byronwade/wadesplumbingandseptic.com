@@ -111,7 +111,7 @@ const faqs = [
 	{
 		question: "How often should I have my septic tank pumped?",
 		answer:
-			"Most septic tanks should be pumped every 3–5 years, depending on household size, wastewater volume, and tank size. We recommend a professional inspection to determine the right schedule for your system.",
+			"Most septic tanks should be pumped every 3 to 5 years, depending on household size, wastewater volume, and tank size. We recommend a professional inspection to determine the right schedule for your system.",
 	},
 	{
 		question: "What are the signs of a failing septic system?",
@@ -126,7 +126,7 @@ const faqs = [
 	{
 		question: "How long does a water heater typically last?",
 		answer:
-			"Conventional tank water heaters commonly last 8–12 years, while tankless models can last 15–20 years or longer with proper maintenance.",
+			"Conventional tank water heaters commonly last 8 to 12 years, while tankless models can last 15 to 20 years or longer with proper maintenance.",
 	},
 	{
 		question: "What areas do you serve?",
@@ -256,8 +256,8 @@ export default function HomePage() {
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
 						<p className="type-lead mt-5">
-							When a standard system will not work - steep slopes, difficult soil,
-							tight lots, or sensitive environments - that is exactly where we
+							When a standard system will not work (steep slopes, difficult soil,
+							tight lots, or sensitive environments), that is exactly where we
 							excel.
 						</p>
 					</div>
@@ -306,7 +306,7 @@ export default function HomePage() {
 								href={siteConfig.phoneHref}
 							>
 								<Phone />
-								Call to Schedule - {siteConfig.phone}
+								Call to Schedule: {siteConfig.phone}
 							</a>
 						</div>
 						<div className="relative aspect-[4/3] overflow-hidden rounded-lg">

@@ -1,6 +1,6 @@
 ---
 title: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
-description: The holiday season is one of the busiest times of the year - and the last
+description: The holiday season is one of the busiest times of the year, and the last
  thing you need during family gatherings, dinner parties, or overnight guests is
  a…
 category: Plumbing Tips
@@ -18,7 +18,7 @@ tags:
 - santa cruz county homes
 image: /images/wordpress/img-1839-1.webp
 imageAlt: "Prevent Holiday Plumbing Issues in Santa Cruz County Homes"
----The holiday season is one of the busiest times of the year - and the last thing you need during family gatherings, dinner parties, or overnight guests is a plumbing emergency. When your home is full and your plumbing system is working overtime, even a small issue can snowball into a major disruption.
+---The holiday season is one of the busiest times of the year, and the last thing you need during family gatherings, dinner parties, or overnight guests is a plumbing emergency. When your home is full and your plumbing system is working overtime, even a small issue can snowball into a major disruption.
 
 ![Warning sign on a wooden post](/images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp)
 
@@ -26,7 +26,7 @@ At Wade’s Plumbing & Septic, we help homeowners throughout Santa Cruz County p
 
 1\. Broken Washing Machines Can Disrupt Travel Plans
 
-If you’re prepping for a holiday trip, the last thing you want is a broken washing machine just as you start packing. Leaks or malfunctions can leave you scrambling for clean clothes - and possibly stuck at a laundromat while others are celebrating.
+If you’re prepping for a holiday trip, the last thing you want is a broken washing machine just as you start packing. Leaks or malfunctions can leave you scrambling for clean clothes, and possibly stuck at a laundromat while others are celebrating.
 
 Prevent this by:
 
@@ -37,7 +37,7 @@ Prevent this by:
 
 2\. Dishwasher Failures Can Mean Piles of Holiday Dishes
 
-The dishwasher is one of the most-used appliances during the holidays. Between family dinners and parties, it’s working hard - and can easily break down under heavy use.
+The dishwasher is one of the most-used appliances during the holidays. Between family dinners and parties, it’s working hard, and can easily break down under heavy use.
 
 Avoid a holiday dishwasher disaster by:
 
@@ -48,7 +48,7 @@ Avoid a holiday dishwasher disaster by:
 
 3\. Clogged Toilets Can Disrupt the Festivities
 
-With extra guests using your bathrooms, toilets will be flushing more often - and that increases the chance of blockages.
+With extra guests using your bathrooms, toilets will be flushing more often, and that increases the chance of blockages.
 
 To prevent backups and overflows:
 
@@ -66,7 +66,7 @@ No one wants to face a cold shower on a chilly holiday morning. With more people
 - Ask your plumber if your tank’s capacity matches your home’s holiday demand
 - Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
 
-Be Proactive - Avoid Holiday Plumbing Emergencies
+Be Proactive, Avoid Holiday Plumbing Emergencies
 
 With a few small steps and some preventative maintenance, you can avoid the stress and inconvenience of plumbing disasters during the holidays. At Wade’s Plumbing & Septic, we provide fast, reliable plumbing services to homeowners in Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding communities.
 
@@ -108,6 +108,6 @@ The timeline usually ranges from 1 to 3 hours, depending on the complexity of th
 
 Wade's Plumbing & Septic is a trusted local authority with years of experience, providing reliable and efficient plumbing solutions tailored to the unique needs of Santa Cruz County residents.
 
-## Skip the DIY - Get It Done Right
+## Skip the DIY, Get It Done Right
 
 At Wade's Plumbing & Septic, we understand the unique challenges of maintaining plumbing systems in Santa Cruz County homes, especially during the holiday season. Trust our team of licensed professionals to handle your plumbing needs efficiently and reliably.

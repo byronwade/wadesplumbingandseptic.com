@@ -56,11 +56,11 @@ Ensure uninterrupted operations with our expert drain cleaning services tailored
 
 ★★★★★ 5-star rating
 
-> "Wade's Plumbing & Septic resolved our drain issues quickly and efficiently. Highly recommend!" - Sarah, Santa Cruz
+> "Wade's Plumbing & Septic resolved our drain issues quickly and efficiently. Highly recommend!" (Sarah, Santa Cruz)
 
-> "Their team was professional and courteous. Our business operations are running smoothly again." - Mike, Capitola
+> "Their team was professional and courteous. Our business operations are running smoothly again." (Mike, Capitola)
 
-> "Fast and reliable service. We couldn't be happier with the results!" - Emily, Watsonville
+> "Fast and reliable service. We couldn't be happier with the results!" (Emily, Watsonville)
 
 Licensed Contractor: C-42
 

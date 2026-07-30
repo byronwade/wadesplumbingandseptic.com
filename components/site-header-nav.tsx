@@ -149,7 +149,7 @@ function ServicesMegaMenu() {
 							Plumbing &amp; septic done right the first time
 						</h3>
 						<p className="header-muted mt-3 text-sm leading-relaxed">
-							From drain diagnostics to engineered septic work - clear options,
+							From drain diagnostics to engineered septic work: clear options,
 							licensed crews, and service across Santa Cruz County.
 						</p>
 						<div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">

@@ -70,7 +70,7 @@ While some homeowners may choose to monitor their septic systems themselves, pro
 
 ## Sources & Local References
 
-- [Santa Cruz County opens seasonal groundwater testing window - Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
+- [Santa Cruz County opens seasonal groundwater testing window, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
 - [Competitor gap: need home sales and sewer line inspection service?](https://redwoodpipeanddrain.com)
 
 ## Seasonal Tip
@@ -93,7 +93,7 @@ Our team at Wade's Plumbing & Septic is ready to assist with all your septic sys
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including the vibrant communities of [Aptos](/service-area/aptos/), [Capitola](/service-area/capitola/), [Santa Cruz](/service-area/santa-cruz/), [Scotts Valley](/service-area/scotts-valley/), and [Watsonville](/service-area/watsonville/). Our team is fully licensed (C-42 license for CA) and dedicated to providing top-notch septic services you can trust.
 
-Office Hours: Monday to Friday, 9am–5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 

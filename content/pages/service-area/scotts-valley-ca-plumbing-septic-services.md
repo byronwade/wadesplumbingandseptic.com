@@ -1,6 +1,6 @@
 ---
 title: Scotts Valley, CA Plumbing & Septic Services
-description: 'Scotts Valley plumbing & septic - Granite Creek, Skypark, hillside septics & suburban sewers. Wade''s 831.225.4344, CSLB #1087260.'
+description: 'Scotts Valley plumbing & septic, Granite Creek, Skypark, hillside septics & suburban sewers. Wade''s 831.225.4344, CSLB #1087260.'
 eyebrow: Scotts Valley, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
@@ -9,7 +9,7 @@ imageAlt: Redwood hillside near Scotts Valley residential neighborhoods
 
 Scotts Valley reads suburban on a map but behaves like a mountain town once you leave the Highway 17 corridor. Granite Creek, Skypark, and the neighborhoods threading toward Mount Hermon and Felton mix 1970s tract homes, 1990s builds, and wooded lots where the sewer main ends and septic responsibility begins. Elevation and pine-redwood root systems shape plumbing problems as much as pipe age.
 
-Wade's Plumbing & Septic is family-owned, Santa Cruz County–based, and licensed (CSLB #1087260). We serve Scotts Valley homeowners who want clear explanations - not upsells - when a pressure issue might be a PRV, a partially closed valve, or a line compromised by roots.
+Wade's Plumbing & Septic is family-owned, Santa Cruz County-based, and licensed (CSLB #1087260). We serve Scotts Valley homeowners who want clear explanations (not upsells), when a pressure issue might be a PRV, a partially closed valve, or a line compromised by roots.
 
 ## Suburban Supply Lines and Hillside Access
 
@@ -21,7 +21,7 @@ Scotts Valley homes often have better-documented plumbing than coastal cottages,
 - **Repipe sections** where copper pinholes or polybutylene failures appear during remodels
 - **Drain repairs** in bathrooms added when "builder standard" layouts no longer match household size
 
-Garage conversions and ADUs are common as families grow. We verify that existing lines and water heaters can handle added fixtures - or flag what needs upgrading before drywall closes.
+Garage conversions and ADUs are common as families grow. We verify that existing lines and water heaters can handle added fixtures, or flag what needs upgrading before drywall closes.
 
 ## Sewer in Town, Septic on the Edges
 
@@ -39,11 +39,11 @@ Knowing your connection type before a kitchen expansion saves rework. We help ow
 
 ## Freeze Risk, Storm Debris, and Commuter Wear
 
-Inland Scotts Valley sees colder overnight lows than the coast - occasionally enough to threaten exposed hose bibs and poorly insulated lines in crawlspaces. Winter storms drop needles and branches that clog gutters and outdoor drains, sometimes backing water toward foundation vents and crawlspace plumbing.
+Inland Scotts Valley sees colder overnight lows than the coast, occasionally enough to threaten exposed hose bibs and poorly insulated lines in crawlspaces. Winter storms drop needles and branches that clog gutters and outdoor drains, sometimes backing water toward foundation vents and crawlspace plumbing.
 
 Many households run dual schedules: heavy morning use before the commute over 17, then quiet days. That pattern stresses aging water heaters and exposes intermittent leaks that only show up at peak demand. We schedule diagnostics around how your home is actually lived in.
 
-Commercial properties near the Kings Village and Scotts Valley Drive corridors add another layer - grease interceptors, restroom clusters, and irrigation cross-connections that can masquerade as residential drain problems when tenants call after hours.
+Commercial properties near the Kings Village and Scotts Valley Drive corridors add another layer, grease interceptors, restroom clusters, and irrigation cross-connections that can masquerade as residential drain problems when tenants call after hours.
 
 ## Scotts Valley Appointments
 

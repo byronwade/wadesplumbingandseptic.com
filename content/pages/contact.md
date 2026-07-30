@@ -33,8 +33,8 @@ Email: info@wadesplumbing.com
 
 ## Hours of Operation
 
-Monday - Friday: 7:00 AM - 6:00 PM 
-Saturday: 8:00 AM - 2:00 PM 
+Monday to Friday: 7:00 AM to 6:00 PM 
+Saturday: 8:00 AM to 2:00 PM 
 Sunday: Closed (Emergency Services Available)
 
 ## Serving Santa Cruz County, CA
@@ -43,7 +43,7 @@ Wade's Plumbing & Septic is proud to offer our expert services to the communitie
 
 Contractor License: C-42 (CA) / State License (GA)
 
-Office Hours: Monday – Friday, 9am – 5pm
+Office Hours: Monday to Friday, 9am to 5pm
 
 Emergency Line: Available
 

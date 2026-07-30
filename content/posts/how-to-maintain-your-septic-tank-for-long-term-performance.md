@@ -27,7 +27,7 @@ Over time, household waste accumulates in your septic tank. While bacteria break
 
 Recommended schedule:
 
-Most homes benefit from pumping every 1–3 years, depending on tank size and household usage. A professional inspection will determine your optimal pumping frequency.
+Most homes benefit from pumping every 1 to 3 years, depending on tank size and household usage. A professional inspection will determine your optimal pumping frequency.
 
 Benefits:
 
@@ -41,7 +41,7 @@ Even with regular pumping, solids and sludge can build up in your septic system�
 
 Solution:
 
-Schedule high-pressure water jetting every 5 years to clean the inside of your septic lines. This process uses a powerful stream of water to break up blockages and flush out debris - restoring optimal flow throughout your system.
+Schedule high-pressure water jetting every 5 years to clean the inside of your septic lines. This process uses a powerful stream of water to break up blockages and flush out debris, restoring optimal flow throughout your system.
 
 Why it matters:
 
@@ -51,7 +51,7 @@ Why it matters:
 
 3\. Add Beneficial Bacteria to Support Waste Breakdown
 
-Your septic tank relies on naturally occurring bacteria to decompose waste. However, common household chemicals like bleach, antibacterial soaps, and harsh cleaners can kill these bacteria - slowing down the system’s natural breakdown process.
+Your septic tank relies on naturally occurring bacteria to decompose waste. However, common household chemicals like bleach, antibacterial soaps, and harsh cleaners can kill these bacteria, slowing down the system’s natural breakdown process.
 
 What to do:
 

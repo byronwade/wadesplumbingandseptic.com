@@ -120,11 +120,11 @@ Whether you need a routine check-up or urgent repairs, Wade's Plumbing & Septic 
 
 ★★★★★ 5-star rating from our satisfied customers
 
-"Wade's Plumbing & Septic quickly resolved our emergency leak. Highly recommend!" - Sarah, Santa Cruz
+"Wade's Plumbing & Septic quickly resolved our emergency leak. Highly recommend!" (Sarah, Santa Cruz)
 
-"Fast and reliable service. They are my go-to for plumbing issues." - Mike, Watsonville
+"Fast and reliable service. They are my go-to for plumbing issues." (Mike, Watsonville)
 
-"Professional and efficient, they handled our septic problem with ease." - Emma, Capitola
+"Professional and efficient, they handled our septic problem with ease." (Emma, Capitola)
 
 Licensed Contractor: C-42 for CA
 
