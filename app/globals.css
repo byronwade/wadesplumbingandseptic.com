@@ -43,6 +43,8 @@
 	--animate-accordion-up: accordion-up 0.2s ease-out;
 	--animate-rise: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 	--animate-fade: fade 0.55s ease-out both;
+	--animate-search-in: search-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+	--animate-search-out: search-out 0.18s ease-in both;
 }
 
 /*
@@ -1098,6 +1100,28 @@
 	}
 }
 
+@keyframes search-in {
+	from {
+		opacity: 0;
+		transform: translate3d(-50%, 0.75rem, 0) scale(0.985);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(-50%, 0, 0) scale(1);
+	}
+}
+
+@keyframes search-out {
+	from {
+		opacity: 1;
+		transform: translate3d(-50%, 0, 0) scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(-50%, 0.4rem, 0) scale(0.99);
+	}
+}
+
 @keyframes accordion-down {
 	from {
 		height: 0;
@@ -1155,6 +1179,21 @@
 
 	.motion-fade {
 		animation: var(--animate-fade);
+	}
+
+	.animate-search-in {
+		animation: var(--animate-search-in);
+	}
+
+	.animate-search-out {
+		animation: var(--animate-search-out);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.animate-search-in,
+		.animate-search-out {
+			animation: none;
+		}
 	}
 
 	.motion-delay-1 {

@@ -38,9 +38,6 @@ import {
 
 const GROUP_ORDER: SearchResultType[] = ["service", "tip", "page", "action"]
 
-/** Shared column so header, input, results, and footer share one edge. */
-const SEARCH_SHELL = "mx-auto w-full max-w-[90rem] px-4 sm:px-8 lg:px-10"
-
 const GROUP_META: Record<
 	SearchResultType,
 	{ label: string; icon: React.ComponentType<{ className?: string }> }
@@ -61,14 +58,16 @@ const TYPE_BADGE: Record<SearchResultType, string> = {
 function ResultIcon({ doc }: { doc: SearchDocument }) {
 	if (doc.type === "action") {
 		if (doc.id === "action:call")
-			return <Phone className="size-5" aria-hidden />
+			return <Phone className="size-[1.125rem]" aria-hidden />
 		if (doc.id.includes("area"))
-			return <MapPin className="size-5" aria-hidden />
-		return <Hash className="size-5" aria-hidden />
+			return <MapPin className="size-[1.125rem]" aria-hidden />
+		return <Hash className="size-[1.125rem]" aria-hidden />
 	}
-	if (doc.type === "service") return <Wrench className="size-5" aria-hidden />
-	if (doc.type === "tip") return <BookOpen className="size-5" aria-hidden />
-	return <FileText className="size-5" aria-hidden />
+	if (doc.type === "service")
+		return <Wrench className="size-[1.125rem]" aria-hidden />
+	if (doc.type === "tip")
+		return <BookOpen className="size-[1.125rem]" aria-hidden />
+	return <FileText className="size-[1.125rem]" aria-hidden />
 }
 
 function HighlightedTitle({ title, query }: { title: string; query: string }) {
@@ -82,7 +81,7 @@ function HighlightedTitle({ title, query }: { title: string; query: string }) {
 				part.match ? (
 					<mark
 						key={`${part.text}-${index}`}
-						className="rounded-sm bg-[color-mix(in_srgb,var(--primary-bright)_28%,transparent)] text-inherit"
+						className="rounded-[2px] bg-[color-mix(in_srgb,var(--primary-bright)_32%,transparent)] text-inherit"
 					>
 						{part.text}
 					</mark>
@@ -94,7 +93,15 @@ function HighlightedTitle({ title, query }: { title: string; query: string }) {
 	)
 }
 
-function ResultCard({
+function Kbd({ children }: { children: React.ReactNode }) {
+	return (
+		<kbd className="border-white/12 bg-white/[0.06] text-on-dark-subtle inline-flex h-5 min-w-5 items-center justify-center rounded-[4px] border px-1.5 font-mono text-[0.625rem] tracking-[0.04em] uppercase">
+			{children}
+		</kbd>
+	)
+}
+
+function ResultRow({
 	hit,
 	query,
 	active,
@@ -117,27 +124,27 @@ function ResultCard({
 			onFocus={onHover}
 			onClick={onSelect}
 			className={cn(
-				"group grid w-full grid-cols-[5.5rem_minmax(0,1fr)] items-stretch gap-0 overflow-hidden rounded-md text-left transition-[background-color,transform] duration-75 sm:grid-cols-[7.5rem_minmax(0,1fr)]",
-				"bg-white/[0.04] hover:bg-white/[0.07] active:scale-[0.995]",
+				"group grid w-full grid-cols-[3.75rem_minmax(0,1fr)_auto] items-center gap-3 rounded-lg px-2.5 py-2 text-left transition-[background-color,box-shadow,transform] duration-150 sm:grid-cols-[4.25rem_minmax(0,1fr)_auto] sm:gap-3.5 sm:px-3 sm:py-2.5",
+				"hover:bg-white/[0.045]",
 				active &&
-					"bg-white/[0.09] ring-1 ring-[color-mix(in_srgb,var(--primary-bright)_55%,transparent)]",
+					"bg-white/[0.07] shadow-[inset_3px_0_0_0_var(--primary-bright)]",
 			)}
 		>
 			<div
 				className={cn(
-					"relative min-h-[5.5rem] sm:min-h-[7rem]",
+					"relative aspect-square overflow-hidden rounded-md",
 					hit.image
-						? "bg-dark-2"
-						: "bg-[color-mix(in_srgb,var(--primary)_22%,var(--dark-2))] text-[var(--primary-bright)]",
+						? "bg-dark-3"
+						: "bg-[color-mix(in_srgb,var(--primary)_24%,var(--dark-3))] text-[var(--primary-bright)]",
 				)}
 			>
 				{hit.image ? (
 					<Image
 						src={hit.image}
-						alt={hit.title}
+						alt=""
 						fill
-						className="object-cover transition-transform duration-150 group-hover:scale-[1.03]"
-						sizes="120px"
+						className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+						sizes="68px"
 					/>
 				) : (
 					<div className="absolute inset-0 flex items-center justify-center">
@@ -146,7 +153,7 @@ function ResultCard({
 				)}
 			</div>
 
-			<div className="flex min-w-0 flex-col justify-center px-3.5 py-3 sm:px-5 sm:py-4">
+			<div className="min-w-0">
 				<div className="flex items-center gap-2">
 					<span className="spec-tag text-primary-bright">
 						{TYPE_BADGE[hit.type]}
@@ -161,17 +168,23 @@ function ResultCard({
 						</span>
 					) : null}
 				</div>
-				<p className="font-display mt-1.5 text-[1.0625rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-[1.1875rem]">
+				<p className="font-display mt-1 truncate text-[0.98rem] leading-snug font-extrabold tracking-[-0.03em] text-white sm:text-[1.05rem]">
 					<HighlightedTitle title={hit.title} query={query} />
 				</p>
-				<p className="text-on-dark-subtle mt-1 line-clamp-2 text-sm leading-snug">
+				<p className="text-on-dark-subtle mt-0.5 line-clamp-1 text-[0.8125rem] leading-snug">
 					{hit.description}
 				</p>
-				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-bold transition-colors group-hover:text-[var(--primary-bright)]">
-					Open
-					<ArrowUpRight className="size-3.5" aria-hidden />
-				</div>
 			</div>
+
+			<span
+				className={cn(
+					"text-on-dark-subtle hidden items-center gap-1 text-xs font-bold transition-opacity sm:inline-flex",
+					active ? "opacity-100" : "opacity-0 group-hover:opacity-70",
+				)}
+			>
+				Open
+				<ArrowUpRight className="size-3.5" aria-hidden />
+			</span>
 		</button>
 	)
 }
@@ -229,10 +242,10 @@ export function GlobalSearch({
 
 	const hits = React.useMemo(() => {
 		if (!index) return [] as SearchHit[]
-		return searchDocuments(index, query, query.trim() ? 28 : 10)
+		return searchDocuments(index, query, query.trim() ? 24 : 8)
 	}, [index, query])
 
-	const suggestions = React.useMemo(() => suggestSearches(query, 8), [query])
+	const suggestions = React.useMemo(() => suggestSearches(query, 6), [query])
 	const grouped = React.useMemo(() => groupSearchHits(hits), [hits])
 	const flatHits = React.useMemo(
 		() => GROUP_ORDER.flatMap((key) => grouped[key]),
@@ -292,210 +305,204 @@ export function GlobalSearch({
 			<DialogContent
 				showCloseButton={false}
 				className={cn(
-					"bg-ink fixed inset-0 top-0 left-0 z-50 flex h-[100dvh] max-h-[100dvh] w-full max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 text-white shadow-none duration-0",
-					"!animate-none data-[state=closed]:!animate-none data-[state=open]:!animate-none",
+					"search-dialog-panel surface-float tex-glow isolate",
+					"fixed top-[max(1rem,6dvh)] left-1/2 z-50 flex max-h-[min(42rem,88dvh)] w-[min(44rem,calc(100vw-1.25rem))] translate-x-[-50%] translate-y-0 flex-col gap-0 overflow-hidden rounded-xl border-0 p-0 text-white shadow-[var(--hairline-all),var(--shadow-float)]",
+					"data-[state=open]:animate-search-in data-[state=closed]:animate-search-out",
 					"focus:outline-none",
 				)}
-				overlayClassName="!animate-none bg-ink/90 duration-0 backdrop-blur-[2px] data-[state=closed]:!animate-none data-[state=open]:!animate-none"
+				overlayClassName="bg-ink/55 backdrop-blur-[3px]"
 				onOpenAutoFocus={(event) => {
 					event.preventDefault()
 					inputRef.current?.focus({ preventScroll: true })
 				}}
 			>
-				<div
-					aria-hidden
-					className="tex-glow pointer-events-none absolute inset-0 bg-ink"
-				/>
-
-				<div className="relative flex h-full min-h-0 flex-col">
-					<header className="shrink-0 pt-[max(0.85rem,env(safe-area-inset-top))] sm:pt-5">
-						<div
-							className={cn(
-								SEARCH_SHELL,
-								"flex items-center justify-between gap-3 pb-3",
-							)}
-						>
-							<div className="min-w-0">
-								<p className="spec-label">Wade&apos;s</p>
-								<DialogTitle className="type-headline mt-2 text-white">
-									Looking for something?
-								</DialogTitle>
-								<DialogDescription className="sr-only">
-									Search services, expert tips, pages, and quick actions.
-								</DialogDescription>
-							</div>
-
-							<DialogClose className="text-on-dark-muted flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
-								<X className="size-5" />
-								<span className="sr-only">Close search</span>
-							</DialogClose>
-						</div>
-					</header>
-
-					<div className="shrink-0">
-						<div className={SEARCH_SHELL}>
-							<label className="relative block">
-								<span className="sr-only">Search services and tips</span>
-								<Search
-									className="pointer-events-none absolute top-1/2 left-0 size-6 -translate-y-1/2 text-[var(--primary-bright)] sm:size-7"
-									aria-hidden
+				<header className="relative shrink-0 border-b border-white/10 px-4 pt-4 pb-3 sm:px-5 sm:pt-5">
+					<div className="mb-4 flex items-start justify-between gap-3">
+						<div className="min-w-0">
+							<div className="flex items-center gap-2.5">
+								<Image
+									alt=""
+									className="size-8 rounded-md sm:size-9"
+									height={36}
+									src="/images/brand/wades-mark-sm.webp"
+									width={36}
 								/>
-								<input
-									ref={inputRef}
-									value={query}
-									onChange={(event) => {
-										const value = event.target.value
-										setActiveIndex(0)
-										setQuery(value)
-									}}
-									onKeyDown={onKeyDown}
-									placeholder="Service, tip, symptom, or city…"
-									autoComplete="off"
-									autoCorrect="off"
-									spellCheck={false}
-									enterKeyHint="search"
-									role="combobox"
-									aria-expanded
-									aria-controls="global-search-results"
-									aria-activedescendant={
-										flatHits[safeActiveIndex]
-											? `search-option-${flatHits[safeActiveIndex].id}`
-											: undefined
-									}
-									className="font-display h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
-								/>
-							</label>
-
-							<div className="mt-3 flex items-center justify-between gap-3">
-								<div className="chip-rail min-w-0 flex-1">
-									{suggestions.map((suggestion) => (
-										<button
-											key={suggestion}
-											type="button"
-											onClick={() => {
-												setQuery(suggestion)
-												setActiveIndex(0)
-												inputRef.current?.focus()
-											}}
-											className="spec-tag text-on-dark-muted hover:text-primary-bright shrink-0 border border-white/10 bg-white/[0.04] px-3 py-1.5 transition-colors duration-75 hover:border-white/20 hover:bg-white/[0.07]"
-										>
-											{suggestion}
-										</button>
-									))}
+								<div className="min-w-0">
+									<p className="spec-label">Wade&apos;s</p>
+									<DialogTitle className="font-display mt-1 text-[1.35rem] leading-none font-extrabold tracking-[-0.03em] text-white sm:text-[1.55rem]">
+										Search the site
+									</DialogTitle>
 								</div>
-								<p className="text-on-dark-subtle hidden shrink-0 items-center gap-1.5 text-xs sm:flex">
-									<span className="inline-flex items-center gap-1 rounded-sm bg-white/[0.05] px-1.5 py-0.5 font-sans">
-										<CornerDownLeft className="size-3" aria-hidden /> Enter
-									</span>
+							</div>
+							<DialogDescription className="text-on-dark-muted mt-2 max-w-md text-sm leading-snug">
+								Services, tips, cities, and quick actions.
+							</DialogDescription>
+						</div>
+
+						<DialogClose className="text-on-dark-muted hover:bg-white/[0.06] flex size-10 shrink-0 items-center justify-center rounded-md transition-colors duration-150 hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
+							<X className="size-5" />
+							<span className="sr-only">Close search</span>
+						</DialogClose>
+					</div>
+
+					<label className="relative block">
+						<span className="sr-only">Search services and tips</span>
+						<Search
+							className="pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-[var(--primary-bright)]"
+							aria-hidden
+						/>
+						<input
+							ref={inputRef}
+							value={query}
+							onChange={(event) => {
+								setActiveIndex(0)
+								setQuery(event.target.value)
+							}}
+							onKeyDown={onKeyDown}
+							placeholder="Service, tip, symptom, or city…"
+							autoComplete="off"
+							autoCorrect="off"
+							spellCheck={false}
+							enterKeyHint="search"
+							role="combobox"
+							aria-expanded
+							aria-controls="global-search-results"
+							aria-activedescendant={
+								flatHits[safeActiveIndex]
+									? `search-option-${flatHits[safeActiveIndex].id}`
+									: undefined
+							}
+							className="border-white/12 bg-white/[0.045] placeholder:text-white/35 focus:border-[color-mix(in_srgb,var(--primary-bright)_70%,transparent)] focus:bg-white/[0.06] font-display h-12 w-full rounded-lg border pr-4 pl-11 text-[1.05rem] font-bold tracking-[-0.02em] text-white caret-[var(--primary-bright)] outline-none transition-[border-color,background-color,box-shadow] duration-150 focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--primary-bright)_22%,transparent)] sm:h-[3.25rem] sm:text-[1.125rem]"
+						/>
+					</label>
+
+					{suggestions.length > 0 ? (
+						<div className="chip-rail mt-3">
+							{suggestions.map((suggestion) => (
+								<button
+									key={suggestion}
+									type="button"
+									onClick={() => {
+										setQuery(suggestion)
+										setActiveIndex(0)
+										inputRef.current?.focus()
+									}}
+									className="spec-tag text-on-dark-muted hover:border-white/20 hover:bg-white/[0.07] hover:text-primary-bright shrink-0 rounded-md border border-white/10 bg-white/[0.035] px-2.5 py-1 transition-colors duration-150"
+								>
+									{suggestion}
+								</button>
+							))}
+						</div>
+					) : null}
+				</header>
+
+				<div
+					id="global-search-results"
+					role="listbox"
+					className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-2 sm:px-2.5 sm:py-2.5"
+				>
+					{loading ? (
+						<p className="text-on-dark-subtle px-3 py-12 text-center text-sm">
+							Warming up search…
+						</p>
+					) : null}
+
+					{error ? (
+						<p className="text-on-dark-subtle px-3 py-12 text-center text-sm">
+							{error}
+						</p>
+					) : null}
+
+					{showEmpty ? (
+						<div className="px-4 py-12 text-center">
+							<p className="font-display text-xl font-extrabold tracking-[-0.03em] text-white">
+								Nothing for “{query.trim()}”
+							</p>
+							<p className="text-on-dark-muted mx-auto mt-2 max-w-sm text-sm leading-relaxed">
+								Try a symptom, city, or service name. Typos are OK.
+							</p>
+						</div>
+					) : null}
+
+					{!loading && !error && flatHits.length > 0 ? (
+						<div className="space-y-4">
+							<div className="flex items-center justify-between gap-3 px-3 pt-1">
+								<p className="spec-tag text-on-dark-subtle">
+									{showPopular
+										? "Start here"
+										: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
+								</p>
+								<p className="text-on-dark-subtle hidden items-center gap-1.5 text-xs sm:flex">
+									<Kbd>
+										<CornerDownLeft className="size-2.5" aria-hidden />
+									</Kbd>
 									<span>to open</span>
 								</p>
 							</div>
-						</div>
-					</div>
 
-					<div
-						id="global-search-results"
-						role="listbox"
-						className="mt-5 min-h-0 flex-1 overflow-y-auto overscroll-contain pb-4 sm:mt-7 sm:pb-6"
-					>
-						<div className={SEARCH_SHELL}>
-							{loading ? (
-								<p className="text-on-dark-subtle py-16 text-center text-sm">
-									Warming up search…
-								</p>
-							) : null}
-
-							{error ? (
-								<p className="text-on-dark-subtle py-16 text-center text-sm">
-									{error}
-								</p>
-							) : null}
-
-							{showEmpty ? (
-								<div className="section-head mx-auto max-w-lg py-14 text-center">
-									<p className="type-title text-white">
-										Nothing for “{query.trim()}”
-									</p>
-									<p className="type-lead text-on-dark-muted">
-										Try a symptom, city, or service name. Typos are OK; we
-										surface the closest matches when we can.
-									</p>
-								</div>
-							) : null}
-
-							{!loading && !error && flatHits.length > 0 ? (
-								<div className="space-y-7">
-									<div className="flex items-end justify-between gap-3">
-										<p className="spec-tag text-on-dark-subtle">
-											{showPopular
-												? "Start here"
-												: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
-										</p>
-										<p className="text-xs text-white/30 sm:hidden">
-											Tap a result
-										</p>
-									</div>
-
-									{GROUP_ORDER.map((key) => {
-										const groupHits = grouped[key]
-										if (!groupHits.length) return null
-										const meta = GROUP_META[key]
-										const Icon = meta.icon
-										return (
-											<section key={key} aria-label={meta.label}>
-												{!showPopular ? (
-													<div className="mb-2.5 flex items-center gap-2">
-														<Icon
-															className="size-3.5 text-[var(--primary-bright)]"
-															aria-hidden
+							{GROUP_ORDER.map((key) => {
+								const groupHits = grouped[key]
+								if (!groupHits.length) return null
+								const meta = GROUP_META[key]
+								const Icon = meta.icon
+								return (
+									<section key={key} aria-label={meta.label} className="space-y-1">
+										{!showPopular ? (
+											<div className="flex items-center gap-2 px-3 pb-1">
+												<Icon
+													className="size-3.5 text-[var(--primary-bright)]"
+													aria-hidden
+												/>
+												<h3 className="spec-tag text-on-dark-subtle">
+													{meta.label}
+												</h3>
+											</div>
+										) : null}
+										<ul className="space-y-0.5">
+											{groupHits.map((hit) => {
+												const flatIndex = flatHits.findIndex(
+													(item) => item.id === hit.id,
+												)
+												return (
+													<li key={hit.id}>
+														<ResultRow
+															hit={hit}
+															query={query}
+															active={flatIndex === safeActiveIndex}
+															onHover={() => setActiveIndex(flatIndex)}
+															onSelect={() => runHit(hit)}
 														/>
-														<h3 className="spec-tag text-on-dark-subtle">
-															{meta.label}
-														</h3>
-													</div>
-												) : null}
-												<ul className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-3">
-													{groupHits.map((hit) => {
-														const flatIndex = flatHits.findIndex(
-															(item) => item.id === hit.id,
-														)
-														return (
-															<li key={hit.id}>
-																<ResultCard
-																	hit={hit}
-																	query={query}
-																	active={flatIndex === safeActiveIndex}
-																	onHover={() => setActiveIndex(flatIndex)}
-																	onSelect={() => runHit(hit)}
-																/>
-															</li>
-														)
-													})}
-												</ul>
-											</section>
-										)
-									})}
-								</div>
-							) : null}
+													</li>
+												)
+											})}
+										</ul>
+									</section>
+								)
+							})}
 						</div>
-					</div>
-
-					<footer className="shrink-0 border-t border-white/10">
-						<div
-							className={cn(
-								SEARCH_SHELL,
-								"flex items-center justify-between gap-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs text-white/35",
-							)}
-						>
-							<span>
-								{flatHits.length
-									? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
-									: "Services · Tips · Areas · Actions"}
-							</span>
-							<span className="hidden sm:inline">Esc closes · ⌘K toggles</span>
-						</div>
-					</footer>
+					) : null}
 				</div>
+
+				<footer className="text-on-dark-subtle relative shrink-0 border-t border-white/10 px-4 py-2.5 pb-[max(0.65rem,env(safe-area-inset-bottom))] text-xs sm:px-5">
+					<div className="flex items-center justify-between gap-3">
+						<span>
+							{flatHits.length
+								? `${flatHits.length} result${flatHits.length === 1 ? "" : "s"}`
+								: "Services · Tips · Areas · Actions"}
+						</span>
+						<span className="hidden items-center gap-2 sm:inline-flex">
+							<span className="inline-flex items-center gap-1">
+								<Kbd>esc</Kbd>
+								<span>close</span>
+							</span>
+							<span className="inline-flex items-center gap-1">
+								<Kbd>⌘</Kbd>
+								<Kbd>K</Kbd>
+								<span>toggle</span>
+							</span>
+						</span>
+					</div>
+				</footer>
 			</DialogContent>
 		</Dialog>
 	)
