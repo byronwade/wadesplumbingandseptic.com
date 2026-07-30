@@ -4,8 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
+		"prebuild": "node scripts/sync-maplibre-worker.mjs",
 		"build": "next build",
 		"start": "next start",
+		"postinstall": "node scripts/sync-maplibre-worker.mjs",
 		"lint": "eslint . --max-warnings=0",
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write .",
