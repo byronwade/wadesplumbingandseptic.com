@@ -14,3 +14,7 @@ ops/self-hosted-runners/.env
 wp-export/
 tmp/wp-markdown-import/
 scripts/__pycache__/
+
+# evlog local drains + map artifact
+.evlog/
+evlog.map.json

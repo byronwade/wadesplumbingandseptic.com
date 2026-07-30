@@ -93,6 +93,17 @@ for (const collection of COLLECTIONS) {
 			}
 		}
 
+		const title = String(data.title ?? "")
+		if (
+			/Effortless|Optimize Your|Top-Quality|Ensure Optimal|Boost Business|Clear Pipes Guaranteed|Transform Your/i.test(
+				title,
+			)
+		) {
+			errors.push(
+				`${file}: spammy/AI-ish title pattern; lead with the service noun and geo (e.g. "Drain Cleaning in Santa Cruz County")`,
+			)
+		}
+
 		const description = String(data.description ?? "")
 		if (/In This Guide/i.test(description) || /min read/i.test(description)) {
 			errors.push(
@@ -110,20 +121,64 @@ for (const collection of COLLECTIONS) {
 			)
 		}
 
-		if (/tel:\+?1234567890/i.test(source)) {
+		if (
+			/\[Current Date\]/i.test(source) ||
+			/\[Insert[^\]]*\]/i.test(source) ||
+			/TODO:?\s*replace/i.test(source)
+		) {
 			errors.push(
-				`${file}: placeholder phone tel:+1234567890; use tel:+18312254344`,
+				`${file}: unresolved content placeholder (e.g. [Current Date])`,
+			)
+		}
+
+		const fakePhones =
+			source.match(
+				/tel:\+?(?:1(?:800|831|833)555\d{4}|18315556677|19876543210)/gi,
+			) ?? []
+		for (const phone of fakePhones) {
+			errors.push(
+				`${file}: fake phone link "${phone}"; use tel:+18312254344`,
+			)
+		}
+
+		// Business-hours only: no 24/7 or "emergency line" claims.
+		if (/emergency line/i.test(source)) {
+			errors.push(
+				`${file}: claims an "emergency line"; Wade's does not offer 24/7 or after-hours dispatch`,
+			)
+		}
+		if (/24\/7/i.test(source) && !/do not offer 24\/7/i.test(source)) {
+			errors.push(
+				`${file}: claims 24/7 availability; use business hours (Mon to Fri 9:00am to 5:00pm) or explicit "do not offer 24/7"`,
 			)
 		}
 
 		if (
-			/Competitor gap|redwoodpipeanddrain\.com|plumbtreeplumbing\.com/i.test(
+			/Updated (January|February|March|April|May|June|July|August|September|October|November|December) \d{4}/.test(
 				source,
 			)
 		) {
 			errors.push(
-				`${file}: competitor-gap migration leftover; remove outbound competitor links/notes`,
+				`${file}: "Updated Month Year" filler copy; use frontmatter updated: YYYY-MM-DD and real body prose`,
 			)
+		}
+
+		if (
+			/Competitor gap:|Competitor gap|redwoodpipeanddrain\.com|plumbtreeplumbing\.com/i.test(
+				source,
+			)
+		) {
+			errors.push(
+				`${file}: competitor-gap research notes or outbound competitor links must not ship in published content`,
+			)
+		}
+
+		const fakePhones =
+			source.match(
+				/tel:\+?(?:11234567890|1234567890|1831555\d{4}|19876543210)/gi,
+			) ?? []
+		for (const phone of fakePhones) {
+			errors.push(`${file}: fake phone link "${phone}"; use tel:+18312254344`)
 		}
 
 		if (

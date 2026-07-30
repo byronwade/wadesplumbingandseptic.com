@@ -1,13 +1,14 @@
 ---
-title: 'Reliable Gas Line Repair in Santa Cruz County, CA'
+title: Gas Line Repair in Santa Cruz County
 description: >-
-  When it comes to ensuring the safety and functionality of your home's natural
-  gas or propane system, reliable gas line repair is crucial.
+  Licensed gas line repair and safety checks for Santa Cruz County homes. Leak
+  diagnosis and code-compliant fixes. Call 831.225.4344.
 category: Plumbing
 order: 35
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
+updated: '2026-07-30'
 ---
 When it comes to ensuring the safety and functionality of your home's natural gas or propane system, reliable gas line repair is crucial. If you are a resident of Santa Cruz County, California, and in need of professional gas line repair, Wade's Plumbing & Septic is your trusted partner. Our expert technicians are well-equipped to handle any gas line issues, from detecting leaks to replacing corroded pipes. With our commitment to safety and adherence to local building codes, we ensure your gas line system operates flawlessly, providing peace of mind to homeowners.
 
@@ -78,7 +79,7 @@ Choosing Wade's Plumbing & Septic for your gas line repair in Santa Cruz County 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing expert gas line repair services with the utmost professionalism and care.
 
-We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday through Friday from 9am to 5pm, and we offer an emergency line available to ensure your safety and peace of mind.
+We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for reliable and prompt gas line repair services.
 

@@ -1,14 +1,15 @@
 ---
-title: 'Swift Septic Leak Detection in Santa Cruz County, CA'
+title: Leak Detection in Santa Cruz County
 description: >-
-  Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive leak
-  detection services in Santa Cruz County, California. Our cutting-edge.
+  Plumbing and septic leak detection for Santa Cruz County homes. Find hidden
+  leaks before they damage floors and soils. Call 831.225.4344.
 category: Plumbing
 order: 41
 featured: true
 image: >-
   /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
 imageAlt: Pressure gauge on an industrial pipe
+updated: '2026-07-30'
 ---
 Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive leak detection services in Santa Cruz County, California. Our cutting-edge techniques and state-of-the-art equipment ensure that we pinpoint leaks quickly and efficiently, saving you time and money. Whether it's a hidden leak behind your walls or under your floors, our team is equipped to find it using non-invasive methods. Prompt leak detection prevents costly water damage and reduces your utility bills, making it an essential service for homeowners.
 
@@ -74,7 +75,7 @@ Choosing Wade's Plumbing & Septic ensures you're working with a licensed, experi
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and surrounding communities. Our team is dedicated to providing reliable leak detection for septic systems, ensuring peace of mind for homeowners and businesses alike.
 
-We are fully licensed under the C-42 contractor license for California, ensuring professional and compliant services. Our office hours are Monday through Friday, from 9 am to 5 pm. For urgent needs, our emergency line is available to assist you promptly.
+We are fully licensed under the C-42 contractor license for California, ensuring professional and compliant services. Our office hours are Monday through Friday, from 9 am to 5 pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
 
 Expert Leak Detection
 

@@ -1,13 +1,14 @@
 ---
-title: Upgrade to Tankless Water Heaters in Santa Cruz County!
+title: Tankless Water Heater Installation in Santa Cruz County
 description: >-
-  At Wade's Plumbing & Septic, we specialize in expert tankless water heater
-  installation, offering Santa Cruz County, California homeowners a highly.
+  Tankless water heater installation for Santa Cruz County homes, including gas,
+  venting, and permit needs. Call 831.225.4344.
 category: Plumbing
 order: 46
 image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Tankless water heater installation
 featured: true
+updated: '2026-07-30'
 ---
 At Wade's Plumbing & Septic, we specialize in expert tankless [water heater installation](/service-offerings/water-heater-installation/), offering Santa Cruz County, California homeowners a highly efficient and space-saving solution for their hot water needs. A tankless system heats water on demand, ensuring an endless supply without the need for a bulky storage tank. With our professional installation, you can enjoy reduced energy costs and the convenience of instant hot water, tailored to meet the specific demands of your household.
 
@@ -65,7 +66,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 We are fully licensed and insured, holding a C-42 license for California, ensuring that all work is completed to the highest standards of safety and quality.
 
-Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also offer an emergency line that is available to address any urgent plumbing needs you may encounter.
+Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also offer an phone line answered during business hours for scheduling. We do not offer 24/7 dispatch.
 
 With Wade's Plumbing & Septic, you can trust in our commitment to excellence and our deep roots in Santa Cruz County, CA, to deliver reliable and professional service every time.
 
@@ -75,7 +76,7 @@ Upgrade Your Home's Efficiency
 
 Experience the benefits of endless hot water and reduced energy bills with our expert tankless water heater installations in Santa Cruz County.
 
-[Call Us](tel:+18315551234) 
+[Call Us](tel:+18312254344) 
 
 ### What Our Customers Are Saying
 

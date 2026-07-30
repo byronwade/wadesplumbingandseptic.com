@@ -1,28 +1,32 @@
 "use client"
 
 import type { Route } from "next"
-import Image from "next/image"
-import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ArrowLeft, ArrowRight, CalendarDays } from "@/components/icons"
+import { ArrowLeft, ArrowRight } from "@/components/icons"
 import { startTransition, useEffect, useMemo } from "react"
 
+import { ContentCard } from "@/components/content-card"
 import { buttonVariants } from "@/components/ui/button"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
 import {
 	type ArchiveItem,
 	buildArchiveFilters,
 	filterArchiveItems,
 	paginateArchiveItems,
 } from "@/lib/archive"
-import { getServiceImage } from "@/lib/service-images"
+import {
+	parseArchiveSort,
+	sortArchiveItems,
+	type ArchiveSort,
+	type RankedArchiveItem,
+} from "@/lib/page-views/ranking"
 import { cn } from "@/lib/utils"
+
+const SORT_OPTIONS: Array<{ value: ArchiveSort; label: string }> = [
+	{ value: "default", label: "Default" },
+	{ value: "popular", label: "Most popular" },
+	{ value: "trending", label: "Trending" },
+	{ value: "newest", label: "Newest" },
+]
 
 const DEFAULT_PAGE_SIZE = 12
 
@@ -79,78 +83,6 @@ function FilterChip({
 	)
 }
 
-function ArchiveCard({
-	item,
-	variant,
-}: {
-	item: ArchiveItem
-	variant: "service" | "tip"
-}) {
-	const image =
-		variant === "service"
-			? getServiceImage(item.category, item.image)
-			: (item.image ?? "/images/work/precision-valve-installation.webp")
-
-	/*
-	 * .card-rail makes this a flex column and pins .card-body to the bottom, so
-	 * the action links line up across a row. Padding and title size come from the
-	 * card's own container width - see `@container card` in globals.css.
-	 */
-	return (
-		<Card className="group hover:border-border-strong h-full overflow-hidden transition-colors duration-200">
-			<Link
-				aria-label={
-					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
-				}
-				className="bg-muted relative block aspect-16/9 overflow-hidden"
-				href={item.href as Route}
-				prefetch={false}
-				tabIndex={-1}
-			>
-				<Image
-					alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
-					className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-					fill
-					quality={60}
-					sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-					src={image}
-				/>
-			</Link>
-			<CardHeader>
-				<p className="spec-tag">{item.category}</p>
-				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
-					<Link href={item.href as Route} prefetch={false}>
-						{item.title}
-					</Link>
-				</CardTitle>
-				<CardDescription>{item.description}</CardDescription>
-			</CardHeader>
-			<CardContent className="flex flex-col items-start justify-end gap-3">
-				{variant === "tip" && item.date ? (
-					<p className="type-meta flex items-center gap-2 font-bold">
-						<CalendarDays
-							aria-hidden="true"
-							className="text-primary size-4 shrink-0"
-						/>
-						{item.date}
-					</p>
-				) : null}
-				<Link
-					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
-					href={item.href as Route}
-					prefetch={false}
-				>
-					{variant === "service" ? "Learn more" : "Read guide"}
-					<ArrowRight
-						aria-hidden="true"
-						className="size-4 transition-transform group-hover:translate-x-1"
-					/>
-				</Link>
-			</CardContent>
-		</Card>
-	)
-}
-
 export function FilterableArchive({
 	items,
 	variant,
@@ -159,6 +91,8 @@ export function FilterableArchive({
 	emptyLabel = "No results in this filter.",
 	noun = { singular: "item", plural: "items" },
 	showFilters = true,
+	showSort = false,
+	lockedSort = false,
 }: {
 	items: ArchiveItem[]
 	variant: "service" | "tip"
@@ -167,6 +101,8 @@ export function FilterableArchive({
 	emptyLabel?: string
 	noun?: { singular: string; plural: string }
 	showFilters?: boolean
+	showSort?: boolean
+	lockedSort?: boolean
 }) {
 	const router = useRouter()
 	const pathname = usePathname()
@@ -174,12 +110,30 @@ export function FilterableArchive({
 
 	const activeCategory = searchParams.get("category")
 	const requestedPage = parsePage(searchParams.get("page"))
+	const activeSort = lockedSort
+		? parseArchiveSort(
+				pathname.endsWith("/trending")
+					? "trending"
+					: pathname.endsWith("/popular")
+						? "popular"
+						: searchParams.get("sort"),
+			)
+		: parseArchiveSort(searchParams.get("sort"))
 
 	const filters = useMemo(() => buildArchiveFilters(items), [items])
 	const canFilter = showFilters && filters.length > 1
+	const sorted = useMemo(() => {
+		const ranked = items.map((item) => ({
+			...item,
+			uniqueViews: item.uniqueViews ?? 0,
+			totalViews: item.totalViews ?? 0,
+			trendingScore: item.trendingScore ?? 0,
+		})) satisfies RankedArchiveItem[]
+		return sortArchiveItems(ranked, activeSort)
+	}, [items, activeSort])
 	const filtered = useMemo(
-		() => (canFilter ? filterArchiveItems(items, activeCategory) : items),
-		[items, activeCategory, canFilter],
+		() => (canFilter ? filterArchiveItems(sorted, activeCategory) : sorted),
+		[sorted, activeCategory, canFilter],
 	)
 	const { page, pageCount, pageItems, total } = useMemo(
 		() => paginateArchiveItems(filtered, requestedPage, pageSize),
@@ -195,7 +149,11 @@ export function FilterableArchive({
 	}, [page, pathname, requestedPage, router, searchParams])
 
 	function updateParams(
-		next: { category?: string | null; page?: number },
+		next: {
+			category?: string | null
+			page?: number
+			sort?: ArchiveSort | null
+		},
 		options?: { scrollToFilters?: boolean },
 	) {
 		const params = new URLSearchParams(searchParams.toString())
@@ -203,6 +161,12 @@ export function FilterableArchive({
 		if ("category" in next) {
 			if (!next.category || next.category === "all") params.delete("category")
 			else params.set("category", next.category)
+			params.delete("page")
+		}
+
+		if ("sort" in next) {
+			if (!next.sort || next.sort === "default") params.delete("sort")
+			else params.set("sort", next.sort)
 			params.delete("page")
 		}
 
@@ -225,6 +189,7 @@ export function FilterableArchive({
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
 
 	const allSelected = !activeCategory || activeCategory === "all"
+	const sortVisible = showSort && !lockedSort
 
 	return (
 		<section className="container-shell section-y">
@@ -239,12 +204,37 @@ export function FilterableArchive({
 							{activeFilter && canFilter ? activeFilter.label : allLabel}
 						</h2>
 					</div>
-					{canFilter ? (
+					{canFilter || sortVisible ? (
 						<p className="type-meta md:max-w-xs md:text-right">
-							Filter instantly, then page through results.
+							{sortVisible
+								? "Sort by popularity or filter by category."
+								: "Filter instantly, then page through results."}
 						</p>
 					) : null}
 				</div>
+
+				{sortVisible ? (
+					<div className="mt-6 flex flex-wrap items-center gap-2">
+						<p className="spec-tag mr-1">Sort</p>
+						{SORT_OPTIONS.filter((option) =>
+							variant === "service" ? option.value !== "newest" : true,
+						).map((option) => (
+							<button
+								className={cn(
+									"focus-visible:ring-ring inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
+									activeSort === option.value
+										? "border-primary bg-primary text-primary-foreground"
+										: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
+								)}
+								key={option.value}
+								onClick={() => updateParams({ sort: option.value })}
+								type="button"
+							>
+								{option.label}
+							</button>
+						))}
+					</div>
+				) : null}
 
 				{canFilter ? (
 					<div
@@ -274,7 +264,12 @@ export function FilterableArchive({
 			{pageItems.length ? (
 				<div className="card-rail defer-paint">
 					{pageItems.map((item) => (
-						<ArchiveCard item={item} key={item.slug} variant={variant} />
+						<ContentCard
+							item={item}
+							key={item.slug}
+							preferTrending={activeSort === "trending"}
+							variant={variant}
+						/>
 					))}
 				</div>
 			) : (
@@ -290,7 +285,7 @@ export function FilterableArchive({
 				>
 					<p className="type-meta font-bold tabular-nums">
 						Page {page} of {pageCount}
-						<span className="text-muted-foreground/80 font-medium">
+						<span className="text-muted-foreground/80 font-normal">
 							{" "}
 							· showing {(page - 1) * pageSize + 1} to{" "}
 							{Math.min(page * pageSize, total)} of {total}

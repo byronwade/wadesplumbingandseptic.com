@@ -1,8 +1,22 @@
 import { getAllRoutes } from "@/lib/content"
+import { useLogger, withEvlog } from "@/lib/evlog"
 import { siteConfig } from "@/lib/site"
 
-export async function GET() {
+export const GET = withEvlog(async () => {
+	const log = useLogger()
 	const { services, posts, pages } = await getAllRoutes()
+
+	const serviceAreas = pages.filter((page) =>
+		page.slug.startsWith("service-area/"),
+	)
+
+	log.set({
+		llmsTxt: {
+			serviceCount: services.length,
+			tipCount: Math.min(posts.length, 40),
+			serviceAreaCount: serviceAreas.length,
+		},
+	})
 
 	const serviceLines = services
 		.map(
@@ -19,8 +33,7 @@ export async function GET() {
 		)
 		.join("\n")
 
-	const areaLines = pages
-		.filter((page) => page.slug.startsWith("service-area/"))
+	const areaLines = serviceAreas
 		.map(
 			(page) =>
 				`- [${page.title}](${siteConfig.url}/${page.slug}): ${page.description}`,
@@ -56,6 +69,9 @@ ${areaLines}
 - [Service Areas](${siteConfig.url}/service-areas)
 - [About Us](${siteConfig.url}/about-us)
 - [Expert Tips](${siteConfig.url}/expert-tips)
+- [Plumbing & Septic Glossary](${siteConfig.url}/glossary)
+- [Plumbing Glossary](${siteConfig.url}/glossary/plumbing)
+- [Septic Glossary](${siteConfig.url}/glossary/septic)
 - [Warranties](${siteConfig.url}/warranties)
 - [Financing](${siteConfig.url}/financing)
 - [Contact](${siteConfig.url}/contact)
@@ -67,4 +83,4 @@ ${areaLines}
 			"Cache-Control": "public, max-age=3600, s-maxage=86400",
 		},
 	})
-}
+})

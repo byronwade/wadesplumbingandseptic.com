@@ -40,7 +40,7 @@ Contractor License: C-42 license for CA / state license for GA
 
 Office Hours: Monday to Friday 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 Our service area extends across Santa Cruz County, ensuring that residents and businesses have access to reliable and efficient plumbing and septic solutions whenever needed.
 

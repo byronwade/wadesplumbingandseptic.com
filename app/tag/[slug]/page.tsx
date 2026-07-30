@@ -51,7 +51,7 @@ export async function generateMetadata({
 	})
 }
 
-async function TagArchive({ slug }: { slug: string }) {
+async function getTagArchiveData(slug: string) {
 	"use cache"
 	cacheTag("content:posts", `content:tag:${slug}`)
 	cacheLife("max")
@@ -71,12 +71,19 @@ async function TagArchive({ slug }: { slug: string }) {
 		{ posts: 3, services: 3 },
 	)
 
+	return { matched, label, related }
+}
+
+async function TagArchive({ slug }: { slug: string }) {
+	const data = await getTagArchiveData(slug)
+	if (!data) return null
+
 	return (
 		<ArticleArchive
-			description={`Helpful Wade's articles filed under ${label}.`}
-			posts={matched}
-			related={related}
-			title={label}
+			description={`Helpful Wade's articles filed under ${data.label}.`}
+			posts={data.matched}
+			related={data.related}
+			title={data.label}
 		/>
 	)
 }

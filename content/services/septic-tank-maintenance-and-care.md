@@ -1,12 +1,13 @@
 ---
-title: Top Septic Maintenance for Santa Cruz County Homes
+title: Septic Tank Maintenance in Santa Cruz County
 description: >-
-  Septic tank maintenance is an essential service for homeowners in Santa Cruz
-  County, California, ensuring the longevity and efficiency of your septic.
+  Ongoing septic tank maintenance plans for Santa Cruz County homeowners.
+  Pumping, filters, and practical care advice. Call 831.225.4344.
 category: Septic
 order: 16
 image: /images/work/new-construction-rough-in.webp
 imageAlt: New construction plumbing rough-in
+updated: '2026-07-30'
 ---
 Septic tank maintenance is an essential service for homeowners in Santa Cruz County, California, ensuring the longevity and efficiency of your septic system. Regular maintenance can prevent costly system failures and environmental hazards, protecting your home and community. At Wade's Plumbing & Septic, we offer comprehensive septic tank maintenance services tailored to meet the specific needs of your system.
 

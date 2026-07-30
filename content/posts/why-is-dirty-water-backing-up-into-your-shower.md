@@ -83,7 +83,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 **Office Hours:** Monday to Friday, 9am to 5pm
 
-**Emergency Line:** Available for emergencies
+**Office hours:** Monday through Friday, 9:00am to 5:00pm. We do not offer 24/7 dispatch.
 
 Whether you're in the heart of Santa Cruz or the outskirts of Watsonville, we're here to help with all your plumbing needs.
 

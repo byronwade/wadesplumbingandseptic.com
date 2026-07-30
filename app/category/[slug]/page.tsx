@@ -5,21 +5,9 @@ import { Suspense } from "react"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
+import { postCategoryAliases } from "@/lib/post-categories"
 import { getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
-
-const aliases: Record<string, string[]> = {
-	"santa-cruz-plumbing": ["Plumbing Maintenance", "Santa Cruz Plumbing"],
-	"septic-issues-in-santa-cruz-county": [
-		"Septic Guidance",
-		"Septic Maintenance",
-		"Santa Cruz Plumbing",
-	],
-	"diy-projects": ["DIY Projects"],
-	"plumbing-maintenance": ["Plumbing Maintenance", "Plumbing Tips"],
-	"plumbing-tips": ["Plumbing Tips"],
-	"septic-maintenance": ["Septic Maintenance"],
-}
 
 export async function generateStaticParams() {
 	const posts = await getCollection("posts")
@@ -27,14 +15,16 @@ export async function generateStaticParams() {
 		taxonomySlug(post.category ?? "Expert Tips"),
 	)
 
-	return [...new Set([...slugs, ...Object.keys(aliases)])].map((slug) => ({
+	return [
+		...new Set([...slugs, ...Object.keys(postCategoryAliases)]),
+	].map((slug) => ({
 		slug,
 	}))
 }
 
 async function postsForCategory(slug: string) {
 	const posts = await getCollection("posts")
-	const aliasLabels = aliases[slug] ?? []
+	const aliasLabels = postCategoryAliases[slug] ?? []
 
 	return posts.filter((post) => {
 		const category = post.category ?? "Expert Tips"
@@ -52,7 +42,8 @@ export async function generateMetadata({
 
 	if (!posts.length) return {}
 
-	const label = aliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
+	const label =
+		postCategoryAliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
 
 	return buildPageMetadata({
 		title: label,
@@ -61,7 +52,7 @@ export async function generateMetadata({
 	})
 }
 
-async function CategoryArchive({ slug }: { slug: string }) {
+async function getCategoryArchiveData(slug: string) {
 	"use cache"
 	cacheTag("content:posts", `content:category:${slug}`)
 	cacheLife("max")
@@ -69,24 +60,32 @@ async function CategoryArchive({ slug }: { slug: string }) {
 	const posts = await postsForCategory(slug)
 	if (!posts.length) return null
 
-	const label = aliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
+	const label =
+		postCategoryAliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
 	const related = await getRelatedForTopic(
 		{
 			label,
 			description: `Practical ${label.toLowerCase()} from Wade's field experience.`,
-			categories: aliases[slug] ?? [label],
+			categories: postCategoryAliases[slug] ?? [label],
 			keywords: [label, slug.replaceAll("-", " ")],
 			excludeSlugs: posts.map((post) => post.slug),
 		},
 		{ posts: 3, services: 3 },
 	)
 
+	return { posts, label, related }
+}
+
+async function CategoryArchive({ slug }: { slug: string }) {
+	const data = await getCategoryArchiveData(slug)
+	if (!data) return null
+
 	return (
 		<ArticleArchive
-			description={`Practical ${label.toLowerCase()} from Wade's field experience.`}
-			posts={posts}
-			related={related}
-			title={label}
+			description={`Practical ${data.label.toLowerCase()} from Wade's field experience.`}
+			posts={data.posts}
+			related={data.related}
+			title={data.label}
 		/>
 	)
 }

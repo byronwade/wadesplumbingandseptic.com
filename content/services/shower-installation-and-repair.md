@@ -1,13 +1,14 @@
 ---
-title: Transform Your Shower Experience in Santa Cruz County
+title: Shower Installation and Repair in Santa Cruz County
 description: >-
-  If you're a homeowner in Santa Cruz County, ensuring your shower operates
-  efficiently is essential for daily comfort.
+  Shower valve, pan, and fixture repair or installation for Santa Cruz County
+  bathrooms. Call 831.225.4344.
 category: Plumbing
 order: 47
 image: >-
   /images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp
 imageAlt: Chrome shower faucet
+updated: '2026-07-30'
 ---
 If you're a homeowner in Santa Cruz County, ensuring your shower operates efficiently is essential for daily comfort. Our **shower head replacement santa cruz** service is designed to provide you with a seamless experience, ensuring optimal water flow and pressure. Whether your current shower head is outdated, leaking, or simply doesn't suit your needs, Wade's Plumbing & Septic is here to assist with expert installations.
 
