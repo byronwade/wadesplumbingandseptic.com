@@ -29,7 +29,7 @@ For plumbing emergencies, please call our emergency line for immediate assistanc
 123 Main Street 
 Anytown, USA 12345 
 Phone: (555) 123-4567 
-Email: info@wadesplumbing.com 
+Email: [support@wadesinc.io](mailto:support@wadesinc.io) 
 
 ## Hours of Operation
 

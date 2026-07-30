@@ -83,6 +83,16 @@ for (const collection of COLLECTIONS) {
 				`${file}: spaced hyphen aside (" - ") is not allowed; use parentheses, a comma, a colon, or a new sentence`,
 			)
 		}
+
+		// Only the working inbox is allowed in published content.
+		const emails = source.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) ?? []
+		for (const email of emails) {
+			if (email.toLowerCase() !== "support@wadesinc.io") {
+				errors.push(
+					`${file}: email "${email}" is not allowed; use support@wadesinc.io`,
+				)
+			}
+		}
 	}
 }
 
