@@ -3,8 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Phone } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
+import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site"
+import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 export type HeroBreadcrumb = {
@@ -169,16 +171,12 @@ export function ContentHero({
 				  Quote there and keeps the big Call button from sm up.
 				*/}
 				<div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-					<a
-						className={cn(
-							buttonVariants({ size: "xl" }),
-							"hidden w-full sm:inline-flex sm:w-auto",
-						)}
-						href={siteConfig.phoneHref}
-					>
-						<Phone aria-hidden="true" />
-						Call {siteConfig.phone}
-					</a>
+					<CallButton
+						className="hidden w-full sm:inline-flex sm:w-auto"
+						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+						prefer="dial"
+						size="xl"
+					/>
 					<Link
 						className={cn(
 							buttonVariants({ size: "xl" }),
@@ -199,13 +197,13 @@ export function ContentHero({
 					>
 						Get a Free Quote
 					</Link>
-					<a
+					<ProtectedContactLink
 						className="text-on-dark-muted hover:text-primary-bright inline-flex items-center justify-center gap-2 text-sm font-bold transition-colors sm:hidden"
-						href={siteConfig.phoneHref}
+						kind="vcard"
 					>
-						<Phone className="size-4" aria-hidden="true" />
-						Or call {siteConfig.phone}
-					</a>
+						<Phone aria-hidden="true" className="size-4" />
+						Save our contact
+					</ProtectedContactLink>
 				</div>
 			</div>
 		</section>

@@ -1,10 +1,12 @@
 import type { Route } from "next"
 import Link from "next/link"
-import { ArrowRight, Phone } from "@/components/icons"
+import { ArrowRight } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
+import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
-import { siteConfig } from "@/lib/site"
+import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
@@ -14,9 +16,11 @@ export function ContentConversionCta({
 	conversion: ContentConversion
 	/** Override the secondary CTA (defaults to Contact / Get a Free Quote). */
 	secondaryAction?: {
-		href: string
+		href?: string
 		label: string
 		external?: boolean
+		/** Protected email link (no mailto: in server HTML). */
+		contact?: "email" | "phone" | "vcard"
 	}
 }) {
 	const secondary = secondaryAction ?? {
@@ -29,9 +33,9 @@ export function ContentConversionCta({
 		"w-full sm:w-auto",
 	)
 	const secondaryIsExternal =
-		secondary.external ||
-		secondary.href.startsWith("mailto:") ||
-		secondary.href.startsWith("tel:")
+		Boolean(secondary.external) ||
+		Boolean(secondary.href?.startsWith("mailto:")) ||
+		Boolean(secondary.href?.startsWith("tel:"))
 
 	return (
 		<section className="surface-hero tex-grid tex-glow overflow-hidden">
@@ -48,14 +52,21 @@ export function ContentConversionCta({
 					</div>
 
 					<div className="reveal mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-						<a
-							className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
-							href={siteConfig.phoneHref}
-						>
-							<Phone aria-hidden="true" />
-							Call {siteConfig.phone}
-						</a>
-						{secondaryIsExternal ? (
+						<CallButton
+							className="w-full sm:w-auto"
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							mobileLabel="Save contact"
+							size="xl"
+						/>
+						{secondary.contact ? (
+							<ProtectedContactLink
+								className={secondaryClassName}
+								kind={secondary.contact}
+							>
+								{secondary.label}
+								<ArrowRight aria-hidden="true" />
+							</ProtectedContactLink>
+						) : secondaryIsExternal && secondary.href ? (
 							<a className={secondaryClassName} href={secondary.href}>
 								{secondary.label}
 								<ArrowRight aria-hidden="true" />
@@ -63,7 +74,7 @@ export function ContentConversionCta({
 						) : (
 							<Link
 								className={secondaryClassName}
-								href={secondary.href as Route}
+								href={(secondary.href ?? "/contact") as Route}
 								prefetch
 							>
 								{secondary.label}
@@ -116,10 +127,10 @@ export function ContentConversionCta({
 						<span className="ml-2 text-white/85">5-star local reviews</span>
 					</p>
 					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-						{siteConfig.licenses}
+						{contactInfo.licenses}
 					</p>
 					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-						{siteConfig.hours}
+						{contactInfo.hours}
 					</p>
 				</div>
 			</div>

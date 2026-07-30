@@ -4,6 +4,7 @@ import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
+import { ProtectedContactLink } from "@/components/protected-contact"
 import { cn } from "@/lib/utils"
 
 function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
@@ -64,6 +65,24 @@ export function MarkdownContent({
 								<Link href={href as Route} prefetch={false} {...props}>
 									{children}
 								</Link>
+							)
+						}
+
+						// Keep visible link text; apply real tel:/mailto: only on the client
+						// so scrapers do not harvest contiguous contact hrefs from HTML.
+						if (href.startsWith("tel:")) {
+							return (
+								<ProtectedContactLink kind="phone" {...props}>
+									{children}
+								</ProtectedContactLink>
+							)
+						}
+
+						if (href.startsWith("mailto:")) {
+							return (
+								<ProtectedContactLink kind="email" {...props}>
+									{children}
+								</ProtectedContactLink>
 							)
 						}
 

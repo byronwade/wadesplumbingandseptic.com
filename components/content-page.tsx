@@ -13,8 +13,6 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
-
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -24,6 +22,7 @@ import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
+import { VirtualBusinessCard } from "@/components/virtual-business-card"
 
 export function ContentPage({
 	document,
@@ -118,6 +117,12 @@ export function ContentPage({
 				variant={marketing ? "marketing" : "default"}
 			/>
 
+			{document.slug === "contact" ? (
+				<div className="container-shell section-y-tight">
+					<VirtualBusinessCard id="contact-business-card" />
+				</div>
+			) : null}
+
 			{marketing ? (
 				<>
 					{document.gallery?.length ? (
@@ -144,13 +149,11 @@ export function ContentPage({
 			<ContentConversionCta
 				conversion={document.conversion}
 				secondaryAction={
-					document.slug === "contact" || document.slug.startsWith("careers")
-						? {
-								href: `mailto:${siteConfig.email}`,
-								label: "Email Us",
-								external: true,
-							}
-						: undefined
+					document.slug === "contact"
+						? { label: "Email Us", contact: "email" }
+						: document.slug.startsWith("careers")
+							? { label: "Email Us", contact: "email" }
+							: undefined
 				}
 			/>
 			<JsonLd data={jsonLd} />

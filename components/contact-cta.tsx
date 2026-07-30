@@ -1,8 +1,13 @@
 import Link from "next/link"
 import { ArrowRight, Clock, Mail, Phone } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
+import {
+	ProtectedContactLink,
+	ProtectedEmailText,
+} from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site"
+import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 export function ContactCta({
@@ -58,26 +63,23 @@ export function ContactCta({
 						{description}
 					</p>
 					{compact ? (
-						<a
+						<ProtectedContactLink
 							className="text-primary-bright inline-flex items-center gap-2 text-sm font-bold transition-colors hover:text-white"
-							href={siteConfig.phoneHref}
+							kind="phone"
 						>
-							<Phone className="size-4 shrink-0" aria-hidden="true" />
-							{siteConfig.phone}
-						</a>
+							<Phone aria-hidden="true" className="size-4 shrink-0" />
+							{contactInfo.phoneDisplay}
+						</ProtectedContactLink>
 					) : (
 						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
 							<span className="inline-flex items-center gap-2">
 								<Clock className="text-primary-bright size-4 shrink-0" />
-								{siteConfig.hours}
+								{contactInfo.hours}
 							</span>
-							<a
-								className="inline-flex items-center gap-2 transition-colors hover:text-white"
-								href={`mailto:${siteConfig.email}`}
-							>
+							<span className="inline-flex items-center gap-2">
 								<Mail className="text-primary-bright size-4 shrink-0" />
-								{siteConfig.email}
-							</a>
+								<ProtectedEmailText className="transition-colors hover:text-white" />
+							</span>
 						</div>
 					)}
 				</div>
@@ -89,16 +91,12 @@ export function ContactCta({
 					)}
 				>
 					{includeCall ? (
-						<a
-							className={cn(
-								buttonVariants({ size: compact ? "lg" : "xl" }),
-								actionWidth,
-							)}
-							href={siteConfig.phoneHref}
-						>
-							<Phone aria-hidden="true" />
-							Call {siteConfig.phone}
-						</a>
+						<CallButton
+							className={actionWidth}
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							mobileLabel="Save contact"
+							size={compact ? "lg" : "xl"}
+						/>
 					) : null}
 					<Link
 						className={cn(

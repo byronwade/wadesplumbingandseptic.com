@@ -9,13 +9,15 @@ import {
 	Droplets,
 	Gauge,
 	Home,
-	Phone,
 	ShieldCheck,
 	Wrench,
 } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
 import { ContactCta } from "@/components/contact-cta"
 import { JsonLd } from "@/components/json-ld"
+import { ProtectedPhoneText } from "@/components/protected-contact"
+import { contactInfo } from "@/lib/contact"
 
 const HomeFaq = dynamic(() =>
 	import("@/components/home-faq").then((mod) => mod.HomeFaq),
@@ -29,7 +31,6 @@ import {
 	CardTitle,
 } from "@/components/ui/card"
 import { buildPageMetadata } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
@@ -296,16 +297,12 @@ export default function HomePage() {
 						</p>
 
 						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-							<a
-								className={cn(
-									buttonVariants({ size: "xl" }),
-									"w-full sm:w-auto",
-								)}
-								href={siteConfig.phoneHref}
-							>
-								<Phone aria-hidden="true" />
-								Call {siteConfig.phone}
-							</a>
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								mobileLabel="Save contact"
+								size="xl"
+							/>
 							<Link
 								className={cn(
 									buttonVariants({ variant: "inverse", size: "xl" }),
@@ -410,16 +407,12 @@ export default function HomePage() {
 								</div>
 							))}
 							<div className="flex w-full flex-col gap-3 sm:col-span-2 sm:flex-row">
-								<a
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"w-full sm:w-auto",
-									)}
-									href={siteConfig.phoneHref}
-								>
-									<Phone aria-hidden="true" />
-									Call to schedule: {siteConfig.phone}
-								</a>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call to schedule: ${contactInfo.phoneDisplay}`}
+									mobileLabel="Save contact"
+									size="xl"
+								/>
 								<Link
 									className={cn(
 										buttonVariants({ variant: "outline", size: "xl" }),
@@ -684,12 +677,7 @@ export default function HomePage() {
 						</h2>
 						<p className="type-lead">
 							Do not see your question? Call{" "}
-							<a
-								className="text-primary font-bold underline-offset-2 hover:underline"
-								href={siteConfig.phoneHref}
-							>
-								{siteConfig.phone}
-							</a>{" "}
+							<ProtectedPhoneText className="text-primary font-bold underline-offset-2 hover:underline" />{" "}
 							and talk to someone who understands the work.
 						</p>
 					</div>

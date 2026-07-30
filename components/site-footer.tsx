@@ -1,12 +1,12 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Phone } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
 import { CompanyLogo } from "@/components/company-logos"
-import { buttonVariants } from "@/components/ui/button"
+import { ProtectedPhoneText } from "@/components/protected-contact"
+import { VirtualBusinessCard } from "@/components/virtual-business-card"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
-import { cn } from "@/lib/utils"
 
 const serviceLinks = [
 	{ href: "/service-offerings/drain-cleaning", label: "Drain Cleaning" },
@@ -40,7 +40,7 @@ export function SiteFooter() {
 							{siteConfig.hours}
 						</p>
 						<p className="type-subtitle mt-1 text-white">
-							{siteConfig.phone}
+							<ProtectedPhoneText className="text-inherit hover:text-white" />
 						</p>
 					</div>
 					{/*
@@ -48,27 +48,28 @@ export function SiteFooter() {
 					  text-foreground, which in dark mode resolves to near-white - an
 					  invisible label on a white button.
 					*/}
-					<a
-						className={cn(
-							buttonVariants({ variant: "secondary", size: "lg" }),
-							"text-ink w-full bg-white hover:bg-white/90 sm:w-auto",
-						)}
-						href={siteConfig.phoneHref}
-					>
-						<Phone aria-hidden="true" />
-						Call now
-					</a>
+					<CallButton
+						className="text-ink w-full bg-white hover:bg-white/90 sm:w-auto"
+						desktopLabel="Call now"
+						mobileLabel="Save contact"
+						size="lg"
+						variant="secondary"
+					/>
 				</div>
 			</div>
 
 			<div className="container-shell py-[var(--space-section-y-tight)]">
+				<div className="mb-[var(--space-block)]">
+					<VirtualBusinessCard id="footer-business-card" tone="dark" />
+				</div>
+
 				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
 						<Link
+							aria-label="Wade's Plumbing & Septic home"
 							className="flex items-center gap-3"
 							href="/"
 							prefetch
-							aria-label="Wade's Plumbing & Septic home"
 						>
 							<Image
 								alt="Wade's Plumbing & Septic logo"
@@ -99,9 +100,9 @@ export function SiteFooter() {
 						<div className="mt-6 flex gap-2">
 							{socialLinks.map((item) => (
 								<a
+									aria-label={item.label}
 									className="focus-visible:ring-ring grid size-10 place-items-center rounded-md bg-white/8 opacity-80 transition-opacity outline-none hover:opacity-100 focus-visible:ring-2"
 									href={item.href}
-									aria-label={item.label}
 									key={item.label}
 									rel="noopener noreferrer"
 									target="_blank"
@@ -112,9 +113,9 @@ export function SiteFooter() {
 						</div>
 					</div>
 
-					<FooterColumn title="Services" links={serviceLinks} />
-					<FooterColumn title="Company" links={companyNavigation} />
-					<FooterColumn title="Resources" links={resourceNavigation} />
+					<FooterColumn links={serviceLinks} title="Services" />
+					<FooterColumn links={companyNavigation} title="Company" />
+					<FooterColumn links={resourceNavigation} title="Resources" />
 				</div>
 
 				<div className="text-on-dark-subtle mt-[var(--space-block)] flex flex-col gap-4 border-t border-white/10 pt-7 text-xs sm:flex-row sm:items-center sm:justify-between">
