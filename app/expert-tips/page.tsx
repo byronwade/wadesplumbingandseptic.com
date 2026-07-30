@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import type { Route } from "next"
 import Link from "next/link"
-import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
@@ -48,21 +47,13 @@ export default function ExpertTipsPage() {
 				</div>
 			</section>
 
-			<Suspense
-				fallback={
-					<section className="container-shell section-y">
-						Loading guides…
-					</section>
-				}
-			>
-				<RankedContentArchive
-					allLabel="All guides"
-					emptyLabel="No guides in this category."
-					noun={{ singular: "guide", plural: "guides" }}
-					pageSize={9}
-					variant="tip"
-				/>
-			</Suspense>
+			<RankedContentArchive
+				allLabel="All guides"
+				emptyLabel="No guides in this category."
+				noun={{ singular: "guide", plural: "guides" }}
+				pageSize={9}
+				variant="tip"
+			/>
 
 			<ContactCta title="Have a plumbing or septic question?" />
 		</main>

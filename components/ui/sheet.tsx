@@ -19,7 +19,7 @@ export function SheetOverlay({
 	return (
 		<SheetPrimitive.Overlay
 			className={cn(
-				"bg-ink/70 data-[state=open]:animate-fade fixed inset-0 z-50",
+				"bg-ink/70 data-[state=open]:animate-fade fixed inset-0 z-[60]",
 				className,
 			)}
 			{...props}
@@ -28,7 +28,7 @@ export function SheetOverlay({
 }
 
 const sheetVariants = cva(
-	"fixed z-50 flex flex-col gap-4 bg-card text-card-foreground shadow-[var(--shadow-edge)] transition ease-out data-[state=closed]:duration-200 data-[state=open]:duration-300",
+	"fixed z-[60] flex flex-col gap-4 bg-card text-card-foreground shadow-[var(--shadow-edge)] transition ease-out data-[state=closed]:duration-200 data-[state=open]:duration-300",
 	{
 		variants: {
 			side: {

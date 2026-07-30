@@ -140,11 +140,7 @@ export default function RootLayout({
 					Skip to content
 				</a>
 				<SiteHeader />
-				<Suspense
-					fallback={<main id="main-content" className="min-h-[40vh]" />}
-				>
-					{children}
-				</Suspense>
+				{children}
 				<SiteFooter />
 				<CommandMenuLoader />
 				<Suspense fallback={null}>

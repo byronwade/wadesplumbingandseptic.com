@@ -11,7 +11,11 @@ export function utcDay(date: Date) {
 	return date.toISOString().slice(0, 10)
 }
 
-/** Request-time helper. Do not call during static prerender. */
+/**
+ * UTC calendar day. Prefer calling inside `"use cache"` + `cacheLife(...)`
+ * so the value is closed over for that cache entry. Avoid pairing with
+ * `connection()` around full page trees (truncated prerender shells).
+ */
 export function utcDayNow() {
 	return utcDay(new Date())
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
-import { connection } from "next/server"
 import { notFound } from "next/navigation"
-import { Suspense } from "react"
 
 import { ContentPage } from "@/components/content-page"
 import {
@@ -10,11 +8,7 @@ import {
 	resolvePageOrPost,
 	type ContentDocument,
 } from "@/lib/content"
-import {
-	getPageViewStoreCached,
-	getStatsForSlug,
-} from "@/lib/page-views"
-import { utcDayNow } from "@/lib/page-views/stats"
+import { getLiveViewStats } from "@/lib/page-views/live"
 import { getRelatedForPost, getRelatedForTopic } from "@/lib/related-content"
 import { buildPageMetadata } from "@/lib/seo"
 
@@ -81,32 +75,6 @@ async function getRelatedForDocument(
 	return undefined
 }
 
-async function RelatedMarkdownPage({
-	document,
-	isPost,
-}: {
-	document: ContentDocument
-	isPost: boolean
-}) {
-	const related = await getRelatedForDocument(document, isPost)
-
-	await connection()
-	const today = utcDayNow()
-	const store = await getPageViewStoreCached()
-	const viewStats = isPost
-		? getStatsForSlug(store, "tip", document.slug, today)
-		: undefined
-
-	return (
-		<ContentPage
-			document={document}
-			isPost={isPost}
-			related={related}
-			viewStats={viewStats}
-		/>
-	)
-}
-
 export default async function MarkdownPage({
 	params,
 }: {
@@ -118,12 +86,20 @@ export default async function MarkdownPage({
 
 	if (!resolved) notFound()
 
+	const related = await getRelatedForDocument(
+		resolved.document,
+		resolved.isPost,
+	)
+	const viewStats = resolved.isPost
+		? await getLiveViewStats("tip", resolved.document.slug)
+		: undefined
+
 	return (
-		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
-			<RelatedMarkdownPage
-				document={resolved.document}
-				isPost={resolved.isPost}
-			/>
-		</Suspense>
+		<ContentPage
+			document={resolved.document}
+			isPost={resolved.isPost}
+			related={related}
+			viewStats={viewStats}
+		/>
 	)
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import type { Route } from "next"
 import Link from "next/link"
-import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
@@ -57,21 +56,15 @@ export default function TrendingServicesPage() {
 				</div>
 			</section>
 
-			<Suspense
-				fallback={
-					<div className="container-shell section-y">Loading services…</div>
-				}
-			>
-				<RankedContentArchive
-					allLabel="Trending services"
-					emptyLabel="No services in this category."
-					lockedSort
-					noun={{ singular: "service", plural: "services" }}
-					pageSize={12}
-					sort="trending"
-					variant="service"
-				/>
-			</Suspense>
+			<RankedContentArchive
+				allLabel="Trending services"
+				emptyLabel="No services in this category."
+				lockedSort
+				noun={{ singular: "service", plural: "services" }}
+				pageSize={12}
+				sort="trending"
+				variant="service"
+			/>
 
 			<ContactCta title="Seeing the same problem at your place?" />
 		</main>
