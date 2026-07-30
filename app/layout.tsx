@@ -131,6 +131,10 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
+<<<<<<< HEAD
+			suppressHydrationWarning
+=======
+>>>>>>> origin/main
 		>
 			<body className={manrope.className}>
 				<a
