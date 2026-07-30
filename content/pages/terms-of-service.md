@@ -1,6 +1,8 @@
 ---
 title: Website Terms of Service
-description: Terms governing use of the Wade's Plumbing & Septic website and its educational content.
+description: >-
+  This website provides general information about plumbing, septic systems,
+  available services, and homeowner maintenance.
 eyebrow: Legal
 order: 12
 ---

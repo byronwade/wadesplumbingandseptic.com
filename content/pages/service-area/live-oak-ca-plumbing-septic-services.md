@@ -1,12 +1,15 @@
 ---
-title: Live Oak, CA Plumbing & Septic Services
-description: 'Live Oak plumbing & septic along Soquel Drive, near beaches & rural pockets. Family-owned Wade''s, CSLB #1087260. Call 831.225.4344.'
-eyebrow: Live Oak, CA
+title: 'Live Oak, CA Plumbing & Septic Services'
+description: >-
+  Live Oak plumbing & septic along Soquel Drive, near beaches & rural pockets.
+  Family-owned Wade's, CSLB #1087260. Call 831.225.4344.
+eyebrow: 'Live Oak, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
-imageAlt: Live Oak neighborhood between Santa Cruz and Capitola with mixed residential housing
+imageAlt: >-
+  Live Oak neighborhood between Santa Cruz and Capitola with mixed residential
+  housing
 ---
-
 Live Oak is the unincorporated stretch most people drive through without naming, until they own a house here. Soquel Drive and Portola Drive carry steady traffic past 1950s ranch homes, newer infill, and pockets that still feel rural a few blocks off the main roads. You are close enough to Seabright and Capitola for a short bike ride, but far enough from city hall that sewer versus septic answers come from county records, not a quick online map.
 
 Wade's Plumbing & Septic is family-owned (CSLB #1087260) and works Live Oak daily. We know which streets tie into Santa Cruz city sewer extensions, where older septics sit behind fences on larger lots, and how rental density along the corridor affects wear on aging plumbing.
@@ -32,8 +35,8 @@ We assist with:
 - Sewer lateral backups when the problem is between the house and the main
 - Septic pumping and inspections for homes still on tanks, common during escrow
 - Drainfield troubleshooting when wet areas persist in side yards after laundry days
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when county requirements trigger an upgrade
-- [Engineered septic systems](/engineered-septic-systems-santa-cruz-county) where standard trenches will not fit or perc poorly
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county requirements trigger an upgrade
+- [Engineered septic systems](/service-offerings/engineered-septic-system-installation) where standard trenches will not fit or perc poorly
 
 If you are unsure what serves your address, we help trace cleanouts and tank locations before you plan an addition.
 

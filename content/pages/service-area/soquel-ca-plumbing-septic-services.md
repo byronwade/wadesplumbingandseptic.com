@@ -1,12 +1,13 @@
 ---
-title: Soquel, CA Plumbing & Septic Services
-description: 'Soquel plumbing & septic from village core to hillside acres, creek lots, redwoods, sewer & septic mix. Wade''s 831.225.4344, CSLB #1087260.'
-eyebrow: Soquel, CA
+title: 'Soquel, CA Plumbing & Septic Services'
+description: >-
+  Soquel plumbing & septic from village core to hillside acres, creek lots,
+  redwoods, sewer & septic mix. Wade's 831.225.4344, CSLB #1087260.
+eyebrow: 'Soquel, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Soquel Creek and redwood setting near Soquel village homes
 ---
-
 Soquel is where the valley floor meets the Santa Cruz Mountains. The village along Soquel Drive still feels like a crossroads, coffee shops, older commercial buildings, and homes that have been expanded room by room since the 1940s. Follow Soquel Creek uphill and the character shifts: larger lots, denser tree canopy, and wastewater systems that often end at a septic tank instead of a city main.
 
 Wade's Plumbing & Septic is family-owned, based in Santa Cruz County, and licensed (CSLB #1087260). We work with Soquel residents who live on the flat near Capitola borders and with hillside owners whose driveways narrow to a single lane before you reach the house.
@@ -34,8 +35,8 @@ Services we provide:
 - Septic pumping timed to actual use, not a generic three-year postcard
 - Pre-purchase inspections that note tank condition, baffle integrity, and drainfield red flags
 - Troubleshooting for gurgling drains, surfacing effluent, and alarm systems on newer installs
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when upgrades are required
-- [Engineered septic solutions](/engineered-septic-systems-santa-cruz-county) for rocky or steep sites where standard trenches fail perc tests
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when upgrades are required
+- [Engineered septic solutions](/service-offerings/engineered-septic-system-installation) for rocky or steep sites where standard trenches fail perc tests
 
 Properties near Soquel Creek face additional scrutiny on drainage and setbacks. We factor that context into recommendations instead of treating every lot like a flat suburban parcel.
 

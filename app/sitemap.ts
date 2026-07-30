@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 
 import { getAllRoutes, taxonomySlug } from "@/lib/content"
 import { siteConfig } from "@/lib/site"
@@ -22,30 +23,47 @@ function entry(
 
 async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 	"use cache"
+	cacheTag("content:routes", "content:pages", "content:services", "content:posts")
+	cacheLife("max")
 
 	const { pages, services, posts } = await getAllRoutes()
 
 	const fixed = [
 		entry("", undefined, 1),
 		entry("/services", undefined, 0.9),
+		entry("/service-areas", undefined, 0.9),
 		entry("/expert-tips", undefined, 0.9),
+		entry("/faq", undefined, 0.75),
+		entry("/contact", undefined, 0.8),
 	]
+
+	const fixedPaths = new Set(
+		fixed.map((item) => item.url.replace(siteConfig.url, "")),
+	)
 
 	const pageEntries = pages
 		.filter((page) => !page.noindex)
-		.map((page) => entry(`/${page.slug}`, page.updated ?? page.date, 0.75))
+		.filter((page) => !fixedPaths.has(`/${page.slug}`) && page.slug !== "")
+		.map((page) => {
+			const isServiceArea = page.slug.startsWith("service-area/")
+			const isCityService = page.slug.startsWith("santa-cruz/")
+			const priority = isServiceArea ? 0.85 : isCityService ? 0.8 : 0.72
+			return entry(`/${page.slug}`, page.updated ?? page.date, priority)
+		})
 
-	const serviceEntries = services.map((service) =>
-		entry(
-			`/service-offerings/${service.slug}`,
-			service.updated ?? service.date,
-			0.85,
-		),
-	)
+	const serviceEntries = services
+		.filter((service) => !service.noindex)
+		.map((service) =>
+			entry(
+				`/service-offerings/${service.slug}`,
+				service.updated ?? service.date,
+				0.85,
+			),
+		)
 
-	const postEntries = posts.map((post) =>
-		entry(`/${post.slug}`, post.updated ?? post.date, 0.7),
-	)
+	const postEntries = posts
+		.filter((post) => !post.noindex)
+		.map((post) => entry(`/${post.slug}`, post.updated ?? post.date, 0.7))
 
 	const categories = [
 		...new Set(

@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
+import { Suspense } from "react"
 
 import { ArticleArchive } from "@/components/article-archive"
 import { getCollection, taxonomySlug } from "@/lib/content"
@@ -59,15 +61,13 @@ export async function generateMetadata({
 	})
 }
 
-export default async function CategoryPage({
-	params,
-}: {
-	params: Promise<{ slug: string }>
-}) {
-	const { slug } = await params
-	const posts = await postsForCategory(slug)
+async function CategoryArchive({ slug }: { slug: string }) {
+	"use cache"
+	cacheTag("content:posts", `content:category:${slug}`)
+	cacheLife("max")
 
-	if (!posts.length) notFound()
+	const posts = await postsForCategory(slug)
+	if (!posts.length) return null
 
 	const label = aliases[slug]?.[0] ?? posts[0]?.category ?? "Expert Tips"
 	const related = await getRelatedForTopic(
@@ -88,5 +88,22 @@ export default async function CategoryPage({
 			related={related}
 			title={label}
 		/>
+	)
+}
+
+export default async function CategoryPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>
+}) {
+	const { slug } = await params
+	const posts = await postsForCategory(slug)
+
+	if (!posts.length) notFound()
+
+	return (
+		<Suspense fallback={<main id="main-content" className="min-h-[50vh]" />}>
+			<CategoryArchive slug={slug} />
+		</Suspense>
 	)
 }

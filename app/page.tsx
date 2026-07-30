@@ -682,16 +682,15 @@ export default function HomePage() {
 							Straight answers to common questions.
 						</h2>
 						<p className="type-lead">
-							Do not see your question? Call and talk to someone who understands
-							the work.
+							Do not see your question? Call{" "}
+							<a
+								className="text-primary font-bold underline-offset-2 hover:underline"
+								href={siteConfig.phoneHref}
+							>
+								{siteConfig.phone}
+							</a>{" "}
+							and talk to someone who understands the work.
 						</p>
-						<a
-							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
-							href={siteConfig.phoneHref}
-						>
-							<Phone aria-hidden="true" />
-							{siteConfig.phone}
-						</a>
 					</div>
 					<HomeFaq faqs={faqs} />
 				</div>

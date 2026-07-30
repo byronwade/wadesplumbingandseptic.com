@@ -74,12 +74,27 @@ const nextConfig: NextConfig = {
 			]),
 			{
 				source: "/video-tutorials",
-				destination: "/videos",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/videos",
+				destination: "/expert-tips",
 				permanent: true,
 			},
 			{
 				source: "/field-shorts",
-				destination: "/shorts",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/shorts",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/downloads",
+				destination: "/expert-tips",
 				permanent: true,
 			},
 			{
@@ -118,8 +133,8 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/santa-cruz/water-heater-replacement",
-				destination: "/santa-cruz/water-heater-replacment",
+				source: "/santa-cruz/water-heater-replacment",
+				destination: "/santa-cruz/water-heater-replacement",
 				permanent: true,
 			},
 			{

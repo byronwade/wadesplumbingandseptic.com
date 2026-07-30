@@ -1,24 +1,24 @@
 ---
 title: Santa Cruz County's Trusted Guide for Plumbing Emergencies
-description: As a homeowner, it's important to be prepared for emergencies, especially
- when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency…
+description: >-
+  Clogged drains are one of the most common plumbing emergencies that homeowners
+  face. They can occur in sinks, showers, toilets, and other plumbing.
 category: Plumbing Tips
 date: '2025-05-11'
 tags:
-- santa cruz county
-- local plumbing experts
-- plumbing tips
-- septic services
-- clogged drains
-- plumbing emergencies
-- burst pipes
-- emergency plumbing guide
-- home plumbing maintenance
-image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
-imageAlt: "Warning sign on a wooden post"
+  - santa cruz county
+  - local plumbing experts
+  - plumbing tips
+  - septic services
+  - clogged drains
+  - plumbing emergencies
+  - burst pipes
+  - emergency plumbing guide
+  - home plumbing maintenance
+image: >-
+  /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
+imageAlt: Warning sign on a wooden post
 ---
-
-
 As a homeowner, it's important to be prepared for emergencies, especially when it comes to plumbing. From clogged drains to burst pipes, a plumbing emergency can quickly turn into a catastrophic situation if not handled promptly and properly. In this guide, we'll discuss some common plumbing emergencies and what you can do to prevent them and minimize damage.
 
 ![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)

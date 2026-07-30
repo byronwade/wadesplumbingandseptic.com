@@ -1,21 +1,24 @@
 ---
 title: Top Water Heater Services for Santa Cruz County Homes
-description: A broken water heater can quickly disrupt your home life, no hot showers,
- inefficient appliances, and rising utility bills. When your unit stops working…
+description: >-
+  A broken water heater can quickly disrupt your home life, no hot showers,
+  inefficient appliances, and rising utility bills. When your unit stops
+  working.
 category: Plumbing Tips
 date: '2025-06-17'
 tags:
-- santa cruz county
-- plumbing services
-- local plumbing experts
-- water heater repair
-- water heater replacement
-- home plumbing solutions
-- cost-effective plumbing
-- hot water issues
+  - santa cruz county
+  - plumbing services
+  - local plumbing experts
+  - water heater repair
+  - water heater replacement
+  - home plumbing solutions
+  - cost-effective plumbing
+  - hot water issues
 image: /images/wordpress/img-1295-1.webp
-imageAlt: "Top Water Heater Services for Santa Cruz County Homes"
----A broken water heater can quickly disrupt your home life, no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
+imageAlt: Top Water Heater Services for Santa Cruz County Homes
+---
+A broken water heater can quickly disrupt your home life, no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
 
 ![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 

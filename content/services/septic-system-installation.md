@@ -1,15 +1,13 @@
 ---
-title: Premium Septic Installations in Santa Cruz County, CA
-description: When it comes to ensuring your home's wastewater management is both efficient
- and environmentally friendly, professional septic system installation is crucial.
- At Wade's Plumbing & Septic, we pride ourselves on providing top-tier septic system
- solutions to…
+title: 'Premium Septic Installations in Santa Cruz County, CA'
+description: >-
+  When it comes to ensuring your home's wastewater management is both efficient
+  and environmentally friendly, professional septic system installation is.
 category: Septic
 order: 18
 image: /images/work/engineered-septic-hero.webp
 imageAlt: New septic system installation
 ---
-
 When it comes to ensuring your home's wastewater management is both efficient and environmentally friendly, professional septic system installation is crucial. At Wade's Plumbing & Septic, we pride ourselves on providing top-tier septic system solutions to the residents of Santa Cruz County, California. Whether you're building a new home or replacing an outdated system, our team offers comprehensive services that cover every aspect from permit acquisition to final inspection.
 
 ## Comprehensive Septic System Installation Services
