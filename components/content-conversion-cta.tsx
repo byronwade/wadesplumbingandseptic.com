@@ -1,3 +1,4 @@
+import type { Route } from "next"
 import Link from "next/link"
 import { ArrowRight, BadgeCheck, Clock, Phone, Star } from "lucide-react"
 
@@ -8,9 +9,26 @@ import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
 	conversion,
+	secondaryAction,
 }: {
 	conversion: ContentConversion
+	/** Override the secondary CTA (defaults to Contact / Get a Free Quote). */
+	secondaryAction?: {
+		href: string
+		label: string
+		external?: boolean
+	}
 }) {
+	const secondary = secondaryAction ?? {
+		href: "/contact",
+		label: "Get a Free Quote",
+		external: false,
+	}
+	const secondaryClassName = cn(
+		buttonVariants({ variant: "inverse", size: "xl" }),
+		"w-full justify-center gap-2 sm:w-auto",
+	)
+
 	return (
 		<section className="surface-dark relative overflow-hidden">
 			<div
@@ -52,17 +70,23 @@ export function ContentConversionCta({
 							<Phone className="size-5" />
 							Call {siteConfig.phone}
 						</a>
-						<Link
-							className={cn(
-								buttonVariants({ variant: "inverse", size: "xl" }),
-								"w-full justify-center gap-2 sm:w-auto",
-							)}
-							href="/contact"
-							prefetch
-						>
-							Get a Free Quote
-							<ArrowRight />
-						</Link>
+						{secondary.external ||
+						secondary.href.startsWith("mailto:") ||
+						secondary.href.startsWith("tel:") ? (
+							<a className={secondaryClassName} href={secondary.href}>
+								{secondary.label}
+								<ArrowRight />
+							</a>
+						) : (
+							<Link
+								className={secondaryClassName}
+								href={secondary.href as Route}
+								prefetch
+							>
+								{secondary.label}
+								<ArrowRight />
+							</Link>
+						)}
 					</div>
 
 					<ul className="text-white/70 motion-fade motion-delay-2 mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold">

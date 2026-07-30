@@ -2,6 +2,7 @@ import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
 import { articleJsonLd, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo"
+import { siteConfig } from "@/lib/site"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -72,7 +73,18 @@ export function ContentPage({
 					/>
 				</aside>
 			</article>
-			<ContentConversionCta conversion={document.conversion} />
+			<ContentConversionCta
+				conversion={document.conversion}
+				secondaryAction={
+					document.slug === "contact"
+						? {
+								href: `mailto:${siteConfig.email}`,
+								label: "Email Us",
+								external: true,
+							}
+						: undefined
+				}
+			/>
 			<JsonLd
 				data={[
 					isPost ? articleJsonLd(document) : webPageJsonLd(document),

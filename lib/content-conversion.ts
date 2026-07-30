@@ -158,8 +158,30 @@ function parseConversionBundle(
 	}
 }
 
+/** Utility/company pages where "Get local help with {title}" reads broken. */
+const PAGE_CTA_TITLES: Record<string, string> = {
+	"contact us": "Ready to schedule service?",
+	contact: "Ready to schedule service?",
+	"about us": "Need a local licensed team you can trust?",
+	about: "Need a local licensed team you can trust?",
+	faq: "Still have a plumbing or septic question?",
+	faqs: "Still have a plumbing or septic question?",
+	"frequently asked questions": "Still have a plumbing or septic question?",
+	financing: "Want clear options before work begins?",
+	warranties: "Questions about coverage or warranties?",
+	careers: "Interested in joining the Wade's team?",
+	testimonials: "Ready to see what neighbors experience?",
+	"customer reviews": "Ready to see what neighbors experience?",
+	"privacy policy": "Need help with a plumbing or septic issue?",
+	"terms of service": "Need help with a plumbing or septic issue?",
+	"thank you": "We received your message",
+}
+
 function fallbackTitle(title: string) {
 	const cleaned = title.replace(/\?$/, "").trim()
+	const mapped = PAGE_CTA_TITLES[cleaned.toLowerCase()]
+	if (mapped) return mapped
+
 	// Avoid "Ready for help with Ensure Optimal..." when titles already read as CTAs.
 	if (SOFT_CTA_HEADING.test(cleaned) || /^(get|need|want)\b/i.test(cleaned)) {
 		return cleaned
@@ -246,14 +268,23 @@ export function extractContentConversion(
 	}
 }
 
+const PAGE_CTA_DESCRIPTIONS: Record<string, string> = {
+	"contact us":
+		"Call or text 831.225.4344. We will confirm your address, triage the issue, and get you on the schedule with clear next steps.",
+	contact:
+		"Call or text 831.225.4344. We will confirm your address, triage the issue, and get you on the schedule with clear next steps.",
+}
+
 export function normalizeConversion(
 	conversion: ContentConversion | null | undefined,
 	fallback: { title: string; description: string },
 ): ContentConversion {
 	const title = conversion?.title?.trim() || fallbackTitle(fallback.title)
+	const pageKey = fallback.title.replace(/\?$/, "").trim().toLowerCase()
 
 	const description =
 		conversion?.description?.trim() ||
+		PAGE_CTA_DESCRIPTIONS[pageKey] ||
 		fallback.description.trim() ||
 		"Talk with a local licensed team for clear options, honest pricing, and work done the right way."
 
@@ -271,10 +302,15 @@ export function normalizeConversion(
 }
 
 function defaultTestimonialsFor(topic: string): ContentTestimonial[] {
-	const focus = topic.replace(/\s+/g, " ").trim() || "plumbing and septic work"
+	const cleaned = topic.replace(/\s+/g, " ").trim()
+	const isUtilityPage = Boolean(PAGE_CTA_TITLES[cleaned.toLowerCase()])
+	const focus = isUtilityPage
+		? "our plumbing and septic work"
+		: cleaned.toLowerCase() || "plumbing and septic work"
+
 	return [
 		{
-			quote: `Clear communication and solid workmanship. The team made ${focus.toLowerCase()} straightforward from the first call.`,
+			quote: `Clear communication and solid workmanship. The team made ${focus} straightforward from the first call.`,
 			name: "Sarah",
 			location: "Santa Cruz",
 		},
