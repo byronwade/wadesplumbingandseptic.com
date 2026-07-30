@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, BadgeCheck } from "@/components/icons"
+import { ArrowRight, BadgeCheck, Phone } from "@/components/icons"
 
 import { HomeBelowFold } from "@/components/home-below-fold"
 import { JsonLd } from "@/components/json-ld"
@@ -33,37 +33,74 @@ const HERO_TITLE_STYLE = {
 export default function HomePage() {
 	return (
 		<main id="main-content">
-			{/*
-			  No bitmap in the first viewport: <img> and CSS background-image both
-			  become LCP under Chrome and add ~1s+ of Lantern render delay on
-			  mobile. The H1 paints with FCP (~0.9s) for Perf 100. Field photography
-			  lives in the below-fold specialty / gallery sections.
-			*/}
+			<link
+				rel="preload"
+				as="image"
+				href="/images/work/hero-mobile.avif"
+				type="image/avif"
+				media="(max-width: 767px)"
+				fetchPriority="high"
+			/>
+			<link
+				rel="preload"
+				as="image"
+				href="/images/work/hero-desktop.avif"
+				type="image/avif"
+				media="(min-width: 768px)"
+				fetchPriority="high"
+			/>
 			<style>{`
 				.hero-cinematic[data-lcp] {
 					position: relative;
 					isolation: isolate;
 					overflow: hidden;
+					background: #0c0b0a;
 					color: #f7f7f5;
-					min-height: min(88svh, 52rem);
-					display: flex;
-					flex-direction: column;
-					background-color: #0c0b0a;
-					background-image:
-						radial-gradient(ellipse 90% 70% at 80% 10%, rgba(196, 122, 58, 0.22), transparent 55%),
-						radial-gradient(ellipse 70% 60% at 10% 90%, rgba(196, 122, 58, 0.12), transparent 50%),
-						linear-gradient(165deg, #1a1714 0%, #0c0b0a 48%, #14110e 100%);
+				}
+				.hero-cinematic[data-lcp] img {
+					display: block;
+					width: 100%;
+					height: auto;
+					border: 0;
+					aspect-ratio: 3 / 4;
+				}
+				@media (min-width: 768px) {
+					.hero-cinematic[data-lcp] img {
+						aspect-ratio: 16 / 9;
+					}
 				}
 			`}</style>
 			<section className="hero-cinematic" data-lcp="">
+				<picture>
+					<source
+						media="(min-width: 768px)"
+						srcSet="/images/work/hero-desktop.avif"
+						type="image/avif"
+					/>
+					<source
+						media="(min-width: 768px)"
+						srcSet="/images/work/hero-desktop.webp"
+						type="image/webp"
+					/>
+					<source srcSet="/images/work/hero-mobile.avif" type="image/avif" />
+					<img
+						alt=""
+						width={750}
+						height={1000}
+						decoding="sync"
+						fetchPriority="high"
+						src="/images/work/hero-mobile.webp"
+					/>
+				</picture>
 				<div
 					style={{
-						position: "relative",
+						position: "absolute",
+						inset: 0,
 						zIndex: 2,
 						display: "flex",
-						flex: 1,
 						flexDirection: "column",
-						minHeight: "inherit",
+						background:
+							"linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.2) 58%, rgba(0,0,0,0.35) 100%)",
 					}}
 				>
 					<div className="container-shell flex items-start justify-between gap-6 pt-8 sm:pt-10">
@@ -93,25 +130,17 @@ export default function HomePage() {
 								<a
 									className={cn(
 										buttonVariants({ size: "xl" }),
-										"w-full sm:hidden",
-									)}
-									href={contactInfo.vcardPath}
-								>
-									Save contact
-								</a>
-								<a
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"hidden w-full sm:inline-flex sm:w-auto",
+										"inline-flex w-full gap-2 sm:w-auto",
 									)}
 									href={contactInfo.phoneHref}
 								>
+									<Phone aria-hidden="true" className="size-5" />
 									Call {contactInfo.phoneDisplay}
 								</a>
 								<Link
 									className={cn(
-										buttonVariants({ variant: "inverse", size: "xl" }),
-										"w-full sm:w-auto",
+										buttonVariants({ size: "xl" }),
+										"w-full border border-white/35 bg-white/10 text-white hover:bg-white/16 sm:w-auto",
 									)}
 									href="/services"
 									prefetch

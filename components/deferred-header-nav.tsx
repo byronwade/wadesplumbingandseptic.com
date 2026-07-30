@@ -58,20 +58,11 @@ function HeaderNavFallback() {
 			<a
 				className={cn(
 					buttonVariants({ size: "sm", variant: "default" }),
-					"hidden sm:inline-flex",
+					"inline-flex gap-2",
 				)}
 				href={contactInfo.phoneHref}
 			>
 				Call {contactInfo.phoneDisplay}
-			</a>
-			<a
-				className={cn(
-					buttonVariants({ size: "sm", variant: "default" }),
-					"sm:hidden",
-				)}
-				href={contactInfo.vcardPath}
-			>
-				Save contact
 			</a>
 		</nav>
 	)

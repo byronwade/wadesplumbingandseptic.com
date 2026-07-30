@@ -82,7 +82,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<a
-					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+					className="sr-only z-[100] bg-white text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:rounded-br-lg focus:p-3"
 					href="#main-content"
 				>
 					Skip to content

@@ -228,7 +228,7 @@ export function SiteHeaderMobileMenu({
 					<CallButton
 						className="w-full gap-2"
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-						mobileLabel="Save contact"
+						prefer="dial"
 						size="lg"
 					/>
 					<button

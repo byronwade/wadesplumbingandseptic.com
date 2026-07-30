@@ -50,15 +50,23 @@ export function StaticSiteFooter() {
 							</a>
 						</p>
 					</div>
-					<a
-						className={cn(
-							buttonVariants({ variant: "inverse", size: "lg" }),
-							"bg-white text-ink hover:bg-white/90 w-full sm:w-auto",
-						)}
-						href={contactInfo.vcardPath}
-					>
-						Save contact
-					</a>
+					<div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:items-end">
+						<a
+							className={cn(
+								buttonVariants({ variant: "inverse", size: "lg" }),
+								"bg-white text-ink hover:bg-white/90 inline-flex w-full gap-2 sm:w-auto",
+							)}
+							href={contactInfo.phoneHref}
+						>
+							Call {contactInfo.phoneDisplay}
+						</a>
+						<a
+							className="text-center text-sm font-bold text-white/85 underline-offset-2 hover:text-white hover:underline sm:text-right"
+							href={contactInfo.vcardPath}
+						>
+							Save to contacts
+						</a>
+					</div>
 				</div>
 			</div>
 

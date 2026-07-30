@@ -94,7 +94,7 @@ export function ContactCta({
 						<CallButton
 							className={actionWidth}
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							mobileLabel="Save contact"
+							prefer="dial"
 							size={compact ? "lg" : "xl"}
 						/>
 					) : null}

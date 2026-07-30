@@ -24,7 +24,7 @@ import {
 	type IconComponent,
 } from "@/components/icons"
 
-import { CallButton, CallIconButton } from "@/components/call-button"
+import { CallButton } from "@/components/call-button"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { openGlobalSearch } from "@/lib/search-events"
@@ -332,7 +332,7 @@ export function SiteHeaderNav() {
 				/>
 			</div>
 
-			<div className="flex items-center lg:hidden">
+			<div className="flex items-center gap-1 lg:hidden">
 				<Button
 					type="button"
 					variant="ghost"
@@ -345,7 +345,12 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink inline-flex size-11 items-center justify-center rounded-md text-white hover:bg-transparent sm:hidden" />
+				<CallButton
+					className="max-w-[9.75rem] gap-1.5 truncate px-2.5 text-xs sm:hidden"
+					desktopLabel={contactInfo.phoneDisplay}
+					prefer="dial"
+					size="sm"
+				/>
 				<Button
 					type="button"
 					variant="ghost"

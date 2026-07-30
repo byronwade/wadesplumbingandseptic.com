@@ -97,20 +97,11 @@ export function HomeBelowFold() {
 								<a
 									className={cn(
 										buttonVariants({ size: "xl" }),
-										"w-full sm:hidden",
-									)}
-									href={contactInfo.vcardPath}
-								>
-									Save contact
-								</a>
-								<a
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"hidden w-full sm:inline-flex sm:w-auto",
+										"inline-flex w-full gap-2 sm:w-auto",
 									)}
 									href={contactInfo.phoneHref}
 								>
-									Call to schedule: {contactInfo.phoneDisplay}
+									Call {contactInfo.phoneDisplay}
 								</a>
 								<Link
 									className={cn(
@@ -412,15 +403,9 @@ export function HomeBelowFold() {
 					</div>
 					<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:shrink-0">
 						<a
-							className={cn(buttonVariants({ size: "xl" }), "w-full sm:hidden")}
-							href={contactInfo.vcardPath}
-						>
-							Save contact
-						</a>
-						<a
 							className={cn(
 								buttonVariants({ size: "xl" }),
-								"hidden w-full sm:inline-flex sm:w-auto",
+								"inline-flex w-full gap-2 sm:w-auto",
 							)}
 							href={contactInfo.phoneHref}
 						>

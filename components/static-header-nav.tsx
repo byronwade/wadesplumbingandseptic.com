@@ -1,12 +1,12 @@
 import Link from "next/link"
 
+import { Phone } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 /**
- * Server-only primary nav. The Radix mega-menu client island is deferred to
- * interior pages so the homepage can ship without that hydration cost on LCP.
+ * Server-only primary nav fallback. Phone number is the CTA — not save-contact.
  */
 export function StaticHeaderNav() {
 	return (
@@ -45,22 +45,15 @@ export function StaticHeaderNav() {
 				</Link>
 			</div>
 			<a
+				aria-label={`Call ${contactInfo.phoneDisplay}`}
 				className={cn(
 					buttonVariants({ size: "sm", variant: "default" }),
-					"hidden sm:inline-flex",
+					"inline-flex max-w-[11.5rem] gap-1.5 truncate px-2.5 sm:max-w-none sm:gap-2 sm:px-3",
 				)}
 				href={contactInfo.phoneHref}
 			>
-				Call {contactInfo.phoneDisplay}
-			</a>
-			<a
-				className={cn(
-					buttonVariants({ size: "sm", variant: "default" }),
-					"sm:hidden",
-				)}
-				href={contactInfo.vcardPath}
-			>
-				Save contact
+				<Phone aria-hidden="true" className="size-4 shrink-0" />
+				<span className="truncate">{contactInfo.phoneDisplay}</span>
 			</a>
 		</nav>
 	)

@@ -1,10 +1,12 @@
 @import "tailwindcss" source(none);
-@source "../../components/site-header.tsx";
+/* Root skip-link lives in app/layout.tsx — must be sourced or .sr-only never ships. */
+@source "../../app/layout.tsx";
+@source "../../components/home-header.tsx";
 @source "../../components/static-site-footer.tsx";
 @source "../../components/static-header-nav.tsx";
+@source "../../components/icons.tsx";
 @source "../../components/company-logos.tsx";
 @source "../../components/ui/button.tsx";
-@source "../../components/icons.tsx";
 @source "../../components/home-below-fold.tsx";
 @source "../../components/home-faq.tsx";
 @source "../../components/json-ld.tsx";
