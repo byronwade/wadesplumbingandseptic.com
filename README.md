@@ -17,11 +17,25 @@ High-performance marketing and SEO site for
 There is no external CMS, application database, or server-side language
 runtime dependency.
 
+Page-view popularity uses a JSON document store (not a database): local
+`data/page-views.json` in development, and [Vercel Blob](https://vercel.com/docs/storage/vercel-blob)
+in production when `BLOB_READ_WRITE_TOKEN` is set. Unique views are cookie-gated
+(`wps_seen`). Sort archives with `?sort=popular|trending|newest`, or open the
+dedicated `/services/popular`, `/services/trending`, `/expert-tips/popular`,
+and `/expert-tips/trending` pages.
+
 ## Development
 
 ```bash
 npm install
 npm run dev
+```
+
+Optional for durable view counts on Vercel:
+
+```bash
+# .env.local
+BLOB_READ_WRITE_TOKEN=vercel_blob_rw_...
 ```
 
 ## Content

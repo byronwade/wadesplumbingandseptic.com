@@ -52,7 +52,7 @@ export async function generateMetadata({
 	})
 }
 
-async function CategoryArchive({ slug }: { slug: string }) {
+async function getCategoryArchiveData(slug: string) {
 	"use cache"
 	cacheTag("content:posts", `content:category:${slug}`)
 	cacheLife("max")
@@ -73,12 +73,19 @@ async function CategoryArchive({ slug }: { slug: string }) {
 		{ posts: 3, services: 3 },
 	)
 
+	return { posts, label, related }
+}
+
+async function CategoryArchive({ slug }: { slug: string }) {
+	const data = await getCategoryArchiveData(slug)
+	if (!data) return null
+
 	return (
 		<ArticleArchive
-			description={`Practical ${label.toLowerCase()} from Wade's field experience.`}
-			posts={posts}
-			related={related}
-			title={label}
+			description={`Practical ${data.label.toLowerCase()} from Wade's field experience.`}
+			posts={data.posts}
+			related={data.related}
+			title={data.label}
 		/>
 	)
 }

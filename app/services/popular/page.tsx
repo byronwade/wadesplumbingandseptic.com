@@ -11,28 +11,29 @@ import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Plumbing & Septic Services",
+	title: "Most Popular Plumbing & Septic Services",
 	description:
-		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities.",
-	pathname: "/services",
+		"Services with the most unique page views from homeowners researching plumbing and septic work with Wade's.",
+	pathname: "/services/popular",
 	image: "/images/work/commercial-plumbing-installation.webp",
 })
 
-export default function ServicesPage() {
+export default function PopularServicesPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities."
-				eyebrow="Browse Services"
+				description="Ranked by unique visitors. One view per browser, so return visits do not inflate the list."
+				eyebrow="Most popular"
 				image="/images/work/commercial-plumbing-installation.webp"
 				imageAlt="Professional plumbing installation"
-				title="All Plumbing & Septic Services"
+				parent={{ href: "/services" as Route, label: "Services" }}
+				title="Most Popular Services"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">
 				<div className="flex flex-wrap gap-2">
 					<Link
-						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						className={cn(buttonVariants({ size: "sm" }))}
 						href={"/services/popular" as Route}
 						prefetch
 					>
@@ -45,6 +46,13 @@ export default function ServicesPage() {
 					>
 						Trending now
 					</Link>
+					<Link
+						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						href={"/services" as Route}
+						prefetch
+					>
+						All services
+					</Link>
 				</div>
 			</section>
 
@@ -54,18 +62,17 @@ export default function ServicesPage() {
 				}
 			>
 				<RankedContentArchive
-					allLabel="All services"
+					allLabel="Most popular services"
 					emptyLabel="No services in this category."
+					lockedSort
 					noun={{ singular: "service", plural: "services" }}
 					pageSize={12}
+					sort="popular"
 					variant="service"
 				/>
 			</Suspense>
 
-			<ContactCta
-				description="Call or message us. We will diagnose the problem and point you to the right service with no pressure."
-				title="Not sure which service you need?"
-			/>
+			<ContactCta title="Looking for a specific repair?" />
 		</main>
 	)
 }

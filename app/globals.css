@@ -489,6 +489,15 @@
 		margin-top: auto;
 	}
 
+	/* Extended footer band on content cards — pin that instead when present. */
+	.card-rail > * > .card-foot {
+		margin-top: auto;
+	}
+
+	.card-rail > *:has(> .card-foot) > .card-body {
+		margin-top: 0;
+	}
+
 	/*
 	  Long archives skip layout and paint for off-screen rows. The intrinsic size
 	  keeps the scrollbar honest before a row has been rendered.
@@ -579,6 +588,10 @@
 		padding: 1rem var(--space-card) var(--space-card);
 	}
 
+	.card-foot {
+		padding: 0.85rem var(--space-card);
+	}
+
 	.card-title {
 		font-size: var(--type-card);
 	}
@@ -594,6 +607,10 @@
 			padding: 0.875rem 1.25rem 1.25rem;
 		}
 
+		.card-foot {
+			padding: 0.75rem 1.25rem;
+		}
+
 		.card-title {
 			font-size: 1rem;
 		}
@@ -606,6 +623,10 @@
 
 		.card-body {
 			padding: 1.125rem 1.75rem 1.75rem;
+		}
+
+		.card-foot {
+			padding: 0.95rem 1.75rem;
 		}
 
 		.card-title {

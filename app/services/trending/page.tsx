@@ -7,26 +7,28 @@ import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { RankedContentArchive } from "@/components/ranked-content-archive"
 import { buttonVariants } from "@/components/ui/button"
+import { PAGE_VIEW_TREND_DAYS } from "@/lib/page-views/types"
 import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
-	title: "Plumbing & Septic Services",
+	title: "Trending Plumbing & Septic Services",
 	description:
-		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities.",
-	pathname: "/services",
+		"Services gaining the most unique interest over the last week from Santa Cruz County homeowners.",
+	pathname: "/services/trending",
 	image: "/images/work/commercial-plumbing-installation.webp",
 })
 
-export default function ServicesPage() {
+export default function TrendingServicesPage() {
 	return (
 		<main id="main-content">
 			<ContentHero
-				description="Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities."
-				eyebrow="Browse Services"
-				image="/images/work/commercial-plumbing-installation.webp"
-				imageAlt="Professional plumbing installation"
-				title="All Plumbing & Septic Services"
+				description={`Ranked by unique viewers in the last ${PAGE_VIEW_TREND_DAYS} days. Useful when seasonal issues start stacking up.`}
+				eyebrow="Trending now"
+				image="/images/work/drain-cleaning-equipment.webp"
+				imageAlt="Drain cleaning equipment on a job site"
+				parent={{ href: "/services" as Route, label: "Services" }}
+				title="Trending Services"
 			/>
 
 			<section className="container-shell pt-[var(--space-block)]">
@@ -39,11 +41,18 @@ export default function ServicesPage() {
 						Most popular
 					</Link>
 					<Link
-						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						className={cn(buttonVariants({ size: "sm" }))}
 						href={"/services/trending" as Route}
 						prefetch
 					>
 						Trending now
+					</Link>
+					<Link
+						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+						href={"/services" as Route}
+						prefetch
+					>
+						All services
 					</Link>
 				</div>
 			</section>
@@ -54,18 +63,17 @@ export default function ServicesPage() {
 				}
 			>
 				<RankedContentArchive
-					allLabel="All services"
+					allLabel="Trending services"
 					emptyLabel="No services in this category."
+					lockedSort
 					noun={{ singular: "service", plural: "services" }}
 					pageSize={12}
+					sort="trending"
 					variant="service"
 				/>
 			</Suspense>
 
-			<ContactCta
-				description="Call or message us. We will diagnose the problem and point you to the right service with no pressure."
-				title="Not sure which service you need?"
-			/>
+			<ContactCta title="Seeing the same problem at your place?" />
 		</main>
 	)
 }

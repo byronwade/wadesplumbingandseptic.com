@@ -4,8 +4,11 @@ import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { ContentSectionBands } from "@/components/content-section-bands"
 import { JsonLd } from "@/components/json-ld"
-import { RelatedContentSections } from "@/components/related-content"
+import { PageViewTracker } from "@/components/page-view-tracker"
+import { PageViewsStat } from "@/components/page-views-stat"
+import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import type { ContentDocument } from "@/lib/content"
+import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { breadcrumbJsonLd } from "@/lib/seo"
@@ -21,9 +24,11 @@ const promises = [
 export function ServiceLandingPage({
 	service,
 	related,
+	viewStats,
 }: {
 	service: ContentDocument
 	related?: RelatedContent
+	viewStats?: PageViewStats
 }) {
 	const image = getServiceImage(service.category, service.image)
 	const schema = {
@@ -55,6 +60,7 @@ export function ServiceLandingPage({
 
 	return (
 		<main id="main-content">
+			<PageViewTracker kind="service" slug={service.slug} />
 			<ContentHero
 				description={service.description}
 				eyebrow={service.category ?? "Service"}
@@ -64,6 +70,25 @@ export function ServiceLandingPage({
 				title={service.title}
 				variant="marketing"
 			/>
+
+			{viewStats ? (
+				<div className="container-shell pt-[var(--space-section)]">
+					<div className="border-border mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
+						<p className="spec-label">Page interest</p>
+						{viewStats.unique > 0 || viewStats.views > 0 ? (
+							<PageViewsStat
+								totalViews={viewStats.views}
+								trendingScore={viewStats.trending}
+								uniqueViews={viewStats.unique}
+							/>
+						) : (
+							<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+								New on the site · your visit counts
+							</p>
+						)}
+					</div>
+				</div>
+			) : null}
 
 			<ContentSectionBands content={service.content} />
 
@@ -95,7 +120,7 @@ export function ServiceLandingPage({
 			</section>
 
 			{related ? (
-				<RelatedContentSections
+				<RelatedContentSectionsWithStats
 					postsTitle="Related expert tips"
 					related={related}
 					servicesTitle="Related services"
