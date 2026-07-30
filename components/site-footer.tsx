@@ -19,8 +19,8 @@ const serviceLinks = [
 		label: "Septic Inspections",
 	},
 	{
-		href: "/service-offerings/alternative-septic-system-installation",
-		label: "Engineered Septic",
+		href: "/service-offerings/engineered-septic-system-installation",
+		label: "Engineered Septic Systems",
 	},
 ]
 

@@ -189,6 +189,18 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
+				source: "/service-offerings/alternative-septic-system-installation",
+				destination:
+					"/service-offerings/engineered-septic-system-installation",
+				permanent: true,
+			},
+			{
+				source: "/engineered-septic-systems-santa-cruz-county",
+				destination:
+					"/service-offerings/engineered-septic-system-installation",
+				permanent: true,
+			},
+			{
 				source: "/service-offerings/commercial-repairs",
 				destination: "/service-offerings/commercial-plumbing-maintenance",
 				permanent: true,

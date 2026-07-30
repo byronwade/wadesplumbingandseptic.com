@@ -256,8 +256,8 @@ export default function HomePage() {
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
 						<p className="type-lead mt-5">
-							When a standard system will not work—steep slopes, difficult soil,
-							tight lots, or sensitive environments—that is exactly where we
+							When a standard system will not work (steep slopes, difficult soil,
+							tight lots, or sensitive environments), that is exactly where we
 							excel.
 						</p>
 					</div>
@@ -298,16 +298,25 @@ export default function HomePage() {
 									</p>
 								</div>
 							))}
-							<a
-								className={cn(
-									buttonVariants({ size: "xl" }),
-									"mt-2 sm:col-span-2",
-								)}
-								href={siteConfig.phoneHref}
-							>
-								<Phone />
-								Call to Schedule — {siteConfig.phone}
-							</a>
+							<div className="mt-2 flex flex-col gap-3 sm:col-span-2 sm:flex-row">
+								<a
+									className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
+									href={siteConfig.phoneHref}
+								>
+									<Phone />
+									Call to Schedule: {siteConfig.phone}
+								</a>
+								<Link
+									className={cn(
+										buttonVariants({ variant: "outline", size: "xl" }),
+										"w-full sm:w-auto",
+									)}
+									href="/service-offerings/engineered-septic-system-installation"
+									prefetch
+								>
+									Engineered Septic Services
+								</Link>
+							</div>
 						</div>
 						<div className="relative aspect-[4/3] overflow-hidden rounded-lg">
 							<Image
