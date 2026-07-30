@@ -508,31 +508,13 @@
 	}
 
 	/*
-	  Filter chips. Scrolls with snap points on narrow screens rather than
-	  wrapping to three ragged lines, and wraps normally once there is room.
+	  Filter chips (desktop archive UI). Mobile uses labeled selects instead,
+	  so this rail always wraps rather than horizontal-snapping.
 	*/
 	.chip-rail {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
-		overflow-x: auto;
-		padding-bottom: 0.25rem;
-		scroll-snap-type: x proximity;
-		scrollbar-width: none;
-	}
-
-	.chip-rail::-webkit-scrollbar {
-		display: none;
-	}
-
-	.chip-rail > * {
-		scroll-snap-align: start;
-	}
-
-	@media (width >= 48rem) {
-		.chip-rail {
-			flex-wrap: wrap;
-			overflow-x: visible;
-		}
 	}
 
 	/*

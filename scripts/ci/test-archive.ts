@@ -5,6 +5,7 @@ import {
 	buildArchiveFilters,
 	filterArchiveItems,
 	paginateArchiveItems,
+	resolveArchiveCategory,
 	toArchiveItem,
 } from "../../lib/archive"
 
@@ -60,6 +61,22 @@ assert.equal(filters.length, 3)
 
 const plumbing = filterArchiveItems(items, "plumbing")
 assert.equal(plumbing.length, 2)
+
+assert.equal(resolveArchiveCategory(filters, null), null)
+assert.equal(resolveArchiveCategory(filters, "all"), null)
+assert.equal(resolveArchiveCategory(filters, "plumbing"), "plumbing")
+assert.equal(
+	resolveArchiveCategory(filters, "not-a-real-category"),
+	null,
+	"Unknown category keys must fall back to all",
+)
+assert.equal(
+	filterArchiveItems(
+		items,
+		resolveArchiveCategory(filters, "not-a-real-category"),
+	).length,
+	items.length,
+)
 
 const page1 = paginateArchiveItems(items, 1, 2)
 assert.equal(page1.pageCount, 2)

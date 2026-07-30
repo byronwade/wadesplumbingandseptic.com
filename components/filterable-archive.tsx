@@ -17,6 +17,7 @@ import {
 	buildArchiveFilters,
 	filterArchiveItems,
 	paginateArchiveItems,
+	resolveArchiveCategory,
 } from "@/lib/archive"
 import {
 	parseArchiveSort,
@@ -144,7 +145,7 @@ export function FilterableArchive({
 	const pathname = usePathname()
 	const searchParams = useSearchParams()
 
-	const activeCategory = searchParams.get("category")
+	const requestedCategory = searchParams.get("category")
 	const requestedPage = parsePage(searchParams.get("page"))
 	const activeSort = lockedSort
 		? parseArchiveSort(
@@ -157,6 +158,7 @@ export function FilterableArchive({
 		: parseArchiveSort(searchParams.get("sort"))
 
 	const filters = useMemo(() => buildArchiveFilters(items), [items])
+	const activeCategory = resolveArchiveCategory(filters, requestedCategory)
 	const canFilter = showFilters && filters.length > 1
 	const sortOptions = useMemo(
 		() =>
@@ -184,12 +186,36 @@ export function FilterableArchive({
 	)
 
 	useEffect(() => {
-		if (requestedPage === page) return
 		const params = new URLSearchParams(searchParams.toString())
-		if (page <= 1) params.delete("page")
-		else params.set("page", String(page))
+		let dirty = false
+
+		/* Drop stale/unknown category keys so the select is never blank. */
+		if (
+			requestedCategory &&
+			requestedCategory !== "all" &&
+			activeCategory === null
+		) {
+			params.delete("category")
+			dirty = true
+		}
+
+		if (requestedPage !== page) {
+			if (page <= 1) params.delete("page")
+			else params.set("page", String(page))
+			dirty = true
+		}
+
+		if (!dirty) return
 		router.replace(hrefWithParams(pathname, params), { scroll: false })
-	}, [page, pathname, requestedPage, router, searchParams])
+	}, [
+		activeCategory,
+		page,
+		pathname,
+		requestedCategory,
+		requestedPage,
+		router,
+		searchParams,
+	])
 
 	function updateParams(
 		next: {
@@ -232,7 +258,7 @@ export function FilterableArchive({
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
 	const heading =
 		activeFilter && canFilter ? activeFilter.label : allLabel
-	const allSelected = !activeCategory || activeCategory === "all"
+	const allSelected = activeCategory === null
 	const sortVisible = showSort && !lockedSort
 	const activeSortLabel =
 		sortOptions.find((option) => option.value === activeSort)?.label ??
@@ -267,7 +293,7 @@ export function FilterableArchive({
 									id="archive-category"
 									label="Category"
 									onChange={(value) => updateParams({ category: value })}
-									value={allSelected ? "all" : (activeCategory ?? "all")}
+									value={activeCategory ?? "all"}
 								>
 									<option value="all">
 										{allLabel} ({items.length})
