@@ -29,6 +29,7 @@ export async function generateMetadata({
 		description: service.description,
 		pathname: `/service-offerings/${service.slug}`,
 		image: getServiceImage(service.category, service.image),
+		eyebrow: service.category ?? "Service",
 	})
 }
 

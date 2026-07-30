@@ -38,7 +38,8 @@ export const metadata: Metadata = buildPageMetadata({
 	description:
 		"Licensed plumbing and engineered septic service in Santa Cruz County and selected Santa Clara County communities. Clear pricing, no upselling. Call 831.225.4344.",
 	pathname: "/",
-	image: "/images/locations/santa-cruz-plumber.webp",
+	image: "/images/locations/santa-cruz-redwoods.webp",
+	eyebrow: "Family owned · Local crew",
 })
 
 const serviceGroups = [

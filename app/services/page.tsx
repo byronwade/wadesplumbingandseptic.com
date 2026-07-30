@@ -11,6 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
 		"Browse residential plumbing, commercial plumbing, and septic services across Santa Cruz County and selected Santa Clara County communities.",
 	pathname: "/services",
 	image: "/images/work/commercial-plumbing-installation.webp",
+	eyebrow: "What we do",
 })
 
 export default function ServicesPage() {

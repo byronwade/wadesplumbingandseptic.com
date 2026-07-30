@@ -11,6 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
 		"Practical plumbing and septic education for Santa Cruz County homeowners from Wade's licensed local team.",
 	pathname: "/expert-tips",
 	image: "/images/team/byron-working.webp",
+	eyebrow: "Homeowner guides",
 })
 
 export default function ExpertTipsPage() {

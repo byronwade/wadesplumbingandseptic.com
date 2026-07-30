@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import { siteConfig } from "@/lib/site"
 
 export function absoluteUrl(pathname: string) {
@@ -13,6 +14,7 @@ export function buildPageMetadata({
 	description,
 	pathname,
 	image,
+	eyebrow,
 	type = "website",
 	noindex = false,
 }: {
@@ -20,11 +22,17 @@ export function buildPageMetadata({
 	description: string
 	pathname: string
 	image?: string
+	/** Short label above the title on the generated OG card. */
+	eyebrow?: string
 	type?: "website" | "article"
 	noindex?: boolean
 }): Metadata {
 	const url = absoluteUrl(pathname)
-	const ogImage = absoluteUrl(image ?? "/images/brand/wades-mark.webp")
+	const ogImage = buildOgImagePath({
+		title,
+		eyebrow: eyebrow ?? defaultOgEyebrow(type),
+		image: image ?? "/images/work/precision-valve-installation.webp",
+	})
 
 	return {
 		title,
