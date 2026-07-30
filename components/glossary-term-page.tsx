@@ -67,114 +67,102 @@ export function GlossaryTermPage({
 				title={term.term}
 			/>
 
-			<article className="article-shell section-y grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)]">
-				<div className="min-w-0 space-y-8">
-					{term.alsoKnownAs?.length ? (
-						<p className="type-meta text-muted-foreground font-bold">
-							Also called: {term.alsoKnownAs.join(", ")}
-						</p>
-					) : null}
-
-					<section aria-labelledby="definition-heading" className="space-y-4">
-						<h2 className="type-title" id="definition-heading">
-							What it means
-						</h2>
-						{paragraphs(term.definition).map((paragraph) => (
-							<p className="type-body" key={paragraph.slice(0, 40)}>
-								{paragraph}
-							</p>
-						))}
-					</section>
-
-					<section aria-labelledby="local-heading" className="space-y-4">
-						<h2 className="type-title" id="local-heading">
-							Why it matters in Santa Cruz County
-						</h2>
-						<p className="type-body">{term.localContext}</p>
-					</section>
-
-					<section
-						aria-labelledby="tip-heading"
-						className="border-border bg-muted/40 rounded-lg border p-5"
-					>
-						<h2 className="type-card-title mb-2" id="tip-heading">
-							Homeowner tip
-						</h2>
-						<p className="type-body">{term.homeownerTip}</p>
-					</section>
-
-					{relatedServices.length ? (
-						<section aria-labelledby="services-heading" className="space-y-4">
-							<h2 className="type-title" id="services-heading">
-								Related Wade&apos;s services
-							</h2>
-							<ul className="grid gap-3 sm:grid-cols-2">
-								{relatedServices.map((service) => (
-									<li key={service.slug}>
-										<Link
-											className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold transition-colors"
-											href={`/service-offerings/${service.slug}` as Route}
-											prefetch={false}
-										>
-											{service.title}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</section>
-					) : null}
-
-					{relatedTerms.length ? (
-						<section aria-labelledby="related-terms-heading" className="space-y-4">
-							<h2 className="type-title" id="related-terms-heading">
-								Related glossary terms
-							</h2>
-							<ul className="flex flex-wrap gap-2">
-								{relatedTerms.map((related) => (
-									<li key={related.slug}>
-										<Link
-											className="border-border hover:border-primary/40 hover:bg-muted/40 inline-flex rounded-md border px-3 py-1.5 text-sm font-bold transition-colors"
-											href={
-												glossaryTermPath(topic, related.slug) as Route
-											}
-											prefetch={false}
-										>
-											{related.term}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</section>
-					) : null}
-
-					<p className="type-body text-muted-foreground">
-						Also explore the{" "}
-						<Link
-							className="text-primary font-bold underline-offset-2 hover:underline"
-							href={glossaryHubPath(otherTopic) as Route}
-						>
-							{otherTopic === "plumbing"
-								? "Plumbing Glossary"
-								: "Septic Glossary"}
-						</Link>{" "}
-						or call{" "}
-						<a
-							className="text-primary font-bold underline-offset-2 hover:underline"
-							href={siteConfig.phoneHref}
-						>
-							{siteConfig.phone}
-						</a>{" "}
-						with questions about your property.
+			<article className="article-shell section-y space-y-8">
+				{term.alsoKnownAs?.length ? (
+					<p className="type-meta text-muted-foreground font-bold">
+						Also called: {term.alsoKnownAs.join(", ")}
 					</p>
-				</div>
+				) : null}
 
-				<aside className="lg:sticky lg:top-[var(--header-offset)] lg:self-start">
-					<ContactCta
-						compact
-						description="Tell us what you are seeing at the house or business and we will translate the next step into plain English."
-						title="Have this issue right now?"
-					/>
-				</aside>
+				<section aria-labelledby="definition-heading" className="space-y-4">
+					<h2 className="type-title" id="definition-heading">
+						What it means
+					</h2>
+					{paragraphs(term.definition).map((paragraph) => (
+						<p className="type-body" key={paragraph.slice(0, 40)}>
+							{paragraph}
+						</p>
+					))}
+				</section>
+
+				<section aria-labelledby="local-heading" className="space-y-4">
+					<h2 className="type-title" id="local-heading">
+						Why it matters in Santa Cruz County
+					</h2>
+					<p className="type-body">{term.localContext}</p>
+				</section>
+
+				<section
+					aria-labelledby="tip-heading"
+					className="border-border bg-muted/40 rounded-lg border p-5"
+				>
+					<h2 className="type-card-title mb-2" id="tip-heading">
+						Homeowner tip
+					</h2>
+					<p className="type-body">{term.homeownerTip}</p>
+				</section>
+
+				{relatedServices.length ? (
+					<section aria-labelledby="services-heading" className="space-y-4">
+						<h2 className="type-title" id="services-heading">
+							Related Wade&apos;s services
+						</h2>
+						<ul className="grid gap-3 sm:grid-cols-2">
+							{relatedServices.map((service) => (
+								<li key={service.slug}>
+									<Link
+										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold transition-colors"
+										href={`/service-offerings/${service.slug}` as Route}
+										prefetch={false}
+									>
+										{service.title}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</section>
+				) : null}
+
+				{relatedTerms.length ? (
+					<section aria-labelledby="related-terms-heading" className="space-y-4">
+						<h2 className="type-title" id="related-terms-heading">
+							Related glossary terms
+						</h2>
+						<ul className="flex flex-wrap gap-2">
+							{relatedTerms.map((related) => (
+								<li key={related.slug}>
+									<Link
+										className="border-border hover:border-primary/40 hover:bg-muted/40 inline-flex rounded-md border px-3 py-1.5 text-sm font-bold transition-colors"
+										href={glossaryTermPath(topic, related.slug) as Route}
+										prefetch={false}
+									>
+										{related.term}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</section>
+				) : null}
+
+				<p className="type-body text-muted-foreground">
+					Also explore the{" "}
+					<Link
+						className="text-primary font-bold underline-offset-2 hover:underline"
+						href={glossaryHubPath(otherTopic) as Route}
+					>
+						{otherTopic === "plumbing"
+							? "Plumbing Glossary"
+							: "Septic Glossary"}
+					</Link>{" "}
+					or call{" "}
+					<a
+						className="text-primary font-bold underline-offset-2 hover:underline"
+						href={siteConfig.phoneHref}
+					>
+						{siteConfig.phone}
+					</a>{" "}
+					with questions about your property.
+				</p>
 			</article>
 
 			<JsonLd
