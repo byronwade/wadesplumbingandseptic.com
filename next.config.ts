@@ -75,12 +75,27 @@ const nextConfig: NextConfig = {
 			]),
 			{
 				source: "/video-tutorials",
-				destination: "/videos",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/videos",
+				destination: "/expert-tips",
 				permanent: true,
 			},
 			{
 				source: "/field-shorts",
-				destination: "/shorts",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/shorts",
+				destination: "/expert-tips",
+				permanent: true,
+			},
+			{
+				source: "/downloads",
+				destination: "/expert-tips",
 				permanent: true,
 			},
 			{

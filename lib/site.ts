@@ -53,8 +53,5 @@ export const resourceNavigation = [
 	{ href: "/expert-tips", label: "Expert Tips & Blog" },
 	{ href: "/maintenance-guide", label: "Maintenance Guide" },
 	{ href: "/glossary", label: "Plumbing Glossary" },
-	{ href: "/videos", label: "Video Tutorials" },
-	{ href: "/shorts", label: "Field Shorts" },
-	{ href: "/downloads", label: "Downloads" },
 	{ href: "/septic-solutions", label: "Septic Solutions" },
 ] as const
