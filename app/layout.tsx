@@ -128,15 +128,10 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-<<<<<<< HEAD
 		<html
 			lang="en"
 			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
-			suppressHydrationWarning
 		>
-=======
-		<html lang="en" className={`${manrope.variable} ${archivo.variable}`}>
->>>>>>> origin/main
 			<body className={manrope.className}>
 				<a
 					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
