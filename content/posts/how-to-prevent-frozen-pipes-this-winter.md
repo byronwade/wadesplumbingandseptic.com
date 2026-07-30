@@ -81,7 +81,7 @@ Count on Wade's Plumbing & Septic for prompt, reliable emergency solutions in Sa
 
 Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and the surrounding areas. Our team is equipped to handle all your plumbing needs, including preventing frozen pipes this winter.
 
-Our office hours are Monday through Friday, 9am to 5pm, but our emergency line is available to assist you with any urgent plumbing issues.
+Our office hours are Monday through Friday, 9am to 5pm, but our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
 
 We holds a C-42 contractor license for California, ensuring you receive professional and certified service every time.
 

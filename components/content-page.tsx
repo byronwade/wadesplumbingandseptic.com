@@ -1,6 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import { resolveContentLayout } from "@/lib/content-layout"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import {
@@ -17,6 +18,7 @@ import { siteConfig } from "@/lib/site"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
+import { ContentSectionBands } from "@/components/content-section-bands"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
@@ -36,6 +38,8 @@ export function ContentPage({
 }) {
 	const isServiceArea = document.slug.startsWith("service-area/")
 	const isFaq = document.slug === "faq"
+	const layout = resolveContentLayout(document, { isPost })
+	const marketing = layout === "marketing"
 
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
@@ -67,6 +71,40 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
+	const postMeta = isPost ? (
+		<div className="border-border mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
+			{document.date ? (
+				<p className="type-meta font-bold">
+					Published{" "}
+					<time dateTime={document.date}>
+						{new Intl.DateTimeFormat("en-US", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+							timeZone: "UTC",
+						}).format(new Date(`${document.date}T00:00:00Z`))}
+					</time>
+					{document.updated ? ` · Updated ${document.updated}` : null}
+				</p>
+			) : (
+				<span />
+			)}
+			{viewStats ? (
+				viewStats.unique > 0 || viewStats.views > 0 ? (
+					<PageViewsStat
+						totalViews={viewStats.views}
+						trendingScore={viewStats.trending}
+						uniqueViews={viewStats.unique}
+					/>
+				) : (
+					<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+						New guide · your visit counts
+					</p>
+				)
+			) : null}
+		</div>
+	) : null
+
 	return (
 		<main id="main-content">
 			{isPost ? <PageViewTracker kind="tip" slug={document.slug} /> : null}
@@ -77,46 +115,31 @@ export function ContentPage({
 				imageAlt={document.imageAlt}
 				parent={parent}
 				title={document.title}
+				variant={marketing ? "marketing" : "default"}
 			/>
-			<article className="article-shell section-y">
-				{isPost ? (
-					<div className="border-border mb-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b pb-5">
-						{document.date ? (
-							<p className="type-meta font-bold">
-								Published{" "}
-								<time dateTime={document.date}>
-									{new Intl.DateTimeFormat("en-US", {
-										year: "numeric",
-										month: "long",
-										day: "numeric",
-										timeZone: "UTC",
-									}).format(new Date(`${document.date}T00:00:00Z`))}
-								</time>
-								{document.updated ? ` · Updated ${document.updated}` : null}
-							</p>
-						) : (
-							<span />
-						)}
-						{viewStats ? (
-							viewStats.unique > 0 || viewStats.views > 0 ? (
-								<PageViewsStat
-									totalViews={viewStats.views}
-									trendingScore={viewStats.trending}
-									uniqueViews={viewStats.unique}
-								/>
-							) : (
-								<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
-									New guide · your visit counts
-								</p>
-							)
-						) : null}
-					</div>
-				) : null}
-				{document.gallery?.length ? (
-					<ContentGallery images={document.gallery} />
-				) : null}
-				<MarkdownContent content={document.content} demoteH1 />
-			</article>
+
+			{marketing ? (
+				<>
+					{document.gallery?.length ? (
+						<ContentGallery images={document.gallery} variant="rail" />
+					) : null}
+					{isPost ? (
+						<div className="container-shell pt-[var(--space-section)]">
+							{postMeta}
+						</div>
+					) : null}
+					<ContentSectionBands content={document.content} />
+				</>
+			) : (
+				<article className="article-shell section-y">
+					{postMeta}
+					{document.gallery?.length ? (
+						<ContentGallery images={document.gallery} />
+					) : null}
+					<MarkdownContent content={document.content} demoteH1 />
+				</article>
+			)}
+
 			{related ? <RelatedContentSectionsWithStats related={related} /> : null}
 			<ContentConversionCta
 				conversion={document.conversion}

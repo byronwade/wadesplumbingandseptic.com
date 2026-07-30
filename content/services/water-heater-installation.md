@@ -1,19 +1,23 @@
 ---
-title: Efficient Water Heater Installations in Santa Cruz County
+title: Water Heater Installation in Santa Cruz County
 description: >-
-  Water heater installation is an essential service for homeowners seeking
-  efficient and reliable hot water systems. Whether your current unit is
-  outdated.
+  Tank and tankless water heater installation for Santa Cruz County homes.
+  Code-compliant installs and clear options. Call 831.225.4344.
 category: Plumbing
 order: 25
 image: /images/work/water-heater-installation.webp
-imageAlt: Water heater installation
+imageAlt: Water heater installation on a residential job
+updated: "2026-07-30"
 ---
-Water heater installation is an essential service for homeowners seeking efficient and reliable hot water systems. Whether your current unit is outdated or you're upgrading to a more energy-efficient model, proper installation is crucial. At Wade's Plumbing & Septic, serving Santa Cruz County, California, we specialize in professional water heater installation, ensuring that your household's hot water needs are met with precision and care.
 
-Updated July 2026
+Need reliable hot water again? Wade's Plumbing & Septic installs conventional
+tank and tankless water heaters for homes across Santa Cruz County and selected
+nearby foothill communities. We help you compare practical options, install to
+code, and leave the system tested and ready to use.
 
-In 2026, California has introduced updated energy efficiency standards for residential water heaters, emphasizing the importance of choosing modern, compliant models. These new regulations not only promote environmental sustainability but also offer homeowners potential energy savings. As summer approaches, it's a great time to consider a water heater upgrade to ensure optimal performance and compliance with these new standards. For a seamless transition, trust Wade's Plumbing & Septic's expert [water heater installation services](/service-areas/) in Santa Cruz County, California.
+California efficiency rules and local code requirements change over time. We
+install current, compliant equipment and will explain venting, electrical or gas
+connections, and permit needs for your property before work begins.
 
 ## Why Choose Wade's Plumbing & Septic for Water Heater Installation?
 
@@ -50,4 +54,7 @@ Regular maintenance and timely repairs can extend the lifespan of your water hea
 
 **What types of water heaters do you install?** We install both traditional tank water heaters and tankless models, working with all major brands to meet your specific needs.
 
-Choosing the right water heater installation service is crucial for ensuring long-term reliability and efficiency. At Wade's Plumbing & Septic, we are committed to providing top-quality service to residents of Santa Cruz County, California. For more information or to schedule a consultation, [contact us today](/service-offerings/fixture-installation/). We also offer a range of plumbing services, including [drain cleaning](/service-offerings/drain-cleaning/) and [alternative septic system installation](/service-offerings/engineered-septic-system-installation/), ensuring your home’s plumbing systems are in top shape.
+Ready for a clear recommendation? [Contact Wade's](/contact) or call
+[831.225.4344](tel:+18312254344). You can also review
+[tankless water heater installation](/service-offerings/tankless-water-heater-installation)
+and other [plumbing services](/service-category/plumbing).

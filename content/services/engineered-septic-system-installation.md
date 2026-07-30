@@ -1,16 +1,15 @@
 ---
-title: Engineered Septic Systems
+title: Engineered Septic System Installation in Santa Cruz County
 description: >-
-  Engineered septic design and installation for steep lots, poor soils, tight
-  setbacks, and sensitive sites across Santa Cruz County. ATUs, mounds, and
-  advanced treatment. CSLB #1087260. Call 831.225.4344.
+  Engineered septic design and installation for difficult Santa Cruz County
+  lots. ATU and advanced treatment support. Call 831.225.4344.
 category: Septic
 order: 1
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank engineered septic installation on a hillside
 featured: true
+updated: '2026-07-30'
 ---
-
 When a conventional tank and leach field will not work, that is our specialty. Wade's Plumbing & Septic designs and installs **engineered septic systems** for Santa Cruz County properties with steep slopes, shallow soils, high groundwater, rocky ground, small lots, or environmentally sensitive sites.
 
 We handle site evaluation support, system selection, permitting coordination, installation, startup, and owner guidance. Clear recommendations before money changes hands.

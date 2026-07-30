@@ -1,12 +1,13 @@
 ---
-title: Septic Compliance Experts for Santa Cruz County Homes
+title: Septic Compliance and Permitting in Santa Cruz County
 description: >-
-  Understanding the intricacies of septic system permitting is crucial for
-  homeowners in Santa Cruz County, California. This process ensures that your.
+  Help with septic permits, compliance, and county requirements for Santa Cruz
+  County properties. Call 831.225.4344.
 category: Septic
 order: 14
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank septic system
+updated: '2026-07-30'
 ---
 Understanding the intricacies of septic system permitting is crucial for homeowners in Santa Cruz County, California. This process ensures that your septic system complies with local, state, and federal regulations, helping you avoid potential legal issues and costly delays. At Wade's Plumbing & Septic, our dedicated team offers a comprehensive septic system compliance and permitting service to streamline this often complex process for you.
 
@@ -61,7 +62,7 @@ At Wade's Plumbing & Septic, we are proud to provide expert septic system compli
 
 Our team is fully licensed and certified, holding a C-42 license for California, ensuring that all work is performed to the highest standards of safety and professionalism.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent issues, our emergency line is available to address any septic emergencies you may encounter.
+Our office hours are Monday through Friday, from 9am to 5pm. For urgent issues, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
 
 Septic System Compliance
 
@@ -69,4 +70,4 @@ Septic System Compliance
 
 Guarantee peace of mind with our expert septic compliance services in Santa Cruz County.
 
-[Call Us Today](tel:+19876543210) [Get a Free ★★★★★ 5-star rating "Wade's Plumbing & Septic made the septic compliance process seamless and stress-free. Highly recommended!" (Sarah, Scotts Valley "Their expertise in septic compliance is unmatched. Professional and efficient service every time."), Mike, Santa Cruz "I trust Wade's for all my septic needs. Their compliance experts are knowledgeable and reliable." (Lisa, Aptos Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call Us Today](tel:+18312254344) [Get a Free ★★★★★ 5-star rating "Wade's Plumbing & Septic made the septic compliance process seamless and stress-free. Highly recommended!" (Sarah, Scotts Valley "Their expertise in septic compliance is unmatched. Professional and efficient service every time."), Mike, Santa Cruz "I trust Wade's for all my septic needs. Their compliance experts are knowledgeable and reliable." (Lisa, Aptos Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))

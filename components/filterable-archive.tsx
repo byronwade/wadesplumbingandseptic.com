@@ -285,7 +285,7 @@ export function FilterableArchive({
 				>
 					<p className="type-meta font-bold tabular-nums">
 						Page {page} of {pageCount}
-						<span className="text-muted-foreground/80 font-medium">
+						<span className="text-muted-foreground/80 font-normal">
 							{" "}
 							· showing {(page - 1) * pageSize + 1} to{" "}
 							{Math.min(page * pageSize, total)} of {total}

@@ -1,13 +1,13 @@
 ---
-title: Expert Septic Leach Field Repair in Santa Cruz County
+title: Septic Leach Field Repair in Santa Cruz County
 description: >-
-  When your septic system starts showing signs of trouble, addressing issues
-  promptly with professional septic leach field repair is crucial. In Santa
-  Cruz.
+  Leach field repair and replacement for failing Santa Cruz County septic
+  systems. Clear options before you rebuild. Call 831.225.4344.
 category: Septic
 order: 6
 image: /images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp
 imageAlt: Santa Cruz County engineered septic system
+updated: '2026-07-30'
 ---
 When your septic system starts showing signs of trouble, addressing issues promptly with professional septic leach field repair is crucial. In Santa Cruz County, California, Wade's Plumbing & Septic offers expert repair and replacement services to keep your system running smoothly. Our skilled technicians are ready to tackle any septic challenge, ensuring your system remains efficient and environmentally friendly.
 
@@ -89,7 +89,7 @@ Our team is fully licensed and insured, holding a C-42 license for California, e
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available for urgent septic issues
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, Wade's Plumbing & Septic is your trusted local source for reliable septic solutions.
 
@@ -115,7 +115,7 @@ Wade's Plumbing & Septic is a trusted local provider with years of experience in
 
 Our certified team ensures your septic system operates efficiently, preventing costly disruptions.
 
-[Call Us Now](tel:+18315551234) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
 </ 
 

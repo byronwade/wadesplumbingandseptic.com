@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@import "./typeset.css";
+
+.typeset-docs {
+	--typeset-font-body: var(--font-geist);
+	--typeset-font-heading: var(--font-geist);
+	--typeset-font-mono: var(--font-geist-mono);
+	--typeset-size: 15px;
+	--typeset-leading: 1.75;
+	--typeset-flow: 1.25em;
+}
 
 @theme inline {
 	--color-background: var(--background);
@@ -694,12 +704,9 @@
 	  Slow drift on the hero photograph. Cinematic movement comes from the frame,
 	  not from elements sliding in, so this is the only motion in the band.
 	*/
-	.media-drift {
-		will-change: transform;
-	}
-
 	@media (prefers-reduced-motion: no-preference) {
 		.media-drift {
+			will-change: transform;
 			animation: drift 28s ease-in-out infinite alternate;
 		}
 	}
