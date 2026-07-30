@@ -8,10 +8,10 @@ export function SiteHeader() {
 	return (
 		<header className="bg-ink sticky top-0 z-50 text-white shadow-[0_1px_0_0_rgba(0,0,0,0.45)]">
 			<div className="bg-ink-soft hidden sm:block">
-				<div className="container-shell header-muted flex items-center justify-between py-2 text-xs font-bold">
+				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-bold">
 					<span>{siteConfig.hours}</span>
 					<Link
-						className="header-muted transition-colors hover:text-white"
+						className="transition-colors hover:text-white"
 						href="/service-areas"
 						prefetch
 					>
@@ -37,10 +37,10 @@ export function SiteHeader() {
 							width={44}
 						/>
 						<span className="leading-none">
-							<span className="block text-[0.95rem] font-extrabold tracking-[-0.03em] text-white sm:text-lg">
+							<span className="font-display block truncate text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
 								Wade&apos;s Plumbing
 							</span>
-							<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
+							<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
 								&amp; Septic
 							</span>
 						</span>

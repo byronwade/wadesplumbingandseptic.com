@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import type { FillLayerSpecification, LineLayerSpecification } from "maplibre-gl"
+import type {
+	FillLayerSpecification,
+	LineLayerSpecification,
+} from "maplibre-gl"
 
 import {
 	Map,
@@ -228,8 +231,8 @@ export function ServiceAreasMap() {
 							closeButton
 							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
-							<div className="font-sans space-y-2.5 pr-6 antialiased">
-								<p className="text-foreground text-lg leading-snug font-extrabold tracking-tight">
+							<div className="space-y-2.5 pr-6 font-sans antialiased">
+								<p className="text-foreground font-display text-lg leading-snug font-extrabold tracking-tight">
 									{selected.properties.name}
 								</p>
 								<p className="text-primary text-sm font-bold tracking-normal">
@@ -255,7 +258,7 @@ export function ServiceAreasMap() {
 					/>
 					Service coverage: Santa Cruz County &amp; west foothills
 				</li>
-				<li className="max-w-xl text-center text-sm font-medium leading-relaxed">
+				<li className="max-w-xl text-center text-sm leading-relaxed font-medium">
 					Approximate area including Los Gatos &amp; Saratoga; generally west of
 					Highway 101. Call to confirm your address.
 				</li>

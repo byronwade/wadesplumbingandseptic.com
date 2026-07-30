@@ -19,8 +19,8 @@ import {
 	Users,
 	Wallet,
 	Wrench,
-	type LucideIcon,
-} from "lucide-react"
+	type IconComponent,
+} from "@/components/icons"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import { openGlobalSearch } from "@/lib/search-events"
@@ -56,7 +56,7 @@ import {
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
-const megaIcons: Record<MegaNavItem["icon"], LucideIcon> = {
+const megaIcons: Record<MegaNavItem["icon"], IconComponent> = {
 	wrench: Wrench,
 	droplets: Droplets,
 	building: Building2,
@@ -81,19 +81,19 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 		<li>
 			<NavigationMenuLink asChild>
 				<Link
-					className="focus-visible:ring-ring group flex items-start gap-3 rounded-md p-3 transition-colors outline-none hover:bg-white/[0.06] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+					className="focus-visible:ring-ring group relative flex items-start gap-3.5 rounded-lg p-3 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 					href={href as Route}
 					prefetch
 				>
-					<span className="bg-ink-soft text-primary-bright mt-0.5 grid size-9 shrink-0 place-items-center rounded-md shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-						<Icon className="size-4" aria-hidden="true" />
+					<span className="surface-raised text-primary-bright grid size-9 shrink-0 place-items-center rounded-md transition-colors group-hover:bg-[color-mix(in_srgb,var(--primary)_30%,var(--dark-3))]">
+						<Icon className="size-[1.125rem]" aria-hidden="true" />
 					</span>
 					<span className="min-w-0">
-						<span className="group-hover:text-primary-bright block text-sm font-extrabold tracking-[-0.01em] text-white">
+						<span className="group-hover:text-primary-bright block text-sm font-bold tracking-[-0.01em] text-white transition-colors">
 							{label}
 						</span>
 						{description ? (
-							<span className="header-muted mt-1 block text-sm leading-snug">
+							<span className="text-on-dark-subtle mt-1 block text-[0.8125rem] leading-snug">
 								{description}
 							</span>
 						) : null}
@@ -101,6 +101,50 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 				</Link>
 			</NavigationMenuLink>
 		</li>
+	)
+}
+
+/* Shared footer bar. Credentials on the left, the two actions on the right, so
+   both menus resolve the same way instead of each inventing its own CTA block. */
+function MegaFooter({
+	action,
+	actionLabel,
+}: {
+	action: Route
+	actionLabel: string
+}) {
+	return (
+		<div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+			<p className="text-on-dark-subtle flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+				<span className="inline-flex items-center gap-2">
+					<BadgeCheck
+						aria-hidden="true"
+						className="text-primary-bright size-4"
+					/>
+					{siteConfig.licenses}
+				</span>
+				<span>{siteConfig.hours}</span>
+			</p>
+			<div className="flex shrink-0 items-center gap-2">
+				<a
+					className={buttonVariants({ size: "sm" })}
+					href={siteConfig.phoneHref}
+				>
+					<Phone aria-hidden="true" />
+					{siteConfig.phone}
+				</a>
+				<NavigationMenuLink asChild>
+					<Link
+						className={buttonVariants({ variant: "inverse", size: "sm" })}
+						href={action}
+						prefetch
+					>
+						{actionLabel}
+						<ArrowRight aria-hidden="true" />
+					</Link>
+				</NavigationMenuLink>
+			</div>
+		</div>
 	)
 }
 
@@ -112,7 +156,7 @@ function MobileNavLink({ href, label, description }: NavLink) {
 				href={href as Route}
 				prefetch
 			>
-				<span className="text-foreground block text-base font-extrabold tracking-[-0.02em]">
+				<span className="text-foreground block text-base font-bold tracking-[-0.02em]">
 					{label}
 				</span>
 				{description ? (
@@ -125,88 +169,44 @@ function MobileNavLink({ href, label, description }: NavLink) {
 	)
 }
 
+/*
+ * Two columns instead of three, and no marketing tile. The old middle column of
+ * links was squeezed between a big pitch block and a highlights rail, which left
+ * every column too narrow to read. Categories now get the room, highlights sit
+ * in their own sunken well, and the CTAs move to a shared footer bar.
+ */
 function ServicesMegaMenu() {
 	return (
-		<div className="w-full">
-			<div className="container-shell grid gap-8 py-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.45fr)_minmax(0,0.95fr)] lg:gap-10 lg:py-8">
-				{/* Brand column - soft copper wash on the same ink as the header */}
-				<div className="relative overflow-hidden rounded-lg p-6 sm:p-7">
-					<div
-						aria-hidden="true"
-						className="pointer-events-none absolute inset-0"
-						style={{
-							background: `
-								radial-gradient(ellipse 90% 80% at 0% 0%, color-mix(in srgb, var(--primary) 28%, transparent), transparent 65%),
-								linear-gradient(165deg, var(--ink-soft) 0%, transparent 70%)
-							`,
-						}}
-					/>
-					<div className="relative">
-						<p className="text-primary-bright text-xs font-extrabold tracking-[0.16em] uppercase">
-							Local specialists
-						</p>
-						<h3 className="mt-3 text-2xl font-extrabold tracking-[-0.03em] text-white">
-							Plumbing &amp; septic done right the first time
-						</h3>
-						<p className="header-muted mt-3 text-sm leading-relaxed">
-							From drain diagnostics to engineered septic work: clear options,
-							licensed crews, and service across Santa Cruz County.
-						</p>
-						<div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-							<a
-								className={cn(buttonVariants({ size: "lg" }), "gap-2")}
-								href={siteConfig.phoneHref}
-							>
-								<Phone className="size-4" aria-hidden="true" />
-								Call {siteConfig.phone}
-							</a>
-							<Link
-								className={cn(
-									buttonVariants({ variant: "inverse", size: "lg" }),
-									"gap-2",
-								)}
-								href={"/services" as Route}
-								prefetch
-							>
-								Browse all services
-								<ArrowRight className="size-4" aria-hidden="true" />
-							</Link>
-						</div>
-					</div>
-				</div>
-
+		<div className="container-shell py-7 lg:py-8">
+			<div className="grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10">
 				<div>
-					<p className="text-primary-bright mb-3 text-xs font-extrabold tracking-[0.16em] uppercase">
-						Service categories
-					</p>
-					<ul className="grid gap-1 sm:grid-cols-2">
+					<p className="spec-label mb-3">Service categories</p>
+					<ul className="grid gap-0.5 sm:grid-cols-2">
 						{serviceNavLinks.map((item) => (
 							<MegaLink key={item.href} {...item} />
 						))}
 					</ul>
 				</div>
 
-				<div className="lg:border-l lg:border-white/10 lg:pl-8">
-					<p className="text-primary-bright mb-3 text-xs font-extrabold tracking-[0.16em] uppercase">
-						Popular right now
-					</p>
-					<ul className="space-y-1">
+				<div className="rounded-lg bg-black/20 p-3 lg:p-4">
+					<p className="spec-label mb-3 px-1">Popular right now</p>
+					<ul className="space-y-0.5">
 						{serviceMegaHighlights.map((item) => (
 							<li key={item.href}>
 								<NavigationMenuLink asChild>
 									<Link
-										className="focus-visible:ring-ring group block rounded-md p-3 transition-colors outline-none hover:bg-white/[0.06] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+										className="focus-visible:ring-ring group block rounded-md p-2.5 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 										href={item.href as Route}
 										prefetch
 									>
-										<span className="group-hover:text-primary-bright flex items-center justify-between gap-3 text-sm font-extrabold tracking-[-0.01em] text-white">
+										<span className="group-hover:text-primary-bright flex items-center justify-between gap-3 text-sm font-bold tracking-[-0.01em] text-white transition-colors">
 											{item.label}
 											<ArrowRight
-												className="header-muted size-4 opacity-0 transition group-hover:opacity-100"
 												aria-hidden="true"
+												className="text-primary-bright size-4 shrink-0 -translate-x-1 opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100"
 											/>
 										</span>
-										<span className="header-muted mt-1 block text-sm leading-snug">
+										<span className="text-on-dark-subtle mt-1 block text-[0.8125rem] leading-snug">
 											{item.description}
 										</span>
 									</Link>
@@ -214,85 +214,60 @@ function ServicesMegaMenu() {
 							</li>
 						))}
 					</ul>
-					<p className="header-muted mt-5 text-xs font-bold">
-						{siteConfig.licenses} · {siteConfig.hours}
-					</p>
 				</div>
 			</div>
+
+			<MegaFooter action={"/services" as Route} actionLabel="All services" />
 		</div>
 	)
 }
 
 function CompanyMegaMenu() {
 	return (
-		<div className="w-full">
-			<div className="container-shell grid gap-8 py-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-12 lg:py-8">
-				<div className="overflow-hidden rounded-lg shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]">
-					<div className="relative aspect-[16/10] min-h-48">
-						<Image
-							alt="Coastal redwoods in Wade's Santa Cruz County service area"
-							className="object-cover"
-							fill
-							sizes="(min-width: 1024px) 28rem, 100vw"
-							src="/images/locations/santa-cruz-redwoods.webp"
-						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-						<div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-							<p className="text-primary-bright text-xs font-extrabold tracking-[0.16em] uppercase">
-								Family-owned · Local
-							</p>
-							<p className="mt-2 max-w-sm text-lg font-extrabold tracking-[-0.02em] text-white">
-								Trusted plumbing &amp; septic for Santa Cruz County homes and
-								businesses.
-							</p>
-						</div>
-					</div>
-					<div className="bg-ink-soft flex flex-wrap gap-x-5 gap-y-2 px-5 py-4 text-sm font-bold text-white">
-						<span className="inline-flex items-center gap-2">
-							<BadgeCheck
-								className="text-primary-bright size-4"
-								aria-hidden="true"
-							/>
-							{siteConfig.licenses}
-						</span>
-						<span className="header-muted inline-flex items-center gap-2">
-							<Phone className="size-4" aria-hidden="true" />
-							{siteConfig.phone}
-						</span>
-					</div>
-				</div>
-
+		<div className="container-shell py-7 lg:py-8">
+			<div className="grid items-stretch gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
 				<div>
-					<p className="text-primary-bright mb-3 text-xs font-extrabold tracking-[0.16em] uppercase">
-						Company
-					</p>
-					<ul className="grid gap-1 sm:grid-cols-2">
+					<p className="spec-label mb-3">Company</p>
+					<ul className="grid gap-0.5 sm:grid-cols-2">
 						{companyNavLinks.map((item) => (
 							<MegaLink key={item.href} {...item} />
 						))}
 					</ul>
-					<div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
-						<a
-							className={cn(buttonVariants({ size: "lg" }), "gap-2")}
-							href={siteConfig.phoneHref}
-						>
-							<Phone className="size-4" aria-hidden="true" />
-							Call {siteConfig.phone}
-						</a>
-						<Link
-							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
-								"gap-2",
-							)}
-							href={"/contact" as Route}
-							prefetch
-						>
-							Get a free quote
-							<ArrowRight className="size-4" aria-hidden="true" />
-						</Link>
-					</div>
 				</div>
+
+				{/* Place image. items-stretch plus h-full so it fills the link column
+				    instead of leaving a band of empty tile under its caption. */}
+				<NavigationMenuLink asChild>
+					<Link
+						className="focus-visible:ring-ring group surface-raised relative block overflow-hidden rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
+						href={"/service-areas" as Route}
+						prefetch
+					>
+						<div className="relative aspect-16/10 lg:aspect-auto lg:h-full lg:min-h-56">
+							<Image
+								alt="Coastal redwoods in Wade's Santa Cruz County service area"
+								className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+								fill
+								sizes="(min-width: 1024px) 24rem, 100vw"
+								src="/images/locations/santa-cruz-redwoods.webp"
+							/>
+							<div className="from-dark-3 via-dark-3/55 absolute inset-0 bg-linear-to-t to-transparent" />
+							<div className="absolute inset-x-0 bottom-0 p-4">
+								<p className="spec-label">Where we work</p>
+								<p className="mt-2 flex items-center gap-2 text-[0.9375rem] font-bold tracking-[-0.02em] text-white">
+									Santa Cruz County and the foothills
+									<ArrowRight
+										aria-hidden="true"
+										className="text-primary-bright size-4 shrink-0 transition-transform group-hover:translate-x-1"
+									/>
+								</p>
+							</div>
+						</div>
+					</Link>
+				</NavigationMenuLink>
 			</div>
+
+			<MegaFooter action={"/contact" as Route} actionLabel="Get a free quote" />
 		</div>
 	)
 }
@@ -434,9 +409,7 @@ export function SiteHeaderNav() {
 
 							<Separator className="my-3" />
 
-							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-								Services
-							</p>
+							<p className="spec-tag px-3 pb-2">Services</p>
 							{serviceNavLinks.map((item) => (
 								<MobileNavLink key={item.href} {...item} />
 							))}
@@ -449,9 +422,7 @@ export function SiteHeaderNav() {
 
 							<Separator className="my-3" />
 
-							<p className="text-muted-foreground px-3 pb-1 text-xs font-extrabold tracking-[0.14em] uppercase">
-								Company
-							</p>
+							<p className="spec-tag px-3 pb-2">Company</p>
 							{companyNavLinks.map((item) => (
 								<MobileNavLink key={item.href} {...item} />
 							))}

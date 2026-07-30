@@ -25,6 +25,9 @@
 	--color-ink-soft: var(--ink-soft);
 	--color-panel: var(--panel);
 	--color-panel-elevated: var(--panel-elevated);
+	--color-dark-1: var(--dark-1);
+	--color-dark-2: var(--dark-2);
+	--color-dark-3: var(--dark-3);
 	--color-sunken: var(--sunken);
 	--color-on-dark: var(--on-dark);
 	--color-on-dark-muted: var(--on-dark-muted);
@@ -60,29 +63,29 @@
   can be reasoned about instead of eyeballed.
 */
 :root {
-	--ink: oklch(0.1809 0.0052 248.1);
-	--ink-soft: oklch(0.2293 0.009 255.6);
-	--panel: oklch(0.2202 0.0115 254.1);
-	--panel-elevated: oklch(0.2666 0.015 256.8);
-	--background: oklch(0.9756 0.0026 106.4);
-	--foreground: oklch(0.1989 0.0051 248.1);
+	--ink: oklch(0.175 0.008 68);
+	--ink-soft: oklch(0.215 0.009 68);
+	--panel: oklch(0.215 0.009 68);
+	--panel-elevated: oklch(0.268 0.01 68);
+	--background: oklch(0.976 0.003 85);
+	--foreground: oklch(0.2 0.007 68);
 	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.1989 0.0051 248.1);
+	--card-foreground: oklch(0.2 0.007 68);
 	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.1989 0.0051 248.1);
+	--popover-foreground: oklch(0.2 0.007 68);
 	--primary: oklch(0.4859 0.1104 51.3);
 	--primary-foreground: oklch(1 0 0);
 	--primary-bright: oklch(0.7557 0.1133 66.7);
-	--secondary: oklch(0.9425 0.0027 106.5);
-	--secondary-foreground: oklch(0.2379 0.0089 255.6);
-	--muted: oklch(0.9516 0.0027 106.4);
-	--muted-foreground: oklch(0.4906 0.0128 256.7);
+	--secondary: oklch(0.942 0.004 85);
+	--secondary-foreground: oklch(0.24 0.008 68);
+	--muted: oklch(0.951 0.004 85);
+	--muted-foreground: oklch(0.49 0.011 68);
 	--accent: oklch(0.9243 0.0201 70);
 	--accent-foreground: oklch(0.4027 0.0855 54.6);
 	--destructive: oklch(0.5534 0.1739 38.4);
-	--border: oklch(0.8939 0.0068 97.4);
-	--border-strong: oklch(0.8316 0.0097 100);
-	--input: oklch(0.8939 0.0068 97.4);
+	--border: oklch(0.893 0.006 85);
+	--border-strong: oklch(0.83 0.008 82);
+	--input: oklch(0.893 0.006 85);
 	--ring: oklch(0.4859 0.1104 51.3);
 	--radius: 0.5rem;
 	--shadow-edge: 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
@@ -95,20 +98,47 @@
 	  so section rhythm never read. This is a deliberate, visible step down -
 	  L 0.9756 → 0.9483.
 	*/
-	--sunken: oklch(0.9483 0.004 106.5);
+	--sunken: oklch(0.948 0.005 85);
 
 	/* Text ramp for ink/panel surfaces. Replaces three near-identical
 	   hardcoded whites (#ececea / #e4e5e7 / #e8e8e4) and ad-hoc white/NN. */
-	--on-dark: oklch(0.9666 0.0026 106.4);
-	--on-dark-muted: oklch(0.8749 0.0064 255.5);
-	--on-dark-subtle: oklch(0.7123 0.0141 251.6);
+	--on-dark: oklch(0.967 0.003 85);
+	--on-dark-muted: oklch(0.875 0.007 80);
+	--on-dark-subtle: oklch(0.712 0.011 75);
+
+	/*
+	  Dark elevation ramp. Every ink surface used to resolve to roughly the same
+	  lightness, so the header, the mega menu, and each page hero read as one
+	  undifferentiated slab. These are separated by ~0.035 L, which is a visible
+	  step, and each level up is also lighter in chroma so it reads as "closer"
+	  rather than just "greyer".
+
+	    ink      L .18   page chrome, the header bar
+	    dark-1   L .215  hero bands
+	    dark-2   L .25   floating panels (mega menu, popovers)
+	    dark-3   L .285  cards resting on a panel
+	*/
+	--dark-1: oklch(0.215 0.009 68);
+	--dark-2: oklch(0.252 0.01 68);
+	--dark-3: oklch(0.288 0.011 68);
+
+	/*
+	  Top inner highlight. A single light hairline along the top edge is what
+	  makes a dark panel read as a raised object rather than a hole. Paired with
+	  --shadow-float on anything that floats.
+	*/
+	--hairline-top: inset 0 1px 0 0 oklch(1 0 0 / 0.08);
+	--hairline-all: inset 0 0 0 1px oklch(1 0 0 / 0.08);
+	--shadow-float:
+		0 1px 2px oklch(0 0 0 / 0.4), 0 12px 24px -8px oklch(0 0 0 / 0.45),
+		0 32px 64px -24px oklch(0 0 0 / 0.55);
 
 	/* Long-form copy. Was hardcoded #3f444b, which left every content page
 	   unreadable in dark mode. */
-	--prose-body: oklch(0.3847 0.0136 256.8);
-	--prose-quote: oklch(0.4321 0.0139 252.2);
-	--prose-quote-bg: oklch(0.9543 0.004 106.5);
-	--prose-code-bg: oklch(0.9428 0.0013 0);
+	--prose-body: oklch(0.385 0.01 68);
+	--prose-quote: oklch(0.432 0.01 68);
+	--prose-quote-bg: oklch(0.954 0.005 85);
+	--prose-code-bg: oklch(0.943 0.004 85);
 
 	/* --- Type scale ---
 	   display  → home hero only
@@ -163,41 +193,47 @@
 }
 
 .dark {
-	--ink: oklch(0.1582 0.0072 258.4);
-	--ink-soft: oklch(0.2071 0.0117 254.1);
-	--panel: oklch(0.2202 0.0115 254.1);
-	--panel-elevated: oklch(0.2666 0.015 256.8);
-	--background: oklch(0.1809 0.0052 248.1);
-	--foreground: oklch(0.9603 0.004 106.5);
-	--card: oklch(0.2168 0.0109 260.7);
-	--card-foreground: oklch(0.9603 0.004 106.5);
-	--popover: oklch(0.2168 0.0109 260.7);
-	--popover-foreground: oklch(0.9603 0.004 106.5);
+	--ink: oklch(0.13 0.006 68);
+	--ink-soft: oklch(0.185 0.008 68);
+	--panel: oklch(0.205 0.009 68);
+	--panel-elevated: oklch(0.255 0.01 68);
+	--background: oklch(0.165 0.007 68);
+	--foreground: oklch(0.96 0.004 85);
+	--card: oklch(0.205 0.008 68);
+	--card-foreground: oklch(0.96 0.004 85);
+	--popover: oklch(0.205 0.008 68);
+	--popover-foreground: oklch(0.96 0.004 85);
 	--primary: oklch(0.619 0.1364 50.7);
 	--primary-foreground: oklch(1 0 0);
 	--primary-bright: oklch(0.7557 0.1133 66.7);
-	--secondary: oklch(0.2458 0.0153 256.8);
-	--secondary-foreground: oklch(0.9299 0.0053 106.5);
-	--muted: oklch(0.2458 0.0153 256.8);
-	--muted-foreground: oklch(0.7456 0.0146 258.4);
+	--secondary: oklch(0.235 0.009 68);
+	--secondary-foreground: oklch(0.93 0.005 85);
+	--muted: oklch(0.235 0.009 68);
+	--muted-foreground: oklch(0.745 0.012 78);
 	--accent: oklch(0.2554 0.0212 66.6);
 	--accent-foreground: oklch(0.7557 0.1133 66.7);
 	--destructive: oklch(0.6828 0.1741 40.3);
-	--border: oklch(0.3067 0.0167 255.6);
-	--border-strong: oklch(0.3757 0.0202 254.1);
-	--input: oklch(0.3067 0.0167 255.6);
+	--border: oklch(0.295 0.01 68);
+	--border-strong: oklch(0.365 0.012 68);
+	--input: oklch(0.295 0.01 68);
 	--ring: oklch(0.7557 0.1133 66.7);
 	--shadow-edge: 0 0 0 1px color-mix(in srgb, white 8%, transparent);
 	--shadow-panel:
 		0 1px 2px color-mix(in srgb, black 30%, transparent),
 		0 8px 24px -12px color-mix(in srgb, black 45%, transparent);
 
-	--sunken: oklch(0.2076 0.0092 255.6);
+	--sunken: oklch(0.195 0.008 68);
 
-	--prose-body: oklch(0.8305 0.013 255.5);
-	--prose-quote: oklch(0.8643 0.0117 252.1);
-	--prose-quote-bg: oklch(0.2369 0.0137 253.1);
-	--prose-code-bg: oklch(0.2584 0.0151 256.8);
+	--prose-body: oklch(0.83 0.01 80);
+	--prose-quote: oklch(0.864 0.009 80);
+	--prose-quote-bg: oklch(0.228 0.009 68);
+	--prose-code-bg: oklch(0.25 0.01 68);
+
+	/* Dark theme starts lower, so the ramp shifts down with it and keeps the
+	   same ~0.035 L separation between levels. */
+	--dark-1: oklch(0.195 0.008 68);
+	--dark-2: oklch(0.232 0.009 68);
+	--dark-3: oklch(0.268 0.01 68);
 }
 
 /*
@@ -552,6 +588,95 @@
 	/* Surfaces */
 	.surface-sunken {
 		background: var(--sunken);
+	}
+
+	/*
+	  Hero band. Distinct from the header on three axes at once, because a
+	  lightness step alone was not enough separation: a lighter base (--dark-1
+	  against the header's --ink), a hairline along the top edge, and the grid
+	  and glow textures below, which the flat header bar never has.
+	*/
+	.surface-hero {
+		--border: color-mix(in srgb, white 10%, transparent);
+		--muted-foreground: var(--on-dark-muted);
+		--ring-offset: var(--dark-1);
+		position: relative;
+		isolation: isolate;
+		background: var(--dark-1);
+		color: var(--on-dark);
+		box-shadow: var(--hairline-top);
+	}
+
+	/*
+	  Floating dark panel: mega menu, popovers. --dark-2 with a full hairline and
+	  a real drop shadow, so it reads as sitting above the page rather than being
+	  cut out of the header.
+	*/
+	.surface-float {
+		--border: color-mix(in srgb, white 10%, transparent);
+		--muted-foreground: var(--on-dark-muted);
+		--ring-offset: var(--dark-2);
+		background: var(--dark-2);
+		color: var(--on-dark);
+		box-shadow: var(--hairline-all), var(--shadow-float);
+	}
+
+	/* A card resting on a floating panel. */
+	.surface-raised {
+		background: var(--dark-3);
+		box-shadow: var(--hairline-all);
+	}
+
+	/*
+	  Blueprint grid, drawn from the subject: permit drawings and site plans are
+	  set on exactly this kind of ruled field. Masked so it fades out instead of
+	  ending on a hard edge, and pinned behind content on its own z layer, which
+	  is why every surface using it sets `isolation: isolate`.
+	*/
+	.tex-grid::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background-image:
+			linear-gradient(
+				to right,
+				color-mix(in srgb, white 4.5%, transparent) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				color-mix(in srgb, white 4.5%, transparent) 1px,
+				transparent 1px
+			);
+		background-size: 4rem 4rem;
+		mask-image: radial-gradient(
+			ellipse 90% 80% at 50% 0%,
+			black 20%,
+			transparent 75%
+		);
+	}
+
+	/* Ambient copper. One warm source top-left so the band has a light
+	   direction instead of reading evenly flat. */
+	.tex-glow::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background:
+			radial-gradient(
+				ellipse 60% 70% at 8% 0%,
+				color-mix(in srgb, var(--primary) 28%, transparent),
+				transparent 62%
+			),
+			radial-gradient(
+				ellipse 45% 55% at 92% 100%,
+				color-mix(in srgb, var(--primary-bright) 9%, transparent),
+				transparent 60%
+			);
 	}
 
 	.surface-panel {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import type { Route } from "next"
 import Link from "next/link"
-import { MapPinned, Phone } from "lucide-react"
+import { MapPinned, Phone } from "@/components/icons"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
@@ -74,11 +74,11 @@ export default function ServiceAreasPage() {
 							<span className="text-primary">serves on the Central Coast</span>
 						</h2>
 						<p className="type-lead mt-5">
-							Mountain roads, coastal soils, older piping, steep lots, and septic
-							regulations change how a job should be diagnosed. The map shows our
-							approximate coverage: Santa Cruz County and the west foothills into
-							Los Gatos and Saratoga. Tap the shaded area or browse communities
-							below, and call to confirm your address.
+							Mountain roads, coastal soils, older piping, steep lots, and
+							septic regulations change how a job should be diagnosed. The map
+							shows our approximate coverage: Santa Cruz County and the west
+							foothills into Los Gatos and Saratoga. Tap the shaded area or
+							browse communities below, and call to confirm your address.
 						</p>
 					</div>
 				</div>
@@ -105,16 +105,14 @@ export default function ServiceAreasPage() {
 					{counties.map((county) => (
 						<div key={county.title}>
 							<div className="max-w-3xl">
-								<h2 className="type-title text-3xl sm:text-4xl">
-									{county.title}
-								</h2>
+								<h2 className="type-title">{county.title}</h2>
 								<p className="type-lead mt-4">{county.summary}</p>
 							</div>
 							<ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
 										<Link
-											className="border-border bg-background hover:border-primary/40 flex items-center gap-4 rounded-lg border px-5 py-4 text-base font-extrabold tracking-[-0.02em] transition-colors"
+											className="border-border bg-background hover:border-primary/40 flex items-center gap-4 rounded-lg border px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
 											href={location.href as Route}
 											prefetch
 										>
@@ -133,9 +131,7 @@ export default function ServiceAreasPage() {
 
 			<section className="container-shell section-y">
 				<div className="surface-panel mx-auto max-w-3xl p-8 text-center sm:p-10">
-					<h2 className="type-title text-3xl sm:text-4xl">
-						Not sure if we cover your address?
-					</h2>
+					<h2 className="type-title">Not sure if we cover your address?</h2>
 					<p className="type-lead mt-4">
 						Call with the city, ZIP code, and type of work. A real person will
 						confirm coverage and schedule the right visit.

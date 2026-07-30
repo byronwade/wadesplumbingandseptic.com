@@ -11,7 +11,7 @@ import {
 	Phone,
 	ShieldCheck,
 	Wrench,
-} from "lucide-react"
+} from "@/components/icons"
 
 import { ContactCta } from "@/components/contact-cta"
 import { HomeFaq } from "@/components/home-faq"
@@ -106,6 +106,12 @@ const trustedBrands = [
 	{ src: "/images/partners/grundfos.webp", alt: "Grundfos" },
 ] as const
 
+const heroStats = [
+	{ label: "Licensed", value: "CA CSLB #1087260" },
+	{ label: "Local rating", value: "4.9 out of 5" },
+	{ label: "Office hours", value: "Mon to Fri, 9 to 5" },
+] as const
+
 const trustPoints = [
 	"Family owned & operated",
 	"Licensed & insured",
@@ -182,19 +188,27 @@ const faqs = [
 	},
 ]
 
+/*
+ * Art-directed pair: a landscape crop for the framed plate on wide screens, a
+ * shorter crop on phones. `sizes` reflects the framed column (about 45vw from lg
+ * up) rather than the old full-bleed 100vw, so the browser stops fetching a
+ * viewport-width file for a half-width slot.
+ */
+const HERO_SIZES = "(min-width: 1024px) 45vw, (min-width: 640px) 90vw, 100vw"
+
 function HomeHeroMedia() {
 	const common = {
 		alt: "Three-tank engineered septic system installed on a hillside property in Santa Cruz County",
-		sizes: "100vw",
+		sizes: HERO_SIZES,
 	} as const
 
 	const {
 		props: { srcSet: desktop },
 	} = getImageProps({
 		...common,
-		width: 768,
-		height: 1024,
-		quality: 70,
+		width: 900,
+		height: 720,
+		quality: 72,
 		src: "/images/work/engineered-septic-hero.webp",
 	})
 
@@ -203,14 +217,14 @@ function HomeHeroMedia() {
 	} = getImageProps({
 		...common,
 		width: 640,
-		height: 400,
-		quality: 65,
+		height: 480,
+		quality: 68,
 		src: "/images/work/engineered-septic-hero-mobile.webp",
 	})
 
 	return (
 		<picture>
-			<source media="(min-width: 640px)" srcSet={desktop} sizes="100vw" />
+			<source media="(min-width: 640px)" srcSet={desktop} sizes={HERO_SIZES} />
 			<img
 				{...rest}
 				srcSet={mobile}
@@ -227,50 +241,101 @@ export default function HomePage() {
 	return (
 		<main id="main-content">
 			{/*
-			  Hero height is bounded in rem, not 92vh. At viewport height the copy
-			  sat marooned in the bottom third of a very tall panel. Two scrims
-			  instead of the previous three stacked layers: a horizontal one to
-			  hold the copy, a short vertical one to seat the buttons - enough
-			  contrast for AA without crushing the work photo to near-black.
-			*/}
-			<section className="surface-dark relative flex min-h-[32rem] items-end overflow-hidden pt-20 pb-14 sm:min-h-[36rem] sm:pb-16 lg:min-h-[40rem] lg:items-center lg:pt-24 lg:pb-20">
-				<HomeHeroMedia />
-				<div className="from-ink via-ink/92 to-ink/25 absolute inset-0 bg-linear-to-r" />
-				<div className="from-ink/80 to-ink/0 absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t" />
+			  The photo used to be a full-bleed background under three stacked
+			  scrims, which flattened the best asset on the site into grey mush and
+			  left the copy floating on an empty field.
 
-				<div className="container-shell relative">
-					<div className="section-head max-w-2xl">
-						<p className="spec-label">Santa Cruz County, CA</p>
-						<h1 className="type-display text-white">
-							Honest plumbing
-							<br />
-							<span className="text-primary-bright">&amp; septic</span>
-						</h1>
-						<p className="motion-rise motion-delay-1 type-lead text-on-dark-muted max-w-xl">
-							No sales pressure. No upselling. Clear pricing before work begins
-							from local licensed professionals.
-						</p>
+			  It is now a framed object in its own column: a spec plate, captioned
+			  the way a permit photo is, with the job's real numbers under it. The
+			  copy column keeps the ink and textures, so the two halves read as
+			  "pitch" and "proof" instead of "text on a picture".
+			*/}
+			<section className="surface-hero tex-grid tex-glow overflow-hidden">
+				<div className="container-shell grid items-center gap-10 pt-16 pb-14 sm:pt-20 sm:pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-14 lg:pt-24 lg:pb-20">
+					<div>
+						<div className="section-head max-w-xl">
+							<p className="spec-label motion-fade">Santa Cruz County, CA</p>
+							<h1 className="type-display motion-rise text-white">
+								Honest plumbing
+								<br />
+								<span className="text-primary-bright">&amp; septic</span>
+							</h1>
+							<p className="motion-rise motion-delay-1 type-lead text-on-dark-muted">
+								No sales pressure. No upselling. Clear pricing before work
+								begins from local licensed professionals.
+							</p>
+						</div>
+
+						<div className="motion-rise motion-delay-2 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+							<a
+								className={cn(
+									buttonVariants({ size: "xl" }),
+									"w-full sm:w-auto",
+								)}
+								href={siteConfig.phoneHref}
+							>
+								<Phone aria-hidden="true" />
+								Call {siteConfig.phone}
+							</a>
+							<Link
+								className={cn(
+									buttonVariants({ variant: "inverse", size: "xl" }),
+									"w-full sm:w-auto",
+								)}
+								href="/services"
+								prefetch
+							>
+								Our Services
+								<ArrowRight aria-hidden="true" />
+							</Link>
+						</div>
+
+						{/* Credentials as data, not as another row of chips. */}
+						<dl className="motion-fade motion-delay-2 mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
+							{heroStats.map(({ label, value }) => (
+								<div key={label}>
+									<dt className="text-on-dark-subtle font-mono text-[0.6875rem] tracking-[0.14em] uppercase">
+										{label}
+									</dt>
+									<dd className="font-display mt-1 text-[0.9375rem] font-bold tracking-[-0.01em] text-white">
+										{value}
+									</dd>
+								</div>
+							))}
+						</dl>
 					</div>
-					<div className="motion-rise motion-delay-2 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-						<a
-							className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
-							href={siteConfig.phoneHref}
-						>
-							<Phone aria-hidden="true" />
-							Call {siteConfig.phone}
-						</a>
-						<Link
-							className={cn(
-								buttonVariants({ variant: "inverse", size: "xl" }),
-								"w-full sm:w-auto",
-							)}
-							href="/services"
-							prefetch
-						>
-							Our Services
-							<ArrowRight aria-hidden="true" />
-						</Link>
-					</div>
+
+					<figure className="motion-rise motion-delay-1 relative">
+						{/* Copper bloom behind the plate, so it lifts off the band. */}
+						<div
+							aria-hidden="true"
+							className="bg-primary/25 absolute -inset-6 -z-10 rounded-full blur-3xl"
+						/>
+						<div className="surface-raised overflow-hidden rounded-xl p-2">
+							<div className="relative aspect-4/3 overflow-hidden rounded-lg lg:aspect-5/4">
+								<HomeHeroMedia />
+								<span className="surface-float absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase backdrop-blur-sm">
+									Engineered ATU
+								</span>
+							</div>
+							<figcaption className="flex items-end justify-between gap-4 px-2 pt-3 pb-1">
+								<span className="text-[0.8125rem] leading-snug font-bold text-white">
+									Three-tank engineered septic system
+									<span className="text-on-dark-subtle block font-normal">
+										Hillside property, Santa Cruz Mountains
+									</span>
+								</span>
+								<Link
+									className="text-primary-bright inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
+									href="/service-category/septic"
+									prefetch
+								>
+									Septic work
+									<ArrowRight aria-hidden="true" className="size-3.5" />
+								</Link>
+							</figcaption>
+						</div>
+					</figure>
 				</div>
 			</section>
 
@@ -304,9 +369,9 @@ export default function HomePage() {
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
 						<p className="type-lead">
-							When a standard system will not work (steep slopes, difficult soil,
-							tight lots, or sensitive environments), that is exactly where we
-							excel.
+							When a standard system will not work (steep slopes, difficult
+							soil, tight lots, or sensitive environments), that is exactly
+							where we excel.
 						</p>
 					</div>
 
@@ -358,7 +423,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className="surface-dark section-y">
+			<section className="surface-hero tex-grid section-y overflow-hidden">
 				<div className="container-shell">
 					<div className="section-head-row reveal">
 						<div className="section-head max-w-2xl">
@@ -521,7 +586,7 @@ export default function HomePage() {
 						</div>
 					</div>
 
-					<div className="surface-dark rounded-lg p-7 sm:p-9">
+					<div className="surface-float relative overflow-hidden rounded-xl p-7 sm:p-9">
 						<p className="spec-label">Real people, real results</p>
 						<div className="mt-8 space-y-7">
 							{testimonials.map(([quote, person]) => (

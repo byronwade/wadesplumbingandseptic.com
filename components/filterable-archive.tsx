@@ -4,7 +4,7 @@ import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ArrowLeft, ArrowRight, CalendarDays } from "lucide-react"
+import { ArrowLeft, ArrowRight, CalendarDays } from "@/components/icons"
 import { startTransition, useEffect, useMemo } from "react"
 
 import { Badge } from "@/components/ui/badge"

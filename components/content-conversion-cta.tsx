@@ -1,6 +1,6 @@
 import type { Route } from "next"
 import Link from "next/link"
-import { ArrowRight, BadgeCheck, Clock, Phone, Star } from "lucide-react"
+import { ArrowRight, BadgeCheck, Clock, Phone, Star } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
@@ -26,7 +26,7 @@ export function ContentConversionCta({
 	}
 	const secondaryClassName = cn(
 		buttonVariants({ variant: "inverse", size: "xl" }),
-		"w-full justify-center gap-2 sm:w-auto",
+		"w-full sm:w-auto",
 	)
 	const secondaryIsExternal =
 		secondary.external ||
@@ -34,44 +34,25 @@ export function ContentConversionCta({
 		secondary.href.startsWith("tel:")
 
 	return (
-		<section className="surface-dark relative overflow-hidden">
-			<div
-				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 opacity-90"
-				style={{
-					background: `
-						radial-gradient(ellipse 70% 55% at 12% 20%, color-mix(in srgb, var(--primary) 28%, transparent), transparent 70%),
-						radial-gradient(ellipse 50% 45% at 88% 80%, color-mix(in srgb, var(--primary-bright) 14%, transparent), transparent 65%),
-						linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #15191e 100%)
-					`,
-				}}
-			/>
-			<div
-				aria-hidden="true"
-				className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color-mix(in_srgb,var(--primary-bright)_45%,transparent)] to-transparent"
-			/>
-
+		<section className="surface-hero tex-grid tex-glow overflow-hidden">
 			<div className="container-shell section-y relative">
 				<div className="mx-auto max-w-3xl text-center">
-					<p className="type-eyebrow text-primary-bright motion-fade">
+					<p className="spec-label spec-label-center reveal">
 						{conversion.eyebrow}
 					</p>
-					<h2 className="type-title motion-rise mt-4 text-balance text-white">
+					<h2 className="type-title reveal mt-4 text-white">
 						{conversion.title}
 					</h2>
-					<p className="motion-fade motion-delay-1 mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#e8e8e4] sm:text-lg">
+					<p className="type-lead reveal text-on-dark-muted mx-auto mt-5 max-w-2xl">
 						{conversion.description}
 					</p>
 
-					<div className="motion-rise motion-delay-2 mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+					<div className="reveal mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
 						<a
-							className={cn(
-								buttonVariants({ size: "xl" }),
-								"w-full gap-2 sm:w-auto",
-							)}
+							className={cn(buttonVariants({ size: "xl" }), "w-full sm:w-auto")}
 							href={siteConfig.phoneHref}
 						>
-							<Phone className="size-5" />
+							<Phone aria-hidden="true" />
 							Call {siteConfig.phone}
 						</a>
 						{secondaryIsExternal ? (
@@ -91,7 +72,7 @@ export function ContentConversionCta({
 						)}
 					</div>
 
-					<ul className="text-white/70 motion-fade motion-delay-2 mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold">
+					<ul className="text-on-dark-muted reveal mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-bold">
 						<li className="inline-flex items-center gap-2">
 							<span
 								className="text-primary-bright inline-flex items-center gap-0.5"
@@ -115,7 +96,10 @@ export function ContentConversionCta({
 							{siteConfig.licenses}
 						</li>
 						<li className="inline-flex items-center gap-2">
-							<Clock className="text-primary-bright size-4" aria-hidden="true" />
+							<Clock
+								className="text-primary-bright size-4"
+								aria-hidden="true"
+							/>
 							{siteConfig.hours}
 						</li>
 					</ul>
@@ -123,27 +107,25 @@ export function ContentConversionCta({
 
 				{conversion.testimonials.length > 0 ? (
 					<div className="mx-auto mt-14 max-w-5xl">
-						<p className="text-primary-bright mb-6 text-center text-xs font-extrabold tracking-[0.18em] uppercase">
+						<p className="spec-label spec-label-center mb-7">
 							What neighbors say
 						</p>
+						{/* No manual delays: scroll-driven reveals stagger on their own,
+						    since each column crosses the viewport edge in turn. */}
 						<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
 							{conversion.testimonials.map((testimonial, index) => (
 								<li
+									className="reveal relative"
 									key={`${testimonial.name}-${index}`}
-									className={cn(
-										"motion-rise relative",
-										index === 1 && "motion-delay-1",
-										index >= 2 && "motion-delay-2",
-									)}
 								>
-									<blockquote className="border-white/10 border-t pt-5">
-										<p className="text-[0.95rem] leading-relaxed text-[#e8e8e4]">
+									<blockquote className="border-t border-white/10 pt-5">
+										<p className="text-on-dark-muted text-[0.9375rem] leading-relaxed text-pretty">
 											&ldquo;{testimonial.quote}&rdquo;
 										</p>
-										<footer className="mt-4 text-sm font-extrabold text-white">
+										<footer className="mt-4 text-sm font-bold text-white">
 											{testimonial.name}
 											{testimonial.location ? (
-												<span className="text-white/55 font-bold">
+												<span className="text-on-dark-subtle font-normal">
 													{" "}
 													· {testimonial.location}
 												</span>

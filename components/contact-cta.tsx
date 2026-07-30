@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Clock, Mail, Phone } from "lucide-react"
+import { ArrowRight, Clock, Mail, Phone } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
@@ -26,7 +26,8 @@ export function ContactCta({
 	return (
 		<section
 			className={cn(
-				"surface-dark relative overflow-hidden",
+				"relative overflow-hidden",
+				compact ? "surface-float" : "surface-hero tex-grid tex-glow",
 				compact ? "rounded-lg p-[var(--space-card)] sm:p-7" : "section-y-tight",
 			)}
 		>

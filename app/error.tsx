@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
-import { ArrowLeft, RotateCcw } from "lucide-react"
+import { ArrowLeft, RotateCcw } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"

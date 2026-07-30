@@ -15,7 +15,7 @@ import {
 	Sparkles,
 	Wrench,
 	X,
-} from "lucide-react"
+} from "@/components/icons"
 
 import {
 	Dialog,
@@ -148,26 +148,26 @@ function ResultCard({
 
 			<div className="flex min-w-0 flex-col justify-center px-3.5 py-3 sm:px-5 sm:py-4">
 				<div className="flex items-center gap-2">
-					<span className="text-[0.65rem] font-extrabold tracking-[0.16em] text-[var(--primary-bright)] uppercase">
+					<span className="spec-tag text-primary-bright">
 						{TYPE_BADGE[hit.type]}
 					</span>
 					{hit.matchLabel === "Closest match" ? (
-						<span className="truncate text-xs text-white/45">
+						<span className="type-meta text-on-dark-subtle truncate">
 							Closest match
 						</span>
 					) : hit.category ? (
-						<span className="truncate text-xs text-white/45">
+						<span className="type-meta text-on-dark-subtle truncate">
 							{hit.category}
 						</span>
 					) : null}
 				</div>
-				<p className="mt-1.5 text-[1.05rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-[1.2rem]">
+				<p className="font-display mt-1.5 text-[1.0625rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-[1.1875rem]">
 					<HighlightedTitle title={hit.title} query={query} />
 				</p>
-				<p className="mt-1 line-clamp-2 text-sm leading-snug text-white/55">
+				<p className="text-on-dark-subtle mt-1 line-clamp-2 text-sm leading-snug">
 					{hit.description}
 				</p>
-				<div className="mt-2 flex items-center gap-1 text-xs font-extrabold tracking-[-0.01em] text-white/35 transition-colors group-hover:text-[var(--primary-bright)]">
+				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-bold transition-colors group-hover:text-[var(--primary-bright)]">
 					Open
 					<ArrowUpRight className="size-3.5" aria-hidden />
 				</div>
@@ -320,10 +320,8 @@ export function GlobalSearch({
 							)}
 						>
 							<div className="min-w-0">
-								<p className="text-[0.68rem] font-extrabold tracking-[0.2em] text-[var(--primary-bright)] uppercase">
-									Wade&apos;s
-								</p>
-								<DialogTitle className="mt-1 text-2xl font-extrabold tracking-[-0.04em] text-white sm:text-3xl">
+								<p className="spec-label">Wade&apos;s</p>
+								<DialogTitle className="type-headline mt-2 text-white">
 									Looking for something?
 								</DialogTitle>
 								<DialogDescription className="sr-only">
@@ -331,7 +329,7 @@ export function GlobalSearch({
 								</DialogDescription>
 							</div>
 
-							<DialogClose className="flex size-11 shrink-0 items-center justify-center rounded-md text-white/70 transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
+							<DialogClose className="text-on-dark-muted flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
 								<X className="size-5" />
 								<span className="sr-only">Close search</span>
 							</DialogClose>
@@ -368,7 +366,7 @@ export function GlobalSearch({
 											? `search-option-${flatHits[safeActiveIndex].id}`
 											: undefined
 									}
-									className="h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
+									className="font-display h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
 								/>
 							</label>
 
@@ -383,13 +381,13 @@ export function GlobalSearch({
 												setActiveIndex(0)
 												inputRef.current?.focus()
 											}}
-											className="shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-extrabold tracking-[-0.01em] text-white/70 transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
+											className="text-on-dark-muted shrink-0 rounded-md bg-white/[0.05] px-3 py-1.5 text-xs font-bold transition-colors duration-75 hover:bg-white/[0.09] hover:text-white"
 										>
 											{suggestion}
 										</button>
 									))}
 								</div>
-								<p className="hidden shrink-0 items-center gap-1.5 text-xs text-white/35 sm:flex">
+								<p className="text-on-dark-subtle hidden shrink-0 items-center gap-1.5 text-xs sm:flex">
 									<span className="inline-flex items-center gap-1 rounded-sm bg-white/[0.05] px-1.5 py-0.5 font-sans">
 										<CornerDownLeft className="size-3" aria-hidden /> Enter
 									</span>
@@ -406,20 +404,20 @@ export function GlobalSearch({
 					>
 						<div className={SEARCH_SHELL}>
 							{loading ? (
-								<p className="py-16 text-center text-sm text-white/45">
+								<p className="text-on-dark-subtle py-16 text-center text-sm">
 									Warming up search…
 								</p>
 							) : null}
 
 							{error ? (
-								<p className="py-16 text-center text-sm text-white/45">
+								<p className="text-on-dark-subtle py-16 text-center text-sm">
 									{error}
 								</p>
 							) : null}
 
 							{showEmpty ? (
 								<div className="mx-auto max-w-lg py-14 text-center">
-									<p className="text-2xl font-extrabold tracking-[-0.03em] text-white">
+									<p className="font-display text-2xl font-extrabold tracking-[-0.03em] text-white">
 										Nothing for “{query.trim()}”
 									</p>
 									<p className="mt-2 text-sm text-white/50">
@@ -432,7 +430,7 @@ export function GlobalSearch({
 							{!loading && !error && flatHits.length > 0 ? (
 								<div className="space-y-7">
 									<div className="flex items-end justify-between gap-3">
-										<p className="text-[0.7rem] font-extrabold tracking-[0.18em] text-white/40 uppercase">
+										<p className="spec-tag text-on-dark-subtle">
 											{showPopular
 												? "Start here"
 												: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
@@ -455,7 +453,7 @@ export function GlobalSearch({
 															className="size-3.5 text-[var(--primary-bright)]"
 															aria-hidden
 														/>
-														<h3 className="text-[0.7rem] font-extrabold tracking-[0.16em] text-white/45 uppercase">
+														<h3 className="spec-tag text-on-dark-subtle">
 															{meta.label}
 														</h3>
 													</div>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, Phone } from "lucide-react"
+import { ArrowLeft, Phone } from "@/components/icons"
 
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"

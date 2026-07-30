@@ -1,7 +1,7 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Phone } from "lucide-react"
+import { Phone } from "@/components/icons"
 
 import { CompanyLogo } from "@/components/company-logos"
 import { buttonVariants } from "@/components/ui/button"

@@ -1,4 +1,4 @@
-import { Check, Clock, Phone, ShieldCheck } from "lucide-react"
+import { Check, Clock, Phone, ShieldCheck } from "@/components/icons"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
