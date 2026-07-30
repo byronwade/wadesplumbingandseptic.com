@@ -1,18 +1,20 @@
 ---
-title: Septic Pumping Maintenance in Santa Cruz County, CA
-description: 'In This Guide4 min read1.Did You Know?2.Quick Answer for Santa Cruz
- Homeowners3.Understanding Septic Systems: A Brief Overview4.Why Regular Septic Maintena…'
+title: 'Septic Pumping Maintenance in Santa Cruz County, CA'
+description: >-
+  For homeowners in Santa Cruz County, maintaining your septic system is
+  essential to ensure its longevity and efficiency.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic pumping santa cruz
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic pumping santa cruz
 image: /images/services/septic-pumping-illustration.webp
-imageAlt: "Septic pumping service"
----In This Guide4 min read
+imageAlt: Septic pumping service
+---
+In This Guide4 min read
 
 ![Septic installation equipment on site](/images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp)
 
@@ -57,7 +59,7 @@ The frequency of septic maintenance depends on several factors, including the si
 
 ## Choosing a Trusted Septic Service Provider in Santa Cruz
 
-Selecting a reliable service provider is crucial for maintaining your septic system. Look for licensed professionals with a strong reputation in Santa Cruz County. A trusted provider will offer comprehensive services, including [septic repair and replacement](/lp/failed-septic-repair-replacement-santa-cruz-county/), ensuring your system remains in top condition.
+Selecting a reliable service provider is crucial for maintaining your septic system. Look for licensed professionals with a strong reputation in Santa Cruz County. A trusted provider will offer comprehensive services, including [septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement), ensuring your system remains in top condition.
 
 ## DIY Monitoring vs. Calling a Professional
 

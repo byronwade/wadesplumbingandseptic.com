@@ -1,12 +1,13 @@
 ---
-title: Ben Lomond, CA Plumbing & Septic Services
-description: 'Ben Lomond plumbing and septic for redwood canyon homes, wells, root-damaged lines, steep leach fields, and honest pumping schedules. Wade''s: 831.225.4344.'
-eyebrow: Ben Lomond, CA
+title: 'Ben Lomond, CA Plumbing & Septic Services'
+description: >-
+  Ben Lomond plumbing and septic for redwood canyon homes, wells, root-damaged
+  lines, steep leach fields, and honest pumping schedules. Wade's: 831.225.4344.
+eyebrow: 'Ben Lomond, CA'
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
-imageAlt: Redwood forest and mountain homes in Ben Lomond, California
+imageAlt: 'Redwood forest and mountain homes in Ben Lomond, California'
 ---
-
 Ben Lomond doesn't announce itself. You drive past Felton on Highway 9, cross the river, and suddenly the road narrows, the canopy closes in, and every driveway points uphill at an angle that makes you rethink where you'd put a septic tank. That's the everyday reality for plumbing and septic work here, and it's why Wade's Plumbing & Septic has spent years in these canyons rather than treating Ben Lomond like a generic mountain town.
 
 We're a family-owned Santa Cruz County company. When we say we know Ben Lomond, we mean we've pulled roots out of sewer laterals on Alba Road, pumped tanks tucked behind retaining walls on Love Creek, and traced well supply lines that run 200 feet from the house to the ridgeline.
@@ -35,7 +36,7 @@ Wade's septic services include:
 - **County inspections and certifications** when you're buying, selling, or refinancing
 - **Filter service, risers, and alarm checks**, small upgrades that prevent expensive emergencies
 - **Leach field evaluation** when wet spots appear downhill from the tank or toilets back up during laundry
-- **System repair and replacement**, including [engineered septic designs](/engineered-septic-systems-santa-cruz-county) when Ben Lomond's slopes won't support a standard gravity layout
+- **System repair and replacement**, including [engineered septic designs](/service-offerings/engineered-septic-system-installation) when Ben Lomond's slopes won't support a standard gravity layout
 
 If your property was affected by wildfire rebuild requirements, septic setbacks and water supply upgrades often go hand in hand. We coordinate both sides so you're not solving plumbing in a vacuum.
 

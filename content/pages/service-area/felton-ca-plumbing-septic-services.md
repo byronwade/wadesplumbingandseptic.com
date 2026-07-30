@@ -1,12 +1,14 @@
 ---
-title: Felton, CA Plumbing & Septic Services
-description: Family-owned plumbing and septic for Felton homes on wells, steep lots, and redwood-lined Highway 9. Pumping, repairs, and emergency help. Call 831.225.4344.
-eyebrow: Felton, CA
+title: 'Felton, CA Plumbing & Septic Services'
+description: >-
+  Family-owned plumbing and septic for Felton homes on wells, steep lots, and
+  redwood-lined Highway 9. Pumping, repairs, and emergency help. Call
+  831.225.4344.
+eyebrow: 'Felton, CA'
 order: 50
 image: /images/locations/river-and-redwoods.webp
-imageAlt: San Lorenzo River corridor and redwood canopy near Felton, California
+imageAlt: 'San Lorenzo River corridor and redwood canopy near Felton, California'
 ---
-
 Felton sits where Highway 9 bends into the redwoods, close enough to Scotts Valley for groceries, far enough up the San Lorenzo Valley that most properties still run on septic, wells, and long supply lines buried under roots. Wade's Plumbing & Septic is a family-owned Santa Cruz County shop that knows this corridor: the mix of full-time homes near downtown, older cabins off Graham Hill Road, and hillside lots where a "simple" leak turns into a trench through clay and redwood feeder roots.
 
 ## Plumbing on Felton's mix of old and new
@@ -33,7 +35,7 @@ Wade's septic work in Felton includes:
 - **Inspections and certifications** for real estate, refinancing, or county requirements
 - **Riser installs, alarms, and effluent filters** so you can maintain the system without digging up the yard each time
 - **Drainfield troubleshooting**, surfacing effluent, slow drains throughout the house, or odors near the leach area
-- **Repairs and replacements**, including coordination with [engineered septic systems](/engineered-septic-systems-santa-cruz-county) when Felton's slopes and setbacks demand an alternative design
+- **Repairs and replacements**, including coordination with [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Felton's slopes and setbacks demand an alternative design
 
 Steep lots near the river corridor can limit conventional leach field placement. We explain what the county will approve and what your property can support, before you spend money on a plan that won't pass.
 

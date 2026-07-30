@@ -1,18 +1,21 @@
 ---
 title: Efficient Septic Leach Repairs in Santa Cruz County
-description: In This Guide3 min read1.Did You Know?2.Quick Answer for Santa Cruz Homeowners3.Understanding
- Your Septic Leach Field4.Signs Your Septic Leach Field Needs …
+description: >-
+  Understanding septic leach field repair is crucial for Santa Cruz County
+  homeowners to maintain a healthy septic system and avoid costly repairs. Our.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic leach field repair
-image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
-imageAlt: "Warning sign on a wooden post"
----In This Guide3 min read
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic leach field repair
+image: >-
+  /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
+imageAlt: Warning sign on a wooden post
+---
+In This Guide3 min read
 
 ![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)
 
@@ -60,7 +63,7 @@ Hiring professionals for septic leach field repairs offers several advantages:
 
 ![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
 
-At Wade's Plumbing & Septic, we specialize in comprehensive [septic repair and replacement services](/lp/failed-septic-repair-replacement-santa-cruz-county/) across Santa Cruz County. Our skilled technicians are equipped to handle all aspects of septic leach field repair, ensuring your system functions optimally. We pride ourselves on delivering reliable and efficient solutions tailored to your needs.
+At Wade's Plumbing & Septic, we specialize in comprehensive [septic repair and replacement services](/service-offerings/septic-tank-repair-and-replacement) across Santa Cruz County. Our skilled technicians are equipped to handle all aspects of septic leach field repair, ensuring your system functions optimally. We pride ourselves on delivering reliable and efficient solutions tailored to your needs.
 
 ## Maintaining Your Septic System for Longevity
 

@@ -1,22 +1,23 @@
 ---
 title: 'Plumber vs DIY: Your Santa Cruz County Guide'
-description: 'When a plumbing issue pops up, your first thought might be: Should I
- try to fix this myself or call a plumber? It’s a valid question, and the answer depends
- on…'
+description: >-
+  When a plumbing issue pops up, your first thought might be: Should I try to
+  fix this myself or call a plumber? It’s a valid question, and the answer.
 category: Plumbing Tips
 date: '2025-05-20'
 tags:
-- santa cruz plumbing
-- plumbing tips
-- diy plumbing
-- professional plumber
-- septic services
-- plumbing advice
-- local plumbing guide
-- plumbing repair
+  - santa cruz plumbing
+  - plumbing tips
+  - diy plumbing
+  - professional plumber
+  - septic services
+  - plumbing advice
+  - local plumbing guide
+  - plumbing repair
 image: /images/wordpress/img-1669.webp
-imageAlt: "Plumber vs DIY: Your Santa Cruz County Guide"
----When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question, and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
+imageAlt: 'Plumber vs DIY: Your Santa Cruz County Guide'
+---
+When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question, and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
 
 ![Completed multi-tank septic system](/images/work/completed-multi-tank.webp)
 

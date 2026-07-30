@@ -1,18 +1,21 @@
 ---
 title: Top Sewer Line Repair for Santa Cruz County Homes
-description: In This Guide4 min read1.Did You Know?2.Quick Answer for Santa Cruz Homeowners3.Understanding
- Common Sewer Line Problems4.Signs Your Sewer Line Needs Repai…
+description: >-
+  Did you know that trenchless sewer repair can be completed in a fraction of
+  the time compared to traditional methods?
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- sewer line repair
-image: /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
-imageAlt: "Stacked concrete pipes ready for installation"
----In This Guide4 min read
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - sewer line repair
+image: >-
+  /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
+imageAlt: Stacked concrete pipes ready for installation
+---
+In This Guide4 min read
 
 ![Sewer and drain service equipment](/images/work/drain-cleaning-equipment.webp)
 
@@ -36,7 +39,7 @@ Sewer lines are essential components of your home's plumbing system. However, th
 
 ## Signs Your Sewer Line Needs Repair
 
-Early detection of sewer line issues can save you time and money. Watch out for signs such as slow drains, unusual odors, gurgling noises from toilets, or damp patches in your yard. If you notice any of these indicators, it may be time to consider a [sewer line repair](/lp/plumbing-repair-services-santa-cruz-county/).
+Early detection of sewer line issues can save you time and money. Watch out for signs such as slow drains, unusual odors, gurgling noises from toilets, or damp patches in your yard. If you notice any of these indicators, it may be time to consider a [sewer line repair](/lp/service-offerings/pipe-repair-and-replacement).
 
 ## The Importance of Regular Sewer Line Inspections
 
@@ -77,7 +80,7 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 ## Sources & Local References
 
 - [Plumbing & septic service areas overview](/service-areas/)
-- [Plumbing Repair Services, Santa Cruz County](/lp/plumbing-repair-services-santa-cruz-county/)
+- [Plumbing Repair Services, Santa Cruz County](/lp/service-offerings/pipe-repair-and-replacement)
 
 ## Sources & Local References
 

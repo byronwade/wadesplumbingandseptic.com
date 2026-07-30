@@ -1,15 +1,14 @@
 ---
 title: Ensure Reliable Storm Drain Clearing in Santa Cruz County
-description: Storm drain cleaning is a crucial service for homeowners in Santa Cruz
- County, California, ensuring your property remains safe from flooding and water
- damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to…
+description: >-
+  Storm drain cleaning is a crucial service for homeowners in Santa Cruz County,
+  California, ensuring your property remains safe from flooding and water.
 category: Plumbing
 order: 29
-image: /images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp
-imageAlt: "Weathered drain cover"
-
+image: >-
+  /images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp
+imageAlt: Weathered drain cover
 ---
-
 Storm [drain cleaning](/service-offerings/drain-cleaning/) is a crucial service for homeowners in Santa Cruz County, California, ensuring your property remains safe from flooding and water damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to effectively remove leaves, sediment, debris, and other obstructions from your storm drains, catch basins, and drainage systems. Regular maintenance is essential to prevent costly water damage and extend the lifespan of your drainage infrastructure. Our experienced team also offers preventative maintenance programs tailored for commercial properties, securing your investment against potential water-related disasters.
 
 ## Signs Your Storm Drains Need Cleaning

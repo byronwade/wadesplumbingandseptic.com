@@ -1,7 +1,8 @@
 ---
-title: Water Main & Sewer Line Repair, Santa Cruz County
-description: High-ticket water main and sewer line campaign page for inspection and
- repair calls.
+title: 'Water Main & Sewer Line Repair, Santa Cruz County'
+description: >-
+  High-value service line and sewer repair page built to qualify serious calls
+  and schedule inspections.
 order: 30
 image: /images/team/byron-working.webp
 imageAlt: Underground plumbing installation and excavation
@@ -11,7 +12,7 @@ noindex: true
 
 Call-First Campaign Landing Page
 
-# Water Main & Sewer Line Repair
+## Water Main & Sewer Line Repair
 
 High-value service line and sewer repair page built to qualify serious calls and schedule inspections.
 

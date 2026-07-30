@@ -1,12 +1,13 @@
 ---
-title: Rio Del Mar, CA Plumbing & Septic Services
-description: 'Rio Del Mar plumbing & septic for beach flats, bluff homes & Aptos-adjacent septics. Wade''s family-owned, 831.225.4344, CSLB #1087260.'
-eyebrow: Rio Del Mar, CA
+title: 'Rio Del Mar, CA Plumbing & Septic Services'
+description: >-
+  Rio Del Mar plumbing & septic for beach flats, bluff homes & Aptos-adjacent
+  septics. Wade's family-owned, 831.225.4344, CSLB #1087260.
+eyebrow: 'Rio Del Mar, CA'
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Rio Del Mar beach neighborhood near Aptos with coastal residential homes
 ---
-
 Rio Del Mar is a beach town in practice if not on every map label. The flat grid near Rio Del Mar Beach and the Esplanade area holds 1960s to 80s homes, weekend retreats, and full-time families who chose the flat walk to sand over hillside views. Climb toward the bluff or inland toward Aptos and lots widen, septic tanks replace sewer mains, and plumbing access gets more interesting.
 
 Wade's Plumbing & Septic is family-owned (CSLB #1087260) and serves Rio Del Mar from our Santa Cruz County base. We understand the difference between a slab ranch three blocks from the beach and a hillside property where the cleanout is halfway down the driveway.
@@ -32,8 +33,8 @@ Our wastewater work includes:
 - Sewer lateral inspection when backups affect multiple fixtures
 - Septic pumping with documentation helpful for escrow and property managers
 - Drainfield assessment for soggy lawns, slow drains, or odors after pumping
-- [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when systems no longer meet county standards
-- [Engineered septic options](/engineered-septic-systems-santa-cruz-county) for bluff-adjacent parcels with tight replacement areas
+- [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when systems no longer meet county standards
+- [Engineered septic options](/service-offerings/engineered-septic-system-installation) for bluff-adjacent parcels with tight replacement areas
 
 Buying here? Confirm wastewater type early. A kitchen remodel budget changes sharply if drainfield replacement is on the horizon.
 

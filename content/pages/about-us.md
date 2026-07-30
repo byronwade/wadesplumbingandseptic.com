@@ -1,36 +1,35 @@
 ---
-
 title: About Us
-description: Wade's Plumbing & Septic is a family-owned and operated business delivering
- reliable plumbing and septic solutions since 2005. We've built our reputation on…
+description: >-
+  Wade's Plumbing & Septic is a family-owned plumbing and septic company serving
+  Santa Cruz County and selected Santa Clara County communities since 2005.
 order: 1
 image: /images/team/byron-working.webp
 imageAlt: Byron Wade working on a plumbing rough-in
 gallery:
-- src: /images/team/wades-team.webp
-  alt: Wade's Plumbing and Septic team together
-  width: 1440
-  height: 1080
-  caption: The Wade's team
-- src: /images/team/byron-working.webp
-  alt: Byron Wade working on an underground plumbing rough-in
-  width: 1440
-  height: 1081
-  caption: Field experience informs every company standard
-- src: /images/team/byron-wade.webp
-  alt: Byron Wade, founder of Wade's Plumbing and Septic
-  width: 445
-  height: 444
-  caption: Byron Wade, founder
-- src: /images/team/dave.webp
-  alt: Dave, co-owner of Wade's Plumbing and Septic
-  width: 675
-  height: 900
-  caption: Dave, co-owner
+  - src: /images/team/wades-team.webp
+    alt: Wade's Plumbing and Septic team together
+    width: 1440
+    height: 1080
+    caption: The Wade's team
+  - src: /images/team/byron-working.webp
+    alt: Byron Wade working on an underground plumbing rough-in
+    width: 1440
+    height: 1081
+    caption: Field experience informs every company standard
+  - src: /images/team/byron-wade.webp
+    alt: 'Byron Wade, founder of Wade''s Plumbing and Septic'
+    width: 445
+    height: 444
+    caption: 'Byron Wade, founder'
+  - src: /images/team/dave.webp
+    alt: 'Dave, co-owner of Wade''s Plumbing and Septic'
+    width: 675
+    height: 900
+    caption: 'Dave, co-owner'
 eyebrow: About Wade's
 ---
-
-# About Wade's Plumbing & Septic
+## About Wade's Plumbing & Septic
 
 Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2005. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.
 

@@ -93,6 +93,23 @@ for (const collection of COLLECTIONS) {
 			}
 		}
 
+		const description = String(data.description ?? "")
+		if (/In This Guide/i.test(description) || /min read/i.test(description)) {
+			errors.push(
+				`${file}: description looks like a table-of-contents leak; rewrite the meta description`,
+			)
+		}
+		if (/…/.test(description) || /\.\.\.$/.test(description.trim())) {
+			errors.push(
+				`${file}: description is truncated with an ellipsis; finish the sentence`,
+			)
+		}
+		if (description.trim().length > 0 && description.trim().length < 70) {
+			warnings.push(
+				`${file}: description is short (${description.trim().length} chars); aim for ~120-158`,
+			)
+		}
+
 		if (
 			/\[Current Date\]/i.test(source) ||
 			/\[Insert[^\]]*\]/i.test(source) ||
@@ -113,9 +130,13 @@ for (const collection of COLLECTIONS) {
 			)
 		}
 
-		if (/Competitor gap:/i.test(source)) {
+		if (
+			/Competitor gap:|Competitor gap|redwoodpipeanddrain\.com|plumbtreeplumbing\.com/i.test(
+				source,
+			)
+		) {
 			errors.push(
-				`${file}: "Competitor gap" research notes must not ship in published content`,
+				`${file}: competitor-gap research notes or outbound competitor links must not ship in published content`,
 			)
 		}
 
@@ -124,8 +145,22 @@ for (const collection of COLLECTIONS) {
 				/tel:\+?(?:11234567890|1234567890|1831555\d{4}|19876543210)/gi,
 			) ?? []
 		for (const phone of fakePhones) {
+			errors.push(`${file}: fake phone link "${phone}"; use tel:+18312254344`)
+		}
+
+		if (
+			/\/(?:lp\/)?(?:engineered-septic-systems|failed-septic-repair|emergency-plumber|plumbing-repair-services|water-main-sewer-line-repair)-santa-cruz-county/i.test(
+				source,
+			)
+		) {
 			errors.push(
-				`${file}: fake phone link "${phone}"; use tel:+18312254344`,
+				`${file}: links to a noindex campaign LP; point to /service-offerings/... instead`,
+			)
+		}
+
+		if (/water-heater-replacment/.test(source)) {
+			errors.push(
+				`${file}: typo slug water-heater-replacment; use water-heater-replacement`,
 			)
 		}
 	}

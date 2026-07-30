@@ -1,16 +1,13 @@
 ---
 title: Expert Septic Troubleshooting in Santa Cruz County
-description: When your septic system isn't working as it should, the need for expert
- septic tank troubleshooting becomes critical. In Santa Cruz County, California,
- , Wade's Plumbing & Septic provides comprehensive diagnostic
- services to…
+description: >-
+  When your septic system isn't working as it should, the need for expert septic
+  tank troubleshooting becomes critical. In Santa Cruz County, California,,.
 category: Septic
 order: 9
 image: /images/work/engineered-septic-hero.webp
-imageAlt: "Engineered septic system installation"
-
+imageAlt: Engineered septic system installation
 ---
-
 When your septic system isn't working as it should, the need for expert septic tank troubleshooting becomes critical. In Santa Cruz County, California,, Wade's Plumbing & Septic provides comprehensive diagnostic services to swiftly identify and resolve septic issues. Our licensed and experienced team uses state-of-the-art techniques to ensure your system operates smoothly and efficiently, preventing costly repairs and health hazards.
 
 ## Signs You Need Septic Tank Troubleshooting

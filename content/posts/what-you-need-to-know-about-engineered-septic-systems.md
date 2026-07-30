@@ -1,22 +1,22 @@
 ---
 title: Understand Engineered Septic Systems in Santa Cruz County
-description: septic system) is a customized onsite wastewater treatment system that
- uses special designs or technologies beyond the standard septic tank and leach field…
+description: >-
+  septic system) is a customized onsite wastewater treatment system that uses
+  special designs or technologies beyond the standard septic tank and leach.
 category: Septic Maintenance
 date: '2025-05-11'
 tags:
-- local septic services
-- santa cruz county septic
-- engineered septic systems
-- septic system guide
-- home septic upgrade
-- septic maintenance tips
-- engineered septic benefits
-- septic installation considerations
+  - local septic services
+  - santa cruz county septic
+  - engineered septic systems
+  - septic system guide
+  - home septic upgrade
+  - septic maintenance tips
+  - engineered septic benefits
+  - septic installation considerations
 image: /images/work/engineered-retaining-wall.webp
 imageAlt: Engineered septic retaining wall and control panel
 ---
-
 ## 1\. What is an Engineered Septic System?
 
 An

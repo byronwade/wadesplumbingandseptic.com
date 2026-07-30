@@ -1,20 +1,21 @@
 ---
 title: Efficient Septic Recovery Services in Santa Cruz County
-description: 'Estimated reading time: 5 minutes.In This GuideQuick Answer for Santa
- Cruz HomeownersUnderstanding the Impact of the 2020 Santa Cruz Mountains Fire on
- Sept…'
+description: >-
+  The 2020 Santa Cruz Mountains Fire has exacerbated septic system issues for
+  many homeowners in Santa Cruz County, California, with environmental changes.
 category: Plumbing Tips
 date: '2026-04-05'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic system issues
-image: /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
-imageAlt: "Efficient Septic Recovery Services in Santa Cruz County"
-
----**Estimated reading time:** 5 minutes.
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic system issues
+image: >-
+  /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
+imageAlt: Efficient Septic Recovery Services in Santa Cruz County
+---
+**Estimated reading time:** 5 minutes.
 
 ![Chrome sink drain close-up](/images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp)
 

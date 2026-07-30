@@ -1,18 +1,21 @@
 ---
 title: Early Septic Detection for Santa Cruz County Homes
-description: In This Guide4 min read1.Did You Know?2.Quick Answer for Santa Cruz Homeowners3.Understanding
- Your Septic System4.Common Warning Signs of Septic Trouble5.W…
+description: >-
+  Did you know that regular septic inspections can extend the life of your
+  system by up to 30%?
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- septic warning signs septic service
-image: /images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp
-imageAlt: "Early Septic Detection for Santa Cruz County Homes"
----In This Guide4 min read
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - septic warning signs septic service
+image: >-
+  /images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp
+imageAlt: Early Septic Detection for Santa Cruz County Homes
+---
+In This Guide4 min read
 
 ![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 

@@ -1,18 +1,21 @@
 ---
 title: Swift Septic Solutions for Santa Cruz County Homes
-description: In This Guide3 min read1.Did You Know?2.Quick Answer for Santa Cruz Homeowners3.Understanding
- Emergency Septic Issues4.Signs Your Septic System Needs Immed…
+description: >-
+  When septic emergencies occur, Santa Cruz homeowners can trust Wade's Plumbing
+  & Septic for prompt and effective solutions.
 category: Septic Issues in Santa Cruz County
 date: '2026-04-25'
 tags:
-- santa cruz
-- septic
-- plumbing
-- septic issues in Santa Cruz County
-- emergency septic solutions
-image: /images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp
-imageAlt: "Treated wastewater warning near waterway"
----In This Guide3 min read
+  - santa cruz
+  - septic
+  - plumbing
+  - septic issues in Santa Cruz County
+  - emergency septic solutions
+image: >-
+  /images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp
+imageAlt: Treated wastewater warning near waterway
+---
+In This Guide3 min read
 
 ![Plumbing emergency warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)
 

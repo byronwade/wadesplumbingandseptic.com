@@ -34,8 +34,6 @@ major repairs.
 Whether you are buying a home, planning maintenance, or noticing early warning
 signs, we help you get answers you can trust.
 
-
-
 ## **What We Do**
 
 We perform a **full evaluation of your septic system’s key components** , focusing on performance, condition, and risk factors.
@@ -47,8 +45,6 @@ We perform a **full evaluation of your septic system’s key components** , focu
 - **Sludge & Scum Level Measurement** We measure buildup inside the tank to determine if pumping is needed and evaluate overall system health.
 - **Drainfield Evaluation** We check for warning signs like standing water, slow absorption, or odors that indicate problems below the surface.
 - **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield, critical for long-term performance.
-
-
 
 ## **Why This Service Matters**
 
@@ -63,8 +59,6 @@ This service helps you:
 - **Understand exactly what you’re buying (for real estate transactions)**
 - **Plan maintenance instead of dealing with emergencies**
 - **Protect your property value**
-
-
 
 ## **Perfect For**
 
@@ -88,8 +82,6 @@ A thorough septic inspection usually takes a few hours, depending on the size an
 
 Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, known for our professional service and expertise. Our commitment to quality and customer satisfaction ensures your septic system is in good hands.
 
- 
-
 Ensure Your System's Health
 
 ## Thorough Septic Inspections in Santa Cruz County, CA
@@ -98,7 +90,7 @@ Guarantee the reliability and efficiency of your septic system with our expert i
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
 
-</ 
+</
 
 ★★★★★ 5-Star Rating
 

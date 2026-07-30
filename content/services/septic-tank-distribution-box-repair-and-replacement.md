@@ -1,16 +1,14 @@
 ---
 title: Optimize Septic Box in Santa Cruz County for Efficiency
-description: Ensuring the optimal functioning of your septic system is crucial for
- any homeowner in Santa Cruz County, California. One essential component that demands
- attention is the distribution box. Our septic tank distribution box repair service
- is…
+description: >-
+  Ensuring the optimal functioning of your septic system is crucial for any
+  homeowner in Santa Cruz County, California. One essential component that
+  demands.
 category: Septic
 order: 13
 image: /images/work/engineered-septic-hero.webp
-imageAlt: "Septic distribution box and drain field work"
-
+imageAlt: Septic distribution box and drain field work
 ---
-
 Ensuring the optimal functioning of your septic system is crucial for any homeowner in Santa Cruz County, California. One essential component that demands attention is the distribution box. Our **septic tank distribution box repair** service is designed to address issues that can disrupt the even distribution of wastewater across your drainfield lines. At Wade's Plumbing & Septic, our experts are skilled in locating, evaluating, and repairing or replacing this critical part to maintain your septic system's efficiency and prevent potential failures.
 
 ## Signs You Need Septic Tank Distribution Box Repair

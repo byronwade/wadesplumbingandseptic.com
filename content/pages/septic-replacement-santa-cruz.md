@@ -1,8 +1,9 @@
 ---
 title: Septic System Replacement in Santa Cruz County
-description: Complete septic system replacement in Santa Cruz County. Failed perc
- tests, aging systems, and full replacements, get a free assessment from Wade's
- Plumbing & Septic.
+description: >-
+  Complete septic system replacement in Santa Cruz County. Failed perc tests,
+  aging systems, and full replacements, get a free assessment from Wade's
+  Plumbing & Septic.
 order: 60
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Septic System Replacement in Santa Cruz County
@@ -11,7 +12,7 @@ eyebrow: Santa Cruz County
 
 **Licensed California Contractor** · Fast response · Santa Cruz, CA service area
 
-# Septic System Replacement in Santa Cruz County
+## Septic System Replacement in Santa Cruz County
 
 Failing systems, failed perc tests, or aging conventional septic. Wade's delivers honest assessments and complete replacement planning in Santa Cruz County.
 
