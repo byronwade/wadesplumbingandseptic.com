@@ -1,22 +1,13 @@
 import type { MetadataRoute } from "next"
 
-import {
-	getSitemapChunk,
-	getSitemapChunkCount,
-} from "@/lib/sitemap"
+import { buildSitemapEntries } from "@/lib/sitemap"
 
-export async function generateSitemaps() {
-	const count = await getSitemapChunkCount()
-	return Array.from({ length: count }, (_, id) => ({ id }))
-}
-
-export default async function sitemap(props: {
-	id: Promise<string> | string
-}): Promise<MetadataRoute.Sitemap> {
-	const idValue = await props.id
-	const id = Number(idValue)
-
-	if (!Number.isInteger(id) || id < 0) return []
-
-	return getSitemapChunk(id)
+/**
+ * Single sitemap at /sitemap.xml.
+ * Inventory is well under the 50k URL limit, so chunked generateSitemaps
+ * is unnecessary and would leave /sitemap.xml without a working index
+ * (footer and robots.txt both point at the root URL).
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+	return buildSitemapEntries()
 }
