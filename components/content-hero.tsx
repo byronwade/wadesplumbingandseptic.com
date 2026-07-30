@@ -180,10 +180,10 @@ export function ContentHero({
 
 	if (kind === "article") {
 		return (
-			<header className="hero-article overflow-x-clip border-border border-b">
-				<div className="article-shell pt-10 pb-8 sm:pt-14 sm:pb-10">
+			<header className="hero-article border-border border-b">
+				<div className="article-shell pt-10 pb-8 sm:pt-14 sm:pb-12">
 					<BreadcrumbTrail items={trail} tone="light" />
-					<div className="section-head max-w-3xl">
+					<div className="section-head">
 						{eyebrow ? (
 							<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 								{eyebrow}
@@ -192,7 +192,7 @@ export function ContentHero({
 						<h1 className="type-headline motion-rise text-foreground">
 							{title}
 						</h1>
-						<p className="type-lead motion-rise motion-delay-1 text-muted-foreground max-w-2xl">
+						<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
 							{description}
 						</p>
 					</div>
@@ -201,27 +201,23 @@ export function ContentHero({
 							{meta}
 						</div>
 					) : null}
-				</div>
 
-				{image ? (
-					<figure className="hero-media-bleed hero-article-media motion-rise motion-delay-2">
-						<div className="relative aspect-[5/4] w-full overflow-hidden sm:aspect-[2/1] lg:aspect-[21/9]">
-							<Image
-								alt={imageAlt?.trim() || title}
-								className="object-cover"
-								fill
-								priority
-								quality={75}
-								sizes="100vw"
-								src={image}
-							/>
-							<div
-								aria-hidden="true"
-								className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/10 sm:from-black/25 sm:to-transparent"
-							/>
-						</div>
-					</figure>
-				) : null}
+					{image ? (
+						<figure className="hero-article-media motion-rise motion-delay-2 mt-8 sm:mt-10">
+							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[2/1]">
+								<Image
+									alt={imageAlt?.trim() || title}
+									className="object-cover"
+									fill
+									priority
+									quality={75}
+									sizes="(min-width: 768px) 48rem, 100vw"
+									src={image}
+								/>
+							</div>
+						</figure>
+					) : null}
+				</div>
 			</header>
 		)
 	}
@@ -230,8 +226,8 @@ export function ContentHero({
 		const actions = showActions ?? true
 
 		return (
-			<header className="hero-service overflow-x-clip">
-				<div className="container-shell pt-10 pb-8 sm:pt-12 sm:pb-10">
+			<header className="hero-service border-border border-b">
+				<div className="container-shell pt-10 pb-10 sm:pt-12 sm:pb-12">
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
 						<div className="section-head max-w-2xl">
@@ -268,27 +264,27 @@ export function ContentHero({
 							</div>
 						) : null}
 					</div>
-				</div>
 
-				{image ? (
-					<div className="hero-media-bleed hero-service-media motion-fade">
-						<div className="relative h-[min(62svh,28rem)] w-full sm:h-[min(42vw,28rem)] lg:h-[32rem]">
-							<Image
-								alt={imageAlt?.trim() || title}
-								className="object-cover"
-								fill
-								priority
-								quality={70}
-								sizes="100vw"
-								src={image}
-							/>
-							<div
-								aria-hidden="true"
-								className="absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-black/15 sm:from-black/35 sm:to-transparent"
-							/>
+					{image ? (
+						<div className="hero-service-media motion-fade mt-8 sm:mt-10">
+							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[21/9] lg:aspect-[2.4/1]">
+								<Image
+									alt={imageAlt?.trim() || title}
+									className="object-cover"
+									fill
+									priority
+									quality={70}
+									sizes="(min-width: 1280px) 78rem, 100vw"
+									src={image}
+								/>
+								<div
+									aria-hidden="true"
+									className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent"
+								/>
+							</div>
 						</div>
-					</div>
-				) : null}
+					) : null}
+				</div>
 			</header>
 		)
 	}

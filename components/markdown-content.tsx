@@ -25,7 +25,7 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	}
 
 	return (
-		<figure className="bg-muted my-8 overflow-hidden max-sm:mx-[calc(var(--space-page-x)*-1)] max-sm:w-[calc(100%+(var(--space-page-x)*2))] max-sm:rounded-none sm:rounded-lg">
+		<figure className="bg-muted my-8 overflow-hidden rounded-lg">
 			<Image
 				alt={alt?.trim() || "Wade's Plumbing & Septic project photo"}
 				className="h-auto w-full object-cover"

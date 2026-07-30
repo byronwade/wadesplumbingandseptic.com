@@ -17,6 +17,7 @@ import {
 	estimateReadingMinutes,
 	formatReadingTime,
 } from "@/lib/reading-time"
+import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 import { siteConfig } from "@/lib/site"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -84,8 +85,13 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
+	const articleBody =
+		isPost && document.image
+			? stripLeadingMarkdownImage(document.content)
+			: document.content
+
 	const readingTime = isPost
-		? formatReadingTime(estimateReadingMinutes(document.content))
+		? formatReadingTime(estimateReadingMinutes(articleBody))
 		: null
 
 	const articleMeta = isPost ? (
@@ -144,14 +150,20 @@ export function ContentPage({
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} variant="rail" />
 					) : null}
-					<ContentSectionBands content={document.content} />
+					<ContentSectionBands content={articleBody} />
 				</>
 			) : (
-				<article className="article-shell section-y">
+				<article
+					className={
+						isPost
+							? "article-shell pb-[var(--space-section-y)] pt-8 sm:pt-10"
+							: "article-shell section-y"
+					}
+				>
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />
 					) : null}
-					<MarkdownContent content={document.content} demoteH1 />
+					<MarkdownContent content={articleBody} demoteH1 />
 				</article>
 			)}
 

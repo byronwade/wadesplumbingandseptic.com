@@ -1,4 +1,14 @@
 /**
+ * When a post already has a featured hero image, drop a leading markdown image
+ * so the article does not open with two photos stacked back to back.
+ */
+export function stripLeadingMarkdownImage(content: string): string {
+	return content
+		.replace(/^\s*!\[[^\]]*]\([^)]+\)\s*/, "")
+		.replace(/^\n+/, "")
+}
+
+/**
  * Strip WordPress-era guide chrome that still leaks into migrated markdown:
  * glued "In This Guide4 min read" lines, empty TOC headings, and double-numbered
  * outline lists (`1. 1. Section title`).
