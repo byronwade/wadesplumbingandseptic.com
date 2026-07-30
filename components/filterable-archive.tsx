@@ -2,8 +2,13 @@
 
 import type { Route } from "next"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ArrowLeft, ArrowRight } from "@/components/icons"
-import { startTransition, useEffect, useMemo } from "react"
+import { ArrowLeft, ArrowRight, ChevronDown } from "@/components/icons"
+import {
+	startTransition,
+	useEffect,
+	useMemo,
+	type ReactNode,
+} from "react"
 
 import { ContentCard } from "@/components/content-card"
 import { buttonVariants } from "@/components/ui/button"
@@ -42,10 +47,6 @@ function hrefWithParams(pathname: string, params: URLSearchParams) {
 	return (query ? `${pathname}?${query}` : pathname) as Route
 }
 
-/*
- * One chip, both call sites. The "all" chip and the per-category chips were
- * separate copies of the same 20 lines of classes, so they drifted apart.
- */
 function FilterChip({
 	label,
 	count,
@@ -59,7 +60,7 @@ function FilterChip({
 }) {
 	return (
 		<button
-			aria-selected={selected}
+			aria-pressed={selected}
 			className={cn(
 				"focus-visible:ring-ring inline-flex shrink-0 items-center gap-2 rounded-md border px-3.5 py-2 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
 				selected
@@ -67,7 +68,6 @@ function FilterChip({
 					: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
 			)}
 			onClick={onSelect}
-			role="tab"
 			type="button"
 		>
 			{label}
@@ -80,6 +80,42 @@ function FilterChip({
 				{count}
 			</span>
 		</button>
+	)
+}
+
+function ArchiveSelect({
+	id,
+	label,
+	value,
+	onChange,
+	children,
+}: {
+	id: string
+	label: string
+	value: string
+	onChange: (value: string) => void
+	children: ReactNode
+}) {
+	return (
+		<label className="grid gap-1.5" htmlFor={id}>
+			<span className="text-muted-foreground font-mono text-[0.6875rem] font-semibold tracking-[0.12em] uppercase">
+				{label}
+			</span>
+			<span className="relative block">
+				<select
+					className="border-border-strong bg-card text-foreground focus-visible:ring-ring w-full appearance-none rounded-md border py-3 pr-11 pl-3.5 text-sm font-bold outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
+					id={id}
+					onChange={(event) => onChange(event.target.value)}
+					value={value}
+				>
+					{children}
+				</select>
+				<ChevronDown
+					aria-hidden="true"
+					className="text-muted-foreground pointer-events-none absolute top-1/2 right-3.5 size-4 -translate-y-1/2"
+				/>
+			</span>
+		</label>
 	)
 }
 
@@ -122,6 +158,13 @@ export function FilterableArchive({
 
 	const filters = useMemo(() => buildArchiveFilters(items), [items])
 	const canFilter = showFilters && filters.length > 1
+	const sortOptions = useMemo(
+		() =>
+			SORT_OPTIONS.filter((option) =>
+				variant === "service" ? option.value !== "newest" : true,
+			),
+		[variant],
+	)
 	const sorted = useMemo(() => {
 		const ranked = items.map((item) => ({
 			...item,
@@ -187,77 +230,124 @@ export function FilterableArchive({
 
 	const countLabel = `${total} ${total === 1 ? noun.singular : noun.plural}`
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
-
+	const heading =
+		activeFilter && canFilter ? activeFilter.label : allLabel
 	const allSelected = !activeCategory || activeCategory === "all"
 	const sortVisible = showSort && !lockedSort
+	const activeSortLabel =
+		sortOptions.find((option) => option.value === activeSort)?.label ??
+		"Default"
+	const showControls = canFilter || sortVisible
 
 	return (
 		<section className="container-shell section-y">
 			<div
-				className="border-border mb-[var(--space-block)] border-b pb-5"
+				className="border-border mb-[var(--space-block)] border-b pb-6"
 				id="archive-filters"
 			>
-				<div className="section-head-row">
-					<div className="section-head">
-						<p className="spec-label">{countLabel}</p>
-						<h2 className="type-title">
-							{activeFilter && canFilter ? activeFilter.label : allLabel}
-						</h2>
-					</div>
-					{canFilter || sortVisible ? (
-						<p className="type-meta md:max-w-xs md:text-right">
-							{sortVisible
-								? "Sort by popularity or filter by category."
-								: "Filter instantly, then page through results."}
+				<div className="section-head">
+					<p className="spec-label">{countLabel}</p>
+					<h2 className="type-title">{heading}</h2>
+					{sortVisible && activeSort !== "default" ? (
+						<p className="type-meta text-muted-foreground">
+							Sorted by {activeSortLabel.toLowerCase()}
 						</p>
 					) : null}
 				</div>
 
-				{sortVisible ? (
-					<div className="mt-6 flex flex-wrap items-center gap-2">
-						<p className="spec-tag mr-1">Sort</p>
-						{SORT_OPTIONS.filter((option) =>
-							variant === "service" ? option.value !== "newest" : true,
-						).map((option) => (
-							<button
-								className={cn(
-									"focus-visible:ring-ring inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
-									activeSort === option.value
-										? "border-primary bg-primary text-primary-foreground"
-										: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
-								)}
-								key={option.value}
-								onClick={() => updateParams({ sort: option.value })}
-								type="button"
-							>
-								{option.label}
-							</button>
-						))}
-					</div>
-				) : null}
+				{showControls ? (
+					<>
+						{/*
+						  Mobile: two labeled selects. Clear job per control, no chip
+						  wall, native picker on iOS/Android.
+						*/}
+						<div className="mt-6 grid gap-3 sm:hidden">
+							{canFilter ? (
+								<ArchiveSelect
+									id="archive-category"
+									label="Category"
+									onChange={(value) => updateParams({ category: value })}
+									value={allSelected ? "all" : (activeCategory ?? "all")}
+								>
+									<option value="all">
+										{allLabel} ({items.length})
+									</option>
+									{filters.map((filter) => (
+										<option key={filter.key} value={filter.key}>
+											{filter.label} ({filter.count})
+										</option>
+									))}
+								</ArchiveSelect>
+							) : null}
+							{sortVisible ? (
+								<ArchiveSelect
+									id="archive-sort"
+									label="Sort"
+									onChange={(value) =>
+										updateParams({ sort: value as ArchiveSort })
+									}
+									value={activeSort}
+								>
+									{sortOptions.map((option) => (
+										<option key={option.value} value={option.value}>
+											{option.label}
+										</option>
+									))}
+								</ArchiveSelect>
+							) : null}
+						</div>
 
-				{canFilter ? (
-					<div
-						aria-label="Filter by category"
-						className="chip-rail mt-6"
-						role="tablist"
-					>
-						<FilterChip
-							count={items.length}
-							label={allLabel}
-							onSelect={() => updateParams({ category: "all" })}
-							selected={allSelected}
-						/>
-						{filters.map((filter) => (
-							<FilterChip
-								count={filter.count}
-								key={filter.key}
-								label={filter.label}
-								onSelect={() => updateParams({ category: filter.key })}
-								selected={activeCategory === filter.key}
-							/>
-						))}
-					</div>
+						{/* Desktop: chips stay glanceable when there is room. */}
+						<div className="mt-6 hidden space-y-5 sm:block">
+							{sortVisible ? (
+								<div className="flex flex-wrap items-center gap-2">
+									<p className="spec-tag mr-1">Sort</p>
+									{sortOptions.map((option) => (
+										<button
+											aria-pressed={activeSort === option.value}
+											className={cn(
+												"focus-visible:ring-ring inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
+												activeSort === option.value
+													? "border-primary bg-primary text-primary-foreground"
+													: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
+											)}
+											key={option.value}
+											onClick={() => updateParams({ sort: option.value })}
+											type="button"
+										>
+											{option.label}
+										</button>
+									))}
+								</div>
+							) : null}
+
+							{canFilter ? (
+								<div
+									aria-label="Filter by category"
+									className="chip-rail"
+									role="group"
+								>
+									<FilterChip
+										count={items.length}
+										label={allLabel}
+										onSelect={() => updateParams({ category: "all" })}
+										selected={allSelected}
+									/>
+									{filters.map((filter) => (
+										<FilterChip
+											count={filter.count}
+											key={filter.key}
+											label={filter.label}
+											onSelect={() =>
+												updateParams({ category: filter.key })
+											}
+											selected={activeCategory === filter.key}
+										/>
+									))}
+								</div>
+							) : null}
+						</div>
+					</>
 				) : null}
 			</div>
 
