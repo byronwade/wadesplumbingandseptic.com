@@ -32,4 +32,4 @@ This resource center collects the same core guidance used throughout our homeown
 - Gather model numbers, prior reports, and relevant permits.
 - Write down when the symptom started and which fixtures are affected.
 
-For more detail, use the [maintenance guide](/maintenance-guide), [plumbing glossary](/glossary), and [expert tips](/expert-tips).
+For more detail, use the [maintenance guide](/maintenance-guide), [plumbing glossary](/glossary/plumbing), [septic glossary](/glossary/septic), and [expert tips](/expert-tips).

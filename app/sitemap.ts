@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next"
+import { cacheLife, cacheTag } from "next/cache"
 
 import { getAllRoutes, taxonomySlug } from "@/lib/content"
+import { getAllGlossaryEntries } from "@/lib/glossary"
 import { siteConfig } from "@/lib/site"
 
 const CHUNK_SIZE = 100
@@ -22,14 +24,29 @@ function entry(
 
 async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 	"use cache"
+	cacheTag(
+		"content:routes",
+		"content:pages",
+		"content:services",
+		"content:posts",
+		"glossary:plumbing",
+		"glossary:septic",
+	)
+	cacheLife("max")
 
-	const { pages, services, posts } = await getAllRoutes()
+	const [{ pages, services, posts }, glossaryEntries] = await Promise.all([
+		getAllRoutes(),
+		getAllGlossaryEntries(),
+	])
 
 	const fixed = [
 		entry("", undefined, 1),
 		entry("/services", undefined, 0.9),
 		entry("/service-areas", undefined, 0.9),
 		entry("/expert-tips", undefined, 0.9),
+		entry("/glossary", undefined, 0.85),
+		entry("/glossary/plumbing", undefined, 0.84),
+		entry("/glossary/septic", undefined, 0.84),
 		entry("/faq", undefined, 0.75),
 		entry("/contact", undefined, 0.8),
 	]
@@ -85,6 +102,10 @@ async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 		"/service-category/specialty-services",
 	].map((route) => entry(route, undefined, 0.8))
 
+	const glossaryTermEntries = glossaryEntries.map(({ topic, term }) =>
+		entry(`/glossary/${topic}/${term.slug}`, undefined, 0.65),
+	)
+
 	return [
 		...fixed,
 		...pageEntries,
@@ -93,6 +114,7 @@ async function buildSitemapEntries(): Promise<SitemapEntry[]> {
 		...categories,
 		...tags,
 		...serviceCategories,
+		...glossaryTermEntries,
 	]
 }
 
