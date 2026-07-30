@@ -4,7 +4,7 @@
 # Required env (see .env.example):
 #   ACCESS_TOKEN  GitHub PAT with admin:repo_hook (classic) or fine-grained
 #                 Administration: Read & write on Actions/Runners for the repo
-#   — or —
+#   - or  - 
 #   RUNNER_TOKEN  short-lived registration token from:
 #                 Settings → Actions → Runners → New self-hosted runner
 #

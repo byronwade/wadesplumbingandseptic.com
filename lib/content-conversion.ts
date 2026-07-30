@@ -94,7 +94,7 @@ function orphanEyebrowBefore(content: string, sectionStart: number) {
 function parseTestimonials(text: string): ContentTestimonial[] {
 	const testimonials: ContentTestimonial[] = []
 	const pattern =
-		/"([^"]{12,280})"\s*[-–—]\s*([A-Za-z][A-Za-z'’.\-]+(?:\s+[A-Za-z][A-Za-z'’.\-]*)?)(?:,\s*([A-Za-z][A-Za-z\s.'’-]+))?/g
+		/"([^"]{12,280})"\s*[-– - ]\s*([A-Za-z][A-Za-z'’.\-]+(?:\s+[A-Za-z][A-Za-z'’.\-]*)?)(?:,\s*([A-Za-z][A-Za-z\s.'’-]+))?/g
 
 	for (const match of text.matchAll(pattern)) {
 		const quote = match[1]?.trim()
@@ -132,7 +132,7 @@ function parseConversionBundle(
 ): ContentConversion | null {
 	if (sections.length === 0) return null
 
-	// Prefer the last closing CTA — it was written as the end-of-page closer.
+	// Prefer the last closing CTA - it was written as the end-of-page closer.
 	const primary =
 		[...sections]
 			.reverse()

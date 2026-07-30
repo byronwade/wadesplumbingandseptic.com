@@ -21,14 +21,14 @@ import {
 } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
-/** Brand tokens from globals.css — MapLibre paint needs concrete colors. */
+/** Brand tokens from globals.css - MapLibre paint needs concrete colors. */
 const BRAND = {
 	primary: "#8f4a1a",
 	primaryBright: "#e0a15d",
 	ink: "#101214",
 } as const
 
-/** OpenFreeMap — reliable free vector basemap (Carto tiles often leave a blank white canvas). */
+/** OpenFreeMap - reliable free vector basemap (Carto tiles often leave a blank white canvas). */
 const mapStyles = {
 	light: "https://tiles.openfreemap.org/styles/positron",
 	dark: "https://tiles.openfreemap.org/styles/dark",
@@ -172,7 +172,7 @@ export function ServiceAreasMap() {
 								<p className="text-primary text-sm font-extrabold tracking-[-0.01em]">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
-										: "Selected coverage — confirm address"}
+										: "Selected coverage - confirm address"}
 								</p>
 								<p className="text-muted-foreground text-base leading-relaxed">
 									{selected.properties.description}
@@ -190,7 +190,7 @@ export function ServiceAreasMap() {
 						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
-					Service coverage — Santa Cruz County &amp; west foothills
+					Service coverage - Santa Cruz County &amp; west foothills
 				</li>
 				<li className="max-w-xl text-center text-sm font-medium leading-relaxed">
 					Approximate area including Los Gatos &amp; Saratoga; generally west of

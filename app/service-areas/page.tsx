@@ -17,7 +17,7 @@ import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 const description =
-	"Interactive map of Wade's Plumbing & Septic coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga — generally west of Highway 101."
+	"Interactive map of Wade's Plumbing & Septic coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga - generally west of Highway 101."
 
 export const metadata: Metadata = buildPageMetadata({
 	title: "Plumbing & Septic Service Areas",
@@ -36,7 +36,7 @@ const counties = [
 	{
 		title: "Santa Clara County, California",
 		summary:
-			"Foothill communities near the Santa Cruz County line — including Los Gatos and Saratoga — may be covered depending on the address. Call with the property address to confirm.",
+			"Foothill communities near the Santa Cruz County line - including Los Gatos and Saratoga - may be covered depending on the address. Call with the property address to confirm.",
 		locations: locationsByCounty("Santa Clara County"),
 	},
 ] as const
@@ -74,7 +74,7 @@ export default function ServiceAreasPage() {
 						<p className="type-lead mt-5">
 							Mountain roads, coastal soils, older piping, steep lots, and septic
 							regulations change how a job should be diagnosed. The map shows our
-							approximate coverage — Santa Cruz County and the west foothills into
+							approximate coverage - Santa Cruz County and the west foothills into
 							Los Gatos and Saratoga. Tap the shaded area or browse communities
 							below, and call to confirm your address.
 						</p>

@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT"
 
 if [[ ! -f .env ]]; then
-	echo "Missing .env — copy .env.example to .env and add ACCESS_TOKEN or RUNNER_TOKEN." >&2
+	echo "Missing .env - copy .env.example to .env and add ACCESS_TOKEN or RUNNER_TOKEN." >&2
 	exit 1
 fi
 

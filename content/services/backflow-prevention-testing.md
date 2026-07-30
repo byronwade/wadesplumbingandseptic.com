@@ -77,11 +77,11 @@ Safeguard your home's drinking water with our expert backflow testing services i
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 
-"Wade's Plumbing & Septic provided exceptional service. Their backflow testing was thorough and efficient!" — Sarah, Santa Cruz
+"Wade's Plumbing & Septic provided exceptional service. Their backflow testing was thorough and efficient!" - Sarah, Santa Cruz
 
-"I trust Wade's for all my plumbing needs. Their professionalism in backflow testing is unmatched." — John, Watsonville
+"I trust Wade's for all my plumbing needs. Their professionalism in backflow testing is unmatched." - John, Watsonville
 
-"Fast and reliable service! Wade's team ensured our water safety with their backflow testing." — Emily, Scotts Valley
+"Fast and reliable service! Wade's team ensured our water safety with their backflow testing." - Emily, Scotts Valley
 
 ★★★★★ 5-star rating from satisfied customers
 

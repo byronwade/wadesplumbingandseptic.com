@@ -256,8 +256,8 @@ export default function HomePage() {
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
 						<p className="type-lead mt-5">
-							When a standard system will not work—steep slopes, difficult soil,
-							tight lots, or sensitive environments—that is exactly where we
+							When a standard system will not work - steep slopes, difficult soil,
+							tight lots, or sensitive environments - that is exactly where we
 							excel.
 						</p>
 					</div>
@@ -306,7 +306,7 @@ export default function HomePage() {
 								href={siteConfig.phoneHref}
 							>
 								<Phone />
-								Call to Schedule — {siteConfig.phone}
+								Call to Schedule - {siteConfig.phone}
 							</a>
 						</div>
 						<div className="relative aspect-[4/3] overflow-hidden rounded-lg">

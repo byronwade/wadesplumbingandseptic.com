@@ -1,6 +1,6 @@
 ---
 title: Top Water Heater Services for Santa Cruz County Homes
-description: A broken water heater can quickly disrupt your home life—no hot showers,
+description: A broken water heater can quickly disrupt your home life - no hot showers,
  inefficient appliances, and rising utility bills. When your unit stops working…
 category: Plumbing Tips
 date: '2025-06-17'
@@ -15,7 +15,7 @@ tags:
 - hot water issues
 image: /images/wordpress/img-1295-1.webp
 imageAlt: "Top Water Heater Services for Santa Cruz County Homes"
----A broken water heater can quickly disrupt your home life—no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
+---A broken water heater can quickly disrupt your home life - no hot showers, inefficient appliances, and rising utility bills. When your unit stops working properly, you’re faced with a critical decision: Should you repair it or replace it entirely?
 
 ![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 
@@ -81,7 +81,7 @@ Water Heater Repair: When It’s Still Worth Fixing
 If your unit is under 8–10 years old and in decent condition, repair might be the smarter option. Regular maintenance and small repairs can keep your system running efficiently.
 
 * * Flush the tank annually to remove sediment and prevent corrosion
-- Test the pressure relief valve by lifting the lever—if no water discharges, it may need replacement
+- Test the pressure relief valve by lifting the lever - if no water discharges, it may need replacement
 - ## Serving Santa Cruz County, CA
 
 At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including but not limited to:

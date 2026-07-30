@@ -18,7 +18,7 @@ export const serviceAreasGeoJSON = {
 				"id": "service-coverage",
 				"name": "Wade's Service Coverage",
 				"tier": "primary",
-				"description": "Primary service coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga \u2014 generally west of the Highway 101 corridor. Call with the property address to confirm."
+				"description": "Primary service coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga - generally west of the Highway 101 corridor. Call with the property address to confirm."
 			},
 			"geometry": {
 				"type": "Polygon",

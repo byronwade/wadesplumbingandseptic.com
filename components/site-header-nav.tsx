@@ -129,7 +129,7 @@ function ServicesMegaMenu() {
 	return (
 		<div className="w-full">
 			<div className="container-shell grid gap-8 py-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.45fr)_minmax(0,0.95fr)] lg:gap-10 lg:py-8">
-				{/* Brand column — soft copper wash on the same ink as the header */}
+				{/* Brand column - soft copper wash on the same ink as the header */}
 				<div className="relative overflow-hidden rounded-lg p-6 sm:p-7">
 					<div
 						aria-hidden="true"
@@ -149,7 +149,7 @@ function ServicesMegaMenu() {
 							Plumbing &amp; septic done right the first time
 						</h3>
 						<p className="header-muted mt-3 text-sm leading-relaxed">
-							From drain diagnostics to engineered septic work — clear options,
+							From drain diagnostics to engineered septic work - clear options,
 							licensed crews, and service across Santa Cruz County.
 						</p>
 						<div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">

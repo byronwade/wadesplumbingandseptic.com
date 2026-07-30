@@ -18,7 +18,7 @@ tags:
 image: /images/wordpress/img-0073.webp
 imageAlt: "Solve Shower Backup Issues in Santa Cruz County Homes"
 
----Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures—like the toilet, bathroom sink, dishwasher, or washing machine—experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.
+---Few things are more alarming than seeing dirty water rising into your shower. This usually signals a blockage in your home’s main sewer line. When any of your plumbing fixtures - like the toilet, bathroom sink, dishwasher, or washing machine - experience drainage issues, water can be redirected to the lowest point in your home, often the shower or tub.
 
 ![Chrome bathroom faucet](/images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp)
 
@@ -45,13 +45,13 @@ There are several typical reasons for main drain and sewer line blockages:
 
 Can Toilet Paper Clog Sewer Lines?
 
-Yes—even toilet paper can contribute to clogs. Although it’s designed to be flushable, large amounts or overly thick toilet paper can accumulate in older or compromised systems. If your plumbing hasn’t been maintained in a while or your sewer line is aging, even regular toilet paper may build up and cause issues.
+Yes - even toilet paper can contribute to clogs. Although it’s designed to be flushable, large amounts or overly thick toilet paper can accumulate in older or compromised systems. If your plumbing hasn’t been maintained in a while or your sewer line is aging, even regular toilet paper may build up and cause issues.
 
 Choosing a fast-dissolving, septic-safe toilet paper can help, but flushing anything beyond human waste and toilet paper should always be avoided.
 
 Why Ignoring Drain Clogs Is Dangerous
 
-It’s easy to dismiss minor clogs—until they become major ones. Hair, soap scum, grease, and other organic debris build up over time, slowly reducing flow until a complete blockage forms. Persistent clogs may even signal tree root intrusion, which can destroy your pipes and lead to raw sewage backing up into your home.
+It’s easy to dismiss minor clogs - until they become major ones. Hair, soap scum, grease, and other organic debris build up over time, slowly reducing flow until a complete blockage forms. Persistent clogs may even signal tree root intrusion, which can destroy your pipes and lead to raw sewage backing up into your home.
 
 Once clogs become severe, they require specialized tools like augers, hydro-jetting equipment, or sewer cameras to resolve. Delaying professional attention will only lead to higher repair costs and greater damage to your home’s plumbing infrastructure.
 
@@ -63,7 +63,7 @@ If your drains are slow, if you hear gurgling, or if you experience sewage backu
 
 Protect Your Home with Preventative Maintenance
 
-Backups and sewer line clogs are preventable with proper care. If you’ve noticed recurring drainage issues or suspect your main line may be clogged, contact a trusted local plumber to inspect the entire system—bathroom pipes, kitchen drains, and the main sewer line.
+Backups and sewer line clogs are preventable with proper care. If you’ve noticed recurring drainage issues or suspect your main line may be clogged, contact a trusted local plumber to inspect the entire system - bathroom pipes, kitchen drains, and the main sewer line.
 
 Acting quickly can prevent long-term damage, save money, and keep your home safe from health hazards and costly water damage.
 

@@ -1,19 +1,19 @@
 ---
 title: Interlaken, CA Plumbing & Septic Services
-description: Plumbing and septic in Interlaken, CA—rural Watsonville-area homes between ag lands and the coast. Wade's serves Santa Cruz County. 831.225.4344.
+description: Plumbing and septic in Interlaken, CA - rural Watsonville-area homes between ag lands and the coast. Wade's serves Santa Cruz County. 831.225.4344.
 eyebrow: Interlaken, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural residential area near Interlaken in Santa Cruz County, California
 ---
 
-Interlaken is a small, unincorporated community on the eastern edge of the Watsonville area—residential streets and rural lanes where neighborhood houses sit close to strawberry fields, flower crops, and the open Pajaro Valley. Named for the Swiss lake country but firmly rooted in south Santa Cruz County, Interlaken is the kind of place where you know your neighbors and your plumber should know the difference between a municipal connection and a private septic system on the next parcel over.
+Interlaken is a small, unincorporated community on the eastern edge of the Watsonville area - residential streets and rural lanes where neighborhood houses sit close to strawberry fields, flower crops, and the open Pajaro Valley. Named for the Swiss lake country but firmly rooted in south Santa Cruz County, Interlaken is the kind of place where you know your neighbors and your plumber should know the difference between a municipal connection and a private septic system on the next parcel over.
 
 Wade's Plumbing & Septic provides licensed plumbing and septic service throughout Santa Cruz County, including Interlaken. We show up prepared for the mix of housing ages, well systems, and septic layouts found in this part of the county.
 
 ## Plumbing services in Interlaken
 
-Interlaken homes span from post-war bungalows to newer infill construction. Original plumbing may still be in service—galvanized supply lines, cast-iron drains, and single-bath layouts that strain under modern family use. Properties closer to agricultural operations sometimes have outdoor plumbing for wash stations or secondary structures that share supply from the main house.
+Interlaken homes span from post-war bungalows to newer infill construction. Original plumbing may still be in service - galvanized supply lines, cast-iron drains, and single-bath layouts that strain under modern family use. Properties closer to agricultural operations sometimes have outdoor plumbing for wash stations or secondary structures that share supply from the main house.
 
 We help Interlaken residents with:
 
@@ -28,7 +28,7 @@ Water pressure issues in Interlaken often trace to well systems or aging pressur
 
 ## Septic services in Interlaken
 
-Septic systems dominate Interlaken residential properties. Lot sizes vary—some parcels are compact enough that tank and field placement required careful engineering; others have more room but sit on soils that percolate slowly. Systems installed in the 1970s and 1980s may lack modern risers, effluent filters, or documentation.
+Septic systems dominate Interlaken residential properties. Lot sizes vary - some parcels are compact enough that tank and field placement required careful engineering; others have more room but sit on soils that percolate slowly. Systems installed in the 1970s and 1980s may lack modern risers, effluent filters, or documentation.
 
 Our Interlaken septic services include:
 
@@ -51,7 +51,7 @@ Older homes may have plumbing vents that no longer meet code, or additions tied 
 
 ## Schedule service in Interlaken
 
-Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing—we will schedule a visit and come prepared for south county conditions.
+Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing - we will schedule a visit and come prepared for south county conditions.
 
 **Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Freedom](/service-area/freedom-ca-plumbing-septic-services), [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services), and [Amesti](/service-area/amesti-ca-plumbing-septic-services).
 

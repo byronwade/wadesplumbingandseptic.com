@@ -55,6 +55,17 @@ for (const collection of COLLECTIONS) {
 				warnings.push(`${file}: image not found at public${data.image}`)
 			}
 		}
+
+		// Em dashes are banned site-wide (see AGENTS.md).
+		if (
+			source.includes("\u2014") ||
+			source.includes("&mdash;") ||
+			source.includes("&#8212;")
+		) {
+			errors.push(
+				`${file}: em dash (U+2014) is not allowed; use " - ", a comma, or a colon`,
+			)
+		}
 	}
 }
 

@@ -15,7 +15,7 @@ Updated April 2026In 2026, Santa Cruz County has implemented updated regulations
 
 ### Know What’s Happening Underground Before It Becomes a Problem
 
-Your septic system is one of the most expensive systems on your property—and most of it is completely out of sight.
+Your septic system is one of the most expensive systems on your property - and most of it is completely out of sight.
 
 Our inspection service gives you a **clear, honest understanding** of your system’s condition so you can make the right decisions before small issues turn into major repairs.
 
@@ -30,16 +30,16 @@ We perform a **full evaluation of your septic system’s key components** , focu
 ### **Complete System Check Includes:**
 
 - **Septic Tank Condition** We inspect the tank for structural issues, deterioration, or signs of failure.
-- **Baffle & Outlet Tee Inspection** These protect your drainfield from solids. If they fail, your system is at risk—we make sure they’re intact and doing their job.
+- **Baffle & Outlet Tee Inspection** These protect your drainfield from solids. If they fail, your system is at risk - we make sure they’re intact and doing their job.
 - **Sludge & Scum Level Measurement** We measure buildup inside the tank to determine if pumping is needed and evaluate overall system health.
 - **Drainfield Evaluation** We check for warning signs like standing water, slow absorption, or odors that indicate problems below the surface.
-- **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield—critical for long-term performance.
+- **Distribution Box Inspection (When Accessible)** Ensures wastewater is being distributed evenly across your drainfield - critical for long-term performance.
 
 
 
 ## **Why This Service Matters**
 
-Most septic failures don’t happen suddenly—they build up over time.
+Most septic failures don’t happen suddenly - they build up over time.
 
 The problem is, without a proper inspection, you won’t know there’s an issue until it’s already expensive.
 

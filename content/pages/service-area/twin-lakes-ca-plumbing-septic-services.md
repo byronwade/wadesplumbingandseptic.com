@@ -1,13 +1,13 @@
 ---
 title: Twin Lakes, CA Plumbing & Septic Services
-description: 'Twin Lakes beach-area plumbing & septic—narrow lots, salt air, sewer & hillside septics. Wade''s 831.225.4344, CSLB #1087260.'
+description: 'Twin Lakes beach-area plumbing & septic - narrow lots, salt air, sewer & hillside septics. Wade''s 831.225.4344, CSLB #1087260.'
 eyebrow: Twin Lakes, CA
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Twin Lakes coastal community between Santa Cruz and Capitola
 ---
 
-Twin Lakes is easy to miss on a commute—until a winter storm pushes surf close to the beach flats or a summer rental week ends with a plumbing surprise. Sandwiched between Santa Cruz and Capitola, this small beach neighborhood mixes narrow ocean-side lots, modest single-story homes, and a few properties climbing the bluff where wastewater setups change with elevation.
+Twin Lakes is easy to miss on a commute - until a winter storm pushes surf close to the beach flats or a summer rental week ends with a plumbing surprise. Sandwiched between Santa Cruz and Capitola, this small beach neighborhood mixes narrow ocean-side lots, modest single-story homes, and a few properties climbing the bluff where wastewater setups change with elevation.
 
 Wade's Plumbing & Septic is family-owned and licensed in California (CSLB #1087260). We respond to Twin Lakes homeowners, long-term renters, and property managers who need a county team that understands tight lot lines and coastal hardware wear.
 
@@ -25,7 +25,7 @@ Homes here are often second residences or vacation rentals. We document repairs 
 
 ## Beach Flats Sewer and Bluff-Top Septic
 
-Lower Twin Lakes properties generally connect to municipal sewer lines serving the coastal grid. Move up the bluff or onto slightly larger parcels, and septic systems appear—sometimes legacy tanks predating modern setback rules.
+Lower Twin Lakes properties generally connect to municipal sewer lines serving the coastal grid. Move up the bluff or onto slightly larger parcels, and septic systems appear - sometimes legacy tanks predating modern setback rules.
 
 We provide:
 
@@ -39,11 +39,11 @@ Mixing up sewer and septic symptoms costs time. We verify connection type on sit
 
 ## Salt, Sand, and Storm Surge Stress
 
-Ocean proximity accelerates corrosion on hose bibs, exterior shutoffs, and some tank components. Sand tracked into outdoor showers and laundry rooms finds its way into drains not designed for heavy grit. Winter swells and king tides remind owners how close groundwater sits—saturated soils stress drainfields and can expose shallow laterals.
+Ocean proximity accelerates corrosion on hose bibs, exterior shutoffs, and some tank components. Sand tracked into outdoor showers and laundry rooms finds its way into drains not designed for heavy grit. Winter swells and king tides remind owners how close groundwater sits - saturated soils stress drainfields and can expose shallow laterals.
 
 Twin Lakes also sees concentrated use during holiday weekends. Systems that cope fine with a retired couple may struggle when occupancy triples. We recommend realistic maintenance intervals instead of waiting for an emergency during the busiest rental week of the year.
 
-The neighborhood's position between two larger cities means some owners assume Santa Cruz or Capitola rules apply to permits and sewer extensions—they do not always. We clarify county versus city jurisdiction when work touches laterals near the municipal boundary so you are not surprised mid-project.
+The neighborhood's position between two larger cities means some owners assume Santa Cruz or Capitola rules apply to permits and sewer extensions - they do not always. We clarify county versus city jurisdiction when work touches laterals near the municipal boundary so you are not surprised mid-project.
 
 ## Twin Lakes Appointments
 

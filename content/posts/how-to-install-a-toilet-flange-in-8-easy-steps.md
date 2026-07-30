@@ -83,7 +83,7 @@ Before you begin, make sure you have the following on hand:
 ### 6\. Position the New Toilet Flange
 
 - Press the flange into the drain opening.
-- The top of the flange should sit **¼ inch above** the finished floor—not flush.
+- The top of the flange should sit **¼ inch above** the finished floor - not flush.
 - Ensure the bolts are straight and evenly spaced.
 
 ### 7\. Secure the Flange to the Floor
@@ -102,7 +102,7 @@ Before you begin, make sure you have the following on hand:
 
 ## When to Call a Professional Plumber
 
-Even the most confident DIYers can run into unexpected issues. If you notice cracks, leaks, or anything that looks unusual—play it safe and give us a call.
+Even the most confident DIYers can run into unexpected issues. If you notice cracks, leaks, or anything that looks unusual - play it safe and give us a call.
 
 We provide expert toilet flange installation and toilet repairs throughout:
 
@@ -114,7 +114,7 @@ We provide expert toilet flange installation and toilet repairs throughout:
 - Surrounding areas
 
 📞 **Call now: (831) 225-4344** 
-We don’t offer online booking—just fast, friendly phone service!
+We don’t offer online booking - just fast, friendly phone service!
 
 ## Toilet Flange FAQs
 
@@ -137,7 +137,7 @@ A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to
 Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
 
 📞 **(831) 225-4344** 
-We’re here to help—fast, reliable, and local plumbing service in Santa Cruz County!
+We’re here to help - fast, reliable, and local plumbing service in Santa Cruz County!
 
 Santa Cruz County Septic Experts
 
@@ -189,6 +189,6 @@ Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available 7 AM - 7 PM, Monday through Saturday
 
-## Skip the DIY — Get It Done Right
+## Skip the DIY - Get It Done Right
 
 While installing a toilet flange might seem straightforward, it can quickly become complex without the right expertise. Trust Wade's Plumbing & Septic in Santa Cruz County, CA, to handle your plumbing needs with precision and care.

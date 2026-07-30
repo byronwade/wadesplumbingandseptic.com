@@ -173,7 +173,7 @@ Licensed Contractor: C-42 for CA
 
 Fast Response Guarantee: Available for emergencies to serve Santa Cruz County, CA
 
-## Skip the DIY — Get It Done Right
+## Skip the DIY - Get It Done Right
 
 Trust Wade's Plumbing & Septic for professional drain cleaning services in Santa Cruz County, CA. Our expert team ensures your drains are cleared efficiently and effectively, saving you time and hassle.
 

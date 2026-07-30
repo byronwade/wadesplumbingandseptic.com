@@ -1,13 +1,13 @@
 ---
 title: Amesti, CA Plumbing & Septic Services
-description: Plumbing and septic for Amesti, CA—rural south county lots near Amesti Creek and Watsonville. Wade's Plumbing & Septic. Santa Cruz County. 831.225.4344.
+description: Plumbing and septic for Amesti, CA - rural south county lots near Amesti Creek and Watsonville. Wade's Plumbing & Septic. Santa Cruz County. 831.225.4344.
 eyebrow: Amesti, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: South Santa Cruz County rural property near Amesti, California
 ---
 
-Amesti is a quiet census-designated place tucked between Watsonville and the rolling agricultural lands south of the city—modest homes, small farms, and rural lots threaded by Amesti Creek and the county roads that connect Freedom, Las Lomas, and the Pajaro Valley floor. It is not a town center with a main street; it is a patchwork of residential parcels where septic systems, well pumps, and aging plumbing are part of daily life.
+Amesti is a quiet census-designated place tucked between Watsonville and the rolling agricultural lands south of the city - modest homes, small farms, and rural lots threaded by Amesti Creek and the county roads that connect Freedom, Las Lomas, and the Pajaro Valley floor. It is not a town center with a main street; it is a patchwork of residential parcels where septic systems, well pumps, and aging plumbing are part of daily life.
 
 Wade's Plumbing & Septic knows Amesti because we work across south Santa Cruz County every day. Whether you are dealing with a backed-up drain before harvest season or a septic alarm going off after a wet winter, we respond with practical diagnostics and honest recommendations.
 
@@ -18,7 +18,7 @@ Homes in Amesti were built across several decades, from simple ranch-style house
 Common Amesti plumbing calls include:
 
 - Kitchen and bathroom drain clogs, including grease buildup in older cast-iron lines
-- Water heater failures—often linked to hard well water and lack of regular flushing
+- Water heater failures - often linked to hard well water and lack of regular flushing
 - Leaking hose bibs, outdoor sinks, and laundry room connections in utility areas
 - Low water pressure traced to well equipment, sediment-clogged aerators, or partially closed valves
 - Fixture upgrades for bathrooms and kitchens during remodels
@@ -43,7 +43,7 @@ Santa Cruz County permitting applies to major septic work in Amesti. We help you
 
 ## Local conditions in Amesti
 
-Amesti Creek and seasonal drainage channels influence groundwater on low-lying parcels. After sustained winter rain, we see more calls about saturated drainfields and septic backups—not because the tank is full, but because the soil cannot accept more effluent until conditions dry out.
+Amesti Creek and seasonal drainage channels influence groundwater on low-lying parcels. After sustained winter rain, we see more calls about saturated drainfields and septic backups - not because the tank is full, but because the soil cannot accept more effluent until conditions dry out.
 
 Agricultural activity nearby means dust, debris, and occasional chemical storage on adjacent parcels. That does not directly affect your septic tank, but it reminds us that Amesti plumbing often serves households embedded in a working farm landscape, not a suburban subdivision.
 

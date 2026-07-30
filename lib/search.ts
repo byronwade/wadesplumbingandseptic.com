@@ -12,7 +12,7 @@ export type SearchDocument = {
 	category?: string
 	image?: string
 	keywords: string[]
-	/** Extra body/excerpt terms — weighted lower than keywords. */
+	/** Extra body/excerpt terms - weighted lower than keywords. */
 	body?: string
 	popularity?: number
 	intents?: SearchIntent[]
@@ -254,7 +254,7 @@ export type ParsedQuery = {
 
 /**
  * Expand query tokens with synonyms + intent phrases.
- * Uses exact/phrase matching — never bare substring includes — so "drain"
+ * Uses exact/phrase matching - never bare substring includes - so "drain"
  * does not activate the septic "drainfield" family.
  */
 export function expandQuery(query: string): ParsedQuery {

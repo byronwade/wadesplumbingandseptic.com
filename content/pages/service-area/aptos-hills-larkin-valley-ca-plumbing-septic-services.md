@@ -1,19 +1,19 @@
 ---
 title: Aptos Hills-Larkin Valley, CA Plumbing & Septic Services
-description: Plumbing and septic for Aptos Hills-Larkin Valley—equestrian oak hills, large lots, and rural Santa Cruz County living. Wade's. 831.225.4344.
+description: Plumbing and septic for Aptos Hills-Larkin Valley - equestrian oak hills, large lots, and rural Santa Cruz County living. Wade's. 831.225.4344.
 eyebrow: Aptos Hills-Larkin Valley, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Equestrian property and oak hills in Aptos Hills-Larkin Valley, California
 ---
 
-Aptos Hills-Larkin Valley is one of Santa Cruz County's most distinctive rural communities—expansive oak-studded hills, equestrian properties, and custom homes on multi-acre parcels along Larkin Valley Road and the connecting lanes above Aptos. This is not suburban Aptos; it is horse-country living where private wells, septic systems, and barn plumbing are central to how properties function day to day.
+Aptos Hills-Larkin Valley is one of Santa Cruz County's most distinctive rural communities - expansive oak-studded hills, equestrian properties, and custom homes on multi-acre parcels along Larkin Valley Road and the connecting lanes above Aptos. This is not suburban Aptos; it is horse-country living where private wells, septic systems, and barn plumbing are central to how properties function day to day.
 
 Wade's Plumbing & Septic serves Aptos Hills-Larkin Valley homeowners who need experienced help with hillside infrastructure, long pipe runs, and septic systems sized for larger households and accessory structures. We work across Santa Cruz County and know this corridor well.
 
 ## Plumbing services in Aptos Hills-Larkin Valley
 
-Properties here include ranch-style homes, architect-designed residences, barns with living quarters, and compounds with multiple buildings sharing or splitting water service. Wells and pressure systems feed homes that may sit hundreds of feet from the pump house. Drain lines on sloped lots require careful installation and maintenance—bellies and root intrusion cause problems years after original construction.
+Properties here include ranch-style homes, architect-designed residences, barns with living quarters, and compounds with multiple buildings sharing or splitting water service. Wells and pressure systems feed homes that may sit hundreds of feet from the pump house. Drain lines on sloped lots require careful installation and maintenance - bellies and root intrusion cause problems years after original construction.
 
 Common plumbing work in Aptos Hills-Larkin Valley:
 
@@ -28,7 +28,7 @@ Horse properties add wash racks, automatic waterers, and tack-room plumbing on l
 
 ## Septic services in Aptos Hills-Larkin Valley
 
-Nearly every parcel in Aptos Hills-Larkin Valley operates on private septic. Systems may be conventional gravity fields on flatter pads or engineered designs on steeper building sites. Bedroom counts, ADUs, and caretaker units affect required tank capacity—older systems may be undersized for current use.
+Nearly every parcel in Aptos Hills-Larkin Valley operates on private septic. Systems may be conventional gravity fields on flatter pads or engineered designs on steeper building sites. Bedroom counts, ADUs, and caretaker units affect required tank capacity - older systems may be undersized for current use.
 
 Wade's septic services here include:
 
@@ -45,7 +45,7 @@ Percolation tests and setback distances from wells, creeks, and property lines s
 
 Oak root systems are persistent. Sewer laterals and septic distribution lines on wooded lots are vulnerable to intrusion that causes recurring clogs despite repeated snaking. Camera inspection often reveals the true cause.
 
-Equestrian use means wash-water, manure management areas, and pasture irrigation—all of which affect how water moves across your parcel. A drainfield in a low spot that collects runoff from uphill paddocks will struggle regardless of tank maintenance.
+Equestrian use means wash-water, manure management areas, and pasture irrigation - all of which affect how water moves across your parcel. A drainfield in a low spot that collects runoff from uphill paddocks will struggle regardless of tank maintenance.
 
 Fire season demands attention to exterior plumbing. Hose bibs, pool fillers used for emergency supply, and backup water sources should be tested and accessible before summer heat and red-flag conditions arrive.
 

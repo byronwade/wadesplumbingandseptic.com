@@ -45,16 +45,16 @@ Confirm online runners:
 ## Security notes
 
 - Prefer **private repo + trusted contributors** for self-hosted runners.
-- Docker runners mount the host Docker socket — treat them as privileged.
+- Docker runners mount the host Docker socket - treat them as privileged.
 - `EPHEMERAL=true` (default) deregisters after each job to reduce sticky state.
 - Never commit `.env` or registration tokens.
 
 ## Workflow map
 
-- `.github/workflows/ci.yml` — parallel lint / typecheck / format / build
-- `.github/workflows/content.yml` — markdown frontmatter + content integrity
-- `.github/workflows/quality.yml` — shadscan, Lighthouse budgets, npm audit
-- `.github/workflows/runner-health.yml` — scheduled pool ping every 6 hours
+- `.github/workflows/ci.yml` - parallel lint / typecheck / format / build
+- `.github/workflows/content.yml` - markdown frontmatter + content integrity
+- `.github/workflows/quality.yml` - shadscan, Lighthouse budgets, npm audit
+- `.github/workflows/runner-health.yml` - scheduled pool ping every 6 hours
 
 ## Policy
 

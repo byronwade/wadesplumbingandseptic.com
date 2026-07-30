@@ -51,7 +51,7 @@ npm run ci:self-hosted-policy
 
 ## CI (self-hosted only)
 
-GitHub Actions workflows run exclusively on **local self-hosted runners** — not
+GitHub Actions workflows run exclusively on **local self-hosted runners** - not
 GitHub-hosted `ubuntu-latest` machines. See
 [`ops/self-hosted-runners/README.md`](ops/self-hosted-runners/README.md) to
 bring up the Docker fleet (`wades-ci` + `wades-quality` pools).

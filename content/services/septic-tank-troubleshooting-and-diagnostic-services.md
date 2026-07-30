@@ -62,7 +62,7 @@ It's recommended to have your septic system inspected at least once every three 
 
 Contact Wade's Plumbing & Septic immediately. Our team will provide prompt and reliable service to diagnose and address the issue efficiently.
 
-Trust Wade's Plumbing & Septic for all your septic tank troubleshooting needs in Santa Cruz County, California. Our commitment to quality, local expertise, and responsive service sets us apart. Don't let septic issues disrupt your life—[contact us today](/service-offerings/septic-tank-inspection-and-assessment/) for a thorough inspection and expert advice.
+Trust Wade's Plumbing & Septic for all your septic tank troubleshooting needs in Santa Cruz County, California. Our commitment to quality, local expertise, and responsive service sets us apart. Don't let septic issues disrupt your life - [contact us today](/service-offerings/septic-tank-inspection-and-assessment/) for a thorough inspection and expert advice.
 
 Septic System Acting Up?
 

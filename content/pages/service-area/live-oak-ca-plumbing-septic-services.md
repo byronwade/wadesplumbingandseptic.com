@@ -7,7 +7,7 @@ image: /images/locations/river-and-redwoods.webp
 imageAlt: Live Oak neighborhood between Santa Cruz and Capitola with mixed residential housing
 ---
 
-Live Oak is the unincorporated stretch most people drive through without naming—until they own a house here. Soquel Drive and Portola Drive carry steady traffic past 1950s ranch homes, newer infill, and pockets that still feel rural a few blocks off the main roads. You are close enough to Seabright and Capitola for a short bike ride, but far enough from city hall that sewer versus septic answers come from county records, not a quick online map.
+Live Oak is the unincorporated stretch most people drive through without naming - until they own a house here. Soquel Drive and Portola Drive carry steady traffic past 1950s ranch homes, newer infill, and pockets that still feel rural a few blocks off the main roads. You are close enough to Seabright and Capitola for a short bike ride, but far enough from city hall that sewer versus septic answers come from county records, not a quick online map.
 
 Wade's Plumbing & Septic is family-owned (CSLB #1087260) and works Live Oak daily. We know which streets tie into Santa Cruz city sewer extensions, where older septics sit behind fences on larger lots, and how rental density along the corridor affects wear on aging plumbing.
 
@@ -16,7 +16,7 @@ Wade's Plumbing & Septic is family-owned (CSLB #1087260) and works Live Oak dail
 Live Oak housing is heterogeneous: slab ranches, raised foundations with crawlspaces, and the occasional hillside property climbing toward the freeway. That mix produces a wide call list:
 
 - **Drain cleaning** for kitchen and main lines when roots invade from street trees or backyard oaks
-- **Water heater service** in garages and interior closets—some original units well past typical lifespan
+- **Water heater service** in garages and interior closets - some original units well past typical lifespan
 - **Galvanized and copper supply repairs** where corrosion shows up as discolored water or dropping pressure
 - **Fixture upgrades** for bathrooms never fully remodeled since original construction
 - **Leak detection** under slabs common on post-war streets between 17th and 41st avenues
@@ -30,7 +30,7 @@ Live Oak has seen sewer expansion over the decades, but not every lot converted.
 We assist with:
 
 - Sewer lateral backups when the problem is between the house and the main
-- Septic pumping and inspections for homes still on tanks—common during escrow
+- Septic pumping and inspections for homes still on tanks - common during escrow
 - Drainfield troubleshooting when wet areas persist in side yards after laundry days
 - [Failed septic repair and replacement](/failed-septic-repair-replacement-santa-cruz-county) when county requirements trigger an upgrade
 - [Engineered septic systems](/engineered-septic-systems-santa-cruz-county) where standard trenches will not fit or perc poorly
@@ -41,7 +41,7 @@ If you are unsure what serves your address, we help trace cleanouts and tank loc
 
 Live Oak's location means marine fog rolls in regularly, keeping crawlspaces damp and encouraging mold-adjacent plumbing issues like sweating pipes and slow-drying leaks. High-traffic Soquel Drive corridors see more tenant turnover; disposals, toilets, and water heaters take abuse in shared-wall duplexes.
 
-Proximity to the coast adds mild salt exposure on exterior fixtures for homes west of the freeway. Winter storms test outdoor drains and downspout tie-ins—especially where owners added patio slabs without updating slope. We look at the whole path water takes, not just the fixture that complained first.
+Proximity to the coast adds mild salt exposure on exterior fixtures for homes west of the freeway. Winter storms test outdoor drains and downspout tie-ins - especially where owners added patio slabs without updating slope. We look at the whole path water takes, not just the fixture that complained first.
 
 ## Live Oak Service from Wade's
 

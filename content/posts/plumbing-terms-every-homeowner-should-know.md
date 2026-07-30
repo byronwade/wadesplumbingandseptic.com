@@ -1,6 +1,6 @@
 ---
 title: Essential Plumbing Terms for Santa Cruz County Homeowners
-description: The plumbing world has its own language—and if you’ve ever tried to follow
+description: The plumbing world has its own language - and if you’ve ever tried to follow
  along with a plumber mid-job, you know it can feel like they’re speaking a…
 category: Plumbing Tips
 date: '2025-06-24'
@@ -17,7 +17,7 @@ tags:
 - plumbing basics
 image: /images/wordpress/img-1852.webp
 imageAlt: "Essential Plumbing Terms for Santa Cruz County Homeowners"
----The plumbing world has its own language—and if you’ve ever tried to follow along with a plumber mid-job, you know it can feel like they’re speaking a different dialect. Words like “blackwater,” “blow bag,” or “trap seal” might sound unfamiliar, but understanding them can go a long way in helping you communicate effectively and make informed decisions when repairs or installations are needed.
+---The plumbing world has its own language - and if you’ve ever tried to follow along with a plumber mid-job, you know it can feel like they’re speaking a different dialect. Words like “blackwater,” “blow bag,” or “trap seal” might sound unfamiliar, but understanding them can go a long way in helping you communicate effectively and make informed decisions when repairs or installations are needed.
 
 ![Septic installation equipment on site](/images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp)
 
@@ -27,7 +27,7 @@ At Wade’s Plumbing & Septic, we believe in educating our customers, not just s
 
 1\. Blackwater
 
-This term refers to wastewater from toilets—essentially anything that contains human waste. Blackwater must be handled and disposed of carefully, as it poses health risks and must be directed through proper sewage or septic systems.
+This term refers to wastewater from toilets - essentially anything that contains human waste. Blackwater must be handled and disposed of carefully, as it poses health risks and must be directed through proper sewage or septic systems.
 
 2\. Greywater
 
@@ -51,7 +51,7 @@ If your home uses a septic system, the drain field is the underground network of
 
 7\. Fittings
 
-Fittings are the connectors between plumbing pipes. They come in all shapes and sizes—elbows, tees, couplings—and are used to change direction, reduce pipe size, or join multiple pipes together.
+Fittings are the connectors between plumbing pipes. They come in all shapes and sizes - elbows, tees, couplings - and are used to change direction, reduce pipe size, or join multiple pipes together.
 
 8\. GPF (Gallons Per Flush)
 
@@ -67,7 +67,7 @@ This is the small amount of water that sits in the U- or S-shaped pipe (the “t
 
 11\. Tee
 
-A tee is a T-shaped fitting used to connect three pipes—usually one horizontal pipe and two that branch off. It’s commonly used when creating junctions in your drain or water lines.
+A tee is a T-shaped fitting used to connect three pipes - usually one horizontal pipe and two that branch off. It’s commonly used when creating junctions in your drain or water lines.
 
 12\. Blow Bag
 
@@ -93,13 +93,13 @@ Understanding these terms allows you to:
 - Ask informed questions about services and pricing
 - Feel more confident about DIY tasks or maintenance
 
-Plus, being familiar with plumbing lingo helps you spot signs of trouble earlier—before a minor annoyance becomes a major problem.
+Plus, being familiar with plumbing lingo helps you spot signs of trouble earlier - before a minor annoyance becomes a major problem.
 
 Looking for Help with Your Plumbing?
 
 Whether you’re dealing with a clogged drain, a leaking water heater, or planning a full plumbing upgrade, Wade’s Plumbing & Septic is here to help. We serve homeowners and businesses across Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding communities.
 
-Our expert team is happy to walk you through the process in plain English—and get the job done right the first time.
+Our expert team is happy to walk you through the process in plain English - and get the job done right the first time.
 
 Santa Cruz County Septic Experts
 
