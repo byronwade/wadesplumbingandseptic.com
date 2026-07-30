@@ -1,13 +1,14 @@
 ---
-title: Expert Pipe Repair & Replacement in Santa Cruz County
+title: Pipe Repair and Replacement in Santa Cruz County
 description: >-
-  At Wade's Plumbing & Septic, we understand the urgency and importance of
-  maintaining a reliable plumbing system.
+  Pipe repair and repiping for Santa Cruz County homes. Fix leaks, corrosion,
+  and outdated lines with lasting materials. Call 831.225.4344.
 category: Plumbing
 order: 31
 image: >-
   /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
 imageAlt: Leaking water pipe outdoors
+updated: '2026-07-30'
 ---
 At Wade's Plumbing & Septic, we understand the urgency and importance of maintaining a reliable plumbing system. Our specialized pipe repair and replacement services cater to residents and businesses throughout Santa Cruz County, ensuring that your piping infrastructure remains in optimal condition. Whether you're dealing with a minor leak or require extensive repiping, our expert team is equipped to handle all types of pipe materials, including copper, PEX, PVC, and galvanized steel. With our comprehensive approach, we can address your "pipe repair Santa Cruz County" needs efficiently and effectively.
 
@@ -80,7 +81,7 @@ Our team is fully licensed and insured, holding a C-42 license for California. W
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more information on our service areas, visit our [service area overview](/service-areas/).
 
@@ -90,4 +91,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Fast-Response Guarantee: Available for emergencies](/contact/))
+[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Scheduling: Monday through Friday, 9:00am to 5:00pm.

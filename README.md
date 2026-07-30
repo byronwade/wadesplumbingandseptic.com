@@ -1,7 +1,7 @@
 # Wade's Plumbing & Septic
 
 High-performance marketing and SEO site for
-[wadesplumbingandseptic.com](https://wadesplumbingandseptic.com).
+[www.wadesplumbingandseptic.com](https://www.wadesplumbingandseptic.com).
 
 ## Stack
 
@@ -10,7 +10,7 @@ High-performance marketing and SEO site for
 - Tailwind CSS 4
 - shadcn/ui primitives
 - Local Markdown content with `use cache` data access
-- Chunked `app/sitemap.ts` + Metadata / JSON-LD SEO
+- Priority-sorted, image-aware chunked `app/sitemap.ts` + Metadata / JSON-LD SEO
 - Vercel-ready static generation
 - Real Wade's project, team, location, and partner media
 

@@ -1,21 +1,20 @@
 ---
 title: Reliable Pipe Leak Repairs for Santa Cruz County Homes
 description: >-
-  Pipe leaks in septic systems can lead to significant issues if not addressed
-  promptly.
+  How pipe leaks affect septic systems in Santa Cruz County, common causes,
+  early warning signs, and when to call Wade's Plumbing & Septic for inspection
+  and repair support.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
   - plumbing
   - septic issues in Santa Cruz County
   - pipe leak repair
-image: >-
-  /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
-imageAlt: Outdoor plumbing pipes with gauges
+image: /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
+imageAlt: "Outdoor plumbing pipes with gauges"
 ---
-In This Guide4 min read
 
 ![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
 
@@ -84,4 +83,3 @@ While some homeowners may feel comfortable performing basic checks on their sept
 ## Sources & Local References
 
 - [Plumbing & septic service areas overview](/service-areas/)
-

@@ -258,7 +258,7 @@ export function ServiceAreasMap() {
 					/>
 					Service coverage: Santa Cruz County &amp; west foothills
 				</li>
-				<li className="max-w-xl text-center text-sm leading-relaxed font-medium">
+				<li className="max-w-xl text-center text-sm leading-relaxed font-normal">
 					Approximate area including Los Gatos &amp; Saratoga; generally west of
 					Highway 101. Call to confirm your address.
 				</li>

@@ -8,7 +8,6 @@ import { CommandMenuLoader } from "@/components/command-menu-loader"
 import { JsonLd } from "@/components/json-ld"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { ThemeProvider } from "@/components/theme-provider"
 import { getCollection } from "@/lib/content"
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -20,7 +19,7 @@ const manrope = Manrope({
 	display: "swap",
 	variable: "--font-manrope",
 	preload: true,
-	weight: ["400", "500", "700"],
+	weight: ["400", "700"],
 })
 
 /*
@@ -32,7 +31,8 @@ const archivo = Archivo({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-archivo",
-	preload: true,
+	/* Body font covers first paint; Archivo is for display headings. */
+	preload: false,
 	weight: ["700", "800"],
 })
 
@@ -104,10 +104,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "#f7f7f5" },
-		{ media: "(prefers-color-scheme: dark)", color: "#101214" },
-	],
+	themeColor: "#f7f7f5",
 }
 
 async function RootJsonLd() {
@@ -131,37 +128,34 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
+<<<<<<< HEAD
 		<html
 			lang="en"
 			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
 			suppressHydrationWarning
 		>
+=======
+		<html lang="en" className={`${manrope.variable} ${archivo.variable}`}>
+>>>>>>> origin/main
 			<body className={manrope.className}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="light"
-					enableSystem
-					disableTransitionOnChange
+				<a
+					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+					href="#main-content"
 				>
-					<a
-						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-						href="#main-content"
-					>
-						Skip to content
-					</a>
-					<SiteHeader />
-					<Suspense
-						fallback={<main id="main-content" className="min-h-[40vh]" />}
-					>
-						{children}
-					</Suspense>
-					<SiteFooter />
-					<CommandMenuLoader />
-					<Suspense fallback={null}>
-						<RootJsonLd />
-					</Suspense>
-					<AnalyticsLoader />
-				</ThemeProvider>
+					Skip to content
+				</a>
+				<SiteHeader />
+				<Suspense
+					fallback={<main id="main-content" className="min-h-[40vh]" />}
+				>
+					{children}
+				</Suspense>
+				<SiteFooter />
+				<CommandMenuLoader />
+				<Suspense fallback={null}>
+					<RootJsonLd />
+				</Suspense>
+				<AnalyticsLoader />
 			</body>
 		</html>
 	)

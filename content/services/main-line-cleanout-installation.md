@@ -1,12 +1,13 @@
 ---
-title: 'Reliable Main Line Cleanout in Santa Cruz County, CA'
+title: Main Line Cleanout Installation in Santa Cruz County
 description: >-
-  In Santa Cruz County, California, keeping your plumbing system in top shape is
-  crucial, and a main line cleanout installation can be a game-changer for.
+  Main sewer cleanout installation for easier access and cleaning in Santa Cruz
+  County homes. Call 831.225.4344.
 category: Plumbing
 order: 36
 image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic control panel
+updated: '2026-07-30'
 ---
 In Santa Cruz County, California, keeping your plumbing system in top shape is crucial, and a main line cleanout installation can be a game-changer for homeowners. This service ensures easy access to your main sewer line for routine maintenance and emergencies, aligning with updated plumbing codes designed to enhance efficiency and lower future costs. At Wade's Plumbing & Septic, we specialize in providing comprehensive main line cleanout installations that meet local regulations and safeguard your home against plumbing issues.
 
@@ -65,7 +66,7 @@ Contractor License: C-42 for California
 
 Office Hours: Monday to Friday, 9am to 5pm
 
-Emergency Line: Available
+Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
 
 For more information on the areas we serve, please visit our [service area overview](/service-areas/).
 
@@ -75,4 +76,4 @@ Ensure Your Plumbing Runs Smoothly
 
 Keep your plumbing system in top condition with our expert main line cleanout services.
 
-[Call Us Now](tel:+18315551234) [Get a Free ★★★★★ 5-Star Rated Service "Wade's Plumbing & Septic quickly resolved our main line issue with professionalism and care. Highly recommend!" (Sarah, Aptos "Fantastic service! The team was prompt and efficient, leaving our plumbing system in perfect condition."), Mike, Santa Cruz "I was impressed by their expertise and fast response. Our main line is now running smoothly!" (Lisa, Watsonville Licensed Contractor: C-42 Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call Us Now](tel:+18312254344) [Get a Free ★★★★★ 5-Star Rated Service "Wade's Plumbing & Septic quickly resolved our main line issue with professionalism and care. Highly recommend!" (Sarah, Aptos "Fantastic service! The team was prompt and efficient, leaving our plumbing system in perfect condition."), Mike, Santa Cruz "I was impressed by their expertise and fast response. Our main line is now running smoothly!" (Lisa, Watsonville Licensed Contractor: C-42 Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
