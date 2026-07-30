@@ -79,16 +79,30 @@ function FitServiceAreaBounds() {
 	useEffect(() => {
 		if (!map || !isLoaded) return
 
-		const frame = requestAnimationFrame(() => {
+		const fit = () => {
+			const narrow =
+				typeof window !== "undefined" &&
+				window.matchMedia("(max-width: 767px)").matches
+
 			map.resize()
 			map.fitBounds(serviceAreaMapBounds, {
-				padding: { top: 56, bottom: 56, left: 48, right: 48 },
+				padding: narrow
+					? { top: 36, bottom: 36, left: 20, right: 20 }
+					: { top: 56, bottom: 56, left: 48, right: 48 },
 				duration: 0,
-				maxZoom: 10,
+				maxZoom: narrow ? 10.5 : 11,
 			})
-		})
+		}
 
-		return () => cancelAnimationFrame(frame)
+		const frame = requestAnimationFrame(fit)
+		const media = window.matchMedia("(max-width: 767px)")
+		const onChange = () => fit()
+		media.addEventListener("change", onChange)
+
+		return () => {
+			cancelAnimationFrame(frame)
+			media.removeEventListener("change", onChange)
+		}
 	}, [map, isLoaded])
 
 	return null
@@ -102,8 +116,19 @@ export function ServiceAreasMap() {
 	} | null>(null)
 
 	return (
-		<div className="space-y-3">
-			<div className="border-border bg-muted/40 relative h-[min(70vh,36rem)] min-h-[22rem] w-full overflow-hidden rounded-lg border shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]">
+		<div className="space-y-4">
+			{/*
+			  Mobile: full-bleed edge-to-edge plane.
+			  Desktop: contained surface with radius inside the page shell.
+			*/}
+			<div
+				className={cn(
+					"bg-muted/40 relative w-full overflow-hidden",
+					"h-[min(62vh,30rem)] min-h-[20rem] sm:h-[min(70vh,36rem)] sm:min-h-[22rem]",
+					"border-border border-y",
+					"md:mx-auto md:w-[min(100%-calc(var(--space-page-x)*2),var(--content-max))] md:rounded-lg md:border md:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)]",
+				)}
+			>
 				<Map
 					center={serviceAreaMapCenter}
 					className="h-full w-full"
@@ -111,6 +136,7 @@ export function ServiceAreasMap() {
 					styles={mapStyles}
 					zoom={serviceAreaMapZoom}
 					fadeDuration={0}
+					cooperativeGestures
 				>
 					<FitServiceAreaBounds />
 					<MapControls position="bottom-right" showZoom showFullscreen />
@@ -137,18 +163,18 @@ export function ServiceAreasMap() {
 							closeOnClick={false}
 							focusAfterOpen={false}
 							closeButton
-							className="min-w-52"
+							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
-							<div className="space-y-1.5 p-1">
-								<p className="text-sm font-extrabold tracking-[-0.02em]">
+							<div className="space-y-2.5 pr-6">
+								<p className="text-lg font-extrabold tracking-[-0.03em]">
 									{selected.properties.name}
 								</p>
-								<p className="text-muted-foreground text-xs font-bold">
+								<p className="text-primary text-sm font-extrabold tracking-[-0.01em]">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
-										: "Selected communities"}
+										: "Selected coverage — confirm address"}
 								</p>
-								<p className="text-muted-foreground text-xs leading-relaxed">
+								<p className="text-muted-foreground text-base leading-relaxed">
 									{selected.properties.description}
 								</p>
 							</div>
@@ -157,22 +183,22 @@ export function ServiceAreasMap() {
 				</Map>
 			</div>
 
-			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold">
-				<li className="flex items-center gap-2">
+			<ul className="text-muted-foreground flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-[var(--space-page-x)] text-sm font-bold">
+				<li className="flex items-center gap-2.5">
 					<span
 						aria-hidden="true"
-						className={cn("size-3 rounded-sm")}
+						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primary }}
 					/>
 					Santa Cruz County (primary)
 				</li>
-				<li className="flex items-center gap-2">
+				<li className="flex items-center gap-2.5">
 					<span
 						aria-hidden="true"
-						className={cn("size-3 rounded-sm")}
+						className={cn("size-3.5 rounded-sm")}
 						style={{ backgroundColor: BRAND.primaryBright }}
 					/>
-					Selected Santa Clara communities
+					Los Gatos &amp; Saratoga (selected)
 				</li>
 			</ul>
 		</div>

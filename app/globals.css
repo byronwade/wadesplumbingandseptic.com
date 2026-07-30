@@ -131,6 +131,17 @@
   .maplibregl-ctrl-attrib-button {
     @apply bg-transparent! dark:invert;
 	}
+
+	/* Cooperative gestures: one-finger page scroll on mobile; brand the hint. */
+	.maplibregl-cooperative-gesture-screen {
+		background: color-mix(in srgb, var(--ink) 55%, transparent);
+		font-family: var(--font-sans);
+		font-size: 1.05rem;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		text-align: center;
+		padding-inline: 1.25rem;
+	}
 }
 
 html {

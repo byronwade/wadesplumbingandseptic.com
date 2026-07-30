@@ -17,7 +17,7 @@ import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 const description =
-	"Interactive map of Wade's Plumbing & Septic service coverage across Santa Cruz County and selected Santa Clara County communities."
+	"Interactive map of Wade's Plumbing & Septic service coverage across Santa Cruz County, plus selected work in Los Gatos and Saratoga."
 
 export const metadata: Metadata = buildPageMetadata({
 	title: "Plumbing & Septic Service Areas",
@@ -63,38 +63,42 @@ export default function ServiceAreasPage() {
 				title="Plumbing & septic service areas"
 			/>
 
-			<section className="container-shell section-y">
-				<div className="mx-auto max-w-3xl text-center">
-					<Badge>Coverage Map</Badge>
-					<h2 className="type-title mt-5">
-						See where Wade&apos;s{" "}
-						<span className="text-primary">serves on the Central Coast</span>
-					</h2>
-					<p className="type-lead mt-5">
-						Mountain roads, coastal soils, older piping, steep lots, and septic
-						regulations change how a job should be diagnosed. The map shows our
-						coverage counties — tap a shaded area or browse the communities
-						below to confirm local service.
-					</p>
+			<section className="section-y overflow-x-clip">
+				<div className="container-shell">
+					<div className="mx-auto max-w-3xl text-center">
+						<Badge>Coverage Map</Badge>
+						<h2 className="type-title mt-5">
+							See where Wade&apos;s{" "}
+							<span className="text-primary">serves on the Central Coast</span>
+						</h2>
+						<p className="type-lead mt-5">
+							Mountain roads, coastal soils, older piping, steep lots, and septic
+							regulations change how a job should be diagnosed. The map shows Santa
+							Cruz County plus Los Gatos and Saratoga — tap a shaded area or browse
+							the communities below to confirm local service.
+						</p>
+					</div>
 				</div>
 
+				{/* Full-bleed on mobile; map component constrains itself from md up. */}
 				<div className="mt-10">
 					<ServiceAreasMap />
-					<p className="text-muted-foreground mt-3 text-center text-xs font-bold">
-						{serviceAreaLocations.length} communities listed · Call{" "}
-						<a
-							className="text-primary underline-offset-2 hover:underline"
-							href={siteConfig.phoneHref}
-						>
-							{siteConfig.phone}
-						</a>{" "}
-						to confirm your address
-					</p>
 				</div>
+
+				<p className="text-muted-foreground container-shell mt-4 text-center text-sm font-bold">
+					{serviceAreaLocations.length} communities listed · Call{" "}
+					<a
+						className="text-primary underline-offset-2 hover:underline"
+						href={siteConfig.phoneHref}
+					>
+						{siteConfig.phone}
+					</a>{" "}
+					to confirm your address
+				</p>
 			</section>
 
 			<section className="border-border bg-card border-y">
-				<div className="container-shell section-y space-y-14">
+				<div className="container-shell section-y space-y-16">
 					{counties.map((county) => (
 						<div key={county.title}>
 							<div className="max-w-3xl">
@@ -103,16 +107,16 @@ export default function ServiceAreasPage() {
 								</h2>
 								<p className="type-lead mt-4">{county.summary}</p>
 							</div>
-							<ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+							<ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
 										<Link
-											className="border-border bg-background hover:border-primary/40 flex items-center gap-3 rounded-lg border px-4 py-3 text-sm font-extrabold tracking-[-0.02em] transition-colors"
+											className="border-border bg-background hover:border-primary/40 flex items-center gap-4 rounded-lg border px-5 py-4 text-base font-extrabold tracking-[-0.02em] transition-colors"
 											href={location.href as Route}
 											prefetch
 										>
-											<span className="bg-accent text-accent-foreground grid size-8 shrink-0 place-items-center rounded-md">
-												<MapPinned className="size-4" aria-hidden="true" />
+											<span className="bg-accent text-accent-foreground grid size-10 shrink-0 place-items-center rounded-md">
+												<MapPinned className="size-5" aria-hidden="true" />
 											</span>
 											{location.name}
 										</Link>

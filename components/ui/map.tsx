@@ -22,6 +22,11 @@ import { X, Minus, Plus, Locate, Maximize, Loader2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
+// MapLibre v6 resolves its worker via import.meta.url, which Next's bundler
+// does not emit. Without an explicit same-origin worker URL the browser loads
+// the SPA HTML fallback and fails with a MIME type error — blank white map.
+MapLibreGL.setWorkerUrl("/maplibre-gl/maplibre-gl-worker.mjs");
+
 const defaultStyles = {
   dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
   light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
@@ -633,9 +638,9 @@ function PopupCloseButton({ onClick }: { onClick: () => void }) {
       type="button"
       onClick={onClick}
       aria-label="Close popup"
-      className="focus-visible:ring-ring hover:bg-muted text-foreground absolute top-1 right-1 z-10 inline-flex size-5 cursor-pointer items-center justify-center rounded-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset"
+      className="focus-visible:ring-ring hover:bg-muted text-foreground absolute top-2.5 right-2.5 z-10 inline-flex size-8 cursor-pointer items-center justify-center rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset"
     >
-      <X className="size-3.5" />
+      <X className="size-4" />
     </button>
   );
 }
@@ -697,7 +702,7 @@ function MarkerPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-62 rounded-md border p-3 shadow-md",
+        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}
@@ -1108,7 +1113,7 @@ function MapPopup({
   return createPortal(
     <div
       className={cn(
-        "bg-popover text-popover-foreground relative max-w-62 rounded-md border p-3 shadow-md",
+        "bg-popover text-popover-foreground relative max-w-sm rounded-lg border p-5 text-base shadow-md",
         "animate-in fade-in-0 zoom-in-95 duration-200 ease-out",
         className,
       )}

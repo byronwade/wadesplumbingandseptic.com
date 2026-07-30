@@ -20,31 +20,34 @@ export function SiteHeader() {
 				</div>
 			</div>
 
-			<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
-				<Link
-					className="flex min-w-0 items-center gap-2.5 sm:gap-3"
-					href="/"
-					aria-label="Wade's Plumbing & Septic home"
-					prefetch
-				>
-					<Image
-						alt="Wade's Plumbing & Septic logo"
-						className="size-10 shrink-0 rounded-md sm:size-11"
-						height={44}
-						src="/images/brand/wades-mark-sm.webp"
-						width={44}
-					/>
-					<span className="leading-none">
-						<span className="block text-[0.95rem] font-extrabold tracking-[-0.03em] text-white sm:text-lg">
-							Wade&apos;s Plumbing
+			{/* Relative shell so mega-menu viewports span the full header width */}
+			<div className="relative">
+				<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
+					<Link
+						className="flex min-w-0 items-center gap-2.5 sm:gap-3"
+						href="/"
+						aria-label="Wade's Plumbing & Septic home"
+						prefetch
+					>
+						<Image
+							alt="Wade's Plumbing & Septic logo"
+							className="size-10 shrink-0 rounded-md sm:size-11"
+							height={44}
+							src="/images/brand/wades-mark-sm.webp"
+							width={44}
+						/>
+						<span className="leading-none">
+							<span className="block text-[0.95rem] font-extrabold tracking-[-0.03em] text-white sm:text-lg">
+								Wade&apos;s Plumbing
+							</span>
+							<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
+								&amp; Septic
+							</span>
 						</span>
-						<span className="text-primary-bright mt-1 block text-[0.65rem] font-extrabold tracking-[0.18em] uppercase">
-							&amp; Septic
-						</span>
-					</span>
-				</Link>
+					</Link>
 
-				<SiteHeaderNav />
+					<SiteHeaderNav />
+				</div>
 			</div>
 		</header>
 	)

@@ -234,13 +234,13 @@ export const serviceAreaLocations: ServiceAreaLocation[] = [
 	},
 ]
 
-export const serviceAreaMapCenter: [number, number] = [-121.85, 37.12]
-export const serviceAreaMapZoom = 9
+export const serviceAreaMapCenter: [number, number] = [-121.95, 37.08]
+export const serviceAreaMapZoom = 9.4
 
-/** Southwest → northeast bounds covering Santa Cruz + Santa Clara polygons. */
+/** Southwest → northeast bounds covering Santa Cruz County + Los Gatos & Saratoga. */
 export const serviceAreaMapBounds: [[number, number], [number, number]] = [
-	[-122.32, 36.85],
-	[-121.21, 37.49],
+	[-122.35, 36.84],
+	[-121.55, 37.32],
 ]
 
 export function locationsByCounty(county: ServiceAreaCounty) {
