@@ -1,9 +1,10 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { IdentificationCard, Phone } from "@/components/icons"
+import { Phone } from "@/components/icons"
 
 import { ProtectedContactLink } from "@/components/protected-contact"
+import { SaveContactButton } from "@/components/save-contact-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
@@ -11,9 +12,8 @@ import { cn } from "@/lib/utils"
 type ButtonSize = "default" | "sm" | "lg" | "xl" | "icon"
 
 /**
- * Call CTA. By default phones see "Save contact" (vCard / Add Contact) and
- * desktop sees dial. Prefer is implemented with CSS dual links so there is no
- * matchMedia effect or hydration mismatch.
+ * Call CTA. By default phones see "Save contact" (vCard, then call prompt)
+ * and desktop sees dial.
  */
 export function CallButton({
 	className,
@@ -51,27 +51,19 @@ export function CallButton({
 
 	if (prefer === "vcard") {
 		return (
-			<ProtectedContactLink
-				ariaLabel="Save Wade's Plumbing & Septic to your contacts"
-				className={styles}
-				kind="vcard"
-			>
-				{showIcon ? <IdentificationCard aria-hidden="true" /> : null}
+			<SaveContactButton className={className} size={size} variant={variant}>
 				{mobileLabel}
-			</ProtectedContactLink>
+			</SaveContactButton>
 		)
 	}
 
 	return (
 		<>
-			<ProtectedContactLink
-				ariaLabel="Save Wade's Plumbing & Septic to your contacts"
-				className={cn(styles, "sm:hidden")}
-				kind="vcard"
-			>
-				{showIcon ? <IdentificationCard aria-hidden="true" /> : null}
-				{mobileLabel}
-			</ProtectedContactLink>
+			<span className="sm:hidden">
+				<SaveContactButton className={className} size={size} variant={variant}>
+					{mobileLabel}
+				</SaveContactButton>
+			</span>
 			<ProtectedContactLink
 				ariaLabel={`Call ${contactInfo.phoneDisplay}`}
 				className={cn(styles, "hidden sm:inline-flex")}
@@ -84,17 +76,24 @@ export function CallButton({
 	)
 }
 
-/** Icon-only header call control with the same mobile vCard behavior. */
+/** Icon-only header call control with the same mobile vCard + call-prompt behavior. */
 export function CallIconButton({ className }: { className?: string }) {
 	return (
 		<>
-			<ProtectedContactLink
-				ariaLabel="Save Wade's Plumbing & Septic to your contacts"
-				className={cn(className, "sm:hidden")}
-				kind="vcard"
-			>
-				<Phone aria-hidden="true" className="size-5" />
-			</ProtectedContactLink>
+			<span className="sm:hidden">
+				<SaveContactButton
+					className={cn(
+						className,
+						"inline-flex size-11 items-center justify-center p-0",
+					)}
+					showIcon={false}
+					size="icon"
+					variant="ghost"
+				>
+					<span className="sr-only">Save contact</span>
+					<Phone aria-hidden="true" className="size-5" />
+				</SaveContactButton>
+			</span>
 			<ProtectedContactLink
 				ariaLabel={`Call ${contactInfo.phoneDisplay}`}
 				className={cn(className, "hidden sm:inline-flex")}

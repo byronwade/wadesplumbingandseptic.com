@@ -51,7 +51,7 @@ export function SiteFooter() {
 					<CallButton
 						className="text-ink w-full bg-white hover:bg-white/90 sm:w-auto"
 						desktopLabel="Call now"
-						mobileLabel="Save contact"
+						prefer="dial"
 						size="lg"
 						variant="secondary"
 					/>
@@ -60,6 +60,13 @@ export function SiteFooter() {
 
 			<div className="container-shell py-[var(--space-section-y-tight)]">
 				<div className="mb-[var(--space-block)]">
+					<p className="text-primary-bright mb-3 font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+						Keep us handy
+					</p>
+					<p className="text-on-dark-muted mb-5 max-w-xl text-sm leading-relaxed">
+						Save Wade&apos;s to your phone, then call or text whenever you need
+						plumbing or septic help.
+					</p>
 					<VirtualBusinessCard id="footer-business-card" tone="dark" />
 				</div>
 

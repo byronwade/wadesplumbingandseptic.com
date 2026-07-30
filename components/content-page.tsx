@@ -118,9 +118,17 @@ export function ContentPage({
 			/>
 
 			{document.slug === "contact" ? (
-				<div className="container-shell section-y-tight">
+				<section className="container-shell section-y-tight">
+					<div className="section-head mb-6 max-w-2xl">
+						<p className="spec-label">Start here</p>
+						<h2 className="type-title">Save our contact, then reach out</h2>
+						<p className="type-lead">
+							Add Wade&apos;s to your phone with one tap. After you save, you
+							can call or email from the same card.
+						</p>
+					</div>
 					<VirtualBusinessCard id="contact-business-card" />
-				</div>
+				</section>
 			) : null}
 
 			{marketing ? (
