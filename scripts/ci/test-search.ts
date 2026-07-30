@@ -1,6 +1,8 @@
 import assert from "node:assert/strict"
 
 import {
+	bestWordDistance,
+	editDistance,
 	expandQuery,
 	highlightMatches,
 	searchDocuments,
@@ -89,6 +91,17 @@ const docs: SearchDocument[] = [
 		popularity: 12,
 		intents: ["area", "service"],
 	},
+	{
+		id: "service:toilet",
+		type: "service",
+		title: "Toilet Repair and Installation",
+		description: "Fix running toilets, wax rings, and replacements.",
+		href: "/service-offerings/toilet-repair",
+		category: "Plumbing",
+		keywords: ["toilet", "toilets", "wax", "ring", "flush"],
+		popularity: 38,
+		intents: ["service"],
+	},
 ]
 
 function topTitles(query: string, limit = 3) {
@@ -149,6 +162,49 @@ const expanded = expandQuery("sewage smell")
 assert.ok(
 	expanded.expanded.includes("septic") || expanded.expanded.includes("odor"),
 	"sewage smell expands",
+)
+
+assert.equal(editDistance("septic", "septik"), 1, "septik is 1 edit from septic")
+assert.ok(
+	bestWordDistance("septic tank cleaning", "septik") <= 1,
+	"bestWordDistance finds septik ≈ septic",
+)
+
+assertFirstIncludes(
+	topTitles("septik pumping"),
+	"Septic",
+	"misspelling septik → septic pumping",
+)
+assertFirstIncludes(
+	topTitles("cloggd drain"),
+	"Drain",
+	"misspelling cloggd → drain cleaning",
+)
+assertFirstIncludes(
+	topTitles("water heter"),
+	"Water Heater",
+	"misspelling heter → water heater",
+)
+assertFirstIncludes(
+	topTitles("toilett repair"),
+	"Toilet",
+	"misspelling toilett → toilet repair",
+)
+
+const misspelled = searchDocuments(docs, "septik", 5)
+assert.ok(misspelled.length > 0, "misspellings return closest hits")
+assert.ok(
+	misspelled.some(
+		(hit) =>
+			hit.matchLabel === "Closest match" ||
+			hit.title.toLowerCase().includes("septic"),
+	),
+	"closest/fuzzy label or septic title for septik",
+)
+
+assert.ok(
+	suggestSearches("septik").some((item) => item.includes("septic")),
+	"suggestions recover from septik typo",
 )
 
 console.log("Search quality checks passed ✓")

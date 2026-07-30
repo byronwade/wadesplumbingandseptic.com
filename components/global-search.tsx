@@ -151,7 +151,11 @@ function ResultCard({
 					<span className="text-[0.65rem] font-extrabold tracking-[0.16em] text-[var(--primary-bright)] uppercase">
 						{TYPE_BADGE[hit.type]}
 					</span>
-					{hit.category ? (
+					{hit.matchLabel === "Closest match" ? (
+						<span className="truncate text-xs text-white/45">
+							Closest match
+						</span>
+					) : hit.category ? (
 						<span className="truncate text-xs text-white/45">
 							{hit.category}
 						</span>
@@ -419,8 +423,8 @@ export function GlobalSearch({
 										Nothing for “{query.trim()}”
 									</p>
 									<p className="mt-2 text-sm text-white/50">
-										Try a symptom, city, or service name - search understands
-										plain homeowner language.
+										Try a symptom, city, or service name. Typos are OK - we
+										surface the closest matches when we can.
 									</p>
 								</div>
 							) : null}

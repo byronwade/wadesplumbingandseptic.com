@@ -183,6 +183,78 @@ const MATCH_LABELS: Record<SearchHit["matchedOn"], string> = {
 	body: "In article",
 }
 
+/** How many edits a typo can have before we stop considering it a match. */
+function maxEditsFor(length: number) {
+	if (length <= 2) return 0
+	if (length <= 4) return 1
+	if (length <= 7) return 2
+	return 3
+}
+
+/**
+ * Levenshtein edit distance with an early exit when `max` is exceeded.
+ * Used for misspelling / closest-match ranking.
+ */
+export function editDistance(a: string, b: string, max = Infinity): number {
+	if (a === b) return 0
+	if (!a.length) return b.length
+	if (!b.length) return a.length
+	if (Math.abs(a.length - b.length) > max) return max + 1
+
+	// Ensure a is the shorter string for a smaller DP row.
+	if (a.length > b.length) {
+		const swap = a
+		a = b
+		b = swap
+	}
+
+	const prev = Array.from({ length: a.length + 1 }, (_, i) => i)
+	const curr = new Array<number>(a.length + 1)
+
+	for (let j = 1; j <= b.length; j += 1) {
+		curr[0] = j
+		let rowMin = curr[0] ?? j
+		const bj = b.charCodeAt(j - 1)
+		for (let i = 1; i <= a.length; i += 1) {
+			const cost = a.charCodeAt(i - 1) === bj ? 0 : 1
+			const del = (prev[i] ?? max) + 1
+			const ins = (curr[i - 1] ?? max) + 1
+			const sub = (prev[i - 1] ?? max) + cost
+			const value = Math.min(del, ins, sub)
+			curr[i] = value
+			if (value < rowMin) rowMin = value
+		}
+		if (rowMin > max) return max + 1
+		for (let i = 0; i <= a.length; i += 1) prev[i] = curr[i] ?? max
+	}
+
+	return prev[a.length] ?? max + 1
+}
+
+/** Best (lowest) edit distance from `needle` to any word in `haystack`. */
+export function bestWordDistance(haystack: string, needle: string): number {
+	if (!needle) return Infinity
+	if (haystack.includes(needle)) return 0
+
+	const max = maxEditsFor(needle.length)
+	let best = max + 1
+	for (const word of haystack.split(" ")) {
+		if (!word) continue
+		if (Math.abs(word.length - needle.length) > max) continue
+		const distance = editDistance(word, needle, max)
+		if (distance < best) best = distance
+		if (best === 0) return 0
+	}
+	return best
+}
+
+function tokensNearlyEqual(a: string, b: string) {
+	if (tokenMatchesTerm(a, b)) return true
+	const max = maxEditsFor(Math.min(a.length, b.length))
+	if (max === 0) return false
+	return editDistance(a, b, max) <= max
+}
+
 function normalize(value: string) {
 	return value
 		.toLowerCase()
@@ -289,10 +361,14 @@ export function expandQuery(query: string): ParsedQuery {
 					return parts.every(
 						(part) =>
 							tokens.includes(part) ||
-							tokens.some((queryToken) => tokenMatchesTerm(queryToken, part)),
+							tokens.some(
+								(queryToken) =>
+									tokenMatchesTerm(queryToken, part) ||
+									tokensNearlyEqual(queryToken, part),
+							),
 					)
 				}
-				return tokenMatchesTerm(token, term)
+				return tokenMatchesTerm(token, term) || tokensNearlyEqual(token, term)
 			}),
 		)
 
@@ -328,39 +404,32 @@ export function expandQuery(query: string): ParsedQuery {
 	}
 }
 
-function fuzzyIncludes(haystack: string, needle: string) {
-	if (!needle) return false
-	if (haystack.includes(needle)) return true
-	if (needle.length < 4) return false
-
-	const words = haystack.split(" ")
-	return words.some((word) => {
-		if (Math.abs(word.length - needle.length) > 1) return false
-		let misses = 0
-		let i = 0
-		let j = 0
-		while (i < word.length && j < needle.length) {
-			if (word[i] === needle[j]) {
-				i += 1
-				j += 1
-				continue
-			}
-			misses += 1
-			if (misses > 1) return false
-			if (word.length > needle.length) i += 1
-			else if (needle.length > word.length) j += 1
-			else {
-				i += 1
-				j += 1
-			}
-		}
-		return misses + (word.length - i) + (needle.length - j) <= 1
-	})
-}
-
 function prefixMatchesField(field: string, prefix: string) {
 	if (!prefix || prefix.length < 2) return false
 	return field.split(" ").some((word) => word.startsWith(prefix))
+}
+
+/**
+ * Score a fuzzy (misspelled) hit. Closer edits rank higher.
+ * Returns null when the distance is outside the allowed typo budget.
+ */
+function fuzzyFieldHit(
+	field: string,
+	token: string,
+	baseScore: number,
+	matchedOn: SearchHit["matchedOn"],
+): { score: number; matchedOn: SearchHit["matchedOn"]; fuzzy: boolean } | null {
+	const max = maxEditsFor(token.length)
+	if (max === 0) return null
+	const distance = bestWordDistance(field, token)
+	if (distance > max) return null
+	// 1 edit ≈ 78% of exact field score, 2 edits ≈ 58%, 3 edits ≈ 42%
+	const factor = distance === 1 ? 0.78 : distance === 2 ? 0.58 : 0.42
+	return {
+		score: Math.round(baseScore * factor),
+		matchedOn,
+		fuzzy: true,
+	}
 }
 
 function scoreTokenAgainstDocument(
@@ -372,33 +441,62 @@ function scoreTokenAgainstDocument(
 		keywords: string
 		body: string
 	},
-): { score: number; matchedOn: SearchHit["matchedOn"] } | null {
+): {
+	score: number
+	matchedOn: SearchHit["matchedOn"]
+	fuzzy: boolean
+} | null {
 	const { title, description, category, keywords, body } = fields
 	const titleWords = title.split(" ")
 
-	if (title === token) return { score: 130, matchedOn: "title" }
+	if (title === token) return { score: 130, matchedOn: "title", fuzzy: false }
 	if (title.startsWith(`${token} `) || title === token) {
-		return { score: 100, matchedOn: "title" }
+		return { score: 100, matchedOn: "title", fuzzy: false }
 	}
-	if (titleWords.includes(token)) return { score: 88, matchedOn: "title" }
+	if (titleWords.includes(token)) {
+		return { score: 88, matchedOn: "title", fuzzy: false }
+	}
 	if (titleWords.some((word) => lightStem(word) === lightStem(token))) {
-		return { score: 78, matchedOn: "title" }
+		return { score: 78, matchedOn: "title", fuzzy: false }
 	}
-	if (title.includes(token)) return { score: 68, matchedOn: "title" }
+	if (title.includes(token)) {
+		return { score: 68, matchedOn: "title", fuzzy: false }
+	}
+
+	const titleFuzzy = fuzzyFieldHit(title, token, 88, "title")
+	if (titleFuzzy) return titleFuzzy
+
 	if (
 		category.includes(token) ||
 		lightStem(category).includes(lightStem(token))
 	) {
-		return { score: 58, matchedOn: "category" }
+		return { score: 58, matchedOn: "category", fuzzy: false }
 	}
-	if (keywords.includes(token) || fuzzyIncludes(keywords, token)) {
-		return { score: 48, matchedOn: "keyword" }
+	const categoryFuzzy = fuzzyFieldHit(category, token, 58, "category")
+	if (categoryFuzzy) return categoryFuzzy
+
+	if (keywords.includes(token)) {
+		return { score: 48, matchedOn: "keyword", fuzzy: false }
 	}
-	if (description.includes(token) || fuzzyIncludes(description, token)) {
-		return { score: 28, matchedOn: "description" }
+	const keywordFuzzy = fuzzyFieldHit(keywords, token, 48, "keyword")
+	if (keywordFuzzy) return keywordFuzzy
+
+	if (description.includes(token)) {
+		return { score: 28, matchedOn: "description", fuzzy: false }
 	}
-	if (body.includes(token)) return { score: 14, matchedOn: "body" }
-	if (fuzzyIncludes(title, token)) return { score: 52, matchedOn: "title" }
+	const descriptionFuzzy = fuzzyFieldHit(
+		description,
+		token,
+		28,
+		"description",
+	)
+	if (descriptionFuzzy) return descriptionFuzzy
+
+	if (body.includes(token)) {
+		return { score: 14, matchedOn: "body", fuzzy: false }
+	}
+	const bodyFuzzy = fuzzyFieldHit(body, token, 14, "body")
+	if (bodyFuzzy) return bodyFuzzy
 
 	return null
 }
@@ -466,23 +564,29 @@ function scoreDocument(
 	let matchedOn: SearchHit["matchedOn"] = "description"
 	let matchedOriginal = 0
 	let matchedExpanded = 0
+	let fuzzyHits = 0
+	let exactHits = 0
 
 	if (phrase.length > 3) {
 		if (fields.title.includes(phrase)) {
 			score += 180
 			matchedOn = "title"
 			matchedOriginal += 1
+			exactHits += 1
 		} else if (fields.keywords.includes(phrase)) {
 			score += 90
 			matchedOn = "keyword"
 			matchedOriginal += 1
+			exactHits += 1
 		} else if (fields.description.includes(phrase)) {
 			score += 50
 			matchedOriginal += 1
+			exactHits += 1
 		} else if (fields.body.includes(phrase)) {
 			score += 24
 			matchedOn = "body"
 			matchedOriginal += 1
+			exactHits += 1
 		}
 	}
 
@@ -491,12 +595,14 @@ function scoreDocument(
 			score += 70
 			matchedOn = "title"
 			matchedOriginal += 0.5
+			exactHits += 1
 		} else if (
 			fields.keywords.includes(gram) ||
 			fields.description.includes(gram)
 		) {
 			score += 36
 			matchedOriginal += 0.25
+			exactHits += 1
 		}
 	}
 
@@ -505,10 +611,12 @@ function scoreDocument(
 		if (!hit) continue
 
 		const isOriginal = original.has(token)
-		const weight = isOriginal ? 1 : 0.5
+		const weight = isOriginal ? 1 : 0.55
 		score += hit.score * weight
 		matchedExpanded += 1
 		if (isOriginal) matchedOriginal += 1
+		if (hit.fuzzy) fuzzyHits += 1
+		else exactHits += 1
 
 		const rank: SearchHit["matchedOn"][] = [
 			"title",
@@ -524,17 +632,42 @@ function scoreDocument(
 
 	if (prefix && prefixMatchesField(fields.title, prefix)) {
 		score += 22
+		exactHits += 1
 		if (matchedOn === "description" || matchedOn === "body") matchedOn = "title"
 	} else if (prefix && prefixMatchesField(fields.keywords, prefix)) {
 		score += 10
+		exactHits += 1
+	} else if (prefix) {
+		// Prefix mistype: "heaterr" → still pull heater titles via edit distance
+		const prefixFuzzy = fuzzyFieldHit(fields.title, prefix, 22, "title")
+		if (prefixFuzzy) {
+			score += prefixFuzzy.score
+			fuzzyHits += 1
+			if (matchedOn === "description" || matchedOn === "body") {
+				matchedOn = "title"
+			}
+		}
 	}
 
 	if (matchedExpanded === 0 && score === 0) return null
 
 	const originalCoverage = matchedOriginal / Math.max(tokens.length, 1)
-	if (originalCoverage === 0 && score < 90 && intents.size === 0) return null
+	// Keep strong fuzzy / closest matches even when no original token matched
+	// exactly (e.g. "septik pumping", "cloggd drain").
+	const fuzzyOnly = exactHits === 0 && fuzzyHits > 0
+	if (
+		originalCoverage === 0 &&
+		score < 48 &&
+		intents.size === 0 &&
+		!fuzzyOnly
+	) {
+		return null
+	}
 
-	score *= 0.58 + Math.min(1, originalCoverage) * 0.42
+	const coverageFactor = fuzzyOnly
+		? 0.72
+		: 0.58 + Math.min(1, originalCoverage) * 0.42
+	score *= coverageFactor
 	score += (document.popularity ?? 0) * 1.35
 	score += intentBoost(document, intents)
 
@@ -552,7 +685,7 @@ function scoreDocument(
 		...document,
 		score,
 		matchedOn,
-		matchLabel: MATCH_LABELS[matchedOn],
+		matchLabel: fuzzyOnly ? "Closest match" : MATCH_LABELS[matchedOn],
 	}
 }
 
@@ -659,9 +792,12 @@ export function suggestSearches(query: string, limit = 6): string[] {
 			(term) =>
 				phrase.includes(term) ||
 				term.includes(phrase) ||
-				tokens.some((token) =>
-					tokenMatchesTerm(token, term.split(" ")[0] ?? ""),
-				),
+				tokens.some((token) => {
+					const head = term.split(" ")[0] ?? ""
+					return (
+						tokenMatchesTerm(token, head) || tokensNearlyEqual(token, head)
+					)
+				}),
 		)
 		if (!related) continue
 		suggestions.add(canonical)
