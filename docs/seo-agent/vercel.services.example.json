@@ -1,0 +1,43 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"services": {
+		"site": {
+			"root": ".",
+			"framework": "nextjs",
+			"installCommand": "npm ci --ignore-scripts --omit=peer",
+			"buildCommand": "npm run build"
+		},
+		"eve_seo_agent": {
+			"root": "automation/seo-agent",
+			"installCommand": "npm ci --ignore-scripts --omit=peer",
+			"buildCommand": "npm run build",
+			"routes": [
+				{
+					"src": "/_internal/eve/(.*)",
+					"transforms": [
+						{
+							"type": "request.path",
+							"op": "set",
+							"args": "/$1"
+						}
+					]
+				}
+			]
+		}
+	},
+	"rewrites": [
+		{
+			"source": "/_internal/eve/(.*)",
+			"destination": {
+				"service": "eve_seo_agent",
+				"path": "/$1"
+			}
+		},
+		{
+			"source": "/(.*)",
+			"destination": {
+				"service": "site"
+			}
+		}
+	]
+}
