@@ -1,0 +1,949 @@
+{
+  "schema_version": "1.0",
+  "classification": "MOCK_VERIFIED",
+  "sitemap_sources": [
+    "app/sitemap.ts"
+  ],
+  "robots_sources": [
+    "app/robots.ts"
+  ],
+  "redirect_sources": [],
+  "pages_with_json_ld": [
+    "/",
+    "/glossary",
+    "/service-area/[city]/[service]",
+    "/service-areas"
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/[...slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/5-signs-you-need-to-call-a-professional-plumber"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/6-signs-you-have-a-hidden-water-leak"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/about-us"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/careers"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/careers/customer-service-representative"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/careers/licensed-plumber"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/careers/septic-system-installer"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/category/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/compare/conventional-vs-engineered-septic"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/compare/hydro-jetting-vs-snaking"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/compare/repair-vs-replace-water-heater"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/contact"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/contact-call-first"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/efficient-water-filtration-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/emergency-plumber-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/emergency-septic-solutions-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/engineered-septic-systems-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/expert-tips"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/expert-tips/popular"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/expert-tips/trending"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/failed-septic-repair-replacement-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/faq"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/financing"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/franchise"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/glossary"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/glossary/plumbing"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/glossary/plumbing/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/glossary/septic"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/glossary/septic/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-santa-cruz-countys-unique-geography-affects-septic-systems"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-avoid-common-holiday-plumbing-disasters"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-handle-a-clogged-drain-or-sewer-line"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-install-a-toilet-flange-in-8-easy-steps"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-locate-trustworthy-plumbing-services-nearby"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-maintain-your-septic-tank-for-long-term-performance"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-prevent-frozen-pipes-this-winter"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/insurance-claims"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/maintenance-guide"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/memorial-day-plumbing-prep-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/monterey"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/new-septic-installations-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/pipe-leak-solutions-santa-cruz-septic"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/plumbing-repair-services-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/plumbing-terms-every-homeowner-should-know"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/privacy-policy"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/promotions"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/rebates"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/san-jose"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz-toilet-running-solutions"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz/commercial-plumbing"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz/drain-clearing"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz/santa-cruz-plumbers-near-me"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz/septic-pumping"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/santa-cruz/water-heater-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-leach-field-repairs-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-pumping-essentials-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-replacement-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-safety-during-floods-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-solutions"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-system-challenges-santa-cruz-fire"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-system-components-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-system-seasonal-maintenance-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-system-types-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/septic-trouble-signs-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/[city]/[service]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/amesti-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/aptos-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/ben-lomond-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/bonny-doon-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/boulder-creek-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/brookdale-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/capitola-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/corralitos-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/davenport-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/day-valley-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/felton-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/freedom-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/interlaken-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/la-selva-beach-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/las-lomas-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/live-oak-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/lompico-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/los-gatos-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/mount-hermon-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/paradise-park-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/pasatiempo-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/rio-del-mar-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/santa-cruz-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/saratoga-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/scotts-valley-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/soquel-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/twin-lakes-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/watsonville-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-area/zayante-ca-plumbing-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-areas"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-category/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/backflow-prevention-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/backflow-prevention-testing"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/commercial-drain-cleaning"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/commercial-plumbing-maintenance"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/commercial-septic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/drain-cleaning"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/drain-line-inspection"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/drainfield-repair-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/engineered-septic-system-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/fixture-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/garbage-disposal-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/gas-line-repair"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/grease-trap-cleaning"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/grease-trap-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/high-pressure-jetting-for-septic-lines"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/hydro-jetting"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/leak-detection"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/main-line-cleanout-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/pipe-repair-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-filter-cleaning-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-system-abandonment"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-system-certification"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-system-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-alarm-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-cleaning-and-pumping"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-design-and-engineering"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-distribution-box-repair-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-inspection-and-assessment"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-leach-field-repair-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-maintenance-and-care"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-repair-and-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-riser-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-system-compliance-and-permitting"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-system-upgrades"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/sewer-camera-inspection"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/sewer-line-inspection"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/shower-installation-and-repair"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/smoke-tests"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/storm-drain-cleaning"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/sump-pump-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/tankless-water-heater-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/toilet-repair"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/trenchless-sewer-line-replacement"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/video-inspections"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/water-filtration-system-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/water-heater-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/water-line-repair-and-installation"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/service-offerings/water-softener-maintenance"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/services"
+    },
+    {
+      "severity": "info",
+      "code": "METADATA_INHERITED_OR_UNDECLARED",
+      "url": "/services/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/services/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/services/popular"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/services/trending"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/sewer-line-repair-essentials-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/should-you-call-a-plumber-or-fix-it-yourself"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/should-you-repair-or-replace-your-water-heater"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/signs-your-drain-field-needs-professional-repair"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/slow-drains-solutions-santa-cruz"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/tag/[slug]"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/terms-of-service"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/testimonials"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/thank-you"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/the-benefits-of-hydro-jetting"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/the-complete-guide-to-septic-system-maintenance"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/the-importance-of-regular-plumbing-maintenance"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/warranties"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/water-main-sewer-line-repair-santa-cruz-county"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/what-is-hard-water-why-does-it-matter-for-your-home"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/what-you-need-to-know-about-engineered-septic-systems"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/why-is-dirty-water-backing-up-into-your-shower"
+    },
+    {
+      "severity": "info",
+      "code": "CANONICAL_INHERITED_OR_UNDECLARED",
+      "url": "/why-you-should-never-ignore-septic-system-warning-signs"
+    },
+    {
+      "severity": "info",
+      "code": "NO_NEXT_REDIRECT_MAP_DECLARED",
+      "source_path": "next.config.ts"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "run_id": "live-integration-verification-20260730",
+  "collected_at": "2026-07-30T06:46:17.8005022Z",
+  "source": "live-integration-verification",
+  "source_url_or_tool": "redacted-local-cli-and-public-read-probes",
+  "scope": "read-only integration verification; no production mutation",
+  "classification": "FAILED",
+  "redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+  "retention_class": "VERSIONED_NON_SECRET",
+  "sha256": "2e2391274e6e854a34eb7651dae7c2c304493e6ede43d1374f7fc27effdb0ee7",
+  "payload": {
+    "production_content_changed": false,
+    "main_pushed": false,
+    "merged": false,
+    "results": [
+      {
+        "id": "ai-gateway-request-and-usage",
+        "status": "BLOCKED_MISSING_CREDENTIALS",
+        "classification": "BLOCKED_MISSING_CREDENTIALS",
+        "collected_at": "2026-07-30T06:42:29Z",
+        "scope": "sidecar-only AI Gateway request and usage accounting",
+        "source_url_or_tool": "vercel-project-environment-inspection",
+        "evidence": "No separate sidecar Vercel project or sidecar environment was discoverable; no AI Gateway credential was available to this process. No model request was made."
+      },
+      {
+        "id": "eve-workflow-invocation",
+        "status": "FAILED",
+        "classification": "FAILED",
+        "collected_at": "2026-07-30T06:46:17.8005022Z",
+        "scope": "deployed Eve sidecar durable workflow",
+        "source_url_or_tool": "vercel-project-and-route-inspection",
+        "evidence": "The accessible Vercel teams expose the public-site project but no separate SEO sidecar deployment. The expected agent route resolves to the public-site HTML fallback, so no Eve workflow was invoked.",
+        "corrective_action": "Create or link the separate sidecar project with Root Directory automation/seo-agent, deploy it, then repeat the audit-only invocation."
+      },
+      {
+        "id": "protected-cron-authentication",
+        "status": "FAILED",
+        "classification": "FAILED",
+        "collected_at": "2026-07-30T06:46:17.8005022Z",
+        "scope": "GET /api/cron on the separate deployed sidecar",
+        "source_url_or_tool": "allowlisted-public-http-probe",
+        "safe_request_identifier": "iad1::x7jzn-1785393978878-07fed743ca6b",
+        "evidence": "The public-site /api/cron response was HTTP 200 text/html, not the sidecar JSON dispatcher. No authorization header or CRON_SECRET was sent.",
+        "corrective_action": "Deploy the sidecar first; then test unauthenticated 401 and authenticated audit-only dispatch without logging the secret."
+      },
+      {
+        "id": "search-console-property-read",
+        "status": "BLOCKED_MISSING_CREDENTIALS",
+        "classification": "BLOCKED_MISSING_CREDENTIALS",
+        "collected_at": "2026-07-30T06:42:29Z",
+        "scope": "Search Console readonly sidecar adapter",
+        "source_url_or_tool": "sidecar-environment-inspection",
+        "evidence": "No sidecar environment containing SEARCH_CONSOLE_ACCESS_TOKEN was available; no Google request was made."
+      },
+      {
+        "id": "pagespeed-request",
+        "status": "BLOCKED_MISSING_CREDENTIALS",
+        "classification": "BLOCKED_MISSING_CREDENTIALS",
+        "collected_at": "2026-07-30T06:42:29Z",
+        "scope": "PageSpeed sidecar adapter",
+        "source_url_or_tool": "sidecar-environment-inspection",
+        "evidence": "No sidecar environment containing PAGESPEED_API_KEY was available; no PageSpeed request was made."
+      },
+      {
+        "id": "github-repository-read",
+        "status": "LIVE_VERIFIED",
+        "classification": "LIVE_VERIFIED",
+        "collected_at": "2026-07-30T06:41:40.5825254Z",
+        "scope": "configured local GitHub CLI principal; read-only repository metadata",
+        "source_url_or_tool": "github-cli:repository-rest-read",
+        "safe_request_identifier": "F29C:F0E4E:145A6AB:480B00C:6A6AF23C",
+        "evidence": "Authenticated GitHub REST read of byronwade/wadesplumbingandseptic.com returned HTTP 200. The active principal has repo and workflow scopes. This is not proof of a deployed Vercel Connect connector."
+      },
+      {
+        "id": "github-disposable-draft-pr-permission",
+        "status": "LIVE_VERIFIED",
+        "classification": "LIVE_VERIFIED",
+        "collected_at": "2026-07-30T06:43:48.7607315Z",
+        "scope": "non-default disposable branch and draft PR only",
+        "source_url_or_tool": "github-cli:draft-pr-lifecycle",
+        "safe_request_identifier": "CCC2:2F4CB3:AF025:265A28:6A6AF2A4",
+        "evidence": "Created draft PR #7 from eve/integration-test/2026-07-30-live-permissions against main, confirmed draft state and CLEAN merge status, then closed it without merge and deleted its remote branch and local worktree at 2026-07-30T06:43:59.0907595Z."
+      },
+      {
+        "id": "vercel-project-and-preview-read",
+        "status": "LIVE_VERIFIED",
+        "classification": "LIVE_VERIFIED",
+        "collected_at": "2026-07-30T06:42:29Z",
+        "scope": "authenticated Vercel CLI read of the public-site project and preview deployment",
+        "source_url_or_tool": "vercel-cli:project-and-deployment-read",
+        "evidence": "The accessible Wade's team exposes wadesplumbingandseptic-com and a ready preview URL. This proves CLI read access to the public project only, not a sidecar Vercel-read adapter or sidecar deployment."
+      },
+      {
+        "id": "browser-fetch",
+        "status": "LIVE_VERIFIED",
+        "classification": "LIVE_VERIFIED",
+        "collected_at": "2026-07-30T06:44:50.274Z",
+        "scope": "allowlisted public HTTP document retrieval",
+        "source_url_or_tool": "browser-research-adapter:allowlisted-fetch",
+        "safe_request_identifier": "iad1::zld6g-1785393882301-17c85f8441dc",
+        "evidence": "The bounded browser-research adapter fetched the allowlisted robots.txt document with content hash 28625bd7b795d31959f827d10d1bd683dc28f3c54358cb8350d9e6608671f152. No raw document was retained."
+      },
+      {
+        "id": "browser-search-and-session",
+        "status": "BLOCKED_MISSING_CREDENTIALS",
+        "classification": "BLOCKED_MISSING_CREDENTIALS",
+        "collected_at": "2026-07-30T06:44:41.2354869Z",
+        "scope": "approved web-search provider and isolated browser session",
+        "source_url_or_tool": "sidecar-environment-inspection",
+        "evidence": "The web-search provider is intentionally unconfigured and browser automation is disabled. No Browserbase project/key or verified Eve browser session was available."
+      },
+      {
+        "id": "optional-ga4-business-profile-local-falcon-similarweb-google-trends-tracing",
+        "status": "BLOCKED_MISSING_CREDENTIALS",
+        "classification": "BLOCKED_MISSING_CREDENTIALS",
+        "collected_at": "2026-07-30T06:42:29Z",
+        "scope": "optional sidecar integrations",
+        "source_url_or_tool": "sidecar-environment-inspection",
+        "evidence": "No separate sidecar environment or approved optional adapter credentials were discoverable. No optional-provider request, Business Profile change, or telemetry export was made."
+      },
+      {
+        "id": "health-readiness-and-structured-traces",
+        "status": "FAILED",
+        "classification": "FAILED",
+        "collected_at": "2026-07-30T06:46:17.8005022Z",
+        "scope": "deployed sidecar /api/healthz, /api/readyz, and trace/log correlation",
+        "source_url_or_tool": "allowlisted-public-http-probe",
+        "safe_request_identifiers": [
+          "iad1::4p2zg-1785393978107-bcfbfd9ca2c0",
+          "iad1::9skqt-1785393978364-03fb393886fb"
+        ],
+        "evidence": "Both expected paths on the public site returned HTTP 200 text/html rather than JSON sidecar diagnostics. Without the intended sidecar deployment, no live Eve/Vercel trace or safe structured log correlation exists to inspect.",
+        "corrective_action": "Deploy and identify the isolated sidecar URL, then capture redacted JSON health/readiness and trace correlation evidence."
+      }
+    ]
+  }
+}

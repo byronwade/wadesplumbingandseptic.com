@@ -13,6 +13,7 @@ export default defineConfig([
 		"out/**",
 		"next-env.d.ts",
 		"public/maplibre-gl/**",
+		"automation/seo-agent/**",
 	]),
 	{
 		// mapcn-generated MapLibre wrapper updates callback refs during render.

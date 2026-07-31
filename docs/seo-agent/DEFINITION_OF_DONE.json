@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    { "id": "CP-01", "check_ids": ["root-control-plane"] },
+    { "id": "CP-02", "check_ids": ["root-control-plane"] },
+    { "id": "AR-01", "check_ids": ["sidecar-verify"] },
+    { "id": "AR-02", "check_ids": ["sidecar-verify"] },
+    { "id": "CI-01", "check_ids": ["sidecar-test"] },
+    { "id": "EV-01", "check_ids": ["sidecar-test"] },
+    { "id": "EV-02", "check_ids": ["sidecar-audit-fixture"] },
+    { "id": "EV-03", "check_ids": ["sidecar-audit-fixture", "sidecar-test"] },
+    { "id": "CT-01", "check_ids": ["root-seo-check", "sidecar-verify"] },
+    { "id": "CT-02", "check_ids": ["sidecar-test"] },
+    { "id": "CT-03", "check_ids": ["root-seo-check", "sidecar-test"] },
+    { "id": "CT-04", "check_ids": ["root-seo-check", "root-test"] },
+    {
+      "id": "PS-01",
+      "check_ids": ["root-lint", "root-typecheck", "root-build"]
+    },
+    { "id": "PL-01", "check_ids": ["sidecar-test"] },
+    { "id": "PL-02", "check_ids": ["sidecar-test", "sidecar-evals"] },
+    { "id": "PL-03", "check_ids": ["sidecar-test"] },
+    { "id": "PL-04", "check_ids": ["sidecar-build", "sidecar-sandbox"] },
+    { "id": "PL-05", "check_ids": ["sidecar-verify", "sidecar-evals"] },
+    {
+      "id": "RT-01",
+      "check_ids": [
+        "sidecar-integration",
+        "sidecar-build",
+        "sidecar-health-smoke"
+      ]
+    },
+    { "id": "IN-01", "check_ids": ["sidecar-live-probe"], "external": true },
+    { "id": "AU-01", "check_ids": ["sidecar-audit-fixture"] },
+    { "id": "PR-01", "check_ids": ["sidecar-test"] },
+    {
+      "id": "PR-02",
+      "check_ids": ["sidecar-publishing-fixture", "sidecar-test"]
+    },
+    { "id": "QA-01", "check_ids": ["sidecar-test"] },
+    { "id": "OB-01", "check_ids": ["sidecar-test"] },
+    { "id": "OB-02", "check_ids": ["sidecar-test"] },
+    {
+      "id": "OB-03",
+      "check_ids": [
+        "sidecar-observability",
+        "root-security-scan",
+        "sidecar-test"
+      ]
+    },
+    { "id": "RL-01", "check_ids": ["sidecar-rollback-drill"] },
+    {
+      "id": "VY-01",
+      "check_ids": [
+        "root-format",
+        "root-lint",
+        "root-typecheck",
+        "root-test",
+        "root-seo-check",
+        "root-security-scan",
+        "root-build",
+        "sidecar-build"
+      ]
+    },
+    { "id": "VY-02", "check_ids": [] }
+  ]
+}

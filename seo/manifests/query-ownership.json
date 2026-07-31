@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "classification": "MOCK_VERIFIED",
+  "ownership": [],
+  "backlog": [
+    {
+      "id": "await-live-query-evidence",
+      "state": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Search Console and approved public-browser research must establish demand and intent before assigning a canonical page owner."
+    }
+  ]
+}

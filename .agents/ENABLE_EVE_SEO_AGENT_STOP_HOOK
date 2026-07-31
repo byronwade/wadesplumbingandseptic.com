@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "enabled": true,
+  "max_continuations": 1,
+  "purpose": "final-verification-only"
+}

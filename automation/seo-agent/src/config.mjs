@@ -1,0 +1,211 @@
+import { z } from "zod";
+import { DEFAULT_BUDGETS } from "./constants.mjs";
+
+const envSchema = z
+	.object({
+		SEO_AGENT_ENV: z.enum(["development", "preview", "production"]).optional(),
+		SEO_AGENT_REPOSITORY: z
+			.string()
+			.regex(/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/)
+			.optional(),
+		SEO_AGENT_SITE_URL: z.string().url().optional(),
+		SEO_AGENT_BROWSER_RESEARCH_ENABLED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_BROWSER_ALLOWED_DOMAINS: z.string().optional(),
+		SEO_AGENT_LIVE_READS_APPROVED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: z
+			.string()
+			.regex(/^[a-z0-9][a-z0-9-]{2,79}$/)
+			.optional(),
+		SEO_AGENT_BLOB_ENABLED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_BLOB_ARCHIVE_APPROVED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_BLOB_APPROVED_RUN_ID: z
+			.string()
+			.regex(/^[a-z0-9][a-z0-9-]{2,79}$/)
+			.optional(),
+		SEO_AGENT_BLOB_PREFIX: z
+			.string()
+			.regex(/^[a-z0-9][a-z0-9/_-]{2,95}$/)
+			.optional(),
+		SEO_AGENT_MUTATION_MODE: z.enum(["disabled", "enabled"]).optional(),
+		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: z.enum(["true", "false"]).optional(),
+		SEARCH_CONSOLE_ACCESS_TOKEN: z.string().min(1).optional(),
+		PAGESPEED_API_KEY: z.string().min(1).optional(),
+		GITHUB_READ_TOKEN: z.string().min(1).optional(),
+		VERCEL_READ_TOKEN: z.string().min(1).optional(),
+		VERCEL_READ_PROJECT_ID: z.string().min(1).optional(),
+		VERCEL_READ_TEAM_ID: z.string().min(1).optional(),
+		AI_GATEWAY_API_KEY: z.string().min(1).optional(),
+		VERCEL_OIDC_TOKEN: z.string().min(1).optional(),
+		BROWSERBASE_API_KEY: z.string().min(1).optional(),
+		BROWSERBASE_PROJECT_ID: z.string().min(1).optional(),
+		GA4_ACCESS_TOKEN: z.string().min(1).optional(),
+		GA4_PROPERTY_ID: z.string().min(1).optional(),
+		GOOGLE_BUSINESS_PROFILE_ACCESS_TOKEN: z.string().min(1).optional(),
+		GOOGLE_BUSINESS_PROFILE_LOCATION_ID: z.string().min(1).optional(),
+		LOCAL_FALCON_API_KEY: z.string().min(1).optional(),
+		SIMILARWEB_API_KEY: z.string().min(1).optional(),
+		GOOGLE_TRENDS_ACCESS_TOKEN: z.string().min(1).optional(),
+		BLOB_READ_WRITE_TOKEN: z.string().min(1).optional(),
+		SEO_AGENT_ENABLE_AI_GATEWAY: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_GITHUB: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_VERCEL: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_PAGESPEED: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_BROWSERBASE: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_GA4: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_BUSINESS_PROFILE: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_LOCAL_FALCON: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_SIMILARWEB: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_GOOGLE_TRENDS: z.enum(["true", "false"]).optional(),
+	})
+	.passthrough();
+
+function parseAllowedDomains(value) {
+	if (!value) return [];
+	const domains = value
+		.split(",")
+		.map((domain) => domain.trim())
+		.filter(Boolean);
+	for (const domain of domains) {
+		if (!DEFAULT_BUDGETS.allowedDomains.includes(domain)) {
+			throw new Error(
+				`Browser research domain is not approved by versioned policy: ${domain}`,
+			);
+		}
+	}
+	return domains;
+}
+
+export function loadConfig(env = process.env) {
+	const raw = envSchema.parse(env);
+	return Object.freeze({
+		environment: raw.SEO_AGENT_ENV ?? "development",
+		repository:
+			raw.SEO_AGENT_REPOSITORY ?? "byronwade/wadesplumbingandseptic.com",
+		siteUrl:
+			raw.SEO_AGENT_SITE_URL ?? "https://www.wadesplumbingandseptic.com/",
+		browserResearch: {
+			enabled: raw.SEO_AGENT_BROWSER_RESEARCH_ENABLED === "true",
+			allowedDomains: parseAllowedDomains(
+				raw.SEO_AGENT_BROWSER_ALLOWED_DOMAINS,
+			),
+		},
+		integrationFlags: Object.freeze({
+			aiGateway: raw.SEO_AGENT_ENABLE_AI_GATEWAY === "true",
+			github: raw.SEO_AGENT_ENABLE_GITHUB === "true",
+			vercel: raw.SEO_AGENT_ENABLE_VERCEL === "true",
+			searchConsole: raw.SEO_AGENT_ENABLE_SEARCH_CONSOLE === "true",
+			pageSpeed: raw.SEO_AGENT_ENABLE_PAGESPEED === "true",
+			browserbase: raw.SEO_AGENT_ENABLE_BROWSERBASE === "true",
+			ga4: raw.SEO_AGENT_ENABLE_GA4 === "true",
+			businessProfile: raw.SEO_AGENT_ENABLE_BUSINESS_PROFILE === "true",
+			localFalcon: raw.SEO_AGENT_ENABLE_LOCAL_FALCON === "true",
+			similarweb: raw.SEO_AGENT_ENABLE_SIMILARWEB === "true",
+			googleTrends: raw.SEO_AGENT_ENABLE_GOOGLE_TRENDS === "true",
+		}),
+		liveReads: Object.freeze({
+			humanApproved: raw.SEO_AGENT_LIVE_READS_APPROVED === "true",
+			approvedRunId: raw.SEO_AGENT_LIVE_READS_APPROVED_RUN_ID,
+		}),
+		publishing: Object.freeze({
+			mutationMode: raw.SEO_AGENT_MUTATION_MODE ?? "disabled",
+			humanApproved: raw.SEO_AGENT_PUBLISHING_HUMAN_APPROVED === "true",
+			integrationTestEnabled:
+				raw.SEO_AGENT_PUBLISHING_INTEGRATION_TEST === "true",
+		}),
+		blob: Object.freeze({
+			enabled: raw.SEO_AGENT_BLOB_ENABLED === "true",
+			archiveApproved: raw.SEO_AGENT_BLOB_ARCHIVE_APPROVED === "true",
+			approvedRunId: raw.SEO_AGENT_BLOB_APPROVED_RUN_ID,
+			prefix: raw.SEO_AGENT_BLOB_PREFIX ?? "wades-eve-seo-agent/v1",
+		}),
+		credentials: Object.freeze({
+			searchConsoleAccessToken: raw.SEARCH_CONSOLE_ACCESS_TOKEN,
+			pageSpeedApiKey: raw.PAGESPEED_API_KEY,
+			githubReadToken: raw.GITHUB_READ_TOKEN,
+			vercelReadToken: raw.VERCEL_READ_TOKEN,
+			vercelProjectId: raw.VERCEL_READ_PROJECT_ID,
+			vercelTeamId: raw.VERCEL_READ_TEAM_ID,
+			aiGatewayApiKey: raw.AI_GATEWAY_API_KEY,
+			vercelOidcToken: raw.VERCEL_OIDC_TOKEN,
+			browserbaseApiKey: raw.BROWSERBASE_API_KEY,
+			browserbaseProjectId: raw.BROWSERBASE_PROJECT_ID,
+			ga4AccessToken: raw.GA4_ACCESS_TOKEN,
+			ga4PropertyId: raw.GA4_PROPERTY_ID,
+			businessProfileAccessToken: raw.GOOGLE_BUSINESS_PROFILE_ACCESS_TOKEN,
+			businessProfileLocationId: raw.GOOGLE_BUSINESS_PROFILE_LOCATION_ID,
+			localFalconApiKey: raw.LOCAL_FALCON_API_KEY,
+			similarwebApiKey: raw.SIMILARWEB_API_KEY,
+			googleTrendsAccessToken: raw.GOOGLE_TRENDS_ACCESS_TOKEN,
+			blobReadWriteToken: raw.BLOB_READ_WRITE_TOKEN,
+		}),
+	});
+}
+
+export function assertDeployedSidecarReadiness(config) {
+	if (config.environment !== "production") {
+		throw new Error(
+			"Deployed sidecar readiness requires SEO_AGENT_ENV=production.",
+		);
+	}
+	if (
+		!config.credentials.aiGatewayApiKey &&
+		!config.credentials.vercelOidcToken
+	) {
+		throw new Error(
+			"Deployed sidecar readiness requires Vercel OIDC or AI_GATEWAY_API_KEY.",
+		);
+	}
+	return config;
+}
+
+export function summarizeConfig(config) {
+	return Object.freeze({
+		environment: config.environment,
+		repository: config.repository,
+		site_url: config.siteUrl,
+		browser_research_enabled: config.browserResearch.enabled,
+		browser_allowed_domains: config.browserResearch.allowedDomains,
+		integration_flags: config.integrationFlags,
+		live_reads_approval_configured: Boolean(
+			config.liveReads.humanApproved && config.liveReads.approvedRunId,
+		),
+		publishing: config.publishing,
+		blob: Object.freeze({
+			enabled: config.blob.enabled,
+			archive_approval_configured: Boolean(
+				config.blob.archiveApproved && config.blob.approvedRunId,
+			),
+			prefix: config.blob.prefix,
+			credential_configured: Boolean(config.credentials.blobReadWriteToken),
+		}),
+		integrations: Object.freeze({
+			search_console: Boolean(config.credentials.searchConsoleAccessToken),
+			pagespeed: Boolean(config.credentials.pageSpeedApiKey),
+			github: Boolean(config.credentials.githubReadToken),
+			vercel: Boolean(
+				config.credentials.vercelReadToken &&
+				config.credentials.vercelProjectId,
+			),
+			ai_gateway: Boolean(
+				config.credentials.aiGatewayApiKey ||
+				config.credentials.vercelOidcToken,
+			),
+			browserbase: Boolean(
+				config.credentials.browserbaseApiKey &&
+				config.credentials.browserbaseProjectId,
+			),
+			ga4: Boolean(
+				config.credentials.ga4AccessToken && config.credentials.ga4PropertyId,
+			),
+			business_profile: Boolean(
+				config.credentials.businessProfileAccessToken &&
+				config.credentials.businessProfileLocationId,
+			),
+			local_falcon: Boolean(config.credentials.localFalconApiKey),
+			similarweb: Boolean(config.credentials.similarwebApiKey),
+			google_trends: Boolean(config.credentials.googleTrendsAccessToken),
+		}),
+	});
+}
