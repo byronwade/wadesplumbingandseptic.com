@@ -21,7 +21,7 @@ The archive is fail-closed and is not automatic: it requires an enabled sidecar-
 
 ## Build and Deployment Convention
 
-Set the one Vercel project framework to Services. The repository-root `vercel.json` declares `site` at `/` and `eve_seo_agent` at `/_internal/eve`; each service installs from its own root and invokes its own build. The Eve build produces Vercel Build Output API artifacts and native schedule metadata. Do not add `outputDirectory` or `crons`, because that would override or duplicate Eve-owned build output and schedules.
+Set the one Vercel project framework to Services. The repository-root `vercel.json` declares independently built `site` and `eve_seo_agent` services, then exposes them with top-level rewrites: Eve only under `/_internal/eve`, and the public site as the catch-all. Eve also transforms `/_internal/eve/*` so its handlers observe `/api/*`. Each service installs from its own root and invokes its own build. The Eve build produces Vercel Build Output API artifacts and native schedule metadata. Do not add `outputDirectory`, `crons`, legacy `routePrefix`, or service-level `maxDuration`, because those override or conflict with the current Services model and Eve-owned metadata.
 
 Use preview deployments for sidecar changes. Normal Vercel Git behavior may deploy the sidecar after a human-approved merge to its configured production branch, but the agent never invokes deployment, promotion, or merge. No project linking or deployment command is part of local verification.
 

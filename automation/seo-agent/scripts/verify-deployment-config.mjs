@@ -49,16 +49,76 @@ if (!sidecarService || !siteService)
 	);
 if (sidecarService?.root !== "automation/seo-agent")
 	failures.push("Eve service must use automation/seo-agent as its root.");
-if (sidecarService?.routePrefix !== "/_internal/eve")
+if (siteService?.root !== "." || siteService?.framework !== "nextjs")
+	failures.push("Site service must own the repository root as Next.js.");
+if (
+	"routePrefix" in (sidecarService ?? {}) ||
+	"routePrefix" in (siteService ?? {})
+)
 	failures.push(
-		"Eve service must stay under the reserved internal route prefix.",
+		"routePrefix belongs to experimentalServices; current services routing must use top-level rewrites.",
+	);
+if (
+	"maxDuration" in (sidecarService ?? {}) ||
+	"maxDuration" in (siteService ?? {})
+)
+	failures.push(
+		"maxDuration is not a service-level field; leave runtime limits to Eve Build Output metadata.",
 	);
 if (sidecarService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
 	failures.push("Eve service must install only its local lockfile.");
 if (sidecarService?.buildCommand !== "npm run build")
 	failures.push("Eve service must invoke its own build.");
-if (siteService?.root !== "." || siteService?.routePrefix !== "/")
-	failures.push("Site service must own the root route.");
+if (siteService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
+	failures.push("Site service must install only its local lockfile.");
+if (siteService?.buildCommand !== "npm run build")
+	failures.push("Site service must invoke its own build.");
+
+const rewrites = Array.isArray(vercelConfig.rewrites)
+	? vercelConfig.rewrites
+	: [];
+const eveRewrite = rewrites.find(
+	(rule) =>
+		rule?.source === "/_internal/eve/(.*)" &&
+		rule?.destination?.service === "eve_seo_agent" &&
+		rule?.destination?.path === "/$1",
+);
+const siteRewrite = rewrites.find(
+	(rule) => rule?.source === "/(.*)" && rule?.destination?.service === "site",
+);
+if (!eveRewrite)
+	failures.push(
+		"Top-level rewrites must expose Eve only under /_internal/eve and map path /$1.",
+	);
+if (!siteRewrite)
+	failures.push(
+		"Top-level rewrites must send remaining public traffic to site.",
+	);
+if (
+	eveRewrite &&
+	siteRewrite &&
+	rewrites.indexOf(eveRewrite) > rewrites.indexOf(siteRewrite)
+)
+	failures.push(
+		"Eve rewrite must be evaluated before the site catch-all rewrite.",
+	);
+
+const evePathTransform = (sidecarService?.routes ?? []).find(
+	(route) =>
+		route?.src === "/_internal/eve/(.*)" &&
+		Array.isArray(route.transforms) &&
+		route.transforms.some(
+			(transform) =>
+				transform?.type === "request.path" &&
+				transform?.op === "set" &&
+				transform?.args === "/$1",
+		),
+);
+if (!evePathTransform)
+	failures.push(
+		"Eve service routes must transform /_internal/eve/* to the path Eve handlers observe.",
+	);
+
 if ("crons" in vercelConfig || "crons" in (sidecarService ?? {}))
 	failures.push(
 		"Eve schedules emit Vercel Cron metadata; do not duplicate them in vercel.json.",
@@ -87,5 +147,5 @@ if (failures.length)
 		`Sidecar deployment configuration failed:\n- ${failures.join("\n- ")}`,
 	);
 console.log(
-	"Vercel Services configuration verified (one project; independently built site and Eve services; Eve-owned Cron/output metadata).",
+	"Vercel Services configuration verified (one project; independently built site and Eve services; rewrite-routed /_internal/eve; Eve-owned Cron/output metadata).",
 );
