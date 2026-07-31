@@ -50,3 +50,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Eve SEO Agent
+
+- Before SEO-agent work, read `docs/seo-agent/BUILD_SPEC.md`, `EXECUTION_PLAN.md`, `DEFINITION_OF_DONE.md`, `MANUAL_SETUP.md`, `SOURCE_POLICY.md`, and `IMPLEMENTATION_STATUS.md`.
+- Keep the Eve runtime in `automation/seo-agent`; it has no public UI, CMS, or application database. Git is its durable state and evidence record.
+- Never write directly to `main`, force-push, merge, deploy, or enable production mutation. Draft PRs require explicit human approval.
+- Keep the public site and Eve service isolated. Root-site runtime code must not import sidecar code or agent environment values.
+- Run relevant deterministic checks and record commands, evidence truth states, failures, blockers, and next action in `IMPLEMENTATION_STATUS.md`. Never describe a fixture result as a live integration.

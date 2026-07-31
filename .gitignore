@@ -18,3 +18,14 @@ scripts/__pycache__/
 # evlog local drains + map artifact
 .evlog/
 evlog.map.json
+
+# Eve SEO agent local build output and non-secret verification artifacts
+automation/seo-agent/.eve/
+automation/seo-agent/.output/
+automation/seo-agent/.eve-stale-local/
+automation/seo-agent/build-profile.json
+automation/seo-agent/.env*
+!automation/seo-agent/.env.example
+automation/seo-agent/.vercel/
+.seo-agent-artifacts/
+/artifacts/verification/

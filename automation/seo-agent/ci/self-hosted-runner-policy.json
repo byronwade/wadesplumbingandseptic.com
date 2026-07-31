@@ -1,0 +1,25 @@
+{
+	"schema_version": "1.0",
+	"classification": "MOCK_VERIFIED",
+	"runner_labels": ["self-hosted", "linux", "x64", "wades-seo-offline"],
+	"node_version": "25.9.0",
+	"npm_version": "11.12.1",
+	"network_policy": "Host firewall blocks outbound traffic except the GitHub Actions control plane.",
+	"prohibited_environment_variables": [
+		"AI_GATEWAY_API_KEY",
+		"CRON_SECRET",
+		"GITHUB_READ_TOKEN",
+		"SEO_AGENT_APPROVED_RUN_ID",
+		"SEO_AGENT_LIVE_PROBE_APPROVED",
+		"VERCEL_OIDC_TOKEN",
+		"VERCEL_READ_TOKEN",
+		"VERCEL_TOKEN"
+	],
+	"required_runner_controls": [
+		"ephemeral checkout",
+		"no browser profile",
+		"no Vercel, GitHub, connector, or production credentials",
+		"offline npm cache contains only reviewed lockfile dependencies",
+		"runner is not used for pull_request or pull_request_target events"
+	]
+}

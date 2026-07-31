@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "classification": "MOCK_VERIFIED",
+  "facts": [],
+  "pending_review": [
+    {
+      "id": "candidate-santa-cruz-county-service-area",
+      "kind": "service_area",
+      "value": "Santa Cruz County",
+      "source_path": "wordpress/wp-content/themes/wades-plumbing-and-septic/template-landing-core-plumbing.php",
+      "review_status": "PENDING_HUMAN_APPROVAL",
+      "reason": "Repository text is not itself publication approval."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "classification": "MOCK_VERIFIED",
+  "source_paths": [],
+  "rules": [],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "NO_NEXT_REDIRECT_MAP_DECLARED",
+      "source_path": "next.config.ts"
+    }
+  ]
+}

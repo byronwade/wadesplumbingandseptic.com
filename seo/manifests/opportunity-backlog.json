@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "classification": "LIVE_VERIFIED",
+  "opportunities": [
+    {
+      "id": "santa-cruz-county-onsite-wastewater-intent-research",
+      "state": "RESEARCH_ONLY_PENDING_HUMAN_APPROVAL",
+      "intent_hypotheses": [
+        "maintenance",
+        "informational",
+        "service"
+      ],
+      "evidence_ids": [
+        "2026-07-30-santa-cruz-county-public-demand"
+      ],
+      "existing_page_assessment": "PENDING_REPOSITORY_OWNER_REVIEW",
+      "query_owner": null,
+      "new_url_allowed": false,
+      "publication_blocker": "Public County evidence does not establish Wade's service availability, approved service area, demand volume, or a canonical page owner."
+    },
+    {
+      "id": "santa-cruz-county-plumbing-permit-intent-research",
+      "state": "RESEARCH_ONLY_PENDING_HUMAN_APPROVAL",
+      "intent_hypotheses": [
+        "informational",
+        "service"
+      ],
+      "evidence_ids": [
+        "2026-07-30-santa-cruz-county-public-demand"
+      ],
+      "existing_page_assessment": "PENDING_REPOSITORY_OWNER_REVIEW",
+      "query_owner": null,
+      "new_url_allowed": false,
+      "publication_blocker": "Permit context cannot be converted into legal advice, a new page, or a business claim without current fact review and human approval."
+    }
+  ]
+}

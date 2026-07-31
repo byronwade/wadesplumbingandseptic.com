@@ -1,0 +1,63 @@
+name: SEO agent offline gate
+
+on:
+  push:
+    branches:
+      - "feat/**"
+      - "fix/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  verify:
+    name: Credential-free offline verification
+    runs-on: [self-hosted, linux, x64, wades-seo-offline]
+    timeout-minutes: 20
+    env:
+      SEO_AGENT_OFFLINE_CI: "true"
+    steps:
+      - name: Checkout trusted branch ref
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          clean: true
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Verify isolated runner policy
+        run: node automation/seo-agent/scripts/verify-self-hosted-runner.mjs
+
+      - name: Run deterministic root-site SEO validation
+        run: npm run seo:check
+
+      - name: Install exact sidecar dependency graph from offline cache
+        working-directory: automation/seo-agent
+        run: npm ci --offline --ignore-scripts --omit=peer
+
+      - name: Run deterministic sidecar verification
+        run: |
+          set -o pipefail
+          started_at="$(date +%s)"
+          set +e
+          npm run seo-agent:verify 2>&1 | tee "$RUNNER_TEMP/seo-agent-offline.log"
+          verification_exit="${PIPESTATUS[0]}"
+          set -e
+          finished_at="$(date +%s)"
+          node automation/seo-agent/scripts/record-offline-provenance.mjs --exit-code="$verification_exit" --duration-seconds="$((finished_at - started_at))"
+          exit "$verification_exit"
+
+      - name: Publish redacted offline evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: seo-agent-offline-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/seo-agent-offline.log
+            ${{ runner.temp }}/seo-agent-offline-provenance.json
+          if-no-files-found: warn
+          retention-days: 14
