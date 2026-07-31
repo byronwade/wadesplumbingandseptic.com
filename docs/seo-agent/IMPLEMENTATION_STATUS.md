@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 24 — Vercel Services Config Repair (2026-07-31)
+
+- State: COMPLETE for static/offline repair plus site-only deploy recovery (`MOCK_VERIFIED` offline; live Services still blocked). Production and preview deployments for `main` commits `cd3bd8d` and `bd4b1c1` failed immediately after the Services topology landed.
+- Root cause: root `vercel.json` mixed the current `services` model with legacy `routePrefix` and service-level `maxDuration`. Against `https://openapi.vercel.sh/vercel.json`, those fields are rejected (`additionalProperties` errors). Current Services routing requires top-level `rewrites` with `{ "service": "..." }` destinations, not `routePrefix`.
+- First repair attempt: a schema-valid Services `vercel.json` with rewrite routing was pushed on this branch (`6897028`). Local site and Eve builds both succeeded, but the Vercel preview for that commit still failed after about `1.5` minutes. Protected build logs remain unread (`BLOCKED_MISSING_CREDENTIALS`: no Vercel token/MCP auth in this environment). Manual setup already recorded that Services availability was not verified on the linked project.
+- Recovery change: keep root `vercel.json` site-only (schema only) so the public Next.js project can deploy again. Store the corrected Services topology in `docs/seo-agent/vercel.services.example.json` and teach `verify-deployment-config.mjs` to validate that target while forbidding an unverified live `services` block. Promote the example to root only after an owner records `LIVE_VERIFIED` Services access. No provider call, content mutation, merge, or production configuration change is performed by this agent turn.
+- Commands: with Node `v24.18.1`, OpenAPI schema validation of the repaired Services example reported `0` errors; local `npm run build` and `npm --prefix automation/seo-agent run build` both exit `0`; `npm --prefix automation/seo-agent run verify` / `test` (`97/97`) / `verify:offline` exit `0`. After the site-only recovery commit `c9218fd`, Vercel preview deployment `5698679011` completed successfully.
+- Evidence truth states: `MOCK_VERIFIED` for local schema/config alignment and offline gates; `FAILED` for the schema-valid Services preview deploy on `6897028` without readable logs; `LIVE_VERIFIED` for site-only preview deploy success on `c9218fd` (`https://wadesplumbingandseptic-3t5vh5ak2-byron-wade.vercel.app`); `BLOCKED_MISSING_CREDENTIALS` for Vercel log inspection and Services project access proof.
+- Next exact action: merge this recovery PR through normal human review so production can deploy again. Separately, an owner should enable/prove Services access before promoting `vercel.services.example.json` to root.
+
 ## Phase 23 — Post-Merge Build and Formatting Repair (2026-07-31)
 
 - State: COMPLETE for the sidecar repair and local production builds (`MOCK_VERIFIED`). GitHub merged the Eve control-plane port as `origin/main` commit `cd3bd8d198f4e8659e695b986462ed9443498a6c` (PR #77). No deployment, provider call, content mutation, GitHub write, or production configuration change occurred during this verification.

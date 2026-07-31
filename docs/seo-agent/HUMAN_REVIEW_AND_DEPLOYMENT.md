@@ -37,7 +37,7 @@ The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the servi
 
 ## Vercel Sidecar, Eve, and AI Gateway
 
-1. [ ] Request/confirm Vercel Services availability, then link one Vercel project at the repository root and select the Services framework. Keep the committed root `vercel.json`; do not create a second sidecar project.
+1. [ ] Request/confirm Vercel Services availability, then link one Vercel project at the repository root and select the Services framework. Until that is proven, keep root `vercel.json` site-only. After proof, promote `docs/seo-agent/vercel.services.example.json` to root `vercel.json` (rewrite-routed `site` + `eve_seo_agent`); do not create a second sidecar project.
 2. [ ] Confirm `site` uses root `.` at `/`, while `eve_seo_agent` uses `automation/seo-agent` at `/_internal/eve`; each must use `npm ci --ignore-scripts --omit=peer` and `npm run build` from its own root.
 3. [ ] Set the project's production branch to `main`; do not deploy with `vercel --prod` as an agent action.
 4. [ ] Configure deployment protection for previews and record how the human reviewer can access a preview without granting a bypass token to the sidecar.

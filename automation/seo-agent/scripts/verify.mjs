@@ -22,6 +22,7 @@ const required = [
 	"automation/seo-agent/package.json",
 	"automation/seo-agent/package-lock.json",
 	"vercel.json",
+	"docs/seo-agent/vercel.services.example.json",
 	"automation/seo-agent/.env.example",
 	"automation/seo-agent/.prettierignore",
 	"automation/seo-agent/eslint.config.mjs",

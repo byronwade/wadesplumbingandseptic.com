@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
@@ -6,9 +6,13 @@ const repoRoot = resolve(root, "../..");
 const packageJson = JSON.parse(
 	readFileSync(resolve(root, "package.json"), "utf8"),
 );
-const vercelConfig = JSON.parse(
-	readFileSync(resolve(repoRoot, "vercel.json"), "utf8"),
+const rootVercelPath = resolve(repoRoot, "vercel.json");
+const servicesExamplePath = resolve(
+	repoRoot,
+	"docs/seo-agent/vercel.services.example.json",
 );
+const vercelConfig = JSON.parse(readFileSync(rootVercelPath, "utf8"));
+const servicesExample = JSON.parse(readFileSync(servicesExamplePath, "utf8"));
 const envExample = readFileSync(resolve(root, ".env.example"), "utf8");
 const failures = [];
 
@@ -41,35 +45,50 @@ for (const dependency of [
 }
 if (vercelConfig.$schema !== "https://openapi.vercel.sh/vercel.json")
 	failures.push("vercel.json must use the Vercel schema.");
-const sidecarService = vercelConfig.services?.eve_seo_agent;
-const siteService = vercelConfig.services?.site;
-if (!sidecarService || !siteService)
+if (servicesExample.$schema !== "https://openapi.vercel.sh/vercel.json")
 	failures.push(
-		"root Vercel Services configuration must declare site and Eve services.",
+		"docs/seo-agent/vercel.services.example.json must use the Vercel schema.",
 	);
-if (sidecarService?.root !== "automation/seo-agent")
-	failures.push("Eve service must use automation/seo-agent as its root.");
-if (sidecarService?.routePrefix !== "/_internal/eve")
+if (existsSync(resolve(root, "vercel.json")))
 	failures.push(
-		"Eve service must stay under the reserved internal route prefix.",
+		"Do not keep a nested automation/seo-agent/vercel.json; root owns deploy topology.",
 	);
-if (sidecarService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
-	failures.push("Eve service must install only its local lockfile.");
-if (sidecarService?.buildCommand !== "npm run build")
-	failures.push("Eve service must invoke its own build.");
-if (siteService?.root !== "." || siteService?.routePrefix !== "/")
-	failures.push("Site service must own the root route.");
-if ("crons" in vercelConfig || "crons" in (sidecarService ?? {}))
+
+const activeServicesConfig =
+	vercelConfig.services && typeof vercelConfig.services === "object"
+		? vercelConfig
+		: null;
+
+if (activeServicesConfig) {
 	failures.push(
-		"Eve schedules emit Vercel Cron metadata; do not duplicate them in vercel.json.",
+		...validateServicesTopology(activeServicesConfig, "root vercel.json"),
 	);
-if (
-	"outputDirectory" in vercelConfig ||
-	"outputDirectory" in (sidecarService ?? {})
-)
+} else {
+	if ("services" in vercelConfig || "rewrites" in vercelConfig)
+		failures.push(
+			"Site-only root vercel.json must omit services and service rewrites until Services access is LIVE_VERIFIED.",
+		);
+	const disallowedRootKeys = [
+		"buildCommand",
+		"installCommand",
+		"outputDirectory",
+		"framework",
+		"crons",
+	];
+	for (const key of disallowedRootKeys) {
+		if (key in vercelConfig)
+			failures.push(
+				`Site-only root vercel.json must not set ${key}; let the Next.js project defaults own the public site.`,
+			);
+	}
 	failures.push(
-		"Eve determines the Vercel Build Output API directory; do not override it.",
+		...validateServicesTopology(
+			servicesExample,
+			"docs/seo-agent/vercel.services.example.json",
+		),
 	);
+}
+
 for (const name of [
 	"SEO_AGENT_ENV",
 	"AI_GATEWAY_API_KEY",
@@ -86,6 +105,119 @@ if (failures.length)
 	throw new Error(
 		`Sidecar deployment configuration failed:\n- ${failures.join("\n- ")}`,
 	);
-console.log(
-	"Vercel Services configuration verified (one project; independently built site and Eve services; Eve-owned Cron/output metadata).",
-);
+
+if (activeServicesConfig) {
+	console.log(
+		"Vercel Services configuration verified (one project; independently built site and Eve services; rewrite-routed /_internal/eve; Eve-owned Cron/output metadata).",
+	);
+} else {
+	console.log(
+		"Site-only root deploy verified; Services topology remains MOCK_VERIFIED in docs/seo-agent/vercel.services.example.json until owner LIVE_VERIFIED access exists.",
+	);
+}
+
+/**
+ * @param {Record<string, unknown>} config
+ * @param {string} label
+ * @returns {string[]}
+ */
+function validateServicesTopology(config, label) {
+	/** @type {string[]} */
+	const localFailures = [];
+	const sidecarService = config.services?.eve_seo_agent;
+	const siteService = config.services?.site;
+	if (!sidecarService || !siteService)
+		localFailures.push(
+			`${label} must declare site and Eve services for the target Services topology.`,
+		);
+	if (sidecarService?.root !== "automation/seo-agent")
+		localFailures.push(
+			`${label}: Eve service must use automation/seo-agent as its root.`,
+		);
+	if (siteService?.root !== "." || siteService?.framework !== "nextjs")
+		localFailures.push(
+			`${label}: Site service must own the repository root as Next.js.`,
+		);
+	if (
+		"routePrefix" in (sidecarService ?? {}) ||
+		"routePrefix" in (siteService ?? {})
+	)
+		localFailures.push(
+			`${label}: routePrefix belongs to experimentalServices; current services routing must use top-level rewrites.`,
+		);
+	if (
+		"maxDuration" in (sidecarService ?? {}) ||
+		"maxDuration" in (siteService ?? {})
+	)
+		localFailures.push(
+			`${label}: maxDuration is not a service-level field; leave runtime limits to Eve Build Output metadata.`,
+		);
+	if (sidecarService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
+		localFailures.push(
+			`${label}: Eve service must install only its local lockfile.`,
+		);
+	if (sidecarService?.buildCommand !== "npm run build")
+		localFailures.push(`${label}: Eve service must invoke its own build.`);
+	if (siteService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
+		localFailures.push(
+			`${label}: Site service must install only its local lockfile.`,
+		);
+	if (siteService?.buildCommand !== "npm run build")
+		localFailures.push(`${label}: Site service must invoke its own build.`);
+
+	const rewrites = Array.isArray(config.rewrites) ? config.rewrites : [];
+	const eveRewrite = rewrites.find(
+		(rule) =>
+			rule?.source === "/_internal/eve/(.*)" &&
+			rule?.destination?.service === "eve_seo_agent" &&
+			rule?.destination?.path === "/$1",
+	);
+	const siteRewrite = rewrites.find(
+		(rule) => rule?.source === "/(.*)" && rule?.destination?.service === "site",
+	);
+	if (!eveRewrite)
+		localFailures.push(
+			`${label}: top-level rewrites must expose Eve only under /_internal/eve and map path /$1.`,
+		);
+	if (!siteRewrite)
+		localFailures.push(
+			`${label}: top-level rewrites must send remaining public traffic to site.`,
+		);
+	if (
+		eveRewrite &&
+		siteRewrite &&
+		rewrites.indexOf(eveRewrite) > rewrites.indexOf(siteRewrite)
+	)
+		localFailures.push(
+			`${label}: Eve rewrite must be evaluated before the site catch-all rewrite.`,
+		);
+
+	const evePathTransform = (sidecarService?.routes ?? []).find(
+		(route) =>
+			route?.src === "/_internal/eve/(.*)" &&
+			Array.isArray(route.transforms) &&
+			route.transforms.some(
+				(transform) =>
+					transform?.type === "request.path" &&
+					transform?.op === "set" &&
+					transform?.args === "/$1",
+			),
+	);
+	if (!evePathTransform)
+		localFailures.push(
+			`${label}: Eve service routes must transform /_internal/eve/* to the path Eve handlers observe.`,
+		);
+
+	if ("crons" in config || "crons" in (sidecarService ?? {}))
+		localFailures.push(
+			`${label}: Eve schedules emit Vercel Cron metadata; do not duplicate them.`,
+		);
+	if (
+		"outputDirectory" in config ||
+		"outputDirectory" in (sidecarService ?? {})
+	)
+		localFailures.push(
+			`${label}: Eve determines the Vercel Build Output API directory; do not override it.`,
+		);
+	return localFailures;
+}
