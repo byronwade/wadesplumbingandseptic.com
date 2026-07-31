@@ -7,8 +7,9 @@ category: Septic
 order: 8
 image: /images/work/engineered-retaining-wall.webp
 imageAlt: Engineered septic site work
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Septic tank design is an essential service for homeowners in Santa Cruz County, California, who seek efficient and environmentally-friendly waste management solutions. At Wade's Plumbing & Septic, we specialize in creating custom septic systems tailored to the unique needs of each site. Our licensed experts consider soil conditions, topography, and environmental constraints to ensure optimal functionality and compliance with local regulations.
 
 ## Understanding Septic Tank Design and Engineering
@@ -44,10 +45,10 @@ Proactive maintenance is key to avoiding costly repairs. Regular [septic tank in
 
 ## Frequently Asked Questions
 
-**What types of septic systems do you design?** 
+**What types of septic systems do you design?**
 We design conventional, alternative, and advanced treatment systems tailored to site-specific needs.
 
-**How often should a septic system be inspected?** 
+**How often should a septic system be inspected?**
 Regular inspections are recommended every 1-3 years to ensure optimal performance and compliance.
 
 To learn more about our septic tank design services and how we can assist you, [contact Wade's Plumbing & Septic](/contact) today. Our team is ready to provide the expertise and support you need to ensure a reliable and efficient septic system for your property in Santa Cruz County, California.
@@ -70,7 +71,7 @@ Custom Septic Solutions
 
 Tailored septic systems for efficient and environmentally-friendly waste management.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ## Trusted Septic Tank Design in Santa Cruz County, CA
 

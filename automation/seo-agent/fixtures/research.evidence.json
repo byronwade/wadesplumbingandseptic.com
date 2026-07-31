@@ -1,28 +1,45 @@
 [
-  {
-    "source": "search-console",
-    "scope": "fixture-query-performance",
-    "classification": "MOCK_VERIFIED",
-    "sourceUrlOrTool": "fixture:search-console-query",
-    "payload": {
-      "rows": [
-        { "query_cluster": "septic pumping santa cruz", "clicks": 0, "impressions": 0, "note": "Synthetic fixture; not live demand." },
-        { "query_cluster": "emergency plumber santa cruz", "clicks": 0, "impressions": 0, "note": "Synthetic fixture; not live demand." }
-      ]
-    }
-  },
-  {
-    "source": "pagespeed",
-    "scope": "fixture-performance-audit",
-    "classification": "MOCK_VERIFIED",
-    "sourceUrlOrTool": "fixture:pagespeed-mobile",
-    "payload": { "performance": 0.9, "seo": 1, "note": "Synthetic fixture; not a live PageSpeed result." }
-  },
-  {
-    "source": "browser-research",
-    "scope": "fixture-santa-cruz-county-intent",
-    "classification": "MOCK_VERIFIED",
-    "sourceUrlOrTool": "fixture:public-research",
-    "payload": { "finding": "Intent classification is intentionally deferred until approved live/public research.", "note": "No external research claim is made." }
-  }
+	{
+		"source": "search-console",
+		"scope": "fixture-query-performance",
+		"classification": "MOCK_VERIFIED",
+		"sourceUrlOrTool": "fixture:search-console-query",
+		"payload": {
+			"rows": [
+				{
+					"query_cluster": "septic pumping santa cruz",
+					"clicks": 0,
+					"impressions": 0,
+					"note": "Synthetic fixture; not live demand."
+				},
+				{
+					"query_cluster": "emergency plumber santa cruz",
+					"clicks": 0,
+					"impressions": 0,
+					"note": "Synthetic fixture; not live demand."
+				}
+			]
+		}
+	},
+	{
+		"source": "pagespeed",
+		"scope": "fixture-performance-audit",
+		"classification": "MOCK_VERIFIED",
+		"sourceUrlOrTool": "fixture:pagespeed-mobile",
+		"payload": {
+			"performance": 0.9,
+			"seo": 1,
+			"note": "Synthetic fixture; not a live PageSpeed result."
+		}
+	},
+	{
+		"source": "browser-research",
+		"scope": "fixture-santa-cruz-county-intent",
+		"classification": "MOCK_VERIFIED",
+		"sourceUrlOrTool": "fixture:public-research",
+		"payload": {
+			"finding": "Intent classification is intentionally deferred until approved live/public research.",
+			"note": "No external research claim is made."
+		}
+	}
 ]

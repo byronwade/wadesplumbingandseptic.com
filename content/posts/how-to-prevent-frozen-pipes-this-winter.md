@@ -1,24 +1,27 @@
 ---
 title: Prevent Frozen Pipes This Winter in Santa Cruz County, CA
-description: Protect your home from costly water damage with these essential tips
- for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
- properly insulate them, and maintain adequate heating to avoid expensive emergency
- repairs.
+description:
+  Protect your home from costly water damage with these essential tips
+  for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
+  properly insulate them, and maintain adequate heating to avoid expensive emergency
+  repairs.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
-- santa cruz plumbing
-- plumbing maintenance
-- frozen pipes
-- winter plumbing tips
-- pipe burst prevention
-- home plumbing protection
-- cold weather plumbing
-- prevent pipe freezing
-- plumbing tips santa cruz
+  - santa cruz plumbing
+  - plumbing maintenance
+  - frozen pipes
+  - winter plumbing tips
+  - pipe burst prevention
+  - home plumbing protection
+  - cold weather plumbing
+  - prevent pipe freezing
+  - plumbing tips santa cruz
 image: /images/work/new-construction-rough-in.webp
 imageAlt: "New construction plumbing rough-in"
----Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and expensive repairs. Preventing frozen pipes is much easier and less costly than dealing with the aftermath of a pipe burst. Here's how to protect your home's plumbing during cold weather.
+---
+
+Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and expensive repairs. Preventing frozen pipes is much easier and less costly than dealing with the aftermath of a pipe burst. Here's how to protect your home's plumbing during cold weather.
 
 ![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 

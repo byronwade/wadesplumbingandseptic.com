@@ -1,6 +1,6 @@
 ---
 title: Day Valley, CA Plumbing & Septic Services
-description: 'Plumbing and septic for Day Valley, CA: equestrian lots and oak hills between Aptos and the Santa Cruz Mountains. Wade''s. 831.225.4344.'
+description: "Plumbing and septic for Day Valley, CA: equestrian lots and oak hills between Aptos and the Santa Cruz Mountains. Wade's. 831.225.4344."
 eyebrow: Day Valley, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp

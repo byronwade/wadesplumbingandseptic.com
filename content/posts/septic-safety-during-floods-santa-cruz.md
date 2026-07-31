@@ -1,10 +1,10 @@
 ---
-title: 'Flood-Proof Your Septic System in Santa Cruz County, CA'
+title: "Flood-Proof Your Septic System in Santa Cruz County, CA"
 description: >-
   Did you know? Proper septic maintenance can turn the tides on flood damage,
   keeping your home safe and dry!
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
@@ -110,7 +110,7 @@ Stay Prepared
 
 Ensure your septic system remains safe and functional during flood conditions with our expert services.
 
-[Call Us](tel:+18312254344) 
+[Call Us](tel:+18312254344)
 
 ## Serving Santa Cruz County, CA
 
@@ -124,11 +124,11 @@ For a complete overview of our service areas, please visit our [main service-are
 
 ★★★★★ 5-star rating from satisfied customers
 
-> "Wade's Plumbing & Septic was a lifesaver when our septic system needed urgent attention. Their team was knowledgeable and efficient!" (Sarah, Santa Cruz) 
+> "Wade's Plumbing & Septic was a lifesaver when our septic system needed urgent attention. Their team was knowledgeable and efficient!" (Sarah, Santa Cruz)
 
-> "Fast, reliable, and professional service. I couldn't be happier with the results!" (Mike, Watsonville) 
+> "Fast, reliable, and professional service. I couldn't be happier with the results!" (Mike, Watsonville)
 
-> "The technicians were prompt and addressed all our concerns with great expertise." (Emily, Scotts Valley) 
+> "The technicians were prompt and addressed all our concerns with great expertise." (Emily, Scotts Valley)
 
 Licensed Contractor: C-42
 

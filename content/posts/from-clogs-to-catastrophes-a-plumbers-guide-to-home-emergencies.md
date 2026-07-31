@@ -4,7 +4,7 @@ description: >-
   Clogged drains are one of the most common plumbing emergencies that homeowners
   face. They can occur in sinks, showers, toilets, and other plumbing.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
   - santa cruz county
   - local plumbing experts
@@ -90,15 +90,24 @@ Plumbing emergencies can be stressful and costly, but with proper prevention and
 
 ## FAQs
 
- 1. What should I do if my toilet overflows? 
+1.  What should I do if my toilet overflows?
+
 - Shut off the water supply to the toilet and try to unclog the toilet using a plunger. If the problem persists, call a plumber.
- 2. How often should I have my plumbing system inspected? 
+
+2.  How often should I have my plumbing system inspected?
+
 - It's recommended to have your plumbing system inspected annually by a professional plumber.
- 3. Can I use chemical drain cleaners to unclog my drains? 
+
+3.  Can I use chemical drain cleaners to unclog my drains?
+
 - It's not recommended to use chemical drain cleaners as they can corrode pipes and harm the environment. Use a plunger or plumbing snake instead.
- 4. How can I prevent sewer line blockages? 
+
+4.  How can I prevent sewer line blockages?
+
 - Avoid flushing inappropriate items down the toilet, such as baby wipes and feminine products. Dispose of grease and food scraps properly, and have your sewer line inspected by a professional plumber.
- 5. What should I do if I have a leaky faucet? 
+
+5.  What should I do if I have a leaky faucet?
+
 - Contact a plumber to repair or replace the faulty components. A leaky faucet can waste water and result in higher water bills.
 
 Santa Cruz County Septic Experts

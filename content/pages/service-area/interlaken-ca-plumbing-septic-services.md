@@ -1,6 +1,6 @@
 ---
 title: Interlaken, CA Plumbing & Septic Services
-description: 'Plumbing and septic in Interlaken, CA: rural Watsonville-area homes between ag lands and the coast. Wade''s serves Santa Cruz County. 831.225.4344.'
+description: "Plumbing and septic in Interlaken, CA: rural Watsonville-area homes between ag lands and the coast. Wade's serves Santa Cruz County. 831.225.4344."
 eyebrow: Interlaken, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp

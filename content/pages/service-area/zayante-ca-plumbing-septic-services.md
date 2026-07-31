@@ -1,14 +1,15 @@
 ---
-title: 'Zayante, CA Plumbing & Septic Services'
+title: "Zayante, CA Plumbing & Septic Services"
 description: >-
   Off-the-highway Zayante plumbing and septic, remote wells, narrow forest
   roads, aging tanks, and redwood root damage. Wade's Santa Cruz County:
   831.225.4344.
-eyebrow: 'Zayante, CA'
+eyebrow: "Zayante, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Remote redwood roads and rural homes in the Zayante area of Santa Cruz County
 ---
+
 Zayante doesn't show up on every map the same way twice. The name covers a scatter of homes off East Zayante Road, Old Felton Road, and the side lanes that branch into forest, places where GPS confidence drops and the plumber you hire needs to know how to find a tank lid under duff and fir needles.
 
 Wade's Plumbing & Septic is a family-owned Santa Cruz County operation that treats Zayante as what it is: rural San Lorenzo Valley fringe, not a suburb with septic as an afterthought. Wells, long driveways, and systems installed when the county's rules looked different are the norm.

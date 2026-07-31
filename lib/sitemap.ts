@@ -3,15 +3,8 @@ import "server-only"
 import type { MetadataRoute } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 
-import {
-	cityServicePages,
-	cityServicePath,
-} from "@/lib/city-service-pages"
-import {
-	getAllRoutes,
-	taxonomySlug,
-	type ContentDocument,
-} from "@/lib/content"
+import { cityServicePages, cityServicePath } from "@/lib/city-service-pages"
+import { getAllRoutes, taxonomySlug, type ContentDocument } from "@/lib/content"
 import { getAllGlossaryEntries } from "@/lib/glossary"
 import { postCategoryAliases } from "@/lib/post-categories"
 import { absoluteUrl } from "@/lib/seo"
@@ -127,9 +120,7 @@ function upsertEntry(map: Map<string, SitemapEntry>, input: EntryInput) {
 		url,
 		priority: input.priority,
 		changeFrequency:
-			input.changeFrequency ??
-			PATH_CHANGE_FREQUENCY[pathname] ??
-			"monthly",
+			input.changeFrequency ?? PATH_CHANGE_FREQUENCY[pathname] ?? "monthly",
 		...(input.lastModified ? { lastModified: input.lastModified } : {}),
 		...(input.images?.length ? { images: input.images } : {}),
 	}
@@ -176,9 +167,7 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		...indexableServices.map(contentLastModified),
 		...indexablePosts.map(contentLastModified),
 	])
-	const newestService = maxTimestamp(
-		indexableServices.map(contentLastModified),
-	)
+	const newestService = maxTimestamp(indexableServices.map(contentLastModified))
 	const newestPost = maxTimestamp(indexablePosts.map(contentLastModified))
 	const newestArea = maxTimestamp(
 		indexablePages
@@ -264,9 +253,7 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		const aliasLabels = postCategoryAliases[slug] ?? []
 		const hasPosts = indexablePosts.some((post) => {
 			const category = post.category ?? "Expert Tips"
-			return (
-				taxonomySlug(category) === slug || aliasLabels.includes(category)
-			)
+			return taxonomySlug(category) === slug || aliasLabels.includes(category)
 		})
 		if (hasPosts) categorySlugs.add(slug)
 	}
@@ -275,9 +262,7 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		const related = indexablePosts.filter((post) => {
 			const category = post.category ?? "Expert Tips"
 			const aliases = postCategoryAliases[slug] ?? []
-			return (
-				taxonomySlug(category) === slug || aliases.includes(category)
-			)
+			return taxonomySlug(category) === slug || aliases.includes(category)
 		})
 		upsertEntry(entries, {
 			pathname: `/category/${slug}`,
@@ -345,7 +330,9 @@ export async function getSitemapChunkCount() {
 	return Math.max(1, Math.ceil(entries.length / SITEMAP_CHUNK_SIZE))
 }
 
-export async function getSitemapChunk(id: number): Promise<MetadataRoute.Sitemap> {
+export async function getSitemapChunk(
+	id: number,
+): Promise<MetadataRoute.Sitemap> {
 	const entries = await buildSitemapEntries()
 	const start = id * SITEMAP_CHUNK_SIZE
 	return entries.slice(start, start + SITEMAP_CHUNK_SIZE)

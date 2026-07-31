@@ -8,8 +8,9 @@ order: 38
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Protecting your home from basement flooding is essential, and a reliable sump pump installation can be your first line of defense. At Wade's Plumbing & Septic, we offer expert sump pump installation services to homeowners in Santa Cruz County, California. Our comprehensive approach ensures your property remains safe and dry, even during heavy rains or unexpected water leaks.
 
 ## Why a Sump Pump Installation is Essential
@@ -62,11 +63,9 @@ Typically, sump pumps last around 7-10 years. Regular maintenance can extend the
 
 With years of experience and a commitment to quality, Wade's Plumbing & Septic is your trusted partner for sump pump installation in Santa Cruz County, California. Our licensed and responsive team is dedicated to providing reliable solutions tailored to your home's unique requirements. Contact us today to schedule your installation and protect your home from potential water damage. If you're considering other plumbing enhancements, explore our [fixture installation services](/service-offerings/fixture-installation/) for more options.
 
- 
-
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including Santa Cruz, Capitola, Scotts 
+Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including Santa Cruz, Capitola, Scotts
 
 Protect Your Home
 

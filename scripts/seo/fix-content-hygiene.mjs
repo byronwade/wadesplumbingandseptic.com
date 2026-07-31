@@ -92,7 +92,11 @@ function firstCleanParagraph(content) {
 			flush()
 			continue
 		}
-		buf.push(trimmed.replace(/!\[[^\]]*]\([^)]+\)/g, "").replace(/\[([^\]]+)]\([^)]+\)/g, "$1"))
+		buf.push(
+			trimmed
+				.replace(/!\[[^\]]*]\([^)]+\)/g, "")
+				.replace(/\[([^\]]+)]\([^)]+\)/g, "$1"),
+		)
 	}
 	flush()
 
@@ -102,7 +106,8 @@ function firstCleanParagraph(content) {
 				chunk.length >= 80 &&
 				!/In This Guide/i.test(chunk) &&
 				!/min read/i.test(chunk),
-		) ?? chunks[0] ??
+		) ??
+		chunks[0] ??
 		""
 	)
 }
@@ -177,10 +182,7 @@ for (const file of walk(ROOT)) {
 
 	if (/tel:\+?1234567890/i.test(content)) {
 		content = content.replace(/tel:\+?1234567890/gi, "tel:+18312254344")
-		content = content.replace(
-			/\(?123\)?[-.\s]?456[-.\s]?7890/g,
-			"831.225.4344",
-		)
+		content = content.replace(/\(?123\)?[-.\s]?456[-.\s]?7890/g, "831.225.4344")
 		changed = true
 	}
 

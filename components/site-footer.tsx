@@ -133,10 +133,10 @@ export function SiteFooter() {
 						Also a tech company
 					</p>
 					<p className="max-w-[22rem] text-[0.9375rem] leading-snug text-pretty text-white/78 sm:max-w-lg sm:text-base sm:leading-relaxed">
-						Wade&apos;s Plumbing &amp; Septic and Wade&apos;s Inc. were developed
-						and designed by{" "}
+						Wade&apos;s Plumbing &amp; Septic and Wade&apos;s Inc. were
+						developed and designed by{" "}
 						<a
-							className="font-semibold text-white underline decoration-white/25 underline-offset-[0.2em] transition-colors hover:text-primary-bright hover:decoration-primary-bright/50"
+							className="hover:text-primary-bright hover:decoration-primary-bright/50 font-semibold text-white underline decoration-white/25 underline-offset-[0.2em] transition-colors"
 							href="https://byronwade.com"
 							rel="noopener noreferrer"
 							target="_blank"

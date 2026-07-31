@@ -14,17 +14,13 @@ import { cn } from "@/lib/utils"
  * performance from the mid-80s into the high 90s under Slow 4G.
  */
 const SiteHeaderNav = dynamic(
-	() =>
-		import("@/components/site-header-nav").then((mod) => mod.SiteHeaderNav),
+	() => import("@/components/site-header-nav").then((mod) => mod.SiteHeaderNav),
 	{ ssr: false },
 )
 
 function HeaderNavFallback() {
 	return (
-		<nav
-			aria-label="Primary"
-			className="flex items-center gap-2 sm:gap-3"
-		>
+		<nav aria-label="Primary" className="flex items-center gap-2 sm:gap-3">
 			<div className="hidden items-center gap-1 lg:flex">
 				<Link
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"

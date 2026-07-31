@@ -1,10 +1,10 @@
 ---
-title: 'Septic Pumping Costs in Santa Cruz County: Invest Wisely'
+title: "Septic Pumping Costs in Santa Cruz County: Invest Wisely"
 description: >-
   For homeowners in Santa Cruz County, understanding septic pumping costs is
   crucial for maintaining an efficient and trouble-free septic system. Regular.
 category: Plumbing Tips
-date: '2026-04-05'
+date: "2026-04-05"
 tags:
   - septic pumping cost
   - santa cruz county

@@ -126,4 +126,3 @@ export const faqs = [
 			"We serve Santa Cruz County and selected Santa Clara County communities in California. Call us if you are unsure whether a specific address is inside the current service area.",
 	},
 ]
-

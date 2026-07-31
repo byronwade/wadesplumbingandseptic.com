@@ -8,8 +8,9 @@ order: 35
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 When it comes to ensuring the safety and functionality of your home's natural gas or propane system, reliable gas line repair is crucial. If you are a resident of Santa Cruz County, California, and in need of professional gas line repair, Wade's Plumbing & Septic is your trusted partner. Our expert technicians are well-equipped to handle any gas line issues, from detecting leaks to replacing corroded pipes. With our commitment to safety and adherence to local building codes, we ensure your gas line system operates flawlessly, providing peace of mind to homeowners.
 
 ## Signs You Need Gas Line Repair in Santa Cruz County
@@ -64,13 +65,13 @@ Preventive measures can prolong the lifespan of your gas line and reduce the nee
 
 ## FAQs About Gas Line Repair
 
-**Q: How often should gas lines be inspected?** 
+**Q: How often should gas lines be inspected?**
 A: It's advisable to have your gas lines inspected annually by a licensed professional.
 
-**Q: Can I repair a gas line myself?** 
+**Q: Can I repair a gas line myself?**
 A: No, gas line repairs should only be conducted by licensed professionals due to safety concerns.
 
-**Q: What should I do if I suspect a gas leak?** 
+**Q: What should I do if I suspect a gas leak?**
 A: Immediately evacuate the area and contact a professional for emergency repairs.
 
 Choosing Wade's Plumbing & Septic for your gas line repair in Santa Cruz County means choosing a team with experience, dedication, and a commitment to safety. Our locally trusted services ensure that your gas lines are in optimal condition, keeping your home safe and efficient. Contact us today to schedule an inspection or repair and experience the peace of mind that comes with professional service.
@@ -89,7 +90,7 @@ Ensure Safety and Functionality
 
 Trust Wade's Plumbing & Septic for expert gas line repair services, ensuring the safety and efficiency of your home in Santa Cruz County.
 
-[Call Us](tel:+18312254344) 
+[Call Us](tel:+18312254344)
 
 ### What Our Santa Cruz County Customers Are Saying
 

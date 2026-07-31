@@ -53,9 +53,7 @@ export default async function PlumbingGlossaryTermRoute({
 		await Promise.all(
 			term.relatedServiceSlugs.map(async (serviceSlug) => {
 				const service = await getDocument("services", serviceSlug)
-				return service
-					? { slug: service.slug, title: service.title }
-					: null
+				return service ? { slug: service.slug, title: service.title } : null
 			}),
 		)
 	).filter((item): item is NonNullable<typeof item> => Boolean(item))

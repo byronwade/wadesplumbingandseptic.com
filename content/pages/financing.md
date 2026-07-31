@@ -7,6 +7,7 @@ description: >-
 order: 5
 eyebrow: Payment Options
 ---
+
 ## Flexible Financing Options
 
 At Wade's Plumbing & Septic, we understand that plumbing and septic emergencies can create unexpected financial strain. That's why we offer flexible financing options to help you address necessary repairs or replacements without delay.
@@ -22,11 +23,11 @@ We partner with reputable financing providers to offer a range of payment plans 
 
 ## Financing Process
 
- 1. Discuss your project with our technician
- 2. Review financing options available for your specific needs
- 3. Complete a simple application
- 4. Receive a quick decision
- 5. Proceed with necessary work upon approval
+1.  Discuss your project with our technician
+2.  Review financing options available for your specific needs
+3.  Complete a simple application
+4.  Receive a quick decision
+5.  Proceed with necessary work upon approval
 
 ## Ready to Get Started?
 

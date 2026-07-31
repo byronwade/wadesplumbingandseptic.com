@@ -1,13 +1,14 @@
 ---
-title: 'Rio Del Mar, CA Plumbing & Septic Services'
+title: "Rio Del Mar, CA Plumbing & Septic Services"
 description: >-
   Rio Del Mar plumbing & septic for beach flats, bluff homes & Aptos-adjacent
   septics. Wade's family-owned, 831.225.4344, CSLB #1087260.
-eyebrow: 'Rio Del Mar, CA'
+eyebrow: "Rio Del Mar, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Rio Del Mar beach neighborhood near Aptos with coastal residential homes
 ---
+
 Rio Del Mar is a beach town in practice if not on every map label. The flat grid near Rio Del Mar Beach and the Esplanade area holds 1960s to 80s homes, weekend retreats, and full-time families who chose the flat walk to sand over hillside views. Climb toward the bluff or inland toward Aptos and lots widen, septic tanks replace sewer mains, and plumbing access gets more interesting.
 
 Wade's Plumbing & Septic is family-owned (CSLB #1087260) and serves Rio Del Mar from our Santa Cruz County base. We understand the difference between a slab ranch three blocks from the beach and a hillside property where the cleanout is halfway down the driveway.

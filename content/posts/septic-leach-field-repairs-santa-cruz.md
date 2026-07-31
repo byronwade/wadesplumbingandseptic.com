@@ -4,7 +4,7 @@ description: >-
   Understanding septic leach field repair is crucial for Santa Cruz County
   homeowners to maintain a healthy septic system and avoid costly repairs. Our.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
@@ -74,7 +74,7 @@ Regular maintenance is key to prolonging the life of your septic system. Conside
 
 ## DIY Monitoring vs. Calling a Professional
 
-While homeowners can monitor their septic systems for signs 
+While homeowners can monitor their septic systems for signs
 
 ## Sources & Local References
 

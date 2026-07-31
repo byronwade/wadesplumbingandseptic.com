@@ -13,10 +13,7 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
-import {
-	estimateReadingMinutes,
-	formatReadingTime,
-} from "@/lib/reading-time"
+import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
 import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -175,7 +172,7 @@ export function ContentPage({
 				<article
 					className={
 						isPost
-							? "article-shell pb-[var(--space-section-y)] pt-8 sm:pt-10"
+							? "article-shell pt-8 pb-[var(--space-section-y)] sm:pt-10"
 							: "article-shell section-y"
 					}
 				>

@@ -31,10 +31,9 @@ export function AnalyticsLoader() {
 		}
 
 		if (idleWindow.requestIdleCallback) {
-			const id = idleWindow.requestIdleCallback(
-				() => setReady(true),
-				{ timeout: 2500 },
-			)
+			const id = idleWindow.requestIdleCallback(() => setReady(true), {
+				timeout: 2500,
+			})
 			return () => idleWindow.cancelIdleCallback?.(id)
 		}
 

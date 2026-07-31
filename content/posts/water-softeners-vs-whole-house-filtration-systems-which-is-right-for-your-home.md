@@ -4,7 +4,7 @@ description: >-
   If your tap water smells off, tastes strange, or leaves behind stains, it may
   be time to install a filtration solution. In Santa Cruz County, hard water.
 category: Plumbing Tips
-date: '2025-07-01'
+date: "2025-07-01"
 tags:
   - home water system
   - water filtration Santa Cruz
@@ -56,13 +56,13 @@ Installing a water softener helps preserve your plumbing system, extend applianc
 
 Water Filters vs. Water Softeners: Key Differences
 
-**Feature**| **Water Filter**| **Water Softener**  
----|---|---  
-Primary Function| Removes contaminants and chemicals| Removes hard minerals  
-Improves Taste/Odor| Yes| No  
-Protects Plumbing| Yes| Yes  
-Safe for Drinking Water| Yes| Salt-based may increase sodium  
-Best For| Bad taste, smell, discoloration, chlorine| Mineral scale, cloudy dishes, soap inefficiency  
+| **Feature**             | **Water Filter**                          | **Water Softener**                              |
+| ----------------------- | ----------------------------------------- | ----------------------------------------------- |
+| Primary Function        | Removes contaminants and chemicals        | Removes hard minerals                           |
+| Improves Taste/Odor     | Yes                                       | No                                              |
+| Protects Plumbing       | Yes                                       | Yes                                             |
+| Safe for Drinking Water | Yes                                       | Salt-based may increase sodium                  |
+| Best For                | Bad taste, smell, discoloration, chlorine | Mineral scale, cloudy dishes, soap inefficiency |
 
 While water softeners are a type of water filter, they serve a very specific purpose. In contrast, whole-house filters address a wider range of contaminants.
 

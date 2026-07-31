@@ -11,8 +11,7 @@ export function GET() {
 	return new Response(body, {
 		headers: {
 			"Content-Type": "text/vcard; charset=utf-8",
-			"Content-Disposition":
-				'inline; filename="Wades-Plumbing-and-Septic.vcf"',
+			"Content-Disposition": 'inline; filename="Wades-Plumbing-and-Septic.vcf"',
 			"Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
 		},
 	})

@@ -8,8 +8,9 @@ order: 46
 image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Tankless water heater installation
 featured: true
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 At Wade's Plumbing & Septic, we specialize in expert tankless [water heater installation](/service-offerings/water-heater-installation/), offering Santa Cruz County, California homeowners a highly efficient and space-saving solution for their hot water needs. A tankless system heats water on demand, ensuring an endless supply without the need for a bulky storage tank. With our professional installation, you can enjoy reduced energy costs and the convenience of instant hot water, tailored to meet the specific demands of your household.
 
 ## Signs You Need a Tankless Water Heater Installation
@@ -76,7 +77,7 @@ Upgrade Your Home's Efficiency
 
 Experience the benefits of endless hot water and reduced energy bills with our expert tankless water heater installations in Santa Cruz County.
 
-[Call Us](tel:+18312254344) 
+[Call Us](tel:+18312254344)
 
 ### What Our Customers Are Saying
 

@@ -1,26 +1,28 @@
 ---
 title: Install a Toilet Flange Easily in Santa Cruz County, CA
-description: This guide from Wade’s Plumbing & Septic simplifies toilet flange installation,
- covering preparation, required tools, and step-by-step instructions. It emphasizes
- the importance of a proper seal in preventing leaks and advises when to call professionals
- for assistance. The guide aims to save time and money for homeowners tackling plumbing
- tasks.
+description:
+  This guide from Wade’s Plumbing & Septic simplifies toilet flange installation,
+  covering preparation, required tools, and step-by-step instructions. It emphasizes
+  the importance of a proper seal in preventing leaks and advises when to call professionals
+  for assistance. The guide aims to save time and money for homeowners tackling plumbing
+  tasks.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
-- santa cruz plumbing
-- toilet flange installation
-- bathroom upgrade tips
-- leak repair santa cruz
-- diy toilet flange
-- plumbing guide santa cruz
-- wade's plumbing tips
-- toilet repair santa cruz
-- flange replacement guide
+  - santa cruz plumbing
+  - toilet flange installation
+  - bathroom upgrade tips
+  - leak repair santa cruz
+  - diy toilet flange
+  - plumbing guide santa cruz
+  - wade's plumbing tips
+  - toilet repair santa cruz
+  - flange replacement guide
 image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toilet-and-sink-under-warm-natural-light-053d81.webp
 imageAlt: "Bathroom with toilet and sink"
+---
 
----Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
+Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
 
 ![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
 
@@ -113,21 +115,21 @@ We provide expert toilet flange installation and toilet repairs throughout:
 - Watsonville
 - Surrounding areas
 
-📞 **Call now: (831) 225-4344** 
+📞 **Call now: (831) 225-4344**
 We don’t offer online booking, just fast, friendly phone service!
 
 ## Toilet Flange FAQs
 
-**Should a toilet flange sit on top of the finished floor?** 
+**Should a toilet flange sit on top of the finished floor?**
 Yes, the flange should be installed approximately ¼ inch above the finished flooring to avoid leaks.
 
-**Do I put the wax ring on the flange or the toilet?** 
+**Do I put the wax ring on the flange or the toilet?**
 Always install the wax ring on the flange before setting the toilet.
 
-**Can I install a toilet flange myself?** 
+**Can I install a toilet flange myself?**
 Yes, if the pipe and subfloor are in good condition and you have the proper tools. Otherwise, contact a licensed plumber.
 
-**What if the old flange is glued in?** 
+**What if the old flange is glued in?**
 A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to avoid damaging the pipe.
 
 ## Need Help With Toilet Repairs?
@@ -136,7 +138,7 @@ A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to
 
 Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
 
-📞 **(831) 225-4344** 
+📞 **(831) 225-4344**
 We’re here to help, fast, reliable, and local plumbing service in Santa Cruz County!
 
 Santa Cruz County Septic Experts

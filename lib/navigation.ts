@@ -24,13 +24,15 @@ export const serviceNavLinks: MegaNavItem[] = [
 	{
 		href: "/services",
 		label: "All Services",
-		description: "Browse plumbing, septic, and commercial work across Santa Cruz County.",
+		description:
+			"Browse plumbing, septic, and commercial work across Santa Cruz County.",
 		icon: "wrench",
 	},
 	{
 		href: "/service-category/plumbing",
 		label: "Residential Plumbing",
-		description: "Leaks, drains, fixtures, water heaters, and whole-home repairs.",
+		description:
+			"Leaks, drains, fixtures, water heaters, and whole-home repairs.",
 		icon: "droplets",
 	},
 	{
@@ -48,7 +50,8 @@ export const serviceNavLinks: MegaNavItem[] = [
 	{
 		href: "/service-category/emergency-services",
 		label: "Urgent Repairs",
-		description: "Priority help for leaks, backups, and time-sensitive repairs.",
+		description:
+			"Priority help for leaks, backups, and time-sensitive repairs.",
 		icon: "siren",
 	},
 ]

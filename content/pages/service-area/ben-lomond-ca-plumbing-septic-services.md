@@ -1,13 +1,14 @@
 ---
-title: 'Ben Lomond, CA Plumbing & Septic Services'
+title: "Ben Lomond, CA Plumbing & Septic Services"
 description: >-
   Ben Lomond plumbing and septic for redwood canyon homes, wells, root-damaged
   lines, steep leach fields, and honest pumping schedules. Wade's: 831.225.4344.
-eyebrow: 'Ben Lomond, CA'
+eyebrow: "Ben Lomond, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
-imageAlt: 'Redwood forest and mountain homes in Ben Lomond, California'
+imageAlt: "Redwood forest and mountain homes in Ben Lomond, California"
 ---
+
 Ben Lomond doesn't announce itself. You drive past Felton on Highway 9, cross the river, and suddenly the road narrows, the canopy closes in, and every driveway points uphill at an angle that makes you rethink where you'd put a septic tank. That's the everyday reality for plumbing and septic work here, and it's why Wade's Plumbing & Septic has spent years in these canyons rather than treating Ben Lomond like a generic mountain town.
 
 We're a family-owned Santa Cruz County company. When we say we know Ben Lomond, we mean we've pulled roots out of sewer laterals on Alba Road, pumped tanks tucked behind retaining walls on Love Creek, and traced well supply lines that run 200 feet from the house to the ridgeline.

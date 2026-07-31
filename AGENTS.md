@@ -10,7 +10,7 @@ Banned characters and patterns:
 
 - Em dash (Unicode U+2014), including `&mdash;` and `&#8212;`
 - En dash (Unicode U+2013), including `&ndash;` and `&#8211;`
-- Spaced hyphen asides: ` - ` (space, hyphen, space) used like a dash
+- Spaced hyphen asides: `-` (space, hyphen, space) used like a dash
 
 This includes:
 
@@ -21,16 +21,16 @@ This includes:
 
 ### Use real punctuation instead
 
-| Instead of | Prefer |
-| --- | --- |
-| `work - steep slopes - that is` | `work (steep slopes), that is` |
-| `property - and most of it` | `property, and most of it` |
-| `suddenly - they build` | `suddenly. They build` |
-| `Call to Schedule - 831…` | `Call to Schedule: 831…` |
+| Instead of                          | Prefer                                        |
+| ----------------------------------- | --------------------------------------------- |
+| `work - steep slopes - that is`     | `work (steep slopes), that is`                |
+| `property - and most of it`         | `property, and most of it`                    |
+| `suddenly - they build`             | `suddenly. They build`                        |
+| `Call to Schedule - 831…`           | `Call to Schedule: 831…`                      |
 | `Monday - Friday` / `Monday–Friday` | `Monday to Friday` or `Monday through Friday` |
-| `9am - 5pm` / `9am–5pm` | `9am to 5pm` |
-| `3–5 years` | `3 to 5 years` |
-| `"Great work!" - Sarah, Aptos` | `"Great work!" (Sarah, Aptos)` |
+| `9am - 5pm` / `9am–5pm`             | `9am to 5pm`                                  |
+| `3–5 years`                         | `3 to 5 years`                                |
+| `"Great work!" - Sarah, Aptos`      | `"Great work!" (Sarah, Aptos)`                |
 
 ### Still allowed
 

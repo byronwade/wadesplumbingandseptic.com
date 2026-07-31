@@ -92,8 +92,8 @@ const judgeAgent = readFileSync(
 	"utf8",
 );
 if (
-	!writingAgent.includes("modelForRole('writing')") ||
-	!judgeAgent.includes("modelForRole('independent_qa')")
+	!/modelForRole\(\s*["']writing["']\s*\)/.test(writingAgent) ||
+	!/modelForRole\(\s*["']independent_qa["']\s*\)/.test(judgeAgent)
 ) {
 	throw new Error(
 		"Writer and independent QA must use their distinct central model profiles.",

@@ -2,10 +2,7 @@ import type { Metadata } from "next"
 import { cacheLife, cacheTag } from "next/cache"
 
 import { GlossaryTopicHub } from "@/components/glossary-hub"
-import {
-	getGlossaryTerms,
-	glossaryHubs,
-} from "@/lib/glossary"
+import { getGlossaryTerms, glossaryHubs } from "@/lib/glossary"
 import { buildPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildPageMetadata({

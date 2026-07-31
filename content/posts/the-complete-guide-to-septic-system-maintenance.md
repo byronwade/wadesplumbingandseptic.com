@@ -1,22 +1,25 @@
 ---
 title: Septic System Maintenance Made Easy in Santa Cruz County
-description: Learn how to properly maintain your septic system to maximize its lifespan
- and avoid costly repairs. This comprehensive guide covers pumping schedules, water
- conservation, proper waste disposal, and warning signs of potential problems.
+description:
+  Learn how to properly maintain your septic system to maximize its lifespan
+  and avoid costly repairs. This comprehensive guide covers pumping schedules, water
+  conservation, proper waste disposal, and warning signs of potential problems.
 category: Septic Maintenance
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
-- santa cruz plumbing
-- septic system maintenance
-- santa cruz county septic
-- septic system guide
-- septic maintenance tips
-- septic tank care
-- plumbing services santa cruz
-- local septic experts
+  - santa cruz plumbing
+  - septic system maintenance
+  - santa cruz county septic
+  - septic system guide
+  - septic maintenance tips
+  - septic tank care
+  - plumbing services santa cruz
+  - local septic experts
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Engineered septic system access points
----A properly maintained septic system can last 25-30 years or more, while a neglected one may fail in just a few years, leading to expensive repairs or replacement. This comprehensive guide covers everything homeowners need to know about maintaining their septic systems.
+---
+
+A properly maintained septic system can last 25-30 years or more, while a neglected one may fail in just a few years, leading to expensive repairs or replacement. This comprehensive guide covers everything homeowners need to know about maintaining their septic systems.
 
 ![Storm drain covered with debris](/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp)
 

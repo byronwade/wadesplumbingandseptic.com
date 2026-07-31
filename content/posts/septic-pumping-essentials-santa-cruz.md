@@ -1,10 +1,10 @@
 ---
-title: 'Septic Pumping Maintenance in Santa Cruz County, CA'
+title: "Septic Pumping Maintenance in Santa Cruz County, CA"
 description: >-
   For homeowners in Santa Cruz County, maintaining your septic system is
   essential to ensure its longevity and efficiency.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
@@ -83,7 +83,7 @@ Signs of a full septic tank include slow drains, gurgling sounds, and water pool
 
 Neglecting regular maintenance can lead to overflows, backups, and system failure, resulting in costly repairs and environmental damage.
 
-### How long does a 
+### How long does a
 
 ## Sources & Local References
 
@@ -114,7 +114,7 @@ Keep Your Septic System Running Smoothly
 
 Ensure the efficiency and longevity of your septic system with our professional pumping services in Santa Cruz County.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ## Serving Santa Cruz County, CA
 

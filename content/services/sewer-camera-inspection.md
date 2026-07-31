@@ -9,8 +9,9 @@ featured: true
 image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
 imageAlt: Stacked concrete pipes ready for installation
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Experiencing plumbing issues can be a homeowner’s nightmare, but a professional sewer camera inspection can help diagnose the problem swiftly and accurately. At Wade's Plumbing & Septic, we provide top-notch sewer camera inspection services throughout Santa Cruz County, California, ensuring your plumbing and sewer systems function smoothly without unnecessary disruptions.
 
 ## Why a Sewer Camera Inspection is Essential
@@ -81,20 +82,20 @@ Quick & Accurate Diagnostics
 
 Uncover hidden plumbing issues with precision using our advanced sewer camera inspections in Santa Cruz County, CA.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ★★★★★ 5-star rating
 
 > "Wade's Plumbing & Septic saved us from a major plumbing disaster. Their sewer camera inspection was quick and efficient!"
-> 
+>
 > \- Sarah, Santa Cruz
 
 > "Fast and reliable service. The team was professional and explained everything clearly. Highly recommend!"
-> 
+>
 > \- Tom, Watsonville
 
 > "I was impressed by their attention to detail and the speed of their service. They found the issue in no time!"
-> 
+>
 > \- Lisa, Scotts Valley
 
 Licensed Contractor: C-42

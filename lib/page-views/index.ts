@@ -47,7 +47,11 @@ export {
 	parsePageViewKey,
 } from "@/lib/page-views/keys"
 export { incrementPageView, readPageViewStore } from "@/lib/page-views/store"
-export type { PageViewKind, PageViewStats, PageViewStore } from "@/lib/page-views/types"
+export type {
+	PageViewKind,
+	PageViewStats,
+	PageViewStore,
+} from "@/lib/page-views/types"
 export {
 	PAGE_VIEW_TREND_DAYS,
 	PAGE_VIEW_COOKIE_NAME,

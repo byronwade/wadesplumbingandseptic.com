@@ -5,7 +5,7 @@ description: >-
   inefficient appliances, and rising utility bills. When your unit stops
   working.
 category: Plumbing Tips
-date: '2025-06-17'
+date: "2025-06-17"
 tags:
   - santa cruz county
   - plumbing services
@@ -84,9 +84,10 @@ Water Heater Repair: When It’s Still Worth Fixing
 
 If your unit is under 8 to 10 years old and in decent condition, repair might be the smarter option. Regular maintenance and small repairs can keep your system running efficiently.
 
-* * Flush the tank annually to remove sediment and prevent corrosion
-- Test the pressure relief valve by lifting the lever, if no water discharges, it may need replacement
-- ## Serving Santa Cruz County, CA
+- Flush the tank annually to remove sediment and prevent corrosion
+
+* Test the pressure relief valve by lifting the lever, if no water discharges, it may need replacement
+* ## Serving Santa Cruz County, CA
 
 At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including but not limited to:
 

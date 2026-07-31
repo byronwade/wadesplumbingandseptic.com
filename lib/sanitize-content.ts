@@ -3,9 +3,7 @@
  * so the article does not open with two photos stacked back to back.
  */
 export function stripLeadingMarkdownImage(content: string): string {
-	return content
-		.replace(/^\s*!\[[^\]]*]\([^)]+\)\s*/, "")
-		.replace(/^\n+/, "")
+	return content.replace(/^\s*!\[[^\]]*]\([^)]+\)\s*/, "").replace(/^\n+/, "")
 }
 
 /**

@@ -42,9 +42,7 @@ export function ContentConversionCta({
 			<div className="container-shell section-y relative">
 				<div className="mx-auto max-w-3xl text-center">
 					<div className="section-head reveal items-center text-center">
-						<p className="spec-label spec-label-center">
-							{conversion.eyebrow}
-						</p>
+						<p className="spec-label spec-label-center">{conversion.eyebrow}</p>
 						<h2 className="type-title text-white">{conversion.title}</h2>
 						<p className="type-lead text-on-dark-muted mx-auto max-w-2xl">
 							{conversion.description}

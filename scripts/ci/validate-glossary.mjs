@@ -81,9 +81,7 @@ function field(block, name) {
 }
 
 function fieldArray(block, name) {
-	const match = block.match(
-		new RegExp(`${name}:\\s*\\[([\\s\\S]*?)\\]`, "m"),
-	)
+	const match = block.match(new RegExp(`${name}:\\s*\\[([\\s\\S]*?)\\]`, "m"))
 	if (!match) return []
 	return [...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1])
 }
@@ -126,7 +124,9 @@ for (const file of files) {
 			!localContext ||
 			!homeownerTip
 		) {
-			fail(`${label}: missing required fields near ${slug ?? term ?? "unknown"}`)
+			fail(
+				`${label}: missing required fields near ${slug ?? term ?? "unknown"}`,
+			)
 			continue
 		}
 		if (slugs.has(slug)) fail(`${label}: duplicate slug ${slug}`)

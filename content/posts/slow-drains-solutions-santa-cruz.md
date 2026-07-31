@@ -4,7 +4,7 @@ description: >-
   Regular drain cleaning can extend the lifespan of your plumbing system and
   prevent unexpected emergencies.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
@@ -105,7 +105,7 @@ Keep Your Drains Flowing Smoothly
 
 Ensure your home's plumbing system remains efficient and trouble-free with our professional drain maintenance services.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ## Serving Santa Cruz County, CA
 

@@ -1,13 +1,14 @@
 ---
-title: 'Boulder Creek, CA Plumbing & Septic Services'
+title: "Boulder Creek, CA Plumbing & Septic Services"
 description: >-
   Upstream San Lorenzo Valley plumbing and septic, fire rebuilds, remote wells,
   failing drainfields on steep lots. Wade's Plumbing & Septic: 831.225.4344.
-eyebrow: 'Boulder Creek, CA'
+eyebrow: "Boulder Creek, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Boulder Creek redwood canyon and San Lorenzo River upstream of Felton
 ---
+
 Highway 9 keeps climbing past Ben Lomond, the air cools, and Boulder Creek feels like the point where the San Lorenzo Valley turns genuinely rural. Mailboxes spaced farther apart. Driveways that switchback. Wells instead of water mains. Septic tanks you sometimes find on a pad you poured yourself because the original installer is three owners back in the chain of title.
 
 Wade's Plumbing & Septic works Boulder Creek properties as they are, not as blueprints wish they were. Family-owned and rooted in Santa Cruz County, we've helped homeowners from downtown Boulder Creek out toward Brookdale, Bonny Doon Road, and the ridges that burned in the CZU Lightning Complex. Rebuilds brought new plumbing codes, new septic setbacks, and new questions about what the county will sign off on a steep lot.

@@ -1,7 +1,8 @@
 ---
 title: Licensed Plumber
-description: Join our team as a licensed plumber performing residential and commercial
- service work. Minimum 2 years experience required with competitive pay and benefits.
+description:
+  Join our team as a licensed plumber performing residential and commercial
+  service work. Minimum 2 years experience required with competitive pay and benefits.
 eyebrow: Careers
 image: /images/team/byron-working.webp
 imageAlt: Wade's Plumbing & Septic field team at work

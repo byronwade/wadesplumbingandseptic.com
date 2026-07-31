@@ -1,6 +1,6 @@
 ---
 title: Corralitos, CA Plumbing & Septic Services
-description: 'Plumbing and septic for Corralitos, CA: orchard roads, wine country, and hillside rural lots. Wade''s Plumbing & Septic, Santa Cruz County. 831.225.4344.'
+description: "Plumbing and septic for Corralitos, CA: orchard roads, wine country, and hillside rural lots. Wade's Plumbing & Septic, Santa Cruz County. 831.225.4344."
 eyebrow: Corralitos, CA
 order: 50
 image: /images/locations/santa-cruz-plumber.webp

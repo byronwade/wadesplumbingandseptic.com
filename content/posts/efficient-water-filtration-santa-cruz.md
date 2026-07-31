@@ -4,7 +4,7 @@ description: >-
   Enhance your Santa Cruz home’s water quality with our expert water filtration
   Santa Cruz plumbing service. Ensure your family enjoys clean, safe drinking.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-25'
+date: "2026-04-25"
 tags:
   - santa cruz
   - septic
@@ -51,7 +51,7 @@ For guidance on choosing the best system, explore our [comparison of water softe
 
 When you choose Wade's Plumbing & Septic for your water filtration installation, expect a seamless and professional process. Our experienced technicians will assess your home's plumbing system, recommend the best filtration solution, and install the system with minimal disruption. This ensures you enjoy the benefits of clean water without hassle.
 
-To find out more about our service areas, visit our 
+To find out more about our service areas, visit our
 
 ## Sources & Local References
 

@@ -1,22 +1,25 @@
 ---
 title: Top 5 Septic Warning Signs in Santa Cruz County
-description: Learn to recognize the warning signs that indicate it's time to call
- a professional plumber instead of attempting DIY repairs. From persistent low water
- pressure to multiple clogged drains, these symptoms require expert attention.
+description:
+  Learn to recognize the warning signs that indicate it's time to call
+  a professional plumber instead of attempting DIY repairs. From persistent low water
+  pressure to multiple clogged drains, these symptoms require expert attention.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
-- santa cruz county
-- septic services
-- septic help
-- plumbing issues
-- low water pressure
-- professional plumbing
-- wade's plumbing
-- plumbing signs
+  - santa cruz county
+  - septic services
+  - septic help
+  - plumbing issues
+  - low water pressure
+  - professional plumbing
+  - wade's plumbing
+  - plumbing signs
 image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
 imageAlt: "Warning sign on a wooden post"
----When it comes to plumbing issues, knowing when to call a professional can save you time, money, and prevent major damage to your home. While some minor problems can be handled with DIY solutions, others require expert attention. Here are five clear signs it's time to call Wade's Plumbing & Septic.
+---
+
+When it comes to plumbing issues, knowing when to call a professional can save you time, money, and prevent major damage to your home. While some minor problems can be handled with DIY solutions, others require expert attention. Here are five clear signs it's time to call Wade's Plumbing & Septic.
 
 ![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
 

@@ -1,6 +1,6 @@
 ---
 title: Los Gatos, CA Plumbing & Septic Services
-description: 'Selected plumbing near the Santa Cruz County line in Los Gatos, CA: not full Santa Clara County coverage. Call with your address. 831.225.4344.'
+description: "Selected plumbing near the Santa Cruz County line in Los Gatos, CA: not full Santa Clara County coverage. Call with your address. 831.225.4344."
 eyebrow: Los Gatos, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp

@@ -9,11 +9,7 @@ import {
 	type ReactNode,
 } from "react"
 
-import {
-	contactEncoded,
-	contactInfo,
-	decodeContactValue,
-} from "@/lib/contact"
+import { contactEncoded, contactInfo, decodeContactValue } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 const useIsomorphicLayoutEffect =
@@ -91,11 +87,7 @@ export function ProtectedContactLink({
 }
 
 /** Visible phone number text with a dial link applied after hydration. */
-export function ProtectedPhoneText({
-	className,
-}: {
-	className?: string
-}) {
+export function ProtectedPhoneText({ className }: { className?: string }) {
 	return (
 		<ProtectedContactLink
 			ariaLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -106,11 +98,7 @@ export function ProtectedPhoneText({
 }
 
 /** Visible email with a mailto link applied after hydration. */
-export function ProtectedEmailText({
-	className,
-}: {
-	className?: string
-}) {
+export function ProtectedEmailText({ className }: { className?: string }) {
 	return (
 		<ProtectedContactLink
 			ariaLabel={`Email ${contactInfo.email}`}

@@ -1,0 +1,2 @@
+# Keep text files LF-normalized across Windows workstations and Linux CI.
+* text=auto eol=lf

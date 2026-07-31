@@ -1,14 +1,15 @@
 ---
-title: 'Felton, CA Plumbing & Septic Services'
+title: "Felton, CA Plumbing & Septic Services"
 description: >-
   Family-owned plumbing and septic for Felton homes on wells, steep lots, and
   redwood-lined Highway 9. Pumping, repairs, and emergency help. Call
   831.225.4344.
-eyebrow: 'Felton, CA'
+eyebrow: "Felton, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
-imageAlt: 'San Lorenzo River corridor and redwood canopy near Felton, California'
+imageAlt: "San Lorenzo River corridor and redwood canopy near Felton, California"
 ---
+
 Felton sits where Highway 9 bends into the redwoods, close enough to Scotts Valley for groceries, far enough up the San Lorenzo Valley that most properties still run on septic, wells, and long supply lines buried under roots. Wade's Plumbing & Septic is a family-owned Santa Cruz County shop that knows this corridor: the mix of full-time homes near downtown, older cabins off Graham Hill Road, and hillside lots where a "simple" leak turns into a trench through clay and redwood feeder roots.
 
 ## Plumbing on Felton's mix of old and new

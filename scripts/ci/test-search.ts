@@ -164,7 +164,11 @@ assert.ok(
 	"sewage smell expands",
 )
 
-assert.equal(editDistance("septic", "septik"), 1, "septik is 1 edit from septic")
+assert.equal(
+	editDistance("septic", "septik"),
+	1,
+	"septik is 1 edit from septic",
+)
 assert.ok(
 	bestWordDistance("septic tank cleaning", "septik") <= 1,
 	"bestWordDistance finds septik ≈ septic",

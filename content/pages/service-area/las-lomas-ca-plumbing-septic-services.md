@@ -1,6 +1,6 @@
 ---
 title: Las Lomas, CA Plumbing & Septic Services
-description: 'Plumbing and septic for Las Lomas, CA: rural south Santa Cruz County near Watsonville and the Pajaro Valley. Wade''s Plumbing & Septic. 831.225.4344.'
+description: "Plumbing and septic for Las Lomas, CA: rural south Santa Cruz County near Watsonville and the Pajaro Valley. Wade's Plumbing & Septic. 831.225.4344."
 eyebrow: Las Lomas, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp

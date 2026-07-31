@@ -494,12 +494,7 @@ function scoreTokenAgainstDocument(
 	if (description.includes(token)) {
 		return { score: 28, matchedOn: "description", fuzzy: false }
 	}
-	const descriptionFuzzy = fuzzyFieldHit(
-		description,
-		token,
-		28,
-		"description",
-	)
+	const descriptionFuzzy = fuzzyFieldHit(description, token, 28, "description")
 	if (descriptionFuzzy) return descriptionFuzzy
 
 	if (body.includes(token)) {
@@ -804,9 +799,7 @@ export function suggestSearches(query: string, limit = 6): string[] {
 				term.includes(phrase) ||
 				tokens.some((token) => {
 					const head = term.split(" ")[0] ?? ""
-					return (
-						tokenMatchesTerm(token, head) || tokensNearlyEqual(token, head)
-					)
+					return tokenMatchesTerm(token, head) || tokensNearlyEqual(token, head)
 				}),
 		)
 		if (!related) continue

@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "classification": "MOCK_VERIFIED",
-  "experiments": [],
-  "policy": "Experiments require a human-approved draft PR, defined baseline, metric, counterfactual, and rollback target."
+	"schema_version": "1.0",
+	"classification": "MOCK_VERIFIED",
+	"experiments": [],
+	"policy": "Experiments require a human-approved draft PR, defined baseline, metric, counterfactual, and rollback target."
 }

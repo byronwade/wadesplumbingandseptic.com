@@ -235,12 +235,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"pipe-repair-and-replacement",
 			"smoke-tests",
 		],
-		relatedTermSlugs: [
-			"vent-stack",
-			"plumbing-trap",
-			"abs-pipe",
-			"sewer-line",
-		],
+		relatedTermSlugs: ["vent-stack", "plumbing-trap", "abs-pipe", "sewer-line"],
 	},
 	{
 		slug: "expansion-tank",
@@ -347,12 +342,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"drain-cleaning",
 			"fixture-installation",
 		],
-		relatedTermSlugs: [
-			"drain-snake",
-			"p-trap",
-			"grease-trap",
-			"dwv-system",
-		],
+		relatedTermSlugs: ["drain-snake", "p-trap", "grease-trap", "dwv-system"],
 	},
 	{
 		slug: "gas-line",
@@ -530,12 +520,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"pipe-repair-and-replacement",
 			"water-line-repair-and-installation",
 		],
-		relatedTermSlugs: [
-			"copper-pipe",
-			"pex-pipe",
-			"supply-line",
-			"water-main",
-		],
+		relatedTermSlugs: ["copper-pipe", "pex-pipe", "supply-line", "water-main"],
 	},
 	{
 		slug: "main-sewer-line",
@@ -874,10 +859,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"Santa Cruz County winter storms overwhelm clogged storm systems in low areas near the San Lorenzo River and coastal flats. Hillside properties must keep hillside drains and culverts clear before atmospheric river events.",
 		homeownerTip:
 			"Keep leaves and mulch away from exterior drain grates before forecast heavy rain.",
-		relatedServiceSlugs: [
-			"storm-drain-cleaning",
-			"commercial-drain-cleaning",
-		],
+		relatedServiceSlugs: ["storm-drain-cleaning", "commercial-drain-cleaning"],
 		relatedTermSlugs: [
 			"floor-drain",
 			"sump-pump",
@@ -943,12 +925,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"water-heater-installation",
 			"water-line-repair-and-installation",
 		],
-		relatedTermSlugs: [
-			"water-heater",
-			"expansion-tank",
-			"prv",
-			"anode-rod",
-		],
+		relatedTermSlugs: ["water-heater", "expansion-tank", "prv", "anode-rod"],
 	},
 	{
 		slug: "tankless-water-heater",
@@ -1032,12 +1009,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"smoke-tests",
 			"pipe-repair-and-replacement",
 		],
-		relatedTermSlugs: [
-			"dwv-system",
-			"plumbing-trap",
-			"smoke-test",
-			"pvc-pipe",
-		],
+		relatedTermSlugs: ["dwv-system", "plumbing-trap", "smoke-test", "pvc-pipe"],
 	},
 	{
 		slug: "water-filtration-system",
@@ -1099,12 +1071,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"leak-detection",
 			"pipe-repair-and-replacement",
 		],
-		relatedTermSlugs: [
-			"water-main",
-			"supply-line",
-			"copper-pipe",
-			"pex-pipe",
-		],
+		relatedTermSlugs: ["water-main", "supply-line", "copper-pipe", "pex-pipe"],
 	},
 	{
 		slug: "water-main",
@@ -1121,12 +1088,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 			"water-line-repair-and-installation",
 			"leak-detection",
 		],
-		relatedTermSlugs: [
-			"water-line",
-			"ball-valve",
-			"prv",
-			"supply-line",
-		],
+		relatedTermSlugs: ["water-line", "ball-valve", "prv", "supply-line"],
 	},
 	{
 		slug: "water-softener",

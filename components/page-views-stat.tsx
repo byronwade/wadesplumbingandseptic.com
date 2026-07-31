@@ -48,8 +48,7 @@ export function PageViewsStat({
 
 	const muted =
 		tone === "on-dark" ? "text-on-dark-subtle" : "text-muted-foreground"
-	const icon =
-		tone === "on-dark" ? "text-primary-bright" : "text-primary"
+	const icon = tone === "on-dark" ? "text-primary-bright" : "text-primary"
 
 	if (showTrend) {
 		return (

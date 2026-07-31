@@ -6,8 +6,8 @@ date: 2025-05-11
 image: /images/services/water-heater-service.webp
 imageAlt: "Water heater service"
 tags:
-- Santa Cruz plumbing
-- plumbing maintenance
+  - Santa Cruz plumbing
+  - plumbing maintenance
 ---
 
 ![Water heater installation](/images/work/water-heater-installation.webp)

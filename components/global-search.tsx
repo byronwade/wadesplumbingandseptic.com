@@ -304,7 +304,7 @@ export function GlobalSearch({
 			>
 				<div
 					aria-hidden
-					className="tex-glow pointer-events-none absolute inset-0 bg-ink"
+					className="tex-glow bg-ink pointer-events-none absolute inset-0"
 				/>
 
 				<div className="relative flex h-full min-h-0 flex-col">

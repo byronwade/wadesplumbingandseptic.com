@@ -4,16 +4,9 @@ import Link from "next/link"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { ProtectedPhoneText } from "@/components/protected-contact"
-import {
-	glossaryHubPath,
-	glossaryTermPath,
-} from "@/lib/glossary"
+import { glossaryHubPath, glossaryTermPath } from "@/lib/glossary"
 import type { GlossaryTerm, GlossaryTopic } from "@/lib/glossary/types"
-import {
-	absoluteUrl,
-	breadcrumbJsonLd,
-	definedTermJsonLd,
-} from "@/lib/seo"
+import { absoluteUrl, breadcrumbJsonLd, definedTermJsonLd } from "@/lib/seo"
 function paragraphs(text: string) {
 	return text
 		.split(/\n\n+/)
@@ -33,10 +26,10 @@ export function GlossaryTermPage({
 	relatedServices: Array<{ slug: string; title: string }>
 }) {
 	const hubPath = glossaryHubPath(topic)
-	const hubLabel = topic === "plumbing" ? "Plumbing Glossary" : "Septic Glossary"
+	const hubLabel =
+		topic === "plumbing" ? "Plumbing Glossary" : "Septic Glossary"
 	const termPath = glossaryTermPath(topic, term.slug)
-	const otherTopic: GlossaryTopic =
-		topic === "plumbing" ? "septic" : "plumbing"
+	const otherTopic: GlossaryTopic = topic === "plumbing" ? "septic" : "plumbing"
 
 	const breadcrumbs = [
 		{ name: "Home", path: "/" },
@@ -123,7 +116,10 @@ export function GlossaryTermPage({
 				) : null}
 
 				{relatedTerms.length ? (
-					<section aria-labelledby="related-terms-heading" className="space-y-4">
+					<section
+						aria-labelledby="related-terms-heading"
+						className="space-y-4"
+					>
 						<h2 className="type-title" id="related-terms-heading">
 							Related glossary terms
 						</h2>

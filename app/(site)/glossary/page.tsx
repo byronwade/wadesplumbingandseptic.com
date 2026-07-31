@@ -6,16 +6,8 @@ import { cacheLife, cacheTag } from "next/cache"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
-import {
-	getGlossaryTerms,
-	glossaryHubPath,
-	glossaryHubs,
-} from "@/lib/glossary"
-import {
-	absoluteUrl,
-	breadcrumbJsonLd,
-	buildPageMetadata,
-} from "@/lib/seo"
+import { getGlossaryTerms, glossaryHubPath, glossaryHubs } from "@/lib/glossary"
+import { absoluteUrl, breadcrumbJsonLd, buildPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildPageMetadata({
 	title: "Plumbing & Septic Glossary",

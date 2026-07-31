@@ -1,10 +1,10 @@
 ---
-title: 'Plumbing Maintenance & Repairs in Santa Cruz County, CA'
+title: "Plumbing Maintenance & Repairs in Santa Cruz County, CA"
 description: >-
   Proper maintenance is crucial for the longevity and efficiency of your
   plumbing system. Regular maintenance can help prevent leaks, clogs, and other.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
   - santa cruz county
   - septic services

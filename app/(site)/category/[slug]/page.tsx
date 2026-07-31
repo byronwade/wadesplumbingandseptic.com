@@ -14,11 +14,11 @@ export async function generateStaticParams() {
 		taxonomySlug(post.category ?? "Expert Tips"),
 	)
 
-	return [
-		...new Set([...slugs, ...Object.keys(postCategoryAliases)]),
-	].map((slug) => ({
-		slug,
-	}))
+	return [...new Set([...slugs, ...Object.keys(postCategoryAliases)])].map(
+		(slug) => ({
+			slug,
+		}),
+	)
 }
 
 async function postsForCategory(slug: string) {
