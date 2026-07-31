@@ -330,12 +330,7 @@ export const septicTerms: GlossaryTerm[] = [
 			"septic-tank-cleaning-and-pumping",
 			"septic-tank-maintenance-and-care",
 		],
-		relatedTermSlugs: [
-			"baffle",
-			"effluent",
-			"biomat",
-			"pump-chamber",
-		],
+		relatedTermSlugs: ["baffle", "effluent", "biomat", "pump-chamber"],
 	},
 	{
 		slug: "engineered-septic-system",

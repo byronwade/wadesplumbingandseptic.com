@@ -296,7 +296,9 @@ export function ContentHero({
 					<div
 						className={cn(
 							"grid items-end gap-8",
-							image ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]" : undefined,
+							image
+								? "lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]"
+								: undefined,
 						)}
 					>
 						<div className="section-head max-w-2xl">

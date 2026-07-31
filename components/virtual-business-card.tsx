@@ -34,7 +34,7 @@ export function VirtualBusinessCard({
 				"overflow-hidden",
 				dark
 					? "rounded-xl border border-white/10 bg-white/[0.04]"
-					: "border-border bg-card shadow-[var(--shadow-panel)] rounded-xl border",
+					: "border-border bg-card rounded-xl border shadow-[var(--shadow-panel)]",
 				className,
 			)}
 			id={id}
@@ -89,7 +89,7 @@ export function VirtualBusinessCard({
 								className={cn(
 									"mt-1 text-xl font-extrabold tracking-[-0.02em] transition-colors sm:text-2xl",
 									dark
-										? "text-white hover:text-primary-bright"
+										? "hover:text-primary-bright text-white"
 										: "text-foreground hover:text-primary",
 								)}
 							/>
@@ -108,7 +108,7 @@ export function VirtualBusinessCard({
 									className={cn(
 										"mt-1 block text-sm font-bold break-all transition-colors sm:text-base",
 										dark
-											? "text-white hover:text-primary-bright"
+											? "hover:text-primary-bright text-white"
 											: "text-foreground hover:text-primary",
 									)}
 								/>

@@ -5,13 +5,25 @@ import Module from "node:module"
  * lib/content and lib/sitemap are Next server modules. Stub the runtime-only
  * imports so the inventory builder can run under plain tsx in CI.
  */
-const load = (Module as typeof Module & {
-	_load: (request: string, parent: NodeModule | null, isMain: boolean) => unknown
-})._load
+const load = (
+	Module as typeof Module & {
+		_load: (
+			request: string,
+			parent: NodeModule | null,
+			isMain: boolean,
+		) => unknown
+	}
+)._load
 
-;(Module as typeof Module & {
-	_load: (request: string, parent: NodeModule | null, isMain: boolean) => unknown
-})._load = function patchedLoad(request, parent, isMain) {
+;(
+	Module as typeof Module & {
+		_load: (
+			request: string,
+			parent: NodeModule | null,
+			isMain: boolean,
+		) => unknown
+	}
+)._load = function patchedLoad(request, parent, isMain) {
 	if (request === "server-only") return {}
 	if (request === "next/cache") {
 		return {
@@ -24,11 +36,8 @@ const load = (Module as typeof Module & {
 
 async function main() {
 	const { getCollection, taxonomySlug } = await import("../../lib/content")
-	const {
-		SITEMAP_EXCLUDED_PATHS,
-		SITEMAP_MIN_TAG_POSTS,
-		buildSitemapEntries,
-	} = await import("../../lib/sitemap")
+	const { SITEMAP_EXCLUDED_PATHS, SITEMAP_MIN_TAG_POSTS, buildSitemapEntries } =
+		await import("../../lib/sitemap")
 	const { siteConfig } = await import("../../lib/site")
 
 	function pathFromUrl(url: string) {
@@ -45,7 +54,10 @@ async function main() {
 	const paths = entries.map((entry) => pathFromUrl(entry.url))
 	const pathSet = new Set(paths)
 
-	assert.ok(entries.length > 50, "Sitemap should include the core site inventory")
+	assert.ok(
+		entries.length > 50,
+		"Sitemap should include the core site inventory",
+	)
 	assert.equal(new Set(entries.map((entry) => entry.url)).size, entries.length)
 
 	assert.ok(pathSet.has("/"), "Home must be present")

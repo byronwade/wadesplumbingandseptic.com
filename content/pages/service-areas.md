@@ -1,5 +1,4 @@
 ---
-
 title: Plumbing & Septic Service Areas
 description: Wade's serves Santa Cruz County and selected Santa Clara County communities in California.
 eyebrow: Local Coverage
@@ -7,21 +6,21 @@ image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Coastal redwoods in the Santa Cruz County service area
 order: 2
 gallery:
-- src: /images/locations/santa-cruz-redwoods.webp
-  alt: Coastal redwood forest in Santa Cruz County
-  width: 1800
-  height: 1350
-  caption: Santa Cruz County, California
-- src: /images/locations/river-and-redwoods.webp
-  alt: Mountain river surrounded by forest
-  width: 1800
-  height: 1242
-  caption: Serving mountain and rural properties
-- src: /images/locations/santa-cruz-plumber.webp
-  alt: Wade's Plumbing and Septic Santa Cruz service graphic
-  width: 1280
-  height: 720
-  caption: Local plumbing and septic service
+  - src: /images/locations/santa-cruz-redwoods.webp
+    alt: Coastal redwood forest in Santa Cruz County
+    width: 1800
+    height: 1350
+    caption: Santa Cruz County, California
+  - src: /images/locations/river-and-redwoods.webp
+    alt: Mountain river surrounded by forest
+    width: 1800
+    height: 1242
+    caption: Serving mountain and rural properties
+  - src: /images/locations/santa-cruz-plumber.webp
+    alt: Wade's Plumbing and Septic Santa Cruz service graphic
+    width: 1280
+    height: 720
+    caption: Local plumbing and septic service
 ---
 
 ## Local knowledge matters

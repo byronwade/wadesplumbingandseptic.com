@@ -1,14 +1,15 @@
 ---
-title: 'Brookdale, CA Plumbing & Septic Services'
+title: "Brookdale, CA Plumbing & Septic Services"
 description: >-
   Compact Brookdale canyon plumbing and septic, tight lots, old lodge-era
   infrastructure, wells, and hillside drainfields. Wade's Santa Cruz County:
   831.225.4344.
-eyebrow: 'Brookdale, CA'
+eyebrow: "Brookdale, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Brookdale canyon community along Highway 9 in the Santa Cruz Mountains
 ---
+
 Brookdale is small enough to miss if you're not paying attention, a tight bend in Highway 9 between Boulder Creek and Ben Lomond, redwoods pressing close to the road, the historic lodge anchoring a community that has always lived with canyon constraints. There is no municipal sewer grid threading through these lots. Water often arrives from a well or a shared supply. Septic systems sit on hillsides where every square foot of leach line was fought for during the original install.
 
 Wade's Plumbing & Septic knows Brookdale because we've been called to properties where the tank is behind a retaining wall, the cleanout is under a deck, and the only way to explain a backup is to walk the slope with the homeowner and trace where water actually goes when it rains.

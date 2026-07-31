@@ -1,44 +1,44 @@
 {
-  "schema_version": "1.0",
-  "run_id": "public-research-2026-07-30-santa-cruz-county",
-  "collected_at": "2026-07-30T01:57:05.293Z",
-  "source": "santa-cruz-county-public-records",
-  "source_url_or_tool": "https://cdi.santacruzcountyca.gov/",
-  "scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
-  "classification": "LIVE_VERIFIED",
-  "redaction": "NO_SECRETS_OR_PERSONAL_DATA",
-  "retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-  "sha256": "18fcaef843096ea84d2d648b692b05108f49452b6dfd1c61d982625b12152fda",
-  "payload": {
-    "observations": [
-      {
-        "source_url": "https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx",
-        "collected_at": "2026-07-30T01:57:05.293Z",
-        "scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
-        "classification": "LIVE_VERIFIED",
-        "summary": "County guidance says a plumbing permit is generally required for installation, alteration, repair, or replacement of plumbing, gas, or drainage piping and related equipment, subject to listed exemptions.",
-        "intent_signal": "permit-and-replacement research",
-        "inference_limit": "This is a regulatory context signal only. It does not establish demand volume, Wade's availability, pricing, licensing, or service area."
-      },
-      {
-        "source_url": "https://cdi.santacruzcountyca.gov/Portals/35/CDI/UnifiedPermitCenter/Get%20Involved/CEQA/Sustainability%20Update%20Draft%20EIR/4.16_Utilities%20DEIR.pdf",
-        "collected_at": "2026-07-30T01:57:05.293Z",
-        "scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
-        "classification": "LIVE_VERIFIED",
-        "summary": "A County draft EIR describes rural areas using onsite wastewater treatment systems and reports that County Service Area 12 provides countywide septic-system services to more than 27,700 systems, based on the cited 2021 County Health Services Agency source.",
-        "intent_signal": "onsite-wastewater-maintenance research",
-        "inference_limit": "This is public infrastructure context, not current keyword demand or a business claim. The cited figure must be revalidated before any customer-facing use."
-      },
-      {
-        "source_url": "https://cdi.santacruzcountyca.gov/PublicWorks/SewerWater/EnvironmentalCompliance.aspx",
-        "collected_at": "2026-07-30T01:57:05.293Z",
-        "scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
-        "classification": "LIVE_VERIFIED",
-        "summary": "County sanitation guidance describes maintenance and improvement of public sewer systems and warns that unsuitable household drain disposal can contribute to clogs, spills, and maintenance costs.",
-        "intent_signal": "sewer-maintenance-and-clog-prevention research",
-        "inference_limit": "This supports an informational research hypothesis only. It cannot authorize repair advice, emergency claims, or a new page."
-      }
-    ],
-    "research_conclusion": "Public County sources justify further evidence-gathering for permit, onsite-wastewater, and sewer-maintenance intent. Search Console, approved browser/SERP research, repository facts, and human review remain required before assigning a query owner, publishing content, or asserting a Wade's service-area or business claim."
-  }
+	"schema_version": "1.0",
+	"run_id": "public-research-2026-07-30-santa-cruz-county",
+	"collected_at": "2026-07-30T01:57:05.293Z",
+	"source": "santa-cruz-county-public-records",
+	"source_url_or_tool": "https://cdi.santacruzcountyca.gov/",
+	"scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "18fcaef843096ea84d2d648b692b05108f49452b6dfd1c61d982625b12152fda",
+	"payload": {
+		"observations": [
+			{
+				"source_url": "https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx",
+				"collected_at": "2026-07-30T01:57:05.293Z",
+				"scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
+				"classification": "LIVE_VERIFIED",
+				"summary": "County guidance says a plumbing permit is generally required for installation, alteration, repair, or replacement of plumbing, gas, or drainage piping and related equipment, subject to listed exemptions.",
+				"intent_signal": "permit-and-replacement research",
+				"inference_limit": "This is a regulatory context signal only. It does not establish demand volume, Wade's availability, pricing, licensing, or service area."
+			},
+			{
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/35/CDI/UnifiedPermitCenter/Get%20Involved/CEQA/Sustainability%20Update%20Draft%20EIR/4.16_Utilities%20DEIR.pdf",
+				"collected_at": "2026-07-30T01:57:05.293Z",
+				"scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
+				"classification": "LIVE_VERIFIED",
+				"summary": "A County draft EIR describes rural areas using onsite wastewater treatment systems and reports that County Service Area 12 provides countywide septic-system services to more than 27,700 systems, based on the cited 2021 County Health Services Agency source.",
+				"intent_signal": "onsite-wastewater-maintenance research",
+				"inference_limit": "This is public infrastructure context, not current keyword demand or a business claim. The cited figure must be revalidated before any customer-facing use."
+			},
+			{
+				"source_url": "https://cdi.santacruzcountyca.gov/PublicWorks/SewerWater/EnvironmentalCompliance.aspx",
+				"collected_at": "2026-07-30T01:57:05.293Z",
+				"scope": "santa-cruz-county-plumbing-and-septic-demand-intent-research",
+				"classification": "LIVE_VERIFIED",
+				"summary": "County sanitation guidance describes maintenance and improvement of public sewer systems and warns that unsuitable household drain disposal can contribute to clogs, spills, and maintenance costs.",
+				"intent_signal": "sewer-maintenance-and-clog-prevention research",
+				"inference_limit": "This supports an informational research hypothesis only. It cannot authorize repair advice, emergency claims, or a new page."
+			}
+		],
+		"research_conclusion": "Public County sources justify further evidence-gathering for permit, onsite-wastewater, and sewer-maintenance intent. Search Console, approved browser/SERP research, repository facts, and human review remain required before assigning a query owner, publishing content, or asserting a Wade's service-area or business claim."
+	}
 }

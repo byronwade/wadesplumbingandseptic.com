@@ -4,7 +4,7 @@ description: >-
   Santa Cruz County's unique geography presents both beautiful landscapes and
   challenges for homeowners, particularly when it comes to maintaining septic.
 category: Plumbing Tips
-date: '2026-04-11'
+date: "2026-04-11"
 tags:
   - santa cruz plumbing
   - septic system maintenance
@@ -43,9 +43,9 @@ Understanding septic system types suitable for different terrains is crucial. Fo
 
 At Wade's Plumbing & Septic, we offer a wide range of services to address the complex needs of septic systems in Santa Cruz County. Our approach is tailored to the specific geographic challenges of the area.
 
- 1. [Septic Tank Maintenance:](/service-offerings/septic-tank-maintenance-and-care/) Regular inspections and maintenance to ensure your system runs efficiently.
- 2. [Leach Field Repair:](/service-offerings/septic-tank-leach-field-repair-and-replacement/) Addressing issues such as blockages or damage due to soil composition.
- 3. [Septic Troubleshooting:](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) Identifying and resolving problems quickly to prevent system failure.
+1.  [Septic Tank Maintenance:](/service-offerings/septic-tank-maintenance-and-care/) Regular inspections and maintenance to ensure your system runs efficiently.
+2.  [Leach Field Repair:](/service-offerings/septic-tank-leach-field-repair-and-replacement/) Addressing issues such as blockages or damage due to soil composition.
+3.  [Septic Troubleshooting:](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) Identifying and resolving problems quickly to prevent system failure.
 
 Our team provides expert advice on optimizing septic system health, tailored to your specific location and needs.
 
@@ -101,7 +101,7 @@ Efficient Septic Solutions
 
 Ensure your septic system operates smoothly with our expert solutions.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ### What Our Customers Say
 
@@ -111,7 +111,7 @@ Ensure your septic system operates smoothly with our expert solutions.
 
 "Fast and efficient service. Our septic system has never worked better!" (Emily, Scotts Valley)
 
-★★★★★ 5-Star Rating 
+★★★★★ 5-Star Rating
 
 Licensed Contractor: C-42
 

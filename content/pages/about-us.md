@@ -18,17 +18,18 @@ gallery:
     height: 1081
     caption: Field experience informs every company standard
   - src: /images/team/byron-wade.webp
-    alt: 'Byron Wade, founder of Wade''s Plumbing and Septic'
+    alt: "Byron Wade, founder of Wade's Plumbing and Septic"
     width: 445
     height: 444
-    caption: 'Byron Wade, founder'
+    caption: "Byron Wade, founder"
   - src: /images/team/dave.webp
-    alt: 'Dave, co-owner of Wade''s Plumbing and Septic'
+    alt: "Dave, co-owner of Wade's Plumbing and Septic"
     width: 675
     height: 900
-    caption: 'Dave, co-owner'
+    caption: "Dave, co-owner"
 eyebrow: About Wade's
 ---
+
 ## About Wade's Plumbing & Septic
 
 Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2005. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.

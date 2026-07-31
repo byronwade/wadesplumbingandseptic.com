@@ -4,7 +4,7 @@ description: >-
   The 2020 Santa Cruz Mountains Fire has exacerbated septic system issues for
   many homeowners in Santa Cruz County, California, with environmental changes.
 category: Plumbing Tips
-date: '2026-04-05'
+date: "2026-04-05"
 tags:
   - santa cruz
   - septic

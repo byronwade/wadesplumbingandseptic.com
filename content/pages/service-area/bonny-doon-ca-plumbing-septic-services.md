@@ -1,16 +1,17 @@
 ---
-title: 'Bonny Doon, CA Plumbing & Septic Services'
+title: "Bonny Doon, CA Plumbing & Septic Services"
 description: >-
   Ridge-top Bonny Doon plumbing and septic, remote access, vineyards, fire
   rebuilds, wells, and engineered systems on steep Santa Cruz Mountain lots.
   831.225.4344.
-eyebrow: 'Bonny Doon, CA'
+eyebrow: "Bonny Doon, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: >-
   Bonny Doon ridge roads, vineyards, and redwood forest in the Santa Cruz
   Mountains
 ---
+
 Bonny Doon is ridge country. Pine Flat Road, Bonny Doon Road, Empire Grade, names that mean switchbacks, ocean glimpses through fog, and properties where the driveway is longer than some people's commute. Wineries, homesteads, and post-fire rebuilds share one truth: you're on your own for water and waste, and the county permit folder is thick.
 
 Wade's Plumbing & Septic works Bonny Doon as mountain specialists, not coastal generalists. Family-owned in Santa Cruz County, we've serviced wells that feed entire estates, replaced septic systems where only an engineered design would pass, and cleared sewer lines choked by roots in soil that dries to concrete by September.

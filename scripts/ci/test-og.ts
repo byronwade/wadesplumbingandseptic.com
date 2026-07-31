@@ -31,7 +31,9 @@ const path = buildOgImagePath({
 assert.ok(path.startsWith("/api/og?"))
 assert.ok(path.includes("title=Drain"))
 assert.ok(path.includes("eyebrow=Plumbing"))
-assert.ok(path.includes("image=%2Fimages%2Fwork%2Fprecision-valve-installation.webp"))
+assert.ok(
+	path.includes("image=%2Fimages%2Fwork%2Fprecision-valve-installation.webp"),
+)
 
 assert.equal(defaultOgEyebrow("article"), "Expert Tip")
 assert.equal(defaultOgEyebrow("website"), "Wade's Plumbing & Septic")

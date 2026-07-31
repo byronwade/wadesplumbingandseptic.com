@@ -41,11 +41,7 @@ export function CallButton({
 			: `Call ${contactInfo.phoneDisplay}`
 
 	return (
-		<ProtectedContactLink
-			ariaLabel={dialAria}
-			className={styles}
-			kind="phone"
-		>
+		<ProtectedContactLink ariaLabel={dialAria} className={styles} kind="phone">
 			{showIcon ? <Phone aria-hidden="true" className="shrink-0" /> : null}
 			{typeof dialLabel === "string" ? (
 				<span className="truncate">{dialLabel}</span>

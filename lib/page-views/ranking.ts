@@ -1,10 +1,7 @@
 import type { ArchiveItem } from "@/lib/archive"
 import { pageViewKey } from "@/lib/page-views/keys"
 import { statsForKey } from "@/lib/page-views/stats"
-import type {
-	PageViewKind,
-	PageViewStore,
-} from "@/lib/page-views/types"
+import type { PageViewKind, PageViewStore } from "@/lib/page-views/types"
 
 export type ArchiveSort = "default" | "popular" | "trending" | "newest"
 

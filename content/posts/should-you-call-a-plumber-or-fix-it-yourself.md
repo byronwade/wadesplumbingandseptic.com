@@ -1,10 +1,10 @@
 ---
-title: 'Plumber vs DIY: Your Santa Cruz County Guide'
+title: "Plumber vs DIY: Your Santa Cruz County Guide"
 description: >-
   When a plumbing issue pops up, your first thought might be: Should I try to
   fix this myself or call a plumber? It’s a valid question, and the answer.
 category: Plumbing Tips
-date: '2025-05-20'
+date: "2025-05-20"
 tags:
   - santa cruz plumbing
   - plumbing tips
@@ -15,7 +15,7 @@ tags:
   - local plumbing guide
   - plumbing repair
 image: /images/wordpress/img-1669.webp
-imageAlt: 'Plumber vs DIY: Your Santa Cruz County Guide'
+imageAlt: "Plumber vs DIY: Your Santa Cruz County Guide"
 ---
 
 When a plumbing issue pops up, your first thought might be: Should I try to fix this myself or call a plumber? It’s a valid question, and the answer depends on several key factors like your experience, the severity of the issue, and how much time you’re willing to invest.
@@ -42,12 +42,12 @@ But when in doubt, it’s better to call the pros at Wade’s Plumbing & Septic 
 
 Not all plumbing problems are created equal. Some minor issues can be handled with a wrench and a little know-how. Others, however, require specialized tools, training, and safety precautions.
 
-**DIY-Friendly**| **Call a Plumber**  
----|---  
-Dripping faucet| Burst pipe  
-Slow drain| Sewage backup  
-Running toilet| Water heater failure  
-Low water pressure| Main line blockage  
+| **DIY-Friendly**   | **Call a Plumber**   |
+| ------------------ | -------------------- |
+| Dripping faucet    | Burst pipe           |
+| Slow drain         | Sewage backup        |
+| Running toilet     | Water heater failure |
+| Low water pressure | Main line blockage   |
 
 Trying to fix serious problems (like a broken pipe or backflow issue), on your own can be risky and expensive. A licensed plumber will know how to handle these situations safely and effectively.
 

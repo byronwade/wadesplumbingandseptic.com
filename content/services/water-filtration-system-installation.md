@@ -8,8 +8,9 @@ order: 33
 image: >-
   /images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp
 imageAlt: Water filtration and treatment tank system
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Enhance the quality of your home's water with our expert **water filtration system installation in Santa Cruz County**. At Wade's Plumbing & Septic, we understand the importance of clean, safe drinking water for you and your family. Our comprehensive solutions range from whole-house systems to point-of-use filters, ensuring that your water is free from contaminants. Whether you're looking to address specific issues like hard water or require specialized filtration, our seasoned professionals have you covered.
 
 ## Signs You Need Water Filtration System Installation in Santa Cruz County
@@ -67,22 +68,22 @@ Water Quality Solutions
 
 Experience the benefits of clean, safe drinking water with our expert water filtration system installation in Santa Cruz County.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ### What Our Customers Say
 
 ★★★★★ 5-star rating from satisfied customers in Santa Cruz County, CA
 
 > "Our water quality has never been better since Wade's installed our new filtration system. Highly recommend!"
-> 
+>
 > \- Emily, Santa Cruz
 
 > "Professional and efficient service. The team was knowledgeable and friendly. Our water is now crystal clear!"
-> 
+>
 > \- Mark, Watsonville
 
 > "Fast and reliable! Wade's Plumbing & Septic made the whole process simple and stress-free."
-> 
+>
 > \- Sarah, Capitola
 
 Wade's Plumbing & Septic is a licensed contractor (C-42) ensuring top-quality service and expertise.

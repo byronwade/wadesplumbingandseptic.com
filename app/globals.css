@@ -659,12 +659,11 @@
 	}
 
 	.footer-credit {
-		background:
-			linear-gradient(
-				180deg,
-				color-mix(in srgb, black 35%, var(--ink)) 0%,
-				oklch(0.12 0.008 68) 100%
-			);
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, black 35%, var(--ink)) 0%,
+			oklch(0.12 0.008 68) 100%
+		);
 	}
 
 	.hero-index-tip {
@@ -678,13 +677,12 @@
 	}
 
 	.hero-index-service {
-		background:
-			linear-gradient(
-				135deg,
-				color-mix(in srgb, var(--ink) 4%, var(--background)) 0%,
-				var(--background) 55%,
-				color-mix(in srgb, var(--primary) 5%, var(--background)) 100%
-			);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--ink) 4%, var(--background)) 0%,
+			var(--background) 55%,
+			color-mix(in srgb, var(--primary) 5%, var(--background)) 100%
+		);
 	}
 
 	.hero-page {

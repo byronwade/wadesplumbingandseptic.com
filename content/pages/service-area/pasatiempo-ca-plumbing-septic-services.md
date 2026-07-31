@@ -1,6 +1,6 @@
 ---
 title: Pasatiempo, CA Plumbing & Septic Services
-description: 'Plumbing for Pasatiempo, CA: golf-course estate homes near Scotts Valley and Santa Cruz. Mostly sewer-served. Wade''s Plumbing & Septic. 831.225.4344.'
+description: "Plumbing for Pasatiempo, CA: golf-course estate homes near Scotts Valley and Santa Cruz. Mostly sewer-served. Wade's Plumbing & Septic. 831.225.4344."
 eyebrow: Pasatiempo, CA
 order: 50
 image: /images/locations/santa-cruz-plumber.webp

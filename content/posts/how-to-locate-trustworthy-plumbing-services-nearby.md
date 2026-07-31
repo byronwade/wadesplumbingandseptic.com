@@ -1,10 +1,10 @@
 ---
-title: 'Find Reliable Plumbing Services in Santa Cruz County, CA'
+title: "Find Reliable Plumbing Services in Santa Cruz County, CA"
 description: >-
   In the hustle and bustle of modern life, finding trustworthy plumbing services
   nearby can often feel like navigating a maze.
 category: Plumbing Tips
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
   - santa cruz county
   - plumbing services

@@ -1,6 +1,6 @@
 ---
 title: Amesti, CA Plumbing & Septic Services
-description: 'Plumbing and septic for Amesti, CA: rural south county lots near Amesti Creek and Watsonville. Wade''s Plumbing & Septic. Santa Cruz County. 831.225.4344.'
+description: "Plumbing and septic for Amesti, CA: rural south county lots near Amesti Creek and Watsonville. Wade's Plumbing & Septic. Santa Cruz County. 831.225.4344."
 eyebrow: Amesti, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp

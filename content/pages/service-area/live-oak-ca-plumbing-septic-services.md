@@ -1,15 +1,16 @@
 ---
-title: 'Live Oak, CA Plumbing & Septic Services'
+title: "Live Oak, CA Plumbing & Septic Services"
 description: >-
   Live Oak plumbing & septic along Soquel Drive, near beaches & rural pockets.
   Family-owned Wade's, CSLB #1087260. Call 831.225.4344.
-eyebrow: 'Live Oak, CA'
+eyebrow: "Live Oak, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: >-
   Live Oak neighborhood between Santa Cruz and Capitola with mixed residential
   housing
 ---
+
 Live Oak is the unincorporated stretch most people drive through without naming, until they own a house here. Soquel Drive and Portola Drive carry steady traffic past 1950s ranch homes, newer infill, and pockets that still feel rural a few blocks off the main roads. You are close enough to Seabright and Capitola for a short bike ride, but far enough from city hall that sewer versus septic answers come from county records, not a quick online map.
 
 Wade's Plumbing & Septic is family-owned (CSLB #1087260) and works Live Oak daily. We know which streets tie into Santa Cruz city sewer extensions, where older septics sit behind fences on larger lots, and how rental density along the corridor affects wear on aging plumbing.

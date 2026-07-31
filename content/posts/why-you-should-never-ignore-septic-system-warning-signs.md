@@ -1,22 +1,25 @@
 ---
 title: Prevent Costly Septic Issues in Santa Cruz County Homes
-description: Learn to recognize the critical warning signs of septic system problems
- and why addressing them promptly can save you thousands in repairs. From slow drains
- to unusual odors, these symptoms require immediate professional attention.
+description:
+  Learn to recognize the critical warning signs of septic system problems
+  and why addressing them promptly can save you thousands in repairs. From slow drains
+  to unusual odors, these symptoms require immediate professional attention.
 category: Septic Maintenance
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
-- local septic services
-- septic system maintenance
-- plumbing tips
-- septic warning signs
-- santa cruz county septic
-- avoid costly repairs
-- septic tank issues
-- early warning signs
+  - local septic services
+  - septic system maintenance
+  - plumbing tips
+  - septic warning signs
+  - santa cruz county septic
+  - avoid costly repairs
+  - septic tank issues
+  - early warning signs
 image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic system controls and access
----Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can save you thousands of dollars and protect your property value.
+---
+
+Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can save you thousands of dollars and protect your property value.
 
 ![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 
@@ -91,7 +94,6 @@ Our office hours are Monday through Friday, 9am to 5pm, and we take calls during
 
 With our extensive knowledge and experience, we are committed to providing reliable and trustworthy septic services throughout Santa Cruz County, ensuring your system operates smoothly and efficiently.
 
-
 ## Frequently Asked Questions
 
 ### How much does it cost to repair a septic system in Santa Cruz County?
@@ -116,5 +118,4 @@ Stay Ahead of Septic Issues
 
 Identify early warning signs of septic system problems and avoid expensive repairs with our expert guidance.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/) 
-
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)

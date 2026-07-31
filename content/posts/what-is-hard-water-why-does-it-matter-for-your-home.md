@@ -1,11 +1,11 @@
 ---
-title: 'Understanding Hard Water: Impact on Santa Cruz County Homes'
+title: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 description: >-
   When you turn on the tap, you probably aren’t thinking about what’s in your
   water, just that it’s flowing. But beyond the basics of hydration and
   hygiene,.
 category: Plumbing Tips
-date: '2025-07-29'
+date: "2025-07-29"
 tags:
   - santa cruz county
   - local plumbing experts
@@ -16,7 +16,7 @@ tags:
   - water quality
   - calcium magnesium
 image: /images/wordpress/img-1838-1.webp
-imageAlt: 'Understanding Hard Water: Impact on Santa Cruz County Homes'
+imageAlt: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 ---
 
 When you turn on the tap, you probably aren’t thinking about what’s in your water, just that it’s flowing. But beyond the basics of hydration and hygiene, the quality of your water can significantly impact your home, plumbing, and health. If your water contains high levels of calcium and magnesium, it’s known as hard water, and it could be silently damaging your plumbing and appliances.

@@ -1,13 +1,14 @@
 ---
-title: 'Twin Lakes, CA Plumbing & Septic Services'
+title: "Twin Lakes, CA Plumbing & Septic Services"
 description: >-
   Twin Lakes beach-area plumbing & septic, narrow lots, salt air, sewer &
   hillside septics. Wade's 831.225.4344, CSLB #1087260.
-eyebrow: 'Twin Lakes, CA'
+eyebrow: "Twin Lakes, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Twin Lakes coastal community between Santa Cruz and Capitola
 ---
+
 Twin Lakes is easy to miss on a commute, until a winter storm pushes surf close to the beach flats or a summer rental week ends with a plumbing surprise. Sandwiched between Santa Cruz and Capitola, this small beach neighborhood mixes narrow ocean-side lots, modest single-story homes, and a few properties climbing the bluff where wastewater setups change with elevation.
 
 Wade's Plumbing & Septic is family-owned and licensed in California (CSLB #1087260). We respond to Twin Lakes homeowners, long-term renters, and property managers who need a county team that understands tight lot lines and coastal hardware wear.

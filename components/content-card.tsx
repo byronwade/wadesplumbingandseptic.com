@@ -78,7 +78,7 @@ export function ContentCard({
 			 * Extended footer band: same card width/radius/border as the body,
 			 * with a soft copper-tinted ground so the silhouette still reads as one card.
 			 */}
-			<div className="card-foot border-border bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)] border-t">
+			<div className="card-foot border-border border-t bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)]">
 				<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 					{showViews ? (
 						<PageViewsStat

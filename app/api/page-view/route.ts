@@ -13,7 +13,9 @@ import type { PageViewKind } from "@/lib/page-views/types"
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:[a-z0-9/-]*[a-z0-9])?$/i
 
-function parseBody(value: unknown): { kind: PageViewKind; slug: string } | null {
+function parseBody(
+	value: unknown,
+): { kind: PageViewKind; slug: string } | null {
 	if (!value || typeof value !== "object") return null
 	const body = value as { kind?: unknown; slug?: unknown }
 	if (body.kind !== "service" && body.kind !== "tip") return null

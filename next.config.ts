@@ -60,7 +60,8 @@ const nextConfig: NextConfig = {
 			"next/dist/build/polyfills/polyfill-module": "./lib/empty-module.js",
 			"next/dist/build/polyfills/polyfill-module.js": "./lib/empty-module.js",
 			"next/dist/esm/build/polyfills/polyfill-module": "./lib/empty-module.js",
-			"next/dist/esm/build/polyfills/polyfill-module.js": "./lib/empty-module.js",
+			"next/dist/esm/build/polyfills/polyfill-module.js":
+				"./lib/empty-module.js",
 		},
 	},
 	webpack: (config) => {

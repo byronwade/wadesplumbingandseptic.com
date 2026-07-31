@@ -8,8 +8,9 @@ order: 1
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank engineered septic installation on a hillside
 featured: true
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 When a conventional tank and leach field will not work, that is our specialty. Wade's Plumbing & Septic designs and installs **engineered septic systems** for Santa Cruz County properties with steep slopes, shallow soils, high groundwater, rocky ground, small lots, or environmentally sensitive sites.
 
 We handle site evaluation support, system selection, permitting coordination, installation, startup, and owner guidance. Clear recommendations before money changes hands.

@@ -8,8 +8,9 @@ order: 26
 image: >-
   /images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp
 imageAlt: Stacked concrete pipes ready for installation
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 When sewer issues arise, the disruption can be a major inconvenience for homeowners. Fortunately, our trenchless sewer line replacement service in Santa Cruz County offers a solution that minimizes property disruption while effectively addressing damaged or deteriorated sewer pipes. By utilizing innovative techniques such as pipe bursting or pipe lining technology, we can install new sewer lines without extensive excavation, preserving your landscaping and hardscaping.
 
 ## Why Opt for Trenchless Sewer Line Replacement in Santa Cruz County?
@@ -61,19 +62,19 @@ Santa Cruz County's Trusted Sewer Experts
 
 Minimize disruption to your property with our seamless trenchless sewer replacement service.
 
-[Call Us Now](tel:+18312254344) 
+[Call Us Now](tel:+18312254344)
 
 ### What Our Customers Are Saying
 
 ★★★★★ 5-star rating from our satisfied customers!
 
-> "Wade's Plumbing & Septic made my sewer line repair hassle-free. The trenchless method was a lifesaver!" 
+> "Wade's Plumbing & Septic made my sewer line repair hassle-free. The trenchless method was a lifesaver!"
 > **\- Emily, Santa Cruz**
 
-> "I was impressed by their professionalism and quick service. Highly recommend Wade's for any plumbing needs!" 
+> "I was impressed by their professionalism and quick service. Highly recommend Wade's for any plumbing needs!"
 > **\- David, Scotts Valley**
 
-> "Exceptional service! The team was prompt and efficient, solving my sewer issues with ease." 
+> "Exceptional service! The team was prompt and efficient, solving my sewer issues with ease."
 > **\- Sarah, Capitola**
 
 Licensed Contractor: C-42 (California)

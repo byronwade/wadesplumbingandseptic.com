@@ -35,13 +35,11 @@ Phone calls are prioritized for fastest response and scheduling.
 - Permit & Timeline Planning
 - Repair vs. Replace Assessment
 
-
-
 ### What Happens Next
 
- 1. Phone qualification call
- 2. On-site evaluation and soil/permit review
- 3. Written proposal with options and timeline
+1.  Phone qualification call
+2.  On-site evaluation and soil/permit review
+3.  Written proposal with options and timeline
 
 #### Ready to Get Started?
 
@@ -55,10 +53,10 @@ Phone calls are prioritized for fastest response and scheduling.
 
 ##### FAQ
 
-**How much does a septic system replacement cost?** 
+**How much does a septic system replacement cost?**
 Costs vary significantly based on system type, soil conditions, lot constraints, and permitting requirements. Call us for a site-specific assessment.
 
-**Do I need a permit to replace a septic system?** 
+**Do I need a permit to replace a septic system?**
 Yes. In Santa Cruz County, septic system replacements require permits through the County Environmental Health division. Wade's handles permitting coordination.
 
 ### Ready to Schedule?

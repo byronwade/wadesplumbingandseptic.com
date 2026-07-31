@@ -34,8 +34,12 @@ type H2Section = {
 
 function conversionScore(sectionBody: string) {
 	let score = 0
-	if (/\[Call Us/i.test(sectionBody) || /tel:\+?\d/i.test(sectionBody)) score += 1
-	if (/\[Get a Free Quote\]/i.test(sectionBody) || /Get a Free Quote/i.test(sectionBody))
+	if (/\[Call Us/i.test(sectionBody) || /tel:\+?\d/i.test(sectionBody))
+		score += 1
+	if (
+		/\[Get a Free Quote\]/i.test(sectionBody) ||
+		/Get a Free Quote/i.test(sectionBody)
+	)
 		score += 1
 	if (/★★★★★/.test(sectionBody)) score += 1
 	if (/What Our Customers Say/i.test(sectionBody)) score += 1
@@ -182,13 +186,7 @@ export type ConversionFallback = {
 }
 
 type PageKind =
-	| "career"
-	| "contact"
-	| "about"
-	| "area"
-	| "tip"
-	| "service"
-	| "general"
+	"career" | "contact" | "about" | "area" | "tip" | "service" | "general"
 
 /** Section headings that should never become the designed CTA title. */
 const WEAK_CONVERSION_TITLE =

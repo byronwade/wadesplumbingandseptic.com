@@ -15,11 +15,7 @@ import type {
 	GlossaryTerm,
 	GlossaryTopic,
 } from "@/lib/glossary/types"
-import {
-	absoluteUrl,
-	breadcrumbJsonLd,
-	definedTermSetJsonLd,
-} from "@/lib/seo"
+import { absoluteUrl, breadcrumbJsonLd, definedTermSetJsonLd } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export function GlossaryTopicHub({
@@ -114,9 +110,7 @@ export function GlossaryTopicHub({
 									<li key={term.slug}>
 										<Link
 											className="border-border bg-background hover:border-primary/40 hover:bg-muted/40 group flex h-full flex-col gap-2 rounded-lg border p-5 transition-colors"
-											href={
-												glossaryTermPath(hub.topic, term.slug) as Route
-											}
+											href={glossaryTermPath(hub.topic, term.slug) as Route}
 											prefetch={false}
 										>
 											<span className="type-card-title group-hover:text-primary transition-colors">

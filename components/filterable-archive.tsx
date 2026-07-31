@@ -3,12 +3,7 @@
 import type { Route } from "next"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { ArrowLeft, ArrowRight, ChevronDown } from "@/components/icons"
-import {
-	startTransition,
-	useEffect,
-	useMemo,
-	type ReactNode,
-} from "react"
+import { startTransition, useEffect, useMemo, type ReactNode } from "react"
 
 import { ContentCard } from "@/components/content-card"
 import { buttonVariants } from "@/components/ui/button"
@@ -256,8 +251,7 @@ export function FilterableArchive({
 
 	const countLabel = `${total} ${total === 1 ? noun.singular : noun.plural}`
 	const activeFilter = filters.find((filter) => filter.key === activeCategory)
-	const heading =
-		activeFilter && canFilter ? activeFilter.label : allLabel
+	const heading = activeFilter && canFilter ? activeFilter.label : allLabel
 	const allSelected = activeCategory === null
 	const sortVisible = showSort && !lockedSort
 	const activeSortLabel =
@@ -364,9 +358,7 @@ export function FilterableArchive({
 											count={filter.count}
 											key={filter.key}
 											label={filter.label}
-											onSelect={() =>
-												updateParams({ category: filter.key })
-											}
+											onSelect={() => updateParams({ category: filter.key })}
 											selected={activeCategory === filter.key}
 										/>
 									))}

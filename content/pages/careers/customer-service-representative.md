@@ -1,8 +1,9 @@
 ---
 title: Customer Service Representative
-description: Join our customer service team handling calls, scheduling appointments,
- and providing exceptional customer support. Previous customer service experience
- preferred.
+description:
+  Join our customer service team handling calls, scheduling appointments,
+  and providing exceptional customer support. Previous customer service experience
+  preferred.
 eyebrow: Careers
 image: /images/team/byron-working.webp
 imageAlt: Wade's Plumbing & Septic field team at work

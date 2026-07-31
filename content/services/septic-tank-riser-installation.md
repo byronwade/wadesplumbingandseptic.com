@@ -8,8 +8,9 @@ order: 4
 image: >-
   /images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp
 imageAlt: Septic installation equipment on site
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Septic tank riser installation is an essential service for homeowners looking to simplify the maintenance and inspection of their septic systems. By bringing the tank access points to the surface, risers eliminate the need for labor-intensive digging, saving both time and money. At Wade's Plumbing & Septic, we specialize in installing durable, watertight risers with secure, childproof lids that blend seamlessly with your landscaping. Servicing Santa Cruz County, California, our expert team ensures that your septic system remains easily accessible for routine care and emergency interventions.
 
 ## Why Septic Tank Riser Installation is Essential
@@ -88,8 +89,8 @@ Simplify maintenance and inspections with our professional septic riser installa
 
 "Great experience from start to finish. The risers have made maintenance much simpler." (Emily, Capitola)
 
-★★★★★ 5-star service 
+★★★★★ 5-star service
 
-Licensed Contractor: C-42 
+Licensed Contractor: C-42
 
 Fast-Response Guarantee: Available Monday to Friday, 7 AM to 5 PM

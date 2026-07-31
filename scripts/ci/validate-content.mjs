@@ -133,12 +133,10 @@ for (const collection of COLLECTIONS) {
 
 		const fakePhones =
 			source.match(
-				/tel:\+?(?:1(?:800|831|833)555\d{4}|18315556677|19876543210)/gi,
+				/tel:\+?(?:1(?:800|831|833)555\d{4}|11234567890|1234567890|18315556677|19876543210)/gi,
 			) ?? []
 		for (const phone of fakePhones) {
-			errors.push(
-				`${file}: fake phone link "${phone}"; use tel:+18312254344`,
-			)
+			errors.push(`${file}: fake phone link "${phone}"; use tel:+18312254344`)
 		}
 
 		// Business-hours only: no 24/7 or "emergency line" claims.
@@ -171,14 +169,6 @@ for (const collection of COLLECTIONS) {
 			errors.push(
 				`${file}: competitor-gap research notes or outbound competitor links must not ship in published content`,
 			)
-		}
-
-		const fakePhones =
-			source.match(
-				/tel:\+?(?:11234567890|1234567890|1831555\d{4}|19876543210)/gi,
-			) ?? []
-		for (const phone of fakePhones) {
-			errors.push(`${file}: fake phone link "${phone}"; use tel:+18312254344`)
 		}
 
 		if (

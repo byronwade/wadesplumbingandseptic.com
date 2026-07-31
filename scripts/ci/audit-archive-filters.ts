@@ -39,9 +39,8 @@ async function main() {
 		paginateArchiveItems,
 		resolveArchiveCategory,
 	} = await import("../../lib/archive")
-	const { attachViewStats, sortArchiveItems } = await import(
-		"../../lib/page-views/ranking"
-	)
+	const { attachViewStats, sortArchiveItems } =
+		await import("../../lib/page-views/ranking")
 	const { utcDayNow } = await import("../../lib/page-views/stats")
 	const { getPageViewStoreCached } = await import("../../lib/page-views")
 
@@ -65,7 +64,10 @@ async function main() {
 	console.log(`SERVICES ${rankedServices.length}`)
 	const svcFilters = buildArchiveFilters(rankedServices)
 	console.log("filters", svcFilters)
-	assert.ok(svcFilters.length > 1, "Services need multiple categories to filter")
+	assert.ok(
+		svcFilters.length > 1,
+		"Services need multiple categories to filter",
+	)
 	for (const filter of svcFilters) {
 		assert.equal(
 			filterArchiveItems(rankedServices, filter.key).length,
@@ -80,7 +82,9 @@ async function main() {
 	const def = sortArchiveItems(rankedServices, "default")
 	console.log(
 		"popular top",
-		pop.slice(0, 5).map((item) => [item.slug, item.uniqueViews, item.trendingScore]),
+		pop
+			.slice(0, 5)
+			.map((item) => [item.slug, item.uniqueViews, item.trendingScore]),
 	)
 	console.log(
 		"trending top",

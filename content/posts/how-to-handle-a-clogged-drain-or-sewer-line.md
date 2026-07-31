@@ -1,10 +1,10 @@
 ---
-title: 'Emergency Drain & Sewer Solutions in Santa Cruz County, CA'
+title: "Emergency Drain & Sewer Solutions in Santa Cruz County, CA"
 description: >-
   Plumbing problems in your home can range from a quick fix with a plunger to a
   major issue requiring professional help. While some clogs are manageable on.
 category: Plumbing Tips
-date: '2025-06-10'
+date: "2025-06-10"
 tags:
   - santa cruz plumbing
   - plumbing repair
@@ -15,7 +15,7 @@ tags:
   - sewer solutions
   - sewer backup
 image: /images/wordpress/img-1837-1.webp
-imageAlt: 'Emergency Drain & Sewer Solutions in Santa Cruz County, CA'
+imageAlt: "Emergency Drain & Sewer Solutions in Santa Cruz County, CA"
 ---
 
 Plumbing problems in your home can range from a quick fix with a plunger to a major issue requiring professional help. While some clogs are manageable on your own, others can lead to serious backups and damage if ignored. Whether you’re dealing with a slow drain or a full-on plumbing emergency, it’s crucial to act fast to prevent flooding, water damage, or costly repairs.
@@ -54,12 +54,12 @@ If you want to attempt main drain cleaning yourself, gather the following tools 
 
 Step-by-Step Cleaning Process
 
- 1. Locate and Open the Cleanout Pipe 
-Look for a short pipe with a cap, usually found in the yard or basement. This gives you access to the sewer line. Open the cap slowly and cautiously, allowing any backed-up wastewater to drain. Be prepared for potential spray or overflow.
- 2. Use the Drain Snake or Auger 
-Once the water subsides, feed the auger into the pipe. Follow the instructions specific to your equipment. Continue until the resistance disappears, indicating that the blockage has cleared. Keep the auger running for a few more minutes to break up any lingering debris.
- 3. Flush With Water 
-With the auger still in the pipe, run water through the system using your hose. This helps remove loose debris from both the tool and the pipes. After flushing, remove the snake, replace the cleanout cap, and thoroughly clean your tools.
+1.  Locate and Open the Cleanout Pipe
+    Look for a short pipe with a cap, usually found in the yard or basement. This gives you access to the sewer line. Open the cap slowly and cautiously, allowing any backed-up wastewater to drain. Be prepared for potential spray or overflow.
+2.  Use the Drain Snake or Auger
+    Once the water subsides, feed the auger into the pipe. Follow the instructions specific to your equipment. Continue until the resistance disappears, indicating that the blockage has cleared. Keep the auger running for a few more minutes to break up any lingering debris.
+3.  Flush With Water
+    With the auger still in the pipe, run water through the system using your hose. This helps remove loose debris from both the tool and the pipes. After flushing, remove the snake, replace the cleanout cap, and thoroughly clean your tools.
 
 Still Dealing With a Clog? Let the Experts Handle It
 

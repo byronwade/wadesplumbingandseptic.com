@@ -4,7 +4,7 @@ description: >-
   Water leaks are one of the most damaging and costly problems a homeowner can
   face. According to national studies, the average home wastes up to 180.
 category: Plumbing Tips
-date: '2025-05-27'
+date: "2025-05-27"
 tags:
   - santa cruz plumbing
   - water leak detection

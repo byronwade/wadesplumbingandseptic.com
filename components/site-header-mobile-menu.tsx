@@ -116,7 +116,10 @@ export function SiteHeaderMobileMenu({
 			  h-dvh + min-h-0 keeps the scroll region between header/footer so
 			  lower links are not trapped under the sticky CTA bar.
 			*/}
-			<SheetContent side="right" className="bg-card h-dvh gap-0 overflow-hidden">
+			<SheetContent
+				side="right"
+				className="bg-card h-dvh gap-0 overflow-hidden"
+			>
 				<SheetHeader className="shrink-0 shadow-[inset_0_-1px_0_0_var(--border)]">
 					<div className="flex items-center gap-3">
 						<Image
@@ -151,11 +154,7 @@ export function SiteHeaderMobileMenu({
 						<ul>
 							{mobilePrimaryLinks.map((item) => (
 								<li key={item.href}>
-									<MobileNavLink
-										compact
-										onNavigate={closeMenu}
-										{...item}
-									/>
+									<MobileNavLink compact onNavigate={closeMenu} {...item} />
 								</li>
 							))}
 						</ul>

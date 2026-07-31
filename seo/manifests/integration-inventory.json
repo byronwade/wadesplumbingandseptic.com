@@ -1,118 +1,118 @@
 {
-  "schema_version": "1.0",
-  "classification": "BLOCKED_MISSING_CREDENTIALS",
-  "integrations": [
-    {
-      "id": "vercel-eve-ai-gateway",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Separate sidecar Vercel project and AI Gateway only",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
-    },
-    {
-      "id": "vercel-sandbox",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Sidecar-only ephemeral sandbox with no public-site write mount",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "github-connect",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Repository read; separately approved draft-PR capability only",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
-    },
-    {
-      "id": "vercel-read",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only project and deployment inspection; no logs or configuration reads",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
-    },
-    {
-      "id": "search-console",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Search Console readonly OAuth scope",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "pagespeed",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only PageSpeed API key",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "browser-research",
-      "category": "required",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Explicitly approved versioned domain allowlist and rate limits for HTTP public-document retrieval",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
-    },
-    {
-      "id": "browser-automation",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Reviewed isolated browser provider, explicit versioned domain allowlist, rate limits, and no credential forwarding",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
-    },
-    {
-      "id": "browserbase",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Separate Browserbase project, one short read-only session, explicit research-domain allowlist",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "ga4",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only aggregate analytics",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "local-falcon",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only local-rank evidence",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "similarweb",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only market-research evidence",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "google-trends",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Approved Google Trends alpha access and documented endpoint only",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "business-profile",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Read-only business-profile evidence",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "tracing",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Telemetry write only; no secrets in spans",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    },
-    {
-      "id": "vercel-blob-artifacts",
-      "category": "optional",
-      "state": "BLOCKED_MISSING_CREDENTIALS",
-      "minimum_scope": "Private sidecar-only storage for bounded redacted artifact copies; Git remains canonical",
-      "setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
-    }
-  ]
+	"schema_version": "1.0",
+	"classification": "BLOCKED_MISSING_CREDENTIALS",
+	"integrations": [
+		{
+			"id": "vercel-eve-ai-gateway",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Separate sidecar Vercel project and AI Gateway only",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
+		},
+		{
+			"id": "vercel-sandbox",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Sidecar-only ephemeral sandbox with no public-site write mount",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "github-connect",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Repository read; separately approved draft-PR capability only",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
+		},
+		{
+			"id": "vercel-read",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only project and deployment inspection; no logs or configuration reads",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
+		},
+		{
+			"id": "search-console",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Search Console readonly OAuth scope",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "pagespeed",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only PageSpeed API key",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "browser-research",
+			"category": "required",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Explicitly approved versioned domain allowlist and rate limits for HTTP public-document retrieval",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
+		},
+		{
+			"id": "browser-automation",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Reviewed isolated browser provider, explicit versioned domain allowlist, rate limits, and no credential forwarding",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#required-human-actions"
+		},
+		{
+			"id": "browserbase",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Separate Browserbase project, one short read-only session, explicit research-domain allowlist",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "ga4",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only aggregate analytics",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "local-falcon",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only local-rank evidence",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "similarweb",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only market-research evidence",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "google-trends",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Approved Google Trends alpha access and documented endpoint only",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "business-profile",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only business-profile evidence",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "tracing",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Telemetry write only; no secrets in spans",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		},
+		{
+			"id": "vercel-blob-artifacts",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Private sidecar-only storage for bounded redacted artifact copies; Git remains canonical",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
+		}
+	]
 }

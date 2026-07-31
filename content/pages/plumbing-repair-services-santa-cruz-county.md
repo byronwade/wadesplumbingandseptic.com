@@ -1,5 +1,5 @@
 ---
-title: 'Plumbing Repair Services, Santa Cruz County'
+title: "Plumbing Repair Services, Santa Cruz County"
 description: >-
   Call-first plumbing repair page for homeowners needing fast scheduling and
   clear options before work starts.

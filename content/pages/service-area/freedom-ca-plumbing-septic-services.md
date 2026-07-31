@@ -1,6 +1,6 @@
 ---
 title: Freedom, CA Plumbing & Septic Services
-description: 'Plumbing and septic service in Freedom, CA: ag lands, rural lots, and Freedom Blvd corridor. Wade''s serves south Santa Cruz County. Call 831.225.4344.'
+description: "Plumbing and septic service in Freedom, CA: ag lands, rural lots, and Freedom Blvd corridor. Wade's serves south Santa Cruz County. Call 831.225.4344."
 eyebrow: Freedom, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp

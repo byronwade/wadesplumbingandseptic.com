@@ -1,8 +1,5 @@
 import type { ContentDocument } from "@/lib/content"
-import {
-	companyNavigation,
-	resourceNavigation,
-} from "@/lib/site"
+import { companyNavigation, resourceNavigation } from "@/lib/site"
 
 export type ContentLayout = "marketing" | "article"
 

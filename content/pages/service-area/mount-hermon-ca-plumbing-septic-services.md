@@ -1,14 +1,15 @@
 ---
-title: 'Mount Hermon, CA Plumbing & Septic Services'
+title: "Mount Hermon, CA Plumbing & Septic Services"
 description: >-
   Mount Hermon plumbing and septic for conference-area homes, seasonal
   occupancy, private wells, and forested lots near Scotts Valley. Wade's:
   831.225.4344.
-eyebrow: 'Mount Hermon, CA'
+eyebrow: "Mount Hermon, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Forested residential roads near Mount Hermon and Scotts Valley border
 ---
+
 Mount Hermon is its own pocket of the Santa Cruz Mountains, tucked off Graham Hill Road between Scotts Valley and the San Lorenzo Valley, shaded by second-growth redwoods, known to most outsiders for the conference grounds and to residents for quiet roads, dark nights, and infrastructure that doesn't behave like town.
 
 Wade's Plumbing & Septic serves Mount Hermon homeowners who live here full-time and those who maintain a home that sits partially empty between seasons. Both situations stress plumbing and septic differently. A system that works fine in July can struggle in a rainy February when the drainfield is saturated and the house has had guests for a week straight.

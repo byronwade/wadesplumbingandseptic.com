@@ -21,7 +21,10 @@ export function hasSeenToken(cookieValue: string | undefined, token: string) {
 	return parseSeenCookie(cookieValue).includes(token)
 }
 
-export function appendSeenToken(cookieValue: string | undefined, token: string) {
+export function appendSeenToken(
+	cookieValue: string | undefined,
+	token: string,
+) {
 	const tokens = parseSeenCookie(cookieValue).filter((item) => item !== token)
 	tokens.push(token)
 	return serializeSeenCookie(tokens)

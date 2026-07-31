@@ -4,7 +4,7 @@ description: >-
   We recently helped a homeowner in Santa Cruz, CA who was dealing with an
   unpredictable shower, fluctuating temperatures, inconsistent pressure, and a.
 category: Plumbing Tips
-date: '2025-08-05'
+date: "2025-08-05"
 tags:
   - santa cruz county
   - plumbing services
@@ -124,7 +124,7 @@ Upgrade Your Home's Comfort
 
 Experience a revitalized shower experience with our expert plumbing solutions.
 
-[Call Us](tel:+18312254344) 
+[Call Us](tel:+18312254344)
 
 ## Enhance Shower Flow in Santa Cruz County Homes
 

@@ -4,7 +4,7 @@ description: >-
   What Santa Cruz County homeowners should know before a new septic installation,
   including site constraints, permits, and when engineered systems are needed.
 category: Septic Issues in Santa Cruz County
-date: '2026-04-13'
+date: "2026-04-13"
 tags:
   - santa cruz
   - septic
@@ -93,7 +93,7 @@ Regular inspections, pumping, and addressing minor issues are crucial. Professio
 
 ## Myths to Address
 
-**Myth:** New septic 
+**Myth:** New septic
 
 ## Sources & Local References
 

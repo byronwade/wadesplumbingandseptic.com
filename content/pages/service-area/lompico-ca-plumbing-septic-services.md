@@ -1,15 +1,16 @@
 ---
-title: 'Lompico, CA Plumbing & Septic Services'
+title: "Lompico, CA Plumbing & Septic Services"
 description: >-
   Lompico's private-road community needs mountain plumbing and septic pros,
   wells, remote tanks, steep leach fields, root-clogged lines. Wade's:
   831.225.4344.
-eyebrow: 'Lompico, CA'
+eyebrow: "Lompico, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural forest roads and mountain homes in the Lompico community near Zayante
 ---
-Lompico is one of those Santa Cruz County places you commit to. The road in, the community's own character, homes set back among madrone and redwood on parcels that were never meant for tract-housing infrastructure. There is no city water main waiting at the corner. Sewer doesn't exist. Your plumbing and septic system *is* your utility company, and when it fails, you're not calling a municipal crew.
+
+Lompico is one of those Santa Cruz County places you commit to. The road in, the community's own character, homes set back among madrone and redwood on parcels that were never meant for tract-housing infrastructure. There is no city water main waiting at the corner. Sewer doesn't exist. Your plumbing and septic system _is_ your utility company, and when it fails, you're not calling a municipal crew.
 
 Wade's Plumbing & Septic serves Lompico with the patience remote work demands. Family-owned, county-based, we've pumped tanks at the end of one-lane drives, repaired well lines buried under twenty years of leaf litter, and replaced drainfields where the only flat spot was someone's idea of a parking pad.
 

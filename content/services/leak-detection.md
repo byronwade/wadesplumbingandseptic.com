@@ -9,8 +9,9 @@ featured: true
 image: >-
   /images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp
 imageAlt: Pressure gauge on an industrial pipe
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 Welcome to Wade's Plumbing & Septic, where we specialize in comprehensive leak detection services in Santa Cruz County, California. Our cutting-edge techniques and state-of-the-art equipment ensure that we pinpoint leaks quickly and efficiently, saving you time and money. Whether it's a hidden leak behind your walls or under your floors, our team is equipped to find it using non-invasive methods. Prompt leak detection prevents costly water damage and reduces your utility bills, making it an essential service for homeowners.
 
 ## Signs You Might Need Leak Detection in Santa Cruz
@@ -30,10 +31,10 @@ If you notice any of these signs, it's crucial to seek professional **leak detec
 
 Understanding the root causes of leaks can help in preventing them. Some common causes include:
 
- 1. **Corrosion:** Over time, pipes can corrode, leading to leaks.
- 2. **High Water Pressure:** Excessive pressure can strain pipes and cause them to burst.
- 3. **Tree Root Intrusion:** Roots can invade and damage pipes, especially older ones.
- 4. **Age of Pipes:** Older pipes are more prone to wear and tear, leading to potential leaks.
+1.  **Corrosion:** Over time, pipes can corrode, leading to leaks.
+2.  **High Water Pressure:** Excessive pressure can strain pipes and cause them to burst.
+3.  **Tree Root Intrusion:** Roots can invade and damage pipes, especially older ones.
+4.  **Age of Pipes:** Older pipes are more prone to wear and tear, leading to potential leaks.
 
 ### The Leak Detection Process
 
@@ -83,7 +84,7 @@ Expert Leak Detection
 
 Detect and resolve septic leaks swiftly with our cutting-edge technology and expertise.
 
-[Call Us Now](tel:+1-831-123-4567) 
+[Call Us Now](tel:+1-831-123-4567)
 
 ### What Our Customers Say About Our Swift Septic Leak Detection
 

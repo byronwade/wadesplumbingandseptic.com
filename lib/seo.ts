@@ -282,10 +282,7 @@ export function extractFaqPairs(markdown: string) {
 	return pairs
 }
 
-export function serviceAreaJsonLd(
-	document: ContentDocument,
-	cityName: string,
-) {
+export function serviceAreaJsonLd(document: ContentDocument, cityName: string) {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Service",

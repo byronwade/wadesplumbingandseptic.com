@@ -8,8 +8,9 @@ featured: true
 order: 20
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic pumping and maintenance service
-updated: '2026-07-30'
+updated: "2026-07-30"
 ---
+
 ## Scheduled septic pumping protects the system
 
 Solids and scum accumulate even in a healthy septic tank. If too much material builds up, it can reduce treatment volume, block components, or move toward the drain field.

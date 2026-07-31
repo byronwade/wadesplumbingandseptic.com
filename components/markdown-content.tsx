@@ -100,9 +100,7 @@ export function MarkdownContent({
 					),
 					...(demoteH1
 						? {
-								h1: ({ children, ...props }) => (
-									<h2 {...props}>{children}</h2>
-								),
+								h1: ({ children, ...props }) => <h2 {...props}>{children}</h2>,
 							}
 						: {}),
 					// Wide tables scroll inside their own box instead of pushing the

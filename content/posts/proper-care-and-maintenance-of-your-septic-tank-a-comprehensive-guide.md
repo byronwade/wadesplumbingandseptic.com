@@ -1,11 +1,11 @@
 ---
-title: 'Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide'
+title: "Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide"
 description: >-
   Taking care of your septic tank is an important task that should not be
   overlooked. A septic tank is a self-contained underground chamber that is
   designed.
 category: Septic Maintenance
-date: '2025-05-11'
+date: "2025-05-11"
 tags:
   - septic maintenance
   - septic repair

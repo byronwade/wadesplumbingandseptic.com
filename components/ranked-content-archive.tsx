@@ -3,10 +3,7 @@ import { Suspense } from "react"
 import { FilterableArchive } from "@/components/filterable-archive"
 import { toArchiveItem, type ArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
-import {
-	sortArchiveItems,
-	type ArchiveSort,
-} from "@/lib/page-views/ranking"
+import { sortArchiveItems, type ArchiveSort } from "@/lib/page-views/ranking"
 import { rankItemsWithLiveStats } from "@/lib/page-views/live"
 
 async function serviceItems() {
