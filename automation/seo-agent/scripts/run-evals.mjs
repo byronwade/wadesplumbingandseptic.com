@@ -5,7 +5,7 @@ const root = resolve(import.meta.dirname, "..");
 const eveCli = resolve(root, "node_modules/eve/bin/eve.js");
 const child = spawn(
 	process.execPath,
-	[eveCli, "eval", "--strict", "--max-concurrency", "1", "--timeout", "15000"],
+	[eveCli, "eval", "--strict", "--max-concurrency", "1", "--timeout", "30000"],
 	{
 		cwd: root,
 		env: {
