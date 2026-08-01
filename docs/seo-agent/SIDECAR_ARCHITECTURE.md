@@ -23,9 +23,9 @@ The archive is fail-closed and is not automatic: it requires an enabled sidecar-
 
 Target topology: one Vercel project with framework Services. The checked-in target config is `docs/seo-agent/vercel.services.example.json`: independently built `site` and `eve_seo_agent` services, top-level rewrites exposing Eve only under `/_internal/eve`, and the public site as the catch-all. Eve also transforms `/_internal/eve/*` so its handlers observe `/api/*`. Each service installs from its own root and invokes its own build. The Eve build produces Vercel Build Output API artifacts and native schedule metadata. Do not add `outputDirectory`, `crons`, legacy `routePrefix`, or service-level `maxDuration`, because those override or conflict with the current Services model and Eve-owned metadata.
 
-Current recovery state: root `vercel.json` stays site-only (schema only, no `services` block) until an owner records `LIVE_VERIFIED` Services access on the linked project. Activating the sidecar deploy means copying the example Services config into root `vercel.json` after that proof, not creating a second project.
+Activation state: root `vercel.json` declares the reviewed Services topology on the feature branch, and the linked project now uses the Services Framework Preset with Node 24. The reviewed preview deployed both independently built services successfully. Production remains the existing human-controlled `main` deployment until this draft PR is reviewed and merged through normal branch protection; no sidecar action may merge or promote it.
 
-Use preview deployments for sidecar changes. Normal Vercel Git behavior may deploy the sidecar after a human-approved merge to its configured production branch, but the agent never invokes deployment, promotion, or merge. No project linking or deployment command is part of local verification.
+Use preview deployments for sidecar changes. The deployed internal functions remain SSO-protected, so direct endpoint probes are `BLOCKED_PREVIEW_SSO` until an owner approves an SSO-safe verification path. Normal Vercel Git behavior may deploy the sidecar after a human-approved merge to its configured production branch, but the agent never invokes deployment, promotion, or merge.
 
 ## Runtime and Environment
 

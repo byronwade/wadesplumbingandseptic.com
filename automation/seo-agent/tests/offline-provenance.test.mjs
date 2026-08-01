@@ -13,6 +13,8 @@ const script = resolve(
 
 test("offline provenance records the verifier result without a credential", () => {
 	const runnerTemp = mkdtempSync(resolve(tmpdir(), "wades-seo-offline-"));
+	const env = { ...process.env, RUNNER_TEMP: runnerTemp };
+	delete env.npm_execpath;
 	try {
 		const result = spawnSync(
 			process.execPath,
@@ -20,7 +22,7 @@ test("offline provenance records the verifier result without a credential", () =
 			{
 				cwd: root,
 				encoding: "utf8",
-				env: { ...process.env, RUNNER_TEMP: runnerTemp },
+				env,
 			},
 		);
 		assert.equal(result.status, 0, result.stderr);
@@ -51,6 +53,22 @@ test("offline provenance rejects missing or malformed verifier results", () => {
 		});
 		assert.notEqual(result.status, 0);
 		assert.match(result.stderr, /exit code from 0 through 255/);
+		const unsafeCommand = spawnSync(
+			process.execPath,
+			[
+				script,
+				"--exit-code=0",
+				"--duration-seconds=1",
+				"--verification-command=echo nope",
+			],
+			{
+				cwd: root,
+				encoding: "utf8",
+				env: { ...process.env, RUNNER_TEMP: runnerTemp },
+			},
+		);
+		assert.notEqual(unsafeCommand.status, 0);
+		assert.match(unsafeCommand.stderr, /safe npm verification command/);
 	} finally {
 		rmSync(runnerTemp, { force: true, recursive: true });
 	}

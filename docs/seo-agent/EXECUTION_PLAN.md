@@ -30,6 +30,10 @@ Complete phases in order. A phase is not complete until its acceptance checks ha
 - Phase 8: every draft PR includes a preview URL or a `BLOCKED_MISSING_CREDENTIALS` evidence record; it cannot be marked ready without a passing preview audit.
 - Phase 9: production evidence confirms a human merge and a Vercel-created production deployment; it never credits an agent-run deployment.
 
+## Phase 22 Update: Services Preview Boundary (2026-08-01)
+
+The one-project Services topology has now reached a `LIVE_VERIFIED` preview deployment: the public site and the isolated Eve service built separately and the service functions are present only below `/_internal/eve`. This completes the deployment-topology proof, not live agent operation. Direct endpoint acceptance remains `BLOCKED_PREVIEW_SSO`; provider reads, observe-only workflow invocation, and all mutation paths remain separately gated. The measurable next acceptance check is an owner-approved SSO-safe health/readiness and Cron-auth verification followed by one audit-only invocation that produces zero content files, zero PRs, and zero provider writes.
+
 ## Implementation Progress (2026-07-29)
 
 | Phase | Current evidence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Status                                                                                                                                                 |

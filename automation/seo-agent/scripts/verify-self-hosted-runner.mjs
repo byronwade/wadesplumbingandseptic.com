@@ -8,16 +8,20 @@ const policyPath = resolve(
 	"automation/seo-agent/ci/self-hosted-runner-policy.json",
 );
 const policy = JSON.parse(readFileSync(policyPath, "utf8"));
-const npmCli =
-	process.env.npm_execpath ??
-	resolve(dirname(process.execPath), "node_modules/npm/bin/npm-cli.js");
+const npmCliCandidates = [
+	process.env.npm_execpath,
+	// Node distributions commonly install npm beside the runtime under lib/.
+	resolve(dirname(process.execPath), "../lib/node_modules/npm/bin/npm-cli.js"),
+	resolve(dirname(process.execPath), "node_modules/npm/bin/npm-cli.js"),
+].filter(Boolean);
+const npmCli = npmCliCandidates.find((candidate) => existsSync(candidate));
 
 if (process.env.SEO_AGENT_OFFLINE_CI !== "true")
 	throw new Error(
 		"Self-hosted runner preflight requires SEO_AGENT_OFFLINE_CI=true.",
 	);
 
-if (!existsSync(npmCli))
+if (!npmCli)
 	throw new Error("npm CLI entry point is unavailable for runner preflight.");
 const npmVersion = execFileSync(process.execPath, [npmCli, "--version"], {
 	encoding: "utf8",
