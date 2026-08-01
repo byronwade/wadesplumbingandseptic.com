@@ -1,4 +1,6 @@
 import { makeEvidence, sha256 } from "./contracts.mjs";
+import { getToken } from "@vercel/connect";
+import { JWT } from "google-auth-library";
 import { assertAllowedDomain, classifyUntrustedText } from "./policy.mjs";
 import { createRunBudget } from "./run-controls.mjs";
 import {
@@ -16,6 +18,76 @@ const DEFAULT_REQUEST_POLICY = Object.freeze({
 });
 
 const MAX_UNTRUSTED_DOCUMENT_BYTES = 256_000;
+const DEFAULT_GITHUB_CONNECTOR_ID = "github/wadesplumbingandseptic-com";
+const SEARCH_CONSOLE_READ_SCOPE =
+	"https://www.googleapis.com/auth/webmasters.readonly";
+
+export function createVercelConnectGithubTokenProvider({
+	connector = DEFAULT_GITHUB_CONNECTOR_ID,
+	getTokenImpl = getToken,
+} = {}) {
+	if (!/^github\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(connector)) {
+		throw new Error("GitHub Connect connector ID is invalid.");
+	}
+	return async () => {
+		const token = await getTokenImpl(connector, {
+			subject: { type: "app" },
+		});
+		if (typeof token !== "string" || token.length === 0) {
+			throw new IntegrationError(
+				"CREDENTIAL_REJECTED",
+				"Vercel Connect did not return a GitHub app token.",
+			);
+		}
+		return token;
+	};
+}
+
+/**
+ * Returns a short-lived Google access-token provider for a service account.
+ * The service account is the background job identity. A user-scoped OAuth
+ * connector is intentionally not used for scheduled, non-interactive runs.
+ */
+export function createGoogleServiceAccountTokenProvider({
+	clientEmail,
+	privateKey,
+	scopes = [SEARCH_CONSOLE_READ_SCOPE],
+	jwtFactory = (options) => new JWT(options),
+} = {}) {
+	if (
+		typeof clientEmail !== "string" ||
+		!/^[^@\s]+@[^@\s]+\.iam\.gserviceaccount\.com$/.test(clientEmail)
+	) {
+		throw new Error("Google service account email is invalid.");
+	}
+	const normalizedPrivateKey = String(privateKey ?? "").replace(/\\n/g, "\n");
+	if (
+		!normalizedPrivateKey.startsWith("-----BEGIN PRIVATE KEY-----") ||
+		!normalizedPrivateKey.includes("-----END PRIVATE KEY-----")
+	) {
+		throw new Error("Google service account private key is invalid.");
+	}
+	if (!Array.isArray(scopes) || scopes.length === 0)
+		throw new Error("Google service account scopes are required.");
+
+	let client;
+	return async () => {
+		client ??= jwtFactory({
+			email: clientEmail,
+			key: normalizedPrivateKey,
+			scopes,
+		});
+		const result = await client.getAccessToken();
+		const token = typeof result === "string" ? result : result?.token;
+		if (typeof token !== "string" || token.length === 0) {
+			throw new IntegrationError(
+				"CREDENTIAL_REJECTED",
+				"Google service account did not return an access token.",
+			);
+		}
+		return token;
+	};
+}
 
 async function withAdapterTimeout(operation, { timeoutMs = 8_000, source }) {
 	let timer;
@@ -80,6 +152,34 @@ function blocked(runId, source, scope, reason) {
 
 function authorization(token) {
 	return { authorization: `Bearer ${token}` };
+}
+
+async function resolveAccessToken({
+	accessToken,
+	accessTokenProvider,
+	source,
+	timeoutMs,
+}) {
+	if (!accessTokenProvider) return accessToken;
+	try {
+		const token = await withAdapterTimeout(accessTokenProvider, {
+			timeoutMs,
+			source,
+		});
+		if (typeof token !== "string" || token.length === 0) {
+			throw new IntegrationError(
+				"CREDENTIAL_REJECTED",
+				`${source} did not return an access token.`,
+			);
+		}
+		return token;
+	} catch (error) {
+		if (error instanceof IntegrationError) throw error;
+		throw new IntegrationError(
+			"CREDENTIAL_REJECTED",
+			`${source} credential exchange failed.`,
+		);
+	}
 }
 
 function clamp(value, maximum) {
@@ -307,6 +407,7 @@ export function createAiGatewayAdapter({
 
 export function createSearchConsoleAdapter({
 	accessToken,
+	accessTokenProvider,
 	enabled = true,
 	fetchImpl = fetch,
 	budget,
@@ -323,18 +424,24 @@ export function createSearchConsoleAdapter({
 				"site-access",
 			);
 			if (disabled) return disabled;
-			if (!accessToken)
+			const resolvedAccessToken = await resolveAccessToken({
+				accessToken,
+				accessTokenProvider,
+				source: "Search Console service account",
+				timeoutMs: requestPolicy?.timeoutMs,
+			});
+			if (!resolvedAccessToken)
 				return blocked(
 					runId,
 					"search-console",
 					"site-access",
-					"Missing read-only Search Console OAuth credential.",
+					"Missing read-only Search Console service-account credential.",
 				);
 			const payload = await requestJson({
 				fetchImpl,
 				budget,
 				url: sitesEndpoint,
-				init: { headers: authorization(accessToken) },
+				init: { headers: authorization(resolvedAccessToken) },
 				source: "Search Console site list",
 				policy: requestPolicy,
 			});
@@ -360,12 +467,18 @@ export function createSearchConsoleAdapter({
 				"query-performance",
 			);
 			if (disabled) return disabled;
-			if (!accessToken)
+			const resolvedAccessToken = await resolveAccessToken({
+				accessToken,
+				accessTokenProvider,
+				source: "Search Console service account",
+				timeoutMs: requestPolicy?.timeoutMs,
+			});
+			if (!resolvedAccessToken)
 				return blocked(
 					runId,
 					"search-console",
 					"query-performance",
-					"Missing read-only Search Console OAuth credential.",
+					"Missing read-only Search Console service-account credential.",
 				);
 			const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`;
 			const payload = await requestJson({
@@ -375,7 +488,7 @@ export function createSearchConsoleAdapter({
 				init: {
 					method: "POST",
 					headers: {
-						...authorization(accessToken),
+						...authorization(resolvedAccessToken),
 						"content-type": "application/json",
 					},
 					body: JSON.stringify(assertCompleteSearchConsoleWindow(request, now)),
@@ -806,6 +919,7 @@ export function createBrowserbaseAdapter({
 
 export function createGithubReadAdapter({
 	accessToken,
+	accessTokenProvider,
 	repository = "byronwade/wadesplumbingandseptic.com",
 	enabled = true,
 	fetchImpl = fetch,
@@ -814,23 +928,41 @@ export function createGithubReadAdapter({
 } = {}) {
 	const [owner, repo] = repository.split("/");
 	const base = `https://api.github.com/repos/${encodeURIComponent(owner ?? "")}/${encodeURIComponent(repo ?? "")}`;
-	const headers = () => ({
-		...authorization(accessToken),
-		accept: "application/vnd.github+json",
-		"x-github-api-version": "2026-03-10",
-	});
-	const request = (url, init, source) =>
-		requestJson({
+	const hasCredential = Boolean(accessToken || accessTokenProvider);
+	const resolveAccessToken = async () => {
+		if (accessToken) return accessToken;
+		if (!accessTokenProvider) return undefined;
+		const token = await accessTokenProvider();
+		if (typeof token !== "string" || token.length === 0) {
+			throw new IntegrationError(
+				"CREDENTIAL_REJECTED",
+				"GitHub credential provider returned no token.",
+			);
+		}
+		return token;
+	};
+	const request = async (url, init, source) => {
+		const token = await resolveAccessToken();
+		return requestJson({
 			fetchImpl,
 			budget,
 			url,
-			init: { ...init, headers: { ...headers(), ...init?.headers } },
+			init: {
+				...init,
+				headers: {
+					...authorization(token),
+					accept: "application/vnd.github+json",
+					"x-github-api-version": "2026-03-10",
+					...init?.headers,
+				},
+			},
 			source,
 			policy: requestPolicy,
 		});
+	};
 	const guard = (runId, scope) =>
 		requireEnabled(enabled, runId, "github", scope) ??
-		(!accessToken
+		(!hasCredential
 			? blocked(
 					runId,
 					"github",
@@ -1190,6 +1322,7 @@ export function createIntegrationRegistry({
 	config = {},
 	fetchImpl = fetch,
 	budget = createRunBudget(),
+	googleServiceAccountJwtFactory,
 } = {}) {
 	const credentials = config.credentials ?? {};
 	const flags = config.integrationFlags ?? {};
@@ -1201,6 +1334,12 @@ export function createIntegrationRegistry({
 		}),
 		github: createGithubReadAdapter({
 			accessToken: credentials.githubReadToken,
+			accessTokenProvider:
+				flags.github === true && !credentials.githubReadToken
+					? createVercelConnectGithubTokenProvider({
+							connector: config.githubConnectorId,
+						})
+					: undefined,
 			repository: config.repository,
 			enabled: flags.github === true,
 			fetchImpl,
@@ -1216,6 +1355,15 @@ export function createIntegrationRegistry({
 		}),
 		search_console: createSearchConsoleAdapter({
 			accessToken: credentials.searchConsoleAccessToken,
+			accessTokenProvider:
+				credentials.googleServiceAccountEmail &&
+				credentials.googleServiceAccountPrivateKey
+					? createGoogleServiceAccountTokenProvider({
+							clientEmail: credentials.googleServiceAccountEmail,
+							privateKey: credentials.googleServiceAccountPrivateKey,
+							jwtFactory: googleServiceAccountJwtFactory,
+						})
+					: undefined,
 			enabled: flags.searchConsole === true,
 			fetchImpl,
 			budget,

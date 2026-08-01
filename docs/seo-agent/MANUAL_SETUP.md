@@ -1,87 +1,31 @@
-# Eve SEO Agent Manual Setup
+# Eve Owner Setup
 
-> Review checklist: use [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md) as the authoritative human handoff. Every cloud/integration checkbox in that guide is intentionally unchecked unless a human records independent evidence.
+The public site is correctly deployed as a Next.js project. Keep it that way until a reviewed Vercel Services activation change is ready.
 
-## Safety Before Setup
+## Already Configured
 
-Complete this only after Phases 1-4 have passed. Use this repository's one Vercel Services project, which builds the public site and `automation/seo-agent` independently in one deployment. Never paste tokens into repository files, committed configuration, prompts, evidence, or PR descriptions.
+- [x] The Vercel project uses Node 24 and the Next.js Framework Preset.
+- [x] Eve safety settings exist in Preview and Production: observe mode, mutation kill switch, disabled publishing, disabled live reads, and bounded budgets.
+- [x] A separate encrypted `CRON_SECRET` exists for Preview and Production. No external Cron schedule is enabled.
+- [x] GitHub Connect is installed as `github/wadesplumbingandseptic-com` for this repository. Its triggers are off.
+- [x] The GitHub read adapter is enabled and uses Vercel Connect app tokens. No static GitHub token is stored.
+- [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off.
+- [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console work.
+- [ ] Add the service-account email and private key as Production sidecar secrets only after the Services preview is approved. Their exact names are `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`.
+- [x] Search Console, Vercel read access, Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends, Blob archiving, publishing, and direct writes remain disabled.
 
-## Required Human Actions
+## Keep Off
 
-1. Request/confirm Vercel Services beta access, then link the repository's single Vercel project at its root. Set its framework to **Services**. Until that access is `LIVE_VERIFIED`, keep root `vercel.json` site-only so the public Next.js site can deploy. After proof, copy `docs/seo-agent/vercel.services.example.json` over root `vercel.json`. Confirm `site` is rooted at `.`, `eve_seo_agent` is rooted at `automation/seo-agent`, and top-level rewrites send `/_internal/eve/*` to Eve and all other public traffic to the site.
-2. The target Services config runs isolated install/build commands for each service and uses rewrite-based Services routing (not legacy `routePrefix`). Do not add manual Vercel Cron configuration: Eve emits schedule metadata during its build. Pull only local development environment values; never commit `.env*` files. The native schedule triggers durable Eve work directly; do not duplicate it with `/api/cron`.
-3. Configure Vercel AI Gateway for the sidecar. Record the project/environment identity and a redacted successful probe in the run manifest.
-4. Create a dedicated Vercel Connect GitHub connector with access limited to `byronwade/wadesplumbingandseptic.com`. Attach only the required environments and choose read scope plus draft-PR capability; do not grant merge, administration, secrets, deployments, releases, or broad organization scope. Configure each GitHub write operation to require explicit human approval.
-5. If GitHub mention/webhook triggering is adopted, attach Connect triggers only to the deployed sidecar path. Verify webhook delivery through a non-destructive mention/fixture and document the deployed URL.
-6. Grant `webmasters.readonly` Search Console access and a restricted PageSpeed key. Set only the specific `SEO_AGENT_ENABLE_*` flags for connectors reviewed by the owner. Add GA4 Data API read access, Business Profile `business.manage` access, Browserbase, Local Falcon, Similarweb, Google Trends alpha, or tracing only after a per-adapter privacy/scope review. Browserbase must use a separate project and one short non-keepalive read-only session; its connection URL must never be persisted. If any service is unavailable, alpha-gated, or lacks a documented approved endpoint, create a `BLOCKED_MISSING_CREDENTIALS` record rather than sharing credentials informally. If a configured/reachable probe errors or the required sidecar endpoint is absent, record `FAILED` with a safe request ID and corrective action; never relabel it as credential-blocked.
-7. Configure Vercel project access for preview/production read-only deployment inspection. The agent must not receive deploy, promote, alias, domain, project-settings, or environment-variable write permissions.
-8. Set Cron schedules only after the audit-only run succeeds. Start with a low-frequency schedule and hard budgets; record timezone, cron expression, owner, max runs, and disable path in versioned config. If a human separately configures an external caller for `GET /_internal/eve/api/cron`, set a unique encrypted `CRON_SECRET` of at least 24 characters as a reviewed server variable and send it only as `Authorization: Bearer <CRON_SECRET>`; the endpoint has no fallback authentication. Native Eve scheduling is platform-authenticated and does not require this secret.
-9. Confirm branch protection requires human review and blocks direct default-branch changes. Confirm Vercel Git integration produces preview deployments for PRs and production deployment only from approved `main` changes.
-10. Review deployment protection so the sidecar can audit only URLs to which it has explicitly authorized read access. Avoid giving it a bypass token for the public production site.
-11. If the owner wants redacted artifact copies, attach the existing Vercel Blob store only after reviewing the shared Services project server-environment scope. Keep `BLOB_READ_WRITE_TOKEN` encrypted, absent from local development/previews, Git, and every `NEXT_PUBLIC_` variable. Set `SEO_AGENT_BLOB_ENABLED=true` only after confirming Git remains the canonical store. Before a single reviewed archive, require a read-only Git reader to verify the exact full commit and every manifest/evidence byte; that commit must include `seo/runs/<run-id>/blob-archive-approval.json` with the run ID, manifest/bundle digests, approval timestamp, and a non-secret review reference. Then temporarily set `SEO_AGENT_BLOB_ARCHIVE_APPROVED=true` and `SEO_AGENT_BLOB_APPROVED_RUN_ID` to that exact run ID; remove both variables after verification. Do not grant the agent a public-serving, list, or delete workflow.
+- [ ] Do not change the Vercel Framework Preset to Services today.
+- [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
+- [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
-## Live Verification Record (2026-07-30)
+## Later, When We Activate the Sidecar
 
-- [x] The locally configured GitHub principal completed a repository read and a disposable draft-PR exercise. Draft PR #7 was closed without merge, and its named remote branch was deleted immediately after readback. This does not prove the sidecar's Vercel Connect installation.
-- [x] The locally configured Vercel CLI read the existing public-site project and a ready preview deployment. This does not prove Vercel Services availability, the `eve_seo_agent` route, or any sidecar adapter credential.
-- [x] The allowlisted browser-research adapter retrieved the public `robots.txt` document without retaining its raw content.
-- [ ] Vercel Services availability and one-project deployment: not verified in the accessible Vercel team. Do not approximate this by deploying the sidecar as a second project.
-- [ ] AI Gateway, Eve workflow, protected Cron, Search Console, PageSpeed, Vercel sidecar adapter, optional providers, browser session, and trace sink: not verified because no Services deployment/environment was accessible to this verification run.
-- [ ] Eve `healthz` and `readyz`: the required Services paths are `/_internal/eve/api/healthz` and `/_internal/eve/api/readyz`; legacy root-path HTML fallback is not a healthy sidecar.
+1. Create and review a dedicated Services activation PR that promotes [vercel.services.example.json](vercel.services.example.json) to the root Vercel configuration.
+2. Verify its preview preserves the public site and exposes only the internal Eve routes.
+3. Change the project Framework Preset to Services only for that reviewed deployment.
+4. Add the two Search Console service-account variables to Production and set `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true` for one exact approved read-only run.
+5. Run the first audit-only sidecar verification. Keep mutation mode disabled.
 
-See `seo/evidence/live-integration-verification-2026-07-30.json` for timestamps, redacted request identifiers, scopes, classifications, and corrective actions. No content was published, no Business Profile data changed, no branch was merged, and no push reached `main`.
-
-The sidecar package requires Node 24 or newer. Eve owns the Vercel Sandbox runtime image and the sidecar denies all network egress by default. Do not relax that policy through an environment variable. Any future sandbox network access or workspace source must be a reviewed versioned change with a matching regression test and must remain unavailable to untrusted/generated commands by default. After the Services configuration is linked, a human may test only the isolated smoke path by temporarily setting `SEO_AGENT_SANDBOX_INTEGRATION_APPROVED=true` in the reviewed production Eve-service environment and running `npm --prefix automation/seo-agent run sandbox:integration`. It creates a `node24` deny-all Sandbox, runs one benign Node stdout command, stops it, and prints a redacted record. Do not set this approval in development, previews, or repository files.
-
-The offline audit fixture renders a proposal only. It does not write the rendered `seo/runs/` or `seo/evidence/` files to the working tree. After human approval, a future scoped GitHub draft-PR gateway may publish that exact proposal only on a non-`main` feature branch.
-
-After configuration, run `npm --prefix automation/seo-agent run live:probe` to produce a no-network plan. For the first production audit only, an authorized human must set the non-secret production-sidecar approval values to one planned run ID, then run the matching probe: `$env:SEO_AGENT_ENV='production'; $env:SEO_AGENT_LIVE_READS_APPROVED='true'; $env:SEO_AGENT_LIVE_READS_APPROVED_RUN_ID='first-production-audit-YYYY-MM-DD'; npm --prefix automation/seo-agent run live:probe -- --execute --run-id=first-production-audit-YYYY-MM-DD`. Shared probe code rejects every execution outside production, without approval, or with a non-matching run ID; remove the approval values after the reviewed audit. It uses only read endpoints and prints redacted evidence. Do not redirect that output into Git until it has been reviewed for the required `seo/` evidence packet. Adding another browser-research domain requires a reviewed versioned-policy change; it cannot be supplied ad hoc through the environment.
-
-## Environment and Connector Inventory
-
-Maintain a redacted inventory in `seo/manifests/integration-inventory.json`; it must contain no secret values.
-
-| Integration                      | Minimum scope                                                                   | Default state                         | Live-proof requirement                                                                                                                    |
-| -------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Vercel / Eve / AI Gateway        | One Services project; OIDC preferred, no `NEXT_PUBLIC_` access                  | Blocked until linked                  | Eve service deployment and redacted OIDC/Gateway probe.                                                                                   |
-| Vercel Sandbox                   | Eve service only                                                                | Blocked until project policy approves | Isolated fixture command; no public-site write mount.                                                                                     |
-| GitHub via Connect               | Read repository + create draft PR after approval                                | Blocked until installed               | Read probe and draft-only mock/live policy proof.                                                                                         |
-| Search Console                   | Read-only property access                                                       | Optional                              | Redacted query/page probe.                                                                                                                |
-| PageSpeed                        | Read-only public API/query                                                      | Optional                              | Timestamped target-URL result.                                                                                                            |
-| Browserbase                      | Separate Browserbase project; short read-only session                           | Optional                              | Redacted session ID/status; never persist CDP connection URL.                                                                             |
-| Browser research                 | Explicit versioned public-domain allowlist                                      | Required                              | Redacted HTTP public-document retrieval and injection-defense evidence. This is not browser automation.                                   |
-| Browser automation               | Reviewed isolated provider; explicit domain allowlist; no credential forwarding | Optional                              | Redacted browser-provider result. It remains `BLOCKED_MISSING_CREDENTIALS` until a reviewed provider adapter is installed.                |
-| GA4                              | Analytics Data API read-only property                                           | Optional                              | Redacted aggregate `runReport` query.                                                                                                     |
-| Business Profile                 | `business.manage`, performance reads only                                       | Optional                              | Redacted performance time-series probe.                                                                                                   |
-| Local Falcon                     | OAuth/MCP or read-only API key                                                  | Optional                              | Redacted documented report-list probe.                                                                                                    |
-| Similarweb / Google Trends alpha | Reviewed vendor access only                                                     | Optional                              | `BLOCKED_MISSING_CREDENTIALS` unless the owner supplies documented approved access.                                                       |
-| Tracing / OTEL                   | Write telemetry only, no secrets in spans                                       | Optional                              | Redacted trace correlation ID.                                                                                                            |
-| Vercel Blob artifact archive     | Reviewed shared server scope; bounded redacted JSON copies only                 | Optional                              | Exact approved run ID, Git-verified bundle plus committed approval record, and private non-overwrite probe with no provider URL retained. |
-
-## Preview and Production Checklist
-
-Before a content PR can be ready for human review, record the draft PR URL, exact commit SHA, public-site preview URL, sidecar preview URL if changed, preview audit timestamp, content/schema/SEO checks, and any blocked live check. After a human merge, record the production deployment URL/ID, commit association, read-only audit result, and rollback recommendation if any. Do not mark a deployment verified from a build log alone.
-
-## Controlled Publishing Lifecycle
-
-The lifecycle implementation is intentionally fixture-only until an owner completes the prerequisites above. Its injected gateway has no automatic merge operation, and the deployed sidecar must not add one. It must never receive force-push, default-branch write, delete, deployment, Vercel-settings, secret, release, or repository-administration permission.
-
-Keep these sidecar-only controls disabled by default:
-
-- `SEO_AGENT_MUTATION_MODE=disabled`
-- `SEO_AGENT_PUBLISHING_HUMAN_APPROVED=false`
-- `SEO_AGENT_PUBLISHING_INTEGRATION_TEST=false`
-
-An authorized integration proof requires all three values to be enabled for the single reviewed exercise and the runtime mutation kill switch to be off. The integration-test flag is not a production authorization: it only prevents a real GitHub/Vercel action from being reachable accidentally in local or fixture runs. Remove the temporary values immediately afterward and retain only redacted evidence.
-
-For each approved opportunity, the gateway must read the current `main` SHA, create a deny-all isolated sandbox checkout at that SHA, gather versioned evidence, select exactly one existing-page-first opportunity, validate a bounded Markdown patch, and create only `eve/seo/YYYY-MM-DD-<slug>`. It may then create an attributed commit and draft PR, attach `seo-agent`, risk, and content labels, wait for the existing self-hosted CI result, detect the Vercel preview, audit affected non-indexable preview URLs, and comment the findings. It may mark the PR ready only after CI and preview gates pass. It only observes a human merge, then performs a read-only production audit and writes a redacted entry to the monthly SEO operations issue.
-
-Do not configure a publishing gateway until it has a reviewed comprehensive PR-body template, a human-approval record, approved service-area facts, a versioned evidence packet, a rollback note, and all deterministic lifecycle fixtures passing. If any gate is unavailable or fails, leave the PR draft and record `BLOCKED_MISSING_CREDENTIALS` or the failed gate; do not work around it.
-
-## Emergency Disable and Rollback
-
-- Disable the Eve service Cron schedule first; then remove or detach the relevant connector from the Vercel Services project.
-- Revoke compromised connector credentials through Vercel Connect/GitHub, not by committing replacement secrets.
-- For published content, a human reverts the merged PR or rolls Vercel back to a known-good deployment, then documents the outcome in the linked manifest.
-- The completion hook remains disabled unless the sentinel is deliberately created in Phase 10. The sentinel is an enforcement switch, not a runtime requirement.
-- Before enabling a connector or Cron, run `npm --prefix automation/seo-agent run rollback:drill`. It proves only the documented, human-only rollback sequence and performs no live rollback, provider call, or repository write.
+The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).

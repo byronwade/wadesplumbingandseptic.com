@@ -97,11 +97,10 @@ jobs:
         run: |
           mkdir -p artifacts/lighthouse
           CHROME_PATH="$(command -v google-chrome || command -v chromium-browser || command -v chromium)"
-          npx --yes lighthouse@12 http://127.0.0.1:3010/ \
+          CHROME_PATH="$CHROME_PATH" npx --yes lighthouse@12 http://127.0.0.1:3010/ \
             --only-categories=performance,accessibility,best-practices,seo \
             --preset=desktop \
             --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
-            --chrome-path="$CHROME_PATH" \
             --output=json \
             --output=html \
             --output-path=artifacts/lighthouse/desktop \

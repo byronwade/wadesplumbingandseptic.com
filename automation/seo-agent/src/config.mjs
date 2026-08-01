@@ -29,9 +29,15 @@ const envSchema = z
 		SEO_AGENT_MUTATION_MODE: z.enum(["disabled", "enabled"]).optional(),
 		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: z.enum(["true", "false"]).optional(),
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: z.string().email().optional(),
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: z.string().min(1).optional(),
 		SEARCH_CONSOLE_ACCESS_TOKEN: z.string().min(1).optional(),
 		PAGESPEED_API_KEY: z.string().min(1).optional(),
 		GITHUB_READ_TOKEN: z.string().min(1).optional(),
+		SEO_AGENT_GITHUB_CONNECTOR_ID: z
+			.string()
+			.regex(/^github\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/)
+			.optional(),
 		VERCEL_READ_TOKEN: z.string().min(1).optional(),
 		VERCEL_READ_PROJECT_ID: z.string().min(1).optional(),
 		VERCEL_READ_TEAM_ID: z.string().min(1).optional(),
@@ -79,6 +85,14 @@ function parseAllowedDomains(value) {
 
 export function loadConfig(env = process.env) {
 	const raw = envSchema.parse(env);
+	if (
+		Boolean(raw.GOOGLE_SERVICE_ACCOUNT_EMAIL) !==
+		Boolean(raw.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY)
+	) {
+		throw new Error(
+			"GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY must be configured together.",
+		);
+	}
 	return Object.freeze({
 		environment: raw.SEO_AGENT_ENV ?? "development",
 		repository:
@@ -91,6 +105,8 @@ export function loadConfig(env = process.env) {
 				raw.SEO_AGENT_BROWSER_ALLOWED_DOMAINS,
 			),
 		},
+		githubConnectorId:
+			raw.SEO_AGENT_GITHUB_CONNECTOR_ID ?? "github/wadesplumbingandseptic-com",
 		integrationFlags: Object.freeze({
 			aiGateway: raw.SEO_AGENT_ENABLE_AI_GATEWAY === "true",
 			github: raw.SEO_AGENT_ENABLE_GITHUB === "true",
@@ -121,6 +137,8 @@ export function loadConfig(env = process.env) {
 			prefix: raw.SEO_AGENT_BLOB_PREFIX ?? "wades-eve-seo-agent/v1",
 		}),
 		credentials: Object.freeze({
+			googleServiceAccountEmail: raw.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+			googleServiceAccountPrivateKey: raw.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY,
 			searchConsoleAccessToken: raw.SEARCH_CONSOLE_ACCESS_TOKEN,
 			pageSpeedApiKey: raw.PAGESPEED_API_KEY,
 			githubReadToken: raw.GITHUB_READ_TOKEN,
@@ -181,7 +199,11 @@ export function summarizeConfig(config) {
 			credential_configured: Boolean(config.credentials.blobReadWriteToken),
 		}),
 		integrations: Object.freeze({
-			search_console: Boolean(config.credentials.searchConsoleAccessToken),
+			search_console: Boolean(
+				(config.credentials.googleServiceAccountEmail &&
+					config.credentials.googleServiceAccountPrivateKey) ||
+				config.credentials.searchConsoleAccessToken,
+			),
 			pagespeed: Boolean(config.credentials.pageSpeedApiKey),
 			github: Boolean(config.credentials.githubReadToken),
 			vercel: Boolean(
@@ -207,5 +229,13 @@ export function summarizeConfig(config) {
 			similarweb: Boolean(config.credentials.similarwebApiKey),
 			google_trends: Boolean(config.credentials.googleTrendsAccessToken),
 		}),
+		search_console_auth_mode:
+			config.credentials.googleServiceAccountEmail &&
+			config.credentials.googleServiceAccountPrivateKey
+				? "service_account"
+				: config.credentials.searchConsoleAccessToken
+					? "legacy_access_token"
+					: "not_configured",
+		github_connector_id: config.githubConnectorId,
 	});
 }

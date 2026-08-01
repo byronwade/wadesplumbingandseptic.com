@@ -30,6 +30,7 @@ Vercel Services is a deployment boundary, not a static-secret boundary: project-
 | `SEO_AGENT_BLOB_ARCHIVE_APPROVED` + exact run ID | `false` / absent                  | `false` / absent                   | temporary exact-run approval only, then remove                                     |
 | `BLOB_READ_WRITE_TOKEN`                          | absent                            | absent                             | reviewed project server variable; never Git or `NEXT_PUBLIC_`                      |
 | Required/optional adapter credentials            | absent                            | absent                             | reviewed project server variables only after scope approval                        |
+| `GOOGLE_SERVICE_ACCOUNT_EMAIL` + private key     | absent                            | absent                             | Search Console service account only; encrypted, never `NEXT_PUBLIC_`               |
 
 Never copy a production secret to Preview, Git, a shell history, artifacts, PR bodies, `seo/` records, or `NEXT_PUBLIC_` variables. Vercel supports isolated Development, Preview, and Production variables; use `vercel env run` for a temporary local check rather than exporting secrets to a file when possible. Do not mistake that environment scoping for per-service credential isolation.
 
@@ -57,10 +58,11 @@ The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the servi
 
 ### Search Console service account
 
-1. [ ] Create a dedicated Google Cloud service account (or approved workload identity) for this sidecar.
-2. [ ] Enable Search Console API and grant the identity the least-privilege property access required for read-only data (`webmasters.readonly` where OAuth is used). Do not use an owner’s personal credential.
-3. [ ] Add the credential to the Production sidecar only as an encrypted variable; set `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true` only after approval.
-4. [ ] Run the approved exact-run probe. Verify date windows exclude the most recent three calendar days, rows are redacted/hashed, and the result states `LIVE_VERIFIED` only with a real timestamped probe.
+1. [x] Create the dedicated `eve-seo-reader` Google Cloud service account and add it as a Restricted Search Console user. This was owner-reported and is not yet a live adapter verification.
+2. [ ] Enable Search Console API. Do not use an owner’s personal Google credential or the generic Google OAuth connector for scheduled work.
+3. [ ] Generate one dedicated service-account key only if Workload Identity Federation is not yet available. Store its client email as `GOOGLE_SERVICE_ACCOUNT_EMAIL` and its private key as `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` in Production after the Services preview is approved. Never upload the JSON file, put it in Preview, or paste it into Git, chat, logs, or an issue.
+4. [ ] Set `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true` only for one exact approved read-only run. The adapter requests only `https://www.googleapis.com/auth/webmasters.readonly` and mints a short-lived token in process.
+5. [ ] Run the approved exact-run probe. Verify date windows exclude the most recent three calendar days, rows are redacted/hashed, and the result states `LIVE_VERIFIED` only with a real timestamped probe.
 
 ### PageSpeed Insights
 
