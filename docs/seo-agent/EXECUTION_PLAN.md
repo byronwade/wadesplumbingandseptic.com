@@ -59,6 +59,12 @@ After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747
 - Acceptance checks: a regression record with all classified ready evidence passes; records with an unclassified integration or non-ready independent review fail completion. Canonical evidence must include sidecar integration, dependency, Sandbox classification, observability, rollback, and independent-review output.
 - Dependencies / next gate: no external state is changed. Current integration records are valid `BLOCKED_MISSING_CREDENTIALS` entries, so canonical deterministic verification may pass but final completion must remain rejected until the required human-approved live probes are recorded.
 
+## Phase 36 Update: Production Read-Authorization Diagnostic (2026-08-01)
+
+- Acceptance scope: inspect the deployed observe-only control state before attempting any live provider read and prove that a missing exact-run approval fails closed.
+- Result: production health and readiness are `LIVE_VERIFIED` at the stated endpoints. The sidecar reports a closed circuit, required Cron secret, observe mode, and an active mutation kill switch. Live reads are not authorized because the exact Production controls remain `SEO_AGENT_LIVE_READS_APPROVED=false` and no approved run ID exists. This is correctly `BLOCKED_MISSING_CREDENTIALS`, not an integration failure.
+- Dependencies / next gate: requires a human-selected one-time audit run ID and explicit approval. It does not authorize proposal mode, publishing, Blob archival, a Sandbox session, direct-main writes, force pushes, automatic merges, or deployment changes.
+
 The requested `openai/gpt-5.6-terra` route is now `LIVE_VERIFIED`. A bounded OIDC request with the approved `openai/gpt-4.1-mini` availability fallback returned the expected response and reported Terra as the model used. The primary route remains Terra. The verified fallback is retained only to preserve audit availability if the primary route becomes temporarily unavailable. This does not authorize a live audit, draft publication, merge, or production mutation.
 
 ## Implementation Progress (2026-07-29)

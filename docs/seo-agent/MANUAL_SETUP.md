@@ -20,12 +20,14 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
-## Later, When We Activate the Sidecar
+## Next: One Audit-Only Run
 
-1. Let the normal PR checks for the reviewed Services branch finish green. Keep the PR as a draft.
-2. Approve an SSO-safe way to verify only `/_internal/eve/api/healthz`, `/_internal/eve/api/readyz`, and the protected Cron rejection path. Do not disable SSO just for testing.
-3. Approve one exact read-only audit run, then set only the required read-integration flags for that run.
-4. Review the audit evidence. Keep mutation mode, publishing, auto-merge, GitHub triggers, and external Cron disabled.
-5. Merge only through normal human branch protection when the preview and required CI evidence are accepted.
+- [ ] Let the draft PR checks and preview finish green. Keep the PR a draft.
+- [ ] Choose one lower-case run ID, such as `production-audit-2026-08-01`.
+- [ ] In Vercel Production only, set `SEO_AGENT_LIVE_READS_APPROVED=true` and set `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID` to that exact run ID.
+- [ ] Leave observe mode on. Keep mutation mode `disabled`, the kill switch `true`, publishing approval `false`, integration-test `false`, Blob disabled, and Sandbox approval `false`.
+- [ ] Tell Codex the approved run ID. It will perform only read-only integration checks and an audit with zero content changes and zero pull requests.
+- [ ] Review the redacted report, then set `SEO_AGENT_LIVE_READS_APPROVED=false` and remove the approved run ID.
+- [ ] Do not enable GitHub triggers, publishing, automatic merge, external Cron, or direct writes to `main`.
 
 The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).

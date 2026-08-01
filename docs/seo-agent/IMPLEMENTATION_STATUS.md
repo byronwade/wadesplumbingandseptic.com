@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 36: Production Read-Authorization Diagnostic (2026-08-01)
+
+- State: `BLOCKED_MISSING_CREDENTIALS` for live audit authorization, intentionally. The deployed sidecar itself is healthy and no production content or provider state changed.
+- Live evidence: at `2026-08-01T15:29Z`, production `GET /_internal/eve/api/healthz` and `GET /_internal/eve/api/readyz` each returned HTTP `200`. Both reported `ready: true`, `mode: observe`, `cron_secret_required: true`, a closed circuit with zero failures, `integration_classification: CONFIGURED_UNVERIFIED`, and `mutation_kill_switch: true`.
+- Configuration evidence: the encrypted Production configuration has the reviewed non-secret variable names for Cron, OIDC, Google service account, PageSpeed, Blob, and all adapter flags. Its safe control values are `SEO_AGENT_ENV=production`, `SEO_AGENT_RUN_MODE=observe`, `SEO_AGENT_MUTATION_MODE=disabled`, `SEO_AGENT_MUTATION_KILL_SWITCH=true`, `SEO_AGENT_LIVE_READS_APPROVED=false`, no `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID`, `SEO_AGENT_PUBLISHING_HUMAN_APPROVED=false`, `SEO_AGENT_PUBLISHING_INTEGRATION_TEST=false`, `SEO_AGENT_BLOB_ENABLED=false`, and `SEO_AGENT_SANDBOX_INTEGRATION_APPROVED=false`. No secret value was printed or committed.
+- Result: the exact-run authorization guard correctly blocks every provider read. It would be unsafe to bypass this with a direct local request or to change production approval flags without a human-approved run identifier.
+- Next exact action: a human must choose a new lower-case run ID such as `production-audit-2026-08-01`, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID` to that exact value in the Production Eve environment, and explicitly authorize one audit-only read. Keep observe mode, mutation mode `disabled`, the kill switch `true`, publishing approval `false`, integration-test `false`, Blob disabled, and Sandbox approval `false`. Then run `npm --prefix automation/seo-agent run live:probe -- --execute --run-id=<exact-run-id>` from the approved production sidecar environment, retain only redacted evidence, and reset the two live-read approval variables immediately afterward.
+
 ## Phase 35: Completion-Evidence Integrity (2026-08-01)
 
 - State: COMPLETE for deterministic verification hardening (`MOCK_VERIFIED`). This phase does not alter a provider, deployment, Connector, publishing mode, or agent authority.
