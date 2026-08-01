@@ -32,6 +32,7 @@ export const RUNTIME_ERROR_CODES = Object.freeze({
 });
 
 const AUDIT_JOB = Object.freeze({ name: "audit", cron: "17 16 * * 1" });
+const PROPOSAL_JOB = Object.freeze({ name: "proposal", cron: null });
 const SAFE_RUN_ID = /^[a-z0-9][a-z0-9-]{2,79}$/;
 
 export class RuntimeError extends Error {
@@ -65,9 +66,11 @@ export function verifyCronSecret(authorization, expectedSecret) {
 	);
 }
 
+/** @param {{ job?: "audit" | "proposal" }} [input] */
 export function selectScheduledJob({ job } = {}) {
 	if (job === undefined || job === "" || job === AUDIT_JOB.name)
 		return AUDIT_JOB;
+	if (job === PROPOSAL_JOB.name) return PROPOSAL_JOB;
 	throw new RuntimeError(
 		RUNTIME_ERROR_CODES.UNSUPPORTED_JOB,
 		`Unsupported scheduled job: ${String(job)}`,
@@ -104,6 +107,7 @@ export function createRunDescriptor({ job, now = new Date() } = {}) {
 	});
 }
 
+/** @param {{ runId: string, idempotencyKey: string, job?: "audit" | "proposal" }} input */
 export function assertRunDescriptor({
 	runId,
 	idempotencyKey,
@@ -450,24 +454,66 @@ export function planRun({ descriptor, settings, recordedRunIds = [] }) {
 	const plan = {
 		...descriptor,
 		mode: settings.mode,
-		auditOnly: true,
+		auditOnly: descriptor.job === AUDIT_JOB.name,
 		firstRunAuditOnly: firstRun,
 		mutationsAllowed: false,
 		mutationKillSwitch: settings.mutationKillSwitch,
 		inactive,
 		limits: settings.limits,
 	};
-	const workPackets = inactive
-		? []
-		: createAuditWorkPackets({
-				descriptor,
-				mode: settings.mode,
-				firstRunAuditOnly: firstRun,
-				budgets: settings.limits,
-			});
+	const workPackets =
+		inactive || descriptor.job !== AUDIT_JOB.name
+			? []
+			: createAuditWorkPackets({
+					descriptor,
+					mode: settings.mode,
+					firstRunAuditOnly: firstRun,
+					budgets: settings.limits,
+				});
 	if (!inactive)
 		assertAuditWorkPackets(workPackets, { budgets: settings.limits });
 	return Object.freeze({ ...plan, workPackets });
+}
+
+/**
+ * A proposal is never a standing cron capability. The protected dispatcher may
+ * start it only for an exact, human-approved run ID while the runtime is in
+ * propose mode and the mutation kill switch is deliberately off.
+ */
+export function assertProposalRunAuthorization({
+	descriptor,
+	settings,
+	config,
+}) {
+	if (descriptor?.job !== PROPOSAL_JOB.name) {
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.UNSUPPORTED_JOB,
+			"Only proposal jobs may enter the draft publication workflow.",
+			{ status: 400 },
+		);
+	}
+	if (settings?.mode !== "propose") {
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.RUNTIME_PAUSED,
+			"Proposal execution requires SEO_AGENT_RUN_MODE=propose.",
+			{ status: 409 },
+		);
+	}
+	const publishing = config?.publishing;
+	if (
+		publishing?.mutationMode !== "enabled" ||
+		settings?.mutationKillSwitch !== false ||
+		publishing?.humanApproved !== true ||
+		publishing?.integrationTestEnabled !== true ||
+		publishing?.approvedRunId !== descriptor.runId
+	) {
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
+			"Proposal execution is not approved for this exact run ID.",
+			{ status: 409 },
+		);
+	}
+	return true;
 }
 
 export async function executeOrchestratedAudit({

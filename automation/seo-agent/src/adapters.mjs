@@ -23,6 +23,14 @@ const GITHUB_READ_TOKEN_PERMISSIONS = Object.freeze([
 	"contents:read",
 	"pull_requests:read",
 ]);
+// The only write-capable Connect request in this codebase. It is intentionally
+// fixed to the single repository and the three draft-PR actions below; callers
+// cannot add administration, workflow, secret, or merge permissions.
+const GITHUB_DRAFT_WRITE_TOKEN_PERMISSIONS = Object.freeze([
+	"contents:write",
+	"pull_requests:write",
+	"issues:write",
+]);
 const SEARCH_CONSOLE_READ_SCOPE =
 	"https://www.googleapis.com/auth/webmasters.readonly";
 
@@ -50,6 +58,43 @@ export function createVercelConnectGithubTokenProvider({
 					type: "github_app_installation",
 					repositories: [repository],
 					permissions: GITHUB_READ_TOKEN_PERMISSIONS,
+				},
+			],
+		});
+		if (typeof token !== "string" || token.length === 0) {
+			throw new IntegrationError(
+				"CREDENTIAL_REJECTED",
+				"Vercel Connect did not return a GitHub app token.",
+			);
+		}
+		return token;
+	};
+}
+
+export function createVercelConnectGithubDraftWriteTokenProvider({
+	connector = DEFAULT_GITHUB_CONNECTOR_ID,
+	repository,
+	getTokenImpl = getToken,
+} = {}) {
+	if (!/^github\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(connector)) {
+		throw new Error("GitHub Connect connector ID is invalid.");
+	}
+	if (
+		typeof repository !== "string" ||
+		!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository)
+	) {
+		throw new Error(
+			"GitHub Connect requires one owner/repository restriction.",
+		);
+	}
+	return async () => {
+		const token = await getTokenImpl(connector, {
+			subject: { type: "app" },
+			authorizationDetails: [
+				{
+					type: "github_app_installation",
+					repositories: [repository],
+					permissions: GITHUB_DRAFT_WRITE_TOKEN_PERMISSIONS,
 				},
 			],
 		});
