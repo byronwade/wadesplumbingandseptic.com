@@ -8,6 +8,7 @@ import {
 	createAiGatewayAdapter,
 	createGa4Adapter,
 	createGithubReadAdapter,
+	createGoogleServiceAccountTokenProvider,
 	createVercelConnectGithubTokenProvider,
 	createIntegrationRegistry,
 	createLocalFalconAdapter,
@@ -170,6 +171,105 @@ test("GitHub Connect provider rejects missing app tokens and malformed connector
 		getTokenImpl: async () => "",
 	});
 	await assert.rejects(provider, /did not return a GitHub app token/);
+});
+
+test("Search Console uses a cached short-lived service-account token and never records key material", async () => {
+	let jwtFactoryCalls = 0;
+	const tokenProvider = createGoogleServiceAccountTokenProvider({
+		clientEmail: "eve-seo-reader@example-project.iam.gserviceaccount.com",
+		privateKey:
+			"-----BEGIN PRIVATE KEY-----\\nfixture-private-key\\n-----END PRIVATE KEY-----",
+		jwtFactory: ({ email, key, scopes }) => {
+			jwtFactoryCalls += 1;
+			assert.equal(
+				email,
+				"eve-seo-reader@example-project.iam.gserviceaccount.com",
+			);
+			assert.equal(key.includes("\n"), true);
+			assert.deepEqual(scopes, [
+				"https://www.googleapis.com/auth/webmasters.readonly",
+			]);
+			return {
+				getAccessToken: async () => ({ token: "service-account-token" }),
+			};
+		},
+	});
+	assert.equal(await tokenProvider(), "service-account-token");
+	assert.equal(await tokenProvider(), "service-account-token");
+	assert.equal(jwtFactoryCalls, 1);
+	const requests = [];
+	const adapter = createSearchConsoleAdapter({
+		accessTokenProvider: tokenProvider,
+		fetchImpl: async (url, init) => {
+			requests.push({ url: String(url), init });
+			return jsonResponse({ siteEntry: [] });
+		},
+	});
+	const evidence = await adapter.probe({
+		runId: "search-service-account-fixture",
+	});
+	assert.equal(evidence.classification, "LIVE_VERIFIED");
+	assert.equal(jwtFactoryCalls, 1);
+	assert.equal(
+		requests[0].init.headers.authorization,
+		"Bearer service-account-token",
+	);
+	assert.equal(JSON.stringify(evidence).includes("fixture-private-key"), false);
+});
+
+test("Search Console service-account configuration is atomic and takes precedence over legacy access tokens", async () => {
+	assert.throws(
+		() =>
+			createGoogleServiceAccountTokenProvider({
+				clientEmail: "invalid",
+				privateKey:
+					"-----BEGIN PRIVATE KEY-----\\nfixture\\n-----END PRIVATE KEY-----",
+			}),
+		/Service account email is invalid/i,
+	);
+	assert.throws(
+		() =>
+			createGoogleServiceAccountTokenProvider({
+				clientEmail: "eve-seo-reader@example-project.iam.gserviceaccount.com",
+				privateKey: "not-a-private-key",
+			}),
+		/private key is invalid/i,
+	);
+	assert.throws(
+		() =>
+			loadConfig({
+				GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+			}),
+		/must be configured together/,
+	);
+	const config = loadConfig({
+		GOOGLE_SERVICE_ACCOUNT_EMAIL:
+			"eve-seo-reader@example-project.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\\nfixture-private-key\\n-----END PRIVATE KEY-----",
+		SEARCH_CONSOLE_ACCESS_TOKEN: "legacy-token",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+	});
+	const summary = summarizeConfig(config);
+	assert.equal(summary.integrations.search_console, true);
+	assert.equal(summary.search_console_auth_mode, "service_account");
+	assert.equal(JSON.stringify(summary).includes("fixture-private-key"), false);
+	let providerCalls = 0;
+	const registry = createIntegrationRegistry({
+		config,
+		googleServiceAccountJwtFactory: () => ({
+			getAccessToken: async () => {
+				providerCalls += 1;
+				return { token: "service-account-token" };
+			},
+		}),
+		fetchImpl: async (_url, init) => {
+			assert.equal(init.headers.authorization, "Bearer service-account-token");
+			return jsonResponse({ siteEntry: [] });
+		},
+	});
+	await registry.search_console.probe({ runId: "search-registry-fixture" });
+	assert.equal(providerCalls, 1);
 });
 
 test("Vercel read adapter confines requests to project/deployment GET endpoints", async () => {

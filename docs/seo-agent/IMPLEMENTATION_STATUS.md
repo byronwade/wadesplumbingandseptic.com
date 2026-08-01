@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 26 - Search Console Service Account Repair (2026-07-31)
+
+- State: COMPLETE for the offline service-account adapter (`MOCK_VERIFIED`). The Google OAuth connector remains `FAILED` for Eve's non-interactive app subject and is not represented as a live Search Console integration.
+- Completed work: added the official sidecar-only `google-auth-library@11.0.0` dependency and a typed Google service-account token provider. It validates the service-account email and PEM envelope, normalizes literal newline escapes in the private key, requests only `https://www.googleapis.com/auth/webmasters.readonly`, caches the JWT client in process, and never includes credential material in configuration summaries or evidence. Search Console's adapter now resolves that short-lived token before its existing bounded, read-only `sites.list` and Search Analytics calls. The former `SEARCH_CONSOLE_ACCESS_TOKEN` path remains a local-fixture compatibility fallback; it is not the intended deployed credential path.
+- Regression coverage: added deterministic coverage for private-key normalization, read-only scope selection, token-header use, key redaction, atomic environment configuration, service-account precedence over the legacy token, and absent partial configuration. The first focused run correctly failed because the test asserted the pre-normalized newline form; the assertion was corrected without weakening the implementation's fail-closed credential behavior.
+- Live evidence: the linked Google OAuth connector `accounts.google.com/wadesplumbingandseptic-com` is present. A Vercel Connect app-token request through temporary Development and Production project identities returned `ConnectError` with code `unresolved_token`; no Google API request followed. This is a configured connector failure for a background app subject, not proof of Search Console access. The service-account property grant was owner-reported, but neither `GOOGLE_SERVICE_ACCOUNT_EMAIL` nor `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` exists in the Vercel project environment and no Vercel Services sidecar is deployed, so Search Console remains `BLOCKED_MISSING_CREDENTIALS` for Eve.
+- Verification: `npm install --ignore-scripts` and `npm install --package-lock-only --ignore-scripts` in `automation/seo-agent` - exit `0`; `npm --prefix automation/seo-agent run ci:offline; npm --prefix automation/seo-agent run audit:dependencies; npm --prefix automation/seo-agent run security:scan` - exit `0` - `19.2s` - lint, format, typecheck, `101` deterministic tests, `10` runtime integration fixtures, evals, fixture audit, rollback drill, independent review, Eve build, dependency audit, and secret scan all passed. Root `npm run format:check; npm run lint; npm run typecheck; npm run build` - exit `0` - `88.2s` - produced the existing `590` public-site routes. The Eve build retained its non-failing pre-existing Windows absolute-path module-evaluation warning for `agent/tools/orchestrate.ts` while its manifest verification passed.
+- External blockers: root `vercel.json` correctly remains site-only while Vercel Services has no accepted preview proof. The private service-account credential or an approved workload-identity configuration has not been added to the future Production sidecar environment. The Production-only PageSpeed key remains present but its flag is off and it was not invoked.
+- Next exact action: create the reviewed Services activation preview, then add the dedicated service-account email/private key as encrypted Production variables, approve one exact audit-only run, and use the sidecar's `live:probe --execute` command to classify the real Search Console result without enabling mutation.
+
 ## Phase 25 - GitHub Connect Read Integration (2026-08-01)
 
 - State: PARTIALLY LIVE_VERIFIED. The GitHub Connect app-token exchange and one repository metadata read are live verified. The Vercel-hosted Eve sidecar remains undeployed because the project intentionally uses the recovered site-only Next.js configuration.
@@ -132,11 +142,12 @@
 
 ## Current State
 
-- Current phase: 18 — Review remediation and canonical runtime selection
-- State: COMPLETE for deterministic implementation (`MOCK_VERIFIED`); external Blob verification and other live integrations remain `BLOCKED_MISSING_CREDENTIALS`
-- Branch: `feat/eve-seo-agent`
+- Current phase: 26 — Search Console service-account repair
+- State: COMPLETE for the offline implementation (`MOCK_VERIFIED`); Search Console, Blob, and other undeployed live integrations remain `BLOCKED_MISSING_CREDENTIALS`
+- Branch: `docs/simplify-eve-owner-setup`
+- Current commit: recorded by the Phase 26 checkpoint commit on `docs/simplify-eve-owner-setup`; use `git rev-parse HEAD` after integration for the exact release SHA.
 - Baseline commit: `b43fc94` (`Deploy WordPress releases to the active theme`)
-- Latest verified control-plane checkpoint: review remediation and canonical runtime selection.
+- Latest verified control-plane checkpoint: service-account adapter, typed configuration, and redaction regression coverage.
 - Product runtime: IMPLEMENTED OFFLINE; LIVE RUNTIME BLOCKED
 - Verification state: `MOCK_VERIFIED` for the control plane, contracts, policy/evals, safe telemetry, audit-only workflow, and canonical verification evidence
 
