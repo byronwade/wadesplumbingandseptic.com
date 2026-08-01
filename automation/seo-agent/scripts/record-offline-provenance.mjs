@@ -14,6 +14,8 @@ const args = new Map(
 );
 const exitCode = Number(args.get("--exit-code"));
 const durationSeconds = Number(args.get("--duration-seconds"));
+const verificationCommand =
+	args.get("--verification-command") ?? "npm run seo-agent:verify";
 if (!Number.isInteger(exitCode) || exitCode < 0 || exitCode > 255)
 	throw new Error(
 		"Offline CI provenance requires an exit code from 0 through 255.",
@@ -21,6 +23,10 @@ if (!Number.isInteger(exitCode) || exitCode < 0 || exitCode > 255)
 if (!Number.isInteger(durationSeconds) || durationSeconds < 0)
 	throw new Error(
 		"Offline CI provenance requires a non-negative whole duration.",
+	);
+if (!/^npm run [a-z0-9:-]+$/i.test(verificationCommand))
+	throw new Error(
+		"Offline CI provenance requires a safe npm verification command.",
 	);
 const npmCliCandidates = [
 	process.env.npm_execpath,
@@ -46,7 +52,7 @@ writeFileSync(
 			schema_version: "1.0",
 			classification: "MOCK_VERIFIED",
 			scope: "self_hosted_offline_ci",
-			verification_command: "npm run seo-agent:verify",
+			verification_command: verificationCommand,
 			exit_code: exitCode,
 			duration_seconds: durationSeconds,
 			commit: git(["rev-parse", "HEAD"]),

@@ -52,7 +52,7 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	assert.equal(typeof rootPackage.scripts?.["seo-agent:verify"], "string");
 	assert.equal(typeof rootPackage.scripts?.["verify:all"], "string");
 	assert.equal(typeof rootPackage.scripts?.["verify:completion"], "string");
-	assert.match(workflow, /npm run seo-agent:verify/);
+	assert.match(workflow, /npm run verify:all/);
 	assert.match(workflow, /verification_exit="\$\{PIPESTATUS\[0\]\}"/);
 	assert.match(workflow, /--exit-code="\$verification_exit"/);
 	assert.match(
@@ -60,6 +60,7 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 		/--duration-seconds="\$\(\(finished_at - started_at\)\)"/,
 	);
 	assert.match(workflow, /exit "\$verification_exit"/);
+	assert.match(workflow, /artifacts\/verification\/\*\*/);
 	assert.match(workflow, /SEO_AGENT_OFFLINE_CI: "true"/);
 	assert.doesNotMatch(workflow, /secrets\./);
 	assert.doesNotMatch(workflow, /npm run (eve:deploy|eve:dev|live:probe)/);

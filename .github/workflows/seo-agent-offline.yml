@@ -48,16 +48,16 @@ jobs:
         working-directory: automation/seo-agent
         run: npm ci --offline --ignore-scripts --omit=peer
 
-      - name: Run deterministic sidecar verification
+      - name: Run canonical deterministic verification
         run: |
           set -o pipefail
           started_at="$(date +%s)"
           set +e
-          npm run seo-agent:verify 2>&1 | tee "$RUNNER_TEMP/seo-agent-offline.log"
+          npm run verify:all 2>&1 | tee "$RUNNER_TEMP/seo-agent-offline.log"
           verification_exit="${PIPESTATUS[0]}"
           set -e
           finished_at="$(date +%s)"
-          node automation/seo-agent/scripts/record-offline-provenance.mjs --exit-code="$verification_exit" --duration-seconds="$((finished_at - started_at))"
+          node automation/seo-agent/scripts/record-offline-provenance.mjs --verification-command="npm run verify:all" --exit-code="$verification_exit" --duration-seconds="$((finished_at - started_at))"
           exit "$verification_exit"
 
       - name: Publish redacted offline evidence
@@ -68,5 +68,6 @@ jobs:
           path: |
             ${{ runner.temp }}/seo-agent-offline.log
             ${{ runner.temp }}/seo-agent-offline-provenance.json
+            artifacts/verification/**
           if-no-files-found: warn
           retention-days: 14
