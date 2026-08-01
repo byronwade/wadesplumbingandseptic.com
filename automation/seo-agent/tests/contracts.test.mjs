@@ -29,9 +29,23 @@ import {
 	buildTechnicalSeoReport,
 	collectPageInventory,
 } from "../src/inventory.mjs";
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import {
+	mkdirSync,
+	mkdtempSync,
+	readFileSync,
+	rmSync,
+	writeFileSync,
+} from "node:fs";
 import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
+
+test("native Eve eval timeout remains bounded and agrees with its CLI wrapper", () => {
+	const root = resolve(import.meta.dirname, "..");
+	const config = readFileSync(join(root, "evals", "evals.config.ts"), "utf8");
+	const runner = readFileSync(join(root, "scripts", "run-evals.mjs"), "utf8");
+	assert.match(config, /timeoutMs: 30000/);
+	assert.match(runner, /"--timeout", "30000"/);
+});
 
 test("duplicate canonical routes are rejected", () => {
 	assert.throws(
