@@ -2,8 +2,8 @@
 	"schema_version": "1.0",
 	"classification": "MOCK_VERIFIED",
 	"runner_labels": ["self-hosted", "linux", "x64", "wades-seo-offline"],
-	"node_version": "25.9.0",
-	"npm_version": "11.12.1",
+	"node_version": "24.18.0",
+	"npm_version": "11.16.0",
 	"network_policy": "Host firewall blocks outbound traffic except the GitHub Actions control plane.",
 	"prohibited_environment_variables": [
 		"AI_GATEWAY_API_KEY",

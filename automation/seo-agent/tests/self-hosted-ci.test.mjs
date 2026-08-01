@@ -31,6 +31,10 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	assert.match(workflow, /persist-credentials: false/);
 	assert.match(
 		workflow,
+		/\/home\/bcw19\/actions-runner-wades\/externals\/node24\/bin/,
+	);
+	assert.match(
+		workflow,
 		/actions\/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4\.6\.2/,
 	);
 	assert.match(workflow, /npm ci --offline --ignore-scripts --omit=peer/);
@@ -52,6 +56,6 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 		"x64",
 		"wades-seo-offline",
 	]);
-	assert.equal(policy.node_version, "25.9.0");
-	assert.equal(policy.npm_version, "11.12.1");
+	assert.equal(policy.node_version, "24.18.0");
+	assert.equal(policy.npm_version, "11.16.0");
 });

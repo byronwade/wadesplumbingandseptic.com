@@ -29,6 +29,12 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
+      - name: Select approved Eve runtime
+        run: |
+          echo "/home/bcw19/actions-runner-wades/externals/node24/bin" >> "$GITHUB_PATH"
+          node --version
+          npm --version
+
       - name: Verify isolated runner policy
         run: node automation/seo-agent/scripts/verify-self-hosted-runner.mjs
 
