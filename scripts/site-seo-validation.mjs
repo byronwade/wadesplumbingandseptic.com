@@ -1,8 +1,8 @@
 import { npmExecutable, runCommand } from "./verification-core.mjs"
 
 const result = runCommand({
-  name: npmExecutable(),
-  args: ["run", "seo:check"],
+	name: npmExecutable(),
+	args: ["run", "seo:check"],
 })
 process.stdout.write(result.stdout)
 process.stderr.write(result.stderr)
