@@ -247,7 +247,7 @@ test("retries, timeouts, and the circuit breaker have bounded degraded behavior"
 	assert.equal(broken.error.code, RUNTIME_ERROR_CODES.EVE_UNAVAILABLE);
 });
 
-test("health and readiness are redacted and explicitly degraded without a provider", () => {
+test("health and readiness are redacted and recognize Vercel OIDC", () => {
 	const development = runtimeHealth({ env: { SEO_AGENT_ENV: "development" } });
 	assert.equal(development.status, "degraded");
 	assert.equal(development.ready, true);
@@ -256,11 +256,20 @@ test("health and readiness are redacted and explicitly degraded without a provid
 		"BLOCKED_MISSING_CREDENTIALS",
 	);
 	const production = runtimeHealth({
-		env: { ...productionEnv, VERCEL_OIDC_TOKEN: "fixture-token" },
+		env: productionEnv,
+		oidcTokenPresent: true,
 	});
 	assert.equal(production.status, "configured_unverified");
 	assert.equal(production.ready, true);
-	assert.equal(JSON.stringify(production).includes("fixture-token"), false);
+	assert.equal(
+		JSON.stringify(production).includes("x-vercel-oidc-token"),
+		false,
+	);
+	const placeholderKeyFallsBackToOidc = runtimeHealth({
+		env: { ...productionEnv, AI_GATEWAY_API_KEY: "placeholder" },
+		oidcTokenPresent: true,
+	});
+	assert.equal(placeholderKeyFallsBackToOidc.status, "configured_unverified");
 });
 
 test("orchestrated dry runs remain local, audit-only, and credential-free", async () => {

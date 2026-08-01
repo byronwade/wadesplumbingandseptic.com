@@ -87,14 +87,18 @@ proposals, approvals, and rollback information.
 
 ### What configuration can enable
 
-The service can make real, read-only research requests only after the owner
-configures a model identity through Vercel OIDC or `AI_GATEWAY_API_KEY`, then
-enables and verifies each least-privilege integration separately. Supported
-read-side integrations include Vercel AI Gateway, GitHub repository inspection,
-Vercel project and deployment inspection, Search Console, PageSpeed Insights,
-and controlled web or browser research. Optional adapters include GA4, Business
-Profile, Local Falcon, Similarweb, Google Trends, tracing, and private Blob
-archiving of already approved redacted evidence bundles.
+The service uses Vercel's automatic OIDC identity for AI Gateway on deployed
+Vercel functions. For local development, `vercel env pull` provisions a
+short-lived OIDC token in an ignored local environment file. A static
+`AI_GATEWAY_API_KEY` is only needed outside Vercel. It takes precedence over
+OIDC, so a placeholder or invalid static key must be removed rather than left
+to block OIDC authentication. Each least-privilege integration is enabled and
+verified separately. Supported read-side integrations include Vercel AI
+Gateway, GitHub repository inspection, Vercel project and deployment
+inspection, Search Console, PageSpeed Insights, and controlled web or browser
+research. Optional adapters include GA4, Business Profile, Local Falcon,
+Similarweb, Google Trends, tracing, and private Blob archiving of already
+approved redacted evidence bundles.
 
 Each live integration is reported as `LIVE_VERIFIED`, `MOCK_VERIFIED`,
 `BLOCKED_MISSING_CREDENTIALS`, or `FAILED`. A configured variable alone does
@@ -102,8 +106,9 @@ not make an integration live.
 
 ### What Eve cannot do today
 
-- It cannot make a model-backed research request until AI Gateway credentials
-  or Vercel OIDC are available to the deployed service.
+- It cannot use the default premium model until the Vercel AI Gateway account
+  has access to that model. A lower-cost model has been live-verified through
+  OIDC, but model-routing changes still require review.
 - It cannot currently write site content, create a Git branch, or open a
   content pull request. The installed GitHub Eve tool is intentionally read
   only, and every current runtime mode remains audit-only.
@@ -116,8 +121,9 @@ not make an integration live.
 
 ### Before a live draft-content test
 
-1. Add a fresh `AI_GATEWAY_API_KEY` or enable Vercel OIDC for the production
-   Eve service. Do not reuse credentials pasted into chat or committed files.
+1. Use Vercel OIDC for the deployed service. For a local probe, run
+   `vercel env pull automation/seo-agent/.env.production.local --environment=production`.
+   The pulled file is ignored and must never be committed.
 2. Keep `SEO_AGENT_RUN_MODE=propose` only for the approved run, retain
    `SEO_AGENT_MUTATION_KILL_SWITCH=true` until the guarded publication gateway
    is reviewed, and leave automatic merge disabled.
