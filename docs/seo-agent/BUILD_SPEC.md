@@ -96,6 +96,8 @@ Every draft must include: purpose, query cluster, canonical URL, title/meta/H1 p
 7. A human approves and merges. The existing Vercel Git integration then performs the normal production deployment from `main`; the agent does not deploy or promote.
 8. A post-merge production audit checks the exact production URL, commit/deployment association, sitemap/robots/canonical behavior, critical templates, and approved performance budget. Failure produces a human-facing rollback recommendation; only a human executes rollback.
 
+For an initial live draft proof, the sidecar MAY expose one compiled Eve schedule named `proposal-proof`. Its UTC cron expression SHALL be `0 0 29 2 *`, making it a leap-day calendar anchor rather than an operational cadence. A Vercel administrator may invoke that registered schedule with the Vercel CLI, which supplies the platform application principal without disclosing `CRON_SECRET`. It SHALL map only to the deterministic `proposal-YYYY-MM-DD` run ID and SHALL fail before a durable Eve session starts unless propose mode, enabled mutation mode, a disabled kill switch, the human approval flag, the integration-test flag, the exact approved run ID, and a reviewed `audit-YYYY-MM-DD` precondition run ID all match. It is not a standing publication schedule, cannot be invoked from a public route, and does not add merge, deployment, main-write, or force-push authority.
+
 Preview audits must avoid accidental indexing or analytics pollution. Production audits are read-only and rate-limited. A failed preview or production audit never gives the agent authority to modify production.
 
 ## 9. State, Schemas, and Required Artifacts

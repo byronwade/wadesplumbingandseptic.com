@@ -33,6 +33,10 @@ const envSchema = z
 			.string()
 			.regex(/^[a-z0-9][a-z0-9-]{2,79}$/)
 			.optional(),
+		SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID: z
+			.string()
+			.regex(/^audit-\d{4}-\d{2}-\d{2}$/)
+			.optional(),
 		GOOGLE_SERVICE_ACCOUNT_EMAIL: z.string().email().optional(),
 		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: z.string().min(1).optional(),
 		SEARCH_CONSOLE_ACCESS_TOKEN: z.string().min(1).optional(),
@@ -134,6 +138,8 @@ export function loadConfig(env = process.env) {
 			integrationTestEnabled:
 				raw.SEO_AGENT_PUBLISHING_INTEGRATION_TEST === "true",
 			approvedRunId: raw.SEO_AGENT_PUBLISHING_APPROVED_RUN_ID,
+			preconditionAuditRunId:
+				raw.SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID,
 		}),
 		blob: Object.freeze({
 			enabled: raw.SEO_AGENT_BLOB_ENABLED === "true",

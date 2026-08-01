@@ -67,6 +67,7 @@ test("configuration is typed, scoped, and never exposes credential values in its
 		humanApproved: true,
 		integrationTestEnabled: true,
 		approvedRunId: undefined,
+		preconditionAuditRunId: undefined,
 	});
 	assert.equal(
 		JSON.stringify(summary).includes("github-read-token-value"),
