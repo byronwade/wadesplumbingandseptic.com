@@ -24,6 +24,7 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 
 - [ ] Let the draft PR checks and preview finish green. Keep the PR a draft.
 - [ ] Choose one lower-case run ID, such as `production-audit-2026-08-01`.
+- [ ] In Vercel Production only, set the enabled read adapters you want this audit to test: `SEO_AGENT_ENABLE_VERCEL=true`, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, and `SEO_AGENT_ENABLE_PAGESPEED=true`. `SEO_AGENT_ENABLE_AI_GATEWAY=true` and `SEO_AGENT_ENABLE_GITHUB=true` are already configured. Leave every optional adapter disabled unless its credential and scope have been separately reviewed.
 - [ ] In Vercel Production only, set `SEO_AGENT_LIVE_READS_APPROVED=true` and set `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID` to that exact run ID.
 - [ ] Leave observe mode on. Keep mutation mode `disabled`, the kill switch `true`, publishing approval `false`, integration-test `false`, Blob disabled, and Sandbox approval `false`.
 - [ ] Tell Codex the approved run ID. It will perform only read-only integration checks and an audit with zero content changes and zero pull requests.

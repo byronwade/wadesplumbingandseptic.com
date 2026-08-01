@@ -65,6 +65,18 @@ After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747
 - Result: production health and readiness are `LIVE_VERIFIED` at the stated endpoints. The sidecar reports a closed circuit, required Cron secret, observe mode, and an active mutation kill switch. Live reads are not authorized because the exact Production controls remain `SEO_AGENT_LIVE_READS_APPROVED=false` and no approved run ID exists. This is correctly `BLOCKED_MISSING_CREDENTIALS`, not an integration failure.
 - Dependencies / next gate: requires a human-selected one-time audit run ID and explicit approval. It does not authorize proposal mode, publishing, Blob archival, a Sandbox session, direct-main writes, force pushes, automatic merges, or deployment changes.
 
+## Phase 37 Update: Production Configuration Reconciliation (2026-08-01)
+
+- Acceptance scope: distinguish project-level connector and credential setup from the sidecar's explicit runtime authorization and adapter flags, without making a provider request or changing production configuration.
+- Result: the authenticated Vercel CLI identifies the Production project as `byron-wade/wadesplumbingandseptic-com` on Node `24.x`. A fresh scoped environment pull confirms that OIDC, the Google service-account values, and the PageSpeed key are present without exposing values. It also confirms the safety boundary remains active: live reads are `false`, no exact approved run ID exists, and the Vercel, Search Console, PageSpeed, and Browserbase adapters remain disabled. AI Gateway and GitHub are configured but may not run while the exact live-read authorization is absent.
+- Dependencies / next gate: the owner must intentionally enable only the desired read adapters, choose an exact lower-case audit run ID, and set the one-time live-read approval. Observe mode, disabled mutation, and the enabled kill switch remain required. The next command is the read-only production probe, not a publishing workflow.
+
+## Phase 38 Update: Control-Plane Command Coverage (2026-08-01)
+
+- Acceptance scope: align the root command contract with the published Definition of Done and ensure canonical verification cannot omit the control-plane discovery check.
+- Result: `npm run seo-agent:control-plane` now executes the existing sidecar control-plane verifier. The root offline gate invokes it first, canonical `verify:all` records it as a dedicated check, and a self-hosted workflow regression test requires both command names. This is a deterministic contract repair and does not change Eve authority or provider configuration.
+- Dependencies / next gate: fresh canonical evidence must include the new control-plane check. The human-approved, read-only production audit remains the next live phase.
+
 The requested `openai/gpt-5.6-terra` route is now `LIVE_VERIFIED`. A bounded OIDC request with the approved `openai/gpt-4.1-mini` availability fallback returned the expected response and reported Terra as the model used. The primary route remains Terra. The verified fallback is retained only to preserve audit availability if the primary route becomes temporarily unavailable. This does not authorize a live audit, draft publication, merge, or production mutation.
 
 ## Implementation Progress (2026-07-29)

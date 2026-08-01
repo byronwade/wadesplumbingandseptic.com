@@ -37,6 +37,8 @@ const missing = requiredFiles.filter(
 const failures = [...missing.map((file) => `missing required file: ${file}`)];
 if (!rootPackageJson.scripts?.["seo-agent:verify"])
 	failures.push("root package.json is missing seo-agent:verify.");
+if (!rootPackageJson.scripts?.["seo-agent:control-plane"])
+	failures.push("root package.json is missing seo-agent:control-plane.");
 if (!rootPackageJson.scripts?.["seo:check"])
 	failures.push("root package.json is missing seo:check.");
 if (!rootPackageJson.scripts?.["verify:all"])

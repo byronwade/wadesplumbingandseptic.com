@@ -37,6 +37,7 @@ function parseLastJsonLine(output) {
 }
 
 const checks = [
+	["control-plane", npmExecutable(), ["run", "seo-agent:control-plane"]],
 	[
 		"verification-contracts",
 		process.execPath,
