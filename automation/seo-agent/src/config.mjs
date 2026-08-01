@@ -29,6 +29,10 @@ const envSchema = z
 		SEO_AGENT_MUTATION_MODE: z.enum(["disabled", "enabled"]).optional(),
 		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_PUBLISHING_APPROVED_RUN_ID: z
+			.string()
+			.regex(/^[a-z0-9][a-z0-9-]{2,79}$/)
+			.optional(),
 		GOOGLE_SERVICE_ACCOUNT_EMAIL: z.string().email().optional(),
 		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: z.string().min(1).optional(),
 		SEARCH_CONSOLE_ACCESS_TOKEN: z.string().min(1).optional(),
@@ -129,6 +133,7 @@ export function loadConfig(env = process.env) {
 			humanApproved: raw.SEO_AGENT_PUBLISHING_HUMAN_APPROVED === "true",
 			integrationTestEnabled:
 				raw.SEO_AGENT_PUBLISHING_INTEGRATION_TEST === "true",
+			approvedRunId: raw.SEO_AGENT_PUBLISHING_APPROVED_RUN_ID,
 		}),
 		blob: Object.freeze({
 			enabled: raw.SEO_AGENT_BLOB_ENABLED === "true",

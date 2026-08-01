@@ -7,11 +7,12 @@ export type RuntimeWorkflowInput = {
 		idempotencyKey: string;
 		continuationToken: string;
 		scheduledAt: string;
-		cron: string;
+		cron: string | null;
 	};
 	settings: Record<string, unknown>;
 	repoRoot?: string | null;
 	executeLiveReads?: boolean;
+	config?: Record<string, unknown>;
 };
 
 // Eve invokes this from a durable task session. The request handler only starts

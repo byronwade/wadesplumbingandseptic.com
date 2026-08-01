@@ -152,6 +152,61 @@ export function createGithubDraftPublisher({
 	};
 
 	return Object.freeze({
+		async readMainCommit() {
+			const denial = guard();
+			if (denial) return denial;
+			const main = await request(
+				`${base}/git/ref/heads/main`,
+				{ method: "GET" },
+				"GitHub main branch read",
+			);
+			if (!SAFE_SHA.test(main?.object?.sha ?? "")) {
+				throw new Error("GitHub main branch did not resolve to a commit SHA.");
+			}
+			return Object.freeze({
+				classification,
+				branch: "main",
+				sha: main.object.sha,
+				write_performed: false,
+			});
+		},
+
+		async createBranch({ branch, fromSha }) {
+			const denial = guard();
+			if (denial) return denial;
+			assertDraftBranch(branch);
+			if (!SAFE_SHA.test(fromSha ?? "")) {
+				throw new Error("GitHub draft branch requires a main commit SHA.");
+			}
+			const main = await request(
+				`${base}/git/ref/heads/main`,
+				{ method: "GET" },
+				"GitHub main branch read",
+			);
+			if (main?.object?.sha !== fromSha) {
+				throw new Error(
+					"GitHub main changed before the draft branch could be created.",
+				);
+			}
+			const created = await request(
+				`${base}/git/refs`,
+				{
+					method: "POST",
+					body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: fromSha }),
+				},
+				"GitHub draft feature branch create",
+			);
+			if (created?.object?.sha !== fromSha) {
+				throw new Error("GitHub did not create the requested draft branch.");
+			}
+			return Object.freeze({
+				classification,
+				branch,
+				base_sha: fromSha,
+				write_performed: true,
+			});
+		},
+
 		async stageMarkdownChangeSet({ branch, changeSet }) {
 			const denial = guard();
 			if (denial) return denial;

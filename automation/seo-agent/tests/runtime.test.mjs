@@ -118,6 +118,17 @@ test("schedule selection and stable run identity are deterministic", () => {
 			}),
 		/does not match/,
 	);
+	const proposal = createRunDescriptor({ job: "proposal", now });
+	assert.equal(proposal.runId, "proposal-2026-07-30");
+	assert.equal(proposal.cron, null);
+	assert.equal(
+		assertRunDescriptor({
+			runId: proposal.runId,
+			idempotencyKey: proposal.idempotencyKey,
+			job: "proposal",
+		}).job,
+		"proposal",
+	);
 });
 
 test("duplicate dispatches are denied by an active durable session and local lock", async () => {

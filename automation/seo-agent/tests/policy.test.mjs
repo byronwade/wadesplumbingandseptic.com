@@ -433,6 +433,45 @@ test("GitHub publisher stays inert by default and only writes one guarded draft 
 	);
 });
 
+test("GitHub publisher creates a draft branch from the current main SHA without force", async () => {
+	const sha = "a".repeat(40);
+	const requests = [];
+	const publisher = createGithubDraftPublisher({
+		repository: "byronwade/wadesplumbingandseptic.com",
+		accessTokenProvider: async () => "fixture-connect-token",
+		classification: "MOCK_VERIFIED",
+		enabled: true,
+		mutationMode: "enabled",
+		mutationKillSwitch: false,
+		humanApproved: true,
+		integrationTestEnabled: true,
+		fetchImpl: async (url, init) => {
+			requests.push({ url: String(url), init });
+			if (init.method === "GET") return jsonResponse({ object: { sha } });
+			if (init.method === "POST") return jsonResponse({ object: { sha } });
+			throw new Error("Unexpected mutation method");
+		},
+	});
+	const main = await publisher.readMainCommit();
+	assert.deepEqual(main, {
+		classification: "MOCK_VERIFIED",
+		branch: "main",
+		sha,
+		write_performed: false,
+	});
+	const branch = await publisher.createBranch({
+		branch: "eve/seo/2026-08-01-guarded-post",
+		fromSha: sha,
+	});
+	assert.equal(branch.branch, "eve/seo/2026-08-01-guarded-post");
+	assert.equal(requests.length, 3);
+	assert.equal(requests[2].url.endsWith("/git/refs"), true);
+	assert.deepEqual(JSON.parse(requests[2].init.body), {
+		ref: "refs/heads/eve/seo/2026-08-01-guarded-post",
+		sha,
+	});
+});
+
 test("draft publisher forwards only a complete draft packet and rejects non-draft or malformed gateway results", async () => {
 	const changeSet = createChangeSet();
 	const packet = createPacket(changeSet);

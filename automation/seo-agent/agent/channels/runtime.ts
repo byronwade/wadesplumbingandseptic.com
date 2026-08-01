@@ -19,12 +19,15 @@ function packet(
 		type: "SEO_RUNTIME_DISPATCH",
 		run_id: descriptor.runId,
 		idempotency_key: descriptor.idempotencyKey,
-		audit_only: true,
+		job: descriptor.job,
+		audit_only: descriptor.job === "audit",
 		mode: settings.mode,
 		mutation_kill_switch: settings.mutationKillSwitch,
 		limits: settings.limits,
 		instruction:
-			"Use the orchestrate tool exactly once. It may only perform this audit-only run and must return a truthful blocked record when a dependency is unavailable.",
+			descriptor.job === "audit"
+				? "Use the orchestrate tool exactly once with job audit. It may only perform this read-only audit and must return a truthful blocked record when a dependency is unavailable."
+				: "Use the orchestrate tool exactly once with job proposal. It may create at most one explicitly approved draft PR and must never merge, deploy, or write main.",
 	});
 }
 
@@ -65,7 +68,7 @@ export default defineChannel({
 						auth: null,
 						continuationToken: descriptor.continuationToken,
 						mode: "task",
-						title: `Wade SEO audit ${descriptor.runId}`,
+						title: `Wade SEO ${descriptor.job} ${descriptor.runId}`,
 					}),
 				locks,
 				circuit,

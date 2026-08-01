@@ -9,6 +9,7 @@ import {
 	createGa4Adapter,
 	createGithubReadAdapter,
 	createGoogleServiceAccountTokenProvider,
+	createVercelConnectGithubDraftWriteTokenProvider,
 	createVercelConnectGithubTokenProvider,
 	createIntegrationRegistry,
 	createLocalFalconAdapter,
@@ -65,6 +66,7 @@ test("configuration is typed, scoped, and never exposes credential values in its
 		mutationMode: "enabled",
 		humanApproved: true,
 		integrationTestEnabled: true,
+		approvedRunId: undefined,
 	});
 	assert.equal(
 		JSON.stringify(summary).includes("github-read-token-value"),
@@ -187,6 +189,31 @@ test("GitHub Connect provider rejects missing app tokens and malformed connector
 		getTokenImpl: async () => "",
 	});
 	await assert.rejects(provider, /did not return a GitHub app token/);
+});
+
+test("GitHub draft writer requests one repository and fixed draft-only permissions", async () => {
+	const provider = createVercelConnectGithubDraftWriteTokenProvider({
+		connector: "github/wadesplumbingandseptic-com",
+		repository: "byronwade/wadesplumbingandseptic.com",
+		getTokenImpl: async (_connector, options) => {
+			assert.deepEqual(options, {
+				subject: { type: "app" },
+				authorizationDetails: [
+					{
+						type: "github_app_installation",
+						repositories: ["byronwade/wadesplumbingandseptic.com"],
+						permissions: [
+							"contents:write",
+							"pull_requests:write",
+							"issues:write",
+						],
+					},
+				],
+			});
+			return "draft-write-fixture-token";
+		},
+	});
+	assert.equal(await provider(), "draft-write-fixture-token");
 });
 
 test("Search Console uses a cached short-lived service-account token and never records key material", async () => {
