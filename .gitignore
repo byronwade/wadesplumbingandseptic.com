@@ -29,3 +29,4 @@ automation/seo-agent/.env*
 automation/seo-agent/.vercel/
 .seo-agent-artifacts/
 /artifacts/verification/
+.vercel

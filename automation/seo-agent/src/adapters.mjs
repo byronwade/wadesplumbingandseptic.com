@@ -19,19 +19,39 @@ const DEFAULT_REQUEST_POLICY = Object.freeze({
 
 const MAX_UNTRUSTED_DOCUMENT_BYTES = 256_000;
 const DEFAULT_GITHUB_CONNECTOR_ID = "github/wadesplumbingandseptic-com";
+const GITHUB_READ_TOKEN_PERMISSIONS = Object.freeze([
+	"contents:read",
+	"pull_requests:read",
+]);
 const SEARCH_CONSOLE_READ_SCOPE =
 	"https://www.googleapis.com/auth/webmasters.readonly";
 
 export function createVercelConnectGithubTokenProvider({
 	connector = DEFAULT_GITHUB_CONNECTOR_ID,
+	repository,
 	getTokenImpl = getToken,
 } = {}) {
 	if (!/^github\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(connector)) {
 		throw new Error("GitHub Connect connector ID is invalid.");
 	}
+	if (
+		typeof repository !== "string" ||
+		!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository)
+	) {
+		throw new Error(
+			"GitHub Connect requires one owner/repository restriction.",
+		);
+	}
 	return async () => {
 		const token = await getTokenImpl(connector, {
 			subject: { type: "app" },
+			authorizationDetails: [
+				{
+					type: "github_app_installation",
+					repositories: [repository],
+					permissions: GITHUB_READ_TOKEN_PERMISSIONS,
+				},
+			],
 		});
 		if (typeof token !== "string" || token.length === 0) {
 			throw new IntegrationError(
@@ -1344,6 +1364,7 @@ export function createIntegrationRegistry({
 				flags.github === true && !credentials.githubReadToken
 					? createVercelConnectGithubTokenProvider({
 							connector: config.githubConnectorId,
+							repository: config.repository,
 						})
 					: undefined,
 			repository: config.repository,
