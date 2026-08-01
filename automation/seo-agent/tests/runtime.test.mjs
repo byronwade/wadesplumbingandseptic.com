@@ -174,6 +174,19 @@ test("dispatcher starts durable work promptly and never executes long work inlin
 	assert.equal(accepted.audit_only, true);
 	assert.equal(accepted.mutation_kill_switch, true);
 	assert.match(accepted.durable_session_id, /^eve-audit-2026-07-30-observe$/);
+	const proposal = await dispatchCronRequest({
+		request: cronRequest("/api/cron?job=proposal"),
+		env: {
+			...productionEnv,
+			SEO_AGENT_RUN_MODE: "propose",
+			SEO_AGENT_MUTATION_KILL_SWITCH: "false",
+		},
+		now: new Date("2026-07-30T16:17:00.000Z"),
+		startRun: async (descriptor) => ({ sessionId: `eve-${descriptor.runId}` }),
+	});
+	assert.equal(proposal.status, "ACCEPTED");
+	assert.equal(proposal.job, "proposal");
+	assert.equal(proposal.audit_only, false);
 });
 
 test("paused, disabled, mutation kill switch, and first-run policy fail closed", async () => {

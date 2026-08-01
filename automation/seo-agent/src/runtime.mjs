@@ -363,12 +363,12 @@ export async function dispatchCronRequest({
 	}
 	if (settings.mode === "disabled")
 		return cronPayload("DISABLED", descriptor, {
-			audit_only: true,
+			audit_only: descriptor.job === AUDIT_JOB.name,
 			mutation_kill_switch: settings.mutationKillSwitch,
 		});
 	if (settings.mode === "paused")
 		return cronPayload("PAUSED", descriptor, {
-			audit_only: true,
+			audit_only: descriptor.job === AUDIT_JOB.name,
 			mutation_kill_switch: settings.mutationKillSwitch,
 		});
 	if (!circuit.allow())
@@ -401,7 +401,7 @@ export async function dispatchCronRequest({
 		});
 		circuit.recordSuccess();
 		return cronPayload("ACCEPTED", descriptor, {
-			audit_only: true,
+			audit_only: descriptor.job === AUDIT_JOB.name,
 			mutation_kill_switch: settings.mutationKillSwitch,
 			durable_session_id: result?.sessionId ?? null,
 		});
