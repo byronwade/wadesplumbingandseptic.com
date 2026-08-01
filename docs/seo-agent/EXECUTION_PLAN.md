@@ -44,6 +44,10 @@ The adapter and its mocked end to end flow are `MOCK_VERIFIED`. A live GitHub wr
 
 After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747d9beff4d339c060c67d` as production deployment `dpl_jrQmpaSE9qc4Y89c4jSa8knyFdTv`. Read-only `GET` probes to the internal health and readiness routes returned HTTP `200`, `mode: observe`, `ready: true`, `integration_classification: CONFIGURED_UNVERIFIED`, and an enabled mutation kill switch. This is `LIVE_VERIFIED` only for the deployment and OIDC-aware health surface. It starts no audit, makes no model request, and enables no publishing path.
 
+## Phase 33 Update: Terra Model Availability and Fallback (2026-08-01)
+
+The requested `openai/gpt-5.6-terra` route is now `LIVE_VERIFIED`. A bounded OIDC request with the approved `openai/gpt-4.1-mini` availability fallback returned the expected response and reported Terra as the model used. The primary route remains Terra. The verified fallback is retained only to preserve audit availability if the primary route becomes temporarily unavailable. This does not authorize a live audit, draft publication, merge, or production mutation.
+
 ## Implementation Progress (2026-07-29)
 
 | Phase | Current evidence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Status                                                                                                                                                 |
