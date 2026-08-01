@@ -32,6 +32,10 @@ const envSchema = z
 		SEARCH_CONSOLE_ACCESS_TOKEN: z.string().min(1).optional(),
 		PAGESPEED_API_KEY: z.string().min(1).optional(),
 		GITHUB_READ_TOKEN: z.string().min(1).optional(),
+		SEO_AGENT_GITHUB_CONNECTOR_ID: z
+			.string()
+			.regex(/^github\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/)
+			.optional(),
 		VERCEL_READ_TOKEN: z.string().min(1).optional(),
 		VERCEL_READ_PROJECT_ID: z.string().min(1).optional(),
 		VERCEL_READ_TEAM_ID: z.string().min(1).optional(),
@@ -91,6 +95,8 @@ export function loadConfig(env = process.env) {
 				raw.SEO_AGENT_BROWSER_ALLOWED_DOMAINS,
 			),
 		},
+		githubConnectorId:
+			raw.SEO_AGENT_GITHUB_CONNECTOR_ID ?? "github/wadesplumbingandseptic-com",
 		integrationFlags: Object.freeze({
 			aiGateway: raw.SEO_AGENT_ENABLE_AI_GATEWAY === "true",
 			github: raw.SEO_AGENT_ENABLE_GITHUB === "true",
@@ -207,5 +213,6 @@ export function summarizeConfig(config) {
 			similarweb: Boolean(config.credentials.similarwebApiKey),
 			google_trends: Boolean(config.credentials.googleTrendsAccessToken),
 		}),
+		github_connector_id: config.githubConnectorId,
 	});
 }

@@ -8,6 +8,7 @@ import {
 	createAiGatewayAdapter,
 	createGa4Adapter,
 	createGithubReadAdapter,
+	createVercelConnectGithubTokenProvider,
 	createIntegrationRegistry,
 	createLocalFalconAdapter,
 	createPageSpeedAdapter,
@@ -50,10 +51,15 @@ test("configuration is typed, scoped, and never exposes credential values in its
 		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: "true",
 		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: "true",
 		GITHUB_READ_TOKEN: "github-read-token-value",
+		SEO_AGENT_GITHUB_CONNECTOR_ID: "github/wadesplumbingandseptic-com",
 	});
 	const summary = summarizeConfig(config);
 	assert.equal(summary.environment, "preview");
 	assert.equal(summary.integrations.github, true);
+	assert.equal(
+		summary.github_connector_id,
+		"github/wadesplumbingandseptic-com",
+	);
 	assert.deepEqual(summary.publishing, {
 		mutationMode: "enabled",
 		humanApproved: true,
@@ -121,6 +127,49 @@ test("GitHub read adapter uses only the documented read endpoint and produces re
 	);
 	assert.equal(requests[0].init.method, undefined);
 	assert.equal(requests[0].init.headers.authorization, "Bearer test-token");
+});
+
+test("GitHub read adapter uses a short-lived Vercel Connect app token when no static token exists", async () => {
+	let tokenRequests = 0;
+	const provider = createVercelConnectGithubTokenProvider({
+		connector: "github/wadesplumbingandseptic-com",
+		getTokenImpl: async (connector, options) => {
+			tokenRequests += 1;
+			assert.equal(connector, "github/wadesplumbingandseptic-com");
+			assert.deepEqual(options, { subject: { type: "app" } });
+			return "connect-fixture-token";
+		},
+	});
+	const adapter = createGithubReadAdapter({
+		accessTokenProvider: provider,
+		fetchImpl: async (_url, init) => {
+			assert.equal(init.headers.authorization, "Bearer connect-fixture-token");
+			return jsonResponse({
+				full_name: "byronwade/wadesplumbingandseptic.com",
+				default_branch: "main",
+				private: true,
+				archived: false,
+				pushed_at: "2026-07-31T00:00:00Z",
+			});
+		},
+	});
+	const evidence = await adapter.probe({ runId: "github-connect-fixture" });
+	assert.equal(evidence.classification, "LIVE_VERIFIED");
+	assert.equal(tokenRequests, 1);
+});
+
+test("GitHub Connect provider rejects missing app tokens and malformed connector IDs", async () => {
+	assert.throws(
+		() =>
+			createVercelConnectGithubTokenProvider({
+				connector: "https://github.example.test",
+			}),
+		/invalid/,
+	);
+	const provider = createVercelConnectGithubTokenProvider({
+		getTokenImpl: async () => "",
+	});
+	await assert.rejects(provider, /did not return a GitHub app token/);
 });
 
 test("Vercel read adapter confines requests to project/deployment GET endpoints", async () => {
