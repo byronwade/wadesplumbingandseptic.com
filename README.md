@@ -63,6 +63,72 @@ npm run ci:content
 npm run ci:self-hosted-policy
 ```
 
+## Eve SEO Agent
+
+Eve is a private, backend-only SEO operations service at
+`automation/seo-agent`. It has no public UI, CMS, or application database.
+The public site does not import Eve code or expose Eve environment variables.
+Git and the committed `seo/` records remain the source of truth for evidence,
+proposals, approvals, and rollback information.
+
+### What Eve can do today
+
+- Run deterministic local audit fixtures, policy checks, content checks, and
+  Eve evaluations without cloud credentials.
+- Expose private health and readiness endpoints at
+  `/_internal/eve/api/healthz` and `/_internal/eve/api/readyz`.
+- Protect its internal Cron dispatcher at `/_internal/eve/api/cron` using a
+  timing-safe secret comparison.
+- Create durable audit sessions when its runtime dependencies are configured.
+- Enforce observe mode, an audit-only first run, duplicate-run protection,
+  limits, and the default mutation kill switch.
+- Evaluate source policy, content safety, page ownership, internal links,
+  query overlap, and a valid no-change decision in local fixture mode.
+
+### What configuration can enable
+
+The service can make real, read-only research requests only after the owner
+configures a model identity through Vercel OIDC or `AI_GATEWAY_API_KEY`, then
+enables and verifies each least-privilege integration separately. Supported
+read-side integrations include Vercel AI Gateway, GitHub repository inspection,
+Vercel project and deployment inspection, Search Console, PageSpeed Insights,
+and controlled web or browser research. Optional adapters include GA4, Business
+Profile, Local Falcon, Similarweb, Google Trends, tracing, and private Blob
+archiving of already approved redacted evidence bundles.
+
+Each live integration is reported as `LIVE_VERIFIED`, `MOCK_VERIFIED`,
+`BLOCKED_MISSING_CREDENTIALS`, or `FAILED`. A configured variable alone does
+not make an integration live.
+
+### What Eve cannot do today
+
+- It cannot make a model-backed research request until AI Gateway credentials
+  or Vercel OIDC are available to the deployed service.
+- It cannot currently write site content, create a Git branch, or open a
+  content pull request. The installed GitHub Eve tool is intentionally read
+  only, and every current runtime mode remains audit-only.
+- It cannot merge a pull request, push to `main`, deploy production, modify
+  repository or Vercel settings, change secrets, publish to a Business Profile,
+  or bypass a human review.
+- It cannot create new service pages. Any future draft proposal must prefer an
+  evidence-backed update to an existing page, and a new URL is limited to a
+  useful blog post or an explicitly approved landing page.
+
+### Before a live draft-content test
+
+1. Add a fresh `AI_GATEWAY_API_KEY` or enable Vercel OIDC for the production
+   Eve service. Do not reuse credentials pasted into chat or committed files.
+2. Keep `SEO_AGENT_RUN_MODE=propose` only for the approved run, retain
+   `SEO_AGENT_MUTATION_KILL_SWITCH=true` until the guarded publication gateway
+   is reviewed, and leave automatic merge disabled.
+3. Deploy the separately reviewed publication gateway. It must be limited to
+   one draft PR, a nondefault `eve/seo/` branch, one new URL, bounded files,
+   complete evidence, and a human reviewer.
+
+See [`docs/seo-agent/MANUAL_SETUP.md`](docs/seo-agent/MANUAL_SETUP.md) for
+owner setup and [`docs/seo-agent/BUILD_SPEC.md`](docs/seo-agent/BUILD_SPEC.md)
+for the safety contract.
+
 ## CI (self-hosted only)
 
 GitHub Actions workflows run exclusively on **local self-hosted runners** - not
