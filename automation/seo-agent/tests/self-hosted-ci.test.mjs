@@ -9,12 +9,14 @@ const policyPath = resolve(
 	root,
 	"automation/seo-agent/ci/self-hosted-runner-policy.json",
 );
+const rootPackagePath = resolve(root, "package.json");
 
 test("self-hosted workflow is credential-free, pinned, and offline-only", () => {
 	assert.equal(existsSync(workflowPath), true);
 	assert.equal(existsSync(policyPath), true);
 	const workflow = readFileSync(workflowPath, "utf8");
 	const policy = JSON.parse(readFileSync(policyPath, "utf8"));
+	const rootPackage = JSON.parse(readFileSync(rootPackagePath, "utf8"));
 
 	assert.match(workflow, /^permissions:\r?\n  contents: read\r?$/m);
 	assert.match(workflow, /workflow_dispatch:/);
@@ -39,6 +41,8 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	);
 	assert.match(workflow, /npm ci --offline --ignore-scripts --omit=peer/);
 	assert.match(workflow, /npm run seo:check/);
+	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:content/);
+	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:seo-meta/);
 	assert.match(workflow, /npm run seo-agent:verify/);
 	assert.match(workflow, /verification_exit="\$\{PIPESTATUS\[0\]\}"/);
 	assert.match(workflow, /--exit-code="\$verification_exit"/);

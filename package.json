@@ -24,6 +24,7 @@
 		"ci:og": "npx --yes tsx scripts/ci/test-og.ts",
 		"ci:seo-meta": "npx --yes tsx scripts/ci/test-seo-meta.ts",
 		"ci:service-sections": "npx --yes tsx scripts/ci/test-service-sections.ts",
+		"seo:check": "npm run ci:content && npm run ci:glossary && npm run ci:city-service && npm run ci:sitemap && npm run ci:service-sections && npm run ci:og && npm run ci:seo-meta",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",
 		"migrate:wordpress": "python3 -u scripts/migrate-from-wordpress-csv.py",
 		"migrate:wordpress-images": "python3 -u scripts/migrate-wordpress-images.py",
