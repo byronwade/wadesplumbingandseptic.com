@@ -39,6 +39,10 @@ if (!rootPackageJson.scripts?.["seo-agent:verify"])
 	failures.push("root package.json is missing seo-agent:verify.");
 if (!rootPackageJson.scripts?.["seo:check"])
 	failures.push("root package.json is missing seo:check.");
+if (!rootPackageJson.scripts?.["verify:all"])
+	failures.push("root package.json is missing verify:all.");
+if (!rootPackageJson.scripts?.["verify:completion"])
+	failures.push("root package.json is missing verify:completion.");
 const sentinel = resolve(root, ".agents/ENABLE_EVE_SEO_AGENT_STOP_HOOK");
 if (!existsSync(sentinel))
 	failures.push(

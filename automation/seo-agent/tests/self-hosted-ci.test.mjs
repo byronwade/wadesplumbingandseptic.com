@@ -41,8 +41,17 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	);
 	assert.match(workflow, /npm ci --offline --ignore-scripts --omit=peer/);
 	assert.match(workflow, /npm run seo:check/);
+	assert.ok(
+		workflow.indexOf(
+			"Install exact root-site dependency graph from offline cache",
+		) < workflow.indexOf("Run deterministic root-site SEO validation"),
+		"the root dependency graph must be installed before the root SEO check",
+	);
 	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:content/);
 	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:seo-meta/);
+	assert.equal(typeof rootPackage.scripts?.["seo-agent:verify"], "string");
+	assert.equal(typeof rootPackage.scripts?.["verify:all"], "string");
+	assert.equal(typeof rootPackage.scripts?.["verify:completion"], "string");
 	assert.match(workflow, /npm run seo-agent:verify/);
 	assert.match(workflow, /verification_exit="\$\{PIPESTATUS\[0\]\}"/);
 	assert.match(workflow, /--exit-code="\$verification_exit"/);

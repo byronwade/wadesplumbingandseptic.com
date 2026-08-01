@@ -38,6 +38,9 @@ jobs:
       - name: Verify isolated runner policy
         run: node automation/seo-agent/scripts/verify-self-hosted-runner.mjs
 
+      - name: Install exact root-site dependency graph from offline cache
+        run: npm ci --offline --ignore-scripts --omit=peer
+
       - name: Run deterministic root-site SEO validation
         run: npm run seo:check
 
