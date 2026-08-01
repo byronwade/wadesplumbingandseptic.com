@@ -10,6 +10,7 @@ const policyPath = resolve(
 	"automation/seo-agent/ci/self-hosted-runner-policy.json",
 );
 const rootPackagePath = resolve(root, "package.json");
+const rootVerificationPath = resolve(root, "scripts/verify-all.mjs");
 
 test("self-hosted workflow is credential-free, pinned, and offline-only", () => {
 	assert.equal(existsSync(workflowPath), true);
@@ -17,6 +18,7 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	const workflow = readFileSync(workflowPath, "utf8");
 	const policy = JSON.parse(readFileSync(policyPath, "utf8"));
 	const rootPackage = JSON.parse(readFileSync(rootPackagePath, "utf8"));
+	const rootVerification = readFileSync(rootVerificationPath, "utf8");
 
 	assert.match(workflow, /^permissions:\r?\n  contents: read\r?$/m);
 	assert.match(workflow, /workflow_dispatch:/);
@@ -49,10 +51,16 @@ test("self-hosted workflow is credential-free, pinned, and offline-only", () => 
 	);
 	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:content/);
 	assert.match(rootPackage.scripts?.["seo:check"] ?? "", /ci:seo-meta/);
+	assert.equal(
+		typeof rootPackage.scripts?.["seo-agent:control-plane"],
+		"string",
+	);
 	assert.equal(typeof rootPackage.scripts?.["seo-agent:verify"], "string");
 	assert.equal(typeof rootPackage.scripts?.["verify:all"], "string");
 	assert.equal(typeof rootPackage.scripts?.["verify:completion"], "string");
 	assert.match(workflow, /npm run verify:all/);
+	assert.match(rootVerification, /"control-plane"/);
+	assert.match(rootVerification, /"seo-agent:control-plane"/);
 	assert.match(workflow, /verification_exit="\$\{PIPESTATUS\[0\]\}"/);
 	assert.match(workflow, /--exit-code="\$verification_exit"/);
 	assert.match(

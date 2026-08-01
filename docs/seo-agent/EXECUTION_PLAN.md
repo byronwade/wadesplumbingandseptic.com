@@ -34,6 +34,51 @@ Complete phases in order. A phase is not complete until its acceptance checks ha
 
 The one-project Services topology has now reached a `LIVE_VERIFIED` preview deployment: the public site and the isolated Eve service built separately and the service functions are present only below `/_internal/eve`. This completes the deployment-topology proof, not live agent operation. Direct endpoint acceptance remains `BLOCKED_PREVIEW_SSO`; provider reads, observe-only workflow invocation, and all mutation paths remain separately gated. The measurable next acceptance check is an owner-approved SSO-safe health/readiness and Cron-auth verification followed by one audit-only invocation that produces zero content files, zero PRs, and zero provider writes.
 
+## Phase 31 Update: Guarded GitHub Draft Publisher (2026-08-01)
+
+The Phase 7 draft publisher now has an explicit Vercel Connect compatible GitHub REST adapter. It is disabled by default and is not exposed to Eve model tools. Before it can make any request, it requires enabled publishing mode, a disabled kill switch, an explicit human approval record, and the separate integration-test execution flag. Its write allowlist is limited to one `eve/seo/YYYY-MM-DD-<slug>` feature ref, one Git tree and commit, a non-force feature-ref update, and a draft pull request targeting `main`. It has no merge, deletion, default-branch update, repository-settings, secret, or deployment operation.
+
+The adapter and its mocked end to end flow are `MOCK_VERIFIED`. A live GitHub write remains `BLOCKED_MISSING_CREDENTIALS` until the Vercel Connect GitHub App is granted the reviewed minimum permissions and a human approves one disposable integration test. This phase does not enable mutation mode or change production configuration.
+
+## Phase 32 Update: Production OIDC Runtime Verification (2026-08-01)
+
+After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747d9beff4d339c060c67d` as production deployment `dpl_jrQmpaSE9qc4Y89c4jSa8knyFdTv`. Read-only `GET` probes to the internal health and readiness routes returned HTTP `200`, `mode: observe`, `ready: true`, `integration_classification: CONFIGURED_UNVERIFIED`, and an enabled mutation kill switch. This is `LIVE_VERIFIED` only for the deployment and OIDC-aware health surface. It starts no audit, makes no model request, and enables no publishing path.
+
+## Phase 33 Update: Terra Model Availability and Fallback (2026-08-01)
+
+## Phase 34 Update: Cross-Platform Eve Build and Verification Repair (2026-08-01)
+
+- Acceptance scope: make canonical Windows verification execute its actual npm gates, and make the current official Eve build/eval workflow portable to the owner workstation without changing any agent capability or privilege.
+- Acceptance checks: `npm run test:verification-core`, sidecar format/lint/typecheck/test/evals/build, and `npm run verify:all` must pass. The verifier must record a fresh artifact with every required root and sidecar check, and the public site must remain dependency-isolated from Eve.
+- Result: complete. The npm command shim is executed by the active Node npm CLI when possible, and its real execution has a regression test. Removing the Eve `@vercel/connect` externalization prevents its Windows bundler from writing a bare drive-letter ESM import; the typed client is now part of the sidecar bundle. `npm run verify:all` passed `17/17` checks in `156.5s` and emitted `artifacts/verification/2026-08-01T150847522z-14de4c87073d`. This is `MOCK_VERIFIED`, not live publishing proof.
+- Dependencies / next gate: draft PR `#85` remains subject to existing self-hosted CI and preview review. No live mutation is authorized by this phase.
+
+## Phase 35 Update: Completion-Evidence Integrity (2026-08-01)
+
+- Acceptance scope: make `verify:all` enumerate all applicable deterministic resilience and independent-review checks, and make `verify:completion` fail closed when any Definition-of-Done or integration-classification evidence is missing or incomplete.
+- Acceptance checks: a regression record with all classified ready evidence passes; records with an unclassified integration or non-ready independent review fail completion. Canonical evidence must include sidecar integration, dependency, Sandbox classification, observability, rollback, and independent-review output.
+- Dependencies / next gate: no external state is changed. Current integration records are valid `BLOCKED_MISSING_CREDENTIALS` entries, so canonical deterministic verification may pass but final completion must remain rejected until the required human-approved live probes are recorded.
+
+## Phase 36 Update: Production Read-Authorization Diagnostic (2026-08-01)
+
+- Acceptance scope: inspect the deployed observe-only control state before attempting any live provider read and prove that a missing exact-run approval fails closed.
+- Result: production health and readiness are `LIVE_VERIFIED` at the stated endpoints. The sidecar reports a closed circuit, required Cron secret, observe mode, and an active mutation kill switch. Live reads are not authorized because the exact Production controls remain `SEO_AGENT_LIVE_READS_APPROVED=false` and no approved run ID exists. This is correctly `BLOCKED_MISSING_CREDENTIALS`, not an integration failure.
+- Dependencies / next gate: requires a human-selected one-time audit run ID and explicit approval. It does not authorize proposal mode, publishing, Blob archival, a Sandbox session, direct-main writes, force pushes, automatic merges, or deployment changes.
+
+## Phase 37 Update: Production Configuration Reconciliation (2026-08-01)
+
+- Acceptance scope: distinguish project-level connector and credential setup from the sidecar's explicit runtime authorization and adapter flags, without making a provider request or changing production configuration.
+- Result: the authenticated Vercel CLI identifies the Production project as `byron-wade/wadesplumbingandseptic-com` on Node `24.x`. A fresh scoped environment pull confirms that OIDC, the Google service-account values, and the PageSpeed key are present without exposing values. It also confirms the safety boundary remains active: live reads are `false`, no exact approved run ID exists, and the Vercel, Search Console, PageSpeed, and Browserbase adapters remain disabled. AI Gateway and GitHub are configured but may not run while the exact live-read authorization is absent.
+- Dependencies / next gate: the owner must intentionally enable only the desired read adapters, choose an exact lower-case audit run ID, and set the one-time live-read approval. Observe mode, disabled mutation, and the enabled kill switch remain required. The next command is the read-only production probe, not a publishing workflow.
+
+## Phase 38 Update: Control-Plane Command Coverage (2026-08-01)
+
+- Acceptance scope: align the root command contract with the published Definition of Done and ensure canonical verification cannot omit the control-plane discovery check.
+- Result: `npm run seo-agent:control-plane` now executes the existing sidecar control-plane verifier. The root offline gate invokes it first, canonical `verify:all` records it as a dedicated check, and a self-hosted workflow regression test requires both command names. This is a deterministic contract repair and does not change Eve authority or provider configuration.
+- Dependencies / next gate: fresh canonical evidence must include the new control-plane check. The human-approved, read-only production audit remains the next live phase.
+
+The requested `openai/gpt-5.6-terra` route is now `LIVE_VERIFIED`. A bounded OIDC request with the approved `openai/gpt-4.1-mini` availability fallback returned the expected response and reported Terra as the model used. The primary route remains Terra. The verified fallback is retained only to preserve audit availability if the primary route becomes temporarily unavailable. This does not authorize a live audit, draft publication, merge, or production mutation.
+
 ## Implementation Progress (2026-07-29)
 
 | Phase | Current evidence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Status                                                                                                                                                 |

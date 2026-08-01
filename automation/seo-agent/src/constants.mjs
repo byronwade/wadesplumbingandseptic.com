@@ -13,22 +13,29 @@ export const AGENT_SEMANTIC_VERSION = "0.1.0";
 // route centralized so orchestration and writing never silently diverge.
 export const DEFAULT_MODEL_ROUTE = "openai/gpt-5.6-terra";
 export const INDEPENDENT_JUDGE_MODEL_ROUTE = "anthropic/claude-sonnet-4.6";
+// This route completed an authenticated OIDC probe on 2026-08-01. It is a
+// bounded availability fallback only; Terra remains the requested primary.
+export const OIDC_VERIFIED_FALLBACK_MODEL_ROUTE = "openai/gpt-4.1-mini";
 export const APPROVED_MODEL_ROUTES = Object.freeze([
 	DEFAULT_MODEL_ROUTE,
 	INDEPENDENT_JUDGE_MODEL_ROUTE,
+	OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
 ]);
 export const MODEL_ROLE_POLICY = Object.freeze({
 	orchestration: Object.freeze({
 		primary: DEFAULT_MODEL_ROUTE,
-		fallbacks: Object.freeze([INDEPENDENT_JUDGE_MODEL_ROUTE]),
+		fallbacks: Object.freeze([OIDC_VERIFIED_FALLBACK_MODEL_ROUTE]),
 	}),
 	writing: Object.freeze({
 		primary: DEFAULT_MODEL_ROUTE,
-		fallbacks: Object.freeze([INDEPENDENT_JUDGE_MODEL_ROUTE]),
+		fallbacks: Object.freeze([OIDC_VERIFIED_FALLBACK_MODEL_ROUTE]),
 	}),
 	independent_qa: Object.freeze({
 		primary: INDEPENDENT_JUDGE_MODEL_ROUTE,
-		fallbacks: Object.freeze([DEFAULT_MODEL_ROUTE]),
+		fallbacks: Object.freeze([
+			DEFAULT_MODEL_ROUTE,
+			OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
+		]),
 	}),
 });
 // A pre-dispatch per-request reservation, not a provider price assertion.

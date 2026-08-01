@@ -106,13 +106,15 @@ not make an integration live.
 
 ### What Eve cannot do today
 
-- Its default model route is `openai/gpt-5.6-terra`, confirmed in the live AI
-  Gateway catalog. Its bounded OIDC generation probe currently receives HTTP
-  `403`, so the route is `FAILED` until the Gateway account has access. Catalog
-  availability is not proof that the account tier permits use.
+- Its default model route is `openai/gpt-5.6-terra`, now `LIVE_VERIFIED` through
+  Vercel OIDC. A bounded request returned the expected response with Terra as
+  the reported model. `openai/gpt-4.1-mini` is an approved availability
+  fallback, not a substitute for the primary route.
 - It cannot currently write site content, create a Git branch, or open a
-  content pull request. The installed GitHub Eve tool is intentionally read
-  only, and every current runtime mode remains audit-only.
+  content pull request from the deployed runtime. The installed GitHub Eve tool
+  is intentionally read only, and every current runtime mode remains audit-only.
+  A separately guarded draft-publisher adapter is awaiting review and remains
+  disabled behind its explicit human-approval and integration-test gates.
 - It cannot merge a pull request, push to `main`, deploy production, modify
   repository or Vercel settings, change secrets, publish to a Business Profile,
   or bypass a human review.

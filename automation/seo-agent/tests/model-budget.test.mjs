@@ -6,6 +6,7 @@ import {
 	DEFAULT_BUDGETS,
 	DEFAULT_MODEL_ROUTE,
 	MODEL_ROLE_POLICY,
+	OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
 } from "../src/constants.mjs";
 
 test("Terra is the centralized approved default for orchestration and writing", () => {
@@ -13,6 +14,13 @@ test("Terra is the centralized approved default for orchestration and writing", 
 	assert.ok(APPROVED_MODEL_ROUTES.includes(DEFAULT_MODEL_ROUTE));
 	assert.equal(MODEL_ROLE_POLICY.orchestration.primary, DEFAULT_MODEL_ROUTE);
 	assert.equal(MODEL_ROLE_POLICY.writing.primary, DEFAULT_MODEL_ROUTE);
+	assert.deepEqual(MODEL_ROLE_POLICY.orchestration.fallbacks, [
+		OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
+	]);
+	assert.deepEqual(MODEL_ROLE_POLICY.writing.fallbacks, [
+		OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
+	]);
+	assert.ok(APPROVED_MODEL_ROUTES.includes(OIDC_VERIFIED_FALLBACK_MODEL_ROUTE));
 });
 
 test("model ledger atomically reserves tool, token, and cost budget per audit run", () => {
