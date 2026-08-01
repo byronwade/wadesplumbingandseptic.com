@@ -174,7 +174,7 @@ test("budget exhaustion fails closed", () => {
 		}).requested_max_output_tokens,
 		1200,
 	);
-	assert.equal(resolveApprovedModelRoute(), "openai/gpt-5.4");
+	assert.equal(resolveApprovedModelRoute(), "openai/gpt-5.6-terra");
 	assert.throws(
 		() => resolveApprovedModelRoute("unapproved/provider-model"),
 		/not approved/,
@@ -201,7 +201,7 @@ test("budget exhaustion fails closed", () => {
 	assert.throws(
 		() =>
 			resolveModelProfile("writing", {
-				SEO_AGENT_WRITER_MODEL_FALLBACKS: "openai/gpt-5.4",
+				SEO_AGENT_WRITER_MODEL_FALLBACKS: "openai/gpt-5.6-terra",
 			}),
 		/distinct from the primary/,
 	);
