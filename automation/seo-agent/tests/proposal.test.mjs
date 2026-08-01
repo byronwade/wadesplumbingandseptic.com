@@ -22,6 +22,7 @@ function config(runId) {
 			humanApproved: true,
 			integrationTestEnabled: true,
 			approvedRunId: runId,
+			preconditionAuditRunId: "audit-2026-08-01",
 		},
 	};
 }
@@ -154,7 +155,39 @@ test("proposal cannot write when the exact approval is absent or QA rejects", as
 				config: config("proposal-2026-08-02"),
 				repoRoot,
 			}),
-		/approved for this exact run ID/,
+		/exact approval and a reviewed prior audit run/,
+	);
+	await assert.rejects(
+		() =>
+			executeDraftProposal({
+				descriptor,
+				settings: loadRuntimeSettings(env),
+				config: {
+					...config(descriptor.runId),
+					publishing: {
+						...config(descriptor.runId).publishing,
+						preconditionAuditRunId: undefined,
+					},
+				},
+				repoRoot,
+			}),
+		/exact approval and a reviewed prior audit run/,
+	);
+	await assert.rejects(
+		() =>
+			executeDraftProposal({
+				descriptor,
+				settings: loadRuntimeSettings(env),
+				config: {
+					...config(descriptor.runId),
+					publishing: {
+						...config(descriptor.runId).publishing,
+						preconditionAuditRunId: "audit-2026-08-02",
+					},
+				},
+				repoRoot,
+			}),
+		/exact approval and a reviewed prior audit run/,
 	);
 	const calls = [];
 	const result = await executeDraftProposal({

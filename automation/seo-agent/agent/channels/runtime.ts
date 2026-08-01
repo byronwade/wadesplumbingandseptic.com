@@ -2,11 +2,14 @@ import { GET, defineChannel } from "eve/channels";
 import {
 	createCircuitBreaker,
 	createDispatchLockStore,
+	createNativeScheduleDescriptor,
 	createRunDescriptor,
 	dispatchCronRequest,
 	loadRuntimeSettings,
+	assertProposalRunAuthorization,
 	runtimeHealth,
 } from "../../src/runtime.mjs";
+import { loadConfig } from "../../src/config.mjs";
 
 const locks = createDispatchLockStore();
 const circuit = createCircuitBreaker();
@@ -86,16 +89,17 @@ export default defineChannel({
 		}),
 	],
 	async receive(input, { send }) {
-		if (input.target?.source !== "EVE_NATIVE_CRON")
-			throw new Error(
-				"Runtime channel accepts only the native Eve schedule target.",
-			);
-		const descriptor = createRunDescriptor();
+		const descriptor = createNativeScheduleDescriptor({
+			source: input.target?.source,
+		});
 		const settings = loadRuntimeSettings();
+		const config = loadConfig();
 		if (settings.mode === "disabled" || settings.mode === "paused")
 			throw new Error(
 				`Runtime is ${settings.mode}; native schedule work is not started.`,
 			);
+		if (descriptor.job === "proposal")
+			assertProposalRunAuthorization({ descriptor, settings, config });
 		if (!locks.acquire(descriptor.idempotencyKey))
 			throw new Error(
 				`Duplicate native schedule dispatch denied: ${descriptor.runId}`,
@@ -105,7 +109,7 @@ export default defineChannel({
 				auth: input.auth,
 				continuationToken: descriptor.continuationToken,
 				mode: "task",
-				title: `Wade SEO audit ${descriptor.runId}`,
+				title: `Wade SEO ${descriptor.job} ${descriptor.runId}`,
 			});
 		} finally {
 			locks.release(descriptor.idempotencyKey);

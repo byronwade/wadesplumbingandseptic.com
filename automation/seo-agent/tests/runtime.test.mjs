@@ -5,6 +5,7 @@ import {
 	assertRunDescriptor,
 	createCircuitBreaker,
 	createDispatchLockStore,
+	createNativeScheduleDescriptor,
 	createRunDescriptor,
 	deterministicRunId,
 	dispatchCronRequest,
@@ -120,7 +121,7 @@ test("schedule selection and stable run identity are deterministic", () => {
 	);
 	const proposal = createRunDescriptor({ job: "proposal", now });
 	assert.equal(proposal.runId, "proposal-2026-07-30");
-	assert.equal(proposal.cron, null);
+	assert.equal(proposal.cron, "0 0 29 2 *");
 	assert.equal(
 		assertRunDescriptor({
 			runId: proposal.runId,
@@ -128,6 +129,22 @@ test("schedule selection and stable run identity are deterministic", () => {
 			job: "proposal",
 		}).job,
 		"proposal",
+	);
+	const nativeAudit = createNativeScheduleDescriptor({
+		source: "EVE_NATIVE_CRON",
+		now,
+	});
+	assert.equal(nativeAudit.job, "audit");
+	const nativeProposal = createNativeScheduleDescriptor({
+		source: "EVE_NATIVE_PROPOSAL_PROOF",
+		now,
+	});
+	assert.equal(nativeProposal.job, "proposal");
+	assert.equal(nativeProposal.runId, "proposal-2026-07-30");
+	assert.throws(
+		() =>
+			createNativeScheduleDescriptor({ source: "untrusted-web-input", now }),
+		/compiled native schedule targets/,
 	);
 });
 

@@ -32,7 +32,15 @@ export const RUNTIME_ERROR_CODES = Object.freeze({
 });
 
 const AUDIT_JOB = Object.freeze({ name: "audit", cron: "17 16 * * 1" });
-const PROPOSAL_JOB = Object.freeze({ name: "proposal", cron: null });
+// This calendar anchor deliberately has no normal operational use. It exists so
+// a Vercel administrator can invoke the named, platform-authenticated schedule
+// through `vercel crons run` for one exact proposal proof. The date is a leap
+// day, and the proposal authorization must still match the derived run ID.
+const PROPOSAL_JOB = Object.freeze({ name: "proposal", cron: "0 0 29 2 *" });
+const NATIVE_SCHEDULE_JOBS = Object.freeze({
+	EVE_NATIVE_CRON: AUDIT_JOB.name,
+	EVE_NATIVE_PROPOSAL_PROOF: PROPOSAL_JOB.name,
+});
 const SAFE_RUN_ID = /^[a-z0-9][a-z0-9-]{2,79}$/;
 
 export class RuntimeError extends Error {
@@ -105,6 +113,23 @@ export function createRunDescriptor({ job, now = new Date() } = {}) {
 		continuationToken: `seo-runtime:${runId}`,
 		scheduledAt: now.toISOString(),
 	});
+}
+
+/**
+ * Map only compiled Eve schedule targets to their immutable job type. This is
+ * separate from the CRON_SECRET protected HTTP fallback: Vercel invokes a
+ * compiled schedule with its own application principal, so no secret needs to
+ * cross the local CLI or a public request boundary.
+ */
+export function createNativeScheduleDescriptor({ source, now = new Date() }) {
+	const job = NATIVE_SCHEDULE_JOBS[source];
+	if (!job)
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.MALFORMED_REQUEST,
+			"Runtime channel accepts only compiled native schedule targets.",
+			{ status: 400 },
+		);
+	return createRunDescriptor({ job, now });
 }
 
 /** @param {{ runId: string, idempotencyKey: string, job?: "audit" | "proposal" }} input */
@@ -500,16 +525,21 @@ export function assertProposalRunAuthorization({
 		);
 	}
 	const publishing = config?.publishing;
+	const proposalDate = descriptor.runId.slice("proposal-".length);
+	const auditRunId = publishing?.preconditionAuditRunId;
+	const auditDate = auditRunId?.slice("audit-".length);
 	if (
 		publishing?.mutationMode !== "enabled" ||
 		settings?.mutationKillSwitch !== false ||
 		publishing?.humanApproved !== true ||
 		publishing?.integrationTestEnabled !== true ||
-		publishing?.approvedRunId !== descriptor.runId
+		publishing?.approvedRunId !== descriptor.runId ||
+		!/^audit-\d{4}-\d{2}-\d{2}$/.test(auditRunId ?? "") ||
+		auditDate > proposalDate
 	) {
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
-			"Proposal execution is not approved for this exact run ID.",
+			"Proposal execution requires an exact approval and a reviewed prior audit run.",
 			{ status: 409 },
 		);
 	}
