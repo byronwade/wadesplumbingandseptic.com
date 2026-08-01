@@ -20,6 +20,7 @@ import {
 import { resolve } from "node:path";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
+import { createIntegrationRegistry } from "../src/adapters.mjs";
 
 const productionEnv = Object.freeze({
 	SEO_AGENT_ENV: "production",
@@ -293,17 +294,55 @@ test("orchestrated dry runs remain local, audit-only, and credential-free", asyn
 	);
 });
 
-test("configured observation fails closed until Git-backed run persistence is approved", async () => {
+test("approved configured observation performs bounded reads but remains audit-only", async () => {
+	const descriptor = createRunDescriptor({
+		now: new Date("2026-07-30T00:00:00.000Z"),
+	});
+	const config = {
+		environment: "production",
+		repository: "byronwade/wadesplumbingandseptic.com",
+		siteUrl: "https://www.wadesplumbingandseptic.com/",
+		browserResearch: { enabled: false, allowedDomains: [] },
+		githubConnectorId: "github/wadesplumbingandseptic-com",
+		integrationFlags: {
+			aiGateway: true,
+			github: false,
+			vercel: false,
+			searchConsole: false,
+			pageSpeed: false,
+			browserbase: false,
+			ga4: false,
+			businessProfile: false,
+			localFalcon: false,
+			similarweb: false,
+			googleTrends: false,
+		},
+		liveReads: { humanApproved: true, approvedRunId: descriptor.runId },
+		credentials: { vercelOidcToken: "oidc-fixture-token" },
+		blob: { enabled: false, archiveApproved: false, prefix: "fixtures" },
+	};
+	const registry = createIntegrationRegistry({
+		config,
+		fetchImpl: async () =>
+			new Response(JSON.stringify({ data: [{ id: "openai/gpt-5.6-terra" }] }), {
+				headers: { "content-type": "application/json" },
+			}),
+	});
 	const result = await executeOrchestratedAudit({
-		descriptor: createRunDescriptor({
-			now: new Date("2026-07-30T00:00:00.000Z"),
-		}),
+		descriptor,
 		settings: loadRuntimeSettings(productionEnv),
 		repoRoot: resolve(import.meta.dirname, "../../.."),
 		executeLiveReads: true,
+		config,
+		registry,
+		treeHash: "runtime-fixture-tree",
 	});
-	assert.equal(result.classification, "BLOCKED_MISSING_CREDENTIALS");
-	assert.match(result.reason, /durable run-manifest persistence/);
+	assert.equal(result.classification, "LIVE_VERIFIED");
+	assert.equal(result.audit_only, true);
+	assert.equal(result.content_files_changed, 0);
+	assert.equal(result.draft_prs_created, 0);
+	assert.equal(result.artifact_proposal.write_performed, false);
+	assert.equal(result.integration_status.ai_gateway, "LIVE_VERIFIED");
 });
 
 test("Git-backed completed history rejects a duplicate runtime run without a database", async () => {

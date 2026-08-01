@@ -365,6 +365,7 @@ export function assertCompleteSearchConsoleWindow(request, now = new Date()) {
 
 export function createAiGatewayAdapter({
 	enabled = true,
+	accessToken,
 	fetchImpl = fetch,
 	budget,
 	requestPolicy,
@@ -385,6 +386,10 @@ export function createAiGatewayAdapter({
 				url: endpoint,
 				source: "AI Gateway model catalog",
 				policy: requestPolicy,
+				init:
+					typeof accessToken === "string" && accessToken.length > 0
+						? { headers: { authorization: `Bearer ${accessToken}` } }
+						: undefined,
 			});
 			return evidence({
 				runId,
@@ -1329,6 +1334,7 @@ export function createIntegrationRegistry({
 	return {
 		ai_gateway: createAiGatewayAdapter({
 			enabled: flags.aiGateway === true,
+			accessToken: credentials.aiGatewayApiKey ?? credentials.vercelOidcToken,
 			fetchImpl,
 			budget,
 		}),
