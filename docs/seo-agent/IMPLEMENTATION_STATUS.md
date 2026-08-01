@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 42: GitHub Connect Live Verification and Scope Repair (2026-08-01)
+
+- State: Production deployment and the read-only GitHub Connect token exchange are `LIVE_VERIFIED`. The scope repair is implemented and test-verified locally, but it is not deployed until its separate corrective PR is merged.
+- Live evidence: PR `#87` merged at `2026-08-01T18:58:20Z` as `b8f5758429a6e2752074ff2e6349bc949b01cb17`. Vercel Production deployment `dpl_FHH2cxnfRH5RTKnaPQFFp8Vq8KNu` is `Ready`, its build log confirms that exact merge commit, and public `/_internal/eve/api/healthz` plus `/_internal/eve/api/readyz` both returned HTTP `200`, `mode: observe`, `ready: true`, and an enabled mutation kill switch. `vercel agent-runs list` returned no Agent Runs.
+- GitHub evidence: a short-lived Vercel OIDC identity from the linked Wade's project successfully obtained an app token from `github/wadesplumbingandseptic-com`. A read-only GitHub installation request returned exactly one repository, `byronwade/wadesplumbingandseptic.com`, when Vercel Connect authorization details requested `contents:read` for that repository. No token, credential, Git branch, content, PR, merge, or issue write was printed or performed.
+- Finding and repair: the existing provider requested an unscoped GitHub app token. Its installation listing exposed more repositories than this service needs. `automation/seo-agent/src/adapters.mjs` now requires one `owner/repository` restriction and requests only `contents:read` plus `pull_requests:read`; the registry passes the configured Wade's repository. Regression tests reject an unscoped provider and assert the exact authorization details.
+- Commands: linked this checkout to `byron-wade/wadesplumbingandseptic-com` using `vercel link`; `getToken` with Vercel OIDC and a scoped GitHub authorization request -- exit `0` -- `LIVE_VERIFIED`; production deployment, health, readiness, and Agent Run inspection -- exit `0`; `npm --prefix automation/seo-agent run format:check`, `lint`, `typecheck`, and `test` -- exit `0` -- `104` tests passed after formatting repair.
+- External blocker: Production remains observe-only, has no Agent Run, and has not yet performed a live audit. The installed GitHub App itself should also be restricted to only the Wade's repository in GitHub before any future draft-writing workflow is enabled, even though the corrective code independently scopes each issued token.
+- Next exact action: run the full deterministic verifier, open and merge the scoped-token corrective PR, then authorize one exact read-only Production audit run and inspect its redacted Eve trace. Do not enable content publishing as part of the audit.
+
 ## Phase 41: Live Audit Runtime Activation (2026-08-01)
 
 - State: COMPLETE for the controlled runtime implementation (`MOCK_VERIFIED`). Production remains observe-only and has not been redeployed or invoked by this phase.

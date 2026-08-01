@@ -7,8 +7,9 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [x] The Vercel project uses Node 24 and the Services Framework Preset. A reviewed preview deployed both the site and internal Eve functions.
 - [x] Eve safety settings exist in Preview and Production: observe mode, mutation kill switch, disabled publishing, disabled live reads, and bounded budgets.
 - [x] A separate encrypted `CRON_SECRET` exists for Preview and Production. No external Cron schedule is enabled.
-- [x] GitHub Connect is installed as `github/wadesplumbingandseptic-com` for this repository. Its triggers are off.
+- [x] GitHub Connect is installed as `github/wadesplumbingandseptic-com` for this repository. Its app-token exchange and a one-repository read token were live-verified on 2026-08-01. Its triggers are off.
 - [x] The GitHub read adapter is enabled and uses Vercel Connect app tokens. No static GitHub token is stored.
+- [ ] In the GitHub App installation, select only `byronwade/wadesplumbingandseptic.com`. The sidecar patch scopes each token request to this repository, but installation-level repository access must also be narrowed before any draft-writing workflow is enabled.
 - [x] AI Gateway uses Vercel's automatic OIDC identity. The conflicting static Gateway key was removed from Preview and Production, and a fresh Production OIDC-only request was live-verified on 2026-08-01. Model access remains separate from OIDC authentication.
 - [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off.
 - [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console work.

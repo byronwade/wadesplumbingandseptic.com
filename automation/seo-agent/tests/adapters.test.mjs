@@ -134,10 +134,20 @@ test("GitHub read adapter uses a short-lived Vercel Connect app token when no st
 	let tokenRequests = 0;
 	const provider = createVercelConnectGithubTokenProvider({
 		connector: "github/wadesplumbingandseptic-com",
+		repository: "byronwade/wadesplumbingandseptic.com",
 		getTokenImpl: async (connector, options) => {
 			tokenRequests += 1;
 			assert.equal(connector, "github/wadesplumbingandseptic-com");
-			assert.deepEqual(options, { subject: { type: "app" } });
+			assert.deepEqual(options, {
+				subject: { type: "app" },
+				authorizationDetails: [
+					{
+						type: "github_app_installation",
+						repositories: ["byronwade/wadesplumbingandseptic.com"],
+						permissions: ["contents:read", "pull_requests:read"],
+					},
+				],
+			});
 			return "connect-fixture-token";
 		},
 	});
@@ -164,10 +174,16 @@ test("GitHub Connect provider rejects missing app tokens and malformed connector
 		() =>
 			createVercelConnectGithubTokenProvider({
 				connector: "https://github.example.test",
+				repository: "byronwade/wadesplumbingandseptic.com",
 			}),
 		/invalid/,
 	);
+	assert.throws(
+		() => createVercelConnectGithubTokenProvider(),
+		/owner\/repository restriction/,
+	);
 	const provider = createVercelConnectGithubTokenProvider({
+		repository: "byronwade/wadesplumbingandseptic.com",
 		getTokenImpl: async () => "",
 	});
 	await assert.rejects(provider, /did not return a GitHub app token/);
