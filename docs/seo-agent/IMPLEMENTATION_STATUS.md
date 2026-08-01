@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 27: Release CI Runner and Dependency Audit Repair (2026-07-31)
+
+- State: COMPLETE locally. The repository now has a dedicated online Linux self-hosted runner named `wades-wsl-release` with the required `wades`, `wades-ci`, `wades-quality`, and `wades-seo-offline` labels. It is registered as a system service for `byronwade/wadesplumbingandseptic.com`.
+- Completed work: reviewed the previously queued PR checks, verified the absence of any repository runner, then registered the dedicated runner in the local Ubuntu WSL environment. The Quality `npm audit` job exposed two high severity advisories caused by Next's nested `postcss@8.5.10`. Updated the root direct PostCSS dependency and a scoped npm override to `8.5.25`, which resolves every installed PostCSS copy to the patched version.
+- Verification: `npm install --package-lock-only --ignore-scripts`, `npm ci --ignore-scripts`, `npm ls postcss --all`, `npm audit --omit=dev --audit-level=high`, and `git diff --check` completed locally with exit `0`. The final production dependency audit reported `found 0 vulnerabilities`. Fresh remote CI is required because the prior Quality job evaluated the commit before this lockfile repair.
+- External state: the Vercel preview for PR `#80` is `Ready`. No production merge, content publication, sidecar deployment, or mutation capability has been enabled by this phase.
+- Next exact action: push the audit repair, wait for the required CI checks and preview to pass, merge PR `#80` without bypassing protection, then verify the Vercel production deployment.
+
 ## Phase 26 - Search Console Service Account Repair (2026-07-31)
 
 - State: COMPLETE for the offline service-account adapter (`MOCK_VERIFIED`). The Google OAuth connector remains `FAILED` for Eve's non-interactive app subject and is not represented as a live Search Console integration.
@@ -142,8 +150,8 @@
 
 ## Current State
 
-- Current phase: 26 — Search Console service-account repair
-- State: COMPLETE for the offline implementation (`MOCK_VERIFIED`); Search Console, Blob, and other undeployed live integrations remain `BLOCKED_MISSING_CREDENTIALS`
+- Current phase: 27 — Release CI runner and dependency audit repair
+- State: COMPLETE locally; fresh remote CI remains pending before merge. Search Console, Blob, and other undeployed live integrations remain `BLOCKED_MISSING_CREDENTIALS`
 - Branch: `docs/simplify-eve-owner-setup`
 - Current commit: recorded by the Phase 26 checkpoint commit on `docs/simplify-eve-owner-setup`; use `git rev-parse HEAD` after integration for the exact release SHA.
 - Baseline commit: `b43fc94` (`Deploy WordPress releases to the active theme`)

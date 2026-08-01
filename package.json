@@ -62,7 +62,7 @@
 		"@types/react-dom": "19.2.3",
 		"eslint": "9.39.5",
 		"eslint-config-next": "16.3.0-preview.10",
-		"postcss": "8.5.6",
+		"postcss": "8.5.25",
 		"prettier": "3.9.6",
 		"prettier-plugin-tailwindcss": "0.8.1",
 		"tailwindcss": "4.3.3",
@@ -70,6 +70,9 @@
 	},
 	"engines": {
 		"node": ">=22.0.0"
+	},
+	"overrides": {
+		"postcss": "8.5.25"
 	},
 	"browserslist": [
 		"chrome >= 111",
