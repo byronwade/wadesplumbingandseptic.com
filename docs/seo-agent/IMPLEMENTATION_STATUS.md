@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 30: Live Draft-Content Capability Assessment (2026-08-01)
+
+- State: `BLOCKED_MISSING_CREDENTIALS` for a real blog-post draft PR. The draft-PR writer is intentionally not implemented. No live Eve session, model request, Git branch, content change, or pull request was started by this assessment.
+- Production evidence: at `2026-08-01T10:45Z`, `GET /_internal/eve/api/healthz` returned HTTP `200` with `mode: observe`, `ready: true`, `mutation_kill_switch: true`, and `integration_classification: BLOCKED_MISSING_CREDENTIALS`. Vercel Agent Runs reported zero runs in the preceding day. Production environment metadata confirms the Cron and proposal safety-variable names exist, but neither `AI_GATEWAY_API_KEY` nor `VERCEL_OIDC_TOKEN` is available to the deployed service.
+- Code evidence: `automation/seo-agent/agent/tools/github.ts` exposes the GitHub `repo-explorer` read-only preset only. `agent/tools/orchestrate.ts`, `src/runtime.mjs`, and the runtime channel hard-code audit-only execution. No deployed tool can create a branch, commit Markdown, or open a draft PR. The `propose` mode label does not change that current behavior.
+- Documentation: root `README.md` now distinguishes Eve's currently verified audit and policy capabilities, the read-only integrations that additional configuration can enable, and the operations it intentionally cannot perform.
+- Verification: `npx prettier --no-config --use-tabs --no-semi --single-quote=false --check README.md docs/seo-agent/IMPLEMENTATION_STATUS.md` and `git diff --check` exited `0`. The repository-configured Prettier check could not load the locally absent `prettier-plugin-tailwindcss`; this is a local dependency-install limitation, not a documentation formatting failure.
+- Required next action: configure a fresh model identity through Vercel OIDC or a newly issued `AI_GATEWAY_API_KEY`, then implement, review, and deploy a narrowly scoped publication gateway before requesting one human-approved draft blog-post run. That gateway must retain the mutation kill switch, one-PR and one-URL budget, nondefault `eve/seo/` branch requirement, draft-only PR setting, complete evidence packet, and no merge capability.
+
 ## Phase 29: Production Runtime Probe and Image-Delivery Repair (2026-08-01)
 
 - State: the Eve deployment is `LIVE_VERIFIED` for non-mutating health, readiness, and Cron authentication. The image repair is `MOCK_VERIFIED` by the canonical build and awaits human review in draft PR `#82` before it can reach production.
