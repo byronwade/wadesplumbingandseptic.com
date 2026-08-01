@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 34: Cross-Platform Eve Build and Verification Repair (2026-08-01)
+
+- State: COMPLETE (`MOCK_VERIFIED`). The public-site and sidecar verification system now runs the real root npm checks on Windows and native Eve compilation/evaluations no longer fail from a Windows ESM path defect.
+- Changed scope: `scripts/verification-core.mjs` resolves the Windows npm command shim through the active Node npm CLI when available, with a direct shell fallback for non-lifecycle invocation. `scripts/verification-core.test.mjs` proves that real `npm --version` execution succeeds. The canonical verifier includes that regression test before all other gates. The Eve agent no longer externalizes `@vercel/connect`: Eve bundles the approved typed Connect client into its backend output instead of generating an invalid raw `C:\\...` ESM import. No Connect scope, credential, model, tool, endpoint, or publishing permission changed.
+- Commands: `npm run test:verification-core` -- exit `0` -- `1` passing test; `npm --prefix automation/seo-agent run format:check && npm --prefix automation/seo-agent run lint && npm --prefix automation/seo-agent run typecheck && npm --prefix automation/seo-agent run test && npm --prefix automation/seo-agent run evals && npm --prefix automation/seo-agent run build` -- exit `0` -- about `50s`; `npm run verify:all` -- exit `0` -- `156.5s`.
+- Evidence: `artifacts/verification/2026-08-01T150847522z-14de4c87073d/results.json` and `summary.md` recorded `17/17` passed checks, no failed checks, and `MOCK_VERIFIED` classification. The sidecar build produced the backend-only Eve output and verified its manifest on Node `24.14.0`; root formatting, lint, typecheck, SEO/search/archive gates, production build, sidecar tests/evals/build, security scan, audit fixture, and health smoke all passed.
+- Failures / limitations: this is deterministic local evidence only. It does not verify a live provider call, a GitHub write, a content change, or a pull request. The publisher remains disabled and `BLOCKED_MISSING_CREDENTIALS` until an explicitly human-approved disposable write test is performed with least-privilege Connect permissions.
+- Next exact action: commit this repair to draft PR `#85`, allow normal self-hosted CI and the preview to complete, and keep the PR draft. After human review and merge, perform only the separately approved audit-only production workflow invocation; do not enable publishing or automatic merge.
+
 ## Phase 33: Terra Model Availability and Fallback (2026-08-01)
 
 - State: `openai/gpt-5.6-terra` is `LIVE_VERIFIED` through Vercel OIDC. It remains the centralized orchestration and writing primary. `openai/gpt-4.1-mini` is the approved availability fallback because it has also completed an OIDC probe. This adds no mutation authority and starts no Eve audit session.

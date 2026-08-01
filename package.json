@@ -27,6 +27,7 @@
 		"ci:service-sections": "tsx scripts/ci/test-service-sections.ts",
 		"seo:check": "npm run ci:content && npm run ci:glossary && npm run ci:city-service && npm run ci:sitemap && npm run ci:service-sections && npm run ci:og && npm run ci:images && npm run ci:seo-meta",
 		"seo-agent:verify": "node scripts/verify-seo-agent.mjs",
+		"test:verification-core": "node --test scripts/verification-core.test.mjs",
 		"verify:all": "node scripts/verify-all.mjs",
 		"verify:completion": "node scripts/verify-completion.mjs",
 		"migrate:wayback": "python3 -u scripts/migrate-from-wayback.py",

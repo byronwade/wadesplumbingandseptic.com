@@ -19,6 +19,11 @@ const outputRoot = resolve(repositoryRoot, "artifacts", "verification", runId)
 mkdirSync(outputRoot, { recursive: true })
 
 const checks = [
+	[
+		"verification-launcher",
+		process.execPath,
+		["--test", "scripts/verification-core.test.mjs"],
+	],
 	["root-format", npmExecutable(), ["run", "format:check"]],
 	["root-lint", npmExecutable(), ["run", "lint"]],
 	["root-typecheck", npmExecutable(), ["run", "typecheck"]],
