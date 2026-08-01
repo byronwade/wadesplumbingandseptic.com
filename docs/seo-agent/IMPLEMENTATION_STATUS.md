@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 35: Completion-Evidence Integrity (2026-08-01)
+
+- State: COMPLETE for deterministic verification hardening (`MOCK_VERIFIED`). This phase does not alter a provider, deployment, Connector, publishing mode, or agent authority.
+- Changed scope: canonical `verify:all` now runs the sidecar integration tests, dependency audit, sandbox integration classification, observability fixture, rollback drill, and independent readiness review in addition to its existing root and sidecar gates. Its evidence records the independent review, every unclassified integration, incomplete Definition-of-Done entries, review-derived high or critical findings, and external prerequisites. `verify:completion` now rejects missing or non-ready independent-review evidence, unclassified integration evidence, and incomplete DoD entries. New contract tests prove that a fully classified ready record passes and that an incomplete review cannot pass.
+- Commands: `npm run test:verification-core && npm run format:check && npm run lint && npm run typecheck && git diff --check` -- exit `0` -- about `53s`; `npm run verify:all` -- exit `0` -- `147.4s`, with `23/23` checks passed and evidence at `artifacts/verification/2026-08-01T152446423z-327d9e3691fe`; `npm run verify:completion` -- exit `1` as expected.
+- Truth boundary: the expanded evidence reported zero unclassified integrations and zero high or critical findings. Completion correctly rejected the seven required integrations represented by the current inventory as not `LIVE_VERIFIED`: Vercel Eve and AI Gateway, Vercel Sandbox, GitHub Connect, Vercel read, Search Console, PageSpeed, and browser research. This repair makes that distinction machine-enforced.
+- Next exact action: regenerate fresh evidence after this status checkpoint, push it to draft PR `#85`, allow its normal self-hosted CI and preview to finish, then reconcile the integration inventory through new redacted live probes. Do not enable publishing or automatic merge.
+
 ## Phase 34: Cross-Platform Eve Build and Verification Repair (2026-08-01)
 
 - State: COMPLETE (`MOCK_VERIFIED`). The public-site and sidecar verification system now runs the real root npm checks on Windows and native Eve compilation/evaluations no longer fail from a Windows ESM path defect.

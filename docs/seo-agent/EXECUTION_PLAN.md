@@ -53,6 +53,12 @@ After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747
 - Result: complete. The npm command shim is executed by the active Node npm CLI when possible, and its real execution has a regression test. Removing the Eve `@vercel/connect` externalization prevents its Windows bundler from writing a bare drive-letter ESM import; the typed client is now part of the sidecar bundle. `npm run verify:all` passed `17/17` checks in `156.5s` and emitted `artifacts/verification/2026-08-01T150847522z-14de4c87073d`. This is `MOCK_VERIFIED`, not live publishing proof.
 - Dependencies / next gate: draft PR `#85` remains subject to existing self-hosted CI and preview review. No live mutation is authorized by this phase.
 
+## Phase 35 Update: Completion-Evidence Integrity (2026-08-01)
+
+- Acceptance scope: make `verify:all` enumerate all applicable deterministic resilience and independent-review checks, and make `verify:completion` fail closed when any Definition-of-Done or integration-classification evidence is missing or incomplete.
+- Acceptance checks: a regression record with all classified ready evidence passes; records with an unclassified integration or non-ready independent review fail completion. Canonical evidence must include sidecar integration, dependency, Sandbox classification, observability, rollback, and independent-review output.
+- Dependencies / next gate: no external state is changed. Current integration records are valid `BLOCKED_MISSING_CREDENTIALS` entries, so canonical deterministic verification may pass but final completion must remain rejected until the required human-approved live probes are recorded.
+
 The requested `openai/gpt-5.6-terra` route is now `LIVE_VERIFIED`. A bounded OIDC request with the approved `openai/gpt-4.1-mini` availability fallback returned the expected response and reported Terra as the model used. The primary route remains Terra. The verified fallback is retained only to preserve audit availability if the primary route becomes temporarily unavailable. This does not authorize a live audit, draft publication, merge, or production mutation.
 
 ## Implementation Progress (2026-07-29)

@@ -1,4 +1,4 @@
-import { mkdirSync } from "node:fs"
+import { mkdirSync, readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import {
 	git,
@@ -18,11 +18,33 @@ const runId = `${startedAt.replace(/[:.]/g, "").replace("Z", "z")}-${commit.slic
 const outputRoot = resolve(repositoryRoot, "artifacts", "verification", runId)
 mkdirSync(outputRoot, { recursive: true })
 
+const INTEGRATION_CLASSIFICATIONS = new Set([
+	"LIVE_VERIFIED",
+	"MOCK_VERIFIED",
+	"BLOCKED_MISSING_CREDENTIALS",
+	"FAILED",
+])
+
+function parseLastJsonLine(output) {
+	for (const line of output.trim().split(/\r?\n/).reverse()) {
+		try {
+			return JSON.parse(line)
+		} catch {
+			// Command output can include normal npm or runtime lines before JSON.
+		}
+	}
+	return null
+}
+
 const checks = [
 	[
-		"verification-launcher",
+		"verification-contracts",
 		process.execPath,
-		["--test", "scripts/verification-core.test.mjs"],
+		[
+			"--test",
+			"scripts/verification-core.test.mjs",
+			"scripts/verify-completion.test.mjs",
+		],
 	],
 	["root-format", npmExecutable(), ["run", "format:check"]],
 	["root-lint", npmExecutable(), ["run", "lint"]],
@@ -52,9 +74,19 @@ const checks = [
 		["--prefix", "automation/seo-agent", "run", "test"],
 	],
 	[
+		"sidecar-integration-tests",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "test:integration"],
+	],
+	[
 		"sidecar-evals",
 		npmExecutable(),
 		["--prefix", "automation/seo-agent", "run", "evals"],
+	],
+	[
+		"sidecar-dependency-audit",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "audit:dependencies"],
 	],
 	[
 		"sidecar-security",
@@ -62,9 +94,29 @@ const checks = [
 		["--prefix", "automation/seo-agent", "run", "security:scan"],
 	],
 	[
+		"sidecar-sandbox-integration",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "sandbox:integration"],
+	],
+	[
+		"sidecar-observability",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "observability:fixture"],
+	],
+	[
 		"sidecar-audit-only",
 		npmExecutable(),
 		["--prefix", "automation/seo-agent", "run", "audit:fixture"],
+	],
+	[
+		"sidecar-rollback-drill",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "rollback:drill"],
+	],
+	[
+		"sidecar-independent-review",
+		npmExecutable(),
+		["--prefix", "automation/seo-agent", "run", "review:independent"],
 	],
 	[
 		"sidecar-health-smoke",
@@ -78,17 +130,44 @@ const checks = [
 	],
 ]
 
-const results = checks.map(([id, name, args]) => {
+const capturedResults = checks.map(([id, name, args]) => {
 	const result = runCommand({ name, args })
 	writeText(
 		resolve(outputRoot, "logs", `${id}.log`),
 		`${result.stdout}${result.stderr}`,
 	)
-	return { id, ...result, stdout: undefined, stderr: undefined }
+	return { id, ...result }
+})
+const results = capturedResults.map((result) => {
+	const safeResult = { ...result }
+	delete safeResult.stdout
+	delete safeResult.stderr
+	return safeResult
 })
 const failed = results
 	.filter((result) => result.status !== "PASSED")
 	.map((result) => result.id)
+const independentReview = parseLastJsonLine(
+	capturedResults.find((result) => result.id === "sidecar-independent-review")
+		?.stdout ?? "",
+)
+const integrationInventory = JSON.parse(
+	readFileSync(
+		resolve(repositoryRoot, "seo", "manifests", "integration-inventory.json"),
+		"utf8",
+	),
+)
+const unclassifiedIntegrations = (integrationInventory.integrations ?? [])
+	.filter((integration) => !INTEGRATION_CLASSIFICATIONS.has(integration.state))
+	.map((integration) => integration.id)
+const incompleteDefinitionOfDone =
+	independentReview?.completion_ready === true
+		? []
+		: [
+				...(independentReview?.completion_blockers ?? []),
+				...(independentReview?.external_prerequisites ?? []),
+				...(independentReview ? [] : ["INDEPENDENT_REVIEW_UNAVAILABLE"]),
+			]
 const finishedAt = new Date().toISOString()
 const endTreeHash = workingTreeHash()
 const payload = {
@@ -105,9 +184,15 @@ const payload = {
 	checks: results,
 	failed_checks: failed,
 	skipped_checks: [],
-	critical_high_findings: [],
+	independent_review: independentReview,
+	unclassified_integrations: unclassifiedIntegrations,
+	incomplete_definition_of_done: incompleteDefinitionOfDone,
+	critical_high_findings: independentReview?.completion_blockers ?? [],
 	external_blockers: [
 		"Live endpoint invocation remains protected by Vercel SSO until an owner-approved preview verification path exists.",
+		...(independentReview?.external_prerequisites ?? []).map(
+			(entry) => entry.detail,
+		),
 	],
 }
 writeJson(resolve(outputRoot, "results.json"), payload)
