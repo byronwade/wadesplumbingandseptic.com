@@ -106,9 +106,10 @@ not make an integration live.
 
 ### What Eve cannot do today
 
-- It cannot use the default premium model until the Vercel AI Gateway account
-  has access to that model. A lower-cost model has been live-verified through
-  OIDC, but model-routing changes still require review.
+- Its default model route is `openai/gpt-5.6-terra`, confirmed in the live AI
+  Gateway catalog. Its bounded OIDC generation probe currently receives HTTP
+  `403`, so the route is `FAILED` until the Gateway account has access. Catalog
+  availability is not proof that the account tier permits use.
 - It cannot currently write site content, create a Git branch, or open a
   content pull request. The installed GitHub Eve tool is intentionally read
   only, and every current runtime mode remains audit-only.
