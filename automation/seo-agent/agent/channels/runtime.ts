@@ -37,9 +37,19 @@ function json(payload: unknown, status = 200) {
 
 export default defineChannel({
 	routes: [
-		GET("/api/healthz", async () => json(runtimeHealth({ circuit }))),
-		GET("/api/readyz", async () => {
-			const health = runtimeHealth({ circuit });
+		GET("/api/healthz", async (request) =>
+			json(
+				runtimeHealth({
+					circuit,
+					oidcTokenPresent: Boolean(request.headers.get("x-vercel-oidc-token")),
+				}),
+			),
+		),
+		GET("/api/readyz", async (request) => {
+			const health = runtimeHealth({
+				circuit,
+				oidcTokenPresent: Boolean(request.headers.get("x-vercel-oidc-token")),
+			});
 			return json(health, health.ready ? 200 : 503);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {

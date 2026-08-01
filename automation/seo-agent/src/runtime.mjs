@@ -528,15 +528,33 @@ export async function executeOrchestratedAudit({
 	};
 }
 
+function hasGatewayApiKey(env) {
+	return (
+		typeof env.AI_GATEWAY_API_KEY === "string" &&
+		env.AI_GATEWAY_API_KEY.trim().length >= 24
+	);
+}
+
+export function gatewayAuthenticationAvailable({
+	env = process.env,
+	oidcTokenPresent = false,
+} = {}) {
+	return (
+		hasGatewayApiKey(env) || Boolean(env.VERCEL_OIDC_TOKEN) || oidcTokenPresent
+	);
+}
+
 export function runtimeHealth({
 	env = process.env,
 	circuit = createCircuitBreaker(),
+	oidcTokenPresent = false,
 } = {}) {
 	try {
 		const settings = loadRuntimeSettings(env);
-		const integrationAvailable = Boolean(
-			env.AI_GATEWAY_API_KEY || env.VERCEL_OIDC_TOKEN,
-		);
+		const integrationAvailable = gatewayAuthenticationAvailable({
+			env,
+			oidcTokenPresent,
+		});
 		const configurationReady =
 			!settings.requiresCronSecret ||
 			(typeof settings.cronSecret === "string" &&
