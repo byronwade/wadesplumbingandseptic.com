@@ -1,10 +1,10 @@
 # Eve Owner Setup
 
-The public site is correctly deployed as a Next.js project. Keep it that way until a reviewed Vercel Services activation change is ready.
+The reviewed draft branch uses a single Vercel Services project: the public site remains at `/` and the backend-only Eve sidecar is only under `/_internal/eve`. Production remains unchanged until a human merges the draft PR.
 
 ## Already Configured
 
-- [x] The Vercel project uses Node 24 and the Next.js Framework Preset.
+- [x] The Vercel project uses Node 24 and the Services Framework Preset. A reviewed preview deployed both the site and internal Eve functions.
 - [x] Eve safety settings exist in Preview and Production: observe mode, mutation kill switch, disabled publishing, disabled live reads, and bounded budgets.
 - [x] A separate encrypted `CRON_SECRET` exists for Preview and Production. No external Cron schedule is enabled.
 - [x] GitHub Connect is installed as `github/wadesplumbingandseptic-com` for this repository. Its triggers are off.
@@ -16,16 +16,15 @@ The public site is correctly deployed as a Next.js project. Keep it that way unt
 
 ## Keep Off
 
-- [ ] Do not change the Vercel Framework Preset to Services until this reviewed activation branch is ready to deploy.
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
 ## Later, When We Activate the Sidecar
 
-1. Review the dedicated Services activation PR, which promotes the checked-in topology to the root Vercel configuration.
-2. Change the project Framework Preset to Services immediately before deploying that reviewed branch.
-3. Verify its preview preserves the public site and exposes only the internal Eve routes.
-4. Set `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true` for one exact approved read-only run.
-5. Run the first audit-only sidecar verification. Keep mutation mode disabled.
+1. Let the normal PR checks for the reviewed Services branch finish green. Keep the PR as a draft.
+2. Approve an SSO-safe way to verify only `/_internal/eve/api/healthz`, `/_internal/eve/api/readyz`, and the protected Cron rejection path. Do not disable SSO just for testing.
+3. Approve one exact read-only audit run, then set only the required read-integration flags for that run.
+4. Review the audit evidence. Keep mutation mode, publishing, auto-merge, GitHub triggers, and external Cron disabled.
+5. Merge only through normal human branch protection when the preview and required CI evidence are accepted.
 
 The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).
