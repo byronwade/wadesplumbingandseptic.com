@@ -13,6 +13,8 @@ const script = resolve(
 
 test("offline provenance records the verifier result without a credential", () => {
 	const runnerTemp = mkdtempSync(resolve(tmpdir(), "wades-seo-offline-"));
+	const env = { ...process.env, RUNNER_TEMP: runnerTemp };
+	delete env.npm_execpath;
 	try {
 		const result = spawnSync(
 			process.execPath,
@@ -20,7 +22,7 @@ test("offline provenance records the verifier result without a credential", () =
 			{
 				cwd: root,
 				encoding: "utf8",
-				env: { ...process.env, RUNNER_TEMP: runnerTemp },
+				env,
 			},
 		);
 		assert.equal(result.status, 0, result.stderr);

@@ -22,9 +22,12 @@ if (!Number.isInteger(durationSeconds) || durationSeconds < 0)
 	throw new Error(
 		"Offline CI provenance requires a non-negative whole duration.",
 	);
-const npmCli =
-	process.env.npm_execpath ??
-	resolve(dirname(process.execPath), "node_modules/npm/bin/npm-cli.js");
+const npmCliCandidates = [
+	process.env.npm_execpath,
+	resolve(dirname(process.execPath), "../lib/node_modules/npm/bin/npm-cli.js"),
+	resolve(dirname(process.execPath), "node_modules/npm/bin/npm-cli.js"),
+].filter(Boolean);
+const npmCli = npmCliCandidates.find((candidate) => existsSync(candidate));
 if (!existsSync(npmCli))
 	throw new Error("npm CLI entry point is unavailable for CI provenance.");
 
