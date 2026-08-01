@@ -1,5 +1,5 @@
-import { mkdirSync } from "node:fs";
-import { resolve } from "node:path";
+import { mkdirSync } from "node:fs"
+import { resolve } from "node:path"
 import {
   git,
   npmExecutable,
@@ -9,14 +9,14 @@ import {
   workingTreeHash,
   writeJson,
   writeText,
-} from "./verification-core.mjs";
+} from "./verification-core.mjs"
 
-const startedAt = new Date().toISOString();
-const commit = git(["rev-parse", "HEAD"]);
-const startTreeHash = workingTreeHash();
-const runId = `${startedAt.replace(/[:.]/g, "").replace("Z", "z")}-${commit.slice(0, 12)}`;
-const outputRoot = resolve(repositoryRoot, "artifacts", "verification", runId);
-mkdirSync(outputRoot, { recursive: true });
+const startedAt = new Date().toISOString()
+const commit = git(["rev-parse", "HEAD"])
+const startTreeHash = workingTreeHash()
+const runId = `${startedAt.replace(/[:.]/g, "").replace("Z", "z")}-${commit.slice(0, 12)}`
+const outputRoot = resolve(repositoryRoot, "artifacts", "verification", runId)
+mkdirSync(outputRoot, { recursive: true })
 
 const checks = [
   ["root-format", npmExecutable(), ["run", "format:check"]],
@@ -71,21 +71,21 @@ const checks = [
     npmExecutable(),
     ["--prefix", "automation/seo-agent", "run", "build"],
   ],
-];
+]
 
 const results = checks.map(([id, name, args]) => {
-  const result = runCommand({ name, args });
+  const result = runCommand({ name, args })
   writeText(
     resolve(outputRoot, "logs", `${id}.log`),
     `${result.stdout}${result.stderr}`,
-  );
-  return { id, ...result, stdout: undefined, stderr: undefined };
-});
+  )
+  return { id, ...result, stdout: undefined, stderr: undefined }
+})
 const failed = results
   .filter((result) => result.status !== "PASSED")
-  .map((result) => result.id);
-const finishedAt = new Date().toISOString();
-const endTreeHash = workingTreeHash();
+  .map((result) => result.id)
+const finishedAt = new Date().toISOString()
+const endTreeHash = workingTreeHash()
 const payload = {
   schema_version: "1.0",
   run_id: runId,
@@ -104,15 +104,15 @@ const payload = {
   external_blockers: [
     "Live endpoint invocation remains protected by Vercel SSO until an owner-approved preview verification path exists.",
   ],
-};
-writeJson(resolve(outputRoot, "results.json"), payload);
+}
+writeJson(resolve(outputRoot, "results.json"), payload)
 writeText(
   resolve(outputRoot, "summary.md"),
   `# Verification ${runId}\n\n- Commit: ${commit}\n- Tree hash: ${endTreeHash}\n- Classification: ${payload.classification}\n- Passed: ${results.length - failed.length}/${results.length}\n- Failed checks: ${failed.length ? failed.join(", ") : "none"}\n`,
-);
+)
 writeJson(resolve(repositoryRoot, "artifacts", "verification", "latest.json"), {
   run_id: runId,
   results_path: `artifacts/verification/${runId}/results.json`,
-});
-console.log(`Verification evidence written to artifacts/verification/${runId}`);
-if (failed.length) process.exit(1);
+})
+console.log(`Verification evidence written to artifacts/verification/${runId}`)
+if (failed.length) process.exit(1)
