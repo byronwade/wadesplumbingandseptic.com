@@ -40,6 +40,10 @@ The Phase 7 draft publisher now has an explicit Vercel Connect compatible GitHub
 
 The adapter and its mocked end to end flow are `MOCK_VERIFIED`. A live GitHub write remains `BLOCKED_MISSING_CREDENTIALS` until the Vercel Connect GitHub App is granted the reviewed minimum permissions and a human approves one disposable integration test. This phase does not enable mutation mode or change production configuration.
 
+## Phase 32 Update: Production OIDC Runtime Verification (2026-08-01)
+
+After the human merge of PR `#84`, Vercel deployed commit `dafe36c3012b91c82a747d9beff4d339c060c67d` as production deployment `dpl_jrQmpaSE9qc4Y89c4jSa8knyFdTv`. Read-only `GET` probes to the internal health and readiness routes returned HTTP `200`, `mode: observe`, `ready: true`, `integration_classification: CONFIGURED_UNVERIFIED`, and an enabled mutation kill switch. This is `LIVE_VERIFIED` only for the deployment and OIDC-aware health surface. It starts no audit, makes no model request, and enables no publishing path.
+
 ## Implementation Progress (2026-07-29)
 
 | Phase | Current evidence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Status                                                                                                                                                 |
