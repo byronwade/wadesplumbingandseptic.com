@@ -1,7 +1,9 @@
 import { timingSafeEqual, createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { createAuditOnlyRun } from "./audit.mjs";
+import { createAuditOnlyRun, createConfiguredAuditOnlyRun } from "./audit.mjs";
+import { createIntegrationRegistry } from "./adapters.mjs";
+import { loadConfig } from "./config.mjs";
 import { DEFAULT_BUDGETS } from "./constants.mjs";
 import { collectRecordedRunIds } from "./run-history.mjs";
 import {
@@ -473,6 +475,9 @@ export async function executeOrchestratedAudit({
 	settings = loadRuntimeSettings(),
 	repoRoot = resolveRepositoryRoot(),
 	executeLiveReads = false,
+	config = loadConfig(),
+	registry = undefined,
+	treeHash = process.env.VERCEL_GIT_COMMIT_SHA ?? "VERCEL_RUNTIME_UNAVAILABLE",
 }) {
 	if (!repoRoot)
 		return {
@@ -512,20 +517,20 @@ export async function executeOrchestratedAudit({
 			}),
 			runtime_plan: plan,
 		};
-	// A completed run cannot be treated as durable until its canonical manifest
-	// can be committed through the separately human-approved Git artifact path.
-	// This sidecar intentionally has no direct repository write or database
-	// lease, so production observation fails closed instead of creating a run
-	// whose duplicate protection would disappear after the worker exits.
-	return {
-		classification: "BLOCKED_MISSING_CREDENTIALS",
-		state: "BLOCKED_MISSING_CREDENTIALS",
-		run_id: plan.runId,
-		audit_only: true,
-		runtime_plan: plan,
-		reason:
-			"Git-backed durable run-manifest persistence is not configured; no live audit is started without the human-approved artifact path.",
-	};
+	// The first production audit may read only configured integrations. It builds
+	// a redacted immutable artifact proposal but performs no Git write, content
+	// change, PR creation, merge, deployment, or Blob archive. Persisting that
+	// proposal is a distinct, human-approved Git artifact step.
+	const run = await createConfiguredAuditOnlyRun({
+		repoRoot,
+		runId: plan.runId,
+		treeHash,
+		config,
+		registry: registry ?? createIntegrationRegistry({ config }),
+		executeLiveReads,
+		completedRunIds: recordedRunIds,
+	});
+	return Object.freeze({ ...run, runtime_plan: plan });
 }
 
 function hasGatewayApiKey(env) {

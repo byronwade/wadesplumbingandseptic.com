@@ -1,5 +1,16 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 41: Live Audit Runtime Activation (2026-08-01)
+
+- State: COMPLETE for the controlled runtime implementation (`MOCK_VERIFIED`). Production remains observe-only and has not been redeployed or invoked by this phase.
+- Changed scope: replaced the production audit placeholder with the configured, bounded read-only audit executor. An exact approved Production run now collects typed adapter evidence, creates a redacted immutable audit-manifest proposal, and returns it through the durable Eve session. It cannot write Git, create a PR, modify content, merge, deploy, archive to Blob, or disable the mutation kill switch. AI Gateway model-catalog probing now forwards only a supplied runtime OIDC or Gateway credential in an Authorization header, never logs it.
+- Commands: `npm run format:check; npm run typecheck; node --test tests/runtime.test.mjs tests/adapters.test.mjs tests/audit.test.mjs` in `automation/seo-agent` with Node `v24.14.0` -- exit `0` -- `5.61s` -- formatting and typecheck passed with `36` focused tests. `npm run ci:offline` in `automation/seo-agent` with Node `v24.14.0` -- exit `0` -- approximately `55s` -- lint, all formatting gates, typecheck, static contracts, secret scan, `104` unit tests, `10` runtime integration tests, `15` Eve evals with `50` gates, audit fixture, human-only rollback drill, independent review, and Eve build/manifest verification passed.
+- Evidence: `automation/seo-agent/src/runtime.mjs`, `automation/seo-agent/src/adapters.mjs`, `automation/seo-agent/tests/runtime.test.mjs`, and `automation/seo-agent/tests/adapters.test.mjs`. The new regression fixture supplies a matching Production approval and one bounded model-catalog response, proves `LIVE_VERIFIED` evidence may be returned, and proves zero content files, zero draft PRs, and `write_performed=false`.
+- Verification classification: `MOCK_VERIFIED` for the end-to-end runtime and authenticated-header fixture. No cloud integration, workflow, provider request, GitHub write, Blob write, deployment, or production content mutation was performed.
+- Failures / limitations: the local Eve evaluator emitted one post-success world-local queue cleanup retry (`socket hang up`) after all `15/15` evals completed. The command exited `0`; no external provider call occurred. This does not establish a live workflow run.
+- External blocker: live Vercel read inspection still requires the separate least-privilege `VERCEL_READ_TOKEN`, project ID, and team ID. Browser automation and optional provider adapters remain disabled. These individual blocks do not prevent a core audit from returning the available integration classifications.
+- Next exact action: push this code checkpoint as a draft PR, obtain human merge, deploy the approved Production build with a one-time exact live-read approval, inspect the scheduled Eve Agent Run and its redacted report, then reset the approval. Keep all publishing controls disabled.
+
 ## Phase 40: Authorized Production Audit Attempt and Safe Reversion (2026-08-01)
 
 - State: `BLOCKED_MISSING_CREDENTIALS` for credential-bearing provider verification. No audit workflow, provider request, content change, pull request, merge, or deployment occurred.

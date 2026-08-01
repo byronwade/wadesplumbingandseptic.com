@@ -561,11 +561,14 @@ test("Search Console refuses partial date windows and bounds every requested row
 	);
 });
 
-test("AI Gateway model discovery is bounded, typed, and credential-free", async () => {
+test("AI Gateway model discovery is bounded, typed, and uses a supplied runtime credential", async () => {
+	let authorization = null;
 	const result = await createAiGatewayAdapter({
 		enabled: true,
-		fetchImpl: async () =>
-			jsonResponse({
+		accessToken: "oidc-fixture-token",
+		fetchImpl: async (_url, init) => {
+			authorization = init.headers.authorization;
+			return jsonResponse({
 				data: [
 					{
 						id: "openai/fixture-model",
@@ -574,8 +577,10 @@ test("AI Gateway model discovery is bounded, typed, and credential-free", async 
 						max_tokens: 4096,
 					},
 				],
-			}),
+			});
+		},
 	}).probe({ runId: "gateway-fixture" });
+	assert.equal(authorization, "Bearer oidc-fixture-token");
 	assert.equal(result.classification, "LIVE_VERIFIED");
 	assert.equal(result.payload.models[0].id, "openai/fixture-model");
 });
