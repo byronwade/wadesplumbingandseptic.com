@@ -14,6 +14,7 @@ import {
 } from "../src/policy.mjs";
 import {
 	assertDraftPrPacket,
+	createGithubDraftPublisher,
 	createDraftPullRequest,
 } from "../src/publishing.mjs";
 import {
@@ -42,6 +43,14 @@ function createChangeSet() {
 
 function createPacket(changeSet) {
 	return `# SEO Draft PR Packet\n\n- Proposal: fixture\n- Query cluster: fixture query\n- Canonical owner: /fixture\n- Existing page assessment: EXISTING_SUFFICIENT\n- Evidence: fixture-evidence\n- Change manifest: ${changeSet.proposal_id}\n- Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.\n- Rollback: revert fixture\n- Publication: DRAFT PR ONLY; human approval and merge required.\n`;
+}
+
+function jsonResponse(payload, status = 200) {
+	return {
+		ok: status >= 200 && status < 300,
+		status,
+		json: async () => payload,
+	};
 }
 
 test("direct-main, merge, and production deployment actions are denied", () => {
@@ -319,6 +328,109 @@ test("draft publication degrades safely without a gateway", async () => {
 	});
 	assert.equal(result.classification, "BLOCKED_MISSING_CREDENTIALS");
 	assert.equal(result.draft_pr_created, false);
+});
+
+test("GitHub publisher stays inert by default and only writes one guarded draft branch", async () => {
+	const changeSet = createChangeSet();
+	const packet = createPacket(changeSet);
+	let tokenRequests = 0;
+	let requestCount = 0;
+	const disabled = createGithubDraftPublisher({
+		repository: "byronwade/wadesplumbingandseptic.com",
+		accessTokenProvider: async () => {
+			tokenRequests += 1;
+			return "fixture-connect-token";
+		},
+		fetchImpl: async () => {
+			requestCount += 1;
+			throw new Error("disabled publisher must not make a request");
+		},
+	});
+	const blocked = await disabled.stageMarkdownChangeSet({
+		branch: "eve/seo/2026-08-01-fixture-post",
+		changeSet,
+	});
+	assert.equal(blocked.classification, "BLOCKED_MISSING_CREDENTIALS");
+	assert.equal(tokenRequests, 0);
+	assert.equal(requestCount, 0);
+
+	const requests = [];
+	const sha = (character) => character.repeat(40);
+	const publisher = createGithubDraftPublisher({
+		repository: "byronwade/wadesplumbingandseptic.com",
+		accessTokenProvider: async () => "fixture-connect-token",
+		classification: "MOCK_VERIFIED",
+		enabled: true,
+		mutationMode: "enabled",
+		mutationKillSwitch: false,
+		humanApproved: true,
+		integrationTestEnabled: true,
+		fetchImpl: async (url, init) => {
+			requests.push({ url: String(url), init });
+			assert.equal(init.headers.authorization, "Bearer fixture-connect-token");
+			switch (`${init.method} ${url}`) {
+				case "GET https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/git/ref/heads/eve/seo/2026-08-01-fixture-post":
+					return jsonResponse({ object: { sha: sha("a") } });
+				case `GET https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/git/commits/${sha("a")}`:
+					return jsonResponse({ tree: { sha: sha("b") } });
+				case "POST https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/git/trees":
+					return jsonResponse({ sha: sha("c") });
+				case "POST https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/git/commits":
+					return jsonResponse({ sha: sha("d") });
+				case "PATCH https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/git/refs/heads/eve/seo/2026-08-01-fixture-post":
+					return jsonResponse({ object: { sha: sha("d") } });
+				case "POST https://api.github.com/repos/byronwade/wadesplumbingandseptic.com/pulls":
+					return jsonResponse({
+						draft: true,
+						number: 42,
+						html_url:
+							"https://github.com/byronwade/wadesplumbingandseptic.com/pull/42",
+						base: { ref: "main" },
+						head: { ref: "eve/seo/2026-08-01-fixture-post" },
+					});
+				default:
+					throw new Error(`Unexpected GitHub request: ${init.method} ${url}`);
+			}
+		},
+	});
+	const result = await createDraftPullRequest({
+		humanApproval: true,
+		branch: "eve/seo/2026-08-01-fixture-post",
+		title: "SEO: fixture post",
+		body: packet,
+		changeSet,
+		gateway: publisher,
+	});
+	assert.equal(result.classification, "MOCK_VERIFIED");
+	assert.equal(result.draft_pr_created, true);
+	assert.equal(result.commit_sha, sha("d"));
+	assert.deepEqual(
+		requests.map((request) => request.init.method),
+		["GET", "GET", "POST", "POST", "PATCH", "POST"],
+	);
+	const branchUpdate = JSON.parse(requests[4].init.body);
+	assert.deepEqual(branchUpdate, { sha: sha("d"), force: false });
+	const pullRequest = JSON.parse(requests[5].init.body);
+	assert.deepEqual(
+		{
+			base: pullRequest.base,
+			draft: pullRequest.draft,
+			head: pullRequest.head,
+		},
+		{ base: "main", draft: true, head: "eve/seo/2026-08-01-fixture-post" },
+	);
+	assert.equal(
+		requests.some((request) => request.url.includes("/main")),
+		false,
+	);
+	assert.equal(
+		requests.some((request) => request.init.method === "DELETE"),
+		false,
+	);
+	await assert.rejects(
+		publisher.stageMarkdownChangeSet({ branch: "main", changeSet }),
+		/eve\/seo\//,
+	);
 });
 
 test("draft publisher forwards only a complete draft packet and rejects non-draft or malformed gateway results", async () => {

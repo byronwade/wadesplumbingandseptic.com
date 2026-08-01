@@ -25,13 +25,36 @@ export function npmExecutable() {
 	return process.platform === "win32" ? "npm.cmd" : "npm"
 }
 
+function resolveCommand(name, args) {
+	if (process.platform !== "win32" || name !== "npm.cmd") {
+		return { name, args, shell: false }
+	}
+	// npm lifecycle scripts expose the actual npm CLI entrypoint. Running that
+	// with Node avoids spawnSync EINVAL for Windows .cmd shims while preserving
+	// the exact npm command contract. The shell fallback also supports direct
+	// `node scripts/verify-all.mjs` execution outside an npm lifecycle.
+	if (
+		typeof process.env.npm_execpath === "string" &&
+		process.env.npm_execpath
+	) {
+		return {
+			name: process.execPath,
+			args: [process.env.npm_execpath, ...args],
+			shell: false,
+		}
+	}
+	return { name, args, shell: true }
+}
+
 export function runCommand({ name, args, cwd = repositoryRoot }) {
 	const startedAt = new Date().toISOString()
 	const started = performance.now()
-	const result = spawnSync(name, args, {
+	const command = resolveCommand(name, args)
+	const result = spawnSync(command.name, command.args, {
 		cwd,
 		encoding: "utf8",
 		windowsHide: true,
+		shell: command.shell,
 	})
 	const durationMs = Math.round(performance.now() - started)
 	return {
@@ -49,9 +72,11 @@ export function runCommand({ name, args, cwd = repositoryRoot }) {
 export function toolVersions() {
 	const value = (name, args) => {
 		try {
-			return execFileSync(name, args, {
+			const command = resolveCommand(name, args)
+			return execFileSync(command.name, command.args, {
 				cwd: repositoryRoot,
 				encoding: "utf8",
+				shell: command.shell,
 			}).trim()
 		} catch {
 			return "unavailable"

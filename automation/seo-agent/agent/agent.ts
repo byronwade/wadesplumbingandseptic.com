@@ -7,5 +7,4 @@ export default defineAgent({
 	model,
 	modelOptions,
 	modelContextWindowTokens,
-	build: { externalDependencies: ["@vercel/connect"] },
 });

@@ -1,5 +1,12 @@
 import { assertTruthState, authorizeAction } from "./policy.mjs";
 import { assertMarkdownChangeSet } from "./markdown-change-set.mjs";
+import { requestJson } from "./adapters.mjs";
+import { createRunBudget } from "./run-controls.mjs";
+
+const SAFE_DRAFT_BRANCH =
+	/^eve\/seo\/\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_SHA = /^[a-f0-9]{7,64}$/i;
+const GITHUB_API_VERSION = "2026-03-10";
 
 const REQUIRED_PACKET_MARKERS = Object.freeze([
 	"# SEO Draft PR Packet",
@@ -29,6 +36,249 @@ export function assertDraftPrPacket({ title, body, changeSet }) {
 	if (!body.includes(`- Change manifest: ${changeSet.proposal_id}`))
 		throw new Error("Draft PR packet does not reference its change manifest");
 	return true;
+}
+
+function parseRepository(repository) {
+	if (
+		typeof repository !== "string" ||
+		!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository)
+	) {
+		throw new Error("GitHub publisher requires an owner/repository name.");
+	}
+	return repository.split("/");
+}
+
+function assertDraftBranch(branch) {
+	if (typeof branch !== "string" || !SAFE_DRAFT_BRANCH.test(branch)) {
+		throw new Error(
+			"GitHub publisher permits only eve/seo/YYYY-MM-DD-<slug> feature branches.",
+		);
+	}
+	return branch;
+}
+
+function blockedPublisher(reason) {
+	return Object.freeze({
+		classification: "BLOCKED_MISSING_CREDENTIALS",
+		reason,
+		write_performed: false,
+	});
+}
+
+function branchPath(branch) {
+	return branch
+		.split("/")
+		.map((segment) => encodeURIComponent(segment))
+		.join("/");
+}
+
+/**
+ * Creates the only real GitHub write boundary. It uses a short-lived token
+ * supplied by Vercel Connect, and it is inert until an explicit caller
+ * supplies all four existing publication gates. It deliberately has no merge,
+ * deletion, default-branch update, force-push, repository-settings, or secret
+ * operation.
+ */
+export function createGithubDraftPublisher({
+	repository,
+	accessTokenProvider,
+	fetchImpl = fetch,
+	budget = createRunBudget(),
+	requestPolicy,
+	classification = "LIVE_VERIFIED",
+	enabled = false,
+	mutationMode = "disabled",
+	mutationKillSwitch = true,
+	humanApproved = false,
+	integrationTestEnabled = false,
+} = {}) {
+	const [owner, repo] = parseRepository(repository);
+	if (typeof accessTokenProvider !== "function") {
+		throw new Error(
+			"GitHub publisher requires a Vercel Connect token provider.",
+		);
+	}
+	assertTruthState(classification);
+	const base = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`;
+
+	const guard = () => {
+		if (!enabled)
+			return blockedPublisher(
+				"GitHub draft publishing is disabled by default.",
+			);
+		if (mutationMode !== "enabled")
+			return blockedPublisher(
+				"Publishing requires SEO_AGENT_MUTATION_MODE=enabled.",
+			);
+		if (mutationKillSwitch !== false)
+			return blockedPublisher(
+				"Publishing is blocked by the mutation kill switch.",
+			);
+		if (humanApproved !== true)
+			return blockedPublisher(
+				"Publishing requires an explicit human approval record.",
+			);
+		if (integrationTestEnabled !== true)
+			return blockedPublisher(
+				"Publishing requires the explicit integration-test execution flag.",
+			);
+		return null;
+	};
+
+	const request = async (url, init, source) => {
+		const token = await accessTokenProvider();
+		if (typeof token !== "string" || token.length === 0) {
+			throw new Error(
+				"GitHub publisher did not receive a Vercel Connect token.",
+			);
+		}
+		return requestJson({
+			fetchImpl,
+			budget,
+			url,
+			init: {
+				...init,
+				headers: {
+					accept: "application/vnd.github+json",
+					authorization: `Bearer ${token}`,
+					"content-type": "application/json",
+					"x-github-api-version": GITHUB_API_VERSION,
+					...init?.headers,
+				},
+			},
+			source,
+			policy: requestPolicy,
+		});
+	};
+
+	return Object.freeze({
+		async stageMarkdownChangeSet({ branch, changeSet }) {
+			const denial = guard();
+			if (denial) return denial;
+			assertDraftBranch(branch);
+			assertMarkdownChangeSet(changeSet);
+			const ref = await request(
+				`${base}/git/ref/heads/${branchPath(branch)}`,
+				{ method: "GET" },
+				"GitHub draft branch read",
+			);
+			const parentSha = ref?.object?.sha;
+			if (!SAFE_SHA.test(parentSha ?? "")) {
+				throw new Error("GitHub draft branch did not resolve to a commit SHA.");
+			}
+			const parent = await request(
+				`${base}/git/commits/${encodeURIComponent(parentSha)}`,
+				{ method: "GET" },
+				"GitHub draft parent commit read",
+			);
+			if (!SAFE_SHA.test(parent?.tree?.sha ?? "")) {
+				throw new Error(
+					"GitHub draft parent commit did not contain a tree SHA.",
+				);
+			}
+			const tree = await request(
+				`${base}/git/trees`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						base_tree: parent.tree.sha,
+						tree: changeSet.files.map((file) => ({
+							path: file.path,
+							mode: "100644",
+							type: "blob",
+							content: file.content,
+						})),
+					}),
+				},
+				"GitHub draft tree create",
+			);
+			if (!SAFE_SHA.test(tree?.sha ?? "")) {
+				throw new Error("GitHub draft tree create did not return a SHA.");
+			}
+			const commit = await request(
+				`${base}/git/commits`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						message: `chore(seo): ${changeSet.proposal_id} [eve-seo-agent; human-approved]`,
+						tree: tree.sha,
+						parents: [parentSha],
+					}),
+				},
+				"GitHub draft commit create",
+			);
+			if (!SAFE_SHA.test(commit?.sha ?? "")) {
+				throw new Error("GitHub draft commit create did not return a SHA.");
+			}
+			const updated = await request(
+				`${base}/git/refs/heads/${branchPath(branch)}`,
+				{
+					method: "PATCH",
+					body: JSON.stringify({ sha: commit.sha, force: false }),
+				},
+				"GitHub draft feature branch update",
+			);
+			if (updated?.object?.sha !== commit.sha) {
+				throw new Error("GitHub draft feature branch was not updated safely.");
+			}
+			return Object.freeze({
+				classification,
+				branch,
+				commit_sha: commit.sha,
+				write_performed: true,
+			});
+		},
+
+		async createPullRequest({ branch, title, body, draft }) {
+			const denial = guard();
+			if (denial) return denial;
+			assertDraftBranch(branch);
+			authorizeAction("create_draft_pull_request", {
+				humanApproval: humanApproved,
+				draft,
+				branch,
+			});
+			if (typeof title !== "string" || !title.trim() || title.length > 120) {
+				throw new Error("GitHub draft pull request title is invalid.");
+			}
+			if (typeof body !== "string" || !body.trim()) {
+				throw new Error("GitHub draft pull request body is required.");
+			}
+			const pullRequest = await request(
+				`${base}/pulls`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						title,
+						body,
+						head: branch,
+						base: "main",
+						draft: true,
+					}),
+				},
+				"GitHub draft pull request create",
+			);
+			if (
+				pullRequest?.draft !== true ||
+				!Number.isInteger(pullRequest?.number) ||
+				pullRequest.number < 1 ||
+				typeof pullRequest?.html_url !== "string" ||
+				!pullRequest.html_url.startsWith("https://") ||
+				pullRequest?.base?.ref !== "main" ||
+				pullRequest?.head?.ref !== branch
+			) {
+				throw new Error(
+					"GitHub did not return the requested draft pull request.",
+				);
+			}
+			return Object.freeze({
+				classification,
+				draft: true,
+				number: pullRequest.number,
+				url: pullRequest.html_url,
+			});
+		},
+	});
 }
 
 export async function createDraftPullRequest({
