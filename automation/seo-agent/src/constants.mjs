@@ -9,7 +9,9 @@ export const TRUTH_STATES = Object.freeze([
 
 export const AGENT_SEMANTIC_VERSION = "0.1.0";
 
-export const DEFAULT_MODEL_ROUTE = "openai/gpt-5.4";
+// Confirmed in the live AI Gateway model catalog on 2026-08-01. Keep this
+// route centralized so orchestration and writing never silently diverge.
+export const DEFAULT_MODEL_ROUTE = "openai/gpt-5.6-terra";
 export const INDEPENDENT_JUDGE_MODEL_ROUTE = "anthropic/claude-sonnet-4.6";
 export const APPROVED_MODEL_ROUTES = Object.freeze([
 	DEFAULT_MODEL_ROUTE,

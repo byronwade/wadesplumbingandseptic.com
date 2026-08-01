@@ -1,7 +1,19 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createModelRunLedger } from "../src/model-budget.mjs";
-import { DEFAULT_BUDGETS } from "../src/constants.mjs";
+import {
+	APPROVED_MODEL_ROUTES,
+	DEFAULT_BUDGETS,
+	DEFAULT_MODEL_ROUTE,
+	MODEL_ROLE_POLICY,
+} from "../src/constants.mjs";
+
+test("Terra is the centralized approved default for orchestration and writing", () => {
+	assert.equal(DEFAULT_MODEL_ROUTE, "openai/gpt-5.6-terra");
+	assert.ok(APPROVED_MODEL_ROUTES.includes(DEFAULT_MODEL_ROUTE));
+	assert.equal(MODEL_ROLE_POLICY.orchestration.primary, DEFAULT_MODEL_ROUTE);
+	assert.equal(MODEL_ROLE_POLICY.writing.primary, DEFAULT_MODEL_ROUTE);
+});
 
 test("model ledger atomically reserves tool, token, and cost budget per audit run", () => {
 	const ledger = createModelRunLedger({
@@ -11,7 +23,7 @@ test("model ledger atomically reserves tool, token, and cost budget per audit ru
 		runId: "model-budget-fixture-001",
 		prompt: "Summarize only the supplied evidence.",
 		maxOutputTokens: 1200,
-		model: "openai/gpt-5.4",
+		model: DEFAULT_MODEL_ROUTE,
 	});
 	assert.equal(first.usage.maxToolCalls, 1);
 	assert.equal(
@@ -26,7 +38,7 @@ test("model ledger atomically reserves tool, token, and cost budget per audit ru
 				runId: "model-budget-fixture-001",
 				prompt: "A second request must not exceed the run reservation.",
 				maxOutputTokens: 1,
-				model: "openai/gpt-5.4",
+				model: DEFAULT_MODEL_ROUTE,
 			}),
 		/Budget exhausted: maxModelCostUsd/,
 	);
@@ -44,7 +56,7 @@ test("model ledger rejects unsafe run IDs and unapproved routes before recording
 				runId: "../unsafe",
 				prompt: "bounded",
 				maxOutputTokens: 1,
-				model: "openai/gpt-5.4",
+				model: DEFAULT_MODEL_ROUTE,
 			}),
 		/safe audit run ID/,
 	);
