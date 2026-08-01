@@ -305,6 +305,13 @@ const nextConfig: NextConfig = {
 		]
 	},
 	images: {
+		/*
+		 * Vercel Services currently serves the site assets but not Next's
+		 * built-in /_next/image optimizer. All local assets are already
+		 * optimized WebP files, so serve them directly instead of emitting
+		 * optimizer URLs that return 404.
+		 */
+		unoptimized: true,
 		formats: ["image/avif", "image/webp"],
 		qualities: [48, 52, 55, 58, 60, 65, 70, 75, 80, 85],
 		/* Cap retina candidates; 100vw heroes do not need 3840px sources. */
