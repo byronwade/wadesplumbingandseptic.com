@@ -1,5 +1,12 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 47: Native Cron Services Route Repair (2026-08-02)
+
+- State: READY_FOR_HUMAN_REVIEW. Production `d2c3197f48cf8116f8da4211f5678164d65ccebf` was deployed after the durable-handoff repair. A real Vercel native-Cron invocation at `2026-08-02T22:33:03.248Z` reached `/eve/v1/cron/wIQCJcoYJQBApnwAhG4IX5HtL49IJI7heDiAzS-6TU4`, but the production request log shows HTTP `404` from the public site and Vercel Agent Runs remain zero.
+- Cause and correction: the one-project Services configuration routed only `/_internal/eve/*` to the sidecar. Eve generates native Cron metadata under `/eve/v1/cron/*`; without an explicit, ordered service rewrite, Vercel sends that callback to the site catch-all. The repair adds the narrow `/eve/v1/cron/*` route to `eve_seo_agent`, validates it in the deterministic deployment-configuration gate, and documents the opaque framework callback exception to the no-public-agent-route rule.
+- Verification requirement: rerun the sidecar deployment-config, format, typecheck, test, build, and canonical verification commands before merge. The observed Cron trigger and public-site `404` are `LIVE_VERIFIED` failure evidence. No Agent Run, content mutation, branch, or draft content PR is claimed.
+- Next exact action: merge and deploy this routing repair, trigger the same registered native Cron path, confirm a durable audit Agent Run, then enable only the exact one-time draft-PR controls for a human-reviewable blog post.
+
 ## Phase 46: Native Schedule Durable Handoff Repair (2026-08-02)
 
 - State: READY_FOR_HUMAN_REVIEW. A real Production native-Cron invocation was accepted at `2026-08-02T18:48:35.600Z`, but Vercel recorded zero Eve Agent Runs. This is `FAILED` live evidence for the pre-repair schedule path, not a credential or approval failure.
