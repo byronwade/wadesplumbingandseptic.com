@@ -7,7 +7,7 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [x] The Vercel project uses Node 24 and the Services Framework Preset. A reviewed preview deployed both the site and internal Eve functions.
 - [x] Eve safety settings exist in Preview and Production: observe mode, mutation kill switch, disabled publishing, disabled live reads, and bounded budgets.
 - [x] A separate encrypted `CRON_SECRET` exists for Preview and Production. The protected fallback dispatcher remains secret-authenticated.
-- [ ] The compiled `proposal-proof` schedule has been deployed. It uses the UTC leap-day expression `0 0 29 2 *` and exists only for a Vercel administrator's one-time CLI lifecycle proof.
+- [ ] The repaired single native `audit` schedule is deployed. It runs at `17 16 * * 1` UTC and normally selects only the audit job.
 - [x] GitHub Connect is installed as `github/wadesplumbingandseptic-com` for this repository. Its app-token exchange and a one-repository read token were live-verified on 2026-08-01. Its triggers are off.
 - [x] The GitHub read adapter is enabled and uses Vercel Connect app tokens. No static GitHub token is stored.
 - [ ] In the GitHub App installation, select only `byronwade/wadesplumbingandseptic.com`. The sidecar patch scopes each token request to this repository, but installation-level repository access must also be narrowed before any draft-writing workflow is enabled.
@@ -35,10 +35,10 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 
 ## One-Time Draft Proposal Proof
 
-- [ ] Merge and deploy the reviewed `proposal-proof` schedule patch first. Do not change the existing audit schedule.
-- [ ] Set only these Production values for the exact current UTC date: `SEO_AGENT_RUN_MODE=propose`, `SEO_AGENT_MUTATION_MODE=enabled`, `SEO_AGENT_MUTATION_KILL_SWITCH=false`, `SEO_AGENT_PUBLISHING_HUMAN_APPROVED=true`, `SEO_AGENT_PUBLISHING_INTEGRATION_TEST=true`, `SEO_AGENT_PUBLISHING_APPROVED_RUN_ID=proposal-YYYY-MM-DD`, and `SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID=audit-YYYY-MM-DD` for the reviewed audit.
-- [ ] Use `vercel crons list --project wadesplumbingandseptic-com --scope byron-wade` to find the deployed `proposal-proof` path, then run `vercel crons run <that-path> --project wadesplumbingandseptic-com --scope byron-wade`.
+- [ ] Merge and deploy the reviewed single-schedule repair first. Do not add a second Eve schedule or a public trigger route.
+- [ ] Set only these Production values for the exact current UTC date: `SEO_AGENT_RUN_MODE=propose`, `SEO_AGENT_MUTATION_MODE=enabled`, `SEO_AGENT_MUTATION_KILL_SWITCH=false`, `SEO_AGENT_NATIVE_SCHEDULE_JOB=proposal`, `SEO_AGENT_PUBLISHING_HUMAN_APPROVED=true`, `SEO_AGENT_PUBLISHING_INTEGRATION_TEST=true`, `SEO_AGENT_PUBLISHING_APPROVED_RUN_ID=proposal-YYYY-MM-DD`, and `SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID=audit-YYYY-MM-DD` for the reviewed audit.
+- [ ] Use `vercel crons list --project wadesplumbingandseptic-com --scope byron-wade` to find the one deployed native Eve path, then run `vercel crons run <that-path> --project wadesplumbingandseptic-com --scope byron-wade`.
 - [ ] Inspect the Eve Agent Run, the resulting draft branch and PR, and the PR's preview. Confirm that no merge, deployment, or direct `main` write occurred.
-- [ ] Immediately restore observe mode, disabled mutation, an enabled kill switch, disabled approval flags, and remove both proposal run IDs. Redeploy and record the redacted result in `IMPLEMENTATION_STATUS.md`.
+- [ ] Immediately restore `SEO_AGENT_NATIVE_SCHEDULE_JOB=audit`, observe mode, disabled mutation, an enabled kill switch, disabled approval flags, and remove both proposal run IDs. Redeploy and record the redacted result in `IMPLEMENTATION_STATUS.md`.
 
 The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).

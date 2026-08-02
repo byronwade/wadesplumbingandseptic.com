@@ -19,12 +19,9 @@ export function verifyEveBuildSummary(summary) {
 			"Eve build summary must contain the bounded audit schedule.",
 		);
 	}
-	const proposalProofSchedule = (summary.schedules ?? []).find(
-		(schedule) => schedule.name === "proposal-proof",
-	);
-	if (!proposalProofSchedule || proposalProofSchedule.cron !== "0 0 29 2 *") {
+	if ((summary.schedules ?? []).length !== 1) {
 		throw new Error(
-			"Eve build summary must contain the manual proposal-proof schedule.",
+			"Eve build summary must contain only the single audit schedule.",
 		);
 	}
 	const channels = new Set(
@@ -57,7 +54,7 @@ function run() {
 		JSON.parse(readFileSync(summaryPath, "utf8")),
 	);
 	console.log(
-		`Eve build summary verified (${summary.generatorVersion}; ${summary.subagents.length} least-privilege role agents; explicit Sandbox; bounded audit and exact-gated proposal-proof dispatchers).`,
+		`Eve build summary verified (${summary.generatorVersion}; ${summary.subagents.length} least-privilege role agents; explicit Sandbox; one bounded native schedule with exact-gated proposal dispatch).`,
 	);
 }
 

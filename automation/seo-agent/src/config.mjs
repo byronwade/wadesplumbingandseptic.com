@@ -27,6 +27,7 @@ const envSchema = z
 			.regex(/^[a-z0-9][a-z0-9/_-]{2,95}$/)
 			.optional(),
 		SEO_AGENT_MUTATION_MODE: z.enum(["disabled", "enabled"]).optional(),
+		SEO_AGENT_NATIVE_SCHEDULE_JOB: z.enum(["audit", "proposal"]).optional(),
 		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_PUBLISHING_APPROVED_RUN_ID: z
@@ -141,6 +142,11 @@ export function loadConfig(env = process.env) {
 			preconditionAuditRunId:
 				raw.SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID,
 		}),
+		nativeSchedule: Object.freeze({
+			// The sole compiled Eve schedule is audit-only unless an owner sets this
+			// server-only value for one exact, separately approved proposal proof.
+			job: raw.SEO_AGENT_NATIVE_SCHEDULE_JOB ?? "audit",
+		}),
 		blob: Object.freeze({
 			enabled: raw.SEO_AGENT_BLOB_ENABLED === "true",
 			archiveApproved: raw.SEO_AGENT_BLOB_ARCHIVE_APPROVED === "true",
@@ -201,6 +207,7 @@ export function summarizeConfig(config) {
 			config.liveReads.humanApproved && config.liveReads.approvedRunId,
 		),
 		publishing: config.publishing,
+		native_schedule_job: config.nativeSchedule.job,
 		blob: Object.freeze({
 			enabled: config.blob.enabled,
 			archive_approval_configured: Boolean(

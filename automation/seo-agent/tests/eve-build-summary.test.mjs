@@ -8,10 +8,7 @@ function summary() {
 		schemaVersion: 3,
 		generatorVersion: "0.29.4",
 		sandbox: { logicalPath: "sandbox.ts" },
-		schedules: [
-			{ name: "audit", cron: "17 16 * * 1" },
-			{ name: "proposal-proof", cron: "0 0 29 2 *" },
-		],
+		schedules: [{ name: "audit", cron: "17 16 * * 1" }],
 		channels: [
 			{ urlPath: "/api/healthz" },
 			{ urlPath: "/api/readyz" },
@@ -33,9 +30,12 @@ test("Eve 0.29 build summaries retain the required runtime contract", () => {
 		() =>
 			verifyEveBuildSummary({
 				...summary(),
-				schedules: [{ name: "audit", cron: "17 16 * * 1" }],
+				schedules: [
+					{ name: "audit", cron: "17 16 * * 1" },
+					{ name: "unexpected", cron: "0 0 * * *" },
+				],
 			}),
-		/manual proposal-proof schedule/,
+		/single audit schedule/,
 	);
 	assert.throws(
 		() =>

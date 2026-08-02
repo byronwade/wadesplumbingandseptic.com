@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { scanForSecrets } from "../src/policy.mjs";
 
@@ -18,7 +18,10 @@ const candidates = execFileSync(
 	.split(/\r?\n/)
 	.filter(Boolean)
 	.filter((path) => !path.endsWith(".md") && !path.endsWith(".json"));
-const findings = candidates.filter((path) =>
+const existingCandidates = candidates.filter((path) =>
+	existsSync(resolve(root, path)),
+);
+const findings = existingCandidates.filter((path) =>
 	scanForSecrets(readFileSync(resolve(root, path), "utf8")),
 );
 if (findings.length)
@@ -26,5 +29,5 @@ if (findings.length)
 		`Secret-like executable content detected: ${findings.join(", ")}`,
 	);
 console.log(
-	`Secret scan passed (${candidates.length} tracked executable files).`,
+	`Secret scan passed (${existingCandidates.length} tracked executable files).`,
 );

@@ -50,6 +50,7 @@ test("configuration is typed, scoped, and never exposes credential values in its
 		SEO_AGENT_BROWSER_RESEARCH_ENABLED: "true",
 		SEO_AGENT_BROWSER_ALLOWED_DOMAINS: "www.wadesplumbingandseptic.com",
 		SEO_AGENT_MUTATION_MODE: "enabled",
+		SEO_AGENT_NATIVE_SCHEDULE_JOB: "proposal",
 		SEO_AGENT_PUBLISHING_HUMAN_APPROVED: "true",
 		SEO_AGENT_PUBLISHING_INTEGRATION_TEST: "true",
 		GITHUB_READ_TOKEN: "github-read-token-value",
@@ -69,6 +70,7 @@ test("configuration is typed, scoped, and never exposes credential values in its
 		approvedRunId: undefined,
 		preconditionAuditRunId: undefined,
 	});
+	assert.equal(summary.native_schedule_job, "proposal");
 	assert.equal(
 		JSON.stringify(summary).includes("github-read-token-value"),
 		false,
@@ -79,6 +81,10 @@ test("configuration is typed, scoped, and never exposes credential values in its
 				SEO_AGENT_BROWSER_ALLOWED_DOMAINS: "unapproved.example.test",
 			}),
 		/not approved/,
+	);
+	assert.throws(
+		() => loadConfig({ SEO_AGENT_NATIVE_SCHEDULE_JOB: "write-main" }),
+		/Invalid option/,
 	);
 });
 
