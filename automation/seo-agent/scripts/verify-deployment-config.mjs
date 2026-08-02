@@ -168,6 +168,12 @@ function validateServicesTopology(config, label) {
 		localFailures.push(`${label}: Site service must invoke its own build.`);
 
 	const rewrites = Array.isArray(config.rewrites) ? config.rewrites : [];
+	const nativeCronRewrite = rewrites.find(
+		(rule) =>
+			rule?.source === "/eve/v1/cron/(.*)" &&
+			rule?.destination?.service === "eve_seo_agent" &&
+			rule?.destination?.path === "/eve/v1/cron/$1",
+	);
 	const eveRewrite = rewrites.find(
 		(rule) =>
 			rule?.source === "/_internal/eve/(.*)" &&
@@ -181,9 +187,21 @@ function validateServicesTopology(config, label) {
 		localFailures.push(
 			`${label}: top-level rewrites must expose Eve only under /_internal/eve and map path /$1.`,
 		);
+	if (!nativeCronRewrite)
+		localFailures.push(
+			`${label}: native Eve Cron traffic must route only /eve/v1/cron/* to the Eve service.`,
+		);
 	if (!siteRewrite)
 		localFailures.push(
 			`${label}: top-level rewrites must send remaining public traffic to site.`,
+		);
+	if (
+		nativeCronRewrite &&
+		siteRewrite &&
+		rewrites.indexOf(nativeCronRewrite) > rewrites.indexOf(siteRewrite)
+	)
+		localFailures.push(
+			`${label}: native Eve Cron routing must be evaluated before the site catch-all rewrite.`,
 		);
 	if (
 		eveRewrite &&

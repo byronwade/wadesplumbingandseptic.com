@@ -27,6 +27,13 @@
 	},
 	"rewrites": [
 		{
+			"source": "/eve/v1/cron/(.*)",
+			"destination": {
+				"service": "eve_seo_agent",
+				"path": "/eve/v1/cron/$1"
+			}
+		},
+		{
 			"source": "/_internal/eve/(.*)",
 			"destination": {
 				"service": "eve_seo_agent",
