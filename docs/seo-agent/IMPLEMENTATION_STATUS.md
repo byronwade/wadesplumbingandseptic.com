@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 46: Native Schedule Durable Handoff Repair (2026-08-02)
+
+- State: READY_FOR_HUMAN_REVIEW. A real Production native-Cron invocation was accepted at `2026-08-02T18:48:35.600Z`, but Vercel recorded zero Eve Agent Runs. This is `FAILED` live evidence for the pre-repair schedule path, not a credential or approval failure.
+- Cause and correction: the installed Eve `0.29.4` schedule API requires `waitUntil(receive(...))` to keep a schedule's durable handoff alive after the Cron task returns. `agent/schedules/audit.ts` had awaited `receive(...)` directly. The repair now registers that handoff with `waitUntil`, and a regression test asserts the supported API shape and trusted native target.
+- Verification: `npm run format:check` exit `0`; `npm run typecheck` exit `0`; `npm run test` exit `0` with `110` passing tests; `npm run build` exit `0` and verified the compiled Eve manifest. These are `MOCK_VERIFIED` for the correction. The native Cron acceptance and zero Agent Runs are `LIVE_VERIFIED` observations of the defect.
+- Production configuration: `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=audit-2026-08-02`, and `SEO_AGENT_NATIVE_SCHEDULE_JOB=audit` were set only to authorize the required first audit. They do not enable mutation or GitHub writes. The unchanged Production redeploy is `dpl_49m6nMkyqtQFBZkHMKyZLrUhovz2`.
+- Next exact action: merge and deploy the schedule-handoff repair, trigger the one native Cron path again, confirm a durable audit Agent Run, and only then enable the exact one-time draft-PR gates for a human-reviewable blog-post PR.
+
 ## Phase 45: Single Native Proposal Proof Repair (2026-08-02)
 
 - State: COMPLETE for the local implementation (`MOCK_VERIFIED`); deployment and the first live proposal proof remain pending human review of the repair PR.
