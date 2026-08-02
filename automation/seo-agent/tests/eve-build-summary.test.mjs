@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import test from "node:test";
 import { verifyEveBuildSummary } from "../scripts/verify-eve-manifest.mjs";
 
@@ -45,4 +47,14 @@ test("Eve 0.29 build summaries retain the required runtime contract", () => {
 			}),
 		/readyz channel/,
 	);
+});
+
+test("the native schedule hands durable work to Eve through waitUntil", () => {
+	const scheduleSource = readFileSync(
+		resolve(import.meta.dirname, "../agent/schedules/audit.ts"),
+		"utf8",
+	);
+	assert.match(scheduleSource, /run\(\{ receive, waitUntil, appAuth \}\)/);
+	assert.match(scheduleSource, /waitUntil\(\s*receive\(runtime,/s);
+	assert.match(scheduleSource, /target: \{ source: "EVE_NATIVE_CRON" \}/);
 });
