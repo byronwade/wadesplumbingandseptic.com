@@ -32,15 +32,8 @@ export const RUNTIME_ERROR_CODES = Object.freeze({
 });
 
 const AUDIT_JOB = Object.freeze({ name: "audit", cron: "17 16 * * 1" });
-// This calendar anchor deliberately has no normal operational use. It exists so
-// a Vercel administrator can invoke the named, platform-authenticated schedule
-// through `vercel crons run` for one exact proposal proof. The date is a leap
-// day, and the proposal authorization must still match the derived run ID.
-const PROPOSAL_JOB = Object.freeze({ name: "proposal", cron: "0 0 29 2 *" });
-const NATIVE_SCHEDULE_JOBS = Object.freeze({
-	EVE_NATIVE_CRON: AUDIT_JOB.name,
-	EVE_NATIVE_PROPOSAL_PROOF: PROPOSAL_JOB.name,
-});
+const PROPOSAL_JOB = Object.freeze({ name: "proposal", cron: AUDIT_JOB.cron });
+const NATIVE_SCHEDULE_SOURCE = "EVE_NATIVE_CRON";
 const SAFE_RUN_ID = /^[a-z0-9][a-z0-9-]{2,79}$/;
 
 export class RuntimeError extends Error {
@@ -116,17 +109,20 @@ export function createRunDescriptor({ job, now = new Date() } = {}) {
 }
 
 /**
- * Map only compiled Eve schedule targets to their immutable job type. This is
- * separate from the CRON_SECRET protected HTTP fallback: Vercel invokes a
- * compiled schedule with its own application principal, so no secret needs to
- * cross the local CLI or a public request boundary.
+ * Accept only the single compiled Eve schedule target. Its server-only job
+ * selection is audit by default; the proposal setting is meaningful only when
+ * the exact proposal authorization gate passes before session creation.
+ * @param {{ source?: string, job?: "audit" | "proposal", now?: Date }} input
  */
-export function createNativeScheduleDescriptor({ source, now = new Date() }) {
-	const job = NATIVE_SCHEDULE_JOBS[source];
-	if (!job)
+export function createNativeScheduleDescriptor({
+	source,
+	job = AUDIT_JOB.name,
+	now = new Date(),
+}) {
+	if (source !== NATIVE_SCHEDULE_SOURCE)
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.MALFORMED_REQUEST,
-			"Runtime channel accepts only compiled native schedule targets.",
+			"Runtime channel accepts only the compiled native schedule target.",
 			{ status: 400 },
 		);
 	return createRunDescriptor({ job, now });

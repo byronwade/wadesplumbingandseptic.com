@@ -89,11 +89,18 @@ export default defineChannel({
 		}),
 	],
 	async receive(input, { send }) {
-		const descriptor = createNativeScheduleDescriptor({
-			source: input.target?.source,
-		});
 		const settings = loadRuntimeSettings();
 		const config = loadConfig();
+		const nativeScheduleJob = config.nativeSchedule.job;
+		if (nativeScheduleJob !== "audit" && nativeScheduleJob !== "proposal")
+			throw new Error("Native schedule job configuration is invalid.");
+		const descriptor = createNativeScheduleDescriptor({
+			source:
+				typeof input.target?.source === "string"
+					? input.target.source
+					: undefined,
+			job: nativeScheduleJob,
+		});
 		if (settings.mode === "disabled" || settings.mode === "paused")
 			throw new Error(
 				`Runtime is ${settings.mode}; native schedule work is not started.`,

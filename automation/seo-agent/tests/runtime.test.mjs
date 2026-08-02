@@ -121,7 +121,7 @@ test("schedule selection and stable run identity are deterministic", () => {
 	);
 	const proposal = createRunDescriptor({ job: "proposal", now });
 	assert.equal(proposal.runId, "proposal-2026-07-30");
-	assert.equal(proposal.cron, "0 0 29 2 *");
+	assert.equal(proposal.cron, "17 16 * * 1");
 	assert.equal(
 		assertRunDescriptor({
 			runId: proposal.runId,
@@ -136,7 +136,8 @@ test("schedule selection and stable run identity are deterministic", () => {
 	});
 	assert.equal(nativeAudit.job, "audit");
 	const nativeProposal = createNativeScheduleDescriptor({
-		source: "EVE_NATIVE_PROPOSAL_PROOF",
+		source: "EVE_NATIVE_CRON",
+		job: "proposal",
 		now,
 	});
 	assert.equal(nativeProposal.job, "proposal");
@@ -144,7 +145,16 @@ test("schedule selection and stable run identity are deterministic", () => {
 	assert.throws(
 		() =>
 			createNativeScheduleDescriptor({ source: "untrusted-web-input", now }),
-		/compiled native schedule targets/,
+		/compiled native schedule target/,
+	);
+	assert.throws(
+		() =>
+			createNativeScheduleDescriptor({
+				source: "EVE_NATIVE_CRON",
+				job: "write-main",
+				now,
+			}),
+		/Unsupported scheduled job/,
 	);
 });
 
