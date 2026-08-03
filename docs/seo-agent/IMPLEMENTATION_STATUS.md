@@ -1,5 +1,6 @@
 # Eve SEO Agent Implementation Status
 
+<<<<<<< HEAD
 ## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).
@@ -51,6 +52,17 @@
 - After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false` and remove the approved run ID. Do not start Task 2 until that proof exists.
 - Out of scope (Task 3): wiring GSC into topic selection.
 - Next exact action: human merge/deploy this PR, then run the Production live-probe URL once and record the redacted classification.
+=======
+## Phase 54: Live Connect Draft PR Proof (2026-08-03)
+
+- State: LIVE_VERIFIED for Cron → Vercel Connect → draft PR. Not a fixture result.
+- Connect: team `wades-web-dev` connector `github/wadesplumbingandseptic-com` (`scl_FVfVjQbQtfeqYXRbfvxCrA`), GitHub App `gitwadesplumbingandseptic-com`, installation `150943643` on `byronwade`, attached to project `wadesplumbingandseptic-com` for Production and Preview.
+- Production health before proof: `mode: propose`, `ready: true`, `mutation_kill_switch: false`.
+- Commands: `vercel crons run "/eve/v1/cron/mztlWjGEvDDzWJTu64vs_D4R0wSVHIOJ1Cxo9o6r_VI" --project wadesplumbingandseptic-com --scope wades-web-dev` at `2026-08-03T12:50:08.094Z`. Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ` completed in `30.7s` on deployment `dpl_3ZTdJevhxmAQwp7xv1vqW5zfTVF9`.
+- Draft PR: [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) opened by `gitwadesplumbingandseptic-com[bot]` on `eve/seo/2026-08-03-home-plumbing-hosting-checklist-2026-08-03` with `content/posts/home-plumbing-hosting-checklist-2026-08-03.md`. Draft only; no merge and no `main` write.
+- Earlier same-day failure: Agent Run `wrun_41KZ3TN9860GSFRYR8Q3EV14EK` hit GitHub HTTP `422` because the interim manual `eve/seo/...` branch already existed. After that branch was removed, the second Cron succeeded. Follow-up code reuses an existing draft branch or open draft PR on create `422` so same-day retries do not fail closed.
+- Next exact action: human review of PR `#102` for content; merge the idempotent publisher repair when ready.
+>>>>>>> e34d2e3 (fix(eve): Reuse existing Connect draft branch/PR on GitHub 422)
 
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 

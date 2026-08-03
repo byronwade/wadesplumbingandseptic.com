@@ -1,6 +1,6 @@
 import { assertTruthState, authorizeAction } from "./policy.mjs";
 import { assertMarkdownChangeSet } from "./markdown-change-set.mjs";
-import { requestJson } from "./adapters.mjs";
+import { IntegrationError, requestJson } from "./adapters.mjs";
 import { createRunBudget } from "./run-controls.mjs";
 
 const SAFE_DRAFT_BRANCH =
@@ -70,6 +70,26 @@ function branchPath(branch) {
 		.split("/")
 		.map((segment) => encodeURIComponent(segment))
 		.join("/");
+}
+
+function assertDraftPullRequestShape(pullRequest, branch, classification) {
+	if (
+		pullRequest?.draft !== true ||
+		!Number.isInteger(pullRequest?.number) ||
+		pullRequest.number < 1 ||
+		typeof pullRequest?.html_url !== "string" ||
+		!pullRequest.html_url.startsWith("https://") ||
+		pullRequest?.base?.ref !== "main" ||
+		pullRequest?.head?.ref !== branch
+	) {
+		throw new Error("GitHub did not return the requested draft pull request.");
+	}
+	return Object.freeze({
+		classification,
+		draft: true,
+		number: pullRequest.number,
+		url: pullRequest.html_url,
+	});
 }
 
 /**
@@ -173,23 +193,48 @@ export function createGithubDraftPublisher({
 					"GitHub main changed before the draft branch could be created.",
 				);
 			}
-			const created = await request(
-				`${base}/git/refs`,
-				{
-					method: "POST",
-					body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: fromSha }),
-				},
-				"GitHub draft feature branch create",
-			);
-			if (created?.object?.sha !== fromSha) {
-				throw new Error("GitHub did not create the requested draft branch.");
+			try {
+				const created = await request(
+					`${base}/git/refs`,
+					{
+						method: "POST",
+						body: JSON.stringify({ ref: `refs/heads/${branch}`, sha: fromSha }),
+					},
+					"GitHub draft feature branch create",
+				);
+				if (created?.object?.sha !== fromSha) {
+					throw new Error("GitHub did not create the requested draft branch.");
+				}
+				return Object.freeze({
+					classification,
+					branch,
+					base_sha: fromSha,
+					write_performed: true,
+				});
+			} catch (error) {
+				// Same-day Cron retries collide on eve/seo/YYYY-MM-DD-<slug>.
+				// Reuse the existing feature branch; staging commits on top.
+				if (!(error instanceof IntegrationError) || error.status !== 422) {
+					throw error;
+				}
+				const existing = await request(
+					`${base}/git/ref/heads/${branchPath(branch)}`,
+					{ method: "GET" },
+					"GitHub existing draft branch read",
+				);
+				if (!SAFE_SHA.test(existing?.object?.sha ?? "")) {
+					throw new Error(
+						"GitHub reported the draft branch exists but returned no commit SHA.",
+					);
+				}
+				return Object.freeze({
+					classification,
+					branch,
+					base_sha: existing.object.sha,
+					write_performed: false,
+					reused_existing_branch: true,
+				});
 			}
-			return Object.freeze({
-				classification,
-				branch,
-				base_sha: fromSha,
-				write_performed: true,
-			});
 		},
 
 		async stageMarkdownChangeSet({ branch, changeSet }) {
@@ -284,39 +329,43 @@ export function createGithubDraftPublisher({
 			if (typeof body !== "string" || !body.trim()) {
 				throw new Error("GitHub draft pull request body is required.");
 			}
-			const pullRequest = await request(
-				`${base}/pulls`,
-				{
-					method: "POST",
-					body: JSON.stringify({
-						title,
-						body,
-						head: branch,
-						base: "main",
-						draft: true,
-					}),
-				},
-				"GitHub draft pull request create",
-			);
-			if (
-				pullRequest?.draft !== true ||
-				!Number.isInteger(pullRequest?.number) ||
-				pullRequest.number < 1 ||
-				typeof pullRequest?.html_url !== "string" ||
-				!pullRequest.html_url.startsWith("https://") ||
-				pullRequest?.base?.ref !== "main" ||
-				pullRequest?.head?.ref !== branch
-			) {
-				throw new Error(
-					"GitHub did not return the requested draft pull request.",
+			try {
+				const pullRequest = await request(
+					`${base}/pulls`,
+					{
+						method: "POST",
+						body: JSON.stringify({
+							title,
+							body,
+							head: branch,
+							base: "main",
+							draft: true,
+						}),
+					},
+					"GitHub draft pull request create",
 				);
+				return assertDraftPullRequestShape(pullRequest, branch, classification);
+			} catch (error) {
+				if (!(error instanceof IntegrationError) || error.status !== 422) {
+					throw error;
+				}
+				const head = `${owner}:${branch}`;
+				const existing = await request(
+					`${base}/pulls?state=open&head=${encodeURIComponent(head)}&base=main&per_page=5`,
+					{ method: "GET" },
+					"GitHub existing draft pull request lookup",
+				);
+				const match = Array.isArray(existing)
+					? existing.find(
+							(item) =>
+								item?.draft === true &&
+								item?.head?.ref === branch &&
+								item?.base?.ref === "main",
+						)
+					: null;
+				if (!match) throw error;
+				return assertDraftPullRequestShape(match, branch, classification);
 			}
-			return Object.freeze({
-				classification,
-				draft: true,
-				number: pullRequest.number,
-				url: pullRequest.html_url,
-			});
 		},
 	});
 }
