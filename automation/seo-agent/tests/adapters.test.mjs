@@ -31,7 +31,11 @@ import {
 	loadConfig,
 	summarizeConfig,
 } from "../src/config.mjs";
-import { probeReadOnlyIntegrations } from "../src/probes.mjs";
+import {
+	probeReadOnlyIntegrations,
+	probeSearchConsoleLive,
+} from "../src/probes.mjs";
+import { makeEvidence } from "../src/contracts.mjs";
 import { createRunBudget } from "../src/run-controls.mjs";
 import { DEFAULT_BUDGETS } from "../src/constants.mjs";
 
@@ -775,6 +779,95 @@ test("web search injection is escalated as a redacted security event and competi
 		{ subject: "hours", value: "24 hours", provenance: second },
 	]);
 	assert.equal(conflicts[0].state, "CONFLICT_REQUIRES_HUMAN_FACT_CHECK");
+});
+
+test("focused Search Console probe stays offline until production approval and enablement", async () => {
+	const runId = "search-console-live-2026-08-03";
+	const offline = await probeSearchConsoleLive({
+		registry: createIntegrationRegistry({ config: loadConfig({}) }),
+		config: loadConfig({}),
+		runId,
+		execute: false,
+	});
+	assert.equal(offline.classification, "BLOCKED_MISSING_CREDENTIALS");
+
+	const unapproved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "false",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+	});
+	await assert.rejects(
+		probeSearchConsoleLive({
+			registry: createIntegrationRegistry({ config: unapproved }),
+			config: unapproved,
+			runId,
+			execute: true,
+		}),
+		/without SEO_AGENT_LIVE_READS_APPROVED=true/,
+	);
+
+	const disabled = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "false",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+	});
+	await assert.rejects(
+		probeSearchConsoleLive({
+			registry: createIntegrationRegistry({ config: disabled }),
+			config: disabled,
+			runId,
+			execute: true,
+		}),
+		/SEO_AGENT_ENABLE_SEARCH_CONSOLE is not true/,
+	);
+
+	let requested = false;
+	const approved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+		SEARCH_CONSOLE_ACCESS_TOKEN: "fixture-token",
+	});
+	const live = await probeSearchConsoleLive({
+		registry: {
+			search_console: {
+				async probe() {
+					requested = true;
+					return makeEvidence({
+						runId,
+						source: "search-console",
+						scope: "site-access",
+						classification: "LIVE_VERIFIED",
+						sourceUrlOrTool: "https://www.googleapis.com/webmasters/v3/sites",
+						collectedAt: "2026-08-03T00:00:00.000Z",
+						payload: {
+							sites: [
+								{ site_url_hash: "abc", permission_level: "siteFullUser" },
+							],
+						},
+					});
+				},
+			},
+		},
+		config: approved,
+		runId,
+		execute: true,
+	});
+	assert.equal(requested, true);
+	assert.equal(live.classification, "LIVE_VERIFIED");
+	assert.equal(live.payload.sites[0].permission_level, "siteFullUser");
 });
 
 test("every live probe caller requires production and an exact human-approved audit run ID", async () => {

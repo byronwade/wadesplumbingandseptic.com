@@ -1,0 +1,94 @@
+/**
+ * Production HTTP handlers for exact-run live probes.
+ * Secrets stay in the Production runtime; local CLI cannot read Sensitive vars.
+ */
+import { createIntegrationRegistry } from "./adapters.mjs";
+import { loadConfig, summarizeConfig } from "./config.mjs";
+import { probeSearchConsoleLive } from "./probes.mjs";
+import { verifyCronSecret } from "./runtime.mjs";
+
+export function authorizeLiveProbeRequest({
+	authorization,
+	cronSecret = process.env.CRON_SECRET,
+} = {}) {
+	if (!verifyCronSecret(authorization, cronSecret)) {
+		return Object.freeze({
+			ok: false,
+			status: 401,
+			body: Object.freeze({
+				error: "AUTHENTICATION_FAILED",
+				message: "Live probes require a valid CRON_SECRET bearer token.",
+			}),
+		});
+	}
+	return Object.freeze({ ok: true });
+}
+
+/**
+ * @param {object} [input]
+ * @param {{ url: string, headers: { get: (name: string) => string | null } }} input.request
+ * @param {ReturnType<typeof loadConfig>} [input.config]
+ * @param {{ search_console: { probe: Function } }} [input.registry]
+ * @param {string} [input.cronSecret]
+ */
+export async function handleSearchConsoleLiveProbe({
+	request,
+	config = loadConfig(),
+	registry = createIntegrationRegistry({ config }),
+	cronSecret = process.env.CRON_SECRET,
+} = {}) {
+	const auth = authorizeLiveProbeRequest({
+		authorization: request?.headers?.get?.("authorization"),
+		cronSecret,
+	});
+	if (!auth.ok) return auth;
+
+	const url = new URL(request.url);
+	const runId = url.searchParams.get("run_id");
+	if (typeof runId !== "string" || !/^[a-z0-9][a-z0-9-]{2,79}$/.test(runId)) {
+		return Object.freeze({
+			ok: false,
+			status: 400,
+			body: Object.freeze({
+				error: "MALFORMED_REQUEST",
+				message: "Query parameter run_id must be a safe audit run ID.",
+			}),
+		});
+	}
+
+	try {
+		const evidence = await probeSearchConsoleLive({
+			registry,
+			config,
+			runId,
+			execute: true,
+		});
+		return Object.freeze({
+			ok: evidence.classification === "LIVE_VERIFIED",
+			status: evidence.classification === "LIVE_VERIFIED" ? 200 : 503,
+			body: Object.freeze({
+				mode: "human-approved-live-read",
+				run_id: runId,
+				adapter: "search_console",
+				config: summarizeConfig(config),
+				result: Object.freeze({
+					classification: evidence.classification,
+					scope: evidence.scope,
+					source: evidence.source,
+					collected_at: evidence.collected_at,
+					payload: evidence.payload,
+				}),
+			}),
+		});
+	} catch (error) {
+		return Object.freeze({
+			ok: false,
+			status: 403,
+			body: Object.freeze({
+				error: "LIVE_READ_REFUSED",
+				message: error instanceof Error ? error.message : "Live read refused.",
+				run_id: runId,
+			}),
+		});
+	}
+}

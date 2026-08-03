@@ -39,6 +39,46 @@ export function assertAuthorizedLiveRead({ config, runId, execute }) {
 	return true;
 }
 
+/**
+ * Focused Search Console live probe used by Task 1. Does not dispatch other
+ * adapters, so a Search Console proof cannot be confused with PageSpeed/GA4.
+ */
+export async function probeSearchConsoleLive({
+	registry,
+	config,
+	runId = "search-console-live-probe",
+	execute = false,
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "search-console",
+			scope: "site-access",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "search-console-live-probe-disabled",
+			payload: {
+				reason:
+					"Search Console live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, enable SEO_AGENT_ENABLE_SEARCH_CONSOLE, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.searchConsole) {
+		throw new Error(
+			"Search Console probe refused because SEO_AGENT_ENABLE_SEARCH_CONSOLE is not true.",
+		);
+	}
+	if (typeof registry?.search_console?.probe !== "function") {
+		throw new Error("Search Console probe requires a registry adapter.");
+	}
+	return assertEvidence(
+		await retryReadOnly(() => registry.search_console.probe({ runId })),
+	);
+}
+
 export async function probeReadOnlyIntegrations({
 	registry,
 	config,
