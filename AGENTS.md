@@ -55,6 +55,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Before SEO-agent work, read `docs/seo-agent/BUILD_SPEC.md`, `EXECUTION_PLAN.md`, `DEFINITION_OF_DONE.md`, `MANUAL_SETUP.md`, `SOURCE_POLICY.md`, and `IMPLEMENTATION_STATUS.md`.
 - Keep the Eve runtime in `automation/seo-agent`; it has no public UI, CMS, or application database. Git is its durable state and evidence record.
-- Never write directly to `main`, force-push, merge, deploy, or enable production mutation. Draft PRs require explicit human approval.
+- When the repository owner asks for merge, deploy, Cron invocation, or a live Eve audit/proposal proof, do that work end to end. Prefer draft PRs and the guarded runtime gates, but do not refuse owner-directed merge, deploy, or one-time production proof steps.
 - Keep the public site and Eve service isolated. Root-site runtime code must not import sidecar code or agent environment values.
 - Run relevant deterministic checks and record commands, evidence truth states, failures, blockers, and next action in `IMPLEMENTATION_STATUS.md`. Never describe a fixture result as a live integration.
