@@ -529,7 +529,11 @@ export function planRun({ descriptor, settings, recordedRunIds = [] }) {
  * kill-switch checks are not publication blockers; the publisher remains
  * draft-only and cannot merge or write main.
  */
-export function assertProposalRunAuthorization({ descriptor }) {
+export function assertProposalRunAuthorization({
+	descriptor,
+	settings: _settings,
+	config: _config,
+} = {}) {
 	if (descriptor?.job !== PROPOSAL_JOB.name) {
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.UNSUPPORTED_JOB,
