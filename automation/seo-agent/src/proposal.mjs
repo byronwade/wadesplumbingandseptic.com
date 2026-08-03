@@ -24,6 +24,7 @@ import {
 	PROPOSAL_GENERATION_LIMITS,
 	shouldSkipTopicModelDecision,
 } from "./generation-guards.mjs";
+import { loadBrandContext } from "./brand-context.mjs";
 import { buildDemandAwareTopicCatalog } from "./local-demand.mjs";
 import { assertProposalRunAuthorization } from "./runtime.mjs";
 import { collectPageInventory } from "./inventory.mjs";
@@ -783,6 +784,9 @@ export async function executeDraftProposal({
 		});
 	}
 	const opportunity = selection.opportunity;
+	const brandContext = loadBrandContext({ repoRoot });
+	const assertQuality = (markdown, nextOpportunity) =>
+		assertPublishableBlogDraft(markdown, nextOpportunity, brandContext);
 	const date = proposalDate(descriptor);
 	const written = await writer({
 		runId: descriptor.runId,
@@ -791,7 +795,7 @@ export async function executeDraftProposal({
 		generationGuard: guard,
 	});
 	let markdown = extractMarkdown(written.markdown);
-	let quality = assertPublishableBlogDraft(markdown, opportunity);
+	let quality = assertQuality(markdown, opportunity);
 	let writerModel = written.model;
 	let writerReservation = written.reservation;
 	let revision = Object.freeze({
@@ -808,7 +812,7 @@ export async function executeDraftProposal({
 			runId: descriptor.runId,
 			quality,
 			reviser,
-			assertQuality: assertPublishableBlogDraft,
+			assertQuality,
 			generationGuard: guard,
 		});
 		markdown = revised.markdown;

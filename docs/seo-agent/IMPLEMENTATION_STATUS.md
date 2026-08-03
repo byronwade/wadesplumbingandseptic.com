@@ -1,5 +1,20 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 84: Task 15 Craft Skills (Brand Context, Evidence Boundaries, Writing Quality, Discovery CI) (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`.
+- Branch/PR: `cursor/eve-craft-skills-aab8` (Task 15 in `INTEGRATION_ROLLOUT.md`).
+- Delivered:
+  - Git-backed `seo/manifests/brand-context.json` (positioning, voice, banned phrases, CTA, local hooks).
+  - `src/brand-context.mjs` load/assert/brief/lint/`proposeBrandContextPatch` (patch returns proposed JSON only; no Blob or working-tree write).
+  - Eve tools `get_brand_context` and `propose_brand_context_patch`.
+  - Skills: `brand-context`, `seo-evidence-boundaries` (+ checklist reference), `writing-quality` (+ AI phrases reference). Skill count 14 → 17.
+  - Draft quality gate applies brand lint; fatal reasons for banned phrases, dash punctuation, missing local hooks.
+  - Offline discovery CI: `npm run eve:info` → `scripts/verify-eve-discovery.mjs`, wired into `npm run verify`.
+- Commands (sidecar): `npm run eve:info`; `npm run verify`; `npm test` (includes `tests/brand-context.test.mjs`).
+- Classification: `MOCK_VERIFIED` (deterministic offline). No live provider proof required for this craft task.
+- Next exact action: human review/merge of the draft PR; continue optional integration rollout (Task 8+) as credentials allow.
+
 ## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.

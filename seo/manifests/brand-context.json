@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.0",
+	"classification": "MOCK_VERIFIED",
+	"updated_at": "2026-08-03",
+	"product": {
+		"name": "Wade's Plumbing & Septic",
+		"short_name": "Wade's",
+		"one_liner": "Family-owned plumbing and septic specialists serving Santa Cruz County and nearby Santa Clara foothill communities.",
+		"audience": "Santa Cruz County homeowners who need honest plumbing or septic guidance and a clear next step to call a qualified local crew.",
+		"category": "Residential plumbing and septic services"
+	},
+	"positioning": {
+		"primary": "Local, family-owned plumbing and septic work rooted in Santa Cruz County terrain and homeowner constraints.",
+		"differentiators": [
+			"Santa Cruz County coastal and foothill site conditions (slopes, trees, older systems) shape the advice.",
+			"Practical homeowner observation first; no dangerous DIY repair instructions.",
+			"Existing service and tip pages own queries before new URLs are proposed."
+		],
+		"competitors_are_not": [
+			"National content farms with generic septic advice",
+			"Doorway pages that repeat the same thin city copy"
+		]
+	},
+	"voice": {
+		"tone": [
+			"plain",
+			"specific",
+			"warm",
+			"unpadded"
+		],
+		"prefer": [
+			"Concrete local conditions over generic national tips",
+			"Clear next steps (observe safely, then call)",
+			"Comma, colon, or a new sentence instead of dash punctuation"
+		],
+		"avoid": [
+			"Hype and unsupported persuasion",
+			"Em dashes and spaced hyphen asides in user-facing copy",
+			"Template filler and AI cliches"
+		]
+	},
+	"banned_phrases": [
+		"in today's digital age",
+		"in conclusion",
+		"it is important to note",
+		"game changer",
+		"unlock the power",
+		"delve into",
+		"comprehensive guide to everything",
+		"as an AI",
+		"cutting-edge solution"
+	],
+	"cta": {
+		"primary": "Call Wade's Plumbing & Septic at 831.225.4344",
+		"secondary": "Browse related services and expert tips on the site",
+		"never_claim_without_approved_fact": [
+			"prices",
+			"guarantees",
+			"response times",
+			"24/7 availability",
+			"licensing beyond approved repository facts",
+			"insurance",
+			"warranties",
+			"reviews",
+			"job counts",
+			"sponsorships"
+		]
+	},
+	"geo": {
+		"primary_market": "Santa Cruz County, CA",
+		"nearby": [
+			"selected Santa Clara County foothill communities"
+		],
+		"required_local_hooks": [
+			"Santa Cruz"
+		]
+	},
+	"pending_review": []
+}

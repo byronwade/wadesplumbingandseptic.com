@@ -16,9 +16,14 @@ function summary() {
 			{ urlPath: "/api/readyz" },
 			{ urlPath: "/api/cron" },
 		],
-		tools: [{ name: "model" }, { name: "orchestrate" }],
+		tools: [
+			{ name: "model" },
+			{ name: "orchestrate" },
+			{ name: "get_brand_context" },
+			{ name: "propose_brand_context_patch" },
+		],
 		subagents: Array.from({ length: 9 }, (_, index) => ({ name: `${index}` })),
-		skills: Array.from({ length: 14 }, (_, index) => ({ name: `${index}` })),
+		skills: Array.from({ length: 17 }, (_, index) => ({ name: `${index}` })),
 	};
 }
 

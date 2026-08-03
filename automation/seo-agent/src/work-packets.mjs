@@ -113,6 +113,7 @@ export function createAuditWorkPackets({
 				objective: ROLE_OBJECTIVES[role],
 				permitted_inputs: [
 					"approved-facts",
+					"brand-context",
 					"evidence-records",
 					"page-inventory",
 					"query-ownership",

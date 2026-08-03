@@ -1,5 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { assertBrandContext } from "../src/brand-context.mjs";
 import {
 	assertEvidence,
 	assertFactRegistry,
@@ -62,6 +63,7 @@ const required = [
 	"automation/seo-agent/agent/channels/runtime.ts",
 	"automation/seo-agent/agent/tools/orchestrate.ts",
 	"seo/manifests/approved-facts.json",
+	"seo/manifests/brand-context.json",
 	"seo/manifests/integration-inventory.json",
 	"seo/manifests/opportunity-backlog.json",
 	"seo/manifests/query-ownership.json",
@@ -84,6 +86,7 @@ if (missing.length)
 
 const parse = (path) => JSON.parse(readFileSync(resolve(root, path), "utf8"));
 assertFactRegistry(parse("seo/manifests/approved-facts.json"));
+assertBrandContext(parse("seo/manifests/brand-context.json"));
 assertIntegrationInventory(parse("seo/manifests/integration-inventory.json"));
 assertOpportunityBacklog(parse("seo/manifests/opportunity-backlog.json"));
 const evidenceRoot = resolve(root, "seo/evidence");
