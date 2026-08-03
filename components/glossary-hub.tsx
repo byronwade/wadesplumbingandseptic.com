@@ -63,7 +63,7 @@ export function GlossaryTopicHub({
 					))}
 					<p className="type-body text-muted-foreground">
 						Looking for the other glossary? Browse the{" "}
-						<Link
+						<Link prefetch={false}
 							className="text-primary font-bold underline-offset-2 hover:underline"
 							href={glossaryHubPath(otherTopic.topic) as Route}
 						>
@@ -108,10 +108,10 @@ export function GlossaryTopicHub({
 							<ul className="grid gap-4 md:grid-cols-2">
 								{letterTerms.map((term) => (
 									<li key={term.slug}>
-										<Link
+										<Link prefetch={false}
 											className="border-border bg-background hover:border-primary/40 hover:bg-muted/40 group flex h-full flex-col gap-2 rounded-lg border p-5 transition-colors"
 											href={glossaryTermPath(hub.topic, term.slug) as Route}
-											prefetch={false}
+
 										>
 											<span className="type-card-title group-hover:text-primary transition-colors">
 												{term.term}

@@ -40,6 +40,7 @@ const nextConfig: NextConfig = {
 	poweredByHeader: false,
 	compress: true,
 	experimental: {
+		turbopackFileSystemCacheForBuild: true,
 		optimizePackageImports: [
 			"@phosphor-icons/react",
 			"@radix-ui/react-accordion",

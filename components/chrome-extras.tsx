@@ -2,26 +2,13 @@
 
 import dynamic from "next/dynamic"
 
-const CommandMenuLoader = dynamic(
-	() =>
-		import("@/components/command-menu-loader").then(
-			(mod) => mod.CommandMenuLoader,
-		),
-	{ ssr: false },
-)
-
 const AnalyticsLoader = dynamic(
 	() =>
 		import("@/components/analytics-loader").then((mod) => mod.AnalyticsLoader),
 	{ ssr: false },
 )
 
-/** Client islands for search + analytics (mounted with site chrome). */
+/** Client islands for analytics (command menu mounts from the root layout). */
 export function ChromeExtras() {
-	return (
-		<>
-			<CommandMenuLoader />
-			<AnalyticsLoader />
-		</>
-	)
+	return <AnalyticsLoader />
 }

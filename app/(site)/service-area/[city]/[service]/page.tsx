@@ -124,7 +124,7 @@ export default async function CityServicePage({
 							<Phone aria-hidden="true" className="size-4" />
 							Call {siteConfig.phone}
 						</a>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "outline", size: "lg" }),
 								"justify-center",
@@ -179,7 +179,7 @@ export default async function CityServicePage({
 					</p>
 					<ul className="mt-8 flex flex-col gap-3 text-sm font-bold sm:flex-row sm:flex-wrap">
 						<li>
-							<Link
+							<Link prefetch={false}
 								className="text-accent underline-offset-4 hover:underline"
 								href={serviceHref}
 							>
@@ -187,7 +187,7 @@ export default async function CityServicePage({
 							</Link>
 						</li>
 						<li>
-							<Link
+							<Link prefetch={false}
 								className="text-accent underline-offset-4 hover:underline"
 								href={cityHubHref}
 							>
@@ -227,7 +227,7 @@ export default async function CityServicePage({
 						<ul className="mt-6 flex flex-wrap gap-3">
 							{nearby.map((item) => (
 								<li key={item.slug}>
-									<Link
+									<Link prefetch={false}
 										className="surface-panel inline-flex px-4 py-2 text-sm font-bold"
 										href={item.href as Route}
 									>

@@ -80,10 +80,10 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 	return (
 		<li>
 			<NavigationMenuLink asChild>
-				<Link
+				<Link prefetch={false}
 					className="focus-visible:ring-ring group relative flex items-start gap-3.5 rounded-lg p-3 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 					href={href as Route}
-					prefetch
+
 				>
 					<span className="surface-raised text-primary-bright grid size-9 shrink-0 place-items-center rounded-md transition-colors group-hover:bg-[color-mix(in_srgb,var(--primary)_30%,var(--dark-3))]">
 						<Icon className="size-[1.125rem]" aria-hidden="true" />
@@ -132,10 +132,10 @@ function MegaFooter({
 					size="sm"
 				/>
 				<NavigationMenuLink asChild>
-					<Link
+					<Link prefetch={false}
 						className={buttonVariants({ variant: "inverse", size: "sm" })}
 						href={action}
-						prefetch
+
 					>
 						{actionLabel}
 						<ArrowRight aria-hidden="true" />
@@ -171,10 +171,10 @@ function ServicesMegaMenu() {
 						{serviceMegaHighlights.map((item) => (
 							<li key={item.href}>
 								<NavigationMenuLink asChild>
-									<Link
+									<Link prefetch={false}
 										className="focus-visible:ring-ring group block rounded-md p-2.5 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 										href={item.href as Route}
-										prefetch
+
 									>
 										<span className="group-hover:text-primary-bright flex items-center justify-between gap-3 text-sm font-bold tracking-[-0.01em] text-white transition-colors">
 											{item.label}
@@ -215,10 +215,10 @@ function CompanyMegaMenu() {
 				{/* Place image. items-stretch plus h-full so it fills the link column
 				    instead of leaving a band of empty tile under its caption. */}
 				<NavigationMenuLink asChild>
-					<Link
+					<Link prefetch={false}
 						className="focus-visible:ring-ring group surface-raised relative block overflow-hidden rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 						href={"/service-areas" as Route}
-						prefetch
+
 					>
 						<div className="relative aspect-16/10 lg:aspect-auto lg:h-full lg:min-h-56">
 							<Image
@@ -267,10 +267,10 @@ export function SiteHeaderNav() {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<NavigationMenuLink asChild>
-							<Link
+							<Link prefetch={false}
 								className={cn(navigationMenuTriggerStyle(), triggerClassName)}
 								href={"/" as Route}
-								prefetch
+
 							>
 								Home
 							</Link>
@@ -289,10 +289,10 @@ export function SiteHeaderNav() {
 					{midNavLinks.map((item) => (
 						<NavigationMenuItem key={item.href}>
 							<NavigationMenuLink asChild>
-								<Link
+								<Link prefetch={false}
 									className={cn(navigationMenuTriggerStyle(), triggerClassName)}
 									href={item.href as Route}
-									prefetch
+
 								>
 									{item.label}
 								</Link>

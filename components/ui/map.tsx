@@ -102,12 +102,13 @@ function getSystemTheme(): Theme {
 }
 
 function useResolvedTheme(themeProp?: "light" | "dark"): Theme {
-	const [detectedTheme, setDetectedTheme] = useState<Theme>(
-		() => getDocumentTheme() ?? getSystemTheme(),
-	)
+	// Keep the initial render pure for SSR: never read document/window here.
+	const [detectedTheme, setDetectedTheme] = useState<Theme>("light")
 
 	useEffect(() => {
 		if (themeProp) return // Skip detection if theme is provided via prop
+
+		setDetectedTheme(getDocumentTheme() ?? getSystemTheme())
 
 		// Watch for document theme changes (e.g., next-themes toggling the class
 		// or the data-theme attribute).
@@ -262,7 +263,9 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 	const isControlled = viewport !== undefined && onViewportChange !== undefined
 
 	const onViewportChangeRef = useRef(onViewportChange)
-	onViewportChangeRef.current = onViewportChange
+	useEffect(() => {
+		onViewportChangeRef.current = onViewportChange
+	})
 
 	const stableStyles = useStableValue(styles)
 
@@ -495,19 +498,24 @@ function MapMarker({
 		onDrag,
 		onDragEnd,
 	})
-	callbacksRef.current = {
-		onClick,
-		onMouseEnter,
-		onMouseLeave,
-		onDragStart,
-		onDrag,
-		onDragEnd,
-	}
+	useEffect(() => {
+		callbacksRef.current = {
+			onClick,
+			onMouseEnter,
+			onMouseLeave,
+			onDragStart,
+			onDrag,
+			onDragEnd,
+		}
+	})
 
-	const marker = useMemo(() => {
+	const [marker, setMarker] = useState<MapLibreGL.Marker | null>(null)
+
+	useEffect(() => {
+		const element = document.createElement("div")
 		const markerInstance = new MapLibreGL.Marker({
 			...markerOptions,
-			element: document.createElement("div"),
+			element,
 			draggable,
 		}).setLngLat([longitude, latitude])
 
@@ -517,13 +525,9 @@ function MapMarker({
 		const handleMouseLeave = (e: MouseEvent) =>
 			callbacksRef.current.onMouseLeave?.(e)
 
-		markerInstance.getElement()?.addEventListener("click", handleClick)
-		markerInstance
-			.getElement()
-			?.addEventListener("mouseenter", handleMouseEnter)
-		markerInstance
-			.getElement()
-			?.addEventListener("mouseleave", handleMouseLeave)
+		element.addEventListener("click", handleClick)
+		element.addEventListener("mouseenter", handleMouseEnter)
+		element.addEventListener("mouseleave", handleMouseLeave)
 
 		const handleDragStart = () => {
 			const lngLat = markerInstance.getLngLat()
@@ -541,27 +545,37 @@ function MapMarker({
 		markerInstance.on("dragstart", handleDragStart)
 		markerInstance.on("drag", handleDrag)
 		markerInstance.on("dragend", handleDragEnd)
+		setMarker(markerInstance)
 
-		return markerInstance
+		return () => {
+			element.removeEventListener("click", handleClick)
+			element.removeEventListener("mouseenter", handleMouseEnter)
+			element.removeEventListener("mouseleave", handleMouseLeave)
+			markerInstance.off("dragstart", handleDragStart)
+			markerInstance.off("drag", handleDrag)
+			markerInstance.off("dragend", handleDragEnd)
+			markerInstance.remove()
+			setMarker(null)
+		}
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !marker) return
 
 		marker.addTo(map)
 
 		return () => {
 			marker.remove()
 		}
-
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [map])
+	}, [map, marker])
 
 	const { offset, rotation, rotationAlignment, pitchAlignment } = markerOptions
 
 	useEffect(() => {
+		if (!marker) return
+
 		const current = marker.getLngLat()
 		if (current.lng !== longitude || current.lat !== latitude) {
 			marker.setLngLat([longitude, latitude])
@@ -600,8 +614,15 @@ function MapMarker({
 		pitchAlignment,
 	])
 
+	const markerContextValue = useMemo(
+		() => (marker ? { marker, map } : null),
+		[marker, map],
+	)
+
+	if (!markerContextValue) return null
+
 	return (
-		<MarkerContext.Provider value={{ marker, map }}>
+		<MarkerContext.Provider value={markerContextValue}>
 			{children}
 		</MarkerContext.Provider>
 	)
@@ -660,24 +681,24 @@ function MarkerPopup({
 	...popupOptions
 }: MarkerPopupProps) {
 	const { marker, map } = useMarkerContext()
-	const container = useMemo(() => document.createElement("div"), [])
+	const [container, setContainer] = useState<HTMLDivElement | null>(null)
 	const { offset, maxWidth } = popupOptions
 
+	useEffect(() => {
+		setContainer(document.createElement("div"))
+	}, [])
+
 	const popup = useMemo(() => {
-		const popupInstance = new MapLibreGL.Popup({
+		return new MapLibreGL.Popup({
 			offset: 16,
 			...popupOptions,
 			closeButton: false,
-		})
-			.setMaxWidth("none")
-			.setDOMContent(container)
-
-		return popupInstance
+		}).setMaxWidth("none")
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		popup.setDOMContent(container)
 		marker.setPopup(popup)
@@ -686,7 +707,7 @@ function MarkerPopup({
 			marker.setPopup(null)
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [map])
+	}, [map, container])
 
 	// Sync popup options when they change.
 	useEffect(() => {
@@ -697,6 +718,8 @@ function MarkerPopup({
 	}, [popup, offset, maxWidth])
 
 	const handleClose = () => popup.remove()
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -726,41 +749,46 @@ function MarkerTooltip({
 	...popupOptions
 }: MarkerTooltipProps) {
 	const { marker, map } = useMarkerContext()
-	const container = useMemo(() => document.createElement("div"), [])
+	const [container, setContainer] = useState<HTMLDivElement | null>(null)
 	const { offset, maxWidth } = popupOptions
 
+	useEffect(() => {
+		setContainer(document.createElement("div"))
+	}, [])
+
 	const tooltip = useMemo(() => {
-		const tooltipInstance = new MapLibreGL.Popup({
+		return new MapLibreGL.Popup({
 			offset: 16,
 			...popupOptions,
 			closeOnClick: true,
 			closeButton: false,
 		}).setMaxWidth("none")
-
-		return tooltipInstance
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		tooltip.setDOMContent(container)
+
+		const el = marker.getElement()
+		if (!el) return
 
 		const handleMouseEnter = () => {
 			tooltip.setLngLat(marker.getLngLat()).addTo(map)
 		}
 		const handleMouseLeave = () => tooltip.remove()
 
-		marker.getElement()?.addEventListener("mouseenter", handleMouseEnter)
-		marker.getElement()?.addEventListener("mouseleave", handleMouseLeave)
+		el.addEventListener("mouseenter", handleMouseEnter)
+		el.addEventListener("mouseleave", handleMouseLeave)
 
 		return () => {
-			marker.getElement()?.removeEventListener("mouseenter", handleMouseEnter)
-			marker.getElement()?.removeEventListener("mouseleave", handleMouseLeave)
+			el.removeEventListener("mouseenter", handleMouseEnter)
+			el.removeEventListener("mouseleave", handleMouseLeave)
 			tooltip.remove()
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [map])
+	}, [map, container])
 
 	// Sync tooltip options when they change.
 	useEffect(() => {
@@ -769,6 +797,8 @@ function MarkerTooltip({
 			tooltip.setMaxWidth(maxWidth)
 		}
 	}, [tooltip, offset, maxWidth])
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -1057,25 +1087,29 @@ function MapPopup({
 }: MapPopupProps) {
 	const { map } = useMap()
 	const onCloseRef = useRef(onClose)
-	onCloseRef.current = onClose
-	const container = useMemo(() => document.createElement("div"), [])
+	useEffect(() => {
+		onCloseRef.current = onClose
+	})
+	const [container, setContainer] = useState<HTMLDivElement | null>(null)
 	const { offset, maxWidth } = popupOptions
 
+	useEffect(() => {
+		setContainer(document.createElement("div"))
+	}, [])
+
 	const popup = useMemo(() => {
-		const popupInstance = new MapLibreGL.Popup({
+		return new MapLibreGL.Popup({
 			offset: 16,
 			...popupOptions,
 			closeButton: false,
 		})
 			.setMaxWidth("none")
 			.setLngLat([longitude, latitude])
-
-		return popupInstance
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		const onCloseProp = () => onCloseRef.current?.()
 
@@ -1091,7 +1125,7 @@ function MapPopup({
 			}
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [map])
+	}, [map, container])
 
 	// Sync popup position and options when they change.
 	useEffect(() => {
@@ -1108,6 +1142,8 @@ function MapPopup({
 	const handleClose = () => {
 		popup.remove()
 	}
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -1383,7 +1419,9 @@ function MapGeoJSON<
 		[defaults.line, linePaint],
 	)
 	const latestRef = useRef({ onClick, onHover })
-	latestRef.current = { onClick, onHover }
+	useEffect(() => {
+		latestRef.current = { onClick, onHover }
+	})
 
 	// Add source on mount.
 	useEffect(() => {
@@ -1747,7 +1785,9 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 	)
 
 	const latestRef = useRef({ data, onClick, onHover })
-	latestRef.current = { data, onClick, onHover }
+	useEffect(() => {
+		latestRef.current = { data, onClick, onHover }
+	})
 
 	// Add source and layers on mount.
 	useEffect(() => {

@@ -59,7 +59,7 @@ async function GlossaryIndexBody() {
 			<ul className="grid gap-6 md:grid-cols-2">
 				{hubs.map((hub) => (
 					<li key={hub.topic}>
-						<Link
+						<Link prefetch={false}
 							className="border-border bg-background hover:border-primary/40 group flex h-full flex-col gap-4 rounded-lg border p-6 transition-colors"
 							href={hub.href as Route}
 						>

@@ -51,8 +51,10 @@ export default async function ServiceOfferingPage({
 
 	if (!service) notFound()
 
-	const related = await getRelatedCached(service)
-	const viewStats = await getLiveViewStats("service", service.slug)
+	const [related, viewStats] = await Promise.all([
+		getRelatedCached(service),
+		getLiveViewStats("service", service.slug),
+	])
 
 	return (
 		<ServiceLandingPage
