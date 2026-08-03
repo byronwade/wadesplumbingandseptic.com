@@ -51,16 +51,19 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 6 — GA4 Analytics Data API
 
-- **Status:** Offline `MOCK_VERIFIED`; Production path deployed; Cron returned `503` / `BLOCKED_MISSING_CREDENTIALS` until owner sets `GA4_PROPERTY_ID` (see Phase 75)
-- **Branch/PR:** `cursor/eve-ga4-live-aab8`
+- **Status:** Explicitly skipped for rollout with recorded blocker (Phase 75). Offline `MOCK_VERIFIED`; Production path deployed; Cron returned `503` / `BLOCKED_MISSING_CREDENTIALS` (no `GA4_PROPERTY_ID`)
+- **Branch/PR:** `cursor/eve-ga4-live-aab8` / `#119`
 - **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/ga4`; aggregate sessions only (`sessions_total` / `row_count`); service-account JWT via existing `GOOGLE_SERVICE_ACCOUNT_*` + `GA4_PROPERTY_ID` (optional `GA4_ACCESS_TOKEN` override); soft `FAILED` evidence for upstream errors
-- **Owner setup:** See `MANUAL_SETUP.md` → **Next: Google Analytics Data (GA4)** (enable Analytics Data API, grant SA Viewer on the property, set `GA4_PROPERTY_ID`)
-- **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=ga4-2026-08-03`; deploy; Cron-run `/_internal/eve/api/live-probe/ga4` three times for HTTP `200`; reset flags
-- **Exit gate:** Task 7 may start after `LIVE_VERIFIED`, or remain skipped with a recorded blocker
+- **Owner setup:** See `MANUAL_SETUP.md` → **Deferred: Google Analytics Data (GA4)**
+- **Exit gate:** Task 7 started with this recorded skip
 
 ## Task 7 — Local Falcon (optional)
 
-- **Status:** not started
+- **Status:** `MOCK_VERIFIED` offline path (awaiting owner `LOCAL_FALCON_API_KEY` + Production Cron `LIVE_VERIFIED`)
+- **Branch/PR:** `cursor/eve-local-falcon-live-aab8`
+- **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/local-falcon`; aggregate `report_count` only; soft `FAILED` evidence for upstream errors
+- **Owner setup:** See `MANUAL_SETUP.md` → **Next: Local Falcon**
+- **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_LOCAL_FALCON=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=local-falcon-2026-08-03`; deploy; Cron-run `/_internal/eve/api/live-probe/local-falcon` three times for HTTP `200`; reset flags
 - **Prerequisite:** Task 6 complete or explicitly skipped with recorded blocker
 
 ## Task 8 — Business Profile (optional)

@@ -1526,49 +1526,77 @@ export function createLocalFalconAdapter({
 			const disabled = requireEnabled(
 				enabled,
 				runId,
-				"local-falcon",
+				"local_falcon",
 				"report-read",
 			);
 			if (disabled) return disabled;
 			if (!apiKey)
 				return blocked(
 					runId,
-					"local-falcon",
+					"local_falcon",
 					"report-read",
-					"Missing Local Falcon API credential.",
+					"Missing LOCAL_FALCON_API_KEY.",
 				);
-			const payload = await requestJson({
-				fetchImpl,
-				budget,
-				url: endpoint,
-				init: {
-					method: "POST",
-					headers: {
-						authorization: `Bearer ${apiKey}`,
-						"content-type": "application/json",
+			try {
+				const payload = await requestJson({
+					fetchImpl,
+					budget,
+					url: endpoint,
+					init: {
+						method: "POST",
+						headers: {
+							authorization: `Bearer ${apiKey}`,
+							"content-type": "application/json",
+						},
+						body: "{}",
 					},
-					body: "{}",
-				},
-				source: "Local Falcon reports",
-				policy: requestPolicy,
-			});
-			if (payload.success !== true)
-				throw new IntegrationError(
-					"MALFORMED_RESPONSE",
-					"Local Falcon did not return its documented success envelope.",
-				);
-			return evidence({
-				runId,
-				source: "local-falcon",
-				scope: "report-read",
-				endpoint,
-				tier: SOURCE_TIERS.OFFICIAL_PROVIDER,
-				payload: {
-					report_count: Array.isArray(payload.data)
-						? payload.data.slice(0, 100).length
-						: 0,
-				},
-			});
+					source: "Local Falcon reports",
+					policy: requestPolicy,
+				});
+				if (payload.success !== true) {
+					return makeEvidence({
+						runId,
+						source: "local_falcon",
+						scope: "report-read",
+						classification: "FAILED",
+						sourceUrlOrTool: endpoint,
+						payload: {
+							reason:
+								"Local Falcon did not return its documented success envelope.",
+							next_action:
+								"Confirm LOCAL_FALCON_API_KEY is valid and the account can list reports.",
+						},
+					});
+				}
+				return evidence({
+					runId,
+					source: "local_falcon",
+					scope: "report-read",
+					endpoint,
+					tier: SOURCE_TIERS.OFFICIAL_PROVIDER,
+					payload: {
+						report_count: Array.isArray(payload.data)
+							? payload.data.slice(0, 100).length
+							: 0,
+					},
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "local_falcon",
+					scope: "report-read",
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint,
+					payload: {
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm LOCAL_FALCON_API_KEY is set in Production and the Local Falcon API is reachable.",
+					},
+				});
+			}
 		},
 	};
 }
