@@ -9,7 +9,7 @@
   - `2026-08-03T15:42:21.357Z` request `65vkz-1785771741357-0f9f97fa4377` → `200`
   - `2026-08-03T15:42:27.705Z` request `jbv4p-1785771747705-fe677252cc12` → `200`
   - `2026-08-03T15:42:34.002Z` request `2frhj-1785771754002-d21d8f77df25` → `200`
-- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_PAGESPEED=false`, Production redeploy after reset.
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_PAGESPEED=false`, Production redeploy `dpl_8jafayWyxzcBp1KYnbs2Zge3USx2` after reset.
 - Soft-budget rule: PageSpeed QA annotates human review only. It does not fail-close draft publication.
 - Next exact action: start Task 5 (browser research / Browserbase) on its own PR.
 
