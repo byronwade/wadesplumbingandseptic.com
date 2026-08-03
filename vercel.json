@@ -24,6 +24,10 @@
 		{
 			"path": "/_internal/eve/api/live-probe/ga4",
 			"schedule": "0 0 1 1 *"
+		},
+		{
+			"path": "/_internal/eve/api/live-probe/local-falcon",
+			"schedule": "0 0 1 1 *"
 		}
 	],
 	"services": {

@@ -33,7 +33,10 @@ test("GA4 adapter soft-fails missing credentials and returns FAILED for upstream
 	assert.equal(failed.classification, "FAILED");
 	// Upstream error text is sanitized; durable next_action steers the owner.
 	assert.equal(failed.payload.reason, "External integration request failed.");
-	assert.match(failed.payload.next_action, /Analytics Data API|Viewer|GA4_PROPERTY_ID/i);
+	assert.match(
+		failed.payload.next_action,
+		/Analytics Data API|Viewer|GA4_PROPERTY_ID/i,
+	);
 });
 
 test("focused GA4 live probe stays offline until approval and enablement", async () => {

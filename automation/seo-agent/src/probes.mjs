@@ -126,6 +126,48 @@ export async function probeGa4Live({
 }
 
 /**
+ * Focused Task 7 live probe: Local Falcon report-list read.
+ * Aggregate report_count only. Does not open PRs or run other adapters.
+ */
+export async function probeLocalFalconLive({
+	registry,
+	config,
+	runId = "local-falcon-live-probe",
+	execute = false,
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "local_falcon",
+			scope: "report-read",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "local-falcon-live-probe-disabled",
+			payload: {
+				reason:
+					"Local Falcon live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, set LOCAL_FALCON_API_KEY, enable SEO_AGENT_ENABLE_LOCAL_FALCON, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.localFalcon) {
+		throw new Error(
+			"Local Falcon probe refused because SEO_AGENT_ENABLE_LOCAL_FALCON is not true.",
+		);
+	}
+	if (typeof registry?.local_falcon?.probe !== "function") {
+		throw new Error(
+			"Local Falcon probe requires a registry.local_falcon adapter.",
+		);
+	}
+	return assertEvidence(
+		await retryReadOnly(() => registry.local_falcon.probe({ runId })),
+	);
+}
+
+/**
  * Focused Task 5 live probe: allowlisted HTTP browser research.
  * Does not open PRs, run Search Console/PageSpeed, or create Browserbase sessions.
  * Browserbase remains a separate optional adapter (blocked without project credentials).

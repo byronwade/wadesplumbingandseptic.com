@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.
+- Branch/PR: `cursor/eve-local-falcon-live-aab8` (Task 7 from `INTEGRATION_ROLLOUT.md`).
+- Offline: focused probe `probeLocalFalconLive`; CRON route `GET /_internal/eve/api/live-probe/local-falcon`; CLI `npm run live:probe:local-falcon`; adapter soft-fails upstream errors to `FAILED` evidence; Cron allowlisted.
+- Docs: `MANUAL_SETUP.md` Next: Local Falcon; Task 6 moved to Deferred.
+- Next exact action: merge/deploy Task 7; arm and Cron-prove if `LOCAL_FALCON_API_KEY` is present, else record `BLOCKED_MISSING_CREDENTIALS`; then trigger standing propose Cron for a draft blog PR test.
+
 ## Phase 75: Task 6 GA4 Production Path Deployed; Live Proof BLOCKED (2026-08-03)
 
 - State: Path on `main` / Production; Cron exercised; live result `BLOCKED_MISSING_CREDENTIALS` (no `GA4_PROPERTY_ID`). Not `LIVE_VERIFIED`.
@@ -12,7 +20,8 @@
 - Cause: Production has Google service account + `SEO_AGENT_ENABLE_GA4` arming path, but no `GA4_PROPERTY_ID` (and no `GA4_ACCESS_TOKEN`). Owner must complete Manual Setup Next: Google Analytics Data (GA4).
 - Cleanup: live-reads approved false, approved run ID removed, `SEO_AGENT_ENABLE_GA4=false`, Production redeploy `dpl_3uPKVQtU6NdtxZgfZbPXyhJQS1qb` after reset.
 - Branches/PRs: `#119` merged; no open PRs; no leftover `cursor/*` feature branches after cleanup.
-- Next exact action: owner enables Analytics Data API, grants Viewer to `eve-seo-reader` on the GA4 property, sets Production `GA4_PROPERTY_ID`, then re-arm and Cron-prove `GET /_internal/eve/api/live-probe/ga4` three times for HTTP `200`.
+- Skip decision: Task 6 remains blocked on missing `GA4_PROPERTY_ID`; rollout continues to Task 7 with this recorded skip. Owner can still complete Deferred GA4 setup later.
+- Next exact action: SUPERSEDED by Phase 76 Task 7 Local Falcon path.
 
 ## Phase 74: Task 6 GA4 Live Probe Path (2026-08-03)
 
