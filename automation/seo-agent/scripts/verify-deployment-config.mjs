@@ -234,10 +234,39 @@ function validateServicesTopology(config, label) {
 			`${label}: Eve service routes must transform /_internal/eve/* to the path Eve handlers observe.`,
 		);
 
-	if ("crons" in config || "crons" in (sidecarService ?? {}))
+	if ("crons" in (sidecarService ?? {}))
 		localFailures.push(
-			`${label}: Eve schedules emit Vercel Cron metadata; do not duplicate them.`,
+			`${label}: Eve service must not declare crons; Eve schedules emit Cron metadata.`,
 		);
+	const allowedLiveProbeCrons = new Set([
+		"/_internal/eve/api/live-probe/search-console",
+		"/_internal/eve/api/live-probe/pagespeed",
+	]);
+	const rootCrons = Array.isArray(config.crons) ? config.crons : null;
+	if (rootCrons) {
+		for (const cron of rootCrons) {
+			if (
+				typeof cron?.path !== "string" ||
+				!allowedLiveProbeCrons.has(cron.path) ||
+				cron.schedule !== "0 0 1 1 *"
+			) {
+				localFailures.push(
+					`${label}: only annual manual-trigger live-probe crons are allowed (${[
+						...allowedLiveProbeCrons,
+					].join(", ")}); Eve schedules emit their own Cron metadata.`,
+				);
+				break;
+			}
+		}
+		const paths = rootCrons.map((cron) => cron.path);
+		if (new Set(paths).size !== paths.length) {
+			localFailures.push(`${label}: live-probe cron paths must be unique.`);
+		}
+	} else if ("crons" in config) {
+		localFailures.push(
+			`${label}: crons must be an array of allowed live-probe paths when present.`,
+		);
+	}
 	if (
 		"outputDirectory" in config ||
 		"outputDirectory" in (sidecarService ?? {})

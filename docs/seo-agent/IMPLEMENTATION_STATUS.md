@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 65: Task 2 PageSpeed Live Probe Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / blocked on Production deploy for final `LIVE_VERIFIED`. Task 2 from `INTEGRATION_ROLLOUT.md` started on dedicated branch `cursor/eve-pagespeed-live-aab8`.
+- Offline: focused PageSpeed probe helpers, CRON-authenticated Production route `GET /_internal/eve/api/live-probe/pagespeed`, CLI `npm run live:probe:pagespeed`, annual manual-trigger Cron entry, and deterministic fixtures. Deployment-config verifier allowlists only the Search Console and PageSpeed live-probe crons. Sidecar `npm test` → `127/127` passing; format/typecheck/verify passed. This is `MOCK_VERIFIED` for the probe path.
+- Live proof plan: set `SEO_AGENT_ENABLE_PAGESPEED=true`, keep Search Console disabled, `SEO_AGENT_LIVE_READS_APPROVED=true` with exact run ID `pagespeed-live-2026-08-03`, redeploy Production, then `vercel crons run '/_internal/eve/api/live-probe/pagespeed'`. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, and set `SEO_AGENT_ENABLE_PAGESPEED=false`.
+- Out of scope (Task 3+): wiring PageSpeed into content QA or GSC into topic selection.
+- Next exact action: human merge/deploy this PR (or Production deploy of this branch), then run the Production live-probe Cron and record the redacted classification.
+
 ## Phase 63: Task 1 Search Console LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 1 live proof (`LIVE_VERIFIED`).

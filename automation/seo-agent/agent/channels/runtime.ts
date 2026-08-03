@@ -10,7 +10,10 @@ import {
 	runtimeHealth,
 } from "../../src/runtime.mjs";
 import { loadConfig } from "../../src/config.mjs";
-import { handleSearchConsoleLiveProbe } from "../../src/live-probe-http.mjs";
+import {
+	handlePageSpeedLiveProbe,
+	handleSearchConsoleLiveProbe,
+} from "../../src/live-probe-http.mjs";
 
 const locks = createDispatchLockStore();
 const circuit = createCircuitBreaker();
@@ -61,6 +64,10 @@ export default defineChannel({
 		}),
 		GET("/api/live-probe/search-console", async (request) => {
 			const result = await handleSearchConsoleLiveProbe({ request });
+			return json(result.body, result.status);
+		}),
+		GET("/api/live-probe/pagespeed", async (request) => {
+			const result = await handlePageSpeedLiveProbe({ request });
 			return json(result.body, result.status);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {
