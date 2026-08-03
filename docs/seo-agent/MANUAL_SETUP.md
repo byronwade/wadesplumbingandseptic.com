@@ -13,17 +13,48 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] In the GitHub App installation, select only `byronwade/wadesplumbingandseptic.com`. The sidecar patch scopes each token request to this repository, but installation-level repository access must also be narrowed before any draft-writing workflow is enabled.
 - [x] AI Gateway uses Vercel's automatic OIDC identity. The conflicting static Gateway key was removed from Preview and Production, and a fresh Production OIDC-only request was live-verified on 2026-08-01. Model access remains separate from OIDC authentication.
 - [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off except during approved live proofs.
-- [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console work.
-- [x] The Search Console service-account email and private key are stored as Production server-side variables.
+- [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console or GA4 work.
+- [x] The Search Console service-account email and private key are stored as Production server-side variables (`GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`).
 - [x] Search Console live probe (Task 1) and topic wiring (Task 3) are `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/search-console` and `/search-console-topics`). Local `vercel env run` cannot see Sensitive Google credentials.
 - [x] PageSpeed live probe (Task 2) and draft/preview QA wiring (Task 4) are `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/pagespeed` and `/pagespeed-qa`).
 - [x] Browser research live probe (Task 5) is `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/browser-research`).
-- [x] Optional adapters (Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs. Browserbase has no Production API key/project id yet (`BLOCKED_MISSING_CREDENTIALS`).
+- [ ] Google Analytics Data API (Task 6 / GA4): follow **Next: Google Analytics Data (GA4)** below, then run the focused live probe.
+- [x] Other optional adapters (Browserbase, Business Profile, Local Falcon, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs. Browserbase has no Production API key/project id yet (`BLOCKED_MISSING_CREDENTIALS`).
 
 ## Keep Off
 
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
+
+## Next: Google Analytics Data (GA4)
+
+Eve Task 6 reads aggregate sessions from the GA4 Data API. Prefer the existing `eve-seo-reader` Google service account (already in Production). Do not use a personal Google login for scheduled work.
+
+### 1. Google Cloud / Analytics Admin (owner)
+
+1. [ ] In Google Cloud for the same project that owns the service account, enable **Google Analytics Data API**.
+2. [ ] In Google Analytics Admin for the Wade site property, open **Property access management**.
+3. [ ] Add the Production service account email (`GOOGLE_SERVICE_ACCOUNT_EMAIL`, typically `eve-seo-reader@…iam.gserviceaccount.com`) with role **Viewer** (read-only).
+4. [ ] Copy the GA4 **Property ID** (Admin → Property settings). It is a number such as `123456789`. Eve also accepts `properties/123456789`.
+
+### 2. Vercel Production variables (owner)
+
+Set these in Production only (Sensitive / encrypted). Do not put them in Preview or Git.
+
+1. [ ] `GA4_PROPERTY_ID` = the numeric property id from step 1.4.
+2. [ ] Leave `GA4_ACCESS_TOKEN` unset. Eve mints a short-lived token from the existing service account with scope `https://www.googleapis.com/auth/analytics.readonly`.
+3. [ ] Keep `SEO_AGENT_ENABLE_GA4=false` until the live probe is armed (Eve or owner sets it to `true` only for that exact run).
+4. [ ] Confirm `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` remain present (same credentials used for Search Console).
+
+### 3. Live proof (after Task 6 code is on Production)
+
+1. [ ] Choose run ID `ga4-2026-08-03` (or another lower-case id).
+2. [ ] Temporarily set Production: `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=<exact run id>`. Keep Search Console, PageSpeed, and Browserbase flags off unless separately approved.
+3. [ ] Redeploy Production so the new env values apply.
+4. [ ] Trigger Cron: `GET /_internal/eve/api/live-probe/ga4` three times. HTTP `200` means `LIVE_VERIFIED` (aggregate sessions only; no raw day dump in the Cron response body).
+5. [ ] Reset: `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, set `SEO_AGENT_ENABLE_GA4=false`, redeploy.
+
+CLI note: local `vercel env run` / `npm run live:probe:ga4 -- --execute` cannot read Sensitive secrets. Prefer Production Cron for the authoritative proof.
 
 ## Next: One Audit-Only Run
 

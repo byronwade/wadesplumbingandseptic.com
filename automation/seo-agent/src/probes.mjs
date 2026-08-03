@@ -86,6 +86,46 @@ export async function probeSearchConsoleLive({
 }
 
 /**
+ * Focused Task 6 live probe: GA4 Analytics Data API aggregate sessions read.
+ * Does not open PRs or dispatch Search Console/PageSpeed/browser adapters.
+ */
+export async function probeGa4Live({
+	registry,
+	config,
+	runId = "ga4-live-probe",
+	execute = false,
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "ga4",
+			scope: "report-read",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "ga4-live-probe-disabled",
+			payload: {
+				reason:
+					"GA4 live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, set GA4_PROPERTY_ID, enable SEO_AGENT_ENABLE_GA4, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.ga4) {
+		throw new Error(
+			"GA4 probe refused because SEO_AGENT_ENABLE_GA4 is not true.",
+		);
+	}
+	if (typeof registry?.ga4?.probe !== "function") {
+		throw new Error("GA4 probe requires a registry.ga4 adapter.");
+	}
+	return assertEvidence(
+		await retryReadOnly(() => registry.ga4.probe({ runId })),
+	);
+}
+
+/**
  * Focused Task 5 live probe: allowlisted HTTP browser research.
  * Does not open PRs, run Search Console/PageSpeed, or create Browserbase sessions.
  * Browserbase remains a separate optional adapter (blocked without project credentials).

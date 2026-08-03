@@ -1,11 +1,18 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 74: Task 6 GA4 Live Probe Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; live proof blocked until owner completes GA4 property access and sets `GA4_PROPERTY_ID`.
+- Branch/PR: `cursor/eve-ga4-live-aab8` (Task 6 from `INTEGRATION_ROLLOUT.md`).
+- Offline: `createGa4Adapter` accepts service-account token provider (`analytics.readonly`) or `GA4_ACCESS_TOKEN`; normalizes `properties/<id>`; returns aggregate `sessions_total` / `row_count` only; upstream errors → `FAILED` evidence. Focused probe `probeGa4Live`; CRON route `GET /_internal/eve/api/live-probe/ga4`; CLI `npm run live:probe:ga4`; Cron allowlisted.
+- Docs: `MANUAL_SETUP.md` adds owner steps for Analytics Data API, GA4 Viewer grant on the existing Eve service account, and Production `GA4_PROPERTY_ID`.
+- Commands (sidecar): `npm run format` exit `0`; `npm run typecheck` exit `0`; `npm test` → `179/179`; `npm run verify` exit `0`.
+- Live arming (next): after owner sets `GA4_PROPERTY_ID` and grants Viewer, set `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=ga4-2026-08-03`, deploy, Cron-run `/_internal/eve/api/live-probe/ga4` three times (`200` = `LIVE_VERIFIED`), then reset flags.
+- Next exact action: merge/deploy Task 6 path; owner completes Manual Setup GA4 checklist; then Production Cron live proof.
+
 ## Phase 73: Task 6 GA4 BLOCKED_MISSING_CREDENTIALS (2026-08-03)
 
-- State: BLOCKED for optional GA4 live verification.
-- Evidence: Production env lists `SEO_AGENT_ENABLE_GA4` but does not list `GA4_ACCESS_TOKEN` or `GA4_PROPERTY_ID`. No GA4 Data API request was attempted. Classification: `BLOCKED_MISSING_CREDENTIALS` (not a fixture pass, not a live failure).
-- Confirmation after Task 5 merge: sidecar `npm test` → `175/175`; Production `readyz` → `ready: true`, `mode: propose`, live-read approval off; no open PRs; no leftover `cursor/*` branches.
-- Next exact action: owner supplies reviewed GA4 credentials for a dedicated Task 6 PR, or proceed to Task 7 (Local Falcon) only if that credential path is intentionally next; otherwise continue owned non-optional work (Task 11 independent judge / observation) when the board prioritizes it.
+- State: SUPERSEDED by Phase 74 probe path. Previously blocked: Production had `SEO_AGENT_ENABLE_GA4` but no `GA4_PROPERTY_ID` / access token. No live GA4 request was made at that checkpoint.
 
 ## Phase 72: Task 5 Browser Research LIVE_VERIFIED (2026-08-03)
 

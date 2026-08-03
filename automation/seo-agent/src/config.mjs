@@ -263,7 +263,10 @@ export function summarizeConfig(config) {
 				config.credentials.browserbaseProjectId,
 			),
 			ga4: Boolean(
-				config.credentials.ga4AccessToken && config.credentials.ga4PropertyId,
+				config.credentials.ga4PropertyId &&
+				(config.credentials.ga4AccessToken ||
+					(config.credentials.googleServiceAccountEmail &&
+						config.credentials.googleServiceAccountPrivateKey)),
 			),
 			business_profile: Boolean(
 				config.credentials.businessProfileAccessToken &&
