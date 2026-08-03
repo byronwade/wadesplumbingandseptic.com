@@ -8,7 +8,7 @@ const AnalyticsLoader = dynamic(
 	{ ssr: false },
 )
 
-/** Client islands for analytics (command menu mounts from AppProviders). */
+/** Client islands for analytics (command menu mounts from the root layout). */
 export function ChromeExtras() {
 	return <AnalyticsLoader />
 }

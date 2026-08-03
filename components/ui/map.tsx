@@ -614,10 +614,15 @@ function MapMarker({
 		pitchAlignment,
 	])
 
-	if (!marker) return null
+	const markerContextValue = useMemo(
+		() => (marker ? { marker, map } : null),
+		[marker, map],
+	)
+
+	if (!markerContextValue) return null
 
 	return (
-		<MarkerContext.Provider value={{ marker, map }}>
+		<MarkerContext.Provider value={markerContextValue}>
 			{children}
 		</MarkerContext.Provider>
 	)

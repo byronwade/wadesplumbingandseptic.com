@@ -1,10 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ThemeProvider, useTheme } from "next-themes"
-
-import { AppCommandShell } from "@/components/app-command-shell"
-import { Toaster } from "@/components/ui/sonner"
+import { useTheme } from "next-themes"
 
 function isTypingTarget(target: EventTarget | null) {
 	if (!(target instanceof HTMLElement)) return false
@@ -17,7 +14,8 @@ function isTypingTarget(target: EventTarget | null) {
 	)
 }
 
-function ThemeHotkey() {
+/** Toggles light/dark with `d`, ignoring typing targets. */
+export function ThemeHotkey() {
 	const { resolvedTheme, setTheme } = useTheme()
 
 	React.useEffect(() => {
@@ -34,16 +32,4 @@ function ThemeHotkey() {
 	}, [resolvedTheme, setTheme])
 
 	return null
-}
-
-/** Root client providers for theme, toasts, and accessibility hotkeys. */
-export function AppProviders({ children }: { children: React.ReactNode }) {
-	return (
-		<ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-			{children}
-			<ThemeHotkey />
-			<AppCommandShell />
-			<Toaster richColors closeButton position="top-center" />
-		</ThemeProvider>
-	)
 }

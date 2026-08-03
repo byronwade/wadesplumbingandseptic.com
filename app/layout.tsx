@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next"
 import { Archivo, Geist, Geist_Mono, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
+import { ThemeProvider } from "next-themes"
 import { Suspense } from "react"
+import { Toaster } from "sonner"
 
-import { AppProviders } from "@/components/app-providers"
+import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
+import { ThemeHotkey } from "@/components/theme-hotkey"
 import { getCollection } from "@/lib/content"
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -120,7 +123,7 @@ export default function RootLayout({
 			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
 		>
 			<body className={manrope.className}>
-				<AppProviders>
+				<ThemeProvider attribute="class" defaultTheme="light" enableSystem>
 					<a
 						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
 						href="#main-content"
@@ -141,7 +144,10 @@ export default function RootLayout({
 					>
 						<RootJsonLd />
 					</Suspense>
-				</AppProviders>
+					<ThemeHotkey />
+					<AppCommandShell />
+					<Toaster richColors closeButton position="top-center" />
+				</ThemeProvider>
 			</body>
 		</html>
 	)

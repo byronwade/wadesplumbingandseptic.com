@@ -69,7 +69,7 @@ function BreadcrumbTrail({
 			<ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
 				{ancestors.map((item, index) => (
 					<li
-						key={`${item.label}-${index}`}
+						key={item.href ?? item.label}
 						className="flex items-center gap-1.5"
 					>
 						{index > 0 ? (
