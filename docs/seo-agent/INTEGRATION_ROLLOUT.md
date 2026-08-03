@@ -59,7 +59,7 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 7 — Local Falcon (optional)
 
-- **Status:** `MOCK_VERIFIED` offline path (awaiting owner `LOCAL_FALCON_API_KEY` + Production Cron `LIVE_VERIFIED`)
+- **Status:** Offline `MOCK_VERIFIED`; Production path deployed; Cron returned `503` / `BLOCKED_MISSING_CREDENTIALS` (no `LOCAL_FALCON_API_KEY`). See Phase 77.
 - **Branch/PR:** `cursor/eve-local-falcon-live-aab8`
 - **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/local-falcon`; aggregate `report_count` only; soft `FAILED` evidence for upstream errors
 - **Owner setup:** See `MANUAL_SETUP.md` → **Next: Local Falcon**

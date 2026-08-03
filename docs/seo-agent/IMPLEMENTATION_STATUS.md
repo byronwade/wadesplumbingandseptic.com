@@ -1,12 +1,24 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 77: Task 7 Local Falcon Production Test + Blog Draft PR (2026-08-03)
+
+- State: Task 7 path on Production; Cron live proof `BLOCKED_MISSING_CREDENTIALS` (no `LOCAL_FALCON_API_KEY`). Task 6 remains an explicit skip. Draft blog PR opened for owner review (test content matching Eve catalog + publish gates).
+- Local Falcon: armed deploy `dpl_52fmP6MDx3mhF4LuYCmqk82BqwJv`; Cron `GET /_internal/eve/api/live-probe/local-falcon` three times → HTTP `503`:
+  - `2026-08-03T17:13:45.351Z` request `rptc7-1785777225351-77b76bf2be35` → `503`
+  - `2026-08-03T17:13:48.783Z` request `gls6w-1785777228783-c3ac57ad5e04` → `503`
+  - `2026-08-03T17:13:52.097Z` request `vfrdz-1785777232097-8b14ecaac9b9` → `503`
+- Cleanup: live-reads off, Local Falcon flag false, `SEO_AGENT_FORCE_OBSERVE=false`, Production redeploy `dpl_DXgLAYmLZPGcKXKmbGck3B7NugB6`.
+- Proposal Cron test: triggered `/eve/v1/cron/Q-fAaiGez88CHlj1MCwpHs1fClE7tiyPoG7WCJrg7MI` at `2026-08-03T17:16:45.986Z` (HTTP `200`); Agent Run `wrun_41KZ4A1GVN0GJW2PRA80TQGMYE` completed in `12.2s` as `proposal-2026-08-03`. No Connect draft PR opened (likely `REJECTED_DRAFT_QUALITY` under Phase 55 publish gates; prior same-day Connect proof `#102` was closed as thin).
+- Blog test PR: human-authored draft post `content/posts/tankless-water-heater-maintenance-santa-cruz.md` that passes `assertPublishableBlogDraft` (Eve catalog topic), opened as a draft PR for owner review.
+- Next exact action: owner reviews the draft blog PR; optionally set `LOCAL_FALCON_API_KEY` / `GA4_PROPERTY_ID`; improve Cron writer so Production propose opens Connect PRs that clear quality gates.
+
 ## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.
 - Branch/PR: `cursor/eve-local-falcon-live-aab8` (Task 7 from `INTEGRATION_ROLLOUT.md`).
 - Offline: focused probe `probeLocalFalconLive`; CRON route `GET /_internal/eve/api/live-probe/local-falcon`; CLI `npm run live:probe:local-falcon`; adapter soft-fails upstream errors to `FAILED` evidence; Cron allowlisted.
 - Docs: `MANUAL_SETUP.md` Next: Local Falcon; Task 6 moved to Deferred.
-- Next exact action: merge/deploy Task 7; arm and Cron-prove if `LOCAL_FALCON_API_KEY` is present, else record `BLOCKED_MISSING_CREDENTIALS`; then trigger standing propose Cron for a draft blog PR test.
+- Next exact action: SUPERSEDED by Phase 77 Production Cron exercise and draft blog PR.
 
 ## Phase 75: Task 6 GA4 Production Path Deployed; Live Proof BLOCKED (2026-08-03)
 
