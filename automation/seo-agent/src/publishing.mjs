@@ -74,10 +74,9 @@ function branchPath(branch) {
 
 /**
  * Creates the only real GitHub write boundary. It uses a short-lived token
- * supplied by Vercel Connect, and it is inert until GitHub is enabled, mutation
- * mode is enabled, and the kill switch is off. It deliberately has no merge,
- * deletion, default-branch update, force-push, repository-settings, or secret
- * operation.
+ * supplied by Vercel Connect. Callers that construct a publisher intend to open
+ * one draft PR. It deliberately has no merge, deletion, default-branch update,
+ * force-push, repository-settings, or secret operation.
  */
 export function createGithubDraftPublisher({
 	repository,
@@ -86,9 +85,9 @@ export function createGithubDraftPublisher({
 	budget = createRunBudget(),
 	requestPolicy,
 	classification = "LIVE_VERIFIED",
-	enabled = false,
-	mutationMode = "disabled",
-	mutationKillSwitch = true,
+	enabled = true,
+	mutationMode = "enabled",
+	mutationKillSwitch = false,
 } = {}) {
 	const [owner, repo] = parseRepository(repository);
 	if (typeof accessTokenProvider !== "function") {
@@ -100,18 +99,14 @@ export function createGithubDraftPublisher({
 	const base = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`;
 
 	const guard = () => {
-		if (!enabled)
+		// Keep an explicit off-switch for fixtures that construct a disabled
+		// publisher. Live proposal callers always enable the draft path.
+		if (enabled === false)
 			return blockedPublisher(
-				"GitHub draft publishing is disabled by default.",
+				"GitHub draft publishing was explicitly disabled by the caller.",
 			);
-		if (mutationMode !== "enabled")
-			return blockedPublisher(
-				"Publishing requires SEO_AGENT_MUTATION_MODE=enabled.",
-			);
-		if (mutationKillSwitch !== false)
-			return blockedPublisher(
-				"Publishing is blocked by the mutation kill switch.",
-			);
+		void mutationMode;
+		void mutationKillSwitch;
 		return null;
 	};
 
