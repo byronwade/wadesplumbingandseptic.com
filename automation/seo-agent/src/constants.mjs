@@ -75,6 +75,21 @@ export const RUN_STATES = Object.freeze([
 	"SECURITY_ESCALATED",
 ]);
 
+/**
+ * Community and holiday research hosts Eve may fetch automatically during
+ * proposal runs. These are versioned policy, not owner-selected options.
+ */
+export const COMMUNITY_RESEARCH_DOMAINS = Object.freeze([
+	"www.usa.gov",
+	"www.cityofcapitola.org",
+	"capitolaartandwine.com",
+	"www.capitolaartandwine.com",
+	"www.santacruzcountyfair.com",
+	"www.watsonville.gov",
+	"www.santacruzca.gov",
+	"www.wadesplumbingandseptic.com",
+]);
+
 export const DEFAULT_BUDGETS = Object.freeze({
 	maxRunsPerSchedule: 1,
 	maxWorkflowSteps: 9,
@@ -89,7 +104,7 @@ export const DEFAULT_BUDGETS = Object.freeze({
 	maxDraftPrsPerCycle: 1,
 	maxProposedUrlsPerCycle: 2,
 	maxExternalRequests: 30,
-	allowedDomains: [
+	allowedDomains: Object.freeze([
 		"www.wadesplumbingandseptic.com",
 		"wadesplumbingandseptic.com",
 		"www.googleapis.com",
@@ -108,7 +123,7 @@ export const DEFAULT_BUDGETS = Object.freeze({
 		"www.santacruzcountyfair.com",
 		"www.watsonville.gov",
 		"www.santacruzca.gov",
-	],
+	]),
 });
 
 export const PROHIBITED_ACTIONS = Object.freeze([

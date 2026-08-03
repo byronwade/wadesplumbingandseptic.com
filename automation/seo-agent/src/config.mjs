@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { DEFAULT_BUDGETS } from "./constants.mjs";
+import { COMMUNITY_RESEARCH_DOMAINS, DEFAULT_BUDGETS } from "./constants.mjs";
 import { isStandingProductionPropose } from "./production-mode.mjs";
 
 const envSchema = z
@@ -94,6 +94,29 @@ function parseAllowedDomains(value) {
 	return domains;
 }
 
+function resolveBrowserResearchConfig(raw, standingPropose) {
+	const extra = parseAllowedDomains(raw.SEO_AGENT_BROWSER_ALLOWED_DOMAINS);
+	// Standing Production propose always researches community/holiday hosts.
+	// Owner env flags are not required for Eve to decide and fetch.
+	const enabled =
+		standingPropose || raw.SEO_AGENT_BROWSER_RESEARCH_ENABLED === "true";
+	const allowedDomains = [
+		...new Set([
+			...(standingPropose || enabled ? COMMUNITY_RESEARCH_DOMAINS : []),
+			...extra,
+		]),
+	];
+	return Object.freeze({
+		enabled,
+		allowedDomains: Object.freeze(allowedDomains),
+		mode: standingPropose
+			? "AUTOMATIC_STANDING_PROPOSE"
+			: enabled
+				? "EXPLICITLY_ENABLED"
+				: "DISABLED",
+	});
+}
+
 export function loadConfig(env = process.env) {
 	const raw = envSchema.parse(env);
 	if (
@@ -111,12 +134,7 @@ export function loadConfig(env = process.env) {
 			raw.SEO_AGENT_REPOSITORY ?? "byronwade/wadesplumbingandseptic.com",
 		siteUrl:
 			raw.SEO_AGENT_SITE_URL ?? "https://www.wadesplumbingandseptic.com/",
-		browserResearch: {
-			enabled: raw.SEO_AGENT_BROWSER_RESEARCH_ENABLED === "true",
-			allowedDomains: parseAllowedDomains(
-				raw.SEO_AGENT_BROWSER_ALLOWED_DOMAINS,
-			),
-		},
+		browserResearch: resolveBrowserResearchConfig(raw, standingPropose),
 		githubConnectorId:
 			raw.SEO_AGENT_GITHUB_CONNECTOR_ID ?? "github/wadesplumbingandseptic-com",
 		integrationFlags: Object.freeze({
@@ -206,6 +224,7 @@ export function summarizeConfig(config) {
 		repository: config.repository,
 		site_url: config.siteUrl,
 		browser_research_enabled: config.browserResearch.enabled,
+		browser_research_mode: config.browserResearch.mode,
 		browser_allowed_domains: config.browserResearch.allowedDomains,
 		integration_flags: config.integrationFlags,
 		live_reads_approval_configured: Boolean(

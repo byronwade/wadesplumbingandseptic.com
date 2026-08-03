@@ -95,6 +95,14 @@ Visit [contact](/contact) when you want professional help.
 `;
 }
 
+async function fixtureTopicDecider({ candidates }) {
+	return {
+		topic_id: candidates[0].id,
+		reason: "Fixture chooses the top ranked community-timed topic.",
+		mode: "MODEL_DECIDED",
+	};
+}
+
 function publisherFactory(calls) {
 	return () => ({
 		async readMainCommit() {
@@ -148,6 +156,8 @@ test("proposal opens one Connect-backed draft PR for a demand-timed local topic"
 		config: config(),
 		repoRoot,
 		now: new Date("2026-08-01T12:00:00.000Z"),
+		browserResearch: null,
+		topicDecider: fixtureTopicDecider,
 		writer: async ({ opportunity }) => ({
 			markdown: richDraft(opportunity),
 			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
@@ -167,6 +177,7 @@ test("proposal opens one Connect-backed draft PR for a demand-timed local topic"
 		result.opportunity.selection_reason,
 		"DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY",
 	);
+	assert.equal(result.topic_decision.mode, "MODEL_DECIDED");
 	assert.equal(result.demand.calendar_loaded, true);
 	assert.equal(result.demand.trends_loaded, true);
 	assert.equal(result.demand.research_mode, "CALENDAR_ONLY");
@@ -190,6 +201,8 @@ test("proposal rejects junk drafts instead of opening a Connect PR", async () =>
 		config: config(),
 		repoRoot,
 		now: new Date("2026-08-01T12:00:00.000Z"),
+		browserResearch: null,
+		topicDecider: fixtureTopicDecider,
 		writer: async () => ({
 			markdown: "not a valid draft",
 			reservation: { cost_reservation: { reserved_max_cost_usd: 0 } },
@@ -200,6 +213,41 @@ test("proposal rejects junk drafts instead of opening a Connect PR", async () =>
 	assert.equal(result.state, "REJECTED_DRAFT_QUALITY");
 	assert.equal(result.draft_pr_created, false);
 	assert.equal(calls.length, 0);
+});
+
+test("proposal honors Eve topic decisions over score order", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		now: new Date("2026-08-01T12:00:00.000Z"),
+	});
+	const calls = [];
+	const result = await executeDraftProposal({
+		descriptor,
+		settings: loadRuntimeSettings(env),
+		config: config(),
+		repoRoot,
+		now: new Date("2026-08-01T12:00:00.000Z"),
+		browserResearch: null,
+		topicDecider: async ({ candidates }) => {
+			const labor = candidates.find((topic) => topic.id.includes("labor-day"));
+			assert.equal(Boolean(labor), true);
+			return {
+				topic_id: labor.id,
+				reason: "Labor Day hosting prep is the stronger near-term click path.",
+				mode: "MODEL_DECIDED",
+			};
+		},
+		writer: async ({ opportunity }) => ({
+			markdown: richDraft(opportunity),
+			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
+			model: "openai/gpt-5.6-terra",
+		}),
+		publisherFactory: publisherFactory(calls),
+	});
+	assert.equal(result.state, "DRAFT_PR_OPEN");
+	assert.match(result.opportunity.query_cluster, /Labor Day/i);
+	assert.equal(result.topic_decision.mode, "MODEL_DECIDED");
+	assert.match(result.topic_decision.reason, /Labor Day/i);
 });
 
 test("non-proposal jobs cannot enter the draft publication workflow", async () => {

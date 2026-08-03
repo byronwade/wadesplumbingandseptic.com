@@ -1,13 +1,21 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 57: Fully Autonomous Research and Topic Decisions (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner direction: nothing in the proposal path should be an owner option or unavailable toggle. Eve must research and decide automatically.
+- Correction: standing Production propose auto-enables community browser research with versioned hosts (`COMMUNITY_RESEARCH_DOMAINS`). Proposal runs attach the browser research adapter by default (fixtures may pass `null` only for offline tests). Eve also runs an autonomous model topic decision over viable candidates; score ranking remains fallback only when the model cannot return a valid id. Writer prompts receive decision rationale and research notes.
+- Remaining human boundary: draft PR merge/release only. Eve still cannot write `main`, merge, or deploy.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`129/129` passing). Classification for automatic research/decision wiring is `MOCK_VERIFIED` until the next live Cron draft is reviewed.
+- Next exact action: merge and deploy, run Eve Cron, confirm the draft PR packet shows model topic decision plus automatic demand research without owner env toggles.
+
 ## Phase 56: Automatic Local Demand and Community Timing (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
+- State: READY_FOR_HUMAN_REVIEW / extended by Phase 57. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
 - Correction: Eve proposal selection now merges a versioned local demand calendar (`seo/manifests/local-demand-calendar.json`) and trending local concepts (`seo/manifests/trending-local-concepts.json`) ahead of the evergreen catalog. Active windows cover Independence Day, Labor Day, Thanksgiving, New Year, Watsonville Strawberry Festival, Capitola Art & Wine, Santa Cruz County Fair, Open Studios, rainy season, and summer visitor hosting, plus hard-water, vacation-rental, ADU, and storm-week trend concepts.
-- Runtime: `src/local-demand.mjs` selects lead-window holidays/events and in-month trends offline (`CALENDAR_ONLY`). Optional browser corroboration uses allowlisted community domains (`usa.gov`, Capitola/Watsonville/county fair/art-and-wine hosts) when `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` and those domains are listed in `SEO_AGENT_BROWSER_ALLOWED_DOMAINS`. Public web remains context only: no sponsorship, prices, licensed/insured, or service-area invention.
+- Runtime: demand timing is automatic from versioned manifests. Phase 57 removes the owner browser-research toggle requirement for standing propose.
 - Quality: demand-timed drafts must name the community event/holiday/trend, keep people-first depth gates, and reject fake event affiliation claims.
-- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`127/127` passing), including `local-demand` and demand-timed `proposal` coverage. Classification for calendar/trends is `MOCK_VERIFIED` until a live Cron draft is reviewed; browser corroboration is not claimed live in this phase.
-- Next exact action: merge and deploy with Phase 55, run Eve Cron, and confirm the next draft PR is demand-timed (for example Art & Wine / Labor Day / County Fair in the current August lead window) with community context and full depth gates.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`127/127` passing before Phase 57).
+- Next exact action: complete Phase 57 merge/deploy proof.
 
 ## Phase 55: Blog Generation Quality Rebuild (2026-08-03)
 

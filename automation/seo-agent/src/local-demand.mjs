@@ -228,8 +228,8 @@ export function topicFromTrendEntry(entry) {
 }
 
 /**
- * Optional live corroboration hook. Production Cron can run without this.
- * When browser research is unavailable, returns calendar-only context.
+ * Automatic live corroboration for active calendar/trend entries. When a
+ * browser adapter is absent (offline fixtures), returns calendar-only context.
  */
 export async function gatherLocalDemandResearch({
 	activeEntries = [],
@@ -241,7 +241,7 @@ export async function gatherLocalDemandResearch({
 			classification: "MOCK_VERIFIED",
 			mode: "CALENDAR_ONLY",
 			reason:
-				"No browser research adapter configured; using versioned local demand calendar and trending concepts.",
+				"Browser research adapter unavailable in this runtime; using versioned local demand calendar and trending concepts.",
 			observations: Object.freeze([]),
 		});
 	}

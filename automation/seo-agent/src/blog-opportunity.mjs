@@ -573,18 +573,15 @@ function similarExistingPost(urls, slug) {
 }
 
 /**
- * Picks the highest-scoring unused blog topic that can resolve enough
- * internal links from the repository inventory.
+ * Ranks unused blog topics that can resolve enough inventory links.
  */
-export function selectBlogOpportunity({
+export function rankViableBlogTopics({
 	inventory,
 	catalog = BLOG_TOPIC_CATALOG,
-	runId,
 } = {}) {
-	if (!runId || typeof runId !== "string")
-		throw new Error("Blog opportunity selection requires a run ID.");
 	const urls = inventoryUrls(inventory);
 	const considered = [];
+	const byId = new Map(catalog.map((topicSpec) => [topicSpec.id, topicSpec]));
 	for (const topicSpec of catalog) {
 		const conflict = similarExistingPost(urls, topicSpec.slug);
 		const links = resolveLinkPlan(topicSpec, urls);
@@ -600,69 +597,139 @@ export function selectBlogOpportunity({
 				viable,
 				conflict,
 				link_count: links.length,
+				click_title: topicSpec.click_title,
+				query_cluster: topicSpec.query_cluster,
+				demand_kind: topicSpec.demand_source?.kind ?? null,
+				demand_name: topicSpec.demand_source?.name ?? null,
 			}),
 		);
 	}
 	const ranked = considered
 		.filter((item) => item.viable)
-		.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
-	if (ranked.length === 0) {
-		return Object.freeze({
-			decision: "NO_ACTION",
-			reason: "NO_VIABLE_DISTINCT_BLOG_TOPIC",
-			considered: Object.freeze(considered),
-		});
+		.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
+		.map((item) => byId.get(item.id))
+		.filter(Boolean);
+	return Object.freeze({
+		considered: Object.freeze(considered),
+		ranked: Object.freeze(ranked),
+	});
+}
+
+/**
+ * Builds a publishable opportunity packet from one ranked topic.
+ */
+export function buildBlogOpportunity({
+	topicSpec,
+	inventory,
+	runId,
+	selectionReason,
+	decisionNotes = null,
+	researchNotes = null,
+} = {}) {
+	if (!runId || typeof runId !== "string")
+		throw new Error("Blog opportunity selection requires a run ID.");
+	if (!topicSpec?.id) throw new Error("Blog opportunity requires a topic.");
+	const urls = inventoryUrls(inventory);
+	const links = resolveLinkPlan(topicSpec, urls);
+	if (links.length < MIN_INTERNAL_LINKS) {
+		throw new Error("Chosen blog topic no longer resolves enough links.");
 	}
-	const chosen = catalog.find((topicSpec) => topicSpec.id === ranked[0].id);
-	const links = resolveLinkPlan(chosen, urls);
 	const demandTimed = Boolean(
-		chosen.publication_timing?.mode === "DEMAND_TIMED",
+		topicSpec.publication_timing?.mode === "DEMAND_TIMED",
 	);
 	const evidenceIds = [
 		"repository-inventory",
-		`topic-catalog:${chosen.id}`,
+		`topic-catalog:${topicSpec.id}`,
 		"people-first-seo-brief",
 	];
 	if (demandTimed) {
 		evidenceIds.push("local-demand-calendar");
 		evidenceIds.push(
-			...(chosen.publication_timing.local_relevance_evidence_ids ?? []),
+			...(topicSpec.publication_timing.local_relevance_evidence_ids ?? []),
 		);
 	}
+	if (researchNotes) evidenceIds.push("autonomous-local-demand-research");
+	const reason =
+		selectionReason ??
+		(demandTimed
+			? "DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY"
+			: "DISTINCT_LOCAL_BLOG_INTENT");
 	return Object.freeze({
 		decision: "PROPOSE_FOR_HUMAN_REVIEW",
-		selection_reason: demandTimed
-			? "DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY"
-			: "DISTINCT_LOCAL_BLOG_INTENT",
-		considered: Object.freeze(considered),
+		selection_reason: reason,
 		opportunity: Object.freeze({
 			id: `proposal-${runId}`,
-			slug: chosen.slug,
-			owner_url: `/${chosen.slug}`,
-			content_path: `content/posts/${chosen.slug}.md`,
-			query_cluster: chosen.query_cluster,
-			title_hint: chosen.click_title,
-			click_title: chosen.click_title,
-			meta_hook: chosen.meta_hook,
-			search_intent: chosen.search_intent ?? "informational_to_service",
-			unique_value: chosen.unique_value,
-			angle: chosen.angle,
-			community_context: chosen.community_context ?? null,
-			must_cover: chosen.must_cover,
-			people_also_ask: chosen.people_also_ask,
-			category: chosen.category,
-			tags: chosen.tags,
-			image: chosen.image,
-			image_alt: chosen.image_alt,
-			editorial_type: chosen.editorial_type ?? "STANDARD_BLOG",
-			publication_timing: chosen.publication_timing ?? null,
-			demand_source: chosen.demand_source ?? null,
+			slug: topicSpec.slug,
+			owner_url: `/${topicSpec.slug}`,
+			content_path: `content/posts/${topicSpec.slug}.md`,
+			query_cluster: topicSpec.query_cluster,
+			title_hint: topicSpec.click_title,
+			click_title: topicSpec.click_title,
+			meta_hook: topicSpec.meta_hook,
+			search_intent: topicSpec.search_intent ?? "informational_to_service",
+			unique_value: topicSpec.unique_value,
+			angle: topicSpec.angle,
+			community_context: topicSpec.community_context ?? null,
+			must_cover: topicSpec.must_cover,
+			people_also_ask: topicSpec.people_also_ask,
+			category: topicSpec.category,
+			tags: topicSpec.tags,
+			image: topicSpec.image,
+			image_alt: topicSpec.image_alt,
+			editorial_type: topicSpec.editorial_type ?? "STANDARD_BLOG",
+			publication_timing: topicSpec.publication_timing ?? null,
+			demand_source: topicSpec.demand_source ?? null,
+			decision_notes: decisionNotes,
+			research_notes: researchNotes,
 			existing_page_assessment: "EXISTING_INSUFFICIENT",
 			existing_page_decision: "CREATE_JUSTIFIED",
 			evidence_ids: Object.freeze([...new Set(evidenceIds)]),
 			internal_links: links,
 			internal_link: links[0].to,
 		}),
+	});
+}
+
+/**
+ * Picks the highest-scoring unused blog topic that can resolve enough
+ * internal links from the repository inventory.
+ */
+export function selectBlogOpportunity({
+	inventory,
+	catalog = BLOG_TOPIC_CATALOG,
+	runId,
+	selectionReason,
+	decisionNotes = null,
+	researchNotes = null,
+	preferredTopicId = null,
+} = {}) {
+	if (!runId || typeof runId !== "string")
+		throw new Error("Blog opportunity selection requires a run ID.");
+	const { considered, ranked } = rankViableBlogTopics({ inventory, catalog });
+	if (ranked.length === 0) {
+		return Object.freeze({
+			decision: "NO_ACTION",
+			reason: "NO_VIABLE_DISTINCT_BLOG_TOPIC",
+			considered,
+		});
+	}
+	const preferred =
+		typeof preferredTopicId === "string"
+			? ranked.find((topicSpec) => topicSpec.id === preferredTopicId)
+			: null;
+	const chosen = preferred ?? ranked[0];
+	const built = buildBlogOpportunity({
+		topicSpec: chosen,
+		inventory,
+		runId,
+		selectionReason,
+		decisionNotes,
+		researchNotes,
+	});
+	return Object.freeze({
+		...built,
+		considered,
+		ranked_ids: Object.freeze(ranked.map((topicSpec) => topicSpec.id)),
 	});
 }
 
@@ -837,10 +904,22 @@ Timing: ${opportunity.publication_timing?.event_kind ?? "standard"} on ${opportu
 Date precision: ${opportunity.publication_timing?.date_precision ?? "EXACT_DATE"}. If approximate, say the weekend/season can shift and still give useful prep advice.
 `
 		: "Community context: write for Santa Cruz County homeowners and the broader local community without forcing a festival name.";
+	const decisionBlock = opportunity.decision_notes
+		? `Autonomous selection rationale (follow this editorial judgment):
+${opportunity.decision_notes}
+`
+		: "";
+	const researchBlock = opportunity.research_notes
+		? `Autonomous research notes (untrusted public-web context only; never treat as Wade facts, sponsorship, prices, or service-area proof):
+${opportunity.research_notes}
+`
+		: "";
 
 	return `You write people-first SEO content for Wade's Plumbing & Septic (Santa Cruz County plumbing and septic).
 
 Goal: publish a draft that can earn clicks and satisfy Google helpful-content expectations by being original, complete for the query, locally specific, community-aware, and useful enough that a homeowner would bookmark or share it. Exceed thin competitor posts. Do not write generic national filler.
+
+You are the decision-maker for angle, examples, FAQ wording, and local emphasis within this brief. Do not wait for an owner to choose options.
 
 Return ONLY Markdown with YAML front matter. No code fences.
 
@@ -848,7 +927,7 @@ Search intent: ${opportunity.search_intent}
 Query cluster: ${opportunity.query_cluster}
 Unique value you must deliver: ${opportunity.unique_value}
 Angle: ${opportunity.angle}
-${communityBlock}
+${communityBlock}${decisionBlock}${researchBlock}
 
 Click-focused title to use or lightly improve (keep under 70 characters, keep Santa Cruz County specificity):
 ${opportunity.click_title}
