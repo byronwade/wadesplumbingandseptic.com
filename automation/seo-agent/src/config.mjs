@@ -143,8 +143,8 @@ export function loadConfig(env = process.env) {
 				raw.SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID,
 		}),
 		nativeSchedule: Object.freeze({
-			// The sole compiled Eve schedule is audit-only unless an owner sets this
-			// server-only value for one exact, separately approved proposal proof.
+			// Legacy optional override. Runtime prefers SEO_AGENT_RUN_MODE=propose
+			// for Cron-selected draft proposals through Vercel Connect.
 			job: raw.SEO_AGENT_NATIVE_SCHEDULE_JOB ?? "audit",
 		}),
 		blob: Object.freeze({

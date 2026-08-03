@@ -30,7 +30,7 @@ function packet(
 		instruction:
 			descriptor.job === "audit"
 				? "Use the orchestrate tool exactly once with job audit. It may only perform this read-only audit and must return a truthful blocked record when a dependency is unavailable."
-				: "Use the orchestrate tool exactly once with job proposal. It may create at most one explicitly approved draft PR and must never merge, deploy, or write main.",
+				: "Use the orchestrate tool exactly once with job proposal. Research, write one bounded post, and open at most one draft PR through Vercel Connect GitHub. Never merge, deploy, or write main.",
 	});
 }
 
@@ -91,9 +91,10 @@ export default defineChannel({
 	async receive(input, { send }) {
 		const settings = loadRuntimeSettings();
 		const config = loadConfig();
-		const nativeScheduleJob = config.nativeSchedule.job;
-		if (nativeScheduleJob !== "audit" && nativeScheduleJob !== "proposal")
-			throw new Error("Native schedule job configuration is invalid.");
+		// Observe Cron stays audit-only. Propose mode uses the same Monday Cron
+		// to research and open one draft PR through Vercel Connect GitHub.
+		const nativeScheduleJob =
+			settings.mode === "propose" ? "proposal" : "audit";
 		const descriptor = createNativeScheduleDescriptor({
 			source:
 				typeof input.target?.source === "string"

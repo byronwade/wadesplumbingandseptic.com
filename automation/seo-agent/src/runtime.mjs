@@ -112,9 +112,8 @@ export function createRunDescriptor({ job, now = new Date() } = {}) {
 }
 
 /**
- * Accept only the single compiled Eve schedule target. Its server-only job
- * selection is audit by default; the proposal setting is meaningful only when
- * the exact proposal authorization gate passes before session creation.
+ * Accept only the single compiled Eve schedule target. Observe mode selects
+ * audit. Propose mode selects the Connect-backed draft proposal job.
  * @param {{ source?: string, job?: "audit" | "proposal", now?: Date }} input
  */
 export function createNativeScheduleDescriptor({
@@ -519,9 +518,10 @@ export function planRun({ descriptor, settings, recordedRunIds = [] }) {
 }
 
 /**
- * A proposal is never a standing cron capability. The protected dispatcher may
- * start it only for an exact, human-approved run ID while the runtime is in
- * propose mode and the mutation kill switch is deliberately off.
+ * Standing draft-proposal gate. Cron may research and open one draft PR through
+ * Vercel Connect GitHub when propose mode is on, mutation is enabled, the kill
+ * switch is off, and the GitHub adapter is enabled. It never merges, deploys,
+ * force-pushes, or writes main.
  */
 export function assertProposalRunAuthorization({
 	descriptor,
@@ -542,22 +542,24 @@ export function assertProposalRunAuthorization({
 			{ status: 409 },
 		);
 	}
-	const publishing = config?.publishing;
-	const proposalDate = descriptor.runId.slice("proposal-".length);
-	const auditRunId = publishing?.preconditionAuditRunId;
-	const auditDate = auditRunId?.slice("audit-".length);
-	if (
-		publishing?.mutationMode !== "enabled" ||
-		settings?.mutationKillSwitch !== false ||
-		publishing?.humanApproved !== true ||
-		publishing?.integrationTestEnabled !== true ||
-		publishing?.approvedRunId !== descriptor.runId ||
-		!/^audit-\d{4}-\d{2}-\d{2}$/.test(auditRunId ?? "") ||
-		auditDate > proposalDate
-	) {
+	if (config?.publishing?.mutationMode !== "enabled") {
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
-			"Proposal execution requires an exact approval and a reviewed prior audit run.",
+			"Proposal execution requires SEO_AGENT_MUTATION_MODE=enabled.",
+			{ status: 409 },
+		);
+	}
+	if (settings?.mutationKillSwitch !== false) {
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
+			"Proposal execution requires SEO_AGENT_MUTATION_KILL_SWITCH=false.",
+			{ status: 409 },
+		);
+	}
+	if (config?.integrationFlags?.github !== true) {
+		throw new RuntimeError(
+			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
+			"Proposal execution requires SEO_AGENT_ENABLE_GITHUB=true so Vercel Connect can open the draft PR.",
 			{ status: 409 },
 		);
 	}

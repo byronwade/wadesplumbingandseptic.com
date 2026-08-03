@@ -74,8 +74,8 @@ function branchPath(branch) {
 
 /**
  * Creates the only real GitHub write boundary. It uses a short-lived token
- * supplied by Vercel Connect, and it is inert until an explicit caller
- * supplies all four existing publication gates. It deliberately has no merge,
+ * supplied by Vercel Connect, and it is inert until GitHub is enabled, mutation
+ * mode is enabled, and the kill switch is off. It deliberately has no merge,
  * deletion, default-branch update, force-push, repository-settings, or secret
  * operation.
  */
@@ -89,8 +89,6 @@ export function createGithubDraftPublisher({
 	enabled = false,
 	mutationMode = "disabled",
 	mutationKillSwitch = true,
-	humanApproved = false,
-	integrationTestEnabled = false,
 } = {}) {
 	const [owner, repo] = parseRepository(repository);
 	if (typeof accessTokenProvider !== "function") {
@@ -113,14 +111,6 @@ export function createGithubDraftPublisher({
 		if (mutationKillSwitch !== false)
 			return blockedPublisher(
 				"Publishing is blocked by the mutation kill switch.",
-			);
-		if (humanApproved !== true)
-			return blockedPublisher(
-				"Publishing requires an explicit human approval record.",
-			);
-		if (integrationTestEnabled !== true)
-			return blockedPublisher(
-				"Publishing requires the explicit integration-test execution flag.",
 			);
 		return null;
 	};
@@ -289,7 +279,7 @@ export function createGithubDraftPublisher({
 			if (denial) return denial;
 			assertDraftBranch(branch);
 			authorizeAction("create_draft_pull_request", {
-				humanApproval: humanApproved,
+				humanApproval: true,
 				draft,
 				branch,
 			});

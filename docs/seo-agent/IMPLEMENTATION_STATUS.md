@@ -1,13 +1,20 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 51: Standing Cron → Connect Draft PR Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner direction: stop the one-time run-ID / Vercel CLI gate circus. Eve should research on Cron and open the draft PR with Vercel Connect GitHub.
+- Changed scope: proposal authorization now requires only `SEO_AGENT_RUN_MODE=propose`, `SEO_AGENT_MUTATION_MODE=enabled`, `SEO_AGENT_MUTATION_KILL_SWITCH=false`, and `SEO_AGENT_ENABLE_GITHUB=true`. The native Monday Cron selects `proposal` automatically in propose mode and `audit` in observe mode. The GitHub publisher still uses only a short-lived Vercel Connect draft-write token and still cannot merge, deploy, force-push, or write `main`.
+- Removed from the live path: exact `SEO_AGENT_PUBLISHING_APPROVED_RUN_ID`, precondition audit run ID, publishing human-approval flag, integration-test flag, and `SEO_AGENT_NATIVE_SCHEDULE_JOB=proposal` as the primary selector.
+- Verification: run sidecar `test` for proposal/publisher regressions, then `npm run verify:all` before merge.
+- Next exact action: merge and deploy this branch, set the four Production values above in the Vercel project UI, run the Eve Cron (dashboard Run or Monday schedule), and confirm one `eve/seo/YYYY-MM-DD-<slug>` draft PR from Connect.
+
 ## Phase 50: Owner-Directed Merge and Live Proposal Gate (2026-08-03)
 
-- State: `BLOCKED_MISSING_CREDENTIALS` for the live proposal Cron only. Merge and Production deploy are complete.
-- Owner direction: agent process rules no longer treat merge, deploy, Cron, or live proofs as refusals. `AGENTS.md` and `.agents/skills/wades-eve-seo-agent/SKILL.md` now treat those as normal Eve delivery steps. Eve runtime typed approvals, kill switch, and draft-only publisher remain in force.
+- State: superseded by Phase 51 for the draft-PR path. Merge and Production deploy of the snapshot repair remain complete.
 - Merge: PR [#96](https://github.com/byronwade/wadesplumbingandseptic.com/pull/96) was squash-merged at `2026-08-03T01:46:05Z` as commit `9bb3be55ba3a0da81ae9cc637f7c76fa9982a9d8`.
 - Production deploy: GitHub Vercel status reached `Deployment has completed` for that commit as Production deployment `5719740753`. Public health/readiness still report `mode: observe`, `ready: true`, `configured_unverified`, and `mutation_kill_switch: true`.
-- Live proposal attempt: blocked because this cloud agent has no Vercel credentials. Vercel MCP reports `needsAuth` and interactive MCP auth is desktop-only. `npx vercel` has no stored token and only starts a device-login flow. Without Production env write + `vercel crons run`, no draft content PR can be created from here.
-- Next exact action: authenticate Vercel for this agent (Cursor desktop Vercel MCP, or inject a scoped `VERCEL_TOKEN`), then set the one-time Production proposal gates for `proposal-2026-08-03` with a reviewed `audit-YYYY-MM-DD` precondition, invoke the native Cron once, confirm one `eve/seo/2026-08-03-<slug>` draft PR, and restore observe-only controls.
+- Correction: asking this cloud agent for Vercel MCP/CLI auth was the wrong handoff. Connect GitHub already posts the draft PR from the Eve runtime after Cron research once Production is in propose mode.
+- Next exact action: complete Phase 51.
 
 ## Phase 49: Vercel Eve Server Snapshot Bundle Path Repair (2026-08-03)
 

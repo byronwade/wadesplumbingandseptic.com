@@ -15,7 +15,7 @@ description: Govern phased work on Wade's backend-only Eve SEO and content-opera
 8. Build query-to-page ownership and link-graph evidence before drafting. Improve an existing canonical page before proposing a new URL.
 9. Reject doorway pages, stuffing, unsupported service-area/business claims, fake reviews/jobs, and unsafe advice. Require fact checking and independent QA for every content proposal.
 10. Run deterministic offline checks and evaluation fixtures for every change. Never weaken, skip, or rewrite tests to obtain a pass.
-11. Prefer draft PRs and the guarded publishing path. Use the one-time proposal gates for live blog proofs; restore observe-only Production controls afterward.
+11. Prefer draft PRs through Vercel Connect GitHub after Cron research. Standing propose mode plus mutation enabled and kill switch off is enough; restore observe-only controls when audit-only Cron is desired again.
 12. Update `docs/seo-agent/IMPLEMENTATION_STATUS.md` after every phase with commands, exit codes, durations, evidence, classifications, failures, blockers, and the next exact action.
 13. Run `npm run verify:all` from a clean worktree and retain its generated evidence. Run `npm run verify:completion` before final completion; evidence is stale after tracked files change.
 14. The enabled Stop hook may only emit a bounded continuation when caller-supplied active-state JSON says the goal is active and completion verification fails. It must not write files, create work, or retry checks.

@@ -363,8 +363,6 @@ test("GitHub publisher stays inert by default and only writes one guarded draft 
 		enabled: true,
 		mutationMode: "enabled",
 		mutationKillSwitch: false,
-		humanApproved: true,
-		integrationTestEnabled: true,
 		fetchImpl: async (url, init) => {
 			requests.push({ url: String(url), init });
 			assert.equal(init.headers.authorization, "Bearer fixture-connect-token");
@@ -443,8 +441,6 @@ test("GitHub publisher creates a draft branch from the current main SHA without 
 		enabled: true,
 		mutationMode: "enabled",
 		mutationKillSwitch: false,
-		humanApproved: true,
-		integrationTestEnabled: true,
 		fetchImpl: async (url, init) => {
 			requests.push({ url: String(url), init });
 			if (init.method === "GET") return jsonResponse({ object: { sha } });

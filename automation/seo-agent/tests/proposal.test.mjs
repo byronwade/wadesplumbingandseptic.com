@@ -12,17 +12,13 @@ const env = Object.freeze({
 	CRON_SECRET: "this-is-a-long-fixture-cron-secret-value",
 });
 
-function config(runId) {
+function config() {
 	return {
 		repository: "byronwade/wadesplumbingandseptic.com",
 		githubConnectorId: "github/wadesplumbingandseptic-com",
 		integrationFlags: { github: true },
 		publishing: {
 			mutationMode: "enabled",
-			humanApproved: true,
-			integrationTestEnabled: true,
-			approvedRunId: runId,
-			preconditionAuditRunId: "audit-2026-08-01",
 		},
 	};
 }
@@ -109,7 +105,7 @@ function publisherFactory(calls) {
 	});
 }
 
-test("proposal runs only with one exact approval and opens one draft PR", async () => {
+test("proposal opens one Connect-backed draft PR when propose mode is armed", async () => {
 	const descriptor = createRunDescriptor({
 		job: "proposal",
 		now: new Date("2026-08-01T12:00:00.000Z"),
@@ -118,7 +114,7 @@ test("proposal runs only with one exact approval and opens one draft PR", async 
 	const result = await executeDraftProposal({
 		descriptor,
 		settings: loadRuntimeSettings(env),
-		config: config(descriptor.runId),
+		config: config(),
 		repoRoot,
 		writer: async (input) => ({
 			markdown: draft(input),
@@ -142,7 +138,7 @@ test("proposal runs only with one exact approval and opens one draft PR", async 
 	);
 });
 
-test("proposal cannot write when the exact approval is absent or QA rejects", async () => {
+test("proposal cannot write when GitHub Connect is disabled, mutation is off, or QA rejects", async () => {
 	const descriptor = createRunDescriptor({
 		job: "proposal",
 		now: new Date("2026-08-01T12:00:00.000Z"),
@@ -152,10 +148,13 @@ test("proposal cannot write when the exact approval is absent or QA rejects", as
 			executeDraftProposal({
 				descriptor,
 				settings: loadRuntimeSettings(env),
-				config: config("proposal-2026-08-02"),
+				config: {
+					...config(),
+					integrationFlags: { github: false },
+				},
 				repoRoot,
 			}),
-		/exact approval and a reviewed prior audit run/,
+		/SEO_AGENT_ENABLE_GITHUB=true/,
 	);
 	await assert.rejects(
 		() =>
@@ -163,37 +162,31 @@ test("proposal cannot write when the exact approval is absent or QA rejects", as
 				descriptor,
 				settings: loadRuntimeSettings(env),
 				config: {
-					...config(descriptor.runId),
-					publishing: {
-						...config(descriptor.runId).publishing,
-						preconditionAuditRunId: undefined,
-					},
+					...config(),
+					publishing: { mutationMode: "disabled" },
 				},
 				repoRoot,
 			}),
-		/exact approval and a reviewed prior audit run/,
+		/SEO_AGENT_MUTATION_MODE=enabled/,
 	);
 	await assert.rejects(
 		() =>
 			executeDraftProposal({
 				descriptor,
-				settings: loadRuntimeSettings(env),
-				config: {
-					...config(descriptor.runId),
-					publishing: {
-						...config(descriptor.runId).publishing,
-						preconditionAuditRunId: "audit-2026-08-02",
-					},
-				},
+				settings: loadRuntimeSettings({
+					...env,
+					SEO_AGENT_MUTATION_KILL_SWITCH: "true",
+				}),
+				config: config(),
 				repoRoot,
 			}),
-		/exact approval and a reviewed prior audit run/,
+		/SEO_AGENT_MUTATION_KILL_SWITCH=false/,
 	);
 	const calls = [];
 	const result = await executeDraftProposal({
 		descriptor,
 		settings: loadRuntimeSettings(env),
-		config: config(descriptor.runId),
+		config: config(),
 		repoRoot,
 		writer: async (input) => ({
 			markdown: draft(input),
