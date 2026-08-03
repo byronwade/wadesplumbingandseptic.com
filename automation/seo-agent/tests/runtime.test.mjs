@@ -25,6 +25,7 @@ import { createIntegrationRegistry } from "../src/adapters.mjs";
 
 const productionEnv = Object.freeze({
 	SEO_AGENT_ENV: "production",
+	SEO_AGENT_FORCE_OBSERVE: "true",
 	SEO_AGENT_RUN_MODE: "observe",
 	SEO_AGENT_MUTATION_KILL_SWITCH: "true",
 	CRON_SECRET: "this-is-a-long-fixture-cron-secret-value",
@@ -35,6 +36,20 @@ function cronRequest(path = "/api/cron", secret = productionEnv.CRON_SECRET) {
 		headers: secret ? { authorization: `Bearer ${secret}` } : {},
 	});
 }
+
+test("Vercel Production stands in propose mode for Connect draft PRs unless force-observe is set", () => {
+	const armed = loadRuntimeSettings({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_RUN_MODE: "observe",
+		SEO_AGENT_MUTATION_KILL_SWITCH: "true",
+		CRON_SECRET: productionEnv.CRON_SECRET,
+	});
+	assert.equal(armed.mode, "propose");
+	assert.equal(armed.mutationKillSwitch, false);
+	const observe = loadRuntimeSettings(productionEnv);
+	assert.equal(observe.mode, "observe");
+	assert.equal(observe.mutationKillSwitch, true);
+});
 
 test("cron authentication is timing-safe in behavior and rejects malformed requests", async () => {
 	assert.equal(

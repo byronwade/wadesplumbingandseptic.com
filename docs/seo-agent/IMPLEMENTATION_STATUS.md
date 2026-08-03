@@ -1,5 +1,11 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 52: Arm Production Propose Without Dashboard Token (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / merge. PR #98 is on `main` and Production-deployed, but this cloud agent still cannot write Vercel project env (MCP `needsAuth`, no `VERCEL_TOKEN`, device login needs owner GitHub session).
+- Correction: Vercel Production now stands in propose mode in code (`VERCEL_ENV=production` or `SEO_AGENT_ENV=production`) so Cron → Connect draft PRs are armed even when stale dashboard values still say observe / kill-switch true. Set `SEO_AGENT_FORCE_OBSERVE=true` to restore audit-only Cron.
+- Next exact action: merge this arming change to `main`, confirm Production health reports `mode: propose` and `mutation_kill_switch: false`, then run the Eve Cron (dashboard Run or Monday schedule) and confirm one `eve/seo/...` draft PR.
+
 ## Phase 51: Standing Cron → Connect Draft PR Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner direction: stop the one-time run-ID / Vercel CLI gate circus. Eve should research on Cron and open the draft PR with Vercel Connect GitHub.

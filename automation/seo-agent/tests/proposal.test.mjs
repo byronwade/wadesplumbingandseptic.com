@@ -7,6 +7,9 @@ import { createRunDescriptor, loadRuntimeSettings } from "../src/runtime.mjs";
 const repoRoot = resolve(import.meta.dirname, "../../..");
 const env = Object.freeze({
 	SEO_AGENT_ENV: "production",
+	// Keep explicit env control for gate tests; standing Production propose is
+	// covered in runtime tests.
+	SEO_AGENT_FORCE_OBSERVE: "true",
 	SEO_AGENT_RUN_MODE: "propose",
 	SEO_AGENT_MUTATION_KILL_SWITCH: "false",
 	CRON_SECRET: "this-is-a-long-fixture-cron-secret-value",
