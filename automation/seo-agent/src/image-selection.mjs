@@ -553,6 +553,14 @@ export function rankExternalImageCandidates({
 			if (tradeTopic && artNoise.length > 0) score -= artNoise.length * 4;
 			if (tradeTopic && providerClass === "museum" && tradeHits.length === 0)
 				score -= 6;
+			if (
+				Number.isInteger(candidate.width) &&
+				Number.isInteger(candidate.height) &&
+				candidate.width >= 1000 &&
+				candidate.height >= 600
+			) {
+				score += 1;
+			}
 			return Object.freeze({
 				...candidate,
 				provider_class: providerClass,
@@ -566,11 +574,29 @@ export function rankExternalImageCandidates({
 			});
 		})
 		.filter((candidate) => candidate.relevance_score >= INLINE_MIN_SCORE)
-		.sort((left, right) => right.relevance_score - left.relevance_score)
-		.slice(0, limit);
+		.sort((left, right) => right.relevance_score - left.relevance_score);
+	// Prefer provider diversity in the shortlist so one API does not dominate.
+	const diversified = [];
+	const deferred = [];
+	const providerCounts = new Map();
+	for (const candidate of ranked) {
+		const key = candidate.provider ?? "unknown";
+		const count = providerCounts.get(key) ?? 0;
+		if (count >= 2) {
+			deferred.push(candidate);
+			continue;
+		}
+		providerCounts.set(key, count + 1);
+		diversified.push(candidate);
+		if (diversified.length >= limit) break;
+	}
+	for (const candidate of deferred) {
+		if (diversified.length >= limit) break;
+		diversified.push(candidate);
+	}
 	return Object.freeze({
-		classification: ranked.length > 0 ? "MOCK_VERIFIED" : "FAILED",
-		candidates: Object.freeze(ranked),
+		classification: diversified.length > 0 ? "MOCK_VERIFIED" : "FAILED",
+		candidates: Object.freeze(diversified.slice(0, limit)),
 		publication_permitted: false,
 	});
 }

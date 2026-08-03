@@ -226,8 +226,15 @@ export function createImageResearchAdapter({
 			});
 		},
 
-		async searchForOpportunity({ opportunity, limit = 16 } = {}) {
-			const queries = buildImageSearchQueries(opportunity, { maxQueries: 3 });
+		async searchForOpportunity({
+			opportunity,
+			limit = 16,
+			extraTerms = [],
+		} = {}) {
+			const queries = buildImageSearchQueries(opportunity, {
+				maxQueries: 3,
+				extraTerms,
+			});
 			const perQueryLimit = Math.max(4, Math.ceil(limit / queries.length));
 			const seen = new Set();
 			const merged = [];

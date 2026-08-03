@@ -9,6 +9,7 @@ import {
 } from "../src/image-providers-open.mjs";
 import { createConfiguredImageResearchAdapter } from "../src/image-research.mjs";
 import {
+	createGrokipediaResearchClient,
 	createNominatimResearchClient,
 	createOpenResearchAdapter,
 	createWikidataResearchClient,
@@ -303,4 +304,142 @@ test("Wikidata and Nominatim open research stay soft-context only", async () => 
 	const blocked = await open.probe({ runId: "open-research-fixture" });
 	assert.equal(blocked.classification, "BLOCKED_MISSING_CREDENTIALS");
 	assert.match(blocked.payload.next_action, /MANUAL_SETUP/);
+});
+
+test("Grokipedia research uses public HTML only and demotes entertainment noise", async () => {
+	const urls = [];
+	const client = createGrokipediaResearchClient({
+		async fetchImpl(url) {
+			const href = String(url);
+			urls.push(href);
+			assert.equal(href.includes("/api/"), false);
+			if (href.includes("/search?")) {
+				return {
+					ok: true,
+					async text() {
+						return `
+<a href="/page/Septic_tank" data-slug="Septic_tank" data-search-result-link="true" data-search-snippet="septic tank is an underground watertight vessel for wastewater and plumbing">
+  <span class="min-w-0 truncate text-sm font-medium text-fg-primary">Septic tank</span>
+</a>
+<a href="/page/The_Woman_in_the_Septic_Tank" data-slug="The_Woman_in_the_Septic_Tank" data-search-result-link="true" data-search-snippet="Filipino comedy film satire about septic tank">
+  <span class="min-w-0 truncate text-sm font-medium text-fg-primary">The Woman in the Septic Tank</span>
+</a>
+<a href="/page/Septic_drain_field" data-slug="Septic_drain_field" data-search-result-link="true" data-search-snippet="drain field for onsite wastewater treatment and residential septic plumbing">
+  <span class="min-w-0 truncate text-sm font-medium text-fg-primary">Septic drain field</span>
+</a>`;
+					},
+				};
+			}
+			if (href.includes("/page/Septic_tank")) {
+				return {
+					ok: true,
+					async text() {
+						return `<html><head>
+<meta property="og:title" content="Septic tank - Grokipedia">
+<meta property="og:description" content="A septic tank is an underground vessel for domestic wastewater.">
+</head></html>`;
+					},
+				};
+			}
+			return {
+				ok: true,
+				async text() {
+					return "<html></html>";
+				},
+			};
+		},
+	});
+	const result = await client.search({
+		query: "septic tank plumbing",
+		limit: 4,
+		opportunity: {
+			query_cluster: "septic tank maintenance",
+			tags: ["septic", "plumbing"],
+		},
+	});
+	assert.equal(result.classification, "MOCK_VERIFIED");
+	assert.equal(result.api_used, false);
+	assert.equal(result.transport, "public_html");
+	assert.ok(result.results.length >= 1);
+	assert.equal(result.results[0].usage, "TOPIC_VOCABULARY_LEAD_ONLY");
+	assert.ok(
+		result.results.every(
+			(item) => !/woman in the septic|comedy film/i.test(item.label),
+		),
+	);
+	assert.ok(urls.every((href) => !href.includes("/api/")));
+	assert.ok(urls.some((href) => href.includes("grokipedia.com/search")));
+});
+
+test("open research adapter includes Grokipedia when enabled", async () => {
+	const adapter = createOpenResearchAdapter({
+		enabled: true,
+		grokipediaEnabled: true,
+		async fetchImpl(url) {
+			const href = String(url);
+			if (href.includes("wikidata.org")) {
+				return {
+					ok: true,
+					async json() {
+						return {
+							search: [
+								{
+									id: "Q386300",
+									label: "septic tank",
+									description: "wastewater vessel",
+									concepturi: "https://www.wikidata.org/entity/Q386300",
+								},
+							],
+						};
+					},
+				};
+			}
+			if (href.includes("nominatim")) {
+				return {
+					ok: true,
+					async json() {
+						return [
+							{
+								place_id: 1,
+								osm_type: "relation",
+								osm_id: 1,
+								display_name: "Santa Cruz County, California, United States",
+								lat: "37",
+								lon: "-122",
+							},
+						];
+					},
+				};
+			}
+			if (href.includes("grokipedia.com/search")) {
+				return {
+					ok: true,
+					async text() {
+						return `<a href="/page/Plumbing" data-slug="Plumbing" data-search-snippet="plumbing pipes wastewater residential systems"><span class="text-fg-primary">Plumbing</span></a>`;
+					},
+				};
+			}
+			if (href.includes("grokipedia.com/page/")) {
+				return {
+					ok: true,
+					async text() {
+						return `<meta property="og:title" content="Plumbing - Grokipedia"><meta name="description" content="Plumbing conveys water and wastewater.">`;
+					},
+				};
+			}
+			throw new Error(`Unexpected URL ${href}`);
+		},
+	});
+	const researched = await adapter.researchOpportunity({
+		opportunity: {
+			query_cluster: "plumbing inspection",
+			tags: ["plumbing"],
+		},
+	});
+	assert.equal(researched.classification, "MOCK_VERIFIED");
+	assert.equal(researched.publication_permitted, false);
+	assert.ok((researched.grokipedia?.results ?? []).length >= 1);
+	const probe = await adapter.probe({ runId: "grokipedia-fixture" });
+	assert.match(probe.scope, /grokipedia/);
+	assert.equal(probe.payload.grokipedia_transport, "public_html");
 });

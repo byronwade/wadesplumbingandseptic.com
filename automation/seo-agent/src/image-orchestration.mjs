@@ -56,9 +56,11 @@ export async function collectProposalMediaContext({
 		throw new Error("collectProposalMediaContext requires an opportunity.");
 
 	let openResearchSummary = null;
+	let researchExtraTerms = [];
 	if (config?.integrationFlags?.openResearch === true) {
 		const openResearch = createOpenResearchAdapter({
 			enabled: true,
+			grokipediaEnabled: config?.integrationFlags?.grokipedia !== false,
 			budget,
 			fetchImpl,
 		});
@@ -66,20 +68,36 @@ export async function collectProposalMediaContext({
 			const researchedOpen = await openResearch.researchOpportunity({
 				opportunity,
 			});
+			const grokipediaLabels = (researchedOpen.grokipedia?.results ?? [])
+				.slice(0, 3)
+				.map((item) => item.label)
+				.filter(Boolean);
+			researchExtraTerms = grokipediaLabels
+				.flatMap((label) =>
+					String(label)
+						.toLowerCase()
+						.split(/[^a-z0-9]+/g)
+						.filter((token) => token.length >= 4),
+				)
+				.slice(0, 4);
 			openResearchSummary = Object.freeze({
 				classification: researchedOpen.classification,
 				wikidata_count: researchedOpen.wikidata?.results?.length ?? 0,
 				nominatim_count: researchedOpen.nominatim?.results?.length ?? 0,
+				grokipedia_count: researchedOpen.grokipedia?.results?.length ?? 0,
 				wikidata_labels: Object.freeze(
 					(researchedOpen.wikidata?.results ?? [])
 						.slice(0, 3)
 						.map((item) => item.label),
 				),
+				grokipedia_labels: Object.freeze(grokipediaLabels),
 				place_names: Object.freeze(
 					(researchedOpen.nominatim?.results ?? [])
 						.slice(0, 2)
 						.map((item) => item.display_name),
 				),
+				grokipedia_transport:
+					researchedOpen.grokipedia?.transport ?? "public_html",
 			});
 		} catch (error) {
 			openResearchSummary = Object.freeze({
@@ -108,6 +126,7 @@ export async function collectProposalMediaContext({
 		const researched = await imageResearch.searchForOpportunity({
 			opportunity,
 			limit: 20,
+			extraTerms: researchExtraTerms,
 		});
 		onlineResearchSummary = Object.freeze({
 			classification: researched.classification,

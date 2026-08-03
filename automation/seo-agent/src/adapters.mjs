@@ -1730,6 +1730,7 @@ export function createIntegrationRegistry({
 		}),
 		open_research: createOpenResearchAdapter({
 			enabled: flags.openResearch === true,
+			grokipediaEnabled: flags.grokipedia === true,
 			fetchImpl,
 			budget,
 		}),

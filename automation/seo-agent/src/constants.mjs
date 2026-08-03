@@ -154,6 +154,8 @@ export const DEFAULT_BUDGETS = Object.freeze({
 		"nominatim.openstreetmap.org",
 		"www.openstreetmap.org",
 		"openstreetmap.org",
+		"grokipedia.com",
+		"www.grokipedia.com",
 		"www.usa.gov",
 		"www.cityofcapitola.org",
 		"capitolaartandwine.com",

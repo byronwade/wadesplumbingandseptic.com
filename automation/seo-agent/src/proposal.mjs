@@ -475,7 +475,7 @@ Search queries used: ${queries.length > 0 ? queries.map((query) => `\`${query}\`
 Staged draft asset files: ${stagedCount}
 Open research soft context (never Wade facts alone): ${
 		imagePackage.open_research
-			? `${imagePackage.open_research.classification}; Wikidata leads: ${(imagePackage.open_research.wikidata_labels ?? []).join(", ") || "none"}; places: ${(imagePackage.open_research.place_names ?? []).join("; ") || "none"}`
+			? `${imagePackage.open_research.classification}; Wikidata leads: ${(imagePackage.open_research.wikidata_labels ?? []).join(", ") || "none"}; Grokipedia leads: ${(imagePackage.open_research.grokipedia_labels ?? []).join(", ") || "none"}; places: ${(imagePackage.open_research.place_names ?? []).join("; ") || "none"}`
 			: "not collected"
 	}
 Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); prefer stock/commons over museum art for trade topics; staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;

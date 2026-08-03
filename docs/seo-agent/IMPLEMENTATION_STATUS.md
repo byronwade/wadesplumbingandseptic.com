@@ -1,12 +1,20 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 82: Grokipedia Soft Research + Media Ranking Polish (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` on the Task 14 media + open-research path.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: added xAI Grokipedia soft research via robots-allowed public HTML only (`/search`, `/page/*`; never `/api/*`); trade-relevance filter demotes entertainment/noise leads; Grokipedia labels enrich image search queries; ranking adds resolution boost + provider diversity in the shortlist; PR brief surfaces Grokipedia leads as soft context.
+- Evidence truth: fixture/`MOCK_VERIFIED` only. Not a live Production propose observation. Not a Grokipedia official developer API partnership.
+- Commands: sidecar `npm test` → `211/211` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
+- Next exact action: human review of draft PR `#123`; optional `SEO_AGENT_ENABLE_GROKIPEDIA=false` if owner wants Wikidata/Nominatim only; keep treating Grokipedia as untrusted encyclopedia context.
+
 ## Phase 81: Image Orchestration Refinement (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` refinements on the Task 14 media path.
+- State: SUPERSEDED by Phase 82 Grokipedia + ranking polish.
 - Branch/PR: `cursor/eve-image-sourcing-aab8`.
-- Offline: parallel provider fan-out with round-robin merge; multi-query search variants; trade-aware ranking that prefers stock/commons and demotes museum art noise for plumbing topics; `image-orchestration.mjs` centralizes propose-side media collection; stages up to two online illustration candidates; PR brief adds attribution, provider class, and query list.
-- Commands: sidecar `npm test` → `209/209` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
-- Next exact action: merge/deploy; add optional stock keys; enable AI line-art only after review; confirm propose Images section shows diversified queries and attribution.
+- Offline: parallel provider fan-out with round-robin merge; multi-query search variants; trade-aware ranking; `image-orchestration.mjs` centralizes propose-side media collection.
+- Next exact action: SUPERSEDED by Phase 82.
 
 ## Phase 80: Expanded Open Image + Research APIs (2026-08-03)
 

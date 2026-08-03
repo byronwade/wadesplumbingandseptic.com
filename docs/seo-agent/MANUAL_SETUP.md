@@ -29,7 +29,14 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 
 ## Next: Online image sourcing + open research APIs
 
-Eve prefers first-party `public/images` when a work/service photo clearly matches the topic. When that fails, standing Production propose sources license-safe online assets from many open APIs and can stage winners into `public/images/sourced/<slug>/` with provenance. Soft open-research helpers (Wikidata, OpenStreetMap Nominatim) add topic/place context only. Brand, partner, team, and logo assets still cannot be featured.
+Eve prefers first-party `public/images` when a work/service photo clearly matches the topic. When that fails, standing Production propose sources license-safe online assets from many open APIs and can stage winners into `public/images/sourced/<slug>/` with provenance. Soft open-research helpers (Wikidata, OpenStreetMap Nominatim, and xAI Grokipedia) add topic/place context only. Brand, partner, team, and logo assets still cannot be featured.
+
+### Grokipedia (xAI encyclopedia)
+Grokipedia at `grokipedia.com` is the xAI / X encyclopedia product. Eve may use it as soft topic vocabulary only:
+1. [ ] Transport is robots-safe public HTML (`/search` and `/page/*`) only. Eve does not call Grokipedia `/api/*` (disallowed by their robots.txt).
+2. [ ] Results are untrusted AI encyclopedia leads, never Wade facts alone.
+3. [ ] Enabled with open research by default; set `SEO_AGENT_ENABLE_GROKIPEDIA=false` to skip.
+4. [ ] This is not a stock image API. Optional xAI Grok image/chat (`api.x.ai`) is separate and not wired here.
 
 ### Keyless image sources (on when image sourcing is enabled)
 Openverse (commercial CC/PD filter), Wikimedia Commons, Metropolitan Museum Open Access, Art Institute of Chicago public domain, NASA Image Library.
@@ -45,7 +52,7 @@ Openverse (commercial CC/PD filter), Wikimedia Commons, Metropolitan Museum Open
 1. [ ] Prefer real Wade work photos under `public/images/work/` with descriptive filenames.
 2. [ ] Optional AI fallback: `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` only after review (technical line-art SVG, not photoreal AI).
 3. [ ] Outside standing propose, set `SEO_AGENT_ENABLE_IMAGE_SOURCING=true` and/or `SEO_AGENT_ENABLE_OPEN_RESEARCH=true`.
-4. [ ] In draft PR review, check **Images (featured is fail-closed)** for origin, rights, provenance, alt text, and reject photoreal AI filler. Treat Wikidata/Nominatim lines as soft context only, never as Wade facts.
+4. [ ] In draft PR review, check **Images (featured is fail-closed)** for origin, rights, provenance, alt text, and reject photoreal AI filler. Treat Wikidata/Nominatim/Grokipedia lines as soft context only, never as Wade facts.
 
 ## Next: Local Falcon
 

@@ -624,7 +624,10 @@ export function buildImageSearchQuery(opportunity) {
 /**
  * Build diversified image-search queries for broader relevant coverage.
  */
-export function buildImageSearchQueries(opportunity, { maxQueries = 3 } = {}) {
+export function buildImageSearchQueries(
+	opportunity,
+	{ maxQueries = 3, extraTerms = [] } = {},
+) {
 	if (!opportunity || typeof opportunity !== "object")
 		throw new Error("Image search query requires an opportunity.");
 	const cluster = String(opportunity.query_cluster ?? "").trim();
@@ -633,14 +636,24 @@ export function buildImageSearchQueries(opportunity, { maxQueries = 3 } = {}) {
 		.filter((tag) => typeof tag === "string" && tag.trim())
 		.map((tag) => tag.trim())
 		.slice(0, 4);
+	const extras = (Array.isArray(extraTerms) ? extraTerms : [])
+		.filter((term) => typeof term === "string" && term.trim())
+		.map((term) => term.trim())
+		.slice(0, 3);
 	const subjectTokens = tokenizeForQuery(
-		[cluster, ...tags].filter(Boolean).join(" "),
+		[cluster, ...tags, ...extras].filter(Boolean).join(" "),
 	).slice(0, 5);
 	const variants = [
 		[cluster, title, ...tags.slice(0, 2), "plumbing"].filter(Boolean).join(" "),
 		[...subjectTokens, "residential plumbing"].join(" "),
 		[...subjectTokens.slice(0, 3), "home service equipment"].join(" "),
+		extras.length > 0
+			? [...extras.slice(0, 2), ...subjectTokens.slice(0, 2), "plumbing"].join(
+					" ",
+				)
+			: null,
 	]
+		.filter(Boolean)
 		.map((value) => value.replace(/\s+/g, " ").trim())
 		.filter((value) => value.length >= 8)
 		.map((value) => value.slice(0, 240));

@@ -83,6 +83,8 @@ const envSchema = z
 		SEO_AGENT_ENABLE_IMAGE_SOURCING: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_ENABLE_IMAGE_AI_LINEART: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_ENABLE_OPEN_RESEARCH: z.enum(["true", "false"]).optional(),
+		// Defaults on with open research; set false to skip Grokipedia HTML leads.
+		SEO_AGENT_ENABLE_GROKIPEDIA: z.enum(["true", "false"]).optional(),
 	})
 	.passthrough();
 
@@ -166,6 +168,10 @@ export function loadConfig(env = process.env) {
 			imageAiLineArt: raw.SEO_AGENT_ENABLE_IMAGE_AI_LINEART === "true",
 			openResearch:
 				standingPropose || raw.SEO_AGENT_ENABLE_OPEN_RESEARCH === "true",
+			// Soft Grokipedia leads ride with open research (public HTML only).
+			grokipedia:
+				(standingPropose || raw.SEO_AGENT_ENABLE_OPEN_RESEARCH === "true") &&
+				raw.SEO_AGENT_ENABLE_GROKIPEDIA !== "false",
 		}),
 		liveReads: Object.freeze({
 			humanApproved: raw.SEO_AGENT_LIVE_READS_APPROVED === "true",
@@ -303,6 +309,7 @@ export function summarizeConfig(config) {
 			image_sourcing: config.integrationFlags.imageSourcing === true,
 			image_ai_lineart: config.integrationFlags.imageAiLineArt === true,
 			open_research: config.integrationFlags.openResearch === true,
+			grokipedia: config.integrationFlags.grokipedia === true,
 		}),
 		search_console_auth_mode:
 			config.credentials.googleServiceAccountEmail &&
