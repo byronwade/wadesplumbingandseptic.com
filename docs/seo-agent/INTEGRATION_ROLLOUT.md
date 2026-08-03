@@ -18,3 +18,13 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for PageSpeed `LIVE_VERIFIED`)
 - **Request IDs:** `jlmdf-1785769354624-edf5f2e49d8b`, `89kdm-1785769458215-e741a6a75eb2`, `x288r-1785769554588-9e473083c699`
 - **Exit gate:** Task 3 may start (`#110` merged)
+
+## Task 3 — Search Console topic wiring
+
+- **Status:** `LIVE_VERIFIED` (2026-08-03)
+- **Branch/PR:** `cursor/eve-gsc-topic-wiring-aab8` / `#113`
+- **Scope:** Feed Search Console Search Analytics query signals into blog topic scoring (`score_bonus` / `gsc_signal`); soft-fail when Search Console is disabled; redacted evidence (no raw query strings); focused live probe `GET /_internal/eve/api/live-probe/search-console-topics`
+- **Offline proof:** sidecar `npm test` → `163/163`; `npm run typecheck` / `npm run verify` exit `0`
+- **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for topic-signal `LIVE_VERIFIED`)
+- **Request IDs:** `mcxf9-1785771130232-a771f1f49e53`, `nfpqh-1785771148908-0fa253aae282`, `bnksh-1785771152137-ff6f49e55f1c`
+- **Exit gate:** Task 4 (PageSpeed QA wiring) may start

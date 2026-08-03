@@ -13,6 +13,7 @@ import { loadConfig } from "../../src/config.mjs";
 import {
 	handlePageSpeedLiveProbe,
 	handleSearchConsoleLiveProbe,
+	handleSearchConsoleTopicsLiveProbe,
 } from "../../src/live-probe-http.mjs";
 
 const locks = createDispatchLockStore();
@@ -68,6 +69,10 @@ export default defineChannel({
 		}),
 		GET("/api/live-probe/pagespeed", async (request) => {
 			const result = await handlePageSpeedLiveProbe({ request });
+			return json(result.body, result.status);
+		}),
+		GET("/api/live-probe/search-console-topics", async (request) => {
+			const result = await handleSearchConsoleTopicsLiveProbe({ request });
 			return json(result.body, result.status);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {

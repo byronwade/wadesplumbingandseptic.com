@@ -1,5 +1,22 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 68: Task 3 Search Console Topic Wiring LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 3 live proof (`LIVE_VERIFIED`).
+- Branch/PR: `cursor/eve-gsc-topic-wiring-aab8` / `#113`.
+- Method: Armed Production for run ID `search-console-topics-2026-08-03` (`SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, `SEO_AGENT_ENABLE_PAGESPEED=false`, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching approved run ID), Production-deployed commit `06647e5` as `dpl_7gtrEWvmx6zmyvRKXkmQ4cBPcMgS`, then triggered Production Cron `GET /_internal/eve/api/live-probe/search-console-topics` three times. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted): three successful Production responses on deployment `dpl_7gtrEWvmx6zmyvRKXkmQ4cBPcMgS`:
+  - `2026-08-03T15:32:10.232Z` request `mcxf9-1785771130232-a771f1f49e53` → `200`
+  - `2026-08-03T15:32:28.908Z` request `nfpqh-1785771148908-0fa253aae282` → `200`
+  - `2026-08-03T15:32:32.137Z` request `bnksh-1785771152137-ff6f49e55f1c` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy `dpl_CK9coF1KUP446G6rd8AuD41SufgP` after reset.
+- Next exact action: start Task 4 (PageSpeed QA wiring) on its own PR.
+
+## Phase 67: Task 3 Search Console Topic Wiring Path (2026-08-03)
+
+- State: SUPERSEDED by Phase 68 live proof. Offline wiring path shipped on `cursor/eve-gsc-topic-wiring-aab8` (`MOCK_VERIFIED` fixtures; `163/163` tests).
+- Offline: `search-console-topics.mjs` matching + capped `score_bonus`; adapter `queryTopicSignals` with redacted evidence; `executeDraftProposal` soft-fails when Search Console is off and applies `gsc_signal` when signals match; focused probe `probeSearchConsoleTopicsLive`; CRON-authenticated route `GET /_internal/eve/api/live-probe/search-console-topics`; CLI `npm run live:probe:search-console-topics`; annual manual Cron entry allowlisted in deployment-config verifier.
+
 ## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).

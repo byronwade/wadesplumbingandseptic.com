@@ -1,5 +1,10 @@
 import { assertEvidence, makeEvidence } from "./contracts.mjs";
 import { retryReadOnly } from "./run-controls.mjs";
+import { BLOG_TOPIC_CATALOG } from "./blog-opportunity.mjs";
+import {
+	collectSearchConsoleTopicSignals,
+	defaultSearchConsoleTopicWindow,
+} from "./search-console-topics.mjs";
 
 const READ_ONLY_PROBES = Object.freeze([
 	"ai_gateway",
@@ -126,6 +131,58 @@ export async function probePageSpeedLive({
 			registry.pagespeed.probe({ runId, url, strategy }),
 		),
 	);
+}
+
+/**
+ * Focused Task 3 live probe: Search Console query → topic signal matching.
+ * Does not open PRs or run PageSpeed.
+ */
+export async function probeSearchConsoleTopicsLive({
+	registry,
+	config,
+	runId = "search-console-topics-live-probe",
+	execute = false,
+	catalog = BLOG_TOPIC_CATALOG,
+	now = new Date(),
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "search-console",
+			scope: "topic-signals",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "search-console-topics-live-probe-disabled",
+			payload: {
+				reason:
+					"Search Console topic-signal live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, enable SEO_AGENT_ENABLE_SEARCH_CONSOLE, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.searchConsole) {
+		throw new Error(
+			"Search Console topic probe refused because SEO_AGENT_ENABLE_SEARCH_CONSOLE is not true.",
+		);
+	}
+	if (typeof registry?.search_console?.queryTopicSignals !== "function") {
+		throw new Error(
+			"Search Console topic probe requires a registry adapter with queryTopicSignals.",
+		);
+	}
+	const result = await retryReadOnly(() =>
+		collectSearchConsoleTopicSignals({
+			searchConsole: registry.search_console,
+			siteUrl: config.siteUrl,
+			runId,
+			catalog,
+			now,
+			window: defaultSearchConsoleTopicWindow(now),
+		}),
+	);
+	return assertEvidence(result.evidence);
 }
 
 export async function probeReadOnlyIntegrations({
