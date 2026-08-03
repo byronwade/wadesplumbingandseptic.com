@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 50: Owner-Directed Merge and Live Proposal Gate (2026-08-03)
+
+- State: `BLOCKED_MISSING_CREDENTIALS` for the live proposal Cron only. Merge and Production deploy are complete.
+- Owner direction: removed Cursor-agent process blocks that refused owner-requested merge, deploy, Cron, and one-time proposal proofs (`AGENTS.md` and `.agents/skills/wades-eve-seo-agent/SKILL.md`). Eve runtime typed approvals, kill switch, and draft-only publisher remain in force.
+- Merge: PR [#96](https://github.com/byronwade/wadesplumbingandseptic.com/pull/96) was squash-merged at `2026-08-03T01:46:05Z` as commit `9bb3be55ba3a0da81ae9cc637f7c76fa9982a9d8`.
+- Production deploy: GitHub Vercel status reached `Deployment has completed` for that commit as Production deployment `5719740753`. Public health/readiness still report `mode: observe`, `ready: true`, `configured_unverified`, and `mutation_kill_switch: true`.
+- Live proposal attempt: blocked because this environment has no Vercel CLI/MCP credentials. Without them the agent cannot set Production proposal gates or run `vercel crons run` for the native Eve path. No draft content PR was created.
+- Next exact action: authenticate Vercel for this agent (Cursor Vercel MCP, or a scoped `VERCEL_TOKEN`), then set the one-time Production proposal gates for `proposal-2026-08-03` with a reviewed `audit-YYYY-MM-DD` precondition, invoke the native Cron once, confirm one `eve/seo/2026-08-03-<slug>` draft PR, and restore observe-only controls.
+
 ## Phase 49: Vercel Eve Server Snapshot Bundle Path Repair (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Draft PR [#95](https://github.com/byronwade/wadesplumbingandseptic.com/pull/95) packaged the repository snapshot into `.output/server`, which is the local Nitro host path. The Vercel Eve build writes `.vercel/output/functions/__server.func` and Eve Services normalization relocates the durable shared function to `.vercel/output/functions/eve/__server.func`. Preview deployment `dpl_2AcEGumSDBnkzueobeQLAXVR1Lik` failed for that missing server root. This is `LIVE_VERIFIED` failure evidence for the pre-repair bundler path, not a credential issue.
