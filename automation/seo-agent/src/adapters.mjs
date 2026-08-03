@@ -578,6 +578,13 @@ export function createSearchConsoleAdapter({
 	};
 }
 
+const PAGESPEED_REQUEST_POLICY = Object.freeze({
+	timeoutMs: 90_000,
+	maxAttempts: 2,
+	maxResponseBytes: 2_000_000,
+	maxRetryAfterMs: 5_000,
+});
+
 export function createPageSpeedAdapter({
 	apiKey,
 	enabled = true,
@@ -611,22 +618,41 @@ export function createPageSpeedAdapter({
 			);
 			endpoint.searchParams.set("url", url);
 			endpoint.searchParams.set("strategy", strategy);
+			endpoint.searchParams.set("category", "performance");
 			endpoint.searchParams.set("key", apiKey);
-			const payload = await requestJson({
-				fetchImpl,
-				budget,
-				url: endpoint,
-				source: "PageSpeed request",
-				policy: requestPolicy,
-			});
-			return evidence({
-				runId,
-				source: "pagespeed",
-				scope: `performance-audit:${strategy}`,
-				endpoint: endpoint.origin + endpoint.pathname,
-				tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
-				payload: compactPageSpeedPayload(payload),
-			});
+			try {
+				const payload = await requestJson({
+					fetchImpl,
+					budget,
+					url: endpoint,
+					source: "PageSpeed request",
+					policy: { ...PAGESPEED_REQUEST_POLICY, ...requestPolicy },
+				});
+				return evidence({
+					runId,
+					source: "pagespeed",
+					scope: `performance-audit:${strategy}`,
+					endpoint: endpoint.origin + endpoint.pathname,
+					tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
+					payload: compactPageSpeedPayload(payload),
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "pagespeed",
+					scope: `performance-audit:${strategy}`,
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint.origin + endpoint.pathname,
+					payload: {
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm PAGESPEED_API_KEY in Production and that pagespeedonline.googleapis.com is reachable.",
+					},
+				});
+			}
 		},
 	};
 }
