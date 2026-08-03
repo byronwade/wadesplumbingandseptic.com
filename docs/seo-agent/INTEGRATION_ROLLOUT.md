@@ -51,9 +51,10 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 6 — GA4 (optional)
 
-- **Status:** not started
-- **Prerequisite:** Task 5 `LIVE_VERIFIED`
-- **Notes:** disabled by default; needs reviewed GA4 property access + credential inventory before a dedicated PR
+- **Status:** `BLOCKED_MISSING_CREDENTIALS` (2026-08-03)
+- **Prerequisite:** Task 5 `LIVE_VERIFIED` (met)
+- **Evidence:** Production has `SEO_AGENT_ENABLE_GA4`, but no `GA4_ACCESS_TOKEN` / `GA4_PROPERTY_ID` (or equivalent reviewed credential) is present. No live GA4 request was made.
+- **Exit gate:** Task 7 may start while GA4 remains blocked, or resume Task 6 after owner adds reviewed GA4 credentials and a dedicated live-probe PR
 
 ## Task 7 — Local Falcon (optional)
 
