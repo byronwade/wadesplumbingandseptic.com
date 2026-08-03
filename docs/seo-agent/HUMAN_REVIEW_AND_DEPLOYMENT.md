@@ -74,7 +74,7 @@ The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the servi
 
 | Integration      | Human setup / verification                                                            | Current state                 |
 | ---------------- | ------------------------------------------------------------------------------------- | ----------------------------- |
-| GA4              | [ ] Analytics Data API read-only property identity, aggregate-only probe              | `BLOCKED_MISSING_CREDENTIALS` |
+| GA4              | [ ] Enable Analytics Data API; add existing Eve service account as GA4 Viewer; set Production `GA4_PROPERTY_ID`; leave `GA4_ACCESS_TOKEN` unset; focused Cron probe `GET /_internal/eve/api/live-probe/ga4` | Pending Task 6 owner setup (see `MANUAL_SETUP.md`) |
 | Business Profile | [ ] Approved performance-read scope and location ID; no review/response write actions | `BLOCKED_MISSING_CREDENTIALS` |
 | Browserbase      | [ ] Separate project, explicit allowed domains, short non-keepalive read-only session | `BLOCKED_MISSING_CREDENTIALS` |
 | Local Falcon     | [ ] Read-only vendor credential and documented report probe                           | `BLOCKED_MISSING_CREDENTIALS` |

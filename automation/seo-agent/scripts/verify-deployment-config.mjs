@@ -244,6 +244,7 @@ function validateServicesTopology(config, label) {
 		"/_internal/eve/api/live-probe/search-console-topics",
 		"/_internal/eve/api/live-probe/pagespeed-qa",
 		"/_internal/eve/api/live-probe/browser-research",
+		"/_internal/eve/api/live-probe/ga4",
 	]);
 	const rootCrons = Array.isArray(config.crons) ? config.crons : null;
 	if (rootCrons) {

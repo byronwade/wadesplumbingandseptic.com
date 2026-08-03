@@ -12,6 +12,7 @@ import {
 import { loadConfig } from "../../src/config.mjs";
 import {
 	handleBrowserResearchLiveProbe,
+	handleGa4LiveProbe,
 	handlePageSpeedLiveProbe,
 	handlePageSpeedQaLiveProbe,
 	handleSearchConsoleLiveProbe,
@@ -83,6 +84,10 @@ export default defineChannel({
 		}),
 		GET("/api/live-probe/browser-research", async (request) => {
 			const result = await handleBrowserResearchLiveProbe({ request });
+			return json(result.body, result.status);
+		}),
+		GET("/api/live-probe/ga4", async (request) => {
+			const result = await handleGa4LiveProbe({ request });
 			return json(result.body, result.status);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {

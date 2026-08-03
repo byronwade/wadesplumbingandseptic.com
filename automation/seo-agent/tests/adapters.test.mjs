@@ -718,7 +718,7 @@ test("optional official adapters normalize fixtures while disabled optional path
 	const ga4 = await createGa4Adapter({
 		enabled: true,
 		accessToken: "ga4-token",
-		propertyId: "123",
+		propertyId: "properties/123",
 		fetchImpl: async () =>
 			jsonResponse({
 				rows: [
@@ -726,10 +726,19 @@ test("optional official adapters normalize fixtures while disabled optional path
 						dimensionValues: [{ value: "20260701" }],
 						metricValues: [{ value: "2" }],
 					},
+					{
+						dimensionValues: [{ value: "20260702" }],
+						metricValues: [{ value: "3" }],
+					},
 				],
 			}),
 	}).probe({ runId: "ga4-fixture" });
-	assert.equal(ga4.payload.rows[0].metric_values[0], "2");
+	assert.equal(ga4.classification, "LIVE_VERIFIED");
+	assert.equal(ga4.payload.property_id, "123");
+	assert.equal(ga4.payload.row_count, 2);
+	assert.equal(ga4.payload.sessions_total, 5);
+	assert.equal(ga4.payload.metric, "sessions");
+	assert.equal(JSON.stringify(ga4).includes("20260701"), false);
 	const business = await createBusinessProfileAdapter({
 		enabled: true,
 		accessToken: "business-token",

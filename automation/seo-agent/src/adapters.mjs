@@ -37,6 +37,24 @@ const GITHUB_DRAFT_WRITE_TOKEN_PERMISSIONS = Object.freeze([
 ]);
 const SEARCH_CONSOLE_READ_SCOPE =
 	"https://www.googleapis.com/auth/webmasters.readonly";
+const GA4_READ_SCOPE = "https://www.googleapis.com/auth/analytics.readonly";
+
+/**
+ * Normalize a GA4 property id to the bare numeric (or alphanumeric) form.
+ * Accepts `123456789` or `properties/123456789`.
+ * @param {string | null | undefined} propertyId
+ * @returns {string | null}
+ */
+export function normalizeGa4PropertyId(propertyId) {
+	if (typeof propertyId !== "string") return null;
+	const trimmed = propertyId.trim();
+	if (!trimmed) return null;
+	const bare = trimmed.startsWith("properties/")
+		? trimmed.slice("properties/".length)
+		: trimmed;
+	if (!/^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$/.test(bare)) return null;
+	return bare;
+}
 
 export function createVercelConnectGithubTokenProvider({
 	connector = DEFAULT_GITHUB_CONNECTOR_ID,
@@ -1334,6 +1352,7 @@ export function createVercelReadAdapter({
 
 export function createGa4Adapter({
 	accessToken,
+	accessTokenProvider,
 	propertyId,
 	enabled = false,
 	fetchImpl = fetch,
@@ -1344,52 +1363,92 @@ export function createGa4Adapter({
 		async probe({ runId }) {
 			const disabled = requireEnabled(enabled, runId, "ga4", "report-read");
 			if (disabled) return disabled;
-			if (!accessToken || !propertyId)
+			const normalizedPropertyId = normalizeGa4PropertyId(propertyId);
+			if (!normalizedPropertyId)
 				return blocked(
 					runId,
 					"ga4",
 					"report-read",
-					"Missing GA4 read credential or property ID.",
+					"Missing or invalid GA4_PROPERTY_ID (use the numeric property id).",
 				);
-			const endpoint = `https://analyticsdata.googleapis.com/v1beta/properties/${encodeURIComponent(propertyId)}:runReport`;
-			const payload = await requestJson({
-				fetchImpl,
-				budget,
-				url: endpoint,
-				init: {
-					method: "POST",
-					headers: {
-						...authorization(accessToken),
-						"content-type": "application/json",
+			const endpoint = `https://analyticsdata.googleapis.com/v1beta/properties/${encodeURIComponent(normalizedPropertyId)}:runReport`;
+			try {
+				const resolvedAccessToken = await resolveAccessToken({
+					accessToken,
+					accessTokenProvider,
+					source: "GA4 service account",
+					timeoutMs: requestPolicy?.timeoutMs,
+				});
+				if (!resolvedAccessToken)
+					return blocked(
+						runId,
+						"ga4",
+						"report-read",
+						"Missing GA4 read credential (GA4_ACCESS_TOKEN or Google service account).",
+					);
+				const payload = await requestJson({
+					fetchImpl,
+					budget,
+					url: endpoint,
+					init: {
+						method: "POST",
+						headers: {
+							...authorization(resolvedAccessToken),
+							"content-type": "application/json",
+						},
+						body: JSON.stringify({
+							// Exclude incomplete recent days, matching Search Console caution.
+							dateRanges: [{ startDate: "30daysAgo", endDate: "4daysAgo" }],
+							dimensions: [{ name: "date" }],
+							metrics: [{ name: "sessions" }],
+							limit: "31",
+						}),
 					},
-					body: JSON.stringify({
-						dateRanges: [{ startDate: "30daysAgo", endDate: "4daysAgo" }],
-						dimensions: [{ name: "date" }],
-						metrics: [{ name: "sessions" }],
-						limit: "100",
-					}),
-				},
-				source: "GA4 report",
-				policy: requestPolicy,
-			});
-			return evidence({
-				runId,
-				source: "ga4",
-				scope: "report-read",
-				endpoint,
-				tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
-				payload: {
-					row_count: (payload.rows ?? []).slice(0, 100).length,
-					rows: (payload.rows ?? []).slice(0, 100).map((row) => ({
-						dimension_values: (row.dimensionValues ?? []).map(
-							(value) => value.value ?? null,
-						),
-						metric_values: (row.metricValues ?? []).map(
-							(value) => value.value ?? null,
-						),
-					})),
-				},
-			});
+					source: "GA4 report",
+					policy: requestPolicy,
+				});
+				const rows = (payload.rows ?? []).slice(0, 31);
+				let sessionsTotal = 0;
+				for (const row of rows) {
+					const value = Number(row?.metricValues?.[0]?.value ?? 0);
+					if (Number.isFinite(value)) sessionsTotal += value;
+				}
+				return evidence({
+					runId,
+					source: "ga4",
+					scope: "report-read",
+					endpoint,
+					tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
+					payload: {
+						property_id: normalizedPropertyId,
+						date_range: Object.freeze({
+							start_date: "30daysAgo",
+							end_date: "4daysAgo",
+						}),
+						metric: "sessions",
+						row_count: rows.length,
+						sessions_total: sessionsTotal,
+						// Aggregate-only durable evidence; no per-day dimension dump.
+					},
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "ga4",
+					scope: "report-read",
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint,
+					payload: {
+						property_id: normalizedPropertyId,
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm Analytics Data API is enabled, the service account is a Viewer on the GA4 property, and GA4_PROPERTY_ID is correct.",
+					},
+				});
+			}
 		},
 	};
 }
@@ -1604,6 +1663,17 @@ export function createIntegrationRegistry({
 		}),
 		ga4: createGa4Adapter({
 			accessToken: credentials.ga4AccessToken,
+			accessTokenProvider:
+				!credentials.ga4AccessToken &&
+				credentials.googleServiceAccountEmail &&
+				credentials.googleServiceAccountPrivateKey
+					? createGoogleServiceAccountTokenProvider({
+							clientEmail: credentials.googleServiceAccountEmail,
+							privateKey: credentials.googleServiceAccountPrivateKey,
+							scopes: [GA4_READ_SCOPE],
+							jwtFactory: googleServiceAccountJwtFactory,
+						})
+					: undefined,
 			propertyId: credentials.ga4PropertyId,
 			enabled: flags.ga4 === true,
 			fetchImpl,

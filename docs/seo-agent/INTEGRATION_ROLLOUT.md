@@ -49,12 +49,14 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Request IDs:** `pvg9f-1785773479604-875726474167`, `jxqqx-1785773484010-820345f8e44f`, `4klwv-1785773488231-7505d212de28`
 - **Exit gate:** Task 6 (GA4, optional) may start, or skip with a recorded blocker
 
-## Task 6 — GA4 (optional)
+## Task 6 — GA4 Analytics Data API
 
-- **Status:** `BLOCKED_MISSING_CREDENTIALS` (2026-08-03)
-- **Prerequisite:** Task 5 `LIVE_VERIFIED` (met)
-- **Evidence:** Production has `SEO_AGENT_ENABLE_GA4`, but no `GA4_ACCESS_TOKEN` / `GA4_PROPERTY_ID` (or equivalent reviewed credential) is present. No live GA4 request was made.
-- **Exit gate:** Task 7 may start while GA4 remains blocked, or resume Task 6 after owner adds reviewed GA4 credentials and a dedicated live-probe PR
+- **Status:** `MOCK_VERIFIED` offline path (awaiting owner GA4 property access + Production Cron `LIVE_VERIFIED`)
+- **Branch/PR:** `cursor/eve-ga4-live-aab8`
+- **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/ga4`; aggregate sessions only (`sessions_total` / `row_count`); service-account JWT via existing `GOOGLE_SERVICE_ACCOUNT_*` + `GA4_PROPERTY_ID` (optional `GA4_ACCESS_TOKEN` override); soft `FAILED` evidence for upstream errors
+- **Owner setup:** See `MANUAL_SETUP.md` → **Next: Google Analytics Data (GA4)** (enable Analytics Data API, grant SA Viewer on the property, set `GA4_PROPERTY_ID`)
+- **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=ga4-2026-08-03`; deploy; Cron-run `/_internal/eve/api/live-probe/ga4` three times for HTTP `200`; reset flags
+- **Exit gate:** Task 7 may start after `LIVE_VERIFIED`, or remain skipped with a recorded blocker
 
 ## Task 7 — Local Falcon (optional)
 
