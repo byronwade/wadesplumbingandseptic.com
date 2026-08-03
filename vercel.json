@@ -1,5 +1,11 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"crons": [
+		{
+			"path": "/_internal/eve/api/live-probe/search-console",
+			"schedule": "0 0 1 1 *"
+		}
+	],
 	"services": {
 		"site": {
 			"root": ".",
