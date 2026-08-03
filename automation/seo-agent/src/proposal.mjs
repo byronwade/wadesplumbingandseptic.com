@@ -38,6 +38,10 @@ import {
 	applySearchConsoleSignalsToCatalog,
 	collectSearchConsoleTopicSignals,
 } from "./search-console-topics.mjs";
+import {
+	collectPageSpeedQaSignals,
+	formatPageSpeedQaForBrief,
+} from "./pagespeed-qa.mjs";
 
 function resolveProposalNow(descriptor, now) {
 	if (now instanceof Date && Number.isFinite(now.valueOf())) return now;
@@ -445,6 +449,7 @@ export function buildDraftPrBrief({
 	selectionReason = null,
 	revision = null,
 	generation = null,
+	pagespeedQa = null,
 }) {
 	const linkLines = opportunity.internal_links
 		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
@@ -556,6 +561,9 @@ Expected outcome after human merge (observation only, not a guaranteed ranking c
 - Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.
 - Rollback: Revert this single Markdown file after human review.
 - Publication: DRAFT PR ONLY; human approval and merge required.
+
+## Preview / performance QA
+${formatPageSpeedQaForBrief(pagespeedQa)}
 
 ## Execution evidence
 - Writer model: ${writer.model}
@@ -679,6 +687,7 @@ export async function executeDraftProposal({
 	now,
 	browserResearch,
 	searchConsole,
+	pagespeed,
 	topicDecider = decideTopicWithGateway,
 	generationGuard = null,
 } = {}) {
@@ -712,6 +721,29 @@ export async function executeDraftProposal({
 		demandContext.catalog,
 		searchConsoleTopics.signals,
 	);
+	const pagespeedAdapter =
+		pagespeed === undefined
+			? config?.integrationFlags?.pageSpeed === true
+				? createIntegrationRegistry({ config }).pagespeed
+				: null
+			: pagespeed;
+	const pagespeedQa = await collectPageSpeedQaSignals({
+		pagespeed: pagespeedAdapter,
+		siteUrl: config?.siteUrl,
+		runId: descriptor.runId,
+		strategy: "mobile",
+	});
+	const pagespeedQaSummary = Object.freeze({
+		classification: pagespeedQa.classification,
+		status: pagespeedQa.signal?.status ?? null,
+		performance_score: pagespeedQa.signal?.performance_score ?? null,
+		measured_url: pagespeedQa.signal?.measured_url ?? null,
+		reason: pagespeedQa.reason ?? null,
+		evidence_id:
+			pagespeedQa.classification === "LIVE_VERIFIED"
+				? "pagespeed:draft-preview-qa"
+				: null,
+	});
 	const guard = generationGuard ?? createProposalGenerationGuard();
 	const selection = await resolveTopicSelection({
 		inventory,
@@ -747,6 +779,7 @@ export async function executeDraftProposal({
 				research_mode: demandContext.research.mode,
 			}),
 			search_console_topics: searchConsoleSummary,
+			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
 	const opportunity = selection.opportunity;
@@ -807,6 +840,7 @@ export async function executeDraftProposal({
 				stop_reason: revision.stop_reason ?? null,
 			}),
 			search_console_topics: searchConsoleSummary,
+			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
 	const changeSet = buildMarkdownChangeSet({
@@ -843,6 +877,11 @@ export async function executeDraftProposal({
 		model: writerModel,
 		reservation: writerReservation,
 	};
+	const pagespeedQaForBrief = Object.freeze({
+		classification: pagespeedQa.classification,
+		signal: pagespeedQa.signal,
+		reason: pagespeedQa.reason,
+	});
 	const pr = await createDraftPullRequest({
 		humanApproval: true,
 		branch,
@@ -859,6 +898,7 @@ export async function executeDraftProposal({
 			selectionReason: selection.selection_reason,
 			revision,
 			generation: guard.snapshot(),
+			pagespeedQa: pagespeedQaForBrief,
 		}),
 		changeSet,
 		gateway: publisher,
@@ -898,6 +938,7 @@ export async function executeDraftProposal({
 			research_mode: demandContext.research.mode,
 		}),
 		search_console_topics: searchConsoleSummary,
+		pagespeed_qa: pagespeedQaSummary,
 	});
 }
 

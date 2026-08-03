@@ -6,6 +6,7 @@ import { createIntegrationRegistry } from "./adapters.mjs";
 import { loadConfig, summarizeConfig } from "./config.mjs";
 import {
 	probePageSpeedLive,
+	probePageSpeedQaLive,
 	probeSearchConsoleLive,
 	probeSearchConsoleTopicsLive,
 } from "./probes.mjs";
@@ -235,6 +236,81 @@ export async function handleSearchConsoleTopicsLiveProbe({
 				mode: "human-approved-live-read",
 				run_id: runId,
 				adapter: "search_console_topics",
+				config: summarizeConfig(config),
+				result: Object.freeze({
+					classification: evidence.classification,
+					scope: evidence.scope,
+					source: evidence.source,
+					collected_at: evidence.collected_at,
+					payload: evidence.payload,
+				}),
+			}),
+		});
+	} catch (error) {
+		return Object.freeze({
+			ok: false,
+			status: 403,
+			body: Object.freeze({
+				error: "LIVE_READ_REFUSED",
+				message: error instanceof Error ? error.message : "Live read refused.",
+				run_id: runId,
+			}),
+		});
+	}
+}
+
+/**
+ * Task 4 focused live probe: PageSpeed draft/preview QA signals.
+ *
+ * @param {object} [input]
+ * @param {{ url: string, headers: { get: (name: string) => string | null } }} input.request
+ * @param {ReturnType<typeof loadConfig>} [input.config]
+ * @param {{ pagespeed: { probe?: Function } }} [input.registry]
+ * @param {string} [input.cronSecret]
+ */
+export async function handlePageSpeedQaLiveProbe({
+	request,
+	config = loadConfig(),
+	registry = createIntegrationRegistry({ config }),
+	cronSecret = process.env.CRON_SECRET,
+} = {}) {
+	const auth = authorizeLiveProbeRequest({
+		authorization: request?.headers?.get?.("authorization"),
+		cronSecret,
+	});
+	if (!auth.ok) return auth;
+
+	const url = new URL(request.url);
+	const runId =
+		url.searchParams.get("run_id") ?? config.liveReads?.approvedRunId ?? null;
+	if (typeof runId !== "string" || !/^[a-z0-9][a-z0-9-]{2,79}$/.test(runId)) {
+		return Object.freeze({
+			ok: false,
+			status: 400,
+			body: Object.freeze({
+				error: "MALFORMED_REQUEST",
+				message:
+					"Provide run_id as a query parameter or set SEO_AGENT_LIVE_READS_APPROVED_RUN_ID.",
+			}),
+		});
+	}
+
+	try {
+		const evidence = await probePageSpeedQaLive({
+			registry,
+			config,
+			runId,
+			execute: true,
+			strategy: url.searchParams.get("strategy") ?? "mobile",
+			url: url.searchParams.get("url") ?? undefined,
+		});
+		return Object.freeze({
+			ok: evidence.classification === "LIVE_VERIFIED",
+			status: evidence.classification === "LIVE_VERIFIED" ? 200 : 503,
+			body: Object.freeze({
+				mode: "human-approved-live-read",
+				run_id: runId,
+				adapter: "pagespeed_qa",
 				config: summarizeConfig(config),
 				result: Object.freeze({
 					classification: evidence.classification,

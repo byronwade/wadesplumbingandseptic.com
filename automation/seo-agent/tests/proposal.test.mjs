@@ -646,4 +646,48 @@ test("proposal soft-fails Search Console topic wiring when adapter is absent", a
 		"BLOCKED_MISSING_CREDENTIALS",
 	);
 	assert.equal(result.search_console_topics.matched_topic_count, 0);
+	assert.equal(
+		result.pagespeed_qa.classification,
+		"BLOCKED_MISSING_CREDENTIALS",
+	);
+	assert.equal(result.pagespeed_qa.status, null);
+});
+
+test("proposal soft-fails PageSpeed QA wiring when adapter is absent", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		scheduledAt: "2026-08-03T12:00:00.000Z",
+		runId: "proposal-pagespeed-qa-soft-fail",
+	});
+	const settings = loadRuntimeSettings(env);
+	const calls = [];
+	const result = await executeDraftProposal({
+		descriptor,
+		settings,
+		config: config(),
+		repoRoot,
+		browserResearch: null,
+		searchConsole: null,
+		pagespeed: null,
+		topicDecider: async ({ candidates }) => ({
+			topic_id: candidates[0].id,
+			reason: "Fixture chooses the first viable topic.",
+			why_over_others: "Offline fixture path.",
+			seo_value: "Keeps proposal tests deterministic.",
+		}),
+		writer: async ({ opportunity }) => ({
+			markdown: richDraft(opportunity),
+			model: "fixture-writer",
+			reservation: { reserved: 1 },
+		}),
+		publisherFactory: publisherFactory(calls),
+	});
+	assert.equal(
+		result.pagespeed_qa.classification,
+		"BLOCKED_MISSING_CREDENTIALS",
+	);
+	assert.equal(result.draft_pr_created, true);
+	const prBody = calls.find(([name]) => name === "pr")[3];
+	assert.match(prBody, /Preview \/ performance QA/);
+	assert.match(prBody, /PageSpeed QA/);
 });
