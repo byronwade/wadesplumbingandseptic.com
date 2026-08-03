@@ -12,6 +12,7 @@ import {
 import { loadConfig } from "../../src/config.mjs";
 import {
 	handlePageSpeedLiveProbe,
+	handlePageSpeedQaLiveProbe,
 	handleSearchConsoleLiveProbe,
 	handleSearchConsoleTopicsLiveProbe,
 } from "../../src/live-probe-http.mjs";
@@ -73,6 +74,10 @@ export default defineChannel({
 		}),
 		GET("/api/live-probe/search-console-topics", async (request) => {
 			const result = await handleSearchConsoleTopicsLiveProbe({ request });
+			return json(result.body, result.status);
+		}),
+		GET("/api/live-probe/pagespeed-qa", async (request) => {
+			const result = await handlePageSpeedQaLiveProbe({ request });
 			return json(result.body, result.status);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {

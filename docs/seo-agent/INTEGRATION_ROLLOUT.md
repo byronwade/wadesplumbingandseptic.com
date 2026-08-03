@@ -28,3 +28,12 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for topic-signal `LIVE_VERIFIED`)
 - **Request IDs:** `mcxf9-1785771130232-a771f1f49e53`, `nfpqh-1785771148908-0fa253aae282`, `bnksh-1785771152137-ff6f49e55f1c`
 - **Exit gate:** Task 4 (PageSpeed QA wiring) may start
+
+## Task 4 — PageSpeed draft/preview QA wiring
+
+- **Status:** `MOCK_VERIFIED` offline path (awaiting Production Cron `LIVE_VERIFIED`)
+- **Branch/PR:** `cursor/eve-pagespeed-qa-wiring-aab8`
+- **Scope:** Shape PageSpeed Insights into draft/preview QA signals (`performance_score`, LCP, CLS, soft PASS/WARN/FAIL budgets); soft-fail when PageSpeed is disabled; redacted evidence (no raw audit dumps); surface in Connect draft PR brief; focused live probe `GET /_internal/eve/api/live-probe/pagespeed-qa`
+- **Offline proof:** sidecar `npm test` / `npm run typecheck` / `npm run verify`
+- **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_PAGESPEED=true`, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=pagespeed-qa-2026-08-03`; deploy; Cron-run the QA probe three times for HTTP `200`; reset flags
+- **Exit gate:** Task 5 (browser research / Browserbase) may start only after `LIVE_VERIFIED`

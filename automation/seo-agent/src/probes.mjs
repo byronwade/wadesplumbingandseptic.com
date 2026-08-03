@@ -5,6 +5,7 @@ import {
 	collectSearchConsoleTopicSignals,
 	defaultSearchConsoleTopicWindow,
 } from "./search-console-topics.mjs";
+import { collectPageSpeedQaSignals } from "./pagespeed-qa.mjs";
 
 const READ_ONLY_PROBES = Object.freeze([
 	"ai_gateway",
@@ -131,6 +132,60 @@ export async function probePageSpeedLive({
 			registry.pagespeed.probe({ runId, url, strategy }),
 		),
 	);
+}
+
+/**
+ * Focused Task 4 live probe: PageSpeed → draft/preview QA signal shaping.
+ * Does not open PRs or run Search Console.
+ */
+export async function probePageSpeedQaLive({
+	registry,
+	config,
+	runId = "pagespeed-qa-live-probe",
+	execute = false,
+	url,
+	strategy = "mobile",
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "pagespeed",
+			scope: "draft-preview-qa",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "pagespeed-qa-live-probe-disabled",
+			payload: {
+				reason:
+					"PageSpeed QA live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, enable SEO_AGENT_ENABLE_PAGESPEED, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.pageSpeed) {
+		throw new Error(
+			"PageSpeed QA probe refused because SEO_AGENT_ENABLE_PAGESPEED is not true.",
+		);
+	}
+	const targetUrl = url ?? config.siteUrl;
+	if (typeof targetUrl !== "string" || !targetUrl.startsWith("https://")) {
+		throw new Error(
+			"PageSpeed QA probe requires an https site URL (SEO_AGENT_SITE_URL or config.siteUrl).",
+		);
+	}
+	if (typeof registry?.pagespeed?.probe !== "function") {
+		throw new Error("PageSpeed QA probe requires a registry adapter.");
+	}
+	const result = await retryReadOnly(() =>
+		collectPageSpeedQaSignals({
+			pagespeed: registry.pagespeed,
+			siteUrl: targetUrl,
+			runId,
+			strategy,
+		}),
+	);
+	return assertEvidence(result.evidence);
 }
 
 /**

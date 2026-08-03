@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 69: Task 4 PageSpeed Draft/Preview QA Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; blocked on Production Cron for final `LIVE_VERIFIED`.
+- Branch/PR: `cursor/eve-pagespeed-qa-wiring-aab8` (Task 4 from `INTEGRATION_ROLLOUT.md`).
+- Offline: `pagespeed-qa.mjs` extracts performance score + core vitals, grades soft PASS/WARN/FAIL budgets, redacts measured URLs, and omits raw Lighthouse audit dumps from durable evidence; `executeDraftProposal` soft-fails when PageSpeed is off and adds a Preview / performance QA section to the Connect draft PR brief; focused probe `probePageSpeedQaLive`; CRON-authenticated route `GET /_internal/eve/api/live-probe/pagespeed-qa`; CLI `npm run live:probe:pagespeed-qa`; annual manual Cron entry allowlisted in deployment-config verifier.
+- Soft-budget rule: PageSpeed QA annotates human review only. It does not fail-close draft publication.
+- Live arming (next): Production only. Set `SEO_AGENT_ENABLE_PAGESPEED=true`, keep `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=pagespeed-qa-2026-08-03`, deploy the Task 4 commit, then `vercel crons run '/_internal/eve/api/live-probe/pagespeed-qa'` three times. Handler `200` only for `LIVE_VERIFIED`. Reset live-read flags and PageSpeed enablement afterward.
+- Out of scope (Task 5): browser research / Browserbase.
+- Next exact action: Production-deploy this PR, run the Cron live proof, record request IDs, then mark Task 4 `LIVE_VERIFIED`.
+
 ## Phase 68: Task 3 Search Console Topic Wiring LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 3 live proof (`LIVE_VERIFIED`).

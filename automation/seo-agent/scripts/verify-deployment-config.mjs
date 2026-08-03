@@ -242,6 +242,7 @@ function validateServicesTopology(config, label) {
 		"/_internal/eve/api/live-probe/search-console",
 		"/_internal/eve/api/live-probe/pagespeed",
 		"/_internal/eve/api/live-probe/search-console-topics",
+		"/_internal/eve/api/live-probe/pagespeed-qa",
 	]);
 	const rootCrons = Array.isArray(config.crons) ? config.crons : null;
 	if (rootCrons) {
