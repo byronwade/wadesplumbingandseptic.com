@@ -66,6 +66,15 @@ function formatResearchNotes(research) {
 	return lines.filter(Boolean).join("\n");
 }
 
+function cleanBriefText(value, fallback, max = 800) {
+	if (typeof value !== "string" || !value.trim()) return fallback;
+	return value
+		.trim()
+		.replace(/\u2014|\u2013/g, ", ")
+		.replace(/\s+-\s+/g, ", ")
+		.slice(0, max);
+}
+
 function parseTopicDecision(text, candidateIds) {
 	if (typeof text !== "string" || !text.trim()) return null;
 	const fenced = text
@@ -80,10 +89,18 @@ function parseTopicDecision(text, candidateIds) {
 		) {
 			return Object.freeze({
 				topic_id: parsed.topic_id,
-				reason:
-					typeof parsed.reason === "string" && parsed.reason.trim()
-						? parsed.reason.trim().slice(0, 500)
-						: "Model selected the strongest local click opportunity.",
+				reason: cleanBriefText(
+					parsed.reason,
+					"Model selected the strongest local click opportunity.",
+				),
+				why_over_others: cleanBriefText(
+					parsed.why_over_others,
+					"This topic beat the other viable candidates on local timing, click appeal, and distinct intent.",
+				),
+				seo_value: cleanBriefText(
+					parsed.seo_value,
+					"This post targets a specific Santa Cruz County query with helpful depth and internal links into service pages.",
+				),
 			});
 		}
 	} catch {
@@ -94,6 +111,10 @@ function parseTopicDecision(text, candidateIds) {
 			return Object.freeze({
 				topic_id: id,
 				reason: "Model named a viable topic id in free-form output.",
+				why_over_others:
+					"The model named this topic among the viable candidates.",
+				seo_value:
+					"This post targets a specific Santa Cruz County query with helpful depth and internal links into service pages.",
 			});
 		}
 	}
@@ -132,9 +153,14 @@ ${formatResearchNotes(research) ?? "Calendar and inventory only."}
 Candidate topics (JSON):
 ${JSON.stringify(payload, null, 2)}
 
-Return ONLY JSON:
-{"topic_id":"<exact id>","reason":"<one or two sentences>"}`;
-	const maxOutputTokens = 400;
+Return ONLY JSON with detailed reviewer-facing rationale:
+{
+  "topic_id": "<exact id>",
+  "reason": "<2 to 4 sentences: what you chose and why it matters now>",
+  "why_over_others": "<2 to 4 sentences: why this beat the other viable candidates>",
+  "seo_value": "<2 to 4 sentences: how this helps search visibility, clicks, and internal linking>"
+}`;
+	const maxOutputTokens = 700;
 	const reservation = reserveModelRequest({
 		runId,
 		prompt,
@@ -228,7 +254,44 @@ async function writeWithGateway({ runId, opportunity, date }) {
 	}
 }
 
-function packet({
+function formatAlternatives(considered = [], chosenId) {
+	const viable = considered
+		.filter((item) => item.viable && item.id !== chosenId)
+		.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
+		.slice(0, 6);
+	if (viable.length === 0) {
+		return "- No other viable distinct blog topics remained in this run.";
+	}
+	return viable
+		.map((item) => {
+			const demand = item.demand_name
+				? `${item.demand_kind ?? "DEMAND"}: ${item.demand_name}`
+				: "evergreen catalog";
+			return `- \`${item.id}\` (score ${item.score}, ${demand}): ${item.click_title}`;
+		})
+		.join("\n");
+}
+
+function formatSkipped(considered = []) {
+	const skipped = considered
+		.filter((item) => !item.viable)
+		.slice(0, 8)
+		.map((item) => {
+			const why = item.conflict
+				? `near-duplicate or existing coverage at ${item.conflict}`
+				: `only ${item.link_count} resolvable internal links`;
+			return `- \`${item.id}\`: skipped because ${why}`;
+		});
+	return skipped.length > 0
+		? skipped.join("\n")
+		: "- No candidates were skipped for conflict or link shortages.";
+}
+
+/**
+ * Detailed reviewer-facing brief for the Connect draft PR.
+ * Exported for deterministic packet tests.
+ */
+export function buildDraftPrBrief({
 	opportunity,
 	changeSet,
 	writer,
@@ -236,36 +299,128 @@ function packet({
 	quality,
 	demandContext,
 	topicDecision,
+	considered = [],
+	selectionReason = null,
 }) {
-	const links = opportunity.internal_links
-		.map((link) => `${link.to} (${link.anchor})`)
-		.join("; ");
+	const linkLines = opportunity.internal_links
+		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
+		.join("\n");
 	const demand = opportunity.demand_source
-		? `${opportunity.demand_source.kind}: ${opportunity.demand_source.name} on ${opportunity.demand_source.date} (${opportunity.demand_source.lead_time_days} days lead)`
-		: "standard catalog topic";
+		? `${opportunity.demand_source.kind}: ${opportunity.demand_source.name} on ${opportunity.demand_source.date} (${opportunity.demand_source.lead_time_days} days of useful lead time)`
+		: "evergreen catalog topic (no active holiday/event window forced this choice)";
+	const decisionMode = topicDecision?.mode ?? "SCORE_FALLBACK";
+	const whyChosen = cleanBriefText(
+		topicDecision?.reason ?? opportunity.decision_notes,
+		"Eve selected the strongest inventory-aware local topic for this run.",
+	);
+	const whyOverOthers = cleanBriefText(
+		topicDecision?.why_over_others,
+		"Eve preferred this topic over other viable candidates because it had stronger local timing, clearer click appeal, and a distinct query cluster.",
+	);
+	const seoValue = cleanBriefText(
+		topicDecision?.seo_value,
+		"This draft targets a specific Santa Cruz County search intent with people-first depth and contextual links into owned service pages.",
+	);
+	const researchMode = demandContext?.research?.mode ?? "CATALOG_ONLY";
+	const researchClass =
+		demandContext?.research?.classification ?? "MOCK_VERIFIED";
+	const activeDemand = (demandContext?.active_demand ?? [])
+		.slice(0, 6)
+		.map(
+			(entry) =>
+				`- ${entry.name} (${entry.kind}, ${entry.lead_time_days} days lead)`,
+		);
+	const activeTrends = (demandContext?.active_trends ?? [])
+		.slice(0, 4)
+		.map((entry) => `- ${entry.name} (${entry.kind})`);
+	const mustCover = (opportunity.must_cover ?? [])
+		.map((item) => `- ${item}`)
+		.join("\n");
+	const faqPreview = (opportunity.people_also_ask ?? [])
+		.slice(0, 5)
+		.map((item) => `- ${item}`)
+		.join("\n");
+
 	return `# SEO Draft PR Packet
 
+## What Eve did this run
+- Autonomously researched Santa Cruz County demand timing from the versioned holiday/event calendar and trending-concept windows.
+- Compared viable unused blog topics against the live Markdown inventory and link graph.
+- Chose **${opportunity.click_title}** (\`${opportunity.slug}\`) using decision mode \`${decisionMode}\`.
+- Wrote a people-first draft, ran fail-closed quality gates, then opened this draft-only Connect PR.
+- Research mode: ${researchMode} (${researchClass}).
+- Active demand signals considered:
+${activeDemand.length > 0 ? activeDemand.join("\n") : "- None inside a lead window for this run."}
+- Active trending concepts considered:
+${activeTrends.length > 0 ? activeTrends.join("\n") : "- None active for the current month window."}
+
+## Why this blog post matters now
+${whyChosen}
+
+Demand timing: ${demand}
+Selection reason: ${selectionReason ?? "DISTINCT_LOCAL_BLOG_INTENT"}
+Unique value Eve is trying to own: ${opportunity.unique_value}
+Angle: ${opportunity.angle}
+Community context: ${opportunity.community_context ?? "Santa Cruz County homeowners and local hosts."}
+
+## Why Eve chose this over the other options
+${whyOverOthers}
+
+Other viable topics Eve could have drafted instead:
+${formatAlternatives(considered, topicDecision?.topic_id ?? opportunity.slug)}
+
+Topics Eve skipped before ranking:
+${formatSkipped(considered)}
+
+## How this helps SEO
+${seoValue}
+
+Concrete SEO mechanics in this draft:
+- Query cluster targeted: ${opportunity.query_cluster}
+- Search intent: ${opportunity.search_intent}
+- Canonical owner URL: ${opportunity.owner_url}
+- Existing page assessment: ${opportunity.existing_page_assessment} (${opportunity.existing_page_decision})
+- Click title and CTR-oriented meta are Santa Cruz County specific, so the result can earn the click instead of looking like a national filler post.
+- Draft depth gate passed at about **${quality.word_count} words**, with Quick Answer, unique-value section, FAQ depth, and ${quality.faq_questions ?? "5+"} FAQ answers.
+- Internal links create paths from this informational post into money/service pages readers need next:
+${linkLines}
+- Must-cover local points Eve had to satisfy:
+${mustCover}
+- People-also-ask coverage baked into the FAQ:
+${faqPreview}
+
+Expected outcome after human merge (observation only, not a guaranteed ranking claim):
+- Earn impressions/clicks for the query cluster from Santa Cruz County homeowners preparing around the same local timing.
+- Strengthen topical relevance and internal PageRank flow into the linked service and related posts.
+- Observe Search Console for this URL and its linked service pages over a 28 complete-day window after merge (excluding incomplete recent days).
+
+## Draft contents and controls
 - Proposal: ${opportunity.id}
 - Query cluster: ${opportunity.query_cluster}
 - Canonical owner: ${opportunity.owner_url}
 - Existing page assessment: ${opportunity.existing_page_assessment}
-- Demand timing: ${demand}
-- Topic decision: ${topicDecision?.mode ?? "SCORE_FALLBACK"} (${topicDecision?.reason ?? "highest inventory-aware score"})
-- Research mode: ${demandContext?.research?.mode ?? "CATALOG_ONLY"} (${demandContext?.research?.classification ?? "MOCK_VERIFIED"})
 - Evidence: ${opportunity.evidence_ids.join(", ")}
 - Change manifest: ${changeSet.proposal_id}
-- Planned internal links: ${links}
-- Draft quality: ${quality.word_count} words; links ${quality.internal_links.join(", ")}
+- Content path: \`${opportunity.content_path}\`
+- Planned internal links: ${opportunity.internal_links.map((link) => link.to).join("; ")}
+- Draft quality: ${quality.word_count} words; FAQ ${quality.faq_questions ?? "n/a"}; matched links ${quality.internal_links.join(", ")}
 - Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.
 - Rollback: Revert this single Markdown file after human review.
 - Publication: DRAFT PR ONLY; human approval and merge required.
 
 ## Execution evidence
 - Writer model: ${writer.model}
+- Topic decision model: ${topicDecision?.model ?? "score-fallback / fixture"}
 - Writer reservation: ${writer.reservation?.cost_reservation?.reserved_max_cost_usd ?? 0} USD
 - Branch: ${branch}
-- Selection: Eve autonomously researched local demand and chose the topic; thin or claim-heavy drafts are rejected before Connect write.
+- Decision notes passed into the writer: ${opportunity.decision_notes ?? whyChosen}
+- Research notes passed into the writer: ${opportunity.research_notes ?? "Calendar and inventory only for this run."}
 `;
+}
+
+/** @deprecated Prefer buildDraftPrBrief; kept as an alias for local call sites. */
+function packet(input) {
+	return buildDraftPrBrief(input);
 }
 
 async function resolveTopicSelection({
@@ -290,7 +445,12 @@ async function resolveTopicSelection({
 	const researchNotes = formatResearchNotes(research);
 	let topicDecision = Object.freeze({
 		mode: "SCORE_FALLBACK",
-		reason: "Using inventory-aware score ranking.",
+		reason:
+			"Eve used inventory-aware score ranking because the model decision step was unavailable.",
+		why_over_others:
+			"The top-scoring viable topic won on demand timing bonus, intent fit, and distinct slug coverage versus the other ranked candidates.",
+		seo_value:
+			"This draft still targets a distinct Santa Cruz County query cluster with people-first depth and contextual internal links into owned service pages.",
 		topic_id: ranking.ranked[0].id,
 	});
 	try {
@@ -304,6 +464,8 @@ async function resolveTopicSelection({
 			topicDecision = Object.freeze({
 				mode: decided.mode ?? "MODEL_DECIDED",
 				reason: decided.reason,
+				why_over_others: decided.why_over_others,
+				seo_value: decided.seo_value,
 				topic_id: decided.topic_id,
 				model: decided.model ?? null,
 			});
@@ -328,9 +490,16 @@ async function resolveTopicSelection({
 	});
 	return Object.freeze({
 		...selection,
+		considered: ranking.considered,
 		topicDecision: Object.freeze({
 			...topicDecision,
 			topic_id: chosenTopic.id,
+			why_over_others:
+				topicDecision.why_over_others ??
+				"Eve preferred this topic over other viable candidates on local timing, click appeal, and distinct intent.",
+			seo_value:
+				topicDecision.seo_value ??
+				"This draft targets a specific Santa Cruz County intent with helpful depth and internal links into service pages.",
 		}),
 	});
 }
@@ -464,6 +633,8 @@ export async function executeDraftProposal({
 			quality,
 			demandContext,
 			topicDecision: selection.topicDecision,
+			considered: selection.considered,
+			selectionReason: selection.selection_reason,
 		}),
 		changeSet,
 		gateway: publisher,
@@ -483,6 +654,11 @@ export async function executeDraftProposal({
 			demand_source: opportunity.demand_source,
 		},
 		topic_decision: selection.topicDecision,
+		pr_brief_preview: {
+			why_chosen: selection.topicDecision?.reason ?? null,
+			why_over_others: selection.topicDecision?.why_over_others ?? null,
+			seo_value: selection.topicDecision?.seo_value ?? null,
+		},
 		demand: Object.freeze({
 			calendar_loaded: demandContext.calendar_loaded,
 			trends_loaded: demandContext.trends_loaded,

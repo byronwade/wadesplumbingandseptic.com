@@ -1,8 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { resolve } from "node:path";
-import { executeDraftProposal } from "../src/proposal.mjs";
+import { buildDraftPrBrief, executeDraftProposal } from "../src/proposal.mjs";
 import { BLOG_QUALITY_THRESHOLDS } from "../src/blog-opportunity.mjs";
+import { assertDraftPrPacket } from "../src/publishing.mjs";
+import { buildMarkdownChangeSet } from "../src/markdown-change-set.mjs";
 import { createRunDescriptor, loadRuntimeSettings } from "../src/runtime.mjs";
 
 const repoRoot = resolve(import.meta.dirname, "../../..");
@@ -98,7 +100,12 @@ Visit [contact](/contact) when you want professional help.
 async function fixtureTopicDecider({ candidates }) {
 	return {
 		topic_id: candidates[0].id,
-		reason: "Fixture chooses the top ranked community-timed topic.",
+		reason:
+			"Fixture chooses the top ranked community-timed topic because local festival or holiday hosting demand is active and neighbors are searching for practical prep help.",
+		why_over_others:
+			"Other viable topics were evergreen or farther from the current lead window, so this one had a clearer near-term click reason for Santa Cruz County hosts.",
+		seo_value:
+			"The post can capture informational queries around a timed local event, then pass readers into drain cleaning, leak detection, and contact pages through contextual internal links.",
 		mode: "MODEL_DECIDED",
 	};
 }
@@ -132,8 +139,8 @@ function publisherFactory(calls) {
 				write_performed: true,
 			};
 		},
-		async createPullRequest({ branch, draft }) {
-			calls.push(["pr", branch, draft]);
+		async createPullRequest({ branch, draft, body, title }) {
+			calls.push(["pr", branch, draft, body, title]);
 			return {
 				classification: "MOCK_VERIFIED",
 				draft,
@@ -187,6 +194,180 @@ test("proposal opens one Connect-backed draft PR for a demand-timed local topic"
 		/Santa Cruz|Capitola|Labor Day|Fair|Festival|Open Studios|hard water|vacation|ADU|storm/i,
 	);
 	assert.equal(BLOG_QUALITY_THRESHOLDS.min_body_words >= 1400, true);
+	const prBody = calls.find(([name]) => name === "pr")[3];
+	assert.match(prBody, /## What Eve did this run/);
+	assert.match(prBody, /## Why this blog post matters now/);
+	assert.match(prBody, /## Why Eve chose this over the other options/);
+	assert.match(prBody, /## How this helps SEO/);
+	assert.match(prBody, /Other viable topics Eve could have drafted instead/);
+	assert.match(prBody, /Expected outcome after human merge/);
+	assert.match(prBody, /near-term click reason|community-timed|lead window/i);
+});
+
+test("draft PR brief is detailed and keeps required packet markers", () => {
+	const changeSet = buildMarkdownChangeSet({
+		proposalId: "proposal-brief-fixture",
+		files: [
+			{
+				path: "content/posts/fixture-brief.md",
+				operation: "CREATE",
+				content: `---
+title: Fixture Brief
+description: "Santa Cruz County fixture brief for packet marker coverage."
+category: Plumbing Tips
+date: "2026-08-01"
+canonical: /fixture-brief
+query_cluster: fixture brief Santa Cruz
+evidence_ids: [fixture]
+---
+
+# Fixture Brief
+
+Santa Cruz County fixture body for packet tests.
+`,
+			},
+		],
+	});
+	const body = buildDraftPrBrief({
+		opportunity: {
+			id: "proposal-brief-fixture",
+			slug: "capitola-art-wine-weekend-home-plumbing-prep",
+			owner_url: "/capitola-art-wine-weekend-home-plumbing-prep",
+			content_path:
+				"content/posts/capitola-art-wine-weekend-home-plumbing-prep.md",
+			query_cluster: "Capitola Art and Wine Festival weekend plumbing prep",
+			click_title:
+				"Art & Wine Weekend Home Prep for Capitola and Santa Cruz Hosts",
+			search_intent: "informational_to_service",
+			unique_value:
+				"Connect festival weekend hosting to practical plumbing prep.",
+			angle: "Help hosts prep bathrooms and kitchens before guests arrive.",
+			community_context:
+				"Capitola Art & Wine Festival is a local community weekend.",
+			must_cover: ["guest bathroom checks", "kitchen disposal limits"],
+			people_also_ask: [
+				"How can festival weekend guests stress home plumbing?",
+			],
+			existing_page_assessment: "EXISTING_INSUFFICIENT",
+			existing_page_decision: "CREATE_JUSTIFIED",
+			evidence_ids: ["repository-inventory", "local-demand-calendar"],
+			internal_links: [
+				{
+					to: "/service-area/capitola-ca-plumbing-septic-services",
+					anchor: "capitola service area",
+					reader_rationale: "Local next step for Capitola hosts.",
+				},
+				{
+					to: "/service-offerings/drain-cleaning",
+					anchor: "drain cleaning",
+					reader_rationale: "Helps readers act on clog risk.",
+				},
+				{
+					to: "/contact",
+					anchor: "contact",
+					reader_rationale: "Clear path to request help.",
+				},
+				{
+					to: "/how-to-avoid-common-holiday-plumbing-disasters",
+					anchor: "holiday plumbing",
+					reader_rationale: "Related hosting guidance.",
+				},
+			],
+			decision_notes: "Chose Art & Wine because the lead window is active.",
+			research_notes: "Calendar-only research for this fixture.",
+			demand_source: {
+				kind: "LOCAL_EVENT",
+				name: "Capitola Art & Wine Festival",
+				date: "2026-09-12",
+				lead_time_days: 42,
+			},
+		},
+		changeSet,
+		writer: {
+			model: "openai/gpt-5.6-terra",
+			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
+		},
+		branch: "eve/seo/2026-08-01-capitola-art-wine-weekend-home-plumbing-prep",
+		quality: {
+			word_count: 1600,
+			faq_questions: 5,
+			internal_links: [
+				"/service-area/capitola-ca-plumbing-septic-services",
+				"/service-offerings/drain-cleaning",
+				"/contact",
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+			],
+		},
+		demandContext: {
+			research: {
+				mode: "CALENDAR_ONLY",
+				classification: "MOCK_VERIFIED",
+			},
+			active_demand: [
+				{
+					name: "Capitola Art & Wine Festival",
+					kind: "LOCAL_EVENT",
+					lead_time_days: 42,
+				},
+				{ name: "Labor Day", kind: "HOLIDAY", lead_time_days: 37 },
+			],
+			active_trends: [
+				{
+					name: "hard water and coastal mineral scale",
+					kind: "TRENDING_CONCEPT",
+				},
+			],
+		},
+		topicDecision: {
+			mode: "MODEL_DECIDED",
+			topic_id: "event-capitola-art-wine-2026",
+			reason:
+				"Art & Wine weekend is an active Santa Cruz County community moment with hosting load.",
+			why_over_others:
+				"Labor Day was close, but Art & Wine had a stronger local-event click hook for Capitola and nearby hosts.",
+			seo_value:
+				"The post can win informational festival-weekend queries and route readers into Capitola service and drain pages.",
+			model: "openai/gpt-5.6-terra",
+		},
+		considered: [
+			{
+				id: "event-capitola-art-wine-2026",
+				viable: true,
+				score: 32,
+				click_title: "Art & Wine Weekend Home Prep",
+				demand_kind: "LOCAL_EVENT",
+				demand_name: "Capitola Art & Wine Festival",
+			},
+			{
+				id: "holiday-labor-day-2026",
+				viable: true,
+				score: 29,
+				click_title: "Labor Day Weekend Plumbing Prep",
+				demand_kind: "HOLIDAY",
+				demand_name: "Labor Day",
+			},
+			{
+				id: "tankless-water-heater-maintenance-santa-cruz",
+				viable: false,
+				score: 24,
+				click_title: "Tankless Water Heater Maintenance",
+				conflict: null,
+				link_count: 2,
+			},
+		],
+		selectionReason: "DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY",
+	});
+	assertDraftPrPacket({
+		title: "SEO: Capitola Art and Wine Festival weekend plumbing prep",
+		body,
+		changeSet,
+	});
+	assert.match(body, /Why Eve chose this over the other options/);
+	assert.match(body, /holiday-labor-day-2026/);
+	assert.match(body, /How this helps SEO/);
+	assert.match(body, /stronger local-event click hook/);
+	assert.equal(body.includes("\u2014"), false);
+	assert.equal(body.includes("\u2013"), false);
 });
 
 test("proposal rejects junk drafts instead of opening a Connect PR", async () => {
@@ -234,6 +415,10 @@ test("proposal honors Eve topic decisions over score order", async () => {
 			return {
 				topic_id: labor.id,
 				reason: "Labor Day hosting prep is the stronger near-term click path.",
+				why_over_others:
+					"Eve preferred Labor Day over the higher-scoring festival topic for this fixture because end-of-summer hosting is immediate.",
+				seo_value:
+					"A Labor Day prep post can capture late-summer hosting queries and link into drain and septic service pages.",
 				mode: "MODEL_DECIDED",
 			};
 		},
@@ -248,6 +433,9 @@ test("proposal honors Eve topic decisions over score order", async () => {
 	assert.match(result.opportunity.query_cluster, /Labor Day/i);
 	assert.equal(result.topic_decision.mode, "MODEL_DECIDED");
 	assert.match(result.topic_decision.reason, /Labor Day/i);
+	const prBody = calls.find(([name]) => name === "pr")[3];
+	assert.match(prBody, /Why Eve chose this over the other options/);
+	assert.match(prBody, /end-of-summer hosting is immediate/);
 });
 
 test("non-proposal jobs cannot enter the draft publication workflow", async () => {

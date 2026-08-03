@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 58: Detailed Draft PR Briefs (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked for detailed PR briefs that explain what Eve did, why it chose the topic over alternatives, why the post matters, and how it helps SEO.
+- Correction: Connect draft PR bodies now use `buildDraftPrBrief` with reviewer sections for run actions, timing importance, alternatives considered/skipped, SEO mechanics, expected observation window, and execution evidence, while keeping the required packet markers.
+- Topic decisions also capture `why_over_others` and `seo_value` for the brief.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`130/130` passing), including detailed brief packet marker coverage.
+- Next exact action: merge/deploy with prior autonomy work, then confirm the next live draft PR body contains the detailed brief sections.
+
 ## Phase 57: Fully Autonomous Research and Topic Decisions (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner direction: nothing in the proposal path should be an owner option or unavailable toggle. Eve must research and decide automatically.
