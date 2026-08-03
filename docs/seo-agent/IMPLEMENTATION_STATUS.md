@@ -6,7 +6,7 @@
 - Live proof context: Cron → Connect previously opened draft PR [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) via `gitwadesplumbingandseptic-com[bot]` (Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ`). That post was generic, non-local, thinly linked, and not worth keeping. PRs `#102` and `#101` are closed; the colliding `eve/seo/...hosting-checklist...` branch was deleted.
 - Root cause: the live Cron path used a hardcoded hosting-checklist topic, a generic anti-local writer prompt, a single home link, and fallback publishing that could open a draft PR from junk Markdown.
 - Correction: `src/blog-opportunity.mjs` now holds a 10-topic Santa Cruz County catalog with click titles, CTR meta hooks, unique-value briefs, must-cover points, and people-also-ask questions. Selection stays inventory-aware. The writer brief targets people-first helpful content. Publish gates require about `1,400`+ words, `7`+ H2s, Quick Answer, unique-value section, `5`+ FAQ answers, `4`+ planned internal links, local meta description, and reject generic filler or unsupported claims. Writer max output tokens raised to `6,500`. Junk drafts still return `REJECTED_DRAFT_QUALITY` with no Connect PR.
-- Verification: focused `blog-opportunity` and `proposal` tests pass; full sidecar `npm test` follows before commit.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`122/122` passing), including expanded `blog-opportunity` and `proposal` coverage for people-first depth gates.
 - Next exact action: merge and deploy, then run Eve Cron and confirm the next draft PR is a catalog topic with CTR meta, unique local value, FAQ depth, and multiple service links.
 
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
