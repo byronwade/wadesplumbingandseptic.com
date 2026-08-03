@@ -4,6 +4,7 @@ import { createAuditOnlyRun, createConfiguredAuditOnlyRun } from "./audit.mjs";
 import { createIntegrationRegistry } from "./adapters.mjs";
 import { loadConfig } from "./config.mjs";
 import { DEFAULT_BUDGETS } from "./constants.mjs";
+import { isStandingProductionPropose } from "./production-mode.mjs";
 import {
 	isRepositoryRoot,
 	readRepositorySnapshotMetadata,
@@ -168,17 +169,23 @@ export function assertRunDescriptor({
 	});
 }
 
+export { isStandingProductionPropose } from "./production-mode.mjs";
+
 export function loadRuntimeSettings(env = process.env) {
-	const mode =
-		env.SEO_AGENT_RUN_MODE ??
-		(env.SEO_AGENT_ENV === "production" ? "observe" : "dry-run");
+	const standingPropose = isStandingProductionPropose(env);
+	const mode = standingPropose
+		? "propose"
+		: (env.SEO_AGENT_RUN_MODE ??
+			(env.SEO_AGENT_ENV === "production" ? "observe" : "dry-run"));
 	if (!RUNTIME_MODES.includes(mode))
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.MALFORMED_REQUEST,
 			`Unsupported SEO_AGENT_RUN_MODE: ${mode}`,
 			{ status: 503 },
 		);
-	const killSwitch = env.SEO_AGENT_MUTATION_KILL_SWITCH ?? "true";
+	const killSwitch = standingPropose
+		? "false"
+		: (env.SEO_AGENT_MUTATION_KILL_SWITCH ?? "true");
 	if (!["true", "false"].includes(killSwitch))
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.MALFORMED_REQUEST,

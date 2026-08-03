@@ -96,13 +96,17 @@ test("deployed sidecar configuration requires production plus an OIDC or Gateway
 	assert.throws(
 		() =>
 			assertDeployedSidecarReadiness(
-				loadConfig({ SEO_AGENT_ENV: "production" }),
+				loadConfig({
+					SEO_AGENT_ENV: "production",
+					SEO_AGENT_FORCE_OBSERVE: "true",
+				}),
 			),
 		/Vercel OIDC or AI_GATEWAY_API_KEY/,
 	);
 	const config = assertDeployedSidecarReadiness(
 		loadConfig({
 			SEO_AGENT_ENV: "production",
+			SEO_AGENT_FORCE_OBSERVE: "true",
 			VERCEL_OIDC_TOKEN: "oidc-token-value",
 		}),
 	);
@@ -790,7 +794,10 @@ test("every live probe caller requires production and an exact human-approved au
 		/outside the production/,
 	);
 
-	const unapprovedConfig = loadConfig({ SEO_AGENT_ENV: "production" });
+	const unapprovedConfig = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_FORCE_OBSERVE: "true",
+	});
 	await assert.rejects(
 		probeReadOnlyIntegrations({
 			registry: createIntegrationRegistry({ config: unapprovedConfig }),
@@ -803,6 +810,7 @@ test("every live probe caller requires production and an exact human-approved au
 
 	const approvedConfig = loadConfig({
 		SEO_AGENT_ENV: "production",
+		SEO_AGENT_FORCE_OBSERVE: "true",
 		SEO_AGENT_LIVE_READS_APPROVED: "true",
 		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
 	});

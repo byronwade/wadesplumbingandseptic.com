@@ -1,9 +1,11 @@
 import { z } from "zod";
 import { DEFAULT_BUDGETS } from "./constants.mjs";
+import { isStandingProductionPropose } from "./production-mode.mjs";
 
 const envSchema = z
 	.object({
 		SEO_AGENT_ENV: z.enum(["development", "preview", "production"]).optional(),
+		SEO_AGENT_FORCE_OBSERVE: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_REPOSITORY: z
 			.string()
 			.regex(/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/)
@@ -102,6 +104,7 @@ export function loadConfig(env = process.env) {
 			"GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY must be configured together.",
 		);
 	}
+	const standingPropose = isStandingProductionPropose(raw);
 	return Object.freeze({
 		environment: raw.SEO_AGENT_ENV ?? "development",
 		repository:
@@ -117,8 +120,8 @@ export function loadConfig(env = process.env) {
 		githubConnectorId:
 			raw.SEO_AGENT_GITHUB_CONNECTOR_ID ?? "github/wadesplumbingandseptic-com",
 		integrationFlags: Object.freeze({
-			aiGateway: raw.SEO_AGENT_ENABLE_AI_GATEWAY === "true",
-			github: raw.SEO_AGENT_ENABLE_GITHUB === "true",
+			aiGateway: standingPropose || raw.SEO_AGENT_ENABLE_AI_GATEWAY === "true",
+			github: standingPropose || raw.SEO_AGENT_ENABLE_GITHUB === "true",
 			vercel: raw.SEO_AGENT_ENABLE_VERCEL === "true",
 			searchConsole: raw.SEO_AGENT_ENABLE_SEARCH_CONSOLE === "true",
 			pageSpeed: raw.SEO_AGENT_ENABLE_PAGESPEED === "true",
@@ -134,7 +137,9 @@ export function loadConfig(env = process.env) {
 			approvedRunId: raw.SEO_AGENT_LIVE_READS_APPROVED_RUN_ID,
 		}),
 		publishing: Object.freeze({
-			mutationMode: raw.SEO_AGENT_MUTATION_MODE ?? "disabled",
+			mutationMode: standingPropose
+				? "enabled"
+				: (raw.SEO_AGENT_MUTATION_MODE ?? "disabled"),
 			humanApproved: raw.SEO_AGENT_PUBLISHING_HUMAN_APPROVED === "true",
 			integrationTestEnabled:
 				raw.SEO_AGENT_PUBLISHING_INTEGRATION_TEST === "true",

@@ -37,16 +37,10 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 
 Eve opens draft PRs with Vercel Connect GitHub after Cron research. No Vercel CLI token is required for that write path.
 
-- [ ] Merge and deploy the Connect draft-PR path repair.
-- [ ] In Vercel Production for the Eve service, set only:
-  - `SEO_AGENT_RUN_MODE=propose`
-  - `SEO_AGENT_MUTATION_MODE=enabled`
-  - `SEO_AGENT_MUTATION_KILL_SWITCH=false`
-  - `SEO_AGENT_ENABLE_GITHUB=true`
-  - `SEO_AGENT_ENABLE_AI_GATEWAY=true`
+- [ ] Merge and deploy the Connect draft-PR path. On Vercel Production, Eve stands in propose mode in code so stale dashboard observe values do not block draft PRs.
 - [ ] Keep GitHub Connect installed as `github/wadesplumbingandseptic-com` with contents and pull-request write on this repository.
 - [ ] Let the Monday `17 16 * * 1` UTC Cron run, or use the Vercel dashboard Cron Run control for that schedule.
 - [ ] Confirm Eve opens one `eve/seo/YYYY-MM-DD-<slug>` draft PR. It must not merge, deploy, or write `main`.
-- [ ] After review, restore `SEO_AGENT_RUN_MODE=observe`, `SEO_AGENT_MUTATION_MODE=disabled`, and `SEO_AGENT_MUTATION_KILL_SWITCH=true` if you want Cron audit-only again.
+- [ ] To restore audit-only Cron, set `SEO_AGENT_FORCE_OBSERVE=true` in Production and redeploy.
 
 The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).
