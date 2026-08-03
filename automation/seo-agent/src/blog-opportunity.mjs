@@ -550,7 +550,9 @@ function resolveLinkPlan(topicSpec, urls) {
 
 function topicScore(topicSpec) {
 	return (
-		topicSpec.demand * topicSpec.intent_fit - topicSpec.cannibalization_risk
+		topicSpec.demand * topicSpec.intent_fit -
+		topicSpec.cannibalization_risk +
+		(Number.isFinite(topicSpec.score_bonus) ? topicSpec.score_bonus : 0)
 	);
 }
 
@@ -613,9 +615,25 @@ export function selectBlogOpportunity({
 	}
 	const chosen = catalog.find((topicSpec) => topicSpec.id === ranked[0].id);
 	const links = resolveLinkPlan(chosen, urls);
+	const demandTimed = Boolean(
+		chosen.publication_timing?.mode === "DEMAND_TIMED",
+	);
+	const evidenceIds = [
+		"repository-inventory",
+		`topic-catalog:${chosen.id}`,
+		"people-first-seo-brief",
+	];
+	if (demandTimed) {
+		evidenceIds.push("local-demand-calendar");
+		evidenceIds.push(
+			...(chosen.publication_timing.local_relevance_evidence_ids ?? []),
+		);
+	}
 	return Object.freeze({
 		decision: "PROPOSE_FOR_HUMAN_REVIEW",
-		selection_reason: "DISTINCT_LOCAL_BLOG_INTENT",
+		selection_reason: demandTimed
+			? "DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY"
+			: "DISTINCT_LOCAL_BLOG_INTENT",
 		considered: Object.freeze(considered),
 		opportunity: Object.freeze({
 			id: `proposal-${runId}`,
@@ -626,22 +644,22 @@ export function selectBlogOpportunity({
 			title_hint: chosen.click_title,
 			click_title: chosen.click_title,
 			meta_hook: chosen.meta_hook,
-			search_intent: chosen.search_intent,
+			search_intent: chosen.search_intent ?? "informational_to_service",
 			unique_value: chosen.unique_value,
 			angle: chosen.angle,
+			community_context: chosen.community_context ?? null,
 			must_cover: chosen.must_cover,
 			people_also_ask: chosen.people_also_ask,
 			category: chosen.category,
 			tags: chosen.tags,
 			image: chosen.image,
 			image_alt: chosen.image_alt,
+			editorial_type: chosen.editorial_type ?? "STANDARD_BLOG",
+			publication_timing: chosen.publication_timing ?? null,
+			demand_source: chosen.demand_source ?? null,
 			existing_page_assessment: "EXISTING_INSUFFICIENT",
 			existing_page_decision: "CREATE_JUSTIFIED",
-			evidence_ids: Object.freeze([
-				"repository-inventory",
-				`topic-catalog:${chosen.id}`,
-				"people-first-seo-brief",
-			]),
+			evidence_ids: Object.freeze([...new Set(evidenceIds)]),
 			internal_links: links,
 			internal_link: links[0].to,
 		}),
@@ -766,6 +784,29 @@ export function assertPublishableBlogDraft(markdown, opportunity) {
 	if (covered.length < Math.min(3, opportunity.must_cover.length)) {
 		return Object.freeze({ ok: false, reason: "MISSING_MUST_COVER_DEPTH" });
 	}
+	const demandName = opportunity.demand_source?.name;
+	if (typeof demandName === "string" && demandName.length >= 4) {
+		const variants = [
+			demandName,
+			demandName.replace(/\s*&\s*/g, " and "),
+			demandName.replace(/\s+and\s+/gi, " & "),
+		];
+		const mentioned = variants.some((variant) =>
+			new RegExp(variant.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i").test(
+				text,
+			),
+		);
+		if (!mentioned) {
+			return Object.freeze({ ok: false, reason: "MISSING_COMMUNITY_CONTEXT" });
+		}
+	}
+	if (
+		/\b(?:we sponsor|wade'?s?\s+is\s+(?:an?\s+)?(?:official\s+)?sponsor|sponsored by wade|official plumber of|preferred vendor of)\b/i.test(
+			text,
+		)
+	) {
+		return Object.freeze({ ok: false, reason: "EVENT_SPONSORSHIP_CLAIM" });
+	}
 	return Object.freeze({
 		ok: true,
 		reason: null,
@@ -773,6 +814,7 @@ export function assertPublishableBlogDraft(markdown, opportunity) {
 		internal_links: matched,
 		faq_questions: faqQuestionCount(text),
 		description_length: description.length,
+		demand_timed: Boolean(opportunity.publication_timing),
 	});
 }
 
@@ -787,9 +829,18 @@ export function buildWriterPrompt({ opportunity, date }) {
 	const paa = opportunity.people_also_ask
 		.map((question) => `- ${question}`)
 		.join("\n");
+	const communityBlock = opportunity.community_context
+		? `Community / demand timing context (use as local relevance, NOT as sponsorship or business proof):
+${opportunity.community_context}
+Demand label to mention naturally once or twice: ${opportunity.demand_source?.name ?? "Santa Cruz County community timing"}
+Timing: ${opportunity.publication_timing?.event_kind ?? "standard"} on ${opportunity.demand_source?.date ?? "n/a"} (${opportunity.publication_timing?.lead_time_days ?? "n/a"} days of useful lead time).
+Date precision: ${opportunity.publication_timing?.date_precision ?? "EXACT_DATE"}. If approximate, say the weekend/season can shift and still give useful prep advice.
+`
+		: "Community context: write for Santa Cruz County homeowners and the broader local community without forcing a festival name.";
+
 	return `You write people-first SEO content for Wade's Plumbing & Septic (Santa Cruz County plumbing and septic).
 
-Goal: publish a draft that can earn clicks and satisfy Google helpful-content expectations by being original, complete for the query, locally specific, and useful enough that a homeowner would bookmark or share it. Exceed thin competitor posts. Do not write generic national filler.
+Goal: publish a draft that can earn clicks and satisfy Google helpful-content expectations by being original, complete for the query, locally specific, community-aware, and useful enough that a homeowner would bookmark or share it. Exceed thin competitor posts. Do not write generic national filler.
 
 Return ONLY Markdown with YAML front matter. No code fences.
 
@@ -797,6 +848,7 @@ Search intent: ${opportunity.search_intent}
 Query cluster: ${opportunity.query_cluster}
 Unique value you must deliver: ${opportunity.unique_value}
 Angle: ${opportunity.angle}
+${communityBlock}
 
 Click-focused title to use or lightly improve (keep under 70 characters, keep Santa Cruz County specificity):
 ${opportunity.click_title}
@@ -841,6 +893,8 @@ People-first / SEO quality bar:
 - Titles and descriptions must earn the click: specific problem + place + outcome. No clickbait that the body fails to deliver.
 - Do NOT keyword stuff, build doorway city pages, or reuse boilerplate from other posts.
 - Do NOT claim the company is "serving", "available in", licensed, insured, bonded, 24/7, same-day, or guaranteed, and do not quote prices.
+- Do NOT claim Wade is a sponsor, staffs an event, or is the official plumber of any festival, fair, or holiday.
+- Local events and holidays are community timing context that helps neighbors prepare their homes. Keep that warm and useful without fake urgency stats.
 - Do NOT give dangerous DIY steps (torch work, trenching, electrical panels, chemical drain bombing). Prefer stop-and-call-a-pro guidance when risk rises.
 - Avoid empty phrases like "in today's world", "it is important to note", or "needless to say".`;
 }

@@ -1,13 +1,22 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 56: Automatic Local Demand and Community Timing (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
+- Correction: Eve proposal selection now merges a versioned local demand calendar (`seo/manifests/local-demand-calendar.json`) and trending local concepts (`seo/manifests/trending-local-concepts.json`) ahead of the evergreen catalog. Active windows cover Independence Day, Labor Day, Thanksgiving, New Year, Watsonville Strawberry Festival, Capitola Art & Wine, Santa Cruz County Fair, Open Studios, rainy season, and summer visitor hosting, plus hard-water, vacation-rental, ADU, and storm-week trend concepts.
+- Runtime: `src/local-demand.mjs` selects lead-window holidays/events and in-month trends offline (`CALENDAR_ONLY`). Optional browser corroboration uses allowlisted community domains (`usa.gov`, Capitola/Watsonville/county fair/art-and-wine hosts) when `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` and those domains are listed in `SEO_AGENT_BROWSER_ALLOWED_DOMAINS`. Public web remains context only: no sponsorship, prices, licensed/insured, or service-area invention.
+- Quality: demand-timed drafts must name the community event/holiday/trend, keep people-first depth gates, and reject fake event affiliation claims.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`127/127` passing), including `local-demand` and demand-timed `proposal` coverage. Classification for calendar/trends is `MOCK_VERIFIED` until a live Cron draft is reviewed; browser corroboration is not claimed live in this phase.
+- Next exact action: merge and deploy with Phase 55, run Eve Cron, and confirm the next draft PR is demand-timed (for example Art & Wine / Labor Day / County Fair in the current August lead window) with community context and full depth gates.
+
 ## Phase 55: Blog Generation Quality Rebuild (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner closed the thin Connect draft (#102) and asked for people-first SEO content that can compete: more unique pages, stronger click appeal, and enough depth to satisfy helpful-content expectations.
+- State: READY_FOR_HUMAN_REVIEW / extended by Phase 56. Owner closed the thin Connect draft (#102) and asked for people-first SEO content that can compete: more unique pages, stronger click appeal, and enough depth to satisfy helpful-content expectations.
 - Live proof context: Cron → Connect previously opened draft PR [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) via `gitwadesplumbingandseptic-com[bot]` (Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ`). That post was generic, non-local, thinly linked, and not worth keeping. PRs `#102` and `#101` are closed; the colliding `eve/seo/...hosting-checklist...` branch was deleted.
 - Root cause: the live Cron path used a hardcoded hosting-checklist topic, a generic anti-local writer prompt, a single home link, and fallback publishing that could open a draft PR from junk Markdown.
 - Correction: `src/blog-opportunity.mjs` now holds a 10-topic Santa Cruz County catalog with click titles, CTR meta hooks, unique-value briefs, must-cover points, and people-also-ask questions. Selection stays inventory-aware. The writer brief targets people-first helpful content. Publish gates require about `1,400`+ words, `7`+ H2s, Quick Answer, unique-value section, `5`+ FAQ answers, `4`+ planned internal links, local meta description, and reject generic filler or unsupported claims. Writer max output tokens raised to `6,500`. Junk drafts still return `REJECTED_DRAFT_QUALITY` with no Connect PR.
-- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`122/122` passing), including expanded `blog-opportunity` and `proposal` coverage for people-first depth gates.
-- Next exact action: merge and deploy, then run Eve Cron and confirm the next draft PR is a catalog topic with CTR meta, unique local value, FAQ depth, and multiple service links.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`122/122` passing originally; Phase 56 raises the suite to `127/127`).
+- Next exact action: complete Phase 56 merge/deploy proof.
 
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 

@@ -1,0 +1,482 @@
+{
+	"schema_version": "1.0",
+	"classification": "MOCK_VERIFIED",
+	"description": "Versioned Santa Cruz County demand calendar for Eve blog timing. Holidays use fixed public dates. Local events use approximate community windows and must be treated as context, never as Wade sponsorship, attendance, or service-area proof. Exact festival dates can shift year to year.",
+	"entries": [
+		{
+			"id": "holiday-independence-day-2026",
+			"kind": "HOLIDAY",
+			"name": "Independence Day",
+			"date": "2026-07-04",
+			"lead_window_days": { "min": 14, "max": 40 },
+			"slug": "independence-day-plumbing-prep-santa-cruz",
+			"query_cluster": "Independence Day plumbing prep Santa Cruz County",
+			"click_title": "Independence Day Plumbing Prep for Santa Cruz County Hosts",
+			"meta_hook": "Hosting for the Fourth? Reduce guest-day plumbing surprises with a Santa Cruz County checklist for bathrooms, outdoor water, and disposals.",
+			"unique_value": "Focus on holiday hosting load for coastal and hillside homes, not a generic national July 4 tip list.",
+			"angle": "Help homeowners prepare bathrooms, hose bibs, and kitchen drains before holiday guests arrive without inventing event attendance or pricing claims.",
+			"community_context": "Independence Day gatherings often mean more showers, flushes, ice, and outdoor rinsing across Santa Cruz County homes.",
+			"must_cover": [
+				"guest bathroom supply checks before a busy holiday weekend",
+				"outdoor faucet and hose habits during gatherings",
+				"disposal and grease limits when cooking for a crowd",
+				"signs to stop DIY and call before guests arrive"
+			],
+			"people_also_ask": [
+				"What should I check before holiday guests use the bathrooms?",
+				"Can outdoor entertaining stress old hose bibs?",
+				"How do I reduce clog risk while cooking for a crowd?",
+				"What leaks are worth fixing before a holiday weekend?",
+				"When should I call a plumber before guests arrive?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "holiday plumbing", "hosting guests", "summer"],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Home plumbing preparation for holiday hosting",
+			"preferred_links": [
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/service-offerings/drain-cleaning",
+				"/service-offerings/leak-detection",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "GOVERNMENT_OR_STANDARD",
+				"url": "https://www.usa.gov/holidays",
+				"note": "Federal holiday date reference only."
+			}
+		},
+		{
+			"id": "holiday-labor-day-2026",
+			"kind": "HOLIDAY",
+			"name": "Labor Day",
+			"date": "2026-09-07",
+			"lead_window_days": { "min": 14, "max": 45 },
+			"slug": "labor-day-weekend-plumbing-prep-santa-cruz",
+			"query_cluster": "Labor Day weekend plumbing prep Santa Cruz",
+			"click_title": "Labor Day Weekend Plumbing Prep for Santa Cruz County Homes",
+			"meta_hook": "End-of-summer guests still stress drains and outdoor water. A practical Labor Day plumbing prep guide for Santa Cruz County hosts.",
+			"unique_value": "Tie end-of-summer hosting to coastal outdoor water use and septic-friendly kitchen habits.",
+			"angle": "Prepare for the last big summer hosting weekend with bathroom, outdoor rinse, and kitchen drain habits that protect pipes and septic systems.",
+			"community_context": "Labor Day weekend is a common last-hurrah hosting window for Santa Cruz County households before school routines settle in.",
+			"must_cover": [
+				"end-of-summer outdoor faucet and rinse station checks",
+				"guest toilet and supply stop habits",
+				"septic-aware cooking cleanup for holiday meals",
+				"what to do if a clog hits mid-weekend"
+			],
+			"people_also_ask": [
+				"What plumbing checks matter before a Labor Day party?",
+				"Should I disconnect hoses after summer hosting?",
+				"How do holiday leftovers affect a septic system?",
+				"What is a safe response to a weekend clog?",
+				"When is a same-weekend plumber visit necessary?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "labor day", "holiday plumbing", "hosting guests"],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Plumbing prep for late-summer hosting",
+			"preferred_links": [
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/service-offerings/drain-cleaning",
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "GOVERNMENT_OR_STANDARD",
+				"url": "https://www.usa.gov/holidays",
+				"note": "Federal holiday date reference only."
+			}
+		},
+		{
+			"id": "event-watsonville-strawberry-festival-2026",
+			"kind": "LOCAL_EVENT",
+			"name": "Watsonville Strawberry Festival",
+			"date": "2026-08-01",
+			"date_precision": "APPROXIMATE_WEEKEND",
+			"lead_window_days": { "min": 10, "max": 45 },
+			"slug": "watsonville-strawberry-festival-weekend-home-prep",
+			"query_cluster": "Watsonville Strawberry Festival weekend home plumbing prep",
+			"click_title": "Strawberry Festival Weekend Home Prep for Watsonville Hosts",
+			"meta_hook": "Festival weekends fill Santa Cruz County houses. Prep bathrooms and kitchens before Watsonville Strawberry Festival guests arrive.",
+			"unique_value": "Anchor practical hosting plumbing to a real South County community festival without inventing sponsorship or attendance claims.",
+			"angle": "Help Watsonville and nearby hosts ready guest bathrooms, kitchen drains, and outdoor rinse habits before a busy berry-weekend crowd.",
+			"community_context": "Watsonville Strawberry Festival is a cherished Santa Cruz County community weekend. Nearby hosts often see more overnight guests, cooking, and outdoor rinsing. Treat timing as community context, not a Wade sponsorship claim.",
+			"must_cover": [
+				"why local festival weekends raise bathroom and kitchen load",
+				"guest bathroom checks before overnight visitors",
+				"kitchen grease and disposal limits while entertaining",
+				"outdoor rinse and hose bib habits after a sticky summer day"
+			],
+			"people_also_ask": [
+				"How can a festival weekend stress home plumbing?",
+				"What should Watsonville hosts check before overnight guests?",
+				"How do I reduce clog risk while cooking for visitors?",
+				"Are outdoor rinse stations hard on older hose bibs?",
+				"When should I call a plumber before a busy local weekend?"
+			],
+			"category": "Plumbing Tips",
+			"tags": [
+				"santa cruz",
+				"watsonville",
+				"strawberry festival",
+				"community events",
+				"hosting guests"
+			],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Home plumbing prep for a busy community festival weekend",
+			"preferred_links": [
+				"/service-area/watsonville-ca-plumbing-septic-services",
+				"/service-offerings/drain-cleaning",
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "PUBLIC_WEB_UNTRUSTED",
+				"url": "https://www.watsonville.gov/1117/Watsonville-Strawberry-Festival",
+				"note": "Community festival timing can shift. Use only as local context, never as a Wade business claim."
+			}
+		},
+		{
+			"id": "event-capitola-art-wine-2026",
+			"kind": "LOCAL_EVENT",
+			"name": "Capitola Art & Wine Festival",
+			"date": "2026-09-12",
+			"date_precision": "APPROXIMATE_WEEKEND",
+			"lead_window_days": { "min": 10, "max": 50 },
+			"slug": "capitola-art-wine-weekend-home-plumbing-prep",
+			"query_cluster": "Capitola Art and Wine Festival weekend plumbing prep",
+			"click_title": "Art & Wine Weekend Home Prep for Capitola and Santa Cruz Hosts",
+			"meta_hook": "Festival weekends mean guests and busy bathrooms. Prep Santa Cruz County home plumbing before Capitola Art & Wine hits town.",
+			"unique_value": "Connect a real Santa Cruz County community festival weekend to practical hosting plumbing, without inventing company affiliation with the event.",
+			"angle": "Use the Art & Wine weekend as community context for homeowners hosting friends or family: bathrooms, disposals, outdoor rinse water, and early leak checks.",
+			"community_context": "Capitola Art & Wine Festival is a well-known Santa Cruz County community weekend. Nearby hosts often see more overnight guests and heavier bathroom use. Treat festival timing as approximate community context, not a sponsorship claim.",
+			"must_cover": [
+				"why community festival weekends raise indoor water use",
+				"bathroom and toilet checks before overnight guests",
+				"kitchen disposal limits during entertaining",
+				"outdoor rinse and hose bib habits for sandy or sticky hands"
+			],
+			"people_also_ask": [
+				"How can festival weekend guests stress home plumbing?",
+				"What should I check before hosting overnight visitors?",
+				"Are outdoor rinse stations hard on hose bibs?",
+				"How do I reduce clog risk while entertaining?",
+				"When should I call a plumber before a busy local weekend?"
+			],
+			"category": "Plumbing Tips",
+			"tags": [
+				"santa cruz",
+				"capitola",
+				"art and wine",
+				"community events",
+				"hosting guests"
+			],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Home plumbing prep for a busy community weekend",
+			"preferred_links": [
+				"/service-area/capitola-ca-plumbing-septic-services",
+				"/service-offerings/drain-cleaning",
+				"/service-offerings/fixture-installation",
+				"/contact",
+				"/how-to-avoid-common-holiday-plumbing-disasters"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "PUBLIC_WEB_UNTRUSTED",
+				"url": "https://capitolaartandwine.com/",
+				"note": "Community festival timing is approximate and may shift. Use only as local context, never as a Wade business claim."
+			}
+		},
+		{
+			"id": "event-santa-cruz-county-fair-2026",
+			"kind": "LOCAL_EVENT",
+			"name": "Santa Cruz County Fair",
+			"date": "2026-09-16",
+			"date_precision": "APPROXIMATE_WEEK",
+			"lead_window_days": { "min": 10, "max": 50 },
+			"slug": "santa-cruz-county-fair-week-home-plumbing-checklist",
+			"query_cluster": "Santa Cruz County Fair week home plumbing checklist",
+			"click_title": "County Fair Week Home Plumbing Checklist for Local Hosts",
+			"meta_hook": "Fair week brings visitors and fuller houses. A Santa Cruz County checklist for bathrooms, laundry, and kitchen drains before the crowd arrives.",
+			"unique_value": "Anchor advice to County Fair week hosting patterns without inventing fair operations or company involvement.",
+			"angle": "Help households hosting out-of-town family during fair week avoid preventable clogs, leaks, and outdoor faucet issues.",
+			"community_context": "Santa Cruz County Fair week is a local tradition that often means overnight guests and heavier laundry or kitchen use in nearby homes.",
+			"must_cover": [
+				"overnight guest bathroom readiness",
+				"laundry hose and supply checks before extra loads",
+				"kitchen drain habits during family meals",
+				"early leak signs worth catching before a packed week"
+			],
+			"people_also_ask": [
+				"Why does fair week matter for home plumbing?",
+				"What laundry checks prevent floods during guest stays?",
+				"How do I prep bathrooms for overnight visitors?",
+				"What kitchen habits protect drains during family cooking?",
+				"When should I get help before guests arrive?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "county fair", "hosting guests", "community events"],
+			"image": "/images/services/commercial-plumbing.webp",
+			"image_alt": "Home plumbing checklist for a busy local week",
+			"preferred_links": [
+				"/service-offerings/leak-detection",
+				"/service-offerings/drain-cleaning",
+				"/6-signs-you-have-a-hidden-water-leak",
+				"/contact"
+			],
+			"demand": 4,
+			"intent_fit": 4,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "PUBLIC_WEB_UNTRUSTED",
+				"url": "https://www.santacruzcountyfair.com/",
+				"note": "Fair dates can shift. Use as community timing context only."
+			}
+		},
+		{
+			"id": "event-santa-cruz-open-studios-2026",
+			"kind": "LOCAL_EVENT",
+			"name": "Santa Cruz County Open Studios",
+			"date": "2026-10-04",
+			"date_precision": "APPROXIMATE_WEEKEND",
+			"lead_window_days": { "min": 10, "max": 40 },
+			"slug": "open-studios-weekend-home-plumbing-prep-santa-cruz",
+			"query_cluster": "Open Studios weekend home plumbing prep Santa Cruz",
+			"click_title": "Open Studios Weekend Home Prep for Santa Cruz County Hosts",
+			"meta_hook": "Art tour weekends bring visitors through town. Prep bathrooms and kitchens before Santa Cruz County Open Studios traffic and overnight guests.",
+			"unique_value": "Use a local arts weekend as hosting context for practical plumbing prep without claiming event affiliation.",
+			"angle": "Help hosts and hillside households ready guest bathrooms, outdoor rinses, and kitchen drains before Open Studios visitors circulate.",
+			"community_context": "Santa Cruz County Open Studios weekends draw neighbors and out-of-town guests into homes and studios across the county. Treat dates as approximate community timing.",
+			"must_cover": [
+				"guest bathroom readiness for art-tour weekends",
+				"kitchen drain habits when hosting after studio visits",
+				"outdoor faucet checks for muddy or paint-stained hands",
+				"early leak clues worth catching before a packed weekend"
+			],
+			"people_also_ask": [
+				"How can Open Studios weekends affect home plumbing?",
+				"What should hosts check before overnight art-tour guests?",
+				"Do outdoor rinses stress older hose bibs?",
+				"How do I reduce clog risk while entertaining visitors?",
+				"When should I call before a busy local arts weekend?"
+			],
+			"category": "Plumbing Tips",
+			"tags": [
+				"santa cruz",
+				"open studios",
+				"community events",
+				"hosting guests"
+			],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Home plumbing prep for Open Studios weekend hosting",
+			"preferred_links": [
+				"/service-area/santa-cruz-ca-plumbing-septic-services",
+				"/service-offerings/drain-cleaning",
+				"/service-offerings/leak-detection",
+				"/contact"
+			],
+			"demand": 4,
+			"intent_fit": 4,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "PUBLIC_WEB_UNTRUSTED",
+				"url": "https://www.santacruzca.gov/",
+				"note": "Open Studios weekends can shift year to year. Use as community timing context only."
+			}
+		},
+		{
+			"id": "holiday-thanksgiving-2026",
+			"kind": "HOLIDAY",
+			"name": "Thanksgiving",
+			"date": "2026-11-26",
+			"lead_window_days": { "min": 14, "max": 45 },
+			"slug": "thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"query_cluster": "Thanksgiving kitchen drain septic prep Santa Cruz",
+			"click_title": "Thanksgiving Kitchen and Septic Prep for Santa Cruz County",
+			"meta_hook": "Turkey day grease and disposals overload drains. Prep kitchens and septic systems before Thanksgiving in Santa Cruz County.",
+			"unique_value": "Pair Thanksgiving cooking load with septic-parcel realities common across the county.",
+			"angle": "Prevent holiday kitchen clogs and septic stress with grease handling, disposal limits, and early backup signs.",
+			"community_context": "Thanksgiving cooking and overnight guests create one of the highest kitchen-drain loads of the year for Santa Cruz County homes.",
+			"must_cover": [
+				"grease and oil handling before and after the meal",
+				"disposal limits during holiday cooking",
+				"septic warning signs after heavy kitchen use",
+				"guest bathroom readiness for multi-day visits"
+			],
+			"people_also_ask": [
+				"Can Thanksgiving grease damage a septic system?",
+				"Should I use the disposal for holiday scraps?",
+				"What clog signs show up during holiday cooking?",
+				"How do I prep bathrooms for overnight family?",
+				"When is a pre-holiday plumber visit worth it?"
+			],
+			"category": "Septic Issues in Santa Cruz County",
+			"tags": ["santa cruz", "thanksgiving", "septic", "kitchen drains"],
+			"image": "/images/services/septic-pumping-illustration.webp",
+			"image_alt": "Kitchen and septic prep for Thanksgiving",
+			"preferred_links": [
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/service-offerings/drain-cleaning",
+				"/service-offerings/grease-trap-cleaning",
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "GOVERNMENT_OR_STANDARD",
+				"url": "https://www.usa.gov/holidays",
+				"note": "Federal holiday date reference only."
+			}
+		},
+		{
+			"id": "season-rainy-season-prep-2026",
+			"kind": "SEASONAL_TREND",
+			"name": "Santa Cruz County rainy season",
+			"date": "2026-11-01",
+			"date_precision": "SEASON_START",
+			"lead_window_days": { "min": 7, "max": 60 },
+			"slug": "rainy-season-septic-and-drain-prep-santa-cruz",
+			"query_cluster": "rainy season septic drain prep Santa Cruz County",
+			"click_title": "Rainy Season Septic and Drain Prep for Santa Cruz County",
+			"meta_hook": "Wet months raise drainfield and cleanout stress. Prep septic and drainage habits before Santa Cruz County rains settle in.",
+			"unique_value": "Focus on wet-season septic and drainage behavior for local parcels instead of generic winterizing filler.",
+			"angle": "Explain how sustained rain changes what homeowners should watch around cleanouts, drainfields, and outdoor drainage without inventing flood statistics.",
+			"community_context": "Santa Cruz County wet-season patterns push more moisture into soils and outdoor drains, which is when stressed septic systems and yard cleanouts often show themselves.",
+			"must_cover": [
+				"why wet soils matter for drainfields",
+				"cleanout and yard drainage checks before storms",
+				"indoor habits that reduce system stress during long rain",
+				"warning signs that need a professional evaluation"
+			],
+			"people_also_ask": [
+				"Can heavy rain affect a septic drainfield?",
+				"What should I check before a storm week?",
+				"Are soggy spots over a drainfield a warning?",
+				"Should I pump before rainy season?",
+				"When is standing water a plumbing emergency?"
+			],
+			"category": "Septic Issues in Santa Cruz County",
+			"tags": ["santa cruz", "rainy season", "septic", "drainfield"],
+			"image": "/images/services/septic-pumping-illustration.webp",
+			"image_alt": "Rainy season septic and drainage prep",
+			"preferred_links": [
+				"/septic-safety-during-floods-santa-cruz",
+				"/signs-your-drain-field-needs-professional-repair",
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/septic-safety-during-floods-santa-cruz",
+				"note": "Seasonal angle grounded in existing first-party rainy-season septic content."
+			}
+		},
+		{
+			"id": "holiday-new-year-2027",
+			"kind": "HOLIDAY",
+			"name": "New Year's Day",
+			"date": "2027-01-01",
+			"lead_window_days": { "min": 10, "max": 35 },
+			"slug": "new-year-plumbing-reset-santa-cruz-homes",
+			"query_cluster": "New Year plumbing maintenance reset Santa Cruz",
+			"click_title": "New Year Plumbing Reset for Santa Cruz County Homes",
+			"meta_hook": "Start the year with a practical plumbing reset: shutoffs, hoses, water heaters, and septic habits for Santa Cruz County homes.",
+			"unique_value": "A January maintenance reset tied to local housing and septic patterns, not a vague resolutions list.",
+			"angle": "Turn New Year motivation into a concrete plumbing and septic checklist homeowners can finish in one weekend morning.",
+			"community_context": "After holiday hosting, Santa Cruz County homes benefit from a calm reset before winter storms and school-year routines continue.",
+			"must_cover": [
+				"locate and test accessibility of main and fixture shutoffs",
+				"washing machine hose and supply checks",
+				"water heater flush or service decision points",
+				"septic pumping cadence review without invented schedules"
+			],
+			"people_also_ask": [
+				"What plumbing checks belong in a New Year reset?",
+				"How do I find my main water shutoff?",
+				"Should washer hoses be replaced on a schedule?",
+				"What water heater checks are homeowner-safe?",
+				"How do I plan septic maintenance for the year?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "new year", "plumbing maintenance", "home checklist"],
+			"image": "/images/services/water-heater-service.webp",
+			"image_alt": "New Year home plumbing maintenance checklist",
+			"preferred_links": [
+				"/the-importance-of-regular-plumbing-maintenance",
+				"/service-offerings/water-heater-installation",
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/contact"
+			],
+			"demand": 4,
+			"intent_fit": 4,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "GOVERNMENT_OR_STANDARD",
+				"url": "https://www.usa.gov/holidays",
+				"note": "Federal holiday date reference only."
+			}
+		},
+		{
+			"id": "season-summer-tourist-hosting-2026",
+			"kind": "SEASONAL_TREND",
+			"name": "Summer visitor season",
+			"date": "2026-06-15",
+			"date_precision": "SEASON_WINDOW",
+			"lead_window_days": { "min": 7, "max": 50 },
+			"slug": "summer-visitor-plumbing-prep-santa-cruz-hosts",
+			"query_cluster": "summer visitor plumbing prep Santa Cruz hosts",
+			"click_title": "Summer Visitor Plumbing Prep for Santa Cruz County Hosts",
+			"meta_hook": "Vacation guests mean more showers and laundry. Prep plumbing before summer visitors fill Santa Cruz County homes.",
+			"unique_value": "Speak directly to hosts and vacation-home caretakers in a visitor-heavy coastal county.",
+			"angle": "Prepare short-term hosting load: bathrooms, laundry hoses, outdoor rinsing, and shutoff literacy for guests or caretakers.",
+			"community_context": "Summer brings more short stays and family visits across Santa Cruz County, which quietly increases fixture and laundry cycles.",
+			"must_cover": [
+				"pre-arrival bathroom and supply stop checks",
+				"laundry hose inspection before guest turnover",
+				"outdoor rinse habits after beach days",
+				"simple shutoff instructions to leave for guests or caretakers"
+			],
+			"people_also_ask": [
+				"How do summer guests stress home plumbing?",
+				"What should vacation-home hosts check monthly?",
+				"Are beach outdoor rinses hard on hose bibs?",
+				"What shutoffs should guests know about?",
+				"When should a caretaker call a plumber?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "summer", "hosting guests", "vacation home"],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Summer visitor plumbing preparation",
+			"preferred_links": [
+				"/service-offerings/leak-detection",
+				"/service-offerings/drain-cleaning",
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 4,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/",
+				"note": "Seasonal hosting demand is a local business-context hypothesis for topic timing, not a traffic statistic claim."
+			}
+		}
+	]
+}

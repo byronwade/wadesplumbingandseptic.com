@@ -101,6 +101,13 @@ export const DEFAULT_BUDGETS = Object.freeze({
 		"analyticsdata.googleapis.com",
 		"businessprofileperformance.googleapis.com",
 		"api.localfalcon.com",
+		"www.usa.gov",
+		"www.cityofcapitola.org",
+		"capitolaartandwine.com",
+		"www.capitolaartandwine.com",
+		"www.santacruzcountyfair.com",
+		"www.watsonville.gov",
+		"www.santacruzca.gov",
 	],
 });
 

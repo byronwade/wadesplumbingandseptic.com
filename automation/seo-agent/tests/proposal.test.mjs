@@ -2,11 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { resolve } from "node:path";
 import { executeDraftProposal } from "../src/proposal.mjs";
-import {
-	BLOG_QUALITY_THRESHOLDS,
-	selectBlogOpportunity,
-} from "../src/blog-opportunity.mjs";
-import { collectPageInventory } from "../src/inventory.mjs";
+import { BLOG_QUALITY_THRESHOLDS } from "../src/blog-opportunity.mjs";
 import { createRunDescriptor, loadRuntimeSettings } from "../src/runtime.mjs";
 
 const repoRoot = resolve(import.meta.dirname, "../../..");
@@ -49,6 +45,9 @@ function richDraft(opportunity) {
 	const filler = Array.from({ length: 28 }, (_, index) => {
 		return `Depth block ${index + 1}: Santa Cruz County homeowners can use calm checks, keep grease out of drains, watch for leaks, and stop before unsafe DIY work while still getting enough detail to act.`;
 	}).join("\n\n");
+	const demandName = opportunity.demand_source?.name
+		? `Community timing context: ${opportunity.demand_source.name} helps neighbors plan home prep.`
+		: "";
 	return `---
 title: ${opportunity.click_title}
 description: "${opportunity.meta_hook}"
@@ -66,7 +65,7 @@ evidence_ids: [${opportunity.evidence_ids.join(", ")}]
 
 # ${opportunity.click_title}
 
-${opportunity.angle} ${opportunity.unique_value}
+${opportunity.angle} ${opportunity.unique_value} ${demandName}
 
 ## Quick Answer for Santa Cruz County Homeowners
 
@@ -137,23 +136,18 @@ function publisherFactory(calls) {
 	});
 }
 
-test("proposal opens one Connect-backed draft PR for a selected local topic", async () => {
+test("proposal opens one Connect-backed draft PR for a demand-timed local topic", async () => {
 	const descriptor = createRunDescriptor({
 		job: "proposal",
 		now: new Date("2026-08-01T12:00:00.000Z"),
 	});
-	const inventory = collectPageInventory({ repoRoot });
-	const selection = selectBlogOpportunity({
-		inventory,
-		runId: descriptor.runId,
-	});
-	assert.equal(selection.decision, "PROPOSE_FOR_HUMAN_REVIEW");
 	const calls = [];
 	const result = await executeDraftProposal({
 		descriptor,
 		settings: loadRuntimeSettings(env),
 		config: config(),
 		repoRoot,
+		now: new Date("2026-08-01T12:00:00.000Z"),
 		writer: async ({ opportunity }) => ({
 			markdown: richDraft(opportunity),
 			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
@@ -165,8 +159,22 @@ test("proposal opens one Connect-backed draft PR for a selected local topic", as
 	assert.equal(result.draft_pr_created, true);
 	assert.equal(calls.filter(([name]) => name === "branch").length, 1);
 	assert.equal(calls.filter(([name]) => name === "pr").length, 1);
-	assert.equal(calls[1][1], `eve/seo/2026-08-01-${selection.opportunity.slug}`);
-	assert.match(result.opportunity.query_cluster, /Santa Cruz/i);
+	assert.match(
+		calls.find(([name]) => name === "branch")[1],
+		/^eve\/seo\/2026-08-01-/,
+	);
+	assert.equal(
+		result.opportunity.selection_reason,
+		"DEMAND_TIMED_LOCAL_EVENT_OR_HOLIDAY",
+	);
+	assert.equal(result.demand.calendar_loaded, true);
+	assert.equal(result.demand.trends_loaded, true);
+	assert.equal(result.demand.research_mode, "CALENDAR_ONLY");
+	assert.equal(Boolean(result.opportunity.demand_source?.name), true);
+	assert.match(
+		result.opportunity.query_cluster,
+		/Santa Cruz|Capitola|Labor Day|Fair|Festival|Open Studios|hard water|vacation|ADU|storm/i,
+	);
 	assert.equal(BLOG_QUALITY_THRESHOLDS.min_body_words >= 1400, true);
 });
 
@@ -181,6 +189,7 @@ test("proposal rejects junk drafts instead of opening a Connect PR", async () =>
 		settings: loadRuntimeSettings(env),
 		config: config(),
 		repoRoot,
+		now: new Date("2026-08-01T12:00:00.000Z"),
 		writer: async () => ({
 			markdown: "not a valid draft",
 			reservation: { cost_reservation: { reserved_max_cost_usd: 0 } },
