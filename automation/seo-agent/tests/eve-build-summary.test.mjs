@@ -58,3 +58,11 @@ test("the native schedule hands durable work to Eve through waitUntil", () => {
 	assert.match(scheduleSource, /waitUntil\(\s*receive\(runtime,/s);
 	assert.match(scheduleSource, /target: \{ source: "EVE_NATIVE_CRON" \}/);
 });
+
+test("the Eve root agent declares bounded session limits", () => {
+	const agentSource = readFileSync(
+		resolve(import.meta.dirname, "../agent/agent.ts"),
+		"utf8",
+	);
+	assert.match(agentSource, /limits:\s*EVE_SESSION_LIMITS/);
+});

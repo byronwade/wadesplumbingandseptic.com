@@ -5,6 +5,7 @@ import {
 	APPROVED_MODEL_ROUTES,
 	DEFAULT_BUDGETS,
 	DEFAULT_MODEL_ROUTE,
+	EVE_SESSION_LIMITS,
 	MODEL_ROLE_POLICY,
 	OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
 } from "../src/constants.mjs";
@@ -21,6 +22,16 @@ test("Terra is the centralized approved default for orchestration and writing", 
 		OIDC_VERIFIED_FALLBACK_MODEL_ROUTE,
 	]);
 	assert.ok(APPROVED_MODEL_ROUTES.includes(OIDC_VERIFIED_FALLBACK_MODEL_ROUTE));
+});
+
+test("Eve session limits and request policy use the same bounded input budget", () => {
+	assert.equal(DEFAULT_BUDGETS.maxModelTokens, 24000);
+	assert.equal(
+		DEFAULT_BUDGETS.maxModelTokens,
+		EVE_SESSION_LIMITS.maxInputTokensPerSession,
+	);
+	assert.equal(EVE_SESSION_LIMITS.maxOutputTokensPerSession, 1200);
+	assert.equal(EVE_SESSION_LIMITS.sessionTimeoutMs, 300000);
 });
 
 test("model ledger atomically reserves tool, token, and cost budget per audit run", () => {

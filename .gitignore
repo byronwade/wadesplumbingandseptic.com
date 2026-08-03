@@ -24,6 +24,7 @@ automation/seo-agent/.eve/
 automation/seo-agent/.output/
 automation/seo-agent/.eve-stale-local/
 automation/seo-agent/build-profile.json
+automation/seo-agent/repository-snapshot/
 automation/seo-agent/.env*
 !automation/seo-agent/.env.example
 automation/seo-agent/.vercel/
