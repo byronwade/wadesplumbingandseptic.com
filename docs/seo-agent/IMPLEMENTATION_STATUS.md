@@ -5,7 +5,7 @@
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` refinements on the Task 14 media path.
 - Branch/PR: `cursor/eve-image-sourcing-aab8`.
 - Offline: parallel provider fan-out with round-robin merge; multi-query search variants; trade-aware ranking that prefers stock/commons and demotes museum art noise for plumbing topics; `image-orchestration.mjs` centralizes propose-side media collection; stages up to two online illustration candidates; PR brief adds attribution, provider class, and query list.
-- Commands recorded after verify in this phase entry.
+- Commands: sidecar `npm test` → `209/209` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
 - Next exact action: merge/deploy; add optional stock keys; enable AI line-art only after review; confirm propose Images section shows diversified queries and attribution.
 
 ## Phase 80: Expanded Open Image + Research APIs (2026-08-03)
