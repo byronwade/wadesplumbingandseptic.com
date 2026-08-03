@@ -33,12 +33,20 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] Review the redacted report, then set `SEO_AGENT_LIVE_READS_APPROVED=false` and remove the approved run ID.
 - [ ] Do not enable GitHub triggers, publishing, automatic merge, external Cron, or direct writes to `main`.
 
-## One-Time Draft Proposal Proof
+## Draft Blog PR via Cron + Vercel Connect
 
-- [ ] Merge and deploy the reviewed single-schedule repair first. Do not add a second Eve schedule or a public trigger route.
-- [ ] Set only these Production values for the exact current UTC date: `SEO_AGENT_RUN_MODE=propose`, `SEO_AGENT_MUTATION_MODE=enabled`, `SEO_AGENT_MUTATION_KILL_SWITCH=false`, `SEO_AGENT_NATIVE_SCHEDULE_JOB=proposal`, `SEO_AGENT_PUBLISHING_HUMAN_APPROVED=true`, `SEO_AGENT_PUBLISHING_INTEGRATION_TEST=true`, `SEO_AGENT_PUBLISHING_APPROVED_RUN_ID=proposal-YYYY-MM-DD`, and `SEO_AGENT_PUBLISHING_PRECONDITION_AUDIT_RUN_ID=audit-YYYY-MM-DD` for the reviewed audit.
-- [ ] Use `vercel crons list --project wadesplumbingandseptic-com --scope byron-wade` to find the one deployed native Eve path, then run `vercel crons run <that-path> --project wadesplumbingandseptic-com --scope byron-wade`.
-- [ ] Inspect the Eve Agent Run, the resulting draft branch and PR, and the PR's preview. Confirm that no merge, deployment, or direct `main` write occurred.
-- [ ] Immediately restore `SEO_AGENT_NATIVE_SCHEDULE_JOB=audit`, observe mode, disabled mutation, an enabled kill switch, disabled approval flags, and remove both proposal run IDs. Redeploy and record the redacted result in `IMPLEMENTATION_STATUS.md`.
+Eve opens draft PRs with Vercel Connect GitHub after Cron research. No Vercel CLI token is required for that write path.
+
+- [ ] Merge and deploy the Connect draft-PR path repair.
+- [ ] In Vercel Production for the Eve service, set only:
+  - `SEO_AGENT_RUN_MODE=propose`
+  - `SEO_AGENT_MUTATION_MODE=enabled`
+  - `SEO_AGENT_MUTATION_KILL_SWITCH=false`
+  - `SEO_AGENT_ENABLE_GITHUB=true`
+  - `SEO_AGENT_ENABLE_AI_GATEWAY=true`
+- [ ] Keep GitHub Connect installed as `github/wadesplumbingandseptic-com` with contents and pull-request write on this repository.
+- [ ] Let the Monday `17 16 * * 1` UTC Cron run, or use the Vercel dashboard Cron Run control for that schedule.
+- [ ] Confirm Eve opens one `eve/seo/YYYY-MM-DD-<slug>` draft PR. It must not merge, deploy, or write `main`.
+- [ ] After review, restore `SEO_AGENT_RUN_MODE=observe`, `SEO_AGENT_MUTATION_MODE=disabled`, and `SEO_AGENT_MUTATION_KILL_SWITCH=true` if you want Cron audit-only again.
 
 The detailed technical reference is [HUMAN_REVIEW_AND_DEPLOYMENT.md](HUMAN_REVIEW_AND_DEPLOYMENT.md).

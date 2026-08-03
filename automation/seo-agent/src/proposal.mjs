@@ -225,8 +225,6 @@ export async function executeDraftProposal({
 		enabled: config.integrationFlags.github === true,
 		mutationMode: config.publishing.mutationMode,
 		mutationKillSwitch: settings.mutationKillSwitch,
-		humanApproved: config.publishing.humanApproved,
-		integrationTestEnabled: config.publishing.integrationTestEnabled,
 	});
 	const main = await publisher.readMainCommit();
 	if (main?.classification === "BLOCKED_MISSING_CREDENTIALS") return main;

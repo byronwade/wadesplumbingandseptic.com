@@ -11,7 +11,7 @@ import { runDraftProposalWorkflow } from "../../src/workflows/proposal";
 
 export default defineTool({
 	description:
-		"Execute one protected SEO runtime work packet. Audit jobs are read-only. A proposal job can create one human-approved draft PR only; it never merges, deploys, or writes main.",
+		"Execute one protected SEO runtime work packet. Audit jobs are read-only. A proposal job researches and opens one draft PR through Vercel Connect GitHub; it never merges, deploys, or writes main.",
 	inputSchema: z.object({
 		runId: z.string().regex(/^[a-z0-9][a-z0-9-]{2,79}$/),
 		idempotencyKey: z.string().regex(/^[a-f0-9]{64}$/),
