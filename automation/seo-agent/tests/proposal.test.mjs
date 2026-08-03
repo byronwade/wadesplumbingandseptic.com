@@ -2,6 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { resolve } from "node:path";
 import { executeDraftProposal } from "../src/proposal.mjs";
+import { selectBlogOpportunity } from "../src/blog-opportunity.mjs";
+import { collectPageInventory } from "../src/inventory.mjs";
 import { createRunDescriptor, loadRuntimeSettings } from "../src/runtime.mjs";
 
 const repoRoot = resolve(import.meta.dirname, "../../..");
@@ -24,30 +26,72 @@ function config() {
 	};
 }
 
-function draft({ opportunity }) {
+function richDraft(opportunity) {
+	const links = opportunity.internal_links
+		.slice(0, 3)
+		.map((link) => `See [${link.anchor}](${link.to}) for next steps.`)
+		.join("\n\n");
+	const paragraphs = Array.from({ length: 40 }, (_, index) => {
+		return `Section detail ${index + 1}: Santa Cruz County homeowners can use calm checks, keep grease out of drains, watch for leaks, and stop before unsafe DIY work. Useful local context beats generic filler while avoiding prices, licenses, and guarantees.`;
+	}).join("\n\n");
 	return `---
-title: Plumbing Checklist Before Hosting Guests
-description: A practical checklist for checking household plumbing before visitors arrive.
-category: Plumbing Tips
+title: ${opportunity.title_hint}
+description: Practical Santa Cruz County guidance for ${opportunity.query_cluster}.
+category: ${opportunity.category}
 date: "2026-08-01"
 tags:
+  - santa cruz
   - plumbing maintenance
-image: /images/services/drain-clearing.webp
-imageAlt: "Plumbing drain-clearing equipment"
+image: ${opportunity.image}
+imageAlt: "${opportunity.image_alt}"
 canonical: ${opportunity.owner_url}
-query_cluster: plumbing checklist before hosting guests
-evidence_ids: [repository-inventory, owner-approved-blog-test]
+query_cluster: ${opportunity.query_cluster}
+evidence_ids: [${opportunity.evidence_ids.join(", ")}]
 ---
 
-# Plumbing Checklist Before Hosting Guests
+# ${opportunity.title_hint}
 
-Before visitors arrive, a few simple checks can help you notice ordinary plumbing issues early.
+${paragraphs}
 
-## Check the fixtures you use most
+## Quick Answer for Santa Cruz County Homeowners
 
-Run each faucet briefly and look for drips under visible connections.
+- Inspect early.
+- Avoid unsafe shortcuts.
+- Use linked service pages when risk rises.
 
-Visit [Wade's Plumbing & Septic](${opportunity.internal_link}) for contact information.
+## Local context
+
+Santa Cruz County homes mix coastal moisture, older plumbing, and septic parcels.
+
+## Safe checks
+
+Look for drips, odors, and weak flow without forcing fittings.
+
+## Prevention
+
+Keep wipes and grease out of plumbing pathways.
+
+## When to get help
+
+Stop if sewage, active flooding, or gas odors appear.
+
+## FAQ
+
+### Is this emergency advice?
+
+No. It is calm maintenance guidance for ordinary issues.
+
+### Can I invent a price?
+
+No. This draft never quotes prices.
+
+### What page should I open next?
+
+Use the contact link after reviewing the service pages below.
+
+${links}
+
+Visit [contact](/contact) when you want professional help.
 `;
 }
 
@@ -92,7 +136,39 @@ function publisherFactory(calls) {
 	});
 }
 
-test("proposal opens one Connect-backed draft PR", async () => {
+test("proposal opens one Connect-backed draft PR for a selected local topic", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		now: new Date("2026-08-01T12:00:00.000Z"),
+	});
+	const inventory = collectPageInventory({ repoRoot });
+	const selection = selectBlogOpportunity({
+		inventory,
+		runId: descriptor.runId,
+	});
+	assert.equal(selection.decision, "PROPOSE_FOR_HUMAN_REVIEW");
+	const calls = [];
+	const result = await executeDraftProposal({
+		descriptor,
+		settings: loadRuntimeSettings(env),
+		config: config(),
+		repoRoot,
+		writer: async ({ opportunity }) => ({
+			markdown: richDraft(opportunity),
+			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
+			model: "openai/gpt-5.6-terra",
+		}),
+		publisherFactory: publisherFactory(calls),
+	});
+	assert.equal(result.state, "DRAFT_PR_OPEN");
+	assert.equal(result.draft_pr_created, true);
+	assert.equal(calls.filter(([name]) => name === "branch").length, 1);
+	assert.equal(calls.filter(([name]) => name === "pr").length, 1);
+	assert.equal(calls[1][1], `eve/seo/2026-08-01-${selection.opportunity.slug}`);
+	assert.match(result.opportunity.query_cluster, /Santa Cruz/i);
+});
+
+test("proposal rejects junk drafts instead of opening a Connect PR", async () => {
 	const descriptor = createRunDescriptor({
 		job: "proposal",
 		now: new Date("2026-08-01T12:00:00.000Z"),
@@ -103,38 +179,6 @@ test("proposal opens one Connect-backed draft PR", async () => {
 		settings: loadRuntimeSettings(env),
 		config: config(),
 		repoRoot,
-		writer: async (input) => ({
-			markdown: draft(input),
-			reservation: { cost_reservation: { reserved_max_cost_usd: 0.2 } },
-			model: "openai/gpt-5.6-terra",
-		}),
-		publisherFactory: publisherFactory(calls),
-	});
-	assert.equal(result.state, "DRAFT_PR_OPEN");
-	assert.equal(result.draft_pr_created, true);
-	assert.equal(calls.filter(([name]) => name === "branch").length, 1);
-	assert.equal(calls.filter(([name]) => name === "pr").length, 1);
-	assert.equal(
-		calls[1][1],
-		"eve/seo/2026-08-01-home-plumbing-hosting-checklist-2026-08-01",
-	);
-});
-
-test("proposal still opens a draft PR when the writer fails or returns junk", async () => {
-	const descriptor = createRunDescriptor({
-		job: "proposal",
-		now: new Date("2026-08-01T12:00:00.000Z"),
-	});
-	const calls = [];
-	const result = await executeDraftProposal({
-		descriptor,
-		settings: loadRuntimeSettings(env),
-		config: {
-			...config(),
-			integrationFlags: { github: false },
-			publishing: { mutationMode: "disabled" },
-		},
-		repoRoot,
 		writer: async () => ({
 			markdown: "not a valid draft",
 			reservation: { cost_reservation: { reserved_max_cost_usd: 0 } },
@@ -142,9 +186,9 @@ test("proposal still opens a draft PR when the writer fails or returns junk", as
 		}),
 		publisherFactory: publisherFactory(calls),
 	});
-	assert.equal(result.state, "DRAFT_PR_OPEN");
-	assert.equal(result.draft_pr_created, true);
-	assert.equal(calls.filter(([name]) => name === "pr").length, 1);
+	assert.equal(result.state, "REJECTED_DRAFT_QUALITY");
+	assert.equal(result.draft_pr_created, false);
+	assert.equal(calls.length, 0);
 });
 
 test("non-proposal jobs cannot enter the draft publication workflow", async () => {
