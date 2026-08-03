@@ -195,5 +195,38 @@ test("draft PR brief includes fail-closed featured image section", () => {
 	});
 	assert.match(brief, /Images \(featured is fail-closed\)/);
 	assert.match(brief, /first-party OWNED/i);
+	assert.match(brief, /prefer stock\/commons over museum art/i);
 	assert.match(brief, /remote UNVERIFIED never auto-publishes/i);
+});
+
+test("trade-aware ranking demotes museum art noise for plumbing topics", () => {
+	const opportunity = tanklessOpportunity();
+	const ranked = rankExternalImageCandidates({
+		opportunity,
+		candidates: [
+			{
+				provider: "metmuseum",
+				source_url: "https://www.metmuseum.org/art/1",
+				asset_url: "https://images.metmuseum.org/painting.jpg",
+				title: "Oil painting portrait in museum gallery",
+				description: "Impressionist canvas sculpture still life",
+				usage_rights_provisional: "PUBLIC_DOMAIN",
+			},
+			{
+				provider: "unsplash",
+				source_url: "https://unsplash.com/photos/tankless",
+				asset_url: "https://images.unsplash.com/tankless-heater.jpg",
+				title: "Tankless water heater plumbing install",
+				description: "Residential tankless heater service valves",
+				usage_rights_provisional: "LICENSED",
+			},
+		],
+	});
+	assert.ok(ranked.candidates.length >= 1);
+	assert.equal(ranked.candidates[0].provider, "unsplash");
+	assert.ok(
+		(ranked.candidates[0].relevance_score ?? 0) >
+			(ranked.candidates.find((item) => item.provider === "metmuseum")
+				?.relevance_score ?? -999),
+	);
 });

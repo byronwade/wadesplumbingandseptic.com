@@ -13,15 +13,8 @@ import {
 	selectBlogOpportunity,
 } from "./blog-opportunity.mjs";
 import { COMMUNITY_RESEARCH_DOMAINS } from "./constants.mjs";
-import {
-	applyFeaturedImageToOpportunity,
-	buildBlogImagePackage,
-	IMAGE_SELECTION_THRESHOLDS,
-} from "./image-selection.mjs";
-import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
-import { stageBestOnlineImage } from "./image-staging.mjs";
-import { createOpenResearchAdapter } from "./open-research.mjs";
-import { createRunBudget } from "./run-controls.mjs";
+import { applyFeaturedImageToOpportunity } from "./image-selection.mjs";
+import { collectProposalMediaContext } from "./image-orchestration.mjs";
 import {
 	buildExpansionPrompt,
 	isExpandableDraftFailure,
@@ -453,34 +446,39 @@ function formatImagePackageForBrief(imagePackage = null) {
 	const featured = imagePackage.featured;
 	const plan = featured?.plan;
 	const origin = plan?.origin ?? plan?.provider ?? "unknown";
+	const attribution = imagePackage.attribution_line
+		? `\n  - Attribution: ${imagePackage.attribution_line}`
+		: "";
 	const featuredLine = plan
-		? `- Featured (${origin}, ${plan.usage_rights}, score ${plan.relevance_score ?? "n/a"}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}${plan.generation_style === "technical_line_art" ? "\n  - Style: professional technical line art (not photoreal AI)." : ""}`
+		? `- Featured (${origin}, ${plan.usage_rights}, score ${plan.relevance_score ?? "n/a"}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}${attribution}${plan.generation_style === "technical_line_art" ? "\n  - Style: professional technical line art (not photoreal AI)." : ""}`
 		: `- Featured: not selected (${featured?.reason ?? "no plan"}). ${featured?.next_action ?? ""}`;
 	const illustrations = (imagePackage.illustrations?.candidates ?? [])
 		.slice(0, 4)
 		.map(
 			(candidate) =>
-				`- Illustration candidate (score ${candidate.relevance_score}): \`${candidate.public_url}\` (${candidate.alt_text})`,
+				`- Illustration candidate (${candidate.origin ?? "first_party"}, score ${candidate.relevance_score}): \`${candidate.public_url}\` (${candidate.alt_text})`,
 		);
 	const external = (imagePackage.external_research?.candidates ?? [])
-		.slice(0, 5)
+		.slice(0, 6)
 		.map(
 			(candidate) =>
-				`- Online candidate (${candidate.provider ?? "unknown"}, provisional ${candidate.usage_rights_provisional ?? "UNVERIFIED"}, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} (${candidate.license_name ?? "license pending"})`,
+				`- Online candidate (${candidate.provider ?? "unknown"}/${candidate.provider_class ?? "other"}, provisional ${candidate.usage_rights_provisional ?? "UNVERIFIED"}, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} (${candidate.license_name ?? "license pending"})`,
 		);
 	const stagedCount = (imagePackage.staged_files ?? []).length;
+	const queries = imagePackage.online_research?.queries ?? [];
 	return `${featuredLine}
-First-party illustration candidates:
+Illustration candidates:
 ${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enough for in-body use."}
 Online sourced candidates (staged into draft only when rights-safe; still need human PR review):
 ${external.length > 0 ? external.join("\n") : "- None returned for this topic in this run."}
+Search queries used: ${queries.length > 0 ? queries.map((query) => `\`${query}\``).join("; ") : "n/a"}
 Staged draft asset files: ${stagedCount}
 Open research soft context (never Wade facts alone): ${
 		imagePackage.open_research
 			? `${imagePackage.open_research.classification}; Wikidata leads: ${(imagePackage.open_research.wikidata_labels ?? []).join(", ") || "none"}; places: ${(imagePackage.open_research.place_names ?? []).join("; ") || "none"}`
 			: "not collected"
 	}
-Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;
+Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); prefer stock/commons over museum art for trade topics; staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;
 }
 
 export function buildDraftPrBrief({
@@ -832,106 +830,17 @@ export async function executeDraftProposal({
 			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
-	const imageBudget = createRunBudget();
-	let externalCandidates = [];
-	let stagedFeatured = null;
-	let onlineResearchSummary = null;
-	let openResearchSummary = null;
-	if (config?.integrationFlags?.openResearch === true) {
-		const openResearch = createOpenResearchAdapter({
-			enabled: true,
-			budget: imageBudget,
-		});
-		try {
-			const researchedOpen = await openResearch.researchOpportunity({
-				opportunity: selection.opportunity,
-			});
-			openResearchSummary = Object.freeze({
-				classification: researchedOpen.classification,
-				wikidata_count: researchedOpen.wikidata?.results?.length ?? 0,
-				nominatim_count: researchedOpen.nominatim?.results?.length ?? 0,
-				wikidata_labels: Object.freeze(
-					(researchedOpen.wikidata?.results ?? [])
-						.slice(0, 3)
-						.map((item) => item.label),
-				),
-				place_names: Object.freeze(
-					(researchedOpen.nominatim?.results ?? [])
-						.slice(0, 2)
-						.map((item) => item.display_name),
-				),
-			});
-		} catch (error) {
-			openResearchSummary = Object.freeze({
-				classification: "FAILED",
-				reason:
-					error instanceof Error
-						? error.message.slice(0, 240)
-						: "Open research failed.",
-			});
-		}
-	}
-	if (config?.integrationFlags?.imageSourcing === true) {
-		const imageResearch = createConfiguredImageResearchAdapter({
-			config,
-			budget: imageBudget,
-			includeAiLineArt: config?.integrationFlags?.imageAiLineArt === true,
-		});
-		const researched = await imageResearch.searchForOpportunity({
-			opportunity: selection.opportunity,
-			limit: 16,
-		});
-		onlineResearchSummary = Object.freeze({
-			classification: researched.classification,
-			count: (researched.candidates ?? []).length,
-			reason: researched.reason ?? null,
-			provider_summaries: researched.provider_summaries ?? null,
-		});
-		externalCandidates = researched.candidates ?? [];
-		const firstPartyProbe = buildBlogImagePackage({
-			opportunity: selection.opportunity,
-			repoRoot,
-			externalCandidates,
-		});
-		if (
-			!firstPartyProbe.featured.plan &&
-			externalCandidates.length > 0 &&
-			researched.classification === "MOCK_VERIFIED"
-		) {
-			const preferProviders = [
-				"openverse",
-				"unsplash",
-				"pexels",
-				"pixabay",
-				"wikimedia",
-				"flickr",
-				"metmuseum",
-				"artic",
-				"nasa",
-				"europeana",
-				...(config?.integrationFlags?.imageAiLineArt === true
-					? ["ai-lineart"]
-					: []),
-			];
-			stagedFeatured = await stageBestOnlineImage({
-				opportunity: selection.opportunity,
-				candidates: externalCandidates,
-				role: "featured",
-				minScore: IMAGE_SELECTION_THRESHOLDS.online_featured_min_score,
-				budget: imageBudget,
-				preferProviders,
-			});
-		}
-	}
-	const imagePackage = Object.freeze({
-		...buildBlogImagePackage({
-			opportunity: selection.opportunity,
-			repoRoot,
-			externalCandidates,
-			stagedFeatured,
-		}),
-		open_research: openResearchSummary,
+	const media = await collectProposalMediaContext({
+		opportunity: selection.opportunity,
+		repoRoot,
+		config,
 	});
+	const imagePackage = Object.freeze({
+		...media.imagePackage,
+		online_research: media.onlineResearchSummary,
+	});
+	const onlineResearchSummary = media.onlineResearchSummary;
+	const openResearchSummary = media.openResearchSummary;
 	const opportunity = applyFeaturedImageToOpportunity(
 		selection.opportunity,
 		imagePackage.featured,

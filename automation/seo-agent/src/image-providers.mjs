@@ -511,7 +511,7 @@ export function createAiLineArtImageClient({
 }
 
 /**
- * Fan out across configured providers and merge unique HTTPS candidates.
+ * Fan out across configured providers in parallel and merge unique HTTPS candidates.
  */
 export function createCompositeImageSearchClient({
 	clients = [],
@@ -538,39 +538,46 @@ export function createCompositeImageSearchClient({
 				MAX_COMBINED,
 			);
 			const perProvider = Math.max(2, Math.ceil(capped / active.length));
-			const providerResults = [];
-			for (const client of active) {
-				try {
-					const result = await client.searchImages({
+			const settled = await Promise.allSettled(
+				active.map((client) =>
+					client.searchImages({
 						query: safeQuery,
 						limit: perProvider,
-					});
-					providerResults.push(result);
-				} catch (error) {
-					providerResults.push(
-						Object.freeze({
-							classification: "FAILED",
-							provider: client.id ?? "unknown",
-							results: [],
-							reason:
-								error instanceof Error
-									? error.message.slice(0, 240)
-									: "Provider failed.",
-						}),
-					);
-				}
-			}
+					}),
+				),
+			);
+			const providerResults = settled.map((entry, index) => {
+				if (entry.status === "fulfilled") return entry.value;
+				return Object.freeze({
+					classification: "FAILED",
+					provider: active[index]?.id ?? "unknown",
+					results: [],
+					reason:
+						entry.reason instanceof Error
+							? entry.reason.message.slice(0, 240)
+							: "Provider failed.",
+				});
+			});
 			const seen = new Set();
 			const merged = [];
-			for (const result of providerResults) {
-				for (const candidate of result.results ?? []) {
-					const key = candidate.asset_url ?? candidate.source_url;
-					if (!key || seen.has(key)) continue;
-					seen.add(key);
-					merged.push(candidate);
-					if (merged.length >= capped) break;
+			// Round-robin merge so one verbose provider cannot crowd out the rest.
+			const queues = providerResults.map((result) => [
+				...(result.results ?? []),
+			]);
+			let progressed = true;
+			while (merged.length < capped && progressed) {
+				progressed = false;
+				for (const queue of queues) {
+					while (queue.length > 0 && merged.length < capped) {
+						const candidate = queue.shift();
+						const key = candidate?.asset_url ?? candidate?.source_url;
+						if (!key || seen.has(key)) continue;
+						seen.add(key);
+						merged.push(candidate);
+						progressed = true;
+						break;
+					}
 				}
-				if (merged.length >= capped) break;
 			}
 			const anyVerified = providerResults.some(
 				(result) =>
@@ -606,16 +613,64 @@ export function createCompositeImageSearchClient({
 	});
 }
 
+/**
+ * Build one primary image-search query from an opportunity.
+ */
 export function buildImageSearchQuery(opportunity) {
+	const queries = buildImageSearchQueries(opportunity);
+	return queries[0];
+}
+
+/**
+ * Build diversified image-search queries for broader relevant coverage.
+ */
+export function buildImageSearchQueries(opportunity, { maxQueries = 3 } = {}) {
 	if (!opportunity || typeof opportunity !== "object")
 		throw new Error("Image search query requires an opportunity.");
-	const parts = [
-		opportunity.query_cluster,
-		opportunity.click_title,
-		...(opportunity.tags ?? []).slice(0, 3),
-		"plumbing",
+	const cluster = String(opportunity.query_cluster ?? "").trim();
+	const title = String(opportunity.click_title ?? "").trim();
+	const tags = (opportunity.tags ?? [])
+		.filter((tag) => typeof tag === "string" && tag.trim())
+		.map((tag) => tag.trim())
+		.slice(0, 4);
+	const subjectTokens = tokenizeForQuery(
+		[cluster, ...tags].filter(Boolean).join(" "),
+	).slice(0, 5);
+	const variants = [
+		[cluster, title, ...tags.slice(0, 2), "plumbing"].filter(Boolean).join(" "),
+		[...subjectTokens, "residential plumbing"].join(" "),
+		[...subjectTokens.slice(0, 3), "home service equipment"].join(" "),
 	]
-		.filter((part) => typeof part === "string" && part.trim())
-		.map((part) => part.trim());
-	return assertQuery([...new Set(parts)].join(" ").slice(0, 240));
+		.map((value) => value.replace(/\s+/g, " ").trim())
+		.filter((value) => value.length >= 8)
+		.map((value) => value.slice(0, 240));
+	const unique = [...new Set(variants)].slice(
+		0,
+		Math.min(Math.max(1, maxQueries), 4),
+	);
+	if (unique.length === 0) {
+		return Object.freeze([assertQuery("residential plumbing equipment")]);
+	}
+	return Object.freeze(unique.map((value) => assertQuery(value)));
+}
+
+function tokenizeForQuery(value) {
+	return String(value)
+		.toLowerCase()
+		.split(/[^a-z0-9]+/g)
+		.filter(
+			(token) =>
+				token.length >= 3 &&
+				![
+					"the",
+					"and",
+					"for",
+					"with",
+					"santa",
+					"cruz",
+					"county",
+					"home",
+					"homes",
+				].includes(token),
+		);
 }

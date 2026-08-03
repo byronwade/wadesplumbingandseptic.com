@@ -23,7 +23,54 @@ const FEATURED_MIN_SCORE = 18;
 const INLINE_MIN_SCORE = 10;
 const ONLINE_FEATURED_MIN_SCORE = 14;
 const MAX_INLINE_CANDIDATES = 5;
-const MAX_EXTERNAL_CANDIDATES = 8;
+const MAX_EXTERNAL_CANDIDATES = 12;
+
+const TRADE_SUBJECT_TOKENS = Object.freeze([
+	"tankless",
+	"septic",
+	"drain",
+	"plumbing",
+	"heater",
+	"waterheater",
+	"pipe",
+	"toilet",
+	"backflow",
+	"excavation",
+	"sump",
+	"valve",
+	"faucet",
+	"hydrojet",
+	"camera",
+]);
+
+const ART_NOISE_TOKENS = Object.freeze([
+	"painting",
+	"canvas",
+	"sculpture",
+	"portrait",
+	"impressionist",
+	"stilllife",
+	"oilpainting",
+	"watercolor",
+	"museum",
+	"gallery",
+	"statue",
+	"bronze",
+]);
+
+const PROVIDER_CLASS = Object.freeze({
+	unsplash: "stock",
+	pexels: "stock",
+	pixabay: "stock",
+	flickr: "stock",
+	openverse: "stock",
+	wikimedia: "commons",
+	nasa: "government",
+	europeana: "museum",
+	metmuseum: "museum",
+	artic: "museum",
+	"ai-lineart": "ai",
+});
 
 /** Paths that must never be blog featured images. */
 const FEATURED_BLOCKED_PREFIXES = Object.freeze([
@@ -440,6 +487,7 @@ export function selectIllustrationCandidates({
 				relevance_score: entry.scored.score,
 				matched_tokens: entry.scored.matched_tokens,
 				publication_eligible: true,
+				origin: "first_party",
 			}),
 		);
 	return Object.freeze({
@@ -448,8 +496,14 @@ export function selectIllustrationCandidates({
 	});
 }
 
+function opportunityIsTradeTopic(opportunity) {
+	const tokens = new Set(opportunityTokens(opportunity));
+	return TRADE_SUBJECT_TOKENS.some((token) => tokens.has(token));
+}
+
 /**
  * Filter external research candidates to those with content-token overlap.
+ * Applies trade-aware boosts and demotes fine-art noise for plumbing topics.
  * Never marks them publication-eligible until staged.
  */
 export function rankExternalImageCandidates({
@@ -458,6 +512,7 @@ export function rankExternalImageCandidates({
 	limit = MAX_EXTERNAL_CANDIDATES,
 } = {}) {
 	const needed = new Set(opportunityTokens(opportunity));
+	const tradeTopic = opportunityIsTradeTopic(opportunity);
 	const ranked = (Array.isArray(candidates) ? candidates : [])
 		.map((candidate) => {
 			const textTokens = tokenizeImageText(
@@ -468,21 +523,44 @@ export function rankExternalImageCandidates({
 					candidate.asset_url,
 					candidate.provider,
 					candidate.generation_style,
+					candidate.license_name,
 				]
 					.filter(Boolean)
 					.join(" "),
 			);
 			const matched = textTokens.filter((token) => needed.has(token));
 			let score = matched.length * 4;
+			const providerClass =
+				PROVIDER_CLASS[candidate.provider] ??
+				candidate.provider_class ??
+				"other";
 			if (candidate.usage_rights_provisional === "PUBLIC_DOMAIN") score += 2;
 			if (candidate.usage_rights_provisional === "LICENSED") score += 1;
-			if (candidate.generation_style === "technical_line_art") score += 1;
+			if (candidate.generation_style === "technical_line_art") score += 2;
+			const tradeHits = TRADE_SUBJECT_TOKENS.filter((token) =>
+				textTokens.includes(token),
+			);
+			if (tradeHits.length > 0) score += tradeHits.length * 3;
+			if (
+				tradeTopic &&
+				(providerClass === "stock" || providerClass === "commons")
+			)
+				score += 3;
+			if (tradeTopic && providerClass === "government") score += 1;
+			const artNoise = ART_NOISE_TOKENS.filter((token) =>
+				textTokens.includes(token),
+			);
+			if (tradeTopic && artNoise.length > 0) score -= artNoise.length * 4;
+			if (tradeTopic && providerClass === "museum" && tradeHits.length === 0)
+				score -= 6;
 			return Object.freeze({
 				...candidate,
+				provider_class: providerClass,
 				usage_rights: "UNVERIFIED",
 				publication_eligible: false,
 				relevance_score: score,
 				matched_tokens: Object.freeze(matched),
+				trade_hits: Object.freeze(tradeHits),
 				required_next_action:
 					"Stage into public/images/sourced/ with provenance, confirm rights evidence, and get human PR approval before featured or body use.",
 			});
@@ -506,6 +584,7 @@ export function buildBlogImagePackage({
 	externalCandidates = [],
 	library = null,
 	stagedFeatured = null,
+	stagedIllustrations = [],
 } = {}) {
 	const assets = library ?? indexFirstPartyImages({ repoRoot });
 	let featured = selectFeaturedImagePlan({
@@ -513,28 +592,47 @@ export function buildBlogImagePackage({
 		repoRoot,
 		library: assets,
 	});
-	let stagedFiles = Object.freeze([]);
+	let stagedFiles = [];
 	if (!featured.plan && stagedFeatured?.plan) {
 		featured = acceptStagedFeaturedPlan({
 			staged: stagedFeatured,
 			opportunity,
 		});
 		if (featured.plan) {
-			stagedFiles = Object.freeze([...(stagedFeatured.files ?? [])]);
+			stagedFiles.push(...(stagedFeatured.files ?? []));
 		}
-	} else if (
-		featured.plan &&
-		stagedFeatured?.plan &&
-		stagedFeatured.plan.generation_style !== "technical_line_art"
-	) {
-		// Keep first-party featured when it already clears the bar.
-		stagedFiles = Object.freeze([]);
 	}
-	const illustrations = selectIllustrationCandidates({
+	const firstPartyIllustrations = selectIllustrationCandidates({
 		opportunity,
 		repoRoot,
 		library: assets,
 		featuredAssetPath: featured.plan?.asset_path ?? null,
+	});
+	const onlineIllustrationPlans = (
+		Array.isArray(stagedIllustrations) ? stagedIllustrations : []
+	)
+		.filter((entry) => entry?.plan)
+		.map((entry) =>
+			Object.freeze({
+				...entry.plan,
+				role: "illustration_candidate",
+				origin: "online_sourced",
+				publication_eligible: true,
+			}),
+		);
+	for (const entry of Array.isArray(stagedIllustrations)
+		? stagedIllustrations
+		: []) {
+		stagedFiles.push(...(entry.files ?? []));
+	}
+	const illustrations = Object.freeze({
+		classification: "MOCK_VERIFIED",
+		candidates: Object.freeze(
+			[...firstPartyIllustrations.candidates, ...onlineIllustrationPlans].slice(
+				0,
+				MAX_INLINE_CANDIDATES,
+			),
+		),
 	});
 	const external = rankExternalImageCandidates({
 		opportunity,
@@ -544,12 +642,13 @@ export function buildBlogImagePackage({
 		featured,
 		illustrations,
 		external_research: external,
-		staged_files: stagedFiles,
+		staged_files: Object.freeze(stagedFiles),
 		policy: Object.freeze({
 			featured_min_score: FEATURED_MIN_SCORE,
 			online_featured_min_score: ONLINE_FEATURED_MIN_SCORE,
 			inline_min_score: INLINE_MIN_SCORE,
 			prefer_first_party_owned: true,
+			prefer_stock_over_museum_for_trade_topics: true,
 			online_stock_and_commons_allowed_when_staged: true,
 			ai_lineart_fallback_style: "technical_line_art",
 			external_never_auto_publishes_until_staged: true,

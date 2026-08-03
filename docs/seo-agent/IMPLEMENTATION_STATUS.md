@@ -1,13 +1,18 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 81: Image Orchestration Refinement (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` refinements on the Task 14 media path.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: parallel provider fan-out with round-robin merge; multi-query search variants; trade-aware ranking that prefers stock/commons and demotes museum art noise for plumbing topics; `image-orchestration.mjs` centralizes propose-side media collection; stages up to two online illustration candidates; PR brief adds attribution, provider class, and query list.
+- Commands recorded after verify in this phase entry.
+- Next exact action: merge/deploy; add optional stock keys; enable AI line-art only after review; confirm propose Images section shows diversified queries and attribution.
+
 ## Phase 80: Expanded Open Image + Research APIs (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for expanded open provider catalog. Not `LIVE_VERIFIED` for keyed providers or live propose observation.
-- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 expanded for broader open-source API coverage).
-- Offline: keyless image clients Openverse, Wikimedia, MET, AIC, NASA; optional Pixabay, Flickr, Europeana, Unsplash, Pexels; AI technical line-art remains optional. `open-research.mjs` adds Wikidata + Nominatim soft context for proposals. External request budget raised to 60 for multi-provider fan-out. Aggregated asset hosts allowed only when source provenance is allowlisted.
-- Policy unchanged for featured fail-closed rights classes; open research is soft context only (never Wade facts alone).
-- Commands: sidecar `npm test` → `204/204` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
-- Next exact action: merge/deploy; add optional stock keys from Manual Setup; enable AI line-art only after review; confirm propose run Images + open-research brief sections.
+- State: SUPERSEDED by Phase 81 orchestration refinements; provider catalog remains in place.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Next exact action: SUPERSEDED by Phase 81.
 
 ## Phase 79: Online Image Sourcing + Careful AI Line Art (2026-08-03)
 

@@ -3,6 +3,7 @@ import { rankExternalImageCandidates } from "./image-selection.mjs";
 import {
 	IMAGE_PROVIDER_DOMAINS,
 	buildImageSearchQuery,
+	buildImageSearchQueries,
 	createAiLineArtImageClient,
 	createCompositeImageSearchClient,
 	createPexelsImageClient,
@@ -226,8 +227,61 @@ export function createImageResearchAdapter({
 		},
 
 		async searchForOpportunity({ opportunity, limit = 16 } = {}) {
-			const query = buildImageSearchQuery(opportunity);
-			return this.searchRelevant({ query, limit, opportunity });
+			const queries = buildImageSearchQueries(opportunity, { maxQueries: 3 });
+			const perQueryLimit = Math.max(4, Math.ceil(limit / queries.length));
+			const seen = new Set();
+			const merged = [];
+			const summaries = [];
+			let classification = "FAILED";
+			for (const query of queries) {
+				const result = await this.searchRelevant({
+					query,
+					limit: perQueryLimit,
+					opportunity,
+				});
+				summaries.push(
+					Object.freeze({
+						query,
+						classification: result.classification,
+						count: (result.candidates ?? []).length,
+					}),
+				);
+				if (
+					result.classification === "MOCK_VERIFIED" ||
+					result.classification === "LIVE_VERIFIED"
+				) {
+					classification = "MOCK_VERIFIED";
+				} else if (
+					classification !== "MOCK_VERIFIED" &&
+					result.classification === "BLOCKED_MISSING_CREDENTIALS"
+				) {
+					classification = "BLOCKED_MISSING_CREDENTIALS";
+				}
+				for (const candidate of result.candidates ?? []) {
+					const key = candidate.asset_url ?? candidate.source_url;
+					if (!key || seen.has(key)) continue;
+					seen.add(key);
+					merged.push(candidate);
+					if (merged.length >= limit) break;
+				}
+				if (merged.length >= limit) break;
+			}
+			const ranked = rankExternalImageCandidates({
+				opportunity,
+				candidates: merged,
+				limit,
+			});
+			return Object.freeze({
+				classification:
+					ranked.candidates.length > 0 ? "MOCK_VERIFIED" : classification,
+				source: "image-research",
+				queries: Object.freeze(queries),
+				query_summaries: Object.freeze(summaries),
+				candidates: ranked.candidates,
+				publication_permitted: false,
+				relevance_filtered: true,
+				provider_summaries: null,
+			});
 		},
 	});
 }
@@ -306,4 +360,8 @@ export function createConfiguredImageResearchAdapter({
 	});
 }
 
-export { IMAGE_PROVIDER_DOMAINS, buildImageSearchQuery };
+export {
+	IMAGE_PROVIDER_DOMAINS,
+	buildImageSearchQuery,
+	buildImageSearchQueries,
+};

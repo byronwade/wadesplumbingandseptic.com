@@ -100,7 +100,7 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 - **Status:** Offline `MOCK_VERIFIED` expanded multi-source path (see Phase 80). Live keyed stock/AI proofs stay credential-gated until Production keys and a propose observation.
 - **Branch/PR:** `cursor/eve-image-sourcing-aab8`
-- **Scope:** Prefer first-party `public/images`. When that fails, search a broad open catalog: Openverse, Wikimedia, MET, AIC, NASA (keyless) plus Unsplash, Pexels, Pixabay, Flickr, Europeana (optional keys). Optional AI technical line-art SVG. Stage license-safe assets under `public/images/sourced/<slug>/`. Soft open research via Wikidata + Nominatim for topic/place context only.
+- **Scope:** Prefer first-party `public/images`. When that fails, search a broad open catalog with diversified queries and parallel provider fan-out: Openverse, Wikimedia, MET, AIC, NASA (keyless) plus Unsplash, Pexels, Pixabay, Flickr, Europeana (optional keys). Trade-aware ranking prefers stock/commons over museum art for plumbing topics. Optional AI technical line-art SVG. Stage featured + up to two illustration assets under `public/images/sourced/<slug>/`. Soft open research via Wikidata + Nominatim for topic/place context only.
 - **Featured-image rule:** fail-closed. Prefer OWNED; allow staged LICENSED / PUBLIC_DOMAIN; AI only as technical line art with `EXPLICIT_PERMISSION`. Brand/partner/team/logo classes remain blocked.
 - **Owner setup:** optional keys listed in `MANUAL_SETUP.md`; careful `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` after review. Standing Production propose enables image sourcing and open research in code.
 - **Prerequisite:** Owner redirected here ahead of Tasks 8 to 13; those optional adapters remain separately blocked or unstarted.
