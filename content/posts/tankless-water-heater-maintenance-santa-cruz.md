@@ -9,8 +9,8 @@ tags:
   - tankless water heater
   - water heater
   - plumbing maintenance
-image: "/images/services/water-heater-service.webp"
-imageAlt: "Tankless water heater service context"
+image: "/images/work/tankless-water-heater-installation.webp"
+imageAlt: "Tankless Water Heater Maintenance for Santa Cruz County Homes"
 ---
 
 # Tankless Water Heater Maintenance for Santa Cruz County Homes
