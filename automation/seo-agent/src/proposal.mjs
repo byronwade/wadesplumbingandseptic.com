@@ -13,6 +13,8 @@ import {
 	selectBlogOpportunity,
 } from "./blog-opportunity.mjs";
 import { COMMUNITY_RESEARCH_DOMAINS } from "./constants.mjs";
+import { applyFeaturedImageToOpportunity } from "./image-selection.mjs";
+import { collectProposalMediaContext } from "./image-orchestration.mjs";
 import {
 	buildExpansionPrompt,
 	isExpandableDraftFailure,
@@ -326,10 +328,11 @@ async function writeWithGateway({
 	opportunity,
 	date,
 	generationGuard = null,
+	imagePackage = null,
 }) {
 	return generateMarkdownWithGateway({
 		runId,
-		prompt: buildWriterPrompt({ opportunity, date }),
+		prompt: buildWriterPrompt({ opportunity, date, imagePackage }),
 		maxOutputTokens: PROPOSAL_GENERATION_LIMITS.writeMaxOutputTokens,
 		stage: "write",
 		generationGuard,
@@ -437,6 +440,54 @@ function formatGenerationSpend(generation = null) {
 ${callLines || "- No generation stages recorded."}`;
 }
 
+function formatImagePackageForBrief(imagePackage = null) {
+	if (!imagePackage) {
+		return "- Media package was not built for this run. Reject if the draft invents remote image URLs.";
+	}
+	const featured = imagePackage.featured;
+	const plan = featured?.plan;
+	const origin = plan?.origin ?? plan?.provider ?? "unknown";
+	const attribution = imagePackage.attribution_line
+		? `\n  - Attribution: ${imagePackage.attribution_line}`
+		: "";
+	const featuredLine = plan
+		? `- Featured (${origin}, ${plan.usage_rights}, score ${plan.relevance_score ?? "n/a"}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}${attribution}${plan.generation_style === "technical_line_art" ? "\n  - Style: professional technical line art (not photoreal AI)." : ""}`
+		: `- Featured: not selected (${featured?.reason ?? "no plan"}). ${featured?.next_action ?? ""}`;
+	const illustrations = (imagePackage.illustrations?.candidates ?? [])
+		.slice(0, 4)
+		.map(
+			(candidate) =>
+				`- Illustration candidate (${candidate.origin ?? "first_party"}, score ${candidate.relevance_score}): \`${candidate.public_url}\` (${candidate.alt_text})`,
+		);
+	const external = (imagePackage.external_research?.candidates ?? [])
+		.slice(0, 6)
+		.map(
+			(candidate) =>
+				`- Online candidate (${candidate.provider ?? "unknown"}/${candidate.provider_class ?? "other"}, provisional ${candidate.usage_rights_provisional ?? "UNVERIFIED"}, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} (${candidate.license_name ?? "license pending"})`,
+		);
+	const stagedCount = (imagePackage.staged_files ?? []).length;
+	const queries = imagePackage.online_research?.queries ?? [];
+	return `Reviewer checklist:
+- [ ] Featured image is a real site asset (first-party or staged under \`public/images/sourced/\`)
+- [ ] Rights/provenance look correct; reject photoreal AI filler
+- [ ] Alt text matches the topic
+- [ ] Draft does not hotlink remote stock hosts
+
+${featuredLine}
+Illustration candidates:
+${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enough for in-body use."}
+Online sourced candidates (staged into draft only when rights-safe; still need human PR review):
+${external.length > 0 ? external.join("\n") : "- None returned for this topic in this run."}
+Search queries used: ${queries.length > 0 ? queries.map((query) => `\`${query}\``).join("; ") : "n/a"}
+Staged draft asset files: ${stagedCount}
+Open research soft context (never Wade facts alone): ${
+		imagePackage.open_research
+			? `${imagePackage.open_research.classification}; Wikidata leads: ${(imagePackage.open_research.wikidata_labels ?? []).join(", ") || "none"}; Grokipedia leads: ${(imagePackage.open_research.grokipedia_labels ?? []).join(", ") || "none"}; places: ${(imagePackage.open_research.place_names ?? []).join("; ") || "none"}`
+			: "not collected"
+	}
+Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); prefer stock/commons over museum art for trade topics; staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;
+}
+
 export function buildDraftPrBrief({
 	opportunity,
 	changeSet,
@@ -450,10 +501,20 @@ export function buildDraftPrBrief({
 	revision = null,
 	generation = null,
 	pagespeedQa = null,
+	imagePackage = null,
 }) {
 	const linkLines = opportunity.internal_links
-		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
+		.map(
+			(link) =>
+				`- [${link.anchor}](${link.to}) [${link.role ?? "link"}]: ${link.reader_rationale}`,
+		)
 		.join("\n");
+	const serviceLinkCount = opportunity.internal_links.filter(
+		(link) => link.role === "service",
+	).length;
+	const postLinkCount = opportunity.internal_links.filter(
+		(link) => link.role === "post",
+	).length;
 	const demand = opportunity.demand_source
 		? `${opportunity.demand_source.kind}: ${opportunity.demand_source.name} on ${opportunity.demand_source.date} (${opportunity.demand_source.lead_time_days} days of useful lead time)`
 		: "evergreen catalog topic (no active holiday/event window forced this choice)";
@@ -468,7 +529,7 @@ export function buildDraftPrBrief({
 	);
 	const seoValue = cleanBriefText(
 		topicDecision?.seo_value,
-		"This draft targets a specific Santa Cruz County search intent with people-first depth and contextual links into owned service pages.",
+		"This draft targets a specific Santa Cruz County search intent with people-first depth and contextual links into owned service pages and related posts.",
 	);
 	const researchMode = demandContext?.research?.mode ?? "CATALOG_ONLY";
 	const researchClass =
@@ -495,8 +556,9 @@ export function buildDraftPrBrief({
 ## What Eve did this run
 - Autonomously researched Santa Cruz County demand timing from the versioned holiday/event calendar and trending-concept windows.
 - Compared viable unused blog topics against the live Markdown inventory and link graph.
+- Built a diligent internal-link plan (services + related posts + CTA) and a site media package before writing.
 - Chose **${opportunity.click_title}** (\`${opportunity.slug}\`) using decision mode \`${decisionMode}\`.
-- Wrote a people-first draft, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
+- Wrote a people-first draft that must use site media sources and keyword-aware internal links, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
 - Ran fail-closed quality gates, then opened this draft-only Connect PR.
 - Token-efficiency safeguards:
 ${formatGenerationSpend(generation)}
@@ -507,6 +569,17 @@ ${formatRevisionRounds(revision)}
 ${activeDemand.length > 0 ? activeDemand.join("\n") : "- None inside a lead window for this run."}
 - Active trending concepts considered:
 ${activeTrends.length > 0 ? activeTrends.join("\n") : "- None active for the current month window."}
+
+## Media sources (prominent; review required)
+${formatImagePackageForBrief(imagePackage)}
+
+## Internal linking diligence
+- Planned mix: ${serviceLinkCount} service page(s), ${postLinkCount} related post(s), plus CTA/home as available.
+- Matched in draft: ${(quality.internal_links ?? []).join(", ") || "n/a"}
+- Service links matched: ${(quality.service_links ?? []).join(", ") || "n/a"}
+- Related post links matched: ${(quality.post_links ?? []).join(", ") || "n/a"}
+- Reviewer check: service keywords and related-post mentions should be linked in context, not dumped at the end.
+${linkLines}
 
 ## Why this blog post matters now
 ${whyChosen}
@@ -536,7 +609,7 @@ Concrete SEO mechanics in this draft:
 - Existing page assessment: ${opportunity.existing_page_assessment} (${opportunity.existing_page_decision})
 - Click title and CTR-oriented meta are Santa Cruz County specific, so the result can earn the click instead of looking like a national filler post.
 - Draft depth gate passed at about **${quality.word_count} words**, with Quick Answer, unique-value section, FAQ depth, and ${quality.faq_questions ?? "5+"} FAQ answers.
-- Internal links create paths from this informational post into money/service pages readers need next:
+- Diligent internal links move equity from this informational post into money/service pages and related posts:
 ${linkLines}
 - Must-cover local points Eve had to satisfy:
 ${mustCover}
@@ -557,7 +630,7 @@ Expected outcome after human merge (observation only, not a guaranteed ranking c
 - Change manifest: ${changeSet.proposal_id}
 - Content path: \`${opportunity.content_path}\`
 - Planned internal links: ${opportunity.internal_links.map((link) => link.to).join("; ")}
-- Draft quality: ${quality.word_count} words; FAQ ${quality.faq_questions ?? "n/a"}; matched links ${quality.internal_links.join(", ")}
+- Draft quality: ${quality.word_count} words; FAQ ${quality.faq_questions ?? "n/a"}; matched links ${(quality.internal_links ?? []).join(", ")}
 - Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.
 - Rollback: Revert this single Markdown file after human review.
 - Publication: DRAFT PR ONLY; human approval and merge required.
@@ -782,13 +855,28 @@ export async function executeDraftProposal({
 			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
-	const opportunity = selection.opportunity;
+	const media = await collectProposalMediaContext({
+		opportunity: selection.opportunity,
+		repoRoot,
+		config,
+	});
+	const imagePackage = Object.freeze({
+		...media.imagePackage,
+		online_research: media.onlineResearchSummary,
+	});
+	const onlineResearchSummary = media.onlineResearchSummary;
+	const openResearchSummary = media.openResearchSummary;
+	const opportunity = applyFeaturedImageToOpportunity(
+		selection.opportunity,
+		imagePackage.featured,
+	);
 	const date = proposalDate(descriptor);
 	const written = await writer({
 		runId: descriptor.runId,
 		opportunity,
 		date,
 		generationGuard: guard,
+		imagePackage,
 	});
 	let markdown = extractMarkdown(written.markdown);
 	let quality = assertPublishableBlogDraft(markdown, opportunity);
@@ -851,6 +939,7 @@ export async function executeDraftProposal({
 				operation: "CREATE",
 				content: markdown,
 			},
+			...(imagePackage.staged_files ?? []),
 		],
 	});
 	const branch = `eve/seo/${date}-${opportunity.slug}`;
@@ -899,6 +988,7 @@ export async function executeDraftProposal({
 			revision,
 			generation: guard.snapshot(),
 			pagespeedQa: pagespeedQaForBrief,
+			imagePackage,
 		}),
 		changeSet,
 		gateway: publisher,
@@ -916,6 +1006,9 @@ export async function executeDraftProposal({
 			query_cluster: opportunity.query_cluster,
 			selection_reason: selection.selection_reason,
 			demand_source: opportunity.demand_source,
+			image: opportunity.image,
+			image_alt: opportunity.image_alt,
+			image_plan: opportunity.image_plan ?? null,
 		},
 		topic_decision: selection.topicDecision,
 		generation: guard.snapshot(),
@@ -939,6 +1032,14 @@ export async function executeDraftProposal({
 		}),
 		search_console_topics: searchConsoleSummary,
 		pagespeed_qa: pagespeedQaSummary,
+		images: Object.freeze({
+			featured: imagePackage.featured,
+			illustration_count: imagePackage.illustrations.candidates.length,
+			external_research_count: imagePackage.external_research.candidates.length,
+			staged_file_count: (imagePackage.staged_files ?? []).length,
+			online_research: onlineResearchSummary,
+			open_research: openResearchSummary,
+		}),
 	});
 }
 

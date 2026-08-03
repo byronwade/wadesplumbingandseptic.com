@@ -224,7 +224,7 @@ test("run artifact bundles are canonical, Git-path scoped, and reject unsafe pat
 			draft_pr_url: null,
 			preview_url: null,
 			budget_usage: {},
-			budget_limits: { maxExternalRequests: 30 },
+			budget_limits: { maxExternalRequests: 60 },
 			source_code_sha: "fixture-tree",
 		},
 		evidence: [

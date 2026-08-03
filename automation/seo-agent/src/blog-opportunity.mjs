@@ -12,7 +12,10 @@ const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const MIN_BODY_WORDS = 1_400;
 const MAX_BODY_WORDS = 2_200;
 const MIN_H2 = 7;
-const MIN_INTERNAL_LINKS = 4;
+const MIN_INTERNAL_LINKS = 5;
+const MIN_SERVICE_LINKS = 2;
+const MIN_RELATED_POST_LINKS = 1;
+const MAX_PLANNED_LINKS = 8;
 const MIN_FAQ_QUESTIONS = 5;
 const MIN_DESCRIPTION = 70;
 const MAX_DESCRIPTION = 155;
@@ -520,32 +523,138 @@ function inventoryUrls(inventory) {
 	return new Set((inventory?.pages ?? []).map((page) => page.url));
 }
 
-function resolveLinkPlan(topicSpec, urls) {
-	const links = [];
-	for (const to of topicSpec.preferred_links) {
-		if (!urls.has(to)) continue;
-		const anchor =
-			to.split("/").filter(Boolean).at(-1)?.replaceAll("-", " ") ??
-			"related page";
-		links.push(
-			Object.freeze({
-				to,
-				anchor: anchor.slice(0, 48),
-				reader_rationale: `Helps readers act on ${topicSpec.query_cluster}.`,
-			}),
-		);
-		if (links.length >= 6) break;
+function inventoryByUrl(inventory) {
+	return new Map((inventory?.pages ?? []).map((page) => [page.url, page]));
+}
+
+export function classifyInternalLinkRole(url) {
+	if (typeof url !== "string" || !url.startsWith("/")) return "other";
+	if (url.startsWith("/service-offerings/")) return "service";
+	if (url === "/contact" || url === "/faq" || url === "/") return "cta";
+	if (!url.slice(1).includes("/")) return "post";
+	return "other";
+}
+
+function tokenizeLinkText(value) {
+	return String(value ?? "")
+		.toLowerCase()
+		.split(/[^a-z0-9]+/g)
+		.filter((token) => token.length >= 3);
+}
+
+function anchorForUrl(url, page = null) {
+	if (url === "/") return "Wade's Plumbing & Septic";
+	if (url === "/contact") return "Contact Us";
+	if (url === "/faq") return "FAQ";
+	if (page?.title && typeof page.title === "string") {
+		return page.title.replace(/\s*[|:].*$/, "").trim().slice(0, 56);
 	}
-	if (urls.has("/") && !links.some((link) => link.to === "/")) {
-		links.push(
-			Object.freeze({
-				to: "/",
-				anchor: "Wade's Plumbing & Septic",
-				reader_rationale: "Gives readers a clear path back to the home site.",
-			}),
-		);
+	const slug =
+		url.split("/").filter(Boolean).at(-1)?.replaceAll("-", " ") ??
+		"related page";
+	return slug.slice(0, 56);
+}
+
+function topicLinkTokens(topicSpec) {
+	return tokenizeLinkText(
+		[
+			topicSpec.query_cluster,
+			topicSpec.click_title,
+			...(topicSpec.tags ?? []),
+			...(topicSpec.must_cover ?? []).slice(0, 3),
+		]
+			.filter(Boolean)
+			.join(" "),
+	);
+}
+
+function scoreUrlForTopic(url, page, topicTokens) {
+	const hay = tokenizeLinkText(`${url} ${page?.title ?? ""}`);
+	let score = 0;
+	for (const token of topicTokens) {
+		if (hay.includes(token)) score += 3;
 	}
-	return Object.freeze(links.slice(0, 6));
+	const role = classifyInternalLinkRole(url);
+	if (role === "service") score += 2;
+	if (role === "post") score += 1;
+	return score;
+}
+
+function makeLinkEntry(to, page, topicSpec, rationale) {
+	const role = classifyInternalLinkRole(to);
+	return Object.freeze({
+		to,
+		anchor: anchorForUrl(to, page),
+		role,
+		reader_rationale:
+			rationale ??
+			(role === "service"
+				? `Links the reader to Wade's ${anchorForUrl(to, page)} service when they are ready to act.`
+				: role === "post"
+					? `Strengthens topical internal linking with related guidance on ${anchorForUrl(to, page)}.`
+					: `Helps readers act on ${topicSpec.query_cluster}.`),
+	});
+}
+
+/**
+ * Diligent internal-link plan: curated preferred links first, then inventory
+ * fill for service + related-post mix. Supports SEO internal linking structure.
+ */
+export function buildDiligentLinkPlan(topicSpec, inventory) {
+	const urls = inventoryUrls(inventory);
+	const pages = inventoryByUrl(inventory);
+	const topicTokens = topicLinkTokens(topicSpec);
+	const chosen = [];
+	const seen = new Set();
+
+	const push = (to, rationale) => {
+		if (!urls.has(to) || seen.has(to) || chosen.length >= MAX_PLANNED_LINKS)
+			return false;
+		seen.add(to);
+		chosen.push(makeLinkEntry(to, pages.get(to) ?? null, topicSpec, rationale));
+		return true;
+	};
+
+	for (const to of topicSpec.preferred_links ?? []) {
+		push(to);
+		if (chosen.length >= MAX_PLANNED_LINKS) break;
+	}
+
+	const countRole = (role) =>
+		chosen.filter((link) => link.role === role).length;
+
+	const fillFromInventory = (role, needed) => {
+		if (needed <= 0) return;
+		const ranked = [...urls]
+			.filter((url) => classifyInternalLinkRole(url) === role && !seen.has(url))
+			.map((url) => ({
+				url,
+				score: scoreUrlForTopic(url, pages.get(url), topicTokens),
+			}))
+			.filter((entry) => entry.score > 0)
+			.sort(
+				(left, right) =>
+					right.score - left.score || left.url.localeCompare(right.url),
+			);
+		for (const entry of ranked) {
+			if (countRole(role) >= needed) break;
+			push(
+				entry.url,
+				role === "service"
+					? "Inventory-matched service page for keyword-aware internal linking."
+					: "Inventory-matched related post for topical cluster linking.",
+			);
+		}
+	};
+
+	fillFromInventory("service", MIN_SERVICE_LINKS);
+	fillFromInventory("post", MIN_RELATED_POST_LINKS + 1);
+	push("/contact", "Clear next step when the reader needs local help.");
+	if (urls.has("/") && !seen.has("/")) {
+		push("/", "Path back to Wade's Plumbing & Septic.");
+	}
+
+	return Object.freeze(chosen.slice(0, MAX_PLANNED_LINKS));
 }
 
 function topicScore(topicSpec) {
@@ -575,6 +684,16 @@ function similarExistingPost(urls, slug) {
 /**
  * Ranks unused blog topics that can resolve enough inventory links.
  */
+function linkPlanMeetsMix(links) {
+	const services = links.filter((link) => link.role === "service").length;
+	const posts = links.filter((link) => link.role === "post").length;
+	return (
+		links.length >= MIN_INTERNAL_LINKS &&
+		services >= MIN_SERVICE_LINKS &&
+		posts >= MIN_RELATED_POST_LINKS
+	);
+}
+
 export function rankViableBlogTopics({
 	inventory,
 	catalog = BLOG_TOPIC_CATALOG,
@@ -584,10 +703,10 @@ export function rankViableBlogTopics({
 	const byId = new Map(catalog.map((topicSpec) => [topicSpec.id, topicSpec]));
 	for (const topicSpec of catalog) {
 		const conflict = similarExistingPost(urls, topicSpec.slug);
-		const links = resolveLinkPlan(topicSpec, urls);
+		const links = buildDiligentLinkPlan(topicSpec, inventory);
 		const viable =
 			!conflict &&
-			links.length >= MIN_INTERNAL_LINKS &&
+			linkPlanMeetsMix(links) &&
 			!urls.has(`/${topicSpec.slug}`);
 		considered.push(
 			Object.freeze({
@@ -597,6 +716,9 @@ export function rankViableBlogTopics({
 				viable,
 				conflict,
 				link_count: links.length,
+				service_link_count: links.filter((link) => link.role === "service")
+					.length,
+				post_link_count: links.filter((link) => link.role === "post").length,
 				click_title: topicSpec.click_title,
 				query_cluster: topicSpec.query_cluster,
 				demand_kind: topicSpec.demand_source?.kind ?? null,
@@ -629,10 +751,11 @@ export function buildBlogOpportunity({
 	if (!runId || typeof runId !== "string")
 		throw new Error("Blog opportunity selection requires a run ID.");
 	if (!topicSpec?.id) throw new Error("Blog opportunity requires a topic.");
-	const urls = inventoryUrls(inventory);
-	const links = resolveLinkPlan(topicSpec, urls);
-	if (links.length < MIN_INTERNAL_LINKS) {
-		throw new Error("Chosen blog topic no longer resolves enough links.");
+	const links = buildDiligentLinkPlan(topicSpec, inventory);
+	if (!linkPlanMeetsMix(links)) {
+		throw new Error(
+			"Chosen blog topic no longer resolves a diligent service + post link mix.",
+		);
 	}
 	const demandTimed = Boolean(
 		topicSpec.publication_timing?.mode === "DEMAND_TIMED",
@@ -812,13 +935,49 @@ export function assertPublishableBlogDraft(markdown, opportunity) {
 		return Object.freeze({ ok: false, reason: "MISSING_UNIQUE_VALUE_SECTION" });
 	}
 	const links = markdownLinks(text);
-	const planned = new Set(opportunity.internal_links.map((link) => link.to));
+	const plannedLinks = opportunity.internal_links ?? [];
+	const planned = new Set(plannedLinks.map((link) => link.to));
 	const matched = [...new Set(links.filter((href) => planned.has(href)))];
 	if (matched.length < MIN_INTERNAL_LINKS) {
 		return Object.freeze({
 			ok: false,
 			reason: "INSUFFICIENT_INTERNAL_LINKS",
 			matched,
+		});
+	}
+	const plannedServices = plannedLinks.filter(
+		(link) => (link.role ?? classifyInternalLinkRole(link.to)) === "service",
+	);
+	const plannedPosts = plannedLinks.filter(
+		(link) => (link.role ?? classifyInternalLinkRole(link.to)) === "post",
+	);
+	const matchedServices = matched.filter(
+		(href) => classifyInternalLinkRole(href) === "service",
+	);
+	const matchedPosts = matched.filter(
+		(href) => classifyInternalLinkRole(href) === "post",
+	);
+	const requiredServices = Math.min(MIN_SERVICE_LINKS, plannedServices.length);
+	const requiredPosts = Math.min(
+		MIN_RELATED_POST_LINKS,
+		plannedPosts.length,
+	);
+	if (matchedServices.length < requiredServices) {
+		return Object.freeze({
+			ok: false,
+			reason: "INSUFFICIENT_SERVICE_LINKS",
+			matched,
+			matched_services: matchedServices,
+			required_services: requiredServices,
+		});
+	}
+	if (matchedPosts.length < requiredPosts) {
+		return Object.freeze({
+			ok: false,
+			reason: "INSUFFICIENT_BLOG_LINKS",
+			matched,
+			matched_posts: matchedPosts,
+			required_posts: requiredPosts,
 		});
 	}
 	const words = wordCount(text);
@@ -879,16 +1038,61 @@ export function assertPublishableBlogDraft(markdown, opportunity) {
 		reason: null,
 		word_count: words,
 		internal_links: matched,
+		service_links: matchedServices,
+		post_links: matchedPosts,
 		faq_questions: faqQuestionCount(text),
 		description_length: description.length,
 		demand_timed: Boolean(opportunity.publication_timing),
 	});
 }
 
-export function buildWriterPrompt({ opportunity, date }) {
+function formatMediaSourcesForPrompt(imagePackage = null, opportunity) {
+	const featuredUrl = opportunity?.image ?? null;
+	const featuredAlt = opportunity?.image_alt ?? "Topic image";
+	const featuredPlan = imagePackage?.featured?.plan ?? null;
+	const attribution = imagePackage?.attribution_line ?? null;
+	const illustrations = (imagePackage?.illustrations?.candidates ?? [])
+		.filter((item) => item?.public_url && item?.alt_text)
+		.slice(0, 2);
+	const illustrationLines =
+		illustrations.length > 0
+			? illustrations
+					.map(
+						(item) =>
+							`- Optional mid-body image only if it helps: ![${item.alt_text}](${item.public_url})`,
+					)
+					.join("\n")
+			: "- No approved mid-body illustration candidates in this run.";
+	const origin =
+		featuredPlan?.origin ??
+		featuredPlan?.provider ??
+		(featuredUrl?.startsWith("/images/sourced/")
+			? "sourced_online"
+			: "site_library");
+	return `SITE MEDIA SOURCES (prominent feature; use the site assets below, do not invent remote image URLs):
+- Featured front-matter image (required exact path): ${featuredUrl}
+- Featured alt text: "${featuredAlt}"
+- Featured origin/rights: ${origin} / ${featuredPlan?.usage_rights ?? "OWNED_OR_STAGED"}
+${attribution ? `- Attribution line to mention near the end when rights require it: ${attribution}` : "- Attribution: not required unless the staged provenance says otherwise."}
+- Mid-body illustrations (optional, max 2, exact paths only):
+${illustrationLines}
+- Prefer Wade first-party work/service photos when the featured path is under /images/work/ or /images/services/.
+- Never paste Unsplash/Pexels/remote hotlinks. Only use the exact public paths listed above.`;
+}
+
+export function buildWriterPrompt({ opportunity, date, imagePackage = null }) {
 	const linkLines = opportunity.internal_links
-		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
+		.map(
+			(link) =>
+				`- [${link.anchor}](${link.to}) [${link.role ?? classifyInternalLinkRole(link.to)}]: ${link.reader_rationale}`,
+		)
 		.join("\n");
+	const serviceLinks = opportunity.internal_links.filter(
+		(link) => (link.role ?? classifyInternalLinkRole(link.to)) === "service",
+	);
+	const postLinks = opportunity.internal_links.filter(
+		(link) => (link.role ?? classifyInternalLinkRole(link.to)) === "post",
+	);
 	const tagLines = opportunity.tags.map((tag) => `  - ${tag}`).join("\n");
 	const mustCover = opportunity.must_cover
 		.map((item, index) => `${index + 1}. ${item}`)
@@ -914,6 +1118,7 @@ ${opportunity.decision_notes}
 ${opportunity.research_notes}
 `
 		: "";
+	const mediaBlock = formatMediaSourcesForPrompt(imagePackage, opportunity);
 
 	return `You write people-first SEO content for Wade's Plumbing & Septic (Santa Cruz County plumbing and septic).
 
@@ -928,6 +1133,8 @@ Query cluster: ${opportunity.query_cluster}
 Unique value you must deliver: ${opportunity.unique_value}
 Angle: ${opportunity.angle}
 ${communityBlock}${decisionBlock}${researchBlock}
+
+${mediaBlock}
 
 Click-focused title to use or lightly improve (keep under 70 characters, keep Santa Cruz County specificity):
 ${opportunity.click_title}
@@ -961,8 +1168,16 @@ Required structure and depth:
 4. At least ${MIN_H2} total H2 sections. Use scannable subheads, short paragraphs, and checklists where they help decisions.
 5. H2 "FAQ" with at least ${MIN_FAQ_QUESTIONS} ### question headings and useful answers.
 6. Closing CTA linking to /contact without inventing arrival times, prices, or guarantees.
-7. At least ${MIN_INTERNAL_LINKS} contextual Markdown links to these approved destinations (exact paths):
+7. Diligent internal linking (critical for site SEO structure and link equity):
+   - At least ${MIN_INTERNAL_LINKS} contextual Markdown links using the approved destinations below (exact paths).
+   - Include at least ${MIN_SERVICE_LINKS} service links and at least ${MIN_RELATED_POST_LINKS} related blog post link(s) from that list.
+   - On the first meaningful mention of a service keyword (for example tankless installation, septic pumping, drain cleaning), link that phrase to the matching service page.
+   - Place related blog post links mid-body where the reader needs deeper context, not as a dumped list at the end.
+   - Use natural keyword-rich anchors (the provided anchor text or a close variant), not "click here".
+Approved destinations:
 ${linkLines}
+Service destinations to prioritize (${serviceLinks.length}): ${serviceLinks.map((link) => link.to).join(", ") || "none"}
+Related post destinations to prioritize (${postLinks.length}): ${postLinks.map((link) => link.to).join(", ") || "none"}
 
 People-first / SEO quality bar:
 - Target ${MIN_BODY_WORDS} to ${MAX_BODY_WORDS} words of real guidance. Prefer specific steps, decision points, and local context over adjectives.
@@ -983,6 +1198,9 @@ export const BLOG_QUALITY_THRESHOLDS = Object.freeze({
 	max_body_words: MAX_BODY_WORDS,
 	min_h2: MIN_H2,
 	min_internal_links: MIN_INTERNAL_LINKS,
+	min_service_links: MIN_SERVICE_LINKS,
+	min_related_post_links: MIN_RELATED_POST_LINKS,
+	max_planned_links: MAX_PLANNED_LINKS,
 	min_faq_questions: MIN_FAQ_QUESTIONS,
 	min_description: MIN_DESCRIPTION,
 	max_description: MAX_DESCRIPTION,

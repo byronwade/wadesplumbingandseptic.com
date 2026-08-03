@@ -1,12 +1,65 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 83: Site Media Prominence + Diligent Internal Linking + Doctor Scans (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` on Task 14 media + blog SEO structure.
+- Branch/PR: `cursor/eve-image-sourcing-aab8` / `#123`.
+- Offline: blog drafts now treat site media as a prominent writer input (`SITE MEDIA SOURCES`); PR packet elevates `Media sources (prominent; review required)` with reviewer checklist; `buildDiligentLinkPlan` fills service + related-post mix from inventory titles/tokens; quality gates require min 5 internal links including service and related-post matches; writer/expansion prompts require keyword-aware first-mention service links and mid-body related posts.
+- Repo diagnostics (entire workspace, not live Production proofs):
+  - `npx vercel-doctor@latest -y --offline` → 357 warnings / 0 errors (report under `/opt/cursor/artifacts/doctor-reports/vercel-doctor.md`)
+  - `npx react-doctor@latest . -y --offline` → score **59/100** (stdout under `react-doctor.stdout.txt`)
+  - `npx @shadscan/cli@latest . --json --no-interactive` → score **68**, grade **D** (`shadscan.json`)
+- Evidence truth: sidecar fixture/`MOCK_VERIFIED` only for Eve path. Doctor scores are static diagnostics, not Eve LIVE_VERIFIED integrations.
+- Commands: sidecar `npm test` → `212/212` exit `0`; `npm run lint` exit `0`; `npm run inventory` exit `0`; `npm run verify` exit `0`.
+- Next exact action: human review of `#123`; optionally open a separate cleanup track for react-doctor/shadscan app-shell findings; keep Eve media/linking gates on for propose.
+
+## Phase 82: Grokipedia Soft Research + Media Ranking Polish (2026-08-03)
+
+- State: SUPERSEDED by Phase 83 media prominence + diligent linking.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: Grokipedia soft research + ranking polish remain in place.
+- Next exact action: SUPERSEDED by Phase 83.
+
+## Phase 81: Image Orchestration Refinement (2026-08-03)
+
+- State: SUPERSEDED by Phase 82 Grokipedia + ranking polish.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: parallel provider fan-out with round-robin merge; multi-query search variants; trade-aware ranking; `image-orchestration.mjs` centralizes propose-side media collection.
+- Next exact action: SUPERSEDED by Phase 82.
+
+## Phase 80: Expanded Open Image + Research APIs (2026-08-03)
+
+- State: SUPERSEDED by Phase 81 orchestration refinements; provider catalog remains in place.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Next exact action: SUPERSEDED by Phase 81.
+
+## Phase 79: Online Image Sourcing + Careful AI Line Art (2026-08-03)
+
+- State: SUPERSEDED by Phase 80 expanded open API catalog.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Next exact action: SUPERSEDED by Phase 80.
+
+## Phase 78: Content-Relevant Image Sourcing + Strict Featured Gates (2026-08-03)
+
+- State: SUPERSEDED by Phase 79 online sourcing path.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: first-party relevance scoring and featured gates remain the preferred path inside Phase 79.
+- Next exact action: SUPERSEDED by Phase 79.
+
+## Phase 77: Task 7 Local Falcon Production Test + Blog Draft PR (2026-08-03)
+
+- State: Task 7 path on Production; Cron live proof `BLOCKED_MISSING_CREDENTIALS` (no `LOCAL_FALCON_API_KEY`). Draft blog PR `#122` opened for owner review.
+- Local Falcon Cron on armed deploy `dpl_52fmP6MDx3mhF4LuYCmqk82BqwJv` returned HTTP `503` three times; flags reset afterward.
+- Proposal Cron `wrun_41KZ4A1GVN0GJW2PRA80TQGMYE` completed without a Connect draft PR under quality gates; `#122` carries the reviewable tankless draft.
+- Next exact action: SUPERSEDED by Phase 78 image sourcing work.
+
 ## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.
-- Branch/PR: `cursor/eve-local-falcon-live-aab8` (Task 7 from `INTEGRATION_ROLLOUT.md`).
+- State: SUPERSEDED by Phase 77 Production exercise. Offline `MOCK_VERIFIED` probe path shipped via `#121`.
+- Branch/PR: `cursor/eve-local-falcon-live-aab8` / `#121`.
 - Offline: focused probe `probeLocalFalconLive`; CRON route `GET /_internal/eve/api/live-probe/local-falcon`; CLI `npm run live:probe:local-falcon`; adapter soft-fails upstream errors to `FAILED` evidence; Cron allowlisted.
 - Docs: `MANUAL_SETUP.md` Next: Local Falcon; Task 6 moved to Deferred.
-- Next exact action: merge/deploy Task 7; arm and Cron-prove if `LOCAL_FALCON_API_KEY` is present, else record `BLOCKED_MISSING_CREDENTIALS`; then trigger standing propose Cron for a draft blog PR test.
+- Next exact action: SUPERSEDED by Phase 77.
 
 ## Phase 75: Task 6 GA4 Production Path Deployed; Live Proof BLOCKED (2026-08-03)
 

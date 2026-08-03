@@ -261,18 +261,47 @@ export function createGithubDraftPublisher({
 					"GitHub draft parent commit did not contain a tree SHA.",
 				);
 			}
+			const treeEntries = [];
+			for (const file of changeSet.files) {
+				if (file.encoding === "base64" && file.content_base64) {
+					const blob = await request(
+						`${base}/git/blobs`,
+						{
+							method: "POST",
+							body: JSON.stringify({
+								content: file.content_base64,
+								encoding: "base64",
+							}),
+						},
+						"GitHub draft binary blob create",
+					);
+					if (!SAFE_SHA.test(blob?.sha ?? "")) {
+						throw new Error(
+							"GitHub draft binary blob create did not return a SHA.",
+						);
+					}
+					treeEntries.push({
+						path: file.path,
+						mode: "100644",
+						type: "blob",
+						sha: blob.sha,
+					});
+					continue;
+				}
+				treeEntries.push({
+					path: file.path,
+					mode: "100644",
+					type: "blob",
+					content: file.content,
+				});
+			}
 			const tree = await request(
 				`${base}/git/trees`,
 				{
 					method: "POST",
 					body: JSON.stringify({
 						base_tree: parent.tree.sha,
-						tree: changeSet.files.map((file) => ({
-							path: file.path,
-							mode: "100644",
-							type: "blob",
-							content: file.content,
-						})),
+						tree: treeEntries,
 					}),
 				},
 				"GitHub draft tree create",

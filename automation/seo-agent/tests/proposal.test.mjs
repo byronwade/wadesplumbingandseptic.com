@@ -29,8 +29,15 @@ function config() {
 
 function richDraft(opportunity) {
 	const links = opportunity.internal_links
-		.slice(0, 4)
-		.map((link) => `See [${link.anchor}](${link.to}) for next steps.`)
+		.map((link) => {
+			if (link.role === "service") {
+				return `When you need [${link.anchor}](${link.to}), use that service path instead of guessing.`;
+			}
+			if (link.role === "post") {
+				return `For deeper reading, see [${link.anchor}](${link.to}) while you compare options.`;
+			}
+			return `See [${link.anchor}](${link.to}) for next steps.`;
+		})
 		.join("\n\n");
 	const cover = opportunity.must_cover
 		.map((point) => {
@@ -413,7 +420,6 @@ test("proposal expands a good thin draft instead of rewriting from scratch", asy
 		topicDecider: fixtureTopicDecider,
 		writer: async ({ opportunity }) => {
 			const links = opportunity.internal_links
-				.slice(0, 4)
 				.map((link) => `See [${link.anchor}](${link.to}) for next steps.`)
 				.join("\n\n");
 			const faqs = opportunity.people_also_ask

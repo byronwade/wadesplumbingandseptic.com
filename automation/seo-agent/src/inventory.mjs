@@ -83,15 +83,20 @@ export function collectPageInventory({
 					.replaceAll(sep, "/");
 				const route =
 					collection === "services" ? `/service-offerings/${slug}` : `/${slug}`;
+				const titleMatch = source.match(/^title:\s*["']?(.+?)["']?\s*$/m);
+				const title = titleMatch?.[1]?.trim()
+					? titleMatch[1].trim().slice(0, 160)
+					: null;
 				return {
 					url: route,
+					title,
 					source_path: relative(repoRoot, sourcePath).replaceAll("\\", "/"),
 					canonical_url: new URL(route, siteOrigin).toString(),
 					type:
 						collection === "services" ? "service_content" : "markdown_content",
 					lifecycle: "CONTENT_MANAGED",
 					owner: null,
-					metadata_declared: /^title:\s*.+$/m.test(source),
+					metadata_declared: Boolean(title),
 					canonical_declared: false,
 					json_ld_blocks: /application\/ld\+json/.test(source) ? 1 : 0,
 					classification: "MOCK_VERIFIED",

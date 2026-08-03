@@ -27,6 +27,33 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
+## Next: Online image sourcing + open research APIs
+
+Eve prefers first-party `public/images` when a work/service photo clearly matches the topic. When that fails, standing Production propose sources license-safe online assets from many open APIs and can stage winners into `public/images/sourced/<slug>/` with provenance. Soft open-research helpers (Wikidata, OpenStreetMap Nominatim, and xAI Grokipedia) add topic/place context only. Brand, partner, team, and logo assets still cannot be featured.
+
+### Grokipedia (xAI encyclopedia)
+Grokipedia at `grokipedia.com` is the xAI / X encyclopedia product. Eve may use it as soft topic vocabulary only:
+1. [ ] Transport is robots-safe public HTML (`/search` and `/page/*`) only. Eve does not call Grokipedia `/api/*` (disallowed by their robots.txt).
+2. [ ] Results are untrusted AI encyclopedia leads, never Wade facts alone.
+3. [ ] Enabled with open research by default; set `SEO_AGENT_ENABLE_GROKIPEDIA=false` to skip.
+4. [ ] This is not a stock image API. Optional xAI Grok image/chat (`api.x.ai`) is separate and not wired here.
+
+### Keyless image sources (on when image sourcing is enabled)
+Openverse (commercial CC/PD filter), Wikimedia Commons, Metropolitan Museum Open Access, Art Institute of Chicago public domain, NASA Image Library.
+
+### Optional keys that expand coverage (Production secrets)
+1. [ ] `UNSPLASH_ACCESS_KEY`
+2. [ ] `PEXELS_API_KEY`
+3. [ ] `PIXABAY_API_KEY`
+4. [ ] `FLICKR_API_KEY` (Eve requests commercial-safe CC licenses only)
+5. [ ] `EUROPEANA_API_KEY` (open reusability filter)
+
+### Careful AI + flags
+1. [ ] Prefer real Wade work photos under `public/images/work/` with descriptive filenames.
+2. [ ] Optional AI fallback: `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` only after review (technical line-art SVG, not photoreal AI).
+3. [ ] Outside standing propose, set `SEO_AGENT_ENABLE_IMAGE_SOURCING=true` and/or `SEO_AGENT_ENABLE_OPEN_RESEARCH=true`.
+4. [ ] In draft PR review, check **Media sources (prominent; review required)** and **Internal linking diligence** for origin, rights, provenance, alt text, service/related-post link mix, and reject photoreal AI filler. Treat Wikidata/Nominatim/Grokipedia lines as soft context only, never as Wade facts.
+
 ## Next: Local Falcon
 
 Eve Task 7 reads a bounded Local Falcon report list (`report_count` only). Requires a Local Falcon API key.

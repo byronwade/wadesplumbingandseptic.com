@@ -13,6 +13,8 @@ import {
 	buildTopicSignalsFromRawRows,
 	defaultSearchConsoleTopicWindow,
 } from "./search-console-topics.mjs";
+import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
+import { createOpenResearchAdapter } from "./open-research.mjs";
 
 const DEFAULT_REQUEST_POLICY = Object.freeze({
 	timeoutMs: 8_000,
@@ -1717,6 +1719,18 @@ export function createIntegrationRegistry({
 		local_falcon: createLocalFalconAdapter({
 			apiKey: credentials.localFalconApiKey,
 			enabled: flags.localFalcon === true,
+			fetchImpl,
+			budget,
+		}),
+		image_research: createConfiguredImageResearchAdapter({
+			config,
+			fetchImpl,
+			budget,
+			includeAiLineArt: flags.imageAiLineArt === true,
+		}),
+		open_research: createOpenResearchAdapter({
+			enabled: flags.openResearch === true,
+			grokipediaEnabled: flags.grokipedia === true,
 			fetchImpl,
 			budget,
 		}),

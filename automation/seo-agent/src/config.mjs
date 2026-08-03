@@ -63,6 +63,11 @@ const envSchema = z
 		LOCAL_FALCON_API_KEY: z.string().min(1).optional(),
 		SIMILARWEB_API_KEY: z.string().min(1).optional(),
 		GOOGLE_TRENDS_ACCESS_TOKEN: z.string().min(1).optional(),
+		UNSPLASH_ACCESS_KEY: z.string().min(1).optional(),
+		PEXELS_API_KEY: z.string().min(1).optional(),
+		PIXABAY_API_KEY: z.string().min(1).optional(),
+		FLICKR_API_KEY: z.string().min(1).optional(),
+		EUROPEANA_API_KEY: z.string().min(1).optional(),
 		BLOB_READ_WRITE_TOKEN: z.string().min(1).optional(),
 		SEO_AGENT_ENABLE_AI_GATEWAY: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_ENABLE_GITHUB: z.enum(["true", "false"]).optional(),
@@ -75,6 +80,11 @@ const envSchema = z
 		SEO_AGENT_ENABLE_LOCAL_FALCON: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_ENABLE_SIMILARWEB: z.enum(["true", "false"]).optional(),
 		SEO_AGENT_ENABLE_GOOGLE_TRENDS: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_IMAGE_SOURCING: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_IMAGE_AI_LINEART: z.enum(["true", "false"]).optional(),
+		SEO_AGENT_ENABLE_OPEN_RESEARCH: z.enum(["true", "false"]).optional(),
+		// Defaults on with open research; set false to skip Grokipedia HTML leads.
+		SEO_AGENT_ENABLE_GROKIPEDIA: z.enum(["true", "false"]).optional(),
 	})
 	.passthrough();
 
@@ -151,6 +161,17 @@ export function loadConfig(env = process.env) {
 			localFalcon: raw.SEO_AGENT_ENABLE_LOCAL_FALCON === "true",
 			similarweb: raw.SEO_AGENT_ENABLE_SIMILARWEB === "true",
 			googleTrends: raw.SEO_AGENT_ENABLE_GOOGLE_TRENDS === "true",
+			// Standing Production propose sources online images (Wikimedia always;
+			// Unsplash/Pexels when keys exist; AI line-art only when separately enabled).
+			imageSourcing:
+				standingPropose || raw.SEO_AGENT_ENABLE_IMAGE_SOURCING === "true",
+			imageAiLineArt: raw.SEO_AGENT_ENABLE_IMAGE_AI_LINEART === "true",
+			openResearch:
+				standingPropose || raw.SEO_AGENT_ENABLE_OPEN_RESEARCH === "true",
+			// Soft Grokipedia leads ride with open research (public HTML only).
+			grokipedia:
+				(standingPropose || raw.SEO_AGENT_ENABLE_OPEN_RESEARCH === "true") &&
+				raw.SEO_AGENT_ENABLE_GROKIPEDIA !== "false",
 		}),
 		liveReads: Object.freeze({
 			humanApproved: raw.SEO_AGENT_LIVE_READS_APPROVED === "true",
@@ -198,6 +219,11 @@ export function loadConfig(env = process.env) {
 			localFalconApiKey: raw.LOCAL_FALCON_API_KEY,
 			similarwebApiKey: raw.SIMILARWEB_API_KEY,
 			googleTrendsAccessToken: raw.GOOGLE_TRENDS_ACCESS_TOKEN,
+			unsplashAccessKey: raw.UNSPLASH_ACCESS_KEY,
+			pexelsApiKey: raw.PEXELS_API_KEY,
+			pixabayApiKey: raw.PIXABAY_API_KEY,
+			flickrApiKey: raw.FLICKR_API_KEY,
+			europeanaApiKey: raw.EUROPEANA_API_KEY,
 			blobReadWriteToken: raw.BLOB_READ_WRITE_TOKEN,
 		}),
 	});
@@ -275,6 +301,15 @@ export function summarizeConfig(config) {
 			local_falcon: Boolean(config.credentials.localFalconApiKey),
 			similarweb: Boolean(config.credentials.similarwebApiKey),
 			google_trends: Boolean(config.credentials.googleTrendsAccessToken),
+			unsplash: Boolean(config.credentials.unsplashAccessKey),
+			pexels: Boolean(config.credentials.pexelsApiKey),
+			pixabay: Boolean(config.credentials.pixabayApiKey),
+			flickr: Boolean(config.credentials.flickrApiKey),
+			europeana: Boolean(config.credentials.europeanaApiKey),
+			image_sourcing: config.integrationFlags.imageSourcing === true,
+			image_ai_lineart: config.integrationFlags.imageAiLineArt === true,
+			open_research: config.integrationFlags.openResearch === true,
+			grokipedia: config.integrationFlags.grokipedia === true,
 		}),
 		search_console_auth_mode:
 			config.credentials.googleServiceAccountEmail &&
