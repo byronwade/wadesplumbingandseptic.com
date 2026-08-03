@@ -12,11 +12,13 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [x] The GitHub read adapter is enabled and uses Vercel Connect app tokens. No static GitHub token is stored.
 - [ ] In the GitHub App installation, select only `byronwade/wadesplumbingandseptic.com`. The sidecar patch scopes each token request to this repository, but installation-level repository access must also be narrowed before any draft-writing workflow is enabled.
 - [x] AI Gateway uses Vercel's automatic OIDC identity. The conflicting static Gateway key was removed from Preview and Production, and a fresh Production OIDC-only request was live-verified on 2026-08-01. Model access remains separate from OIDC authentication.
-- [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off.
+- [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off except during approved live proofs.
 - [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console work.
-- [x] The Search Console service-account email and private key are stored as Production server-side variables. This is configuration only, not a verified API read.
-- [ ] Search Console live probe: after merging the Task 1 PR, call Production `GET /_internal/eve/api/live-probe/search-console?run_id=<exact approved run id>` with the Cron bearer secret, confirm `LIVE_VERIFIED`, then reset live-read approval. Local `vercel env run` cannot see Sensitive Google credentials.
-- [x] Optional adapters (Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs.
+- [x] The Search Console service-account email and private key are stored as Production server-side variables.
+- [x] Search Console live probe (Task 1) and topic wiring (Task 3) are `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/search-console` and `/search-console-topics`). Local `vercel env run` cannot see Sensitive Google credentials.
+- [x] PageSpeed live probe (Task 2) and draft/preview QA wiring (Task 4) are `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/pagespeed` and `/pagespeed-qa`).
+- [ ] Browser research live probe (Task 5): arm Production, call `GET /_internal/eve/api/live-probe/browser-research`, confirm `LIVE_VERIFIED`, then reset live-read approval.
+- [x] Optional adapters (Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs. Browserbase has no Production API key/project id yet (`BLOCKED_MISSING_CREDENTIALS`).
 
 ## Keep Off
 

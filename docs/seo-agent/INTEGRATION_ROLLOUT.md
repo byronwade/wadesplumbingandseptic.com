@@ -14,7 +14,7 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 ## Task 2 — PageSpeed Insights live verification
 
 - **Status:** `LIVE_VERIFIED` (2026-08-03)
-- **PR:** `cursor/eve-pagespeed-live-aab8`
+- **PR:** `#110` (`cursor/eve-pagespeed-live-aab8`)
 - **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for PageSpeed `LIVE_VERIFIED`)
 - **Request IDs:** `jlmdf-1785769354624-edf5f2e49d8b`, `89kdm-1785769458215-e741a6a75eb2`, `x288r-1785769554588-9e473083c699`
 - **Exit gate:** Task 3 may start (`#110` merged)
@@ -38,3 +38,58 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for PageSpeed QA `LIVE_VERIFIED`)
 - **Request IDs:** `65vkz-1785771741357-0f9f97fa4377`, `jbv4p-1785771747705-fe677252cc12`, `2frhj-1785771754002-d21d8f77df25`
 - **Exit gate:** Task 5 (browser research / Browserbase) may start
+
+## Task 5 — Browser research live verification
+
+- **Status:** `MOCK_VERIFIED` offline path (awaiting Production Cron `LIVE_VERIFIED`)
+- **Branch/PR:** `cursor/eve-browser-research-live-aab8`
+- **Scope:** Focused allowlisted HTTP browser research live probe (`GET /_internal/eve/api/live-probe/browser-research`); compact redacted responses (content hash / excerpt metadata only, no HTML body); Cron + CLI; proposal demand research already uses this adapter when enabled
+- **Browserbase:** optional and separately gated. Production currently has `SEO_AGENT_ENABLE_BROWSERBASE` but no `BROWSERBASE_API_KEY` / `BROWSERBASE_PROJECT_ID`, so Browserbase remains `BLOCKED_MISSING_CREDENTIALS` and is not part of this task's exit gate
+- **Live proof gate:** arm Production with `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` (or rely on standing propose auto-enable), keep Search Console/PageSpeed/Browserbase flags off unless separately approved, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=browser-research-2026-08-03`; deploy; Cron-run the browser-research probe three times for HTTP `200`; reset live-read approval afterward
+- **Exit gate:** Task 6 may start only after HTTP browser research is `LIVE_VERIFIED`
+
+## Task 6 — GA4 (optional)
+
+- **Status:** not started
+- **Prerequisite:** Task 5 `LIVE_VERIFIED`
+- **Notes:** disabled by default; needs reviewed GA4 property access + credential inventory before a dedicated PR
+
+## Task 7 — Local Falcon (optional)
+
+- **Status:** not started
+- **Prerequisite:** Task 6 complete or explicitly skipped with recorded blocker
+
+## Task 8 — Business Profile (optional)
+
+- **Status:** not started
+- **Prerequisite:** Task 7 complete or explicitly skipped with recorded blocker
+
+## Task 9 — SERP / PAA API
+
+- **Status:** not started
+- **Prerequisite:** prior optional adapters resolved or blocked with evidence
+
+## Task 10 — Google Trends
+
+- **Status:** not started
+- **Prerequisite:** Task 9 complete or blocked with evidence
+
+## Task 11 — Independent judge on every draft
+
+- **Status:** not started
+- **Prerequisite:** Task 10 complete or blocked with evidence
+
+## Task 12 — Indexation / coverage
+
+- **Status:** not started
+- **Prerequisite:** Task 11 complete or blocked with evidence
+
+## Task 13 — Post-publish observation loop
+
+- **Status:** not started
+- **Prerequisite:** Task 12 complete or blocked with evidence
+
+## Task 14 — Image provenance (optional)
+
+- **Status:** not started
+- **Prerequisite:** Task 13 complete or blocked with evidence

@@ -142,6 +142,8 @@ export function loadConfig(env = process.env) {
 			github: standingPropose || raw.SEO_AGENT_ENABLE_GITHUB === "true",
 			vercel: raw.SEO_AGENT_ENABLE_VERCEL === "true",
 			searchConsole: raw.SEO_AGENT_ENABLE_SEARCH_CONSOLE === "true",
+			// Camel-case `pageSpeed` is the integrationFlags key (not `pagespeed`).
+			// Registry adapters and summarizeConfig.integrations use snake/lower `pagespeed`.
 			pageSpeed: raw.SEO_AGENT_ENABLE_PAGESPEED === "true",
 			browserbase: raw.SEO_AGENT_ENABLE_BROWSERBASE === "true",
 			ga4: raw.SEO_AGENT_ENABLE_GA4 === "true",

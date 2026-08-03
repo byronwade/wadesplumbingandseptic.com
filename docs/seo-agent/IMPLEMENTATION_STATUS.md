@@ -1,5 +1,19 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 71: Task 5 Browser Research Path + Past-Phase Hardening (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; blocked on Production Cron for final browser-research `LIVE_VERIFIED`.
+- Branch/PR: `cursor/eve-browser-research-live-aab8` (Task 5 from `INTEGRATION_ROLLOUT.md`).
+- Confirmation on `main` before this branch: sidecar `npm run format:check`, `typecheck`, `test` → `170/170`, `verify` exit `0`. Production health `GET /_internal/eve/api/healthz` → `200`, `ready: true`, `mode: propose`, `mutation_kill_switch: false`, live-read flags off.
+- Past-phase improvements in this PR:
+  - HTTP handler tests for Task 3 topics and Task 4 PageSpeed QA live-probe routes
+  - `INTEGRATION_ROLLOUT.md` Task 2 PR number corrected; Tasks 5 to 14 stubs added
+  - `MANUAL_SETUP.md` marks Tasks 1 to 4 live probes complete and records Browserbase credential gap
+- Task 5 offline: focused probe `probeBrowserResearchLive` (upstream errors become `FAILED` evidence); CRON-authenticated route `GET /_internal/eve/api/live-probe/browser-research` with compact payload (hash / excerpt metadata only); CLI `npm run live:probe:browser-research`; annual Cron allowlisted.
+- Browserbase: `SEO_AGENT_ENABLE_BROWSERBASE` exists in Production, but `BROWSERBASE_API_KEY` / `BROWSERBASE_PROJECT_ID` are absent → remains `BLOCKED_MISSING_CREDENTIALS` and is not the Task 5 exit gate.
+- Live arming (next): Production only. Set `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` if standing propose does not already enable research, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=browser-research-2026-08-03`, keep Search Console/PageSpeed/Browserbase flags off, deploy, then `vercel crons run '/_internal/eve/api/live-probe/browser-research'` three times. Handler `200` only for `LIVE_VERIFIED`. Reset live-read approval afterward.
+- Next exact action: Production-deploy this PR, run the Cron live proof, record request IDs, then mark Task 5 `LIVE_VERIFIED`.
+
 ## Phase 70: Task 4 PageSpeed Draft/Preview QA LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 4 live proof (`LIVE_VERIFIED`).
