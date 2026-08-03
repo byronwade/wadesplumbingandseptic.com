@@ -6,7 +6,7 @@
 - Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 expanded for broader open-source API coverage).
 - Offline: keyless image clients Openverse, Wikimedia, MET, AIC, NASA; optional Pixabay, Flickr, Europeana, Unsplash, Pexels; AI technical line-art remains optional. `open-research.mjs` adds Wikidata + Nominatim soft context for proposals. External request budget raised to 60 for multi-provider fan-out. Aggregated asset hosts allowed only when source provenance is allowlisted.
 - Policy unchanged for featured fail-closed rights classes; open research is soft context only (never Wade facts alone).
-- Commands recorded after verify in this phase entry.
+- Commands: sidecar `npm test` → `204/204` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
 - Next exact action: merge/deploy; add optional stock keys from Manual Setup; enable AI line-art only after review; confirm propose run Images + open-research brief sections.
 
 ## Phase 79: Online Image Sourcing + Careful AI Line Art (2026-08-03)
