@@ -171,7 +171,7 @@ test("budget exhaustion fails closed", () => {
 	assert.throws(
 		() =>
 			assertModelRequestBudget({
-				prompt: "x".repeat(64000),
+				prompt: "x".repeat(100000),
 				maxOutputTokens: 1,
 			}),
 		/token budget exhausted/,

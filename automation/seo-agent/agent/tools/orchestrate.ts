@@ -3,7 +3,7 @@ import { z } from "zod";
 import {
 	assertRunDescriptor,
 	loadRuntimeSettings,
-	resolveRepositoryRoot,
+	resolveRepositoryState,
 } from "../../src/runtime.mjs";
 import { loadConfig } from "../../src/config.mjs";
 import { runAuditOnlyWorkflow } from "../../src/workflows/audit";
@@ -21,13 +21,15 @@ export default defineTool({
 		const settings = loadRuntimeSettings();
 		const descriptor = assertRunDescriptor({ runId, idempotencyKey, job });
 		const config = loadConfig();
+		const repository = resolveRepositoryState();
 		const workflowInput = {
 			descriptor: {
 				...descriptor,
 				scheduledAt: new Date().toISOString(),
 			},
 			settings,
-			repoRoot: resolveRepositoryRoot(),
+			repoRoot: repository?.repoRoot ?? null,
+			treeHash: repository?.commitSha,
 			config,
 		};
 		if (descriptor.job === "proposal") {

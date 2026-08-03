@@ -1,5 +1,6 @@
 import { defineAgent } from "eve";
 import { model, modelContextWindowTokens, modelOptions } from "./model";
+import { EVE_SESSION_LIMITS } from "../src/constants.mjs";
 
 export default defineAgent({
 	description:
@@ -7,4 +8,5 @@ export default defineAgent({
 	model,
 	modelOptions,
 	modelContextWindowTokens,
+	limits: EVE_SESSION_LIMITS,
 });

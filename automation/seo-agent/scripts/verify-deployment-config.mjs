@@ -27,6 +27,8 @@ for (const script of [
 	"test:integration",
 	"verify:offline",
 	"build",
+	"stage:repository-snapshot",
+	"bundle:repository-snapshot",
 	"dry-run",
 	"runtime:preflight",
 ]) {
@@ -160,6 +162,10 @@ function validateServicesTopology(config, label) {
 		);
 	if (sidecarService?.buildCommand !== "npm run build")
 		localFailures.push(`${label}: Eve service must invoke its own build.`);
+	if ("includeFiles" in (sidecarService ?? {}))
+		localFailures.push(
+			`${label}: service configuration cannot use includeFiles; bundle the generated snapshot into Eve Build Output instead.`,
+		);
 	if (siteService?.installCommand !== "npm ci --ignore-scripts --omit=peer")
 		localFailures.push(
 			`${label}: Site service must install only its local lockfile.`,

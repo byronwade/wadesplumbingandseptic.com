@@ -45,6 +45,17 @@ export const MODEL_ROLE_POLICY = Object.freeze({
 // assertion. Nine bounded specialist packets must fit inside one audit run.
 export const MODEL_COST_RESERVATION_USD = 0.2;
 
+// These framework limits bound the Eve root session itself. Keep the input
+// ceiling aligned with the policy preflight budget: the first production
+// orchestration request is intentionally allowed enough context to load the
+// repository snapshot, but no follow-up model turn can run after that budget
+// has been consumed.
+export const EVE_SESSION_LIMITS = Object.freeze({
+	maxInputTokensPerSession: 24000,
+	maxOutputTokensPerSession: 1200,
+	sessionTimeoutMs: 300000,
+});
+
 export const RUN_STATES = Object.freeze([
 	"PLANNED",
 	"COLLECTING",
@@ -68,7 +79,7 @@ export const DEFAULT_BUDGETS = Object.freeze({
 	maxRunsPerSchedule: 1,
 	maxWorkflowSteps: 9,
 	maxRunWallSeconds: 300,
-	maxModelTokens: 16000,
+	maxModelTokens: EVE_SESSION_LIMITS.maxInputTokensPerSession,
 	maxModelCostUsd: 2,
 	maxToolCalls: 24,
 	maxBrowserPages: 12,

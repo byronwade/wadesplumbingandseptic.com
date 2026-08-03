@@ -1,10 +1,13 @@
 import { timingSafeEqual, createHash } from "node:crypto";
-import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { createAuditOnlyRun, createConfiguredAuditOnlyRun } from "./audit.mjs";
 import { createIntegrationRegistry } from "./adapters.mjs";
 import { loadConfig } from "./config.mjs";
 import { DEFAULT_BUDGETS } from "./constants.mjs";
+import {
+	isRepositoryRoot,
+	readRepositorySnapshotMetadata,
+} from "./repository-snapshot.mjs";
 import { collectRecordedRunIds } from "./run-history.mjs";
 import {
 	assertAuditWorkPackets,
@@ -459,14 +462,33 @@ export function runtimeFailure(error, descriptor) {
 	};
 }
 
+export function resolveRepositoryState(env = process.env) {
+	const configured = env.SEO_AGENT_REPOSITORY_ROOT?.trim();
+	const candidates = [
+		configured ? resolve(configured) : null,
+		resolve(process.cwd(), "repository-snapshot"),
+		resolve(import.meta.dirname, "repository-snapshot"),
+		resolve(import.meta.dirname, "../repository-snapshot"),
+		resolve(import.meta.dirname, "../../.."),
+	].filter(Boolean);
+	for (const root of [...new Set(candidates)]) {
+		if (!isRepositoryRoot(root)) continue;
+		const snapshot = readRepositorySnapshotMetadata(root);
+		return Object.freeze({
+			repoRoot: root,
+			source: snapshot ? "BUNDLED_GIT_SNAPSHOT" : "LOCAL_CHECKOUT",
+			commitSha:
+				snapshot?.commit_sha ??
+				env.VERCEL_GIT_COMMIT_SHA ??
+				"VERCEL_RUNTIME_UNAVAILABLE",
+			contentSha256: snapshot?.content_sha256 ?? null,
+		});
+	}
+	return null;
+}
+
 export function resolveRepositoryRoot(env = process.env) {
-	const configured = env.SEO_AGENT_REPOSITORY_ROOT;
-	const candidate = configured
-		? resolve(configured)
-		: resolve(import.meta.dirname, "../../..");
-	return existsSync(resolve(candidate, "seo", "manifests", "pages.json"))
-		? candidate
-		: null;
+	return resolveRepositoryState(env)?.repoRoot ?? null;
 }
 
 export function planRun({ descriptor, settings, recordedRunIds = [] }) {
@@ -549,7 +571,9 @@ export async function executeOrchestratedAudit({
 	executeLiveReads = false,
 	config = loadConfig(),
 	registry = undefined,
-	treeHash = process.env.VERCEL_GIT_COMMIT_SHA ?? "VERCEL_RUNTIME_UNAVAILABLE",
+	treeHash = resolveRepositoryState()?.commitSha ??
+		process.env.VERCEL_GIT_COMMIT_SHA ??
+		"VERCEL_RUNTIME_UNAVAILABLE",
 }) {
 	if (!repoRoot)
 		return {

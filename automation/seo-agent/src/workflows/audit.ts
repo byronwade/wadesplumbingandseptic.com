@@ -11,6 +11,7 @@ export type RuntimeWorkflowInput = {
 	};
 	settings: Record<string, unknown>;
 	repoRoot?: string | null;
+	treeHash?: string;
 	executeLiveReads?: boolean;
 	config?: Record<string, unknown>;
 };
@@ -31,6 +32,7 @@ async function buildAuditReport(input: RuntimeWorkflowInput) {
 			typeof executeOrchestratedAudit
 		>[0]["settings"],
 		repoRoot: input.repoRoot,
+		treeHash: input.treeHash,
 		executeLiveReads: input.executeLiveReads === true,
 	});
 }
