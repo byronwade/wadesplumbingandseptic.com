@@ -8,9 +8,19 @@ import {
 	createPexelsImageClient,
 	createUnsplashImageClient,
 	createWikimediaImageClient,
+	isAllowedImageHostname,
 } from "./image-providers.mjs";
+import {
+	createArticImageClient,
+	createEuropeanaImageClient,
+	createFlickrImageClient,
+	createMetMuseumImageClient,
+	createNasaImageClient,
+	createOpenverseImageClient,
+	createPixabayImageClient,
+} from "./image-providers-open.mjs";
 
-const MAX_RESULTS = 12;
+const MAX_RESULTS = 24;
 
 function blocked(reason) {
 	return Object.freeze({
@@ -27,25 +37,19 @@ function assertQuery(query) {
 	return query.trim();
 }
 
-function hostnameAllowed(hostname, allowedDomains) {
-	return allowedDomains.some(
-		(domain) => hostname === domain || hostname.endsWith(`.${domain}`),
-	);
-}
-
 function normalizeCandidate(candidate, allowedDomains) {
 	if (!candidate || typeof candidate !== "object")
 		throw new Error("Image-search result must be an object.");
-	// AI line-art may carry inline SVG with a synthetic HTTPS provenance URL.
 	const sourceUrl = new URL(candidate.source_url);
 	const assetUrl = new URL(candidate.asset_url);
 	if (sourceUrl.protocol !== "https:" || assetUrl.protocol !== "https:")
 		throw new Error("Image-search results must use HTTPS URLs.");
-	if (
-		!hostnameAllowed(sourceUrl.hostname, allowedDomains) ||
-		(!candidate.inline_svg &&
-			!hostnameAllowed(assetUrl.hostname, allowedDomains))
-	) {
+	const sourceOk = isAllowedImageHostname(sourceUrl.hostname, allowedDomains);
+	const assetOk =
+		Boolean(candidate.inline_svg) ||
+		isAllowedImageHostname(assetUrl.hostname, allowedDomains) ||
+		(candidate.aggregated_asset === true && sourceOk);
+	if (!sourceOk || !assetOk) {
 		throw new Error("Image-search result domain is not explicitly approved.");
 	}
 	const text = [candidate.title, candidate.description, candidate.alt]
@@ -74,6 +78,7 @@ function normalizeCandidate(candidate, allowedDomains) {
 		rights_evidence_id: candidate.rights_evidence_id ?? null,
 		attribution_required: candidate.attribution_required === true,
 		generation_style: candidate.generation_style ?? null,
+		aggregated_asset: candidate.aggregated_asset === true,
 		inline_svg:
 			typeof candidate.inline_svg === "string" ? candidate.inline_svg : null,
 		usage_rights: "UNVERIFIED",
@@ -104,7 +109,7 @@ export function createImageResearchAdapter({
 					payload: Object.freeze({
 						reason: "Image sourcing is disabled for this environment.",
 						next_action:
-							"Enable SEO_AGENT_ENABLE_IMAGE_SOURCING (or standing Production propose), optionally add UNSPLASH_ACCESS_KEY / PEXELS_API_KEY, and follow docs/seo-agent/MANUAL_SETUP.md.",
+							"Enable SEO_AGENT_ENABLE_IMAGE_SOURCING (or standing Production propose), optionally add stock API keys, and follow docs/seo-agent/MANUAL_SETUP.md.",
 					}),
 				});
 			}
@@ -130,7 +135,7 @@ export function createImageResearchAdapter({
 					payload: Object.freeze({
 						reason: "No image-search client is configured.",
 						next_action:
-							"Configure Wikimedia/Unsplash/Pexels clients per docs/seo-agent/MANUAL_SETUP.md.",
+							"Configure open image clients per docs/seo-agent/MANUAL_SETUP.md.",
 					}),
 				});
 			}
@@ -174,12 +179,23 @@ export function createImageResearchAdapter({
 			}
 			if (!Array.isArray(response?.results))
 				throw new Error("Image-search provider returned malformed results.");
-			const normalized = response.results
-				.slice(0, limit)
-				.map((candidate) => normalizeCandidate(candidate, allowedDomains));
+			const normalized = [];
+			for (const candidate of response.results.slice(0, limit)) {
+				try {
+					normalized.push(normalizeCandidate(candidate, allowedDomains));
+				} catch (error) {
+					const message =
+						error instanceof Error ? error.message : "normalize failed";
+					// Injection/instruction smuggling must fail closed for the search.
+					if (/untrusted instructions/i.test(message)) throw error;
+					// Skip rows with unallowlisted aggregated hosts or malformed URLs.
+				}
+			}
 			return Object.freeze({
 				classification:
-					response.classification === "FAILED" ? "FAILED" : "MOCK_VERIFIED",
+					response.classification === "FAILED" && normalized.length === 0
+						? "FAILED"
+						: "MOCK_VERIFIED",
 				source: "image-research",
 				query: safeQuery,
 				candidates: Object.freeze(normalized),
@@ -188,10 +204,6 @@ export function createImageResearchAdapter({
 			});
 		},
 
-		/**
-		 * Search then keep only candidates with content-token overlap.
-		 * Still never publication-eligible until staged into public/ with rights.
-		 */
 		async searchRelevant({ query, limit = 8, opportunity } = {}) {
 			const raw = await this.search({ query, limit });
 			if (
@@ -213,7 +225,7 @@ export function createImageResearchAdapter({
 			});
 		},
 
-		async searchForOpportunity({ opportunity, limit = 8 } = {}) {
+		async searchForOpportunity({ opportunity, limit = 16 } = {}) {
 			const query = buildImageSearchQuery(opportunity);
 			return this.searchRelevant({ query, limit, opportunity });
 		},
@@ -222,7 +234,9 @@ export function createImageResearchAdapter({
 
 /**
  * Build the multi-source adapter from config credentials/flags.
- * Wikimedia needs no key. Unsplash/Pexels need keys. AI line-art needs Gateway.
+ * Keyless: Wikimedia, Openverse, MET, AIC, NASA.
+ * Optional keys: Unsplash, Pexels, Pixabay, Flickr, Europeana.
+ * AI line-art needs Gateway + explicit flag.
  */
 export function createConfiguredImageResearchAdapter({
 	config,
@@ -238,7 +252,11 @@ export function createConfiguredImageResearchAdapter({
 	}
 
 	const clients = [
+		createOpenverseImageClient({ fetchImpl, budget }),
 		createWikimediaImageClient({ fetchImpl, budget }),
+		createMetMuseumImageClient({ fetchImpl, budget }),
+		createArticImageClient({ fetchImpl, budget }),
+		createNasaImageClient({ fetchImpl, budget }),
 		createUnsplashImageClient({
 			accessKey: credentials.unsplashAccessKey,
 			fetchImpl,
@@ -246,6 +264,21 @@ export function createConfiguredImageResearchAdapter({
 		}),
 		createPexelsImageClient({
 			apiKey: credentials.pexelsApiKey,
+			fetchImpl,
+			budget,
+		}),
+		createPixabayImageClient({
+			apiKey: credentials.pixabayApiKey,
+			fetchImpl,
+			budget,
+		}),
+		createFlickrImageClient({
+			apiKey: credentials.flickrApiKey,
+			fetchImpl,
+			budget,
+		}),
+		createEuropeanaImageClient({
+			apiKey: credentials.europeanaApiKey,
 			fetchImpl,
 			budget,
 		}),

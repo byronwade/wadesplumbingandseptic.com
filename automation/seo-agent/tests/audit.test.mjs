@@ -31,7 +31,7 @@ test("fixture audit is read-only and produces a no-change decision", () => {
 	assert.deepEqual(run.observability.tool_approvals, []);
 	assert.equal(run.observability.preview_url, null);
 	assert.deepEqual(run.observability.budget_usage, {});
-	assert.equal(run.observability.budget_limits.maxExternalRequests, 30);
+	assert.equal(run.observability.budget_limits.maxExternalRequests, 60);
 	assert.equal(run.collected_at, "1970-01-01T00:00:00.000Z");
 	assert.equal(run.decisions[0].decision, "NO_CHANGE");
 	assert.ok(run.inventory.pages.length > 0);

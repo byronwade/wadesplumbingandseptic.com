@@ -98,9 +98,9 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 14 — Image provenance / content-relevant sourcing
 
-- **Status:** Offline `MOCK_VERIFIED` multi-source path (see Phase 79). Live stock/AI proofs stay credential-gated until Production keys and a Cron/propose observation.
+- **Status:** Offline `MOCK_VERIFIED` expanded multi-source path (see Phase 80). Live keyed stock/AI proofs stay credential-gated until Production keys and a propose observation.
 - **Branch/PR:** `cursor/eve-image-sourcing-aab8`
-- **Scope:** Prefer first-party `public/images` with relevance scoring. When that fails, search Wikimedia (no key), Unsplash, and Pexels; optionally generate professional technical line-art SVG via AI Gateway. Stage license-safe assets into draft PRs under `public/images/sourced/<slug>/` with provenance JSON. Remote `UNVERIFIED` candidates never publish without staging + human PR review.
+- **Scope:** Prefer first-party `public/images`. When that fails, search a broad open catalog: Openverse, Wikimedia, MET, AIC, NASA (keyless) plus Unsplash, Pexels, Pixabay, Flickr, Europeana (optional keys). Optional AI technical line-art SVG. Stage license-safe assets under `public/images/sourced/<slug>/`. Soft open research via Wikidata + Nominatim for topic/place context only.
 - **Featured-image rule:** fail-closed. Prefer OWNED; allow staged LICENSED / PUBLIC_DOMAIN; AI only as technical line art with `EXPLICIT_PERMISSION`. Brand/partner/team/logo classes remain blocked.
-- **Owner setup:** optional `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`; careful `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` after review. Standing Production propose enables image sourcing in code.
+- **Owner setup:** optional keys listed in `MANUAL_SETUP.md`; careful `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` after review. Standing Production propose enables image sourcing and open research in code.
 - **Prerequisite:** Owner redirected here ahead of Tasks 8 to 13; those optional adapters remain separately blocked or unstarted.

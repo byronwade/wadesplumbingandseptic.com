@@ -7,6 +7,11 @@
 import { classifyUntrustedText } from "./policy.mjs";
 import { sha256 } from "./contracts.mjs";
 
+import {
+	OPEN_IMAGE_ASSET_HOST_SUFFIXES,
+	OPEN_IMAGE_PROVIDER_DOMAINS,
+} from "./image-providers-open.mjs";
+
 export const IMAGE_PROVIDER_DOMAINS = Object.freeze([
 	"api.unsplash.com",
 	"images.unsplash.com",
@@ -19,10 +24,32 @@ export const IMAGE_PROVIDER_DOMAINS = Object.freeze([
 	"commons.wikimedia.org",
 	"upload.wikimedia.org",
 	"ai-gateway.vercel.sh",
+	...OPEN_IMAGE_PROVIDER_DOMAINS,
+]);
+
+export const IMAGE_ASSET_HOST_SUFFIXES = Object.freeze([
+	...OPEN_IMAGE_ASSET_HOST_SUFFIXES,
 ]);
 
 const MAX_RESULTS_PER_PROVIDER = 8;
-const MAX_COMBINED = 16;
+const MAX_COMBINED = 40;
+
+export function isAllowedImageHostname(
+	hostname,
+	allowedDomains = IMAGE_PROVIDER_DOMAINS,
+) {
+	if (typeof hostname !== "string" || !hostname) return false;
+	if (
+		allowedDomains.some(
+			(domain) => hostname === domain || hostname.endsWith(`.${domain}`),
+		)
+	) {
+		return true;
+	}
+	return IMAGE_ASSET_HOST_SUFFIXES.some(
+		(suffix) => hostname === suffix || hostname.endsWith(`.${suffix}`),
+	);
+}
 
 const WIKIMEDIA_ALLOWED_LICENSES = Object.freeze([
 	"cc0",

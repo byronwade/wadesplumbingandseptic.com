@@ -20,6 +20,7 @@ import {
 } from "./image-selection.mjs";
 import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
 import { stageBestOnlineImage } from "./image-staging.mjs";
+import { createOpenResearchAdapter } from "./open-research.mjs";
 import { createRunBudget } from "./run-controls.mjs";
 import {
 	buildExpansionPrompt,
@@ -474,6 +475,11 @@ ${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enou
 Online sourced candidates (staged into draft only when rights-safe; still need human PR review):
 ${external.length > 0 ? external.join("\n") : "- None returned for this topic in this run."}
 Staged draft asset files: ${stagedCount}
+Open research soft context (never Wade facts alone): ${
+		imagePackage.open_research
+			? `${imagePackage.open_research.classification}; Wikidata leads: ${(imagePackage.open_research.wikidata_labels ?? []).join(", ") || "none"}; places: ${(imagePackage.open_research.place_names ?? []).join("; ") || "none"}`
+			: "not collected"
+	}
 Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;
 }
 
@@ -830,6 +836,41 @@ export async function executeDraftProposal({
 	let externalCandidates = [];
 	let stagedFeatured = null;
 	let onlineResearchSummary = null;
+	let openResearchSummary = null;
+	if (config?.integrationFlags?.openResearch === true) {
+		const openResearch = createOpenResearchAdapter({
+			enabled: true,
+			budget: imageBudget,
+		});
+		try {
+			const researchedOpen = await openResearch.researchOpportunity({
+				opportunity: selection.opportunity,
+			});
+			openResearchSummary = Object.freeze({
+				classification: researchedOpen.classification,
+				wikidata_count: researchedOpen.wikidata?.results?.length ?? 0,
+				nominatim_count: researchedOpen.nominatim?.results?.length ?? 0,
+				wikidata_labels: Object.freeze(
+					(researchedOpen.wikidata?.results ?? [])
+						.slice(0, 3)
+						.map((item) => item.label),
+				),
+				place_names: Object.freeze(
+					(researchedOpen.nominatim?.results ?? [])
+						.slice(0, 2)
+						.map((item) => item.display_name),
+				),
+			});
+		} catch (error) {
+			openResearchSummary = Object.freeze({
+				classification: "FAILED",
+				reason:
+					error instanceof Error
+						? error.message.slice(0, 240)
+						: "Open research failed.",
+			});
+		}
+	}
 	if (config?.integrationFlags?.imageSourcing === true) {
 		const imageResearch = createConfiguredImageResearchAdapter({
 			config,
@@ -838,7 +879,7 @@ export async function executeDraftProposal({
 		});
 		const researched = await imageResearch.searchForOpportunity({
 			opportunity: selection.opportunity,
-			limit: 8,
+			limit: 16,
 		});
 		onlineResearchSummary = Object.freeze({
 			classification: researched.classification,
@@ -857,10 +898,21 @@ export async function executeDraftProposal({
 			externalCandidates.length > 0 &&
 			researched.classification === "MOCK_VERIFIED"
 		) {
-			const preferProviders =
-				config?.integrationFlags?.imageAiLineArt === true
-					? ["unsplash", "pexels", "wikimedia", "ai-lineart"]
-					: ["unsplash", "pexels", "wikimedia"];
+			const preferProviders = [
+				"openverse",
+				"unsplash",
+				"pexels",
+				"pixabay",
+				"wikimedia",
+				"flickr",
+				"metmuseum",
+				"artic",
+				"nasa",
+				"europeana",
+				...(config?.integrationFlags?.imageAiLineArt === true
+					? ["ai-lineart"]
+					: []),
+			];
 			stagedFeatured = await stageBestOnlineImage({
 				opportunity: selection.opportunity,
 				candidates: externalCandidates,
@@ -871,11 +923,14 @@ export async function executeDraftProposal({
 			});
 		}
 	}
-	const imagePackage = buildBlogImagePackage({
-		opportunity: selection.opportunity,
-		repoRoot,
-		externalCandidates,
-		stagedFeatured,
+	const imagePackage = Object.freeze({
+		...buildBlogImagePackage({
+			opportunity: selection.opportunity,
+			repoRoot,
+			externalCandidates,
+			stagedFeatured,
+		}),
+		open_research: openResearchSummary,
 	});
 	const opportunity = applyFeaturedImageToOpportunity(
 		selection.opportunity,
@@ -1048,6 +1103,7 @@ export async function executeDraftProposal({
 			external_research_count: imagePackage.external_research.candidates.length,
 			staged_file_count: (imagePackage.staged_files ?? []).length,
 			online_research: onlineResearchSummary,
+			open_research: openResearchSummary,
 		}),
 	});
 }

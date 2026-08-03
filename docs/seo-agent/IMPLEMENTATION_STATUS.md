@@ -1,14 +1,19 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 80: Expanded Open Image + Research APIs (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for expanded open provider catalog. Not `LIVE_VERIFIED` for keyed providers or live propose observation.
+- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 expanded for broader open-source API coverage).
+- Offline: keyless image clients Openverse, Wikimedia, MET, AIC, NASA; optional Pixabay, Flickr, Europeana, Unsplash, Pexels; AI technical line-art remains optional. `open-research.mjs` adds Wikidata + Nominatim soft context for proposals. External request budget raised to 60 for multi-provider fan-out. Aggregated asset hosts allowed only when source provenance is allowlisted.
+- Policy unchanged for featured fail-closed rights classes; open research is soft context only (never Wade facts alone).
+- Commands recorded after verify in this phase entry.
+- Next exact action: merge/deploy; add optional stock keys from Manual Setup; enable AI line-art only after review; confirm propose run Images + open-research brief sections.
+
 ## Phase 79: Online Image Sourcing + Careful AI Line Art (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for multi-provider sourcing + staging. Not `LIVE_VERIFIED` for Unsplash/Pexels/AI until Production credentials and a live propose/Cron observation.
-- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 continued per owner request for real online sourcing).
-- Offline: `image-providers.mjs` (Wikimedia, Unsplash, Pexels, AI technical line-art SVG via AI Gateway); `image-staging.mjs` downloads/stages into `public/images/sourced/<slug>/` with provenance; draft change sets accept utf8 SVG + base64 rasters; publishing creates GitHub blobs for binary assets; proposal searches when `imageSourcing` is on, stages when first-party featured fails, and keeps PR brief Images section fail-closed.
-- Policy: prefer first-party OWNED; staged LICENSED/PUBLIC_DOMAIN allowed; AI fallback is professional technical line art only (`EXPLICIT_PERMISSION`, not photoreal); Wikimedia rejects NC/ND licenses; remote UNVERIFIED never auto-publishes.
-- Fixture proof: Unsplash/Pexels/Wikimedia/AI clients normalize rights; AI SVG stages into a 3-file change set; tankless first-party featured still wins when present.
-- Commands: sidecar `npm test` → `197/197` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
-- Next exact action: merge/deploy; add optional `UNSPLASH_ACCESS_KEY` / `PEXELS_API_KEY`; enable `SEO_AGENT_ENABLE_IMAGE_AI_LINEART` only after owner review of line-art quality; confirm a propose run stages or cites online candidates in the draft PR Images section.
+- State: SUPERSEDED by Phase 80 expanded open API catalog.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Next exact action: SUPERSEDED by Phase 80.
 
 ## Phase 78: Content-Relevant Image Sourcing + Strict Featured Gates (2026-08-03)
 

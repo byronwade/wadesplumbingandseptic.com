@@ -27,15 +27,25 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
-## Next: Online image sourcing (featured care)
+## Next: Online image sourcing + open research APIs
 
-Eve prefers first-party `public/images` when a work/service photo clearly matches the topic. When that fails, standing Production propose can source license-safe online assets and stage them into the draft PR under `public/images/sourced/<slug>/` with a provenance sidecar. Brand, partner, team, and logo assets still cannot be featured.
+Eve prefers first-party `public/images` when a work/service photo clearly matches the topic. When that fails, standing Production propose sources license-safe online assets from many open APIs and can stage winners into `public/images/sourced/<slug>/` with provenance. Soft open-research helpers (Wikidata, OpenStreetMap Nominatim) add topic/place context only. Brand, partner, team, and logo assets still cannot be featured.
 
-1. [ ] Prefer adding real Wade work photos under `public/images/work/` with descriptive filenames (example: `tankless-water-heater-installation.webp`).
-2. [ ] Optional stock keys (Production secrets): `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`. Wikimedia Commons needs no key and is included when image sourcing is on.
-3. [ ] Optional careful AI fallback: set `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` only after review. Eve generates professional technical line-art SVG (not photoreal AI photos) via AI Gateway.
-4. [ ] To force sourcing outside standing propose, set `SEO_AGENT_ENABLE_IMAGE_SOURCING=true` for that environment.
-5. [ ] When reviewing a draft PR, check **Images (featured is fail-closed)** for origin (first_party / online_sourced / ai_lineart), rights class, provenance file, alt text, and relevance. Reject anything that looks like generic photoreal AI filler.
+### Keyless image sources (on when image sourcing is enabled)
+Openverse (commercial CC/PD filter), Wikimedia Commons, Metropolitan Museum Open Access, Art Institute of Chicago public domain, NASA Image Library.
+
+### Optional keys that expand coverage (Production secrets)
+1. [ ] `UNSPLASH_ACCESS_KEY`
+2. [ ] `PEXELS_API_KEY`
+3. [ ] `PIXABAY_API_KEY`
+4. [ ] `FLICKR_API_KEY` (Eve requests commercial-safe CC licenses only)
+5. [ ] `EUROPEANA_API_KEY` (open reusability filter)
+
+### Careful AI + flags
+1. [ ] Prefer real Wade work photos under `public/images/work/` with descriptive filenames.
+2. [ ] Optional AI fallback: `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` only after review (technical line-art SVG, not photoreal AI).
+3. [ ] Outside standing propose, set `SEO_AGENT_ENABLE_IMAGE_SOURCING=true` and/or `SEO_AGENT_ENABLE_OPEN_RESEARCH=true`.
+4. [ ] In draft PR review, check **Images (featured is fail-closed)** for origin, rights, provenance, alt text, and reject photoreal AI filler. Treat Wikidata/Nominatim lines as soft context only, never as Wade facts.
 
 ## Next: Local Falcon
 

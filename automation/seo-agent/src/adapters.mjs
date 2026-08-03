@@ -14,6 +14,7 @@ import {
 	defaultSearchConsoleTopicWindow,
 } from "./search-console-topics.mjs";
 import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
+import { createOpenResearchAdapter } from "./open-research.mjs";
 
 const DEFAULT_REQUEST_POLICY = Object.freeze({
 	timeoutMs: 8_000,
@@ -1726,6 +1727,11 @@ export function createIntegrationRegistry({
 			fetchImpl,
 			budget,
 			includeAiLineArt: flags.imageAiLineArt === true,
+		}),
+		open_research: createOpenResearchAdapter({
+			enabled: flags.openResearch === true,
+			fetchImpl,
+			budget,
 		}),
 		similarweb: createUnsupportedOptionalAdapter(
 			"similarweb",
