@@ -15,7 +15,8 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [x] `PAGESPEED_API_KEY` is stored as a Production-only Vercel secret. Its integration flag remains off.
 - [x] The Google OAuth connector is linked. Its background app-token probe returned `unresolved_token`, so it is not used for Eve's scheduled Search Console work.
 - [x] The Search Console service-account email and private key are stored as Production server-side variables. This is configuration only, not a verified API read.
-- [x] Search Console, Vercel read access, Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends, Blob archiving, publishing, and direct writes remain disabled.
+- [ ] Search Console live probe: after merging the Task 1 PR, call Production `GET /_internal/eve/api/live-probe/search-console?run_id=<exact approved run id>` with the Cron bearer secret, confirm `LIVE_VERIFIED`, then reset live-read approval. Local `vercel env run` cannot see Sensitive Google credentials.
+- [x] Optional adapters (Browserbase, GA4, Business Profile, Local Falcon, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs.
 
 ## Keep Off
 

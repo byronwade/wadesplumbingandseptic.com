@@ -10,6 +10,10 @@ import {
 	runtimeHealth,
 } from "../../src/runtime.mjs";
 import { loadConfig } from "../../src/config.mjs";
+import {
+	handlePageSpeedLiveProbe,
+	handleSearchConsoleLiveProbe,
+} from "../../src/live-probe-http.mjs";
 
 const locks = createDispatchLockStore();
 const circuit = createCircuitBreaker();
@@ -57,6 +61,14 @@ export default defineChannel({
 				oidcTokenPresent: Boolean(request.headers.get("x-vercel-oidc-token")),
 			});
 			return json(health, health.ready ? 200 : 503);
+		}),
+		GET("/api/live-probe/search-console", async (request) => {
+			const result = await handleSearchConsoleLiveProbe({ request });
+			return json(result.body, result.status);
+		}),
+		GET("/api/live-probe/pagespeed", async (request) => {
+			const result = await handlePageSpeedLiveProbe({ request });
+			return json(result.body, result.status);
 		}),
 		GET("/api/cron", async (request, { send, resolveActiveSession }) => {
 			const result = await dispatchCronRequest({

@@ -1,16 +1,68 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).
+- Branch/PR: `cursor/eve-pagespeed-live-aab8` / `#110` merged to `main`.
+- Method: Production Cron invocation of `GET /_internal/eve/api/live-probe/pagespeed` with Vercel-injected `CRON_SECRET`. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`. First armed attempt on the initial probe path returned `403` in ~300ms (upstream/request-bound failure before the longer PageSpeed policy landed); after raising the PageSpeed timeout/byte budget and returning `FAILED` evidence for upstream errors, three Cron probes succeeded.
+- Evidence (redacted): three successful Production responses on deployment `dpl_8jiVBefvXrezjkZsYUbNQk9rZtvy`:
+  - `2026-08-03T15:02:34.624Z` request `jlmdf-1785769354624-edf5f2e49d8b` → `200`
+  - `2026-08-03T15:04:18.215Z` request `89kdm-1785769458215-e741a6a75eb2` → `200`
+  - `2026-08-03T15:05:54.588Z` request `x288r-1785769554588-9e473083c699` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_PAGESPEED=false`, Production redeploy `dpl_4CyZxrkZM3p3pkxBbiGJfx5VRkXr`. Health remains `mode: propose`, `mutation_kill_switch: false`.
+- Next exact action: start Task 3 (Search Console topic wiring) on its own PR.
+
+## Phase 65: Task 2 PageSpeed Live Probe Path (2026-08-03)
+
+- State: SUPERSEDED by Phase 66 live proof. Offline probe path shipped on `cursor/eve-pagespeed-live-aab8` (`MOCK_VERIFIED` fixtures; `127/127` tests).
+- Offline: focused PageSpeed probe helpers, CRON-authenticated Production route `GET /_internal/eve/api/live-probe/pagespeed`, CLI `npm run live:probe:pagespeed`, annual manual-trigger Cron entry, and deterministic fixtures. Deployment-config verifier allowlists only the Search Console and PageSpeed live-probe crons. Sidecar `npm test` → `127/127` passing; format/typecheck/verify passed. This is `MOCK_VERIFIED` for the probe path.
+
+## Phase 64: Search Console live retest (2026-08-03)
+
+- State: COMPLETE retest. Search Console remains `LIVE_VERIFIED`.
+- Method: Re-armed Production for run ID `search-console-retest-2026-08-03` (`SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching approved run ID), redeployed `dpl_5q8pyVTiDp3Fra7eFwbW5myquTvq`, then triggered Production Cron `GET /_internal/eve/api/live-probe/search-console` three times. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted):
+  - `2026-08-03T14:46:43.279Z` request `6fxnq-1785768403279-e0b72c0b4d9d` → `200`
+  - `2026-08-03T14:46:59.797Z` request `7vhmb-1785768419797-cf14e9d7523f` → `200`
+  - `2026-08-03T14:47:07.183Z` request `78tfs-1785768427183-b28b62851423` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy `dpl_DapyXdqEZRGun8cRrzdSA2sJT1Qy`. Health again `mode: propose`, `mutation_kill_switch: false`.
+
+
+## Phase 63: Task 1 Search Console LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 1 live proof (`LIVE_VERIFIED`).
+- Branch/PRs: `#106` (probe path) and `#107` (Cron trigger) merged to `main`.
+- Method: Production Cron invocation of `GET /_internal/eve/api/live-probe/search-console` with Vercel-injected `CRON_SECRET` (local CLI cannot read Sensitive secrets). Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted): three successful Production responses on deployment `dpl_DyNQf96UdyXcA9pCfwCxYtx16DGe`:
+  - `2026-08-03T14:35:36.041Z` request `jsh2f-1785767736041-0b69afa834f2` → `200`
+  - `2026-08-03T14:36:04.615Z` request `b7m42-1785767764615-502f16a8929e` → `200`
+  - `2026-08-03T14:36:25.128Z` request `ml9pv-1785767785128-14ab8d8d6262` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, `SEO_AGENT_FORCE_OBSERVE=false` (redeploy restores propose Cron). No content write, draft PR, or merge of site content.
+- Note: Eve audit Cron `audit-2026-08-03` (`wrun_41KZ40H1GC0GPMHDHHFFWJGNMW`) returned `BLOCKED_MISSING_CREDENTIALS` for missing Git-backed repository snapshot before adapters ran; the focused live-probe path is the authoritative Search Console proof.
+- Next exact action: start Task 2 (PageSpeed live verification) on its own PR. Do not wire GSC into topic selection until Task 2 exits.
+
+## Phase 62: Task 1 Search Console Live Probe Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / blocked on Production deploy for final `LIVE_VERIFIED`. Task 1 from `INTEGRATION_ROLLOUT.md` started on dedicated branch `cursor/eve-search-console-live-aab8`.
+- Offline: focused Search Console probe helpers, CRON-authenticated Production route `GET /_internal/eve/api/live-probe/search-console?run_id=...`, CLI `npm run live:probe:search-console`, and deterministic fixtures. Sidecar `npm test` → `122/122` passing; verify/format/typecheck passed. This is `MOCK_VERIFIED` for the probe path.
+- Production config set for the exact run ID `search-console-live-2026-08-03`: `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, `SEO_AGENT_ENABLE_PAGESPEED=false`, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching run ID, `SEO_AGENT_ENV=production` (boolean/run flags stored non-sensitive so CLI can see them).
+- Live blocker: `vercel env run -e production` does **not** inject Sensitive Production secrets (`GOOGLE_SERVICE_ACCOUNT_*`, `CRON_SECRET`, `PAGESPEED_API_KEY` absent in the local process). Local execute therefore cannot mint a Search Console token. Live proof must run inside the deployed Production Eve runtime after this PR is human-merged and deployed, via:
+  - `GET /_internal/eve/api/live-probe/search-console?run_id=search-console-live-2026-08-03` with `Authorization: Bearer $CRON_SECRET`
+- After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false` and remove the approved run ID. Do not start Task 2 until that proof exists.
+- Out of scope (Task 3): wiring GSC into topic selection.
+- Next exact action: human merge/deploy this PR, then run the Production live-probe URL once and record the redacted classification.
+
 ## Phase 60: Proposal Generation Token Safeguards (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner asked to confirm the generation pipeline is careful with tokens and to add safeguards so Eve cannot accidentally burn the session budget on wasteful generation. Follow-up: quality remains more important than thrift.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was. Owner asked to confirm the generation pipeline is careful with tokens and to add safeguards so Eve cannot accidentally burn the session budget on wasteful generation. Follow-up: quality remains more important than thrift.
 - Branch: `cursor/eve-blog-quality-aab8`.
 - Changed scope: added `src/generation-guards.mjs` with proposal-stage waste ceilings. Quality-first budgets: write **6,500**, expand **4,000**, expand-prompt draft ceiling **28,000** chars, reserved output **20,000**, max **5** model calls. Safeguards that remain: skip obvious topic-model re-ranks, no-progress expand stop, structure-preserving truncation only for runaway input, and fallback calls billed to the same guard. Expand prompts explicitly prioritize completeness over brevity. PR briefs report generation spend.
 - Verification: recorded after the quality-first rebalance test run. This remains `MOCK_VERIFIED`; AI Gateway is not called by these fixtures.
-- Next exact action: human review of PR #104 (blog quality + demand + autonomy + expand + token safeguards). No merge/deploy by Eve.
+- Next exact action: Task 3 Search Console topic wiring after `#104` merges.
 
 ## Phase 59: Expand-Existing Peer Review Instead of Full Rewrites (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner asked Eve to peer-review and expand good drafts for SEO depth instead of rewriting whole posts when they are only too thin or missing sections.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was. Owner asked Eve to peer-review and expand good drafts for SEO depth instead of rewriting whole posts when they are only too thin or missing sections.
 - Correction: `src/draft-revision.mjs` classifies expandable quality gaps (`TOO_THIN`, FAQ/section/link/must-cover gaps, local/meta gaps) versus fatal claim failures. Proposal runs now peer-review the existing draft and run up to two expand/revise rounds with a smaller token budget and preserve-first prompts. Fatal claim failures still reject immediately with no rewrite loop.
 - PR briefs record expansion rounds so reviewers can see that Eve added depth instead of starting over.
 - Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`135/135` passing), including expand-existing and fatal-claim non-expand coverage.
@@ -18,7 +70,7 @@
 
 ## Phase 58: Detailed Draft PR Briefs (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner asked for detailed PR briefs that explain what Eve did, why it chose the topic over alternatives, why the post matters, and how it helps SEO.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was. Owner asked for detailed PR briefs that explain what Eve did, why it chose the topic over alternatives, why the post matters, and how it helps SEO.
 - Correction: Connect draft PR bodies now use `buildDraftPrBrief` with reviewer sections for run actions, timing importance, alternatives considered/skipped, SEO mechanics, expected observation window, and execution evidence, while keeping the required packet markers.
 - Topic decisions also capture `why_over_others` and `seo_value` for the brief.
 - Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`130/130` passing), including detailed brief packet marker coverage.
@@ -26,7 +78,7 @@
 
 ## Phase 57: Fully Autonomous Research and Topic Decisions (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner direction: nothing in the proposal path should be an owner option or unavailable toggle. Eve must research and decide automatically.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was. Owner direction: nothing in the proposal path should be an owner option or unavailable toggle. Eve must research and decide automatically.
 - Correction: standing Production propose auto-enables community browser research with versioned hosts (`COMMUNITY_RESEARCH_DOMAINS`). Proposal runs attach the browser research adapter by default (fixtures may pass `null` only for offline tests). Eve also runs an autonomous model topic decision over viable candidates; score ranking remains fallback only when the model cannot return a valid id. Writer prompts receive decision rationale and research notes.
 - Remaining human boundary: draft PR merge/release only. Eve still cannot write `main`, merge, or deploy.
 - Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`129/129` passing). Classification for automatic research/decision wiring is `MOCK_VERIFIED` until the next live Cron draft is reviewed.
@@ -34,7 +86,7 @@
 
 ## Phase 56: Automatic Local Demand and Community Timing (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / extended by Phase 57. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was / extended by Phase 57. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
 - Correction: Eve proposal selection now merges a versioned local demand calendar (`seo/manifests/local-demand-calendar.json`) and trending local concepts (`seo/manifests/trending-local-concepts.json`) ahead of the evergreen catalog. Active windows cover Independence Day, Labor Day, Thanksgiving, New Year, Watsonville Strawberry Festival, Capitola Art & Wine, Santa Cruz County Fair, Open Studios, rainy season, and summer visitor hosting, plus hard-water, vacation-rental, ADU, and storm-week trend concepts.
 - Runtime: demand timing is automatic from versioned manifests. Phase 57 removes the owner browser-research toggle requirement for standing propose.
 - Quality: demand-timed drafts must name the community event/holiday/trend, keep people-first depth gates, and reject fake event affiliation claims.
@@ -43,12 +95,21 @@
 
 ## Phase 55: Blog Generation Quality Rebuild (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / extended by Phase 56. Owner closed the thin Connect draft (#102) and asked for people-first SEO content that can compete: more unique pages, stronger click appeal, and enough depth to satisfy helpful-content expectations.
+- State: MERGED via `#104` / READY_FOR_HUMAN_REVIEW was / extended by Phase 56. Owner closed the thin Connect draft (#102) and asked for people-first SEO content that can compete: more unique pages, stronger click appeal, and enough depth to satisfy helpful-content expectations.
 - Live proof context: Cron → Connect previously opened draft PR [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) via `gitwadesplumbingandseptic-com[bot]` (Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ`). That post was generic, non-local, thinly linked, and not worth keeping. PRs `#102` and `#101` are closed; the colliding `eve/seo/...hosting-checklist...` branch was deleted.
 - Root cause: the live Cron path used a hardcoded hosting-checklist topic, a generic anti-local writer prompt, a single home link, and fallback publishing that could open a draft PR from junk Markdown.
 - Correction: `src/blog-opportunity.mjs` now holds a 10-topic Santa Cruz County catalog with click titles, CTR meta hooks, unique-value briefs, must-cover points, and people-also-ask questions. Selection stays inventory-aware. The writer brief targets people-first helpful content. Publish gates require about `1,400`+ words, `7`+ H2s, Quick Answer, unique-value section, `5`+ FAQ answers, `4`+ planned internal links, local meta description, and reject generic filler or unsupported claims. Writer max output tokens raised to `6,500`. Junk drafts still return `REJECTED_DRAFT_QUALITY` with no Connect PR.
 - Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`122/122` passing originally; Phase 56 raises the suite to `127/127`).
 - Next exact action: complete Phase 56 merge/deploy proof.
+
+## Phase 54: Live Connect Draft PR Proof (2026-08-03)
+
+- State: LIVE_VERIFIED for Cron → Vercel Connect → draft PR. Not a fixture result. Publisher reuses an existing draft branch or open draft PR on GitHub create `422` (`#103` merged).
+- Connect: team `wades-web-dev` connector `github/wadesplumbingandseptic-com` (`scl_FVfVjQbQtfeqYXRbfvxCrA`), GitHub App `gitwadesplumbingandseptic-com`, installation `150943643` on `byronwade`, attached to project `wadesplumbingandseptic-com` for Production and Preview.
+- Production health before proof: `mode: propose`, `ready: true`, `mutation_kill_switch: false`.
+- Commands: `vercel crons run "/eve/v1/cron/mztlWjGEvDDzWJTu64vs_D4R0wSVHIOJ1Cxo9o6r_VI" --project wadesplumbingandseptic-com --scope wades-web-dev` at `2026-08-03T12:50:08.094Z`. Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ` completed in `30.7s` on deployment `dpl_3ZTdJevhxmAQwp7xv1vqW5zfTVF9`.
+- Draft PR: [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) opened by `gitwadesplumbingandseptic-com[bot]` on `eve/seo/2026-08-03-home-plumbing-hosting-checklist-2026-08-03` with `content/posts/home-plumbing-hosting-checklist-2026-08-03.md`. Draft only; no merge and no `main` write.
+- Earlier same-day failure: Agent Run `wrun_41KZ3TN9860GSFRYR8Q3EV14EK` hit GitHub HTTP `422` because the interim manual `eve/seo/...` branch already existed. After that branch was removed, the second Cron succeeded.
 
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 

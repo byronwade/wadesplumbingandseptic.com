@@ -31,7 +31,12 @@ import {
 	loadConfig,
 	summarizeConfig,
 } from "../src/config.mjs";
-import { probeReadOnlyIntegrations } from "../src/probes.mjs";
+import {
+	probePageSpeedLive,
+	probeReadOnlyIntegrations,
+	probeSearchConsoleLive,
+} from "../src/probes.mjs";
+import { makeEvidence } from "../src/contracts.mjs";
 import { createRunBudget } from "../src/run-controls.mjs";
 import { DEFAULT_BUDGETS } from "../src/constants.mjs";
 
@@ -428,6 +433,22 @@ test("Google adapters redact query dimensions and API keys from evidence", async
 	});
 	assert.equal(speedEvidence.classification, "LIVE_VERIFIED");
 	assert.equal(JSON.stringify(speedEvidence).includes("page-speed-key"), false);
+
+	const failedPageSpeed = createPageSpeedAdapter({
+		apiKey: "page-speed-key",
+		fetchImpl: async () =>
+			jsonResponse({ error: { message: "API key not valid" } }, 400),
+	});
+	const failedEvidence = await failedPageSpeed.analyze({
+		runId: "speed-failure-fixture",
+		url: "https://www.wadesplumbingandseptic.com/",
+	});
+	assert.equal(failedEvidence.classification, "FAILED");
+	assert.match(failedEvidence.payload.reason, /HTTP 400/);
+	assert.equal(
+		JSON.stringify(failedEvidence).includes("page-speed-key"),
+		false,
+	);
 });
 
 test("browser research requires an explicitly configured browser domain, not merely a general network allowlist", async () => {
@@ -792,6 +813,180 @@ test("web search injection is escalated as a redacted security event and competi
 		{ subject: "hours", value: "24 hours", provenance: second },
 	]);
 	assert.equal(conflicts[0].state, "CONFLICT_REQUIRES_HUMAN_FACT_CHECK");
+});
+
+test("focused Search Console probe stays offline until production approval and enablement", async () => {
+	const runId = "search-console-live-2026-08-03";
+	const offline = await probeSearchConsoleLive({
+		registry: createIntegrationRegistry({ config: loadConfig({}) }),
+		config: loadConfig({}),
+		runId,
+		execute: false,
+	});
+	assert.equal(offline.classification, "BLOCKED_MISSING_CREDENTIALS");
+
+	const unapproved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "false",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+	});
+	await assert.rejects(
+		probeSearchConsoleLive({
+			registry: createIntegrationRegistry({ config: unapproved }),
+			config: unapproved,
+			runId,
+			execute: true,
+		}),
+		/without SEO_AGENT_LIVE_READS_APPROVED=true/,
+	);
+
+	const disabled = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "false",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+	});
+	await assert.rejects(
+		probeSearchConsoleLive({
+			registry: createIntegrationRegistry({ config: disabled }),
+			config: disabled,
+			runId,
+			execute: true,
+		}),
+		/SEO_AGENT_ENABLE_SEARCH_CONSOLE is not true/,
+	);
+
+	let requested = false;
+	const approved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: "eve@example.iam.gserviceaccount.com",
+		GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+			"-----BEGIN PRIVATE KEY-----\nfixture\n-----END PRIVATE KEY-----",
+		SEARCH_CONSOLE_ACCESS_TOKEN: "fixture-token",
+	});
+	const live = await probeSearchConsoleLive({
+		registry: {
+			search_console: {
+				async probe() {
+					requested = true;
+					return makeEvidence({
+						runId,
+						source: "search-console",
+						scope: "site-access",
+						classification: "LIVE_VERIFIED",
+						sourceUrlOrTool: "https://www.googleapis.com/webmasters/v3/sites",
+						collectedAt: "2026-08-03T00:00:00.000Z",
+						payload: {
+							sites: [
+								{ site_url_hash: "abc", permission_level: "siteFullUser" },
+							],
+						},
+					});
+				},
+			},
+		},
+		config: approved,
+		runId,
+		execute: true,
+	});
+	assert.equal(requested, true);
+	assert.equal(live.classification, "LIVE_VERIFIED");
+	assert.equal(live.payload.sites[0].permission_level, "siteFullUser");
+});
+
+test("focused PageSpeed probe stays offline until production approval and enablement", async () => {
+	const runId = "pagespeed-live-2026-08-03";
+	const offline = await probePageSpeedLive({
+		registry: createIntegrationRegistry({ config: loadConfig({}) }),
+		config: loadConfig({}),
+		runId,
+		execute: false,
+	});
+	assert.equal(offline.classification, "BLOCKED_MISSING_CREDENTIALS");
+
+	const unapproved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_PAGESPEED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "false",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		PAGESPEED_API_KEY: "fixture-pagespeed-key",
+	});
+	await assert.rejects(
+		probePageSpeedLive({
+			registry: createIntegrationRegistry({ config: unapproved }),
+			config: unapproved,
+			runId,
+			execute: true,
+		}),
+		/without SEO_AGENT_LIVE_READS_APPROVED=true/,
+	);
+
+	const disabled = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_PAGESPEED: "false",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		PAGESPEED_API_KEY: "fixture-pagespeed-key",
+	});
+	await assert.rejects(
+		probePageSpeedLive({
+			registry: createIntegrationRegistry({ config: disabled }),
+			config: disabled,
+			runId,
+			execute: true,
+		}),
+		/SEO_AGENT_ENABLE_PAGESPEED is not true/,
+	);
+
+	let requested = null;
+	const approved = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_PAGESPEED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+		PAGESPEED_API_KEY: "fixture-pagespeed-key",
+	});
+	const live = await probePageSpeedLive({
+		registry: {
+			pagespeed: {
+				async probe(input) {
+					requested = input;
+					return makeEvidence({
+						runId,
+						source: "pagespeed",
+						scope: "performance-audit:mobile",
+						classification: "LIVE_VERIFIED",
+						sourceUrlOrTool:
+							"https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+						collectedAt: "2026-08-03T00:00:00.000Z",
+						payload: {
+							id: "https://www.wadesplumbingandseptic.com/",
+							categories: { performance: { score: 0.91 } },
+						},
+					});
+				},
+			},
+		},
+		config: approved,
+		runId,
+		execute: true,
+	});
+	assert.equal(requested.runId, runId);
+	assert.equal(requested.url, "https://www.wadesplumbingandseptic.com/");
+	assert.equal(requested.strategy, "mobile");
+	assert.equal(live.classification, "LIVE_VERIFIED");
+	assert.equal(live.payload.categories.performance.score, 0.91);
+	assert.equal(JSON.stringify(live).includes("fixture-pagespeed-key"), false);
 });
 
 test("every live probe caller requires production and an exact human-approved audit run ID", async () => {

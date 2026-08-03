@@ -469,6 +469,92 @@ test("GitHub publisher creates a draft branch from the current main SHA without 
 	});
 });
 
+test("GitHub publisher reuses an existing draft branch after create HTTP 422", async () => {
+	const mainSha = "a".repeat(40);
+	const existingSha = "b".repeat(40);
+	const requests = [];
+	const publisher = createGithubDraftPublisher({
+		repository: "byronwade/wadesplumbingandseptic.com",
+		accessTokenProvider: async () => "fixture-connect-token",
+		classification: "MOCK_VERIFIED",
+		enabled: true,
+		mutationMode: "enabled",
+		mutationKillSwitch: false,
+		fetchImpl: async (url, init) => {
+			requests.push({ url: String(url), init });
+			if (
+				init.method === "GET" &&
+				String(url).endsWith("/git/ref/heads/main")
+			) {
+				return jsonResponse({ object: { sha: mainSha } });
+			}
+			if (init.method === "POST" && String(url).endsWith("/git/refs")) {
+				return jsonResponse({ message: "Reference already exists" }, 422);
+			}
+			if (
+				init.method === "GET" &&
+				String(url).includes("/git/ref/heads/eve/seo/2026-08-01-guarded-post")
+			) {
+				return jsonResponse({ object: { sha: existingSha } });
+			}
+			throw new Error(`Unexpected GitHub request: ${init.method} ${url}`);
+		},
+	});
+	const branch = await publisher.createBranch({
+		branch: "eve/seo/2026-08-01-guarded-post",
+		fromSha: mainSha,
+	});
+	assert.deepEqual(branch, {
+		classification: "MOCK_VERIFIED",
+		branch: "eve/seo/2026-08-01-guarded-post",
+		base_sha: existingSha,
+		write_performed: false,
+		reused_existing_branch: true,
+	});
+	assert.equal(requests.length, 3);
+});
+
+test("GitHub publisher returns an existing open draft PR after create HTTP 422", async () => {
+	const publisher = createGithubDraftPublisher({
+		repository: "byronwade/wadesplumbingandseptic.com",
+		accessTokenProvider: async () => "fixture-connect-token",
+		classification: "MOCK_VERIFIED",
+		enabled: true,
+		mutationMode: "enabled",
+		mutationKillSwitch: false,
+		fetchImpl: async (url, init) => {
+			if (init.method === "POST" && String(url).endsWith("/pulls")) {
+				return jsonResponse({ message: "Validation Failed" }, 422);
+			}
+			if (init.method === "GET" && String(url).includes("/pulls?")) {
+				return jsonResponse([
+					{
+						draft: true,
+						number: 102,
+						html_url:
+							"https://github.com/byronwade/wadesplumbingandseptic.com/pull/102",
+						base: { ref: "main" },
+						head: { ref: "eve/seo/2026-08-03-fixture-post" },
+					},
+				]);
+			}
+			throw new Error(`Unexpected GitHub request: ${init.method} ${url}`);
+		},
+	});
+	const result = await publisher.createPullRequest({
+		branch: "eve/seo/2026-08-03-fixture-post",
+		title: "SEO: fixture post",
+		body: "Draft body",
+		draft: true,
+	});
+	assert.deepEqual(result, {
+		classification: "MOCK_VERIFIED",
+		draft: true,
+		number: 102,
+		url: "https://github.com/byronwade/wadesplumbingandseptic.com/pull/102",
+	});
+});
+
 test("draft publisher forwards only a complete draft packet and rejects non-draft or malformed gateway results", async () => {
 	const changeSet = createChangeSet();
 	const packet = createPacket(changeSet);
