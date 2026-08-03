@@ -9,7 +9,7 @@
   - `2026-08-03T16:11:19.604Z` request `pvg9f-1785773479604-875726474167` → `200`
   - `2026-08-03T16:11:24.010Z` request `jxqqx-1785773484010-820345f8e44f` → `200`
   - `2026-08-03T16:11:28.231Z` request `4klwv-1785773488231-7505d212de28` → `200`
-- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_BROWSER_RESEARCH_ENABLED=false`, Production redeploy after reset. Standing propose may still auto-enable research for Cron proposal runs.
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_BROWSER_RESEARCH_ENABLED=false`, Production redeploy `dpl_7AotW1u2guL5ZJKEAc5TjiTyipm1` after reset. Standing propose may still auto-enable research for Cron proposal runs.
 - Browserbase: still `BLOCKED_MISSING_CREDENTIALS` (no Production API key/project id).
 - Next exact action: start Task 6 (GA4) only if GA4 credentials/property access are reviewed; otherwise record `BLOCKED_MISSING_CREDENTIALS` and skip to the next owned task.
 
