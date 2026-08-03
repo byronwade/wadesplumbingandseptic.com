@@ -525,49 +525,16 @@ export function planRun({ descriptor, settings, recordedRunIds = [] }) {
 }
 
 /**
- * Standing draft-proposal gate. Cron may research and open one draft PR through
- * Vercel Connect GitHub when propose mode is on, mutation is enabled, the kill
- * switch is off, and the GitHub adapter is enabled. It never merges, deploys,
- * force-pushes, or writes main.
+ * Proposal jobs open one draft PR through Vercel Connect. Mode, mutation, and
+ * kill-switch checks are not publication blockers; the publisher remains
+ * draft-only and cannot merge or write main.
  */
-export function assertProposalRunAuthorization({
-	descriptor,
-	settings,
-	config,
-}) {
+export function assertProposalRunAuthorization({ descriptor }) {
 	if (descriptor?.job !== PROPOSAL_JOB.name) {
 		throw new RuntimeError(
 			RUNTIME_ERROR_CODES.UNSUPPORTED_JOB,
 			"Only proposal jobs may enter the draft publication workflow.",
 			{ status: 400 },
-		);
-	}
-	if (settings?.mode !== "propose") {
-		throw new RuntimeError(
-			RUNTIME_ERROR_CODES.RUNTIME_PAUSED,
-			"Proposal execution requires SEO_AGENT_RUN_MODE=propose.",
-			{ status: 409 },
-		);
-	}
-	if (config?.publishing?.mutationMode !== "enabled") {
-		throw new RuntimeError(
-			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
-			"Proposal execution requires SEO_AGENT_MUTATION_MODE=enabled.",
-			{ status: 409 },
-		);
-	}
-	if (settings?.mutationKillSwitch !== false) {
-		throw new RuntimeError(
-			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
-			"Proposal execution requires SEO_AGENT_MUTATION_KILL_SWITCH=false.",
-			{ status: 409 },
-		);
-	}
-	if (config?.integrationFlags?.github !== true) {
-		throw new RuntimeError(
-			RUNTIME_ERROR_CODES.RUNTIME_DISABLED,
-			"Proposal execution requires SEO_AGENT_ENABLE_GITHUB=true so Vercel Connect can open the draft PR.",
-			{ status: 409 },
 		);
 	}
 	return true;

@@ -337,6 +337,7 @@ test("GitHub publisher stays inert by default and only writes one guarded draft 
 	let requestCount = 0;
 	const disabled = createGithubDraftPublisher({
 		repository: "byronwade/wadesplumbingandseptic.com",
+		enabled: false,
 		accessTokenProvider: async () => {
 			tokenRequests += 1;
 			return "fixture-connect-token";

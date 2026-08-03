@@ -1,5 +1,11 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked to remove safety guards so Eve can just open a draft PR.
+- Changed scope: proposal authorization only checks the job name. Independent QA reject, content-policy reject, mutation/kill-switch/GitHub flag checks, and writer failures no longer block publication. A deterministic Markdown fallback is used when the gateway or draft shape fails. The publisher remains draft-only through Vercel Connect and still cannot merge or write `main`.
+- Next exact action: merge and deploy, then run the Eve Cron and confirm one `eve/seo/...` draft PR.
+
 ## Phase 52: Arm Production Propose Without Dashboard Token (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / merge. PR #98 is on `main` and Production-deployed, but this cloud agent still cannot write Vercel project env (MCP `needsAuth`, no `VERCEL_TOKEN`, device login needs owner GitHub session).
