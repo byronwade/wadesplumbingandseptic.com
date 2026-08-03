@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 55: Blog Generation Quality Rebuild (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner closed the thin Connect draft (#102) and asked for a significant quality improvement to blog generation.
+- Live proof context: Cron → Connect previously opened draft PR [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) via `gitwadesplumbingandseptic-com[bot]` (Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ`). That post was generic, non-local, thinly linked, and not worth keeping. PRs `#102` and `#101` are closed; the colliding `eve/seo/...hosting-checklist...` branch was deleted.
+- Root cause: the live Cron path used a hardcoded hosting-checklist topic, a generic anti-local writer prompt, a single home link, and fallback publishing that could open a draft PR from junk Markdown.
+- Correction: added `src/blog-opportunity.mjs` with a Santa Cruz County topic catalog, inventory-aware selection (skip existing or near-duplicate slugs, require at least three resolvable internal links), a local writing brief (Quick Answer, FAQ, multi-link plan, claim bans), and fail-closed `assertPublishableBlogDraft` checks. `executeDraftProposal` now returns `NO_ACTION` or `REJECTED_DRAFT_QUALITY` instead of publishing thin templates.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`121/121` passing), including new `blog-opportunity` and updated `proposal` tests.
+- Next exact action: merge and deploy, then run Eve Cron and confirm the next draft PR uses a catalog topic, Santa Cruz context, FAQ, and multiple service links.
+
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner asked to remove safety guards so Eve can just open a draft PR.
