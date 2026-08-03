@@ -44,14 +44,16 @@ export async function handleSearchConsoleLiveProbe({
 	if (!auth.ok) return auth;
 
 	const url = new URL(request.url);
-	const runId = url.searchParams.get("run_id");
+	const runId =
+		url.searchParams.get("run_id") ?? config.liveReads?.approvedRunId ?? null;
 	if (typeof runId !== "string" || !/^[a-z0-9][a-z0-9-]{2,79}$/.test(runId)) {
 		return Object.freeze({
 			ok: false,
 			status: 400,
 			body: Object.freeze({
 				error: "MALFORMED_REQUEST",
-				message: "Query parameter run_id must be a safe audit run ID.",
+				message:
+					"Provide run_id as a query parameter or set SEO_AGENT_LIVE_READS_APPROVED_RUN_ID.",
 			}),
 		});
 	}

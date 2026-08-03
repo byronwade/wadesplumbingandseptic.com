@@ -82,6 +82,48 @@ test("Search Console live probe route returns LIVE_VERIFIED for an approved run"
 	);
 });
 
+test("Search Console live probe can use the approved run ID when query is omitted", async () => {
+	const runId = "search-console-live-2026-08-03";
+	const config = loadConfig({
+		SEO_AGENT_ENV: "production",
+		SEO_AGENT_ENABLE_SEARCH_CONSOLE: "true",
+		SEO_AGENT_LIVE_READS_APPROVED: "true",
+		SEO_AGENT_LIVE_READS_APPROVED_RUN_ID: runId,
+	});
+	const result = await handleSearchConsoleLiveProbe({
+		request: {
+			url: "https://example.test/_internal/eve/api/live-probe/search-console",
+			headers: {
+				get(name) {
+					return name.toLowerCase() === "authorization"
+						? `Bearer ${cronSecret}`
+						: null;
+				},
+			},
+		},
+		config,
+		cronSecret,
+		registry: {
+			search_console: {
+				async probe({ runId: requested }) {
+					assert.equal(requested, runId);
+					return makeEvidence({
+						runId,
+						source: "search-console",
+						scope: "site-access",
+						classification: "LIVE_VERIFIED",
+						sourceUrlOrTool:
+							"https://www.googleapis.com/webmasters/v3/sites",
+						payload: { sites: [] },
+					});
+				},
+			},
+		},
+	});
+	assert.equal(result.ok, true);
+	assert.equal(result.body.run_id, runId);
+});
+
 test("Search Console live probe route refuses mismatched run IDs", async () => {
 	const config = loadConfig({
 		SEO_AGENT_ENV: "production",
