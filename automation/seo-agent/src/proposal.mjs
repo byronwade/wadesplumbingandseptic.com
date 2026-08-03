@@ -14,6 +14,10 @@ import {
 } from "./blog-opportunity.mjs";
 import { COMMUNITY_RESEARCH_DOMAINS } from "./constants.mjs";
 import {
+	applyFeaturedImageToOpportunity,
+	buildBlogImagePackage,
+} from "./image-selection.mjs";
+import {
 	buildExpansionPrompt,
 	isExpandableDraftFailure,
 	reviseDraftUntilPublishable,
@@ -437,6 +441,35 @@ function formatGenerationSpend(generation = null) {
 ${callLines || "- No generation stages recorded."}`;
 }
 
+function formatImagePackageForBrief(imagePackage = null) {
+	if (!imagePackage) {
+		return "- Image package was not built for this run.";
+	}
+	const featured = imagePackage.featured;
+	const plan = featured?.plan;
+	const featuredLine = plan
+		? `- Featured (first-party OWNED, score ${plan.relevance_score}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}`
+		: `- Featured: not selected (${featured?.reason ?? "no plan"}). ${featured?.next_action ?? ""}`;
+	const illustrations = (imagePackage.illustrations?.candidates ?? [])
+		.slice(0, 4)
+		.map(
+			(candidate) =>
+				`- Illustration candidate (score ${candidate.relevance_score}): \`${candidate.public_url}\` — ${candidate.alt_text}`,
+		);
+	const external = (imagePackage.external_research?.candidates ?? [])
+		.slice(0, 3)
+		.map(
+			(candidate) =>
+				`- External research only (UNVERIFIED, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} — needs rights + human path before use`,
+		);
+	return `${featuredLine}
+First-party illustration candidates:
+${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enough for in-body use."}
+External research candidates (never auto-published):
+${external.length > 0 ? external.join("\n") : "- None. Featured images stay first-party OWNED unless a human approves a licensed asset path."}
+Policy: featured minimum score ${imagePackage.policy?.featured_min_score}; external candidates never auto-publish.`;
+}
+
 export function buildDraftPrBrief({
 	opportunity,
 	changeSet,
@@ -450,6 +483,7 @@ export function buildDraftPrBrief({
 	revision = null,
 	generation = null,
 	pagespeedQa = null,
+	imagePackage = null,
 }) {
 	const linkLines = opportunity.internal_links
 		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
@@ -561,6 +595,9 @@ Expected outcome after human merge (observation only, not a guaranteed ranking c
 - Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.
 - Rollback: Revert this single Markdown file after human review.
 - Publication: DRAFT PR ONLY; human approval and merge required.
+
+## Images (featured is fail-closed)
+${formatImagePackageForBrief(imagePackage)}
 
 ## Preview / performance QA
 ${formatPageSpeedQaForBrief(pagespeedQa)}
@@ -782,7 +819,14 @@ export async function executeDraftProposal({
 			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
-	const opportunity = selection.opportunity;
+	const imagePackage = buildBlogImagePackage({
+		opportunity: selection.opportunity,
+		repoRoot,
+	});
+	const opportunity = applyFeaturedImageToOpportunity(
+		selection.opportunity,
+		imagePackage.featured,
+	);
 	const date = proposalDate(descriptor);
 	const written = await writer({
 		runId: descriptor.runId,
@@ -899,6 +943,7 @@ export async function executeDraftProposal({
 			revision,
 			generation: guard.snapshot(),
 			pagespeedQa: pagespeedQaForBrief,
+			imagePackage,
 		}),
 		changeSet,
 		gateway: publisher,
@@ -916,6 +961,9 @@ export async function executeDraftProposal({
 			query_cluster: opportunity.query_cluster,
 			selection_reason: selection.selection_reason,
 			demand_source: opportunity.demand_source,
+			image: opportunity.image,
+			image_alt: opportunity.image_alt,
+			image_plan: opportunity.image_plan ?? null,
 		},
 		topic_decision: selection.topicDecision,
 		generation: guard.snapshot(),
@@ -939,6 +987,11 @@ export async function executeDraftProposal({
 		}),
 		search_console_topics: searchConsoleSummary,
 		pagespeed_qa: pagespeedQaSummary,
+		images: Object.freeze({
+			featured: imagePackage.featured,
+			illustration_count: imagePackage.illustrations.candidates.length,
+			external_research_count: imagePackage.external_research.candidates.length,
+		}),
 	});
 }
 

@@ -27,6 +27,16 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [ ] Do not enable GitHub triggers, external Cron, publishing, automatic merge, direct writes to `main`, or a static AI Gateway key.
 - [ ] Do not commit `.env*` files, Vercel tokens, Connect tokens, or provider credentials.
 
+## Next: Content-relevant images (featured care)
+
+Eve now selects featured images from first-party `public/images` using relevance scoring against the blog topic. Brand, partner, team, and logo assets cannot be featured.
+
+1. [ ] Prefer adding real Wade work photos under `public/images/work/` with descriptive filenames (example: `tankless-water-heater-installation.webp`).
+2. [ ] Keep service library shots under `public/images/services/` when they clearly match the topic.
+3. [ ] Do not use partner logos, brand marks, or unrelated lifestyle stock as blog featured images.
+4. [ ] External stock/search providers stay research-only until a reviewed license path exists. Eve will not auto-publish unverified external assets.
+5. [ ] When reviewing a draft PR, check the **Images (featured is fail-closed)** section for the selected asset path, alt text, rights evidence id, and relevance rationale.
+
 ## Next: Local Falcon
 
 Eve Task 7 reads a bounded Local Falcon report list (`report_count` only). Requires a Local Falcon API key.

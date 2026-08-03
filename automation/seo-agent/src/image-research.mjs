@@ -1,4 +1,5 @@
 import { classifyUntrustedText } from "./policy.mjs";
+import { rankExternalImageCandidates } from "./image-selection.mjs";
 
 const MAX_RESULTS = 12;
 
@@ -87,16 +88,36 @@ export function createImageResearchAdapter({
 			});
 			if (!Array.isArray(response?.results))
 				throw new Error("Image-search provider returned malformed results.");
+			const normalized = response.results
+				.slice(0, limit)
+				.map((candidate) => normalizeCandidate(candidate, allowedDomains));
 			return Object.freeze({
 				classification: "MOCK_VERIFIED",
 				source: "image-research",
 				query: safeQuery,
-				candidates: Object.freeze(
-					response.results
-						.slice(0, limit)
-						.map((candidate) => normalizeCandidate(candidate, allowedDomains)),
-				),
+				candidates: Object.freeze(normalized),
 				publication_permitted: false,
+			});
+		},
+
+		/**
+		 * Search then keep only candidates with content-token overlap.
+		 * Still never publication-eligible; featured images must use first-party
+		 * OWNED selection or a human-approved licensed path.
+		 */
+		async searchRelevant({ query, limit = 8, opportunity } = {}) {
+			const raw = await this.search({ query, limit });
+			if (raw.classification !== "MOCK_VERIFIED") return raw;
+			const ranked = rankExternalImageCandidates({
+				opportunity,
+				candidates: raw.candidates,
+				limit,
+			});
+			return Object.freeze({
+				...raw,
+				candidates: ranked.candidates,
+				publication_permitted: false,
+				relevance_filtered: true,
 			});
 		},
 	});

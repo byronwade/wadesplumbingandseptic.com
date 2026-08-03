@@ -1,12 +1,27 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 78: Content-Relevant Image Sourcing + Strict Featured Gates (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for first-party featured selection. External licensed download path not enabled.
+- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 redirected ahead of later optional adapters per owner request).
+- Offline: `image-selection.mjs` indexes `public/images`, scores path/filename tokens against blog opportunity fields, requires featured score ≥ 18, blocks brand/partner/team/logo classes, and builds OWNED image plans with alt text + relevance rationale. `buildBlogImagePackage` feeds proposal writer front matter and a PR brief Images section. External `image-research` candidates can be relevance-filtered via `searchRelevant` but remain `UNVERIFIED` / not publication-eligible.
+- Fixture proof: tankless topic selects `/images/work/tankless-water-heater-installation.webp` with score `37`. Commands: `npm test` → `190/190`; `npm run verify` exit `0`.
+- Next exact action: merge/deploy; optionally refresh draft blog PR `#122` featured image to the selected work photo; keep external provider licensing as a later owner setup item.
+
+## Phase 77: Task 7 Local Falcon Production Test + Blog Draft PR (2026-08-03)
+
+- State: Task 7 path on Production; Cron live proof `BLOCKED_MISSING_CREDENTIALS` (no `LOCAL_FALCON_API_KEY`). Draft blog PR `#122` opened for owner review.
+- Local Falcon Cron on armed deploy `dpl_52fmP6MDx3mhF4LuYCmqk82BqwJv` returned HTTP `503` three times; flags reset afterward.
+- Proposal Cron `wrun_41KZ4A1GVN0GJW2PRA80TQGMYE` completed without a Connect draft PR under quality gates; `#122` carries the reviewable tankless draft.
+- Next exact action: SUPERSEDED by Phase 78 image sourcing work.
+
 ## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.
-- Branch/PR: `cursor/eve-local-falcon-live-aab8` (Task 7 from `INTEGRATION_ROLLOUT.md`).
+- State: SUPERSEDED by Phase 77 Production exercise. Offline `MOCK_VERIFIED` probe path shipped via `#121`.
+- Branch/PR: `cursor/eve-local-falcon-live-aab8` / `#121`.
 - Offline: focused probe `probeLocalFalconLive`; CRON route `GET /_internal/eve/api/live-probe/local-falcon`; CLI `npm run live:probe:local-falcon`; adapter soft-fails upstream errors to `FAILED` evidence; Cron allowlisted.
 - Docs: `MANUAL_SETUP.md` Next: Local Falcon; Task 6 moved to Deferred.
-- Next exact action: merge/deploy Task 7; arm and Cron-prove if `LOCAL_FALCON_API_KEY` is present, else record `BLOCKED_MISSING_CREDENTIALS`; then trigger standing propose Cron for a draft blog PR test.
+- Next exact action: SUPERSEDED by Phase 77.
 
 ## Phase 75: Task 6 GA4 Production Path Deployed; Live Proof BLOCKED (2026-08-03)
 

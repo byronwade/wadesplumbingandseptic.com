@@ -96,7 +96,10 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Status:** not started
 - **Prerequisite:** Task 12 complete or blocked with evidence
 
-## Task 14 — Image provenance (optional)
+## Task 14 — Image provenance / content-relevant sourcing
 
-- **Status:** not started
-- **Prerequisite:** Task 13 complete or blocked with evidence
+- **Status:** Offline `MOCK_VERIFIED` first-party featured selection path (see Phase 78). External provider download remains blocked until owner supplies a reviewed license workflow.
+- **Branch/PR:** `cursor/eve-image-sourcing-aab8`
+- **Scope:** Score first-party `public/images` assets against the blog opportunity; featured images require high relevance, `OWNED` rights, and block brand/partner/team/logo classes. External research candidates may be relevance-filtered but stay `UNVERIFIED` and never auto-publish. Proposal PR brief includes an Images section; writer front matter uses the selected featured URL/alt when available.
+- **Featured-image rule:** fail-closed. If no first-party asset clears the featured score threshold, do not invent a stock hero; record the blocker and keep catalog fallback only as a weak default pending human review.
+- **Prerequisite:** Owner redirected here ahead of Tasks 8 to 13; those optional adapters remain separately blocked or unstarted.
