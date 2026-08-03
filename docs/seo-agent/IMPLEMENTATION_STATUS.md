@@ -1,18 +1,23 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 72: Task 5 Browser Research LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 5 HTTP browser-research live proof (`LIVE_VERIFIED`).
+- Branch/PR: `cursor/eve-browser-research-live-aab8` / `#116`.
+- Method: Armed Production for run ID `browser-research-2026-08-03` (`SEO_AGENT_BROWSER_RESEARCH_ENABLED=true`, Search Console/PageSpeed/Browserbase flags false, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching approved run ID), Production-deployed commit `3be489d` as `dpl_FVcXgzZ2AD5ysz6aXAJtvhA2fLea`, then triggered Production Cron `GET /_internal/eve/api/live-probe/browser-research` three times. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted): three successful Production responses on deployment `dpl_FVcXgzZ2AD5ysz6aXAJtvhA2fLea`:
+  - `2026-08-03T16:11:19.604Z` request `pvg9f-1785773479604-875726474167` → `200`
+  - `2026-08-03T16:11:24.010Z` request `jxqqx-1785773484010-820345f8e44f` → `200`
+  - `2026-08-03T16:11:28.231Z` request `4klwv-1785773488231-7505d212de28` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_BROWSER_RESEARCH_ENABLED=false`, Production redeploy after reset. Standing propose may still auto-enable research for Cron proposal runs.
+- Browserbase: still `BLOCKED_MISSING_CREDENTIALS` (no Production API key/project id).
+- Next exact action: start Task 6 (GA4) only if GA4 credentials/property access are reviewed; otherwise record `BLOCKED_MISSING_CREDENTIALS` and skip to the next owned task.
+
 ## Phase 71: Task 5 Browser Research Path + Past-Phase Hardening (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; blocked on Production Cron for final browser-research `LIVE_VERIFIED`.
-- Branch/PR: `cursor/eve-browser-research-live-aab8` (Task 5 from `INTEGRATION_ROLLOUT.md`).
+- State: SUPERSEDED by Phase 72 live proof. Offline path + past-phase hardening shipped on `cursor/eve-browser-research-live-aab8` (`MOCK_VERIFIED`; `175/175` tests).
 - Confirmation on `main` before this branch: sidecar `npm run format:check`, `typecheck`, `test` → `170/170`, `verify` exit `0`. Production health `GET /_internal/eve/api/healthz` → `200`, `ready: true`, `mode: propose`, `mutation_kill_switch: false`, live-read flags off.
-- Past-phase improvements in this PR:
-  - HTTP handler tests for Task 3 topics and Task 4 PageSpeed QA live-probe routes
-  - `INTEGRATION_ROLLOUT.md` Task 2 PR number corrected; Tasks 5 to 14 stubs added
-  - `MANUAL_SETUP.md` marks Tasks 1 to 4 live probes complete and records Browserbase credential gap
-- Task 5 offline: focused probe `probeBrowserResearchLive` (upstream errors become `FAILED` evidence); CRON-authenticated route `GET /_internal/eve/api/live-probe/browser-research` with compact payload (hash / excerpt metadata only); CLI `npm run live:probe:browser-research`; annual Cron allowlisted.
-- Browserbase: `SEO_AGENT_ENABLE_BROWSERBASE` exists in Production, but `BROWSERBASE_API_KEY` / `BROWSERBASE_PROJECT_ID` are absent → remains `BLOCKED_MISSING_CREDENTIALS` and is not the Task 5 exit gate.
-- Live arming (next): Production only. Set `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` if standing propose does not already enable research, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=browser-research-2026-08-03`, keep Search Console/PageSpeed/Browserbase flags off, deploy, then `vercel crons run '/_internal/eve/api/live-probe/browser-research'` three times. Handler `200` only for `LIVE_VERIFIED`. Reset live-read approval afterward.
-- Next exact action: Production-deploy this PR, run the Cron live proof, record request IDs, then mark Task 5 `LIVE_VERIFIED`.
+- Past-phase improvements: HTTP handler tests for Task 3 topics and Task 4 PageSpeed QA routes; `INTEGRATION_ROLLOUT.md` Tasks 5 to 14 stubs; `MANUAL_SETUP.md` Tasks 1 to 4 marked complete; `pageSpeed` flag naming note.
 
 ## Phase 70: Task 4 PageSpeed Draft/Preview QA LIVE_VERIFIED (2026-08-03)
 

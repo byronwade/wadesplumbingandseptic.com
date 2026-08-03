@@ -41,12 +41,13 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 5 — Browser research live verification
 
-- **Status:** `MOCK_VERIFIED` offline path (awaiting Production Cron `LIVE_VERIFIED`)
-- **Branch/PR:** `cursor/eve-browser-research-live-aab8`
+- **Status:** `LIVE_VERIFIED` (2026-08-03)
+- **Branch/PR:** `cursor/eve-browser-research-live-aab8` / `#116`
 - **Scope:** Focused allowlisted HTTP browser research live probe (`GET /_internal/eve/api/live-probe/browser-research`); compact redacted responses (content hash / excerpt metadata only, no HTML body); Cron + CLI; proposal demand research already uses this adapter when enabled
 - **Browserbase:** optional and separately gated. Production currently has `SEO_AGENT_ENABLE_BROWSERBASE` but no `BROWSERBASE_API_KEY` / `BROWSERBASE_PROJECT_ID`, so Browserbase remains `BLOCKED_MISSING_CREDENTIALS` and is not part of this task's exit gate
-- **Live proof gate:** arm Production with `SEO_AGENT_BROWSER_RESEARCH_ENABLED=true` (or rely on standing propose auto-enable), keep Search Console/PageSpeed/Browserbase flags off unless separately approved, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=browser-research-2026-08-03`; deploy; Cron-run the browser-research probe three times for HTTP `200`; reset live-read approval afterward
-- **Exit gate:** Task 6 may start only after HTTP browser research is `LIVE_VERIFIED`
+- **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for browser-research `LIVE_VERIFIED`)
+- **Request IDs:** `pvg9f-1785773479604-875726474167`, `jxqqx-1785773484010-820345f8e44f`, `4klwv-1785773488231-7505d212de28`
+- **Exit gate:** Task 6 (GA4, optional) may start, or skip with a recorded blocker
 
 ## Task 6 — GA4 (optional)
 
