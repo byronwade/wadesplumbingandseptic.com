@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 49: Vercel Eve Server Snapshot Bundle Path Repair (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Draft PR [#95](https://github.com/byronwade/wadesplumbingandseptic.com/pull/95) packaged the repository snapshot into `.output/server`, which is the local Nitro host path. The Vercel Eve build writes `.vercel/output/functions/__server.func` and Eve Services normalization relocates the durable shared function to `.vercel/output/functions/eve/__server.func`. Preview deployment `dpl_2AcEGumSDBnkzueobeQLAXVR1Lik` failed for that missing server root. This is `LIVE_VERIFIED` failure evidence for the pre-repair bundler path, not a credential issue.
+- Correction: `bundle-repository-snapshot` now resolves Eve server roots in order: `eve/__server.func`, `__server.func`, then `.output/server`. It copies the attributable snapshot into every discovered root, keeps explicit overrides for fixtures, and fails closed when none exist. Regression tests cover the Vercel path preference, multi-root bundling, and the missing-output denial.
+- Verification: with Node `v24.14.0`, sidecar `format:check`, `lint`, `typecheck`, and `test` exited `0` (`116/116` passing). `npm run build` staged snapshot commit `a073be6c111502973d46e1acb5d93ed326cafd4f`, built Eve `0.29.4`, and bundled into the local `.output/server` root. Canonical `npm run verify:all` evidence is regenerated after this checkpoint.
+- Verification classification: `MOCK_VERIFIED` for the path repair and local build. A fresh preview/production Eve deployment remains required before a snapshot-backed audit can be `LIVE_VERIFIED`.
+- Next exact action: push this repair, obtain human review and merge, confirm the Vercel preview/production Eve build succeeds, invoke only the native audit Cron, and confirm the audit report uses `BUNDLED_GIT_SNAPSHOT` before any proposal workflow.
+
 ## Phase 48: Deployed Repository Snapshot and Session Budget Repair (2026-08-02)
 
 - State: READY_FOR_HUMAN_REVIEW. The live audit Agent Run `wrun_41KZ2D4AYN0GNV22XCFMD9N5JQ` completed on deployment `dpl_8LwcUX8D4VqvQoYwPni4eMbdRZjR` at `2026-08-02T23:32:26.259Z`, but truthfully returned `BLOCKED_MISSING_CREDENTIALS`: the independently built Vercel Eve service did not have the Git-backed `app/`, `content/`, and `seo/` inputs needed to inventory the site. It created no content, branch, commit, or pull request. Its model invocation used `21,686` input tokens, exceeding the former local preflight ceiling of `16,000` even though the run itself completed.
