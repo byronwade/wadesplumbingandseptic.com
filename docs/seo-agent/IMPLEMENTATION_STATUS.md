@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 59: Expand-Existing Peer Review Instead of Full Rewrites (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked Eve to peer-review and expand good drafts for SEO depth instead of rewriting whole posts when they are only too thin or missing sections.
+- Correction: `src/draft-revision.mjs` classifies expandable quality gaps (`TOO_THIN`, FAQ/section/link/must-cover gaps, local/meta gaps) versus fatal claim failures. Proposal runs now peer-review the existing draft and run up to two expand/revise rounds with a smaller token budget and preserve-first prompts. Fatal claim failures still reject immediately with no rewrite loop.
+- PR briefs record expansion rounds so reviewers can see that Eve added depth instead of starting over.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`135/135` passing), including expand-existing and fatal-claim non-expand coverage.
+- Next exact action: merge/deploy with prior brief/autonomy work, then confirm a live draft that needed depth shows expansion rounds in the PR body.
+
 ## Phase 58: Detailed Draft PR Briefs (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner asked for detailed PR briefs that explain what Eve did, why it chose the topic over alternatives, why the post matters, and how it helps SEO.

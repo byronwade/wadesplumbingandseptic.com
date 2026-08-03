@@ -396,6 +396,148 @@ test("proposal rejects junk drafts instead of opening a Connect PR", async () =>
 	assert.equal(calls.length, 0);
 });
 
+test("proposal expands a good thin draft instead of rewriting from scratch", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		now: new Date("2026-08-01T12:00:00.000Z"),
+	});
+	const calls = [];
+	let reviserCalls = 0;
+	const result = await executeDraftProposal({
+		descriptor,
+		settings: loadRuntimeSettings(env),
+		config: config(),
+		repoRoot,
+		now: new Date("2026-08-01T12:00:00.000Z"),
+		browserResearch: null,
+		topicDecider: fixtureTopicDecider,
+		writer: async ({ opportunity }) => {
+			const links = opportunity.internal_links
+				.slice(0, 4)
+				.map((link) => `See [${link.anchor}](${link.to}) for next steps.`)
+				.join("\n\n");
+			const faqs = opportunity.people_also_ask
+				.map((question) => `### ${question}\n\nShort Santa Cruz County answer.`)
+				.join("\n\n");
+			// Good concept and structure, intentionally too thin for the SEO depth bar.
+			const thin = `---
+title: ${opportunity.click_title}
+description: "${opportunity.meta_hook}"
+category: ${opportunity.category}
+date: "2026-08-01"
+tags:
+  - santa cruz
+image: ${opportunity.image}
+imageAlt: "${opportunity.image_alt}"
+canonical: ${opportunity.owner_url}
+query_cluster: ${opportunity.query_cluster}
+evidence_ids: [${opportunity.evidence_ids.join(", ")}]
+---
+
+# ${opportunity.click_title}
+
+${opportunity.angle} ${opportunity.unique_value}
+Community timing context: ${opportunity.demand_source?.name ?? "Santa Cruz County"}.
+
+## Quick Answer for Santa Cruz County Homeowners
+
+- Inspect early.
+- Avoid unsafe shortcuts.
+- Use linked service pages when risk rises.
+- Keep photos before a visit.
+
+## What makes this guide different
+
+${opportunity.unique_value}
+
+## Prep notes
+
+Keep the concept. Add more later.
+
+## Hosting checks
+
+Check bathrooms before guests arrive in Santa Cruz County.
+
+## Kitchen habits
+
+Watch grease and disposals.
+
+## When to stop DIY
+
+Stop before unsafe work.
+
+## FAQ
+
+${faqs}
+
+${links}
+
+Visit [contact](/contact) when you want professional help.
+`;
+			return {
+				markdown: thin,
+				reservation: { cost_reservation: { reserved_max_cost_usd: 0.1 } },
+				model: "thin-writer",
+			};
+		},
+		reviser: async ({ markdown, peerReview, opportunity }) => {
+			reviserCalls += 1;
+			assert.equal(peerReview.mode, "EXPAND_EXISTING_DRAFT");
+			assert.match(
+				markdown,
+				new RegExp(
+					opportunity.click_title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+				),
+			);
+			assert.match(markdown, /Keep the concept/);
+			return {
+				markdown: richDraft(opportunity),
+				reservation: { cost_reservation: { reserved_max_cost_usd: 0.05 } },
+				model: "expand-reviser",
+			};
+		},
+		publisherFactory: publisherFactory(calls),
+	});
+	assert.equal(result.state, "DRAFT_PR_OPEN");
+	assert.equal(reviserCalls >= 1, true);
+	assert.equal(result.revision.expanded, true);
+	assert.equal(result.revision.publishable, true);
+	const prBody = calls.find(([name]) => name === "pr")[3];
+	assert.match(prBody, /expanded weak portions instead of rewriting/i);
+	assert.match(prBody, /Peer-review \/ expansion rounds/);
+	assert.match(prBody, /Round 1/);
+});
+
+test("fatal claim failures do not enter the expand path", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		now: new Date("2026-08-01T12:00:00.000Z"),
+	});
+	let reviserCalls = 0;
+	const result = await executeDraftProposal({
+		descriptor,
+		settings: loadRuntimeSettings(env),
+		config: config(),
+		repoRoot,
+		now: new Date("2026-08-01T12:00:00.000Z"),
+		browserResearch: null,
+		topicDecider: fixtureTopicDecider,
+		writer: async ({ opportunity }) => ({
+			markdown: `${richDraft(opportunity)}\n\nWe are licensed insured and available 24/7 for $99.\n`,
+			reservation: { cost_reservation: { reserved_max_cost_usd: 0.1 } },
+			model: "claim-writer",
+		}),
+		reviser: async () => {
+			reviserCalls += 1;
+			throw new Error("reviser should not run for fatal claim failures");
+		},
+		publisherFactory: publisherFactory([]),
+	});
+	assert.equal(result.state, "REJECTED_DRAFT_QUALITY");
+	assert.equal(result.reason, "UNSUPPORTED_MARKETING_CLAIM");
+	assert.equal(reviserCalls, 0);
+});
+
 test("proposal honors Eve topic decisions over score order", async () => {
 	const descriptor = createRunDescriptor({
 		job: "proposal",

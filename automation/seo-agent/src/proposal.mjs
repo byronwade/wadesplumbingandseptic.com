@@ -12,6 +12,11 @@ import {
 	selectBlogOpportunity,
 } from "./blog-opportunity.mjs";
 import { COMMUNITY_RESEARCH_DOMAINS } from "./constants.mjs";
+import {
+	buildExpansionPrompt,
+	isExpandableDraftFailure,
+	reviseDraftUntilPublishable,
+} from "./draft-revision.mjs";
 import { buildDemandAwareTopicCatalog } from "./local-demand.mjs";
 import { assertProposalRunAuthorization } from "./runtime.mjs";
 import { collectPageInventory } from "./inventory.mjs";
@@ -209,10 +214,8 @@ function extractMarkdown(text) {
 	return `${normalized}\n`;
 }
 
-async function writeWithGateway({ runId, opportunity, date }) {
+async function generateMarkdownWithGateway({ runId, prompt, maxOutputTokens }) {
 	const profile = resolveModelProfile("writing");
-	const prompt = buildWriterPrompt({ opportunity, date });
-	const maxOutputTokens = 6_500;
 	const reservation = reserveModelRequest({
 		runId,
 		prompt,
@@ -254,6 +257,37 @@ async function writeWithGateway({ runId, opportunity, date }) {
 	}
 }
 
+async function writeWithGateway({ runId, opportunity, date }) {
+	return generateMarkdownWithGateway({
+		runId,
+		prompt: buildWriterPrompt({ opportunity, date }),
+		maxOutputTokens: 6_500,
+	});
+}
+
+/**
+ * Expand/revise an existing draft. Uses a smaller token budget than a cold
+ * rewrite because the model is instructed to preserve good sections.
+ */
+async function expandWithGateway({
+	runId,
+	opportunity,
+	date,
+	markdown,
+	peerReview,
+}) {
+	return generateMarkdownWithGateway({
+		runId,
+		prompt: buildExpansionPrompt({
+			markdown,
+			opportunity,
+			peerReview,
+			date,
+		}),
+		maxOutputTokens: 3_500,
+	});
+}
+
 function formatAlternatives(considered = [], chosenId) {
 	const viable = considered
 		.filter((item) => item.viable && item.id !== chosenId)
@@ -291,6 +325,20 @@ function formatSkipped(considered = []) {
  * Detailed reviewer-facing brief for the Connect draft PR.
  * Exported for deterministic packet tests.
  */
+function formatRevisionRounds(revision = null) {
+	if (!revision?.expanded || !revision.rounds?.length) {
+		return "- No expansion rounds needed; the first draft passed quality gates.";
+	}
+	return revision.rounds
+		.map(
+			(round) =>
+				`- Round ${round.round}: peer-reviewed \`${round.quality_reason_before}\` via \`${round.mode}\`; after expand => ${
+					round.quality_ok_after ? "publishable" : round.quality_reason_after
+				}`,
+		)
+		.join("\n");
+}
+
 export function buildDraftPrBrief({
 	opportunity,
 	changeSet,
@@ -301,6 +349,7 @@ export function buildDraftPrBrief({
 	topicDecision,
 	considered = [],
 	selectionReason = null,
+	revision = null,
 }) {
 	const linkLines = opportunity.internal_links
 		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
@@ -347,7 +396,10 @@ export function buildDraftPrBrief({
 - Autonomously researched Santa Cruz County demand timing from the versioned holiday/event calendar and trending-concept windows.
 - Compared viable unused blog topics against the live Markdown inventory and link graph.
 - Chose **${opportunity.click_title}** (\`${opportunity.slug}\`) using decision mode \`${decisionMode}\`.
-- Wrote a people-first draft, ran fail-closed quality gates, then opened this draft-only Connect PR.
+- Wrote a people-first draft, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
+- Ran fail-closed quality gates, then opened this draft-only Connect PR.
+- Peer-review / expansion rounds:
+${formatRevisionRounds(revision)}
 - Research mode: ${researchMode} (${researchClass}).
 - Active demand signals considered:
 ${activeDemand.length > 0 ? activeDemand.join("\n") : "- None inside a lead window for this run."}
@@ -522,6 +574,7 @@ export async function executeDraftProposal({
 	config,
 	repoRoot,
 	writer = writeWithGateway,
+	reviser = expandWithGateway,
 	publisherFactory = createGithubDraftPublisher,
 	now,
 	browserResearch,
@@ -572,8 +625,31 @@ export async function executeDraftProposal({
 		opportunity,
 		date,
 	});
-	const markdown = extractMarkdown(written.markdown);
-	const quality = assertPublishableBlogDraft(markdown, opportunity);
+	let markdown = extractMarkdown(written.markdown);
+	let quality = assertPublishableBlogDraft(markdown, opportunity);
+	let writerModel = written.model;
+	let writerReservation = written.reservation;
+	let revision = Object.freeze({
+		expanded: false,
+		rounds: Object.freeze([]),
+		publishable: quality.ok === true,
+	});
+	if (!quality.ok && isExpandableDraftFailure(quality)) {
+		const revised = await reviseDraftUntilPublishable({
+			markdown,
+			opportunity,
+			date,
+			runId: descriptor.runId,
+			quality,
+			reviser,
+			assertQuality: assertPublishableBlogDraft,
+		});
+		markdown = revised.markdown;
+		quality = revised.quality;
+		revision = revised;
+		if (revised.model) writerModel = revised.model;
+		if (revised.reservation) writerReservation = revised.reservation;
+	}
 	if (!quality.ok) {
 		return Object.freeze({
 			classification: demandContext.research.classification,
@@ -588,7 +664,12 @@ export async function executeDraftProposal({
 				selection_reason: selection.selection_reason,
 			},
 			topic_decision: selection.topicDecision,
-			writer_model: written.model,
+			writer_model: writerModel,
+			revision: Object.freeze({
+				expanded: revision.expanded,
+				rounds: revision.rounds,
+				publishable: false,
+			}),
 		});
 	}
 	const changeSet = buildMarkdownChangeSet({
@@ -621,6 +702,10 @@ export async function executeDraftProposal({
 		fromSha: main.sha,
 	});
 	if (created?.classification === "BLOCKED_MISSING_CREDENTIALS") return created;
+	const writerEvidence = {
+		model: writerModel,
+		reservation: writerReservation,
+	};
 	const pr = await createDraftPullRequest({
 		humanApproval: true,
 		branch,
@@ -628,13 +713,14 @@ export async function executeDraftProposal({
 		body: packet({
 			opportunity,
 			changeSet,
-			writer: written,
+			writer: writerEvidence,
 			branch,
 			quality,
 			demandContext,
 			topicDecision: selection.topicDecision,
 			considered: selection.considered,
 			selectionReason: selection.selection_reason,
+			revision,
 		}),
 		changeSet,
 		gateway: publisher,
@@ -654,6 +740,11 @@ export async function executeDraftProposal({
 			demand_source: opportunity.demand_source,
 		},
 		topic_decision: selection.topicDecision,
+		revision: Object.freeze({
+			expanded: revision.expanded,
+			rounds: revision.rounds,
+			publishable: true,
+		}),
 		pr_brief_preview: {
 			why_chosen: selection.topicDecision?.reason ?? null,
 			why_over_others: selection.topicDecision?.why_over_others ?? null,
