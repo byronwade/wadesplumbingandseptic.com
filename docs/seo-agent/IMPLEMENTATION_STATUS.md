@@ -1,5 +1,17 @@
 # Eve SEO Agent Implementation Status
 
+<<<<<<< HEAD
+## Phase 64: Search Console live retest (2026-08-03)
+
+- State: COMPLETE retest. Search Console remains `LIVE_VERIFIED`.
+- Method: Re-armed Production for run ID `search-console-retest-2026-08-03` (`SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching approved run ID), redeployed `dpl_5q8pyVTiDp3Fra7eFwbW5myquTvq`, then triggered Production Cron `GET /_internal/eve/api/live-probe/search-console` three times. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted):
+  - `2026-08-03T14:46:43.279Z` request `6fxnq-1785768403279-e0b72c0b4d9d` → `200`
+  - `2026-08-03T14:46:59.797Z` request `7vhmb-1785768419797-cf14e9d7523f` → `200`
+  - `2026-08-03T14:47:07.183Z` request `78tfs-1785768427183-b28b62851423` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy `dpl_DapyXdqEZRGun8cRrzdSA2sJT1Qy`. Health again `mode: propose`, `mutation_kill_switch: false`.
+- Next exact action: start Task 2 (PageSpeed live verification) on its own PR.
+=======
 ## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).
@@ -20,6 +32,7 @@
 - After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, and set `SEO_AGENT_ENABLE_PAGESPEED=false`.
 - Out of scope (Task 3+): wiring PageSpeed into content QA or GSC into topic selection.
 - Next exact action: human merge/deploy this PR (or Production deploy of this branch), then run the Production live-probe Cron and record the redacted classification.
+>>>>>>> origin/main
 
 ## Phase 63: Task 1 Search Console LIVE_VERIFIED (2026-08-03)
 
