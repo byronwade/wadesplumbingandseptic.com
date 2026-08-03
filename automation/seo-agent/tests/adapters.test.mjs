@@ -93,6 +93,23 @@ test("configuration is typed, scoped, and never exposes credential values in its
 	);
 });
 
+test("standing Production propose auto-enables community browser research", () => {
+	const config = loadConfig({
+		SEO_AGENT_ENV: "production",
+		VERCEL_ENV: "production",
+	});
+	assert.equal(config.browserResearch.enabled, true);
+	assert.equal(config.browserResearch.mode, "AUTOMATIC_STANDING_PROPOSE");
+	assert.equal(
+		config.browserResearch.allowedDomains.includes("capitolaartandwine.com"),
+		true,
+	);
+	assert.equal(
+		config.browserResearch.allowedDomains.includes("www.watsonville.gov"),
+		true,
+	);
+});
+
 test("deployed sidecar configuration requires production plus an OIDC or Gateway credential", () => {
 	assert.throws(
 		() => assertDeployedSidecarReadiness(loadConfig({})),

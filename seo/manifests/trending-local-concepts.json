@@ -1,0 +1,187 @@
+{
+	"schema_version": "1.0",
+	"classification": "MOCK_VERIFIED",
+	"description": "Versioned Santa Cruz County trending concept windows for Eve blog timing. These are editorial hypotheses for local search demand, not Search Console metrics. Never treat them as traffic proof, rankings, or Wade business claims.",
+	"entries": [
+		{
+			"id": "trend-hard-water-coastal-scale-2026",
+			"kind": "TRENDING_CONCEPT",
+			"name": "hard water and coastal mineral scale",
+			"active_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+			"priority_months": [5, 6, 7, 8],
+			"slug": "hard-water-scale-santa-cruz-fixtures-water-heaters",
+			"query_cluster": "hard water scale Santa Cruz fixtures water heaters",
+			"click_title": "Hard Water Scale in Santa Cruz County Homes: What to Watch",
+			"meta_hook": "Mineral scale shortens fixture and heater life. Spot hard-water wear early in Santa Cruz County kitchens and baths.",
+			"unique_value": "Connect hard-water symptoms to coastal and well/municipal mix patterns homeowners actually see locally.",
+			"angle": "Teach recognition of scale on faucets, glass, and tankless units, plus safe owner limits before calling for descaling or repair.",
+			"community_context": "Many Santa Cruz County households deal with mineral-heavy water that quietly erodes fixtures and heater efficiency.",
+			"must_cover": [
+				"visible scale clues on faucets, glass, and showerheads",
+				"how scale stresses tank and tankless heaters differently",
+				"homeowner-safe wipe and filter habits versus pro descaling",
+				"when weak flow or error codes mean stop DIY"
+			],
+			"people_also_ask": [
+				"Does Santa Cruz County have hard water?",
+				"Can scale ruin a tankless water heater?",
+				"What homeowner cleaning is safe on fixtures?",
+				"When should I call for descaling?",
+				"Do water softeners change plumbing maintenance?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "hard water", "water heater", "fixtures"],
+			"image": "/images/services/water-heater-service.webp",
+			"image_alt": "Hard water scale on home plumbing fixtures",
+			"preferred_links": [
+				"/what-is-hard-water-why-does-it-matter-for-your-home",
+				"/service-offerings/tankless-water-heater-installation",
+				"/service-offerings/water-heater-installation",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/what-is-hard-water-why-does-it-matter-for-your-home",
+				"note": "Trend angle grounded in existing first-party hard-water content."
+			}
+		},
+		{
+			"id": "trend-vacation-rental-turnover-2026",
+			"kind": "TRENDING_CONCEPT",
+			"name": "vacation rental and guest turnover plumbing",
+			"active_months": [5, 6, 7, 8, 9],
+			"priority_months": [6, 7, 8],
+			"slug": "vacation-rental-plumbing-turnover-santa-cruz",
+			"query_cluster": "vacation rental plumbing turnover Santa Cruz County",
+			"click_title": "Vacation Rental Plumbing Turnover Checks for Santa Cruz Hosts",
+			"meta_hook": "Guest turnovers hide slow leaks and stressed drains. A host checklist for Santa Cruz County short stays.",
+			"unique_value": "Speak to coastal short-stay hosts and caretakers, not generic landlord tips.",
+			"angle": "Give a repeatable turnover walkthrough for bathrooms, laundry, outdoor rinses, and shutoff literacy between guests.",
+			"community_context": "Visitor-heavy months across Santa Cruz County raise laundry and shower cycles in short-stay homes.",
+			"must_cover": [
+				"between-guest bathroom and supply stop checks",
+				"laundry hose inspection on a turnover cadence",
+				"outdoor rinse habits after beach days",
+				"simple shutoff notes for cleaners or caretakers"
+			],
+			"people_also_ask": [
+				"What plumbing checks belong in a rental turnover?",
+				"How often should hosts inspect washer hoses?",
+				"Are outdoor beach rinses hard on hose bibs?",
+				"What should a cleaner do if a toilet will not stop running?",
+				"When should a caretaker call a plumber?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "vacation rental", "hosting guests", "summer"],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Vacation rental plumbing turnover checklist",
+			"preferred_links": [
+				"/service-offerings/leak-detection",
+				"/service-offerings/drain-cleaning",
+				"/how-to-avoid-common-holiday-plumbing-disasters",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 4,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/",
+				"note": "Seasonal hosting demand hypothesis for topic timing only."
+			}
+		},
+		{
+			"id": "trend-adu-plumbing-planning-2026",
+			"kind": "TRENDING_CONCEPT",
+			"name": "ADU and accessory dwelling plumbing planning",
+			"active_months": [1, 2, 3, 4, 5, 9, 10],
+			"priority_months": [2, 3, 4, 9, 10],
+			"slug": "adu-plumbing-planning-santa-cruz-county",
+			"query_cluster": "ADU plumbing planning Santa Cruz County",
+			"click_title": "ADU Plumbing Planning Questions for Santa Cruz County Homeowners",
+			"meta_hook": "Adding a unit? Learn which plumbing questions to ask before an ADU project in Santa Cruz County.",
+			"unique_value": "Focus on planning questions and capacity constraints, not permit legal advice or invented code interpretations.",
+			"angle": "Help homeowners inventory existing water, sewer/septic, and heater capacity before they sketch an ADU bathroom or kitchen.",
+			"community_context": "Accessory dwellings are a common local housing conversation, and plumbing capacity is often the quiet constraint.",
+			"must_cover": [
+				"why existing supply and drain capacity matter before design",
+				"septic versus sewer questions to ask early",
+				"water heater capacity for an added bath or kitchen",
+				"what belongs in a professional evaluation versus DIY guessing"
+			],
+			"people_also_ask": [
+				"Can my current water heater support an ADU?",
+				"Does a septic system change ADU plumbing plans?",
+				"What should I photograph before an estimate?",
+				"When do I need a dedicated line versus a tie-in?",
+				"What questions should I ask a plumber about an ADU?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "adu", "home addition", "planning"],
+			"image": "/images/services/fixture-installation.webp",
+			"image_alt": "Planning plumbing for an accessory dwelling",
+			"preferred_links": [
+				"/service-offerings/fixture-installation",
+				"/service-offerings/water-heater-installation",
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/contact"
+			],
+			"demand": 4,
+			"intent_fit": 5,
+			"cannibalization_risk": 1,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/",
+				"note": "Local housing-trend editorial hypothesis, not a permit or legal claim."
+			}
+		},
+		{
+			"id": "trend-storm-cleanout-awareness-2026",
+			"kind": "TRENDING_CONCEPT",
+			"name": "storm-week cleanout and backup awareness",
+			"active_months": [10, 11, 12, 1, 2, 3],
+			"priority_months": [11, 12, 1, 2],
+			"slug": "storm-week-cleanout-backup-awareness-santa-cruz",
+			"query_cluster": "storm week sewer cleanout backup Santa Cruz County",
+			"click_title": "Storm-Week Cleanout and Backup Awareness for Santa Cruz Homes",
+			"meta_hook": "Wet weeks raise backup risk. Know cleanout basics and safe responses before Santa Cruz County storms hit.",
+			"unique_value": "Teach recognition and safe limits around cleanouts during wet weather without inventing flood statistics.",
+			"angle": "Explain what homeowners can observe around cleanouts and floor drains during storms, and when to stop and call.",
+			"community_context": "Atmospheric river and wet-week patterns make backup and drainage questions surge across Santa Cruz County.",
+			"must_cover": [
+				"where cleanouts usually sit and why they matter in wet weeks",
+				"safe observations versus unsafe opening or DIY clearing",
+				"indoor signs of a stressed drain or sewer line",
+				"when standing water or sewage odor means professional help"
+			],
+			"people_also_ask": [
+				"What is a sewer cleanout?",
+				"Can heavy rain cause a backup inside the house?",
+				"What should I do if a floor drain gurgles in a storm?",
+				"Is it safe to open a cleanout myself?",
+				"When is sewage backup an emergency?"
+			],
+			"category": "Plumbing Tips",
+			"tags": ["santa cruz", "storm prep", "cleanout", "drain cleaning"],
+			"image": "/images/services/drain-clearing.webp",
+			"image_alt": "Storm-week drain and cleanout awareness",
+			"preferred_links": [
+				"/septic-safety-during-floods-santa-cruz",
+				"/service-offerings/drain-cleaning",
+				"/how-to-handle-a-clogged-drain-or-sewer-line",
+				"/contact"
+			],
+			"demand": 5,
+			"intent_fit": 5,
+			"cannibalization_risk": 2,
+			"source": {
+				"tier": "REPOSITORY_FACT",
+				"url": "https://www.wadesplumbingandseptic.com/septic-safety-during-floods-santa-cruz",
+				"note": "Seasonal storm awareness grounded in existing rainy-season content."
+			}
+		}
+	]
+}
