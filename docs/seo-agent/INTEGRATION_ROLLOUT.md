@@ -51,7 +51,7 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 6 — GA4 Analytics Data API
 
-- **Status:** `MOCK_VERIFIED` offline path (awaiting owner GA4 property access + Production Cron `LIVE_VERIFIED`)
+- **Status:** Offline `MOCK_VERIFIED`; Production path deployed; Cron returned `503` / `BLOCKED_MISSING_CREDENTIALS` until owner sets `GA4_PROPERTY_ID` (see Phase 75)
 - **Branch/PR:** `cursor/eve-ga4-live-aab8`
 - **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/ga4`; aggregate sessions only (`sessions_total` / `row_count`); service-account JWT via existing `GOOGLE_SERVICE_ACCOUNT_*` + `GA4_PROPERTY_ID` (optional `GA4_ACCESS_TOKEN` override); soft `FAILED` evidence for upstream errors
 - **Owner setup:** See `MANUAL_SETUP.md` → **Next: Google Analytics Data (GA4)** (enable Analytics Data API, grant SA Viewer on the property, set `GA4_PROPERTY_ID`)
