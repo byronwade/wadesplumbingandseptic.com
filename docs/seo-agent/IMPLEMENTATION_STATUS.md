@@ -1,5 +1,16 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 62: Task 1 Search Console Live Probe Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / blocked on Production deploy for final `LIVE_VERIFIED`. Task 1 from `INTEGRATION_ROLLOUT.md` started on dedicated branch `cursor/eve-search-console-live-aab8`.
+- Offline: focused Search Console probe helpers, CRON-authenticated Production route `GET /_internal/eve/api/live-probe/search-console?run_id=...`, CLI `npm run live:probe:search-console`, and deterministic fixtures. Sidecar `npm test` → `122/122` passing; verify/format/typecheck passed. This is `MOCK_VERIFIED` for the probe path.
+- Production config set for the exact run ID `search-console-live-2026-08-03`: `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, `SEO_AGENT_ENABLE_PAGESPEED=false`, `SEO_AGENT_LIVE_READS_APPROVED=true`, matching run ID, `SEO_AGENT_ENV=production` (boolean/run flags stored non-sensitive so CLI can see them).
+- Live blocker: `vercel env run -e production` does **not** inject Sensitive Production secrets (`GOOGLE_SERVICE_ACCOUNT_*`, `CRON_SECRET`, `PAGESPEED_API_KEY` absent in the local process). Local execute therefore cannot mint a Search Console token. Live proof must run inside the deployed Production Eve runtime after this PR is human-merged and deployed, via:
+  - `GET /_internal/eve/api/live-probe/search-console?run_id=search-console-live-2026-08-03` with `Authorization: Bearer $CRON_SECRET`
+- After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false` and remove the approved run ID. Do not start Task 2 until that proof exists.
+- Out of scope (Task 3): wiring GSC into topic selection.
+- Next exact action: human merge/deploy this PR, then run the Production live-probe URL once and record the redacted classification.
+
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner asked to remove safety guards so Eve can just open a draft PR.
