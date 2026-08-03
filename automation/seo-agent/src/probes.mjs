@@ -86,6 +86,77 @@ export async function probeSearchConsoleLive({
 }
 
 /**
+ * Focused Task 5 live probe: allowlisted HTTP browser research.
+ * Does not open PRs, run Search Console/PageSpeed, or create Browserbase sessions.
+ * Browserbase remains a separate optional adapter (blocked without project credentials).
+ */
+export async function probeBrowserResearchLive({
+	registry,
+	config,
+	runId = "browser-research-live-probe",
+	execute = false,
+	url,
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "browser-research",
+			scope: "public-web-research",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "browser-research-live-probe-disabled",
+			payload: {
+				reason:
+					"Browser research live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, enable SEO_AGENT_BROWSER_RESEARCH_ENABLED (or standing propose), then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.browserResearch?.enabled) {
+		throw new Error(
+			"Browser research probe refused because SEO_AGENT_BROWSER_RESEARCH_ENABLED is not true (and standing propose did not auto-enable it).",
+		);
+	}
+	const targetUrl =
+		url ?? config.siteUrl ?? "https://www.wadesplumbingandseptic.com/";
+	if (typeof targetUrl !== "string" || !targetUrl.startsWith("https://")) {
+		throw new Error(
+			"Browser research probe requires an https URL within the approved research-domain allowlist.",
+		);
+	}
+	if (typeof registry?.browser?.probe !== "function") {
+		throw new Error(
+			"Browser research probe requires a registry.browser adapter.",
+		);
+	}
+	try {
+		return assertEvidence(
+			await retryReadOnly(() =>
+				registry.browser.probe({ runId, url: targetUrl }),
+			),
+		);
+	} catch (error) {
+		return makeEvidence({
+			runId,
+			source: "browser-research",
+			scope: "public-web-research",
+			classification: "FAILED",
+			sourceUrlOrTool: targetUrl,
+			payload: {
+				reason:
+					error instanceof Error
+						? error.message
+						: "Browser research request failed.",
+				next_action:
+					"Confirm the target host is in SEO_AGENT_BROWSER_ALLOWED_DOMAINS / COMMUNITY_RESEARCH_DOMAINS and that the origin is reachable.",
+			},
+		});
+	}
+}
+
+/**
  * Focused PageSpeed live probe used by Task 2. Does not dispatch other
  * adapters, so a PageSpeed proof cannot be confused with Search Console/GA4.
  */

@@ -16,6 +16,10 @@
 		{
 			"path": "/_internal/eve/api/live-probe/pagespeed-qa",
 			"schedule": "0 0 1 1 *"
+		},
+		{
+			"path": "/_internal/eve/api/live-probe/browser-research",
+			"schedule": "0 0 1 1 *"
 		}
 	],
 	"services": {
