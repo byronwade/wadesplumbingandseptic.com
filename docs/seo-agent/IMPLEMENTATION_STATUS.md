@@ -1,5 +1,64 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 61: Sequential Integration Rollout Task Board (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked for a task per recommended integration, each with its own PR, thorough tests, and live confirmation before the next feature starts. Search Console and PageSpeed credentials were reported already granted.
+- Branch: `cursor/integration-rollout-tasks-aab8`.
+- Changed scope: added `docs/seo-agent/INTEGRATION_ROLLOUT.md` with 14 sequenced tasks (Search Console live first, then PageSpeed live, then wiring PRs, then browser/GA4/Local Falcon/GBP/SERP/Trends/judge/indexation/observation/images). Rules require one feature per PR and a truthful `LIVE_VERIFIED` (or recorded blocker) before the next task.
+- Credential check: Production env for `wadesplumbingandseptic-com` contains `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`, `PAGESPEED_API_KEY`, and the Search Console / PageSpeed enable flags, plus live-read approval vars. Values were not logged. Neither adapter is treated as `LIVE_VERIFIED` until a redacted live probe succeeds.
+- Verification: documentation-only change; no adapter code change in this phase. This is planning evidence, not a live integration proof.
+- Next exact action: human review of the task board, then start Task 1 only (Search Console live probe) on a dedicated branch/PR.
+
+## Phase 60: Proposal Generation Token Safeguards (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked to confirm the generation pipeline is careful with tokens and to add safeguards so Eve cannot accidentally burn the session budget on wasteful generation. Follow-up: quality remains more important than thrift.
+- Branch: `cursor/eve-blog-quality-aab8`.
+- Changed scope: added `src/generation-guards.mjs` with proposal-stage waste ceilings. Quality-first budgets: write **6,500**, expand **4,000**, expand-prompt draft ceiling **28,000** chars, reserved output **20,000**, max **5** model calls. Safeguards that remain: skip obvious topic-model re-ranks, no-progress expand stop, structure-preserving truncation only for runaway input, and fallback calls billed to the same guard. Expand prompts explicitly prioritize completeness over brevity. PR briefs report generation spend.
+- Verification: with Node from the environment `PATH`, sidecar `npm test` exited `0` (`144/144` passing), including quality-first budget floors, structure-preserving truncation, and no-progress expand stop. This remains `MOCK_VERIFIED`; AI Gateway is not called by these fixtures.
+- Next exact action: human review of PR #104 (blog quality + demand + autonomy + expand + token safeguards). No merge/deploy by Eve.
+
+## Phase 59: Expand-Existing Peer Review Instead of Full Rewrites (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked Eve to peer-review and expand good drafts for SEO depth instead of rewriting whole posts when they are only too thin or missing sections.
+- Correction: `src/draft-revision.mjs` classifies expandable quality gaps (`TOO_THIN`, FAQ/section/link/must-cover gaps, local/meta gaps) versus fatal claim failures. Proposal runs now peer-review the existing draft and run up to two expand/revise rounds with a smaller token budget and preserve-first prompts. Fatal claim failures still reject immediately with no rewrite loop.
+- PR briefs record expansion rounds so reviewers can see that Eve added depth instead of starting over.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`135/135` passing), including expand-existing and fatal-claim non-expand coverage.
+- Next exact action: merge/deploy with prior brief/autonomy work, then confirm a live draft that needed depth shows expansion rounds in the PR body.
+
+## Phase 58: Detailed Draft PR Briefs (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner asked for detailed PR briefs that explain what Eve did, why it chose the topic over alternatives, why the post matters, and how it helps SEO.
+- Correction: Connect draft PR bodies now use `buildDraftPrBrief` with reviewer sections for run actions, timing importance, alternatives considered/skipped, SEO mechanics, expected observation window, and execution evidence, while keeping the required packet markers.
+- Topic decisions also capture `why_over_others` and `seo_value` for the brief.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`130/130` passing), including detailed brief packet marker coverage.
+- Next exact action: merge/deploy with prior autonomy work, then confirm the next live draft PR body contains the detailed brief sections.
+
+## Phase 57: Fully Autonomous Research and Topic Decisions (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW. Owner direction: nothing in the proposal path should be an owner option or unavailable toggle. Eve must research and decide automatically.
+- Correction: standing Production propose auto-enables community browser research with versioned hosts (`COMMUNITY_RESEARCH_DOMAINS`). Proposal runs attach the browser research adapter by default (fixtures may pass `null` only for offline tests). Eve also runs an autonomous model topic decision over viable candidates; score ranking remains fallback only when the model cannot return a valid id. Writer prompts receive decision rationale and research notes.
+- Remaining human boundary: draft PR merge/release only. Eve still cannot write `main`, merge, or deploy.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`129/129` passing). Classification for automatic research/decision wiring is `MOCK_VERIFIED` until the next live Cron draft is reviewed.
+- Next exact action: merge and deploy, run Eve Cron, confirm the draft PR packet shows model topic decision plus automatic demand research without owner env toggles.
+
+## Phase 56: Automatic Local Demand and Community Timing (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / extended by Phase 57. Owner asked for a more advanced automatic research path: holidays, trending concepts, and Santa Cruz County community events (including Capitola Art & Wine) so neighbors find and click the site.
+- Correction: Eve proposal selection now merges a versioned local demand calendar (`seo/manifests/local-demand-calendar.json`) and trending local concepts (`seo/manifests/trending-local-concepts.json`) ahead of the evergreen catalog. Active windows cover Independence Day, Labor Day, Thanksgiving, New Year, Watsonville Strawberry Festival, Capitola Art & Wine, Santa Cruz County Fair, Open Studios, rainy season, and summer visitor hosting, plus hard-water, vacation-rental, ADU, and storm-week trend concepts.
+- Runtime: demand timing is automatic from versioned manifests. Phase 57 removes the owner browser-research toggle requirement for standing propose.
+- Quality: demand-timed drafts must name the community event/holiday/trend, keep people-first depth gates, and reject fake event affiliation claims.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`127/127` passing before Phase 57).
+- Next exact action: complete Phase 57 merge/deploy proof.
+
+## Phase 55: Blog Generation Quality Rebuild (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / extended by Phase 56. Owner closed the thin Connect draft (#102) and asked for people-first SEO content that can compete: more unique pages, stronger click appeal, and enough depth to satisfy helpful-content expectations.
+- Live proof context: Cron → Connect previously opened draft PR [#102](https://github.com/byronwade/wadesplumbingandseptic.com/pull/102) via `gitwadesplumbingandseptic-com[bot]` (Agent Run `wrun_41KZ3TS9TB0GQPT2K1YEX9SMHQ`). That post was generic, non-local, thinly linked, and not worth keeping. PRs `#102` and `#101` are closed; the colliding `eve/seo/...hosting-checklist...` branch was deleted.
+- Root cause: the live Cron path used a hardcoded hosting-checklist topic, a generic anti-local writer prompt, a single home link, and fallback publishing that could open a draft PR from junk Markdown.
+- Correction: `src/blog-opportunity.mjs` now holds a 10-topic Santa Cruz County catalog with click titles, CTR meta hooks, unique-value briefs, must-cover points, and people-also-ask questions. Selection stays inventory-aware. The writer brief targets people-first helpful content. Publish gates require about `1,400`+ words, `7`+ H2s, Quick Answer, unique-value section, `5`+ FAQ answers, `4`+ planned internal links, local meta description, and reject generic filler or unsupported claims. Writer max output tokens raised to `6,500`. Junk drafts still return `REJECTED_DRAFT_QUALITY` with no Connect PR.
+- Verification: with Node `v24.14.0`, sidecar `npm test` exited `0` (`122/122` passing originally; Phase 56 raises the suite to `127/127`).
+- Next exact action: complete Phase 56 merge/deploy proof.
+
 ## Phase 53: Remove Draft-PR Safety Blocks (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW. Owner asked to remove safety guards so Eve can just open a draft PR.
