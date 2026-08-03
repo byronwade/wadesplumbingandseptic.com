@@ -4,6 +4,10 @@
 		{
 			"path": "/_internal/eve/api/live-probe/search-console",
 			"schedule": "0 0 1 1 *"
+		},
+		{
+			"path": "/_internal/eve/api/live-probe/pagespeed",
+			"schedule": "0 0 1 1 *"
 		}
 	],
 	"services": {

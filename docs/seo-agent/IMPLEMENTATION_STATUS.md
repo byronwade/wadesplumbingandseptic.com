@@ -1,5 +1,6 @@
 # Eve SEO Agent Implementation Status
 
+<<<<<<< HEAD
 ## Phase 64: Search Console live retest (2026-08-03)
 
 - State: COMPLETE retest. Search Console remains `LIVE_VERIFIED`.
@@ -10,6 +11,28 @@
   - `2026-08-03T14:47:07.183Z` request `78tfs-1785768427183-b28b62851423` → `200`
 - Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy `dpl_DapyXdqEZRGun8cRrzdSA2sJT1Qy`. Health again `mode: propose`, `mutation_kill_switch: false`.
 - Next exact action: start Task 2 (PageSpeed live verification) on its own PR.
+=======
+## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).
+- Branch/PR: `cursor/eve-pagespeed-live-aab8` / draft PR for Task 2.
+- Method: Production Cron invocation of `GET /_internal/eve/api/live-probe/pagespeed` with Vercel-injected `CRON_SECRET`. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`. First armed attempt on the initial probe path returned `403` in ~300ms (upstream/request-bound failure before the longer PageSpeed policy landed); after raising the PageSpeed timeout/byte budget and returning `FAILED` evidence for upstream errors, three Cron probes succeeded.
+- Evidence (redacted): three successful Production responses on deployment `dpl_8jiVBefvXrezjkZsYUbNQk9rZtvy`:
+  - `2026-08-03T15:02:34.624Z` request `jlmdf-1785769354624-edf5f2e49d8b` → `200`
+  - `2026-08-03T15:04:18.215Z` request `89kdm-1785769458215-e741a6a75eb2` → `200`
+  - `2026-08-03T15:05:54.588Z` request `x288r-1785769554588-9e473083c699` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_PAGESPEED=false`, Production redeploy `dpl_4CyZxrkZM3p3pkxBbiGJfx5VRkXr`. Health remains `mode: propose`, `mutation_kill_switch: false`.
+- Next exact action: human-merge this Task 2 PR to `main`, then start Task 3 (Search Console topic wiring) on its own PR.
+
+## Phase 65: Task 2 PageSpeed Live Probe Path (2026-08-03)
+
+- State: SUPERSEDED by Phase 66 live proof. Offline probe path shipped on `cursor/eve-pagespeed-live-aab8` (`MOCK_VERIFIED` fixtures; `127/127` tests).
+- Offline: focused PageSpeed probe helpers, CRON-authenticated Production route `GET /_internal/eve/api/live-probe/pagespeed`, CLI `npm run live:probe:pagespeed`, annual manual-trigger Cron entry, and deterministic fixtures. Deployment-config verifier allowlists only the Search Console and PageSpeed live-probe crons. Sidecar `npm test` → `127/127` passing; format/typecheck/verify passed. This is `MOCK_VERIFIED` for the probe path.
+- Live proof plan: set `SEO_AGENT_ENABLE_PAGESPEED=true`, keep Search Console disabled, `SEO_AGENT_LIVE_READS_APPROVED=true` with exact run ID `pagespeed-live-2026-08-03`, redeploy Production, then `vercel crons run '/_internal/eve/api/live-probe/pagespeed'`. Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- After a `LIVE_VERIFIED` response: reset `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, and set `SEO_AGENT_ENABLE_PAGESPEED=false`.
+- Out of scope (Task 3+): wiring PageSpeed into content QA or GSC into topic selection.
+- Next exact action: human merge/deploy this PR (or Production deploy of this branch), then run the Production live-probe Cron and record the redacted classification.
+>>>>>>> origin/main
 
 ## Phase 63: Task 1 Search Console LIVE_VERIFIED (2026-08-03)
 

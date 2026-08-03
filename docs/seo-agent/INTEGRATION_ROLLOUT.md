@@ -13,5 +13,8 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 2 — PageSpeed Insights live verification
 
-- **Status:** `READY_TO_START`
-- **PR:** dedicated PageSpeed branch next
+- **Status:** `LIVE_VERIFIED` (2026-08-03)
+- **PR:** `cursor/eve-pagespeed-live-aab8`
+- **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for PageSpeed `LIVE_VERIFIED`)
+- **Request IDs:** `jlmdf-1785769354624-edf5f2e49d8b`, `89kdm-1785769458215-e741a6a75eb2`, `x288r-1785769554588-9e473083c699`
+- **Exit gate:** Task 3 may start after this PR is human-merged to `main`

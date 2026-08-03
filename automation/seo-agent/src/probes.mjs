@@ -79,6 +79,55 @@ export async function probeSearchConsoleLive({
 	);
 }
 
+/**
+ * Focused PageSpeed live probe used by Task 2. Does not dispatch other
+ * adapters, so a PageSpeed proof cannot be confused with Search Console/GA4.
+ */
+export async function probePageSpeedLive({
+	registry,
+	config,
+	runId = "pagespeed-live-probe",
+	execute = false,
+	url = config?.siteUrl,
+	strategy = "mobile",
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "pagespeed",
+			scope: "performance-audit",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "pagespeed-live-probe-disabled",
+			payload: {
+				reason:
+					"PageSpeed live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, enable SEO_AGENT_ENABLE_PAGESPEED, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.pageSpeed) {
+		throw new Error(
+			"PageSpeed probe refused because SEO_AGENT_ENABLE_PAGESPEED is not true.",
+		);
+	}
+	if (typeof url !== "string" || !/^https:\/\//.test(url)) {
+		throw new Error(
+			"PageSpeed probe requires an https site URL (SEO_AGENT_SITE_URL or config.siteUrl).",
+		);
+	}
+	if (typeof registry?.pagespeed?.probe !== "function") {
+		throw new Error("PageSpeed probe requires a registry adapter.");
+	}
+	return assertEvidence(
+		await retryReadOnly(() =>
+			registry.pagespeed.probe({ runId, url, strategy }),
+		),
+	);
+}
+
 export async function probeReadOnlyIntegrations({
 	registry,
 	config,
