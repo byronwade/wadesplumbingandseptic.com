@@ -4,6 +4,12 @@
  * still need work.
  */
 
+import {
+	hasRevisionProgress,
+	PROPOSAL_GENERATION_LIMITS,
+	truncateDraftForExpansionPrompt,
+} from "./generation-guards.mjs";
+
 export const EXPANDABLE_QUALITY_REASONS = Object.freeze([
 	"TOO_THIN",
 	"INSUFFICIENT_SECTIONS",
@@ -203,6 +209,10 @@ export function buildExpansionPrompt({
 	const linkLines = (opportunity.internal_links ?? [])
 		.map((link) => `- [${link.anchor}](${link.to})`)
 		.join("\n");
+	const draftSlice = truncateDraftForExpansionPrompt(
+		markdown,
+		PROPOSAL_GENERATION_LIMITS.maxExpandPromptDraftChars,
+	);
 
 	return `You are peer-reviewing an existing Wade's Plumbing & Septic SEO draft for Santa Cruz County.
 
@@ -229,10 +239,11 @@ Rules:
 4. Do not invent prices, licensed/insured claims, 24/7, sponsorship, or "serving City" claims.
 5. Prefer new paragraphs under existing H2s over replacing whole sections.
 6. Target people-first helpful content that can compete in Google Search.
+7. Do not restate unchanged sections at length; keep good prose and only grow the gaps.
 
 Existing draft to improve:
 <<<EXISTING_DRAFT
-${markdown.trim()}
+${draftSlice.text}
 EXISTING_DRAFT<<<`;
 }
 
@@ -248,6 +259,7 @@ export async function reviseDraftUntilPublishable({
 	reviser,
 	assertQuality,
 	maxRounds = MAX_DRAFT_EXPANSION_ROUNDS,
+	generationGuard = null,
 } = {}) {
 	if (typeof reviser !== "function") {
 		throw new Error("Draft revision requires a reviser function.");
@@ -259,6 +271,7 @@ export async function reviseDraftUntilPublishable({
 	let currentQuality = quality;
 	let currentModel = null;
 	let reservation = null;
+	let stopReason = null;
 	const rounds = [];
 	for (let round = 1; round <= maxRounds; round += 1) {
 		if (!isExpandableDraftFailure(currentQuality)) break;
@@ -267,6 +280,7 @@ export async function reviseDraftUntilPublishable({
 			opportunity,
 			quality: currentQuality,
 		});
+		const reasonBefore = currentQuality.reason;
 		const revised = await reviser({
 			runId,
 			opportunity,
@@ -275,23 +289,34 @@ export async function reviseDraftUntilPublishable({
 			peerReview,
 			quality: currentQuality,
 			round,
+			generationGuard,
 		});
 		currentMarkdown = revised.markdown;
 		currentModel = revised.model ?? currentModel;
 		reservation = revised.reservation ?? reservation;
 		currentQuality = assertQuality(currentMarkdown, opportunity);
+		const progressed = hasRevisionProgress({
+			reasonBefore,
+			reasonAfter: currentQuality.reason,
+			okAfter: currentQuality.ok,
+		});
 		rounds.push(
 			Object.freeze({
 				round,
 				quality_reason_before: peerReview.quality_reason,
 				quality_ok_after: currentQuality.ok,
 				quality_reason_after: currentQuality.reason,
+				progressed,
 				mode: peerReview.mode,
 				expand: peerReview.expand,
 			}),
 		);
 		if (currentQuality.ok) break;
 		if (isFatalDraftFailure(currentQuality)) break;
+		if (!progressed) {
+			stopReason = "NO_REVISION_PROGRESS";
+			break;
+		}
 	}
 	return Object.freeze({
 		markdown: currentMarkdown,
@@ -301,5 +326,6 @@ export async function reviseDraftUntilPublishable({
 		rounds: Object.freeze(rounds),
 		expanded: rounds.length > 0,
 		publishable: currentQuality.ok === true,
+		stop_reason: stopReason,
 	});
 }

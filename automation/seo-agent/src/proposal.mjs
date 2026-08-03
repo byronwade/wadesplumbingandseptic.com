@@ -17,6 +17,12 @@ import {
 	isExpandableDraftFailure,
 	reviseDraftUntilPublishable,
 } from "./draft-revision.mjs";
+import {
+	buildScoreFallbackTopicDecision,
+	createProposalGenerationGuard,
+	PROPOSAL_GENERATION_LIMITS,
+	shouldSkipTopicModelDecision,
+} from "./generation-guards.mjs";
 import { buildDemandAwareTopicCatalog } from "./local-demand.mjs";
 import { assertProposalRunAuthorization } from "./runtime.mjs";
 import { collectPageInventory } from "./inventory.mjs";
@@ -135,7 +141,25 @@ async function decideTopicWithGateway({
 	candidates,
 	research,
 	considered,
+	generationGuard = null,
 }) {
+	const skip = shouldSkipTopicModelDecision({
+		ranked: candidates,
+		considered,
+	});
+	if (skip.skip) {
+		generationGuard?.record({
+			stage: "topic_decision",
+			skipped: true,
+			note: skip.reason,
+		});
+		return buildScoreFallbackTopicDecision({
+			topic: candidates[0],
+			considered,
+			skipReason: skip.reason,
+		});
+	}
+
 	const profile = resolveModelProfile("writing");
 	const payload = candidates.map((topic) => ({
 		id: topic.id,
@@ -165,12 +189,22 @@ Return ONLY JSON with detailed reviewer-facing rationale:
   "why_over_others": "<2 to 4 sentences: why this beat the other viable candidates>",
   "seo_value": "<2 to 4 sentences: how this helps search visibility, clicks, and internal linking>"
 }`;
-	const maxOutputTokens = 700;
+	const maxOutputTokens =
+		PROPOSAL_GENERATION_LIMITS.topicDecisionMaxOutputTokens;
+	generationGuard?.assertCanReserve({
+		stage: "topic_decision",
+		maxOutputTokens,
+	});
 	const reservation = reserveModelRequest({
 		runId,
 		prompt,
 		maxOutputTokens,
 		model: profile.primary,
+	});
+	generationGuard?.record({
+		stage: "topic_decision",
+		maxOutputTokens,
+		note: `score_gap=${skip.score_gap ?? "n/a"}`,
 	});
 	const result = await generateText({
 		model: gateway(profile.primary),
@@ -214,14 +248,23 @@ function extractMarkdown(text) {
 	return `${normalized}\n`;
 }
 
-async function generateMarkdownWithGateway({ runId, prompt, maxOutputTokens }) {
+async function generateMarkdownWithGateway({
+	runId,
+	prompt,
+	maxOutputTokens,
+	stage = "write",
+	generationGuard = null,
+	allowFallback = true,
+}) {
 	const profile = resolveModelProfile("writing");
+	generationGuard?.assertCanReserve({ stage, maxOutputTokens });
 	const reservation = reserveModelRequest({
 		runId,
 		prompt,
 		maxOutputTokens,
 		model: profile.primary,
 	});
+	generationGuard?.record({ stage, maxOutputTokens });
 	try {
 		const result = await generateText({
 			model: gateway(profile.primary),
@@ -236,12 +279,23 @@ async function generateMarkdownWithGateway({ runId, prompt, maxOutputTokens }) {
 		};
 	} catch (error) {
 		const secondary = profile.fallbacks?.[0];
-		if (!secondary) throw error;
+		if (!allowFallback || !secondary) throw error;
+		// Fallback re-reserves against the same proposal guard so a failed
+		// primary cannot silently double the generation budget.
+		generationGuard?.assertCanReserve({
+			stage: `${stage}_fallback`,
+			maxOutputTokens,
+		});
 		const fallbackReservation = reserveModelRequest({
 			runId,
 			prompt,
 			maxOutputTokens,
 			model: secondary,
+		});
+		generationGuard?.record({
+			stage: `${stage}_fallback`,
+			maxOutputTokens,
+			note: "primary_failed",
 		});
 		const result = await generateText({
 			model: gateway(secondary),
@@ -257,11 +311,19 @@ async function generateMarkdownWithGateway({ runId, prompt, maxOutputTokens }) {
 	}
 }
 
-async function writeWithGateway({ runId, opportunity, date }) {
+async function writeWithGateway({
+	runId,
+	opportunity,
+	date,
+	generationGuard = null,
+}) {
 	return generateMarkdownWithGateway({
 		runId,
 		prompt: buildWriterPrompt({ opportunity, date }),
-		maxOutputTokens: 6_500,
+		maxOutputTokens: PROPOSAL_GENERATION_LIMITS.writeMaxOutputTokens,
+		stage: "write",
+		generationGuard,
+		allowFallback: true,
 	});
 }
 
@@ -275,6 +337,8 @@ async function expandWithGateway({
 	date,
 	markdown,
 	peerReview,
+	round = 1,
+	generationGuard = null,
 }) {
 	return generateMarkdownWithGateway({
 		runId,
@@ -284,7 +348,11 @@ async function expandWithGateway({
 			peerReview,
 			date,
 		}),
-		maxOutputTokens: 3_500,
+		maxOutputTokens: PROPOSAL_GENERATION_LIMITS.expandMaxOutputTokens,
+		stage: `expand_round_${round}`,
+		generationGuard,
+		// Second expand already spent a round; do not double-spend on fallback.
+		allowFallback: round <= 1,
 	});
 }
 
@@ -329,14 +397,33 @@ function formatRevisionRounds(revision = null) {
 	if (!revision?.expanded || !revision.rounds?.length) {
 		return "- No expansion rounds needed; the first draft passed quality gates.";
 	}
-	return revision.rounds
-		.map(
-			(round) =>
-				`- Round ${round.round}: peer-reviewed \`${round.quality_reason_before}\` via \`${round.mode}\`; after expand => ${
-					round.quality_ok_after ? "publishable" : round.quality_reason_after
-				}`,
+	const lines = revision.rounds.map((round) => {
+		const progress =
+			round.progressed === false ? "; stopped for no progress" : "";
+		return `- Round ${round.round}: peer-reviewed \`${round.quality_reason_before}\` via \`${round.mode}\`; after expand => ${
+			round.quality_ok_after ? "publishable" : round.quality_reason_after
+		}${progress}`;
+	});
+	if (revision.stop_reason) {
+		lines.push(`- Expansion stop reason: \`${revision.stop_reason}\`.`);
+	}
+	return lines.join("\n");
+}
+
+function formatGenerationSpend(generation = null) {
+	if (!generation) {
+		return "- Generation spend was not recorded for this packet.";
+	}
+	const callLines = (generation.call_log ?? [])
+		.map((call) =>
+			call.skipped
+				? `- Skipped \`${call.stage}\` (${call.note ?? "token_save"})`
+				: `- Called \`${call.stage}\` with max output ${call.max_output_tokens}`,
 		)
 		.join("\n");
+	return `- Model calls used: ${generation.calls}/${generation.max_model_calls}
+- Reserved output tokens: ${generation.reserved_output_tokens}/${generation.max_reserved_output_tokens}
+${callLines || "- No generation stages recorded."}`;
 }
 
 export function buildDraftPrBrief({
@@ -350,6 +437,7 @@ export function buildDraftPrBrief({
 	considered = [],
 	selectionReason = null,
 	revision = null,
+	generation = null,
 }) {
 	const linkLines = opportunity.internal_links
 		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
@@ -398,6 +486,8 @@ export function buildDraftPrBrief({
 - Chose **${opportunity.click_title}** (\`${opportunity.slug}\`) using decision mode \`${decisionMode}\`.
 - Wrote a people-first draft, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
 - Ran fail-closed quality gates, then opened this draft-only Connect PR.
+- Token-efficiency safeguards:
+${formatGenerationSpend(generation)}
 - Peer-review / expansion rounds:
 ${formatRevisionRounds(revision)}
 - Research mode: ${researchMode} (${researchClass}).
@@ -481,6 +571,7 @@ async function resolveTopicSelection({
 	runId,
 	research,
 	topicDecider,
+	generationGuard = null,
 }) {
 	const ranking = rankViableBlogTopics({ inventory, catalog });
 	if (rankedEmpty(ranking)) {
@@ -511,6 +602,7 @@ async function resolveTopicSelection({
 			candidates: ranking.ranked.slice(0, 8),
 			research,
 			considered: ranking.considered,
+			generationGuard,
 		});
 		if (decided?.topic_id) {
 			topicDecision = Object.freeze({
@@ -520,6 +612,7 @@ async function resolveTopicSelection({
 				seo_value: decided.seo_value,
 				topic_id: decided.topic_id,
 				model: decided.model ?? null,
+				skip_reason: decided.skip_reason ?? null,
 			});
 		}
 	} catch {
@@ -579,6 +672,7 @@ export async function executeDraftProposal({
 	now,
 	browserResearch,
 	topicDecider = decideTopicWithGateway,
+	generationGuard = null,
 } = {}) {
 	assertProposalRunAuthorization({ descriptor, settings, config });
 	const effectiveNow = resolveProposalNow(descriptor, now);
@@ -593,12 +687,14 @@ export async function executeDraftProposal({
 		browserResearch: researchAdapter,
 		runId: descriptor.runId,
 	});
+	const guard = generationGuard ?? createProposalGenerationGuard();
 	const selection = await resolveTopicSelection({
 		inventory,
 		catalog: demandContext.catalog,
 		runId: descriptor.runId,
 		research: demandContext.research,
 		topicDecider,
+		generationGuard: guard,
 	});
 	if (selection.decision !== "PROPOSE_FOR_HUMAN_REVIEW") {
 		return Object.freeze({
@@ -609,6 +705,7 @@ export async function executeDraftProposal({
 			run_id: descriptor.runId,
 			considered: selection.considered,
 			topic_decision: selection.topicDecision,
+			generation: guard.snapshot(),
 			demand: Object.freeze({
 				calendar_loaded: demandContext.calendar_loaded,
 				trends_loaded: demandContext.trends_loaded,
@@ -624,6 +721,7 @@ export async function executeDraftProposal({
 		runId: descriptor.runId,
 		opportunity,
 		date,
+		generationGuard: guard,
 	});
 	let markdown = extractMarkdown(written.markdown);
 	let quality = assertPublishableBlogDraft(markdown, opportunity);
@@ -633,6 +731,7 @@ export async function executeDraftProposal({
 		expanded: false,
 		rounds: Object.freeze([]),
 		publishable: quality.ok === true,
+		stop_reason: null,
 	});
 	if (!quality.ok && isExpandableDraftFailure(quality)) {
 		const revised = await reviseDraftUntilPublishable({
@@ -643,6 +742,7 @@ export async function executeDraftProposal({
 			quality,
 			reviser,
 			assertQuality: assertPublishableBlogDraft,
+			generationGuard: guard,
 		});
 		markdown = revised.markdown;
 		quality = revised.quality;
@@ -665,10 +765,12 @@ export async function executeDraftProposal({
 			},
 			topic_decision: selection.topicDecision,
 			writer_model: writerModel,
+			generation: guard.snapshot(),
 			revision: Object.freeze({
 				expanded: revision.expanded,
 				rounds: revision.rounds,
 				publishable: false,
+				stop_reason: revision.stop_reason ?? null,
 			}),
 		});
 	}
@@ -721,6 +823,7 @@ export async function executeDraftProposal({
 			considered: selection.considered,
 			selectionReason: selection.selection_reason,
 			revision,
+			generation: guard.snapshot(),
 		}),
 		changeSet,
 		gateway: publisher,
@@ -740,10 +843,12 @@ export async function executeDraftProposal({
 			demand_source: opportunity.demand_source,
 		},
 		topic_decision: selection.topicDecision,
+		generation: guard.snapshot(),
 		revision: Object.freeze({
 			expanded: revision.expanded,
 			rounds: revision.rounds,
 			publishable: true,
+			stop_reason: revision.stop_reason ?? null,
 		}),
 		pr_brief_preview: {
 			why_chosen: selection.topicDecision?.reason ?? null,

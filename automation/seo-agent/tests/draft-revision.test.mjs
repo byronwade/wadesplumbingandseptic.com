@@ -100,6 +100,52 @@ Yes.
 	assert.equal(prompt.includes("\u2014"), false);
 });
 
+test("expansion prompt truncates very long existing drafts", () => {
+	const longBody = Array.from({ length: 400 }, (_, i) =>
+		`Paragraph ${i} adds Santa Cruz County hosting detail for guests and bathrooms.`,
+	).join("\n\n");
+	const markdown = `---
+title: Keep This Concept
+description: "Santa Cruz County hosts need practical prep."
+canonical: /fixture-expand-santa-cruz
+---
+
+# Keep This Concept
+
+${longBody}
+`;
+	const prompt = buildExpansionPrompt({
+		markdown,
+		opportunity,
+		date: "2026-08-01",
+	});
+	assert.match(prompt, /TRUNCATED_FOR_TOKEN_BUDGET/);
+	assert.ok(prompt.length < markdown.length);
+});
+
+test("revision loop stops when an expand round makes no progress", async () => {
+	let reviserCalls = 0;
+	const result = await reviseDraftUntilPublishable({
+		markdown: "# Thin\n\nSanta Cruz County note.\n",
+		opportunity,
+		date: "2026-08-01",
+		runId: "proposal-2026-08-01",
+		quality: { ok: false, reason: "TOO_THIN" },
+		assertQuality: () => ({ ok: false, reason: "TOO_THIN" }),
+		reviser: async ({ markdown }) => {
+			reviserCalls += 1;
+			return {
+				markdown: `${markdown}\nextra words\n`,
+				model: "expand-fixture",
+			};
+		},
+	});
+	assert.equal(reviserCalls, 1);
+	assert.equal(result.publishable, false);
+	assert.equal(result.stop_reason, "NO_REVISION_PROGRESS");
+	assert.equal(result.rounds[0].progressed, false);
+});
+
 test("revision loop expands an existing draft instead of discarding it", async () => {
 	const thin = `---
 title: Keep This Concept
