@@ -262,7 +262,9 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 	const isControlled = viewport !== undefined && onViewportChange !== undefined
 
 	const onViewportChangeRef = useRef(onViewportChange)
-	onViewportChangeRef.current = onViewportChange
+	useEffect(() => {
+		onViewportChangeRef.current = onViewportChange
+	})
 
 	const stableStyles = useStableValue(styles)
 
@@ -495,19 +497,24 @@ function MapMarker({
 		onDrag,
 		onDragEnd,
 	})
-	callbacksRef.current = {
-		onClick,
-		onMouseEnter,
-		onMouseLeave,
-		onDragStart,
-		onDrag,
-		onDragEnd,
-	}
+	useEffect(() => {
+		callbacksRef.current = {
+			onClick,
+			onMouseEnter,
+			onMouseLeave,
+			onDragStart,
+			onDrag,
+			onDragEnd,
+		}
+	})
 
 	const marker = useMemo(() => {
 		const markerInstance = new MapLibreGL.Marker({
 			...markerOptions,
-			element: document.createElement("div"),
+			element:
+				typeof document !== "undefined"
+					? document.createElement("div")
+					: undefined,
 			draggable,
 		}).setLngLat([longitude, latitude])
 
@@ -660,7 +667,11 @@ function MarkerPopup({
 	...popupOptions
 }: MarkerPopupProps) {
 	const { marker, map } = useMarkerContext()
-	const container = useMemo(() => document.createElement("div"), [])
+	const container = useMemo(
+		() =>
+			typeof document !== "undefined" ? document.createElement("div") : null,
+		[],
+	)
 	const { offset, maxWidth } = popupOptions
 
 	const popup = useMemo(() => {
@@ -668,16 +679,18 @@ function MarkerPopup({
 			offset: 16,
 			...popupOptions,
 			closeButton: false,
-		})
-			.setMaxWidth("none")
-			.setDOMContent(container)
+		}).setMaxWidth("none")
+
+		if (container) {
+			popupInstance.setDOMContent(container)
+		}
 
 		return popupInstance
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		popup.setDOMContent(container)
 		marker.setPopup(popup)
@@ -697,6 +710,8 @@ function MarkerPopup({
 	}, [popup, offset, maxWidth])
 
 	const handleClose = () => popup.remove()
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -726,7 +741,11 @@ function MarkerTooltip({
 	...popupOptions
 }: MarkerTooltipProps) {
 	const { marker, map } = useMarkerContext()
-	const container = useMemo(() => document.createElement("div"), [])
+	const container = useMemo(
+		() =>
+			typeof document !== "undefined" ? document.createElement("div") : null,
+		[],
+	)
 	const { offset, maxWidth } = popupOptions
 
 	const tooltip = useMemo(() => {
@@ -742,21 +761,24 @@ function MarkerTooltip({
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		tooltip.setDOMContent(container)
+
+		const el = marker.getElement()
+		if (!el) return
 
 		const handleMouseEnter = () => {
 			tooltip.setLngLat(marker.getLngLat()).addTo(map)
 		}
 		const handleMouseLeave = () => tooltip.remove()
 
-		marker.getElement()?.addEventListener("mouseenter", handleMouseEnter)
-		marker.getElement()?.addEventListener("mouseleave", handleMouseLeave)
+		el.addEventListener("mouseenter", handleMouseEnter)
+		el.addEventListener("mouseleave", handleMouseLeave)
 
 		return () => {
-			marker.getElement()?.removeEventListener("mouseenter", handleMouseEnter)
-			marker.getElement()?.removeEventListener("mouseleave", handleMouseLeave)
+			el.removeEventListener("mouseenter", handleMouseEnter)
+			el.removeEventListener("mouseleave", handleMouseLeave)
 			tooltip.remove()
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -769,6 +791,8 @@ function MarkerTooltip({
 			tooltip.setMaxWidth(maxWidth)
 		}
 	}, [tooltip, offset, maxWidth])
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -1057,8 +1081,14 @@ function MapPopup({
 }: MapPopupProps) {
 	const { map } = useMap()
 	const onCloseRef = useRef(onClose)
-	onCloseRef.current = onClose
-	const container = useMemo(() => document.createElement("div"), [])
+	useEffect(() => {
+		onCloseRef.current = onClose
+	})
+	const container = useMemo(
+		() =>
+			typeof document !== "undefined" ? document.createElement("div") : null,
+		[],
+	)
 	const { offset, maxWidth } = popupOptions
 
 	const popup = useMemo(() => {
@@ -1075,7 +1105,7 @@ function MapPopup({
 	}, [])
 
 	useEffect(() => {
-		if (!map) return
+		if (!map || !container) return
 
 		const onCloseProp = () => onCloseRef.current?.()
 
@@ -1108,6 +1138,8 @@ function MapPopup({
 	const handleClose = () => {
 		popup.remove()
 	}
+
+	if (!container) return null
 
 	return createPortal(
 		<div
@@ -1383,7 +1415,9 @@ function MapGeoJSON<
 		[defaults.line, linePaint],
 	)
 	const latestRef = useRef({ onClick, onHover })
-	latestRef.current = { onClick, onHover }
+	useEffect(() => {
+		latestRef.current = { onClick, onHover }
+	})
 
 	// Add source on mount.
 	useEffect(() => {
@@ -1747,7 +1781,9 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 	)
 
 	const latestRef = useRef({ data, onClick, onHover })
-	latestRef.current = { data, onClick, onHover }
+	useEffect(() => {
+		latestRef.current = { data, onClick, onHover }
+	})
 
 	// Add source and layers on mount.
 	useEffect(() => {
