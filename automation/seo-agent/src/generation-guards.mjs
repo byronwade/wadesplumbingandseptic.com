@@ -1,21 +1,32 @@
 /**
  * Proposal-stage token and call safeguards.
  *
- * Global model-budget accounting still applies. These limits add a tighter
- * generation ceiling so one draft proposal cannot burn the whole session on
- * repeated topic decisions, cold rewrites, or no-progress expand loops.
+ * Quality is the primary goal: budgets are sized so a full people-first draft
+ * (about 1,400 to 2,200 words) plus bounded expands can finish. Safeguards only
+ * stop wasteful repeats (no-progress expands, obvious topic re-ranks, runaway
+ * loops). Never starve a publishable draft to save tokens.
+ *
+ * Global model-budget accounting still applies on top of these ceilings.
  */
 
 export const PROPOSAL_GENERATION_LIMITS = Object.freeze({
-	/** decide (optional) + write + up to two expands */
-	maxModelCalls: 4,
-	/** Sum of reserved maxOutputTokens across proposal model calls */
-	maxReservedOutputTokens: 10_000,
-	topicDecisionMaxOutputTokens: 450,
-	writeMaxOutputTokens: 4_200,
-	expandMaxOutputTokens: 2_800,
-	/** Cap existing-draft bytes embedded in expand prompts */
-	maxExpandPromptDraftChars: 12_000,
+	/** topic (optional) + write + write fallback + up to two expands */
+	maxModelCalls: 5,
+	/**
+	 * Sum of reserved maxOutputTokens across proposal model calls.
+	 * Sized for one full write (or primary+fallback) plus quality expands.
+	 */
+	maxReservedOutputTokens: 20_000,
+	topicDecisionMaxOutputTokens: 500,
+	/** Enough headroom for a complete 1,400 to 2,200 word Markdown draft */
+	writeMaxOutputTokens: 6_500,
+	/** Enough to deepen thin sections to publishable depth, not a stub patch */
+	expandMaxOutputTokens: 4_000,
+	/**
+	 * Keep nearly full drafts in expand prompts. Truncation is a last resort
+	 * for runaway input, not a thrift cut on normal posts.
+	 */
+	maxExpandPromptDraftChars: 28_000,
 	/** Skip the topic LLM when the top score beats #2 by this much */
 	topicScoreGapToSkipModel: 8,
 	/** Larger gap skips even without demand timing */
@@ -192,9 +203,9 @@ export function buildScoreFallbackTopicDecision({
 }
 
 /**
- * Truncate a draft before embedding it in an expand prompt.
- * Keeps front matter plus the head of the body so the model sees structure
- * without paying for the entire long draft twice.
+ * Prepare a draft for an expand prompt. Prefer the full draft. Only when the
+ * draft exceeds the runaway-input ceiling, keep front matter, the H2 outline,
+ * and head/tail body so the model can still expand gaps with quality.
  */
 export function truncateDraftForExpansionPrompt(
 	markdown,
@@ -211,10 +222,52 @@ export function truncateDraftForExpansionPrompt(
 			original_chars: trimmed.length,
 		});
 	}
-	const head = trimmed.slice(0, maxChars);
-	const note = `\n\n[TRUNCATED_FOR_TOKEN_BUDGET: kept first ${maxChars} of ${trimmed.length} characters. Expand the gaps named in the peer review; preserve the unseen tail unless a listed gap requires touching it.]`;
+
+	let frontMatter = "";
+	let body = trimmed;
+	if (trimmed.startsWith("---")) {
+		const end = trimmed.indexOf("\n---", 3);
+		if (end !== -1) {
+			frontMatter = trimmed.slice(0, end + 4).trim();
+			body = trimmed.slice(end + 4).trim();
+		}
+	}
+	const outline = (body.match(/^##\s+.+$/gm) ?? [])
+		.slice(0, 20)
+		.map((line) => line.trim())
+		.join("\n");
+	const note = `[TRUNCATED_FOR_TOKEN_BUDGET: original ${trimmed.length} characters. Quality still required: expand every peer-review gap thoroughly. Preserve front matter, title concept, and listed H2s. Middle body omitted only to avoid runaway input.]`;
+	const reserved =
+		frontMatter.length +
+		outline.length +
+		note.length +
+		120;
+	const bodyBudget = Math.max(2_000, maxChars - reserved);
+	const headLen = Math.floor(bodyBudget * 0.65);
+	const tailLen = Math.max(400, bodyBudget - headLen);
+	const head = body.slice(0, headLen);
+	const tail = body.slice(Math.max(headLen, body.length - tailLen));
+	const text = [
+		frontMatter,
+		"",
+		note,
+		"",
+		"H2 outline:",
+		outline || "(no H2 headings found)",
+		"",
+		"Draft head:",
+		head,
+		"",
+		"...[middle omitted for input ceiling]...",
+		"",
+		"Draft tail:",
+		tail,
+	]
+		.join("\n")
+		.trim();
+
 	return Object.freeze({
-		text: `${head}${note}`,
+		text,
 		truncated: true,
 		original_chars: trimmed.length,
 	});

@@ -216,7 +216,7 @@ export function buildExpansionPrompt({
 
 	return `You are peer-reviewing an existing Wade's Plumbing & Septic SEO draft for Santa Cruz County.
 
-Mission: improve the draft by EXPANDING and REVISING portions. Do NOT rewrite the article from scratch. The concept is already chosen. Save tokens and preserve good work.
+Mission: improve the draft by EXPANDING and REVISING portions. Do NOT rewrite the article from scratch. The concept is already chosen. Preserve good work. Quality and completeness matter more than brevity: fill every peer-review gap thoroughly so the post can compete.
 
 Date for front matter if needed: "${date}"
 Query cluster: ${opportunity.query_cluster}
@@ -239,7 +239,8 @@ Rules:
 4. Do not invent prices, licensed/insured claims, 24/7, sponsorship, or "serving City" claims.
 5. Prefer new paragraphs under existing H2s over replacing whole sections.
 6. Target people-first helpful content that can compete in Google Search.
-7. Do not restate unchanged sections at length; keep good prose and only grow the gaps.
+7. Prefer thorough local guidance over short patches. Do not leave FAQ, Quick Answer, must-cover, or link gaps half-fixed.
+8. Keep good prose already present; grow weak sections instead of inventing a new article.
 
 Existing draft to improve:
 <<<EXISTING_DRAFT

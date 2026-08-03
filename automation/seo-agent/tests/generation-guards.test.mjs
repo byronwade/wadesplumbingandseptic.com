@@ -9,6 +9,17 @@ import {
 	truncateDraftForExpansionPrompt,
 } from "../src/generation-guards.mjs";
 
+test("quality-first defaults leave room for a full write plus expands", () => {
+	assert.ok(PROPOSAL_GENERATION_LIMITS.writeMaxOutputTokens >= 6_500);
+	assert.ok(PROPOSAL_GENERATION_LIMITS.expandMaxOutputTokens >= 4_000);
+	assert.ok(PROPOSAL_GENERATION_LIMITS.maxExpandPromptDraftChars >= 20_000);
+	assert.ok(
+		PROPOSAL_GENERATION_LIMITS.maxReservedOutputTokens >=
+			PROPOSAL_GENERATION_LIMITS.writeMaxOutputTokens +
+				PROPOSAL_GENERATION_LIMITS.expandMaxOutputTokens * 2,
+	);
+});
+
 test("generation guard blocks excess calls and reserved output tokens", () => {
 	const guard = createProposalGenerationGuard({
 		...PROPOSAL_GENERATION_LIMITS,
@@ -99,13 +110,53 @@ test("score fallback decision explains the skipped model call", () => {
 	assert.equal(decision.reason.includes("\u2014"), false);
 });
 
-test("expand prompts truncate oversized drafts", () => {
-	const draft = `${"x".repeat(13_000)}`;
-	const sliced = truncateDraftForExpansionPrompt(draft, 12_000);
+test("expand prompts keep full normal drafts and preserve structure when truncated", () => {
+	const normal = `---
+title: Host Prep
+description: "Santa Cruz County hosting prep."
+canonical: /host-prep
+---
+
+# Host Prep
+
+## Quick Answer for Santa Cruz County Homeowners
+
+Useful local bullets.
+
+## FAQ
+
+### Will guests stress plumbing?
+
+Yes.
+`;
+	const full = truncateDraftForExpansionPrompt(normal);
+	assert.equal(full.truncated, false);
+	assert.equal(full.text, normal.trim());
+
+	const draft = `---
+title: Host Prep
+description: "Santa Cruz County hosting prep."
+canonical: /host-prep
+---
+
+# Host Prep
+
+## Quick Answer for Santa Cruz County Homeowners
+
+${"x".repeat(8_000)}
+
+## FAQ
+
+${"y".repeat(8_000)}
+`;
+	const sliced = truncateDraftForExpansionPrompt(draft, 6_000);
 	assert.equal(sliced.truncated, true);
-	assert.equal(sliced.original_chars, 13_000);
 	assert.match(sliced.text, /TRUNCATED_FOR_TOKEN_BUDGET/);
-	assert.ok(sliced.text.length < draft.length + 200);
+	assert.match(sliced.text, /H2 outline:/);
+	assert.match(sliced.text, /Quick Answer for Santa Cruz County Homeowners/);
+	assert.match(sliced.text, /Draft head:/);
+	assert.match(sliced.text, /Draft tail:/);
+	assert.ok(sliced.text.length < draft.length);
 });
 
 test("no-progress detection stops useless expand loops", () => {

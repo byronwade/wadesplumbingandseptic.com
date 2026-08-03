@@ -351,8 +351,9 @@ async function expandWithGateway({
 		maxOutputTokens: PROPOSAL_GENERATION_LIMITS.expandMaxOutputTokens,
 		stage: `expand_round_${round}`,
 		generationGuard,
-		// Second expand already spent a round; do not double-spend on fallback.
-		allowFallback: round <= 1,
+		// Quality first: allow fallback on every expand round. The proposal
+		// generation guard still bills each fallback against the same ceiling.
+		allowFallback: true,
 	});
 }
 

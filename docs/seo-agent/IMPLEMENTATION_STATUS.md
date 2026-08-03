@@ -2,10 +2,10 @@
 
 ## Phase 60: Proposal Generation Token Safeguards (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW. Owner asked to confirm the generation pipeline is careful with tokens and to add safeguards so Eve cannot accidentally burn the session budget on wasteful generation.
+- State: READY_FOR_HUMAN_REVIEW. Owner asked to confirm the generation pipeline is careful with tokens and to add safeguards so Eve cannot accidentally burn the session budget on wasteful generation. Follow-up: quality remains more important than thrift.
 - Branch: `cursor/eve-blog-quality-aab8`.
-- Changed scope: added `src/generation-guards.mjs` with proposal-stage ceilings (max 4 model calls, 10,000 reserved output tokens), tighter stage budgets (topic decide 450 / write 4,200 / expand 2,800), skip-model topic selection when ranking is already obvious, truncated expand-prompt drafts (12,000 chars), no-progress expand stop, and fallback calls that also consume the proposal guard. PR briefs now report generation spend.
-- Verification: recorded after the focused sidecar test run below. This remains `MOCK_VERIFIED`; AI Gateway is not called by these fixtures.
+- Changed scope: added `src/generation-guards.mjs` with proposal-stage waste ceilings. Quality-first budgets: write **6,500**, expand **4,000**, expand-prompt draft ceiling **28,000** chars, reserved output **20,000**, max **5** model calls. Safeguards that remain: skip obvious topic-model re-ranks, no-progress expand stop, structure-preserving truncation only for runaway input, and fallback calls billed to the same guard. Expand prompts explicitly prioritize completeness over brevity. PR briefs report generation spend.
+- Verification: recorded after the quality-first rebalance test run. This remains `MOCK_VERIFIED`; AI Gateway is not called by these fixtures.
 - Next exact action: human review of PR #104 (blog quality + demand + autonomy + expand + token safeguards). No merge/deploy by Eve.
 
 ## Phase 59: Expand-Existing Peer Review Instead of Full Rewrites (2026-08-03)

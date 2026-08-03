@@ -100,8 +100,25 @@ Yes.
 	assert.equal(prompt.includes("\u2014"), false);
 });
 
-test("expansion prompt truncates very long existing drafts", () => {
-	const longBody = Array.from({ length: 400 }, (_, i) =>
+test("expansion prompt prefers full drafts and only truncates runaway input", () => {
+	const normalPrompt = buildExpansionPrompt({
+		markdown: `---
+title: Keep This Concept
+description: "Santa Cruz County hosts need practical prep."
+canonical: /fixture-expand-santa-cruz
+---
+
+# Keep This Concept
+
+Santa Cruz County hosts can prep bathrooms before guests arrive.
+`,
+		opportunity,
+		date: "2026-08-01",
+	});
+	assert.equal(normalPrompt.includes("TRUNCATED_FOR_TOKEN_BUDGET"), false);
+	assert.match(normalPrompt, /Quality and completeness matter more than brevity/i);
+
+	const longBody = Array.from({ length: 900 }, (_, i) =>
 		`Paragraph ${i} adds Santa Cruz County hosting detail for guests and bathrooms.`,
 	).join("\n\n");
 	const markdown = `---
@@ -112,6 +129,10 @@ canonical: /fixture-expand-santa-cruz
 
 # Keep This Concept
 
+## Quick Answer for Santa Cruz County Homeowners
+
+- Check toilets early.
+
 ${longBody}
 `;
 	const prompt = buildExpansionPrompt({
@@ -120,6 +141,7 @@ ${longBody}
 		date: "2026-08-01",
 	});
 	assert.match(prompt, /TRUNCATED_FOR_TOKEN_BUDGET/);
+	assert.match(prompt, /H2 outline:/);
 	assert.ok(prompt.length < markdown.length);
 });
 
