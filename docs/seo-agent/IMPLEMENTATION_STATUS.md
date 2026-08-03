@@ -1,5 +1,12 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 73: Task 6 GA4 BLOCKED_MISSING_CREDENTIALS (2026-08-03)
+
+- State: BLOCKED for optional GA4 live verification.
+- Evidence: Production env lists `SEO_AGENT_ENABLE_GA4` but does not list `GA4_ACCESS_TOKEN` or `GA4_PROPERTY_ID`. No GA4 Data API request was attempted. Classification: `BLOCKED_MISSING_CREDENTIALS` (not a fixture pass, not a live failure).
+- Confirmation after Task 5 merge: sidecar `npm test` → `175/175`; Production `readyz` → `ready: true`, `mode: propose`, live-read approval off; no open PRs; no leftover `cursor/*` branches.
+- Next exact action: owner supplies reviewed GA4 credentials for a dedicated Task 6 PR, or proceed to Task 7 (Local Falcon) only if that credential path is intentionally next; otherwise continue owned non-optional work (Task 11 independent judge / observation) when the board prioritizes it.
+
 ## Phase 72: Task 5 Browser Research LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 5 HTTP browser-research live proof (`LIVE_VERIFIED`).
