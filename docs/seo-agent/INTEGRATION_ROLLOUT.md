@@ -12,7 +12,8 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 
 ## Task 2 — PageSpeed Insights live verification
 
-- **Status:** `IN_PROGRESS` (offline probe path on `cursor/eve-pagespeed-live-aab8`; awaiting Production `LIVE_VERIFIED`)
-- **PR:** dedicated PageSpeed branch `cursor/eve-pagespeed-live-aab8`
-- **Method:** focused `probePageSpeedLive()`, CLI `npm run live:probe:pagespeed`, Production route `GET /_internal/eve/api/live-probe/pagespeed`, annual Cron for manual `vercel crons run`
-- **Exit gate:** Task 3 starts only after HTTP `200` live-probe proof and live-read flags are reset
+- **Status:** `LIVE_VERIFIED` (2026-08-03)
+- **PR:** `cursor/eve-pagespeed-live-aab8`
+- **Proof:** Production Cron live-probe returned HTTP `200` three times (handler emits `200` only for PageSpeed `LIVE_VERIFIED`)
+- **Request IDs:** `jlmdf-1785769354624-edf5f2e49d8b`, `89kdm-1785769458215-e741a6a75eb2`, `x288r-1785769554588-9e473083c699`
+- **Exit gate:** Task 3 may start after this PR is human-merged to `main`
