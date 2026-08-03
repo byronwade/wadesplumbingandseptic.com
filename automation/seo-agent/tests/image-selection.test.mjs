@@ -195,5 +195,5 @@ test("draft PR brief includes fail-closed featured image section", () => {
 	});
 	assert.match(brief, /Images \(featured is fail-closed\)/);
 	assert.match(brief, /first-party OWNED/i);
-	assert.match(brief, /external candidates never auto-publish/i);
+	assert.match(brief, /remote UNVERIFIED never auto-publishes/i);
 });

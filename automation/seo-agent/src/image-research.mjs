@@ -1,5 +1,14 @@
 import { classifyUntrustedText } from "./policy.mjs";
 import { rankExternalImageCandidates } from "./image-selection.mjs";
+import {
+	IMAGE_PROVIDER_DOMAINS,
+	buildImageSearchQuery,
+	createAiLineArtImageClient,
+	createCompositeImageSearchClient,
+	createPexelsImageClient,
+	createUnsplashImageClient,
+	createWikimediaImageClient,
+} from "./image-providers.mjs";
 
 const MAX_RESULTS = 12;
 
@@ -18,16 +27,24 @@ function assertQuery(query) {
 	return query.trim();
 }
 
+function hostnameAllowed(hostname, allowedDomains) {
+	return allowedDomains.some(
+		(domain) => hostname === domain || hostname.endsWith(`.${domain}`),
+	);
+}
+
 function normalizeCandidate(candidate, allowedDomains) {
 	if (!candidate || typeof candidate !== "object")
 		throw new Error("Image-search result must be an object.");
+	// AI line-art may carry inline SVG with a synthetic HTTPS provenance URL.
 	const sourceUrl = new URL(candidate.source_url);
 	const assetUrl = new URL(candidate.asset_url);
 	if (sourceUrl.protocol !== "https:" || assetUrl.protocol !== "https:")
 		throw new Error("Image-search results must use HTTPS URLs.");
 	if (
-		!allowedDomains.includes(sourceUrl.hostname) ||
-		!allowedDomains.includes(assetUrl.hostname)
+		!hostnameAllowed(sourceUrl.hostname, allowedDomains) ||
+		(!candidate.inline_svg &&
+			!hostnameAllowed(assetUrl.hostname, allowedDomains))
 	) {
 		throw new Error("Image-search result domain is not explicitly approved.");
 	}
@@ -38,6 +55,7 @@ function normalizeCandidate(candidate, allowedDomains) {
 	if (!untrusted.accepted)
 		throw new Error("Image-search result contains untrusted instructions.");
 	return Object.freeze({
+		provider: candidate.provider ?? null,
 		source_url: sourceUrl.toString(),
 		asset_url: assetUrl.toString(),
 		title:
@@ -49,10 +67,19 @@ function normalizeCandidate(candidate, allowedDomains) {
 				? candidate.description.slice(0, 600)
 				: null,
 		alt: typeof candidate.alt === "string" ? candidate.alt.slice(0, 300) : null,
+		photographer: candidate.photographer ?? null,
+		license_name: candidate.license_name ?? null,
+		license_url: candidate.license_url ?? null,
+		usage_rights_provisional: candidate.usage_rights_provisional ?? null,
+		rights_evidence_id: candidate.rights_evidence_id ?? null,
+		attribution_required: candidate.attribution_required === true,
+		generation_style: candidate.generation_style ?? null,
+		inline_svg:
+			typeof candidate.inline_svg === "string" ? candidate.inline_svg : null,
 		usage_rights: "UNVERIFIED",
 		publication_eligible: false,
 		required_next_action:
-			"Obtain rights evidence, relevance rationale, descriptive alt text, and human approval before a draft can use this asset.",
+			"Obtain rights evidence, stage into public/images/sourced/, write descriptive alt text, and get human PR approval before featured or body use.",
 	});
 }
 
@@ -67,6 +94,60 @@ export function createImageResearchAdapter({
 	budget = { consume() {} },
 } = {}) {
 	return Object.freeze({
+		async probe({ runId } = {}) {
+			if (!enabled) {
+				return Object.freeze({
+					classification: "BLOCKED_MISSING_CREDENTIALS",
+					source: "image-research",
+					scope: "image-search",
+					run_id: runId ?? null,
+					payload: Object.freeze({
+						reason: "Image sourcing is disabled for this environment.",
+						next_action:
+							"Enable SEO_AGENT_ENABLE_IMAGE_SOURCING (or standing Production propose), optionally add UNSPLASH_ACCESS_KEY / PEXELS_API_KEY, and follow docs/seo-agent/MANUAL_SETUP.md.",
+					}),
+				});
+			}
+			if (!Array.isArray(allowedDomains) || allowedDomains.length === 0) {
+				return Object.freeze({
+					classification: "BLOCKED_MISSING_CREDENTIALS",
+					source: "image-research",
+					scope: "image-search",
+					run_id: runId ?? null,
+					payload: Object.freeze({
+						reason: "Image research allowlist is empty.",
+						next_action:
+							"Use the versioned image provider domain allowlist in docs/seo-agent/MANUAL_SETUP.md.",
+					}),
+				});
+			}
+			if (typeof imageSearchClient?.searchImages !== "function") {
+				return Object.freeze({
+					classification: "BLOCKED_MISSING_CREDENTIALS",
+					source: "image-research",
+					scope: "image-search",
+					run_id: runId ?? null,
+					payload: Object.freeze({
+						reason: "No image-search client is configured.",
+						next_action:
+							"Configure Wikimedia/Unsplash/Pexels clients per docs/seo-agent/MANUAL_SETUP.md.",
+					}),
+				});
+			}
+			return Object.freeze({
+				classification: "MOCK_VERIFIED",
+				source: "image-research",
+				scope: "image-search",
+				run_id: runId ?? null,
+				payload: Object.freeze({
+					reason:
+						"Image research adapter is configured for offline/fixture use.",
+					next_action:
+						"Run a Production propose cycle and review staged assets in the draft PR Images section; see docs/seo-agent/MANUAL_SETUP.md.",
+				}),
+			});
+		},
+
 		async search({ query, limit = 8 } = {}) {
 			if (!enabled)
 				return blocked("No reviewed image-search provider is configured.");
@@ -86,28 +167,39 @@ export function createImageResearchAdapter({
 				query: safeQuery,
 				limit,
 			});
+			if (response?.classification === "BLOCKED_MISSING_CREDENTIALS") {
+				return blocked(
+					response.reason ?? "Image providers reported missing credentials.",
+				);
+			}
 			if (!Array.isArray(response?.results))
 				throw new Error("Image-search provider returned malformed results.");
 			const normalized = response.results
 				.slice(0, limit)
 				.map((candidate) => normalizeCandidate(candidate, allowedDomains));
 			return Object.freeze({
-				classification: "MOCK_VERIFIED",
+				classification:
+					response.classification === "FAILED" ? "FAILED" : "MOCK_VERIFIED",
 				source: "image-research",
 				query: safeQuery,
 				candidates: Object.freeze(normalized),
 				publication_permitted: false,
+				provider_summaries: response.provider_summaries ?? null,
 			});
 		},
 
 		/**
 		 * Search then keep only candidates with content-token overlap.
-		 * Still never publication-eligible; featured images must use first-party
-		 * OWNED selection or a human-approved licensed path.
+		 * Still never publication-eligible until staged into public/ with rights.
 		 */
 		async searchRelevant({ query, limit = 8, opportunity } = {}) {
 			const raw = await this.search({ query, limit });
-			if (raw.classification !== "MOCK_VERIFIED") return raw;
+			if (
+				raw.classification !== "MOCK_VERIFIED" &&
+				raw.classification !== "LIVE_VERIFIED"
+			) {
+				return raw;
+			}
 			const ranked = rankExternalImageCandidates({
 				opportunity,
 				candidates: raw.candidates,
@@ -120,5 +212,65 @@ export function createImageResearchAdapter({
 				relevance_filtered: true,
 			});
 		},
+
+		async searchForOpportunity({ opportunity, limit = 8 } = {}) {
+			const query = buildImageSearchQuery(opportunity);
+			return this.searchRelevant({ query, limit, opportunity });
+		},
 	});
 }
+
+/**
+ * Build the multi-source adapter from config credentials/flags.
+ * Wikimedia needs no key. Unsplash/Pexels need keys. AI line-art needs Gateway.
+ */
+export function createConfiguredImageResearchAdapter({
+	config,
+	fetchImpl = fetch,
+	budget = { consume() {} },
+	includeAiLineArt = false,
+} = {}) {
+	const flags = config?.integrationFlags ?? {};
+	const credentials = config?.credentials ?? {};
+	const enabled = flags.imageSourcing === true;
+	if (!enabled) {
+		return createImageResearchAdapter({ enabled: false, budget });
+	}
+
+	const clients = [
+		createWikimediaImageClient({ fetchImpl, budget }),
+		createUnsplashImageClient({
+			accessKey: credentials.unsplashAccessKey,
+			fetchImpl,
+			budget,
+		}),
+		createPexelsImageClient({
+			apiKey: credentials.pexelsApiKey,
+			fetchImpl,
+			budget,
+		}),
+	];
+	if (includeAiLineArt && flags.imageAiLineArt === true) {
+		clients.push(
+			createAiLineArtImageClient({
+				apiKey: credentials.aiGatewayApiKey,
+				oidcToken: credentials.vercelOidcToken,
+				fetchImpl,
+				budget,
+			}),
+		);
+	}
+
+	const imageSearchClient = createCompositeImageSearchClient({
+		clients,
+		budget,
+	});
+	return createImageResearchAdapter({
+		enabled: true,
+		allowedDomains: [...IMAGE_PROVIDER_DOMAINS],
+		imageSearchClient,
+		budget,
+	});
+}
+
+export { IMAGE_PROVIDER_DOMAINS, buildImageSearchQuery };

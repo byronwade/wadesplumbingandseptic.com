@@ -13,6 +13,7 @@ import {
 	buildTopicSignalsFromRawRows,
 	defaultSearchConsoleTopicWindow,
 } from "./search-console-topics.mjs";
+import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
 
 const DEFAULT_REQUEST_POLICY = Object.freeze({
 	timeoutMs: 8_000,
@@ -1719,6 +1720,12 @@ export function createIntegrationRegistry({
 			enabled: flags.localFalcon === true,
 			fetchImpl,
 			budget,
+		}),
+		image_research: createConfiguredImageResearchAdapter({
+			config,
+			fetchImpl,
+			budget,
+			includeAiLineArt: flags.imageAiLineArt === true,
 		}),
 		similarweb: createUnsupportedOptionalAdapter(
 			"similarweb",

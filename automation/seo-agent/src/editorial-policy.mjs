@@ -37,11 +37,21 @@ export function validateImagePlan(imagePlan = null) {
 	if (typeof imagePlan !== "object")
 		throw new Error("Image plan must be an object when provided.");
 	if (
-		!/^public\/[a-z0-9/_-]+\.(?:avif|webp|jpe?g|png)$/i.test(
+		!/^public\/[a-z0-9/_-]+\.(?:avif|webp|jpe?g|png|svg)$/i.test(
 			imagePlan.asset_path ?? "",
 		)
 	)
 		throw new Error("Image plan requires a safe local public asset path.");
+	if (
+		/\.svg$/i.test(imagePlan.asset_path ?? "") &&
+		imagePlan.usage_rights === "EXPLICIT_PERMISSION" &&
+		imagePlan.generation_style !== "technical_line_art" &&
+		!String(imagePlan.rights_evidence_id ?? "").startsWith("ai-lineart:")
+	) {
+		throw new Error(
+			"SVG image plans require technical line-art generation metadata or an AI line-art rights evidence id.",
+		);
+	}
 	if (
 		typeof imagePlan.source_url !== "string" ||
 		!/^https:\/\//.test(imagePlan.source_url)

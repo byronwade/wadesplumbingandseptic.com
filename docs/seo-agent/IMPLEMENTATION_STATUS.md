@@ -1,12 +1,21 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 79: Online Image Sourcing + Careful AI Line Art (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for multi-provider sourcing + staging. Not `LIVE_VERIFIED` for Unsplash/Pexels/AI until Production credentials and a live propose/Cron observation.
+- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 continued per owner request for real online sourcing).
+- Offline: `image-providers.mjs` (Wikimedia, Unsplash, Pexels, AI technical line-art SVG via AI Gateway); `image-staging.mjs` downloads/stages into `public/images/sourced/<slug>/` with provenance; draft change sets accept utf8 SVG + base64 rasters; publishing creates GitHub blobs for binary assets; proposal searches when `imageSourcing` is on, stages when first-party featured fails, and keeps PR brief Images section fail-closed.
+- Policy: prefer first-party OWNED; staged LICENSED/PUBLIC_DOMAIN allowed; AI fallback is professional technical line art only (`EXPLICIT_PERMISSION`, not photoreal); Wikimedia rejects NC/ND licenses; remote UNVERIFIED never auto-publishes.
+- Fixture proof: Unsplash/Pexels/Wikimedia/AI clients normalize rights; AI SVG stages into a 3-file change set; tankless first-party featured still wins when present.
+- Commands: sidecar `npm test` → `197/197` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
+- Next exact action: merge/deploy; add optional `UNSPLASH_ACCESS_KEY` / `PEXELS_API_KEY`; enable `SEO_AGENT_ENABLE_IMAGE_AI_LINEART` only after owner review of line-art quality; confirm a propose run stages or cites online candidates in the draft PR Images section.
+
 ## Phase 78: Content-Relevant Image Sourcing + Strict Featured Gates (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` for first-party featured selection. External licensed download path not enabled.
-- Branch/PR: `cursor/eve-image-sourcing-aab8` (Task 14 redirected ahead of later optional adapters per owner request).
-- Offline: `image-selection.mjs` indexes `public/images`, scores path/filename tokens against blog opportunity fields, requires featured score ≥ 18, blocks brand/partner/team/logo classes, and builds OWNED image plans with alt text + relevance rationale. `buildBlogImagePackage` feeds proposal writer front matter and a PR brief Images section. External `image-research` candidates can be relevance-filtered via `searchRelevant` but remain `UNVERIFIED` / not publication-eligible.
-- Fixture proof: tankless topic selects `/images/work/tankless-water-heater-installation.webp` with score `37`. Commands: `npm test` → `190/190`; `npm run verify` exit `0`.
-- Next exact action: merge/deploy; optionally refresh draft blog PR `#122` featured image to the selected work photo; keep external provider licensing as a later owner setup item.
+- State: SUPERSEDED by Phase 79 online sourcing path.
+- Branch/PR: `cursor/eve-image-sourcing-aab8`.
+- Offline: first-party relevance scoring and featured gates remain the preferred path inside Phase 79.
+- Next exact action: SUPERSEDED by Phase 79.
 
 ## Phase 77: Task 7 Local Falcon Production Test + Blog Draft PR (2026-08-03)
 

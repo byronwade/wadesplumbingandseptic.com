@@ -1,18 +1,29 @@
 /**
  * Content-relevant image selection for Eve blog drafts.
  *
- * Featured images are fail-closed and first-party only until a human-approved
- * licensed asset path exists. External research candidates may be listed for
- * review but never become publication-eligible on their own.
+ * Featured preference order:
+ * 1. First-party OWNED assets that clear the featured score
+ * 2. Staged online LICENSED / PUBLIC_DOMAIN assets with provenance
+ * 3. Staged AI technical line-art (EXPLICIT_PERMISSION) as careful fallback
+ *
+ * Remote UNVERIFIED research candidates never auto-publish.
  */
 import { existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
-const IMAGE_EXTENSIONS = new Set([".avif", ".webp", ".jpg", ".jpeg", ".png"]);
+const IMAGE_EXTENSIONS = new Set([
+	".avif",
+	".webp",
+	".jpg",
+	".jpeg",
+	".png",
+	".svg",
+]);
 const FEATURED_MIN_SCORE = 18;
 const INLINE_MIN_SCORE = 10;
+const ONLINE_FEATURED_MIN_SCORE = 14;
 const MAX_INLINE_CANDIDATES = 5;
-const MAX_EXTERNAL_CANDIDATES = 5;
+const MAX_EXTERNAL_CANDIDATES = 8;
 
 /** Paths that must never be blog featured images. */
 const FEATURED_BLOCKED_PREFIXES = Object.freeze([
@@ -106,6 +117,7 @@ function walkImageFiles(rootDir, baseDir = rootDir, acc = []) {
 		const lower = entry.name.toLowerCase();
 		const ext = lower.includes(".") ? `.${lower.split(".").pop()}` : "";
 		if (!IMAGE_EXTENSIONS.has(ext)) continue;
+		if (lower.endsWith(".provenance.json")) continue;
 		acc.push(full);
 	}
 	return acc;
@@ -253,8 +265,7 @@ function buildRationale(opportunity, scored) {
 }
 
 /**
- * Strict featured-image selection: first-party OWNED assets only, high
- * relevance threshold, blocked brand/partner/team/logo classes.
+ * Strict featured-image selection from first-party OWNED assets.
  */
 export function selectFeaturedImagePlan({
 	opportunity,
@@ -289,7 +300,7 @@ export function selectFeaturedImagePlan({
 				}),
 			),
 			next_action:
-				"Add a clearly related first-party work/service photo, or supply a human-approved licensed asset path before publishing a featured image.",
+				"Source a license-safe online asset (Unsplash, Pexels, Wikimedia) or AI technical line art, stage it under public/images/sourced/, or add a clearly related first-party work photo.",
 		});
 	}
 	const plan = Object.freeze({
@@ -305,6 +316,7 @@ export function selectFeaturedImagePlan({
 		matched_tokens: best.scored.matched_tokens,
 		local_claim: false,
 		publication_eligible: true,
+		origin: "first_party",
 	});
 	return Object.freeze({
 		classification: "MOCK_VERIFIED",
@@ -323,8 +335,79 @@ export function selectFeaturedImagePlan({
 }
 
 /**
+ * Accept a staged online/AI plan for featured use when it clears policy gates.
+ */
+export function acceptStagedFeaturedPlan({ staged, opportunity } = {}) {
+	const plan = staged?.plan;
+	if (!plan?.asset_path || !plan?.public_url || !plan?.alt_text) {
+		return Object.freeze({
+			classification: "FAILED",
+			role: "featured",
+			plan: null,
+			reason: staged?.reason ?? "No staged featured plan was available.",
+			next_action: staged?.next_action ?? null,
+		});
+	}
+	if (
+		!["LICENSED", "PUBLIC_DOMAIN", "EXPLICIT_PERMISSION"].includes(
+			plan.usage_rights,
+		)
+	) {
+		return Object.freeze({
+			classification: "FAILED",
+			role: "featured",
+			plan: null,
+			reason: "Staged featured plan lacks an approved rights class.",
+			next_action:
+				"Re-stage with LICENSED, PUBLIC_DOMAIN, or EXPLICIT_PERMISSION rights.",
+		});
+	}
+	if (
+		typeof plan.relevance_score === "number" &&
+		plan.relevance_score < ONLINE_FEATURED_MIN_SCORE
+	) {
+		return Object.freeze({
+			classification: "FAILED",
+			role: "featured",
+			plan: null,
+			reason: `Staged online featured candidate scored ${plan.relevance_score}, below online minimum ${ONLINE_FEATURED_MIN_SCORE}.`,
+			next_action:
+				"Search again with a tighter query or add a first-party work photo.",
+		});
+	}
+	if (
+		plan.generation_style === "technical_line_art" &&
+		plan.usage_rights !== "EXPLICIT_PERMISSION"
+	) {
+		return Object.freeze({
+			classification: "FAILED",
+			role: "featured",
+			plan: null,
+			reason: "AI line-art featured images require EXPLICIT_PERMISSION rights.",
+			next_action: null,
+		});
+	}
+	const alt =
+		plan.alt_text?.length >= 8
+			? plan.alt_text
+			: buildAltText(opportunity, plan, "featured");
+	return Object.freeze({
+		classification: "MOCK_VERIFIED",
+		role: "featured",
+		plan: Object.freeze({
+			...plan,
+			alt_text: alt,
+			publication_eligible: true,
+			origin: plan.provider === "ai-lineart" ? "ai_lineart" : "online_sourced",
+		}),
+		reason: null,
+		next_action: null,
+		files: staged.files ?? Object.freeze([]),
+	});
+}
+
+/**
  * Rank additional first-party illustrations for optional in-body use.
- * Still first-party only; does not download or mutate assets.
  */
 export function selectIllustrationCandidates({
 	opportunity,
@@ -367,7 +450,7 @@ export function selectIllustrationCandidates({
 
 /**
  * Filter external research candidates to those with content-token overlap.
- * Never marks them publication-eligible.
+ * Never marks them publication-eligible until staged.
  */
 export function rankExternalImageCandidates({
 	opportunity,
@@ -383,19 +466,25 @@ export function rankExternalImageCandidates({
 					candidate.description,
 					candidate.alt,
 					candidate.asset_url,
+					candidate.provider,
+					candidate.generation_style,
 				]
 					.filter(Boolean)
 					.join(" "),
 			);
 			const matched = textTokens.filter((token) => needed.has(token));
+			let score = matched.length * 4;
+			if (candidate.usage_rights_provisional === "PUBLIC_DOMAIN") score += 2;
+			if (candidate.usage_rights_provisional === "LICENSED") score += 1;
+			if (candidate.generation_style === "technical_line_art") score += 1;
 			return Object.freeze({
 				...candidate,
 				usage_rights: "UNVERIFIED",
 				publication_eligible: false,
-				relevance_score: matched.length * 4,
+				relevance_score: score,
 				matched_tokens: Object.freeze(matched),
 				required_next_action:
-					"Obtain rights evidence, download into an approved public/ path, write descriptive alt text, and get human approval before featured or body use.",
+					"Stage into public/images/sourced/ with provenance, confirm rights evidence, and get human PR approval before featured or body use.",
 			});
 		})
 		.filter((candidate) => candidate.relevance_score >= INLINE_MIN_SCORE)
@@ -416,13 +505,31 @@ export function buildBlogImagePackage({
 	repoRoot,
 	externalCandidates = [],
 	library = null,
+	stagedFeatured = null,
 } = {}) {
 	const assets = library ?? indexFirstPartyImages({ repoRoot });
-	const featured = selectFeaturedImagePlan({
+	let featured = selectFeaturedImagePlan({
 		opportunity,
 		repoRoot,
 		library: assets,
 	});
+	let stagedFiles = Object.freeze([]);
+	if (!featured.plan && stagedFeatured?.plan) {
+		featured = acceptStagedFeaturedPlan({
+			staged: stagedFeatured,
+			opportunity,
+		});
+		if (featured.plan) {
+			stagedFiles = Object.freeze([...(stagedFeatured.files ?? [])]);
+		}
+	} else if (
+		featured.plan &&
+		stagedFeatured?.plan &&
+		stagedFeatured.plan.generation_style !== "technical_line_art"
+	) {
+		// Keep first-party featured when it already clears the bar.
+		stagedFiles = Object.freeze([]);
+	}
 	const illustrations = selectIllustrationCandidates({
 		opportunity,
 		repoRoot,
@@ -437,11 +544,15 @@ export function buildBlogImagePackage({
 		featured,
 		illustrations,
 		external_research: external,
+		staged_files: stagedFiles,
 		policy: Object.freeze({
 			featured_min_score: FEATURED_MIN_SCORE,
+			online_featured_min_score: ONLINE_FEATURED_MIN_SCORE,
 			inline_min_score: INLINE_MIN_SCORE,
-			featured_requires_first_party_owned: true,
-			external_never_auto_publishes: true,
+			prefer_first_party_owned: true,
+			online_stock_and_commons_allowed_when_staged: true,
+			ai_lineart_fallback_style: "technical_line_art",
+			external_never_auto_publishes_until_staged: true,
 		}),
 	});
 }
@@ -465,6 +576,7 @@ export function applyFeaturedImageToOpportunity(opportunity, featuredResult) {
 
 export const IMAGE_SELECTION_THRESHOLDS = Object.freeze({
 	featured_min_score: FEATURED_MIN_SCORE,
+	online_featured_min_score: ONLINE_FEATURED_MIN_SCORE,
 	inline_min_score: INLINE_MIN_SCORE,
 	max_inline_candidates: MAX_INLINE_CANDIDATES,
 	max_external_candidates: MAX_EXTERNAL_CANDIDATES,

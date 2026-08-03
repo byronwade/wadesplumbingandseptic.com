@@ -16,7 +16,11 @@ import { COMMUNITY_RESEARCH_DOMAINS } from "./constants.mjs";
 import {
 	applyFeaturedImageToOpportunity,
 	buildBlogImagePackage,
+	IMAGE_SELECTION_THRESHOLDS,
 } from "./image-selection.mjs";
+import { createConfiguredImageResearchAdapter } from "./image-research.mjs";
+import { stageBestOnlineImage } from "./image-staging.mjs";
+import { createRunBudget } from "./run-controls.mjs";
 import {
 	buildExpansionPrompt,
 	isExpandableDraftFailure,
@@ -447,27 +451,30 @@ function formatImagePackageForBrief(imagePackage = null) {
 	}
 	const featured = imagePackage.featured;
 	const plan = featured?.plan;
+	const origin = plan?.origin ?? plan?.provider ?? "unknown";
 	const featuredLine = plan
-		? `- Featured (first-party OWNED, score ${plan.relevance_score}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}`
+		? `- Featured (${origin}, ${plan.usage_rights}, score ${plan.relevance_score ?? "n/a"}): \`${plan.public_url}\`\n  - Alt: ${plan.alt_text}\n  - Rights: ${plan.usage_rights} (\`${plan.rights_evidence_id}\`)\n  - Relevance: ${plan.relevance_rationale}${plan.generation_style === "technical_line_art" ? "\n  - Style: professional technical line art (not photoreal AI)." : ""}`
 		: `- Featured: not selected (${featured?.reason ?? "no plan"}). ${featured?.next_action ?? ""}`;
 	const illustrations = (imagePackage.illustrations?.candidates ?? [])
 		.slice(0, 4)
 		.map(
 			(candidate) =>
-				`- Illustration candidate (score ${candidate.relevance_score}): \`${candidate.public_url}\` — ${candidate.alt_text}`,
+				`- Illustration candidate (score ${candidate.relevance_score}): \`${candidate.public_url}\` (${candidate.alt_text})`,
 		);
 	const external = (imagePackage.external_research?.candidates ?? [])
-		.slice(0, 3)
+		.slice(0, 5)
 		.map(
 			(candidate) =>
-				`- External research only (UNVERIFIED, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} — needs rights + human path before use`,
+				`- Online candidate (${candidate.provider ?? "unknown"}, provisional ${candidate.usage_rights_provisional ?? "UNVERIFIED"}, score ${candidate.relevance_score}): ${candidate.asset_url ?? "n/a"} (${candidate.license_name ?? "license pending"})`,
 		);
+	const stagedCount = (imagePackage.staged_files ?? []).length;
 	return `${featuredLine}
 First-party illustration candidates:
 ${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enough for in-body use."}
-External research candidates (never auto-published):
-${external.length > 0 ? external.join("\n") : "- None. Featured images stay first-party OWNED unless a human approves a licensed asset path."}
-Policy: featured minimum score ${imagePackage.policy?.featured_min_score}; external candidates never auto-publish.`;
+Online sourced candidates (staged into draft only when rights-safe; still need human PR review):
+${external.length > 0 ? external.join("\n") : "- None returned for this topic in this run."}
+Staged draft asset files: ${stagedCount}
+Policy: prefer first-party OWNED (min ${imagePackage.policy?.featured_min_score}); staged online LICENSED/PUBLIC_DOMAIN allowed (min ${imagePackage.policy?.online_featured_min_score}); AI fallback is technical line art only; remote UNVERIFIED never auto-publishes.`;
 }
 
 export function buildDraftPrBrief({
@@ -819,9 +826,56 @@ export async function executeDraftProposal({
 			pagespeed_qa: pagespeedQaSummary,
 		});
 	}
+	const imageBudget = createRunBudget();
+	let externalCandidates = [];
+	let stagedFeatured = null;
+	let onlineResearchSummary = null;
+	if (config?.integrationFlags?.imageSourcing === true) {
+		const imageResearch = createConfiguredImageResearchAdapter({
+			config,
+			budget: imageBudget,
+			includeAiLineArt: config?.integrationFlags?.imageAiLineArt === true,
+		});
+		const researched = await imageResearch.searchForOpportunity({
+			opportunity: selection.opportunity,
+			limit: 8,
+		});
+		onlineResearchSummary = Object.freeze({
+			classification: researched.classification,
+			count: (researched.candidates ?? []).length,
+			reason: researched.reason ?? null,
+			provider_summaries: researched.provider_summaries ?? null,
+		});
+		externalCandidates = researched.candidates ?? [];
+		const firstPartyProbe = buildBlogImagePackage({
+			opportunity: selection.opportunity,
+			repoRoot,
+			externalCandidates,
+		});
+		if (
+			!firstPartyProbe.featured.plan &&
+			externalCandidates.length > 0 &&
+			researched.classification === "MOCK_VERIFIED"
+		) {
+			const preferProviders =
+				config?.integrationFlags?.imageAiLineArt === true
+					? ["unsplash", "pexels", "wikimedia", "ai-lineart"]
+					: ["unsplash", "pexels", "wikimedia"];
+			stagedFeatured = await stageBestOnlineImage({
+				opportunity: selection.opportunity,
+				candidates: externalCandidates,
+				role: "featured",
+				minScore: IMAGE_SELECTION_THRESHOLDS.online_featured_min_score,
+				budget: imageBudget,
+				preferProviders,
+			});
+		}
+	}
 	const imagePackage = buildBlogImagePackage({
 		opportunity: selection.opportunity,
 		repoRoot,
+		externalCandidates,
+		stagedFeatured,
 	});
 	const opportunity = applyFeaturedImageToOpportunity(
 		selection.opportunity,
@@ -895,6 +949,7 @@ export async function executeDraftProposal({
 				operation: "CREATE",
 				content: markdown,
 			},
+			...(imagePackage.staged_files ?? []),
 		],
 	});
 	const branch = `eve/seo/${date}-${opportunity.slug}`;
@@ -991,6 +1046,8 @@ export async function executeDraftProposal({
 			featured: imagePackage.featured,
 			illustration_count: imagePackage.illustrations.candidates.length,
 			external_research_count: imagePackage.external_research.candidates.length,
+			staged_file_count: (imagePackage.staged_files ?? []).length,
+			online_research: onlineResearchSummary,
 		}),
 	});
 }

@@ -6,13 +6,18 @@ import { validateMarkdownDraft } from "./strategy.mjs";
 const SAFE_PROPOSAL_ID = /^[a-z0-9][a-z0-9-]{2,79}$/;
 const SAFE_MARKDOWN_PATH =
 	/^content\/(?:pages|posts|services)\/(?:[a-z0-9]+(?:-[a-z0-9]+)*\/)*[a-z0-9]+(?:-[a-z0-9]+)*\.md$/;
+const SAFE_SOURCED_IMAGE_PATH =
+	/^public\/images\/sourced\/[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*\.(?:webp|jpe?g|png|svg)$/;
+const SAFE_PROVENANCE_PATH =
+	/^public\/images\/sourced\/[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*\.provenance\.json$/;
 const OPERATIONS = new Set(["CREATE", "UPDATE"]);
+const MAX_BASE64_CHARS = 3_500_000;
 
 function countLines(content) {
 	return content.split("\n").length;
 }
 
-function assertSafePath(path) {
+function assertMarkdownPath(path) {
 	if (typeof path !== "string" || !SAFE_MARKDOWN_PATH.test(path)) {
 		throw new Error(
 			"Markdown change path must be a safe content/pages, content/posts, or content/services Markdown path",
@@ -21,12 +26,96 @@ function assertSafePath(path) {
 	return path;
 }
 
+function assertImageAssetPath(path) {
+	if (typeof path !== "string" || !SAFE_SOURCED_IMAGE_PATH.test(path)) {
+		throw new Error(
+			"Image asset path must be under public/images/sourced/<slug>/ with an approved extension",
+		);
+	}
+	return path;
+}
+
+function assertProvenancePath(path) {
+	if (typeof path !== "string" || !SAFE_PROVENANCE_PATH.test(path)) {
+		throw new Error(
+			"Image provenance path must be a public/images/sourced/<slug>/*.provenance.json file",
+		);
+	}
+	return path;
+}
+
+function assertUtf8TextFile(file, path) {
+	if (typeof file.content !== "string" || !file.content.trim())
+		throw new Error(`Change content is required: ${path}`);
+	if (file.content.includes("\r"))
+		throw new Error(`Change content must use LF line endings: ${path}`);
+	if (scanForSecrets(file.content))
+		throw new Error(`Change contains a possible secret: ${path}`);
+	return Object.freeze({
+		path,
+		operation: file.operation,
+		content: file.content,
+		encoding: "utf8",
+		kind: file.kind ?? "markdown",
+		line_count: countLines(file.content),
+		content_sha256: sha256(file.content),
+	});
+}
+
+function assertBase64ImageFile(file, path) {
+	if (typeof file.content_base64 !== "string" || !file.content_base64.trim())
+		throw new Error(`Base64 image content is required: ${path}`);
+	if (file.content_base64.length > MAX_BASE64_CHARS)
+		throw new Error(`Staged image exceeds size budget: ${path}`);
+	if (!/^[A-Za-z0-9+/=\s]+$/.test(file.content_base64))
+		throw new Error(`Staged image is not valid base64: ${path}`);
+	const compact = file.content_base64.replace(/\s+/g, "");
+	return Object.freeze({
+		path,
+		operation: file.operation,
+		content_base64: compact,
+		encoding: "base64",
+		kind: "image_asset",
+		line_count: 0,
+		content_sha256: sha256(compact),
+	});
+}
+
 function assertChangeFile(file) {
 	if (!file || typeof file !== "object")
 		throw new Error("Markdown change file must be an object");
-	const path = assertSafePath(file.path);
 	if (!OPERATIONS.has(file.operation))
 		throw new Error(`Unsupported Markdown change operation: ${file.operation}`);
+
+	if (SAFE_SOURCED_IMAGE_PATH.test(file.path ?? "")) {
+		const path = assertImageAssetPath(file.path);
+		if (file.encoding === "base64" || typeof file.content_base64 === "string") {
+			return assertBase64ImageFile(file, path);
+		}
+		const normalized = assertUtf8TextFile(file, path);
+		if (!path.endsWith(".svg")) {
+			throw new Error(
+				"Only SVG image assets may use utf8 content; raster images require base64.",
+			);
+		}
+		return Object.freeze({ ...normalized, kind: "image_asset" });
+	}
+
+	if (SAFE_PROVENANCE_PATH.test(file.path ?? "")) {
+		const path = assertProvenancePath(file.path);
+		const normalized = assertUtf8TextFile(file, path);
+		try {
+			const parsed = JSON.parse(normalized.content);
+			if (parsed?.schema_version !== "1.0" || !parsed?.rights_evidence_id) {
+				throw new Error("invalid provenance");
+			}
+		} catch {
+			throw new Error(`Image provenance JSON is invalid: ${path}`);
+		}
+		return Object.freeze({ ...normalized, kind: "image_provenance" });
+	}
+
+	const path = assertMarkdownPath(file.path);
 	if (typeof file.content !== "string" || !file.content.trim())
 		throw new Error(`Markdown change content is required: ${path}`);
 	if (file.content.includes("\r"))
@@ -40,6 +129,8 @@ function assertChangeFile(file) {
 		path,
 		operation: file.operation,
 		content: file.content,
+		encoding: "utf8",
+		kind: "markdown",
 		line_count: countLines(file.content),
 		content_sha256: sha256(file.content),
 	});
@@ -47,6 +138,7 @@ function assertChangeFile(file) {
 
 /**
  * Builds a bounded, immutable proposal for a future Markdown migration.
+ * May include staged sourced images + provenance under public/images/sourced/.
  * This only validates and describes a change set. It never creates a branch,
  * writes a file, or makes a GitHub request.
  */
@@ -66,6 +158,7 @@ export function buildMarkdownChangeSet({
 		);
 
 	const paths = new Set();
+	let markdownCount = 0;
 	const normalizedFiles = files.map((file) => {
 		const normalized = assertChangeFile(file);
 		if (paths.has(normalized.path))
@@ -73,8 +166,14 @@ export function buildMarkdownChangeSet({
 				`Markdown change set contains a duplicate path: ${normalized.path}`,
 			);
 		paths.add(normalized.path);
+		if (normalized.kind === "markdown") markdownCount += 1;
 		return normalized;
 	});
+	if (markdownCount < 1) {
+		throw new Error(
+			"Draft change set requires at least one Markdown content file",
+		);
+	}
 	const changedLines = normalizedFiles.reduce(
 		(total, file) => total + file.line_count,
 		0,
