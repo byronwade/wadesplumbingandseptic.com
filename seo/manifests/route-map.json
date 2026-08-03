@@ -1,2195 +1,2400 @@
 {
-	"schema_version": "1.0",
-	"generated_from": "repository-route-scan",
-	"classification": "MOCK_VERIFIED",
-	"routes": [
-		{
-			"route_pattern": "/",
-			"source_path": "app/(home)/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/[...slug]",
-			"source_path": "app/(site)/[...slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/5-signs-you-need-to-call-a-professional-plumber",
-			"source_path": "content/posts/5-signs-you-need-to-call-a-professional-plumber.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/5-signs-you-need-to-call-a-professional-plumber"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
-			"source_path": "content/posts/5-types-of-toilets-how-to-choose-the-right-one-for-your-home.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/5-types-of-toilets-how-to-choose-the-right-one-for-your-home"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/6-signs-you-have-a-hidden-water-leak",
-			"source_path": "content/posts/6-signs-you-have-a-hidden-water-leak.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/6-signs-you-have-a-hidden-water-leak"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
-			"source_path": "content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/about-us",
-			"source_path": "content/pages/about-us.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/about-us"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/careers",
-			"source_path": "content/pages/careers.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/careers"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/careers/customer-service-representative",
-			"source_path": "content/pages/careers/customer-service-representative.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/careers/customer-service-representative"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/careers/licensed-plumber",
-			"source_path": "content/pages/careers/licensed-plumber.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/careers/licensed-plumber"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/careers/septic-system-installer",
-			"source_path": "content/pages/careers/septic-system-installer.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/careers/septic-system-installer"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/category/[slug]",
-			"source_path": "app/(site)/category/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/compare/conventional-vs-engineered-septic",
-			"source_path": "content/pages/compare/conventional-vs-engineered-septic.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/compare/conventional-vs-engineered-septic"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/compare/hydro-jetting-vs-snaking",
-			"source_path": "content/pages/compare/hydro-jetting-vs-snaking.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/compare/hydro-jetting-vs-snaking"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/compare/repair-vs-replace-water-heater",
-			"source_path": "content/pages/compare/repair-vs-replace-water-heater.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/compare/repair-vs-replace-water-heater"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/contact",
-			"source_path": "content/pages/contact.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/contact"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/contact-call-first",
-			"source_path": "content/pages/contact-call-first.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/contact-call-first"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/efficient-water-filtration-santa-cruz",
-			"source_path": "content/posts/efficient-water-filtration-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/efficient-water-filtration-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/emergency-plumber-santa-cruz-county",
-			"source_path": "content/pages/emergency-plumber-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/emergency-plumber-santa-cruz-county"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/emergency-septic-solutions-santa-cruz",
-			"source_path": "content/posts/emergency-septic-solutions-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/emergency-septic-solutions-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/engineered-septic-systems-santa-cruz-county",
-			"source_path": "content/pages/engineered-septic-systems-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/engineered-septic-systems-santa-cruz-county"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/expert-tips",
-			"source_path": "app/(site)/expert-tips/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/expert-tips"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/expert-tips/popular",
-			"source_path": "app/(site)/expert-tips/popular/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/expert-tips/popular"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/expert-tips/trending",
-			"source_path": "app/(site)/expert-tips/trending/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/expert-tips/trending"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/failed-septic-repair-replacement-santa-cruz-county",
-			"source_path": "content/pages/failed-septic-repair-replacement-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/failed-septic-repair-replacement-santa-cruz-county"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/faq",
-			"source_path": "content/pages/faq.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/faq"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/financing",
-			"source_path": "content/pages/financing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/financing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/franchise",
-			"source_path": "content/pages/franchise.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/franchise"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
-			"source_path": "content/posts/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/glossary",
-			"source_path": "app/(site)/glossary/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/glossary"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/glossary/plumbing",
-			"source_path": "app/(site)/glossary/plumbing/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/glossary/plumbing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/glossary/plumbing/[slug]",
-			"source_path": "app/(site)/glossary/plumbing/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/glossary/septic",
-			"source_path": "app/(site)/glossary/septic/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/glossary/septic"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/glossary/septic/[slug]",
-			"source_path": "app/(site)/glossary/septic/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"source_path": "content/posts/how-santa-cruz-countys-unique-geography-affects-septic-systems.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-santa-cruz-countys-unique-geography-affects-septic-systems"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-avoid-common-holiday-plumbing-disasters",
-			"source_path": "content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-avoid-common-holiday-plumbing-disasters"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-handle-a-clogged-drain-or-sewer-line",
-			"source_path": "content/posts/how-to-handle-a-clogged-drain-or-sewer-line.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/how-to-handle-a-clogged-drain-or-sewer-line"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
-			"source_path": "content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-install-a-toilet-flange-in-8-easy-steps",
-			"source_path": "content/posts/how-to-install-a-toilet-flange-in-8-easy-steps.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-install-a-toilet-flange-in-8-easy-steps"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-locate-trustworthy-plumbing-services-nearby",
-			"source_path": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-locate-trustworthy-plumbing-services-nearby"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-maintain-your-septic-tank-for-long-term-performance",
-			"source_path": "content/posts/how-to-maintain-your-septic-tank-for-long-term-performance.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-maintain-your-septic-tank-for-long-term-performance"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-prevent-frozen-pipes-this-winter",
-			"source_path": "content/posts/how-to-prevent-frozen-pipes-this-winter.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/how-to-prevent-frozen-pipes-this-winter"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
-			"source_path": "content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/insurance-claims",
-			"source_path": "content/pages/insurance-claims.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/insurance-claims"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/maintenance-guide",
-			"source_path": "content/pages/maintenance-guide.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/maintenance-guide"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/memorial-day-plumbing-prep-santa-cruz",
-			"source_path": "content/posts/memorial-day-plumbing-prep-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/memorial-day-plumbing-prep-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/monterey",
-			"source_path": "content/pages/monterey.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/monterey"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/new-septic-installations-santa-cruz",
-			"source_path": "content/posts/new-septic-installations-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/new-septic-installations-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/pipe-leak-solutions-santa-cruz-septic",
-			"source_path": "content/posts/pipe-leak-solutions-santa-cruz-septic.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/pipe-leak-solutions-santa-cruz-septic"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
-			"source_path": "content/posts/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/plumbing-repair-services-santa-cruz-county",
-			"source_path": "content/pages/plumbing-repair-services-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/plumbing-repair-services-santa-cruz-county"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/plumbing-terms-every-homeowner-should-know",
-			"source_path": "content/posts/plumbing-terms-every-homeowner-should-know.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/plumbing-terms-every-homeowner-should-know"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/privacy-policy",
-			"source_path": "content/pages/privacy-policy.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/privacy-policy"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/promotions",
-			"source_path": "content/pages/promotions.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/promotions"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
-			"source_path": "content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/rebates",
-			"source_path": "content/pages/rebates.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/rebates"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
-			"source_path": "content/posts/salt-water-softeners-vs-water-conditioners-which-is-right-for-you.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/salt-water-softeners-vs-water-conditioners-which-is-right-for-you"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/san-jose",
-			"source_path": "content/pages/san-jose.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/san-jose"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz",
-			"source_path": "content/pages/santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz-toilet-running-solutions",
-			"source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz-toilet-running-solutions"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/commercial-plumbing",
-			"source_path": "content/pages/santa-cruz/commercial-plumbing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/commercial-plumbing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/drain-clearing",
-			"source_path": "content/pages/santa-cruz/drain-clearing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/drain-clearing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/santa-cruz-plumbers-near-me",
-			"source_path": "content/pages/santa-cruz/santa-cruz-plumbers-near-me.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/santa-cruz-plumbers-near-me"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/septic-pumping",
-			"source_path": "content/pages/santa-cruz/septic-pumping.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/septic-pumping"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/water-heater-replacement",
-			"source_path": "content/pages/santa-cruz/water-heater-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/water-heater-replacement"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-leach-field-repairs-santa-cruz",
-			"source_path": "content/posts/septic-leach-field-repairs-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-leach-field-repairs-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-pumping-essentials-santa-cruz",
-			"source_path": "content/posts/septic-pumping-essentials-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-pumping-essentials-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-replacement-santa-cruz",
-			"source_path": "content/pages/septic-replacement-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-replacement-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-safety-during-floods-santa-cruz",
-			"source_path": "content/posts/septic-safety-during-floods-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-safety-during-floods-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-solutions",
-			"source_path": "content/pages/septic-solutions.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-solutions"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-system-challenges-santa-cruz-fire",
-			"source_path": "content/posts/septic-system-challenges-santa-cruz-fire.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-system-challenges-santa-cruz-fire"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-system-components-santa-cruz",
-			"source_path": "content/posts/septic-system-components-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-system-components-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-system-seasonal-maintenance-santa-cruz",
-			"source_path": "content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-system-seasonal-maintenance-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-system-types-santa-cruz",
-			"source_path": "content/posts/septic-system-types-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-system-types-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-trouble-signs-santa-cruz",
-			"source_path": "content/posts/septic-trouble-signs-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-trouble-signs-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/[city]/[service]",
-			"source_path": "app/(site)/service-area/[city]/[service]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["city", "service"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/service-area/amesti-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/amesti-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/amesti-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/aptos-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/aptos-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/aptos-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/ben-lomond-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/ben-lomond-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/ben-lomond-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/bonny-doon-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/bonny-doon-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/bonny-doon-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/boulder-creek-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/boulder-creek-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/boulder-creek-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/brookdale-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/brookdale-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/brookdale-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/capitola-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/capitola-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/capitola-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/corralitos-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/corralitos-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/corralitos-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/davenport-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/davenport-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/davenport-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/day-valley-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/day-valley-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/day-valley-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/felton-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/felton-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/felton-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/freedom-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/freedom-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/freedom-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/interlaken-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/interlaken-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/interlaken-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/la-selva-beach-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/la-selva-beach-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/las-lomas-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/las-lomas-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/live-oak-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/live-oak-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/live-oak-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/lompico-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/lompico-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/lompico-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/los-gatos-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/los-gatos-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/mount-hermon-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/mount-hermon-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/mount-hermon-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/paradise-park-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/paradise-park-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/paradise-park-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/pasatiempo-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/pasatiempo-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/rio-del-mar-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/rio-del-mar-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/santa-cruz-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/santa-cruz-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/saratoga-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/saratoga-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/saratoga-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/scotts-valley-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/scotts-valley-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/soquel-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/soquel-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/soquel-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/twin-lakes-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/twin-lakes-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/watsonville-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/watsonville-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/watsonville-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-area/zayante-ca-plumbing-septic-services",
-			"source_path": "content/pages/service-area/zayante-ca-plumbing-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-area/zayante-ca-plumbing-septic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-areas",
-			"source_path": "app/(site)/service-areas/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-areas"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-category/[slug]",
-			"source_path": "app/(site)/service-category/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/service-offerings/[slug]",
-			"source_path": "app/(site)/service-offerings/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/service-offerings/backflow-prevention-installation",
-			"source_path": "content/services/backflow-prevention-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/backflow-prevention-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/backflow-prevention-testing",
-			"source_path": "content/services/backflow-prevention-testing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/backflow-prevention-testing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/commercial-drain-cleaning",
-			"source_path": "content/services/commercial-drain-cleaning.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/commercial-drain-cleaning"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/commercial-plumbing-maintenance",
-			"source_path": "content/services/commercial-plumbing-maintenance.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/commercial-plumbing-maintenance"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/commercial-septic-services",
-			"source_path": "content/services/commercial-septic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/commercial-septic-services"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/drain-cleaning",
-			"source_path": "content/services/drain-cleaning.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/drain-cleaning"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/drain-line-inspection",
-			"source_path": "content/services/drain-line-inspection.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/drain-line-inspection"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/drainfield-repair-and-replacement",
-			"source_path": "content/services/drainfield-repair-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/drainfield-repair-and-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/engineered-septic-system-installation",
-			"source_path": "content/services/engineered-septic-system-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/engineered-septic-system-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/fixture-installation",
-			"source_path": "content/services/fixture-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/fixture-installation"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/garbage-disposal-installation",
-			"source_path": "content/services/garbage-disposal-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/garbage-disposal-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/gas-line-repair",
-			"source_path": "content/services/gas-line-repair.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/gas-line-repair"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/grease-trap-cleaning",
-			"source_path": "content/services/grease-trap-cleaning.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/grease-trap-cleaning"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/grease-trap-installation",
-			"source_path": "content/services/grease-trap-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/grease-trap-installation"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/high-pressure-jetting-for-septic-lines",
-			"source_path": "content/services/high-pressure-jetting-for-septic-lines.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/high-pressure-jetting-for-septic-lines"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/hydro-jetting",
-			"source_path": "content/services/hydro-jetting.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/hydro-jetting"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/leak-detection",
-			"source_path": "content/services/leak-detection.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/leak-detection"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/main-line-cleanout-installation",
-			"source_path": "content/services/main-line-cleanout-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/main-line-cleanout-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/pipe-repair-and-replacement",
-			"source_path": "content/services/pipe-repair-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/pipe-repair-and-replacement"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-filter-cleaning-and-replacement",
-			"source_path": "content/services/septic-filter-cleaning-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-filter-cleaning-and-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-system-abandonment",
-			"source_path": "content/services/septic-system-abandonment.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/septic-system-abandonment"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-system-certification",
-			"source_path": "content/services/septic-system-certification.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/septic-system-certification"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-system-installation",
-			"source_path": "content/services/septic-system-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/septic-system-installation"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-alarm-installation",
-			"source_path": "content/services/septic-tank-alarm-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-alarm-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-cleaning-and-pumping",
-			"source_path": "content/services/septic-tank-cleaning-and-pumping.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-cleaning-and-pumping"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-design-and-engineering",
-			"source_path": "content/services/septic-tank-design-and-engineering.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-design-and-engineering"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-distribution-box-repair-and-replacement",
-			"source_path": "content/services/septic-tank-distribution-box-repair-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-distribution-box-repair-and-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-inspection-and-assessment",
-			"source_path": "content/services/septic-tank-inspection-and-assessment.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-inspection-and-assessment"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
-			"source_path": "content/services/septic-tank-leach-field-repair-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-leach-field-repair-and-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-maintenance-and-care",
-			"source_path": "content/services/septic-tank-maintenance-and-care.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-maintenance-and-care"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-repair-and-replacement",
-			"source_path": "content/services/septic-tank-repair-and-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-repair-and-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-riser-installation",
-			"source_path": "content/services/septic-tank-riser-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-riser-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-system-compliance-and-permitting",
-			"source_path": "content/services/septic-tank-system-compliance-and-permitting.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-system-compliance-and-permitting"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-system-upgrades",
-			"source_path": "content/services/septic-tank-system-upgrades.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/septic-tank-system-upgrades"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
-			"source_path": "content/services/septic-tank-troubleshooting-and-diagnostic-services.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-troubleshooting-and-diagnostic-services"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/sewer-camera-inspection",
-			"source_path": "content/services/sewer-camera-inspection.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/sewer-camera-inspection"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/sewer-line-inspection",
-			"source_path": "content/services/sewer-line-inspection.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/sewer-line-inspection"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/shower-installation-and-repair",
-			"source_path": "content/services/shower-installation-and-repair.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/shower-installation-and-repair"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/smoke-tests",
-			"source_path": "content/services/smoke-tests.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/smoke-tests"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/storm-drain-cleaning",
-			"source_path": "content/services/storm-drain-cleaning.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/storm-drain-cleaning"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/sump-pump-installation",
-			"source_path": "content/services/sump-pump-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/sump-pump-installation"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/tankless-water-heater-installation",
-			"source_path": "content/services/tankless-water-heater-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/tankless-water-heater-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/toilet-repair",
-			"source_path": "content/services/toilet-repair.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/toilet-repair"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/trenchless-sewer-line-replacement",
-			"source_path": "content/services/trenchless-sewer-line-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/trenchless-sewer-line-replacement"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/video-inspections",
-			"source_path": "content/services/video-inspections.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/video-inspections"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/water-filtration-system-installation",
-			"source_path": "content/services/water-filtration-system-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/water-filtration-system-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/water-heater-installation",
-			"source_path": "content/services/water-heater-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/water-heater-installation"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/water-line-repair-and-installation",
-			"source_path": "content/services/water-line-repair-and-installation.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/water-line-repair-and-installation"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/service-offerings/water-softener-maintenance",
-			"source_path": "content/services/water-softener-maintenance.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/service-offerings/water-softener-maintenance"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/services",
-			"source_path": "app/(site)/services/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/services"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/services/[slug]",
-			"source_path": "app/(site)/services/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/services/popular",
-			"source_path": "app/(site)/services/popular/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/services/popular"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/services/trending",
-			"source_path": "app/(site)/services/trending/page.tsx",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/services/trending"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/sewer-line-repair-essentials-santa-cruz",
-			"source_path": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/sewer-line-repair-essentials-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/should-you-call-a-plumber-or-fix-it-yourself",
-			"source_path": "content/posts/should-you-call-a-plumber-or-fix-it-yourself.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/should-you-call-a-plumber-or-fix-it-yourself"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/should-you-repair-or-replace-your-water-heater",
-			"source_path": "content/posts/should-you-repair-or-replace-your-water-heater.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/should-you-repair-or-replace-your-water-heater"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
-			"source_path": "content/posts/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/signs-your-drain-field-needs-professional-repair",
-			"source_path": "content/posts/signs-your-drain-field-needs-professional-repair.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/signs-your-drain-field-needs-professional-repair"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/slow-drains-solutions-santa-cruz",
-			"source_path": "content/posts/slow-drains-solutions-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/slow-drains-solutions-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/tag/[slug]",
-			"source_path": "app/(site)/tag/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
-			"route_pattern": "/terms-of-service",
-			"source_path": "content/pages/terms-of-service.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/terms-of-service"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/testimonials",
-			"source_path": "content/pages/testimonials.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/testimonials"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/thank-you",
-			"source_path": "content/pages/thank-you.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/thank-you"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/the-benefits-of-hydro-jetting",
-			"source_path": "content/posts/the-benefits-of-hydro-jetting.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/the-benefits-of-hydro-jetting"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/the-complete-guide-to-septic-system-maintenance",
-			"source_path": "content/posts/the-complete-guide-to-septic-system-maintenance.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/the-complete-guide-to-septic-system-maintenance"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/the-importance-of-regular-plumbing-maintenance",
-			"source_path": "content/posts/the-importance-of-regular-plumbing-maintenance.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/the-importance-of-regular-plumbing-maintenance"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
-			"source_path": "content/posts/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
-			"source_path": "content/posts/understanding-the-cost-of-septic-pumping-in-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/understanding-the-cost-of-septic-pumping-in-santa-cruz-county"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/warranties",
-			"source_path": "content/pages/warranties.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/warranties"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/water-main-sewer-line-repair-santa-cruz-county",
-			"source_path": "content/pages/water-main-sewer-line-repair-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/water-main-sewer-line-repair-santa-cruz-county"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
-			"source_path": "content/posts/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/what-is-hard-water-why-does-it-matter-for-your-home",
-			"source_path": "content/posts/what-is-hard-water-why-does-it-matter-for-your-home.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/what-is-hard-water-why-does-it-matter-for-your-home"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/what-you-need-to-know-about-engineered-septic-systems",
-			"source_path": "content/posts/what-you-need-to-know-about-engineered-septic-systems.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/what-you-need-to-know-about-engineered-septic-systems"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/why-is-dirty-water-backing-up-into-your-shower",
-			"source_path": "content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/why-is-dirty-water-backing-up-into-your-shower"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/why-you-should-never-ignore-septic-system-warning-signs",
-			"source_path": "content/posts/why-you-should-never-ignore-septic-system-warning-signs.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/why-you-should-never-ignore-septic-system-warning-signs"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		}
-	]
+  "schema_version": "1.0",
+  "generated_from": "repository-route-scan",
+  "classification": "MOCK_VERIFIED",
+  "routes": [
+    {
+      "route_pattern": "/",
+      "source_path": "app/(home)/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/[...slug]",
+      "source_path": "app/(site)/[...slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/5-signs-you-need-to-call-a-professional-plumber",
+      "source_path": "content/posts/5-signs-you-need-to-call-a-professional-plumber.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/5-signs-you-need-to-call-a-professional-plumber"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+      "source_path": "content/posts/5-types-of-toilets-how-to-choose-the-right-one-for-your-home.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/6-signs-you-have-a-hidden-water-leak",
+      "source_path": "content/posts/6-signs-you-have-a-hidden-water-leak.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/6-signs-you-have-a-hidden-water-leak"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+      "source_path": "content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/about-us",
+      "source_path": "content/pages/about-us.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/about-us"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/careers",
+      "source_path": "content/pages/careers.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/careers"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/careers/customer-service-representative",
+      "source_path": "content/pages/careers/customer-service-representative.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/careers/customer-service-representative"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/careers/licensed-plumber",
+      "source_path": "content/pages/careers/licensed-plumber.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/careers/licensed-plumber"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/careers/septic-system-installer",
+      "source_path": "content/pages/careers/septic-system-installer.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/careers/septic-system-installer"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/category/[slug]",
+      "source_path": "app/(site)/category/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/compare/conventional-vs-engineered-septic",
+      "source_path": "content/pages/compare/conventional-vs-engineered-septic.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/compare/conventional-vs-engineered-septic"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/compare/hydro-jetting-vs-snaking",
+      "source_path": "content/pages/compare/hydro-jetting-vs-snaking.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/compare/hydro-jetting-vs-snaking"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/compare/repair-vs-replace-water-heater",
+      "source_path": "content/pages/compare/repair-vs-replace-water-heater.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/compare/repair-vs-replace-water-heater"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/contact",
+      "source_path": "content/pages/contact.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/contact"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/contact-call-first",
+      "source_path": "content/pages/contact-call-first.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/contact-call-first"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/efficient-water-filtration-santa-cruz",
+      "source_path": "content/posts/efficient-water-filtration-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/efficient-water-filtration-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/emergency-plumber-santa-cruz-county",
+      "source_path": "content/pages/emergency-plumber-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/emergency-plumber-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/emergency-septic-solutions-santa-cruz",
+      "source_path": "content/posts/emergency-septic-solutions-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/emergency-septic-solutions-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/engineered-septic-systems-santa-cruz-county",
+      "source_path": "content/pages/engineered-septic-systems-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/engineered-septic-systems-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/expert-tips",
+      "source_path": "app/(site)/expert-tips/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/expert-tips"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/expert-tips/popular",
+      "source_path": "app/(site)/expert-tips/popular/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/expert-tips/popular"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/expert-tips/trending",
+      "source_path": "app/(site)/expert-tips/trending/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/expert-tips/trending"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/failed-septic-repair-replacement-santa-cruz-county",
+      "source_path": "content/pages/failed-septic-repair-replacement-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/failed-septic-repair-replacement-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/faq",
+      "source_path": "content/pages/faq.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/faq"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/financing",
+      "source_path": "content/pages/financing.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/financing"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/franchise",
+      "source_path": "content/pages/franchise.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/franchise"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
+      "source_path": "content/posts/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/glossary",
+      "source_path": "app/(site)/glossary/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/glossary"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/glossary/plumbing",
+      "source_path": "app/(site)/glossary/plumbing/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/glossary/plumbing"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/glossary/plumbing/[slug]",
+      "source_path": "app/(site)/glossary/plumbing/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/glossary/septic",
+      "source_path": "app/(site)/glossary/septic/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/glossary/septic"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/glossary/septic/[slug]",
+      "source_path": "app/(site)/glossary/septic/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+      "source_path": "content/posts/how-santa-cruz-countys-unique-geography-affects-septic-systems.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-santa-cruz-countys-unique-geography-affects-septic-systems"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-avoid-common-holiday-plumbing-disasters",
+      "source_path": "content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-avoid-common-holiday-plumbing-disasters"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-handle-a-clogged-drain-or-sewer-line",
+      "source_path": "content/posts/how-to-handle-a-clogged-drain-or-sewer-line.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-handle-a-clogged-drain-or-sewer-line"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
+      "source_path": "content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+      "source_path": "content/posts/how-to-install-a-toilet-flange-in-8-easy-steps.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-install-a-toilet-flange-in-8-easy-steps"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-locate-trustworthy-plumbing-services-nearby",
+      "source_path": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-locate-trustworthy-plumbing-services-nearby"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+      "source_path": "content/posts/how-to-maintain-your-septic-tank-for-long-term-performance.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-maintain-your-septic-tank-for-long-term-performance"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-prevent-frozen-pipes-this-winter",
+      "source_path": "content/posts/how-to-prevent-frozen-pipes-this-winter.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-prevent-frozen-pipes-this-winter"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+      "source_path": "content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/insurance-claims",
+      "source_path": "content/pages/insurance-claims.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/insurance-claims"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/maintenance-guide",
+      "source_path": "content/pages/maintenance-guide.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/maintenance-guide"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/memorial-day-plumbing-prep-santa-cruz",
+      "source_path": "content/posts/memorial-day-plumbing-prep-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/memorial-day-plumbing-prep-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/monterey",
+      "source_path": "content/pages/monterey.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/monterey"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/new-septic-installations-santa-cruz",
+      "source_path": "content/posts/new-septic-installations-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/new-septic-installations-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/pipe-leak-solutions-santa-cruz-septic",
+      "source_path": "content/posts/pipe-leak-solutions-santa-cruz-septic.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/pipe-leak-solutions-santa-cruz-septic"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+      "source_path": "content/posts/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/plumbing-repair-services-santa-cruz-county",
+      "source_path": "content/pages/plumbing-repair-services-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/plumbing-repair-services-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/plumbing-terms-every-homeowner-should-know",
+      "source_path": "content/posts/plumbing-terms-every-homeowner-should-know.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/plumbing-terms-every-homeowner-should-know"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/privacy-policy",
+      "source_path": "content/pages/privacy-policy.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/privacy-policy"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/promotions",
+      "source_path": "content/pages/promotions.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/promotions"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+      "source_path": "content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/rebates",
+      "source_path": "content/pages/rebates.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/rebates"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
+      "source_path": "content/posts/salt-water-softeners-vs-water-conditioners-which-is-right-for-you.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/san-jose",
+      "source_path": "content/pages/san-jose.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/san-jose"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz",
+      "source_path": "content/pages/santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz-toilet-running-solutions",
+      "source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz-toilet-running-solutions"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz/commercial-plumbing",
+      "source_path": "content/pages/santa-cruz/commercial-plumbing.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz/commercial-plumbing"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz/drain-clearing",
+      "source_path": "content/pages/santa-cruz/drain-clearing.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz/drain-clearing"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz/santa-cruz-plumbers-near-me",
+      "source_path": "content/pages/santa-cruz/santa-cruz-plumbers-near-me.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz/santa-cruz-plumbers-near-me"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz/septic-pumping",
+      "source_path": "content/pages/santa-cruz/septic-pumping.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz/septic-pumping"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/santa-cruz/water-heater-replacement",
+      "source_path": "content/pages/santa-cruz/water-heater-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/santa-cruz/water-heater-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-leach-field-repairs-santa-cruz",
+      "source_path": "content/posts/septic-leach-field-repairs-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-leach-field-repairs-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-pumping-essentials-santa-cruz",
+      "source_path": "content/posts/septic-pumping-essentials-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-pumping-essentials-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-replacement-santa-cruz",
+      "source_path": "content/pages/septic-replacement-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-replacement-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-safety-during-floods-santa-cruz",
+      "source_path": "content/posts/septic-safety-during-floods-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-safety-during-floods-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-solutions",
+      "source_path": "content/pages/septic-solutions.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-solutions"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-system-challenges-santa-cruz-fire",
+      "source_path": "content/posts/septic-system-challenges-santa-cruz-fire.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-system-challenges-santa-cruz-fire"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-system-components-santa-cruz",
+      "source_path": "content/posts/septic-system-components-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-system-components-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-system-seasonal-maintenance-santa-cruz",
+      "source_path": "content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-system-seasonal-maintenance-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-system-types-santa-cruz",
+      "source_path": "content/posts/septic-system-types-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-system-types-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/septic-trouble-signs-santa-cruz",
+      "source_path": "content/posts/septic-trouble-signs-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/septic-trouble-signs-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/[city]/[service]",
+      "source_path": "app/(site)/service-area/[city]/[service]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "city",
+        "service"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/service-area/amesti-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/amesti-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/amesti-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/aptos-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/aptos-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/aptos-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/ben-lomond-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/ben-lomond-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/ben-lomond-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/bonny-doon-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/bonny-doon-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/bonny-doon-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/boulder-creek-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/boulder-creek-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/boulder-creek-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/brookdale-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/brookdale-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/brookdale-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/capitola-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/capitola-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/capitola-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/corralitos-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/corralitos-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/corralitos-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/davenport-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/davenport-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/davenport-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/day-valley-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/day-valley-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/day-valley-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/felton-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/felton-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/felton-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/freedom-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/freedom-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/freedom-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/interlaken-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/interlaken-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/interlaken-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/la-selva-beach-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/la-selva-beach-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/la-selva-beach-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/las-lomas-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/las-lomas-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/las-lomas-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/live-oak-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/live-oak-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/live-oak-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/lompico-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/lompico-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/lompico-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/los-gatos-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/los-gatos-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/los-gatos-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/mount-hermon-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/mount-hermon-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/mount-hermon-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/paradise-park-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/paradise-park-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/paradise-park-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/pasatiempo-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/pasatiempo-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/pasatiempo-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/rio-del-mar-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/rio-del-mar-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/rio-del-mar-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/santa-cruz-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/santa-cruz-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/santa-cruz-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/saratoga-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/saratoga-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/saratoga-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/scotts-valley-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/scotts-valley-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/scotts-valley-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/soquel-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/soquel-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/soquel-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/twin-lakes-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/twin-lakes-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/twin-lakes-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/watsonville-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/watsonville-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/watsonville-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-area/zayante-ca-plumbing-septic-services",
+      "source_path": "content/pages/service-area/zayante-ca-plumbing-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-area/zayante-ca-plumbing-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-areas",
+      "source_path": "app/(site)/service-areas/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-areas"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-category/[slug]",
+      "source_path": "app/(site)/service-category/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/service-offerings/[slug]",
+      "source_path": "app/(site)/service-offerings/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/service-offerings/backflow-prevention-installation",
+      "source_path": "content/services/backflow-prevention-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/backflow-prevention-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/backflow-prevention-testing",
+      "source_path": "content/services/backflow-prevention-testing.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/backflow-prevention-testing"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/commercial-drain-cleaning",
+      "source_path": "content/services/commercial-drain-cleaning.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/commercial-drain-cleaning"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/commercial-plumbing-maintenance",
+      "source_path": "content/services/commercial-plumbing-maintenance.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/commercial-plumbing-maintenance"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/commercial-septic-services",
+      "source_path": "content/services/commercial-septic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/commercial-septic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/drain-cleaning",
+      "source_path": "content/services/drain-cleaning.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/drain-cleaning"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/drain-line-inspection",
+      "source_path": "content/services/drain-line-inspection.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/drain-line-inspection"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/drainfield-repair-and-replacement",
+      "source_path": "content/services/drainfield-repair-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/drainfield-repair-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/engineered-septic-system-installation",
+      "source_path": "content/services/engineered-septic-system-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/engineered-septic-system-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/fixture-installation",
+      "source_path": "content/services/fixture-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/fixture-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/garbage-disposal-installation",
+      "source_path": "content/services/garbage-disposal-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/garbage-disposal-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/gas-line-repair",
+      "source_path": "content/services/gas-line-repair.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/gas-line-repair"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/grease-trap-cleaning",
+      "source_path": "content/services/grease-trap-cleaning.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/grease-trap-cleaning"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/grease-trap-installation",
+      "source_path": "content/services/grease-trap-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/grease-trap-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/high-pressure-jetting-for-septic-lines",
+      "source_path": "content/services/high-pressure-jetting-for-septic-lines.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/high-pressure-jetting-for-septic-lines"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/hydro-jetting",
+      "source_path": "content/services/hydro-jetting.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/hydro-jetting"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/leak-detection",
+      "source_path": "content/services/leak-detection.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/leak-detection"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/main-line-cleanout-installation",
+      "source_path": "content/services/main-line-cleanout-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/main-line-cleanout-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/pipe-repair-and-replacement",
+      "source_path": "content/services/pipe-repair-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/pipe-repair-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-filter-cleaning-and-replacement",
+      "source_path": "content/services/septic-filter-cleaning-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-filter-cleaning-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-system-abandonment",
+      "source_path": "content/services/septic-system-abandonment.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-system-abandonment"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-system-certification",
+      "source_path": "content/services/septic-system-certification.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-system-certification"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-system-installation",
+      "source_path": "content/services/septic-system-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-system-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-alarm-installation",
+      "source_path": "content/services/septic-tank-alarm-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-alarm-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-cleaning-and-pumping",
+      "source_path": "content/services/septic-tank-cleaning-and-pumping.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-cleaning-and-pumping"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-design-and-engineering",
+      "source_path": "content/services/septic-tank-design-and-engineering.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-design-and-engineering"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-distribution-box-repair-and-replacement",
+      "source_path": "content/services/septic-tank-distribution-box-repair-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-distribution-box-repair-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-inspection-and-assessment",
+      "source_path": "content/services/septic-tank-inspection-and-assessment.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-inspection-and-assessment"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
+      "source_path": "content/services/septic-tank-leach-field-repair-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-leach-field-repair-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-maintenance-and-care",
+      "source_path": "content/services/septic-tank-maintenance-and-care.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-maintenance-and-care"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-repair-and-replacement",
+      "source_path": "content/services/septic-tank-repair-and-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-repair-and-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-riser-installation",
+      "source_path": "content/services/septic-tank-riser-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-riser-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-system-compliance-and-permitting",
+      "source_path": "content/services/septic-tank-system-compliance-and-permitting.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-system-compliance-and-permitting"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-system-upgrades",
+      "source_path": "content/services/septic-tank-system-upgrades.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-system-upgrades"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+      "source_path": "content/services/septic-tank-troubleshooting-and-diagnostic-services.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/sewer-camera-inspection",
+      "source_path": "content/services/sewer-camera-inspection.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/sewer-camera-inspection"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/sewer-line-inspection",
+      "source_path": "content/services/sewer-line-inspection.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/sewer-line-inspection"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/shower-installation-and-repair",
+      "source_path": "content/services/shower-installation-and-repair.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/shower-installation-and-repair"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/smoke-tests",
+      "source_path": "content/services/smoke-tests.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/smoke-tests"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/storm-drain-cleaning",
+      "source_path": "content/services/storm-drain-cleaning.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/storm-drain-cleaning"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/sump-pump-installation",
+      "source_path": "content/services/sump-pump-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/sump-pump-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/tankless-water-heater-installation",
+      "source_path": "content/services/tankless-water-heater-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/tankless-water-heater-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/toilet-repair",
+      "source_path": "content/services/toilet-repair.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/toilet-repair"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/trenchless-sewer-line-replacement",
+      "source_path": "content/services/trenchless-sewer-line-replacement.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/trenchless-sewer-line-replacement"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/video-inspections",
+      "source_path": "content/services/video-inspections.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/video-inspections"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/water-filtration-system-installation",
+      "source_path": "content/services/water-filtration-system-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/water-filtration-system-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/water-heater-installation",
+      "source_path": "content/services/water-heater-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/water-heater-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/water-line-repair-and-installation",
+      "source_path": "content/services/water-line-repair-and-installation.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/water-line-repair-and-installation"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/service-offerings/water-softener-maintenance",
+      "source_path": "content/services/water-softener-maintenance.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/service-offerings/water-softener-maintenance"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/services",
+      "source_path": "app/(site)/services/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/services"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/services/[slug]",
+      "source_path": "app/(site)/services/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/services/popular",
+      "source_path": "app/(site)/services/popular/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/services/popular"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/services/trending",
+      "source_path": "app/(site)/services/trending/page.tsx",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/services/trending"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/sewer-line-repair-essentials-santa-cruz",
+      "source_path": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/sewer-line-repair-essentials-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/should-you-call-a-plumber-or-fix-it-yourself",
+      "source_path": "content/posts/should-you-call-a-plumber-or-fix-it-yourself.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/should-you-call-a-plumber-or-fix-it-yourself"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/should-you-repair-or-replace-your-water-heater",
+      "source_path": "content/posts/should-you-repair-or-replace-your-water-heater.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/should-you-repair-or-replace-your-water-heater"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
+      "source_path": "content/posts/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/signs-your-drain-field-needs-professional-repair",
+      "source_path": "content/posts/signs-your-drain-field-needs-professional-repair.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/signs-your-drain-field-needs-professional-repair"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/slow-drains-solutions-santa-cruz",
+      "source_path": "content/posts/slow-drains-solutions-santa-cruz.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/slow-drains-solutions-santa-cruz"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/tag/[slug]",
+      "source_path": "app/(site)/tag/[slug]/page.tsx",
+      "kind": "DYNAMIC_RUNTIME_DATA",
+      "parameters": [
+        "slug"
+      ],
+      "materialized_routes": [],
+      "materialization_state": "BLOCKED_MISSING_CREDENTIALS",
+      "data_source_paths": [],
+      "classification": "BLOCKED_MISSING_CREDENTIALS",
+      "reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+    },
+    {
+      "route_pattern": "/terms-of-service",
+      "source_path": "content/pages/terms-of-service.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/terms-of-service"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/testimonials",
+      "source_path": "content/pages/testimonials.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/testimonials"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/thank-you",
+      "source_path": "content/pages/thank-you.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/thank-you"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/the-benefits-of-hydro-jetting",
+      "source_path": "content/posts/the-benefits-of-hydro-jetting.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/the-benefits-of-hydro-jetting"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/the-complete-guide-to-septic-system-maintenance",
+      "source_path": "content/posts/the-complete-guide-to-septic-system-maintenance.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/the-complete-guide-to-septic-system-maintenance"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/the-importance-of-regular-plumbing-maintenance",
+      "source_path": "content/posts/the-importance-of-regular-plumbing-maintenance.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/the-importance-of-regular-plumbing-maintenance"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+      "source_path": "content/posts/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
+      "source_path": "content/posts/understanding-the-cost-of-septic-pumping-in-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/warranties",
+      "source_path": "content/pages/warranties.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/warranties"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/water-main-sewer-line-repair-santa-cruz-county",
+      "source_path": "content/pages/water-main-sewer-line-repair-santa-cruz-county.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/water-main-sewer-line-repair-santa-cruz-county"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+      "source_path": "content/posts/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/what-is-hard-water-why-does-it-matter-for-your-home",
+      "source_path": "content/posts/what-is-hard-water-why-does-it-matter-for-your-home.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/what-is-hard-water-why-does-it-matter-for-your-home"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/what-you-need-to-know-about-engineered-septic-systems",
+      "source_path": "content/posts/what-you-need-to-know-about-engineered-septic-systems.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/what-you-need-to-know-about-engineered-septic-systems"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/why-is-dirty-water-backing-up-into-your-shower",
+      "source_path": "content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/why-is-dirty-water-backing-up-into-your-shower"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    },
+    {
+      "route_pattern": "/why-you-should-never-ignore-septic-system-warning-signs",
+      "source_path": "content/posts/why-you-should-never-ignore-septic-system-warning-signs.md",
+      "kind": "STATIC_ROUTE",
+      "parameters": [],
+      "materialized_routes": [
+        "/why-you-should-never-ignore-septic-system-warning-signs"
+      ],
+      "materialization_state": "REPOSITORY_ROUTE_DECLARED",
+      "data_source_paths": [],
+      "classification": "MOCK_VERIFIED",
+      "reason": "Static route pattern is directly declared in the repository."
+    }
+  ]
 }

@@ -52,7 +52,7 @@ Openverse (commercial CC/PD filter), Wikimedia Commons, Metropolitan Museum Open
 1. [ ] Prefer real Wade work photos under `public/images/work/` with descriptive filenames.
 2. [ ] Optional AI fallback: `SEO_AGENT_ENABLE_IMAGE_AI_LINEART=true` only after review (technical line-art SVG, not photoreal AI).
 3. [ ] Outside standing propose, set `SEO_AGENT_ENABLE_IMAGE_SOURCING=true` and/or `SEO_AGENT_ENABLE_OPEN_RESEARCH=true`.
-4. [ ] In draft PR review, check **Images (featured is fail-closed)** for origin, rights, provenance, alt text, and reject photoreal AI filler. Treat Wikidata/Nominatim/Grokipedia lines as soft context only, never as Wade facts.
+4. [ ] In draft PR review, check **Media sources (prominent; review required)** and **Internal linking diligence** for origin, rights, provenance, alt text, service/related-post link mix, and reject photoreal AI filler. Treat Wikidata/Nominatim/Grokipedia lines as soft context only, never as Wade facts.
 
 ## Next: Local Falcon
 

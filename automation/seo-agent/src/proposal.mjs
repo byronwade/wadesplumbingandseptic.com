@@ -328,10 +328,11 @@ async function writeWithGateway({
 	opportunity,
 	date,
 	generationGuard = null,
+	imagePackage = null,
 }) {
 	return generateMarkdownWithGateway({
 		runId,
-		prompt: buildWriterPrompt({ opportunity, date }),
+		prompt: buildWriterPrompt({ opportunity, date, imagePackage }),
 		maxOutputTokens: PROPOSAL_GENERATION_LIMITS.writeMaxOutputTokens,
 		stage: "write",
 		generationGuard,
@@ -441,7 +442,7 @@ ${callLines || "- No generation stages recorded."}`;
 
 function formatImagePackageForBrief(imagePackage = null) {
 	if (!imagePackage) {
-		return "- Image package was not built for this run.";
+		return "- Media package was not built for this run. Reject if the draft invents remote image URLs.";
 	}
 	const featured = imagePackage.featured;
 	const plan = featured?.plan;
@@ -466,7 +467,13 @@ function formatImagePackageForBrief(imagePackage = null) {
 		);
 	const stagedCount = (imagePackage.staged_files ?? []).length;
 	const queries = imagePackage.online_research?.queries ?? [];
-	return `${featuredLine}
+	return `Reviewer checklist:
+- [ ] Featured image is a real site asset (first-party or staged under \`public/images/sourced/\`)
+- [ ] Rights/provenance look correct; reject photoreal AI filler
+- [ ] Alt text matches the topic
+- [ ] Draft does not hotlink remote stock hosts
+
+${featuredLine}
 Illustration candidates:
 ${illustrations.length > 0 ? illustrations.join("\n") : "- None scored high enough for in-body use."}
 Online sourced candidates (staged into draft only when rights-safe; still need human PR review):
@@ -497,8 +504,17 @@ export function buildDraftPrBrief({
 	imagePackage = null,
 }) {
 	const linkLines = opportunity.internal_links
-		.map((link) => `- [${link.anchor}](${link.to}): ${link.reader_rationale}`)
+		.map(
+			(link) =>
+				`- [${link.anchor}](${link.to}) [${link.role ?? "link"}]: ${link.reader_rationale}`,
+		)
 		.join("\n");
+	const serviceLinkCount = opportunity.internal_links.filter(
+		(link) => link.role === "service",
+	).length;
+	const postLinkCount = opportunity.internal_links.filter(
+		(link) => link.role === "post",
+	).length;
 	const demand = opportunity.demand_source
 		? `${opportunity.demand_source.kind}: ${opportunity.demand_source.name} on ${opportunity.demand_source.date} (${opportunity.demand_source.lead_time_days} days of useful lead time)`
 		: "evergreen catalog topic (no active holiday/event window forced this choice)";
@@ -513,7 +529,7 @@ export function buildDraftPrBrief({
 	);
 	const seoValue = cleanBriefText(
 		topicDecision?.seo_value,
-		"This draft targets a specific Santa Cruz County search intent with people-first depth and contextual links into owned service pages.",
+		"This draft targets a specific Santa Cruz County search intent with people-first depth and contextual links into owned service pages and related posts.",
 	);
 	const researchMode = demandContext?.research?.mode ?? "CATALOG_ONLY";
 	const researchClass =
@@ -540,8 +556,9 @@ export function buildDraftPrBrief({
 ## What Eve did this run
 - Autonomously researched Santa Cruz County demand timing from the versioned holiday/event calendar and trending-concept windows.
 - Compared viable unused blog topics against the live Markdown inventory and link graph.
+- Built a diligent internal-link plan (services + related posts + CTA) and a site media package before writing.
 - Chose **${opportunity.click_title}** (\`${opportunity.slug}\`) using decision mode \`${decisionMode}\`.
-- Wrote a people-first draft, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
+- Wrote a people-first draft that must use site media sources and keyword-aware internal links, peer-reviewed it, and expanded weak portions instead of rewriting the whole article when the concept was already good.
 - Ran fail-closed quality gates, then opened this draft-only Connect PR.
 - Token-efficiency safeguards:
 ${formatGenerationSpend(generation)}
@@ -552,6 +569,17 @@ ${formatRevisionRounds(revision)}
 ${activeDemand.length > 0 ? activeDemand.join("\n") : "- None inside a lead window for this run."}
 - Active trending concepts considered:
 ${activeTrends.length > 0 ? activeTrends.join("\n") : "- None active for the current month window."}
+
+## Media sources (prominent; review required)
+${formatImagePackageForBrief(imagePackage)}
+
+## Internal linking diligence
+- Planned mix: ${serviceLinkCount} service page(s), ${postLinkCount} related post(s), plus CTA/home as available.
+- Matched in draft: ${(quality.internal_links ?? []).join(", ") || "n/a"}
+- Service links matched: ${(quality.service_links ?? []).join(", ") || "n/a"}
+- Related post links matched: ${(quality.post_links ?? []).join(", ") || "n/a"}
+- Reviewer check: service keywords and related-post mentions should be linked in context, not dumped at the end.
+${linkLines}
 
 ## Why this blog post matters now
 ${whyChosen}
@@ -581,7 +609,7 @@ Concrete SEO mechanics in this draft:
 - Existing page assessment: ${opportunity.existing_page_assessment} (${opportunity.existing_page_decision})
 - Click title and CTR-oriented meta are Santa Cruz County specific, so the result can earn the click instead of looking like a national filler post.
 - Draft depth gate passed at about **${quality.word_count} words**, with Quick Answer, unique-value section, FAQ depth, and ${quality.faq_questions ?? "5+"} FAQ answers.
-- Internal links create paths from this informational post into money/service pages readers need next:
+- Diligent internal links move equity from this informational post into money/service pages and related posts:
 ${linkLines}
 - Must-cover local points Eve had to satisfy:
 ${mustCover}
@@ -602,13 +630,10 @@ Expected outcome after human merge (observation only, not a guaranteed ranking c
 - Change manifest: ${changeSet.proposal_id}
 - Content path: \`${opportunity.content_path}\`
 - Planned internal links: ${opportunity.internal_links.map((link) => link.to).join("; ")}
-- Draft quality: ${quality.word_count} words; FAQ ${quality.faq_questions ?? "n/a"}; matched links ${quality.internal_links.join(", ")}
+- Draft quality: ${quality.word_count} words; FAQ ${quality.faq_questions ?? "n/a"}; matched links ${(quality.internal_links ?? []).join(", ")}
 - Migration boundary: FUTURE_MARKDOWN_MIGRATION; human-approved migration required.
 - Rollback: Revert this single Markdown file after human review.
 - Publication: DRAFT PR ONLY; human approval and merge required.
-
-## Images (featured is fail-closed)
-${formatImagePackageForBrief(imagePackage)}
 
 ## Preview / performance QA
 ${formatPageSpeedQaForBrief(pagespeedQa)}
@@ -851,6 +876,7 @@ export async function executeDraftProposal({
 		opportunity,
 		date,
 		generationGuard: guard,
+		imagePackage,
 	});
 	let markdown = extractMarkdown(written.markdown);
 	let quality = assertPublishableBlogDraft(markdown, opportunity);

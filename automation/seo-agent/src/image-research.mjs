@@ -149,7 +149,7 @@ export function createImageResearchAdapter({
 					reason:
 						"Image research adapter is configured for offline/fixture use.",
 					next_action:
-						"Run a Production propose cycle and review staged assets in the draft PR Images section; see docs/seo-agent/MANUAL_SETUP.md.",
+						"Run a Production propose cycle and review staged assets in the draft PR Media sources section; see docs/seo-agent/MANUAL_SETUP.md.",
 				}),
 			});
 		},

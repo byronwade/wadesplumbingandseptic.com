@@ -193,10 +193,12 @@ test("draft PR brief includes fail-closed featured image section", () => {
 		},
 		imagePackage,
 	});
-	assert.match(brief, /Images \(featured is fail-closed\)/);
+	assert.match(brief, /Media sources \(prominent; review required\)/);
+	assert.match(brief, /Internal linking diligence/);
 	assert.match(brief, /first-party OWNED/i);
 	assert.match(brief, /prefer stock\/commons over museum art/i);
 	assert.match(brief, /remote UNVERIFIED never auto-publishes/i);
+	assert.match(brief, /Reviewer checklist/);
 });
 
 test("trade-aware ranking demotes museum art noise for plumbing topics", () => {

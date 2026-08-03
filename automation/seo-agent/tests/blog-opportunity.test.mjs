@@ -14,8 +14,15 @@ const repoRoot = resolve(import.meta.dirname, "../../..");
 
 function richDraft(opportunity) {
 	const links = opportunity.internal_links
-		.slice(0, 4)
-		.map((link) => `Read more about [${link.anchor}](${link.to}).`)
+		.map((link) => {
+			if (link.role === "service") {
+				return `When you need [${link.anchor}](${link.to}), use that service path instead of guessing.`;
+			}
+			if (link.role === "post") {
+				return `For deeper reading, see [${link.anchor}](${link.to}) in the middle of your research.`;
+			}
+			return `Next step: [${link.anchor}](${link.to}).`;
+		})
 		.join("\n\n");
 	const cover = opportunity.must_cover
 		.map((point) => {
@@ -93,7 +100,17 @@ test("selects a distinct unused local blog topic with inventory links", () => {
 	});
 	assert.equal(selection.decision, "PROPOSE_FOR_HUMAN_REVIEW");
 	assert.equal(selection.opportunity.slug.includes("santa-cruz"), true);
-	assert.equal(selection.opportunity.internal_links.length >= 4, true);
+	assert.equal(selection.opportunity.internal_links.length >= 5, true);
+	assert.equal(
+		selection.opportunity.internal_links.filter((link) => link.role === "service")
+			.length >= 2,
+		true,
+	);
+	assert.equal(
+		selection.opportunity.internal_links.filter((link) => link.role === "post")
+			.length >= 1,
+		true,
+	);
 	assert.equal(selection.opportunity.must_cover.length >= 4, true);
 	assert.equal(selection.opportunity.people_also_ask.length >= 5, true);
 	assert.equal(
@@ -145,5 +162,38 @@ test("publishable draft requires depth, unique value, FAQ, and CTR meta", () => 
 	assert.match(prompt, /people-first/i);
 	assert.match(prompt, /What makes this guide different/);
 	assert.match(prompt, /Santa Cruz County/);
+	assert.match(prompt, /SITE MEDIA SOURCES/);
+	assert.match(prompt, /Diligent internal linking/);
 	assert.equal(prompt.includes("\u2014"), false);
+});
+
+test("diligent link plan mixes services and related posts with useful anchors", () => {
+	const inventory = collectPageInventory({ repoRoot });
+	const selection = selectBlogOpportunity({
+		inventory,
+		catalog: BLOG_TOPIC_CATALOG,
+		runId: "link-plan-2026-08-03",
+		preferredTopicId: "tankless-water-heater-maintenance-santa-cruz",
+	});
+	assert.equal(selection.decision, "PROPOSE_FOR_HUMAN_REVIEW");
+	const links = selection.opportunity.internal_links;
+	assert.ok(links.every((link) => link.role && link.anchor && link.to));
+	assert.ok(links.some((link) => link.role === "service"));
+	assert.ok(links.some((link) => link.role === "post"));
+	assert.ok(
+		links.some((link) => /water heater|tankless/i.test(link.anchor)),
+	);
+	const thinLinks = assertPublishableBlogDraft(
+		richDraft({
+			...selection.opportunity,
+			internal_links: selection.opportunity.internal_links,
+		}).replace(/service-offerings\/[^\)]+/g, "contact"),
+		selection.opportunity,
+	);
+	assert.equal(thinLinks.ok, false);
+	assert.ok(
+		["INSUFFICIENT_SERVICE_LINKS", "INSUFFICIENT_INTERNAL_LINKS"].includes(
+			thinLinks.reason,
+		),
+	);
 });

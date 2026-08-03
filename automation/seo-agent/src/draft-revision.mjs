@@ -16,6 +16,8 @@ export const EXPANDABLE_QUALITY_REASONS = Object.freeze([
 	"INSUFFICIENT_FAQ_DEPTH",
 	"MISSING_MUST_COVER_DEPTH",
 	"INSUFFICIENT_INTERNAL_LINKS",
+	"INSUFFICIENT_SERVICE_LINKS",
+	"INSUFFICIENT_BLOG_LINKS",
 	"MISSING_QUICK_ANSWER",
 	"MISSING_UNIQUE_VALUE_SECTION",
 	"MISSING_FAQ",
@@ -128,12 +130,17 @@ export function buildPeerReviewReport({ markdown, opportunity, quality } = {}) {
 			);
 			break;
 		case "INSUFFICIENT_INTERNAL_LINKS":
+		case "INSUFFICIENT_SERVICE_LINKS":
+		case "INSUFFICIENT_BLOG_LINKS":
 			expand.push(
-				`Add contextual internal links to these planned paths without stripping existing good links: ${(
+				`Add diligent contextual internal links (service keywords + related posts) to these planned paths without stripping existing good links: ${(
 					opportunity?.internal_links ?? []
 				)
-					.map((link) => link.to)
-					.join(", ")}.`,
+					.map(
+						(link) =>
+							`${link.to} [${link.role ?? "link"}] as "${link.anchor ?? link.to}"`,
+					)
+					.join("; ")}. Link service keywords on first meaningful mention; place related blog links mid-body.`,
 			);
 			break;
 		case "MISSING_QUICK_ANSWER":
@@ -207,7 +214,10 @@ export function buildExpansionPrompt({
 	const keepLines = review.keep.map((item) => `- ${item}`).join("\n");
 	const expandLines = review.expand.map((item) => `- ${item}`).join("\n");
 	const linkLines = (opportunity.internal_links ?? [])
-		.map((link) => `- [${link.anchor}](${link.to})`)
+		.map(
+			(link) =>
+				`- [${link.anchor}](${link.to}) [${link.role ?? "link"}]: ${link.reader_rationale ?? ""}`,
+		)
 		.join("\n");
 	const draftSlice = truncateDraftForExpansionPrompt(
 		markdown,
@@ -222,6 +232,8 @@ Date for front matter if needed: "${date}"
 Query cluster: ${opportunity.query_cluster}
 Canonical: ${opportunity.owner_url}
 Unique value to preserve: ${opportunity.unique_value}
+Featured site image path to preserve in front matter: ${opportunity.image}
+Featured image alt to preserve: ${opportunity.image_alt}
 
 Peer-review keep list:
 ${keepLines}
@@ -229,18 +241,20 @@ ${keepLines}
 Peer-review expand list:
 ${expandLines}
 
-Planned internal links that may still need contextual placement:
+Planned internal links that may still need contextual keyword placement (services + related posts):
 ${linkLines}
 
 Rules:
 1. Return ONLY the full updated Markdown with YAML front matter. No code fences.
-2. Preserve the title concept, structure, and any accurate local guidance already present.
+2. Preserve the title concept, structure, featured image paths, and any accurate local guidance already present.
 3. Add depth, missing sections, FAQ answers, or links only where the peer review requires it.
 4. Do not invent prices, licensed/insured claims, 24/7, sponsorship, or "serving City" claims.
 5. Prefer new paragraphs under existing H2s over replacing whole sections.
 6. Target people-first helpful content that can compete in Google Search.
 7. Prefer thorough local guidance over short patches. Do not leave FAQ, Quick Answer, must-cover, or link gaps half-fixed.
 8. Keep good prose already present; grow weak sections instead of inventing a new article.
+9. Internal linking diligence: on first meaningful mention of a service keyword, link to the matching service path; place related blog links mid-body with natural anchors. Do not dump all links in one closing list.
+10. Keep using site media paths already in front matter. Do not invent remote stock image URLs.
 
 Existing draft to improve:
 <<<EXISTING_DRAFT

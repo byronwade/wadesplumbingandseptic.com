@@ -1,13 +1,24 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 83: Site Media Prominence + Diligent Internal Linking + Doctor Scans (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` on Task 14 media + blog SEO structure.
+- Branch/PR: `cursor/eve-image-sourcing-aab8` / `#123`.
+- Offline: blog drafts now treat site media as a prominent writer input (`SITE MEDIA SOURCES`); PR packet elevates `Media sources (prominent; review required)` with reviewer checklist; `buildDiligentLinkPlan` fills service + related-post mix from inventory titles/tokens; quality gates require min 5 internal links including service and related-post matches; writer/expansion prompts require keyword-aware first-mention service links and mid-body related posts.
+- Repo diagnostics (entire workspace, not live Production proofs):
+  - `npx vercel-doctor@latest -y --offline` → 357 warnings / 0 errors (report under `/opt/cursor/artifacts/doctor-reports/vercel-doctor.md`)
+  - `npx react-doctor@latest . -y --offline` → score **59/100** (stdout under `react-doctor.stdout.txt`)
+  - `npx @shadscan/cli@latest . --json --no-interactive` → score **68**, grade **D** (`shadscan.json`)
+- Evidence truth: sidecar fixture/`MOCK_VERIFIED` only for Eve path. Doctor scores are static diagnostics, not Eve LIVE_VERIFIED integrations.
+- Commands: sidecar `npm test` → `212/212` exit `0`; `npm run lint` exit `0`; `npm run inventory` exit `0`; `npm run verify` exit `0`.
+- Next exact action: human review of `#123`; optionally open a separate cleanup track for react-doctor/shadscan app-shell findings; keep Eve media/linking gates on for propose.
+
 ## Phase 82: Grokipedia Soft Research + Media Ranking Polish (2026-08-03)
 
-- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED` on the Task 14 media + open-research path.
+- State: SUPERSEDED by Phase 83 media prominence + diligent linking.
 - Branch/PR: `cursor/eve-image-sourcing-aab8`.
-- Offline: added xAI Grokipedia soft research via robots-allowed public HTML only (`/search`, `/page/*`; never `/api/*`); trade-relevance filter demotes entertainment/noise leads; Grokipedia labels enrich image search queries; ranking adds resolution boost + provider diversity in the shortlist; PR brief surfaces Grokipedia leads as soft context.
-- Evidence truth: fixture/`MOCK_VERIFIED` only. Not a live Production propose observation. Not a Grokipedia official developer API partnership.
-- Commands: sidecar `npm test` → `211/211` exit `0`; `npm run lint` exit `0`; `npm run verify` exit `0`.
-- Next exact action: human review of draft PR `#123`; optional `SEO_AGENT_ENABLE_GROKIPEDIA=false` if owner wants Wikidata/Nominatim only; keep treating Grokipedia as untrusted encyclopedia context.
+- Offline: Grokipedia soft research + ranking polish remain in place.
+- Next exact action: SUPERSEDED by Phase 83.
 
 ## Phase 81: Image Orchestration Refinement (2026-08-03)
 
