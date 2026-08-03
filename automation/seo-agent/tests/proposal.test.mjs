@@ -2,7 +2,10 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { resolve } from "node:path";
 import { executeDraftProposal } from "../src/proposal.mjs";
-import { selectBlogOpportunity } from "../src/blog-opportunity.mjs";
+import {
+	BLOG_QUALITY_THRESHOLDS,
+	selectBlogOpportunity,
+} from "../src/blog-opportunity.mjs";
 import { collectPageInventory } from "../src/inventory.mjs";
 import { createRunDescriptor, loadRuntimeSettings } from "../src/runtime.mjs";
 
@@ -28,15 +31,27 @@ function config() {
 
 function richDraft(opportunity) {
 	const links = opportunity.internal_links
-		.slice(0, 3)
+		.slice(0, 4)
 		.map((link) => `See [${link.anchor}](${link.to}) for next steps.`)
 		.join("\n\n");
-	const paragraphs = Array.from({ length: 40 }, (_, index) => {
-		return `Section detail ${index + 1}: Santa Cruz County homeowners can use calm checks, keep grease out of drains, watch for leaks, and stop before unsafe DIY work. Useful local context beats generic filler while avoiding prices, licenses, and guarantees.`;
+	const cover = opportunity.must_cover
+		.map((point) => {
+			const detail = `${point}. In Santa Cruz County, coastal moisture, mixed housing ages, and septic parcels change what a careful homeowner should check first. Give the observation, the safe limit, and the professional handoff without inventing prices.`;
+			return `## ${point.slice(0, 48)}\n\n${detail}\n\n${detail}\n\n${detail}`;
+		})
+		.join("\n\n");
+	const faqs = opportunity.people_also_ask
+		.map(
+			(question) =>
+				`### ${question}\n\nProvide a useful Santa Cruz County answer and a safe next action.`,
+		)
+		.join("\n\n");
+	const filler = Array.from({ length: 28 }, (_, index) => {
+		return `Depth block ${index + 1}: Santa Cruz County homeowners can use calm checks, keep grease out of drains, watch for leaks, and stop before unsafe DIY work while still getting enough detail to act.`;
 	}).join("\n\n");
 	return `---
-title: ${opportunity.title_hint}
-description: Practical Santa Cruz County guidance for ${opportunity.query_cluster}.
+title: ${opportunity.click_title}
+description: "${opportunity.meta_hook}"
 category: ${opportunity.category}
 date: "2026-08-01"
 tags:
@@ -49,45 +64,31 @@ query_cluster: ${opportunity.query_cluster}
 evidence_ids: [${opportunity.evidence_ids.join(", ")}]
 ---
 
-# ${opportunity.title_hint}
+# ${opportunity.click_title}
 
-${paragraphs}
+${opportunity.angle} ${opportunity.unique_value}
 
 ## Quick Answer for Santa Cruz County Homeowners
 
 - Inspect early.
 - Avoid unsafe shortcuts.
 - Use linked service pages when risk rises.
+- Keep photos before a visit.
+- Match habits to local housing and septic patterns.
 
-## Local context
+## What makes this guide different
 
-Santa Cruz County homes mix coastal moisture, older plumbing, and septic parcels.
+${opportunity.unique_value}
 
-## Safe checks
+${cover}
 
-Look for drips, odors, and weak flow without forcing fittings.
+## Prevention habits that help
 
-## Prevention
-
-Keep wipes and grease out of plumbing pathways.
-
-## When to get help
-
-Stop if sewage, active flooding, or gas odors appear.
+${filler}
 
 ## FAQ
 
-### Is this emergency advice?
-
-No. It is calm maintenance guidance for ordinary issues.
-
-### Can I invent a price?
-
-No. This draft never quotes prices.
-
-### What page should I open next?
-
-Use the contact link after reviewing the service pages below.
+${faqs}
 
 ${links}
 
@@ -166,6 +167,7 @@ test("proposal opens one Connect-backed draft PR for a selected local topic", as
 	assert.equal(calls.filter(([name]) => name === "pr").length, 1);
 	assert.equal(calls[1][1], `eve/seo/2026-08-01-${selection.opportunity.slug}`);
 	assert.match(result.opportunity.query_cluster, /Santa Cruz/i);
+	assert.equal(BLOG_QUALITY_THRESHOLDS.min_body_words >= 1400, true);
 });
 
 test("proposal rejects junk drafts instead of opening a Connect PR", async () => {

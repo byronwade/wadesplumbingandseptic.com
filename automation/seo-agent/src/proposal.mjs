@@ -40,17 +40,18 @@ function extractMarkdown(text) {
 async function writeWithGateway({ runId, opportunity, date }) {
 	const profile = resolveModelProfile("writing");
 	const prompt = buildWriterPrompt({ opportunity, date });
+	const maxOutputTokens = 6_500;
 	const reservation = reserveModelRequest({
 		runId,
 		prompt,
-		maxOutputTokens: 4200,
+		maxOutputTokens,
 		model: profile.primary,
 	});
 	try {
 		const result = await generateText({
 			model: gateway(profile.primary),
 			prompt,
-			maxOutputTokens: 4200,
+			maxOutputTokens,
 			...resolveGatewayModelOptions("writing"),
 		});
 		return {
@@ -64,13 +65,13 @@ async function writeWithGateway({ runId, opportunity, date }) {
 		const fallbackReservation = reserveModelRequest({
 			runId,
 			prompt,
-			maxOutputTokens: 4200,
+			maxOutputTokens,
 			model: secondary,
 		});
 		const result = await generateText({
 			model: gateway(secondary),
 			prompt,
-			maxOutputTokens: 4200,
+			maxOutputTokens,
 			...resolveGatewayModelOptions("writing"),
 		});
 		return {
