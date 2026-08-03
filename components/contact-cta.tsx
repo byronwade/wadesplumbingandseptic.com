@@ -98,7 +98,7 @@ export function ContactCta({
 							size={compact ? "lg" : "xl"}
 						/>
 					) : null}
-					<Link
+					<Link prefetch={false}
 						className={cn(
 							buttonVariants({
 								variant: includeCall ? "inverse" : "default",
@@ -107,7 +107,7 @@ export function ContactCta({
 							actionWidth,
 						)}
 						href="/contact"
-						prefetch
+
 					>
 						{compact ? "Request service" : "Send a Message"}
 						<ArrowRight aria-hidden="true" />

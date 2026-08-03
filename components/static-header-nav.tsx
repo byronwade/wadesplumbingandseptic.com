@@ -18,28 +18,28 @@ export function StaticHeaderNav() {
 				<Link
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/services"
-					prefetch
+					prefetch={true}
 				>
 					Services
 				</Link>
 				<Link
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/service-areas"
-					prefetch
+					prefetch={true}
 				>
 					Areas
 				</Link>
 				<Link
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/expert-tips"
-					prefetch
+					prefetch={true}
 				>
 					Tips
 				</Link>
 				<Link
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/contact"
-					prefetch
+					prefetch={true}
 				>
 					Contact
 				</Link>

@@ -62,7 +62,7 @@ export function MarkdownContent({
 					a: ({ href = "", children, ...props }) => {
 						if (href.startsWith("/")) {
 							return (
-								<Link href={href as Route} prefetch={false} {...props}>
+								<Link prefetch={false} href={href as Route} {...props}>
 									{children}
 								</Link>
 							)

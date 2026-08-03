@@ -70,10 +70,10 @@ export function ContentConversionCta({
 								<ArrowRight aria-hidden="true" />
 							</a>
 						) : (
-							<Link
+							<Link prefetch={false}
 								className={secondaryClassName}
 								href={(secondary.href ?? "/contact") as Route}
-								prefetch
+
 							>
 								{secondary.label}
 								<ArrowRight aria-hidden="true" />

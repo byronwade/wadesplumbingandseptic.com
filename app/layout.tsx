@@ -3,6 +3,7 @@ import { Archivo, Geist, Geist_Mono, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
 import { Suspense } from "react"
 
+import { AppProviders } from "@/components/app-providers"
 import { JsonLd } from "@/components/json-ld"
 import { getCollection } from "@/lib/content"
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
@@ -115,19 +116,32 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
+			suppressHydrationWarning
 			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
 		>
 			<body className={manrope.className}>
-				<a
-					className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-					href="#main-content"
-				>
-					Skip to content
-				</a>
-				{children}
-				<Suspense fallback={null}>
-					<RootJsonLd />
-				</Suspense>
+				<AppProviders>
+					<a
+						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+						href="#main-content"
+					>
+						Skip to content
+					</a>
+					{children}
+					<Suspense
+						fallback={
+							<div
+								aria-busy="true"
+								aria-label="Loading structured data"
+								className="pointer-events-none fixed inset-x-0 bottom-0 z-[1] h-0.5 overflow-hidden bg-black/5"
+							>
+								<div className="bg-primary/60 h-full w-1/3 animate-pulse" />
+							</div>
+						}
+					>
+						<RootJsonLd />
+					</Suspense>
+				</AppProviders>
 			</body>
 		</html>
 	)

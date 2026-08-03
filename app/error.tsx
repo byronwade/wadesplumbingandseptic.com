@@ -39,13 +39,13 @@ export default function Error({
 							<RotateCcw aria-hidden="true" />
 							Try again
 						</button>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
 								"w-full sm:w-auto",
 							)}
 							href="/"
-							prefetch
+
 						>
 							<ArrowLeft aria-hidden="true" />
 							Back home

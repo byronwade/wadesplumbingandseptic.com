@@ -8,9 +8,14 @@ export async function GET(request: NextRequest) {
 	const eyebrow = searchParams.get("eyebrow")?.trim() || undefined
 	const image = searchParams.get("image")
 
-	return renderOgImage({
+	const response = await renderOgImage({
 		title,
 		eyebrow,
 		image,
 	})
+	response.headers.set(
+		"Cache-Control",
+		"public, max-age=86400, stale-while-revalidate=604800",
+	)
+	return response
 }

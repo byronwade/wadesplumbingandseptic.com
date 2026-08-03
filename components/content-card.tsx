@@ -32,13 +32,13 @@ export function ContentCard({
 
 	return (
 		<Card className="group hover:border-border-strong h-full overflow-hidden transition-colors duration-200">
-			<Link
+			<Link prefetch={false}
 				aria-label={
 					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
 				}
 				className="bg-muted relative block aspect-16/9 overflow-hidden"
 				href={item.href as Route}
-				prefetch={false}
+
 				tabIndex={-1}
 			>
 				<Image
@@ -54,17 +54,17 @@ export function ContentCard({
 			<CardHeader className="flex-1 pb-[var(--space-card)]">
 				<p className="spec-tag">{item.category}</p>
 				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
-					<Link href={item.href as Route} prefetch={false}>
+					<Link prefetch={false} href={item.href as Route}>
 						{item.title}
 					</Link>
 				</CardTitle>
 				<CardDescription className="line-clamp-3">
 					{item.description}
 				</CardDescription>
-				<Link
+				<Link prefetch={false}
 					className="text-primary mt-4 inline-flex items-center gap-2 text-sm font-bold"
 					href={item.href as Route}
-					prefetch={false}
+
 				>
 					{variant === "service" ? "Learn more" : "Read guide"}
 					<ArrowRight
