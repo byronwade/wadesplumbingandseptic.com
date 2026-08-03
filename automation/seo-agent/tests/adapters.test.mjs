@@ -416,6 +416,22 @@ test("Google adapters redact query dimensions and API keys from evidence", async
 	});
 	assert.equal(speedEvidence.classification, "LIVE_VERIFIED");
 	assert.equal(JSON.stringify(speedEvidence).includes("page-speed-key"), false);
+
+	const failedPageSpeed = createPageSpeedAdapter({
+		apiKey: "page-speed-key",
+		fetchImpl: async () =>
+			jsonResponse({ error: { message: "API key not valid" } }, 400),
+	});
+	const failedEvidence = await failedPageSpeed.analyze({
+		runId: "speed-failure-fixture",
+		url: "https://www.wadesplumbingandseptic.com/",
+	});
+	assert.equal(failedEvidence.classification, "FAILED");
+	assert.match(failedEvidence.payload.reason, /HTTP 400/);
+	assert.equal(
+		JSON.stringify(failedEvidence).includes("page-speed-key"),
+		false,
+	);
 });
 
 test("browser research requires an explicitly configured browser domain, not merely a general network allowlist", async () => {

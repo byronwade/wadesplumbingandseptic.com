@@ -163,12 +163,18 @@ export async function handlePageSpeedLiveProbe({
 			}),
 		});
 	} catch (error) {
+		const message =
+			error instanceof Error ? error.message : "Live read refused.";
+		const upstreamFailure =
+			/\b(timed out|HTTP|response exceeds|credential|rate.?limit|upstream)\b/i.test(
+				message,
+			);
 		return Object.freeze({
 			ok: false,
-			status: 403,
+			status: upstreamFailure ? 503 : 403,
 			body: Object.freeze({
-				error: "LIVE_READ_REFUSED",
-				message: error instanceof Error ? error.message : "Live read refused.",
+				error: upstreamFailure ? "LIVE_READ_FAILED" : "LIVE_READ_REFUSED",
+				message,
 				run_id: runId,
 			}),
 		});
