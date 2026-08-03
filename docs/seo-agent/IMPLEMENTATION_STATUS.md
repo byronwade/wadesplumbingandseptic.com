@@ -1,5 +1,19 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 75: Task 6 GA4 Production Path Deployed; Live Proof BLOCKED (2026-08-03)
+
+- State: Path on `main` / Production; Cron exercised; live result `BLOCKED_MISSING_CREDENTIALS` (no `GA4_PROPERTY_ID`). Not `LIVE_VERIFIED`.
+- Branch/PR: `cursor/eve-ga4-live-aab8` / `#119` squash-merged to `main` (`5bf9ef1`).
+- Production: code deploy `dpl_526tjDnzit1Nyf4rzaaU8p9gyufR`; armed deploy `dpl_7jioeRN4hSwyzfe3gsFmaciA2gzm` with `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=ga4-2026-08-03`.
+- Cron evidence (redacted): three invocations on armed deploy returned HTTP `503` (handler returns `200` only for `LIVE_VERIFIED`):
+  - `2026-08-03T16:57:41.970Z` request `7p76k-1785776261970-aaa8d15e9c8b` → `503`
+  - `2026-08-03T16:57:46.316Z` request `26b49-1785776266316-0405072ab4ca` → `503`
+  - `2026-08-03T16:57:50.659Z` request `2gzmb-1785776270659-9e9dc22c6a7a` → `503`
+- Cause: Production has Google service account + `SEO_AGENT_ENABLE_GA4` arming path, but no `GA4_PROPERTY_ID` (and no `GA4_ACCESS_TOKEN`). Owner must complete Manual Setup Next: Google Analytics Data (GA4).
+- Cleanup: live-reads approved false, approved run ID removed, `SEO_AGENT_ENABLE_GA4=false`, Production redeploy `dpl_3uPKVQtU6NdtxZgfZbPXyhJQS1qb` after reset.
+- Branches/PRs: `#119` merged; no open PRs; no leftover `cursor/*` feature branches after cleanup.
+- Next exact action: owner enables Analytics Data API, grants Viewer to `eve-seo-reader` on the GA4 property, sets Production `GA4_PROPERTY_ID`, then re-arm and Cron-prove `GET /_internal/eve/api/live-probe/ga4` three times for HTTP `200`.
+
 ## Phase 74: Task 6 GA4 Live Probe Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; live proof blocked until owner completes GA4 property access and sets `GA4_PROPERTY_ID`.
@@ -8,7 +22,7 @@
 - Docs: `MANUAL_SETUP.md` adds owner steps for Analytics Data API, GA4 Viewer grant on the existing Eve service account, and Production `GA4_PROPERTY_ID`.
 - Commands (sidecar): `npm run format` exit `0`; `npm run typecheck` exit `0`; `npm test` → `179/179`; `npm run verify` exit `0`.
 - Live arming (next): after owner sets `GA4_PROPERTY_ID` and grants Viewer, set `SEO_AGENT_ENABLE_GA4=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=ga4-2026-08-03`, deploy, Cron-run `/_internal/eve/api/live-probe/ga4` three times (`200` = `LIVE_VERIFIED`), then reset flags.
-- Next exact action: merge/deploy Task 6 path; owner completes Manual Setup GA4 checklist; then Production Cron live proof.
+- Next exact action: SUPERSEDED by Phase 75 Production Cron exercise (blocked on missing `GA4_PROPERTY_ID`).
 
 ## Phase 73: Task 6 GA4 BLOCKED_MISSING_CREDENTIALS (2026-08-03)
 
