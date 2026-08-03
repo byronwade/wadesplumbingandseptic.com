@@ -9,6 +9,10 @@ import {
 	SOURCE_TIERS,
 } from "./source-policy.mjs";
 import { createSecurityEvent } from "./security-events.mjs";
+import {
+	buildTopicSignalsFromRawRows,
+	defaultSearchConsoleTopicWindow,
+} from "./search-console-topics.mjs";
 
 const DEFAULT_REQUEST_POLICY = Object.freeze({
 	timeoutMs: 8_000,
@@ -573,6 +577,109 @@ export function createSearchConsoleAdapter({
 				endpoint,
 				tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
 				payload: redactedSearchConsolePayload(payload),
+			});
+		},
+		/**
+		 * Task 3: match raw query rows to catalog topics in process, then persist
+		 * only redacted topic-signal evidence (no raw query strings).
+		 */
+		async queryTopicSignals({
+			runId,
+			siteUrl,
+			catalog = [],
+			request = defaultSearchConsoleTopicWindow(
+				now instanceof Date ? now : new Date(),
+			),
+			now: queryNow = now,
+		}) {
+			const disabled = requireEnabled(
+				enabled,
+				runId,
+				"search-console",
+				"topic-signals",
+			);
+			if (disabled) {
+				return Object.freeze({
+					classification: "BLOCKED_MISSING_CREDENTIALS",
+					signals: Object.freeze([]),
+					evidence: disabled,
+					reason: disabled.payload?.reason ?? null,
+				});
+			}
+			const resolvedAccessToken = await resolveAccessToken({
+				accessToken,
+				accessTokenProvider,
+				source: "Search Console service account",
+				timeoutMs: requestPolicy?.timeoutMs,
+			});
+			if (!resolvedAccessToken) {
+				const blockedEvidence = blocked(
+					runId,
+					"search-console",
+					"topic-signals",
+					"Missing read-only Search Console service-account credential.",
+				);
+				return Object.freeze({
+					classification: "BLOCKED_MISSING_CREDENTIALS",
+					signals: Object.freeze([]),
+					evidence: blockedEvidence,
+					reason: blockedEvidence.payload?.reason ?? null,
+				});
+			}
+			const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`;
+			const bounded = assertCompleteSearchConsoleWindow(
+				request,
+				queryNow instanceof Date ? queryNow : new Date(),
+			);
+			const payload = await requestJson({
+				fetchImpl,
+				budget,
+				url: endpoint,
+				init: {
+					method: "POST",
+					headers: {
+						...authorization(resolvedAccessToken),
+						"content-type": "application/json",
+					},
+					body: JSON.stringify(bounded),
+				},
+				source: "Search Console topic signals",
+				policy: requestPolicy,
+			});
+			const signals = buildTopicSignalsFromRawRows(catalog, payload.rows ?? []);
+			const topicEvidence = evidence({
+				runId,
+				source: "search-console",
+				scope: "topic-signals",
+				endpoint,
+				tier: SOURCE_TIERS.FIRST_PARTY_ANALYTICS,
+				payload: {
+					window: {
+						start_date: bounded.startDate,
+						end_date: bounded.endDate,
+					},
+					site_url_kind: String(siteUrl).startsWith("sc-domain:")
+						? "sc-domain"
+						: "url-prefix",
+					row_count: (payload.rows ?? []).length,
+					matched_topic_count: signals.length,
+					signals: signals.map((signal) => ({
+						topic_id: signal.topic_id,
+						strength: signal.strength,
+						clicks: signal.clicks,
+						impressions: signal.impressions,
+						ctr: signal.ctr,
+						position: signal.position,
+						score_bonus: signal.score_bonus,
+						matched_query_hashes: signal.matched_query_hashes,
+					})),
+				},
+			});
+			return Object.freeze({
+				classification: "LIVE_VERIFIED",
+				signals,
+				evidence: topicEvidence,
+				reason: null,
 			});
 		},
 	};

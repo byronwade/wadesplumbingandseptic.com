@@ -116,10 +116,15 @@ Santa Cruz County hosts can prep bathrooms before guests arrive.
 		date: "2026-08-01",
 	});
 	assert.equal(normalPrompt.includes("TRUNCATED_FOR_TOKEN_BUDGET"), false);
-	assert.match(normalPrompt, /Quality and completeness matter more than brevity/i);
+	assert.match(
+		normalPrompt,
+		/Quality and completeness matter more than brevity/i,
+	);
 
-	const longBody = Array.from({ length: 900 }, (_, i) =>
-		`Paragraph ${i} adds Santa Cruz County hosting detail for guests and bathrooms.`,
+	const longBody = Array.from(
+		{ length: 900 },
+		(_, i) =>
+			`Paragraph ${i} adds Santa Cruz County hosting detail for guests and bathrooms.`,
 	).join("\n\n");
 	const markdown = `---
 title: Keep This Concept

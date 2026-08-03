@@ -2,6 +2,7 @@ import { generateText } from "ai";
 import { gateway } from "@ai-sdk/gateway";
 import {
 	createBrowserResearchAdapter,
+	createIntegrationRegistry,
 	createVercelConnectGithubDraftWriteTokenProvider,
 } from "./adapters.mjs";
 import {
@@ -33,6 +34,10 @@ import {
 } from "./publishing.mjs";
 import { resolveGatewayModelOptions, resolveModelProfile } from "./policy.mjs";
 import { reserveModelRequest } from "./model-budget.mjs";
+import {
+	applySearchConsoleSignalsToCatalog,
+	collectSearchConsoleTopicSignals,
+} from "./search-console-topics.mjs";
 
 function resolveProposalNow(descriptor, now) {
 	if (now instanceof Date && Number.isFinite(now.valueOf())) return now;
@@ -171,10 +176,11 @@ async function decideTopicWithGateway({
 		lead_time_days: topic.demand_source?.lead_time_days ?? null,
 		unique_value: topic.unique_value,
 		score_hint: considered.find((item) => item.id === topic.id)?.score ?? null,
+		gsc_signal: topic.gsc_signal ?? null,
 	}));
 	const prompt = `You are Eve, the autonomous SEO strategist for Wade's Plumbing & Septic in Santa Cruz County.
 
-Choose exactly ONE blog topic to draft next. Prefer community-timed local events, holidays, and trending local concepts when they can earn clicks from neighbors. Prefer distinct helpful intent over generic checklists. Never invent sponsorship, prices, licenses, or service-area claims.
+Choose exactly ONE blog topic to draft next. Prefer community-timed local events, holidays, and trending local concepts when they can earn clicks from neighbors. When Search Console signals are present (gsc_signal), prefer topics with proven local query demand unless a timed community opportunity is clearly stronger. Prefer distinct helpful intent over generic checklists. Never invent sponsorship, prices, licenses, or service-area claims.
 
 Research context:
 ${formatResearchNotes(research) ?? "Calendar and inventory only."}
@@ -672,6 +678,7 @@ export async function executeDraftProposal({
 	publisherFactory = createGithubDraftPublisher,
 	now,
 	browserResearch,
+	searchConsole,
 	topicDecider = decideTopicWithGateway,
 	generationGuard = null,
 } = {}) {
@@ -688,14 +695,39 @@ export async function executeDraftProposal({
 		browserResearch: researchAdapter,
 		runId: descriptor.runId,
 	});
+	const searchConsoleAdapter =
+		searchConsole === undefined
+			? config?.integrationFlags?.searchConsole === true
+				? createIntegrationRegistry({ config }).search_console
+				: null
+			: searchConsole;
+	const searchConsoleTopics = await collectSearchConsoleTopicSignals({
+		searchConsole: searchConsoleAdapter,
+		siteUrl: config?.siteUrl,
+		runId: descriptor.runId,
+		catalog: demandContext.catalog,
+		now: effectiveNow,
+	});
+	const scoredCatalog = applySearchConsoleSignalsToCatalog(
+		demandContext.catalog,
+		searchConsoleTopics.signals,
+	);
 	const guard = generationGuard ?? createProposalGenerationGuard();
 	const selection = await resolveTopicSelection({
 		inventory,
-		catalog: demandContext.catalog,
+		catalog: scoredCatalog,
 		runId: descriptor.runId,
 		research: demandContext.research,
 		topicDecider,
 		generationGuard: guard,
+	});
+	const searchConsoleSummary = Object.freeze({
+		classification: searchConsoleTopics.classification,
+		matched_topic_count: searchConsoleTopics.signals.length,
+		evidence_id:
+			searchConsoleTopics.classification === "LIVE_VERIFIED"
+				? "search-console:topic-signals"
+				: null,
 	});
 	if (selection.decision !== "PROPOSE_FOR_HUMAN_REVIEW") {
 		return Object.freeze({
@@ -714,6 +746,7 @@ export async function executeDraftProposal({
 				active_trend_count: demandContext.active_trends.length,
 				research_mode: demandContext.research.mode,
 			}),
+			search_console_topics: searchConsoleSummary,
 		});
 	}
 	const opportunity = selection.opportunity;
@@ -773,6 +806,7 @@ export async function executeDraftProposal({
 				publishable: false,
 				stop_reason: revision.stop_reason ?? null,
 			}),
+			search_console_topics: searchConsoleSummary,
 		});
 	}
 	const changeSet = buildMarkdownChangeSet({
@@ -863,6 +897,7 @@ export async function executeDraftProposal({
 			active_trend_count: demandContext.active_trends.length,
 			research_mode: demandContext.research.mode,
 		}),
+		search_console_topics: searchConsoleSummary,
 	});
 }
 

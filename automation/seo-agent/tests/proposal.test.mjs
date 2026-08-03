@@ -596,3 +596,54 @@ test("non-proposal jobs cannot enter the draft publication workflow", async () =
 		/Only proposal jobs/,
 	);
 });
+
+test("proposal soft-fails Search Console topic wiring when adapter is absent", async () => {
+	const descriptor = createRunDescriptor({
+		job: "proposal",
+		scheduledAt: "2026-08-03T12:00:00.000Z",
+		runId: "proposal-gsc-soft-fail",
+	});
+	const settings = loadRuntimeSettings(env);
+	const result = await executeDraftProposal({
+		descriptor,
+		settings,
+		config: config(),
+		repoRoot,
+		browserResearch: null,
+		searchConsole: null,
+		topicDecider: async ({ candidates }) => ({
+			topic_id: candidates[0].id,
+			reason: "Fixture chooses the first viable topic.",
+			why_over_others: "Offline fixture path.",
+			seo_value: "Keeps proposal tests deterministic.",
+		}),
+		writer: async ({ opportunity }) => ({
+			markdown: richDraft(opportunity),
+			model: "fixture-writer",
+			reservation: { reserved: 1 },
+		}),
+		publisherFactory: () => ({
+			async readMainCommit() {
+				return { sha: "a".repeat(40), classification: "LIVE_VERIFIED" };
+			},
+			async createBranch() {
+				return { classification: "LIVE_VERIFIED" };
+			},
+			async commitFiles() {
+				return { classification: "LIVE_VERIFIED" };
+			},
+			async openDraftPullRequest() {
+				return {
+					classification: "LIVE_VERIFIED",
+					draft_pr_created: true,
+					pull_request: { number: 1, html_url: "https://example.test/pr/1" },
+				};
+			},
+		}),
+	});
+	assert.equal(
+		result.search_console_topics.classification,
+		"BLOCKED_MISSING_CREDENTIALS",
+	);
+	assert.equal(result.search_console_topics.matched_topic_count, 0);
+});

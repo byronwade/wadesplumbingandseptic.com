@@ -237,11 +237,7 @@ export function truncateDraftForExpansionPrompt(
 		.map((line) => line.trim())
 		.join("\n");
 	const note = `[TRUNCATED_FOR_TOKEN_BUDGET: original ${trimmed.length} characters. Quality still required: expand every peer-review gap thoroughly. Preserve front matter, title concept, and listed H2s. Middle body omitted only to avoid runaway input.]`;
-	const reserved =
-		frontMatter.length +
-		outline.length +
-		note.length +
-		120;
+	const reserved = frontMatter.length + outline.length + note.length + 120;
 	const bodyBudget = Math.max(2_000, maxChars - reserved);
 	const headLen = Math.floor(bodyBudget * 0.65);
 	const tailLen = Math.max(400, bodyBudget - headLen);

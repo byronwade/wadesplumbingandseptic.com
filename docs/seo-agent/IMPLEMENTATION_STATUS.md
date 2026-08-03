@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 67: Task 3 Search Console Topic Wiring Path (2026-08-03)
+
+- State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; blocked on Production Cron for final `LIVE_VERIFIED`.
+- Branch/PR: `cursor/eve-gsc-topic-wiring-aab8` (Task 3 from `INTEGRATION_ROLLOUT.md`).
+- Offline: `search-console-topics.mjs` matching + capped `score_bonus`; adapter `queryTopicSignals` with redacted evidence; `executeDraftProposal` soft-fails when Search Console is off and applies `gsc_signal` when signals match; focused probe `probeSearchConsoleTopicsLive`; CRON-authenticated route `GET /_internal/eve/api/live-probe/search-console-topics`; CLI `npm run live:probe:search-console-topics`; annual manual Cron entry allowlisted in deployment-config verifier.
+- Commands (sidecar): `npm run format:check`, `npm run typecheck`, `npm test` → `163/163`, `npm run verify` → exit `0`. Classification: `MOCK_VERIFIED` for the wiring path (fixtures only; no live Google call from CI).
+- Live arming (next): Production only. Set `SEO_AGENT_ENABLE_SEARCH_CONSOLE=true`, keep `SEO_AGENT_ENABLE_PAGESPEED=false`, set `SEO_AGENT_LIVE_READS_APPROVED=true` and `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=search-console-topics-2026-08-03`, deploy the Task 3 commit, then `vercel crons run '/_internal/eve/api/live-probe/search-console-topics'` three times. Handler `200` only for `LIVE_VERIFIED`. Reset live-read flags and Search Console enablement afterward.
+- Out of scope (Task 4): PageSpeed QA wiring into draft review.
+- Next exact action: merge or Production-deploy this PR, run the Cron live proof, record request IDs, then mark Task 3 `LIVE_VERIFIED`.
+
 ## Phase 66: Task 2 PageSpeed LIVE_VERIFIED (2026-08-03)
 
 - State: COMPLETE for Task 2 live proof (`LIVE_VERIFIED`).

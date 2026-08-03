@@ -241,6 +241,7 @@ function validateServicesTopology(config, label) {
 	const allowedLiveProbeCrons = new Set([
 		"/_internal/eve/api/live-probe/search-console",
 		"/_internal/eve/api/live-probe/pagespeed",
+		"/_internal/eve/api/live-probe/search-console-topics",
 	]);
 	const rootCrons = Array.isArray(config.crons) ? config.crons : null;
 	if (rootCrons) {
