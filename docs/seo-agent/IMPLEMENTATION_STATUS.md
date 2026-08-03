@@ -1,5 +1,18 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 63: Task 1 Search Console LIVE_VERIFIED (2026-08-03)
+
+- State: COMPLETE for Task 1 live proof (`LIVE_VERIFIED`).
+- Branch/PRs: `#106` (probe path) and `#107` (Cron trigger) merged to `main`.
+- Method: Production Cron invocation of `GET /_internal/eve/api/live-probe/search-console` with Vercel-injected `CRON_SECRET` (local CLI cannot read Sensitive secrets). Handler returns HTTP `200` only for `classification: LIVE_VERIFIED`.
+- Evidence (redacted): three successful Production responses on deployment `dpl_DyNQf96UdyXcA9pCfwCxYtx16DGe`:
+  - `2026-08-03T14:35:36.041Z` request `jsh2f-1785767736041-0b69afa834f2` → `200`
+  - `2026-08-03T14:36:04.615Z` request `b7m42-1785767764615-502f16a8929e` → `200`
+  - `2026-08-03T14:36:25.128Z` request `ml9pv-1785767785128-14ab8d8d6262` → `200`
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, `SEO_AGENT_FORCE_OBSERVE=false` (redeploy restores propose Cron). No content write, draft PR, or merge of site content.
+- Note: Eve audit Cron `audit-2026-08-03` (`wrun_41KZ40H1GC0GPMHDHHFFWJGNMW`) returned `BLOCKED_MISSING_CREDENTIALS` for missing Git-backed repository snapshot before adapters ran; the focused live-probe path is the authoritative Search Console proof.
+- Next exact action: start Task 2 (PageSpeed live verification) on its own PR. Do not wire GSC into topic selection until Task 2 exits.
+
 ## Phase 62: Task 1 Search Console Live Probe Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / blocked on Production deploy for final `LIVE_VERIFIED`. Task 1 from `INTEGRATION_ROLLOUT.md` started on dedicated branch `cursor/eve-search-console-live-aab8`.
