@@ -9,7 +9,7 @@
   - `2026-08-03T15:32:10.232Z` request `mcxf9-1785771130232-a771f1f49e53` → `200`
   - `2026-08-03T15:32:28.908Z` request `nfpqh-1785771148908-0fa253aae282` → `200`
   - `2026-08-03T15:32:32.137Z` request `bnksh-1785771152137-ff6f49e55f1c` → `200`
-- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy after reset.
+- Cleanup: `SEO_AGENT_LIVE_READS_APPROVED=false`, approved run ID removed, `SEO_AGENT_ENABLE_SEARCH_CONSOLE=false`, Production redeploy `dpl_CK9coF1KUP446G6rd8AuD41SufgP` after reset.
 - Next exact action: start Task 4 (PageSpeed QA wiring) on its own PR.
 
 ## Phase 67: Task 3 Search Console Topic Wiring Path (2026-08-03)
