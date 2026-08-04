@@ -22,12 +22,7 @@
 		]
 	},
 	"voice": {
-		"tone": [
-			"plain",
-			"specific",
-			"warm",
-			"unpadded"
-		],
+		"tone": ["plain", "specific", "warm", "unpadded"],
 		"prefer": [
 			"Concrete local conditions over generic national tips",
 			"Clear next steps (observe safely, then call)",
@@ -68,12 +63,8 @@
 	},
 	"geo": {
 		"primary_market": "Santa Cruz County, CA",
-		"nearby": [
-			"selected Santa Clara County foothill communities"
-		],
-		"required_local_hooks": [
-			"Santa Cruz"
-		]
+		"nearby": ["selected Santa Clara County foothill communities"],
+		"required_local_hooks": ["Santa Cruz"]
 	},
 	"pending_review": []
 }

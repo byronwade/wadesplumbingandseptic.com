@@ -2,10 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createIntegrationRegistry } from "./adapters.mjs";
 import { loadConfig } from "./config.mjs";
-import {
-	assertBrandContext,
-	loadBrandContext,
-} from "./brand-context.mjs";
+import { assertBrandContext, loadBrandContext } from "./brand-context.mjs";
 import {
 	assertEvidence,
 	assertFactRegistry,
