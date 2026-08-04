@@ -226,7 +226,12 @@
 				"When should I get help before guests arrive?"
 			],
 			"category": "Plumbing Tips",
-			"tags": ["santa cruz", "county fair", "hosting guests", "community events"],
+			"tags": [
+				"santa cruz",
+				"county fair",
+				"hosting guests",
+				"community events"
+			],
 			"image": "/images/services/commercial-plumbing.webp",
 			"image_alt": "Home plumbing checklist for a busy local week",
 			"preferred_links": [
@@ -414,7 +419,12 @@
 				"How do I plan septic maintenance for the year?"
 			],
 			"category": "Plumbing Tips",
-			"tags": ["santa cruz", "new year", "plumbing maintenance", "home checklist"],
+			"tags": [
+				"santa cruz",
+				"new year",
+				"plumbing maintenance",
+				"home checklist"
+			],
 			"image": "/images/services/water-heater-service.webp",
 			"image_alt": "New Year home plumbing maintenance checklist",
 			"preferred_links": [

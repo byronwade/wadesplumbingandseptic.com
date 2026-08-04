@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createIntegrationRegistry } from "./adapters.mjs";
 import { loadConfig } from "./config.mjs";
+import { assertBrandContext, loadBrandContext } from "./brand-context.mjs";
 import {
 	assertEvidence,
 	assertFactRegistry,
@@ -47,6 +48,10 @@ export function createAuditOnlyRun({
 	const technicalSeo = buildTechnicalSeoReport({ repoRoot, inventory });
 	const facts = assertFactRegistry(
 		fixture(join(repoRoot, "seo/manifests/approved-facts.json")),
+	);
+	const brandContext = assertBrandContext(
+		loadBrandContext({ repoRoot }) ??
+			fixture(join(repoRoot, "seo/manifests/brand-context.json")),
 	);
 	const ownership = assertQueryOwnership(
 		fixture(join(repoRoot, "seo/manifests/query-ownership.json")),
@@ -114,6 +119,7 @@ export function createAuditOnlyRun({
 		technical_seo: technicalSeo,
 		query_ownership: ownership,
 		approved_facts: facts,
+		brand_context: brandContext,
 		evidence,
 		integration_status:
 			integrationStatus ??

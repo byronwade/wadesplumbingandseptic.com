@@ -26,6 +26,7 @@ const REQUIRED_SNAPSHOT_PATHS = Object.freeze([
 	"content",
 	"seo/manifests/pages.json",
 	"seo/manifests/approved-facts.json",
+	"seo/manifests/brand-context.json",
 	"seo/manifests/query-ownership.json",
 ]);
 
