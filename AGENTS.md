@@ -1,6 +1,6 @@
 # Agent instructions
 
-This file governs AI-assisted work in this repository. Keep it concise, current, and enforceable. Put package-specific facts in the nearest nested `AGENTS.md`; do not repeat root rules. Read `AGENTS_RESEARCH_BASIS.md` only when changing this protocol, not during normal tasks.
+This file governs AI-assisted work in this repository. Keep it concise, current, and enforceable. Put package-specific facts in the nearest nested `AGENTS.md`; do not repeat root rules.
 
 ## Mission
 

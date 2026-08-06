@@ -27,7 +27,6 @@ import {
 	List,
 	MagnifyingGlass,
 	MapPin as PhMapPin,
-	MapTrifold,
 	Minus as PhMinus,
 	Phone as PhPhone,
 	Plus as PhPlus,
@@ -108,7 +107,6 @@ export const Loader2 = duotone(CircleNotch, "CircleNotch")
 export const Locate = duotone(Crosshair, "Crosshair")
 export const Mail = duotone(Envelope, "Envelope")
 export const Maximize = duotone(CornersOut, "CornersOut")
-export const MapPinned = duotone(MapTrifold, "MapTrifold")
 export const Menu = duotone(List, "List")
 export const RotateCcw = duotone(ArrowCounterClockwise, "ArrowCounterClockwise")
 export const Search = duotone(MagnifyingGlass, "MagnifyingGlass")

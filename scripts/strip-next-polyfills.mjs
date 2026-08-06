@@ -22,8 +22,19 @@ const targets = [
 const stub =
 	"/* stripped for modern browserslist - see scripts/strip-next-polyfills.mjs */\n"
 
+let strippedCount = 0
 for (const target of targets) {
 	if (!existsSync(target)) continue
 	writeFileSync(target, stub)
 	console.log(`stripped ${target}`)
+	strippedCount += 1
+}
+
+if (strippedCount === 0) {
+	console.warn(
+		"strip-next-polyfills: no known polyfill-module path found under " +
+			`${nextRoot} - Next.js may have changed its internal layout, ` +
+			"so legacy polyfills are shipping unstripped. Update the `targets` " +
+			"list in scripts/strip-next-polyfills.mjs.",
+	)
 }

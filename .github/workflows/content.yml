@@ -51,6 +51,9 @@ jobs:
       - name: City × service uniqueness
         run: npm run ci:city-service
 
+      - name: Eve manifest freshness
+        run: node automation/seo-agent/scripts/verify.mjs
+
   route-manifest:
     name: Route manifest smoke
     runs-on: [self-hosted, linux, x64, wades, wades-ci]

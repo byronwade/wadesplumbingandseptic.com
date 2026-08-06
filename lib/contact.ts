@@ -6,7 +6,7 @@ export const VCARD_PATH = "/contact.vcf" as const
 export const contactInfo = {
 	displayName: siteConfig.name,
 	phoneDisplay: siteConfig.phone,
-	phoneE164: "+18312254344",
+	phoneE164: siteConfig.phoneHref.replace(/^tel:/, ""),
 	phoneHref: siteConfig.phoneHref,
 	email: siteConfig.email,
 	emailHref: `mailto:${siteConfig.email}`,

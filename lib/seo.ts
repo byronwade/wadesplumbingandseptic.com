@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 
+import { contactInfo } from "@/lib/contact"
 import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import { siteConfig } from "@/lib/site"
@@ -131,7 +132,7 @@ export function localBusinessJsonLd(
 		"@id": `${siteConfig.url}/#business`,
 		name: siteConfig.name,
 		url: siteConfig.url,
-		telephone: "+18312254344",
+		telephone: contactInfo.phoneE164,
 		email: siteConfig.email,
 		logo: absoluteUrl("/images/brand/wades-mark.webp"),
 		image: absoluteUrl("/images/locations/santa-cruz-plumber.webp"),

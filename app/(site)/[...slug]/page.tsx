@@ -10,7 +10,7 @@ import {
 } from "@/lib/content"
 import { getLiveViewStats } from "@/lib/page-views/live"
 import { getRelatedForPost, getRelatedForTopic } from "@/lib/related-content"
-import { buildPageMetadata } from "@/lib/seo"
+import { buildPageMetadata, cityNameFromServiceArea } from "@/lib/seo"
 
 export async function generateStaticParams() {
 	const [pages, posts] = await Promise.all([
@@ -68,7 +68,7 @@ async function getRelatedForDocument(
 					document.slug.replaceAll("-", " "),
 					"plumbing",
 					"septic",
-					...(document.slug.includes("santa-cruz") ? ["santa cruz"] : []),
+					cityNameFromServiceArea(document).toLowerCase(),
 				],
 				excludeSlugs: [document.slug],
 			},

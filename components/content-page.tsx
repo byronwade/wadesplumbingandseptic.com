@@ -154,7 +154,7 @@ export function ContentPage({
 						<h2 className="type-title">Call, text, or email Wade&apos;s</h2>
 						<p className="type-lead">
 							Phone and email are on the card below. Saving the contact is
-							optional — calling is the fastest way to get help.
+							optional. Calling is the fastest way to get help.
 						</p>
 					</div>
 					<VirtualBusinessCard id="contact-business-card" />

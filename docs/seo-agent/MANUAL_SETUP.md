@@ -73,7 +73,7 @@ Set these in Production only (Sensitive / encrypted). Do not put them in Preview
 2. [ ] `DATAFORSEO_PASSWORD` = the account password from step 1.
 3. [ ] Keep `SEO_AGENT_ENABLE_DATAFORSEO=false` until the live probe is armed.
 
-### 3. Live proof (after Task 8 code is on Production)
+### 3. Live proof (after Task 7a code is on Production)
 
 1. [ ] Choose a run ID such as `dataforseo-2026-08-06` (or another lower-case id).
 2. [ ] Temporarily set Production: `SEO_AGENT_ENABLE_DATAFORSEO=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=<exact run id>`.

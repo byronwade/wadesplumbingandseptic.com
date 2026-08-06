@@ -355,7 +355,7 @@ export function GlobalSearch({
 									spellCheck={false}
 									enterKeyHint="search"
 									role="combobox"
-									aria-expanded
+									aria-expanded={flatHits.length > 0}
 									aria-controls="global-search-results"
 									aria-activedescendant={
 										flatHits[safeActiveIndex]

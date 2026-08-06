@@ -22,6 +22,37 @@ env:
   NEXT_TELEMETRY_DISABLED: "1"
 
 jobs:
+  static-analysis:
+    name: Knip + Biome (advisory)
+    runs-on: [self-hosted, linux, x64, wades, wades-quality]
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      # Advisory only: dead-code and extra-lint signal is useful, but neither
+      # tool gates merges today. continue-on-error keeps this from red-Xing a
+      # PR; read the uploaded logs to see what each tool found.
+      - name: Run Knip (unused files, exports, dependencies)
+        continue-on-error: true
+        run: npm run knip | tee knip-report.txt
+
+      - name: Run Biome (Ultracite lint presets)
+        continue-on-error: true
+        run: npm run biome | tee biome-report.txt
+
+      - name: Upload static analysis reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-analysis-${{ github.sha }}
+          path: |
+            knip-report.txt
+            biome-report.txt
+          retention-days: 14
+
   shadscan:
     name: shadscan UI audit
     runs-on: [self-hosted, linux, x64, wades, wades-quality]

@@ -1,18 +1,12 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S npx tsx
 /**
  * Ensures city × service pSEO rows are unique and complete.
  * Run: npm run ci:city-service
  */
-import path from "node:path"
-import { pathToFileURL } from "node:url"
+import { cityServicePages, getCityLocation } from "../../lib/city-service-pages"
 
 async function main() {
-	const modPath = pathToFileURL(
-		path.join(process.cwd(), "lib/city-service-pages.ts"),
-	).href
-	const { cityServicePages, getCityLocation } = await import(modPath)
-
-	const errors = []
+	const errors: string[] = []
 	const seen = new Set()
 	const localAngles = new Set()
 

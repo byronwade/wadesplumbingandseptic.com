@@ -53,6 +53,8 @@ const checks = [
 	["root-seo", npmExecutable(), ["run", "seo:check"]],
 	["root-search", npmExecutable(), ["run", "ci:search"]],
 	["root-archive", npmExecutable(), ["run", "ci:archive"]],
+	["root-related", npmExecutable(), ["run", "ci:related"]],
+	["root-page-views", npmExecutable(), ["run", "ci:page-views"]],
 	["root-build", npmExecutable(), ["run", "build"]],
 	[
 		"sidecar-format",

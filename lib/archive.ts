@@ -1,3 +1,5 @@
+import { taxonomySlug } from "@/lib/taxonomy-slug"
+
 export type ArchiveItem = {
 	slug: string
 	title: string
@@ -32,11 +34,7 @@ const SHORT_LABELS: Record<string, string> = {
 }
 
 export function archiveCategoryKey(category: string) {
-	return category
-		.toLowerCase()
-		.replace(/&/g, "and")
-		.replace(/[^a-z0-9]+/g, "-")
-		.replace(/^-|-$/g, "")
+	return taxonomySlug(category)
 }
 
 export function archiveCategoryLabel(category: string) {

@@ -2,13 +2,12 @@
 
 import type { ReactNode } from "react"
 import { Phone } from "@/components/icons"
+import type { VariantProps } from "class-variance-authority"
 
 import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
-
-type ButtonSize = "default" | "sm" | "lg" | "xl" | "icon"
 
 /**
  * Primary call CTA — always dials. Save-contact belongs on the contact page
@@ -22,14 +21,10 @@ export function CallButton({
 	desktopLabel,
 }: {
 	className?: string
-	size?: ButtonSize
-	variant?: "default" | "secondary" | "inverse" | "outline" | "ghost"
+	size?: NonNullable<VariantProps<typeof buttonVariants>["size"]>
+	variant?: NonNullable<VariantProps<typeof buttonVariants>["variant"]>
 	showIcon?: boolean
-	/** @deprecated Ignored — CallButton always dials. */
-	prefer?: "auto" | "dial" | "vcard"
 	desktopLabel?: ReactNode
-	/** @deprecated Ignored — CallButton always dials. */
-	mobileLabel?: ReactNode
 }) {
 	const styles = cn(buttonVariants({ size, variant }), className)
 	const dialLabel = desktopLabel ?? `Call ${contactInfo.phoneDisplay}`

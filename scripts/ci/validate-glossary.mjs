@@ -12,6 +12,12 @@ const files = [
 	path.join(root, "lib/glossary/plumbing-terms.ts"),
 	path.join(root, "lib/glossary/septic-terms.ts"),
 ]
+const serviceSlugs = new Set(
+	fs
+		.readdirSync(path.join(root, "content/services"))
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => name.slice(0, -3)),
+)
 
 const EM = "\u2014"
 const EN = "\u2013"
@@ -142,6 +148,13 @@ for (const file of files) {
 		}
 		if (relatedServiceSlugs.length < 1) {
 			fail(`${label}:${slug} needs relatedServiceSlugs`)
+		}
+		for (const serviceSlug of relatedServiceSlugs) {
+			if (!serviceSlugs.has(serviceSlug)) {
+				fail(
+					`${label}:${slug} relatedServiceSlugs references unknown service ${serviceSlug}`,
+				)
+			}
 		}
 		if (relatedTermSlugs.length < 1) {
 			fail(`${label}:${slug} needs relatedTermSlugs`)

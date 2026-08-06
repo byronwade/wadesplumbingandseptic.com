@@ -126,11 +126,7 @@ function MegaFooter({
 				<span>{siteConfig.hours}</span>
 			</p>
 			<div className="flex shrink-0 items-center gap-2">
-				<CallButton
-					desktopLabel={contactInfo.phoneDisplay}
-					prefer="dial"
-					size="sm"
-				/>
+				<CallButton desktopLabel={contactInfo.phoneDisplay} size="sm" />
 				<NavigationMenuLink asChild>
 					<Link
 						className={buttonVariants({ variant: "inverse", size: "sm" })}
@@ -327,7 +323,6 @@ export function SiteHeaderNav() {
 				<CallButton
 					className="gap-2"
 					desktopLabel={contactInfo.phoneDisplay}
-					prefer="dial"
 					size="lg"
 				/>
 			</div>

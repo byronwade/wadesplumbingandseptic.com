@@ -10,6 +10,9 @@ import {
 	type ContentConversion,
 } from "@/lib/content-conversion"
 import { sanitizeArticleContent } from "@/lib/sanitize-content"
+import { taxonomySlug } from "@/lib/taxonomy-slug"
+
+export { taxonomySlug }
 
 export type Collection = "pages" | "services" | "posts"
 
@@ -186,14 +189,6 @@ export async function resolvePageOrPost(slug: string) {
 
 	if (page) return { document: page, isPost: false as const }
 	if (post) return { document: post, isPost: true as const }
-}
-
-export function taxonomySlug(value: string) {
-	return value
-		.toLowerCase()
-		.replace(/&/g, "and")
-		.replace(/[^a-z0-9]+/g, "-")
-		.replace(/^-|-$/g, "")
 }
 
 export async function getAllRoutes() {

@@ -34,7 +34,7 @@ Vercel Services is a deployment boundary, not a static-secret boundary: project-
 
 Never copy a production secret to Preview, Git, a shell history, artifacts, PR bodies, `seo/` records, or `NEXT_PUBLIC_` variables. Vercel supports isolated Development, Preview, and Production variables; use `vercel env run` for a temporary local check rather than exporting secrets to a file when possible. Do not mistake that environment scoping for per-service credential isolation.
 
-The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the service-area map. Configure its publishable, URL-restricted Mapbox token for the `site` service; it is intentionally public, not a sidecar credential, and must never be restored to source code.
+The public site renders the service-area map with a self-hosted, tokenless MapLibre build (`maplibre-gl`); no Mapbox token or account is required for the `site` service.
 
 ## Vercel Sidecar, Eve, and AI Gateway
 

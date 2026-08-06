@@ -454,7 +454,7 @@ export function createAiGatewayAdapter({
 	enabled = true,
 	accessToken,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const endpoint = "https://ai-gateway.vercel.sh/v1/models";
@@ -502,7 +502,7 @@ export function createSearchConsoleAdapter({
 	accessTokenProvider,
 	enabled = true,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 	now,
 } = {}) {
@@ -714,7 +714,7 @@ export function createPageSpeedAdapter({
 	apiKey,
 	enabled = true,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	return {
@@ -1076,7 +1076,7 @@ export function createBrowserbaseAdapter({
 	projectId,
 	enabled = false,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const endpoint = "https://api.browserbase.com/v1/sessions";
@@ -1144,7 +1144,7 @@ export function createGithubReadAdapter({
 	repository = "byronwade/wadesplumbingandseptic.com",
 	enabled = true,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const [owner, repo] = repository.split("/");
@@ -1254,7 +1254,7 @@ export function createVercelReadAdapter({
 	teamId,
 	enabled = true,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const headers = () => authorization(accessToken);
@@ -1356,7 +1356,7 @@ export function createGa4Adapter({
 	propertyId,
 	enabled = false,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	return {
@@ -1458,7 +1458,7 @@ export function createBusinessProfileAdapter({
 	locationId,
 	enabled = false,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	return {
@@ -1517,7 +1517,7 @@ export function createLocalFalconAdapter({
 	apiKey,
 	enabled = false,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const endpoint = "https://api.localfalcon.com/v1/reports/";

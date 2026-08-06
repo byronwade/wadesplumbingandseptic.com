@@ -146,7 +146,6 @@ export function VirtualBusinessCard({
 						<CallButton
 							className="w-full"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							prefer="dial"
 							size="lg"
 						/>
 						<ProtectedContactLink
@@ -195,7 +194,6 @@ export function VirtualBusinessCard({
 					<CallButton
 						className="w-full"
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-						prefer="dial"
 						size="lg"
 					/>
 					<ProtectedContactLink

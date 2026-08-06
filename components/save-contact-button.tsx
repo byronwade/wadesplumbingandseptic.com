@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react"
 import { IdentificationCard, Phone } from "@/components/icons"
+import type { VariantProps } from "class-variance-authority"
 
 import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
@@ -30,8 +31,8 @@ export function SaveContactButton({
 }: {
 	className?: string
 	children?: ReactNode
-	variant?: "default" | "secondary" | "inverse" | "outline" | "ghost"
-	size?: "default" | "sm" | "lg" | "xl" | "icon"
+	variant?: NonNullable<VariantProps<typeof buttonVariants>["variant"]>
+	size?: NonNullable<VariantProps<typeof buttonVariants>["size"]>
 	showIcon?: boolean
 }) {
 	const [promptOpen, setPromptOpen] = useState(false)
