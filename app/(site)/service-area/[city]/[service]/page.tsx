@@ -34,7 +34,7 @@ export async function generateMetadata({
 	const page = getCityServicePage(city, service)
 	const location = getCityLocation(city)
 
-	if (!page || !location) return {}
+	if (!(page && location)) return {}
 
 	return buildPageMetadata({
 		title: `${page.serviceTitle} in ${location.name}, CA`,
@@ -53,7 +53,7 @@ export default async function CityServicePage({
 	const page = getCityServicePage(city, service)
 	const location = getCityLocation(city)
 
-	if (!page || !location) notFound()
+	if (!(page && location)) notFound()
 
 	const serviceDoc = await getDocument("services", service)
 	const image = getServiceImage(

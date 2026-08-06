@@ -1,5 +1,10 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.5.7/schema.json",
+	"extends": [
+		"ultracite/biome/core",
+		"ultracite/biome/react",
+		"ultracite/biome/next"
+	],
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -7,15 +12,41 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!automation/seo-agent/**", "!public/**"]
+		"includes": ["!automation/seo-agent", "!public"]
 	},
 	"formatter": {
 		"enabled": false
 	},
+	"javascript": {
+		"formatter": {
+			"enabled": false
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": false
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": false
+		}
+	},
+	"html": {
+		"formatter": {
+			"enabled": false
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"preset": "recommended"
+			"preset": "recommended",
+			"nursery": {
+				"useSortedClasses": "off"
+			},
+			"style": {
+				"useBlockStatements": "off"
+			}
 		}
 	},
 	"assist": {

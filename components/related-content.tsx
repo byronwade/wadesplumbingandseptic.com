@@ -55,7 +55,7 @@ export function RelatedContentSections({
 	servicesTitle?: string
 	postsTitle?: string
 }) {
-	if (!related.services.length && !related.posts.length) return null
+	if (!(related.services.length || related.posts.length)) return null
 
 	return (
 		<section className="surface-sunken border-border border-y">

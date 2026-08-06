@@ -121,9 +121,9 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		const boost = SERVICE_POPULARITY[service.slug] ?? Math.max(1, 34 - index)
 		const featuredBoost = service.featured ? 8 : 0
 		const orderBoost =
-			service.order !== undefined
-				? Math.max(0, 12 - Math.floor(service.order / 5))
-				: 0
+			service.order === undefined
+				? 0
+				: Math.max(0, 12 - Math.floor(service.order / 5))
 
 		return {
 			id: `service:${service.slug}`,

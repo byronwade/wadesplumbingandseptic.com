@@ -102,25 +102,25 @@ function orphanEyebrowBefore(content: string, sectionStart: number) {
 	const before = content.slice(0, sectionStart).replace(/\s+$/, "")
 	const lines = before.split("\n")
 	const last = lines.at(-1)?.trim() ?? ""
-	if (!last) return undefined
-	if (/^#{1,6}\s/.test(last)) return undefined
-	if (/^[-*!]/.test(last)) return undefined
-	if (/\[/.test(last) || /\]\(/.test(last)) return undefined
-	if (last.length > 72) return undefined
-	if (/[.!?]$/.test(last)) return undefined
+	if (!last) return
+	if (/^#{1,6}\s/.test(last)) return
+	if (/^[-*!]/.test(last)) return
+	if (/\[/.test(last) || /\]\(/.test(last)) return
+	if (last.length > 72) return
+	if (/[.!?]$/.test(last)) return
 	return last
 }
 
 function parseTestimonials(text: string): ContentTestimonial[] {
 	const testimonials: ContentTestimonial[] = []
 	const pattern =
-		/"([^"]{12,280})"\s*[-– - ]\s*([A-Za-z][A-Za-z'’.\-]+(?:\s+[A-Za-z][A-Za-z'’.\-]*)?)(?:,\s*([A-Za-z][A-Za-z\s.'’-]+))?/g
+		/"([^"]{12,280})"\s*[-– - ]\s*([A-Za-z][A-Za-z'’.-]+(?:\s+[A-Za-z][A-Za-z'’.-]*)?)(?:,\s*([A-Za-z][A-Za-z\s.'’-]+))?/g
 
 	for (const match of text.matchAll(pattern)) {
 		const quote = match[1]?.trim()
 		const name = match[2]?.trim()
 		const location = match[3]?.trim()
-		if (!quote || !name) continue
+		if (!(quote && name)) continue
 		testimonials.push({ quote, name, location })
 	}
 

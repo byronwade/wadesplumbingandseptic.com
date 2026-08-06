@@ -75,7 +75,6 @@ async function getRelatedForDocument(
 			{ posts: 3, services: 3 },
 		)
 	}
-	return undefined
 }
 
 export default async function MarkdownPage({

@@ -24,7 +24,7 @@ function walkMd(dir) {
 }
 
 function splitFrontmatter(source) {
-	if (!source.startsWith("---\n") && !source.startsWith("---\r\n")) {
+	if (!(source.startsWith("---\n") || source.startsWith("---\r\n"))) {
 		return { fence: "", body: source }
 	}
 	const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)

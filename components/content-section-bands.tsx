@@ -11,7 +11,6 @@ type BandKind = "bullets" | "faq" | "prose"
 function bandSurface(index: number) {
 	if (index % 3 === 1) return "surface-sunken border-border border-y"
 	if (index % 3 === 2) return "border-border bg-card border-y"
-	return undefined
 }
 
 function extractBulletItems(body: string) {

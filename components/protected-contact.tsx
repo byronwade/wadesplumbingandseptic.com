@@ -13,7 +13,7 @@ import { contactEncoded, contactInfo, decodeContactValue } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 const useIsomorphicLayoutEffect =
-	typeof window !== "undefined" ? useLayoutEffect : useEffect
+	typeof window === "undefined" ? useEffect : useLayoutEffect
 
 type ContactKind = "phone" | "email" | "vcard"
 

@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils"
 function surfaceFor(index: number) {
 	if (index % 3 === 1) return "surface-sunken border-border border-y"
 	if (index % 3 === 2) return "border-border bg-card border-y"
-	return undefined
 }
 
 function SectionChrome({
@@ -346,7 +345,7 @@ function ProseBand({
 	index: number
 }) {
 	const content = section.body || section.lead
-	if (!content && !section.bullets.length) return null
+	if (!(content || section.bullets.length)) return null
 
 	return (
 		<section className={cn("section-y", surfaceFor(index))}>

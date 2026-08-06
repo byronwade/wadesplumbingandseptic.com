@@ -116,14 +116,14 @@ for (const file of files) {
 		const relatedTermSlugs = fieldArray(block, "relatedTermSlugs")
 		const relatedServiceSlugs = fieldArray(block, "relatedServiceSlugs")
 
-		if (
-			!slug ||
-			!term ||
-			!shortDefinition ||
-			!definition ||
-			!localContext ||
-			!homeownerTip
-		) {
+		if (!(
+			slug &&
+			term &&
+			shortDefinition &&
+			definition &&
+			localContext &&
+			homeownerTip
+		)) {
 			fail(
 				`${label}: missing required fields near ${slug ?? term ?? "unknown"}`,
 			)

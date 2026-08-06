@@ -147,12 +147,12 @@ export async function renderOgImage({
 					height: OG_HEIGHT,
 					display: "flex",
 					backgroundImage: hasPhoto
-						? `linear-gradient(105deg, rgba(12,11,10,0.96) 0%, rgba(12,11,10,0.88) 38%, rgba(12,11,10,0.45) 62%, rgba(12,11,10,0.2) 100%)`
+						? "linear-gradient(105deg, rgba(12,11,10,0.96) 0%, rgba(12,11,10,0.88) 38%, rgba(12,11,10,0.45) 62%, rgba(12,11,10,0.2) 100%)"
 						: `linear-gradient(145deg, #14110e 0%, ${INK} 48%, #1a1510 100%)`,
 				}}
 			/>
 
-			{!hasPhoto ? (
+			{hasPhoto ? null : (
 				<div
 					style={{
 						position: "absolute",
@@ -167,7 +167,7 @@ export async function renderOgImage({
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img alt="" height={360} src={markSrc} width={360} />
 				</div>
-			) : null}
+			)}
 
 			{/* Content column */}
 			<div

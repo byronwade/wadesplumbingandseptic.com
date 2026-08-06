@@ -53,7 +53,7 @@ function collectionPath(collection: Collection) {
 }
 
 function normalizeDate(value: unknown) {
-	if (!value) return undefined
+	if (!value) return
 	if (value instanceof Date) return value.toISOString().slice(0, 10)
 	return String(value)
 }
@@ -162,8 +162,8 @@ export async function getDocument(collection: Collection, slug: string) {
 	cacheLife("max")
 
 	const absolutePath = documentPath(collection, slug)
-	if (!absolutePath || !fs.existsSync(absolutePath)) {
-		return undefined
+	if (!(absolutePath && fs.existsSync(absolutePath))) {
+		return
 	}
 
 	return parseDocument(absolutePath, slug)
@@ -186,7 +186,6 @@ export async function resolvePageOrPost(slug: string) {
 
 	if (page) return { document: page, isPost: false as const }
 	if (post) return { document: post, isPost: true as const }
-	return undefined
 }
 
 export function taxonomySlug(value: string) {

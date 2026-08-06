@@ -19,10 +19,10 @@ export function parsePageViewKey(key: string): {
 /** Short stable token for the seen-cookie set (not cryptographic). */
 export function pageViewCookieToken(kind: PageViewKind, slug: string) {
 	const key = pageViewKey(kind, slug)
-	let hash = 2166136261
+	let hash = 2_166_136_261
 	for (let i = 0; i < key.length; i += 1) {
 		hash ^= key.charCodeAt(i)
-		hash = Math.imul(hash, 16777619)
+		hash = Math.imul(hash, 16_777_619)
 	}
 	return (hash >>> 0).toString(36)
 }

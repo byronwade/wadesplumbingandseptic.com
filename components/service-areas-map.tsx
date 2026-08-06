@@ -80,7 +80,7 @@ function FitServiceAreaBounds() {
 	const { map, isLoaded } = useMap()
 
 	useEffect(() => {
-		if (!map || !isLoaded) return
+		if (!(map && isLoaded)) return
 
 		const fit = () => {
 			const narrow =
@@ -121,7 +121,7 @@ function useBasemapLabelLayerId() {
 	const [ready, setReady] = useState(false)
 
 	useEffect(() => {
-		if (!map || !isLoaded) return
+		if (!(map && isLoaded)) return
 
 		const resolve = (forceReady = false) => {
 			const layers = map.getStyle()?.layers

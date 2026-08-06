@@ -205,7 +205,11 @@ function maxEditsFor(length: number) {
  * Levenshtein edit distance with an early exit when `max` is exceeded.
  * Used for misspelling / closest-match ranking.
  */
-export function editDistance(a: string, b: string, max = Infinity): number {
+export function editDistance(
+	a: string,
+	b: string,
+	max = Number.POSITIVE_INFINITY,
+): number {
 	if (a === b) return 0
 	if (!a.length) return b.length
 	if (!b.length) return a.length
@@ -243,7 +247,7 @@ export function editDistance(a: string, b: string, max = Infinity): number {
 
 /** Best (lowest) edit distance from `needle` to any word in `haystack`. */
 export function bestWordDistance(haystack: string, needle: string): number {
-	if (!needle) return Infinity
+	if (!needle) return Number.POSITIVE_INFINITY
 	if (haystack.includes(needle)) return 0
 
 	const max = maxEditsFor(needle.length)
@@ -382,7 +386,7 @@ export function expandQuery(query: string): ParsedQuery {
 			}),
 		)
 
-		if (!phraseHit && !tokenHit) continue
+		if (!(phraseHit || tokenHit)) continue
 
 		if (
 			canonical === "septic" ||

@@ -284,7 +284,7 @@ export function GlobalSearch({
 	}
 
 	const showEmpty =
-		!loading && !error && Boolean(query.trim()) && flatHits.length === 0
+		!(loading || error) && Boolean(query.trim()) && flatHits.length === 0
 	const showPopular = !query.trim() && flatHits.length > 0
 
 	return (
@@ -423,7 +423,7 @@ export function GlobalSearch({
 								</div>
 							) : null}
 
-							{!loading && !error && flatHits.length > 0 ? (
+							{!(loading || error) && flatHits.length > 0 ? (
 								<div className="space-y-7">
 									<div className="flex items-end justify-between gap-3">
 										<p className="spec-tag text-on-dark-subtle">
@@ -443,7 +443,7 @@ export function GlobalSearch({
 										const Icon = meta.icon
 										return (
 											<section key={key} aria-label={meta.label}>
-												{!showPopular ? (
+												{showPopular ? null : (
 													<div className="mb-2.5 flex items-center gap-2">
 														<Icon
 															className="size-3.5 text-[var(--primary-bright)]"
@@ -453,7 +453,7 @@ export function GlobalSearch({
 															{meta.label}
 														</h3>
 													</div>
-												) : null}
+												)}
 												<ul className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-3">
 													{groupHits.map((hit) => {
 														const flatIndex = flatHits.findIndex(

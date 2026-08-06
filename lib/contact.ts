@@ -27,9 +27,10 @@ export const contactInfo = {
  */
 export function encodeContactValue(value: string): string {
 	const key = 37
-	const bytes = Array.from(value, (char, index) => {
-		return (char.charCodeAt(0) ^ (key + (index % 17))) & 255
-	})
+	const bytes = Array.from(
+		value,
+		(char, index) => (char.charCodeAt(0) ^ (key + (index % 17))) & 255,
+	)
 	if (typeof Buffer !== "undefined") {
 		return Buffer.from(bytes).toString("base64")
 	}
@@ -40,11 +41,11 @@ export function encodeContactValue(value: string): string {
 
 export function decodeContactValue(encoded: string): string {
 	let bytes: number[]
-	if (typeof Buffer !== "undefined") {
-		bytes = Array.from(Buffer.from(encoded, "base64"))
-	} else {
+	if (typeof Buffer === "undefined") {
 		const binary = atob(encoded)
 		bytes = Array.from(binary, (char) => char.charCodeAt(0))
+	} else {
+		bytes = Array.from(Buffer.from(encoded, "base64"))
 	}
 	const key = 37
 	return bytes

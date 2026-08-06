@@ -331,7 +331,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 			typeof ResizeObserver === "undefined"
 				? null
 				: new ResizeObserver(() => {
-						if (!container.offsetWidth || !container.offsetHeight) return
+						if (!(container.offsetWidth && container.offsetHeight)) return
 						map.resize()
 					})
 		resizeObserver?.observe(container)
@@ -356,7 +356,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 
 	// Sync controlled viewport to map
 	useEffect(() => {
-		if (!mapInstance || !isControlled || !viewport) return
+		if (!(mapInstance && isControlled && viewport)) return
 		if (mapInstance.isMoving()) return
 
 		const current = getViewport(mapInstance)
@@ -385,7 +385,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 	// Handle style change: close the gate (so layer children tear down and
 	// re-add on the incoming style) - the swap itself is staged to the effect below.
 	useEffect(() => {
-		if (!mapInstance || !resolvedTheme) return
+		if (!(mapInstance && resolvedTheme)) return
 
 		const newStyle = resolvedTheme === "dark" ? mapStyles.dark : mapStyles.light
 
@@ -397,7 +397,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 	}, [mapInstance, resolvedTheme, mapStyles])
 
 	useEffect(() => {
-		if (!mapInstance || !pendingStyle) return
+		if (!(mapInstance && pendingStyle)) return
 
 		setPendingStyle(null)
 		styleSwapInFlightRef.current = true
@@ -408,7 +408,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 
 	// Sync projection when the prop changes after mount.
 	useEffect(() => {
-		if (!mapInstance || !isStyleLoaded || !projection) return
+		if (!(mapInstance && isStyleLoaded && projection)) return
 		if (styleSwapInFlightRef.current) return
 		mapInstance.setProjection(projection)
 	}, [mapInstance, isStyleLoaded, projection])
@@ -428,7 +428,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 				ref={containerRef}
 				className={cn("relative h-full w-full", className)}
 			>
-				{((!isLoaded && !isStyleLoaded) || loading) && <DefaultLoader />}
+				{(!(isLoaded || isStyleLoaded) || loading) && <DefaultLoader />}
 				{/* SSR-safe: children render only when map is loaded on client */}
 				{mapInstance && children}
 			</div>
@@ -926,7 +926,7 @@ function MapControls({
 			},
 			// Without a timeout the spec default is Infinity: a dismissed permission
 			// prompt would leave the button disabled forever.
-			{ timeout: 10000 },
+			{ timeout: 10_000 },
 		)
 	}, [map, onLocate])
 
@@ -994,7 +994,7 @@ function CompassButton({ onClick }: { onClick: () => void }) {
 	const compassRef = useRef<SVGSVGElement>(null)
 
 	useEffect(() => {
-		if (!map || !compassRef.current) return
+		if (!(map && compassRef.current)) return
 
 		const compass = compassRef.current
 
@@ -1167,7 +1167,7 @@ function MapRoute({
 
 	// Add source and layer on mount
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		map.addSource(sourceId, {
 			type: "geojson",
@@ -1204,7 +1204,7 @@ function MapRoute({
 
 	// When coordinates change, update the source data
 	useEffect(() => {
-		if (!isLoaded || !map || coordinates.length < 2) return
+		if (!(isLoaded && map) || coordinates.length < 2) return
 
 		const source = map.getSource(sourceId) as MapLibreGL.GeoJSONSource
 		if (source) {
@@ -1217,7 +1217,7 @@ function MapRoute({
 	}, [isLoaded, map, coordinates, sourceId])
 
 	useEffect(() => {
-		if (!isLoaded || !map || !map.getLayer(layerId)) return
+		if (!(isLoaded && map && map.getLayer(layerId))) return
 
 		map.setPaintProperty(layerId, "line-color", color)
 		map.setPaintProperty(layerId, "line-width", width)
@@ -1227,7 +1227,7 @@ function MapRoute({
 
 	// Handle click and hover events
 	useEffect(() => {
-		if (!isLoaded || !map || !interactive) return
+		if (!(isLoaded && map && interactive)) return
 
 		const handleClick = () => {
 			onClick?.()
@@ -1387,7 +1387,7 @@ function MapGeoJSON<
 
 	// Add source on mount.
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		if (!map.getSource(sourceId)) {
 			map.addSource(sourceId, {
@@ -1411,7 +1411,7 @@ function MapGeoJSON<
 
 	// Sync data when it changes.
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 		const source = map.getSource(sourceId) as
 			MapLibreGL.GeoJSONSource | undefined
 		source?.setData(data as never)
@@ -1419,7 +1419,7 @@ function MapGeoJSON<
 
 	// Sync layers and paint when visibility or styling changes.
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		const source = map.getSource(sourceId)
 		if (!source) return
@@ -1499,7 +1499,7 @@ function MapGeoJSON<
 
 	// Interaction handlers (bound to the fill layer).
 	useEffect(() => {
-		if (!isLoaded || !map || !interactive || !showFill) return
+		if (!(isLoaded && map && interactive && showFill)) return
 
 		let hoveredId: string | number | null = null
 
@@ -1751,7 +1751,7 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 
 	// Add source and layers on mount.
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		map.addSource(sourceId, {
 			type: "geojson",
@@ -1799,7 +1799,7 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 
 	// Sync features when data / curvature / samples change.
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 		const source = map.getSource(sourceId) as
 			MapLibreGL.GeoJSONSource | undefined
 		source?.setData(geoJSON)
@@ -1807,7 +1807,7 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 
 	// Sync paint/layout when they change.
 	useEffect(() => {
-		if (!isLoaded || !map || !map.getLayer(layerId)) return
+		if (!(isLoaded && map && map.getLayer(layerId))) return
 		for (const [key, value] of Object.entries(mergedPaint)) {
 			map.setPaintProperty(
 				layerId,
@@ -1829,7 +1829,7 @@ function MapArc<T extends MapArcDatum = MapArcDatum>({
 
 	// Interaction handlers
 	useEffect(() => {
-		if (!isLoaded || !map || !interactive) return
+		if (!(isLoaded && map && interactive)) return
 
 		let hoveredId: string | number | null = null
 
@@ -1968,7 +1968,7 @@ function MapClusterLayer<
 
 	// Add source and layers on mount
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		// Add clustered GeoJSON source
 		map.addSource(sourceId, {
@@ -2057,7 +2057,7 @@ function MapClusterLayer<
 
 	// Update source data when data prop changes (only for non-URL data)
 	useEffect(() => {
-		if (!isLoaded || !map || typeof data === "string") return
+		if (!(isLoaded && map) || typeof data === "string") return
 
 		const source = map.getSource(sourceId) as MapLibreGL.GeoJSONSource
 		if (source) {
@@ -2067,7 +2067,7 @@ function MapClusterLayer<
 
 	// Update layer styles when props change
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		const prev = stylePropsRef.current
 		const colorsChanged =
@@ -2114,7 +2114,7 @@ function MapClusterLayer<
 
 	// Handle click events
 	useEffect(() => {
-		if (!isLoaded || !map) return
+		if (!(isLoaded && map)) return
 
 		// Cluster click handler - zoom into cluster
 		const handleClusterClick = async (
@@ -2154,7 +2154,7 @@ function MapClusterLayer<
 				features?: MapLibreGL.MapGeoJSONFeature[]
 			},
 		) => {
-			if (!onPointClick || !e.features?.length) return
+			if (!(onPointClick && e.features?.length)) return
 
 			const feature = e.features[0]
 			const coordinates = (

@@ -41,6 +41,6 @@ export function AnalyticsLoader() {
 		return () => globalThis.clearTimeout(timer)
 	}, [onVercel])
 
-	if (!onVercel || !ready) return null
+	if (!(onVercel && ready)) return null
 	return <Analytics />
 }

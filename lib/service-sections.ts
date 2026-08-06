@@ -86,8 +86,8 @@ function leadAndBullets(body: string) {
 			sawBullet = true
 			continue
 		}
-		if (!sawBullet) leadLines.push(line)
-		else after.push(line)
+		if (sawBullet) after.push(line)
+		else leadLines.push(line)
 	}
 
 	return {

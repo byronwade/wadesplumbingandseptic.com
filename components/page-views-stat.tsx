@@ -44,7 +44,7 @@ export function PageViewsStat({
 	const showUnique = uniqueViews > 0
 	const showTotal = !showUnique && totalViews > 0
 
-	if (!showTrend && !showUnique && !showTotal) return null
+	if (!(showTrend || showUnique || showTotal)) return null
 
 	const muted =
 		tone === "on-dark" ? "text-on-dark-subtle" : "text-muted-foreground"

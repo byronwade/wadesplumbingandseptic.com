@@ -134,7 +134,7 @@ export function scoreCandidate(
 	candidate: RelatedSeedDocument,
 	kind: "post" | "service",
 ) {
-	if (candidate.slug === seed.slug) return -Infinity
+	if (candidate.slug === seed.slug) return Number.NEGATIVE_INFINITY
 
 	const candidateHay = [
 		candidate.title,
