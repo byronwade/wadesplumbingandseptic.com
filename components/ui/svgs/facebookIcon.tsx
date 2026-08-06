@@ -1,7 +1,7 @@
 import type { SVGProps } from "react"
 
 const FacebookIcon = (props: SVGProps<SVGSVGElement>) => (
-	<svg {...props} viewBox="0 0 666.667 666.667">
+	<svg aria-hidden="true" {...props} viewBox="0 0 666.667 666.667">
 		<defs>
 			<clipPath id="a" clipPathUnits="userSpaceOnUse">
 				<path d="M0 700h700V0H0Z" />

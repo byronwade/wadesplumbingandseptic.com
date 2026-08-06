@@ -306,6 +306,19 @@ This includes:
 
 CI validates markdown under `content/` and fails if banned dash punctuation is present.
 
+### Optimization & health-check tooling
+
+Use these to find dead code, architecture smells, and render-performance problems before writing new abstractions by hand; they are audit tools, not authorities, so triage their output through the same Reuse Decision Ladder and Bounded Recursive Cleanup rules above rather than acting on every line automatically.
+
+| Tool                                                         | Purpose                                                                                                                                                                                                                                                  | Command                       |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| [Knip](https://knip.dev)                                     | Unused files, exports, and dependencies across the whole module graph (catches cross-file dead code ESLint can't see)                                                                                                                                    | `npm run knip`                |
+| [Biome](https://biomejs.dev)                                 | Fast secondary lint/format check. Available and run read-only for extra signal; it is **not** the primary formatter/linter yet — ESLint + Prettier remain canonical until a deliberate, separately-reviewed migration                                    | `npm run biome`               |
+| [vercel-doctor](https://github.com/Aniket-508/vercel-doctor) | Scans this Next.js app for patterns that inflate the Vercel bill (long function duration, uncached routes, unoptimized images, expensive cron jobs) plus dead code                                                                                       | `npm run audit:vercel-doctor` |
+| [react-doctor](https://github.com/millionco/react-doctor)    | 60+ rule health scan across React state/effects, performance, architecture, bundle size, security, correctness, and accessibility. Installed as a devDependency with an advisory-only GitHub Actions check on PRs (`.github/workflows/react-doctor.yml`) | `npm run doctor`              |
+| [shadscan](https://www.shadscan.com)                         | Deterministic, read-only UI-fundamentals audit for shadcn/ui apps (command menus, focus states, form feedback, a11y, mobile behavior)                                                                                                                    | `npm run audit:shadscan`      |
+| [React Scan](https://react-scan.million.dev)                 | Flags unnecessary re-renders at runtime. Needs a live app; run `npm run dev` in one terminal, then this in another                                                                                                                                       | `npm run audit:react-scan`    |
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

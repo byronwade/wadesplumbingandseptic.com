@@ -22,7 +22,7 @@ function fail(message) {
 	failed = true
 }
 
-function unescape(value) {
+function unescapeGlossaryValue(value) {
 	return value.replace(/\\n/g, "\n").replace(/\\"/g, '"')
 }
 
@@ -77,7 +77,7 @@ function field(block, name) {
 	const match = block.match(
 		new RegExp(`${name}:\\s*"((?:\\\\.|[^"\\\\])*)"`, "m"),
 	)
-	return match ? unescape(match[1]) : null
+	return match ? unescapeGlossaryValue(match[1]) : null
 }
 
 function fieldArray(block, name) {

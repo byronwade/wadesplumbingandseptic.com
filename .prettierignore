@@ -4,3 +4,6 @@ public/images/
 public/maplibre-gl/
 next-env.d.ts
 package-lock.json
+# Separate npm package with its own prettier/lockfile/toolchain (see its
+# own AGENTS.md); root and sidecar formatting opinions should not race.
+automation/seo-agent/

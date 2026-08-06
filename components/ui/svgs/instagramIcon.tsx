@@ -2,6 +2,7 @@ import type { SVGProps } from "react"
 
 const InstagramIcon = (props: SVGProps<SVGSVGElement>) => (
 	<svg
+		aria-hidden="true"
 		{...props}
 		xmlnsXlink="http://www.w3.org/1999/xlink"
 		viewBox="0 0 264.583 264.583"

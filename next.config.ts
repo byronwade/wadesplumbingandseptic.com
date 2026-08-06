@@ -42,12 +42,10 @@ const nextConfig: NextConfig = {
 	experimental: {
 		optimizePackageImports: [
 			"@phosphor-icons/react",
-			"@radix-ui/react-accordion",
 			"@radix-ui/react-dialog",
 			"@radix-ui/react-navigation-menu",
 			"@radix-ui/react-separator",
 			"@radix-ui/react-slot",
-			"@radix-ui/react-tooltip",
 		],
 	},
 	/*
@@ -313,7 +311,7 @@ const nextConfig: NextConfig = {
 		 */
 		unoptimized: true,
 		formats: ["image/avif", "image/webp"],
-		qualities: [48, 52, 55, 58, 60, 65, 70, 75, 80, 85],
+		qualities: [48, 52, 55, 58, 60, 62, 65, 70, 75, 80, 85],
 		/* Cap retina candidates; 100vw heroes do not need 3840px sources. */
 		deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920],
 		imageSizes: [32, 48, 64, 96, 128, 256, 384],

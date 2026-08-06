@@ -1,0 +1,24 @@
+{
+	"$schema": "https://unpkg.com/knip@6/schema.json",
+	// scripts/**/*.{mjs,ts} are CLI entry points invoked via `npm run` and
+	// `node scripts/x.mjs`, not imported by other source files.
+	// instrumentation.ts and next.config.ts are Next.js convention entries
+	// knip's Next.js plugin already detects; listing them again is redundant.
+	"entry": ["scripts/**/*.{mjs,ts}"],
+	"project": ["**/*.{ts,tsx,mjs,js}"],
+	"ignore": [
+		// automation/seo-agent is a separate npm package with its own
+		// package.json, lockfile, and toolchain (see its own AGENTS.md); its
+		// module graph is not part of the root project.
+		"automation/seo-agent/**",
+		"public/**",
+		// Referenced only via a next.config.ts webpack alias, not a JS import.
+		"lib/empty-module.js",
+	],
+	"ignoreDependencies": [
+		// Used via `@import "tailwindcss"` in app/globals.css (Tailwind v4
+		// CSS-first config); knip does not trace CSS-only imports.
+		"tailwindcss",
+	],
+	"ignoreExportsUsedInFile": true,
+}
