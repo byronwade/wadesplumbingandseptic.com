@@ -20,6 +20,7 @@ The reviewed draft branch uses a single Vercel Services project: the public site
 - [x] Browser research live probe (Task 5) is `LIVE_VERIFIED` via Production Cron (`GET /_internal/eve/api/live-probe/browser-research`).
 - [ ] Google Analytics Data API (Task 6 / GA4): skipped for rollout with recorded blocker until `GA4_PROPERTY_ID` is set. See **Deferred: Google Analytics Data (GA4)** below.
 - [ ] Local Falcon (Task 7): follow **Next: Local Falcon** below, then run the focused live probe.
+- [ ] DataForSEO (Task 7a): follow **Next: DataForSEO** below, then run the focused live probe.
 - [x] Other optional adapters (Browserbase, Business Profile, Similarweb, Google Trends), Blob archiving, and direct writes remain disabled until their own task PRs. Browserbase has no Production API key/project id yet (`BLOCKED_MISSING_CREDENTIALS`).
 
 ## Keep Off
@@ -50,6 +51,33 @@ Set these in Production only (Sensitive / encrypted). Do not put them in Preview
 3. [ ] Redeploy Production so the new env values apply.
 4. [ ] Trigger Cron: `GET /_internal/eve/api/live-probe/local-falcon` three times. HTTP `200` means `LIVE_VERIFIED` (aggregate `report_count` only).
 5. [ ] Reset: `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, set `SEO_AGENT_ENABLE_LOCAL_FALCON=false`, redeploy.
+
+CLI note: local `vercel env run` cannot read Sensitive secrets. Prefer Production Cron for the authoritative proof.
+
+## Next: DataForSEO
+
+Eve Task 7a reads a bounded DataForSEO account balance (`money_left_usd` only) and, once wired into strategy work, keyword search volume and an aggregate backlinks summary. Requires a DataForSEO account (pay-as-you-go). This replaces an earlier idea of self-hosting the OpenSEO dashboard in front of it: OpenSEO's only documented AI-agent integration is an interactive-login MCP server, which cannot authenticate an unattended Cron job the way every other Eve adapter does, so Eve talks to DataForSEO's own REST API directly instead.
+
+### 1. DataForSEO account (owner)
+
+1. [ ] Create a DataForSEO account at [dataforseo.com](https://dataforseo.com) and fund it (pay-as-you-go; no credential exists until the account has a balance).
+2. [ ] Locate the account's API login (email) and password in the DataForSEO dashboard. These are sent as HTTP Basic Auth, not a bearer token.
+
+### 2. Vercel Production variables (owner)
+
+Set these in Production only (Sensitive / encrypted). Do not put them in Preview or Git.
+
+1. [ ] `DATAFORSEO_LOGIN` = the account email from step 1.
+2. [ ] `DATAFORSEO_PASSWORD` = the account password from step 1.
+3. [ ] Keep `SEO_AGENT_ENABLE_DATAFORSEO=false` until the live probe is armed.
+
+### 3. Live proof (after Task 8 code is on Production)
+
+1. [ ] Choose a run ID such as `dataforseo-2026-08-06` (or another lower-case id).
+2. [ ] Temporarily set Production: `SEO_AGENT_ENABLE_DATAFORSEO=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=<exact run id>`.
+3. [ ] Redeploy Production so the new env values apply.
+4. [ ] Trigger Cron: `GET /_internal/eve/api/live-probe/dataforseo` three times. HTTP `200` means `LIVE_VERIFIED` (aggregate `money_left_usd` only).
+5. [ ] Reset: `SEO_AGENT_LIVE_READS_APPROVED=false`, remove the approved run ID, set `SEO_AGENT_ENABLE_DATAFORSEO=false`, redeploy.
 
 CLI note: local `vercel env run` cannot read Sensitive secrets. Prefer Production Cron for the authoritative proof.
 

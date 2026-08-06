@@ -380,6 +380,7 @@ test("approved configured observation performs bounded reads but remains audit-o
 			ga4: false,
 			businessProfile: false,
 			localFalcon: false,
+			dataForSeo: false,
 			similarweb: false,
 			googleTrends: false,
 		},

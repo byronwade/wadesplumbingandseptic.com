@@ -1,5 +1,14 @@
 # Eve SEO Agent Implementation Status
 
+## Phase 77: Task 7a DataForSEO Offline Path (2026-08-06)
+
+- State: `MOCK_VERIFIED` offline path only; no live credential exists yet, so no `LIVE_VERIFIED` claim is made. Added out of the numbered rollout sequence at owner request; does not renumber or block Task 8 (Business Profile) or Task 9 (SERP / PAA API).
+- Branch/PR: `claude/openseo-docker-vercel-u5n4su` (Task 7a from `INTEGRATION_ROLLOUT.md`).
+- Context: the owner originally asked to self-host the OpenSEO dashboard in Docker on Vercel and connect it to Eve. Research showed OpenSEO's only documented AI-agent integration is an MCP server behind an interactive OAuth login, which cannot authenticate an unattended Cron job, and its personal-Docker self-host mode binds to `127.0.0.1` with no auth (`AUTH_MODE=local_noauth`) — not reachable by a remote Eve deployment either way. Eve instead calls DataForSEO's own REST API directly (HTTP Basic Auth), the same data provider OpenSEO sits on top of.
+- Offline: adapter `createDataForSeoAdapter` (`probe`/`accountData`, `searchVolume`, `backlinksSummary`); focused probe `probeDataForSeoLive`; CRON route `GET /_internal/eve/api/live-probe/dataforseo`; CLI `npm run live:probe:dataforseo`; adapter soft-fails upstream and DataForSEO task-level errors to `FAILED` evidence; Cron allowlisted; `api.dataforseo.com` added to the versioned domain allowlist.
+- Docs: `MANUAL_SETUP.md` Next: DataForSEO; `integration-inventory.json`, `SOURCE_POLICY.md`, `HUMAN_REVIEW_AND_DEPLOYMENT.md`, `EXECUTION_PLAN.md`, and root `README.md` updated to list the new optional adapter.
+- Next exact action: merge/deploy Task 7a; owner creates and funds a DataForSEO account, sets `DATAFORSEO_LOGIN`/`DATAFORSEO_PASSWORD` in Production, then arm and Cron-prove per `MANUAL_SETUP.md`; until then this remains `BLOCKED_MISSING_CREDENTIALS`.
+
 ## Phase 76: Task 7 Local Falcon Live Probe Path (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`; Task 6 GA4 explicitly skipped with recorded blocker so Task 7 may proceed. Live Local Falcon proof blocked until owner sets `LOCAL_FALCON_API_KEY`.

@@ -19,6 +19,7 @@ const READ_ONLY_PROBES = Object.freeze([
 	"browserbase",
 	"ga4",
 	"local_falcon",
+	"dataforseo",
 	"similarweb",
 	"google_trends",
 	"business_profile",
@@ -239,6 +240,46 @@ export async function probeBrowserResearchLive({
 }
 
 /**
+ * Focused Task 7a live probe: DataForSEO account/balance read.
+ * Aggregate money_left_usd only. Does not open PRs or run other adapters.
+ */
+export async function probeDataForSeoLive({
+	registry,
+	config,
+	runId = "dataforseo-live-probe",
+	execute = false,
+} = {}) {
+	if (!execute) {
+		return makeEvidence({
+			runId,
+			source: "dataforseo",
+			scope: "account-read",
+			classification: "BLOCKED_MISSING_CREDENTIALS",
+			sourceUrlOrTool: "dataforseo-live-probe-disabled",
+			payload: {
+				reason:
+					"DataForSEO live reads require --execute plus SEO_AGENT_LIVE_READS_APPROVED=true and a matching run ID.",
+				next_action:
+					"Approve one Production run ID, set DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD, enable SEO_AGENT_ENABLE_DATAFORSEO, then rerun with --execute.",
+			},
+			collectedAt: new Date(0).toISOString(),
+		});
+	}
+	assertAuthorizedLiveRead({ config, runId, execute });
+	if (!config?.integrationFlags?.dataForSeo) {
+		throw new Error(
+			"DataForSEO probe refused because SEO_AGENT_ENABLE_DATAFORSEO is not true.",
+		);
+	}
+	if (typeof registry?.dataforseo?.probe !== "function") {
+		throw new Error("DataForSEO probe requires a registry.dataforseo adapter.");
+	}
+	return assertEvidence(
+		await retryReadOnly(() => registry.dataforseo.probe({ runId })),
+	);
+}
+
+/**
  * Focused PageSpeed live probe used by Task 2. Does not dispatch other
  * adapters, so a PageSpeed proof cannot be confused with Search Console/GA4.
  */
@@ -411,6 +452,7 @@ export async function probeReadOnlyIntegrations({
 		browserbase: { runId },
 		ga4: { runId },
 		local_falcon: { runId },
+		dataforseo: { runId },
 		similarweb: { runId },
 		google_trends: { runId },
 		business_profile: { runId },

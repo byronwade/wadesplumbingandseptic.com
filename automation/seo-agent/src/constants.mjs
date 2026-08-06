@@ -116,6 +116,7 @@ export const DEFAULT_BUDGETS = Object.freeze({
 		"analyticsdata.googleapis.com",
 		"businessprofileperformance.googleapis.com",
 		"api.localfalcon.com",
+		"api.dataforseo.com",
 		"www.usa.gov",
 		"www.cityofcapitola.org",
 		"capitolaartandwine.com",

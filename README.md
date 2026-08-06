@@ -97,8 +97,8 @@ verified separately. Supported read-side integrations include Vercel AI
 Gateway, GitHub repository inspection, Vercel project and deployment
 inspection, Search Console, PageSpeed Insights, and controlled web or browser
 research. Optional adapters include GA4, Business Profile, Local Falcon,
-Similarweb, Google Trends, tracing, and private Blob archiving of already
-approved redacted evidence bundles.
+DataForSEO, Similarweb, Google Trends, tracing, and private Blob archiving of
+already approved redacted evidence bundles.
 
 Each live integration is reported as `LIVE_VERIFIED`, `MOCK_VERIFIED`,
 `BLOCKED_MISSING_CREDENTIALS`, or `FAILED`. A configured variable alone does

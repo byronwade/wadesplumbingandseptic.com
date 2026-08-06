@@ -78,6 +78,7 @@ The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the servi
 | Business Profile | [ ] Approved performance-read scope and location ID; no review/response write actions | `BLOCKED_MISSING_CREDENTIALS` |
 | Browserbase      | [ ] Separate project, explicit allowed domains, short non-keepalive read-only session | `BLOCKED_MISSING_CREDENTIALS` |
 | Local Falcon     | [ ] Set Production `LOCAL_FALCON_API_KEY`; focused Cron probe `GET /_internal/eve/api/live-probe/local-falcon` (see Manual Setup Next: Local Falcon) | Pending Task 7 owner setup |
+| DataForSEO       | [ ] Set Production `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD`; focused Cron probe `GET /_internal/eve/api/live-probe/dataforseo` (see Manual Setup Next: DataForSEO) | Pending Task 7a owner setup |
 
 | Similarweb       | [ ] Vendor-approved read-only endpoint and privacy review                             | `BLOCKED_MISSING_CREDENTIALS` |
 | Google Trends    | [ ] Approved documented API access; do not scrape or use undocumented access          | `BLOCKED_MISSING_CREDENTIALS` |

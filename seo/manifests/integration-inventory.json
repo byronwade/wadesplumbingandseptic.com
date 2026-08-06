@@ -80,6 +80,13 @@
 			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#environment-and-connector-inventory"
 		},
 		{
+			"id": "dataforseo",
+			"category": "optional",
+			"state": "BLOCKED_MISSING_CREDENTIALS",
+			"minimum_scope": "Read-only keyword search volume, account balance, and backlinks summary evidence",
+			"setup_reference": "docs/seo-agent/MANUAL_SETUP.md#next-dataforseo"
+		},
+		{
 			"id": "similarweb",
 			"category": "optional",
 			"state": "BLOCKED_MISSING_CREDENTIALS",

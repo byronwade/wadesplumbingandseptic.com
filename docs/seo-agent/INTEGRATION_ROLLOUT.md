@@ -66,6 +66,16 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_LOCAL_FALCON=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=local-falcon-2026-08-03`; deploy; Cron-run `/_internal/eve/api/live-probe/local-falcon` three times for HTTP `200`; reset flags
 - **Prerequisite:** Task 6 complete or explicitly skipped with recorded blocker
 
+## Task 7a — DataForSEO (optional, added out of sequence at owner request)
+
+- **Status:** `MOCK_VERIFIED` offline path (awaiting owner `DATAFORSEO_LOGIN`/`DATAFORSEO_PASSWORD` + Production Cron `LIVE_VERIFIED`)
+- **Branch/PR:** `claude/openseo-docker-vercel-u5n4su`
+- **Scope:** Focused live probe `GET /_internal/eve/api/live-probe/dataforseo`; aggregate `money_left_usd` only on the probe path; adapter also exposes `searchVolume` (bounded to 20 keywords) and `backlinksSummary` (aggregate counts only, no raw link list) for future strategy-agent use; soft `FAILED` evidence for upstream/task-level errors
+- **Owner setup:** See `MANUAL_SETUP.md` → **Next: DataForSEO**
+- **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_DATAFORSEO=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=<exact run id>`; deploy; Cron-run `/_internal/eve/api/live-probe/dataforseo` three times for HTTP `200`; reset flags
+- **Prerequisite:** Task 7 complete or explicitly skipped with recorded blocker
+- **Note:** Originally scoped as "self-host the OpenSEO dashboard in Docker and point it at Eve." Dropped that shape because OpenSEO's only documented AI-agent integration (its MCP server) requires an interactive login handshake, which cannot authenticate an unattended Cron job the way every other Eve adapter does. Eve calls DataForSEO's own REST API directly instead — the same data provider OpenSEO itself sits on top of. Does not renumber or block Task 8 (Business Profile) or Task 9 (SERP / PAA API, which DataForSEO's own SERP endpoint could later fulfill); those keep their reserved slots.
+
 ## Task 8 — Business Profile (optional)
 
 - **Status:** not started

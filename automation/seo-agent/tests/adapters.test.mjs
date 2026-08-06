@@ -620,6 +620,7 @@ test("read-only probe remains offline unless an authorized caller explicitly ena
 		"browser_automation",
 		"browserbase",
 		"business_profile",
+		"dataforseo",
 		"ga4",
 		"github",
 		"google_trends",

@@ -1601,6 +1601,267 @@ export function createLocalFalconAdapter({
 	};
 }
 
+const DATAFORSEO_BASE_URL = "https://api.dataforseo.com/v3";
+
+function dataForSeoAuthorization(login, password) {
+	return {
+		authorization: `Basic ${Buffer.from(`${login}:${password}`).toString("base64")}`,
+	};
+}
+
+/** DataForSEO wraps every response in a `tasks` array with its own per-task status code. */
+function firstDataForSeoTask(payload) {
+	const task = Array.isArray(payload?.tasks) ? payload.tasks[0] : null;
+	return task && task.status_code === 20_000 ? task : null;
+}
+
+export function createDataForSeoAdapter({
+	login,
+	password,
+	enabled = false,
+	fetchImpl = fetch,
+	budget,
+	requestPolicy,
+} = {}) {
+	const guard = (runId, scope) =>
+		requireEnabled(enabled, runId, "dataforseo", scope) ??
+		(!login || !password
+			? blocked(
+					runId,
+					"dataforseo",
+					scope,
+					"Missing DATAFORSEO_LOGIN or DATAFORSEO_PASSWORD.",
+				)
+			: null);
+	const request = (path, body, source) =>
+		requestJson({
+			fetchImpl,
+			budget,
+			url: `${DATAFORSEO_BASE_URL}${path}`,
+			init: {
+				method: body === undefined ? "GET" : "POST",
+				headers: {
+					...dataForSeoAuthorization(login, password),
+					...(body === undefined
+						? {}
+						: { "content-type": "application/json" }),
+				},
+				...(body === undefined ? {} : { body: JSON.stringify(body) }),
+			},
+			source,
+			policy: requestPolicy,
+		});
+	return {
+		async probe({ runId }) {
+			return this.accountData({ runId });
+		},
+		/** Lightweight credential/balance check; no keyword or domain lookup. */
+		async accountData({ runId }) {
+			const denied = guard(runId, "account-read");
+			if (denied) return denied;
+			const endpoint = `${DATAFORSEO_BASE_URL}/appendix/user_data`;
+			try {
+				const payload = await request(
+					"/appendix/user_data",
+					undefined,
+					"DataForSEO account data",
+				);
+				const task = firstDataForSeoTask(payload);
+				if (!task) {
+					return makeEvidence({
+						runId,
+						source: "dataforseo",
+						scope: "account-read",
+						classification: "FAILED",
+						sourceUrlOrTool: endpoint,
+						payload: {
+							reason:
+								payload?.tasks?.[0]?.status_message ??
+								"DataForSEO did not return its documented task envelope.",
+							next_action:
+								"Confirm DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD are valid and the account is active.",
+						},
+					});
+				}
+				const account = task.result?.[0] ?? {};
+				return evidence({
+					runId,
+					source: "dataforseo",
+					scope: "account-read",
+					endpoint,
+					tier: SOURCE_TIERS.OFFICIAL_PROVIDER,
+					payload: {
+						money_left_usd: account.money?.balance ?? null,
+					},
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "dataforseo",
+					scope: "account-read",
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint,
+					payload: {
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD are set in Production and api.dataforseo.com is reachable.",
+					},
+				});
+			}
+		},
+		/** Bounded to 20 keywords per call; matches the run's maxExternalRequests budget. */
+		async searchVolume({
+			runId,
+			keywords,
+			locationCode = 2840,
+			languageCode = "en",
+		}) {
+			const denied = guard(runId, "keyword-search-volume");
+			if (denied) return denied;
+			const bounded = (Array.isArray(keywords) ? keywords : []).slice(0, 20);
+			if (bounded.length === 0)
+				throw new Error(
+					"DataForSEO search volume requires at least one keyword.",
+				);
+			const path = "/keywords_data/google_ads/search_volume/live/";
+			const endpoint = `${DATAFORSEO_BASE_URL}${path}`;
+			try {
+				const payload = await request(
+					path,
+					[
+						{
+							keywords: bounded,
+							location_code: locationCode,
+							language_code: languageCode,
+						},
+					],
+					"DataForSEO search volume",
+				);
+				const task = firstDataForSeoTask(payload);
+				if (!task) {
+					return makeEvidence({
+						runId,
+						source: "dataforseo",
+						scope: "keyword-search-volume",
+						classification: "FAILED",
+						sourceUrlOrTool: endpoint,
+						payload: {
+							reason:
+								payload?.tasks?.[0]?.status_message ??
+								"DataForSEO did not return its documented task envelope.",
+							next_action:
+								"Confirm DataForSEO credentials, account balance, and the requested keyword list.",
+						},
+					});
+				}
+				return evidence({
+					runId,
+					source: "dataforseo",
+					scope: "keyword-search-volume",
+					endpoint,
+					tier: SOURCE_TIERS.OFFICIAL_PROVIDER,
+					payload: {
+						location_code: locationCode,
+						language_code: languageCode,
+						keywords: (task.result ?? []).slice(0, 20).map((row) => ({
+							keyword: row.keyword ?? null,
+							search_volume: row.search_volume ?? null,
+							competition: row.competition ?? null,
+							competition_index: row.competition_index ?? null,
+							cpc: row.cpc ?? null,
+						})),
+					},
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "dataforseo",
+					scope: "keyword-search-volume",
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint,
+					payload: {
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm DataForSEO credentials and account balance for keyword search volume requests.",
+					},
+				});
+			}
+		},
+		/** Aggregate counts only; never fetches the raw backlink/referring-domain list. */
+		async backlinksSummary({ runId, target }) {
+			const denied = guard(runId, "backlinks-summary");
+			if (denied) return denied;
+			if (typeof target !== "string" || !target.trim())
+				throw new Error(
+					"DataForSEO backlinks summary requires a target domain.",
+				);
+			const path = "/backlinks/summary/live/";
+			const endpoint = `${DATAFORSEO_BASE_URL}${path}`;
+			try {
+				const payload = await request(
+					path,
+					[{ target }],
+					"DataForSEO backlinks summary",
+				);
+				const task = firstDataForSeoTask(payload);
+				if (!task) {
+					return makeEvidence({
+						runId,
+						source: "dataforseo",
+						scope: "backlinks-summary",
+						classification: "FAILED",
+						sourceUrlOrTool: endpoint,
+						payload: {
+							reason:
+								payload?.tasks?.[0]?.status_message ??
+								"DataForSEO did not return its documented task envelope.",
+							next_action:
+								"Confirm DataForSEO credentials and that the target domain is reachable in the Backlinks index.",
+						},
+					});
+				}
+				const result = task.result?.[0] ?? {};
+				return evidence({
+					runId,
+					source: "dataforseo",
+					scope: "backlinks-summary",
+					endpoint,
+					tier: SOURCE_TIERS.OFFICIAL_PROVIDER,
+					payload: {
+						target: result.target ?? target,
+						backlinks: result.backlinks ?? null,
+						referring_domains: result.referring_domains ?? null,
+						referring_main_domains: result.referring_main_domains ?? null,
+						rank: result.rank ?? null,
+					},
+				});
+			} catch (error) {
+				const normalized = sanitizeError(error);
+				return makeEvidence({
+					runId,
+					source: "dataforseo",
+					scope: "backlinks-summary",
+					classification: "FAILED",
+					sourceUrlOrTool: endpoint,
+					payload: {
+						reason: normalized.message,
+						code: normalized.code,
+						http_status: normalized.status ?? null,
+						next_action:
+							"Confirm DataForSEO credentials and account balance for backlinks requests.",
+					},
+				});
+			}
+		},
+	};
+}
+
 export function createUnsupportedOptionalAdapter(name, reason) {
 	return {
 		probe: ({ runId }) =>
@@ -1717,6 +1978,13 @@ export function createIntegrationRegistry({
 		local_falcon: createLocalFalconAdapter({
 			apiKey: credentials.localFalconApiKey,
 			enabled: flags.localFalcon === true,
+			fetchImpl,
+			budget,
+		}),
+		dataforseo: createDataForSeoAdapter({
+			login: credentials.dataForSeoLogin,
+			password: credentials.dataForSeoPassword,
+			enabled: flags.dataForSeo === true,
 			fetchImpl,
 			budget,
 		}),
