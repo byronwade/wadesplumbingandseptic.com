@@ -1,10 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createDataForSeoAdapter } from "../src/adapters.mjs";
+import { DEFAULT_BUDGETS } from "../src/constants.mjs";
 import { loadConfig } from "../src/config.mjs";
 import { makeEvidence } from "../src/contracts.mjs";
 import { handleDataForSeoLiveProbe } from "../src/live-probe-http.mjs";
 import { probeDataForSeoLive } from "../src/probes.mjs";
+import { createRunBudget } from "../src/run-controls.mjs";
 
 const cronSecret = "a-very-long-cron-secret-for-fixture-tests";
 
@@ -98,6 +100,38 @@ test("DataForSEO search volume and backlinks summary shape their payloads", asyn
 	});
 	assert.equal(backlinks.classification, "LIVE_VERIFIED");
 	assert.equal(backlinks.payload.referring_domains, 40);
+});
+
+test("DataForSEO adapter enforces its own per-run call budget, independent of maxExternalRequests", async () => {
+	const budget = createRunBudget({
+		budgets: { ...DEFAULT_BUDGETS, maxDataForSeoRequestsPerRun: 1 },
+	});
+	const adapter = createDataForSeoAdapter({
+		enabled: true,
+		login: "eve@example.com",
+		password: "token",
+		budget,
+		fetchImpl: async () =>
+			new Response(JSON.stringify(taskResponse({ money: { balance: 10 } })), {
+				headers: { "content-type": "application/json" },
+			}),
+	});
+	const first = await adapter.probe({ runId: "dfs-budget-1" });
+	assert.equal(first.classification, "LIVE_VERIFIED");
+	await assert.rejects(
+		adapter.probe({ runId: "dfs-budget-2" }),
+		/Budget exhausted: maxDataForSeoRequestsPerRun/,
+	);
+});
+
+test("a missing credential never consumes the DataForSEO call budget", async () => {
+	const budget = createRunBudget({
+		budgets: { ...DEFAULT_BUDGETS, maxDataForSeoRequestsPerRun: 1 },
+	});
+	const blockedAdapter = createDataForSeoAdapter({ enabled: true, budget });
+	await blockedAdapter.probe({ runId: "dfs-budget-blocked-1" });
+	await blockedAdapter.probe({ runId: "dfs-budget-blocked-2" });
+	assert.equal(budget.snapshot().maxDataForSeoRequestsPerRun ?? 0, 0);
 });
 
 test("focused DataForSEO live probe stays offline until approval and enablement", async () => {

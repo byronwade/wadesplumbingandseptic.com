@@ -104,6 +104,12 @@ export const DEFAULT_BUDGETS = Object.freeze({
 	maxDraftPrsPerCycle: 1,
 	maxProposedUrlsPerCycle: 2,
 	maxExternalRequests: 30,
+	// DataForSEO is metered/pay-per-call, unlike the mostly-free adapters that
+	// share the general maxExternalRequests pool above. This dedicated, smaller
+	// ceiling bounds spend per run regardless of how much of the general
+	// external-request budget remains. Raising it is a versioned policy change,
+	// not a runtime env var, on purpose.
+	maxDataForSeoRequestsPerRun: 5,
 	allowedDomains: Object.freeze([
 		"www.wadesplumbingandseptic.com",
 		"wadesplumbingandseptic.com",

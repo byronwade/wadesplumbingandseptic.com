@@ -1620,7 +1620,7 @@ export function createDataForSeoAdapter({
 	password,
 	enabled = false,
 	fetchImpl = fetch,
-	budget,
+	budget = createRunBudget(),
 	requestPolicy,
 } = {}) {
 	const guard = (runId, scope) =>
@@ -1659,6 +1659,7 @@ export function createDataForSeoAdapter({
 		async accountData({ runId }) {
 			const denied = guard(runId, "account-read");
 			if (denied) return denied;
+			budget.consume("maxDataForSeoRequestsPerRun");
 			const endpoint = `${DATAFORSEO_BASE_URL}/appendix/user_data`;
 			try {
 				const payload = await request(
@@ -1712,7 +1713,7 @@ export function createDataForSeoAdapter({
 				});
 			}
 		},
-		/** Bounded to 20 keywords per call; matches the run's maxExternalRequests budget. */
+		/** Bounded to 20 keywords per call and to maxDataForSeoRequestsPerRun calls per run. */
 		async searchVolume({
 			runId,
 			keywords,
@@ -1721,6 +1722,7 @@ export function createDataForSeoAdapter({
 		}) {
 			const denied = guard(runId, "keyword-search-volume");
 			if (denied) return denied;
+			budget.consume("maxDataForSeoRequestsPerRun");
 			const bounded = (Array.isArray(keywords) ? keywords : []).slice(0, 20);
 			if (bounded.length === 0)
 				throw new Error(
@@ -1797,6 +1799,7 @@ export function createDataForSeoAdapter({
 		async backlinksSummary({ runId, target }) {
 			const denied = guard(runId, "backlinks-summary");
 			if (denied) return denied;
+			budget.consume("maxDataForSeoRequestsPerRun");
 			if (typeof target !== "string" || !target.trim())
 				throw new Error(
 					"DataForSEO backlinks summary requires a target domain.",
