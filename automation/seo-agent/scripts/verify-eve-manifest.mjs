@@ -32,7 +32,12 @@ export function verifyEveBuildSummary(summary) {
 			throw new Error(`Eve build summary is missing the ${path} channel.`);
 	}
 	const tools = new Set((summary.tools ?? []).map((tool) => tool.name));
-	for (const tool of ["model", "orchestrate"]) {
+	for (const tool of [
+		"model",
+		"orchestrate",
+		"get_brand_context",
+		"propose_brand_context_patch",
+	]) {
 		if (!tools.has(tool))
 			throw new Error(`Root agent is missing the bounded ${tool} tool.`);
 	}
@@ -40,7 +45,7 @@ export function verifyEveBuildSummary(summary) {
 		throw new Error(
 			"Eve build summary does not contain all declared role agents.",
 		);
-	if ((summary.skills ?? []).length !== 14)
+	if ((summary.skills ?? []).length !== 17)
 		throw new Error("Eve build summary does not contain all required skills.");
 	return summary;
 }

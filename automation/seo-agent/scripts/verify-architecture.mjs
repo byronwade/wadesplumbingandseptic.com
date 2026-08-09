@@ -87,6 +87,7 @@ if (presentRoots.length)
 
 for (const path of [
 	"seo/manifests/approved-facts.json",
+	"seo/manifests/brand-context.json",
 	"seo/manifests/query-ownership.json",
 	"seo/manifests/pages.json",
 ]) {

@@ -8,6 +8,8 @@
  * or claim-heavy copy is rejected before any Connect write.
  */
 
+import { lintDraftAgainstBrand } from "./brand-context.mjs";
+
 const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const MIN_BODY_WORDS = 1_400;
 const MAX_BODY_WORDS = 2_200;
@@ -763,7 +765,11 @@ function faqQuestionCount(text) {
 /**
  * Fail-closed draft quality checks for Connect publication.
  */
-export function assertPublishableBlogDraft(markdown, opportunity) {
+export function assertPublishableBlogDraft(
+	markdown,
+	opportunity,
+	brandContext = null,
+) {
 	if (typeof markdown !== "string" || !markdown.trim()) {
 		return Object.freeze({ ok: false, reason: "EMPTY_DRAFT" });
 	}
@@ -873,6 +879,16 @@ export function assertPublishableBlogDraft(markdown, opportunity) {
 		)
 	) {
 		return Object.freeze({ ok: false, reason: "EVENT_SPONSORSHIP_CLAIM" });
+	}
+	if (brandContext) {
+		const brandLint = lintDraftAgainstBrand(text, brandContext);
+		if (!brandLint.ok) {
+			return Object.freeze({
+				ok: false,
+				reason: brandLint.reason,
+				matches: brandLint.matches,
+			});
+		}
 	}
 	return Object.freeze({
 		ok: true,

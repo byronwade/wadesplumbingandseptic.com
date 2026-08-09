@@ -72,16 +72,16 @@ The public site also now requires `NEXT_PUBLIC_MAPBOX_TOKEN` to render the servi
 
 ## Optional Integrations
 
-| Integration      | Human setup / verification                                                            | Current state                 |
-| ---------------- | ------------------------------------------------------------------------------------- | ----------------------------- |
+| Integration      | Human setup / verification                                                                                                                                                                                  | Current state                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | GA4              | [ ] Enable Analytics Data API; add existing Eve service account as GA4 Viewer; set Production `GA4_PROPERTY_ID`; leave `GA4_ACCESS_TOKEN` unset; focused Cron probe `GET /_internal/eve/api/live-probe/ga4` | Pending Task 6 owner setup (see `MANUAL_SETUP.md`) |
-| Business Profile | [ ] Approved performance-read scope and location ID; no review/response write actions | `BLOCKED_MISSING_CREDENTIALS` |
-| Browserbase      | [ ] Separate project, explicit allowed domains, short non-keepalive read-only session | `BLOCKED_MISSING_CREDENTIALS` |
-| Local Falcon     | [ ] Set Production `LOCAL_FALCON_API_KEY`; focused Cron probe `GET /_internal/eve/api/live-probe/local-falcon` (see Manual Setup Next: Local Falcon) | Pending Task 7 owner setup |
+| Business Profile | [ ] Approved performance-read scope and location ID; no review/response write actions                                                                                                                       | `BLOCKED_MISSING_CREDENTIALS`                      |
+| Browserbase      | [ ] Separate project, explicit allowed domains, short non-keepalive read-only session                                                                                                                       | `BLOCKED_MISSING_CREDENTIALS`                      |
+| Local Falcon     | [ ] Set Production `LOCAL_FALCON_API_KEY`; focused Cron probe `GET /_internal/eve/api/live-probe/local-falcon` (see Manual Setup Next: Local Falcon)                                                        | Pending Task 7 owner setup                         |
 
-| Similarweb       | [ ] Vendor-approved read-only endpoint and privacy review                             | `BLOCKED_MISSING_CREDENTIALS` |
-| Google Trends    | [ ] Approved documented API access; do not scrape or use undocumented access          | `BLOCKED_MISSING_CREDENTIALS` |
-| Trace sink       | [ ] Redacted telemetry destination with retention, access, and alert owner            | `BLOCKED_MISSING_CREDENTIALS` |
+| Similarweb | [ ] Vendor-approved read-only endpoint and privacy review | `BLOCKED_MISSING_CREDENTIALS` |
+| Google Trends | [ ] Approved documented API access; do not scrape or use undocumented access | `BLOCKED_MISSING_CREDENTIALS` |
+| Trace sink | [ ] Redacted telemetry destination with retention, access, and alert owner | `BLOCKED_MISSING_CREDENTIALS` |
 
 An optional adapter may never block the core offline suite. A missing or expired credential must yield `BLOCKED_MISSING_CREDENTIALS`, never fabricated analytics.
 

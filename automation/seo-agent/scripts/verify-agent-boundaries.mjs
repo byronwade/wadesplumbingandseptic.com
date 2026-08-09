@@ -34,6 +34,9 @@ const requiredSkills = [
 	"prompt-injection-defense",
 	"preview-audit",
 	"post-deploy-audit",
+	"brand-context",
+	"seo-evidence-boundaries",
+	"writing-quality",
 ];
 const disabled = [
 	"bash",

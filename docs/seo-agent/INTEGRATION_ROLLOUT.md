@@ -66,6 +66,14 @@ Sequential, one-feature-at-a-time rollout. **Do not start the next task until th
 - **Live proof gate:** arm Production with `SEO_AGENT_ENABLE_LOCAL_FALCON=true`, `SEO_AGENT_LIVE_READS_APPROVED=true`, `SEO_AGENT_LIVE_READS_APPROVED_RUN_ID=local-falcon-2026-08-03`; deploy; Cron-run `/_internal/eve/api/live-probe/local-falcon` three times for HTTP `200`; reset flags
 - **Prerequisite:** Task 6 complete or explicitly skipped with recorded blocker
 
+## Task 15 — Craft skills (brand context, evidence boundaries, writing quality, discovery CI)
+
+- **Status:** offline `MOCK_VERIFIED` (this PR)
+- **Branch/PR:** `cursor/eve-craft-skills-aab8`
+- **Scope:** Git-backed `seo/manifests/brand-context.json` + `get_brand_context` / `propose_brand_context_patch` tools; skills `brand-context`, `seo-evidence-boundaries`, `writing-quality`; deterministic brand/style lint in draft quality gates; offline `eve:info` / `verify-eve-discovery` CI gate (filesystem discovery modeled on `eve info`). No Slack/Notion/Blob-first brand store.
+- **Source patterns:** adapted from [vercel-labs/marketing-team-eve-template](https://github.com/vercel-labs/marketing-team-eve-template) SEO craft and writing-quality ideas, kept inside Wade's Cron + Git + draft-PR control plane.
+- **Exit gate:** sidecar tests + `npm run verify` / `eve:info` green; human review of draft PR
+
 ## Task 8 — Business Profile (optional)
 
 - **Status:** not started
