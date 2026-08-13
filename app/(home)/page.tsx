@@ -73,13 +73,13 @@ export default function HomePage() {
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 								size="xl"
 							/>
-							<Link
+							<Link prefetch={false}
 								className={cn(
 									buttonVariants({ variant: "inverse", size: "xl" }),
 									"w-full sm:w-auto",
 								)}
 								href="/services"
-								prefetch
+
 							>
 								Our Services
 								<ArrowRight aria-hidden="true" />

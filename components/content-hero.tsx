@@ -69,7 +69,7 @@ function BreadcrumbTrail({
 			<ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
 				{ancestors.map((item, index) => (
 					<li
-						key={`${item.label}-${index}`}
+						key={item.href ?? item.label}
 						className="flex items-center gap-1.5"
 					>
 						{index > 0 ? (
@@ -79,13 +79,13 @@ function BreadcrumbTrail({
 							/>
 						) : null}
 						{item.href ? (
-							<Link
+							<Link prefetch={false}
 								className={cn(
 									"transition-colors",
 									light ? "hover:text-foreground" : "hover:text-white",
 								)}
 								href={item.href}
-								prefetch={false}
+
 							>
 								{item.label}
 							</Link>
@@ -243,13 +243,13 @@ export function ContentHero({
 									prefer="dial"
 									size="xl"
 								/>
-								<Link
+								<Link prefetch={false}
 									className={cn(
 										buttonVariants({ variant: "outline", size: "xl" }),
 										"w-full sm:w-auto",
 									)}
 									href="/contact"
-									prefetch
+
 								>
 									Request service
 								</Link>
@@ -384,13 +384,13 @@ export function ContentHero({
 								size="lg"
 							/>
 						) : (
-							<Link
+							<Link prefetch={false}
 								className={cn(
 									buttonVariants({ size: "lg" }),
 									"w-full sm:w-auto",
 								)}
 								href="/contact"
-								prefetch
+
 							>
 								Get in touch
 							</Link>

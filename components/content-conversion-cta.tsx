@@ -70,10 +70,10 @@ export function ContentConversionCta({
 								<ArrowRight aria-hidden="true" />
 							</a>
 						) : (
-							<Link
+							<Link prefetch={false}
 								className={secondaryClassName}
 								href={(secondary.href ?? "/contact") as Route}
-								prefetch
+
 							>
 								{secondary.label}
 								<ArrowRight aria-hidden="true" />
@@ -88,10 +88,10 @@ export function ContentConversionCta({
 							What neighbors say
 						</p>
 						<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
-							{conversion.testimonials.map((testimonial, index) => (
+							{conversion.testimonials.map((testimonial) => (
 								<li
 									className="reveal relative"
-									key={`${testimonial.name}-${index}`}
+									key={`${testimonial.name}-${testimonial.location ?? "local"}`}
 								>
 									<blockquote className="border-t border-white/10 pt-5">
 										<p className="text-on-dark-muted text-[0.9375rem] leading-relaxed text-pretty">

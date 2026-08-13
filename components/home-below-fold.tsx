@@ -103,13 +103,13 @@ export function HomeBelowFold() {
 								>
 									Call {contactInfo.phoneDisplay}
 								</a>
-								<Link
+								<Link prefetch={false}
 									className={cn(
 										buttonVariants({ variant: "outline", size: "xl" }),
 										"w-full sm:w-auto",
 									)}
 									href="/service-offerings/engineered-septic-system-installation"
-									prefetch
+
 								>
 									Engineered Septic Services
 								</Link>
@@ -143,10 +143,10 @@ export function HomeBelowFold() {
 										Hillside property, Santa Cruz Mountains
 									</span>
 								</span>
-								<Link
+								<Link prefetch={false}
 									className="text-primary inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
 									href="/service-category/septic"
-									prefetch
+
 								>
 									Septic work
 									<ArrowRight aria-hidden="true" className="size-3.5" />
@@ -171,13 +171,13 @@ export function HomeBelowFold() {
 								properties.
 							</p>
 						</div>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/contact"
-							prefetch
+
 						>
 							Discuss your project
 							<ArrowRight aria-hidden="true" />
@@ -217,13 +217,13 @@ export function HomeBelowFold() {
 								team handles it cleanly, honestly, and on time.
 							</p>
 						</div>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "outline", size: "lg" }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/services"
-							prefetch
+
 						>
 							View all services
 							<ArrowRight aria-hidden="true" />
@@ -345,13 +345,13 @@ export function HomeBelowFold() {
 								</blockquote>
 							))}
 						</div>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
 								"mt-8 w-full sm:w-auto",
 							)}
 							href="/testimonials"
-							prefetch
+
 						>
 							Read customer stories
 							<ArrowRight aria-hidden="true" />
@@ -411,13 +411,13 @@ export function HomeBelowFold() {
 						>
 							Call {contactInfo.phoneDisplay}
 						</a>
-						<Link
+						<Link prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "xl" }),
 								"w-full sm:w-auto",
 							)}
 							href="/contact"
-							prefetch
+
 						>
 							Send a Message
 							<ArrowRight aria-hidden="true" />

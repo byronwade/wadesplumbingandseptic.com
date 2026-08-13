@@ -110,10 +110,10 @@ export default function ServiceAreasPage() {
 							<ul className="border-border bg-border mt-8 grid gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
-										<Link
+										<Link prefetch={false}
 											className="bg-background hover:bg-muted flex h-full items-center px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
 											href={location.href as Route}
-											prefetch
+
 										>
 											{location.name}
 										</Link>

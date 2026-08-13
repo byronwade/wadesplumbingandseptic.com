@@ -10,10 +10,10 @@ export function SiteHeader() {
 			<div className="bg-ink-soft hidden sm:block">
 				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-bold">
 					<span>{siteConfig.hours}</span>
-					<Link
+					<Link prefetch={false}
 						className="transition-colors hover:text-white"
 						href="/service-areas"
-						prefetch
+
 					>
 						{siteConfig.serviceArea}
 					</Link>
@@ -23,11 +23,11 @@ export function SiteHeader() {
 			{/* Relative shell so mega-menu viewports span the full header width */}
 			<div className="relative">
 				<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
-					<Link
+					<Link prefetch={false}
 						className="flex min-w-0 items-center gap-2.5 sm:gap-3"
 						href="/"
 						aria-label="Wade's Plumbing & Septic home"
-						prefetch
+
 					>
 						<Image
 							alt="Wade's Plumbing & Septic logo"

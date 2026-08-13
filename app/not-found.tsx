@@ -19,10 +19,10 @@ export default function NotFound() {
 						below or call us and we will point you in the right direction.
 					</p>
 					<div className="flex flex-col justify-center gap-3 pt-3 sm:flex-row">
-						<Link
+						<Link prefetch={false}
 							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
 							href="/"
-							prefetch
+
 						>
 							<ArrowLeft aria-hidden="true" />
 							Back home

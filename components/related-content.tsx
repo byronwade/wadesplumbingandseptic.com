@@ -28,10 +28,10 @@ function RelatedGroup({
 					<p className="spec-label">Keep exploring</p>
 					<h2 className="type-title">{title}</h2>
 				</div>
-				<Link
+				<Link prefetch={false}
 					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
 					href={viewAllHref}
-					prefetch={false}
+
 				>
 					{viewAllLabel}
 					<ArrowRight aria-hidden="true" className="size-4" />

@@ -11,7 +11,7 @@ export function HomeFaq({
 		<div className="divide-border border-border divide-y rounded-xl border">
 			{faqs.map((faq) => (
 				<details className="group px-5 py-1" key={faq.question}>
-					<summary className="cursor-pointer list-none py-4 text-sm font-bold tracking-[-0.02em] outline-none marker:content-none [&::-webkit-details-marker]:hidden">
+					<summary className="focus-visible:ring-ring cursor-pointer list-none py-4 text-sm font-bold tracking-[-0.02em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-offset-2 marker:content-none [&::-webkit-details-marker]:hidden">
 						<span className="flex items-center justify-between gap-4">
 							{faq.question}
 							<span

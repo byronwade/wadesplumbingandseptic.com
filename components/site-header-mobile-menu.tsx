@@ -39,13 +39,13 @@ function MobileNavLink({
 	const router = useRouter()
 
 	return (
-		<Link
+		<Link prefetch={false}
 			className={cn(
 				"hover:bg-muted focus-visible:ring-ring block rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
 				compact ? "py-2" : "py-2.5",
 			)}
 			href={href as Route}
-			prefetch
+
 			onClick={(event) => {
 				/*
 				  Radix SheetClose + Next Link races the dialog unmount against

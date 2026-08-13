@@ -141,7 +141,7 @@ export function ContentSectionBands({ content }: { content: string }) {
 					body={section.body}
 					heading={section.heading}
 					index={intro ? index + 1 : index}
-					key={`${section.heading}-${index}`}
+					key={section.heading}
 				/>
 			))}
 		</>
