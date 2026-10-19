@@ -63,7 +63,7 @@ Experience fast and effective drain clearing with our professional hydro jetting
 
 ### How much does hydro jetting for drain clearing cost in Santa Cruz County?
 
-The cost for hydro jetting services in Santa Cruz County typically ranges from $300 to $600, depending on the complexity and length of the drain line. For a precise estimate, please contact Wade's Plumbing & Septic for a personalized quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the hydro jetting service?
 

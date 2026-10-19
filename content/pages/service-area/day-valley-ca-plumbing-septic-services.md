@@ -45,7 +45,7 @@ Horses and livestock do not connect to your septic system, but heavy hoof traffi
 
 Day Valley's oak woodland and seasonal creeks create a beautiful setting and real infrastructure challenges. Tree roots seek moisture in sewer laterals and septic lines. Winter storms saturate soils on north-facing slopes and can temporarily overwhelm marginal drainfields.
 
-Fire safety is a community priority. Exterior hose bibs, emergency water supplies, and defensible-space plumbing should be tested before fire season, not assumed to work because they did last year.
+Fire safety is a community priority. Exterior hose bibs, backup water supplies, and defensible-space plumbing should be tested before fire season, not assumed to work because they did last year.
 
 Access matters. Some Day Valley driveways are long, narrow, and steep. Septic pumping trucks need room to maneuver. Tell us about access constraints when you schedule so we arrive with the right equipment and time allowance.
 

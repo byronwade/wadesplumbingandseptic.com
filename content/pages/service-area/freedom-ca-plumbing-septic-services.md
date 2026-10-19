@@ -50,7 +50,7 @@ We factor these conditions into every Freedom service call, not generic advice, 
 
 ## Schedule service in Freedom
 
-For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for non-emergency work.
+For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for scheduled work.
 
 **Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Amesti](/service-area/amesti-ca-plumbing-septic-services), [Las Lomas](/service-area/las-lomas-ca-plumbing-septic-services), and [Corralitos](/service-area/corralitos-ca-plumbing-septic-services).
 

@@ -18,7 +18,7 @@ const trustPoints = [
 	"Family owned and operated",
 	"Licensed and insured",
 	"Clear options before work",
-	"4.9 local rating",
+	"Flat-rate pricing, quoted on site before work begins.",
 ] as const
 
 export function ServiceLandingPage({

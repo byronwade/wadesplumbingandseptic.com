@@ -39,6 +39,8 @@ Upon installation, our team coordinates with inspectors to ensure your system me
 
 ## Factors Affecting Septic System Permitting Costs
 
+Flat-rate pricing, quoted on site before work begins.
+
 Several factors impact the cost of septic system permitting:
 
 - **Site Conditions:** Soil quality and terrain can affect the complexity and cost of the system design.
@@ -63,7 +65,7 @@ At Wade's Plumbing & Septic, we are proud to provide expert septic system compli
 
 Our team is fully licensed and certified, holding a C-42 license for California, ensuring that all work is performed to the highest standards of safety and professionalism.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent issues, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Septic System Compliance
 
@@ -71,4 +73,4 @@ Septic System Compliance
 
 Guarantee peace of mind with our expert septic compliance services in Santa Cruz County.
 
-[Call Us Today](tel:+18312254344) [Get a Free ★★★★★ 5-star rating "Wade's Plumbing & Septic made the septic compliance process seamless and stress-free. Highly recommended!" (Sarah, Scotts Valley "Their expertise in septic compliance is unmatched. Professional and efficient service every time."), Mike, Santa Cruz "I trust Wade's for all my septic needs. Their compliance experts are knowledgeable and reliable." (Lisa, Aptos Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call us](tel:+18312254344) [Request service](/contact)

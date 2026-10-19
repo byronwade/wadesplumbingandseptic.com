@@ -60,6 +60,8 @@ After the inspection, we offer a detailed report of our findings along with reco
 
 The duration of a drain line inspection depends on the complexity of your plumbing system. Typically, it can be completed within a few hours. The cost varies based on factors such as the size of your home, the condition of the pipes, and the extent of any issues found during the inspection. For a personalized estimate, contact us today.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Drain Line Problems
 
 Regular maintenance and inspections are key to preventing future issues. Here are some tips:
@@ -83,7 +85,7 @@ While DIY methods exist, professional inspections are more thorough and accurate
 
 Wade's Plumbing & Septic is a trusted name in Santa Cruz County, CA. Our team of licensed professionals offers decades of experience in plumbing and septic services. With a commitment to quality and customer satisfaction, we provide fast, reliable service when you need it most. By choosing us, you ensure that your home's plumbing system receives the best care possible.
 
-Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or visit our [blog](/how-to-handle-a-clogged-drain-or-sewer-line/) for more tips on handling clogs and maintaining a healthy plumbing system.
+Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or learn about our [drain cleaning service](/service-offerings/drain-cleaning/) for help with clogs and maintaining a healthy plumbing system.
 
 ## Serving Santa Cruz County, CA
 
@@ -98,7 +100,7 @@ Wade's Plumbing & Septic proudly offers expert drain line inspection services to
 - Soquel
 - Ben Lomond
 
-Our team is fully licensed with a C-42 license for California, ensuring you receive professional and reliable service. Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+Our team is fully licensed with a C-42 license for California, ensuring you receive professional and reliable service. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you're in Santa Cruz or any of the surrounding communities, Wade's Plumbing & Septic is your trusted local expert for all drain line inspection needs.
 
@@ -110,16 +112,4 @@ Gain peace of mind with our thorough drain inspections, ensuring optimal perform
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### What Our Customers Say About Our Reliable Drain Inspections
-
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic provided a thorough drain inspection and saved us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz)
-
-"The team was professional and efficient. Our drains are now running smoothly thanks to their expert service." (Tom, Watsonville)
-
-"Quick response and excellent service. Wade's Plumbing & Septic is my go-to for any plumbing needs!" (Lisa, Capitola)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

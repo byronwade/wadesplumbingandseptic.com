@@ -23,7 +23,6 @@ const MARKETING_SLUGS = new Set([
 		.filter((slug) => slug !== "expert-tips" && !slug.startsWith("glossary")),
 	"septic-solutions",
 	"maintenance-guide",
-	"emergency-plumber-santa-cruz-county",
 	"engineered-septic-systems-santa-cruz-county",
 	"failed-septic-repair-replacement-santa-cruz-county",
 	"plumbing-repair-services-santa-cruz-county",

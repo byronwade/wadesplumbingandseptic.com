@@ -43,7 +43,7 @@ If you cannot call immediately, use the contact form and include your city, issu
 
 ### How much does septic repair and replacement cost in Santa Cruz County?
 
-The cost for septic repair and replacement in Santa Cruz County can vary widely based on the extent of the damage and the specific requirements of your system. Typically, prices can range from $3,000 to $10,000. It's best to contact us for a detailed estimate tailored to your situation.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the septic repair and replacement service?
 

@@ -35,7 +35,7 @@ Flooding in Santa Cruz County, California, presents significant challenges for h
 
 ## Signs of Septic System Distress During Floods
 
-During flood conditions, watch for signs of septic system distress. These include slow drains, gurgling sounds in plumbing fixtures, sewage odors, and standing water around the septic tank or drain field. If you notice any of these symptoms, it may be time to consider [urgent septic failure signs](/urgent-septic-failure-signs-santa-cruz/) and take immediate action.
+During flood conditions, watch for signs of septic system distress. These include slow drains, gurgling sounds in plumbing fixtures, sewage odors, and standing water around the septic tank or drain field. If you notice any of these symptoms, it may be time to consider [septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) and take immediate action.
 
 ## The Role of Septic Leak Detection in Flood Preparedness
 
@@ -98,7 +98,7 @@ Before the rainy season, ensure your septic system is inspected and maintained t
 - Clear any debris from around the septic area to prevent blockages.
 - Consult with a septic expert for tailored flood-prevention strategies.
 - Check local flood maps to understand your home's risk level.
-- Keep emergency contact information for septic services handy.
+- Keep contact information for septic professionals handy and confirm their availability.
 
 ## Need Help Now?
 
@@ -116,20 +116,12 @@ Ensure your septic system remains safe and functional during flood conditions wi
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos/), [Capitola](/service-area/capitola/), [Santa Cruz](/service-area/santa-cruz/), and [Scotts Valley](/service-area/scotts-valley/). We are licensed under the C-42 classification in California, ensuring our expertise and compliance with all local regulations.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For a complete overview of our service areas, please visit our [main service-area page](/service-areas/).
 
 ### Flood-Proof Your Septic System in Santa Cruz County, CA
 
-★★★★★ 5-star rating from satisfied customers
-
-> "Wade's Plumbing & Septic was a lifesaver when our septic system needed urgent attention. Their team was knowledgeable and efficient!" (Sarah, Santa Cruz)
-
-> "Fast, reliable, and professional service. I couldn't be happier with the results!" (Mike, Watsonville)
-
-> "The technicians were prompt and addressed all our concerns with great expertise." (Emily, Scotts Valley)
-
 Licensed Contractor: C-42
 
-Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM, ensuring timely service when you need it most.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

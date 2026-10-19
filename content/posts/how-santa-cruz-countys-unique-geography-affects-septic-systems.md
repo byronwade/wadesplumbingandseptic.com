@@ -89,9 +89,7 @@ At Wade's Plumbing & Septic, we proudly provide efficient septic solutions to th
 
 Our team holds a C-42 contractor license for California, ensuring you receive expert and compliant service every time.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on our service areas, visit our [main service-area overview](/service-areas/).
 
@@ -104,14 +102,6 @@ Ensure your septic system operates smoothly with our expert solutions.
 [Call Us Now](tel:+18312254344)
 
 ### What Our Customers Say
-
-"Wade's Plumbing & Septic provided excellent service and solved our septic issues quickly. Highly recommend!" (Sarah, Santa Cruz)
-
-"Professional and reliable. They really know their stuff when it comes to septic systems." (Mike, Watsonville)
-
-"Fast and efficient service. Our septic system has never worked better!" (Emily, Scotts Valley)
-
-★★★★★ 5-Star Rating
 
 Licensed Contractor: C-42
 

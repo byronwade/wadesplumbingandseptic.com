@@ -77,13 +77,13 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA a
 
 Our contractors are fully licensed, holding a C-42 contractor license for California, ensuring that all work is performed to the highest standards of safety and quality.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Frequently Asked Questions
 
-### What is the cost range for plumbing maintenance in Santa Cruz County, CA?
+### How is pricing quoted for plumbing maintenance in Santa Cruz County, CA?
 
-The cost for plumbing maintenance can vary based on the specific services needed. Typically, prices range from $100 to $500, depending on the complexity and scope of the work.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a plumbing maintenance service?
 
@@ -97,14 +97,6 @@ A standard plumbing maintenance service usually takes between 1 to 3 hours, depe
 
 Wade's Plumbing & Septic is a trusted local provider with extensive experience in Santa Cruz County, CA. Our professional team is dedicated to delivering reliable, high-quality plumbing maintenance services tailored to your needs.
 
-"Wade's Plumbing & Septic provided excellent service when our pipes needed urgent attention. Fast and reliable!" (Sarah, Santa Cruz)
-
-"Professional and efficient. I highly recommend them for any plumbing issues." (Mike, Capitola)
-
-"Our go-to plumbing experts in Santa Cruz County. Always a job well done!" (Emily, Watsonville)
-
-★★★★★ 5-star rating
-
 Licensed Contractor: C-42 for California
 
-Guaranteed fast response during business hours: Mon-Fri 8:00 AM to 6:00 PM
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

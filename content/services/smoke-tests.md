@@ -51,6 +51,8 @@ This method allows us to pinpoint problem areas without the need for extensive e
 
 The duration of a smoke test plumbing service can vary depending on the size and complexity of the plumbing system. Typically, a smoke test takes a few hours to complete. Cost factors may include the size of the property, accessibility of the plumbing system, and the extent of any detected issues.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Plumbing Issues in Santa Cruz County
 
 Regular maintenance and inspections are key to preventing plumbing issues. At Wade's Plumbing & Septic, we offer a range of services, including [leak detection](/service-offerings/leak-detection/) and [drain line inspection](/service-offerings/drain-line-inspection/), to keep your system in top shape.
@@ -94,20 +96,10 @@ At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests acros
 - [Soquel](/service-area/soquel/)
 - [Watsonville](/service-area/watsonville/)
 
-Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9am to 5pm, We do not offer 24/7 or after-hours emergency dispatch. For more details on our service areas, visit our [main service-area overview](/service-areas/).
+Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas/).
 
 ## Why Santa Cruz County Trusts Us for Septic Optimization
 
-★★★★★ 5-Star Rated Service
-
 **Customer Testimonials:**
 
-> "Wade's Plumbing & Septic transformed our septic system with their expert service. Highly recommend!" (Sarah, Santa Cruz)
-
-> "Quick, efficient, and reliable! Our septic issues are a thing of the past thanks to Wade's." (Tom, Watsonville)
-
-> "Professional service with a friendly touch. Wade's team knows their stuff!" (Emily, Capitola)
-
 **Licensed Contractor:** C-42 License for California
-
-**Fast-Response Guarantee:** Available Monday to Friday, 8 AM to 5 PM

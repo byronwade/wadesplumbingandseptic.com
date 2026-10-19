@@ -16,7 +16,7 @@ Wade's Plumbing & Septic is seeking licensed plumbers to join our growing team. 
 
 - Diagnose and repair plumbing systems and fixtures
 - Install new plumbing systems in residential and commercial settings
-- Respond to service calls and emergency situations
+- Respond to service calls and repair situations
 - Maintain accurate records of work performed
 - Provide estimates for repairs and installations
 - Ensure all work meets applicable codes and standards

@@ -35,6 +35,8 @@ The abandonment process typically involves pumping out the tank, crushing or rem
 
 The cost of septic system abandonment in Santa Cruz County can vary based on system size, location, and specific site conditions. Generally, the process can be completed within a few days, though scheduling is dependent on permit approvals and weather conditions. Our team provides detailed estimates and timelines before commencing any work, ensuring transparency and trust.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Prevention and Maintenance
 
 Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) can extend the life of your system and delay the need for abandonment. Routine inspections and timely repairs are essential to prevent failures and costly replacements. Consider our [septic system installation](/service-offerings/septic-system-installation/) services if you're upgrading to a new system.
@@ -57,9 +59,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area,
 
 Our contractor license information: C-42 license for California.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, you can trust our local expertise to handle your septic system needs efficiently and effectively.
 
@@ -73,14 +73,4 @@ Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cru
 
 ### Effortless Septic Abandonment in Santa Cruz County, CA
 
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic made the process smooth and stress-free. Highly recommend!" (Emily, Santa Cruz)
-
-"Professional and efficient service. Couldn't be happier with the results." (John, Watsonville)
-
-"The team was knowledgeable and courteous, ensuring everything was handled properly." (Sarah, Capitola)
-
 Licensed Contractor: C-42 License for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

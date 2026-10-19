@@ -43,6 +43,8 @@ Our team conducts a thorough inspection to identify the root cause of the proble
 
 Depending on the severity of the issue, we recommend either a repair or a complete tank replacement. Our goal is to provide a solution that is both cost-effective and long-lasting.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ### Implementation
 
 We handle everything from excavation to installation, ensuring that the process is smooth and causes minimal disruption to your daily life. Our team is experienced in [septic tank distribution box repair and replacement](/service-offerings/septic-tank-distribution-box-repair-and-replacement/) and [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/), ensuring a comprehensive service.
@@ -76,7 +78,7 @@ Choosing Wade's Plumbing & Septic means partnering with a trusted local expert i
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our team is committed to providing top-notch septic tank repair and replacement services to keep your systems running smoothly.
 
-We hold a C-42 license for California, ensuring that our work meets all state regulations and standards. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch.
+We hold a C-42 license for California, ensuring that our work meets all state regulations and standards. Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Fast & Reliable Service
 
@@ -86,14 +88,4 @@ Ensure your septic system is in top condition with our expert repair and replace
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic provided exceptional service when our septic system needed urgent attention. Highly recommend!" (Sarah, Aptos)
-
-"The team was professional and efficient, resolving our septic issues quickly. We're very satisfied with their work." (John, Scotts Valley)
-
-"Reliable and knowledgeable, Wade's Plumbing & Septic is our go-to for all septic needs." (Emily, Capitola)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

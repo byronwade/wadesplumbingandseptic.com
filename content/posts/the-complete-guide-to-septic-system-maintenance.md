@@ -111,13 +111,13 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including 
 
 We hold a C-42 license for California, ensuring our work meets the highest standards of safety and quality.
 
-Our office is open Monday through Friday from 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Frequently Asked Questions
 
 ### How much does septic system maintenance cost in Santa Cruz County?
 
-The cost for septic system maintenance in Santa Cruz County can vary depending on the size and condition of your system, but you can generally expect to pay between $300 and $600. Contact us for a personalized quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic system maintenance service?
 
@@ -133,14 +133,6 @@ Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County with 
 
 ### Septic System Maintenance Made Easy in Santa Cruz County
 
-★★★★★ 5-star rating from satisfied customers throughout Santa Cruz County, CA
-
-"Wade's Plumbing & Septic made the entire process stress-free. Highly recommend!" (Sarah, Capitola)
-
-"Fast, reliable, and professional service every time. My go-to for septic maintenance." (Mike, Watsonville)
-
-"Exceptional service and attention to detail. Never had a better experience!" (Laura, Santa Cruz)
-
 Licensed Contractor: C-42
 
-Fast-response guarantee: Available 7 days a week, 8 AM to 6 PM
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

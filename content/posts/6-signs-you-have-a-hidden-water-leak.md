@@ -72,7 +72,7 @@ As a licensed contractor (C-42 license for CA / state license for GA), we ensure
 
 ### How much does it cost to detect hidden water leaks in Santa Cruz County homes?
 
-We understand that cost is an important factor. To get the most accurate pricing for detecting hidden water leaks, we recommend contacting Wade's Plumbing & Septic for a free quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a water leak detection service?
 

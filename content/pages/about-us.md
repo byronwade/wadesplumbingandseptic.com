@@ -54,19 +54,19 @@ What sets us apart is our customer-first approach. We listen to your concerns, e
 
 At Wade's Plumbing & Septic, we proudly serve the diverse communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our commitment to quality and customer satisfaction extends throughout the region.
 
-We hold a C-42 license for CA and a state license for GA, ensuring our services meet the highest standards of safety and professionalism.
+We hold a C-42 license for California, ensuring our services meet the highest standards of safety and professionalism.
 
-**Office Hours:** Monday to Friday, 9am to 5pm
-
-**Office hours:** Monday through Friday, 9:00am to 5:00pm. We do not offer 24/7 dispatch.
+**Office Hours:** Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you need trenchless sewer line replacement, expert fixture installation, or certified septic system services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
 
 ## Frequently Asked Questions
 
-### What is the cost/pricing range for commercial services at Wade's Plumbing & Septic?
+### How is pricing determined for commercial services at Wade's Plumbing & Septic?
 
 The cost for commercial plumbing and septic services in Santa Cruz County varies based on the complexity and scope of the project. We offer competitive pricing and provide detailed estimates to ensure transparency and value for our clients.
+
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a commercial service visit?
 
@@ -74,7 +74,7 @@ Our professional team will conduct a thorough assessment of your plumbing or sep
 
 ### What is the typical timeline for completing commercial plumbing or septic services?
 
-The timeline for commercial services in Santa Cruz County depends on the service type and complexity. Most projects are completed within a few days, with emergency services available for urgent needs.
+The timeline for commercial services in Santa Cruz County depends on the service type and complexity. Most projects are completed within a few days, with scheduling confirmed during business hours.
 
 ### Why choose Wade's Plumbing & Septic for your commercial needs?
 

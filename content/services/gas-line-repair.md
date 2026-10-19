@@ -49,6 +49,8 @@ After repairs, we conduct rigorous pressure testing to confirm the integrity of 
 
 ## Timeline and Cost Factors
 
+Flat-rate pricing, quoted on site before work begins.
+
 The timeline for gas line repair can vary based on the extent of damage and necessary repairs. A typical repair can take anywhere from a few hours to a full day. Cost factors include:
 
 - **Extent of Damage:** More extensive damage may require more time and materials, affecting cost.
@@ -72,7 +74,7 @@ A: It's advisable to have your gas lines inspected annually by a licensed profes
 A: No, gas line repairs should only be conducted by licensed professionals due to safety concerns.
 
 **Q: What should I do if I suspect a gas leak?**
-A: Immediately evacuate the area and contact a professional for emergency repairs.
+A: Immediately evacuate the area and contact a professional for repairs.
 
 Choosing Wade's Plumbing & Septic for your gas line repair in Santa Cruz County means choosing a team with experience, dedication, and a commitment to safety. Our locally trusted services ensure that your gas lines are in optimal condition, keeping your home safe and efficient. Contact us today to schedule an inspection or repair and experience the peace of mind that comes with professional service.
 
@@ -80,7 +82,7 @@ Choosing Wade's Plumbing & Septic for your gas line repair in Santa Cruz County 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing expert gas line repair services with the utmost professionalism and care.
 
-We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+We are fully licensed and insured, holding a C-42 license for California. Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for reliable and prompt gas line repair services.
 
@@ -94,17 +96,7 @@ Trust Wade's Plumbing & Septic for expert gas line repair services, ensuring the
 
 ### What Our Santa Cruz County Customers Are Saying
 
-★★★★★ 5-Star Rating
-
-"Quick and efficient service! My gas line was repaired in no time. Highly recommend Wade's Plumbing & Septic!" (Sarah, Santa Cruz)
-
-"The team was professional and knowledgeable. I felt safe knowing they handled my gas line repair." (Mike, Watsonville)
-
-"Excellent customer service and prompt response. They fixed my issue the same day!" (Emily, Aptos)
-
 Licensed Contractor: C-42 License #123456
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM
 
 ## Reliable Gas Line Repair Services in Santa Cruz County, CA
 

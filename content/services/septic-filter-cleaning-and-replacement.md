@@ -59,6 +59,8 @@ We confirm flow at the outlet, secure lids, and leave the site clean. If levels 
 
 Most filter cleanings finish in about one to two hours once we are on site. Replacement can take longer when the outlet needs hardware updates or the lid and risers are hard to access.
 
+Flat-rate pricing, quoted on site before work begins.
+
 Cost depends on:
 
 - Whether the job is cleaning only or a full cartridge replacement
@@ -107,14 +109,4 @@ Protect the tank outlet and the drainfield with professional filter cleaning or 
 
 ## What Our Santa Cruz County Customers Are Saying
 
-★★★★★ 5-Star Rated Service
-
-"Wade's team did an excellent job cleaning our septic filter. Their professionalism and attention to detail were top-notch!" (Sarah, Santa Cruz)
-
-"I was impressed by how quickly they responded to my call. The service was efficient and thorough. Highly recommend!" (John, Aptos)
-
-"Friendly service and expert advice. Our septic system is running smoothly thanks to Wade's Plumbing & Septic." (Emily, Watsonville)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM, and Saturday, 9 AM to 3 PM

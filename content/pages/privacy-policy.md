@@ -168,7 +168,7 @@ Questions about this Privacy Policy or your information:
 
 - Email: [support@wadesinc.io](mailto:support@wadesinc.io)
 - Phone: [831.225.4344](tel:+18312254344)
-- Office hours: Monday through Friday, 9:00am to 5:00pm
+- Office hours: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 - Address: 7737 Highway 9, Ben Lomond, CA 95005
 
 For service requests, visit our [contact page](/contact) or see

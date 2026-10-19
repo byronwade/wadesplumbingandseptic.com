@@ -53,4 +53,4 @@ Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Aptos.
 
 **Nearby service areas:** [Rio Del Mar](/service-area/rio-del-mar-ca-plumbing-septic-services), [Day Valley](/service-area/day-valley-ca-plumbing-septic-services), [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Aptos Hills Larkin Valley](/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)

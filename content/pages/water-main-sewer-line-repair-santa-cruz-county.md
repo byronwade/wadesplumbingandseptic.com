@@ -41,9 +41,9 @@ If you cannot call immediately, use the contact form and include your city, issu
 
 ## Frequently Asked Questions
 
-### What is the cost range for water main and sewer line repair in Santa Cruz County?
+### How is pricing determined for water main and sewer line repair in Santa Cruz County?
 
-The cost for water main and sewer line repair can vary based on the extent of the damage and the complexity of the repair. Generally, prices range from $3,000 to $15,000. For an accurate estimate, contact Wade's Plumbing & Septic for a detailed assessment.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the water main and sewer line repair service?
 

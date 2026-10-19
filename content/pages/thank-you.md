@@ -9,11 +9,11 @@ noindex: true
 
 ## We got your message
 
-Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team will review what you sent and follow up during business hours, or sooner if the issue is urgent.
+Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team will review what you sent and follow up during business hours.
 
-### Need help right now?
+### Need to schedule service?
 
-Call or text [831.225.4344](tel:+18312254344) during business hours, Monday through Friday from 9:00 AM to 5:00 PM.
+Call or text [831.225.4344](tel:+18312254344) during business hours, Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 ### While you wait
 

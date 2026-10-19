@@ -43,6 +43,8 @@ We use camera inspections to visually examine the interior of your pipes and tan
 
 Following the diagnostics, we provide you with a detailed explanation of our findings and recommend the most cost-effective solutions tailored to your system's needs.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Cost Factors and Timeline
 
 Costs for septic tank troubleshooting services can vary based on the complexity of the issue, the size of the system, and the required interventions. Typically, the diagnostic process is completed within a few hours, but more extensive repairs may extend the timeline. Our team is committed to transparency and will provide a clear estimate before starting any work.
@@ -73,20 +75,4 @@ Trust our certified professionals to quickly diagnose and resolve any septic iss
 
 ### Customer Trust and Satisfaction
 
-★★★★★ 5-Star Rated Service
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available for your convenience
-
-> "Wade's Plumbing & Septic quickly diagnosed and fixed our septic issue. Highly recommend!"
->
-> \- Emily, Santa Cruz
-
-> "Professional and efficient service. Our septic system is running smoothly again thanks to Wade's."
->
-> \- Jake, Aptos
-
-> "The team at Wade's Plumbing & Septic was knowledgeable and resolved our problems swiftly."
->
-> \- Mia, Scotts Valley

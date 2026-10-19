@@ -37,7 +37,7 @@ function conversionScore(sectionBody: string) {
 	if (/\[Call Us/i.test(sectionBody) || /tel:\+?\d/i.test(sectionBody))
 		score += 1
 	if (
-		/\[Get a Free Quote\]/i.test(sectionBody) ||
+		/\[(?:Get a Free Quote|Request service)\]/i.test(sectionBody) ||
 		/Get a Free Quote/i.test(sectionBody)
 	)
 		score += 1
@@ -139,7 +139,7 @@ function firstParagraph(sectionBody: string) {
 		if (TRUST_LINE.test(line)) continue
 		if (line.startsWith('"') || line.startsWith("“")) continue
 		if (/^What Our Customers Say/i.test(line)) continue
-		if (line.includes("★★★★★") && line.includes("[")) continue
+		if (/★★★★★/.test(line) && line.includes("[")) continue
 		if (line.length < 40) continue
 		return line.replace(/\s*\[[^\]]+\]\([^)]+\)/g, "").trim()
 	}
@@ -433,10 +433,7 @@ export function normalizeConversion(
 	const description =
 		!titleIsWeak && rawDescription ? rawDescription : defaults.description
 
-	const testimonials =
-		conversion?.testimonials && conversion.testimonials.length > 0
-			? conversion.testimonials
-			: defaultTestimonials()
+	const testimonials = conversion?.testimonials ?? []
 
 	return {
 		eyebrow: conversion?.eyebrow?.trim() || defaults.eyebrow,
@@ -444,27 +441,4 @@ export function normalizeConversion(
 		description,
 		testimonials,
 	}
-}
-
-function defaultTestimonials(): ContentTestimonial[] {
-	return [
-		{
-			quote:
-				"Clear communication and solid workmanship. The team made the whole job straightforward from the first call.",
-			name: "Sarah",
-			location: "Santa Cruz",
-		},
-		{
-			quote:
-				"They showed up when promised, explained the options without pressure, and left the job site clean.",
-			name: "Mike",
-			location: "Capitola",
-		},
-		{
-			quote:
-				"Professional, local, and easy to trust. We know who to call the next time something comes up.",
-			name: "Emma",
-			location: "Watsonville",
-		},
-	]
 }

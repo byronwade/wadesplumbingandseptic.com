@@ -40,6 +40,8 @@ The timeline for a trenchless sewer line replacement varies based on the complex
 
 The cost of trenchless sewer line replacement can vary based on several factors, including the length and depth of the sewer line, the extent of damage, and the method used. At Wade's Plumbing & Septic, we provide transparent pricing and detailed estimates, ensuring you understand every aspect of your investment.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Sewer Line Issues
 
 While trenchless sewer line replacement offers a durable solution, regular maintenance is key to preventing future issues. Routine inspections and timely [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) services can prolong the life of your sewer system. Additionally, being mindful of what goes down your drains can prevent clogs and backups.
@@ -64,19 +66,4 @@ Minimize disruption to your property with our seamless trenchless sewer replacem
 
 [Call Us Now](tel:+18312254344)
 
-### What Our Customers Are Saying
-
-★★★★★ 5-star rating from our satisfied customers!
-
-> "Wade's Plumbing & Septic made my sewer line repair hassle-free. The trenchless method was a lifesaver!"
-> **\- Emily, Santa Cruz**
-
-> "I was impressed by their professionalism and quick service. Highly recommend Wade's for any plumbing needs!"
-> **\- David, Scotts Valley**
-
-> "Exceptional service! The team was prompt and efficient, solving my sewer issues with ease."
-> **\- Sarah, Capitola**
-
 Licensed Contractor: C-42 (California)
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

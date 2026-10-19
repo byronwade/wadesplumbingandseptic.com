@@ -2,7 +2,7 @@
 title: Prevent Costly Septic Issues in Santa Cruz County Homes
 description:
   Learn to recognize the critical warning signs of septic system problems
-  and why addressing them promptly can save you thousands in repairs. From slow drains
+  and why addressing them promptly can help prevent major repairs. From slow drains
   to unusual odors, these symptoms require immediate professional attention.
 category: Septic Maintenance
 date: "2025-05-11"
@@ -19,7 +19,7 @@ image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic system controls and access
 ---
 
-Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can save you thousands of dollars and protect your property value.
+Your septic system works silently until something goes wrong. Unfortunately, many homeowners ignore the early warning signs of septic problems, leading to much more expensive repairs and potential environmental hazards. Understanding and responding to these warning signs promptly can help prevent major repairs and protect your property value.
 
 ![Weathered drain cover](/images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp)
 
@@ -49,7 +49,7 @@ Pools of water or consistently soggy ground around your septic tank or drainfiel
 
 ### System Failure and Expensive Repairs
 
-Minor issues inevitably progress to complete system failure if left unaddressed. What might have been a simple repair can quickly escalate to needing a full system replacement, transforming a few hundred dollar repair into a $10,000+ project.
+Minor issues inevitably progress to complete system failure if left unaddressed. What might have been a simple repair can quickly escalate to needing a full system replacement, turning a smaller repair into a major project.
 
 ### Property Damage
 
@@ -72,7 +72,7 @@ A failing septic system can dramatically reduce your property value and complica
 If you've noticed any of these warning signs, don't wait for the problem to worsen. Contact Wade's Plumbing & Septic for a thorough inspection. Our certified technicians can:
 
 - Accurately diagnose the specific issue affecting your system
-- Provide clear, upfront pricing for necessary repairs
+- Flat-rate pricing, quoted on site before work begins.
 - Recommend preventative maintenance to avoid future problems
 - Complete repairs efficiently with minimal disruption to your property
 
@@ -90,7 +90,7 @@ Protect your home and wallet by addressing septic warning signs promptly in Sant
 
 Wade's Plumbing & Septic is proud to serve all of Santa Cruz County, including the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team is fully licensed and insured, holding a C-42 license for California.
 
-Our office hours are Monday through Friday, 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 With our extensive knowledge and experience, we are committed to providing reliable and trustworthy septic services throughout Santa Cruz County, ensuring your system operates smoothly and efficiently.
 
@@ -98,7 +98,7 @@ With our extensive knowledge and experience, we are committed to providing relia
 
 ### How much does it cost to repair a septic system in Santa Cruz County?
 
-We recommend contacting Wade's Plumbing & Septic for a free quote, as prices can vary based on the specific issues and services required. Our team is ready to provide you with an accurate estimate tailored to your needs.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic repair service?
 

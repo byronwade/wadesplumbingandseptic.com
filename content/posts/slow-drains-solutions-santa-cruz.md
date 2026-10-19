@@ -2,7 +2,7 @@
 title: Expert Drain Maintenance for Santa Cruz County Homes
 description: >-
   Regular drain cleaning can extend the lifespan of your plumbing system and
-  prevent unexpected emergencies.
+  prevent unexpected major problems.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
 tags:
@@ -19,7 +19,7 @@ imageAlt: Drain clearing service
 
 ## Did You Know?
 
-Regular drain cleaning can extend the lifespan of your plumbing system and prevent unexpected emergencies.
+Regular drain cleaning can extend the lifespan of your plumbing system and prevent unexpected major problems.
 
 ## Quick Answer for Santa Cruz Homeowners
 
@@ -41,7 +41,7 @@ Slow drains can result from various factors, such as accumulated debris, hair, s
 
 ## The Importance of Professional Drain Cleaning
 
-Professional drain cleaning services are crucial for maintaining the health and efficiency of your plumbing system. Unlike DIY methods, which often provide only temporary relief, professional services use advanced techniques like [hydro jetting](/how-to-handle-a-clogged-drain-or-sewer-line/) to thoroughly clean and clear pipes. This ensures long-lasting results and prevents future issues.
+Professional drain cleaning services are crucial for maintaining the health and efficiency of your plumbing system. Unlike DIY methods, which often provide only temporary relief, professional services use advanced techniques like [hydro jetting](/service-offerings/hydro-jetting/) to thoroughly clean and clear pipes. This ensures long-lasting results and prevents future issues.
 
 ## How Slow Drains Affect Your Home's Plumbing System
 
@@ -113,8 +113,6 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz Coun
 
 Our team holds a C-42 contractor license for California, ensuring that all work meets state standards and regulations.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on our service areas, please visit our [main service-area overview](/service-areas/).

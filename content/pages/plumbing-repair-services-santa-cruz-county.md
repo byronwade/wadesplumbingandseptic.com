@@ -41,9 +41,9 @@ If you cannot call immediately, use the contact form and include your city, issu
 
 ## Frequently Asked Questions
 
-### What is the cost range for plumbing repair services in Santa Cruz County?
+### How is pricing determined for plumbing repair services in Santa Cruz County?
 
-The cost for plumbing repair services in Santa Cruz County can vary depending on the complexity of the issue. Generally, you can expect prices to range from $150 to $500 for common repairs, with more extensive work potentially costing more.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a plumbing repair service?
 

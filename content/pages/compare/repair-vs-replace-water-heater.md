@@ -36,7 +36,7 @@ Replacing a failed tank with another tank is often the cleanest path. Tankless c
 
 ## What we tell Santa Cruz County homeowners
 
-We will say if a $200 part fix is honest, and we will say when another year on a dying tank is throwing money away. Clear options before work begins is the standard.
+Flat-rate pricing, quoted on site before work begins.
 
 ## Related services
 

@@ -47,7 +47,7 @@ Oak root systems are persistent. Sewer laterals and septic distribution lines on
 
 Equestrian use means wash-water, manure management areas, and pasture irrigation, all of which affect how water moves across your parcel. A drainfield in a low spot that collects runoff from uphill paddocks will struggle regardless of tank maintenance.
 
-Fire season demands attention to exterior plumbing. Hose bibs, pool fillers used for emergency supply, and backup water sources should be tested and accessible before summer heat and red-flag conditions arrive.
+Fire season demands attention to exterior plumbing. Hose bibs, pool fillers, and backup water sources should be tested and accessible before summer heat and red-flag conditions arrive.
 
 Driveways can be long and steep. Septic trucks and service vehicles need adequate turnaround space. Mention access details when you call so we plan accordingly.
 

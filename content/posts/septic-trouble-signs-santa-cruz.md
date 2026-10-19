@@ -55,7 +55,7 @@ Homeowners can perform a basic inspection to identify potential septic issues. S
 
 ## When to Call a Professional for Septic Troubleshooting
 
-If you notice any warning signs or suspect septic trouble, it's crucial to contact a professional for [septic troubleshooting](/urgent-septic-failure-signs-santa-cruz/). Experts can accurately diagnose the issue and recommend appropriate solutions, whether it's a simple repair or a complete system overhaul.
+If you notice any warning signs or suspect septic trouble, it's crucial to contact a professional for [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/). Experts can accurately diagnose the issue and recommend appropriate solutions, whether it's a simple repair or a complete system overhaul.
 
 ## Preventative Measures for Septic System Maintenance
 
@@ -107,6 +107,6 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area,
 
 We are fully licensed and insured, holding a C-42 contractor license for California, which assures our clients of our professional standards and commitment to quality service.
 
-Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on the areas we serve, please visit our [service area overview page](/service-areas/).

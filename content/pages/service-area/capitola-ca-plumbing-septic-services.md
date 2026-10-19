@@ -41,7 +41,7 @@ Honest assessment matters here. A sewer backup in the Village is a different fix
 
 ## Rentals, Fog, and Lagoon Drainage
 
-Capitola's vacation rental market puts extra cycles on disposals, washers, and water heaters. We see the pattern: a property runs fine for owner-occupancy, then struggles when sleeping capacity doubles. Scheduling preventive drain cleaning before peak season is cheaper than an emergency call during Art & Wine weekend.
+Capitola's vacation rental market puts extra cycles on disposals, washers, and water heaters. We see the pattern: a property runs fine for owner-occupancy, then struggles when sleeping capacity doubles. Scheduling preventive drain cleaning before peak season is cheaper than a repair call during Art & Wine weekend.
 
 The city sits low enough that groundwater and lagoon influence matter on certain streets. Combined with heavy clay in spots, yard drainage and foundation perimeter lines occasionally tie into plumbing complaints that look like sewer problems but start with surface water. We trace the source instead of assuming the worst.
 
@@ -51,4 +51,4 @@ For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+
 
 **Nearby service areas:** [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Failed septic repair](/service-offerings/septic-tank-repair-and-replacement) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Failed septic repair](/service-offerings/septic-tank-repair-and-replacement) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

@@ -104,7 +104,7 @@ At Wade's Plumbing & Septic, we are dedicated to optimizing shower water flow fo
 
 ### How much does it cost to optimize shower water flow in Santa Cruz County homes?
 
-For specific pricing details, it's best to contact Wade's Plumbing & Septic directly. We offer free quotes to ensure you receive an accurate estimate tailored to your home's needs.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What can I expect during the shower water flow optimization service?
 

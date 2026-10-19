@@ -52,6 +52,8 @@ Our installation process is designed to be thorough and efficient, minimizing di
 
 The cost of a septic system installation can vary based on several factors, including system type, site conditions, and local permitting requirements. On average, the process takes a few weeks from start to finish, ensuring all aspects are handled with care and attention to detail. For a precise estimate, [contact Wade's Plumbing](/service-offerings/septic-tank-inspection-and-assessment/) to schedule a consultation.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## FAQs About Septic System Installation
 
 - **What is the difference between conventional and engineered septic systems?** \- Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
@@ -65,7 +67,7 @@ Wade's Plumbing & Septic is proud to offer premium septic system installation se
 
 As a fully licensed contractor (C-42 license for CA), we ensure that every project meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Septic Installations Made Easy
 
@@ -75,14 +77,4 @@ Experience seamless and efficient septic installations with Wade's Plumbing & Se
 
 [Call Us Now](tel:+18312254344)
 
-"Wade's Plumbing & Septic provided exceptional service when installing our new septic system. Their team was professional and efficient!" (Sarah, Aptos)
-
-"From start to finish, the installation process was seamless. Highly recommend Wade's for any septic needs." (John, Santa Cruz)
-
-"The crew was knowledgeable and courteous. Our new septic system works perfectly!" (Emily, Watsonville)
-
-★★★★★ 5-Star Rating
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday through Friday, 8 AM to 5 PM.

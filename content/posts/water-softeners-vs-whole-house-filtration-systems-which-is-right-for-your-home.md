@@ -103,17 +103,15 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, CA a
 
 Our contractors are fully licensed and certified, holding a C-42 contractor license for California, ensuring compliance with all state regulations and standards.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For residents of Santa Cruz County, CA, Wade's Plumbing & Septic is your trusted local partner for enhancing home water quality with reliable and efficient solutions.
 
 ## Frequently Asked Questions
 
-### What is the cost/pricing range for a home water system in Santa Cruz County, CA?
+### How is pricing quoted for a home water system in Santa Cruz County, CA?
 
-The cost of a home water system in Santa Cruz County varies based on the type and complexity of the system. On average, prices can range from $1,500 to $5,000, including installation and maintenance services provided by Wade's Plumbing & Septic.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the home water system service?
 

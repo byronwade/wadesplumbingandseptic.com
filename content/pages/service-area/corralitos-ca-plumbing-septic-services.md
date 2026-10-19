@@ -49,7 +49,7 @@ Oak and madrone root systems are aggressive. Sewer laterals and septic lines on 
 
 Corralitos roads can be narrow and steep. We plan truck access for septic pumping and bring equipment suited to rural driveways. If your tank is far from the road, tell us when you call so we allow adequate time.
 
-Fire-season awareness matters here too. Hose bibs, emergency water supplies, and exterior plumbing should be maintained and tested before summer, not after a red-flag warning.
+Fire-season awareness matters here too. Hose bibs, backup water supplies, and exterior plumbing should be maintained and tested before summer, not after a red-flag warning.
 
 ## Schedule service in Corralitos
 

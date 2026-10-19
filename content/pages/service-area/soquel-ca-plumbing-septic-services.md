@@ -53,4 +53,4 @@ Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).
 
 **Nearby service areas:** [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Day Valley](/service-area/day-valley-ca-plumbing-septic-services)
 
-**Helpful links:** [All service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)
+**Helpful links:** [All service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)

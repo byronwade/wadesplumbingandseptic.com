@@ -52,7 +52,7 @@ Before you begin, make sure you have the following on hand:
 - Adhesive remover (if needed)
 - Dremel tool (for cutting stuck flanges)
 
-✅ **Tip:** If you're in Santa Cruz County and something goes wrong during installation, call Wade’s Plumbing & Septic. We're available for emergency repairs.
+✅ **Tip:** If you're in Santa Cruz County and something goes wrong during installation, call Wade’s Plumbing & Septic. Call during business hours to schedule service.
 
 ### 2\. Prepare the Work Area
 
@@ -153,15 +153,15 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our contractors are licensed with a C-42 license for California, ensuring you receive professional and reliable service.
 
-Office Hours: Monday to Friday, 9am to 5pm. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 We are committed to providing top-notch plumbing services to our neighbors throughout Santa Cruz County, CA.
 
 ## Frequently Asked Questions
 
-### What is the cost range for installing a toilet flange in Santa Cruz County, CA?
+### How is pricing quoted for installing a toilet flange in Santa Cruz County, CA?
 
-The cost for installing a toilet flange in Santa Cruz County typically ranges from $150 to $300, depending on the complexity of the installation and any additional repairs needed.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the toilet flange installation service?
 
@@ -175,19 +175,11 @@ The installation of a toilet flange usually takes about 1 to 2 hours, depending 
 
 Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, known for our professional service, attention to detail, and commitment to customer satisfaction. Our experienced team ensures a hassle-free installation process.
 
-### What Our Customers Say
-
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic made installing our toilet flange a breeze! Highly recommend their services." (Sarah, Santa Cruz)
-
-"Professional and quick service! They truly know their stuff." (Mike, Watsonville)
-
-"Effortless experience from start to finish. The team was friendly and efficient." (Emily, Capitola)
+### Service Information
 
 Licensed Contractor: C-42
 
-Fast-Response Guarantee: Available 7 AM to 7 PM, Monday through Saturday
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Skip the DIY, Get It Done Right
 

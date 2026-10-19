@@ -36,7 +36,7 @@ The timeline for completing a commercial drain cleaning service depends on the s
 
 ## Preventative Maintenance and Benefits
 
-Investing in [commercial plumbing maintenance](/service-offerings/commercial-plumbing-maintenance/) can prevent future drain issues and extend the lifespan of your plumbing systems. Regular maintenance not only minimizes emergency repairs but also ensures compliance with health and safety standards, which is particularly crucial in food service industries.
+Investing in [commercial plumbing maintenance](/service-offerings/commercial-plumbing-maintenance/) can prevent future drain issues and extend the lifespan of your plumbing systems. Regular maintenance not only minimizes repairs but also ensures compliance with health and safety standards, which is particularly crucial in food service industries.
 
 ### FAQs About Commercial Drain Cleaning
 
@@ -53,14 +53,6 @@ Ensure uninterrupted operations with our expert drain cleaning services tailored
 
 [Call Us](tel:+18312254344)
 
-★★★★★ 5-star rating
-
-> "Wade's Plumbing & Septic resolved our drain issues quickly and efficiently. Highly recommend!" (Sarah, Santa Cruz)
-
-> "Their team was professional and courteous. Our business operations are running smoothly again." (Mike, Capitola)
-
-> "Fast and reliable service. We couldn't be happier with the results!" (Emily, Watsonville)
-
 Licensed Contractor: C-42
 
-Scheduling: Monday through Friday, 9:00am to 5:00pm.
+Scheduling: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.

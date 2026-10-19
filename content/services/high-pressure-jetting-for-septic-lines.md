@@ -56,6 +56,8 @@ This professional service is a cornerstone of effective [septic tank maintenance
 
 The cost of high pressure jetting septic lines can vary based on factors such as the extent of blockages and the complexity of your septic system layout. However, it's a cost-effective preventive measure compared to the expenses associated with a [failed septic repair replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/). The process typically takes a few hours, minimizing disruption to your routine.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Blockages
 
 Regular maintenance and mindful usage can help maintain your septic system's health:
@@ -85,6 +87,6 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 We are a licensed contractor with a C-42 license for California, ensuring that you receive the highest quality service from certified professionals.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumbing & Septic is your trusted partner for all septic services.

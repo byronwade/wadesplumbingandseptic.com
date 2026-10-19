@@ -141,15 +141,15 @@ Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz
 
 Our team holds a C-42 contractor license for California, ensuring top-quality service and compliance with all regulatory standards.
 
-Office Hours: Monday to Friday, 9am to 5pm. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you need a new bathroom faucet installed or any other plumbing service, we are committed to providing reliable and professional service throughout Santa Cruz County, CA.
 
 ## Frequently Asked Questions
 
-### What is the cost range for installing a new bathroom faucet in Santa Cruz County, CA?
+### How is pricing quoted for installing a new bathroom faucet in Santa Cruz County, CA?
 
-The cost for installing a new bathroom faucet in Santa Cruz County, CA typically ranges from $150 to $500, depending on the complexity of the installation and the type of faucet chosen. Our team provides a detailed estimate before starting any work.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the faucet installation service?
 

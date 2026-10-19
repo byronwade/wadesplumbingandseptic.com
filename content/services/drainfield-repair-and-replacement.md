@@ -52,6 +52,8 @@ We ensure that every step of the process is handled with precision, leveraging o
 
 The timeline for drainfield repair varies based on the extent of the damage. Simple repairs may take a few days, while complete replacements could extend over a week. Cost factors depend on the complexity of the repair, the size of the drainfield, and any additional [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) that may be needed.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Issues
 
 Preventive maintenance is key to avoiding future drainfield problems. Regular inspections, reducing water usage, and avoiding the use of harsh chemicals can help maintain your system’s health. Our team also offers [drain line inspection](/service-offerings/drain-line-inspection/) services to keep your system running smoothly.

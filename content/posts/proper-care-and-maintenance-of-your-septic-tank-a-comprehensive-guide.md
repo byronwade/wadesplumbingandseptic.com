@@ -56,7 +56,7 @@ Our expert team in Santa Cruz County, CA, is ready to provide you with top-notch
 
 At Wade's Plumbing & Septic, we are proud to serve the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is dedicated to providing top-notch septic care and maintenance to ensure your system runs smoothly.
 
-We hold a C-42 license for California, ensuring that all our services meet the highest standards of quality and safety. Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+We hold a C-42 license for California, ensuring that all our services meet the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for all your septic needs.
 
@@ -64,9 +64,9 @@ Whether you're in the heart of Santa Cruz or the surrounding communities, you ca
 
 ![Santa Cruz County engineered septic system](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp)
 
-### What is the cost range for septic tank maintenance in Santa Cruz County, CA?
+### How is pricing quoted for septic tank maintenance in Santa Cruz County, CA?
 
-The cost for septic tank maintenance in Santa Cruz County typically ranges from $250 to $500. This depends on the size of your tank and the specific services needed.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic tank maintenance service?
 
@@ -79,14 +79,6 @@ A standard septic tank maintenance service in Santa Cruz County usually takes be
 ### Why choose Wade's Plumbing & Septic for my septic tank needs?
 
 Wade's Plumbing & Septic offers expert services backed by years of experience in Santa Cruz County. Our commitment to quality and customer satisfaction ensures your septic system is in the best hands.
-
-"Wade's Plumbing & Septic made maintaining our septic tank effortless. Their expertise is unmatched!" (Sarah, Aptos)
-
-"Fast and reliable service every time. Highly recommend for septic care!" (John, Santa Cruz)
-
-"The team's knowledge and professionalism put my mind at ease. Thank you, Wade's!" (Emily, Watsonville)
-
-★★★★★ 5-star rating
 
 Licensed Contractor: C-42 for California
 

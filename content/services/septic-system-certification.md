@@ -42,6 +42,8 @@ The cost of septic system certification can vary based on several factors:
 - **Condition of the System:** Systems in need of repair or maintenance may incur additional costs.
 - **Local Regulations:** Specific requirements in Santa Cruz County may influence costs.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ### Prevention and Maintenance Tips
 
 Regular maintenance is key to extending the life of your septic system. Consider our [septic tank maintenance and care services](/service-offerings/septic-tank-maintenance-and-care/) to prevent issues before they arise. Routine inspections and timely repairs can help avoid costly failures.
@@ -67,14 +69,4 @@ Ensure your septic system complies with local regulations and operates efficient
 
 ## Trusted by Santa Cruz County Residents for Septic Certification Compliance
 
-"Wade's Plumbing & Septic made the septic certification process a breeze. Highly recommend!" (Sarah, Aptos)
-
-"Professional and efficient service. They ensured our system met all the local regulations." (Mike, Santa Cruz)
-
-"Great experience with Wade's team. Fast and reliable service!" (Lisa, Watsonville)
-
-★★★★★ 5-Star Rating
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

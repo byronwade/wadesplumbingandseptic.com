@@ -36,6 +36,8 @@ At Wade's Plumbing & Septic, our toilet repair process is thorough and efficient
 
 Once the problem is identified, we provide a detailed explanation of the required repairs and a transparent cost estimate. We aim to complete the repairs swiftly, often within a day, minimizing disruption to your daily routine.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Cost Factors and Timeline
 
 The cost of toilet repair in Santa Cruz can vary based on the extent of the issue and the parts needed. Simple fixes such as replacing a flapper or fill valve are typically quick and affordable. However, more complex problems, like sewer line issues, could require a more extensive repair process.
@@ -72,7 +74,7 @@ At Wade's Plumbing & Septic, we proudly offer expert toilet repair for septic sy
 - Felton
 - Boulder Creek
 
-We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday through Friday, from 9am to 5pm, and we schedule service during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you are in the heart of Santa Cruz or in the surrounding areas, you can trust Wade's Plumbing & Septic for reliable and professional service.
 
@@ -86,14 +88,4 @@ Ensure your bathroom fixtures operate efficiently with our trusted repair servic
 
 ### Trusted Septic Toilet Repair in Santa Cruz County
 
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic quickly fixed our toilet issues. Their service was prompt and professional!" (Sarah, Santa Cruz)
-
-"I couldn't be happier with the fast response and quality repair. Highly recommend!" (Tom, Watsonville)
-
-"Reliable and efficient service every time. Wade's is our go-to for plumbing needs." (Emily, Scotts Valley)
-
 Licensed Contractor: C-42 (CA)
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

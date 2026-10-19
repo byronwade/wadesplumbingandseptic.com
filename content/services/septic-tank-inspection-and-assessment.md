@@ -56,7 +56,7 @@ This service helps you:
 - **Avoid costly system failures**
 - **Catch problems early while they’re still manageable**
 - **Understand exactly what you’re buying (for real estate transactions)**
-- **Plan maintenance instead of dealing with emergencies**
+- **Plan maintenance instead of dealing with problems**
 - **Protect your property value**
 
 ## **Perfect For**
@@ -68,6 +68,8 @@ This service helps you:
 ### How much does a thorough septic inspection cost in Santa Cruz County?
 
 We understand that cost is an important factor, but pricing can vary based on specific needs and system conditions. We encourage you to call us for a free quote tailored to your situation.
+
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic inspection with Wade's Plumbing & Septic?
 
@@ -91,16 +93,6 @@ Guarantee the reliability and efficiency of your septic system with our expert i
 
 </
 
-★★★★★ 5-Star Rating
-
-“Wade's Plumbing & Septic provided a thorough and professional septic inspection. I feel confident knowing my system is in great shape.”, Emily, Santa Cruz
-
-“Fast, reliable, and friendly service! I highly recommend them for any septic needs.”, John, Watsonville
-
-“Their attention to detail during the inspection was impressive. I trust Wade's for all my septic system needs.”, Sarah, Scotts Valley
-
 Licensed Contractor: C-42 for California
-
-Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM
 
 **

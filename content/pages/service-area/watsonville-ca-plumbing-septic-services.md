@@ -2,7 +2,7 @@
 title: "Watsonville, CA Plumbing & Septic Services"
 description: >-
   Watsonville & Pajaro Valley plumbing, septic & ag-property wastewater. Wade's
-  family-owned, CSLB #1087260. Call 831.225.4344 during business hours (Mon to Fri 9:00am to 5:00pm).
+  family-owned, CSLB #1087260. Call 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 eyebrow: "Watsonville, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
@@ -51,4 +51,4 @@ Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+1
 
 **Nearby service areas:** [Freedom](/service-area/freedom-ca-plumbing-septic-services), [Amesti](/service-area/amesti-ca-plumbing-septic-services), [Interlaken](/service-area/interlaken-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

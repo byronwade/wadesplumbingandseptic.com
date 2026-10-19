@@ -2,7 +2,7 @@
 title: "Felton, CA Plumbing & Septic Services"
 description: >-
   Family-owned plumbing and septic for Felton homes on wells, steep lots, and
-  redwood-lined Highway 9. Pumping, repairs, and emergency help. Call
+  redwood-lined Highway 9. Pumping and repairs. Call
   831.225.4344.
 eyebrow: "Felton, CA"
 order: 50

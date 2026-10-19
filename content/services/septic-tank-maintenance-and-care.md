@@ -47,6 +47,8 @@ Several factors can lead to septic system failures, including improper maintenan
 
 The cost of septic tank maintenance varies based on system size, complexity, and condition. Regularly scheduled maintenance plans are cost-effective and provide peace of mind. We tailor our services to your system type and usage patterns, providing detailed documentation of services performed and system condition.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Frequently Asked Questions About Septic Tank Maintenance
 
 - **How often should I schedule septic tank maintenance?** \- Generally, every 3-5 years, but frequency may vary based on system usage and size.
@@ -65,22 +67,4 @@ Ensure the longevity and efficiency of your septic system with our professional 
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### What Our Customers Say
-
-★★★★★ 5-star rated service
-
-> "Wade's Plumbing & Septic has been a lifesaver for our home. Their team is professional and efficient!"
->
-> \- Emily, Santa Cruz
-
-> "I trust Wade's for all my septic needs. They always provide top-notch service."
->
-> \- Michael, Aptos
-
-> "Fast, reliable, and friendly. I wouldn't go anywhere else for septic maintenance."
->
-> \- Sarah, Scotts Valley
-
 Licensed Contractor: C-42 for California
-
-Fast-response guarantee: We’re available Monday to Friday, 8 AM to 5 PM

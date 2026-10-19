@@ -11,7 +11,7 @@ imageAlt: Industrial building with machinery and pipes
 updated: "2026-07-30"
 ---
 
-Grease trap cleaning is a critical service for any food establishment or household kitchen in Santa Cruz County, California. The process involves the meticulous removal of fats, oils, and grease (FOG) that accumulate in grease traps, ensuring compliance with local regulations and preventing potential plumbing issues. Our professional **grease trap cleaning Santa Cruz** service is designed to maintain the efficiency of your kitchen drainage systems, eliminate odors, and avoid costly emergency repairs.
+Grease trap cleaning is a critical service for any food establishment or household kitchen in Santa Cruz County, California. The process involves the meticulous removal of fats, oils, and grease (FOG) that accumulate in grease traps, ensuring compliance with local regulations and preventing potential plumbing issues. Our professional **grease trap cleaning Santa Cruz** service is designed to maintain the efficiency of your kitchen drainage systems, eliminate odors, and avoid costly repairs.
 
 ## Signs You Need Grease Trap Cleaning
 
@@ -43,6 +43,8 @@ Next, we carefully remove the grease and accumulated waste, ensuring proper disp
 The frequency of **grease trap cleaning Santa Cruz** depends on the size of the trap and the volume of FOG produced. Typically, restaurants and commercial kitchens require cleaning every one to three months. Our experts can help determine the ideal schedule for your specific needs.
 
 ## Factors Affecting Grease Trap Cleaning Costs
+
+Flat-rate pricing, quoted on site before work begins.
 
 Several factors can influence the cost of grease trap cleaning, including:
 
@@ -86,6 +88,6 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including 
 
 As a licensed contractor (C-42 license for California), we guarantee quality and reliability in every job we undertake.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 From the bustling streets of Santa Cruz to the serene neighborhoods of Aptos, Wade's Plumbing & Septic is your trusted partner for all plumbing and septic needs in Santa Cruz County, CA.

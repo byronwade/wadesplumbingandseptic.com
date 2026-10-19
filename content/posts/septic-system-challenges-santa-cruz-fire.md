@@ -76,7 +76,7 @@ If your septic system is not functioning properly after a fire, contact a licens
 
 While it might seem that underground systems are safe from fire damage, the heat and subsequent soil changes can indeed impact them. It's important to have your system inspected after a wildfire.
 
-**Myth:** Septic system repairs are not urgent after a fire.
+**Myth:** Septic system repairs can always wait after a fire.
 
 Delaying repairs can lead to more severe damage and costly repairs in the future. Addressing issues promptly ensures the longevity and efficiency of your septic system.
 
@@ -124,7 +124,7 @@ Contact Wade's Plumbing & Septic for expert advice and services to address your 
 
 Santa Cruz County Septic Experts
 
-## Urgent Septic Solutions Needed After Wildfires?
+## Septic System Concerns After Wildfires?
 
 Ensure your septic system is safe and functional with our expert services in Santa Cruz County, California.
 
@@ -134,7 +134,7 @@ Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz County,
 
 Our team is fully licensed and insured, holding a C-42 contractor license for California, ensuring the highest standards of professionalism and expertise.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent issues, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Wade's Plumbing & Septic is committed to delivering reliable and trustworthy septic services throughout Santa Cruz County, CA.
 

@@ -53,6 +53,8 @@ Post-cleaning, we provide tailored maintenance advice to prevent future issues, 
 
 ## Timeline and Cost Factors for Storm Drain Cleaning
 
+Flat-rate pricing, quoted on site before work begins.
+
 The timeline for storm drain cleaning varies based on the extent of blockages and system complexity, typically ranging from a few hours to a full day. Cost factors include:
 
 - The severity of blockages
@@ -90,9 +92,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our contractors are fully licensed and certified, holding a C-42 license in California, ensuring that all services are performed to the highest standards of quality and safety.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For a complete overview of our service areas, please visit our [main service-area overview](/service-areas/).
 
@@ -104,16 +104,4 @@ Protect your property from flooding and water damage with our expert storm drain
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### Customer Testimonials
-
-"Wade's Plumbing & Septic provided exceptional service when we needed our storm drain cleared. Their team was professional and efficient." (Sarah, Santa Cruz)
-
-"I was impressed with how quickly they responded to my call. They cleared our storm drain in no time and the service was top-notch!" (Mike, Capitola)
-
-"Reliable and friendly service. Wade's Plumbing & Septic is my go-to for any plumbing needs." (Emily, Watsonville)
-
-★★★★★ 5-Star Rating
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

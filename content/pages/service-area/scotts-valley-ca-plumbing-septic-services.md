@@ -45,7 +45,7 @@ Inland Scotts Valley sees colder overnight lows than the coast, occasionally eno
 
 Many households run dual schedules: heavy morning use before the commute over 17, then quiet days. That pattern stresses aging water heaters and exposes intermittent leaks that only show up at peak demand. We schedule diagnostics around how your home is actually lived in.
 
-Commercial properties near the Kings Village and Scotts Valley Drive corridors add another layer, grease interceptors, restroom clusters, and irrigation cross-connections that can masquerade as residential drain problems when tenants call after hours.
+Commercial properties near the Kings Village and Scotts Valley Drive corridors add another layer, grease interceptors, restroom clusters, and irrigation cross-connections that can masquerade as residential drain problems when tenants call outside business hours.
 
 ## Scotts Valley Appointments
 
@@ -53,4 +53,4 @@ Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).
 
 **Nearby service areas:** [Mount Hermon](/service-area/mount-hermon-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services), [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services)
 
-**Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)
+**Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)

@@ -16,9 +16,9 @@ Find answers to common questions about plumbing, septic systems, and our service
 
 We serve Santa Cruz County and selected Santa Clara County communities, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, Live Oak, Soquel, Felton, Ben Lomond, Boulder Creek, and nearby mountain and coastal towns. See our full [service areas](/service-areas) list, or call us if you are unsure.
 
-### Do you offer 24/7 or after-hours emergency service?
+### What are your business hours?
 
-No. Wade's is open Monday through Friday, 9:00am to 5:00pm. Call [831.225.4344](tel:+18312254344) during those hours for active leaks, backups, failed water heaters, and other time-sensitive plumbing or septic problems. We do not offer 24/7 or after-hours dispatch.
+Wade's is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call [831.225.4344](tel:+18312254344) during those hours for active leaks, backups, failed water heaters, and other time-sensitive plumbing or septic problems.
 
 ### Are your technicians licensed and insured?
 
@@ -46,9 +46,9 @@ Slow drains, gurgling fixtures, sewage odors, soggy spots over the drainfield, u
 
 ## Scheduling and time-sensitive work
 
-### What is the cost range for time-sensitive plumbing repairs in Santa Cruz County?
+### How is pricing determined for time-sensitive plumbing repairs in Santa Cruz County?
 
-Costs vary with diagnosis, access, and parts. Many repairs fall in a few hundred dollars once the issue is clear; larger line or septic work costs more. We explain options and pricing before work begins.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a service call?
 
@@ -56,7 +56,7 @@ We assess the problem, explain what we found in plain language, outline repair o
 
 ### How quickly can you respond in Santa Cruz County?
 
-Response time depends on call volume and your location. During business hours we prioritize active leaks and backups as the schedule allows. We do not promise after-hours or overnight emergency response.
+Response time depends on call volume and your location. During business hours we prioritize active leaks and backups as the schedule allows.
 
 ### Why choose Wade's for plumbing and septic help?
 
@@ -64,4 +64,4 @@ We are a family-owned local team with deep Santa Cruz County experience, clear c
 
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic is based in Ben Lomond and works across Santa Cruz County and selected Santa Clara County communities. Office hours are Monday to Friday, 9:00am to 5:00pm. Call [831.225.4344](tel:+18312254344) or [request service online](/contact).
+Wade's Plumbing & Septic is based in Ben Lomond and works across Santa Cruz County and selected Santa Clara County communities. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call [831.225.4344](tel:+18312254344) or [request service online](/contact).

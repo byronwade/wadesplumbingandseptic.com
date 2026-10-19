@@ -187,7 +187,6 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		"septic-solutions",
 		"maintenance-guide",
 		"testimonials",
-		"emergency-plumber-santa-cruz-county",
 	])
 
 	const pageDocs: SearchDocument[] = pages

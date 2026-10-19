@@ -16,7 +16,7 @@ Need a plumber or septic tech in Santa Cruz County or nearby foothill communitie
 
 ## Call or text
 
-Use the number on the card for scheduling, questions, and urgent plumbing or septic problems. Texting works when you cannot talk. Have ready:
+Use the number on the card for scheduling, questions, and plumbing or septic problems. Texting works when you cannot talk. Have ready:
 
 - City or ZIP for the property
 - Whether the issue is plumbing, septic, or commercial
@@ -28,7 +28,7 @@ For the fastest intake path, see our [call-first checklist](/contact-call-first)
 
 ## Email
 
-Best for photos, permit questions, and non-urgent follow-up. Include the property address and a short description of what is happening. Tap Email us on the card above when you are ready.
+Best for photos, permit questions, and follow-up questions. Include the property address and a short description of what is happening. Tap Email us on the card above when you are ready.
 
 ## Office
 
@@ -40,8 +40,8 @@ We are based in the San Lorenzo Valley and dispatch across Santa Cruz County and
 
 ## Hours
 
-- **Monday through Friday:** 9:00 AM to 5:00 PM
-- **Saturday and Sunday:** Closed for routine scheduling
+- **Monday to Friday:** 9:00 AM to 5:00 PM
+- **Saturday and Sunday:** Closed
 
 Call during office hours to book service. If you reach us outside those hours, leave a message or text and we will return contact on the next business day.
 
@@ -58,7 +58,7 @@ We regularly serve communities across Santa Cruz County (including Santa Cruz, C
 
 ## Request service
 
-Tell us what is going on and we will point you to the right next step: inspection, repair, pumping, water heater work, drain clearing, or engineered septic options. Clear pricing before work begins. No sales pressure.
+Tell us what is going on and we will point you to the right next step: inspection, repair, pumping, water heater work, drain clearing, or engineered septic options. Flat-rate pricing, quoted on site before work begins. No sales pressure.
 
 ## Frequently asked questions
 
@@ -66,9 +66,9 @@ Tell us what is going on and we will point you to the right next step: inspectio
 
 Call or text, or email us with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
 
-### Do you offer emergency plumbing help?
+### When can I schedule plumbing service?
 
-Call the number on the card. During office hours we triage urgent leaks, backups, and septic alarms as quickly as the schedule allows. Outside office hours, leave a message or text with the address and what is happening so we can respond as soon as we are available.
+Call the number on the card. During office hours we triage leaks, backups, and septic alarms as quickly as the schedule allows. Outside office hours, leave a message or text with the address and what is happening so we can respond as soon as we are available.
 
 ### What should I expect on a service visit?
 
