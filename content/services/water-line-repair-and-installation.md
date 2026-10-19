@@ -56,6 +56,8 @@ The cost and timeline for water line repairs can vary based on several factors, 
 - Location of the water line
 - Materials required for repair or replacement
 
+Flat-rate pricing, quoted on site before work begins.
+
 Our team provides a detailed estimate and timeline after the initial inspection, ensuring transparency and no unexpected costs.
 
 ## Preventing Water Line Issues
@@ -84,7 +86,7 @@ At Wade's Plumbing & Septic, we proudly offer Premium Water Line Solutions to th
 
 As a licensed contractor, we hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent plumbing needs, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Reliable Water Line Services
 
@@ -96,14 +98,4 @@ Ensure the integrity of your water supply with our expert solutions tailored for
 
 ### Why Santa Cruz County Trusts Wade's Plumbing & Septic
 
-★★★★★ 5-Star Rating
-
-"Wade's team upgraded our water lines, and the difference is incredible! Highly recommend their services." (Sarah, Aptos)
-
-"Professional and efficient service. Our water flow has never been better!" (Mike, Scotts Valley)
-
-"Fast and reliable! Wade's Plumbing took care of our water line upgrade with no hassle." (Emily, Capitola)
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Our team is available Monday through Friday, 8 AM to 5 PM, ensuring prompt service for your plumbing needs.

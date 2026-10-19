@@ -57,6 +57,8 @@ After installation, we conduct rigorous testing to certify the proper functionin
 
 The cost of backflow prevention installation can vary based on several factors, including the type of device, the complexity of the installation, and any necessary modifications to your existing plumbing system. At Wade's Plumbing & Septic, we provide transparent pricing and detailed estimates to help you make informed decisions.
 
+Flat-rate pricing, quoted on site before work begins.
+
 For homeowners exploring other options, we also offer [alternative septic system installation](/service-offerings/engineered-septic-system-installation/) and comprehensive [drain cleaning services](/service-offerings/drain-cleaning/) to ensure your entire plumbing system functions optimally.
 
 ## FAQs About Backflow Prevention
@@ -81,16 +83,4 @@ Ensure the safety and purity of your water supply with our professional backflow
 
 [Call Us](tel:+18312254344)
 
-### What Our Customers Are Saying
-
-★★★★★ 5-Star Rated Service
-
-"Wade's Plumbing & Septic provided exceptional service when installing our backflow prevention device. Highly recommend!" (Sarah, Santa Cruz)
-
-"Fast, reliable, and professional. I trust Wade's for all my plumbing needs." (Mike, Watsonville)
-
-"The peace of mind knowing my water supply is safe is invaluable. Thank you, Wade's!" (Emily, Scotts Valley)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

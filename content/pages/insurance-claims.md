@@ -8,14 +8,14 @@ imageAlt: Exposed plumbing repair area at a property
 
 ## Plumbing support after property damage
 
-Water leaks, sewer backups, failed water heaters, and damaged service lines often involve both emergency mitigation and permanent plumbing repair. Wade's can document visible conditions, isolate the plumbing source, and provide a written repair scope.
+Water leaks, sewer backups, failed water heaters, and damaged service lines often involve both damage mitigation and permanent plumbing repair. Wade's can document visible conditions, isolate the plumbing source, and provide a written repair scope.
 
 ## What we can document
 
 - Reported symptoms and visible plumbing conditions
 - Diagnostic steps and source findings
 - Photos of accessible damage and failed components
-- Emergency shutoff or stabilization work
+- Water shutoff or stabilization work
 - Recommended permanent plumbing repairs
 - Completed work and testing
 

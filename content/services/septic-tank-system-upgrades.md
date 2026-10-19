@@ -39,6 +39,8 @@ Upgrading your septic system involves several steps. Our team at Wade's Plumbing
 
 The cost of septic system upgrades varies based on the scope of the project. Factors influencing the cost include the size of your system, the type of upgrades needed, and any additional services required. Investing in quality upgrades can prevent the need for a full [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/), ultimately saving you money in the long run.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Septic System Issues
 
 Preventative measures are key to maintaining a healthy septic system. Regular maintenance, such as [how to maintain your septic tank](/how-to-maintain-your-septic-tank-for-long-term-performance/) practices, can significantly reduce the likelihood of future problems. Additionally, installing a [septic tank alarm installation](/service-offerings/septic-tank-alarm-installation/) can alert you to issues before they become severe.
@@ -61,14 +63,4 @@ Enhance your home's efficiency and compliance with our expert septic system upgr
 
 ### What Our Santa Cruz County Customers Are Saying
 
-★★★★★ 5-Star Rated Service
-
-"Wade's Plumbing & Septic transformed our septic system with efficiency and skill. Highly recommend!" (Sarah, Aptos)
-
-"The team was professional and knowledgeable throughout the entire upgrade process. Excellent service!" (Mark, Santa Cruz)
-
-"Fast, reliable, and top-notch quality. Couldn't be happier with the results." (Emily, Scotts Valley)
-
 Licensed Contractor: C-42 License for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

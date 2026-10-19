@@ -12,4 +12,4 @@ Kitchen grease, roots, wipes, scale, offsets, collapsed pipe, and poor drainage 
 
 Services include cable clearing, sewer cameras, cleanout installation, hydro jetting, commercial drain maintenance, and sewer-line repair options.
 
-Call 831.225.4344 for urgent drain or sewer service in Santa Cruz County.
+Call 831.225.4344 for drain or sewer service in Santa Cruz County.

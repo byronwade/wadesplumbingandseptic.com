@@ -77,6 +77,34 @@ const nextConfig: NextConfig = {
 	},
 	async redirects() {
 		return [
+			// Retired availability pages resolve directly to a schedulable service.
+			{
+				source: "/emergency-plumber-santa-cruz-county",
+				destination: "/contact",
+				permanent: true,
+			},
+			{
+				source: "/service-category/emergency-services",
+				destination: "/services",
+				permanent: true,
+			},
+			...[
+				[
+					"emergency-septic-solutions-santa-cruz",
+					"/service-offerings/septic-tank-repair-and-replacement",
+				],
+				[
+					"from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
+					"/contact",
+				],
+				[
+					"how-to-handle-a-clogged-drain-or-sewer-line",
+					"/service-offerings/drain-cleaning",
+				],
+			].flatMap(([slug, destination]) => [
+				{ source: `/${slug}`, destination, permanent: true },
+				{ source: `/expert-tips/${slug}`, destination, permanent: true },
+			]),
 			{ source: "/about", destination: "/about-us", permanent: true },
 			{ source: "/blog", destination: "/expert-tips", permanent: true },
 			{ source: "/contact-us", destination: "/contact", permanent: true },

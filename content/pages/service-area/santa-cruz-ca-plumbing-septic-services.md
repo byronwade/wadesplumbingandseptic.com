@@ -23,7 +23,7 @@ Santa Cruz plumbing runs the gamut: galvanized supply lines in pre-war Victorian
 - **Leak detection** under slabs and in crawlspaces common on the Westside and near Neary Lagoon
 - **Repiping consultations** when corrosion or low pressure shows up building-wide in duplexes and small apartment buildings
 
-We coordinate with local permitting when work requires it and keep emergency response practical: if water is actively damaging your home, call us at [831.225.4344](tel:+18312254344).
+We coordinate with local permitting when work requires it and schedule plumbing service during business hours at [831.225.4344](tel:+18312254344).
 
 ## Sewer, Septic, and What Santa Cruz Properties Actually Have
 
@@ -43,12 +43,12 @@ If you are buying or remodeling, knowing whether you are on sewer or septic chan
 
 Santa Cruz's marine layer keeps soils damp much of the year. That moisture feeds root growth toward sewer and septic lines, especially on wooded streets between the San Lorenzo River and the freeway. Winter storms push debris into outdoor cleanouts and can expose undersized drainage where downspouts tie into older yard systems.
 
-Salt air accelerates corrosion on exterior hose bibs and some tank hardware near the coast. High-turnover rentals (common near the beach and campus), often see garbage disposals pushed past their limits and water heaters die early from heavy use. We document what we see so property managers and owners can plan maintenance instead of reacting to the same emergency twice a year.
+Salt air accelerates corrosion on exterior hose bibs and some tank hardware near the coast. High-turnover rentals (common near the beach and campus), often see garbage disposals pushed past their limits and water heaters die early from heavy use. We document what we see so property managers and owners can plan maintenance instead of reacting to the same repair twice a year.
 
 ## Schedule Service in Santa Cruz
 
-Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For urgent issues, call [831.225.4344](tel:+18312254344).
+Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344).
 
 **Nearby service areas:** [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Twin Lakes](/service-area/twin-lakes-ca-plumbing-septic-services), [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
 
-**Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)
+**Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)

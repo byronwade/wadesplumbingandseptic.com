@@ -66,7 +66,6 @@ export const SEARCH_SYNONYMS: Record<string, string[]> = {
 	leak: ["drip", "burst pipe", "slab leak", "leak detection", "leaking"],
 	toilet: ["toilets", "commode", "wax ring", "running toilet", "flush"],
 	sink: ["faucet", "garbage disposal", "disposal", "kitchen sink"],
-	urgent: ["emergency", "priority", "same day", "overflow", "flooding"],
 	inspection: ["camera inspection", "video inspection", "assessment"],
 	pumping: ["septic pumping", "tank pumping", "pump out", "pumpout"],
 	hydro: ["jetting", "hydro jetting", "high pressure jetting"],

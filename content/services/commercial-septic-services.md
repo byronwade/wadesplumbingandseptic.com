@@ -50,6 +50,8 @@ Our commitment to quality ensures that your septic system functions optimally, m
 
 ## Factors Influencing Cost and Timeline
 
+Flat-rate pricing, quoted on site before work begins.
+
 The cost and timeline for commercial septic services can vary based on:
 
 - Size and complexity of the system
@@ -97,26 +99,8 @@ Wade's Plumbing & Septic proudly offers reliable commercial septic maintenance s
 
 We are a licensed contractor in California (C-42) (state license), ensuring professional and compliant services.
 
-Our office hours are Monday through Friday, 9 am to 5 pm, but our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas/).
 
-### What Our Customers Are Saying
-
-★★★★★ 5-star rating
-
-> "Wade's Plumbing & Septic saved the day with their efficient septic maintenance service. Highly recommend!"
->
-> \- Sarah, Santa Cruz
-
-> "Professional and reliable service from start to finish. My septic system has never been in better shape."
->
-> \- John, Watsonville
-
-> "Their team was prompt and knowledgeable. I appreciate the peace of mind they provide."
->
-> \- Emily, Scotts Valley
-
 Licensed Contractor: C-42 License
-
-Fast-response guarantee: Available Monday to Friday, 8 AM to 6 PM

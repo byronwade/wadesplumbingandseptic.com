@@ -95,7 +95,7 @@ Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz
 
 We hold a C-42 contractor license for California, ensuring our work meets the highest standards of quality and safety.
 
-Our office is open Monday through Friday, from 9am to 5pm. For those unexpected emergencies, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 At Wade's Plumbing & Septic, we are committed to being your trusted local experts in Santa Cruz County, CA.
 
@@ -103,7 +103,7 @@ At Wade's Plumbing & Septic, we are committed to being your trusted local expert
 
 ### How much does it cost to address hard water issues in Santa Cruz County homes?
 
-The cost to address hard water issues in Santa Cruz County can vary depending on the specific solutions required. Generally, prices range from $500 to $2,500 for water softening systems. Wade's Plumbing & Septic provides a detailed estimate after assessing your home's needs.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a hard water service appointment?
 

@@ -42,6 +42,8 @@ Our expert technicians follow a comprehensive process to ensure your new water h
 
 The cost of water heater installation can vary based on several factors, including the type of unit, the complexity of the installation, and any necessary upgrades to existing plumbing. Our team will provide a detailed estimate and work with you to find a solution that fits your budget.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Water Heater Issues
 
 Regular maintenance and timely repairs can extend the lifespan of your water heater. Consider investing in water softeners to combat hard water issues, which can lead to sediment buildup. Additionally, routine inspections can help identify potential problems before they become major issues.

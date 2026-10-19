@@ -88,7 +88,7 @@ Ensure the longevity and efficiency of your septic system with expert repairs fr
 
 At Wade's Plumbing & Septic, we are proud to offer our expert drain field repair services throughout Santa Cruz County, California. Our service area includes the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more.
 
-We hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety. Our office hours are Monday through Friday, 9am to 5pm, but our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+We hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in need of immediate assistance or planning a future project, Wade's Plumbing & Septic is here to serve the Santa Cruz County community with reliable and professional service.
 
@@ -96,7 +96,7 @@ Whether you're in need of immediate assistance or planning a future project, Wad
 
 ### How much does it cost to repair a drain field in Santa Cruz County?
 
-The cost to repair a drain field in Santa Cruz County can vary depending on the extent of the damage and the specific requirements of your system. Generally, prices range from $3,000 to $10,000. For a precise estimate, contact Wade's Plumbing & Septic for a detailed assessment.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a drain field repair service?
 

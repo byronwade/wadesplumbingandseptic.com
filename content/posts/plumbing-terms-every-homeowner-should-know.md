@@ -112,9 +112,9 @@ Understanding plumbing terms is crucial for effective home maintenance in Santa 
 
 ## Frequently Asked Questions
 
-### What is the cost range for plumbing services in Santa Cruz County, CA?
+### How is pricing quoted for plumbing services in Santa Cruz County, CA?
 
-The cost for plumbing services in Santa Cruz County varies depending on the complexity of the job. Basic repairs might start around $100, while more extensive projects like trenchless sewer line replacement can range from $3,000 to $6,000.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a plumbing service visit?
 

@@ -103,13 +103,13 @@ export function HomeBelowFold() {
 								>
 									Call {contactInfo.phoneDisplay}
 								</a>
-								<Link prefetch={false}
+								<Link
+									prefetch={false}
 									className={cn(
 										buttonVariants({ variant: "outline", size: "xl" }),
 										"w-full sm:w-auto",
 									)}
 									href="/service-offerings/engineered-septic-system-installation"
-
 								>
 									Engineered Septic Services
 								</Link>
@@ -143,10 +143,10 @@ export function HomeBelowFold() {
 										Hillside property, Santa Cruz Mountains
 									</span>
 								</span>
-								<Link prefetch={false}
+								<Link
+									prefetch={false}
 									className="text-primary inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
 									href="/service-category/septic"
-
 								>
 									Septic work
 									<ArrowRight aria-hidden="true" className="size-3.5" />
@@ -171,13 +171,13 @@ export function HomeBelowFold() {
 								properties.
 							</p>
 						</div>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/contact"
-
 						>
 							Discuss your project
 							<ArrowRight aria-hidden="true" />
@@ -217,13 +217,13 @@ export function HomeBelowFold() {
 								team handles it cleanly, honestly, and on time.
 							</p>
 						</div>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "outline", size: "lg" }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/services"
-
 						>
 							View all services
 							<ArrowRight aria-hidden="true" />
@@ -330,12 +330,6 @@ export function HomeBelowFold() {
 									className="border-b border-white/10 pb-7 last:border-0 last:pb-0"
 									key={person}
 								>
-									<p
-										className="text-primary-bright text-sm tracking-[0.2em]"
-										aria-label="Rated 5 out of 5"
-									>
-										★★★★★
-									</p>
 									<p className="mt-3 text-[1.0625rem] leading-relaxed text-pretty text-white">
 										“{quote}”
 									</p>
@@ -345,13 +339,13 @@ export function HomeBelowFold() {
 								</blockquote>
 							))}
 						</div>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg" }),
 								"mt-8 w-full sm:w-auto",
 							)}
 							href="/testimonials"
-
 						>
 							Read customer stories
 							<ArrowRight aria-hidden="true" />
@@ -411,13 +405,13 @@ export function HomeBelowFold() {
 						>
 							Call {contactInfo.phoneDisplay}
 						</a>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "xl" }),
 								"w-full sm:w-auto",
 							)}
 							href="/contact"
-
 						>
 							Send a Message
 							<ArrowRight aria-hidden="true" />

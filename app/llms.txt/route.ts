@@ -38,6 +38,7 @@ Phone: ${siteConfig.phone}
 Email: ${siteConfig.email}
 Address: ${siteConfig.address.display}
 Hours: ${siteConfig.hours}
+Pricing: ${siteConfig.pricing}
 License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
 

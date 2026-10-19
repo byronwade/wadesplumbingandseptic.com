@@ -55,6 +55,8 @@ After installation, we conduct a thorough inspection to ensure everything functi
 
 The cost of fixture installation depends on various factors, including the type of fixture, the complexity of the installation, and any additional plumbing modifications required. On average, simple installations can be completed within a few hours, while more extensive projects may take a day or two.
 
+Flat-rate pricing, quoted on site before work begins.
+
 For those considering additional installations like [septic tank alarm installation](/service-offerings/septic-tank-alarm-installation/), our team can provide a comprehensive quote tailored to your project needs.
 
 ## Preventive Maintenance Tips
@@ -90,7 +92,7 @@ At Wade's Plumbing & Septic, we proudly offer expert fixture installation servic
 
 We are fully licensed and insured, holding a C-42 contractor license for California, ensuring compliance and quality in every project.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumbing & Septic is your trusted partner for all fixture installation needs in Santa Cruz County, CA.
 
@@ -100,4 +102,4 @@ Transform Your Living Space
 
 Enhance the functionality and aesthetics of your home with our professional fixture installation services, tailored for Santa Cruz County, CA.
 
-[Call Us Now](tel:+18312254344) [Get a Free Upgrade with Confidence in Santa Cruz County, CA ★★★★★ 5-star rated service "Wade's team upgraded our fixtures seamlessly! Highly recommend their expertise." (Sarah, Santa Cruz "Professional and efficient service from start to finish. Love our new fixtures!"), John, Capitola "Exceptional service and top-quality fixtures. Couldn't be happier!" (Emily, Watsonville Licensed Contractor: C-42 Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call us](tel:+18312254344) [Request service](/contact)

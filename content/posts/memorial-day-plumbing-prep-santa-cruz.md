@@ -79,9 +79,9 @@ Schedule a septic inspection and perform regular maintenance to ensure your syst
 
 While not mandatory, a professional inspection can help identify potential issues and prevent costly repairs during your holiday gathering.
 
-### What should I do if I encounter a plumbing emergency during the holiday?
+### What should I do if I notice a plumbing problem during the holiday?
 
-Contact a professional plumbing service immediately to address the issue and minimize damage.
+Contact a qualified professional and confirm their availability. Wade's takes calls for scheduling during business hours.
 
 ## DIY Monitoring vs. Professional Services
 
@@ -131,4 +131,4 @@ Get Ready for the Holiday
 
 Ensure your plumbing is in top shape for Memorial Day celebrations in Capitola, CA.
 
-[Call Us](tel:+1-831-123-4567)
+[Call Us](tel:+18312254344)

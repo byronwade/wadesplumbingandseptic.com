@@ -14,7 +14,7 @@ export const serviceCategories = {
 		label: "Residential Plumbing",
 		contentCategory: "Plumbing",
 		description:
-			"Complete plumbing service for homes, including repairs, replacements, maintenance, and urgent repairs.",
+			"Complete plumbing service for homes, including repairs, replacements, and maintenance.",
 		image: "/images/services/drain-clearing.webp",
 	},
 	commercial: {
@@ -44,13 +44,6 @@ export const serviceCategories = {
 		description:
 			"Complete conventional and advanced septic support for tanks, pumps, controls, treatment, and drain fields.",
 		image: "/images/work/completed-multi-tank.webp",
-	},
-	"emergency-services": {
-		label: "Urgent Repairs",
-		contentCategory: "Plumbing",
-		description:
-			"Call-first support during business hours for active leaks, burst pipes, sewer backups, failed water heaters, and other time-sensitive plumbing problems.",
-		image: "/images/work/drain-cleaning-equipment.webp",
 	},
 	"specialty-services": {
 		label: "Specialty Services",

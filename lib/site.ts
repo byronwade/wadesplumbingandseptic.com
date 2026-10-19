@@ -8,7 +8,8 @@ export const siteConfig = {
 	phone: "831.225.4344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
-	hours: "Mon to Fri 9:00am to 5:00pm",
+	hours: "Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday",
+	pricing: "Flat-rate pricing, quoted on site before work begins.",
 	address: {
 		street: "7737 Highway 9",
 		city: "Ben Lomond",

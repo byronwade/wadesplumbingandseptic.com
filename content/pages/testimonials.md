@@ -1,29 +1,35 @@
 ---
-title: "Customer Testimonials: Trusted Plumbing in Santa Cruz County"
+title: "Customer Reviews: Wade's Plumbing & Septic"
 description: >-
   At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa
   Cruz County, California, including Santa Cruz, Capitola, Scotts Valley,.
 order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
-eyebrow: "Real People, Real Results"
+eyebrow: Customer Reviews
 ---
+
+## Read customer reviews
+
+Find Wade's Plumbing & Septic on [Google](https://www.google.com/maps/search/?api=1&query=Wade%27s+Plumbing+%26+Septic+Ben+Lomond) or [Yelp](https://www.yelp.com/search?find_desc=Wade%27s+Plumbing+%26+Septic&find_loc=Ben+Lomond%2C+CA).
 
 ## Serving Santa Cruz County, CA
 
 At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is committed to providing top-notch plumbing and septic services to both residential and commercial clients throughout the region.
 
-Our contractors are licensed under C-42 for California and C-42 license for California, ensuring the highest standards of service and expertise.
+Our contractors are licensed under C-42 for California, ensuring the highest standards of service and expertise.
 
-Office Hours: Monday to Friday, 9am to 5pm
+Office Hours: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-For emergencies, our dedicated line is available for emergencies to address urgent plumbing and septic issues promptly.
+Call 831.225.4344 during business hours to schedule plumbing or septic service.
 
 ## Frequently Asked Questions
 
-### What is the cost range for plumbing services in Santa Cruz County?
+### How is pricing determined for plumbing services in Santa Cruz County?
 
 The cost for plumbing services at Wade's Plumbing & Septic varies depending on the complexity of the job. We offer competitive pricing and provide detailed estimates to ensure transparency for all projects in Santa Cruz County, California.
+
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a service appointment?
 

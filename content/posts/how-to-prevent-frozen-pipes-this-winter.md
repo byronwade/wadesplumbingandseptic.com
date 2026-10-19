@@ -3,7 +3,7 @@ title: Prevent Frozen Pipes This Winter in Santa Cruz County, CA
 description:
   Protect your home from costly water damage with these essential tips
   for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
-  properly insulate them, and maintain adequate heating to avoid expensive emergency
+  properly insulate them, and maintain adequate heating to avoid major
   repairs.
 category: Plumbing Tips
 date: "2025-05-11"
@@ -68,31 +68,31 @@ If you turn on a faucet and only a trickle comes out, you likely have a frozen p
 - Continue applying heat until full water pressure is restored
 - Check all other faucets for additional frozen pipes
 
-If you cannot locate the frozen area, if the frozen area is not accessible, or if you cannot thaw the pipe, call Wade's Plumbing & Septic immediately. We provide emergency services to help protect your home from water damage.
+If you cannot locate the frozen area, if the frozen area is not accessible, or if you cannot thaw the pipe, contact a qualified plumber. Call Wade's Plumbing & Septic during business hours to schedule service.
 
 Taking these preventative measures can save you from the inconvenience and expense of dealing with burst pipes during the coldest months of the year.
 
 Santa Cruz County Septic Experts
 
-## Emergency Plumbing & Septic Services Available
+## Schedule Plumbing & Septic Services
 
 ![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
 
-Count on Wade's Plumbing & Septic for prompt, reliable emergency solutions in Santa Cruz County, California.
+Count on Wade's Plumbing & Septic for scheduled plumbing services in Santa Cruz County, California.
 
 ## Serving Santa Cruz County, CA
 
 Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and the surrounding areas. Our team is equipped to handle all your plumbing needs, including preventing frozen pipes this winter.
 
-Our office hours are Monday through Friday, 9am to 5pm, but our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 We holds a C-42 contractor license for California, ensuring you receive professional and certified service every time.
 
 ## Frequently Asked Questions
 
-### What is the cost range for preventing frozen pipes in Santa Cruz County, CA?
+### How is pricing quoted for preventing frozen pipes in Santa Cruz County, CA?
 
-The cost for preventing frozen pipes can vary based on the specific needs of your home. Typically, services range from $150 to $500, depending on the complexity and size of the plumbing system.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the service to prevent frozen pipes?
 

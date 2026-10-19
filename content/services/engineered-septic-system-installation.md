@@ -61,6 +61,8 @@ Timelines depend on soil work, engineering, and permit review. We keep you updat
 
 Engineered systems cost more than a simple tank-and-field replacement because of treatment equipment, design, and site work. Ranges vary widely by system type, access, and soil conditions. We provide transparent estimates after we understand the site, and we separate what is known from what depends on engineering or county review.
 
+Flat-rate pricing, quoted on site before work begins.
+
 Ongoing maintenance matters: filters, pumps, blowers, and service contracts keep advanced systems healthy. We set that expectation up front.
 
 ## Serving Santa Cruz County and west foothills

@@ -53,4 +53,4 @@ Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for service in
 
 **Nearby service areas:** [Rio Del Mar](/service-area/rio-del-mar-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

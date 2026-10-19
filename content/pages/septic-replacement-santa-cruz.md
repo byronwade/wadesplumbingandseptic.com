@@ -20,6 +20,8 @@ Failing systems, failed perc tests, or aging conventional septic. Wade's deliver
 
 [Request A Free Estimate](/contact/)
 
+Flat-rate pricing, quoted on site before work begins.
+
 Phone calls are prioritized for fastest response and scheduling.
 
 **Licensed California Contractor**
@@ -44,7 +46,7 @@ Phone calls are prioritized for fastest response and scheduling.
 #### Ready to Get Started?
 
 - What city is the property in?
-- Is this urgent or scheduled work?
+- What work needs to be scheduled?
 - Plumbing, sewer, or septic issue?
 
 [Call 831.225.4344](tel:8312254344)

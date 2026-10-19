@@ -48,6 +48,8 @@ The time required for **septic tank distribution box repair** varies based on th
 
 ## Cost Factors and Considerations
 
+Flat-rate pricing, quoted on site before work begins.
+
 Several factors influence the cost of repairing or replacing a distribution box:
 
 - Extent of damage
@@ -90,7 +92,7 @@ At Wade's Plumbing & Septic, we proudly offer expert septic box repair services 
 
 Our contractors are fully licensed and equipped to handle all your septic needs. We holds a C-42 contractor license for California, ensuring compliance with all local regulations.
 
-Our office is open Monday through Friday from 9am to 5pm. For urgent issues, our phone line is answered during business hours for scheduling (Monday through Friday, 9:00am to 5:00pm).
+Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 For more information on our service coverage, visit our [main service-area overview](/service-areas/).
 
@@ -102,16 +104,4 @@ Ensure the optimal functioning of your septic system with our professional repai
 
 [Call Us](tel:+18312254344)
 
-### What Our Customers Are Saying
-
-★★★★★ 5-Star Rating
-
-> "Wade's Plumbing & Septic provided exceptional service when optimizing our septic box. Their team was professional and efficient!" (Sarah, Santa Cruz)
-
-> "I highly recommend Wade's for their expertise in septic systems. They made the whole process seamless and stress-free." (John, Watsonville)
-
-> "The team at Wade's Plumbing & Septic is knowledgeable and reliable. Our septic system has never worked better!" (Emily, Aptos)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

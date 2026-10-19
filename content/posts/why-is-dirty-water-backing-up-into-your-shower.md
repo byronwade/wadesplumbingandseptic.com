@@ -58,7 +58,7 @@ Once clogs become severe, they require specialized tools like augers, hydro-jett
 
 How Often Should Sewer Lines Be Cleaned?
 
-To prevent severe blockages, your main sewer line should be professionally inspected and cleaned every 18 to 22 months. Regular maintenance is affordable compared to emergency plumbing repairs and helps extend the lifespan of your sewer system.
+To prevent severe blockages, your main sewer line should be professionally inspected and cleaned every 18 to 22 months. Regular maintenance is affordable compared to major plumbing repairs and helps extend the lifespan of your sewer system.
 
 If your drains are slow, if you hear gurgling, or if you experience sewage backups, don’t ignore the signs. Have your system evaluated before more serious damage occurs.
 
@@ -82,9 +82,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 **Contractor License:** C-42 license for CA / state license for GA
 
-**Office Hours:** Monday to Friday, 9am to 5pm
-
-**Office hours:** Monday through Friday, 9:00am to 5:00pm. We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in the heart of Santa Cruz or the outskirts of Watsonville, we're here to help with all your plumbing needs.
 
@@ -92,7 +90,7 @@ Whether you're in the heart of Santa Cruz or the outskirts of Watsonville, we're
 
 ### How much does it cost to solve shower backup issues in Santa Cruz County homes?
 
-The cost for resolving shower backup issues varies depending on the severity of the blockage and the required solutions. Typically, prices range from $150 to $500. Contact us for a personalized estimate.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the shower backup service?
 

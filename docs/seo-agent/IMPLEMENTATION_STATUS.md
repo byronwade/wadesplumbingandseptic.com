@@ -1,5 +1,15 @@
 # Eve SEO Agent Implementation Status
 
+## Public-site owner-confirmed business facts (2026-10-19)
+
+- Scope: notebook item 0, owner-confirmed flat-rate pricing, weekday hours, removal of unavailable-service claims, fabricated ratings and template testimonials. Retired one landing page, three posts and the old service category, with eight direct permanent redirects. No Eve runtime, connector, credential or production setting changed.
+- Sources: Byron's October 19, 2026 confirmations in the hobby-job instructions and project notebook. Other questionable facts remain unchanged and are listed in the job RESULT.md for owner review.
+- Commands on Node 24.21.0 / npm 11.19.0: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run seo:check`, `npm run build`, and `git diff --check`, all exit 0. The build generated 578 static pages. The SEO suite passed 25 regression tests, scanned 298 public source files with zero fact violations, validated 161 Markdown files, 95 glossary terms, 24 city/service pages and a 325-URL sitemap, then passed service-section, OG, image-delivery and metadata checks.
+- Local production-server verification: `python runtime-smoke.py`, 37 checks passed, zero failed, including all eight 308 redirects, four rendered pages, JSON-LD hours and absence of prices/ratings, llms.txt, vCard and sitemap. Browser checks covered home, drain-cleaning and contact pages at desktop/mobile widths in actual light/dark themes, plus mobile navigation and the cleaned service trust strip. Fourteen screenshots are retained in the job folder. Checked layouts had no horizontal overflow; browser reported zero uncaught errors and zero console messages.
+- Evidence: `C:/Users/bcw19/agent-tools/hobby-scheduler/jobs/wades-plumbing-hobby-1019-1840/` contains command logs, runtime-smoke.json, browser-errors.json and screenshots. Delegated content validation passed 665 post checks plus a 116-file pages/services audit. This is local deterministic evidence (`MOCK_VERIFIED`), not a live listing, integration or production-deployment proof.
+- Resolved validation issues: initial business-fact scan falsely rejected Markdown-formatted closed-weekend copy; scanner corrected and regression-covered. Review found malformed replacement prose, a retired internal link and duplicate CTA extraction; corrected before final checks. The install reports 18 dependency advisories (1 low, 3 moderate, 13 high, 1 critical) and two existing install-script approval warnings; dependency remediation is outside this correction.
+- Next action: ship through the authorized PR helper using the passing local merge gate. Preserve the GitHub Actions prohibition with the supported `[skip actions]` commit marker. Direct Google review links still need a confirmed place ID; no rating or count has been added.
+
 ## Phase 84: Task 15 Craft Skills (Brand Context, Evidence Boundaries, Writing Quality, Discovery CI) (2026-08-03)
 
 - State: READY_FOR_HUMAN_REVIEW / offline `MOCK_VERIFIED`.

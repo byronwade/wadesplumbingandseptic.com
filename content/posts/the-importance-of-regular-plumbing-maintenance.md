@@ -52,9 +52,9 @@ Routine cleaning and adjustments keep everything flowing properly. With clear dr
 
 **5.**
 
-**Avoid Emergency Repairs**
+**Avoid Major Repairs**
 
-A burst pipe or backed-up sewer line can lead to thousands in emergency repair costs. With regular maintenance from Wade’s Plumbing & Septic, you drastically reduce your risk of plumbing emergencies.
+A burst pipe or backed-up sewer line can lead to extensive damage. Regular maintenance can help identify problems before they develop into major repairs.
 
 **6.**
 
@@ -104,7 +104,7 @@ Regular maintenance ensures your plumbing system in Santa Cruz County stays effi
 
 ### How much does regular plumbing maintenance cost in Santa Cruz County, CA?
 
-The cost of regular plumbing maintenance in Santa Cruz County typically ranges from $150 to $300, depending on the size and condition of your plumbing system. Contact Wade's Plumbing & Septic for a personalized quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a plumbing maintenance service?
 

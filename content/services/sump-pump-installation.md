@@ -45,6 +45,8 @@ We begin with a thorough assessment of your basement and surrounding landscape t
 
 The timeline for sump pump installation can vary based on specific site conditions, but most projects are completed within a day. Factors affecting cost include the type of pump selected, the complexity of installation, and any additional features like battery backup systems.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Issues
 
 Regular maintenance is key to ensuring your sump pump operates effectively. Consider scheduling periodic inspections and cleaning to prevent clogs and mechanical failures. Our [drain cleaning services](/service-offerings/drain-cleaning/) can help keep your system in top condition.
@@ -73,4 +75,4 @@ Protect Your Home
 
 Ensure your Santa Cruz County home stays dry and safe with our reliable sump pump installation services.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote What Our Customers Say ★★★★★ 5-Star Rated Service "Wade's team installed our sump pump quickly and efficiently. No more flooding worries!" (Sarah, Santa Cruz "Professional service and great advice on maintaining our new sump pump."), Tom, Aptos "Fast and reliable installation. Highly recommend Wade's Plumbing & Septic!" (Emily, Watsonville Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM](/contact/))
+[Call us](tel:+18312254344) [Request service](/contact)

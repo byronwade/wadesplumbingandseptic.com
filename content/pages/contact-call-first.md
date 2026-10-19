@@ -1,8 +1,8 @@
 ---
 title: Talk to Wade's Plumbing & Septic
 description: >-
-  Call 831.225.4344 first for service-area confirmation, issue triage, scheduling,
-  and the fastest response to urgent plumbing or septic problems.
+  Call 831.225.4344 first to confirm service coverage, describe your issue,
+  and schedule plumbing or septic service.
 eyebrow: Call-First Intake
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
@@ -21,4 +21,4 @@ For the fastest help, call or text with:
 
 The team will confirm coverage, recommend the right service path, and share the next available scheduling options.
 
-Regular office hours are Monday through Friday, 9:00 AM to 5:00 PM. Office: 7737 Highway 9, Ben Lomond, CA 95005. Email: support@wadesinc.io.
+Regular office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Office: 7737 Highway 9, Ben Lomond, CA 95005. Email: support@wadesinc.io.

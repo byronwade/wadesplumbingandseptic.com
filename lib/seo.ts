@@ -135,7 +135,6 @@ export function localBusinessJsonLd(
 		email: siteConfig.email,
 		logo: absoluteUrl("/images/brand/wades-mark.webp"),
 		image: absoluteUrl("/images/locations/santa-cruz-plumber.webp"),
-		priceRange: "$$",
 		description: siteConfig.description,
 		address: {
 			"@type": "PostalAddress",

@@ -47,7 +47,7 @@ Santa Cruz County has specific septic system regulations. Compliance is crucial 
 
 ## Signs Your Septic Needs Attention
 
-Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/urgent-septic-failure-signs-santa-cruz/) for more details.
+Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) for more details.
 
 ## Choosing the Right Septic Solution
 
@@ -123,7 +123,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, Cali
 
 Our commitment to quality is backed by our C-42 contractor license in California, ensuring that all our installations meet the highest standards of safety and efficiency.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For time-sensitive issues during business hours, call 831.225.4344. We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on our service areas, please visit our [main service-area overview](/service-areas/).
 

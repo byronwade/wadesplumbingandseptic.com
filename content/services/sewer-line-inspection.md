@@ -15,7 +15,7 @@ Maintaining a healthy plumbing system is crucial for any homeowner, and a compre
 
 ## Why Sewer Line Inspection is Essential for Homeowners
 
-Sewer line inspections are a proactive measure to prevent costly repairs and ensure the longevity of your plumbing system. By detecting issues early, homeowners can avoid major disruptions and costly emergencies. Regular inspections help identify:
+Sewer line inspections are a proactive measure to prevent costly repairs and ensure the longevity of your plumbing system. By detecting issues early, homeowners can avoid major disruptions and costly problems. Regular inspections help identify:
 
 - Blockages and clogs
 - Cracks or collapses in the pipes
@@ -60,6 +60,8 @@ The cost of a sewer line inspection can vary based on several factors:
 - The complexity of the inspection process
 - Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning/) or pipe repair
 
+Flat-rate pricing, quoted on site before work begins.
+
 Wade's Plumbing & Septic offers competitive pricing, ensuring quality service at an affordable rate for residents of Santa Cruz County.
 
 ## Preventive Measures to Avoid Sewer Line Issues
@@ -90,7 +92,7 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz, Cap
 
 We holds a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and professionalism.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we also take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Stay Ahead of Plumbing Issues
 
@@ -102,14 +104,4 @@ Safeguard your home with our advanced sewer inspection services, identifying pot
 
 ### Why Santa Cruz County Trusts Us for Sewer Inspections
 
-★★★★★ 5-Star Rating
-
-> "Wade's Plumbing & Septic was thorough and professional. They quickly identified the issue, giving us peace of mind." (Sarah, Santa Cruz)
-
-> "Their sewer inspection service was top-notch. I highly recommend them for any plumbing needs!" (Mike, Capitola)
-
-> "Fast and reliable service with friendly staff. I couldn't be happier with the results." (Emily, Watsonville)
-
 Licensed Contractor: C-42
-
-Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

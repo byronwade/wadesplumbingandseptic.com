@@ -138,16 +138,11 @@ A
 - **"They're a maintenance hassle."** More _structured_ maintenance (often annual), typically handled by service contracts; prevents larger issues.
 - **"Less reliable than conventional."** Proven technologies with long track records; monitoring and regular service enhance reliability.
 
-## 8\. Cost Comparison: Engineered vs. Conventional Septic Systems
+## 8\. Planning for Septic System Work
 
-- **Conventional:** Commonly around **$3,000 to $8,000** for typical installs; region and site can push higher.
-- **Engineered (varies by type):**
-- **ATU + dispersal:** ~**$20k to $40k** installed.
-- **Mound:** ~**$25k to $50k** (sand import, pumping, grading).
-- **Sand/RSF/Peat:** ~**$15k to $30k** depending on size and media.
-- **Operating Costs:** Electricity (pumps/blowers), annual service contracts, repairs (e.g., pumps/air units), media replacement (e.g., peat ~10 to 15 yrs).
-- **Local High-End Example:** In strict coastal markets, engineered replacements have been reported up to **$60k to $80k**.
-- **Lifecycle View:** Higher upfront, but prevents premature failures, supports permitting, and protects property value.
+Flat-rate pricing, quoted on site before work begins.
+
+Discuss installation, operating costs, and maintenance requirements during your site assessment.
 
 ## 9\. Choosing the Right Septic System for Your Property
 
@@ -171,11 +166,7 @@ by protecting the drainfield. Weigh soil type, lot size, local codes, and your m
 
 ### Are engineered septic systems more expensive than conventional septic systems?
 
-Engineered septic systems generally
-
-. Expect roughly
-
-the price of a basic system depending on type and locale (e.g., $15k to $50k+ vs. $5k to $10k). Some coastal replacements have run $60k to $80k. Over time, they can be cost-effective by preventing failures and enabling compliant builds.
+Flat-rate pricing, quoted on site before work begins.
 
 ### Do engineered septic systems require more maintenance than conventional systems?
 
@@ -205,15 +196,15 @@ Discover the benefits of engineered septic systems tailored for Santa Cruz Count
 
 Wade's Plumbing & Septic proudly serves the communities of Santa Cruz, Scotts Valley, Capitola, Watsonville, Aptos, and the surrounding areas. Our team is committed to providing expert engineered septic system solutions throughout Santa Cruz County.
 
-As a licensed contractor (C-42 license for CA), we ensure that all services are performed to the highest standards of quality and safety. Our office operates Monday through Friday, from 9am to 5pm, We do not offer 24/7 or after-hours emergency dispatch.
+As a licensed contractor (C-42 license for CA), we ensure that all services are performed to the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Contact us today to learn more about how we can assist with your septic system needs in Santa Cruz County, CA.
 
 ## Frequently Asked Questions
 
-### What is the cost range for engineered septic systems in Santa Cruz County?
+### How is pricing quoted for engineered septic systems in Santa Cruz County?
 
-The cost for engineered septic systems in Santa Cruz County can vary widely, typically ranging from $15,000 to $30,000, depending on the complexity and specific requirements of your property. For a detailed estimate, contact Wade's Plumbing & Septic for a personalized consultation.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the engineered septic system service?
 

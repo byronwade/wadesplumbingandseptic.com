@@ -53,4 +53,4 @@ Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service 
 
 **Nearby service areas:** [Aptos](/service-area/aptos-ca-plumbing-septic-services), [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)

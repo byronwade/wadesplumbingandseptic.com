@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site"
+
 export const serviceGroups = [
 	{
 		title: "Residential Plumbing",
@@ -70,20 +72,20 @@ export const trustedBrands = [
 
 export const heroStats = [
 	{ label: "Licensed", value: "CA CSLB #1087260" },
-	{ label: "Local rating", value: "4.9 out of 5" },
-	{ label: "Office hours", value: "Mon to Fri, 9 to 5" },
+	{ label: "Pricing", value: "Flat-rate, quoted on site" },
+	{ label: "Office hours", value: siteConfig.hours },
 ] as const
 
 export const trustPoints = [
 	"Family owned & operated",
 	"Licensed & insured",
 	"Satisfaction guaranteed",
-	"4.9 local rating",
+	"Flat-rate pricing, quoted on site before work begins.",
 ] as const
 
 export const reasons = [
 	["No-pressure advice", "Only the work your property needs."],
-	["Transparent pricing", "Clear pricing before work begins."],
+	["Flat-rate pricing", siteConfig.pricing],
 	["Clean workmanship", "Respectful service and a clean finish."],
 	["Long-term reliability", "Repairs and systems designed to last."],
 ] as const

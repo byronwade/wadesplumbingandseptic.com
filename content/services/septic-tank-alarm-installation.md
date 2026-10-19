@@ -33,6 +33,8 @@ Knowing when to install a septic tank alarm can save you time and money. Common 
 
 The cost of septic tank alarm installation can vary based on several factors, including the complexity of your septic system and the type of alarm system you choose. Our team provides transparent pricing and will work with you to find a solution that fits your budget while ensuring optimal system performance.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Prevention and Maintenance Tips
 
 Maintaining your septic system is essential for preventing costly repairs. Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/), including routine inspections and timely septic tank alarm installations, can help extend the life of your system. Additionally, proper waste disposal and avoiding overloading your system are key practices to keep your septic system in top condition.
@@ -55,16 +57,4 @@ Ensure the smooth operation of your septic system with our reliable alarm instal
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/) </
 
-## Trusted by Homeowners in Santa Cruz County
-
-★★★★★ 5-Star Rated Service
-
-"Wade's Plumbing & Septic installed our septic tank alarm quickly and efficiently. We feel much more secure now!" (Sarah, Santa Cruz)
-
-"Professional and reliable service. The team at Wade's made sure everything was up to code." (Mike, Watsonville)
-
-"Great experience from start to finish. The alarm system works perfectly!" (Emily, Scotts Valley)
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available for emergency services.

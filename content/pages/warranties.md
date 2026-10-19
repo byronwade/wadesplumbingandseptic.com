@@ -10,6 +10,8 @@ imageAlt: Clean professional plumbing valve installation
 
 Wade's Plumbing & Septic documents the scope of work, installed equipment, and applicable warranty terms on the estimate or invoice. Coverage depends on the service, materials, system condition, and manufacturer.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Workmanship coverage
 
 If a problem is caused by our covered workmanship, contact the office with the service address and original invoice. The team will review the work, schedule an evaluation, and explain the next step.

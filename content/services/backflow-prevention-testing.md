@@ -44,6 +44,8 @@ At Wade's Plumbing & Septic, our backflow prevention testing process is thorough
 
 The testing process typically takes a few hours, depending on the complexity of your system. Costs can vary based on the number of devices and any necessary repairs or replacements. Our team will provide a clear estimate before commencing work, ensuring transparency and no surprises.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Backflow Issues
 
 Regular maintenance and timely testing are key to preventing backflow issues. Consider scheduling annual tests and inspections to keep your system in optimal condition. Additionally, promptly addressing any plumbing issues and maintaining proper water pressure can help avoid common backflow problems.
@@ -78,14 +80,4 @@ Safeguard your home's drinking water with our expert backflow testing services i
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 
-"Wade's Plumbing & Septic provided exceptional service. Their backflow testing was thorough and efficient!" (Sarah, Santa Cruz)
-
-"I trust Wade's for all my plumbing needs. Their professionalism in backflow testing is unmatched." (John, Watsonville)
-
-"Fast and reliable service! Wade's team ensured our water safety with their backflow testing." (Emily, Scotts Valley)
-
-★★★★★ 5-star rating from satisfied customers
-
 Licensed Contractor: C-42 for California
-
-Fast-response guarantee: Available Monday to Friday, 8 AM to 6 PM

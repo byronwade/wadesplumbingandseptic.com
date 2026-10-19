@@ -142,13 +142,13 @@ Experience swift and efficient drain cleaning services to keep your plumbing flo
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is fully licensed with a C-42 license for California, ensuring professional and reliable service.
 
-Our office hours are Monday through Friday, 9am to 5pm. For urgent needs, our phone line is answered during business hours (Monday through Friday, 9:00am to 5:00pm). We do not offer 24/7 dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Frequently Asked Questions
 
 ### How much does it cost to clear clogged drains in Santa Cruz County, CA?
 
-The cost to clear clogged drains can vary based on the severity and location of the clog. Typically, prices range from $100 to $300. For an accurate estimate, contact Wade's Plumbing & Septic for a personalized quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the drain clearing service?
 
@@ -164,17 +164,7 @@ Wade's Plumbing & Septic is a trusted local provider with a reputation for relia
 
 ## Clear Clogged Drains Easily in Santa Cruz County, CA
 
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic quickly cleared our stubborn drain. Highly recommend!" (Sarah, Santa Cruz)
-
-"Professional and fast service. My go-to for all plumbing needs." (Mike, Capitola)
-
-"Efficient and friendly team. They handled our drain issue with ease." (Lisa, Watsonville)
-
 Licensed Contractor: C-42 for CA
-
-Fast Response Guarantee: Available for emergencies to serve Santa Cruz County, CA
 
 ## Skip the DIY, Get It Done Right
 

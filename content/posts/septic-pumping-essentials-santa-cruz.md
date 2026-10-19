@@ -122,20 +122,12 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz Coun
 
 We are a licensed contractor with a C-42 license for California, ensuring that all our services meet the highest standards of quality and compliance.
 
-Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on our service areas, please visit our [service area overview](/service-areas/).
 
 ## Trusted Septic Pumping Maintenance in Santa Cruz County, CA
 
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic provided outstanding service! The team was professional and efficient." (Emily, Santa Cruz)
-
-"Quick response and thorough work. Highly recommend for any septic needs!" (Mark, Watsonville)
-
-"Exceptional service from start to finish. Wade's is my go-to for septic maintenance." (Sarah, Scotts Valley)
-
 Licensed Contractor: C-42 for California
 
-Fast-Response Guarantee: Available Monday through Friday, 8 AM to 5 PM
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

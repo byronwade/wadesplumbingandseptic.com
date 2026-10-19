@@ -47,13 +47,6 @@ export const serviceNavLinks: MegaNavItem[] = [
 		description: "Business, restaurant, and multi-unit service.",
 		icon: "building",
 	},
-	{
-		href: "/service-category/emergency-services",
-		label: "Urgent Repairs",
-		description:
-			"Priority help for leaks, backups, and time-sensitive repairs.",
-		icon: "siren",
-	},
 ]
 
 export const serviceMegaHighlights = [

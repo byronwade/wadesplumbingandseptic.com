@@ -17,7 +17,7 @@ Interlaken homes span from post-war bungalows to newer infill construction. Orig
 
 We help Interlaken residents with:
 
-- Emergency and scheduled leak repair on supply lines, slabs, and crawlspaces
+- Scheduled leak repair on supply lines, slabs, and crawlspaces
 - Drain cleaning for slow kitchen sinks, tub backups, and main line blockages
 - Water heater repair, replacement, and expansion tank installation
 - Toilet, faucet, shower valve, and garbage disposal service

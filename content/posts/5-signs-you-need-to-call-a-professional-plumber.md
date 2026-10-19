@@ -45,9 +45,9 @@ If you find yourself repeatedly dealing with the same plumbing problem despite a
 
 ## When to Call Wade's Plumbing & Septic
 
-Our team of licensed professionals is available for emergency services and can handle everything from routine maintenance to complex repairs. Don't wait until a minor issue becomes a major problem, contact us at the first sign of these warning indicators.
+Our team of licensed professionals can handle everything from routine maintenance to complex repairs. Don't wait until a minor issue becomes a major problem, contact us at the first sign of these warning indicators.
 
-Remember, proper maintenance is the best way to avoid serious plumbing emergencies. Schedule regular inspections of your home's plumbing system to catch potential problems before they require expensive repairs.
+Remember, proper maintenance is the best way to avoid serious plumbing problems. Schedule regular inspections of your home's plumbing system to catch potential problems before they require expensive repairs.
 
 Santa Cruz County Septic Experts
 
@@ -61,17 +61,17 @@ At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz Coun
 
 We holds a C-42 contractor license for California, ensuring that our work meets the highest standards of quality and safety.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-Whether you need routine maintenance or emergency services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
+Whether you need routine maintenance or scheduled repairs, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
 
 ## Frequently Asked Questions
 
 ![Outdoor water treatment tanks](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
 
-### What is the cost range for septic services in Santa Cruz County, CA?
+### How is pricing quoted for septic services in Santa Cruz County, CA?
 
-The cost for septic services in Santa Cruz County can vary depending on the specific service required. For example, septic tank pumping typically ranges from $300 to $600, while more extensive services like septic system repair or replacement can range from $1,000 to $10,000 or more.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic service appointment?
 
@@ -93,18 +93,8 @@ Recognizing early warning signs can save you from costly repairs and ensure your
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### Trusted by Homeowners in Santa Cruz County
-
-★★★★★ 5-Star Rated Service
-
-**Testimonials:**
-
-> "Wade's Plumbing & Septic quickly identified and resolved our septic issue. Highly recommend!" (Sarah, Aptos)
-
-> "Professional and efficient service. Our septic system is running smoothly again thanks to Wade's!" (John, Watsonville)
-
-> "Fast response and excellent service. Wade's team knows their stuff!" (Emma, Santa Cruz)
+### Service Information
 
 **Licensed Contractor:** C-42 License for California
 
-**Fast-Response Guarantee:** Available for service calls Monday to Friday, 8 AM to 6 PM
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

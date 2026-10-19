@@ -43,7 +43,7 @@ Mixing up sewer and septic symptoms costs time. We verify connection type on sit
 
 Ocean proximity accelerates corrosion on hose bibs, exterior shutoffs, and some tank components. Sand tracked into outdoor showers and laundry rooms finds its way into drains not designed for heavy grit. Winter swells and king tides remind owners how close groundwater sits, saturated soils stress drainfields and can expose shallow laterals.
 
-Twin Lakes also sees concentrated use during holiday weekends. Systems that cope fine with a retired couple may struggle when occupancy triples. We recommend realistic maintenance intervals instead of waiting for an emergency during the busiest rental week of the year.
+Twin Lakes also sees concentrated use during holiday weekends. Systems that cope fine with a retired couple may struggle when occupancy triples. We recommend realistic maintenance intervals instead of waiting for a repair during the busiest rental week of the year.
 
 The neighborhood's position between two larger cities means some owners assume Santa Cruz or Capitola rules apply to permits and sewer extensions. They do not always. We clarify county versus city jurisdiction when work touches laterals near the municipal boundary so you are not surprised mid-project.
 
@@ -53,4 +53,4 @@ Contact Wade's at [831.225.4344](tel:+18312254344) for Twin Lakes plumbing or se
 
 **Nearby service areas:** [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 
-**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Emergency services](/service-category/emergency-services) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)
+**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)

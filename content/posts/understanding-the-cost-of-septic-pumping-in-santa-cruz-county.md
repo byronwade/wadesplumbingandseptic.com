@@ -20,7 +20,7 @@ imageAlt: Septic pumping service illustration
 
 For homeowners in Santa Cruz County, understanding septic pumping costs is crucial for maintaining an efficient and trouble-free septic system. Regular pumping not only prevents system failures but also helps you avoid expensive repairs and replacements. By ensuring your septic system is well-maintained, you can steer clear of extensive repair needs, such as
 
-![Plumbing emergency warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)
+![plumbing problem warning signs](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e-2.webp)
 
 .
 
@@ -34,7 +34,7 @@ The size of your septic tank significantly affects pumping costs. Larger tanks r
 
 ### Service Frequency and Its Cost Implications
 
-The frequency at which you pump your septic tank also affects the cost. Consistent maintenance tends to be more economical than dealing with emergencies. By opting for regular pumping, you can prevent major issues and save money over time. For a thorough septic care plan, explore our
+The frequency at which you pump your septic tank also affects the cost. Consistent maintenance tends to be more economical than dealing with major problems. By opting for regular pumping, you can prevent major issues and save money over time. For a thorough septic care plan, explore our
 
 services.
 
@@ -74,15 +74,15 @@ Invest in affordable septic pumping services in Santa Cruz County to maintain yo
 
 Wade's Plumbing & Septic is proud to serve the entire Santa Cruz County area, including the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. With our C-42 contractor license for California, you can trust our expertise and commitment to quality service.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in the heart of Santa Cruz or in the surrounding areas, our team is ready to provide reliable and professional septic services tailored to your needs.
 
 ## Frequently Asked Questions
 
-### What is the cost range for septic pumping in Santa Cruz County, CA?
+### How is pricing quoted for septic pumping in Santa Cruz County, CA?
 
-The cost for septic pumping in Santa Cruz County typically ranges from $250 to $500, depending on the size of the tank and specific service requirements. Contact us for a personalized quote.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic pumping service?
 

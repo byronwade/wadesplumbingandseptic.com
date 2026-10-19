@@ -2,7 +2,7 @@
 title: Commercial Plumbing Maintenance in Santa Cruz County
 description: >-
   Scheduled commercial plumbing maintenance for Santa Cruz County businesses.
-  Reduce emergencies and keep systems code-ready. Call 831.225.4344.
+  Reduce problems and keep systems code-ready. Call 831.225.4344.
 category: Commercial
 order: 20
 image: /images/work/commercial-plumbing-installation.webp
@@ -10,7 +10,7 @@ imageAlt: Commercial plumbing installation
 updated: "2026-07-30"
 ---
 
-Maintaining a well-functioning commercial plumbing system is essential for the smooth operation of your business. Our **commercial plumbing maintenance** programs at Wade's Plumbing & Septic ensure that your plumbing infrastructure remains in top condition, preventing costly emergency repairs and minimizing business interruptions. Serving Santa Cruz County, California, we offer customized solutions tailored to your facility's specific needs and usage patterns.
+Maintaining a well-functioning commercial plumbing system is essential for the smooth operation of your business. Our **commercial plumbing maintenance** programs at Wade's Plumbing & Septic ensure that your plumbing infrastructure remains in top condition, preventing costly repairs and minimizing business interruptions. Serving Santa Cruz County, California, we offer customized solutions tailored to your facility's specific needs and usage patterns.
 
 ## Signs You Need Commercial Plumbing Maintenance
 
@@ -47,6 +47,8 @@ At Wade's Plumbing & Septic, our comprehensive maintenance process includes:
 
 Regular maintenance should be scheduled annually, but high-usage facilities might require more frequent checks. Our experts will help determine the best timeline for your business.
 
+Flat-rate pricing, quoted on site before work begins.
+
 The cost of **commercial plumbing maintenance** can vary based on several factors, including:
 
 - Size and complexity of the plumbing system
@@ -77,14 +79,4 @@ Ensure your business operates smoothly with our reliable commercial plumbing sol
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
 
-"Wade's Plumbing & Septic has been a lifesaver for our restaurant. Their team is always professional and efficient." (Sarah, Santa Cruz)
-
-"Exceptional service! They quickly resolved our plumbing issues with minimal disruption to our business." (Mike, Capitola)
-
-"Highly recommend Wade's for any commercial plumbing needs. Their expertise and reliability are unmatched." (Linda, Watsonville)
-
-★★★★★ 5-star rating
-
 Licensed Contractor: C-42 for California
-
-Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM

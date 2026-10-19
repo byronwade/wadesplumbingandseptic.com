@@ -48,6 +48,8 @@ This comprehensive approach ensures that leaks are identified without unnecessar
 
 ## Factors Affecting Leak Detection Costs
 
+Flat-rate pricing, quoted on site before work begins.
+
 Several factors can influence the cost of leak detection services:
 
 - **Location of the Leak:** Easily accessible leaks are quicker and cheaper to detect.
@@ -76,7 +78,7 @@ Choosing Wade's Plumbing & Septic ensures you're working with a licensed, experi
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and surrounding communities. Our team is dedicated to providing reliable leak detection for septic systems, ensuring peace of mind for homeowners and businesses alike.
 
-We are fully licensed under the C-42 contractor license for California, ensuring professional and compliant services. Our office hours are Monday through Friday, from 9 am to 5 pm. For urgent needs, our phone line is answered during business hours for scheduling. We do not offer after-hours emergency dispatch.
+We are fully licensed under the C-42 contractor license for California, ensuring professional and compliant services. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Expert Leak Detection
 
@@ -86,16 +88,4 @@ Detect and resolve septic leaks swiftly with our cutting-edge technology and exp
 
 [Call Us Now](tel:+1-831-123-4567)
 
-### What Our Customers Say About Our Swift Septic Leak Detection
-
-★★★★★ 5-Star Rating
-
-**John from Scotts Valley:** "Wade's Plumbing & Septic quickly found and fixed our septic leak. Their service was professional and efficient!"
-
-**Emily from Capitola:** "I was impressed by their prompt response and thorough inspection. Highly recommend them for any septic issues!"
-
-**Mike from Watsonville:** "They provided excellent service and peace of mind. The leak detection was fast and accurate."
-
 We are a licensed contractor (C-42), ensuring quality and compliance with local standards.
-
-Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM.

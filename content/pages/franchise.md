@@ -13,6 +13,8 @@ noindex: true
 
 Wade's Plumbing & Septic is focused on building a reliable, service-first company around honest recommendations, clear pricing, and quality workmanship.
 
+Flat-rate pricing, quoted on site before work begins.
+
 Future ownership and franchise opportunities may become available as the company grows. Contact the Wade's team to introduce yourself and learn whether there is a current opportunity in your market.
 
 ## Start a conversation

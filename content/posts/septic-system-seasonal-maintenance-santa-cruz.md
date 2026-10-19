@@ -40,7 +40,7 @@ For homeowners in Santa Cruz County, maintaining a healthy septic system is vita
 ## Key Benefits of Regular Septic System Care
 
 - **Prevention of System Failures:** Regular checks can prevent major system breakdowns, ensuring continuous operation.
-- **Cost Savings:** Routine maintenance is less expensive than emergency repairs or system replacements.
+- **Cost Savings:** Routine maintenance is less expensive than major repairs or system replacements.
 - **Environmental Protection:** A well-maintained system reduces the risk of contamination to local water sources.
 - **Property Value:** An efficiently functioning septic system can enhance your property's value.
 

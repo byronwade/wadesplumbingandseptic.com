@@ -59,7 +59,7 @@ export function buildBusinessVCard(): string {
 		`NOTE:${escapeText(`${contactInfo.licenses}. Hours: ${contactInfo.hours}. ${siteConfig.serviceArea}.`)}`,
 		`UID:urn:uuid:wades-plumbing-${contactInfo.licenseNumber}`,
 		// Fixed revision keeps the route cacheable; bump when contact fields change.
-		"REV:20260730T120000Z",
+		"REV:20261019T224000Z",
 	]
 
 	if (photo) {

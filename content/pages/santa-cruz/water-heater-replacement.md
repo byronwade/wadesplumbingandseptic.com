@@ -12,4 +12,6 @@ Wade's installs and replaces conventional tank, high-efficiency, and tankless wa
 
 Installation can include removal, new shutoffs and supplies, drain pan, expansion control, venting, gas work, startup, temperature adjustment, testing, and disposal as listed in the written estimate.
 
+Flat-rate pricing, quoted on site before work begins.
+
 The original route spelling is preserved so existing links and search history continue to work.

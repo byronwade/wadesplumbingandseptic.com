@@ -50,7 +50,7 @@ Mature oaks and redwoods root toward sewer laterals and septic lines. Recurring 
 
 Winter storms saturate hillside soils. Septic drainfields on marginal sites may fail temporarily during wet months. Sewer laterals on older homes can shift with ground movement, opening joints that roots exploit.
 
-Fire-season preparedness matters in the foothills. Exterior hose bibs and emergency water sources should be tested before summer, not assumed functional because they worked last year.
+Fire-season preparedness matters in the foothills. Exterior hose bibs and backup water sources should be tested before summer, not assumed functional because they worked last year.
 
 ## Confirm coverage and schedule service
 

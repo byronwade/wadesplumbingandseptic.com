@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils"
 export const metadata: Metadata = buildPageMetadata({
 	title: "Santa Cruz Plumbing & Septic",
 	description:
-		"Licensed plumbing and septic for Santa Cruz County. Clear pricing, no upselling. Call 831.225.4344.",
+		"Licensed plumbing and septic for Santa Cruz County. Flat-rate pricing, quoted on site before work begins. Call 831.225.4344.",
 	pathname: "/",
 	image: "/images/locations/santa-cruz-redwoods.webp",
 	eyebrow: "Family owned · Local crew",
@@ -63,8 +63,8 @@ export default function HomePage() {
 					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
 							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
-							upselling, and clear pricing before work begins from local
-							licensed professionals.
+							upselling, and local licensed professionals. Flat-rate pricing,
+							quoted on site before work begins.
 						</p>
 
 						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
@@ -73,13 +73,13 @@ export default function HomePage() {
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 								size="xl"
 							/>
-							<Link prefetch={false}
+							<Link
+								prefetch={false}
 								className={cn(
 									buttonVariants({ variant: "inverse", size: "xl" }),
 									"w-full sm:w-auto",
 								)}
 								href="/services"
-
 							>
 								Our Services
 								<ArrowRight aria-hidden="true" />

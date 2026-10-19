@@ -11,7 +11,7 @@ imageAlt: Septic installation equipment on site
 updated: "2026-07-30"
 ---
 
-Septic tank riser installation is an essential service for homeowners looking to simplify the maintenance and inspection of their septic systems. By bringing the tank access points to the surface, risers eliminate the need for labor-intensive digging, saving both time and money. At Wade's Plumbing & Septic, we specialize in installing durable, watertight risers with secure, childproof lids that blend seamlessly with your landscaping. Servicing Santa Cruz County, California, our expert team ensures that your septic system remains easily accessible for routine care and emergency interventions.
+Septic tank riser installation is an essential service for homeowners looking to simplify the maintenance and inspection of their septic systems. By bringing the tank access points to the surface, risers eliminate the need for labor-intensive digging, saving both time and money. At Wade's Plumbing & Septic, we specialize in installing durable, watertight risers with secure, childproof lids that blend seamlessly with your landscaping. Servicing Santa Cruz County, California, our expert team ensures that your septic system remains easily accessible for routine care and repair interventions.
 
 ## Why Septic Tank Riser Installation is Essential
 
@@ -44,6 +44,8 @@ Once access is gained, we install the risers, ensuring they are watertight and s
 The complete installation usually takes a few hours, depending on the site conditions and specific requirements of your septic system.
 
 ## Cost Factors for Septic Tank Riser Installation
+
+Flat-rate pricing, quoted on site before work begins.
 
 Several factors influence the cost of installing septic tank risers, including:
 
@@ -83,14 +85,4 @@ Simplify maintenance and inspections with our professional septic riser installa
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
 
-"Wade's Plumbing & Septic made the septic riser installation process so easy and hassle-free. Highly recommend!" (Sarah, Santa Cruz)
-
-"Professional and efficient service. The team was knowledgeable and friendly." (Mike, Watsonville)
-
-"Great experience from start to finish. The risers have made maintenance much simpler." (Emily, Capitola)
-
-★★★★★ 5-star service
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 7 AM to 5 PM

@@ -45,6 +45,8 @@ At Wade's Plumbing & Septic, we follow a thorough process to ensure effective [d
 
 The timeline for drain cleaning varies based on the severity of the blockage, but most residential jobs are completed within a few hours. Cost factors include the complexity of the clog, pipe accessibility, and any additional repair needs. For a detailed estimate, contact Wade's Plumbing & Septic and let our experts assess your situation.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Drain Issues
 
 Prevention is key to maintaining a healthy plumbing system. Here are some tips to keep your drains clear:

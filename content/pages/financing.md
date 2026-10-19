@@ -2,7 +2,7 @@
 title: Financing Options
 description: >-
   At Wade's Plumbing & Septic, we understand that plumbing and septic
-  emergencies can create unexpected financial strain. That's why we offer
+  problems can create unexpected financial strain. That's why we offer
   flexible.
 order: 5
 eyebrow: Payment Options
@@ -10,7 +10,7 @@ eyebrow: Payment Options
 
 ## Flexible Financing Options
 
-At Wade's Plumbing & Septic, we understand that plumbing and septic emergencies can create unexpected financial strain. That's why we offer flexible financing options to help you address necessary repairs or replacements without delay.
+At Wade's Plumbing & Septic, we understand that plumbing and septic problems can create unexpected financial strain. That's why we offer flexible financing options to help you address necessary repairs or replacements without delay.
 
 ## Available Financing Plans
 
@@ -37,19 +37,19 @@ Contact us to discuss your plumbing or septic needs and learn more about our cur
 
 Wade's Plumbing & Septic proudly serves the following communities in Santa Cruz County, California: Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more. Our team is committed to providing top-notch plumbing and septic services throughout the region.
 
-Contractor License: C-42 license for CA / state license for GA
+Contractor License: C-42 license for California
 
-Office Hours: Monday to Friday 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Our service area extends across Santa Cruz County, ensuring that residents and businesses have access to reliable and efficient plumbing and septic solutions whenever needed.
 
 ## Frequently Asked Questions
 
-### What is the pricing range for plumbing and septic services in Santa Cruz County, CA?
+### How is pricing determined for plumbing and septic services in Santa Cruz County, CA?
 
 Our pricing for plumbing and septic services varies based on the specific needs of each project. We offer competitive rates and provide a detailed estimate after assessing your requirements.
+
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the service process with Wade's Plumbing & Septic?
 

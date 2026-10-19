@@ -47,6 +47,8 @@ At Wade's Plumbing & Septic, our water softener maintenance service involves a t
 
 Water softener maintenance is typically recommended annually, although frequency may vary based on water hardness and usage. Costs can depend on the system's condition and specific requirements. Our team provides transparent pricing and detailed estimates, ensuring no surprises.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Water Softener Problems
 
 Preventative measures can prolong the life of your water softener. Regular maintenance, using high-quality salt, and ensuring proper system settings can make a significant difference. For more complex issues, our experts are equipped to handle [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) if needed.
@@ -69,16 +71,6 @@ Ensure your water treatment system operates at peak performance with our expert 
 
 [Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### What Our Customers Say
-
-★★★★★ 5-Star Rating
-
-"Wade's Plumbing & Septic provided exceptional water softener maintenance. My system has never worked better!" (Sarah, Santa Cruz)
-
-"Fast, reliable, and professional service. Highly recommend for anyone in Santa Cruz County!" (John, Capitola)
-
-"Their team was knowledgeable and friendly. I trust Wade's with all my plumbing needs." (Emily, Watsonville)
-
 Licensed Contractor: C-42 for California
 
-Scheduling: Monday through Friday, 9:00am to 5:00pm.
+Scheduling: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.

@@ -109,13 +109,13 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, incl
 
 We hold a C-42 license for California, ensuring that our work meets the highest standards of quality and compliance.
 
-Our office is open Monday through Friday from 9am to 5pm, and we take calls during business hours only. We do not offer 24/7 or after-hours emergency dispatch. Whether you're in the heart of Santa Cruz or the surrounding areas, we're here to help you maintain a reliable septic system.
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Frequently Asked Questions
 
 ### How much does it cost to maximize the lifespan of my septic tank in Santa Cruz County?
 
-The cost to maximize your septic tank's lifespan varies based on specific needs and services required. Generally, you can expect to invest anywhere from $300 to $1,000 for comprehensive maintenance and inspection services.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic tank service in Santa Cruz County homes?
 

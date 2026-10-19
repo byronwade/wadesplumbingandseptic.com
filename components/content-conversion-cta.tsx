@@ -70,10 +70,10 @@ export function ContentConversionCta({
 								<ArrowRight aria-hidden="true" />
 							</a>
 						) : (
-							<Link prefetch={false}
+							<Link
+								prefetch={false}
 								className={secondaryClassName}
 								href={(secondary.href ?? "/contact") as Route}
-
 							>
 								{secondary.label}
 								<ArrowRight aria-hidden="true" />
@@ -121,8 +121,7 @@ export function ContentConversionCta({
 			<div className="relative border-t border-white/12 bg-black/25">
 				<div className="container-shell flex flex-wrap items-center justify-center gap-x-7 gap-y-2 py-3.5 sm:justify-between">
 					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-						<span className="text-primary-bright">★★★★★</span>
-						<span className="ml-2 text-white/85">5-star local reviews</span>
+						Flat-rate pricing, quoted on site before work begins.
 					</p>
 					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
 						{contactInfo.licenses}

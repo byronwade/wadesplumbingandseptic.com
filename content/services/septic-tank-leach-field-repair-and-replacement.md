@@ -88,17 +88,15 @@ Wade's Plumbing & Septic is proud to offer Expert Septic Leach Field Repair serv
 
 Our team is fully licensed and insured, holding a C-42 license for California, ensuring that your septic needs are handled by qualified professionals.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, Wade's Plumbing & Septic is your trusted local source for reliable septic solutions.
 
 ## Frequently Asked Questions
 
-### What is the cost range for expert septic leach field repair in Santa Cruz County?
+### How is pricing determined for expert septic leach field repair in Santa Cruz County?
 
-The cost for septic leach field repair in Santa Cruz County varies based on the extent of the damage and the specific requirements of your system. Typically, prices can range from $3,000 to $10,000. For a precise estimate, we recommend scheduling an on-site evaluation.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the septic leach field repair service?
 
@@ -120,14 +118,4 @@ Our certified team ensures your septic system operates efficiently, preventing c
 
 </
 
-"Wade's Plumbing & Septic saved my yard from a disaster. Quick and professional service!" (Sarah, Aptos)
-
-"Highly recommend their leach field repair service. They know what they're doing!" (Mike, Scotts Valley)
-
-"Fast response and excellent service. My septic system is working perfectly now!" (Emily, Watsonville)
-
-★★★★★ 5-Star Rating
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

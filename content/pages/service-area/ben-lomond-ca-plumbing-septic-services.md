@@ -35,7 +35,7 @@ Wade's septic services include:
 
 - **Tank pumping and cleaning** with clear notes on what we found (sludge depth, baffles, inlet/outlet condition)
 - **County inspections and certifications** when you're buying, selling, or refinancing
-- **Filter service, risers, and alarm checks**, small upgrades that prevent expensive emergencies
+- **Filter service, risers, and alarm checks**, small upgrades that prevent expensive problems
 - **Leach field evaluation** when wet spots appear downhill from the tank or toilets back up during laundry
 - **System repair and replacement**, including [engineered septic designs](/service-offerings/engineered-septic-system-installation) when Ben Lomond's slopes won't support a standard gravity layout
 

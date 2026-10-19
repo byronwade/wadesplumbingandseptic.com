@@ -74,9 +74,9 @@ export const plumbingTerms: GlossaryTerm[] = [
 		definition:
 			"A ball valve uses a perforated ball to start or stop flow with a 90-degree turn of the handle. Full-port models offer minimal restriction when open, making them popular on main lines and water heater connections.\n\nThey seal well when new and are easier to operate than older gate valves that may seize after years without use.",
 		localContext:
-			"Many Santa Cruz County homes still have original gate valves on copper mains. Plumbers often upgrade to ball valves during repipes in Felton, Ben Lomond, and mid-century ranch homes where a stuck shutoff delays emergency repairs.",
+			"Many Santa Cruz County homes still have original gate valves on copper mains. Plumbers often upgrade to ball valves during repipes in Felton, Ben Lomond, and mid-century ranch homes where a stuck shutoff delays leak repairs.",
 		homeownerTip:
-			"Label your main ball valve and exercise it once a year so it turns freely in an emergency.",
+			"Label your main ball valve and exercise it once a year so it turns freely when needed.",
 		relatedServiceSlugs: [
 			"water-line-repair-and-installation",
 			"fixture-installation",
@@ -140,7 +140,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 		shortDefinition:
 			"A capped access fitting on a drain or sewer line that lets plumbers snake, jet, or camera the pipe without cutting into walls, floors, or landscaping.",
 		definition:
-			"A cleanout is a threaded or glued fitting with a removable cap, usually placed where the building drain meets the sewer lateral or at changes of direction. It is the primary access point for clearing clogs and inspecting pipe condition.\n\nMissing or buried cleanouts make emergency drain work slower and more expensive. Code often requires cleanouts at the property line and at major bends in the system.",
+			"A cleanout is a threaded or glued fitting with a removable cap, usually placed where the building drain meets the sewer lateral or at changes of direction. It is the primary access point for clearing clogs and inspecting pipe condition.\n\nMissing or buried cleanouts make drain work slower and more expensive. Code often requires cleanouts at the property line and at major bends in the system.",
 		localContext:
 			"Santa Cruz County hillside homes sometimes have cleanouts buried by landscaping or deck additions in the Santa Cruz Mountains. Coastal properties with raised foundations in Rio Del Mar benefit from exterior cleanouts that stay accessible during winter storms.",
 		homeownerTip:
@@ -285,7 +285,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 		shortDefinition:
 			"The small valve under a sink or behind a toilet that shuts off water to one fixture without turning off the whole house, building, or irrigation line.",
 		definition:
-			"Fixture shutoff valves, often called angle stops, sit on the supply line between the branch and the fixture connector. Quarter-turn or multi-turn designs allow quick isolation during leaks, faucet swaps, or toilet repairs.\n\nOld compression valves on galvanized or copper stub-outs may leak when exercised after years idle. Replacing stops during fixture upgrades prevents emergency shutoff problems.",
+			"Fixture shutoff valves, often called angle stops, sit on the supply line between the branch and the fixture connector. Quarter-turn or multi-turn designs allow quick isolation during leaks, faucet swaps, or toilet repairs.\n\nOld compression valves on galvanized or copper stub-outs may leak when exercised after years idle. Replacing stops during fixture upgrades prevents shutoff problems.",
 		localContext:
 			"Older Santa Cruz cottages often have corroded stops tucked into tight vanity cabinets near the coast. Multi-unit buildings in downtown Santa Cruz benefit from labeled stops so tenants can contain a leak before the main is located.",
 		homeownerTip:
@@ -371,9 +371,9 @@ export const plumbingTerms: GlossaryTerm[] = [
 		definition:
 			"A gate valve uses a threaded stem to lift a metal gate out of the water path. Fully open, it offers low resistance, but partially open positions can vibrate and wear the gate.\n\nMineral buildup and disuse cause many older gate valves to break when forced. Plumbers often replace them with ball valves during repipes or water heater work.",
 		localContext:
-			"Pre-1980 Santa Cruz homes frequently have gate valves on street-side mains in cramped crawl spaces. Corrosion from coastal moisture makes these valves hard to find and operate during after-hours leaks in Live Oak.",
+			"Pre-1980 Santa Cruz homes frequently have gate valves on street-side mains in cramped crawl spaces. Corrosion from coastal moisture makes these valves hard to find and operate during leaks in Live Oak.",
 		homeownerTip:
-			"If your main shutoff has a round wheel handle, test it carefully; consider upgrading before an emergency.",
+			"If your main shutoff has a round wheel handle, test it carefully; consider upgrading before a leak occurs.",
 		relatedServiceSlugs: [
 			"water-line-repair-and-installation",
 			"pipe-repair-and-replacement",
@@ -1043,7 +1043,7 @@ export const plumbingTerms: GlossaryTerm[] = [
 		localContext:
 			"Garage and exterior closet heaters are standard in Santa Cruz County tract homes and mountain cabins. Coastal salt air favors regular inspection of burner compartments and vent connectors on gas models.",
 		homeownerTip:
-			"Flush sediment yearly and plan replacement near the end of the manufacturer warranty period to avoid emergency cold showers.",
+			"Flush sediment yearly and plan replacement near the end of the manufacturer warranty period to avoid unexpected cold showers.",
 		relatedServiceSlugs: [
 			"water-heater-installation",
 			"tankless-water-heater-installation",

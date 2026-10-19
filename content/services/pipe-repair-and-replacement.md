@@ -11,7 +11,7 @@ imageAlt: Leaking water pipe outdoors
 updated: "2026-07-30"
 ---
 
-At Wade's Plumbing & Septic, we understand the urgency and importance of maintaining a reliable plumbing system. Our specialized pipe repair and replacement services cater to residents and businesses throughout Santa Cruz County, ensuring that your piping infrastructure remains in optimal condition. Whether you're dealing with a minor leak or require extensive repiping, our expert team is equipped to handle all types of pipe materials, including copper, PEX, PVC, and galvanized steel. With our comprehensive approach, we can address your "pipe repair Santa Cruz County" needs efficiently and effectively.
+At Wade's Plumbing & Septic, we understand the importance of maintaining a reliable plumbing system. Our specialized pipe repair and replacement services cater to residents and businesses throughout Santa Cruz County, ensuring that your piping infrastructure remains in optimal condition. Whether you're dealing with a minor leak or require extensive repiping, our expert team is equipped to handle all types of pipe materials, including copper, PEX, PVC, and galvanized steel. With our comprehensive approach, we can address your "pipe repair Santa Cruz County" needs efficiently and effectively.
 
 ## Signs You Need Pipe Repair in Santa Cruz County
 
@@ -46,6 +46,8 @@ The cost of pipe repair and replacement can vary based on several factors:
 - Accessibility of the affected area
 - Scope of work required
 
+Flat-rate pricing, quoted on site before work begins.
+
 We provide transparent pricing and detailed estimates to help you make informed decisions without any hidden surprises.
 
 ## Preventing Future Pipe Problems
@@ -78,9 +80,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, offe
 
 Our team is fully licensed and insured, holding a C-42 license for California. We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more information on our service areas, visit our [service area overview](/service-areas/).
 
@@ -90,4 +90,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call Us](tel:+18312254344) [Get a Free Quote</ "Wade's Plumbing & Septic quickly repaired our leaking pipe, saving us from a potential disaster. Highly recommend!" (Sarah, Santa Cruz "The team was professional and efficient, leaving no mess behind. Our pipes are now in perfect condition!"), John, Capitola "Exceptional service and knowledgeable staff. Wade's is our go-to for any plumbing needs!" (Emily, Scotts Valley ★★★★★ 5-Star Rated Service Licensed Contractor: C-42 for CA Scheduling: Monday through Friday, 9:00am to 5:00pm.
+[Call us](tel:+18312254344) [Request service](/contact)

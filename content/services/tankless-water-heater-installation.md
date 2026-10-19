@@ -50,6 +50,8 @@ Throughout the process, we follow all local codes and safety guidelines to ensur
 
 The cost of tankless water heater installation can vary based on several factors, including the size of the unit, any necessary modifications to gas lines, and the complexity of the venting required. On average, installations can take a day to complete, but we always strive to minimize inconvenience to your daily routine.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## FAQs About Tankless Water Heaters
 
 - **Why should I choose a tankless water heater over a traditional one?** Tankless systems are more energy-efficient, providing hot water on demand without holding a reserve, which saves on energy bills.
@@ -67,7 +69,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 We are fully licensed and insured, holding a C-42 license for California, ensuring that all work is completed to the highest standards of safety and quality.
 
-Our office hours are Monday through Friday, 9am to 5pm. For your convenience, we also offer an phone line answered during business hours for scheduling. We do not offer 24/7 dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 With Wade's Plumbing & Septic, you can trust in our commitment to excellence and our deep roots in Santa Cruz County, CA, to deliver reliable and professional service every time.
 
@@ -79,16 +81,4 @@ Experience the benefits of endless hot water and reduced energy bills with our e
 
 [Call Us](tel:+18312254344)
 
-### What Our Customers Are Saying
-
-★★★★★ 5-Star Rating
-
-**John from Santa Cruz:** "Wade's Plumbing & Septic made upgrading to a tankless water heater seamless. Their team was professional and knowledgeable!"
-
-**Emily from Watsonville:** "Exceptional service from start to finish. I love my new tankless water heater, and the installation was quick and efficient!"
-
-**Michael from Scotts Valley:** "Highly recommend Wade's for their expertise and fast response time. My tankless water heater is working perfectly!"
-
 Licensed Contractor: C-42 (California)
-
-Fast-Response Guarantee: Available for all your plumbing needs.

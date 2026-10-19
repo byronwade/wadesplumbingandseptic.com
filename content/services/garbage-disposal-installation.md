@@ -46,6 +46,8 @@ At Wade's Plumbing & Septic, our installation process is straightforward and eff
 
 The cost of garbage disposal installation can vary based on several factors, including the type of unit and the complexity of the installation. Our team provides transparent pricing and a timeline tailored to your needs, usually completing installations within a few hours.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Issues
 
 To extend the life of your garbage disposal, follow these tips:
@@ -78,9 +80,7 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 Contractor License: C-42 license for California
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 For more details on our service areas, visit our [main service-area overview](/service-areas/).
 
@@ -92,22 +92,4 @@ Experience seamless waste management with our expert installation services, ensu
 
 [Call Us Now](tel:+18312254344)
 
-## What Our Customers Are Saying
-
-> "Wade's Plumbing & Septic transformed our kitchen with their disposal installation. Fast and professional service!"
->
-> , Emily, Santa Cruz
-
-> "Highly recommend their kitchen disposal upgrade service. The team was knowledgeable and efficient!"
->
-> , Alex, Watsonville
-
-> "Our new kitchen disposal works like a charm. Wade's team was prompt and courteous throughout the process."
->
-> , Jordan, Capitola
-
-★★★★★ 5-Star Rating from Our Satisfied Customers
-
 Licensed Contractor: C-42
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

@@ -55,7 +55,7 @@ If you cannot call immediately, use the contact form and include your city, issu
 
 ### How much does an engineered septic system cost in Santa Cruz County?
 
-The cost of an engineered septic system in Santa Cruz County can vary widely depending on the complexity of the system and site conditions, typically ranging from $15,000 to $40,000. For a detailed estimate, contact Wade's Plumbing & Septic for a consultation.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the engineered septic system installation service?
 

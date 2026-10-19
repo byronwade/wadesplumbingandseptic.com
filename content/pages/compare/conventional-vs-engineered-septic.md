@@ -34,6 +34,8 @@ Engineered designs and advanced treatment units (ATUs) show up when conventional
 
 These systems cost more up front and need clearer maintenance (alarms, filters, sometimes service contracts), but they are often what makes a property buildable or replaceable at all.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## How to decide without guessing
 
 1. Start with an honest site assessment and soil/perc information, not a sales pitch for the most expensive option.

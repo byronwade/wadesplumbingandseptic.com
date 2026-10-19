@@ -38,6 +38,8 @@ Wade's Plumbing & Septic offers a comprehensive grease trap installation process
 
 The timeline for grease trap installation varies based on the size and type of system. Typically, installations can be completed within a day, minimizing downtime for your business. Cost factors include the type of grease trap, installation complexity, and any necessary modifications to your plumbing system.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Prevention and Maintenance
 
 Once installed, regular [grease trap cleaning](/service-offerings/grease-trap-cleaning/) and maintenance are crucial to keep your system functioning efficiently. This includes routine inspections and timely removal of accumulated FOG. Preventative measures such as staff training on proper waste disposal can also extend the lifespan of your grease trap.
@@ -72,22 +74,6 @@ Ensure your kitchen runs smoothly with expert grease trap installation from Wade
 
 ## Trusted by Local Businesses in Santa Cruz County
 
-★★★★★ 5-Star Service Rating
-
 Our grease trap installation services are trusted by businesses across Santa Cruz County, ensuring the highest standards of quality and reliability.
 
-> "Wade's Plumbing & Septic made the entire grease trap installation process seamless and efficient. Highly recommend!"
->
-> \- Sarah, Santa Cruz
-
-> "Professional and knowledgeable team. Our restaurant's grease trap was installed quickly and without any hassle."
->
-> \- Mike, Watsonville
-
-> "Excellent service from start to finish. The team was prompt and left no mess behind."
->
-> \- Jessica, Capitola
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 6 PM

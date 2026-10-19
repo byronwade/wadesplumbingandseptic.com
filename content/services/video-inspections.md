@@ -56,6 +56,8 @@ Based on our analysis, we offer expert advice and solutions tailored to your spe
 
 A typical sewer line video inspection can be completed in a few hours, depending on the complexity and length of your sewer system. Cost factors include the extent of the inspection, any additional services required, and the state of your current plumbing system.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Preventing Future Sewer Line Issues
 
 Preventive maintenance is key to avoiding costly repairs. Regular inspections, proper waste disposal, and maintaining tree roots away from underground pipes can significantly reduce the risk of sewer line problems.
@@ -80,16 +82,4 @@ Experience peace of mind with our state-of-the-art video inspections, ensuring y
 
 [Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
 
-### What Our Customers Say
-
-"The video inspection service was quick and efficient. I was impressed by their professionalism!" (Sarah, Santa Cruz)
-
-"Wade's Plumbing & Septic helped us identify a hidden issue. Their service saved us time and hassle." (Mike, Capitola)
-
-"Highly recommend their video inspection service. It provided peace of mind knowing everything was clear." (Emma, Watsonville)
-
-★★★★★ 5-Star Rated
-
 Licensed Contractor: C-42
-
-Fast Response Guarantee: Available 7 AM to 7 PM, Monday to Saturday

@@ -54,9 +54,9 @@ forms for spam or unlawful purposes.
 Plumbing, gas, electrical, excavation, and septic work can create serious
 hazards. Do not rely on general website information when conditions involve gas
 odor, sewage exposure, uncontrolled flooding, structural damage, or electrical
-risk. Contact the appropriate emergency service and a qualified professional.
+risk. Contact the appropriate public safety agency and a qualified professional.
 
-For non-emergency service during office hours, call [831.225.4344](tel:+18312254344)
+For plumbing or septic service during office hours, call [831.225.4344](tel:+18312254344)
 or use our [contact page](/contact).
 
 ## Intellectual property
@@ -84,7 +84,7 @@ TO THE FULLEST EXTENT PERMITTED BY LAW, WADE'S AND ITS OWNERS, EMPLOYEES, AND
 AGENTS ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
 PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SITE OR RELIANCE ON SITE CONTENT.
 OUR TOTAL LIABILITY FOR CLAIMS ARISING FROM SITE USE IS LIMITED TO ONE HUNDRED
-U.S. DOLLARS ($100), EXCEPT WHERE LIABILITY CANNOT BE LIMITED BY LAW. This
+U.S. DOLLARS, EXCEPT WHERE LIABILITY CANNOT BE LIMITED BY LAW. This
 section does not limit liability for completed construction work governed by a
 separate written agreement or by non-waivable law.
 

@@ -33,6 +33,8 @@ Our process begins with an extensive site evaluation in Santa Cruz County, Calif
 
 The timeline for septic tank design and installation can vary depending on the complexity of the project and permitting requirements. Typically, the process can take several weeks to a few months. Cost factors include system size, type (conventional, alternative, or advanced treatment), and site-specific engineering needs.
 
+Flat-rate pricing, quoted on site before work begins.
+
 ## Why Choose Wade's Plumbing & Septic?
 
 Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, California, for all septic design and engineering needs. Our team's experience and local knowledge ensure that each project meets the highest standards of quality and compliance. We are responsive, dependable, and committed to providing exceptional service to our community.
@@ -59,9 +61,7 @@ At Wade's Plumbing & Septic, we are proud to offer expert septic tank design ser
 
 Our licensed contractors, holding a C-42 license for California, ensure that every project is handled with the utmost professionalism and expertise.
 
-Office Hours: Monday to Friday, 9am to 5pm
-
-Our office hours are Monday through Friday, 9:00am to 5:00pm. Call 831.225.4344 during business hours to schedule service. We do not offer 24/7 or after-hours emergency dispatch.
+Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 With a strong local presence, we understand the unique needs of Santa Cruz County residents and are here to provide reliable and efficient septic solutions.
 
@@ -75,14 +75,4 @@ Tailored septic systems for efficient and environmentally-friendly waste managem
 
 ## Trusted Septic Tank Design in Santa Cruz County, CA
 
-★★★★★ 5-Star Rated Service
-
-"Wade's Plumbing & Septic designed our septic system with precision and care. We couldn't be happier!" (Sarah, Aptos)
-
-"The team was professional and knowledgeable, making the process seamless from start to finish." (Mike, Santa Cruz)
-
-"Our new septic system works flawlessly, thanks to Wade's expert design services." (Emily, Scotts Valley)
-
 Licensed Contractor: C-42 for California
-
-Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM

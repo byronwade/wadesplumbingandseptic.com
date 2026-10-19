@@ -70,13 +70,13 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, incl
 
 As a licensed contractor with a C-42 license for California, we ensure all our services meet the highest standards of professionalism and reliability.
 
-Our office hours are Monday through Friday, from 9am to 5pm. For your convenience, we take calls during business hours only (Monday through Friday, 9:00am to 5:00pm).
+Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 ## Frequently Asked Questions
 
-### What is the cost range for installing a water softener in Santa Cruz County, CA?
+### How is pricing quoted for installing a water softener in Santa Cruz County, CA?
 
-The cost of installing a water softener in Santa Cruz County can vary based on the system's size and features. Generally, prices range from $1,500 to $3,500, including installation.
+Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during the water softener installation service?
 
