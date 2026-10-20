@@ -9,7 +9,12 @@ import { ServiceAreasMapLazy } from "@/components/service-areas-map-lazy"
 import type { ContentDocument } from "@/lib/content"
 import { normalizeConversion } from "@/lib/content-conversion"
 import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
-import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "@/lib/seo"
+import {
+	breadcrumbJsonLd,
+	buildPageMetadata,
+	serviceAreasJsonLd,
+	webPageJsonLd,
+} from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 const description =
@@ -110,10 +115,10 @@ export default function ServiceAreasPage() {
 							<ul className="border-border bg-border mt-8 grid gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
-										<Link prefetch={false}
+										<Link
+											prefetch={false}
 											className="bg-background hover:bg-muted flex h-full items-center px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
 											href={location.href as Route}
-
 										>
 											{location.name}
 										</Link>
@@ -145,16 +150,7 @@ export default function ServiceAreasPage() {
 							"@id": `${siteConfig.url}/#business`,
 							name: siteConfig.name,
 						},
-						areaServed: [
-							{
-								"@type": "AdministrativeArea",
-								name: "Santa Cruz County, California",
-							},
-							{
-								"@type": "AdministrativeArea",
-								name: "Santa Clara County, California",
-							},
-						],
+						areaServed: serviceAreasJsonLd(),
 					},
 				]}
 			/>

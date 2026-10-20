@@ -178,6 +178,44 @@ async function main() {
 		"Sitemap entries should be sorted by priority so chunk 0 is money pages",
 	)
 
+	const { GET } = await import("../../app/llms.txt/route")
+	const { serviceAreaLocations } = await import("../../lib/service-areas")
+	const { cityServicePages, cityServicePath, getCityLocation } =
+		await import("../../lib/city-service-pages")
+	const directoryResponse = await GET()
+	assert.equal(
+		directoryResponse.headers.get("Content-Type"),
+		"text/plain; charset=utf-8",
+	)
+	const directory = await directoryResponse.text()
+	const directoryUrls = [...directory.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map(
+		(match) => match[1],
+	)
+	for (const location of serviceAreaLocations) {
+		const url = `${siteConfig.url}${location.href}`
+		assert.equal(directoryUrls.filter((entry) => entry === url).length, 1, url)
+		assert.ok(
+			pathSet.has(location.href),
+			`Community missing from sitemap: ${url}`,
+		)
+	}
+	for (const page of cityServicePages) {
+		const location = getCityLocation(page.citySlug)
+		assert.ok(location, `Unknown community: ${page.citySlug}`)
+		const path = cityServicePath(page.citySlug, page.serviceSlug)
+		const url = `${siteConfig.url}${path}`
+		assert.equal(directoryUrls.filter((entry) => entry === url).length, 1, url)
+		assert.ok(pathSet.has(path), `Local guide missing from sitemap: ${url}`)
+		assert.ok(
+			directory.includes(
+				`[${page.serviceTitle} in ${location.name}, CA](${url})`,
+			),
+		)
+	}
+	console.log(
+		`AI directory checks passed (${serviceAreaLocations.length} communities, ${cityServicePages.length} local guides)`,
+	)
+
 	console.log(
 		`Sitemap quality checks passed ✓ (${entries.length} URLs, ${
 			entries.filter((entry) => entry.images?.length).length
