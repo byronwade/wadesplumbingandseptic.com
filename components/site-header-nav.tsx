@@ -332,12 +332,14 @@ export function SiteHeaderNav() {
 				/>
 			</div>
 
-			<div className="flex items-center lg:hidden">
+			{/* Icon targets are sized in px: icons are not text, so enlarged text
+			    should not double them and push the menu button off screen. */}
+			<div className="flex shrink-0 items-center lg:hidden">
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent sm:hidden"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent sm:hidden [&_svg]:size-[16px]"
 					aria-label="Search services, tips, and pages"
 					onMouseEnter={() => void prefetchSearchIndex()}
 					onFocus={() => void prefetchSearchIndex()}
@@ -345,12 +347,12 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink inline-flex size-11 items-center justify-center rounded-md text-white hover:bg-transparent sm:hidden" />
+				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] rounded-md text-white hover:bg-transparent sm:hidden [&_svg]:size-[20px]" />
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent [&_svg]:size-[16px]"
 					aria-label="Open main menu"
 					onClick={openMobileMenu}
 				>

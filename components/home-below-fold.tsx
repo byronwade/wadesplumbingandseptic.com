@@ -183,7 +183,12 @@ export function HomeBelowFold() {
 							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
-					<div className="snap-rail mt-[var(--space-block)]">
+					<div
+						aria-label="Project photos"
+						className="snap-rail mt-[var(--space-block)]"
+						role="region"
+						tabIndex={0}
+					>
 						{workGallery.map((image) => (
 							<figure key={image.src}>
 								<div className="bg-panel-elevated relative aspect-4/5 overflow-hidden rounded-lg">
