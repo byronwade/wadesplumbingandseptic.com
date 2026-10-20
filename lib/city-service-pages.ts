@@ -19,7 +19,6 @@ export type CityServicePage = {
 const serviceTitles: Record<string, string> = {
 	"drain-cleaning": "Drain Cleaning",
 	"hydro-jetting": "Hydro Jetting",
-	"septic-tank-cleaning-and-pumping": "Septic Tank Pumping",
 	"septic-tank-inspection-and-assessment": "Septic Tank Inspection",
 	"engineered-septic-system-installation": "Engineered Septic Systems",
 	"water-heater-installation": "Water Heater Installation",
@@ -51,34 +50,6 @@ export const cityServicePages: CityServicePage[] = [
 					"Many lenders and buyers request one. County rules and private contracts vary, so we inspect to practical standards for your parcel and explain what we find before you negotiate repairs.",
 			},
 		],
-	},
-	{
-		citySlug: "felton",
-		serviceSlug: "septic-tank-cleaning-and-pumping",
-		serviceTitle: serviceTitles["septic-tank-cleaning-and-pumping"]!,
-		localAngle:
-			"San Lorenzo Valley homes in Felton often run full-time occupancy on tanks sized decades ago. Pumping intervals depend on household size and whether a garbage disposal or under-sink filter is pushing solids faster than the tank can settle.",
-		commonIssues: [
-			"Alarms after holiday guests overload the tank",
-			"Slow drains house-wide when the tank is due",
-			"Difficult truck access on narrow redwood driveways",
-			"Filters clogged with lint and grease between pump-outs",
-		],
-		nearbySlugs: ["ben-lomond", "zayante", "brookdale"],
-	},
-	{
-		citySlug: "boulder-creek",
-		serviceSlug: "septic-tank-cleaning-and-pumping",
-		serviceTitle: serviceTitles["septic-tank-cleaning-and-pumping"]!,
-		localAngle:
-			"Boulder Creek's canyon lots and long private roads mean pump trucks need clear staging and accurate lid locations. Many systems sit under leaf litter from dense canopy, so we locate access before guessing with a shovel.",
-		commonIssues: [
-			"Buried risers under years of forest debris",
-			"Seasonal cabins that sit idle then get weekend spikes",
-			"Steep grades that limit truck approach",
-			"Odors after the first heavy rains of the season",
-		],
-		nearbySlugs: ["brookdale", "ben-lomond", "bonny-doon"],
 	},
 	{
 		citySlug: "ben-lomond",
@@ -279,20 +250,6 @@ export const cityServicePages: CityServicePage[] = [
 		nearbySlugs: ["santa-cruz", "twin-lakes", "capitola"],
 	},
 	{
-		citySlug: "mount-hermon",
-		serviceSlug: "septic-tank-cleaning-and-pumping",
-		serviceTitle: serviceTitles["septic-tank-cleaning-and-pumping"]!,
-		localAngle:
-			"Mount Hermon cabins and full-time homes share steep access and heavy tree cover. Pumping visits go smoother when lids are marked and vehicles can stage without blocking the one-lane approaches common here.",
-		commonIssues: [
-			"Seasonal occupancy swings",
-			"Difficult lid access under decks",
-			"Pump systems after power blips",
-			"Scheduling around camp and conference traffic",
-		],
-		nearbySlugs: ["felton", "scotts-valley", "ben-lomond"],
-	},
-	{
 		citySlug: "brookdale",
 		serviceSlug: "septic-tank-inspection-and-assessment",
 		serviceTitle: serviceTitles["septic-tank-inspection-and-assessment"]!,
@@ -347,20 +304,6 @@ export const cityServicePages: CityServicePage[] = [
 			"Recurring kitchen stoppages",
 		],
 		nearbySlugs: ["aptos", "la-selva-beach", "capitola"],
-	},
-	{
-		citySlug: "la-selva-beach",
-		serviceSlug: "septic-tank-cleaning-and-pumping",
-		serviceTitle: serviceTitles["septic-tank-cleaning-and-pumping"]!,
-		localAngle:
-			"La Selva Beach still has pockets of septic near the coast where sandy soils and vacation use change how fast tanks fill. Pumping schedules should match actual occupancy, not a generic annual postcard.",
-		commonIssues: [
-			"Seasonal rental spikes",
-			"Lids hidden in coastal landscaping",
-			"Alarm calls after holiday weekends",
-			"Coordinating access on narrow beach streets",
-		],
-		nearbySlugs: ["aptos", "watsonville", "rio-del-mar"],
 	},
 	{
 		citySlug: "lompico",

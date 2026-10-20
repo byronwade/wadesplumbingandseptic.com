@@ -21,7 +21,7 @@ import {
 const SERVICE_POPULARITY: Record<string, number> = {
 	"engineered-septic-system-installation": 52,
 	"drain-cleaning": 48,
-	"septic-tank-cleaning-and-pumping": 47,
+	"septic-system-installation": 47,
 	"hydro-jetting": 45,
 	"leak-detection": 44,
 	"sewer-camera-inspection": 43,
@@ -259,13 +259,13 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 			type: "page",
 			title: "Septic Services",
 			description:
-				"Pumping, inspections, repairs, and engineered septic systems.",
+				"Septic installations with engineers, inspections, and repairs.",
 			href: "/service-category/septic",
 			category: "Category",
 			keywords: keywordsFromText(
 				"septic",
 				"tank",
-				"pumping",
+				"installation",
 				"leach field",
 				"drainfield",
 			),

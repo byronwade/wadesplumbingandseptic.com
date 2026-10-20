@@ -44,6 +44,41 @@ for (const text of [
 	})
 }
 
+for (const text of [
+	"[septic pumping](/service-offerings/septic-tank-cleaning-and-pumping/)",
+	"See /santa-cruz/septic-pumping for details",
+	"## Essential Septic Pumping in Santa Cruz County",
+	"Contact us for expert septic pumping services.",
+	"Tank pumping coordination, filter service, and maintenance",
+	"We plan truck access for every pump truck visit.",
+	"- **Tank pumping and cleaning** with clear notes",
+	"- Routine pumping sized to household use",
+	"- Septic pumping with sludge-level notes",
+	"We've pumped tanks at the end of one-lane drives.",
+	"Our experts at Wade's will inspect your tank, pump it if necessary.",
+	"Call today to schedule your septic pumping.",
+]) {
+	test(`rejects septic pumping offer: ${text}`, () => {
+		assert.ok(businessFactIssues(text).includes("septic pumping offer"))
+	})
+}
+
+for (const text of [
+	"Most tanks need pumping every 3 to 5 years.",
+	"Failing to pump your tank can cause overflows.",
+	"A tank that hasn't been pumped in fifteen years can fail quietly.",
+	"Sump pump installation keeps crawl spaces dry.",
+	"Low pressure might be a failing well pump uphill.",
+	"Our crews install tanks, treatment units, pumps, controls, and dispersal components.",
+	"Effluent pumps and pump chambers dose the field.",
+	"image: /images/services/septic-pumping-illustration.webp",
+	"Not offered: septic tank pumping",
+]) {
+	test(`allows educational or equipment pump copy: ${text}`, () => {
+		assert.ok(!businessFactIssues(text).includes("septic pumping offer"))
+	})
+}
+
 test("conversion fallback never generates a customer testimonial", () => {
 	const conversion = normalizeConversion(null, {
 		title: "Drain cleaning",
