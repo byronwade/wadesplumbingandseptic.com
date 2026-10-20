@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Archivo, Geist, Geist_Mono, Manrope } from "next/font/google"
+import { Archivo, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
 import { ThemeProvider } from "next-themes"
 import { Suspense } from "react"
@@ -32,17 +32,6 @@ const archivo = Archivo({
 	/* Body font covers first paint; Archivo is for display headings. */
 	preload: false,
 	weight: ["700", "800"],
-})
-
-/* Typeset markdown surfaces (shadcn/typeset). Site UI keeps Manrope/Archivo. */
-const geist = Geist({
-	subsets: ["latin"],
-	variable: "--font-geist",
-})
-
-const geistMono = Geist_Mono({
-	subsets: ["latin"],
-	variable: "--font-geist-mono",
 })
 
 export const metadata: Metadata = {
@@ -120,7 +109,7 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`${manrope.variable} ${archivo.variable} ${geist.variable} ${geistMono.variable}`}
+			className={`${manrope.variable} ${archivo.variable}`}
 		>
 			<body className={manrope.className}>
 				<ThemeProvider attribute="class" defaultTheme="light" enableSystem>
