@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { BadgeCheck } from "@/components/icons"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -11,15 +12,60 @@ import type { ContentDocument } from "@/lib/content"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
-import { breadcrumbJsonLd, businessId } from "@/lib/seo"
+import { parseServiceSections } from "@/lib/service-sections"
+import { breadcrumbJsonLd, serviceFaqJsonLd, serviceJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 const trustPoints = [
 	"Family owned and operated",
 	"Licensed and insured",
 	"Clear options before work",
-	"Flat-rate pricing, quoted on site before work begins.",
 ] as const
+
+/** Answer-first facts for people and AI assistants: where, when, cost, booking. */
+function ServiceFacts() {
+	const linkClass =
+		"text-primary underline decoration-current/40 underline-offset-4 hover:decoration-current"
+	return (
+		<div className="container-shell py-6">
+			<h2 className="spec-label" id="service-facts-heading">
+				At a glance
+			</h2>
+			<dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+				<div>
+					<dt className="text-muted-foreground text-xs font-bold">
+						Service area
+					</dt>
+					<dd className="mt-1 text-sm font-bold">{siteConfig.serviceArea}</dd>
+				</div>
+				<div>
+					<dt className="text-muted-foreground text-xs font-bold">Hours</dt>
+					<dd className="mt-1 text-sm font-bold">{`${siteConfig.hours}.`}</dd>
+				</div>
+				<div>
+					<dt className="text-muted-foreground text-xs font-bold">Pricing</dt>
+					<dd className="mt-1 text-sm font-bold">{siteConfig.pricing}</dd>
+				</div>
+				<div>
+					<dt className="text-muted-foreground text-xs font-bold">
+						How to book
+					</dt>
+					<dd className="mt-1 text-sm font-bold">
+						Call{" "}
+						<a className={linkClass} href={siteConfig.phoneHref}>
+							{siteConfig.phone}
+						</a>{" "}
+						or{" "}
+						<Link className={linkClass} href="/contact" prefetch={false}>
+							request a free quote
+						</Link>
+						.
+					</dd>
+				</div>
+			</dl>
+		</div>
+	)
+}
 
 export function ServiceLandingPage({
 	service,
@@ -32,32 +78,10 @@ export function ServiceLandingPage({
 }) {
 	const image = getServiceImage(service.category, service.image)
 	const category = service.category ?? "Service"
-	const schema = {
-		"@context": "https://schema.org",
-		"@type": "Service",
-		name: service.title,
-		description: service.description,
-		url: `${siteConfig.url}/service-offerings/${service.slug}`,
-		serviceType: category,
-		category: service.category,
-		areaServed: [
-			{
-				"@type": "AdministrativeArea",
-				name: "Santa Cruz County, California",
-			},
-			{
-				"@type": "AdministrativeArea",
-				name: "Santa Clara County, California",
-			},
-		],
-		provider: {
-			"@id": businessId,
-		},
-		brand: {
-			"@type": "Brand",
-			name: siteConfig.name,
-		},
-	}
+	const { sections } = parseServiceSections(service.content)
+	const faqSchema = serviceFaqJsonLd(
+		sections.filter((section) => section.kind === "faq").flatMap((s) => s.faqs),
+	)
 
 	return (
 		<main id="main-content">
@@ -72,8 +96,12 @@ export function ServiceLandingPage({
 				variant="service"
 			/>
 
-			<section className="border-border bg-card border-b">
-				<ul className="container-shell grid grid-cols-1 gap-x-8 gap-y-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
+			<section
+				aria-labelledby="service-facts-heading"
+				className="border-border bg-card border-b"
+			>
+				<ServiceFacts />
+				<ul className="container-shell border-border grid grid-cols-1 gap-x-8 gap-y-3 border-t py-5 sm:grid-cols-3">
 					{trustPoints.map((item) => (
 						<li
 							className="text-muted-foreground flex items-center gap-2.5 text-sm font-bold"
@@ -129,7 +157,8 @@ export function ServiceLandingPage({
 			<ContentConversionCta conversion={service.conversion} />
 			<JsonLd
 				data={[
-					schema,
+					serviceJsonLd(service),
+					...(faqSchema ? [faqSchema] : []),
 					breadcrumbJsonLd([
 						{ name: "Home", path: "/" },
 						{ name: "Services", path: "/services" },

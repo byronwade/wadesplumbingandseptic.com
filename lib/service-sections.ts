@@ -1,5 +1,3 @@
-import { extractFaqPairs } from "@/lib/seo"
-
 export type ServiceSectionKind =
 	| "intro"
 	| "overview"
@@ -97,6 +95,111 @@ function leadAndBullets(body: string) {
 	}
 }
 
+export type ServiceFaq = { question: string; answer: string }
+
+type FaqBlock =
+	| { type: "question"; question: string; answer: string }
+	| { type: "text"; markdown: string }
+
+/** Plain-text answer: same cleanup the site uses for FAQ schema elsewhere. */
+function plainFaqText(markdown: string) {
+	return markdown
+		.replace(/\[([^\]]+)]\([^)]+\)/g, "$1")
+		.replace(/\\-/g, "")
+		.replace(/[#>*_`]/g, "")
+		.replace(/\s+/g, " ")
+		.trim()
+}
+
+/**
+ * One FAQ entry written as `### Question?`, `**Question?** Answer`,
+ * `- **Question?** Answer` or `**Q: Question?**` followed by `A: Answer`.
+ */
+function parseFaqQuestion(text: string): FaqBlock | null {
+	const heading = text.match(/^###\s+(.+?)\s*(?:\n([\s\S]*))?$/)
+	if (heading?.[1]) {
+		const question = heading[1].trim()
+		if (!question.endsWith("?")) return null
+		return { type: "question", question, answer: heading[2]?.trim() ?? "" }
+	}
+
+	const bold = text.match(/^(?:[-*]\s+)?\*\*(?:Q:\s*)?(.+?\?)\*\*([\s\S]*)$/)
+	if (!bold?.[1]) return null
+	const answer = (bold[2] ?? "").replace(/^\s*(?:\\?-|:|A:)?\s*/, "").trim()
+	return { type: "question", question: bold[1].trim(), answer }
+}
+
+function faqBlocks(body: string): FaqBlock[] {
+	const blocks: FaqBlock[] = []
+	for (const paragraph of body.split(/\n\s*\n/)) {
+		const trimmed = paragraph.trim()
+		if (!trimmed) continue
+		// A bulleted FAQ list keeps every question in one paragraph.
+		const parts = /^[-*]\s+\*\*/.test(trimmed)
+			? trimmed.split(/\n(?=[-*]\s+)/)
+			: [trimmed]
+		for (const part of parts) {
+			blocks.push(
+				parseFaqQuestion(part.trim()) ?? { type: "text", markdown: part },
+			)
+		}
+	}
+	return blocks
+}
+
+/**
+ * Split a service FAQ section into question/answer pairs plus the copy around
+ * them. Answers run until the next question, except the last one: closing
+ * paragraphs after it (sign-offs, call prompts) stay visible as section copy
+ * instead of being folded into the final answer or the FAQ schema.
+ */
+export function extractServiceFaqs(body: string): {
+	faqs: ServiceFaq[]
+	lead: string
+	trailing: string
+} {
+	const blocks = faqBlocks(body)
+	const firstQuestion = blocks.findIndex((block) => block.type === "question")
+	if (firstQuestion === -1) return { faqs: [], lead: body.trim(), trailing: "" }
+
+	const textOf = (items: FaqBlock[]) =>
+		items
+			.map((block) => (block.type === "text" ? block.markdown.trim() : ""))
+			.filter(Boolean)
+			.join("\n\n")
+
+	const lead = textOf(blocks.slice(0, firstQuestion))
+	const faqs: ServiceFaq[] = []
+	let trailing = ""
+	let index = firstQuestion
+
+	while (index < blocks.length) {
+		const block = blocks[index] as Extract<FaqBlock, { type: "question" }>
+		let next = index + 1
+		while (next < blocks.length && blocks[next]!.type === "text") next++
+		const followers = blocks.slice(index + 1, next)
+		const isLast = next >= blocks.length
+
+		let answerParts = [block.answer]
+		if (!isLast) {
+			answerParts = [block.answer, textOf(followers)]
+		} else if (!block.answer && followers.length) {
+			answerParts = [textOf(followers.slice(0, 1))]
+			trailing = textOf(followers.slice(1))
+		} else {
+			trailing = textOf(followers)
+		}
+
+		const answer = plainFaqText(
+			answerParts.filter(Boolean).join("\n\n"),
+		).replace(/^A:\s*/, "")
+		if (answer) faqs.push({ question: block.question, answer })
+		index = next
+	}
+
+	return { faqs, lead, trailing }
+}
+
 function classifyHeading(heading: string): ServiceSectionKind {
 	const h = heading.toLowerCase()
 
@@ -164,15 +267,15 @@ function eyebrowFor(kind: ServiceSectionKind): string {
 
 function buildSection(heading: string, body: string): ServiceSection {
 	const kind = classifyHeading(heading)
-	const faqs = kind === "faq" ? extractFaqPairs(body) : []
 
 	if (kind === "faq") {
+		const { faqs, lead, trailing } = extractServiceFaqs(body)
 		return {
 			kind,
 			heading,
 			eyebrow: eyebrowFor(kind),
-			lead: "",
-			body: "",
+			lead: faqs.length ? lead : "",
+			body: faqs.length ? trailing : lead,
 			bullets: [],
 			steps: [],
 			faqs,
