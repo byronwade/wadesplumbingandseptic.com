@@ -72,8 +72,6 @@ If you cannot locate the frozen area, if the frozen area is not accessible, or i
 
 Taking these preventative measures can save you from the inconvenience and expense of dealing with burst pipes during the coldest months of the year.
 
-Santa Cruz County Septic Experts
-
 ## Schedule Plumbing & Septic Services
 
 ![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)

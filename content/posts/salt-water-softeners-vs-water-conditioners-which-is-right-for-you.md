@@ -56,8 +56,6 @@ Sources:
 - [Water Softener Buying Guide](https://www.consumerreports.org/cro/water-softeners/buying-guide/)
 - [Salt-Based vs. Salt-Free Water Softeners](https://www.angieslist.com/articles/salt-based-vs-salt-free-water-soft)
 
-Santa Cruz County Septic Experts
-
 ## Don't Wait, Improve Your Water Quality Today
 
 ![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)

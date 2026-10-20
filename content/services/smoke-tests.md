@@ -73,8 +73,6 @@ With years of experience and a commitment to quality, Wade's Plumbing & Septic i
 
 For reliable smoke test plumbing services, contact Wade's Plumbing & Septic today. Our expert team is ready to help you maintain a safe and efficient plumbing system. Schedule your appointment now and experience the peace of mind that comes with knowing your home is in good hands.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Efficient Smoke Tests in Santa Cruz County
 
 Ensure your septic system's integrity with our professional smoke testing services.

@@ -80,8 +80,6 @@ Engineered septic systems are designed to handle complex waste management needs,
 
 Wade's Plumbing & Septic is your trusted partner in Santa Cruz County for all commercial septic needs. Our team of licensed professionals is ready to address your septic system challenges promptly and effectively. To learn more about how we can support your business, [contact Wade's Plumbing & Septic](/lp/contact-call-first/) today.
 
-Santa Cruz County Septic Experts
-
 ## Ensure Your Business Runs Smoothly with Prompt Septic Maintenance
 
 Protect your commercial investment with reliable septic maintenance services in Santa Cruz County, CA.

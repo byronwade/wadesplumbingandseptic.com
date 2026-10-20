@@ -94,8 +94,6 @@ Don’t wait until you’re ankle-deep in water or facing a major repair. Proact
 
 📞 Call Wade’s Plumbing & Septic today at (831) 225-4344
 
-Santa Cruz County Septic Experts
-
 ## Act Now to Prevent Costly Repairs
 
 Regular maintenance ensures your plumbing system in Santa Cruz County stays efficient and trouble-free.

@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Public-site WordPress leftover cleanup (2026-10-20)
+
+- Scope: retitled `content/posts/5-signs-you-need-to-call-a-professional-plumber.md` (was "Top 5 Septic Warning Signs"), pointed its headings and FAQ questions at plumbing, finished its truncated "Why choose" answer with confirmed facts only (service area, flat-rate pricing quoted on site, phone, weekday hours), fixed "We holds" and added `updated: "2026-10-20"` (now shown as a formatted date like the publication date). Removed the stray "Santa Cruz County Septic Experts" import label from 27 posts and 4 services, closed two cut-off `[Get a Free Quote` links with their existing wording and removed one urgent-repair kicker line. Publication dates unchanged; no new claims, URLs, dependencies or Eve runtime changes.
+- Regression check: `scripts/ci/validate-content.mjs` now fails on truncated HTML entities, unclosed Markdown links and the stray label. Against the old content it reported 35 errors (32 label, 1 entity, 2 links) and no false positives; after cleanup, 0.
+- Commands on Node 24.21.0: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run seo:check` (41/41 tests; 297 files, 0 fact violations; 161 Markdown files; 291 sitemap URLs), `npm run ci:search`, `npm run build` (578 pages) and `git diff --check`, all exit 0.
+- Local production-server proof: 160 passed, 0 failed across all 34 changed URLs (no stray label, literal broken link or truncated entity in rendered output), retitled `<title>` and H1, completed FAQ answer, formatted updated date, repaired contact links and desktop/mobile light/dark views with no overflow or page errors. Evidence: `C:/Users/bcw19/agent-tools/hobby-scheduler/jobs/wades-plumbing-hobby-1019-2310/`. Truth state: local deterministic (`MOCK_VERIFIED`), not a live crawl or ranking result.
+- Next action: ship through the PR helper. Remaining import damage (dropped link words in the engineered septic and septic pumping cost posts, plain-text section headings, "Need Help Now?" headings) is queued in the project notebook.
+
 ## Public-site owner-confirmed business facts (2026-10-19)
 
 - Scope: notebook item 0, owner-confirmed flat-rate pricing, weekday hours, removal of unavailable-service claims, fabricated ratings and template testimonials. Retired one landing page, three posts and the old service category, with eight direct permanent redirects. No Eve runtime, connector, credential or production setting changed.

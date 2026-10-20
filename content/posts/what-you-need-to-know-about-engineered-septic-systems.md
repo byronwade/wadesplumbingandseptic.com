@@ -186,8 +186,6 @@ comparable to or longer than conventional systems with proper maintenance. Some 
 
 They substantially reduce pollutants and pathogens, and many reduce nitrogen which conventional systems don't. This protects wells, streams, and coastal waters.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Expert Septic Solutions
 
 Discover the benefits of engineered septic systems tailored for Santa Cruz County, CA.

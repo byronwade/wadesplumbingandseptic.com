@@ -141,8 +141,6 @@ Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet instal
 📞 **(831) 225-4344**
 We’re here to help, fast, reliable, and local plumbing service in Santa Cruz County!
 
-Santa Cruz County Septic Experts
-
 ## Secure Your Toilet Installation Today
 
 Experience hassle-free toilet flange installation with our expert team in Santa Cruz County, CA.
