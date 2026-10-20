@@ -104,16 +104,6 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/emergency-plumber-santa-cruz-county"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/emergency-septic-solutions-santa-cruz"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/engineered-septic-systems-santa-cruz-county"
 		},
 		{
@@ -154,11 +144,6 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/glossary"
 		},
 		{
@@ -190,11 +175,6 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/how-to-avoid-common-holiday-plumbing-disasters"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/how-to-handle-a-clogged-drain-or-sewer-line"
 		},
 		{
 			"severity": "info",
@@ -329,22 +309,12 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz/septic-pumping"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/santa-cruz/water-heater-replacement"
 		},
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/septic-leach-field-repairs-santa-cruz"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/septic-pumping-essentials-santa-cruz"
 		},
 		{
 			"severity": "info",
@@ -679,11 +649,6 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/service-offerings/septic-tank-cleaning-and-pumping"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/service-offerings/septic-tank-design-and-engineering"
 		},
 		{
@@ -895,11 +860,6 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county"
 		},
 		{
 			"severity": "info",

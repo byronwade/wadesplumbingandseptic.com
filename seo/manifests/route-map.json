@@ -208,28 +208,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/emergency-plumber-santa-cruz-county",
-			"source_path": "content/pages/emergency-plumber-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/emergency-plumber-santa-cruz-county"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/emergency-septic-solutions-santa-cruz",
-			"source_path": "content/posts/emergency-septic-solutions-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/emergency-septic-solutions-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/engineered-septic-systems-santa-cruz-county",
 			"source_path": "content/pages/engineered-septic-systems-santa-cruz-county.md",
 			"kind": "STATIC_ROUTE",
@@ -320,19 +298,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
-			"source_path": "content/posts/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/glossary",
 			"source_path": "app/(site)/glossary/page.tsx",
 			"kind": "STATIC_ROUTE",
@@ -408,17 +373,6 @@
 			"materialized_routes": [
 				"/how-to-avoid-common-holiday-plumbing-disasters"
 			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/how-to-handle-a-clogged-drain-or-sewer-line",
-			"source_path": "content/posts/how-to-handle-a-clogged-drain-or-sewer-line.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/how-to-handle-a-clogged-drain-or-sewer-line"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -727,17 +681,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/santa-cruz/septic-pumping",
-			"source_path": "content/pages/santa-cruz/septic-pumping.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/septic-pumping"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/santa-cruz/water-heater-replacement",
 			"source_path": "content/pages/santa-cruz/water-heater-replacement.md",
 			"kind": "STATIC_ROUTE",
@@ -754,17 +697,6 @@
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/septic-leach-field-repairs-santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/septic-pumping-essentials-santa-cruz",
-			"source_path": "content/posts/septic-pumping-essentials-santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/septic-pumping-essentials-santa-cruz"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -1575,19 +1507,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/service-offerings/septic-tank-cleaning-and-pumping",
-			"source_path": "content/services/septic-tank-cleaning-and-pumping.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/service-offerings/septic-tank-cleaning-and-pumping"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/service-offerings/septic-tank-design-and-engineering",
 			"source_path": "content/services/septic-tank-design-and-engineering.md",
 			"kind": "STATIC_ROUTE",
@@ -2083,19 +2002,6 @@
 			"parameters": [],
 			"materialized_routes": [
 				"/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades"
-			],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
-			"source_path": "content/posts/understanding-the-cost-of-septic-pumping-in-santa-cruz-county.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": [
-				"/understanding-the-cost-of-septic-pumping-in-santa-cruz-county"
 			],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],

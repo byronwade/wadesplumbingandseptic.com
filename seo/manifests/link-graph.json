@@ -20,8 +20,6 @@
 		"/contact",
 		"/contact-call-first",
 		"/efficient-water-filtration-santa-cruz",
-		"/emergency-plumber-santa-cruz-county",
-		"/emergency-septic-solutions-santa-cruz",
 		"/engineered-septic-systems-santa-cruz-county",
 		"/expert-tips",
 		"/expert-tips/popular",
@@ -30,7 +28,6 @@
 		"/faq",
 		"/financing",
 		"/franchise",
-		"/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
 		"/glossary",
 		"/glossary/plumbing",
 		"/glossary/plumbing/[slug]",
@@ -38,7 +35,6 @@
 		"/glossary/septic/[slug]",
 		"/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 		"/how-to-avoid-common-holiday-plumbing-disasters",
-		"/how-to-handle-a-clogged-drain-or-sewer-line",
 		"/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
 		"/how-to-install-a-toilet-flange-in-8-easy-steps",
 		"/how-to-locate-trustworthy-plumbing-services-nearby",
@@ -65,10 +61,8 @@
 		"/santa-cruz/commercial-plumbing",
 		"/santa-cruz/drain-clearing",
 		"/santa-cruz/santa-cruz-plumbers-near-me",
-		"/santa-cruz/septic-pumping",
 		"/santa-cruz/water-heater-replacement",
 		"/septic-leach-field-repairs-santa-cruz",
-		"/septic-pumping-essentials-santa-cruz",
 		"/septic-replacement-santa-cruz",
 		"/septic-safety-during-floods-santa-cruz",
 		"/septic-solutions",
@@ -135,7 +129,6 @@
 		"/service-offerings/septic-system-certification",
 		"/service-offerings/septic-system-installation",
 		"/service-offerings/septic-tank-alarm-installation",
-		"/service-offerings/septic-tank-cleaning-and-pumping",
 		"/service-offerings/septic-tank-design-and-engineering",
 		"/service-offerings/septic-tank-distribution-box-repair-and-replacement",
 		"/service-offerings/septic-tank-inspection-and-assessment",
@@ -178,7 +171,6 @@
 		"/the-complete-guide-to-septic-system-maintenance",
 		"/the-importance-of-regular-plumbing-maintenance",
 		"/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
-		"/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
 		"/warranties",
 		"/water-main-sewer-line-repair-santa-cruz-county",
 		"/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
@@ -315,30 +307,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/emergency-plumber-santa-cruz-county",
-			"to": "/contact",
-			"anchor": "Go To Contact Form",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/emergency-septic-solutions-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/emergency-septic-solutions-santa-cruz",
-			"to": "/how-to-maintain-your-septic-tank-for-long-term-performance",
-			"anchor": "Septic Tank Maintenance Guide",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/emergency-septic-solutions-santa-cruz",
-			"to": "/contact",
-			"anchor": "Get a Free Quote",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"from": "/engineered-septic-systems-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",
@@ -378,6 +346,12 @@
 			"from": "/faq",
 			"to": "/expert-tips",
 			"anchor": "expert tips",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -484,6 +458,12 @@
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "blog on septic failure signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
 			"to": "/septic-system-seasonal-maintenance-santa-cruz",
 			"anchor": "seasonal maintenance tips",
 			"classification": "MOCK_VERIFIED"
@@ -579,21 +559,9 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/septic-pumping-essentials-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "Wade's Plumbing & Septic",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-pumping-essentials-santa-cruz",
-			"to": "/service-offerings/septic-tank-repair-and-replacement",
-			"anchor": "septic repair and replacement",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-pumping-essentials-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "service area overview",
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -606,6 +574,12 @@
 			"from": "/septic-replacement-santa-cruz",
 			"to": "/contact",
 			"anchor": "Request a Free Estimate",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-safety-during-floods-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "septic failure signs",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -750,6 +724,12 @@
 			"from": "/septic-trouble-signs-santa-cruz",
 			"to": "/service-areas",
 			"anchor": "septic maintenance services",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-trouble-signs-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "septic troubleshooting",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2356,8 +2336,8 @@
 		},
 		{
 			"from": "/service-offerings/drain-line-inspection",
-			"to": "/how-to-handle-a-clogged-drain-or-sewer-line",
-			"anchor": "blog",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2404,12 +2384,6 @@
 		},
 		{
 			"from": "/service-offerings/engineered-septic-system-installation",
-			"to": "/service-offerings/septic-tank-cleaning-and-pumping",
-			"anchor": "septic pumping",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-offerings/engineered-septic-system-installation",
 			"to": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
 			"anchor": "leach field repair",
 			"classification": "MOCK_VERIFIED"
@@ -2447,7 +2421,7 @@
 		{
 			"from": "/service-offerings/fixture-installation",
 			"to": "/contact",
-			"anchor": "Get a Free Upgrade with Confidence in Santa Cruz County, CA ★★★★★ 5-star rated service \"Wade's team upgraded our fixtures seamlessly! Highly recommend their expertise.\" (Sarah, Santa Cruz \"Professional and efficient service from start to finish. Love our new fixtures!\"), John, Capitola \"Exceptional service and top-quality fixtures. Couldn't be happier!\" (Emily, Watsonville Licensed Contractor: C-42 Fast-response guarantee: Available Monday to Friday, 8 AM to 5 PM",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2591,7 +2565,7 @@
 		{
 			"from": "/service-offerings/main-line-cleanout-installation",
 			"to": "/contact",
-			"anchor": "Get a Free ★★★★★ 5-Star Rated Service \"Wade's Plumbing & Septic quickly resolved our main line issue with professionalism and care. Highly recommend!\" (Sarah, Aptos \"Fantastic service! The team was prompt and efficient, leaving our plumbing system in perfect condition.\"), Mike, Santa Cruz \"I was impressed by their expertise and fast response. Our main line is now running smoothly!\" (Lisa, Watsonville Licensed Contractor: C-42 Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2622,6 +2596,12 @@
 			"from": "/service-offerings/pipe-repair-and-replacement",
 			"to": "/service-areas",
 			"anchor": "service area overview",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/pipe-repair-and-replacement",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2951,7 +2931,7 @@
 		{
 			"from": "/service-offerings/septic-tank-system-compliance-and-permitting",
 			"to": "/contact",
-			"anchor": "Get a Free ★★★★★ 5-star rating \"Wade's Plumbing & Septic made the septic compliance process seamless and stress-free. Highly recommended!\" (Sarah, Scotts Valley \"Their expertise in septic compliance is unmatched. Professional and efficient service every time.\"), Mike, Santa Cruz \"I trust Wade's for all my septic needs. Their compliance experts are knowledgeable and reliable.\" (Lisa, Aptos Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3083,7 +3063,7 @@
 		{
 			"from": "/service-offerings/shower-installation-and-repair",
 			"to": "/contact",
-			"anchor": "Get Upgrade Your Shower in Santa Cruz County Today At Wade's Plumbing & Septic, we proudly offer expert water heater installations and tankless water heater installations to homeowners across Santa Cruz County, California. Our services are tailored to meet the needs of residential properties, ensuring you enjoy efficient and reliable hot water systems. Discover our comprehensive service area below and find out how we can help enhance your home's plumbing. Aptos Ben Lomond Boulder Creek Brookdale Capitola Davenport Felton Freedom La Selva Beach Live Oak Mount Hermon Pleasure Point Rio Del Mar Santa Cruz Scotts Valley Soquel Watsonville Transform Your Shower Experience in Santa Cruz County ★★★★★ 5-star rating \"Wade's Plumbing & Septic turned our outdated shower into a spa-like retreat. Highly recommend their services!\" (Sarah, Santa Cruz \"Professional and efficient. The team at Wade's made the entire process seamless.\"), John, Capitola \"Our new shower is fantastic! Exceptional service from start to finish.\" (Emily, Watsonville Licensed Contractor: C-42 for California Fast Response Guarantee: Available Monday to Friday, 8 AM to 5 PM",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3155,7 +3135,7 @@
 		{
 			"from": "/service-offerings/sump-pump-installation",
 			"to": "/contact",
-			"anchor": "Get a Free Quote What Our Customers Say ★★★★★ 5-Star Rated Service \"Wade's team installed our sump pump quickly and efficiently. No more flooding worries!\" (Sarah, Santa Cruz \"Professional service and great advice on maintaining our new sump pump.\"), Tom, Aptos \"Fast and reliable installation. Highly recommend Wade's Plumbing & Septic!\" (Emily, Watsonville Licensed Contractor: C-42 for California Fast-Response Guarantee: Available Monday to Friday, 8 AM to 5 PM",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3321,6 +3301,12 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/service-areas",
 			"anchor": "service area overview",
@@ -3334,7 +3320,7 @@
 		},
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/how-to-handle-a-clogged-drain-or-sewer-line",
+			"to": "/service-offerings/hydro-jetting",
 			"anchor": "hydro jetting",
 			"classification": "MOCK_VERIFIED"
 		},
@@ -3408,6 +3394,24 @@
 			"from": "/water-main-sewer-line-repair-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic system",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/compare/conventional-vs-engineered-septic",
+			"anchor": "Compare conventional and engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/contact",
+			"anchor": "Contact us",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
