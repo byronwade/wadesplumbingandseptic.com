@@ -89,8 +89,6 @@ If you’re noticing any of these symptoms in your Santa Cruz, Capitola, Soquel,
 
 Cleaner, safer, and better-tasting water is just one installation away, reach out to our team to schedule a consultation and get started.
 
-Santa Cruz County Septic Experts
-
 ## Upgrade Your Home Water System Today
 
 ![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)

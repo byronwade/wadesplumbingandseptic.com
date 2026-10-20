@@ -78,8 +78,6 @@ If you've noticed any of these warning signs, don't wait for the problem to wors
 
 Remember, addressing septic issues early is always less expensive and less disruptive than waiting for complete system failure. Schedule your inspection today and protect your home, health, and property value.
 
-Santa Cruz County Septic Experts
-
 ## Avoid Costly Repairs: Act Now
 
 Protect your home and wallet by addressing septic warning signs promptly in Santa Cruz County.

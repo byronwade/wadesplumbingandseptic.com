@@ -30,8 +30,9 @@ for (const collection of COLLECTIONS) {
 		count += 1
 		const source = fs.readFileSync(file, "utf8")
 		let data
+		let body
 		try {
-			;({ data } = matter(source))
+			;({ data, content: body } = matter(source))
 		} catch (error) {
 			errors.push(`${file}: invalid frontmatter (${error.message})`)
 			continue
@@ -128,6 +129,33 @@ for (const collection of COLLECTIONS) {
 		) {
 			errors.push(
 				`${file}: unresolved content placeholder (e.g. [Current Date])`,
+			)
+		}
+
+		// WordPress import leftovers: truncated entities, half-written links and
+		// section labels that lost their styling and now read as stray lines.
+		const prose = body.replace(/^```[\s\S]*?^```/gm, "")
+		const entity = prose.match(
+			/&(?:amp|nbsp|quot|apos|lt|gt|#\d+|#x[0-9a-f]+)(?![0-9a-z;])/i,
+		)
+		if (entity) {
+			errors.push(
+				`${file}: truncated HTML entity "${entity[0]}"; finish the sentence with plain text`,
+			)
+		}
+		for (const paragraph of prose.split(/\n\s*\n/)) {
+			const unclosed = paragraph
+				.replace(/\s+/g, " ")
+				.match(/(?<!\\)\[[^\]]*$/)
+			if (unclosed) {
+				errors.push(
+					`${file}: unclosed markdown link "${unclosed[0].slice(0, 40)}"; close it as [text](/path/)`,
+				)
+			}
+		}
+		if (/^Santa Cruz County Septic Experts$/m.test(prose)) {
+			errors.push(
+				`${file}: stray "Santa Cruz County Septic Experts" label left over from WordPress; remove it`,
 			)
 		}
 

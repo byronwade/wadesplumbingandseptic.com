@@ -99,8 +99,6 @@ Our technicians use specialized equipment to thoroughly assess all components of
 
 Regular maintenance is far less expensive than repairing or replacing a failed septic system. Contact Wade's Plumbing & Septic to schedule your professional septic system inspection and pumping. Our experienced technicians will ensure your system continues to function properly for years to come.
 
-Santa Cruz County Septic Experts
-
 ## Don't Delay Your Septic Maintenance
 
 Ensure your system runs smoothly with our expert services in Santa Cruz County, CA.

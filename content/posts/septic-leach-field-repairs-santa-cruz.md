@@ -88,10 +88,8 @@ After heavy rains, monitor your septic system for signs of saturation or failure
 
 Contact Wade's Plumbing & Septic for expert septic leach field repair services in Santa Cruz County.
 
-Need Immediate Septic Leach Field Repair?
-
 ## Santa Cruz County Septic Leach Field Repair Experts
 
 Trust Wade's Plumbing & Septic for expert solutions that restore your septic system's efficiency.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)

@@ -76,8 +76,6 @@ If you’ve noticed any of these signs (green patches on your lawn, slow drainag
 
 We offer prompt, professional drain field repair services across Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas. Our team will assess the damage, determine the root cause, and restore your septic system’s performance before the issue worsens.
 
-Santa Cruz County Septic Experts
-
 ## Repair Your Drain Field in Santa Cruz County Today
 
 ![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)

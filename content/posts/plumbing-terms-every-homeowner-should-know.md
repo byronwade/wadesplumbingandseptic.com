@@ -104,8 +104,6 @@ Whether you’re dealing with a clogged drain, a leaking water heater, or planni
 
 Our expert team is happy to walk you through the process in plain English, and get the job done right the first time.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Reliable Septic Solutions
 
 Understanding plumbing terms is crucial for effective home maintenance in Santa Cruz County, CA. For a fuller A to Z reference, browse Wade's [plumbing glossary](/glossary/plumbing) and [septic glossary](/glossary/septic).

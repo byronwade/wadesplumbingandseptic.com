@@ -54,8 +54,6 @@ If you’ve noticed any of these signs, don’t wait until the problem worsens. 
 
 Our experienced team will locate the source of the leak, assess any damage, and deliver reliable, long-lasting solutions to protect your home and your wallet.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Reliable Septic Solutions
 
 ![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)

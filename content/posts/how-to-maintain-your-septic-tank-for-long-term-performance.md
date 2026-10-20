@@ -97,8 +97,6 @@ Whether you need pumping, jetting, or a full inspection, Wade’s Plumbing & Sep
 
 Let us help you protect your home, save money, and keep your system running smoothly year after year.
 
-Santa Cruz County Septic Experts
-
 ## Protect Your Septic System Today
 
 Ensure the longevity of your septic tank with expert care from Wade's Plumbing & Septic in Santa Cruz County, CA.

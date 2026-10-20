@@ -67,8 +67,6 @@ Backups occur when there is a blockage in your pipes. Regular cleaning can help 
 
 For reliable **drain cleaning Santa Cruz** services, trust the experts at Wade's Plumbing & Septic. Our team combines experience, local knowledge, and a commitment to customer satisfaction. Contact us today to schedule your service and keep your drains in top condition.
 
-Santa Cruz County Septic Experts
-
 ## Act Now to Prevent Costly Drain Issues
 
 Ensure your drains remain clog-free with our expert services in Santa Cruz County, CA.
