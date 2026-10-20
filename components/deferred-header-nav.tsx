@@ -22,31 +22,31 @@ function HeaderNavFallback() {
 	return (
 		<nav aria-label="Primary" className="flex items-center gap-2 sm:gap-3">
 			<div className="hidden items-center gap-1 lg:flex">
-				<Link prefetch={false}
+				<Link
+					prefetch={false}
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/services"
-
 				>
 					Services
 				</Link>
-				<Link prefetch={false}
+				<Link
+					prefetch={false}
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/service-areas"
-
 				>
 					Areas
 				</Link>
-				<Link prefetch={false}
+				<Link
+					prefetch={false}
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/expert-tips"
-
 				>
 					Tips
 				</Link>
-				<Link prefetch={false}
+				<Link
+					prefetch={false}
 					className="rounded-md px-3 py-2 text-sm font-bold text-white/90 transition-colors hover:text-white"
 					href="/contact"
-
 				>
 					Contact
 				</Link>

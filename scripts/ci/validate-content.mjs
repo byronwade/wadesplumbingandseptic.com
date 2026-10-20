@@ -144,9 +144,7 @@ for (const collection of COLLECTIONS) {
 			)
 		}
 		for (const paragraph of prose.split(/\n\s*\n/)) {
-			const unclosed = paragraph
-				.replace(/\s+/g, " ")
-				.match(/(?<!\\)\[[^\]]*$/)
+			const unclosed = paragraph.replace(/\s+/g, " ").match(/(?<!\\)\[[^\]]*$/)
 			if (unclosed) {
 				errors.push(
 					`${file}: unclosed markdown link "${unclosed[0].slice(0, 40)}"; close it as [text](/path/)`,

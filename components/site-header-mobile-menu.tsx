@@ -39,7 +39,8 @@ function MobileNavLink({
 	const router = useRouter()
 
 	return (
-		<Link prefetch={false}
+		<Link
+			prefetch={false}
 			className={cn(
 				"hover:bg-muted focus-visible:ring-ring block rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
 				compact ? "py-2" : "py-2.5",

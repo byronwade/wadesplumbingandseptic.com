@@ -108,10 +108,10 @@ export function GlossaryTermPage({
 						<ul className="grid gap-3 sm:grid-cols-2">
 							{relatedServices.map((service) => (
 								<li key={service.slug}>
-									<Link prefetch={false}
+									<Link
+										prefetch={false}
 										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold transition-colors"
 										href={`/service-offerings/${service.slug}` as Route}
-
 									>
 										{service.title}
 									</Link>
@@ -132,10 +132,10 @@ export function GlossaryTermPage({
 						<ul className="flex flex-wrap gap-2">
 							{relatedTerms.map((related) => (
 								<li key={related.slug}>
-									<Link prefetch={false}
+									<Link
+										prefetch={false}
 										className="border-border hover:border-primary/40 hover:bg-muted/40 inline-flex rounded-md border px-3 py-1.5 text-sm font-bold transition-colors"
 										href={glossaryTermPath(topic, related.slug) as Route}
-
 									>
 										{related.term}
 									</Link>
@@ -147,7 +147,8 @@ export function GlossaryTermPage({
 
 				<p className="type-body text-muted-foreground">
 					Also explore the{" "}
-					<Link prefetch={false}
+					<Link
+						prefetch={false}
 						className="text-primary font-bold underline-offset-2 hover:underline"
 						href={glossaryHubPath(otherTopic) as Route}
 					>

@@ -33,24 +33,24 @@ export default function PopularTipsPage() {
 
 			<section className="container-shell pt-[var(--space-block)]">
 				<div className="flex flex-wrap gap-2">
-					<Link prefetch={false}
+					<Link
+						prefetch={false}
 						className={cn(buttonVariants({ size: "sm" }))}
 						href={"/expert-tips/popular" as Route}
-
 					>
 						Most popular
 					</Link>
-					<Link prefetch={false}
+					<Link
+						prefetch={false}
 						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
 						href={"/expert-tips/trending" as Route}
-
 					>
 						Trending now
 					</Link>
-					<Link prefetch={false}
+					<Link
+						prefetch={false}
 						className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
 						href={"/expert-tips" as Route}
-
 					>
 						All guides
 					</Link>

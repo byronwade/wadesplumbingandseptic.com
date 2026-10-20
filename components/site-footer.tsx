@@ -39,11 +39,11 @@ export function SiteFooter() {
 			<div className="container-shell py-[var(--space-section-y-tight)]">
 				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							aria-label="Wade's Plumbing & Septic home"
 							className="flex items-center gap-3"
 							href="/"
-
 						>
 							<Image
 								alt="Wade's Plumbing & Septic logo"
@@ -104,24 +104,24 @@ export function SiteFooter() {
 				<div className="text-on-dark-subtle mt-[var(--space-block)] flex flex-col gap-4 border-t border-white/10 pt-7 text-xs sm:flex-row sm:items-center sm:justify-between">
 					<p>© 2026 Wade&apos;s Plumbing &amp; Septic. All rights reserved.</p>
 					<div className="flex flex-wrap gap-x-6 gap-y-2">
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className="transition-colors hover:text-white"
 							href="/privacy-policy"
-
 						>
 							Privacy Policy
 						</Link>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className="transition-colors hover:text-white"
 							href="/terms-of-service"
-
 						>
 							Terms
 						</Link>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className="transition-colors hover:text-white"
 							href="/sitemap.xml"
-
 						>
 							Sitemap
 						</Link>
@@ -187,10 +187,10 @@ function FooterColumn({
 			<ul className="text-on-dark-muted mt-5 space-y-1 text-sm">
 				{links.map((link) => (
 					<li key={link.href}>
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className="hover:text-primary-bright inline-flex min-h-6 items-center py-1 transition-colors"
 							href={link.href as Route}
-
 						>
 							{link.label}
 						</Link>
