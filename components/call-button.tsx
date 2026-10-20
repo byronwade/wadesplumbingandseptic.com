@@ -58,8 +58,8 @@ export function CallIconButton({ className }: { className?: string }) {
 		<ProtectedContactLink
 			ariaLabel={`Call ${contactInfo.phoneDisplay}`}
 			className={cn(
-				className,
 				"inline-flex size-11 items-center justify-center",
+				className,
 			)}
 			kind="phone"
 		>
