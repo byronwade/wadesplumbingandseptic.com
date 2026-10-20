@@ -77,10 +77,10 @@ for (const name of bannedPackages) {
 		`"${name}" is statically imported by ${packages.get(name)}, so every page downloads it. Load it with import() on demand instead.`,
 	)
 }
-for (const module of bannedModules) {
+for (const banned of bannedModules) {
 	assert.ok(
-		!reached.includes(module),
-		`${module} is statically reachable from a layout, so every page downloads it. Keep it behind next/dynamic in components/app-command-shell.tsx.`,
+		!reached.includes(banned),
+		`${banned} is statically reachable from a layout, so every page downloads it. Keep it behind next/dynamic in components/app-command-shell.tsx.`,
 	)
 }
 assert.ok(
