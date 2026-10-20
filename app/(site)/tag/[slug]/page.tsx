@@ -43,11 +43,15 @@ export async function generateMetadata({
 
 	const label = labelForTag(slug, matched)
 
-	return buildPageMetadata({
-		title: `${label} Guides`,
-		description: `Wade's plumbing and septic articles about ${slug.replaceAll("-", " ")}.`,
-		pathname: `/tag/${slug}`,
-	})
+	return {
+		...buildPageMetadata({
+			title: `${label} Guides`,
+			description: `Wade's plumbing and septic articles about ${slug.replaceAll("-", " ")}.`,
+			pathname: `/tag/${slug}`,
+		}),
+		// Archives stay available for browsing without competing with the articles.
+		robots: { index: false, follow: true },
+	}
 }
 
 async function getTagArchiveData(slug: string) {

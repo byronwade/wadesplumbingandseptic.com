@@ -16,9 +16,6 @@ import { siteConfig } from "@/lib/site"
 
 export const SITEMAP_CHUNK_SIZE = 250
 
-/** Tags with fewer posts than this stay out of the sitemap (thin archives). */
-export const SITEMAP_MIN_TAG_POSTS = 2
-
 type SitemapEntry = MetadataRoute.Sitemap[number]
 type ChangeFrequency = NonNullable<SitemapEntry["changeFrequency"]>
 
@@ -271,24 +268,7 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		})
 	}
 
-	const tagCounts = new Map<string, ContentDocument[]>()
-	for (const post of indexablePosts) {
-		for (const tag of post.tags ?? []) {
-			const slug = taxonomySlug(tag)
-			const list = tagCounts.get(slug) ?? []
-			list.push(post)
-			tagCounts.set(slug, list)
-		}
-	}
-
-	for (const [slug, taggedPosts] of tagCounts) {
-		if (taggedPosts.length < SITEMAP_MIN_TAG_POSTS) continue
-		upsertEntry(entries, {
-			pathname: `/tag/${slug}`,
-			priority: 0.45,
-			lastModified: maxTimestamp(taggedPosts.map(contentLastModified)),
-		})
-	}
+	// Tag archives are noindex browsing aids, so none belong in the sitemap.
 
 	upsertEntry(entries, {
 		pathname: "/glossary/plumbing",
