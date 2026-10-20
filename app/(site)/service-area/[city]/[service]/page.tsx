@@ -20,6 +20,7 @@ import { getServiceImage } from "@/lib/service-images"
 import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
+	businessId,
 	faqPageJsonLd,
 	serviceAreaPlaceJsonLd,
 } from "@/lib/seo"
@@ -79,7 +80,7 @@ export default async function CityServicePage({
 		serviceType: page.serviceTitle,
 		areaServed: serviceAreaPlaceJsonLd(location),
 		provider: {
-			"@id": `${siteConfig.url}/#business`,
+			"@id": businessId,
 		},
 	}
 

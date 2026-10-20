@@ -6,7 +6,13 @@ import { JsonLd } from "@/components/json-ld"
 import { ProtectedPhoneText } from "@/components/protected-contact"
 import { glossaryHubPath, glossaryTermPath } from "@/lib/glossary"
 import type { GlossaryTerm, GlossaryTopic } from "@/lib/glossary/types"
-import { absoluteUrl, breadcrumbJsonLd, definedTermJsonLd } from "@/lib/seo"
+import {
+	absoluteUrl,
+	breadcrumbJsonLd,
+	businessId,
+	definedTermJsonLd,
+	websiteId,
+} from "@/lib/seo"
 function paragraphs(text: string) {
 	return text
 		.split(/\n\n+/)
@@ -169,8 +175,8 @@ export function GlossaryTermPage({
 						name: `${term.term}: ${hubLabel}`,
 						description: term.shortDefinition,
 						url: absoluteUrl(termPath),
-						isPartOf: { "@id": absoluteUrl("/#website") },
-						about: { "@id": absoluteUrl("/#business") },
+						isPartOf: { "@id": websiteId },
+						about: { "@id": businessId },
 						mainEntity: {
 							"@type": "DefinedTerm",
 							name: term.term,
