@@ -2,6 +2,10 @@ import type { Metadata } from "next"
 
 import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
+import {
+	serviceAreaLocations,
+	type ServiceAreaLocation,
+} from "@/lib/service-areas"
 import { siteConfig } from "@/lib/site"
 
 /** Google often truncates meta descriptions near this length. */
@@ -155,10 +159,9 @@ export function localBusinessJsonLd(
 			name: "CA CSLB License",
 			value: siteConfig.licenseNumber,
 		},
-		areaServed: [
-			{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
-			{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
-		],
+		areaServed: serviceAreasJsonLd().map((area) =>
+			"@id" in area ? { "@id": area["@id"] } : area,
+		),
 		openingHoursSpecification: [
 			{
 				"@type": "OpeningHoursSpecification",
@@ -281,7 +284,32 @@ export function extractFaqPairs(markdown: string) {
 	return pairs
 }
 
+/** Reuse only the communities and counties already shown in the coverage map. */
+export function serviceAreaPlaceJsonLd(location: ServiceAreaLocation) {
+	return {
+		"@type": "Place",
+		"@id": `${absoluteUrl(location.href)}#area`,
+		name: location.name,
+		url: absoluteUrl(location.href),
+		containedInPlace: {
+			"@type": "AdministrativeArea",
+			name: `${location.county}, California`,
+		},
+	}
+}
+
+export function serviceAreasJsonLd() {
+	return [
+		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
+		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+		...serviceAreaLocations.map(serviceAreaPlaceJsonLd),
+	]
+}
+
 export function serviceAreaJsonLd(document: ContentDocument, cityName: string) {
+	const location = serviceAreaLocations.find(
+		(area) => area.href === `/${document.slug}`,
+	)
 	return {
 		"@context": "https://schema.org",
 		"@type": "Service",
@@ -290,14 +318,9 @@ export function serviceAreaJsonLd(document: ContentDocument, cityName: string) {
 		url: absoluteUrl(`/${document.slug}`),
 		serviceType: "Plumbing and septic services",
 		provider: { "@id": `${siteConfig.url}/#business` },
-		areaServed: {
-			"@type": "City",
-			name: cityName,
-			containedInPlace: {
-				"@type": "AdministrativeArea",
-				name: "Santa Cruz County, California",
-			},
-		},
+		areaServed: location
+			? serviceAreaPlaceJsonLd(location)
+			: { "@type": "Place", name: cityName },
 	}
 }
 
@@ -351,6 +374,11 @@ export function definedTermSetJsonLd({
 
 /** Best-effort city label from service-area slug or title. */
 export function cityNameFromServiceArea(document: ContentDocument) {
+	const location = serviceAreaLocations.find(
+		(area) => area.href === `/${document.slug}`,
+	)
+	if (location) return location.name
+
 	const fromSlug = document.slug
 		.replace(/^service-area\//, "")
 		.replace(/-ca-plumbing-septic-services$/, "")

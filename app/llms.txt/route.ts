@@ -1,4 +1,9 @@
 import { getAllRoutes } from "@/lib/content"
+import {
+	cityServicePages,
+	cityServicePath,
+	getCityLocation,
+} from "@/lib/city-service-pages"
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
@@ -30,6 +35,13 @@ export async function GET() {
 		)
 		.join("\n")
 
+	const cityServiceLines = cityServicePages
+		.map((page) => {
+			const location = getCityLocation(page.citySlug)!
+			return `- [${page.serviceTitle} in ${location.name}, CA](${siteConfig.url}${cityServicePath(page.citySlug, page.serviceSlug)})`
+		})
+		.join("\n")
+
 	const body = `# ${siteConfig.name}
 
 > ${siteConfig.description}
@@ -53,6 +65,10 @@ ${tipLines}
 ## Service areas
 
 ${areaLines}
+
+## Local service guides
+
+${cityServiceLines}
 
 ## Important pages
 
