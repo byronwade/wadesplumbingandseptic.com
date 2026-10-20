@@ -32,7 +32,8 @@ export function ContentCard({
 
 	return (
 		<Card className="group hover:border-border-strong h-full overflow-hidden transition-colors duration-200">
-			<Link prefetch={false}
+			<Link
+				prefetch={false}
 				aria-label={
 					variant === "service" ? `View ${item.title}` : `Read ${item.title}`
 				}
@@ -61,10 +62,10 @@ export function ContentCard({
 				<CardDescription className="line-clamp-3">
 					{item.description}
 				</CardDescription>
-				<Link prefetch={false}
+				<Link
+					prefetch={false}
 					className="text-primary mt-4 inline-flex items-center gap-2 text-sm font-bold"
 					href={item.href as Route}
-
 				>
 					{variant === "service" ? "Learn more" : "Read guide"}
 					<ArrowRight
@@ -78,22 +79,23 @@ export function ContentCard({
 			 * Extended footer band: same card width/radius/border as the body,
 			 * with a soft copper-tinted ground so the silhouette still reads as one card.
 			 */}
-			<div className="card-foot border-border border-t bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)]">
+			<div className="card-foot text-foreground border-border border-t bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)]">
 				<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
 					{showViews ? (
 						<PageViewsStat
+							className="text-inherit"
 							preferTrending={preferTrending}
 							totalViews={item.totalViews}
 							trendingScore={item.trendingScore}
 							uniqueViews={item.uniqueViews}
 						/>
 					) : (
-						<span className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+						<span className="font-mono text-[0.6875rem] tracking-[0.08em] text-inherit uppercase">
 							{variant === "service" ? "Local service" : "Homeowner guide"}
 						</span>
 					)}
 					{showDate ? (
-						<p className="type-meta inline-flex items-center gap-2 font-bold">
+						<p className="type-meta inline-flex items-center gap-2 font-bold text-inherit">
 							<CalendarDays
 								aria-hidden="true"
 								className="text-primary size-3.5 shrink-0"
