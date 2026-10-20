@@ -25,7 +25,7 @@ export function MobileCallBar() {
 					)}
 					href={siteConfig.phoneHref}
 				>
-					<Phone aria-hidden="true" />
+					<Phone aria-hidden="true" className="@max-[20rem]:hidden" />
 					<span className="min-w-0 [overflow-wrap:anywhere]">
 						Call {siteConfig.phone}
 					</span>
