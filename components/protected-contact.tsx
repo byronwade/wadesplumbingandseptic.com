@@ -1,19 +1,7 @@
-"use client"
+import type { ComponentPropsWithoutRef, ReactNode } from "react"
 
-import {
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useState,
-	type ComponentPropsWithoutRef,
-	type ReactNode,
-} from "react"
-
-import { contactEncoded, contactInfo, decodeContactValue } from "@/lib/contact"
+import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
-
-const useIsomorphicLayoutEffect =
-	typeof window !== "undefined" ? useLayoutEffect : useEffect
 
 type ContactKind = "phone" | "email" | "vcard"
 
@@ -21,32 +9,26 @@ function payloadFor(kind: ContactKind) {
 	switch (kind) {
 		case "phone":
 			return {
-				href: contactEncoded.phoneHref,
-				label: contactEncoded.phoneDisplay,
-				fallbackHref: "#call-wades",
-				fallbackLabel: contactInfo.phoneDisplay,
+				href: contactInfo.phoneHref,
+				label: contactInfo.phoneDisplay,
 			}
 		case "email":
 			return {
-				href: contactEncoded.emailHref,
-				label: contactEncoded.email,
-				fallbackHref: "#email-wades",
-				fallbackLabel: contactInfo.email,
+				href: contactInfo.emailHref,
+				label: contactInfo.email,
 			}
 		case "vcard":
 			return {
-				href: contactEncoded.vcardPath,
-				label: contactEncoded.phoneDisplay,
-				fallbackHref: contactInfo.vcardPath,
-				fallbackLabel: "Save contact",
+				href: contactInfo.vcardPath,
+				label: "Save contact",
 			}
 	}
 }
 
 /**
- * Renders a visible phone/email/vCard link without putting a harvestable
- * tel: or mailto: href in the server HTML. The real href is applied on the
- * client before paint when possible.
+ * Native contact destinations must be usable in the initial HTML, including
+ * when scripts are still loading or unavailable. The export name is retained
+ * for existing callers; no client-side decoding is needed.
  */
 export function ProtectedContactLink({
 	kind,
@@ -61,32 +43,20 @@ export function ProtectedContactLink({
 	ariaLabel?: string
 } & Omit<ComponentPropsWithoutRef<"a">, "href" | "children" | "className">) {
 	const payload = payloadFor(kind)
-	const ref = useRef<HTMLAnchorElement>(null)
-	const [label, setLabel] = useState(payload.fallbackLabel)
-
-	useIsomorphicLayoutEffect(() => {
-		const href = decodeContactValue(payload.href)
-		const text = decodeContactValue(payload.label)
-		const node = ref.current
-		if (node) node.href = href
-		if (!children) setLabel(text)
-	}, [payload.href, payload.label, children])
 
 	return (
 		<a
-			ref={ref}
 			aria-label={ariaLabel}
 			className={cn(className)}
-			href={payload.fallbackHref}
-			suppressHydrationWarning
+			href={payload.href}
 			{...rest}
 		>
-			{children ?? label}
+			{children ?? payload.label}
 		</a>
 	)
 }
 
-/** Visible phone number text with a dial link applied after hydration. */
+/** Visible phone number with a native dial link. */
 export function ProtectedPhoneText({ className }: { className?: string }) {
 	return (
 		<ProtectedContactLink
@@ -97,7 +67,7 @@ export function ProtectedPhoneText({ className }: { className?: string }) {
 	)
 }
 
-/** Visible email with a mailto link applied after hydration. */
+/** Visible email with a native mailto link. */
 export function ProtectedEmailText({ className }: { className?: string }) {
 	return (
 		<ProtectedContactLink

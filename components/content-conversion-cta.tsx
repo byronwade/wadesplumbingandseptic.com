@@ -19,7 +19,7 @@ export function ContentConversionCta({
 		href?: string
 		label: string
 		external?: boolean
-		/** Protected email link (no mailto: in server HTML). */
+		/** Native contact link that also works before JavaScript loads. */
 		contact?: "email" | "phone" | "vcard"
 	}
 }) {
