@@ -12,6 +12,11 @@ import { getImageProps } from "next/image"
  *
  * One alt for both sources, since <picture> has a single <img>: it has to be
  * true of whichever photograph is served.
+ *
+ * With `images.unoptimized` there is no srcSet, so each source falls back to
+ * its plain file; without that the desktop <source> was empty and desktop got
+ * the portrait. The <img> is the homepage LCP, so it loads eagerly; <picture>
+ * still fetches only the one matching source.
  */
 const HERO_SIZES = "100vw"
 
@@ -22,7 +27,7 @@ export function HomeHeroMedia() {
 	} as const
 
 	const {
-		props: { srcSet: desktop },
+		props: { srcSet: desktopSrcSet, src: desktopSrc },
 	} = getImageProps({
 		...common,
 		width: 1280,
@@ -44,7 +49,11 @@ export function HomeHeroMedia() {
 
 	return (
 		<picture>
-			<source media="(min-width: 640px)" srcSet={desktop} sizes={HERO_SIZES} />
+			<source
+				media="(min-width: 640px)"
+				srcSet={desktopSrcSet ?? desktopSrc}
+				sizes={HERO_SIZES}
+			/>
 			<img
 				{...rest}
 				srcSet={portrait}
@@ -52,6 +61,7 @@ export function HomeHeroMedia() {
 				className="absolute inset-0 size-full object-cover object-[50%_62%]"
 				decoding="async"
 				fetchPriority="high"
+				loading="eager"
 			/>
 		</picture>
 	)
