@@ -1,4 +1,5 @@
 import { ChromeExtras } from "@/components/chrome-extras"
+import { MobileCallBar } from "@/components/mobile-call-bar"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
@@ -12,6 +13,7 @@ export default function SiteChromeLayout({
 			<SiteHeader />
 			{children}
 			<SiteFooter />
+			<MobileCallBar />
 			<ChromeExtras />
 		</>
 	)
