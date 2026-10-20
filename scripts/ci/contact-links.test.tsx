@@ -26,12 +26,15 @@ for (const [kind, href, label] of [
 
 test("call controls preserve their accessible name and custom content", () => {
 	const html = renderToStaticMarkup(
-		createElement(ProtectedContactLink, {
-			kind: "phone",
-			ariaLabel: `Call ${contactInfo.phoneDisplay}`,
-			className: "contact-action",
-			children: createElement("span", null, "Call to schedule"),
-		}),
+		createElement(
+			ProtectedContactLink,
+			{
+				kind: "phone",
+				ariaLabel: `Call ${contactInfo.phoneDisplay}`,
+				className: "contact-action",
+			},
+			createElement("span", null, "Call to schedule"),
+		),
 	)
 	assert.ok(html.includes(`href="${contactInfo.phoneHref}"`), html)
 	assert.ok(
