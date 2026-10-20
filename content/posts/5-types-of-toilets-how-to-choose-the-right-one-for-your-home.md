@@ -26,59 +26,59 @@ Shopping for a new toilet may seem straightforward, but with so many options ava
 
 At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County select and install the perfect toilet for their bathrooms. Below, we’ve broken down five popular types of toilets, plus tips on what to consider when making your final decision.
 
-1\. Water-Saving Toilets: Efficient & Eco-Friendly
+## 1\. Water-Saving Toilets: Efficient & Eco-Friendly
 
 If you’re looking to reduce water usage and save on your monthly bill, water-saving toilets are a smart investment. These toilets use significantly less water per flush than older models, often just 1.28 gallons compared to the older 3.5-gallon standard.
 
 Look for toilets with the EPA WaterSense® label, which certifies that the fixture meets strict efficiency and performance standards. Water-saving toilets are especially ideal for homes in drought-prone areas or those trying to reduce their environmental footprint.
 
-Benefits:
+### Benefits
 
 - Lower utility bills
 - Environmentally responsible
 - Often qualify for rebates or incentives
 
-2\. Push-Button Flush Toilets: Sleek & Low Maintenance
+## 2\. Push-Button Flush Toilets: Sleek & Low Maintenance
 
 Push-button flush toilets offer a modern look and simple functionality. Instead of a traditional lever, these toilets feature one or two buttons (often located on the tank lid) for flushing. Many push-button models are also dual-flush, helping you save water depending on the type of waste.
 
-Why Homeowners Love Them:
+### Why Homeowners Love Them
 
 - Contemporary, stylish appearance
 - Easy to clean and disinfect
 - Reliable with fewer moving parts than lever-based systems
 
-3\. Single-Flush Toilets: The Classic Choice
+## 3\. Single-Flush Toilets: The Classic Choice
 
 The most traditional toilet design is the single-flush model. It uses the same amount of water (typically 1.6 gallons), for every flush, regardless of the waste. These toilets are simple to operate, cost-effective, and easy to maintain.
 
-Best For:
+### Best For
 
 - Families with multiple bathrooms
 - Homeowners looking for reliability over features
 - Budget-conscious renovations
 
-4\. Dual-Flush Toilets: Optimized for Water Efficiency
+## 4\. Dual-Flush Toilets: Optimized for Water Efficiency
 
 Dual-flush toilets offer two flush options: one for liquid waste (usually 0.8 gallons) and one for solid waste (around 1.6 gallons). The flush buttons are typically located on top of the tank and are color-coded or labeled for clarity.
 
-Advantages:
+### Advantages
 
 - Saves water by giving users control over each flush
 - Reduces your monthly water bill
 - Ideal for eco-conscious households
 
-5\. Touchless-Flush Toilets: High-Tech & Hygienic
+## 5\. Touchless-Flush Toilets: High-Tech & Hygienic
 
 Touchless-flush toilets use motion sensors to activate the flush mechanism. These smart toilets reduce the spread of germs by eliminating the need to touch the toilet after use.
 
-Perfect For:
+### Perfect For
 
 - Homes with children, elderly, or immunocompromised individuals
 - High-traffic bathrooms
 - Anyone looking for a clean, hands-free experience
 
-What to Consider When Choosing a Toilet
+## What to Consider When Choosing a Toilet
 
 A toilet is a long-term fixture, so it’s worth taking the time to evaluate all the features that will impact your comfort and convenience. Consider the following before making your purchase:
 
@@ -90,7 +90,7 @@ A toilet is a long-term fixture, so it’s worth taking the time to evaluate all
 
 Think about your family’s needs, water usage habits, and how much maintenance you’re willing to take on.
 
-Need Help Choosing or Installing a Toilet? We’ve Got You Covered
+## Need Help Choosing or Installing a Toilet? We’ve Got You Covered
 
 Choosing the right toilet is just the first step, installing it correctly is equally important. At Wade’s Plumbing & Septic, we offer professional toilet installation services throughout Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and the surrounding areas. Our team can help you select the ideal model for your space and handle every part of the installation with precision and care.
 
