@@ -114,7 +114,12 @@ export function ContentPage({
 						<span aria-hidden="true" className="text-border">
 							·
 						</span>
-						<span>Updated {document.updated}</span>
+						<span>
+							Updated{" "}
+							<time dateTime={document.updated}>
+								{formatPostDate(document.updated)}
+							</time>
+						</span>
 					</>
 				) : null}
 			</p>
