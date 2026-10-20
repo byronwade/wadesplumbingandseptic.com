@@ -112,6 +112,15 @@ export function websiteJsonLd() {
 	}
 }
 
+export function openingHoursJsonLd() {
+	return {
+		"@type": "OpeningHoursSpecification",
+		dayOfWeek: [...siteConfig.openingHours.days],
+		opens: siteConfig.openingHours.opens,
+		closes: siteConfig.openingHours.closes,
+	}
+}
+
 export function localBusinessJsonLd(
 	services: Array<{ slug: string; title: string; description: string }> = [],
 ) {
@@ -166,14 +175,7 @@ export function localBusinessJsonLd(
 		areaServed: serviceAreasJsonLd().map((area) =>
 			"@id" in area ? { "@id": area["@id"] } : area,
 		),
-		openingHoursSpecification: [
-			{
-				"@type": "OpeningHoursSpecification",
-				dayOfWeek: [...siteConfig.openingHours.days],
-				opens: siteConfig.openingHours.opens,
-				closes: siteConfig.openingHours.closes,
-			},
-		],
+		openingHoursSpecification: [openingHoursJsonLd()],
 		sameAs: [
 			siteConfig.googleBusinessUrl,
 			siteConfig.social.facebook,
@@ -265,6 +267,61 @@ export function faqPageJsonLd(
 			},
 		})),
 	}
+}
+
+/**
+ * Service page node: what the service is, where it is offered and how to book
+ * it, all from siteConfig. No offers or prices (flat rate, quoted on site).
+ */
+export function serviceJsonLd(service: ContentDocument) {
+	const url = absoluteUrl(`/service-offerings/${service.slug}`)
+	const hours = openingHoursJsonLd()
+	return {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"@id": `${url}#service`,
+		name: service.title,
+		description: service.description,
+		url,
+		serviceType: service.category ?? "Service",
+		category: service.category,
+		areaServed: [
+			{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
+			{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+		],
+		provider: { "@id": businessId },
+		brand: { "@type": "Brand", name: siteConfig.name },
+		hoursAvailable: hours,
+		availableChannel: {
+			"@type": "ServiceChannel",
+			serviceUrl: absoluteUrl("/contact"),
+			servicePhone: {
+				"@type": "ContactPoint",
+				telephone: siteConfig.phoneE164,
+				contactType: "customer service",
+				hoursAvailable: hours,
+			},
+		},
+	}
+}
+
+/**
+ * FAQ answers that repeat claims still waiting on Byron's confirmation
+ * (guarantees, insurance, certification, length of experience). They stay
+ * visible on the page as written but are not amplified into structured data.
+ */
+const heldFaqClaim = /guarantee|warrant|insured|certified|years of experience/i
+
+/** FAQPage for a service page, built from the same pairs the page shows. */
+export function serviceFaqJsonLd(
+	faqs: Array<{ question: string; answer: string }>,
+) {
+	const eligible = faqs.filter(
+		(faq) =>
+			faq.question.trim().endsWith("?") &&
+			!heldFaqClaim.test(`${faq.question} ${faq.answer}`),
+	)
+	return eligible.length ? faqPageJsonLd(eligible) : null
 }
 
 /** Pull ### Question / answer pairs from markdown for FAQPage schema. */
