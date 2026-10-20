@@ -25,6 +25,10 @@ const load = (
 	}
 )._load = function patchedLoad(request, parent, isMain) {
 	if (request === "server-only") return {}
+	// Metadata tests exercise the real route without loading its UI dependency tree.
+	if (request === "@/components/article-archive") {
+		return { ArticleArchive() {} }
+	}
 	if (request === "next/cache") {
 		return {
 			cacheLife() {},
@@ -36,7 +40,7 @@ const load = (
 
 async function main() {
 	const { getCollection, taxonomySlug } = await import("../../lib/content")
-	const { SITEMAP_EXCLUDED_PATHS, SITEMAP_MIN_TAG_POSTS, buildSitemapEntries } =
+	const { SITEMAP_EXCLUDED_PATHS, buildSitemapEntries } =
 		await import("../../lib/sitemap")
 	const { siteConfig } = await import("../../lib/site")
 
@@ -98,6 +102,10 @@ async function main() {
 			`Use canonical service URLs, not ${path}`,
 		)
 		assert.ok(!path.startsWith("/api/"), `API routes must not appear: ${path}`)
+		assert.ok(
+			!path.startsWith("/tag/"),
+			`Noindex tag archives must not appear: ${path}`,
+		)
 	}
 
 	const services = (await getCollection("services")).filter(
@@ -125,14 +133,35 @@ async function main() {
 		}
 	}
 
-	for (const [slug, count] of tagCounts) {
+	assert.ok(tagCounts.size > 0, "Content should exercise tag archive exclusion")
+	assert.ok(
+		[...tagCounts.values()].some((count) => count > 1),
+		"Content should exercise popular tag archive exclusion",
+	)
+	for (const slug of tagCounts.keys()) {
 		const path = `/tag/${slug}`
-		if (count < SITEMAP_MIN_TAG_POSTS) {
-			assert.ok(!pathSet.has(path), `Thin tag should be omitted: ${path}`)
-		} else {
-			assert.ok(pathSet.has(path), `Popular tag should be included: ${path}`)
-		}
+		assert.ok(!pathSet.has(path), `Noindex tag should be omitted: ${path}`)
 	}
+
+	const { generateMetadata } = await import("../../app/(site)/tag/[slug]/page")
+	for (const slug of tagCounts.keys()) {
+		const metadata = await generateMetadata({
+			params: Promise.resolve({ slug }),
+		})
+		assert.deepEqual(
+			metadata.robots,
+			{ index: false, follow: true },
+			`Tag archive should be noindex with followable links: /tag/${slug}`,
+		)
+		assert.equal(metadata.alternates?.canonical, `/tag/${slug}`)
+	}
+	assert.deepEqual(
+		await generateMetadata({
+			params: Promise.resolve({ slug: "not-a-real-tag-for-seo-check" }),
+		}),
+		{},
+		"Missing tags must not get metadata for a real archive",
+	)
 
 	assert.ok(
 		entries.every(
@@ -152,7 +181,7 @@ async function main() {
 	console.log(
 		`Sitemap quality checks passed ✓ (${entries.length} URLs, ${
 			entries.filter((entry) => entry.images?.length).length
-		} with images)`,
+		} with images, ${tagCounts.size} noindex tag archives checked)`,
 	)
 }
 
