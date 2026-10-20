@@ -179,7 +179,7 @@ export function VirtualBusinessCard({
 
 				<div
 					className={cn(
-						"hidden shrink-0 flex-col justify-center gap-3 border-t p-5 sm:flex sm:w-60 sm:border-t-0 sm:border-l sm:p-7",
+						"hidden shrink-0 flex-col justify-center gap-3 border-t p-5 sm:flex sm:w-64 sm:border-t-0 sm:border-l sm:p-7",
 						dark ? "border-white/10" : "border-border",
 					)}
 				>
@@ -189,11 +189,11 @@ export function VirtualBusinessCard({
 							dark ? "text-on-dark-muted" : "text-muted-foreground",
 						)}
 					>
-						Call or email anytime. You can also save this card if you want the
-						number handy later.
+						Call during office hours or email anytime. You can also save this
+						card if you want the number handy later.
 					</p>
 					<CallButton
-						className="w-full"
+						className="w-full px-4"
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						prefer="dial"
 						size="lg"
@@ -201,8 +201,8 @@ export function VirtualBusinessCard({
 					<ProtectedContactLink
 						ariaLabel={`Email us at ${contactInfo.email}`}
 						className={cn(
-							buttonVariants({ variant: "outline", size: "lg" }),
-							"w-full",
+							buttonVariants({ variant: "outline", size: "lg", wrap: true }),
+							"w-full px-4",
 							dark ? "border-white/20 text-white" : undefined,
 						)}
 						kind="email"

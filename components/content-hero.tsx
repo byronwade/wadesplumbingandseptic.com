@@ -79,13 +79,13 @@ function BreadcrumbTrail({
 							/>
 						) : null}
 						{item.href ? (
-							<Link prefetch={false}
+							<Link
+								prefetch={false}
 								className={cn(
 									"transition-colors",
 									light ? "hover:text-foreground" : "hover:text-white",
 								)}
 								href={item.href}
-
 							>
 								{item.label}
 							</Link>
@@ -243,13 +243,17 @@ export function ContentHero({
 									prefer="dial"
 									size="xl"
 								/>
-								<Link prefetch={false}
+								<Link
+									prefetch={false}
 									className={cn(
-										buttonVariants({ variant: "outline", size: "xl" }),
+										buttonVariants({
+											variant: "outline",
+											size: "xl",
+											wrap: true,
+										}),
 										"w-full sm:w-auto",
 									)}
 									href="/contact"
-
 								>
 									Request service
 								</Link>
@@ -384,13 +388,13 @@ export function ContentHero({
 								size="lg"
 							/>
 						) : (
-							<Link prefetch={false}
+							<Link
+								prefetch={false}
 								className={cn(
-									buttonVariants({ size: "lg" }),
+									buttonVariants({ size: "lg", wrap: true }),
 									"w-full sm:w-auto",
 								)}
 								href="/contact"
-
 							>
 								Get in touch
 							</Link>

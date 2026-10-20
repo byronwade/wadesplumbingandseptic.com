@@ -10,6 +10,7 @@ import {
 	Wrench,
 } from "@/components/icons"
 
+import { CallButton } from "@/components/call-button"
 import { HomeFaq } from "@/components/home-faq"
 import { buttonVariants } from "@/components/ui/button"
 import {
@@ -94,19 +95,20 @@ export function HomeBelowFold() {
 								</div>
 							))}
 							<div className="flex w-full flex-col gap-3 sm:col-span-2 sm:flex-row">
-								<a
-									className={cn(
-										buttonVariants({ size: "xl" }),
-										"inline-flex w-full gap-2 sm:w-auto",
-									)}
-									href={contactInfo.phoneHref}
-								>
-									Call {contactInfo.phoneDisplay}
-								</a>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									showIcon={false}
+									size="xl"
+								/>
 								<Link
 									prefetch={false}
 									className={cn(
-										buttonVariants({ variant: "outline", size: "xl" }),
+										buttonVariants({
+											variant: "outline",
+											size: "xl",
+											wrap: true,
+										}),
 										"w-full sm:w-auto",
 									)}
 									href="/service-offerings/engineered-septic-system-installation"
@@ -136,7 +138,7 @@ export function HomeBelowFold() {
 									Engineered ATU
 								</span>
 							</div>
-							<figcaption className="flex items-end justify-between gap-4 px-2 pt-3 pb-1">
+							<figcaption className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2 px-2 pt-3 pb-1">
 								<span className="text-[0.8125rem] leading-snug font-bold">
 									Three-tank engineered septic system
 									<span className="text-muted-foreground block font-normal">
@@ -174,7 +176,7 @@ export function HomeBelowFold() {
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
+								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/contact"
@@ -225,7 +227,7 @@ export function HomeBelowFold() {
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "outline", size: "lg" }),
+								buttonVariants({ variant: "outline", size: "lg", wrap: true }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href="/services"
@@ -347,7 +349,7 @@ export function HomeBelowFold() {
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
+								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
 								"mt-8 w-full sm:w-auto",
 							)}
 							href="/testimonials"
@@ -401,19 +403,16 @@ export function HomeBelowFold() {
 						</div>
 					</div>
 					<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:shrink-0">
-						<a
-							className={cn(
-								buttonVariants({ size: "xl" }),
-								"inline-flex w-full gap-2 sm:w-auto",
-							)}
-							href={contactInfo.phoneHref}
-						>
-							Call {contactInfo.phoneDisplay}
-						</a>
+						<CallButton
+							className="w-full sm:w-auto"
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							showIcon={false}
+							size="xl"
+						/>
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "xl" }),
+								buttonVariants({ variant: "inverse", size: "xl", wrap: true }),
 								"w-full sm:w-auto",
 							)}
 							href="/contact"

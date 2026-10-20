@@ -130,6 +130,7 @@ function MegaFooter({
 					desktopLabel={contactInfo.phoneDisplay}
 					prefer="dial"
 					size="sm"
+					wrap={false}
 				/>
 				<NavigationMenuLink asChild>
 					<Link
@@ -329,6 +330,7 @@ export function SiteHeaderNav() {
 					desktopLabel={contactInfo.phoneDisplay}
 					prefer="dial"
 					size="lg"
+					wrap={false}
 				/>
 			</div>
 
