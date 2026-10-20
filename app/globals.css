@@ -339,6 +339,13 @@
 		-webkit-text-size-adjust: 100%;
 	}
 
+	/* Keep keyboard-focused content above the mobile call bar. */
+	@media (width < 64rem) {
+		html:has(.mobile-call-bar) {
+			scroll-padding-bottom: calc(10rem + env(safe-area-inset-bottom));
+		}
+	}
+
 	body {
 		margin: 0;
 		background: var(--background);
