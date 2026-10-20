@@ -86,6 +86,6 @@ Expert Leak Detection
 
 Detect and resolve septic leaks swiftly with our cutting-edge technology and expertise.
 
-[Call Us Now](tel:+1-831-123-4567)
+[Call Us Now](tel:+18312254344)
 
 We are a licensed contractor (C-42), ensuring quality and compliance with local standards.

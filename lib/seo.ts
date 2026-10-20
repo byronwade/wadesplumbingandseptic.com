@@ -13,6 +13,10 @@ export const META_DESCRIPTION_MAX = 155
 /** Social previews (and opengraph.xyz) prefer ~125 characters. */
 export const OG_DESCRIPTION_MAX = 125
 
+/** Stable schema.org node IDs: every page references the same business entity. */
+export const businessId = `${siteConfig.url}/#business`
+export const websiteId = `${siteConfig.url}/#website`
+
 export function absoluteUrl(pathname: string) {
 	if (pathname.startsWith("http")) return pathname
 	return `${siteConfig.url}${pathname.startsWith("/") ? pathname : `/${pathname}`}`
@@ -99,11 +103,11 @@ export function websiteJsonLd() {
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
-		"@id": `${siteConfig.url}/#website`,
+		"@id": websiteId,
 		name: siteConfig.name,
 		url: siteConfig.url,
 		description: siteConfig.description,
-		publisher: { "@id": `${siteConfig.url}/#business` },
+		publisher: { "@id": businessId },
 		inLanguage: "en-US",
 	}
 }
@@ -123,7 +127,7 @@ export function localBusinessJsonLd(
 							name: service.title,
 							description: service.description,
 							url: absoluteUrl(`/service-offerings/${service.slug}`),
-							provider: { "@id": `${siteConfig.url}/#business` },
+							provider: { "@id": businessId },
 						},
 					})),
 				}
@@ -132,10 +136,10 @@ export function localBusinessJsonLd(
 	return {
 		"@context": "https://schema.org",
 		"@type": ["Plumber", "LocalBusiness", "HomeAndConstructionBusiness"],
-		"@id": `${siteConfig.url}/#business`,
+		"@id": businessId,
 		name: siteConfig.name,
 		url: siteConfig.url,
-		telephone: "+18312254344",
+		telephone: siteConfig.phoneE164,
 		email: siteConfig.email,
 		logo: absoluteUrl("/images/brand/wades-mark.webp"),
 		image: absoluteUrl("/images/locations/santa-cruz-plumber.webp"),
@@ -165,9 +169,9 @@ export function localBusinessJsonLd(
 		openingHoursSpecification: [
 			{
 				"@type": "OpeningHoursSpecification",
-				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-				opens: "09:00",
-				closes: "17:00",
+				dayOfWeek: [...siteConfig.openingHours.days],
+				opens: siteConfig.openingHours.opens,
+				closes: siteConfig.openingHours.closes,
 			},
 		],
 		sameAs: [
@@ -200,11 +204,13 @@ export function articleJsonLd(document: ContentDocument) {
 		),
 		author: {
 			"@type": "Organization",
+			"@id": businessId,
 			name: siteConfig.name,
 			url: siteConfig.url,
 		},
 		publisher: {
 			"@type": "Organization",
+			"@id": businessId,
 			name: siteConfig.name,
 			logo: {
 				"@type": "ImageObject",
@@ -223,10 +229,10 @@ export function webPageJsonLd(document: ContentDocument) {
 		description: document.description,
 		url: absoluteUrl(`/${document.slug}`),
 		isPartOf: {
-			"@id": `${siteConfig.url}/#website`,
+			"@id": websiteId,
 		},
 		about: {
-			"@id": `${siteConfig.url}/#business`,
+			"@id": businessId,
 		},
 	}
 }
@@ -318,7 +324,7 @@ export function serviceAreaJsonLd(document: ContentDocument, cityName: string) {
 		description: document.description,
 		url: absoluteUrl(`/${document.slug}`),
 		serviceType: "Plumbing and septic services",
-		provider: { "@id": `${siteConfig.url}/#business` },
+		provider: { "@id": businessId },
 		areaServed: location
 			? serviceAreaPlaceJsonLd(location)
 			: { "@type": "Place", name: cityName },

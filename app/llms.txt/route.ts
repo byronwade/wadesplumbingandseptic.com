@@ -4,6 +4,7 @@ import {
 	cityServicePath,
 	getCityLocation,
 } from "@/lib/city-service-pages"
+import { LLMS_FULL_PATH, llmsBusinessSummary } from "@/lib/llms"
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
@@ -42,17 +43,8 @@ export async function GET() {
 		})
 		.join("\n")
 
-	const body = `# ${siteConfig.name}
-
-> ${siteConfig.description}
-
-Phone: ${siteConfig.phone}
-Email: ${siteConfig.email}
-Address: ${siteConfig.address.display}
-Hours: ${siteConfig.hours}
-Pricing: ${siteConfig.pricing}
-License: ${siteConfig.licenses}
-Service area: ${siteConfig.serviceArea}
+	const body = `${llmsBusinessSummary()}
+Full text of services and key pages: ${siteConfig.url}${LLMS_FULL_PATH}
 
 ## Services
 

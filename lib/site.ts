@@ -6,9 +6,17 @@ export const siteConfig = {
 	/** Preferred host matches production redirects (apex → www). */
 	url: "https://www.wadesplumbingandseptic.com",
 	phone: "831.225.4344",
+	/** E.164 form for schema, vCard and tel: links. Must match `phone`. */
+	phoneE164: "+18312254344",
 	phoneHref: "tel:+18312254344",
 	email: "support@wadesinc.io",
 	hours: "Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday",
+	/** Structured form of `hours` for schema.org openingHoursSpecification. */
+	openingHours: {
+		days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+		opens: "09:00",
+		closes: "17:00",
+	},
 	pricing: "Flat-rate pricing, quoted on site before work begins.",
 	address: {
 		street: "7737 Highway 9",

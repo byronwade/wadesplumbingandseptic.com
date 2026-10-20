@@ -65,7 +65,7 @@ Expert Septic Services
 
 Ensure your septic system complies with local regulations and operates efficiently with our certified expertise.
 
-[Call Us Now](tel:+1-831-123-4567)
+[Call Us Now](tel:+18312254344)
 
 ## Trusted by Santa Cruz County Residents for Septic Certification Compliance
 
