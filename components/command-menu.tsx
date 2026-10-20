@@ -31,6 +31,7 @@ const GROUP_LABEL: Record<SearchResultType, string> = {
 type CommandMenuDialogProps = {
 	open: boolean
 	onOpenChange: (open: boolean) => void
+	onCloseAutoFocus?: (event: Event) => void
 }
 
 /**
@@ -40,6 +41,7 @@ type CommandMenuDialogProps = {
 export function CommandMenuDialog({
 	open,
 	onOpenChange,
+	onCloseAutoFocus,
 }: CommandMenuDialogProps) {
 	const router = useRouter()
 	const [query, setQuery] = React.useState("")
@@ -84,7 +86,11 @@ export function CommandMenuDialog({
 	)
 
 	return (
-		<CommandDialog open={open} onOpenChange={handleOpenChange}>
+		<CommandDialog
+			open={open}
+			onOpenChange={handleOpenChange}
+			onCloseAutoFocus={onCloseAutoFocus}
+		>
 			<CommandInput
 				placeholder="Search services, tips, cities…"
 				value={query}

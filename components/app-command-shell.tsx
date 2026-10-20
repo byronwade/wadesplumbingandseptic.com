@@ -1,7 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 import { OPEN_GLOBAL_SEARCH_EVENT } from "@/lib/search-events"
 import { loadSearchIndex } from "@/lib/search-client"
@@ -25,9 +25,19 @@ const CommandMenuDialog = dynamic(
 export function AppCommandShell() {
 	const [open, setOpen] = useState(false)
 	const [requested, setRequested] = useState(false)
+	// Whatever had focus when search opened (usually a header search button).
+	const returnFocusRef = useRef<HTMLElement | null>(null)
 
 	useEffect(() => {
+		const rememberFocus = () => {
+			const active = document.activeElement
+			if (active instanceof HTMLElement && !active.closest("[role=dialog]")) {
+				returnFocusRef.current = active
+			}
+		}
+
 		const openSearch = () => {
+			rememberFocus()
 			setRequested(true)
 			void loadSearchIndex()
 			setOpen(true)
@@ -36,6 +46,7 @@ export function AppCommandShell() {
 		const onKeyDown = (event: KeyboardEvent) => {
 			if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
 				event.preventDefault()
+				rememberFocus()
 				setRequested(true)
 				void loadSearchIndex()
 				setOpen((current) => !current)
@@ -50,7 +61,23 @@ export function AppCommandShell() {
 		}
 	}, [])
 
+	// The dialog has no Radix Trigger, so return focus to the opener ourselves.
+	const restoreFocus = useCallback((event: Event) => {
+		const target = returnFocusRef.current
+		returnFocusRef.current = null
+		if (target?.isConnected) {
+			event.preventDefault()
+			target.focus()
+		}
+	}, [])
+
 	if (!requested) return null
 
-	return <CommandMenuDialog open={open} onOpenChange={setOpen} />
+	return (
+		<CommandMenuDialog
+			open={open}
+			onOpenChange={setOpen}
+			onCloseAutoFocus={restoreFocus}
+		/>
+	)
 }
