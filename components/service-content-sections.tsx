@@ -313,7 +313,9 @@ function FaqBand({
 	section: ServiceSection
 	index: number
 }) {
-	if (!section.faqs.length) return null
+	if (!section.faqs.length) {
+		return <ProseBand index={index} section={section} />
+	}
 
 	return (
 		<section className={cn("section-y", surfaceFor(index))}>
@@ -331,7 +333,17 @@ function FaqBand({
 					</p>
 				</div>
 				<div className="reveal mx-auto mt-[var(--space-block)] max-w-3xl">
+					{section.lead ? (
+						<div className="mb-[var(--space-block)]">
+							<MarkdownContent content={section.lead} demoteH1 />
+						</div>
+					) : null}
 					<HomeFaq faqs={section.faqs} />
+					{section.body ? (
+						<div className="mt-[var(--space-block)]">
+							<MarkdownContent content={section.body} demoteH1 />
+						</div>
+					) : null}
 				</div>
 			</div>
 		</section>
