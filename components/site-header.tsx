@@ -10,10 +10,10 @@ export function SiteHeader() {
 			<div className="bg-ink-soft hidden sm:block">
 				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-bold">
 					<span>{siteConfig.hours}</span>
-					<Link prefetch={false}
+					<Link
+						prefetch={false}
 						className="transition-colors hover:text-white"
 						href="/service-areas"
-
 					>
 						{siteConfig.serviceArea}
 					</Link>
@@ -29,11 +29,11 @@ export function SiteHeader() {
 					  the search and call buttons; the mark and the link name stay.
 					*/}
 					<div className="@container min-w-0 flex-1 lg:@container-normal lg:flex-initial">
-						<Link prefetch={false}
+						<Link
+							prefetch={false}
 							className="flex max-w-full items-center gap-2.5 sm:gap-3"
 							href="/"
 							aria-label="Wade's Plumbing & Septic home"
-
 						>
 							<Image
 								alt="Wade's Plumbing & Septic logo"
@@ -44,7 +44,7 @@ export function SiteHeader() {
 								width={44}
 							/>
 							<span className="min-w-0 leading-none @max-[7.5rem]:hidden">
-								<span className="font-display block text-[0.9375rem] lg:whitespace-nowrap leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg">
+								<span className="font-display block text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg lg:whitespace-nowrap">
 									Wade&apos;s Plumbing
 								</span>
 								<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
