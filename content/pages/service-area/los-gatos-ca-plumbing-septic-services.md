@@ -34,7 +34,6 @@ Los Gatos is predominantly sewer-served through municipal and district systems, 
 
 For properties we confirm are in our service area, septic support may include:
 
-- Tank pumping and routine maintenance
 - Inspections for real estate transactions
 - Effluent filter service, risers, and alarm troubleshooting
 - Leach field evaluation on sloped, wooded parcels

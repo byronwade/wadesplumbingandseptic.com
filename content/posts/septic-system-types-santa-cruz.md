@@ -116,6 +116,6 @@ Spring is an ideal time to inspect your septic system and address any issues bef
 - Consider the environmental impact of your septic system choice.
 - Plan for future scalability if your household needs change.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic for expert advice on the best septic system types for your Santa Cruz home.

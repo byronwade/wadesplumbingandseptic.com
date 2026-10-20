@@ -7,7 +7,7 @@ category: Septic
 order: 18
 image: /images/work/engineered-septic-hero.webp
 imageAlt: New septic system installation
-updated: "2026-07-30"
+updated: "2026-10-20"
 ---
 
 When it comes to ensuring your home's wastewater management is both efficient and environmentally friendly, professional septic system installation is crucial. At Wade's Plumbing & Septic, we pride ourselves on providing top-tier septic system solutions to the residents of Santa Cruz County, California. Whether you're building a new home or replacing an outdated system, our team offers comprehensive services that cover every aspect from permit acquisition to final inspection.
@@ -57,7 +57,7 @@ Flat-rate pricing, quoted on site before work begins.
 ## FAQs About Septic System Installation
 
 - **What is the difference between conventional and engineered septic systems?** \- Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
-- **How can I maintain my septic tank?** \- Regular inspections and pumping are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services for expert assistance.
+- **How can I maintain my septic tank?** \- Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services for expert assistance.
 
 For professional, reliable septic system installation in Santa Cruz County, trust Wade's Plumbing & Septic. Our team is here to guide you through every step, ensuring a seamless experience and a system that serves your home efficiently for years to come. **Contact us today** to schedule your consultation and take the first step toward a worry-free septic solution.
 

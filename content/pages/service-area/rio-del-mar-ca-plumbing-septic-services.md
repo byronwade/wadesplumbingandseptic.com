@@ -32,7 +32,6 @@ Many Rio Del Mar flats connect to sewer infrastructure serving the coastal corri
 Our wastewater work includes:
 
 - Sewer lateral inspection when backups affect multiple fixtures
-- Septic pumping with documentation helpful for escrow and property managers
 - Drainfield assessment for soggy lawns, slow drains, or odors after pumping
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when systems no longer meet county standards
 - [Engineered septic options](/service-offerings/engineered-septic-system-installation) for bluff-adjacent parcels with tight replacement areas

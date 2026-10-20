@@ -53,7 +53,7 @@ Our team provides expert advice on optimizing septic system health, tailored to 
 
 Homeowners should consider several factors when maintaining their septic systems. Regular maintenance and prompt repairs can prevent more significant issues down the line.
 
-Timing of service is crucial, especially before the rainy season, to ensure that systems are prepared for increased water flow. While we don’t discuss specific costs, investing in regular maintenance can save on potential septic pumping costs.
+Timing of service is crucial, especially before the rainy season, to ensure that systems are prepared for increased water flow. While we don’t discuss specific costs, investing in regular maintenance can help avoid larger repairs.
 
 ## Why Santa Cruz County Homeowners Trust Wade's Plumbing & Septic
 

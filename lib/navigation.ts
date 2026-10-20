@@ -38,7 +38,7 @@ export const serviceNavLinks: MegaNavItem[] = [
 	{
 		href: "/service-category/septic",
 		label: "Septic Systems",
-		description: "Inspections, pumping, repairs, and engineered installs.",
+		description: "Installations with engineers, inspections, and repairs.",
 		icon: "badge",
 	},
 	{
@@ -56,9 +56,9 @@ export const serviceMegaHighlights = [
 		description: "ATUs, mounds, and advanced installs for hard sites.",
 	},
 	{
-		href: "/service-offerings/septic-tank-cleaning-and-pumping",
-		label: "Septic Pumping",
-		description: "Keep your system healthy before problems start.",
+		href: "/service-offerings/septic-system-installation",
+		label: "Septic System Installation",
+		description: "New and replacement systems, built alongside engineers.",
 	},
 	{
 		href: "/service-offerings/hydro-jetting",

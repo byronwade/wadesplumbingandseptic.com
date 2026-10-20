@@ -20,7 +20,7 @@ Mount Hermon properties share challenges with Felton and Zayante, with a few loc
 
 **Private wells and pressure systems.** Many homes rely on well pumps, pressure tanks, and filtration skids that coastal plumbers rarely touch. Short cycling, air locks, and sediment at fixtures often trace back to the well house, not the kitchen faucet.
 
-**Seasonal use.** Homes near the conference area may see bursts of occupancy. That spikes water use and septic loading in ways a year-round family of four doesn't. We help owners plan pump schedules and catch small leaks before they run up a pump bill on an empty house.
+**Seasonal use.** Homes near the conference area may see bursts of occupancy. That spikes water use and septic loading in ways a year-round family of four doesn't. We help owners catch small leaks before they run up a pump bill on an empty house.
 
 **Tree canopy and moisture.** Roots seek sewer laterals. Crawlspaces stay damp. Hose bibs on the north side of the house freeze while the south side dries out. Mount Hermon's microclimate is milder than Boulder Creek but still mountain country.
 
@@ -34,9 +34,8 @@ Mount Hermon is overwhelmingly on septic, not sewer. Lots are wooded, slopes are
 
 We provide:
 
-- Routine **tank pumping** sized to actual use, including low-occupancy homes that still need periodic service
 - **Inspections and certifications** for real estate transactions in a market where buyers ask hard septic questions
-- **Riser and access improvements** so future pumping doesn't require landscape demolition
+- **Riser and access improvements** so future service doesn't require landscape demolition
 - **Effluent filter cleaning** and alarm checks on newer installs
 - **Drainfield troubleshooting** when surfacing, odors, or whole-house backups point to leach failure
 - **Repairs and replacements**, including paths toward [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Mount Hermon setbacks or soil data limit conventional options

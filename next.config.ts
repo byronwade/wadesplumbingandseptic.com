@@ -101,6 +101,15 @@ const nextConfig: NextConfig = {
 					"how-to-handle-a-clogged-drain-or-sewer-line",
 					"/service-offerings/drain-cleaning",
 				],
+				// Wade's installs septic systems and does not offer tank pumping.
+				[
+					"septic-pumping-essentials-santa-cruz",
+					"/the-complete-guide-to-septic-system-maintenance",
+				],
+				[
+					"understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
+					"/the-complete-guide-to-septic-system-maintenance",
+				],
 			].flatMap(([slug, destination]) => [
 				{ source: `/${slug}`, destination, permanent: true },
 				{ source: `/expert-tips/${slug}`, destination, permanent: true },
@@ -245,11 +254,22 @@ const nextConfig: NextConfig = {
 				destination: "/service-offerings/shower-installation-and-repair",
 				permanent: true,
 			},
-			{
-				source: "/service-offerings/septic-pumping",
-				destination: "/service-offerings/septic-tank-cleaning-and-pumping",
+			...[
+				"/service-offerings/septic-pumping",
+				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/santa-cruz/septic-pumping",
+			].map((source) => ({
+				source,
+				destination: "/service-offerings/septic-tank-maintenance-and-care",
 				permanent: true,
-			},
+			})),
+			...["felton", "boulder-creek", "mount-hermon", "la-selva-beach"].map(
+				(city) => ({
+					source: `/service-area/${city}/septic-tank-cleaning-and-pumping`,
+					destination: `/service-area/${city}-ca-plumbing-septic-services`,
+					permanent: true,
+				}),
+			),
 			{
 				source: "/service-offerings/septic-installation",
 				destination: "/service-offerings/septic-system-installation",

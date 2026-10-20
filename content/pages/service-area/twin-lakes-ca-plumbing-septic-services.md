@@ -32,7 +32,6 @@ Lower Twin Lakes properties generally connect to municipal sewer lines serving t
 We provide:
 
 - Sewer lateral camera inspection when backups repeat after snaking
-- Septic pumping with sludge-level notes useful for property managers tracking maintenance
 - Drainfield evaluation when odors or wet patches show above the tank
 - Paths to [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county review requires upgrades
 - [Engineered septic guidance](/service-offerings/engineered-septic-system-installation) for steep or limited replacement areas on hillside lots

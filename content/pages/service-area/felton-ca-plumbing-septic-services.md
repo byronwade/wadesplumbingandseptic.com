@@ -2,7 +2,7 @@
 title: "Felton, CA Plumbing & Septic Services"
 description: >-
   Family-owned plumbing and septic for Felton homes on wells, steep lots, and
-  redwood-lined Highway 9. Pumping and repairs. Call
+  redwood-lined Highway 9. Septic repairs and inspections. Call
   831.225.4344.
 eyebrow: "Felton, CA"
 order: 50
@@ -32,7 +32,6 @@ Most Felton parcels are on individual septic systems. Tank size, soil percolatio
 
 Wade's septic work in Felton includes:
 
-- Routine **pumping and cleaning** with honest intervals based on household size, not a calendar sales pitch
 - **Inspections and certifications** for real estate, refinancing, or county requirements
 - **Riser installs, alarms, and effluent filters** so you can maintain the system without digging up the yard each time
 - **Drainfield troubleshooting**, surfacing effluent, slow drains throughout the house, or odors near the leach area

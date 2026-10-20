@@ -34,7 +34,6 @@ Most Saratoga homes connect to municipal sewer, particularly in established neig
 
 A meaningful number of **western hillside and legacy parcels** near the county border may still use **private septic systems**, especially on larger lots, older builds, and properties that were rural before Saratoga's residential growth. For addresses we confirm are in our service area, septic work may include:
 
-- Tank pumping and scheduled maintenance
 - Real estate inspection and documentation
 - Effluent filter cleaning, riser installation, and alarm service
 - Leach field evaluation on sloped, wooded terrain

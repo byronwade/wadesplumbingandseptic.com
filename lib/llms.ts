@@ -25,7 +25,8 @@ Hours: ${siteConfig.hours}
 Pricing: ${siteConfig.pricing}
 License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
-Services: Residential and commercial plumbing, drain, sewer, water heater and septic service
+Services: Residential and commercial plumbing, drain, sewer, water heater and septic service, including new and engineered septic system installation done alongside engineers
+Not offered: septic tank pumping
 Book service: call ${siteConfig.phone} during office hours or request service at ${siteConfig.url}/contact
 Google Business Profile: ${siteConfig.googleBusinessUrl}
 Google reviews: ${siteConfig.googleReviewUrl}`

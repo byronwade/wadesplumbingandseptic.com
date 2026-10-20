@@ -32,7 +32,6 @@ Nearly every parcel in Aptos Hills-Larkin Valley operates on private septic. Sys
 
 Wade's septic services here include:
 
-- Scheduled pumping matched to occupancy and tank volume
 - Real estate inspections for buyers evaluating rural acreage
 - Effluent filter cleaning, riser retrofits, and control panel diagnostics
 - Troubleshooting backups, odors, and alarm conditions
@@ -49,7 +48,7 @@ Equestrian use means wash-water, manure management areas, and pasture irrigation
 
 Fire season demands attention to exterior plumbing. Hose bibs, pool fillers, and backup water sources should be tested and accessible before summer heat and red-flag conditions arrive.
 
-Driveways can be long and steep. Septic trucks and service vehicles need adequate turnaround space. Mention access details when you call so we plan accordingly.
+Driveways can be long and steep. Service trucks and equipment need adequate turnaround space. Mention access details when you call so we plan accordingly.
 
 ## Schedule service in Aptos Hills-Larkin Valley
 
