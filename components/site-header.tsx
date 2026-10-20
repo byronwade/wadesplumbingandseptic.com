@@ -20,15 +20,16 @@ export function SiteHeader() {
 				</div>
 			</div>
 
-			{/* Relative shell so mega-menu viewports span the full header width */}
-			<div className="relative">
+			{/* Rem-based container queries let navigation reflow with enlarged text.
+			    The relative shell keeps mega-menu viewports at full header width. */}
+			<div className="@container/header relative">
 				<div className="container-shell flex h-16 items-center justify-between gap-3 sm:h-18">
 					{/*
 					  The brand gets whatever the controls leave. The query is in rem, so
 					  with enlarged text the wordmark steps aside before it can run under
 					  the search and call buttons; the mark and the link name stay.
 					*/}
-					<div className="@container min-w-0 flex-1 lg:@container-normal lg:flex-initial">
+					<div className="@container min-w-0 flex-1 @min-[64rem]/header:@container-normal @min-[64rem]/header:flex-initial">
 						<Link
 							prefetch={false}
 							className="flex max-w-full items-center gap-2.5 sm:gap-3"
@@ -44,7 +45,7 @@ export function SiteHeader() {
 								width={44}
 							/>
 							<span className="min-w-0 leading-none @max-[7.5rem]:hidden">
-								<span className="font-display block text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg lg:whitespace-nowrap">
+								<span className="font-display block text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg @min-[64rem]/header:whitespace-nowrap">
 									Wade&apos;s Plumbing
 								</span>
 								<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
