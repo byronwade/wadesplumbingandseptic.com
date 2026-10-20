@@ -40,7 +40,7 @@ function ServiceFacts() {
 				</div>
 				<div>
 					<dt className="text-muted-foreground text-xs font-bold">Hours</dt>
-					<dd className="mt-1 text-sm font-bold">{siteConfig.hours}.</dd>
+					<dd className="mt-1 text-sm font-bold">{`${siteConfig.hours}.`}</dd>
 				</div>
 				<div>
 					<dt className="text-muted-foreground text-xs font-bold">Pricing</dt>
