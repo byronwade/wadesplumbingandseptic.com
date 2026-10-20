@@ -26,7 +26,9 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	}
 
 	return (
-		<figure className="bg-muted my-8 overflow-hidden rounded-lg">
+		// Markdown images can occur inside paragraphs, links, and emphasis.
+		// Keep the wrapper phrasing content so HTML parsing preserves the tree.
+		<span className="bg-muted my-8 block overflow-hidden rounded-lg">
 			<Image
 				alt={alt?.trim() || "Wade's Plumbing & Septic project photo"}
 				className="h-auto w-full object-cover"
@@ -35,7 +37,7 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 				src={src}
 				width={1600}
 			/>
-		</figure>
+		</span>
 	)
 }
 
