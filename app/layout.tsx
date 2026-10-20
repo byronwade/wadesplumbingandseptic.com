@@ -3,7 +3,6 @@ import { Archivo, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
 import { ThemeProvider } from "next-themes"
 import { Suspense } from "react"
-import { Toaster } from "sonner"
 
 import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
@@ -135,7 +134,6 @@ export default function RootLayout({
 					</Suspense>
 					<ThemeHotkey />
 					<AppCommandShell />
-					<Toaster richColors closeButton position="top-center" />
 				</ThemeProvider>
 			</body>
 		</html>
