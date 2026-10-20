@@ -2,7 +2,7 @@
 title: "Ben Lomond, CA Plumbing & Septic Services"
 description: >-
   Ben Lomond plumbing and septic for redwood canyon homes, wells, root-damaged
-  lines, steep leach fields, and honest pumping schedules. Wade's: 831.225.4344.
+  lines, and steep leach fields. Wade's: 831.225.4344.
 eyebrow: "Ben Lomond, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
@@ -11,7 +11,7 @@ imageAlt: "Redwood forest and mountain homes in Ben Lomond, California"
 
 Ben Lomond doesn't announce itself. You drive past Felton on Highway 9, cross the river, and suddenly the road narrows, the canopy closes in, and every driveway points uphill at an angle that makes you rethink where you'd put a septic tank. That's the everyday reality for plumbing and septic work here, and it's why Wade's Plumbing & Septic has spent years in these canyons rather than treating Ben Lomond like a generic mountain town.
 
-We're a family-owned Santa Cruz County company. When we say we know Ben Lomond, we mean we've pulled roots out of sewer laterals on Alba Road, pumped tanks tucked behind retaining walls on Love Creek, and traced well supply lines that run 200 feet from the house to the ridgeline.
+We're a family-owned Santa Cruz County company. When we say we know Ben Lomond, we mean we've pulled roots out of sewer laterals on Alba Road and traced well supply lines that run 200 feet from the house to the ridgeline.
 
 ## When the house won't drain, and it's not just a clog
 
@@ -33,7 +33,6 @@ Nearly every Ben Lomond parcel relies on onsite wastewater treatment. Percolatio
 
 Wade's septic services include:
 
-- **Tank pumping and cleaning** with clear notes on what we found (sludge depth, baffles, inlet/outlet condition)
 - **County inspections and certifications** when you're buying, selling, or refinancing
 - **Filter service, risers, and alarm checks**, small upgrades that prevent expensive problems
 - **Leach field evaluation** when wet spots appear downhill from the tank or toilets back up during laundry
@@ -43,7 +42,7 @@ If your property was affected by wildfire rebuild requirements, septic setbacks 
 
 ## The Ben Lomond details that matter
 
-**Access.** Fire roads, single-lane bridges, and tight turnarounds affect whether a pump truck can reach your tank on the first visit. We plan for that.
+**Access.** Fire roads, single-lane bridges, and tight turnarounds affect whether trucks and equipment can reach your tank on the first visit. We plan for that.
 
 **Wells.** Many homes draw from private wells with iron, manganese, or fine sediment that clogs aerators and showerheads. Plumbing symptoms sometimes start at the source, not the fixture.
 

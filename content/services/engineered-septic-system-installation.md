@@ -8,7 +8,7 @@ order: 1
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank engineered septic installation on a hillside
 featured: true
-updated: "2026-07-30"
+updated: "2026-10-20"
 ---
 
 When a conventional tank and leach field will not work, that is our specialty. Wade's Plumbing & Septic designs and installs **engineered septic systems** for Santa Cruz County properties with steep slopes, shallow soils, high groundwater, rocky ground, small lots, or environmentally sensitive sites.
@@ -38,7 +38,7 @@ Call us when you are dealing with:
 - Steep San Lorenzo Valley or foothill parcels with limited usable area
 - Real estate contingencies that require a path to a permitted system
 
-Related services: [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment/), [septic pumping](/service-offerings/septic-tank-cleaning-and-pumping/), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement/), and [septic design support](/service-offerings/septic-tank-design-and-engineering/).
+Related services: [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment/), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement/), and [septic design support](/service-offerings/septic-tank-design-and-engineering/).
 
 ## How we deliver engineered systems
 

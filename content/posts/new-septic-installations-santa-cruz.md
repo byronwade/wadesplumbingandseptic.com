@@ -113,7 +113,7 @@ Spring is an ideal time to inspect and upgrade your septic system before the bus
 - Ensure compliance with Santa Cruz County regulations.
 - Contact Wade's Plumbing & Septic for a free quote.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic today to schedule your new septic installation and ensure your home is compliant and efficient.
 

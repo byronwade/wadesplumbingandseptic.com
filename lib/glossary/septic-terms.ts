@@ -112,7 +112,7 @@ export const septicTerms: GlossaryTerm[] = [
 		relatedServiceSlugs: [
 			"septic-tank-repair-and-replacement",
 			"septic-tank-inspection-and-assessment",
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 		],
 		relatedTermSlugs: [
 			"septic-tank",
@@ -302,7 +302,7 @@ export const septicTerms: GlossaryTerm[] = [
 		homeownerTip:
 			"If effluent looks thick or carries solids during pumping, ask about baffles and filters before problems reach the field.",
 		relatedServiceSlugs: [
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 			"septic-filter-cleaning-and-replacement",
 			"septic-tank-inspection-and-assessment",
 		],
@@ -327,7 +327,6 @@ export const septicTerms: GlossaryTerm[] = [
 			"Have the outlet filter cleaned whenever you pump the tank, or more often if you use a garbage disposal.",
 		relatedServiceSlugs: [
 			"septic-filter-cleaning-and-replacement",
-			"septic-tank-cleaning-and-pumping",
 			"septic-tank-maintenance-and-care",
 		],
 		relatedTermSlugs: ["baffle", "effluent", "biomat", "pump-chamber"],
@@ -418,7 +417,6 @@ export const septicTerms: GlossaryTerm[] = [
 			"Scrape dishes before washing and never pour cooking oil down the drain, even if you have an interceptor.",
 		relatedServiceSlugs: [
 			"commercial-septic-services",
-			"septic-tank-cleaning-and-pumping",
 			"septic-tank-maintenance-and-care",
 		],
 		relatedTermSlugs: [
@@ -634,7 +632,7 @@ export const septicTerms: GlossaryTerm[] = [
 			"Mark riser locations on your site sketch so service crews can pump without guessing in the yard.",
 		relatedServiceSlugs: [
 			"septic-tank-riser-installation",
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 			"septic-tank-inspection-and-assessment",
 		],
 		relatedTermSlugs: [
@@ -681,7 +679,6 @@ export const septicTerms: GlossaryTerm[] = [
 		homeownerTip:
 			"Wipe grease from pans and avoid garbage disposals if your pumper notes thick scum at each visit.",
 		relatedServiceSlugs: [
-			"septic-tank-cleaning-and-pumping",
 			"septic-tank-maintenance-and-care",
 			"septic-tank-inspection-and-assessment",
 		],
@@ -707,7 +704,7 @@ export const septicTerms: GlossaryTerm[] = [
 		relatedServiceSlugs: [
 			"septic-system-abandonment",
 			"septic-tank-system-compliance-and-permitting",
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 		],
 		relatedTermSlugs: [
 			"cesspool",
@@ -849,7 +846,7 @@ export const septicTerms: GlossaryTerm[] = [
 		homeownerTip:
 			"Know your tank location and last pump date; most households need pumping every 3 to 5 years.",
 		relatedServiceSlugs: [
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 			"septic-tank-repair-and-replacement",
 			"septic-tank-inspection-and-assessment",
 		],
@@ -897,7 +894,6 @@ export const septicTerms: GlossaryTerm[] = [
 		homeownerTip:
 			"Do not rely on additives to dissolve sludge; pumping is the only reliable removal method.",
 		relatedServiceSlugs: [
-			"septic-tank-cleaning-and-pumping",
 			"septic-tank-maintenance-and-care",
 			"septic-tank-inspection-and-assessment",
 		],
@@ -995,7 +991,7 @@ export const septicTerms: GlossaryTerm[] = [
 		relatedServiceSlugs: [
 			"septic-system-installation",
 			"septic-tank-repair-and-replacement",
-			"septic-tank-cleaning-and-pumping",
+			"septic-tank-maintenance-and-care",
 		],
 		relatedTermSlugs: [
 			"septic-tank",

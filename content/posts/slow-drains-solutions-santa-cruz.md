@@ -95,7 +95,7 @@ As the rainy season approaches, ensure your drains are clear to prevent water ba
 - Check for any signs of leaks or water damage around plumbing fixtures.
 - Ensure all household members are aware of what not to flush or pour down drains.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic today for expert drain cleaning services in Santa Cruz County.
 

@@ -32,7 +32,6 @@ Septic systems dominate Interlaken residential properties. Lot sizes vary, some 
 
 Our Interlaken septic services include:
 
-- Tank pumping and cleaning with attention to baffle condition and sludge levels
 - Inspections for home sales, refinancing, and landlord turnover
 - Filter cleaning, riser installs, and alarm panel troubleshooting
 - Evaluation of surfacing effluent, odors, and slow-flushing fixtures

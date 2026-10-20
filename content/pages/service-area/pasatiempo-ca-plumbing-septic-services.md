@@ -32,7 +32,6 @@ The majority of Pasatiempo properties are on sewer service through the local san
 
 A small number of Pasatiempo-area parcels on the community's edges or on adjacent undeveloped lots may still operate on septic. If you are unsure which system serves your address, we can verify during a service visit. For properties on septic, we provide:
 
-- Tank pumping and routine maintenance
 - Inspections for real estate transactions
 - Effluent filter service, riser installation, and alarm troubleshooting
 - Leach field evaluation and repair planning when needed

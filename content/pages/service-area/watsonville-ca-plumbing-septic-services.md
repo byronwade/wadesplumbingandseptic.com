@@ -32,7 +32,6 @@ Central Watsonville and many in-town subdivisions connect to city sewer. Cross i
 We help with:
 
 - Sewer lateral diagnosis when multiple fixtures back up at once
-- Septic tank pumping and condition notes for real estate transactions
 - Drainfield failure signs, persistent odors, wet strips in the yard, gurgling after laundry
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county standards require an upgrade
 - [Engineered septic options](/service-offerings/engineered-septic-system-installation) for challenging soils or tight setbacks on agricultural parcels

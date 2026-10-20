@@ -32,7 +32,6 @@ Septic is standard in Corralitos. Hillside lots may use engineered systems, pres
 
 Wade's septic services in Corralitos cover:
 
-- Routine pumping sized to your tank and household occupancy
 - Real estate inspections with documentation for buyers and sellers
 - Effluent filter maintenance, riser installation, and control panel diagnostics
 - Troubleshooting slow drains, backups, and alarm conditions
@@ -47,7 +46,7 @@ Orchard operations mean seasonal irrigation, packing shed water use, and occasio
 
 Oak and madrone root systems are aggressive. Sewer laterals and septic lines on wooded lots are vulnerable to root intrusion over time, often the cause of recurring backups that snaking alone will not fix.
 
-Corralitos roads can be narrow and steep. We plan truck access for septic pumping and bring equipment suited to rural driveways. If your tank is far from the road, tell us when you call so we allow adequate time.
+Corralitos roads can be narrow and steep. We plan truck access for septic work and bring equipment suited to rural driveways. If your tank is far from the road, tell us when you call so we allow adequate time.
 
 Fire-season awareness matters here too. Hose bibs, backup water supplies, and exterior plumbing should be maintained and tested before summer, not after a red-flag warning.
 

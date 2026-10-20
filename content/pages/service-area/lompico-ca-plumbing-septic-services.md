@@ -12,7 +12,7 @@ imageAlt: Rural forest roads and mountain homes in the Lompico community near Za
 
 Lompico is one of those Santa Cruz County places you commit to. The road in, the community's own character, homes set back among madrone and redwood on parcels that were never meant for tract-housing infrastructure. There is no city water main waiting at the corner. Sewer doesn't exist. Your plumbing and septic system _is_ your utility company, and when it fails, you're not calling a municipal crew.
 
-Wade's Plumbing & Septic serves Lompico with the patience remote work demands. Family-owned, county-based, we've pumped tanks at the end of one-lane drives, repaired well lines buried under twenty years of leaf litter, and replaced drainfields where the only flat spot was someone's idea of a parking pad.
+Wade's Plumbing & Septic serves Lompico with the patience remote work demands. Family-owned, county-based, we've repaired well lines buried under twenty years of leaf litter and replaced drainfields where the only flat spot was someone's idea of a parking pad.
 
 ## Mountain plumbing without shortcuts
 
@@ -40,7 +40,6 @@ Lompico's CSD handles water and some community infrastructure, but **onsite sept
 
 Our septic work:
 
-- **Pumping and cleaning** with access planning for private roads and tight turnarounds
 - **Tank location and lid exposure** when records are missing
 - **Inspections** for sales, refinancing, or catching up after years without service
 - **Risers, filters, alarms**, practical upgrades that pay back on the next maintenance cycle
@@ -55,4 +54,4 @@ Residents share roads and watershed with [Zayante](/service-area/zayante-ca-plum
 
 ## Schedule a visit
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether pump truck access is tight so we bring the right equipment the first time.
+Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time.

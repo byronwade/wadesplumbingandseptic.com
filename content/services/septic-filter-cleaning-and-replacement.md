@@ -7,7 +7,7 @@ category: Septic
 order: 10
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic filter cleaning and maintenance
-updated: "2026-07-30"
+updated: "2026-10-20"
 ---
 
 The effluent filter is a small part with a big job. It catches solids before wastewater leaves the tank, so your drainfield stays open and healthy. At Wade's Plumbing & Septic, **septic filter cleaning in Santa Cruz County** is careful, scheduled work that prevents backups and expensive field repairs.
@@ -45,7 +45,7 @@ We keep the visit straightforward and explained before tools come out.
 
 ### Inspection
 
-We locate the tank and risers, open the outlet carefully, and check the filter, water levels, and signs of solids carryover. You get a clear recommendation: clean, replace, or pair the visit with pumping.
+We locate the tank and risers, open the outlet carefully, and check the filter, water levels, and signs of solids carryover. You get a clear recommendation: clean or replace.
 
 ### Cleaning or Replacement
 
@@ -65,7 +65,7 @@ Cost depends on:
 
 - Whether the job is cleaning only or a full cartridge replacement
 - Access: buried lids vs. risers at grade
-- Whether pumping or a broader [tank repair](/service-offerings/septic-tank-repair-and-replacement) is needed the same day
+- Whether a broader [tank repair](/service-offerings/septic-tank-repair-and-replacement) is needed the same day
 - System type (gravity, pump, or advanced treatment)
 
 Ask for a clear estimate when you call. We explain options before work begins.
@@ -74,7 +74,7 @@ Ask for a clear estimate when you call. We explain options before work begins.
 
 Small habits stretch the time between filter visits:
 
-- Schedule regular [septic tank maintenance](/service-offerings/septic-tank-maintenance-and-care/) and pumping
+- Schedule regular [septic tank maintenance](/service-offerings/septic-tank-maintenance-and-care/)
 - Keep wipes, grease, and non-biodegradable trash out of toilets and sinks
 - Spread laundry and high water use across the week
 - Install and use risers so the filter is easy to reach

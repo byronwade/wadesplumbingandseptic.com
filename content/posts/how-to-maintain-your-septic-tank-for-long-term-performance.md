@@ -93,7 +93,7 @@ Use septic-safe toilet paper and limit garbage disposal use to prevent debris fr
 
 Need Septic Tank Maintenance in Santa Cruz County?
 
-Whether you need pumping, jetting, or a full inspection, Wade’s Plumbing & Septic is here to help. We provide expert septic tank maintenance, repair, and drain field services across Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding communities.
+Whether you need jetting or a full inspection, Wade’s Plumbing & Septic is here to help. We provide expert septic tank maintenance, repair, and drain field services across Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding communities.
 
 Let us help you protect your home, save money, and keep your system running smoothly year after year.
 

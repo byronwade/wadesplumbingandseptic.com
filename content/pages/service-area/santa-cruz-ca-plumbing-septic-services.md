@@ -32,7 +32,6 @@ The city core (downtown, much of the Westside, and many Eastside neighborhoods),
 We help Santa Cruz homeowners with:
 
 - Sewer lateral troubleshooting when backups affect one fixture versus the whole house
-- Septic tank pumping schedules suited to household size, not a one-size-fits-all calendar
 - Drainfield assessments when wet spots appear uphill from the tank or odors persist after pumping
 - Guidance on [engineered septic systems](/service-offerings/engineered-septic-system-installation) when slope or setback limits standard designs
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when an aging system can no longer meet county requirements

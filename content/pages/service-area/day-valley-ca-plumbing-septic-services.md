@@ -32,7 +32,6 @@ Septic is the standard in Day Valley. Lot sizes often allow conventional gravity
 
 Our Day Valley septic services include:
 
-- Routine pumping based on tank size and household occupancy, including properties with home offices or caretaker units
 - Pre-sale inspections with clear documentation for buyers navigating rural parcels
 - Effluent filter service, riser installation, and alarm troubleshooting
 - Evaluation of slow drains, surfacing effluent, and persistent odors
@@ -47,7 +46,7 @@ Day Valley's oak woodland and seasonal creeks create a beautiful setting and rea
 
 Fire safety is a community priority. Exterior hose bibs, backup water supplies, and defensible-space plumbing should be tested before fire season, not assumed to work because they did last year.
 
-Access matters. Some Day Valley driveways are long, narrow, and steep. Septic pumping trucks need room to maneuver. Tell us about access constraints when you schedule so we arrive with the right equipment and time allowance.
+Access matters. Some Day Valley driveways are long, narrow, and steep. Service trucks and equipment need room to maneuver. Tell us about access constraints when you schedule so we arrive with the right equipment and time allowance.
 
 The area sits between Aptos flatlands and mountain communities like Corralitos and the San Lorenzo Valley. Soil and elevation change quickly; what works on a valley lot may not apply on your hillside parcel.
 

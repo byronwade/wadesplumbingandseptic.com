@@ -28,11 +28,10 @@ Many Amesti properties have detached workshops, guest cottages, or converted out
 
 ## Septic services in Amesti
 
-Nearly every Amesti residence operates on a private septic system. Tank sizes, field layouts, and installation dates vary widely. Some systems sit on clay-heavy soils that drain slowly; others are on slightly higher ground with better percolation but steeper access roads that complicate pumping truck placement.
+Nearly every Amesti residence operates on a private septic system. Tank sizes, field layouts, and installation dates vary widely. Some systems sit on clay-heavy soils that drain slowly; others are on slightly higher ground with better percolation but steeper access roads that complicate truck and equipment placement.
 
 Our septic work in Amesti includes:
 
-- Scheduled pumping based on household occupancy and tank volume
 - Pre-sale and pre-purchase inspections with written findings
 - Effluent filter service and riser retrofits for easier future maintenance
 - Diagnosis of slow drains, gurgling fixtures, and wet spots in the yard

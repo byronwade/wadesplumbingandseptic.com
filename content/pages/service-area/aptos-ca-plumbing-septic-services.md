@@ -33,7 +33,6 @@ Unlike Santa Cruz's urban core, a large share of Aptos (especially toward Aptos 
 
 We provide:
 
-- Routine tank pumping sized to household use, not an arbitrary interval
 - Inspections when buying property or adding a bedroom that increases design flow
 - Drainfield troubleshooting for surfacing effluent, slow drains throughout the house, or alarms on newer systems
 - Repair and replacement paths outlined on our [failed septic](/service-offerings/septic-tank-repair-and-replacement) page

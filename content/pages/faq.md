@@ -2,8 +2,8 @@
 title: FAQ
 description: >-
   Answers to common plumbing and septic questions for Santa Cruz County and
-  selected Santa Clara County homeowners, including service areas, business
-  hours, and tank pumping.
+  selected Santa Clara County homeowners, including service areas and business
+  hours.
 order: 4
 eyebrow: Helpful Answers
 ---
@@ -35,6 +35,10 @@ Insulate exposed pipes, keep cabinet doors open during cold snaps, let faucets d
 Shut off water to the fixture or at the main valve, contain the water if it is safe to do so, then call us at [831.225.4344](tel:+18312254344) during business hours. Avoid DIY electrical work near standing water.
 
 ## Septic Questions
+
+### Do you pump septic tanks?
+
+No. Wade's Plumbing & Septic installs septic systems, working alongside engineers on [engineered septic systems](/service-offerings/engineered-septic-system-installation), and does not offer septic tank pumping.
 
 ### How often should I pump my septic tank?
 

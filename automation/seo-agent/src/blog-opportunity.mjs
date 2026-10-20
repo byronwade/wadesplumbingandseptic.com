@@ -96,7 +96,7 @@ export const BLOG_TOPIC_CATALOG = Object.freeze([
 			"What foods are worst for a septic tank?",
 			"How do kitchen habits affect a drainfield?",
 			"What smells mean the system is stressed?",
-			"When should I schedule pumping after heavy kitchen use?",
+			"How do I know kitchen habits are overloading my septic tank?",
 		]),
 		category: "Septic Issues in Santa Cruz County",
 		tags: Object.freeze([
@@ -108,7 +108,7 @@ export const BLOG_TOPIC_CATALOG = Object.freeze([
 		image: "/images/services/septic-pumping-illustration.webp",
 		image_alt: "Septic system maintenance context",
 		preferred_links: Object.freeze([
-			"/service-offerings/septic-tank-cleaning-and-pumping",
+			"/service-offerings/septic-tank-maintenance-and-care",
 			"/the-complete-guide-to-septic-system-maintenance",
 			"/signs-your-drain-field-needs-professional-repair",
 			"/service-offerings/grease-trap-cleaning",

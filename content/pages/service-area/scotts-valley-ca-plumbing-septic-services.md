@@ -32,7 +32,6 @@ Much of Scotts Valley's core connects to city sewer, especially around the comme
 Our wastewater services include:
 
 - Lateral inspections before listing a home or after recurring backups
-- Septic pumping with realistic intervals based on tank size and occupancy
 - Drainfield assessments when lawns stay soggy long after rain stops
 - Guidance through [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when systems age out
 - [Engineered septic designs](/service-offerings/engineered-septic-system-installation) for steep or rocky sites common on hillside lots
