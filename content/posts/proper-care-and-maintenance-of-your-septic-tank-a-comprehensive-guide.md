@@ -46,8 +46,6 @@ Lastly, it is important to be mindful of the landscaping around your septic tank
 
 In conclusion, regular maintenance and proper care are crucial for the proper functioning and longevity of your septic tank. By following the tips outlined in this blog post, you can ensure that your septic tank continues to operate effectively for years to come. Remember to avoid disposing of non-biodegradable materials in your septic tank, have your septic tank pumped and inspected regularly, and be mindful of the landscaping around your septic tank.
 
-Santa Cruz County Septic Experts
-
 ## Ensure Your Septic System's Longevity Today
 
 Our expert team in Santa Cruz County, CA, is ready to provide you with top-notch septic tank care and maintenance.

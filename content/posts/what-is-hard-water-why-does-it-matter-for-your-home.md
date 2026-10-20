@@ -81,8 +81,6 @@ If you’ve noticed scale buildup, water spots, low water pressure, or dry skin,
 
 We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding areas with trusted local plumbing expertise. Let us help you improve your water quality, so your home, plumbing, and appliances can perform at their best.
 
-Santa Cruz County Septic Experts
-
 ## Act Now to Protect Your Home from Hard Water Damage
 
 ![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)

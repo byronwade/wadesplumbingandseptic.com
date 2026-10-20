@@ -122,8 +122,6 @@ As the rainy season approaches, ensure your septic system is prepared to handle 
 
 Contact Wade's Plumbing & Septic for expert advice and services to address your septic system issues in Santa Cruz County.
 
-Santa Cruz County Septic Experts
-
 ## Septic System Concerns After Wildfires?
 
 Ensure your septic system is safe and functional with our expert services in Santa Cruz County, California.

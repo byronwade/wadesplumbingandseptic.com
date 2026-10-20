@@ -63,8 +63,6 @@ For more information on plumbing upgrades, you can check out the following resou
 
 By regularly maintaining, repairing, and upgrading your plumbing system, you can ensure that it continues to function effectively and efficiently, saving you money and preventing damage to your property.
 
-Santa Cruz County Septic Experts
-
 ## Don't Delay Your Plumbing Repairs
 
 Ensure your plumbing system operates smoothly with our expert maintenance and repair services in Santa Cruz County, CA.

@@ -118,8 +118,6 @@ While faucet installation is generally DIY-friendly, consider calling Wade's Plu
 
 Installing a new bathroom faucet is a satisfying DIY project that most homeowners can complete in 2-3 hours. With proper installation, your new faucet should provide years of reliable service while enhancing your bathroom's appearance.
 
-Santa Cruz County Septic Experts
-
 ## Upgrade Your Bathroom Faucet Today
 
 ![Pressure gauge on an industrial pipe](/images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp)

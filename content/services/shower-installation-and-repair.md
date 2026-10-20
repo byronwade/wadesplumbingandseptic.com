@@ -57,8 +57,6 @@ Choosing Wade's Plumbing & Septic for your **shower head replacement santa cruz*
 
 Ready to enhance your shower experience? Contact Wade's Plumbing & Septic today to schedule your [fixture installation](/service-offerings/fixture-installation/) and enjoy a revitalized bathroom space. Let us provide you with the quality service you deserve in Santa Cruz County.
 
-Santa Cruz County Septic Experts
-
 ## Upgrade Your Shower Experience Today
 
 Transform your bathroom with our expert fixture installation services in Santa Cruz County, CA.

@@ -68,8 +68,6 @@ If you’re dealing with poor water pressure, temperature fluctuations, or dripp
 
 We serve homes in Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and nearby areas with expert plumbing care. Our team will quickly identify the issue and recommend the best solution so you can enjoy consistent, comfortable showers again.
 
-Santa Cruz County Septic Experts
-
 ## Upgrade Your Shower Experience Today
 
 ![Bathroom water fixture](/images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp)

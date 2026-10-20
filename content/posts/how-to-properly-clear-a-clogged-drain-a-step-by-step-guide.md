@@ -132,8 +132,6 @@ While many clogs can be cleared with DIY methods, some situations require profes
 
 Our professional plumbers have specialized equipment like video cameras and high-pressure water jetters that can resolve even the most stubborn clogs without damaging your plumbing system. For persistent or complex drain issues, contact Wade's Plumbing & Septic for prompt, professional service.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Reliable Septic Solutions
 
 Experience swift and efficient drain cleaning services to keep your plumbing flowing smoothly.

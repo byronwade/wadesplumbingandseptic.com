@@ -74,8 +74,6 @@ With a few small steps and some preventative maintenance, you can avoid the stre
 
 Schedule a pre-holiday inspection during business hours to prepare your plumbing for guests.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Reliable Septic Solutions
 
 ![Hazard warning sign](/images/wordpress/close-up-of-a-warning-sign-against-swimming-due-to-deep-holes-surrounded-by-dry-branches-4f88d9.webp)

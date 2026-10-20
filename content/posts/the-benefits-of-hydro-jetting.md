@@ -89,8 +89,6 @@ Don’t wait for your drains to back up, **get ahead of the problem** with profe
 🔧 Services: Sewer cleaning, drain clearing, hydro-jetting, plumbing inspections, and more  
 📞 **Call us today at (831) 225-4344** to schedule your hydro-jetting service
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Unmatched Hydro-Jetting Services
 
 Experience the pinnacle of efficiency with our superior hydro-jetting solutions designed to keep your plumbing in peak condition across Santa Cruz County, CA.

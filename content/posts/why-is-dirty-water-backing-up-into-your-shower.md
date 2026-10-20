@@ -68,8 +68,6 @@ Backups and sewer line clogs are preventable with proper care. If you’ve notic
 
 Acting quickly can prevent long-term damage, save money, and keep your home safe from health hazards and costly water damage.
 
-Santa Cruz County Septic Experts
-
 ## Act Now for Reliable Septic Solutions
 
 ![Water flowing from a bathroom faucet](/images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp)

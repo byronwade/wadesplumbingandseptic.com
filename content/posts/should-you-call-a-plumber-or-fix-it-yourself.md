@@ -71,8 +71,6 @@ We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and nearby co
 
 📞 Call Wade’s Plumbing & Septic today at (831) 225-4344
 
-Santa Cruz County Septic Experts
-
 ## Don't Risk Costly Mistakes
 
 ![Engineered septic site work](/images/work/engineered-retaining-wall.webp)

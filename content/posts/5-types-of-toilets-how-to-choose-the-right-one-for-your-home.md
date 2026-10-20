@@ -96,8 +96,6 @@ Choosing the right toilet is just the first step, installing it correctly is equ
 
 Whether you’re remodeling a bathroom or replacing an old, inefficient toilet, we’re here to help you make a smart, long-lasting investment in your home.
 
-Santa Cruz County Septic Experts
-
 ## Upgrade Your Bathroom Today
 
 ![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
