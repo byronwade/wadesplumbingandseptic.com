@@ -10,6 +10,7 @@
 	--color-popover-foreground: var(--popover-foreground);
 	--color-primary: var(--primary);
 	--color-primary-foreground: var(--primary-foreground);
+	--color-primary-hover: var(--primary-hover);
 	--color-primary-bright: var(--primary-bright);
 	--color-secondary: var(--secondary);
 	--color-secondary-foreground: var(--secondary-foreground);
@@ -75,6 +76,7 @@
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.2 0.007 68);
 	--primary: oklch(0.4859 0.1104 51.3);
+	--primary-hover: color-mix(in srgb, var(--primary) 88%, black);
 	--primary-foreground: oklch(1 0 0);
 	--primary-bright: oklch(0.7557 0.1133 66.7);
 	--secondary: oklch(0.942 0.004 85);
@@ -211,7 +213,8 @@
 	--popover: oklch(0.205 0.008 68);
 	--popover-foreground: oklch(0.96 0.004 85);
 	--primary: oklch(0.619 0.1364 50.7);
-	--primary-foreground: oklch(1 0 0);
+	--primary-foreground: var(--ink);
+	--primary-hover: var(--primary-bright);
 	--primary-bright: oklch(0.7557 0.1133 66.7);
 	--secondary: oklch(0.235 0.009 68);
 	--secondary-foreground: oklch(0.93 0.005 85);
@@ -1289,11 +1292,9 @@
 
 @keyframes reveal {
 	from {
-		opacity: 0;
 		transform: translateY(1.5rem);
 	}
 	to {
-		opacity: 1;
 		transform: none;
 	}
 }
@@ -1322,7 +1323,8 @@
 	  finished animating before you scrolled to any of it. Tying the animation to
 	  the element's own view() progress means it plays when it is actually seen -
 	  no observers, no JS, and grids stagger naturally because each card crosses
-	  the viewport edge at a different moment.
+	  the viewport edge at a different moment. Only position animates so text
+	  keeps its full contrast throughout the scroll.
 
 	  No fallback branch on purpose: without support the content is simply
 	  visible, which is the correct resting state.
