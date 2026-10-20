@@ -57,7 +57,7 @@ function ServiceFacts() {
 						</a>{" "}
 						or{" "}
 						<Link className={linkClass} href="/contact" prefetch={false}>
-							request service online
+							request a free quote
 						</Link>
 						.
 					</dd>

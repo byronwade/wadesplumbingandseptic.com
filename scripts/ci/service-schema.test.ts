@@ -150,7 +150,7 @@ test("FAQPage schema repeats only visible pairs and skips held claims", () => {
 			assert.equal(entry.acceptedAnswer.text, match.answer)
 			assert.doesNotMatch(
 				`${entry.name} ${entry.acceptedAnswer.text}`,
-				/guarantee|warrant|insured|certified|years of experience/i,
+				/guarantee|warrant|insured|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i,
 			)
 		}
 	}
@@ -165,6 +165,30 @@ test("FAQPage schema repeats only visible pairs and skips held claims", () => {
 		]),
 		null,
 	)
+})
+
+test("FAQ schema does not promote unresolved timing claims or septic pumping", () => {
+	for (const answer of [
+		"Installation typically takes a few hours.",
+		"Our team will provide prompt service.",
+		"Contact us for immediate assistance.",
+		"We offer septic pumping.",
+	]) {
+		assert.equal(
+			serviceFaqJsonLd([{ question: "How can you help?", answer }]),
+			null,
+		)
+	}
+	const approved = {
+		question: "How do I request a quote?",
+		answer: "Call 831.225.4344 for a free quote.",
+	}
+	const schema = serviceFaqJsonLd([
+		approved,
+		{ question: "How soon?", answer: "Within a few hours." },
+	])
+	assert.equal(schema?.mainEntity.length, 1)
+	assert.equal(schema?.mainEntity[0]?.acceptedAnswer.text, approved.answer)
 })
 
 test("Service schema books through the business phone, hours and contact page", () => {
