@@ -126,7 +126,7 @@
 			"preferred_links": [
 				"/service-offerings/fixture-installation",
 				"/service-offerings/water-heater-installation",
-				"/service-offerings/septic-tank-cleaning-and-pumping",
+				"/service-offerings/septic-tank-maintenance-and-care",
 				"/contact"
 			],
 			"demand": 4,
@@ -171,7 +171,7 @@
 			"preferred_links": [
 				"/septic-safety-during-floods-santa-cruz",
 				"/service-offerings/drain-cleaning",
-				"/how-to-handle-a-clogged-drain-or-sewer-line",
+				"/service-offerings/drain-cleaning",
 				"/contact"
 			],
 			"demand": 5,

@@ -220,30 +220,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/emergency-plumber-santa-cruz-county",
-			"source_path": "content/pages/emergency-plumber-santa-cruz-county.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/emergency-plumber-santa-cruz-county",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/emergency-septic-solutions-santa-cruz",
-			"source_path": "content/posts/emergency-septic-solutions-santa-cruz.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/emergency-septic-solutions-santa-cruz",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/engineered-septic-systems-santa-cruz-county",
 			"source_path": "content/pages/engineered-septic-systems-santa-cruz-county.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/engineered-septic-systems-santa-cruz-county",
@@ -340,18 +316,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
-			"source_path": "content/posts/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/from-clogs-to-catastrophes-a-plumbers-guide-to-home-emergencies",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"metadata_declared": true,
 			"canonical_declared": false,
 			"json_ld_blocks": 1,
@@ -427,18 +391,6 @@
 			"url": "/how-to-avoid-common-holiday-plumbing-disasters",
 			"source_path": "content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/how-to-avoid-common-holiday-plumbing-disasters",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/how-to-handle-a-clogged-drain-or-sewer-line",
-			"source_path": "content/posts/how-to-handle-a-clogged-drain-or-sewer-line.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/how-to-handle-a-clogged-drain-or-sewer-line",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,
@@ -760,18 +712,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/santa-cruz/septic-pumping",
-			"source_path": "content/pages/santa-cruz/septic-pumping.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/septic-pumping",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/santa-cruz/water-heater-replacement",
 			"source_path": "content/pages/santa-cruz/water-heater-replacement.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/water-heater-replacement",
@@ -787,18 +727,6 @@
 			"url": "/septic-leach-field-repairs-santa-cruz",
 			"source_path": "content/posts/septic-leach-field-repairs-santa-cruz.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/septic-leach-field-repairs-santa-cruz",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/septic-pumping-essentials-santa-cruz",
-			"source_path": "content/posts/septic-pumping-essentials-santa-cruz.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/septic-pumping-essentials-santa-cruz",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,
@@ -1600,18 +1528,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/service-offerings/septic-tank-cleaning-and-pumping",
-			"source_path": "content/services/septic-tank-cleaning-and-pumping.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/service-offerings/septic-tank-cleaning-and-pumping",
-			"type": "service_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/service-offerings/septic-tank-design-and-engineering",
 			"source_path": "content/services/septic-tank-design-and-engineering.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/service-offerings/septic-tank-design-and-engineering",
@@ -2107,18 +2023,6 @@
 			"url": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
 			"source_path": "content/posts/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
-			"source_path": "content/posts/understanding-the-cost-of-septic-pumping-in-santa-cruz-county.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/understanding-the-cost-of-septic-pumping-in-santa-cruz-county",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,

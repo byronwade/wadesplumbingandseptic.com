@@ -18,6 +18,26 @@ import {
 
 const repoRoot = resolve(import.meta.dirname, "../../..");
 
+test("editorial preferred links point to existing concrete pages", () => {
+	const routes = new Set(
+		collectPageInventory({ repoRoot })
+			.pages.filter((page) => !page.url.includes("["))
+			.map((page) => page.url),
+	);
+	const manifests = [
+		loadLocalDemandCalendar({ repoRoot }),
+		loadTrendingLocalConcepts({ repoRoot }),
+	];
+	const missing = manifests.flatMap((manifest) =>
+		manifest.entries.flatMap((entry) =>
+			entry.preferred_links
+				.filter((url) => !routes.has(url))
+				.map((url) => ({ entry: entry.id, url })),
+		),
+	);
+	assert.deepEqual(missing, [], "Editorial links must use current page URLs.");
+});
+
 test("local demand calendar loads holidays and Santa Cruz community events", () => {
 	const calendar = loadLocalDemandCalendar({ repoRoot });
 	assert.equal(calendar.schema_version, "1.0");
