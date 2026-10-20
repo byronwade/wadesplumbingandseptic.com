@@ -15,7 +15,13 @@ import type {
 	GlossaryTerm,
 	GlossaryTopic,
 } from "@/lib/glossary/types"
-import { absoluteUrl, breadcrumbJsonLd, definedTermSetJsonLd } from "@/lib/seo"
+import {
+	absoluteUrl,
+	breadcrumbJsonLd,
+	businessId,
+	definedTermSetJsonLd,
+	websiteId,
+} from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export function GlossaryTopicHub({
@@ -141,8 +147,8 @@ export function GlossaryTopicHub({
 						name: hub.title,
 						description: hub.description,
 						url: absoluteUrl(hubPath),
-						isPartOf: { "@id": absoluteUrl("/#website") },
-						about: { "@id": absoluteUrl("/#business") },
+						isPartOf: { "@id": websiteId },
+						about: { "@id": businessId },
 					},
 					breadcrumbJsonLd(breadcrumbs),
 					definedTermSetJsonLd({

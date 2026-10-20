@@ -11,7 +11,7 @@ import type { ContentDocument } from "@/lib/content"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
-import { breadcrumbJsonLd } from "@/lib/seo"
+import { breadcrumbJsonLd, businessId } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 const trustPoints = [
@@ -51,7 +51,7 @@ export function ServiceLandingPage({
 			},
 		],
 		provider: {
-			"@id": `${siteConfig.url}/#business`,
+			"@id": businessId,
 		},
 		brand: {
 			"@type": "Brand",

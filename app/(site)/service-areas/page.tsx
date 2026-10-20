@@ -12,6 +12,7 @@ import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
 import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
+	businessId,
 	serviceAreasJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
@@ -147,7 +148,7 @@ export default function ServiceAreasPage() {
 						name: "Plumbing and septic service areas",
 						provider: {
 							"@type": "Plumber",
-							"@id": `${siteConfig.url}/#business`,
+							"@id": businessId,
 							name: siteConfig.name,
 						},
 						areaServed: serviceAreasJsonLd(),
