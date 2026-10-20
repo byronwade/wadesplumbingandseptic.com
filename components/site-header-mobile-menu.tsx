@@ -104,9 +104,11 @@ const mobileCompanyLinks = companyNavLinks.filter(
 export function SiteHeaderMobileMenu({
 	open,
 	onOpenChange,
+	onCloseAutoFocus,
 }: {
 	open: boolean
 	onOpenChange: (open: boolean) => void
+	onCloseAutoFocus: (event: Event) => void
 }) {
 	const router = useRouter()
 	const closeMenu = () => onOpenChange(false)
@@ -120,6 +122,7 @@ export function SiteHeaderMobileMenu({
 			<SheetContent
 				side="right"
 				className="bg-card h-dvh gap-0 overflow-hidden"
+				onCloseAutoFocus={onCloseAutoFocus}
 			>
 				<SheetHeader className="shrink-0 shadow-[inset_0_-1px_0_0_var(--border)]">
 					<div className="flex items-center gap-3">

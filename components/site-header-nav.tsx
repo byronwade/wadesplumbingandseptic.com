@@ -4,7 +4,7 @@ import type { Route } from "next"
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import {
 	ArrowRight,
 	BadgeCheck,
@@ -72,7 +72,7 @@ const megaIcons: Record<MegaNavItem["icon"], IconComponent> = {
 }
 
 const triggerClassName =
-	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent lg:max-xl:px-2.5"
+	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent @max-[80rem]/header:px-2.5"
 
 function MegaLink({ href, label, description, icon }: MegaNavItem) {
 	const Icon = megaIcons[icon]
@@ -253,16 +253,23 @@ function CompanyMegaMenu() {
 export function SiteHeaderNav() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	const [mobileMenuReady, setMobileMenuReady] = useState(false)
+	const mobileMenuTriggerRef = useRef<HTMLButtonElement>(null)
 
 	const openMobileMenu = () => {
 		setMobileMenuReady(true)
 		setMobileMenuOpen(true)
 	}
 
+	// The lazy menu has no Radix Trigger to restore focus to on dismissal.
+	const restoreMobileMenuFocus = (event: Event) => {
+		event.preventDefault()
+		mobileMenuTriggerRef.current?.focus()
+	}
+
 	return (
 		<>
 			<NavigationMenu
-				className="static hidden max-w-none flex-1 justify-center lg:flex"
+				className="static hidden max-w-none flex-1 justify-center @min-[64rem]/header:flex"
 				aria-label="Primary navigation"
 			>
 				<NavigationMenuList>
@@ -312,7 +319,7 @@ export function SiteHeaderNav() {
 				</NavigationMenuList>
 			</NavigationMenu>
 
-			<div className="hidden items-center gap-2 sm:flex">
+			<div className="hidden shrink-0 items-center gap-2 @min-[40rem]/header:flex">
 				<Button
 					type="button"
 					variant="ghost"
@@ -336,12 +343,12 @@ export function SiteHeaderNav() {
 
 			{/* Icon targets are sized in px: icons are not text, so enlarged text
 			    should not double them and push the menu button off screen. */}
-			<div className="flex shrink-0 items-center lg:hidden">
+			<div className="flex shrink-0 items-center @min-[64rem]/header:hidden">
 				<Button
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent sm:hidden [&_svg]:size-[16px]"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[16px]"
 					aria-label="Search services, tips, and pages"
 					onMouseEnter={() => void prefetchSearchIndex()}
 					onFocus={() => void prefetchSearchIndex()}
@@ -349,13 +356,16 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] rounded-md text-white hover:bg-transparent sm:hidden [&_svg]:size-[20px]" />
+				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] rounded-md text-white hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[20px]" />
 				<Button
+					ref={mobileMenuTriggerRef}
 					type="button"
 					variant="ghost"
 					size="icon"
 					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent [&_svg]:size-[16px]"
 					aria-label="Open main menu"
+					aria-expanded={mobileMenuOpen}
+					aria-haspopup="dialog"
 					onClick={openMobileMenu}
 				>
 					<Menu aria-hidden="true" className="size-5" />
@@ -364,6 +374,7 @@ export function SiteHeaderNav() {
 					<SiteHeaderMobileMenu
 						open={mobileMenuOpen}
 						onOpenChange={setMobileMenuOpen}
+						onCloseAutoFocus={restoreMobileMenuFocus}
 					/>
 				) : null}
 			</div>
