@@ -103,6 +103,6 @@ Choosing a trusted local provider like Wade's Plumbing & Septic ensures you're g
 
 Before the rainy season in Santa Cruz County, ensure your septic system is inspected to prevent potential flooding issues.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic for expert septic system services in Santa Cruz County.

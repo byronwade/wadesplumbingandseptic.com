@@ -40,9 +40,9 @@ Coastal septic has its own failure modes:
 
 **Slope and setback limits.** Bluff and hillside lots may require [engineered septic systems in Santa Cruz County](/service-offerings/engineered-septic-system-installation) for any major repair or replacement. We coordinate with designers who know coastal review, not inland templates.
 
-**Maintenance access.** Coastal brush grows fast; lids disappear. Risers and mapped access save money on every future pump.
+**Maintenance access.** Coastal brush grows fast; lids disappear. Risers and mapped access save money on every future tank service.
 
-Wade's septic services include pumping, cleaning, inspections, certifications, filter and baffle service, alarm checks, drainfield evaluation, and repair or replacement planning.
+Wade's septic services include inspections, certifications, filter and baffle service, alarm checks, drainfield evaluation, and repair or replacement planning.
 
 ## Davenport vs. the mountains inland
 

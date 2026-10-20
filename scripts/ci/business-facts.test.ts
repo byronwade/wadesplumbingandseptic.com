@@ -73,6 +73,7 @@ for (const text of [
 	"Effluent pumps and pump chambers dose the field.",
 	"image: /images/services/septic-pumping-illustration.webp",
 	"Not offered: septic tank pumping",
+	"- **Regular Pumping of the Tank:** sludge accumulates in every system.",
 ]) {
 	test(`allows educational or equipment pump copy: ${text}`, () => {
 		assert.ok(!businessFactIssues(text).includes("septic pumping offer"))

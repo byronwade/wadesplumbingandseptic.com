@@ -19,7 +19,7 @@ const septicPumpingOffer = [
 	/\b(?:we(?:'ve|’ve| have| will|'ll|’ll)?|our (?:team|crews?|technicians|experts)(?: at [^,.]+?)?)\s+(?:also\s+|can\s+|will\s+)?(?:(?:inspect your tank,\s+)?pump(?:s|ed)?|pump it)\b/i,
 	/\bschedule\s+(?:your\s+|regular\s+|a\s+)?(?:septic\s+)?(?:tank\s+)?pumping\b/i,
 	// Service-list bullets such as "- Routine tank pumping sized to your home".
-	/^[ \t]*[-*][ \t]+(?:(?:routine|scheduled|regular)\s+)?(?:(?:septic\s+)?tank\s+|septic\s+)?pumping\b/im,
+	/^[ \t]*[-*][ \t]+(?:(?:routine|scheduled)\s+)?(?:(?:septic\s+)?tank\s+|septic\s+)?pumping\b/im,
 ]
 
 /** Public copy rules confirmed by the owner on October 19, 2026. */

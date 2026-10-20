@@ -58,7 +58,7 @@ We regularly serve communities across Santa Cruz County (including Santa Cruz, C
 
 ## Request service
 
-Tell us what is going on and we will point you to the right next step: inspection, repair, pumping, water heater work, drain clearing, or engineered septic options. Flat-rate pricing, quoted on site before work begins. No sales pressure.
+Tell us what is going on and we will point you to the right next step: inspection, repair, water heater work, drain clearing, or engineered septic options. Flat-rate pricing, quoted on site before work begins. No sales pressure.
 
 ## Frequently asked questions
 

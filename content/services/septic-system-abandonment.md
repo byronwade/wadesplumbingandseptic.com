@@ -8,7 +8,7 @@ order: 3
 image: >-
   /images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp
 imageAlt: Plumber installing steel pipes
-updated: "2026-07-30"
+updated: "2026-10-20"
 ---
 
 Properly decommissioning a septic system is crucial for maintaining environmental safety and compliance with local regulations. At Wade's Plumbing & Septic, we specialize in **septic system abandonment in Santa Cruz County** , ensuring that outdated or failing systems are safely managed. This service is essential when transitioning to a municipal sewer system or installing a new septic system, protecting both your property and the local ecosystem.
@@ -23,9 +23,9 @@ There are several signs that indicate a septic system may need decommissioning, 
 
 ### Steps in the Septic System Abandonment Process
 
-The abandonment process typically involves pumping out the tank, crushing or removing it, and filling the area with suitable materials to prevent future hazards. Documentation is crucial to ensure compliance with local health department regulations. Our team handles every step of the process, providing peace of mind that the job is done correctly and safely.
+The abandonment process typically involves pumping out the tank, crushing or removing it, and filling the area with suitable materials to prevent future hazards. Documentation is crucial to ensure compliance with local health department regulations. Our team handles the tank removal, fill, and documentation, providing peace of mind that the job is done correctly and safely.
 
-- Pumping the septic tank
+- Having the remaining waste pumped out of the tank
 - Removing or crushing the tank
 - Filling the void with sand or gravel
 - Documenting the abandonment

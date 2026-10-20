@@ -32,7 +32,6 @@ Septic is the norm in Freedom. Lots are often large enough for conventional leac
 
 Wade's provides full septic support for Freedom properties:
 
-- Routine pumping and cleaning on a schedule that matches household size and tank capacity
 - Inspections for real estate transactions, refinancing, and county compliance
 - Effluent filter cleaning, riser installation, and alarm troubleshooting
 - Leach field evaluation when drains slow or odors appear

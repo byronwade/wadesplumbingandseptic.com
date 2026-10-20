@@ -125,7 +125,7 @@ A
 ![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
 
 - **Regular Inspection and Servicing:** Typically at least annually; test pumps, floats, blowers, alarms; clean media/distribution as needed.
-- **Septic Tank Pumping:** Commonly every 3 to 5 years; additional tanks/clarifiers may require periodic cleaning.
+- **Tank sludge removal:** Pumping commonly every 3 to 5 years; additional tanks/clarifiers may require periodic cleaning.
 - **Cleaning Filters and Components:** Effluent outlet screens, UV sleeves, drip filters, air filters should be cleaned or replaced on schedule.
 - **Monitoring System Performance:** Respond to alarms promptly; watch for odors or wet spots; sampling may be required by local codes.
 - **Proper Usage:** Avoid flushing grease, wipes, solvents, excessive antibacterials; practice water conservation.

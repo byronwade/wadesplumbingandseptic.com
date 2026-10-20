@@ -38,7 +38,6 @@ Flat leach fields are rare on Bonny Doon ridges. Percolation varies within a sin
 
 Wade's septic services:
 
-- **Pumping and maintenance** on schedules that match occupancy, full-time homes vs. weekend land
 - **Locating and documenting** tanks when ownership changed and records didn't
 - **Inspections and certifications** for a buyer pool that knows Bonny Doon complexity
 - **Risers, filters, alarms** to make future service possible without landscape archaeology

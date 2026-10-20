@@ -102,6 +102,6 @@ Check your toilet's components for wear and tear before the holiday season to av
 - Clean mineral deposits from the tank components.
 - Contact a professional plumber if the problem persists.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic for expert toilet repair services in Santa Cruz County.

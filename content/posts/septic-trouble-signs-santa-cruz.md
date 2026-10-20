@@ -59,7 +59,7 @@ If you notice any warning signs or suspect septic trouble, it's crucial to conta
 
 ## Preventative Measures for Septic System Maintenance
 
-Preventative maintenance is key to avoiding septic issues. Schedule regular inspections and pumping services to keep your system in top condition. Avoid flushing non-biodegradable items and limit water usage to prevent overloading the system. By taking these steps, you can ensure the longevity and efficiency of your septic system.
+Preventative maintenance is key to avoiding septic issues. Schedule regular inspections to keep your system in top condition. Avoid flushing non-biodegradable items and limit water usage to prevent overloading the system. By taking these steps, you can ensure the longevity and efficiency of your septic system.
 
 ## Homeowner Action Checklist
 
@@ -89,7 +89,7 @@ Choosing a reliable local service provider like Wade's Plumbing &
 
 Spring is an ideal time to schedule a septic inspection to ensure your system is ready for increased summer usage.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 If you notice any of these warning signs, contact Wade's Plumbing & Septic for expert septic service in Santa Cruz County.
 

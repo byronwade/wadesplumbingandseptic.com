@@ -30,7 +30,7 @@ Taking care of your septic tank is an important task that should not be overlook
 
 First and foremost, it is important to understand that a septic tank operates through a process of natural bacterial digestion. This means that there are certain things that should not be disposed of in your septic tank, such as harsh chemicals, grease, and non-biodegradable materials. These materials can disrupt the natural bacterial digestion process and cause blockages or backups. To ensure the proper functioning of your septic tank, it is important to only flush biodegradable materials and avoid disposing of non-biodegradable materials.
 
-## Regular Septic Tank Pumping
+## Regular Tank Pumping Intervals
 
 Another important aspect of septic tank maintenance is regular pumping. Septic tanks should be pumped every 3-5 years, depending on the size of the tank and the number of people using it. This process involves removing the sludge and scum that has accumulated in the tank over time. Failure to pump your septic tank regularly can lead to the tank overflowing, which can cause serious damage to your property and the environment.
 
@@ -68,7 +68,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ### What should I expect during a septic tank maintenance service?
 
-During maintenance, our experts at Wade's Plumbing & Septic will inspect your tank, pump it if necessary, and ensure all components are functioning properly. We prioritize efficiency and cleanliness to minimize any disruption to your property.
+During maintenance, our experts at Wade's Plumbing & Septic will inspect your tank and ensure all components are functioning properly. We prioritize efficiency and cleanliness to minimize any disruption to your property.
 
 ### How long does a typical septic tank maintenance service take?
 

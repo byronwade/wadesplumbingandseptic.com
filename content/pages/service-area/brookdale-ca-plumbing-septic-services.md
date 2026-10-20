@@ -34,7 +34,6 @@ Brookdale parcels are often compact. Setbacks to the creek corridor, neighbors u
 
 Our septic work here includes:
 
-- **Pumping and cleaning** with truck access planned for narrow drives off Highway 9 or side roads
 - **Inspections** for transfers, refi, or peace of mind after years without service
 - **Baffle, filter, and riser repairs** so maintenance doesn't require a full excavation each time
 - **Drainfield assessment** when odors, wet spots, or slow drains point to leach failure, not a clog

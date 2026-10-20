@@ -121,7 +121,7 @@ Before the holiday rush, ensure your plumbing system is in top shape to avoid an
 - Consider installing a water filtration system for better water quality.
 - Test your sump pump to prevent basement flooding.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic today for a free quote and ensure your plumbing is Memorial Day ready!
 

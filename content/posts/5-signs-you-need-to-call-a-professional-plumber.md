@@ -78,7 +78,7 @@ During a septic service appointment, our team will assess your system's conditio
 
 ### How long does it typically take to complete plumbing and septic services?
 
-The timeline for septic services can vary based on the complexity of the job. Routine maintenance like pumping can be completed in a few hours, while more extensive repairs or installations might take a day or more to ensure quality and safety.
+The timeline for septic services can vary based on the complexity of the job. Routine maintenance can be completed in a few hours, while more extensive repairs or installations might take a day or more to ensure quality and safety.
 
 ### Why choose Wade's Plumbing & Septic for your plumbing needs in Santa Cruz County?
 
