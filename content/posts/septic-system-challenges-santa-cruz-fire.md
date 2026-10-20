@@ -118,7 +118,7 @@ As the rainy season approaches, ensure your septic system is prepared to handle 
 - Check for signs of soil erosion near the septic system.
 - Maintain a buffer zone of vegetation to stabilize soil.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic for expert advice and services to address your septic system issues in Santa Cruz County.
 

@@ -32,9 +32,8 @@ Zayante parcels are heavily wooded. Tanks get buried on slopes with limited leac
 
 Wade's septic services:
 
-- **Locating and pumping** tanks that haven't been serviced in years. We expose lids, document depth, and establish a baseline
 - **Real estate inspections** when buyers want clarity on a system with no paper trail
-- **Filter, baffle, and riser work** so the next pump doesn't start with a shovel
+- **Filter, baffle, and riser work** so the next tank service doesn't start with a shovel
 - **Leach field evaluation** for surfacing effluent, persistent odors, or backups that don't respond to drain cleaning
 - **Repairs and replacements**, including [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Zayante's slopes and tree preservation limits rule out a standard layout
 

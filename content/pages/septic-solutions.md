@@ -29,7 +29,7 @@ Wade's works on the tank, distribution components, pumps, alarms, treatment equi
 ## Septic services
 
 - Inspections, assessments, and real-estate certifications
-- Tank pumping coordination, filter service, and maintenance
+- Filter service and maintenance
 - Camera inspection, line jetting, and diagnostics
 - Tank, baffle, riser, distribution-box, and alarm work
 - Drain field and leach field evaluation or repair

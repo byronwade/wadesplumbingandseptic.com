@@ -31,7 +31,6 @@ Unlike central Santa Cruz, La Selva Beach relies heavily on septic systems. Sewe
 
 We help with:
 
-- Routine pumping based on tank size and household occupancy, not a generic reminder card
 - Inspections that note baffle condition, liquid levels, and signs of drainfield stress
 - Troubleshooting for backups, odors, and wet spots that appear days after heavy laundry use
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when age or soil conditions require a new design

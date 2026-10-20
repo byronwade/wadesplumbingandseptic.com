@@ -33,7 +33,6 @@ Soquel's wastewater picture is split. Denser areas and newer sewer extensions co
 
 Services we provide:
 
-- Septic pumping timed to actual use, not a generic three-year postcard
 - Pre-purchase inspections that note tank condition, baffle integrity, and drainfield red flags
 - Troubleshooting for gurgling drains, surfacing effluent, and alarm systems on newer installs
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when upgrades are required

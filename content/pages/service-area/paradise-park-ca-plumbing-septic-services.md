@@ -30,7 +30,7 @@ We repair leaks, clear drains, replace heaters, and camera sewer lines before re
 
 Paradise Park is entirely on **onsite septic**. Proximity to the river corridor means setbacks, soil conditions, and seasonal groundwater deserve respect, not alarm, but honest assessment.
 
-**Seasonal occupancy.** A cabin used eight weekends a year still needs periodic pumping; biological activity doesn't pause because you're in San Jose. Conversely, over-pumping a lightly used tank wastes money. We recommend intervals based on how the home is actually used.
+**Seasonal occupancy.** A cabin used eight weekends a year still needs periodic pumping; biological activity doesn't pause because you're in San Jose. Conversely, over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used.
 
 **Aging infrastructure.** Original tanks and leach fields from the 1950s to 70s are still in the ground on some lots. Baffles corrode. Concrete spalls. Risers were never installed. We document condition so owners know whether they're maintaining or budgeting for replacement.
 
@@ -38,7 +38,7 @@ Paradise Park is entirely on **onsite septic**. Proximity to the river corridor 
 
 **Permits and upgrades.** When replacement is unavoidable, Santa Cruz County reviews designs carefully near sensitive drainage. We work with [engineered septic system](/service-offerings/engineered-septic-system-installation) options when standard layouts won't clear.
 
-Services include pumping, cleaning, inspections, certifications, filter service, riser installs, drainfield evaluation, and system repair or replacement.
+Services include inspections, certifications, filter service, riser installs, drainfield evaluation, and system repair or replacement.
 
 ## Felton is the hub; Santa Cruz is downstream
 

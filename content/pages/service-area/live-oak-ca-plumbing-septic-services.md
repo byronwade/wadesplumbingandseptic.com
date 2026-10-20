@@ -34,7 +34,6 @@ Live Oak has seen sewer expansion over the decades, but not every lot converted.
 We assist with:
 
 - Sewer lateral backups when the problem is between the house and the main
-- Septic pumping and inspections for homes still on tanks, common during escrow
 - Drainfield troubleshooting when wet areas persist in side yards after laundry days
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when county requirements trigger an upgrade
 - [Engineered septic systems](/service-offerings/engineered-septic-system-installation) where standard trenches will not fit or perc poorly

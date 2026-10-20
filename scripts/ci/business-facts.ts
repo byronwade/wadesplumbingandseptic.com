@@ -4,6 +4,24 @@ export const confirmedHours =
 export const confirmedPricing =
 	"Flat-rate pricing, quoted on site before work begins."
 
+/**
+ * Wade's installs septic systems alongside engineers and does not pump tanks
+ * (owner confirmed October 20, 2026). Educational advice such as "most tanks
+ * need pumping every 3 to 5 years" and sump, well or effluent pumps are fine;
+ * these shapes read as Wade's offering or performing the pumping.
+ */
+const septicPumpingOffer = [
+	/septic-tank-cleaning-and-pumping|(?:service-offerings|santa-cruz)\/septic-pumping(?![\w-])/,
+	/\bSeptic (?:Tank )?Pumping\b/,
+	/\bpumping\s+(?:services?|coordination|visits?|trucks?)\b/i,
+	/\bpump[- ]?(?:trucks?|outs?\s+services?)\b/i,
+	/\bpumping\s+and\s+cleaning\b|\bcleaning\s+and\s+pumping\b/i,
+	/\b(?:we(?:'ve|’ve| have| will|'ll|’ll)?|our (?:team|crews?|technicians|experts)(?: at [^,.]+?)?)\s+(?:also\s+|can\s+|will\s+)?(?:(?:inspect your tank,\s+)?pump(?:s|ed)?|pump it)\b/i,
+	/\bschedule\s+(?:your\s+|regular\s+|a\s+)?(?:septic\s+)?(?:tank\s+)?pumping\b/i,
+	// Service-list bullets such as "- Routine tank pumping sized to your home".
+	/^[ \t]*[-*][ \t]+(?:(?:routine|scheduled)\s+)?(?:(?:septic\s+)?tank\s+|septic\s+)?pumping\b/im,
+]
+
 /** Public copy rules confirmed by the owner on October 19, 2026. */
 export function businessFactIssues(text: string): string[] {
 	const issues: string[] = []
@@ -24,6 +42,10 @@ export function businessFactIssues(text: string): string[] {
 		)
 	) {
 		issues.push("unverified rating or trust claim")
+	}
+	const unbolded = text.replace(/\*\*|__/g, "")
+	if (septicPumpingOffer.some((pattern) => pattern.test(unbolded))) {
+		issues.push("septic pumping offer")
 	}
 	for (const rawLine of text.split("\n")) {
 		const line = rawLine.replace(/\*\*|__/g, "")

@@ -37,8 +37,6 @@ Upstream canyons freeze harder than Felton. Hose bibs, crawlspace pipes, and uni
 
 If you're on city sewer in Boulder Creek, you're the exception. Most parcels depend on a tank-and-leach-field system sized for soils that can change within a single acre.
 
-**Pumping and maintenance.** Tanks buried on slopes still need regular pumping. We document levels and condition so you know whether you're on a three-year cycle or need to watch it closer.
-
 **Failed or failing drainfields.** Boulder Creek's combination of clay, rock, and slope pushes effluent where it shouldn't go. Surfacing in the yard, odors after laundry, or backups when the dishwasher runs are warning signs, not quirks to live with.
 
 **Permits and engineered systems.** When a standard leach field won't fit or won't perk, Santa Cruz County often requires an engineered alternative. We work with [engineered septic system](/service-offerings/engineered-septic-system-installation) designers and installers who understand mountain lots, not flat farmland specs copied onto a hillside.
@@ -47,7 +45,7 @@ If you're on city sewer in Boulder Creek, you're the exception. Most parcels dep
 
 ## Boulder Creek isn't Ben Lomond with a different zip code
 
-Farther from the bay means cooler nights, wetter winters in the canyons, and longer response distances for every trade. Properties near the Big Basin corridor (closed for recovery, but neighborhoods remain) and along Jamie Lane or Bear Creek Road have access constraints pump trucks and backhoes need to plan around.
+Farther from the bay means cooler nights, wetter winters in the canyons, and longer response distances for every trade. Properties near the Big Basin corridor (closed for recovery, but neighborhoods remain) and along Jamie Lane or Bear Creek Road have access constraints trucks and backhoes need to plan around.
 
 We also see more owner-maintained systems here, DIY riser installs, unpermitted repairs from decades ago, tanks nobody remembers pumping. No judgment; we start with an honest assessment of what's safe and what's not.
 

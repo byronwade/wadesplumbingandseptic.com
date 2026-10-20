@@ -68,7 +68,7 @@ At Wade's Plumbing & Septic, we specialize in comprehensive [septic repair and r
 
 Regular maintenance is key to prolonging the life of your septic system. Consider these tips:
 
-- Schedule periodic inspections and pumping services
+- Schedule periodic inspections
 - Practice mindful water usage
 - Avoid disposing of non-biodegradable materials
 
@@ -84,7 +84,7 @@ While homeowners can monitor their septic systems for signs
 
 After heavy rains, monitor your septic system for signs of saturation or failure to prevent long-term damage.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic for expert septic leach field repair services in Santa Cruz County.
 

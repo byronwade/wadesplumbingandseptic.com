@@ -52,7 +52,7 @@ It's crucial to recognize the signs that your septic system may need maintenance
 
 Effective seasonal maintenance involves several key steps:
 
-- **Pumping and Cleaning:** Regular [septic filter cleaning](/service-offerings/septic-filter-cleaning-and-replacement/) ensures optimal system performance.
+- **Filter Cleaning:** Regular [septic filter cleaning](/service-offerings/septic-filter-cleaning-and-replacement/) ensures optimal system performance.
 - **Inspection:** Have your system inspected by [certified septic experts](/service-offerings/septic-system-certification/) to identify any potential issues.
 - **Monitoring Water Usage:** Be mindful of water consumption to prevent overloading the system.
 - **Landscaping Considerations:** Keep trees and shrubs away from the septic area to avoid root intrusion.
@@ -91,7 +91,7 @@ Yes, seasonal changes can impact your system, particularly during periods of hea
 
 ### What does a typical septic maintenance service include?
 
-A typical service includes pumping, inspection, and cleaning of the tank and filters, as well as checking for leaks or other issues.
+A typical service includes inspection of the tank and cleaning of the filters, as well as checking for leaks or other issues.
 
 ## Myths Addressed
 
@@ -123,6 +123,6 @@ Spring is an ideal time to schedule your septic system maintenance to ensure opt
 - Avoid flushing non-biodegradable items to prevent clogs.
 - Use water efficiently to reduce strain on your septic system.
 
-## Need Help Now?
+## Need Plumbing or Septic Help?
 
 Contact Wade's Plumbing & Septic today for expert septic maintenance in Santa Cruz County.

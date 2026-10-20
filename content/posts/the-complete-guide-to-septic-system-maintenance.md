@@ -97,7 +97,7 @@ Our technicians use specialized equipment to thoroughly assess all components of
 
 ![Chrome sink drain close-up](/images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp)
 
-Regular maintenance is far less expensive than repairing or replacing a failed septic system. Contact Wade's Plumbing & Septic to schedule your professional septic system inspection and pumping. Our experienced technicians will ensure your system continues to function properly for years to come.
+Regular maintenance is far less expensive than repairing or replacing a failed septic system. Contact Wade's Plumbing & Septic to schedule your professional septic system inspection. Our experienced technicians will ensure your system continues to function properly for years to come.
 
 ## Don't Delay Your Septic Maintenance
 

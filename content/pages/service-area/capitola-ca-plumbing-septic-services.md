@@ -32,7 +32,6 @@ Most homes in the flat Capitola grid connect to municipal sewer. As you move eas
 Our wastewater work includes:
 
 - Sewer lateral camera runs when backups repeat after snaking
-- Septic pumping with notes on scum and sludge levels, useful if you are tracking system health
 - Drainfield wet-spot evaluation after heavy winter rains
 - Repairs and replacements aligned with Santa Cruz County environmental health requirements
 - Referrals to [engineered septic designs](/service-offerings/engineered-septic-system-installation) when setback or soil limits rule out a standard layout

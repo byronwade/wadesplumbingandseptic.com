@@ -32,7 +32,6 @@ Private septic systems serve virtually every Las Lomas residence. Tank sizes typ
 
 Our Las Lomas septic work includes:
 
-- Scheduled pumping to prevent solids from entering the leach field
 - Inspections for property transfers and rental property compliance
 - Effluent filter cleaning and riser retrofits for safer, easier access
 - Diagnosis of odors, wet spots, and slow-draining fixtures throughout the house
