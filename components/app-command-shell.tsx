@@ -8,7 +8,7 @@ import { loadSearchIndex } from "@/lib/search-client"
 
 /*
   The dialog (cmdk, Radix Dialog and the search UI) is only fetched the first
-  time someone opens search. Shipping it statically cost every page up to
+  time someone opens search. Shipping it statically cost every page about
   80 KB of JavaScript (25 KB compressed) that most visitors never use.
 */
 const CommandMenuDialog = dynamic(
