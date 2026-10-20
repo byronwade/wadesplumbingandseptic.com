@@ -2,8 +2,7 @@ import type { NextRequest } from "next/server"
 
 import { renderOgImage } from "@/lib/og-image"
 
-const OG_CACHE_CONTROL =
-	"public, max-age=86400, stale-while-revalidate=604800"
+const OG_CACHE_CONTROL = "public, max-age=86400, stale-while-revalidate=604800"
 
 export async function GET(request: NextRequest) {
 	const { searchParams } = request.nextUrl
@@ -17,8 +16,7 @@ export async function GET(request: NextRequest) {
 		image,
 	})
 
-	const contentType =
-		imageResponse.headers.get("Content-Type") ?? "image/png"
+	const contentType = imageResponse.headers.get("Content-Type") ?? "image/png"
 
 	return new Response(imageResponse.body, {
 		status: imageResponse.status,
