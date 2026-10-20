@@ -27,7 +27,11 @@ export function ContentGallery({
 						</div>
 					</div>
 
-					<ul className="snap-rail reveal mt-[var(--space-block)]">
+					<ul
+						aria-label="Project photos"
+						className="snap-rail reveal mt-[var(--space-block)]"
+						tabIndex={0}
+					>
 						{images.map((image) => (
 							<li key={image.src}>
 								<figure className="surface-float overflow-hidden rounded-lg">

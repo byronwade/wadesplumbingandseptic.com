@@ -542,6 +542,13 @@
 		display: none;
 	}
 
+	/* The rail is a tab stop so keyboard users can scroll it with the arrow
+	   keys. It bleeds to the screen edge, so the ring sits inside the box. */
+	.snap-rail:focus-visible {
+		outline: 2px solid var(--primary-bright);
+		outline-offset: -2px;
+	}
+
 	.snap-rail > * {
 		scroll-snap-align: start;
 	}
