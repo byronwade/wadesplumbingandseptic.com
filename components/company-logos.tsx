@@ -1,25 +1,31 @@
-import type { SVGProps } from "react"
+import Image from "next/image"
 
-import { FacebookIcon } from "@/components/ui/svgs/facebookIcon"
-import { InstagramIcon } from "@/components/ui/svgs/instagramIcon"
-import { Linkedin } from "@/components/ui/svgs/linkedin"
-
-export type CompanyLogoProps = SVGProps<SVGSVGElement>
-
-/** SVGL company logos installed via `npx shadcn@latest add @svgl/<name>`. */
+// Existing SVGL artwork lives in static files so its paths are not repeated in
+// every page's HTML and RSC payload. The surrounding link supplies the name.
 export const companyLogos = {
-	facebook: FacebookIcon,
-	instagram: InstagramIcon,
-	linkedin: Linkedin,
+	facebook: "/images/brand/social/facebook.svg",
+	instagram: "/images/brand/social/instagram.svg",
+	linkedin: "/images/brand/social/linkedin.svg",
 } as const
 
 export type CompanyLogoName = keyof typeof companyLogos
 
-export function CompanyLogo({
-	name,
-	className,
-	...props
-}: CompanyLogoProps & { name: CompanyLogoName }) {
-	const Icon = companyLogos[name]
-	return <Icon aria-hidden="true" className={className} {...props} />
+export type CompanyLogoProps = {
+	name: CompanyLogoName
+	className?: string
+}
+
+export function CompanyLogo({ name, className }: CompanyLogoProps) {
+	return (
+		<Image
+			alt=""
+			aria-hidden="true"
+			className={className}
+			height={20}
+			loading="lazy"
+			src={companyLogos[name]}
+			unoptimized
+			width={20}
+		/>
+	)
 }
