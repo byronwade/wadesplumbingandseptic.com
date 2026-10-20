@@ -1,6 +1,37 @@
 import assert from "node:assert/strict"
 import Module from "node:module"
 
+import type { ArchiveItem } from "../../lib/archive"
+import type { PageViewKind, PageViewStore } from "../../lib/page-views/types"
+
+// Synthetic audit data stays in memory, separate from local or Blob analytics.
+// Pin both the observation day and daily buckets so calendar time cannot age it.
+const FIXTURE_DAY = "2026-07-30"
+
+// Increasing lifetime counts and rotated recent counts give all three sort
+// modes distinct orders, so returning the input unchanged cannot pass.
+function fixtureStore(items: ArchiveItem[], kind: PageViewKind): PageViewStore {
+	return {
+		version: 1,
+		updatedAt: `${FIXTURE_DAY}T12:00:00.000Z`,
+		pages: Object.fromEntries(
+			items.map((item, index) => [
+				`${kind}:${item.slug}`,
+				{
+					unique: items.length * 100 + index,
+					views: items.length * 200 + index,
+					daily: {
+						[FIXTURE_DAY]: items.length - ((index + 1) % items.length),
+						"2026-07-24": 1, // Oldest day inside the seven-day window.
+						"2026-07-23": items.length * 2, // Just outside the window.
+						"2026-07-31": items.length * 3, // Future days do not count.
+					},
+				},
+			]),
+		),
+	}
+}
+
 const load = (
 	Module as typeof Module & {
 		_load: (
@@ -41,8 +72,6 @@ async function main() {
 	} = await import("../../lib/archive")
 	const { attachViewStats, sortArchiveItems } =
 		await import("../../lib/page-views/ranking")
-	const { utcDayNow } = await import("../../lib/page-views/stats")
-	const { getPageViewStoreCached } = await import("../../lib/page-views")
 
 	const services = await getCollection("services")
 	const posts = await getCollection("posts")
@@ -56,10 +85,55 @@ async function main() {
 	const tipItems = posts.map((post) =>
 		toArchiveItem(post, `/${post.slug}`, post.category ?? "Expert Tips"),
 	)
-	const store = await getPageViewStoreCached()
-	const today = utcDayNow()
-	const rankedServices = attachViewStats(serviceItems, store, "service", today)
-	const rankedTips = attachViewStats(tipItems, store, "tip", today)
+	const rankedServices = attachViewStats(
+		serviceItems,
+		fixtureStore(serviceItems, "service"),
+		"service",
+		FIXTURE_DAY,
+	)
+	const rankedTips = attachViewStats(
+		tipItems,
+		fixtureStore(tipItems, "tip"),
+		"tip",
+		FIXTURE_DAY,
+	)
+	console.log(
+		`Synthetic in-memory view fixture, observation day ${FIXTURE_DAY}`,
+	)
+	for (const items of [rankedServices, rankedTips]) {
+		assert.ok(
+			items.length > 2,
+			"Ranking audit needs at least three content items",
+		)
+		assert.deepEqual(
+			items.map(({ uniqueViews, totalViews, trendingScore }) => ({
+				uniqueViews,
+				totalViews,
+				trendingScore,
+			})),
+			items.map((_, index) => ({
+				uniqueViews: items.length * 100 + index,
+				totalViews: items.length * 200 + index,
+				trendingScore: items.length - ((index + 1) % items.length) + 1,
+			})),
+			"View stats must include exactly the fixture's seven-day window",
+		)
+		assert.deepEqual(
+			sortArchiveItems(items, "popular"),
+			[...items].reverse(),
+			"Popular order must follow lifetime unique views",
+		)
+		assert.deepEqual(
+			sortArchiveItems(items, "trending"),
+			[items[items.length - 1], ...items.slice(0, -1)],
+			"Trending order must follow recent views instead of lifetime views",
+		)
+		assert.deepEqual(
+			sortArchiveItems(items, "default"),
+			items,
+			"Default order must preserve the content inventory order",
+		)
+	}
 
 	console.log(`SERVICES ${rankedServices.length}`)
 	const svcFilters = buildArchiveFilters(rankedServices)
