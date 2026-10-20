@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { CompanyLogo } from "@/components/company-logos"
+import { GoogleReviewButton } from "@/components/google-reviews"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
 
 const serviceLinks = [
@@ -70,6 +71,15 @@ export function SiteFooter() {
 						<p className="text-on-dark-subtle mt-4 font-mono text-xs tracking-[0.06em]">
 							{siteConfig.licenses}
 						</p>
+						<div className="mt-5 flex flex-col items-start gap-2">
+							<GoogleReviewButton onDark />
+							<a
+								className="inline-flex min-h-11 items-center rounded-sm text-sm underline decoration-white/30 underline-offset-4 outline-none hover:text-white focus-visible:ring-2 focus-visible:ring-white"
+								href={siteConfig.googleBusinessUrl}
+							>
+								Find us on Google
+							</a>
+						</div>
 						<div className="mt-6 flex gap-2">
 							{socialLinks.map((item) => (
 								<a

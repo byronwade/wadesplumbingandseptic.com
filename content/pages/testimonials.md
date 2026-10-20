@@ -1,17 +1,13 @@
 ---
 title: "Customer Reviews: Wade's Plumbing & Septic"
 description: >-
-  At Wade's Plumbing & Septic, we proudly serve the vibrant communities of Santa
-  Cruz County, California, including Santa Cruz, Capitola, Scotts Valley,.
+  Read customer reviews for Wade's Plumbing & Septic on Google, or share your
+  experience with our plumbing and septic services.
 order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
 eyebrow: Customer Reviews
 ---
-
-## Read customer reviews
-
-Find Wade's Plumbing & Septic on [Google](https://www.google.com/maps/search/?api=1&query=Wade%27s+Plumbing+%26+Septic+Ben+Lomond) or [Yelp](https://www.yelp.com/search?find_desc=Wade%27s+Plumbing+%26+Septic&find_loc=Ben+Lomond%2C+CA).
 
 ## Serving Santa Cruz County, CA
 

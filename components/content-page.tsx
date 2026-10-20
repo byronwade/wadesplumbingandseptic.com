@@ -20,6 +20,7 @@ import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
 import { ContentSectionBands } from "@/components/content-section-bands"
+import { GoogleReviewInvite } from "@/components/google-reviews"
 import { JsonLd } from "@/components/json-ld"
 import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
@@ -161,6 +162,8 @@ export function ContentPage({
 				</section>
 			) : null}
 
+			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
+
 			{marketing ? (
 				<>
 					{document.gallery?.length ? (
@@ -182,6 +185,8 @@ export function ContentPage({
 					<MarkdownContent content={articleBody} demoteH1 />
 				</article>
 			)}
+
+			{document.slug === "contact" ? <GoogleReviewInvite /> : null}
 
 			{related ? <RelatedContentSectionsWithStats related={related} /> : null}
 			<ContentConversionCta

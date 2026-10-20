@@ -171,6 +171,7 @@ export function localBusinessJsonLd(
 			},
 		],
 		sameAs: [
+			siteConfig.googleBusinessUrl,
 			siteConfig.social.facebook,
 			siteConfig.social.instagram,
 			siteConfig.social.linkedin,
