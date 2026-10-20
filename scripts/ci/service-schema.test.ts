@@ -150,7 +150,7 @@ test("FAQPage schema repeats only visible pairs and skips held claims", () => {
 			assert.equal(entry.acceptedAnswer.text, match.answer)
 			assert.doesNotMatch(
 				`${entry.name} ${entry.acceptedAnswer.text}`,
-				/guarantee|warrant|insured|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i,
+				/guarantee|warrant|insured|licensed|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i,
 			)
 		}
 	}
@@ -173,6 +173,7 @@ test("FAQ schema does not promote unresolved timing claims or septic pumping", (
 		"Our team will provide prompt service.",
 		"Contact us for immediate assistance.",
 		"We offer septic pumping.",
+		"Our crew is licensed.",
 	]) {
 		assert.equal(
 			serviceFaqJsonLd([{ question: "How can you help?", answer }]),

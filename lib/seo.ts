@@ -307,12 +307,12 @@ export function serviceJsonLd(service: ContentDocument) {
 
 /**
  * FAQ answers that repeat claims still waiting on Byron's confirmation
- * (guarantees, insurance, certification, experience and service timing), or
+ * (guarantees, insurance, licensing, certification, experience and timing), or
  * mention septic pumping, which Wade's does not offer. They stay
  * visible on the page as written but are not amplified into structured data.
  */
 const heldFaqClaim =
-	/guarantee|warrant|insured|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i
+	/guarantee|warrant|insured|licensed|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i
 
 /** FAQPage for a service page, built from the same pairs the page shows. */
 export function serviceFaqJsonLd(
