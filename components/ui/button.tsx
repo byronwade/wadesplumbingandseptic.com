@@ -32,10 +32,25 @@ export const buttonVariants = cva(
 				xl: "h-14 px-7 text-base tracking-[-0.01em]",
 				icon: "size-11",
 			},
+			/**
+			 * Let the label wrap instead of overflowing or being cut off in narrow
+			 * columns and with enlarged text. Each size's height becomes a floor.
+			 */
+			wrap: {
+				true: "h-auto py-2 text-center whitespace-normal",
+				false: "",
+			},
 		},
+		compoundVariants: [
+			{ wrap: true, size: "default", class: "min-h-11" },
+			{ wrap: true, size: "sm", class: "min-h-9" },
+			{ wrap: true, size: "lg", class: "min-h-12" },
+			{ wrap: true, size: "xl", class: "min-h-14" },
+		],
 		defaultVariants: {
 			variant: "default",
 			size: "default",
+			wrap: false,
 		},
 	},
 )
@@ -49,6 +64,7 @@ export function Button({
 	className,
 	variant,
 	size,
+	wrap,
 	asChild = false,
 	...props
 }: ButtonProps) {
@@ -56,7 +72,7 @@ export function Button({
 
 	return (
 		<Comp
-			className={cn(buttonVariants({ variant, size, className }))}
+			className={cn(buttonVariants({ variant, size, wrap, className }))}
 			{...props}
 		/>
 	)

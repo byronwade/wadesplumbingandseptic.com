@@ -67,7 +67,7 @@ export default function HomePage() {
 							quoted on site before work begins.
 						</p>
 
-						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
 							<CallButton
 								className="w-full sm:w-auto"
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -76,7 +76,11 @@ export default function HomePage() {
 							<Link
 								prefetch={false}
 								className={cn(
-									buttonVariants({ variant: "inverse", size: "xl" }),
+									buttonVariants({
+										variant: "inverse",
+										size: "xl",
+										wrap: true,
+									}),
 									"w-full sm:w-auto",
 								)}
 								href="/services"

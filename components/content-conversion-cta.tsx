@@ -29,7 +29,7 @@ export function ContentConversionCta({
 		external: false,
 	}
 	const secondaryClassName = cn(
-		buttonVariants({ variant: "inverse", size: "xl" }),
+		buttonVariants({ variant: "inverse", size: "xl", wrap: true }),
 		"w-full sm:w-auto",
 	)
 	const secondaryIsExternal =

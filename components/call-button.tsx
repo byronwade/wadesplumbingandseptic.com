@@ -19,19 +19,25 @@ export function CallButton({
 	size = "xl",
 	variant = "default",
 	showIcon = true,
+	wrap = true,
 	desktopLabel,
 }: {
 	className?: string
 	size?: ButtonSize
 	variant?: "default" | "secondary" | "inverse" | "outline" | "ghost"
 	showIcon?: boolean
+	/**
+	 * Let a long label wrap onto two lines instead of being cut off. Header
+	 * controls that show only the number turn this off to keep their size.
+	 */
+	wrap?: boolean
 	/** @deprecated Ignored — CallButton always dials. */
 	prefer?: "auto" | "dial" | "vcard"
 	desktopLabel?: ReactNode
 	/** @deprecated Ignored — CallButton always dials. */
 	mobileLabel?: ReactNode
 }) {
-	const styles = cn(buttonVariants({ size, variant }), className)
+	const styles = cn(buttonVariants({ size, variant, wrap }), className)
 	const dialLabel = desktopLabel ?? `Call ${contactInfo.phoneDisplay}`
 	const dialAria =
 		typeof dialLabel === "string"
@@ -43,11 +49,7 @@ export function CallButton({
 	return (
 		<ProtectedContactLink ariaLabel={dialAria} className={styles} kind="phone">
 			{showIcon ? <Phone aria-hidden="true" className="shrink-0" /> : null}
-			{typeof dialLabel === "string" ? (
-				<span className="truncate">{dialLabel}</span>
-			) : (
-				dialLabel
-			)}
+			{typeof dialLabel === "string" ? <span>{dialLabel}</span> : dialLabel}
 		</ProtectedContactLink>
 	)
 }
