@@ -72,7 +72,7 @@ const megaIcons: Record<MegaNavItem["icon"], IconComponent> = {
 }
 
 const triggerClassName =
-	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent"
+	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent lg:max-xl:px-2.5"
 
 function MegaLink({ href, label, description, icon }: MegaNavItem) {
 	const Icon = megaIcons[icon]
