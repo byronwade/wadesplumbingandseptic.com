@@ -33,7 +33,7 @@ Google reviews: ${siteConfig.googleReviewUrl}`
 
 /** Nest page headings one level under the section title. */
 function demoteHeadings(markdown: string) {
-	return markdown.replace(/^(#{1,5}) /gm, "#$1 ")
+	return markdown.replace(/^#{1,5} /gm, (heading) => `#${heading}`)
 }
 
 /** Point root-relative Markdown links at the live site so they work off-site. */
