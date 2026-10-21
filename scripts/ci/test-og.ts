@@ -1,8 +1,12 @@
 import assert from "node:assert/strict"
 
+import sharp from "sharp"
+
 import {
 	buildOgImagePath,
 	defaultOgEyebrow,
+	OG_HEIGHT,
+	OG_WIDTH,
 	sanitizeOgImagePath,
 } from "../../lib/og"
 
@@ -38,4 +42,26 @@ assert.ok(
 assert.equal(defaultOgEyebrow("article"), "Expert Tip")
 assert.equal(defaultOgEyebrow("website"), "Wade's Plumbing & Septic")
 
-console.log("og helpers ok")
+async function main() {
+	const { loadPublicPhotoBuffer } = await import("../../lib/og-image")
+
+	// loadPublicPhotoBuffer swallows sharp errors and returns null, so a broken
+	// sharp install would silently drop the photo from every share card.
+	const photo = await loadPublicPhotoBuffer(
+		"/images/work/precision-valve-installation.webp",
+	)
+	assert.ok(photo, "sharp failed to decode a public WebP for the OG card")
+	const meta = await sharp(Buffer.from(photo)).metadata()
+	assert.equal(meta.format, "png")
+	assert.equal(meta.width, OG_WIDTH)
+	assert.equal(meta.height, OG_HEIGHT)
+
+	assert.equal(await loadPublicPhotoBuffer("/api/secret"), null)
+
+	console.log("og helpers ok")
+}
+
+main().catch((error) => {
+	console.error(error)
+	process.exit(1)
+})
