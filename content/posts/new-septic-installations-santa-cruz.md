@@ -55,7 +55,7 @@ Selecting a new septic system involves considering factors like household size, 
 
 ## Installation Process Overview
 
-Installing a new septic system involves site evaluation, system design, and installation. The process typically takes a few days to a week, depending on project complexity and weather conditions. Our [septic system replacement service](/lp/septic-replacement-santa-cruz/) ensures a smooth and efficient installation.
+Installing a new septic system involves site evaluation, system design, and installation. The process typically takes a few days to a week, depending on project complexity and weather conditions. Our [septic system replacement service](/septic-replacement-santa-cruz) ensures a smooth and efficient installation.
 
 ## Maintaining Your New Septic System for Longevity
 

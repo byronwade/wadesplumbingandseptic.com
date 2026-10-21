@@ -28,7 +28,7 @@ Recognizing the signs that your drains need cleaning is vital. Look out for slow
 
 ## Our Commercial Drain Cleaning Process
 
-At Wade’s Plumbing & Septic, we utilize state-of-the-art equipment to handle clogged drains effectively. Our process includes a thorough [drain line inspection](/service-offerings/drain-line-inspection/) to identify the source of the blockage, followed by targeted cleaning techniques such as [hydro jetting](/service-offerings/hydro-jetting-for-drain-clearing/), which uses high-pressure water jets to clear stubborn clogs.
+At Wade’s Plumbing & Septic, we utilize state-of-the-art equipment to handle clogged drains effectively. Our process includes a thorough [drain line inspection](/service-offerings/drain-line-inspection/) to identify the source of the blockage, followed by targeted cleaning techniques such as [hydro jetting](/service-offerings/hydro-jetting), which uses high-pressure water jets to clear stubborn clogs.
 
 ### Timeline and Cost Factors
 

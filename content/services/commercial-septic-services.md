@@ -78,7 +78,7 @@ The frequency depends on usage, but generally, every 1-3 years is recommended to
 
 Engineered septic systems are designed to handle complex waste management needs, often required for larger commercial properties.
 
-Wade's Plumbing & Septic is your trusted partner in Santa Cruz County for all commercial septic needs. Our team of licensed professionals is ready to address your septic system challenges promptly and effectively. To learn more about how we can support your business, [contact Wade's Plumbing & Septic](/lp/contact-call-first/) today.
+Wade's Plumbing & Septic is your trusted partner in Santa Cruz County for all commercial septic needs. Our team of licensed professionals is ready to address your septic system challenges promptly and effectively. To learn more about how we can support your business, [contact Wade's Plumbing & Septic](/contact) today.
 
 ## Ensure Your Business Runs Smoothly with Prompt Septic Maintenance
 
@@ -88,12 +88,12 @@ Protect your commercial investment with reliable septic maintenance services in 
 
 Wade's Plumbing & Septic proudly offers reliable commercial septic maintenance services across Santa Cruz County, California. Our service areas include:
 
-- [Santa Cruz](/service-area/santa-cruz/)
-- [Capitola](/service-area/capitola/)
-- [Aptos](/service-area/aptos/)
-- [Scotts Valley](/service-area/scotts-valley/)
-- [Watsonville](/service-area/watsonville/)
-- [Soquel](/service-area/soquel/)
+- [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services)
+- [Capitola](/service-area/capitola-ca-plumbing-septic-services)
+- [Aptos](/service-area/aptos-ca-plumbing-septic-services)
+- [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
+- [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
+- [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 
 We are a licensed contractor in California (C-42) (state license), ensuring professional and compliant services.
 

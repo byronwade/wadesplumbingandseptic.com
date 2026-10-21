@@ -232,7 +232,11 @@ test("llms.txt and llms-full.txt link only to live, indexable pages", async () =
 	for (const route of ["llms.txt", "llms-full.txt"]) {
 		const body = await routeText(`../../app/${route}/route`)
 		const links = new Set(
-			[...body.matchAll(/https:\/\/www\.wadesplumbingandseptic\.com[^\s)>\]"']*/g)]
+			[
+				...body.matchAll(
+					/https:\/\/www\.wadesplumbingandseptic\.com[^\s)>\]"']*/g,
+				),
+			]
 				.map(([url]) => url.replace(/[#?].*$/, "").replace(/[.,;:]+$/, ""))
 				.map((url) => url.replace(/\/$/, "")),
 		)
@@ -247,6 +251,23 @@ test("llms.txt and llms-full.txt link only to live, indexable pages", async () =
 		}
 		assert.deepEqual(problems, [], route)
 	}
+})
+
+test("Markdown internal links point at final URLs, not redirects", async () => {
+	// Pages, services and posts feed llms-full.txt and the rendered site, so a
+	// stale link costs crawlers and readers an extra redirect hop.
+	const redirects = await redirectSources()
+	const problems: string[] = []
+	for (const file of sourceFiles(["content"], /\.md$/)) {
+		const text = fs.readFileSync(file, "utf8")
+		for (const [, href] of text.matchAll(/\]\((\/[^)\s#?]*)/g)) {
+			const pathname = href.length > 1 ? href.replace(/\/$/, "") : href
+			const redirect = redirects.find((rule) => rule.test.test(pathname))
+			if (redirect)
+				problems.push(`${file}: ${href} redirects (${redirect.source})`)
+		}
+	}
+	assert.deepEqual(problems, [])
 })
 
 test("robots.txt welcomes search and AI crawlers with the same private paths blocked", async () => {

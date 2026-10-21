@@ -83,16 +83,16 @@ Ensure your septic system's integrity with our professional smoke testing servic
 
 At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests across Santa Cruz County, ensuring your plumbing system's integrity. Our services extend to the following communities:
 
-- [Aptos](/service-area/aptos/)
-- [Ben Lomond](/service-area/ben-lomond/)
-- [Boulder Creek](/service-area/boulder-creek/)
-- [Capitola](/service-area/capitola/)
-- [Felton](/service-area/felton/)
-- [Los Gatos](/service-area/los-gatos/)
-- [Santa Cruz](/service-area/santa-cruz/)
-- [Scotts Valley](/service-area/scotts-valley/)
-- [Soquel](/service-area/soquel/)
-- [Watsonville](/service-area/watsonville/)
+- [Aptos](/service-area/aptos-ca-plumbing-septic-services)
+- [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services)
+- [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services)
+- [Capitola](/service-area/capitola-ca-plumbing-septic-services)
+- [Felton](/service-area/felton-ca-plumbing-septic-services)
+- [Los Gatos](/service-area/los-gatos-ca-plumbing-septic-services)
+- [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services)
+- [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
+- [Soquel](/service-area/soquel-ca-plumbing-septic-services)
+- [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 
 Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas/).
 

@@ -47,7 +47,7 @@ Below are some common questions about septic tank alarm installation:
 - **Can I install the alarm myself?** While DIY is possible, professional installation ensures accuracy and reliability.
 - **How do I respond to an alarm?** Upon activation, follow the provided instructions or contact us for immediate assistance.
 
-If you're considering a septic tank alarm installation in Santa Cruz County, California, trust Wade's Plumbing & Septic to provide reliable and professional service. Our team is ready to help you maintain a worry-free septic system. [Contact Wade's Plumbing & Septic](/contact-us) today to schedule your installation and protect your home from potential septic issues.
+If you're considering a septic tank alarm installation in Santa Cruz County, California, trust Wade's Plumbing & Septic to provide reliable and professional service. Our team is ready to help you maintain a worry-free septic system. [Contact Wade's Plumbing & Septic](/contact) today to schedule your installation and protect your home from potential septic issues.
 
 Stay Alert with Confidence
 
