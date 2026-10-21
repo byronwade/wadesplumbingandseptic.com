@@ -566,6 +566,29 @@
 		}
 	}
 
+	/* Keep enlarged text from spending its available width on panel insets. */
+	.panel-inset {
+		min-width: 0;
+		overflow-wrap: anywhere;
+		padding: var(--space-card);
+		padding-inline: min(var(--space-card), 24px);
+	}
+
+	.panel-grid {
+		min-width: 0;
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	/* At most two columns, each with room for the user's chosen text size. */
+	@media (width >= 40rem) {
+		.panel-grid {
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(min(100%, max(11rem, calc((100% - var(--space-grid)) / 2))), 1fr)
+			);
+		}
+	}
+
 	/* --- Card internals ---
 	   Padding and title size are driven by the card's own container width, not
 	   the viewport, so one card component reads correctly at three-up, two-up,
