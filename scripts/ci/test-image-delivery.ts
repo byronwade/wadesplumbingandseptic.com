@@ -50,7 +50,12 @@ assert.match(
 	/fetchPriority="high"/i,
 	`Hero <img> must keep high priority: ${img}`,
 )
+assert.match(
+	img,
+	/decoding="sync"/,
+	`Hero <img> must decode synchronously so LCP is not held on async decode: ${img}`,
+)
 
 console.log(
-	"Image delivery policy passes: local images bypass /_next/image; homepage hero loads eagerly with both sources.",
+	"Image delivery policy passes: local images bypass /_next/image; homepage hero loads eagerly with sync decode and both sources.",
 )
