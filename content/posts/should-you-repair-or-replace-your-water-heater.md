@@ -1,9 +1,8 @@
 ---
 title: Top Water Heater Services for Santa Cruz County Homes
 description: >-
-  A broken water heater can quickly disrupt your home life, no hot showers,
-  inefficient appliances, and rising utility bills. When your unit stops
-  working.
+  A broken water heater means no hot showers, inefficient appliances, and rising
+  utility bills. Here is how to decide whether to repair or replace it.
 category: Plumbing Tips
 date: "2025-06-17"
 tags:

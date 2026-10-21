@@ -2,7 +2,7 @@
 title: Efficient Septic Leach Repairs in Santa Cruz County
 description: >-
   Understanding septic leach field repair is crucial for Santa Cruz County
-  homeowners to maintain a healthy septic system and avoid costly repairs. Our.
+  homeowners to maintain a healthy septic system and avoid costly repairs.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
 tags:

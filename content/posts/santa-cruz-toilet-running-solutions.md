@@ -46,7 +46,7 @@ These DIY solutions can be effective for minor issues; however, if the problem p
 
 ## When to Call a Professional Plumbing Service
 
-If your toilet keeps running despite your best DIY efforts, it may be time to call in the experts. A professional toilet keeps running plumbing service can diagnose and fix more complex issues that might not be apparent. In Santa Cruz County, Wade's Plumbing & Septic offers [comprehensive plumbing services](/service-area/) to ensure your toilet functions efficiently.
+If your toilet keeps running despite your best DIY efforts, it may be time to call in the experts. A professional toilet keeps running plumbing service can diagnose and fix more complex issues that might not be apparent. In Santa Cruz County, Wade's Plumbing & Septic offers [comprehensive plumbing services](/service-areas) to ensure your toilet functions efficiently.
 
 ## The Benefits of Timely Toilet Repairs
 

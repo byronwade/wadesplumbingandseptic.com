@@ -1,9 +1,9 @@
 ---
 title: Optimize Septic System Health with Seasonal Maintenance in Santa Cruz
 description: >-
-  Regular septic maintenance in Santa Cruz is essential for ensuring the
-  longevity and efficiency of your system. By scheduling seasonal check-ups, you
-  can.
+  Regular septic maintenance keeps your Santa Cruz system efficient and
+  long-lasting. Seasonal check-ups can prevent costly repairs and system
+  failures.
 category: Plumbing Tips
 date: "2026-04-11"
 tags:

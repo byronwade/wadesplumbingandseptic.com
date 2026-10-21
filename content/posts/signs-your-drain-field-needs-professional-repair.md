@@ -1,9 +1,8 @@
 ---
 title: Santa Cruz County's Trusted Drain Field Repair Experts
 description: >-
-  While many plumbing problems can be solved with basic tools and a little
-  know-how, your septic system’s drain field is not one of them. The drain
-  field.
+  Many plumbing problems can be solved with basic tools, but your septic drain
+  field is not one of them. Learn the signs it needs professional repair.
 category: Septic Maintenance
 date: "2025-07-08"
 tags:

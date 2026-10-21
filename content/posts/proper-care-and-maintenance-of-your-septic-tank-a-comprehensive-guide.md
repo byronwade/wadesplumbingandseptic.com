@@ -1,9 +1,8 @@
 ---
 title: "Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide"
 description: >-
-  Taking care of your septic tank is an important task that should not be
-  overlooked. A septic tank is a self-contained underground chamber that is
-  designed.
+  Septic tank care should not be overlooked. A septic tank is a self-contained
+  underground chamber designed to hold and treat sewage from your home.
 category: Septic Maintenance
 date: "2025-05-11"
 tags:

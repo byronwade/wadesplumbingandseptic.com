@@ -82,7 +82,7 @@ We recommend having a sewer line inspection every 1-2 years to catch potential i
 
 **What happens if problems are found during the inspection?**
 
-If we identify issues during the inspection, our team will provide a detailed report and recommend the best course of action, which may include services like [hydro jetting for drain clearing](/service-offerings/hydro-jetting-for-drain-clearing/) or pipe repair.
+If we identify issues during the inspection, our team will provide a detailed report and recommend the best course of action, which may include services like [hydro jetting for drain clearing](/service-offerings/hydro-jetting) or pipe repair.
 
 For reliable and professional sewer line inspection services in Santa Cruz County, trust the experts at Wade's Plumbing & Septic. Contact us today to schedule your inspection and ensure your plumbing system remains in top condition. Our friendly and knowledgeable team is here to help you every step of the way.
 

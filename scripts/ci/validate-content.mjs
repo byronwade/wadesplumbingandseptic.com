@@ -19,6 +19,16 @@ function walk(dir) {
 		.map((entry) => path.join(entry.parentPath, entry.name))
 }
 
+/** Markdown body as one line of reader-visible text. */
+function plainText(markdown) {
+	return markdown
+		.replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+		.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+		.replace(/[#>*_\\]/g, "")
+		.replace(/\s+/g, " ")
+		.trim()
+}
+
 for (const collection of COLLECTIONS) {
 	const files = walk(path.join(ROOT, collection))
 	if (files.length === 0) {
@@ -115,6 +125,22 @@ for (const collection of COLLECTIONS) {
 		if (/…/.test(description) || /\.\.\.$/.test(description.trim())) {
 			errors.push(
 				`${file}: description is truncated with an ellipsis; finish the sentence`,
+			)
+		}
+		// WordPress excerpts copied the body's opening words and added a period
+		// wherever they stopped ("the average home wastes up to 180."). Snippets
+		// and llms.txt then quote a sentence that ends mid-thought.
+		const opening = description.replace(/\s+/g, " ").trim().replace(/\.$/, "")
+		const bodyText = plainText(body)
+		const at = bodyText.indexOf(opening)
+		if (
+			description.trim().endsWith(".") &&
+			opening.length > 40 &&
+			at !== -1 &&
+			/^\s*[^\s.!?]/.test(bodyText.slice(at + opening.length))
+		) {
+			errors.push(
+				`${file}: description stops mid-sentence ("…${opening.slice(-30)}."); end on a complete sentence`,
 			)
 		}
 		if (description.trim().length > 0 && description.trim().length < 70) {

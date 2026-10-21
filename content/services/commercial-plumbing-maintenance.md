@@ -67,9 +67,9 @@ Preventative measures are crucial in avoiding costly repairs. Here are some tips
 
 **Why is regular maintenance important?** Regular maintenance prevents major disruptions by catching small issues before they escalate.
 
-**How do I know if I need a plumber's help?** If you're experiencing any of the signs listed above, it’s time to [contact Wade's Plumbing & Septic](/lp/contact-call-first/).
+**How do I know if I need a plumber's help?** If you're experiencing any of the signs listed above, it’s time to [contact Wade's Plumbing & Septic](/contact).
 
-Choosing Wade's Plumbing & Septic for your commercial plumbing maintenance needs ensures expert service from experienced professionals. We are licensed, local, and always ready to respond to the unique demands of businesses across Santa Cruz County. Let us help you maintain a reliable plumbing system that supports your operations. For more information or to schedule a service, [contact us today](/lp/contact-call-first/).
+Choosing Wade's Plumbing & Septic for your commercial plumbing maintenance needs ensures expert service from experienced professionals. We are licensed, local, and always ready to respond to the unique demands of businesses across Santa Cruz County. Let us help you maintain a reliable plumbing system that supports your operations. For more information or to schedule a service, [contact us today](/contact).
 
 Professional Solutions for Your Business
 

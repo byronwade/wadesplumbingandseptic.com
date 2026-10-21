@@ -72,11 +72,11 @@ At Wade's Plumbing & Septic, we are committed to delivering exceptional service 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, offering top-quality pipe repair and replacement services to communities including:
 
-- [Aptos](/service-area/aptos/)
-- [Capitola](/service-area/capitola/)
-- [Scotts Valley](/service-area/scotts-valley/)
-- [Watsonville](/service-area/watsonville/)
-- [Santa Cruz](/service-area/santa-cruz/)
+- [Aptos](/service-area/aptos-ca-plumbing-septic-services)
+- [Capitola](/service-area/capitola-ca-plumbing-septic-services)
+- [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
+- [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
+- [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services)
 
 Our team is fully licensed and insured, holding a C-42 license for California. We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
 

@@ -1,8 +1,8 @@
 ---
 title: Efficient Septic Recovery Services in Santa Cruz County
 description: >-
-  The 2020 Santa Cruz Mountains Fire has exacerbated septic system issues for
-  many homeowners in Santa Cruz County, California, with environmental changes.
+  The 2020 Santa Cruz Mountains Fire worsened septic issues for many Santa Cruz
+  County homeowners, changing septic performance and maintenance needs.
 category: Plumbing Tips
 date: "2026-04-05"
 tags:
