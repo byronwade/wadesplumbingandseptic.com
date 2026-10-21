@@ -16,14 +16,14 @@ import { duotoneIcons, type DuotoneIconName } from "@/components/icon-data"
  *
  * The <svg> matches what Phosphor renders (same attributes, same order), so
  * the markup is unchanged. The weight is fixed here rather than passed at
- * every call site, so no page can drift onto a different one; a `weight`
- * prop is accepted for type compatibility and ignored.
+ * every call site, so there is no `weight` prop and no page can drift onto a
+ * different one.
  *
  * Sizing still comes from Tailwind `size-*`: the <svg> carries
  * width/height="1em" as HTML attributes, and a CSS width/height always beats
  * an attribute.
  */
-export type IconProps = PhosphorIconProps
+export type IconProps = Omit<PhosphorIconProps, "weight">
 export type IconComponent = (props: IconProps) => ReactElement
 
 function duotone(name: DuotoneIconName): IconComponent {
@@ -36,7 +36,6 @@ function duotone(name: DuotoneIconName): IconComponent {
 		color = "currentColor",
 		size = "1em",
 		mirrored = false,
-		weight: _weight,
 		children,
 		...props
 	}: IconProps) {
