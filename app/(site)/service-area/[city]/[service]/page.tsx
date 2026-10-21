@@ -185,7 +185,7 @@ export default async function CityServicePage({
 						<li>
 							<Link
 								prefetch={false}
-								className="text-accent underline-offset-4 hover:underline"
+								className="text-primary underline-offset-4 hover:underline"
 								href={serviceHref}
 							>
 								{page.serviceTitle} (county overview)
@@ -194,7 +194,7 @@ export default async function CityServicePage({
 						<li>
 							<Link
 								prefetch={false}
-								className="text-accent underline-offset-4 hover:underline"
+								className="text-primary underline-offset-4 hover:underline"
 								href={cityHubHref}
 							>
 								All {location.name} plumbing and septic
