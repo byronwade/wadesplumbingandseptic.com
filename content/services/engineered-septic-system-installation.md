@@ -69,6 +69,20 @@ Ongoing maintenance matters: filters, pumps, blowers, and service contracts keep
 
 We install and support engineered septic systems across Santa Cruz County communities and selected Santa Clara County foothill addresses (including Los Gatos and Saratoga, generally west of Highway 101). Confirm your property when you call. See the [service area map](/service-areas).
 
+## Engineered septic system FAQs
+
+### What is an engineered septic system?
+
+An engineered septic system uses advanced treatment and dispersal when a standard gravity system cannot meet county standards. Options include aerobic treatment units, mound systems, pressure distribution, drip systems, and media filters.
+
+### Does Wade's work with engineers?
+
+Yes. We coordinate with designers and engineers during design and permitting so the plan matches what the property can support.
+
+### How do I get a quote for engineered septic installation?
+
+Call 831.225.4344 with the property address and any soil report or county letter you already have. Quotes are free. Flat-rate pricing, quoted on site before work begins.
+
 ## Request an engineered septic consultation
 
 Call or text **[831.225.4344](tel:+18312254344)** with the property address and what you already know (failed system, new build, soil report, county letter). Email photos or documents to **[support@wadesinc.io](mailto:support@wadesinc.io)**. We will tell you the next practical step.
