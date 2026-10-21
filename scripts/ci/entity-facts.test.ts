@@ -7,6 +7,7 @@ import test from "node:test"
 import type { ContentDocument } from "../../lib/content"
 import { contactInfo } from "../../lib/contact"
 import { normalizeConversion } from "../../lib/content-conversion"
+import { faqs } from "../../lib/home-content"
 import { LLMS_FULL_PATH, llmsFullPageSlugs } from "../../lib/llms"
 import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
 import {
@@ -152,7 +153,9 @@ const summaryLines = [
 	`Address: ${siteConfig.address.display}`,
 	`Hours: ${siteConfig.hours}`,
 	`Pricing: ${siteConfig.pricing}`,
+	"Quotes: Free",
 	`Service area: ${siteConfig.serviceArea}`,
+	"Not offered: septic tank pumping",
 	`Google Business Profile: ${siteConfig.googleBusinessUrl}`,
 	`Google reviews: ${siteConfig.googleReviewUrl}`,
 ]
@@ -205,6 +208,49 @@ test("llms.txt link text repeats only confirmed business facts", async () => {
 	// Slugs such as ".../a-weekend-diy-project" are addresses, not claims.
 	const prose = body.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, "")
 	assert.deepEqual(businessFactIssues(prose), [])
+})
+
+test("llms.txt names the core services, including engineered septic installation", async () => {
+	const body = await routeText("../../app/llms.txt/route")
+	const services = body
+		.split("\n")
+		.find((line) => line.startsWith("Services: "))
+	assert.ok(services, "llms.txt summary needs a Services line")
+	for (const service of [
+		"plumbing",
+		"drain",
+		"sewer",
+		"water heater",
+		"engineered septic system installation done alongside engineers",
+	])
+		assert.ok(services.includes(service), `Services line: ${service}`)
+})
+
+test("homepage FAQ answers what Wade's does with confirmed facts", () => {
+	// These answers are also the homepage FAQPage schema that AI assistants quote.
+	for (const faq of faqs)
+		assert.deepEqual(
+			businessFactIssues(`${faq.question}\n${faq.answer}`),
+			[],
+			faq.question,
+		)
+
+	const answerTo = (question: RegExp) => {
+		const faq = faqs.find((item) => question.test(item.question))
+		assert.ok(faq, `homepage FAQ needs a question matching ${question}`)
+		return faq.answer
+	}
+	assert.match(answerTo(/^what does wade's .* do\?$/i), /engineered septic/)
+	assert.match(
+		answerTo(/\bpump septic tanks\b/i),
+		/^No\. .*does not offer septic tank pumping\./,
+	)
+	const pricing = answerTo(/\bquotes? free\b/i)
+	assert.match(pricing, /^Yes, quotes are free\./)
+	assert.ok(pricing.includes(siteConfig.pricing), pricing)
+	const hours = answerTo(/\bhours\b/i)
+	assert.ok(hours.includes(siteConfig.hours), hours)
+	assert.ok(hours.includes(siteConfig.phone), hours)
 })
 
 /** Configured redirects plus Next's automatic trailing-slash normalization. */
