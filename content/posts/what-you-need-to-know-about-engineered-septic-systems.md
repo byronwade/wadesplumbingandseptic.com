@@ -18,6 +18,8 @@ image: /images/work/engineered-retaining-wall.webp
 imageAlt: Engineered septic retaining wall and control panel
 ---
 
+Planning an engineered septic installation in Santa Cruz County? The checklist in section 8 covers parcel records, site evaluation, design, permits and maintenance. Wade's Plumbing & Septic installs septic systems alongside engineers; we do not provide septic tank pumping. Use the checklist to prepare for a free installation quote.
+
 ## 1\. What is an Engineered Septic System?
 
 ![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
@@ -106,9 +108,17 @@ A recirculating sand filter (RSF) cycles wastewater through the sand filter mult
 
 ## 8\. Planning for Septic System Work
 
-Flat-rate pricing, quoted on site before work begins.
+Use this checklist to discuss your project with a designer and installer. County planning sources checked October 21, 2026.
 
-Discuss installation, operating costs, and maintenance requirements during your site assessment.
+1. **Review the parcel records and proposed use.** Find the existing septic permit and the building use it covers. Tell your designer about planned bedrooms, additions or an ADU. The County's [repair and upgrade guidance](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx) explains how the existing permit and proposed use affect the review path. For undeveloped land, start with the County's [new-development guidance](https://scceh.com/NewHome/Programs/LandUse/OWTSNewDevelopment.aspx).
+2. **Complete the required site evaluation.** A Qualified Professional works with Environmental Health staff to assess the property. Depending on the site and existing records, this can include soil profiles, percolation tests and groundwater information. The County determines which components are needed; see its [site-evaluation process](https://scceh.com/NewHome/Programs/LandUse/SiteEvaluation.aspx). Ask your designer what information is still missing before choosing a system.
+3. **Prepare the design and permit application.** The County's [installation-permit guidance for upgrades](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades/OWTSUpgrade.aspx) calls for a complete system design, scaled plot plan, test results and study reports, plus other documents when required. Confirm the application path with your designer and Environmental Health, and obtain the required permit before installation.
+4. **Confirm the installation responsibilities.** The County's [qualified-professional requirements](https://scceh.com/NewHome/Programs/LandUse/QualifiedProfessionals.aspx) distinguish site evaluation and design, installation, and ongoing service. Wade's works alongside engineers for [engineered septic installation](/service-offerings/engineered-septic-system-installation). Discuss the approved layout, site access, startup and owner guidance when planning the work.
+5. **Plan for ongoing maintenance.** Enhanced treatment systems need monitoring and maintenance after installation. The County's [maintenance guidance](https://scceh.com/NewHome/Programs/LandUse/MaintenanceofanOWTS.aspx) says owners must contract with an Onsite System Service Provider for these systems. Ask who will service the selected equipment and what inspection and reporting requirements apply.
+
+**What to have ready for a free quote:** your property address, any soil report or County letter you already have, and whether the project involves a failed system, new build or planned addition. Bring the records you have so we can discuss the next step.
+
+Quotes are free. Flat-rate pricing, quoted on site before work begins. [Request an installation quote](/contact) or call [831.225.4344](tel:+18312254344). Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 ## 9\. Choosing the Right Septic System for Your Property
 

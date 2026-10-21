@@ -1,0 +1,139 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-engineered-septic-planning-2026-10-21",
+	"collected_at": "2026-10-21T16:25:15.545636+00:00",
+	"source": "santa-cruz-county-environmental-health-and-confirmed-repository-facts",
+	"source_url_or_tool": "https://scceh.com/NewHome/Programs/LandUse/SiteEvaluation.aspx",
+	"scope": "Existing article section 8 installation planning refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "58f9a590467c5fb25dd56a312f6a8a99b92ab489bcf885496a38795868376607",
+	"payload": {
+		"observations": [
+			{
+				"id": "parcel-records",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:12.447863+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "0b3dbaf7ca4f79d5d2d3d3a95d2bebf0f7222640e64d98601ccfc7c6456748f1",
+				"summary": "Check the existing permit and permitted building use to distinguish a repair, upgrade or new-development path.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			},
+			{
+				"id": "site-evaluation",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/SiteEvaluation.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:13.090705+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "048cfc8abf101a7045703acca5db9dfc8317e37e5149485ac1b57120cdee0c6d",
+				"summary": "A hired Qualified Professional evaluates the site with Environmental Health staff. Possible components include existing records, field observation, soil profiles, percolation and groundwater information; EH decides which additional components are needed.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			},
+			{
+				"id": "professional-roles",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/QualifiedProfessionals.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:13.649316+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "5f93d56939789b42591e9736ccf46d65f911573e65d7c267ad98aa349bfa01e8",
+				"summary": "Site evaluation and design require qualified professionals; construction and enhanced-system maintenance have separate qualifications. No Wade credential is inferred from this page.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			},
+			{
+				"id": "installation-permit",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades/OWTSUpgrade.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:14.184562+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "1f17d99f47e6c2b55352eb94c26d946d6d7ffc015206a81ae0d9847fb048e5e6",
+				"summary": "An installation-permit application includes the system design, scaled plot plan, test results and reports; additional project-specific documents may be required. A permit is required for an upgrade.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			},
+			{
+				"id": "new-development",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSNewDevelopment.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:14.920749+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "7ddefad0d952571ba8428529fa5016e61bcd635da43da6e401da52d2c4503f49",
+				"summary": "County new-development guidance links its Road Map for New Development, separating site evaluation, design/building review and permit issuance. No price, lot-size rule or timeline from this page is reproduced.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			},
+			{
+				"id": "maintenance",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/MaintenanceofanOWTS.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"collected_at": "2026-10-21T16:25:15.528869+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "Public County guidance availability and planning context only",
+				"sha256": "5b7ade45ef3b7d3ed7e8aa500fa875556853c8d670647031f785262cd6bb4c25",
+				"summary": "Owners of enhanced treatment systems must contract with an Onsite System Service Provider. County regulations set monitoring, inspection and reporting requirements. No pumping interval is reproduced.",
+				"inference_limit": "Not a permit decision, project approval, Wade qualification, timing, price, ranking or live site integration proof."
+			}
+		],
+		"repository_sources": [
+			{
+				"source_path": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"sha256": "e41f9b0d4b96f6a6fb5afa9dbb6f8c07c0dc9358a8bc32c108c685dde3c1c142"
+			},
+			{
+				"source_path": "lib/home-content.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"sha256": "9ea84c45a2d3074147832aafca29e4946ff24df00613f628f4431e2b1f2885e8"
+			},
+			{
+				"source_path": "content/services/engineered-septic-system-installation.md",
+				"source_tier": "REPOSITORY_FACT",
+				"sha256": "a89f4ebd8ed971855db2bc27371e415e3f6addf13f45c5f41f6d2b6b90e921fa"
+			}
+		],
+		"business_fact_authority": "Byron confirmations: 2026-10-19 for hours and flat-rate pricing; 2026-10-20 for installation alongside engineers, no septic tank pumping and free quotes. Reuses existing site facts only.",
+		"claim_map": {
+			"intro": ["business_fact_authority"],
+			"stage_1": ["parcel-records", "new-development"],
+			"stage_2": ["site-evaluation"],
+			"stage_3": ["installation-permit", "new-development"],
+			"stage_4": [
+				"professional-roles",
+				"content/services/engineered-septic-system-installation.md"
+			],
+			"stage_5": ["maintenance"],
+			"quote_checklist": [
+				"content/services/engineered-septic-system-installation.md",
+				"business_fact_authority",
+				"lib/site.ts"
+			]
+		},
+		"editorial_decision": {
+			"purpose": "Help homeowners prepare for engineered septic installation and request a free quote.",
+			"query_cluster": "engineered septic installation process Santa Cruz County",
+			"canonical_owner": "https://www.wadesplumbingandseptic.com/what-you-need-to-know-about-engineered-septic-systems",
+			"duplicate_assessment": "Existing engineered-system explainer owns this supporting planning checklist. New-installation and homeowner-guide articles already overlap, so no new URL is created. Transactional service remains /service-offerings/engineered-septic-system-installation.",
+			"changed_scope": "New short introduction and expanded existing section 8 only; all other article bytes and frontmatter preserved.",
+			"dates": "Original publication date retained. County checklist explicitly labels its source-check date; no article-wide freshness claim.",
+			"schema_impact": "No new FAQPage or HowTo. Existing Article metadata, business schema and canonical remain unchanged.",
+			"internal_links": [
+				"/service-offerings/engineered-septic-system-installation",
+				"/contact",
+				"tel:+18312254344"
+			],
+			"safety_review": "Planning-level steps only; no excavation, tank entry, electrical work, treatment settings or DIY repair procedure.",
+			"held_legacy_claims": [
+				"certified experts/professionals",
+				"4 to 8 week installation timeline",
+				"C-42 credential wording",
+				"all-regulations and long-term performance assurances"
+			],
+			"measurement_limit": "No Search Console access or demand/traffic estimate used. No ranking, index or lead-lift claim.",
+			"rollback": "Revert this bounded PR to restore the original introduction and section 8."
+		}
+	}
+}
