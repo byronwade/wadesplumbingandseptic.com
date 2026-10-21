@@ -46,16 +46,16 @@ export function SaveContactPrompt({
 				<SheetFooter className="pb-[max(1.25rem,env(safe-area-inset-bottom))]">
 					<ProtectedContactLink
 						ariaLabel={`Call ${contactInfo.phoneDisplay}`}
-						className={cn(buttonVariants({ size: "xl" }), "w-full")}
+						className={cn(buttonVariants({ size: "xl", wrap: true }), "w-full")}
 						kind="phone"
 						onClick={() => onOpenChange(false)}
 					>
 						<Phone aria-hidden="true" />
-						Call {contactInfo.phoneDisplay}
+						<span className="min-w-0">Call {contactInfo.phoneDisplay}</span>
 					</ProtectedContactLink>
 					<button
 						className={cn(
-							buttonVariants({ variant: "ghost", size: "lg" }),
+							buttonVariants({ variant: "ghost", size: "lg", wrap: true }),
 							"w-full",
 						)}
 						onClick={() => onOpenChange(false)}
