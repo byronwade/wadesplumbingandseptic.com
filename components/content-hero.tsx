@@ -198,6 +198,7 @@ export function ContentHero({
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={75}
@@ -261,6 +262,7 @@ export function ContentHero({
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={70}
@@ -315,6 +317,7 @@ export function ContentHero({
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={65}
@@ -342,6 +345,7 @@ export function ContentHero({
 					<Image
 						alt=""
 						className="object-cover"
+						decoding="sync"
 						fill
 						priority
 						quality={50}
