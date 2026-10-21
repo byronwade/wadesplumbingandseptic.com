@@ -1,10 +1,11 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown, { defaultUrlTransform } from "react-markdown"
 import remarkGfm from "remark-gfm"
 
 import { ProtectedContactLink } from "@/components/protected-contact"
+import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
@@ -60,6 +61,9 @@ export function MarkdownContent({
 		<div className={cn("prose", className)}>
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
+				urlTransform={(url) =>
+					url === siteConfig.phoneHref ? url : defaultUrlTransform(url)
+				}
 				components={{
 					a: ({ href = "", children, ...props }) => {
 						if (href.startsWith("/")) {
@@ -70,8 +74,7 @@ export function MarkdownContent({
 							)
 						}
 
-						// Keep visible link text; apply real tel:/mailto: only on the client
-						// so scrapers do not harvest contiguous contact hrefs from HTML.
+						// Native contact links use the shared business destinations.
 						if (href.startsWith("tel:")) {
 							return (
 								<ProtectedContactLink kind="phone" {...props}>

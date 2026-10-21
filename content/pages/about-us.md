@@ -62,6 +62,32 @@ Whether you need trenchless sewer line replacement, expert fixture installation,
 
 ## Frequently Asked Questions
 
+### What work can I contact Wade's about?
+
+Wade's Plumbing & Septic handles residential and commercial plumbing, drain cleaning, sewer line repairs, water heater work, and septic system installation. We serve homes and businesses.
+
+### Where does Wade's provide plumbing and septic services?
+
+Wade's serves Santa Cruz County and selected Santa Clara County communities in California. Check our service-area guide or call 831.225.4344 to ask about your property's location.
+
+### Does Wade's install engineered septic systems?
+
+Yes. Wade's installs engineered septic systems alongside engineers, including systems for properties where a conventional septic system will not work. The system design depends on the property's site conditions.
+
+### Is septic tank pumping part of Wade's services?
+
+No. Wade's Plumbing & Septic does not provide septic tank pumping. Our septic work includes installation alongside engineers. Contact a septic pumping company if you need routine pumping.
+
+### Is there a charge for a quote?
+
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Call 831.225.4344 or use our contact page to request a quote for your project.
+
+### When can I reach Wade's to discuss my project?
+
+Call Wade's at 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. You can also request a free quote through our contact page.
+
+## Commercial Service Questions
+
 ### How is pricing determined for commercial services at Wade's Plumbing & Septic?
 
 The cost for commercial plumbing and septic services in Santa Cruz County varies based on the complexity and scope of the project. We offer competitive pricing and provide detailed estimates to ensure transparency and value for our clients.
@@ -79,3 +105,9 @@ The timeline for commercial services in Santa Cruz County depends on the service
 ### Why choose Wade's Plumbing & Septic for your commercial needs?
 
 Wade's Plumbing & Septic is a trusted provider in Santa Cruz County, known for our expertise, reliability, and commitment to customer satisfaction. Our certified team delivers top-quality service, ensuring your commercial plumbing and septic systems operate smoothly.
+
+## Services and Contact Details
+
+Explore our [plumbing and septic services](/services), including [engineered septic system installation](/service-offerings/engineered-septic-system-installation). Check our [service-area guide](/service-areas) for the communities we cover.
+
+[Request a free quote](/contact) or [call 831.225.4344](tel:+18312254344) to discuss your project.
