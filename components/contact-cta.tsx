@@ -52,7 +52,7 @@ export function ContactCta({
 			>
 				<div
 					className={cn(
-						"section-head min-w-0",
+						"section-head min-w-0 [overflow-wrap:anywhere]",
 						!compact && "max-w-2xl flex-1 basis-96",
 					)}
 				>
