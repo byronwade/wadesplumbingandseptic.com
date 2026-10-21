@@ -50,7 +50,7 @@ We provide you with recorded video documentation and a detailed assessment of ou
 
 ### Professional Recommendations
 
-Based on our analysis, we offer expert advice and solutions tailored to your specific situation. Whether it's a simple [drain cleaning](/service-offerings/drain-cleaning/) or more extensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/), we have you covered.
+Based on our analysis, we offer expert advice and solutions tailored to your specific situation. Whether it's a simple [drain cleaning](/service-offerings/drain-cleaning) or more extensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement), we have you covered.
 
 ## Timeline and Cost Factors
 
@@ -80,6 +80,6 @@ Proactive Maintenance
 
 Experience peace of mind with our state-of-the-art video inspections, ensuring your plumbing system in Santa Cruz County operates flawlessly.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42

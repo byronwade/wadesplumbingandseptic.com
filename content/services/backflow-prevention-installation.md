@@ -59,7 +59,7 @@ The cost of backflow prevention installation can vary based on several factors, 
 
 Flat-rate pricing, quoted on site before work begins.
 
-For homeowners exploring other options, we also offer [alternative septic system installation](/service-offerings/engineered-septic-system-installation/) and comprehensive [drain cleaning services](/service-offerings/drain-cleaning/) to ensure your entire plumbing system functions optimally.
+For homeowners exploring other options, we also offer [alternative septic system installation](/service-offerings/engineered-septic-system-installation) and comprehensive [drain cleaning services](/service-offerings/drain-cleaning) to ensure your entire plumbing system functions optimally.
 
 ## FAQs About Backflow Prevention
 
@@ -71,7 +71,7 @@ For homeowners exploring other options, we also offer [alternative septic system
 
 ## Choose Wade's Plumbing & Septic for Your Backflow Needs
 
-With years of experience serving Santa Cruz County, California, Wade's Plumbing & Septic is your trusted partner for backflow prevention installation. Our licensed and responsive team is dedicated to providing top-notch service, ensuring your water supply remains safe and secure. Whether you need a new installation, regular maintenance, or [backflow prevention testing](/service-offerings/backflow-prevention-testing/), we've got you covered.
+With years of experience serving Santa Cruz County, California, Wade's Plumbing & Septic is your trusted partner for backflow prevention installation. Our licensed and responsive team is dedicated to providing top-notch service, ensuring your water supply remains safe and secure. Whether you need a new installation, regular maintenance, or [backflow prevention testing](/service-offerings/backflow-prevention-testing), we've got you covered.
 
 Contact us today to schedule your backflow prevention service and protect your home's water supply with confidence.
 

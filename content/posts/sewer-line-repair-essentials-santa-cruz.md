@@ -42,7 +42,7 @@ Early detection of sewer line issues can save you time and money. Watch out for 
 
 ## The Importance of Regular Sewer Line Inspections
 
-Regular sewer line inspections are vital for maintaining a healthy plumbing system. These inspections can identify potential issues before they become major problems. At Wade's Plumbing & Septic, we offer [comprehensive inspection services](/service-areas/) for homeowners across Santa Cruz County, ensuring your plumbing system is in top condition.
+Regular sewer line inspections are vital for maintaining a healthy plumbing system. These inspections can identify potential issues before they become major problems. At Wade's Plumbing & Septic, we offer [comprehensive inspection services](/service-areas) for homeowners across Santa Cruz County, ensuring your plumbing system is in top condition.
 
 ## How Sewer Line Repairs Can Save You Money
 
@@ -56,7 +56,7 @@ When it comes to selecting a professional for sewer line repair, consider their 
 
 ![Concrete sewer and drain pipes](/images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f.webp)
 
-Santa Cruz homeowners trust Wade's Plumbing & Septic for our commitment to quality and customer satisfaction. Our locally-based team understands the unique challenges of the area, providing customized solutions for each home. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services/) or [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services/), we are here to help keep your plumbing system running smoothly.
+Santa Cruz homeowners trust Wade's Plumbing & Septic for our commitment to quality and customer satisfaction. Our locally-based team understands the unique challenges of the area, providing customized solutions for each home. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services) or [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), we are here to help keep your plumbing system running smoothly.
 
 ## DIY Monitoring vs. Professional Services
 
@@ -78,7 +78,7 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 
 ## Sources & Local References
 
-- [Plumbing & septic service areas overview](/service-areas/)
+- [Plumbing & septic service areas overview](/service-areas)
 - [Plumbing Repair Services, Santa Cruz County](/lp/service-offerings/pipe-repair-and-replacement)
 
 ## Sources & Local References
@@ -95,4 +95,4 @@ Expert Sewer Solutions
 
 Ensure your home's plumbing system operates smoothly with our professional sewer line repair services in Santa Cruz County, CA.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)

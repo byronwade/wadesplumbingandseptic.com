@@ -44,7 +44,7 @@ Recognizing early signs of leach field issues can prevent costly repairs and env
 - Lush green patches in your yard
 - Unpleasant odors
 
-If you notice these signs, it's essential to contact a professional for [septic leach field repair](/service-areas/) services promptly.
+If you notice these signs, it's essential to contact a professional for [septic leach field repair](/service-areas) services promptly.
 
 ## Consequences of Neglecting Septic Leach Field Issues
 
@@ -78,7 +78,7 @@ While homeowners can monitor their septic systems for signs
 
 ## Sources & Local References
 
-- [Reference from wadesplumbingandseptic.com](/service-areas/)
+- [Reference from wadesplumbingandseptic.com](/service-areas)
 
 ## Seasonal Tip
 
@@ -92,4 +92,4 @@ Contact Wade's Plumbing & Septic for expert septic leach field repair services i
 
 Trust Wade's Plumbing & Septic for expert solutions that restore your septic system's efficiency.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)

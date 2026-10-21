@@ -26,7 +26,7 @@ Noticing these signs early can prevent more severe plumbing issues and regulator
 
 ## Causes of Grease Trap Issues
 
-Grease trap problems often arise from a buildup of FOG, which can lead to clogs and backups. Misuse of kitchen drains, such as disposing of excessive food waste or non-biodegradable substances, can exacerbate these issues. Understanding [how to properly clear a clogged drain](/service-offerings/drain-cleaning/) and prevent FOG buildup is crucial for maintaining a functional grease trap.
+Grease trap problems often arise from a buildup of FOG, which can lead to clogs and backups. Misuse of kitchen drains, such as disposing of excessive food waste or non-biodegradable substances, can exacerbate these issues. Understanding [how to properly clear a clogged drain](/service-offerings/drain-cleaning) and prevent FOG buildup is crucial for maintaining a functional grease trap.
 
 ## The Grease Trap Cleaning Process
 
@@ -80,7 +80,7 @@ Neglecting cleaning can lead to clogs, backups, foul odors, and potential fines 
 
 While DIY cleaning is possible, hiring professionals ensures thorough cleaning and proper waste disposal, preventing potential health hazards and operational disruptions.
 
-For dependable **grease trap cleaning Santa Cruz** services, contact Wade's Plumbing & Septic today. Our team is ready to assist you with all your plumbing needs, from [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) to [leak detection](/service-offerings/leak-detection/). Call us to schedule an appointment and experience the difference of working with a trusted local provider!
+For dependable **grease trap cleaning Santa Cruz** services, contact Wade's Plumbing & Septic today. Our team is ready to assist you with all your plumbing needs, from [commercial drain cleaning](/service-offerings/commercial-drain-cleaning) to [leak detection](/service-offerings/leak-detection). Call us to schedule an appointment and experience the difference of working with a trusted local provider!
 
 ## Serving Santa Cruz County, CA
 

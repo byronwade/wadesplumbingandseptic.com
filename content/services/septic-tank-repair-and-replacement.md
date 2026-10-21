@@ -37,7 +37,7 @@ At Wade's Plumbing & Septic, we follow a comprehensive process to ensure effecti
 
 ### Inspection and Diagnosis
 
-Our team conducts a thorough inspection to identify the root cause of the problem. We offer [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment/) to determine the best course of action.
+Our team conducts a thorough inspection to identify the root cause of the problem. We offer [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) to determine the best course of action.
 
 ### Repair or Replacement Decision
 
@@ -47,20 +47,20 @@ Flat-rate pricing, quoted on site before work begins.
 
 ### Implementation
 
-We handle everything from excavation to installation, ensuring that the process is smooth and causes minimal disruption to your daily life. Our team is experienced in [septic tank distribution box repair and replacement](/service-offerings/septic-tank-distribution-box-repair-and-replacement/) and [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/), ensuring a comprehensive service.
+We handle everything from excavation to installation, ensuring that the process is smooth and causes minimal disruption to your daily life. Our team is experienced in [septic tank distribution box repair and replacement](/service-offerings/septic-tank-distribution-box-repair-and-replacement) and [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement), ensuring a comprehensive service.
 
 ## Timeline and Cost Factors
 
-The timeline for a septic tank repair or replacement can vary based on the complexity of the issue. Most repairs are completed within a few days, while replacements might take longer. Cost factors include the extent of damage, tank size, and any additional services required such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/).
+The timeline for a septic tank repair or replacement can vary based on the complexity of the issue. Most repairs are completed within a few days, while replacements might take longer. Cost factors include the extent of damage, tank size, and any additional services required such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement).
 
 ## Preventing Future Septic System Issues
 
 Prevention is key to avoiding costly repairs. Consider the following tips:
 
-- Regularly schedule [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/)
+- Regularly schedule [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care)
 - Avoid flushing non-biodegradable items
 - Be mindful of water usage and fix leaks promptly
-- Consider installing a [septic tank alarm](/service-offerings/septic-tank-alarm-installation/) for early warning of potential issues
+- Consider installing a [septic tank alarm](/service-offerings/septic-tank-alarm-installation) for early warning of potential issues
 
 ## FAQs About Septic Tank Repair in Santa Cruz
 
@@ -86,6 +86,6 @@ Fast & Reliable Service
 
 Ensure your septic system is in top condition with our expert repair and replacement services.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42

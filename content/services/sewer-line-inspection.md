@@ -22,7 +22,7 @@ Sewer line inspections are a proactive measure to prevent costly repairs and ens
 - Tree root intrusions
 - Offset joints
 
-Choosing Wade's Plumbing & Septic for your [sewer line inspection](/service-offerings/sewer-line-inspection/) in Santa Cruz County means trusting a team with extensive experience and local expertise.
+Choosing Wade's Plumbing & Septic for your [sewer line inspection](/service-offerings/sewer-line-inspection) in Santa Cruz County means trusting a team with extensive experience and local expertise.
 
 ## Signs You Need a Sewer Line Inspection
 
@@ -58,7 +58,7 @@ The cost of a sewer line inspection can vary based on several factors:
 
 - The length and accessibility of the sewer line
 - The complexity of the inspection process
-- Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning/) or pipe repair
+- Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning) or pipe repair
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -68,7 +68,7 @@ Wade's Plumbing & Septic offers competitive pricing, ensuring quality service at
 
 Regular maintenance and preventive measures can prolong the life of your sewer lines. Consider the following tips:
 
-- Schedule regular [drain line inspections](/service-offerings/drain-line-inspection/)
+- Schedule regular [drain line inspections](/service-offerings/drain-line-inspection)
 - Avoid flushing non-biodegradable items
 - Monitor and manage tree roots near sewer lines
 

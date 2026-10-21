@@ -26,7 +26,7 @@ Recognizing the signs of sewer line issues early can prevent costly repairs. Be 
 - Slow drainage in sinks and showers
 - Lush patches of grass or sinkholes in your yard
 
-If you notice any of these issues, it may be time to consider a [drain line inspection](/service-offerings/drain-line-inspection/).
+If you notice any of these issues, it may be time to consider a [drain line inspection](/service-offerings/drain-line-inspection).
 
 ## Understanding the Process and Timeline
 
@@ -44,7 +44,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Sewer Line Issues
 
-While trenchless sewer line replacement offers a durable solution, regular maintenance is key to preventing future issues. Routine inspections and timely [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) services can prolong the life of your sewer system. Additionally, being mindful of what goes down your drains can prevent clogs and backups.
+While trenchless sewer line replacement offers a durable solution, regular maintenance is key to preventing future issues. Routine inspections and timely [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) services can prolong the life of your sewer system. Additionally, being mindful of what goes down your drains can prevent clogs and backups.
 
 ## Frequently Asked Questions
 
@@ -56,7 +56,7 @@ Homeowners often have questions about trenchless sewer line replacement:
 
 Wade's Plumbing & Septic is the trusted choice for trenchless sewer line replacement in Santa Cruz County. As a licensed, local company with extensive experience, we offer responsive service and reliable solutions. For comprehensive plumbing and septic services, including [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement), trust our team.
 
-If you're experiencing sewer line issues, don't wait for them to worsen. Contact Wade's Plumbing & Septic today to schedule your consultation or learn more about our [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) services. Let us help you maintain a properly functioning sewer system with minimal disruption.
+If you're experiencing sewer line issues, don't wait for them to worsen. Contact Wade's Plumbing & Septic today to schedule your consultation or learn more about our [commercial drain cleaning](/service-offerings/commercial-drain-cleaning) services. Let us help you maintain a properly functioning sewer system with minimal disruption.
 
 Santa Cruz County's Trusted Sewer Experts
 

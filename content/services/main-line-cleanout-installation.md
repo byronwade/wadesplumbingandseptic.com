@@ -43,11 +43,11 @@ The timeline for a main line cleanout installation varies based on the complexit
 
 ## Preventive Maintenance and Benefits
 
-Regular maintenance, including professional [drain cleaning](/service-offerings/drain-cleaning/) and inspections, can prolong the life of your plumbing system and prevent costly problems. A main line cleanout installation simplifies these processes, allowing easy access for routine checks and cleaning.
+Regular maintenance, including professional [drain cleaning](/service-offerings/drain-cleaning) and inspections, can prolong the life of your plumbing system and prevent costly problems. A main line cleanout installation simplifies these processes, allowing easy access for routine checks and cleaning.
 
 ## Why Choose Wade's Plumbing & Septic?
 
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County for our commitment to quality and customer satisfaction. Our team is licensed, experienced, and dedicated to providing responsive service tailored to your needs. Whether you require a main line cleanout installation or [alternative septic system installation](/service-offerings/engineered-septic-system-installation/), we are your local experts.
+Wade's Plumbing & Septic is a trusted name in Santa Cruz County for our commitment to quality and customer satisfaction. Our team is licensed, experienced, and dedicated to providing responsive service tailored to your needs. Whether you require a main line cleanout installation or [alternative septic system installation](/service-offerings/engineered-septic-system-installation), we are your local experts.
 
 ## Frequently Asked Questions
 
@@ -67,7 +67,7 @@ Contractor License: C-42 for California
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on the areas we serve, please visit our [service area overview](/service-areas/).
+For more information on the areas we serve, please visit our [service area overview](/service-areas).
 
 Ensure Your Plumbing Runs Smoothly
 

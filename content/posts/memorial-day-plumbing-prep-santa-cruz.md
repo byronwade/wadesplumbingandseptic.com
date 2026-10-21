@@ -28,13 +28,13 @@ Prepare your Capitola home for Memorial Day with essential plumbing checks to en
 - Address any unusual noises from your garbage disposal promptly.
 - Regular maintenance can prevent costly repairs down the line.
 
-Memorial Day Plumbing Prep for [Capitola](/service-area/capitola-ca-plumbing-septic-services/) Homes
+Memorial Day Plumbing Prep for [Capitola](/service-area/capitola-ca-plumbing-septic-services) Homes
 
 Make a splash this Memorial Day by ensuring your plumbing system is ready for the festivities! Avoid unexpected hiccups and keep the good times flowing with these essential tips for Capitola homeowners.
 
 ## Understanding the Importance of Pre-Holiday Plumbing Checks
 
-As Memorial Day approaches, homeowners in [Capitola, CA](/service-area/capitola-ca-plumbing-septic-services/) are preparing for family gatherings and festive celebrations. With increased usage of plumbing systems during such events, it's crucial to ensure everything is functioning optimally. Conducting pre-holiday plumbing checks can prevent unexpected issues, allowing you to focus on enjoying the festivities.
+As Memorial Day approaches, homeowners in [Capitola, CA](/service-area/capitola-ca-plumbing-septic-services) are preparing for family gatherings and festive celebrations. With increased usage of plumbing systems during such events, it's crucial to ensure everything is functioning optimally. Conducting pre-holiday plumbing checks can prevent unexpected issues, allowing you to focus on enjoying the festivities.
 
 ## Essential Plumbing Maintenance Tips for Memorial Day
 
@@ -96,15 +96,15 @@ Choosing a trusted local service provider ensures you receive reliable and effic
 ## Sources & Local References
 
 - [Wade's Plumbing & Septic](/)
-- [Plumbing & septic service areas overview](/service-areas/)
-- [Capitola, CA Plumbing & Septic Services](/service-area/capitola-ca-plumbing-septic-services/)
+- [Plumbing & septic service areas overview](/service-areas)
+- [Capitola, CA Plumbing & Septic Services](/service-area/capitola-ca-plumbing-septic-services)
 
 Prepare your Capitola home for Memorial Day with a professional plumbing and septic inspection from Wade's Plumbing & Septic. **Contact us today for a free quote!**
 
 ## Sources & Local References
 
 - [Expert Tips](/expert-tips)
-- [Reference from wadesplumbingandseptic.com](/service-areas/)
+- [Reference from wadesplumbingandseptic.com](/service-areas)
 - [Reference from news.google.com](https://news.google.com/rss/articles/CBMi-AFBVV95cUxNaXRNemZMUXdxZ2hjeFgzR2lhbFRiYTBoNUd4TTZUWi0yTzJralV1T2xnZ0dhQVZWYndwbEhWeXN6SWZFbzBWRmpoZmdlX2p3TFdYUUNzQjAtTXVwNHRMNEdSWnBDZUM4Snp5aG9sall4dWs4SUhRT0VOVlRDdzhFa1NiMUxIUlVMM1F1SWdoYkdhZ0c1NFlYOTFNZVVEVVBxcDJ4emVIM2lxWDZqd3czYlY2NFZyaGstQWNQdGRTOGV1QXkzZnRQRk5HOHlTeGh0LWdVVDJ5a21FU2xobmJDX2UyekhOdVFLQTV3YkJ)
 
 ## Seasonal Tip

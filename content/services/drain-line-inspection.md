@@ -54,7 +54,7 @@ Using state-of-the-art camera equipment, we navigate through your pipes to locat
 
 ### Report and Recommendations
 
-After the inspection, we offer a detailed report of our findings along with recommended actions, such as [drain cleaning](/service-offerings/drain-cleaning/) or [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/).
+After the inspection, we offer a detailed report of our findings along with recommended actions, such as [drain cleaning](/service-offerings/drain-cleaning) or [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement).
 
 ## Timeline and Cost Factors
 
@@ -85,7 +85,7 @@ While DIY methods exist, professional inspections are more thorough and accurate
 
 Wade's Plumbing & Septic is a trusted name in Santa Cruz County, CA. Our team of licensed professionals offers decades of experience in plumbing and septic services. With a commitment to quality and customer satisfaction, we provide fast, reliable service when you need it most. By choosing us, you ensure that your home's plumbing system receives the best care possible.
 
-Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or learn about our [drain cleaning service](/service-offerings/drain-cleaning/) for help with clogs and maintaining a healthy plumbing system.
+Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or learn about our [drain cleaning service](/service-offerings/drain-cleaning) for help with clogs and maintaining a healthy plumbing system.
 
 ## Serving Santa Cruz County, CA
 
@@ -110,6 +110,6 @@ Ensure Your Home's Plumbing Integrity
 
 Gain peace of mind with our thorough drain inspections, ensuring optimal performance and preventing costly repairs.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42

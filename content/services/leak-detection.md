@@ -60,7 +60,7 @@ For a customized quote, contact our team for a detailed assessment.
 
 ## Preventing Future Plumbing Leaks
 
-Prevention is key to maintaining a leak-free home. Regular maintenance and inspections, such as our [commercial plumbing maintenance services](/service-offerings/commercial-plumbing-maintenance/), can help identify potential issues before they become major problems. Additionally, installing a [backflow prevention system](/service-offerings/backflow-prevention-installation/) can safeguard your plumbing from pressure-related leaks.
+Prevention is key to maintaining a leak-free home. Regular maintenance and inspections, such as our [commercial plumbing maintenance services](/service-offerings/commercial-plumbing-maintenance), can help identify potential issues before they become major problems. Additionally, installing a [backflow prevention system](/service-offerings/backflow-prevention-installation) can safeguard your plumbing from pressure-related leaks.
 
 ## FAQs About Leak Detection in Santa Cruz
 

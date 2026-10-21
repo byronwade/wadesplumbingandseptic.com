@@ -46,16 +46,16 @@ Flat-rate pricing, quoted on site before work begins.
 
 ### Prevention and Maintenance Tips
 
-Regular maintenance is key to extending the life of your septic system. Consider our [septic tank maintenance and care services](/service-offerings/septic-tank-maintenance-and-care/) to prevent issues before they arise. Routine inspections and timely repairs can help avoid costly failures.
+Regular maintenance is key to extending the life of your septic system. Consider our [septic tank maintenance and care services](/service-offerings/septic-tank-maintenance-and-care) to prevent issues before they arise. Routine inspections and timely repairs can help avoid costly failures.
 
 ## Why Choose Wade's Plumbing & Septic?
 
-With years of experience serving Santa Cruz County, Wade's Plumbing & Septic stands out for our commitment to quality and customer satisfaction. Our team is licensed, local, and responsive, understanding the specific needs of properties in this area. We also offer related services such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/) and [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/) to ensure your system is always at its best.
+With years of experience serving Santa Cruz County, Wade's Plumbing & Septic stands out for our commitment to quality and customer satisfaction. Our team is licensed, local, and responsive, understanding the specific needs of properties in this area. We also offer related services such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement) and [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement) to ensure your system is always at its best.
 
 ### Frequently Asked Questions
 
 - **How often should septic system certification be done?** Typically, certification is required during property transactions or refinancing, but regular inspections are recommended.
-- **What happens if my system fails certification?** We can assist with necessary repairs or [system abandonment](/service-offerings/septic-system-abandonment/) if required.
+- **What happens if my system fails certification?** We can assist with necessary repairs or [system abandonment](/service-offerings/septic-system-abandonment) if required.
 
 For reliable septic system certification in Santa Cruz County, trust Wade's Plumbing & Septic. Contact us today to schedule your inspection and experience our trustworthy service firsthand. Our team is ready to assist with all your septic needs, ensuring your system is compliant and efficient.
 

@@ -37,7 +37,7 @@ At Wade's Plumbing & Septic, we follow a comprehensive process to ensure your ga
 
 ### 1\. Inspection and Diagnosis
 
-Our licensed technicians conduct a thorough [inspection](/service-offerings/drain-line-inspection/) to accurately diagnose the issue, using advanced tools to detect leaks and assess the condition of your gas line.
+Our licensed technicians conduct a thorough [inspection](/service-offerings/drain-line-inspection) to accurately diagnose the issue, using advanced tools to detect leaks and assess the condition of your gas line.
 
 ### 2\. Repair and Replacement
 

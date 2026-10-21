@@ -26,7 +26,7 @@ Septic tank maintenance involves a series of inspections, cleanings, and adjustm
 - Pump and alarm testing for advanced systems
 - Drainfield evaluation
 
-Regular maintenance extends the life of your septic system, prevents blockages, and ensures compliance with local regulations. For more detailed guidance, visit our [Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide](/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide/).
+Regular maintenance extends the life of your septic system, prevents blockages, and ensures compliance with local regulations. For more detailed guidance, visit our [Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide](/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide).
 
 ## Signs You Need Septic Tank Maintenance
 
@@ -37,7 +37,7 @@ Recognizing the signs of a failing septic system can save you from costly repair
 - Standing water in the yard
 - Gurgling sounds in the plumbing system
 
-If you notice any of these signs, it's crucial to schedule a septic tank inspection promptly. Our [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment/) services can diagnose and address issues before they escalate.
+If you notice any of these signs, it's crucial to schedule a septic tank inspection promptly. Our [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) services can diagnose and address issues before they escalate.
 
 ### Causes of Septic System Failures
 
@@ -55,7 +55,7 @@ Flat-rate pricing, quoted on site before work begins.
 - **What are the benefits of regular septic maintenance?** It prevents system failures, extends system life, and ensures regulatory compliance.
 - **Can I perform maintenance myself?** While basic tasks can be done by homeowners, professional maintenance is recommended for thoroughness and safety.
 
-Regular septic tank maintenance is vital for the health and functionality of your system. Trust Wade's Plumbing & Septic to provide expert care and guidance. To learn more about how to maintain your septic tank, visit our [How to Maintain Your Septic Tank for Long-Term Performance](/how-to-maintain-your-septic-tank-for-long-term-performance/).
+Regular septic tank maintenance is vital for the health and functionality of your system. Trust Wade's Plumbing & Septic to provide expert care and guidance. To learn more about how to maintain your septic tank, visit our [How to Maintain Your Septic Tank for Long-Term Performance](/how-to-maintain-your-septic-tank-for-long-term-performance).
 
 For all your septic system needs in Santa Cruz County, California, contact Wade's Plumbing & Septic. Our dedicated team is ready to assist you with reliable service, expert advice, and customized maintenance plans. Call us today to schedule your septic tank maintenance and ensure your system is running at its best.
 
@@ -65,6 +65,6 @@ Keep Your Septic System Running Smoothly
 
 Ensure the longevity and efficiency of your septic system with our professional maintenance services.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42 for California

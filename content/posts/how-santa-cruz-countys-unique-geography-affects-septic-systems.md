@@ -44,9 +44,9 @@ Understanding septic system types suitable for different terrains is crucial. Fo
 
 At Wade's Plumbing & Septic, we offer a wide range of services to address the complex needs of septic systems in Santa Cruz County. Our approach is tailored to the specific geographic challenges of the area.
 
-1.  [Septic Tank Maintenance:](/service-offerings/septic-tank-maintenance-and-care/) Regular inspections and maintenance to ensure your system runs efficiently.
-2.  [Leach Field Repair:](/service-offerings/septic-tank-leach-field-repair-and-replacement/) Addressing issues such as blockages or damage due to soil composition.
-3.  [Septic Troubleshooting:](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) Identifying and resolving problems quickly to prevent system failure.
+1.  [Septic Tank Maintenance:](/service-offerings/septic-tank-maintenance-and-care) Regular inspections and maintenance to ensure your system runs efficiently.
+2.  [Leach Field Repair:](/service-offerings/septic-tank-leach-field-repair-and-replacement) Addressing issues such as blockages or damage due to soil composition.
+3.  [Septic Troubleshooting:](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) Identifying and resolving problems quickly to prevent system failure.
 
 Our team provides expert advice on optimizing septic system health, tailored to your specific location and needs.
 
@@ -92,7 +92,7 @@ Our team holds a C-42 contractor license for California, ensuring you receive ex
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on our service areas, visit our [main service-area overview](/service-areas/).
+For more information on our service areas, visit our [main service-area overview](/service-areas).
 
 Efficient Septic Solutions
 

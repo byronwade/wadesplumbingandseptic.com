@@ -32,7 +32,7 @@ Understanding the causes of leach field failures can help homeowners prevent the
 - Roots from nearby trees infiltrating the septic lines
 - Lack of regular maintenance and inspections
 
-Our team at Wade's Plumbing & Septic offers comprehensive [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment/) services to help you identify and mitigate these issues before they escalate.
+Our team at Wade's Plumbing & Septic offers comprehensive [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) services to help you identify and mitigate these issues before they escalate.
 
 ## Our Septic Leach Field Repair Process
 
@@ -42,13 +42,13 @@ At Wade's Plumbing & Septic, we follow a meticulous process to ensure effective 
 
 Our team conducts a thorough inspection to determine the extent of the damage and the best course of action.
 
-We utilize advanced techniques like [high-pressure jetting](/service-offerings/high-pressure-jetting-for-septic-lines/) to clear blockages and assess the system’s functionality.
+We utilize advanced techniques like [high-pressure jetting](/service-offerings/high-pressure-jetting-for-septic-lines) to clear blockages and assess the system’s functionality.
 
 ### Repair or Replacement
 
 Depending on the assessment, we may recommend targeted repairs or a complete replacement of the leach field. Options include conventional, chamber, or engineered systems based on your property's needs.
 
-We ensure all work complies with [local regulations](/service-offerings/septic-tank-system-compliance-and-permitting/) and obtain necessary permits.
+We ensure all work complies with [local regulations](/service-offerings/septic-tank-system-compliance-and-permitting) and obtain necessary permits.
 
 ### Testing and Final Checks
 
@@ -69,10 +69,10 @@ We provide transparent estimates and competitive pricing, ensuring you receive v
 
 Preventative measures can extend the life of your septic system:
 
-- Regular maintenance and [septic tank care](/service-offerings/septic-tank-maintenance-and-care/)
+- Regular maintenance and [septic tank care](/service-offerings/septic-tank-maintenance-and-care)
 - Monitoring water usage to avoid overloading the system
 - Keeping trees and shrubs away from the leach field
-- Scheduling routine [inspections](/how-to-maintain-your-septic-tank-for-long-term-performance/)
+- Scheduling routine [inspections](/how-to-maintain-your-septic-tank-for-long-term-performance)
 
 Our team provides expert advice and services to help you maintain a healthy septic system.
 
@@ -114,7 +114,7 @@ Wade's Plumbing & Septic is a trusted local provider with years of experience in
 
 Our certified team ensures your septic system operates efficiently, preventing costly disruptions.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 </
 

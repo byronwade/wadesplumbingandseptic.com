@@ -49,7 +49,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Issues
 
-Regular maintenance is key to ensuring your sump pump operates effectively. Consider scheduling periodic inspections and cleaning to prevent clogs and mechanical failures. Our [drain cleaning services](/service-offerings/drain-cleaning/) can help keep your system in top condition.
+Regular maintenance is key to ensuring your sump pump operates effectively. Consider scheduling periodic inspections and cleaning to prevent clogs and mechanical failures. Our [drain cleaning services](/service-offerings/drain-cleaning) can help keep your system in top condition.
 
 ## Frequently Asked Questions
 
@@ -63,7 +63,7 @@ Typically, sump pumps last around 7-10 years. Regular maintenance can extend the
 
 ## Choose Wade's Plumbing & Septic for Your Sump Pump Needs
 
-With years of experience and a commitment to quality, Wade's Plumbing & Septic is your trusted partner for sump pump installation in Santa Cruz County, California. Our licensed and responsive team is dedicated to providing reliable solutions tailored to your home's unique requirements. Contact us today to schedule your installation and protect your home from potential water damage. If you're considering other plumbing enhancements, explore our [fixture installation services](/service-offerings/fixture-installation/) for more options.
+With years of experience and a commitment to quality, Wade's Plumbing & Septic is your trusted partner for sump pump installation in Santa Cruz County, California. Our licensed and responsive team is dedicated to providing reliable solutions tailored to your home's unique requirements. Contact us today to schedule your installation and protect your home from potential water damage. If you're considering other plumbing enhancements, explore our [fixture installation services](/service-offerings/fixture-installation) for more options.
 
 ## Serving Santa Cruz County, CA
 

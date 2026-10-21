@@ -27,7 +27,7 @@ Knowing when to schedule a sewer camera inspection can save you time and money. 
 - Unexplained wet patches in your yard
 - Gurgling noises in your plumbing system
 
-If you experience any of these issues, it may be time to contact us for a thorough [drain line inspection](/service-offerings/drain-line-inspection/) or a comprehensive sewer camera inspection.
+If you experience any of these issues, it may be time to contact us for a thorough [drain line inspection](/service-offerings/drain-line-inspection) or a comprehensive sewer camera inspection.
 
 ## Causes of Sewer Line Problems
 
@@ -42,7 +42,7 @@ Understanding these common causes can help in taking preventive measures and sch
 
 ### Our Sewer Camera Inspection Process
 
-At Wade's Plumbing & Septic, we make the inspection process as straightforward as possible. Our team will insert a small, flexible camera into your sewer line, transmitting real-time video to our technicians. This allows us to pinpoint the exact location and nature of any issues, which can inform the appropriate solution, whether it’s [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) or another service.
+At Wade's Plumbing & Septic, we make the inspection process as straightforward as possible. Our team will insert a small, flexible camera into your sewer line, transmitting real-time video to our technicians. This allows us to pinpoint the exact location and nature of any issues, which can inform the appropriate solution, whether it’s [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) or another service.
 
 ## Timeline and Cost Factors
 
@@ -50,7 +50,7 @@ Most sewer camera inspections are completed in under an hour, providing a quick 
 
 ## How to Prevent Future Sewer Line Problems
 
-Prevention is key to avoiding frequent sewer line issues. Regular maintenance, such as [drain cleaning](/service-offerings/drain-cleaning/) and [high-pressure jetting](/service-offerings/high-pressure-jetting-for-septic-lines/) for septic lines, can keep your system in top shape. Additionally, being mindful of what is flushed or poured down the drains can greatly reduce the risk of blockages.
+Prevention is key to avoiding frequent sewer line issues. Regular maintenance, such as [drain cleaning](/service-offerings/drain-cleaning) and [high-pressure jetting](/service-offerings/high-pressure-jetting-for-septic-lines) for septic lines, can keep your system in top shape. Additionally, being mindful of what is flushed or poured down the drains can greatly reduce the risk of blockages.
 
 ## FAQs About Sewer Camera Inspections
 

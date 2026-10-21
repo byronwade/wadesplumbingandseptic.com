@@ -39,7 +39,7 @@ Septic line blockages can occur due to several reasons, including:
 - Buildup of solid waste and biomat
 - Flushing non-biodegradable items like wipes and feminine products
 
-Addressing these issues with high pressure jetting can prevent the need for more invasive solutions like [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/).
+Addressing these issues with high pressure jetting can prevent the need for more invasive solutions like [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement).
 
 ## The High Pressure Jetting Process
 
@@ -50,11 +50,11 @@ At Wade's Plumbing & Septic, our trained technicians follow a meticulous process
 - Application of water jets to dislodge and wash away obstructions
 - Final inspection to confirm restored flow and system integrity
 
-This professional service is a cornerstone of effective [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/), ensuring your system operates smoothly.
+This professional service is a cornerstone of effective [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care), ensuring your system operates smoothly.
 
 ## Cost Factors and Timeline
 
-The cost of high pressure jetting septic lines can vary based on factors such as the extent of blockages and the complexity of your septic system layout. However, it's a cost-effective preventive measure compared to the expenses associated with a [failed septic repair replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/). The process typically takes a few hours, minimizing disruption to your routine.
+The cost of high pressure jetting septic lines can vary based on factors such as the extent of blockages and the complexity of your septic system layout. However, it's a cost-effective preventive measure compared to the expenses associated with a [failed septic repair replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement). The process typically takes a few hours, minimizing disruption to your routine.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -67,7 +67,7 @@ Regular maintenance and mindful usage can help maintain your septic system's hea
 - Limit the use of chemical drain cleaners
 - Monitor water usage to prevent overloading the system
 
-For comprehensive care, consider exploring [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/) services.
+For comprehensive care, consider exploring [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement) services.
 
 ## FAQs About High Pressure Jetting
 

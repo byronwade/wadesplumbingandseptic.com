@@ -47,7 +47,7 @@ Identifying septic warning signs early can prevent severe damage. Here are some 
 
 ## Why Timely Septic Service is Crucial
 
-Addressing septic issues promptly is essential to prevent costly repairs and environmental hazards. Regular [septic maintenance services](/service-areas/) help detect problems early, ensuring your system operates efficiently and prolonging its lifespan. Ignoring warning signs can lead to severe damage, requiring extensive repairs or even system replacement.
+Addressing septic issues promptly is essential to prevent costly repairs and environmental hazards. Regular [septic maintenance services](/service-areas) help detect problems early, ensuring your system operates efficiently and prolonging its lifespan. Ignoring warning signs can lead to severe damage, requiring extensive repairs or even system replacement.
 
 ## How to Conduct a Basic Septic Inspection at Home
 
@@ -55,7 +55,7 @@ Homeowners can perform a basic inspection to identify potential septic issues. S
 
 ## When to Call a Professional for Septic Troubleshooting
 
-If you notice any warning signs or suspect septic trouble, it's crucial to contact a professional for [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/). Experts can accurately diagnose the issue and recommend appropriate solutions, whether it's a simple repair or a complete system overhaul.
+If you notice any warning signs or suspect septic trouble, it's crucial to contact a professional for [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services). Experts can accurately diagnose the issue and recommend appropriate solutions, whether it's a simple repair or a complete system overhaul.
 
 ## Preventative Measures for Septic System Maintenance
 
@@ -109,4 +109,4 @@ We are fully licensed and insured, holding a C-42 contractor license for Califor
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on the areas we serve, please visit our [service area overview page](/service-areas/).
+For more information on the areas we serve, please visit our [service area overview page](/service-areas).

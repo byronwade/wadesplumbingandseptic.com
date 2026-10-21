@@ -22,7 +22,7 @@ Recognizing the signs of a failing drainfield can save homeowners from costly re
 - Pooling water or soggy patches in your yard
 - Unusually lush or green patches of grass over the drainfield
 
-If you notice any of these signs, it may be time to consult our team for a [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement/).
+If you notice any of these signs, it may be time to consult our team for a [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement).
 
 ## Causes of Drainfield Failure
 
@@ -33,7 +33,7 @@ Several factors can lead to drainfield failure, necessitating a thorough inspect
 - Soil compaction or improper installation
 - Excessive water usage overwhelming the system
 - Intrusion by tree roots
-- Accumulation of solid waste due to infrequent [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/)
+- Accumulation of solid waste due to infrequent [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement)
 
 Our team at Wade's Plumbing & Septic offers expert [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) solutions to address these issues efficiently.
 
@@ -50,13 +50,13 @@ We ensure that every step of the process is handled with precision, leveraging o
 
 ## Timeline and Cost Factors
 
-The timeline for drainfield repair varies based on the extent of the damage. Simple repairs may take a few days, while complete replacements could extend over a week. Cost factors depend on the complexity of the repair, the size of the drainfield, and any additional [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) that may be needed.
+The timeline for drainfield repair varies based on the extent of the damage. Simple repairs may take a few days, while complete replacements could extend over a week. Cost factors depend on the complexity of the repair, the size of the drainfield, and any additional [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) that may be needed.
 
 Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Issues
 
-Preventive maintenance is key to avoiding future drainfield problems. Regular inspections, reducing water usage, and avoiding the use of harsh chemicals can help maintain your system’s health. Our team also offers [drain line inspection](/service-offerings/drain-line-inspection/) services to keep your system running smoothly.
+Preventive maintenance is key to avoiding future drainfield problems. Regular inspections, reducing water usage, and avoiding the use of harsh chemicals can help maintain your system’s health. Our team also offers [drain line inspection](/service-offerings/drain-line-inspection) services to keep your system running smoothly.
 
 ## Frequently Asked Questions
 

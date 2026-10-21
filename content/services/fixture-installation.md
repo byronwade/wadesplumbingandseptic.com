@@ -41,11 +41,11 @@ We begin with a thorough consultation to understand your needs and preferences. 
 
 ### 2\. Assessment and Planning
 
-Our experts assess the current plumbing setup and plan the installation process to ensure compatibility and optimal performance. We also discuss options such as [grease trap installation](/service-offerings/grease-trap-installation/) if you're considering kitchen upgrades.
+Our experts assess the current plumbing setup and plan the installation process to ensure compatibility and optimal performance. We also discuss options such as [grease trap installation](/service-offerings/grease-trap-installation) if you're considering kitchen upgrades.
 
 ### 3\. Professional Installation
 
-With precision and care, our team installs your chosen fixtures, ensuring secure connections and proper sealing. We can also install [garbage disposals](/service-offerings/garbage-disposal-installation/) to enhance kitchen functionality.
+With precision and care, our team installs your chosen fixtures, ensuring secure connections and proper sealing. We can also install [garbage disposals](/service-offerings/garbage-disposal-installation) to enhance kitchen functionality.
 
 ### 4\. Final Inspection
 
@@ -57,7 +57,7 @@ The cost of fixture installation depends on various factors, including the type 
 
 Flat-rate pricing, quoted on site before work begins.
 
-For those considering additional installations like [septic tank alarm installation](/service-offerings/septic-tank-alarm-installation/), our team can provide a comprehensive quote tailored to your project needs.
+For those considering additional installations like [septic tank alarm installation](/service-offerings/septic-tank-alarm-installation), our team can provide a comprehensive quote tailored to your project needs.
 
 ## Preventive Maintenance Tips
 

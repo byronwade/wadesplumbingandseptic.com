@@ -57,13 +57,13 @@ Our team offers transparent pricing and detailed estimates, ensuring you underst
 
 ## Preventing Future Septic System Challenges
 
-In addition to riser installation, consider regular maintenance to prevent septic system challenges. Routine services such as [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/) can help maintain system efficiency.
+In addition to riser installation, consider regular maintenance to prevent septic system challenges. Routine services such as [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement) can help maintain system efficiency.
 
 ## Frequently Asked Questions
 
 ### How do I maintain my septic tank after installing a riser?
 
-Regular inspections are crucial. Our [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services will keep your system in top condition.
+Regular inspections are crucial. Our [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) services will keep your system in top condition.
 
 ### Can risers be added to any septic system?
 
@@ -83,6 +83,6 @@ Effortless Access to Your Septic System
 
 Simplify maintenance and inspections with our professional septic riser installation service.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42

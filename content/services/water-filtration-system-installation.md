@@ -54,7 +54,7 @@ To maintain optimal water quality, regular maintenance of your filtration system
 - **How often should filters be replaced?** This varies by system type, but generally every 6-12 months.
 - **Can a water filtration system remove all contaminants?** While highly effective, no system removes every possible contaminant. Our experts tailor solutions to your specific needs.
 
-Improve your water quality today with our trusted **water filtration system installation in Santa Cruz County**. Contact Wade's Plumbing & Septic for a consultation and enjoy the peace of mind that comes with clean, safe water. For more information on related services, explore our [fixture installation](/service-offerings/fixture-installation/) and [commercial plumbing maintenance](/service-offerings/commercial-plumbing-maintenance/) offerings.
+Improve your water quality today with our trusted **water filtration system installation in Santa Cruz County**. Contact Wade's Plumbing & Septic for a consultation and enjoy the peace of mind that comes with clean, safe water. For more information on related services, explore our [fixture installation](/service-offerings/fixture-installation) and [commercial plumbing maintenance](/service-offerings/commercial-plumbing-maintenance) offerings.
 
 ## Serving Santa Cruz County, CA
 

@@ -11,7 +11,7 @@ featured: true
 updated: "2026-07-30"
 ---
 
-At Wade's Plumbing & Septic, we specialize in expert tankless [water heater installation](/service-offerings/water-heater-installation/), offering Santa Cruz County, California homeowners a highly efficient and space-saving solution for their hot water needs. A tankless system heats water on demand, ensuring an endless supply without the need for a bulky storage tank. With our professional installation, you can enjoy reduced energy costs and the convenience of instant hot water, tailored to meet the specific demands of your household.
+At Wade's Plumbing & Septic, we specialize in expert tankless [water heater installation](/service-offerings/water-heater-installation), offering Santa Cruz County, California homeowners a highly efficient and space-saving solution for their hot water needs. A tankless system heats water on demand, ensuring an endless supply without the need for a bulky storage tank. With our professional installation, you can enjoy reduced energy costs and the convenience of instant hot water, tailored to meet the specific demands of your household.
 
 ## Signs You Need a Tankless Water Heater Installation
 
@@ -59,7 +59,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Why Choose Wade's Plumbing & Septic?
 
-With years of experience and a commitment to customer satisfaction, Wade's Plumbing & Septic is your trusted partner for tankless water heater installation in Santa Cruz County, CA. Our licensed technicians are local, responsive, and dedicated to delivering top-notch service. We also offer a range of additional services, including [fixture installation](/service-offerings/fixture-installation/) and [drain cleaning](/service-offerings/drain-cleaning/), to ensure all your plumbing needs are met.
+With years of experience and a commitment to customer satisfaction, Wade's Plumbing & Septic is your trusted partner for tankless water heater installation in Santa Cruz County, CA. Our licensed technicians are local, responsive, and dedicated to delivering top-notch service. We also offer a range of additional services, including [fixture installation](/service-offerings/fixture-installation) and [drain cleaning](/service-offerings/drain-cleaning), to ensure all your plumbing needs are met.
 
 Ready to experience the benefits of a tankless water heater in your home? Contact Wade's Plumbing & Septic today. Our friendly team is here to answer your questions and schedule your installation at a time that suits you. Discover the comfort and efficiency of endless hot water with our expert services.
 

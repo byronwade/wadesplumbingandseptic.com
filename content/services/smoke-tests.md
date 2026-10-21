@@ -55,7 +55,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Plumbing Issues in Santa Cruz County
 
-Regular maintenance and inspections are key to preventing plumbing issues. At Wade's Plumbing & Septic, we offer a range of services, including [leak detection](/service-offerings/leak-detection/) and [drain line inspection](/service-offerings/drain-line-inspection/), to keep your system in top shape.
+Regular maintenance and inspections are key to preventing plumbing issues. At Wade's Plumbing & Septic, we offer a range of services, including [leak detection](/service-offerings/leak-detection) and [drain line inspection](/service-offerings/drain-line-inspection), to keep your system in top shape.
 
 ## Frequently Asked Questions
 
@@ -94,7 +94,7 @@ At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests acros
 - [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 
-Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas/).
+Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas).
 
 ## Why Santa Cruz County Trusts Us for Septic Optimization
 

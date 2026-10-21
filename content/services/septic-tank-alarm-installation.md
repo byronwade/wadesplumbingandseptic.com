@@ -37,7 +37,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Prevention and Maintenance Tips
 
-Maintaining your septic system is essential for preventing costly repairs. Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/), including routine inspections and timely septic tank alarm installations, can help extend the life of your system. Additionally, proper waste disposal and avoiding overloading your system are key practices to keep your septic system in top condition.
+Maintaining your septic system is essential for preventing costly repairs. Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care), including routine inspections and timely septic tank alarm installations, can help extend the life of your system. Additionally, proper waste disposal and avoiding overloading your system are key practices to keep your septic system in top condition.
 
 ## Frequently Asked Questions
 
@@ -55,6 +55,6 @@ Stay Alert with Confidence
 
 Ensure the smooth operation of your septic system with our reliable alarm installations.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/) </
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact) </
 
 Licensed Contractor: C-42

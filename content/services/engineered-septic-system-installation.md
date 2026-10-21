@@ -38,7 +38,7 @@ Call us when you are dealing with:
 - Steep San Lorenzo Valley or foothill parcels with limited usable area
 - Real estate contingencies that require a path to a permitted system
 
-Related services: [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment/), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement/), and [septic design support](/service-offerings/septic-tank-design-and-engineering/).
+Related services: [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement), and [septic design support](/service-offerings/septic-tank-design-and-engineering).
 
 ## How we deliver engineered systems
 

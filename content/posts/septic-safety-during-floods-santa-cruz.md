@@ -35,7 +35,7 @@ Flooding in Santa Cruz County, California, presents significant challenges for h
 
 ## Signs of Septic System Distress During Floods
 
-During flood conditions, watch for signs of septic system distress. These include slow drains, gurgling sounds in plumbing fixtures, sewage odors, and standing water around the septic tank or drain field. If you notice any of these symptoms, it may be time to consider [septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) and take immediate action.
+During flood conditions, watch for signs of septic system distress. These include slow drains, gurgling sounds in plumbing fixtures, sewage odors, and standing water around the septic tank or drain field. If you notice any of these symptoms, it may be time to consider [septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) and take immediate action.
 
 ## The Role of Septic Leak Detection in Flood Preparedness
 
@@ -43,7 +43,7 @@ Septic leak detection is a vital service for identifying potential issues before
 
 ## How Sump Pump Installation Can Prevent Flood Damage
 
-A reliable sump pump installation can be a game-changer for homeowners facing frequent flooding. By efficiently removing excess water from basements and crawl spaces, sump pumps help prevent water damage and reduce the strain on your septic system. Consider our [sump pump installation services](/service-areas/) to safeguard your home.
+A reliable sump pump installation can be a game-changer for homeowners facing frequent flooding. By efficiently removing excess water from basements and crawl spaces, sump pumps help prevent water damage and reduce the strain on your septic system. Consider our [sump pump installation services](/service-areas) to safeguard your home.
 
 ## Steps to Take Before, During, and After a Flood
 
@@ -53,7 +53,7 @@ A reliable sump pump installation can be a game-changer for homeowners facing fr
 
 ## Why Professional Septic Services Are Essential for Flood Safety
 
-Professional septic services offer expertise and equipment that DIY solutions cannot match. From [efficient septic solutions](/how-santa-cruz-countys-unique-geography-affects-septic-systems/) to comprehensive inspections, our team provides peace of mind by ensuring your system is flood-ready and compliant with local regulations.
+Professional septic services offer expertise and equipment that DIY solutions cannot match. From [efficient septic solutions](/how-santa-cruz-countys-unique-geography-affects-septic-systems) to comprehensive inspections, our team provides peace of mind by ensuring your system is flood-ready and compliant with local regulations.
 
 ## Maintaining Septic System Health in Santa Cruz County
 
@@ -84,7 +84,7 @@ Contact a professional if you notice any signs of distress or after a flood to e
 ## Sources & Local References
 
 - [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5)
-- [Reference from wadesplumbingandseptic.com](/service-areas/)
+- [Reference from wadesplumbingandseptic.com](/service-areas)
 
 ## Seasonal Tip
 
@@ -118,7 +118,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, incl
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For a complete overview of our service areas, please visit our [main service-area page](/service-areas/).
+For a complete overview of our service areas, please visit our [main service-area page](/service-areas).
 
 ### Flood-Proof Your Septic System in Santa Cruz County, CA
 
