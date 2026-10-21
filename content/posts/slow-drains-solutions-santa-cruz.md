@@ -63,7 +63,7 @@ At Wade's Plumbing & Septic, we offer expert [drain cleaning services](/service-
 - Regularly clean drain stoppers and strainers
 - Avoid pouring grease or coffee grounds down the drain
 - Use a hair trap in showers and bathtubs
-- Schedule routine [drain inspections](/service-area/) with professionals
+- Schedule routine [drain inspections](/service-areas) with professionals
 
 ## Customer Testimonials: Success Stories from Santa Cruz County
 
@@ -109,7 +109,7 @@ Ensure your home's plumbing system remains efficient and trouble-free with our p
 
 ## Serving Santa Cruz County, CA
 
-At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz County, CA, including [Santa Cruz](/service-area/santa-cruz/), [Capitola](/service-area/capitola/), [Scotts Valley](/service-area/scotts-valley/), and [Watsonville](/service-area/watsonville/). Our expert drain maintenance services are trusted by homeowners throughout the region.
+At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz County, CA, including [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Watsonville](/service-area/watsonville-ca-plumbing-septic-services). Our expert drain maintenance services are trusted by homeowners throughout the region.
 
 Our team holds a C-42 contractor license for California, ensuring that all work meets state standards and regulations.
 

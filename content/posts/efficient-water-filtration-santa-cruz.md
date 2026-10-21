@@ -1,8 +1,8 @@
 ---
 title: Upgrade Your Santa Cruz Home with Efficient Water Filtration
 description: >-
-  Enhance your Santa Cruz home’s water quality with our expert water filtration
-  Santa Cruz plumbing service. Ensure your family enjoys clean, safe drinking.
+  Enhance your Santa Cruz home’s water quality with professional water
+  filtration, so your family enjoys clean, safe drinking water.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
 tags:

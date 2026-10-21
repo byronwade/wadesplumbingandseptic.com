@@ -1,4 +1,5 @@
 import type { ContentDocument } from "@/lib/content"
+import { crawlerDisallow } from "@/lib/robots"
 import { siteConfig } from "@/lib/site"
 
 export const LLMS_FULL_PATH = "/llms-full.txt"
@@ -42,10 +43,19 @@ export function absolutizeMarkdownLinks(markdown: string) {
 	return markdown.replace(/\]\(\//g, `](${siteConfig.url}/`)
 }
 
+/** Keep only the text of links robots.txt blocks; crawlers cannot follow them. */
+function unlinkBlockedPaths(markdown: string) {
+	return markdown.replace(
+		/(?<!!)\[([^\]]+)\]\((\/[^)\s]*)\)/g,
+		(link, text: string, href: string) =>
+			crawlerDisallow.some((prefix) => href.startsWith(prefix)) ? text : link,
+	)
+}
+
 export function llmsFullSection(document: ContentDocument, url: string) {
 	return `## ${document.title}
 
 Source: ${url}
 
-${absolutizeMarkdownLinks(demoteHeadings(document.content.trim()))}`
+${absolutizeMarkdownLinks(unlinkBlockedPaths(demoteHeadings(document.content.trim())))}`
 }

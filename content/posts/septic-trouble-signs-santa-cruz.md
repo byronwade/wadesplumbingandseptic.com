@@ -34,7 +34,7 @@ For Santa Cruz County homeowners, recognizing septic warning signs early can sav
 
 ## Understanding Your Septic System
 
-A septic system is an underground wastewater treatment structure commonly used in areas like Santa Cruz County, where centralized sewer systems are not available. It consists of a septic tank and a drain field, which work together to treat and dispose of household wastewater. Regular maintenance, such as [septic system replacement](/lp/septic-replacement-santa-cruz/) and cleaning, is essential to keep your system running smoothly.
+A septic system is an underground wastewater treatment structure commonly used in areas like Santa Cruz County, where centralized sewer systems are not available. It consists of a septic tank and a drain field, which work together to treat and dispose of household wastewater. Regular maintenance, such as [septic system replacement](/septic-replacement-santa-cruz) and cleaning, is essential to keep your system running smoothly.
 
 ## Common Warning Signs of Septic Trouble
 
@@ -103,7 +103,7 @@ Ensure your septic system runs smoothly with our expert inspection services, pre
 
 ## Serving Santa Cruz County, CA
 
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area, including the vibrant communities of [Santa Cruz](/service-area/santa-cruz/), [Capitola](/service-area/capitola/), [Scotts Valley](/service-area/scotts-valley/), and [Aptos](/service-area/aptos/). Our team is dedicated to providing top-notch septic services to ensure your home's system operates smoothly.
+At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area, including the vibrant communities of [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Aptos](/service-area/aptos-ca-plumbing-septic-services). Our team is dedicated to providing top-notch septic services to ensure your home's system operates smoothly.
 
 We are fully licensed and insured, holding a C-42 contractor license for California, which assures our clients of our professional standards and commitment to quality service.
 

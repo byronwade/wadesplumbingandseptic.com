@@ -1,8 +1,8 @@
 ---
 title: "Plumber vs DIY: Your Santa Cruz County Guide"
 description: >-
-  When a plumbing issue pops up, your first thought might be: Should I try to
-  fix this myself or call a plumber? It’s a valid question, and the answer.
+  Should you fix a plumbing issue yourself or call a plumber? The answer depends
+  on your experience, how severe the issue is, and how much time you have.
 category: Plumbing Tips
 date: "2025-05-20"
 tags:

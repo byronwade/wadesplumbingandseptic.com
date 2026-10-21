@@ -1,9 +1,8 @@
 ---
 title: Financing Options
 description: >-
-  At Wade's Plumbing & Septic, we understand that plumbing and septic
-  problems can create unexpected financial strain. That's why we offer
-  flexible.
+  Plumbing and septic problems can create unexpected financial strain. Wade's
+  offers flexible financing options for necessary repairs or replacements.
 order: 5
 eyebrow: Payment Options
 ---

@@ -1,8 +1,8 @@
 ---
 title: Essential Plumbing Terms for Santa Cruz County Homeowners
 description: >-
-  The plumbing world has its own language, and if you’ve ever tried to follow
-  along with a plumber mid-job, you know it can feel like they’re speaking a.
+  Plumbing has its own language. Knowing terms like blackwater, blow bag and
+  trap seal helps you make informed decisions about repairs and installations.
 category: Plumbing Tips
 date: "2025-06-24"
 tags:

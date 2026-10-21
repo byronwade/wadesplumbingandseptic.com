@@ -1,8 +1,8 @@
 ---
 title: Solve Shower Backup Issues in Santa Cruz County Homes
 description: >-
-  Few things are more alarming than seeing dirty water rising into your shower.
-  This usually signals a blockage in your home’s main sewer line. When any of.
+  Dirty water rising into your shower usually signals a blockage in your home’s
+  main sewer line. Here is why it happens and how to resolve it.
 category: Plumbing Tips
 date: "2025-06-03"
 tags:

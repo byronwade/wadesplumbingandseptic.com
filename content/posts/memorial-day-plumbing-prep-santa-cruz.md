@@ -1,8 +1,8 @@
 ---
 title: "Get Capitola Plumbing Ready for Memorial Day, Santa Cruz"
 description: >-
-  Prepare your Capitola home for Memorial Day with essential plumbing checks to
-  ensure a stress-free holiday weekend. Our expert services can help you avoid.
+  Prepare your Capitola home for Memorial Day with essential plumbing checks
+  that help you avoid unexpected plumbing issues over the holiday weekend.
 category: Septic Issues in Santa Cruz County
 date: "2026-05-25"
 tags:

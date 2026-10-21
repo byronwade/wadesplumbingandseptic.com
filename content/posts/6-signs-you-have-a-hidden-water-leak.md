@@ -2,7 +2,7 @@
 title: Detect Hidden Water Leaks in Santa Cruz County Homes
 description: >-
   Water leaks are one of the most damaging and costly problems a homeowner can
-  face. According to national studies, the average home wastes up to 180.
+  face. Learn six warning signs your home may have a hidden water leak.
 category: Plumbing Tips
 date: "2025-05-27"
 tags:

@@ -1,8 +1,9 @@
 ---
 title: Efficient Septic Solutions for Santa Cruz County Homes
 description: >-
-  Santa Cruz County's unique geography presents both beautiful landscapes and
-  challenges for homeowners, particularly when it comes to maintaining septic.
+  Santa Cruz County's varied terrain and proximity to the coast can
+  significantly impact how septic systems function. Here is what homeowners
+  should know.
 category: Plumbing Tips
 date: "2026-04-11"
 tags:
@@ -79,13 +80,13 @@ Signs include slow drains, sewage odors, and wet spots in the yard. These can be
 
 At Wade's Plumbing & Septic, we proudly provide efficient septic solutions to the vibrant communities of Santa Cruz County, California. Our services extend to the following cities and communities:
 
-- [Aptos](/service-area/aptos-ca/)
-- [Ben Lomond](/service-area/ben-lomond-ca/)
-- [Boulder Creek](/service-area/boulder-creek-ca/)
-- [Capitola](/service-area/capitola-ca/)
-- [Felton](/service-area/felton-ca/)
-- [Soquel](/service-area/soquel-ca/)
-- [Watsonville](/service-area/watsonville-ca/)
+- [Aptos](/service-area/aptos-ca-plumbing-septic-services)
+- [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services)
+- [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services)
+- [Capitola](/service-area/capitola-ca-plumbing-septic-services)
+- [Felton](/service-area/felton-ca-plumbing-septic-services)
+- [Soquel](/service-area/soquel-ca-plumbing-septic-services)
+- [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 
 Our team holds a C-42 contractor license for California, ensuring you receive expert and compliant service every time.
 

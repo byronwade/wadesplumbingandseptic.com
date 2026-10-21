@@ -39,7 +39,7 @@ During flood conditions, watch for signs of septic system distress. These includ
 
 ## The Role of Septic Leak Detection in Flood Preparedness
 
-Septic leak detection is a vital service for identifying potential issues before they escalate. Flood conditions can exacerbate small leaks, leading to more severe problems. Our [septic leak detection experts](/service-area/) in Santa Cruz County use advanced techniques to pinpoint leaks, helping homeowners take preventive measures to protect their systems.
+Septic leak detection is a vital service for identifying potential issues before they escalate. Flood conditions can exacerbate small leaks, leading to more severe problems. Our [septic leak detection experts](/service-areas) in Santa Cruz County use advanced techniques to pinpoint leaks, helping homeowners take preventive measures to protect their systems.
 
 ## How Sump Pump Installation Can Prevent Flood Damage
 
@@ -114,7 +114,7 @@ Ensure your septic system remains safe and functional during flood conditions wi
 
 ## Serving Santa Cruz County, CA
 
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos/), [Capitola](/service-area/capitola/), [Santa Cruz](/service-area/santa-cruz/), and [Scotts Valley](/service-area/scotts-valley/). We are licensed under the C-42 classification in California, ensuring our expertise and compliance with all local regulations.
+At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), and [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services). We are licensed under the C-42 classification in California, ensuring our expertise and compliance with all local regulations.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

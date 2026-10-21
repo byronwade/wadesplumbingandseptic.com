@@ -45,7 +45,7 @@ Our team begins with a thorough inspection of your drainage system, identifying 
 
 ### Cleaning
 
-Using specialized equipment, such as [hydro jetting](/service-offerings/hydro-jetting-for-drain-clearing/), we remove all blockages efficiently. This high-pressure method ensures even the toughest clogs are cleared.
+Using specialized equipment, such as [hydro jetting](/service-offerings/hydro-jetting), we remove all blockages efficiently. This high-pressure method ensures even the toughest clogs are cleared.
 
 ### Maintenance Recommendations
 
