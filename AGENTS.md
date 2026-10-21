@@ -39,7 +39,7 @@ This includes:
 - Frontmatter fences: `---`
 - Mathematical minus in code: `a - b`
 
-CI validates markdown under `content/` and fails if banned dash punctuation is present.
+CI validates markdown under `content/` and fails if banned dash punctuation is present. `npm run ci:dashes` (part of `seo:check`) does the same for string literals and JSX text in `app/`, `components/` and `lib/`, GeoJSON under `public/`, the generated `llms.txt` / `llms-full.txt`, and the site JSON-LD. Code comments, regex sources and console messages are not copy and are skipped.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
