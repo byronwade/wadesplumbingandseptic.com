@@ -24,6 +24,7 @@ Email: ${siteConfig.email}
 Address: ${siteConfig.address.display}
 Hours: ${siteConfig.hours}
 Pricing: ${siteConfig.pricing}
+Quotes: Free
 License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
 Services: Residential and commercial plumbing, drain, sewer, water heater and septic service, including new and engineered septic system installation done alongside engineers

@@ -101,21 +101,33 @@ export const testimonials = [
 	],
 ] as const
 
+/**
+ * Homepage FAQ, also published as FAQPage schema. The first four answer what
+ * Wade's does, in words an AI assistant can quote on their own; facts come
+ * from siteConfig so they cannot drift from the rest of the site.
+ */
 export const faqs = [
 	{
-		question: "How often should I have my septic tank pumped?",
+		question: "What does Wade's Plumbing & Septic do?",
+		answer: `Wade's Plumbing & Septic is a family-owned plumbing and septic company in ${siteConfig.address.city}, California, serving Santa Cruz County and licensed under ${siteConfig.licenses}. We handle residential and commercial plumbing, drain, sewer and water heater work, and install new and engineered septic systems alongside engineers.`,
+	},
+	{
+		question: "Does Wade's pump septic tanks?",
 		answer:
-			"Most septic tanks should be pumped every 3 to 5 years, depending on household size, wastewater volume, and tank size. We recommend a professional inspection to determine the right schedule for your system.",
+			"No. Wade's Plumbing & Septic does not offer septic tank pumping. We install, repair and replace septic systems, including engineered systems built alongside engineers. For routine pumping, contact a septic pumping company.",
+	},
+	{
+		question: "Are quotes free, and how is pricing set?",
+		answer: `Yes, quotes are free. ${siteConfig.pricing}`,
+	},
+	{
+		question: "What are your hours?",
+		answer: `Wade's office hours are ${siteConfig.hours}. Call ${siteConfig.phone} during those hours or request a free quote online.`,
 	},
 	{
 		question: "What are the signs of a failing septic system?",
 		answer:
 			"Warning signs include slow drains, gurgling sounds, sewage backups, soggy areas around the drain field, unusually lush grass, strong odors, and contaminated well water.",
-	},
-	{
-		question: "What should I do if I have a water leak?",
-		answer:
-			"Shut off water at the nearest fixture valve or the main valve, keep electricity away from affected areas, and call us promptly for a professional repair.",
 	},
 	{
 		question: "How long does a water heater typically last?",

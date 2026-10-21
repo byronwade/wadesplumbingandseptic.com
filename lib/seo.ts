@@ -187,7 +187,10 @@ export function localBusinessJsonLd(
 			"Septic systems",
 			"Drain cleaning",
 			"Water heaters",
+			"Septic system installation",
 			"Engineered septic systems",
+			"Sewer line repair",
+			"Commercial plumbing",
 		],
 		...(offerCatalog ? { hasOfferCatalog: offerCatalog } : {}),
 	}
