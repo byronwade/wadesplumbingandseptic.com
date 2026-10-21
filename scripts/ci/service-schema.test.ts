@@ -66,6 +66,60 @@ test("every service FAQ section shows its questions instead of rendering empty",
 	)
 })
 
+test("service FAQs use section headings that the page and schema can discover", () => {
+	const nested = services.flatMap((service) =>
+		[
+			...service.body.matchAll(
+				/^#{3,6}\s+([^\n]*(?:\bFAQs?\b|Frequently Asked)[^\n]*)$/gim,
+			),
+		].map((match) => `${service.slug}: ${match[0]}`),
+	)
+	assert.deepEqual(nested, [], "FAQ sections must use H2 headings")
+
+	const expected = new Map([
+		["commercial-drain-cleaning", 2],
+		["septic-system-abandonment", 3],
+		["septic-system-certification", 2],
+		["septic-tank-system-upgrades", 2],
+		["engineered-septic-system-installation", 3],
+	])
+	for (const [slug, count] of expected) {
+		const service = services.find((item) => item.slug === slug)
+		assert.ok(service, slug)
+		const visible = faqSectionsFor(service.body).flatMap(
+			(section) => section.faqs,
+		)
+		assert.equal(visible.length, count, `${slug}: expected visible FAQ answers`)
+		assert.ok(
+			serviceFaqJsonLd(visible),
+			`${slug}: expected eligible FAQ schema`,
+		)
+	}
+})
+
+test("engineered septic FAQs include engineer coordination and confirmed quote facts", () => {
+	const service = services.find(
+		(item) => item.slug === "engineered-septic-system-installation",
+	)
+	assert.ok(service)
+	const visible = faqSectionsFor(service.body).flatMap(
+		(section) => section.faqs,
+	)
+	const schema = serviceFaqJsonLd(visible)
+	assert.equal(schema?.mainEntity.length, 3)
+	assert.match(
+		visible.find((faq) => faq.question.includes("engineers"))?.answer ?? "",
+		/coordinate with designers and engineers/,
+	)
+	const quote =
+		visible.find((faq) => faq.question.includes("quote"))?.answer ?? ""
+	assert.match(quote, /Call 831\.225\.4344/)
+	assert.match(
+		quote,
+		/Quotes are free\. Flat-rate pricing, quoted on site before work begins\./,
+	)
+})
+
 test("FAQ answers are clean text without links, markup or closing call prompts", () => {
 	const problems: string[] = []
 	for (const service of services) {

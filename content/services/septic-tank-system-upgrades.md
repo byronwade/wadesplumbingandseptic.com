@@ -45,7 +45,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 Preventative measures are key to maintaining a healthy septic system. Regular maintenance, such as [how to maintain your septic tank](/how-to-maintain-your-septic-tank-for-long-term-performance/) practices, can significantly reduce the likelihood of future problems. Additionally, installing a [septic tank alarm installation](/service-offerings/septic-tank-alarm-installation/) can alert you to issues before they become severe.
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 **What are engineered septic systems?** Engineered septic systems are specifically designed to handle challenging site conditions or increased capacity requirements. They often involve advanced technology and can be tailored to your property's unique needs.
 
