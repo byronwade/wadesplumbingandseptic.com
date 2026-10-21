@@ -7,8 +7,10 @@ import { dirname, join, relative, resolve } from "node:path"
  * statically. Search (cmdk + Radix Dialog) must stay behind a dynamic
  * import() so it only loads when someone opens it, and the unused sonner
  * toaster must stay out of the shell. The contact card must also keep its
- * optional follow-up sheet out of the initial bundle. Walks the static import
- * graph from each entry point; dynamic import() calls are not followed.
+ * optional follow-up sheet out of the initial bundle. Icons must come from the
+ * generated duotone data, not @phosphor-icons/react, whose modules carry all
+ * six weights of every icon. Walks the static import graph from each entry
+ * point; dynamic import() calls are not followed.
  */
 const root = resolve(__dirname, "../..")
 const entries = [
@@ -81,6 +83,10 @@ for (const name of bannedPackages) {
 		`"${name}" is statically imported by ${packages.get(name)}, so it loads before interaction. Load it with import() on demand instead.`,
 	)
 }
+assert.ok(
+	!packages.has("@phosphor-icons/react"),
+	`"@phosphor-icons/react" is imported at runtime by ${packages.get("@phosphor-icons/react")}, which ships all six weights of every icon to every page. Use @/components/icons; add new icons in scripts/generate-icon-data.mjs.`,
+)
 for (const banned of bannedModules) {
 	assert.ok(
 		!reached.includes(banned),
@@ -93,5 +99,5 @@ assert.ok(
 )
 
 console.log(
-	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} entry points; search UI, contact prompt and toaster stay out of the first load.`,
+	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} entry points; search UI, contact prompt, toaster and unused icon weights stay out of the first load.`,
 )
