@@ -47,10 +47,10 @@ function classifyBand(heading: string, body: string): BandKind {
 
 function BulletPanels({ items }: { items: string[] }) {
 	return (
-		<ul className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel flex items-start gap-3 p-[var(--space-card)] text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-3 text-sm font-bold"
 					key={item}
 				>
 					<span className="bg-accent text-accent-foreground mt-0.5 grid size-8 shrink-0 place-items-center rounded-md">

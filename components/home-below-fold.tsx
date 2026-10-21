@@ -77,12 +77,9 @@ export function HomeBelowFold() {
 					  nothing on the left.
 					*/}
 					<div className="reveal mt-[var(--space-block)] grid items-stretch gap-[var(--space-grid)] lg:grid-cols-2">
-						<div className="grid content-start gap-[var(--space-grid)] sm:grid-cols-2">
+						<div className="panel-grid grid content-start gap-[var(--space-grid)]">
 							{specialtyPoints.map(({ icon: Icon, title, text }) => (
-								<div
-									className="surface-panel p-[var(--space-card)]"
-									key={title}
-								>
+								<div className="surface-panel panel-inset" key={title}>
 									<span className="bg-accent text-accent-foreground grid size-10 place-items-center rounded-md">
 										<Icon className="size-5" aria-hidden="true" />
 									</span>
@@ -94,7 +91,7 @@ export function HomeBelowFold() {
 									</p>
 								</div>
 							))}
-							<div className="flex w-full flex-col gap-3 sm:col-span-2 sm:flex-row">
+							<div className="col-span-full flex w-full flex-col gap-3 sm:flex-row">
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -300,7 +297,7 @@ export function HomeBelowFold() {
 			</section>
 
 			<section className="section-y section-defer">
-				<div className="container-shell grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+				<div className="container-shell grid items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
 					<div>
 						<div className="section-head">
 							<p className="spec-label">Why choose Wade&apos;s</p>
@@ -313,12 +310,9 @@ export function HomeBelowFold() {
 								work at a fair price.
 							</p>
 						</div>
-						<div className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+						<div className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 							{reasons.map(([title, text]) => (
-								<div
-									className="surface-panel p-[var(--space-card)]"
-									key={title}
-								>
+								<div className="surface-panel panel-inset" key={title}>
 									<Wrench className="text-primary size-5" aria-hidden="true" />
 									<h3 className="mt-3 font-bold tracking-[-0.02em]">{title}</h3>
 									<p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
@@ -329,7 +323,7 @@ export function HomeBelowFold() {
 						</div>
 					</div>
 
-					<div className="surface-float relative overflow-hidden rounded-xl p-7 sm:p-9">
+					<div className="surface-float @container relative overflow-hidden rounded-xl px-[min(1.75rem,28px)] py-7 sm:px-[min(2.25rem,36px)] sm:py-9">
 						<p className="spec-label">Real people, real results</p>
 						<div className="mt-8 space-y-7">
 							{testimonials.map(([quote, person]) => (
@@ -350,7 +344,7 @@ export function HomeBelowFold() {
 							prefetch={false}
 							className={cn(
 								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
-								"mt-8 w-full sm:w-auto",
+								"mt-8 w-full sm:w-auto @max-[12rem]:flex-col @max-[12rem]:px-0",
 							)}
 							href="/testimonials"
 						>

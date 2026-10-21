@@ -151,7 +151,7 @@ export default async function CityServicePage({
 						<ul className="mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 							{page.commonIssues.map((issue) => (
 								<li
-									className="surface-panel flex items-start gap-3 p-[var(--space-card)] text-sm font-bold"
+									className="surface-panel panel-inset flex items-start gap-3 text-sm font-bold"
 									key={issue}
 								>
 									<span className="bg-accent text-accent-foreground mt-0.5 grid size-8 shrink-0 place-items-center rounded-md">
