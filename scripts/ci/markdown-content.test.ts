@@ -3,6 +3,7 @@ import { test } from "node:test"
 import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
+import { classifyBand } from "../../components/content-section-bands"
 import { MarkdownContent } from "../../components/markdown-content"
 
 const image = "![Pipe inspection](/images/inspection.webp)"
@@ -62,4 +63,15 @@ test("ordinary paragraphs and contextual links remain intact", () => {
 	assert.match(html, /<p>A <strong>helpful<\/strong> paragraph/)
 	assert.match(html, /href="\/contact"/)
 	assert.doesNotMatch(html, /<img\s/)
+})
+
+test("step lists stay prose; only question headings become an FAQ accordion", () => {
+	const steps =
+		"### What We Help With\n\n- Full System Replacement\n- Permit & Timeline Planning\n\n### What Happens Next\n\n1.  Phone qualification call\n2.  On-site evaluation and soil/permit review\n"
+	assert.equal(classifyBand("Septic System Replacement", steps), "prose")
+
+	const questions =
+		"### Do I need a permit?\n\nYes. Septic replacements require a county permit.\n\n### Who handles permitting?\n\nWe coordinate permitting with the county for you.\n"
+	assert.equal(classifyBand("Common questions", questions), "faq")
+	assert.equal(classifyBand("FAQ", "Short answers below."), "faq")
 })
