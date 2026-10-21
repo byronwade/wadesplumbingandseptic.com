@@ -55,7 +55,9 @@ With years of experience serving Santa Cruz County, Wade's Plumbing & Septic sta
 ## Frequently Asked Questions
 
 - **How often should septic system certification be done?** Typically, certification is required during property transactions or refinancing, but regular inspections are recommended.
-- **What happens if my system fails certification?** We can assist with necessary repairs or [system abandonment](/service-offerings/septic-system-abandonment/) if required.
+- **What happens if my system fails certification?** We can assist with necessary repairs or system abandonment if required.
+
+Learn more about [system abandonment](/service-offerings/septic-system-abandonment).
 
 For reliable septic system certification in Santa Cruz County, trust Wade's Plumbing & Septic. Contact us today to schedule your inspection and experience our trustworthy service firsthand. Our team is ready to assist with all your septic needs, ensuring your system is compliant and efficient.
 
