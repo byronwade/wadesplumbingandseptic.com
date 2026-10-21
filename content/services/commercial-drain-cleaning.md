@@ -38,7 +38,7 @@ The timeline for completing a commercial drain cleaning service depends on the s
 
 Investing in [commercial plumbing maintenance](/service-offerings/commercial-plumbing-maintenance) can prevent future drain issues and extend the lifespan of your plumbing systems. Regular maintenance not only minimizes repairs but also ensures compliance with health and safety standards, which is particularly crucial in food service industries.
 
-### FAQs About Commercial Drain Cleaning
+## FAQs About Commercial Drain Cleaning
 
 - **How often should commercial drains be cleaned?** This depends on the nature of your business. High-use environments like restaurants may require monthly cleanings, while other businesses might need quarterly services.
 - **What should I do if I notice a clogged drain?** If you notice signs of a clog, contact us immediately to avoid further damage and potential business interruptions.

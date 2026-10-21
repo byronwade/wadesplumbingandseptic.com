@@ -41,7 +41,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) can extend the life of your system and delay the need for abandonment. Routine inspections and timely repairs are essential to prevent failures and costly replacements. Consider our [septic system installation](/service-offerings/septic-system-installation) services if you're upgrading to a new system.
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 **What is septic system abandonment?** It's the process of safely decommissioning a septic system to prevent environmental hazards when it's no longer in use.
 
