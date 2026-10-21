@@ -1,6 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
+import { splitContentBands } from "@/lib/content-conversion"
 import { resolveContentLayout } from "@/lib/content-layout"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
@@ -71,7 +72,16 @@ export function ContentPage({
 			? { href: "/service-areas" as Route, label: "Service Areas" }
 			: undefined
 
-	const faqPairs = isFaq ? extractFaqPairs(document.content) : []
+	// About Us has a reviewed general FAQ and a separate legacy commercial
+	// section. Only the reviewed answers belong in its structured data.
+	const faqContent = isFaq
+		? document.content
+		: document.slug === "about-us"
+			? splitContentBands(document.content).sections.find(
+					(section) => section.heading === "Frequently Asked Questions",
+				)?.body
+			: undefined
+	const faqPairs = faqContent ? extractFaqPairs(faqContent) : []
 
 	const jsonLd = [
 		isPost

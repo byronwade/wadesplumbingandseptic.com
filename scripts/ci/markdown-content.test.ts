@@ -5,6 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 
 import { classifyBand } from "../../components/content-section-bands"
 import { MarkdownContent } from "../../components/markdown-content"
+import { siteConfig } from "../../lib/site"
 
 const image = "![Pipe inspection](/images/inspection.webp)"
 
@@ -63,6 +64,24 @@ test("ordinary paragraphs and contextual links remain intact", () => {
 	assert.match(html, /<p>A <strong>helpful<\/strong> paragraph/)
 	assert.match(html, /href="\/contact"/)
 	assert.doesNotMatch(html, /<img\s/)
+})
+
+test("Markdown call links work in server HTML before JavaScript", () => {
+	const html = render(`[Call Wade's](${siteConfig.phoneHref})`)
+	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)
+	assert.match(html, />Call Wade&#x27;s<\/a>/)
+})
+
+test("Markdown still blocks unsafe and unsupported URL protocols", () => {
+	for (const url of [
+		"javascript:unsafe",
+		"vbscript:unsafe",
+		"data:text/html,unsafe",
+		"custom:unsafe",
+	]) {
+		const html = render(`[Unsafe link](${url})`)
+		assert.ok(!html.includes(`href="${url}"`), html)
+	}
 })
 
 test("step lists stay prose; only question headings become an FAQ accordion", () => {
