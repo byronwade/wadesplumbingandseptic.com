@@ -91,7 +91,7 @@ export function HomeBelowFold() {
 									</p>
 								</div>
 							))}
-							<div className="col-span-full flex w-full flex-col gap-3 sm:flex-row">
+							<div className="col-span-full flex w-full min-w-0 flex-col flex-wrap gap-3 sm:flex-row">
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -378,8 +378,8 @@ export function HomeBelowFold() {
 			</section>
 
 			<section className="surface-hero tex-grid tex-glow section-y-tight relative overflow-hidden">
-				<div className="container-shell relative grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12">
-					<div className="section-head max-w-2xl min-w-0">
+				<div className="container-shell relative flex flex-wrap items-center justify-between gap-8 md:gap-12">
+					<div className="section-head max-w-2xl min-w-0 flex-1 basis-96">
 						<p className="spec-label">Wade&apos;s Plumbing &amp; Septic</p>
 						<h2 className="type-title">Ready to get started?</h2>
 						<p className="type-lead text-on-dark-muted text-pretty">
@@ -389,14 +389,14 @@ export function HomeBelowFold() {
 						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
 							<span>{contactInfo.hours}</span>
 							<a
-								className="inline-flex min-h-11 items-center transition-colors hover:text-white"
+								className="inline-flex min-h-11 min-w-0 items-center break-all transition-colors hover:text-white"
 								href={contactInfo.emailHref}
 							>
 								{contactInfo.email}
 							</a>
 						</div>
 					</div>
-					<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:shrink-0">
+					<div className="flex w-full max-w-full min-w-0 flex-col flex-wrap items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
 						<CallButton
 							className="w-full sm:w-auto"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}

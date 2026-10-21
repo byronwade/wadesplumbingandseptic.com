@@ -49,7 +49,11 @@ export function CallButton({
 	return (
 		<ProtectedContactLink ariaLabel={dialAria} className={styles} kind="phone">
 			{showIcon ? <Phone aria-hidden="true" className="shrink-0" /> : null}
-			{typeof dialLabel === "string" ? <span>{dialLabel}</span> : dialLabel}
+			{typeof dialLabel === "string" ? (
+				<span className="min-w-0">{dialLabel}</span>
+			) : (
+				dialLabel
+			)}
 		</ProtectedContactLink>
 	)
 }
