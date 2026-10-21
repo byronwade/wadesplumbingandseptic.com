@@ -67,10 +67,10 @@ function BulletGrid({
 }) {
 	const Icon = tone === "warning" ? Siren : Check
 	return (
-		<ul className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel flex items-start gap-3 p-[var(--space-card)] text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-3 text-sm font-bold"
 					key={item}
 				>
 					<span
@@ -99,7 +99,7 @@ function ProcessSteps({
 		<ol className="mt-[var(--space-block)] grid gap-[var(--space-grid)] lg:grid-cols-3">
 			{steps.map((step, index) => (
 				<li
-					className="surface-panel flex h-full flex-col p-[var(--space-card)]"
+					className="surface-panel panel-inset flex h-full flex-col"
 					key={step.title}
 				>
 					<span className="text-primary font-mono text-[0.6875rem] font-bold tracking-[0.16em] uppercase">
@@ -138,7 +138,7 @@ function IntroBand({
 							<MarkdownContent content={section.lead} demoteH1 />
 						</div>
 					</div>
-					<aside className="surface-panel border-border self-stretch p-[var(--space-card)] lg:mt-10">
+					<aside className="surface-panel panel-inset border-border self-stretch lg:mt-10">
 						<p className="spec-label">{category?.trim() || "Local service"}</p>
 						<p className="type-subtitle mt-3 text-[1.125rem]">{asideTitle}</p>
 						<p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -225,12 +225,12 @@ function TimelineBand({
 	return (
 		<section className={cn("section-y", surfaceFor(index))}>
 			<div className="container-shell">
-				<div className="reveal grid gap-[var(--space-block)] lg:grid-cols-[minmax(14rem,0.85fr)_minmax(0,1.15fr)] lg:items-start">
+				<div className="reveal grid grid-cols-1 gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(14rem,0.85fr)_minmax(0,1.15fr)] lg:items-start">
 					<div className="section-head max-w-md">
 						<p className="spec-label">{section.eyebrow}</p>
 						<h2 className="type-title">{section.heading}</h2>
 					</div>
-					<div className="surface-float border-border p-[var(--space-card)] sm:p-8">
+					<div className="surface-float border-border min-w-0 p-[var(--space-card)] [overflow-wrap:anywhere] sm:p-8">
 						{section.bullets.length ? (
 							<ul className="grid gap-4">
 								{section.bullets.map((item) => (
@@ -281,13 +281,13 @@ function TipsBand({
 				/>
 				{section.bullets.length ? (
 					<div className="reveal">
-						<ol className="mt-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+						<ol className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 							{section.bullets.map((item, itemIndex) => (
 								<li
-									className="surface-panel flex items-start gap-3 p-[var(--space-card)]"
+									className="surface-panel panel-inset flex items-start gap-3"
 									key={item}
 								>
-									<span className="text-primary font-mono text-[0.75rem] font-bold tracking-[0.12em]">
+									<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">
 										{String(itemIndex + 1).padStart(2, "0")}
 									</span>
 									<span className="text-sm leading-snug font-bold">{item}</span>
