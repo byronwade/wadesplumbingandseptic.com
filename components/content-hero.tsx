@@ -222,7 +222,7 @@ export function ContentHero({
 				<div className="container-shell pt-10 pb-10 sm:pt-12 sm:pb-12">
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
-						<div className="section-head max-w-2xl">
+						<div className="section-head max-w-2xl min-w-0">
 							{eyebrow ? (
 								<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 									{eyebrow}
@@ -236,7 +236,7 @@ export function ContentHero({
 							</p>
 						</div>
 						{actions ? (
-							<div className="motion-rise motion-delay-2 flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+							<div className="motion-rise motion-delay-2 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}

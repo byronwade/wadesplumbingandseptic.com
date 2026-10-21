@@ -49,7 +49,7 @@ export function ContentConversionCta({
 						</p>
 					</div>
 
-					<div className="reveal mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+					<div className="reveal mt-8 flex min-w-0 flex-col flex-wrap items-stretch justify-center gap-3 sm:flex-row sm:items-center">
 						<CallButton
 							className="w-full sm:w-auto"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
