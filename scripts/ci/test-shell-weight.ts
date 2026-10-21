@@ -6,19 +6,23 @@ import { dirname, join, relative, resolve } from "node:path"
  * Every page ships whatever the root and route-group layouts import
  * statically. Search (cmdk + Radix Dialog) must stay behind a dynamic
  * import() so it only loads when someone opens it, and the unused sonner
- * toaster must stay out of the shell. Walks the static import graph from each
- * layout; dynamic import() calls are deliberately not followed.
+ * toaster must stay out of the shell. The contact card must also keep its
+ * optional follow-up sheet out of the initial bundle. Walks the static import
+ * graph from each entry point; dynamic import() calls are not followed.
  */
 const root = resolve(__dirname, "../..")
 const entries = [
 	"app/layout.tsx",
 	"app/(home)/layout.tsx",
 	"app/(site)/layout.tsx",
+	"components/virtual-business-card.tsx",
 ]
-const bannedPackages = ["cmdk", "sonner"]
+const bannedPackages = ["cmdk", "sonner", "@radix-ui/react-dialog"]
 const bannedModules = [
 	"components/command-menu.tsx",
 	"components/ui/command.tsx",
+	"components/ui/sheet.tsx",
+	"components/save-contact-prompt.tsx",
 ]
 
 const staticImport =
@@ -74,13 +78,13 @@ const reached = [...seen].map((file) =>
 for (const name of bannedPackages) {
 	assert.ok(
 		!packages.has(name),
-		`"${name}" is statically imported by ${packages.get(name)}, so every page downloads it. Load it with import() on demand instead.`,
+		`"${name}" is statically imported by ${packages.get(name)}, so it loads before interaction. Load it with import() on demand instead.`,
 	)
 }
 for (const banned of bannedModules) {
 	assert.ok(
 		!reached.includes(banned),
-		`${banned} is statically reachable from a layout, so every page downloads it. Keep it behind next/dynamic in components/app-command-shell.tsx.`,
+		`${banned} is statically reachable from an initial entry point. Keep optional dialogs behind an on-demand import().`,
 	)
 }
 assert.ok(
@@ -89,5 +93,5 @@ assert.ok(
 )
 
 console.log(
-	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} layouts; search UI and toaster stay out of the first load.`,
+	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} entry points; search UI, contact prompt and toaster stay out of the first load.`,
 )

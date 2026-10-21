@@ -1,19 +1,18 @@
 "use client"
 
-import { useEffect, useRef, useState, type ReactNode } from "react"
-import { IdentificationCard, Phone } from "@/components/icons"
+import {
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+	type MouseEvent,
+	type ReactNode,
+} from "react"
+import { IdentificationCard } from "@/components/icons"
 
 import { ProtectedContactLink } from "@/components/protected-contact"
+import type { SaveContactPrompt } from "@/components/save-contact-prompt"
 import { buttonVariants } from "@/components/ui/button"
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetFooter,
-	SheetHeader,
-	SheetTitle,
-} from "@/components/ui/sheet"
-import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 /**
@@ -35,8 +34,34 @@ export function SaveContactButton({
 	showIcon?: boolean
 }) {
 	const [promptOpen, setPromptOpen] = useState(false)
+	const [Prompt, setPrompt] = useState<typeof SaveContactPrompt | null>(null)
+	const returnFocusRef = useRef<HTMLAnchorElement | null>(null)
 	const awaitingReturn = useRef(false)
 	const fallbackTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+	useEffect(() => {
+		if (!promptOpen || Prompt) return
+		let active = true
+		void import("@/components/save-contact-prompt")
+			.then((module) => {
+				if (active) setPrompt(() => module.SaveContactPrompt)
+			})
+			.catch(() => {
+				// This optional nudge must never interrupt native contact links.
+				if (active) setPromptOpen(false)
+			})
+		return () => {
+			active = false
+		}
+	}, [promptOpen, Prompt])
+
+	const restoreFocus = useCallback((event: Event) => {
+		const target = returnFocusRef.current
+		if (target?.isConnected) {
+			event.preventDefault()
+			target.focus()
+		}
+	}, [])
 
 	useEffect(() => {
 		function maybePrompt() {
@@ -62,7 +87,8 @@ export function SaveContactButton({
 		}
 	}, [])
 
-	function armPrompt() {
+	function armPrompt(event: MouseEvent<HTMLAnchorElement>) {
+		returnFocusRef.current = event.currentTarget
 		awaitingReturn.current = true
 		if (fallbackTimer.current) clearTimeout(fallbackTimer.current)
 		// Some devices download/open the vCard without leaving the page.
@@ -88,41 +114,13 @@ export function SaveContactButton({
 				{children}
 			</ProtectedContactLink>
 
-			<Sheet open={promptOpen} onOpenChange={setPromptOpen}>
-				<SheetContent
-					className="bg-card gap-0 rounded-t-2xl sm:mx-auto sm:max-w-md sm:rounded-t-2xl"
-					side="bottom"
-				>
-					<SheetHeader className="pb-2">
-						<SheetTitle>Ready to call?</SheetTitle>
-						<SheetDescription>
-							If you saved Wade&apos;s to your contacts, you can dial us next.
-							We are here {contactInfo.hours.toLowerCase()}.
-						</SheetDescription>
-					</SheetHeader>
-					<SheetFooter className="pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-						<ProtectedContactLink
-							ariaLabel={`Call ${contactInfo.phoneDisplay}`}
-							className={cn(buttonVariants({ size: "xl" }), "w-full")}
-							kind="phone"
-							onClick={() => setPromptOpen(false)}
-						>
-							<Phone aria-hidden="true" />
-							Call {contactInfo.phoneDisplay}
-						</ProtectedContactLink>
-						<button
-							className={cn(
-								buttonVariants({ variant: "ghost", size: "lg" }),
-								"w-full",
-							)}
-							onClick={() => setPromptOpen(false)}
-							type="button"
-						>
-							Not now
-						</button>
-					</SheetFooter>
-				</SheetContent>
-			</Sheet>
+			{Prompt ? (
+				<Prompt
+					open={promptOpen}
+					onOpenChange={setPromptOpen}
+					onCloseAutoFocus={restoreFocus}
+				/>
+			) : null}
 		</>
 	)
 }
