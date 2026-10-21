@@ -36,8 +36,8 @@ Understanding the common causes of plumbing issues can help in preventing them. 
 At Wade's Plumbing & Septic, our comprehensive maintenance process includes:
 
 - **Inspection:** Thorough inspection of all plumbing fixtures, water heaters, and drainage systems.
-- **[Backflow prevention testing](/service-offerings/backflow-prevention-testing/):** Ensuring backflow preventers are functioning correctly to prevent contamination.
-- **Cleaning:** Regular [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) to maintain flow and prevent clogs.
+- **[Backflow prevention testing](/service-offerings/backflow-prevention-testing):** Ensuring backflow preventers are functioning correctly to prevent contamination.
+- **Cleaning:** Regular [commercial drain cleaning](/service-offerings/commercial-drain-cleaning) to maintain flow and prevent clogs.
 - **Repairs:** Immediate addressing of any detected issues such as leaks or faulty fixtures.
 - **Customized scheduling:** Maintenance schedules are tailored to your business's specific needs.
 
@@ -59,9 +59,9 @@ The cost of **commercial plumbing maintenance** can vary based on several factor
 
 Preventative measures are crucial in avoiding costly repairs. Here are some tips to maintain your plumbing system:
 
-- Regularly schedule [drain line inspections](/service-offerings/drain-line-inspection/) to catch issues early.
+- Regularly schedule [drain line inspections](/service-offerings/drain-line-inspection) to catch issues early.
 - Ensure employees are aware of proper disposal practices to prevent clogs.
-- Consider installing [backflow prevention devices](/service-offerings/backflow-prevention-installation/) to safeguard your water supply.
+- Consider installing [backflow prevention devices](/service-offerings/backflow-prevention-installation) to safeguard your water supply.
 
 ## FAQs About Commercial Plumbing Maintenance
 
@@ -77,6 +77,6 @@ Professional Solutions for Your Business
 
 Ensure your business operates smoothly with our reliable commercial plumbing solutions in Santa Cruz County.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42 for California

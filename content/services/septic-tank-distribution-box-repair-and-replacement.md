@@ -40,7 +40,7 @@ Understanding these causes helps in preventing future problems and maintaining t
 
 Our process begins with a thorough inspection to pinpoint the distribution box's condition. We carefully excavate the area to access the box, ensuring minimal disruption to your property.
 
-Once exposed, our technicians assess whether [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/) are necessary. If repairable, we address issues like cracks or settling. If replacement is required, we install a new box with precision, ensuring proper leveling and sealing to prevent future complications.
+Once exposed, our technicians assess whether [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement) are necessary. If repairable, we address issues like cracks or settling. If replacement is required, we install a new box with precision, ensuring proper leveling and sealing to prevent future complications.
 
 ## Timeline for Septic Tank Distribution Box Repair
 
@@ -60,7 +60,7 @@ For a comprehensive assessment and an accurate estimate, it's best to contact Wa
 
 ## Preventing Future Distribution Box Issues
 
-Regular maintenance is key to avoiding distribution box problems. Routine inspections and [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) can catch issues early. Avoid placing heavy objects or planting trees near your septic system to prevent damage.
+Regular maintenance is key to avoiding distribution box problems. Routine inspections and [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) can catch issues early. Avoid placing heavy objects or planting trees near your septic system to prevent damage.
 
 ## Frequently Asked Questions
 
@@ -76,7 +76,7 @@ While minor issues might seem manageable, it's best to rely on professionals for
 
 Our team is licensed, experienced, and deeply familiar with the septic needs of Santa Cruz County residents. We provide prompt, reliable service and are committed to ensuring your septic system operates smoothly.
 
-If you're experiencing issues with your distribution box or want to prevent future problems, [contact Wade's Plumbing & Septic](/contact/) today. Let our trusted team in Santa Cruz County provide the expertise and service you need for peace of mind.
+If you're experiencing issues with your distribution box or want to prevent future problems, [contact Wade's Plumbing & Septic](/contact) today. Let our trusted team in Santa Cruz County provide the expertise and service you need for peace of mind.
 
 ## Serving Santa Cruz County, CA
 
@@ -94,7 +94,7 @@ Our contractors are fully licensed and equipped to handle all your septic needs.
 
 Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-For more information on our service coverage, visit our [main service-area overview](/service-areas/).
+For more information on our service coverage, visit our [main service-area overview](/service-areas).
 
 Expert Septic Solutions
 

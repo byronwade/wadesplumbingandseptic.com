@@ -22,7 +22,7 @@ A properly installed septic system is essential for effective waste management a
 - Drainfield installation to ensure efficient wastewater dispersion.
 - Connections that integrate seamlessly with your property.
 
-We specialize in installing various types of systems, including conventional systems, aerobic treatment units, and [alternative septic systems](/service-offerings/engineered-septic-system-installation/), customized to meet the unique demands of your property.
+We specialize in installing various types of systems, including conventional systems, aerobic treatment units, and [alternative septic systems](/service-offerings/engineered-septic-system-installation), customized to meet the unique demands of your property.
 
 ## Signs You Need a New Septic System
 
@@ -33,7 +33,7 @@ Knowing when to replace or install a new septic system can prevent costly repair
 - Standing water in your yard.
 - Unexplained patches of lush grass.
 
-If you experience any of these issues, it may indicate a [failed septic repair replacement](/service-offerings/septic-tank-repair-and-replacement/) need. Contact us for a professional assessment.
+If you experience any of these issues, it may indicate a [failed septic repair replacement](/service-offerings/septic-tank-repair-and-replacement) need. Contact us for a professional assessment.
 
 ## Why Choose Wade's Plumbing & Septic?
 
@@ -50,14 +50,14 @@ Our installation process is designed to be thorough and efficient, minimizing di
 
 ## Cost Factors and Installation Timeline
 
-The cost of a septic system installation can vary based on several factors, including system type, site conditions, and local permitting requirements. On average, the process takes a few weeks from start to finish, ensuring all aspects are handled with care and attention to detail. For a precise estimate, [contact Wade's Plumbing](/service-offerings/septic-tank-inspection-and-assessment/) to schedule a consultation.
+The cost of a septic system installation can vary based on several factors, including system type, site conditions, and local permitting requirements. On average, the process takes a few weeks from start to finish, ensuring all aspects are handled with care and attention to detail. For a precise estimate, [contact Wade's Plumbing](/service-offerings/septic-tank-inspection-and-assessment) to schedule a consultation.
 
 Flat-rate pricing, quoted on site before work begins.
 
 ## FAQs About Septic System Installation
 
 - **What is the difference between conventional and engineered septic systems?** Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
-- **How can I maintain my septic tank?** Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services for expert assistance.
+- **How can I maintain my septic tank?** Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) services for expert assistance.
 
 For professional, reliable septic system installation in Santa Cruz County, trust Wade's Plumbing & Septic. Our team is here to guide you through every step, ensuring a seamless experience and a system that serves your home efficiently for years to come. **Contact us today** to schedule your consultation and take the first step toward a worry-free septic solution.
 

@@ -39,11 +39,11 @@ Flat-rate pricing, quoted on site before work begins.
 
 Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, California, for all septic design and engineering needs. Our team's experience and local knowledge ensure that each project meets the highest standards of quality and compliance. We are responsive, dependable, and committed to providing exceptional service to our community.
 
-Beyond design, we offer comprehensive [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services, helping you maintain optimal system performance.
+Beyond design, we offer comprehensive [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) services, helping you maintain optimal system performance.
 
 ### Preventing Future Septic Issues
 
-Proactive maintenance is key to avoiding costly repairs. Regular [septic tank inspections and assessments](/service-offerings/septic-tank-inspection-and-assessment/) help identify potential issues early. Learn more about how to maintain your septic tank in our [blog post](/how-to-maintain-your-septic-tank-for-long-term-performance/).
+Proactive maintenance is key to avoiding costly repairs. Regular [septic tank inspections and assessments](/service-offerings/septic-tank-inspection-and-assessment) help identify potential issues early. Learn more about how to maintain your septic tank in our [blog post](/how-to-maintain-your-septic-tank-for-long-term-performance).
 
 ## Frequently Asked Questions
 

@@ -52,8 +52,8 @@ It's crucial to recognize the signs that your septic system may need maintenance
 
 Effective seasonal maintenance involves several key steps:
 
-- **Filter Cleaning:** Regular [septic filter cleaning](/service-offerings/septic-filter-cleaning-and-replacement/) ensures optimal system performance.
-- **Inspection:** Have your system inspected by [certified septic experts](/service-offerings/septic-system-certification/) to identify any potential issues.
+- **Filter Cleaning:** Regular [septic filter cleaning](/service-offerings/septic-filter-cleaning-and-replacement) ensures optimal system performance.
+- **Inspection:** Have your system inspected by [certified septic experts](/service-offerings/septic-system-certification) to identify any potential issues.
 - **Monitoring Water Usage:** Be mindful of water consumption to prevent overloading the system.
 - **Landscaping Considerations:** Keep trees and shrubs away from the septic area to avoid root intrusion.
 
@@ -63,7 +63,7 @@ Common issues include clogs, leaks, and system overloads. Regular maintenance an
 
 ## How Wade's Plumbing & Septic Can Help
 
-At Wade's Plumbing & Septic, we offer comprehensive services to keep your system in top shape. From routine inspections to [alternative septic system installations](/service-offerings/engineered-septic-system-installation/), our team is equipped to handle all your septic needs. Our locally trusted services ensure that your system is compliant with Santa Cruz County regulations and operates efficiently.
+At Wade's Plumbing & Septic, we offer comprehensive services to keep your system in top shape. From routine inspections to [alternative septic system installations](/service-offerings/engineered-septic-system-installation), our team is equipped to handle all your septic needs. Our locally trusted services ensure that your system is compliant with Santa Cruz County regulations and operates efficiently.
 
 ## DIY Monitoring vs. Professional Maintenance
 
@@ -101,7 +101,7 @@ Another misconception is that only older systems require seasonal checks. In rea
 
 ## Sources & Local References
 
-For more information on maintaining your septic system, visit our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance/) guide. For a comprehensive view of our service areas, check our [Plumbing & septic service areas overview](/service-areas/). Additionally, explore this [news article](https://news.google.com/rss/articles/CBMitgFBVV95cUxQWVJOV2VDM0lYbW9PcGRjdmttLWZDRVNVTFp0QVVIcm9pTWM1aHY2WlEzT0k0VXRCTW03SnJzbFRHUXVkVzdxTGVLcW55dE1MNHNOWTVLM1lEcVYzQ1BqMW9TNjhNM3RYbm5HX3pDbE5jc3JPdUV0eWsxQkNJNXpobzRfRWd5ZXA0OEswTnpSbVJqb3hNdXBxTEp1QnE0M1lIU1pkdFNDSVlfd2V0REI4WVNCMVNWUdIBuwFBVV95cUxObGR0UG42QmJfaGJhMVF6dkRXRGxLVUozVzBOejlSclhnajJrczZ2RXNIaUljWUx3NkRUbFpNeFA2X1llcjdRdmdBdHVtQXEzYjJwbU9leHVC) for more insights on the importance of regular septic maintenance.
+For more information on maintaining your septic system, visit our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance) guide. For a comprehensive view of our service areas, check our [Plumbing & septic service areas overview](/service-areas). Additionally, explore this [news article](https://news.google.com/rss/articles/CBMitgFBVV95cUxQWVJOV2VDM0lYbW9PcGRjdmttLWZDRVNVTFp0QVVIcm9pTWM1aHY2WlEzT0k0VXRCTW03SnJzbFRHUXVkVzdxTGVLcW55dE1MNHNOWTVLM1lEcVYzQ1BqMW9TNjhNM3RYbm5HX3pDbE5jc3JPdUV0eWsxQkNJNXpobzRfRWd5ZXA0OEswTnpSbVJqb3hNdXBxTEp1QnE0M1lIU1pkdFNDSVlfd2V0REI4WVNCMVNWUdIBuwFBVV95cUxObGR0UG42QmJfaGJhMVF6dkRXRGxLVUozVzBOejlSclhnajJrczZ2RXNIaUljWUx3NkRUbFpNeFA2X1llcjdRdmdBdHVtQXEzYjJwbU9leHVC) for more insights on the importance of regular septic maintenance.
 
 Contact Wade's Plumbing & Septic today to schedule your seasonal septic maintenance and ensure your system runs smoothly all year round.
 

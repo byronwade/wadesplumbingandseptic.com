@@ -39,7 +39,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Prevention and Maintenance
 
-Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) can extend the life of your system and delay the need for abandonment. Routine inspections and timely repairs are essential to prevent failures and costly replacements. Consider our [septic system installation](/service-offerings/septic-system-installation/) services if you're upgrading to a new system.
+Regular [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) can extend the life of your system and delay the need for abandonment. Routine inspections and timely repairs are essential to prevent failures and costly replacements. Consider our [septic system installation](/service-offerings/septic-system-installation) services if you're upgrading to a new system.
 
 ### Frequently Asked Questions
 
@@ -49,7 +49,7 @@ Regular [septic tank maintenance and care](/service-offerings/septic-tank-mainte
 
 **Can I abandon a septic system myself?** Due to regulatory requirements and safety concerns, it's best handled by professionals like Wade's Plumbing & Septic.
 
-For more information on managing post-abandonment challenges, visit our [blog on septic system challenges](/septic-system-challenges-santa-cruz-fire/).
+For more information on managing post-abandonment challenges, visit our [blog on septic system challenges](/septic-system-challenges-santa-cruz-fire).
 
 When it comes to reliable and compliant **septic system abandonment in Santa Cruz County** , Wade's Plumbing & Septic is your local expert. Contact us today to schedule an assessment or learn more about our comprehensive services. Trust us to protect your property and the environment with the utmost professionalism.
 

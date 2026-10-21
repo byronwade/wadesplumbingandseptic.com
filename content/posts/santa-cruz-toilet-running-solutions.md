@@ -54,7 +54,7 @@ Timely repairs can prevent further damage to your plumbing system and save on co
 
 ## How Wade's Plumbing & Septic Can Help
 
-At Wade's Plumbing & Septic, we understand the unique plumbing needs of Santa Cruz County homeowners. Our expert technicians are equipped to handle all types of toilet issues, ensuring your bathroom fixtures operate efficiently. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services/) or [Felton](/service-area/felton-ca-plumbing-septic-services/), our team is ready to assist you with professional and reliable service.
+At Wade's Plumbing & Septic, we understand the unique plumbing needs of Santa Cruz County homeowners. Our expert technicians are equipped to handle all types of toilet issues, ensuring your bathroom fixtures operate efficiently. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services) or [Felton](/service-area/felton-ca-plumbing-septic-services), our team is ready to assist you with professional and reliable service.
 
 ## DIY Monitoring vs. Calling a Professional
 

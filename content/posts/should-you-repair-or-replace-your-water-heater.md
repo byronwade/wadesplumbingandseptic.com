@@ -100,7 +100,7 @@ Our team is fully licensed and certified, holding a C-42 contractor license for 
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For a comprehensive overview of our service areas, please visit our [service area overview](/service-areas/).
+For a comprehensive overview of our service areas, please visit our [service area overview](/service-areas).
 
 ## Frequently Asked Questions
 
@@ -126,4 +126,4 @@ Serving Santa Cruz County Homes
 
 Experience unparalleled efficiency and reliability with our expert water heater services tailored for Santa Cruz County homes.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)

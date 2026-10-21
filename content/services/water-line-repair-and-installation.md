@@ -66,7 +66,7 @@ Preventative measures can significantly extend the life of your water lines:
 
 - Regular inspections and maintenance
 - Addressing minor issues promptly
-- Installing protective measures such as [backflow prevention devices](/service-offerings/backflow-prevention-installation/)
+- Installing protective measures such as [backflow prevention devices](/service-offerings/backflow-prevention-installation)
 
 By taking these steps, you can reduce the risk of expensive repairs and maintain a reliable water supply.
 

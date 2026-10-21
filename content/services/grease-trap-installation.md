@@ -23,7 +23,7 @@ Recognizing the signs that you need a grease trap installation can save your bus
 - Frequent drain clogs or slow drainage
 - Unpleasant odors emanating from drains
 - Backups in sinks or other fixtures
-- Increased need for [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/)
+- Increased need for [commercial drain cleaning](/service-offerings/commercial-drain-cleaning)
 
 ## Our Grease Trap Installation Process
 
@@ -42,7 +42,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Prevention and Maintenance
 
-Once installed, regular [grease trap cleaning](/service-offerings/grease-trap-cleaning/) and maintenance are crucial to keep your system functioning efficiently. This includes routine inspections and timely removal of accumulated FOG. Preventative measures such as staff training on proper waste disposal can also extend the lifespan of your grease trap.
+Once installed, regular [grease trap cleaning](/service-offerings/grease-trap-cleaning) and maintenance are crucial to keep your system functioning efficiently. This includes routine inspections and timely removal of accumulated FOG. Preventative measures such as staff training on proper waste disposal can also extend the lifespan of your grease trap.
 
 ## FAQs About Grease Trap Installation
 

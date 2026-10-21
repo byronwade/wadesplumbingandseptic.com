@@ -29,7 +29,7 @@ Enhancing your Santa Cruz home with a modern septic solution can significantly i
 
 ## Importance of Septic System Upgrades
 
-Septic systems are crucial for waste management in your home. Over time, older systems can become inefficient and environmentally hazardous. Upgrading ensures compliance with [local regulations](/service-areas/) and enhances system performance.
+Septic systems are crucial for waste management in your home. Over time, older systems can become inefficient and environmentally hazardous. Upgrading ensures compliance with [local regulations](/service-areas) and enhances system performance.
 
 ## Benefits of Modern Septic Solutions
 
@@ -47,7 +47,7 @@ Santa Cruz County has specific septic system regulations. Compliance is crucial 
 
 ## Signs Your Septic Needs Attention
 
-Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services/) for more details.
+Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) for more details.
 
 ## Choosing the Right Septic Solution
 
@@ -59,7 +59,7 @@ Installing a new septic system involves site evaluation, system design, and inst
 
 ## Maintaining Your New Septic System for Longevity
 
-Regular maintenance is key to extending your septic system's lifespan. This includes periodic inspections, pumping, and addressing minor issues before they escalate. Consider our [seasonal maintenance tips](/septic-system-seasonal-maintenance-santa-cruz/) to keep your system in top condition.
+Regular maintenance is key to extending your septic system's lifespan. This includes periodic inspections, pumping, and addressing minor issues before they escalate. Consider our [seasonal maintenance tips](/septic-system-seasonal-maintenance-santa-cruz) to keep your system in top condition.
 
 ## DIY Monitoring vs. Professional Services
 
@@ -97,7 +97,7 @@ Regular inspections, pumping, and addressing minor issues are crucial. Professio
 
 ## Sources & Local References
 
-- [Reference from wadesplumbingandseptic.com](/service-areas/)
+- [Reference from wadesplumbingandseptic.com](/service-areas)
 
 ## Seasonal Tip
 
@@ -125,7 +125,7 @@ Our commitment to quality is backed by our C-42 contractor license in California
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on our service areas, please visit our [main service-area overview](/service-areas/).
+For more information on our service areas, please visit our [main service-area overview](/service-areas).
 
 Transform Your Waste Management
 

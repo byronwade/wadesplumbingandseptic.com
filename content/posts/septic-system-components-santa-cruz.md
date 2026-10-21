@@ -57,7 +57,7 @@ The distribution box evenly distributes effluent from the septic tank to the lea
 - Avoid flushing non-biodegradable items and harsh chemicals.
 - Protect the leach field by not parking or driving on it.
 
-For more detailed advice, check out our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance/).
+For more detailed advice, check out our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance).
 
 ## Signs Your Septic System Needs Attention
 
@@ -76,7 +76,7 @@ Septic systems, when properly designed and maintained, effectively treat wastewa
 
 ## Local Septic Services in Santa Cruz County
 
-For residents of [Aptos](/service-area/aptos-ca-plumbing-septic-services/), [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services/), and other areas, Wade's Plumbing & Septic offers expert services to meet all your septic needs. Our team is dedicated to providing quality service that ensures the longevity and efficiency of your septic system.
+For residents of [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), and other areas, Wade's Plumbing & Septic offers expert services to meet all your septic needs. Our team is dedicated to providing quality service that ensures the longevity and efficiency of your septic system.
 
 ## DIY Monitoring vs. Professional Services
 

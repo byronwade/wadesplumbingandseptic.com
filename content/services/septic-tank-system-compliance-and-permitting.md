@@ -27,7 +27,7 @@ The septic system permitting process in Santa Cruz County involves several key s
 
 ### Site Evaluation and Design
 
-Our team begins with a detailed site evaluation to assess soil conditions and determine the most suitable septic system design. We then create a tailored system design that meets regulatory standards and your specific property needs. For more complex requirements, our [septic tank design and engineering](/service-offerings/septic-tank-design-and-engineering/) service can be invaluable.
+Our team begins with a detailed site evaluation to assess soil conditions and determine the most suitable septic system design. We then create a tailored system design that meets regulatory standards and your specific property needs. For more complex requirements, our [septic tank design and engineering](/service-offerings/septic-tank-design-and-engineering) service can be invaluable.
 
 ### Permit Application and Approval
 
@@ -35,7 +35,7 @@ Once the design is finalized, we handle the submission of all necessary permit a
 
 ### Inspection and Final Approval
 
-Upon installation, our team coordinates with inspectors to ensure your system meets all necessary criteria for final approval. We also offer [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment/) services to maintain ongoing compliance.
+Upon installation, our team coordinates with inspectors to ensure your system meets all necessary criteria for final approval. We also offer [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) services to maintain ongoing compliance.
 
 ## Factors Affecting Septic System Permitting Costs
 
@@ -49,13 +49,13 @@ Several factors impact the cost of septic system permitting:
 
 ## Preventing Septic System Challenges
 
-Regular maintenance and timely repairs are critical to preventing issues that may require septic system permitting. Our [comprehensive guide on septic tank maintenance](/how-to-maintain-your-septic-tank-for-long-term-performance/) provides valuable insights into keeping your system in top shape.
+Regular maintenance and timely repairs are critical to preventing issues that may require septic system permitting. Our [comprehensive guide on septic tank maintenance](/how-to-maintain-your-septic-tank-for-long-term-performance) provides valuable insights into keeping your system in top shape.
 
 ## FAQs about Septic System Permitting
 
 - **How long does the permitting process take?** This can vary, but typically it takes a few weeks to a couple of months, depending on the complexity of the project and local authority schedules.
 - **Can I start work without a permit?** No, it is important to obtain the necessary permits before starting any work to avoid fines and delays.
-- **What if my septic system fails inspection?** If issues are identified, our team can assist with [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/) to ensure compliance.
+- **What if my septic system fails inspection?** If issues are identified, our team can assist with [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement) to ensure compliance.
 
 Choosing Wade's Plumbing & Septic means partnering with a trusted local expert in Santa Cruz County. Our licensed team is known for its responsiveness and thorough understanding of local regulations, ensuring a smooth permitting process. To get started or learn more about our services, [contact Wade's Plumbing & Septic](/contact) today. Let us help you navigate the complexities of septic system permitting with confidence.
 

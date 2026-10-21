@@ -31,7 +31,7 @@ Several factors can lead to septic system challenges, including:
 - System overload from excessive water use.
 - Improper maintenance and care.
 
-Understanding these causes can help in preventative efforts and reduce the need for [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement/).
+Understanding these causes can help in preventative efforts and reduce the need for [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement).
 
 ## The Septic Tank Troubleshooting Process
 
@@ -51,7 +51,7 @@ Costs for septic tank troubleshooting services can vary based on the complexity 
 
 ## Preventing Future Septic Issues
 
-Regular maintenance is key to preventing future septic problems. We recommend scheduling routine [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) to keep your system in optimal condition. Additionally, you can refer to our [guide on maintaining your septic tank](/how-to-maintain-your-septic-tank-for-long-term-performance/) for further tips and advice.
+Regular maintenance is key to preventing future septic problems. We recommend scheduling routine [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) to keep your system in optimal condition. Additionally, you can refer to our [guide on maintaining your septic tank](/how-to-maintain-your-septic-tank-for-long-term-performance) for further tips and advice.
 
 ## FAQs About Septic Tank Troubleshooting
 
@@ -63,7 +63,7 @@ It's recommended to have your septic system inspected at least once every three 
 
 Contact Wade's Plumbing & Septic immediately. Our team will provide prompt and reliable service to diagnose and address the issue efficiently.
 
-Trust Wade's Plumbing & Septic for all your septic tank troubleshooting needs in Santa Cruz County, California. Our commitment to quality, local expertise, and responsive service sets us apart. Don't let septic issues disrupt your life, [contact us today](/service-offerings/septic-tank-inspection-and-assessment/) for a thorough inspection and expert advice.
+Trust Wade's Plumbing & Septic for all your septic tank troubleshooting needs in Santa Cruz County, California. Our commitment to quality, local expertise, and responsive service sets us apart. Don't let septic issues disrupt your life, [contact us today](/service-offerings/septic-tank-inspection-and-assessment) for a thorough inspection and expert advice.
 
 Septic System Acting Up?
 
@@ -71,7 +71,7 @@ Septic System Acting Up?
 
 Trust our certified professionals to quickly diagnose and resolve any septic issues, ensuring peace of mind for your home.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
 ### Customer Trust and Satisfaction
 

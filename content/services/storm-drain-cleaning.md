@@ -11,7 +11,7 @@ imageAlt: Weathered drain cover
 updated: "2026-07-30"
 ---
 
-Storm [drain cleaning](/service-offerings/drain-cleaning/) is a crucial service for homeowners in Santa Cruz County, California, ensuring your property remains safe from flooding and water damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to effectively remove leaves, sediment, debris, and other obstructions from your storm drains, catch basins, and drainage systems. Regular maintenance is essential to prevent costly water damage and extend the lifespan of your drainage infrastructure. Our experienced team also offers preventative maintenance programs tailored for commercial properties, securing your investment against potential water-related disasters.
+Storm [drain cleaning](/service-offerings/drain-cleaning) is a crucial service for homeowners in Santa Cruz County, California, ensuring your property remains safe from flooding and water damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to effectively remove leaves, sediment, debris, and other obstructions from your storm drains, catch basins, and drainage systems. Regular maintenance is essential to prevent costly water damage and extend the lifespan of your drainage infrastructure. Our experienced team also offers preventative maintenance programs tailored for commercial properties, securing your investment against potential water-related disasters.
 
 ## Signs Your Storm Drains Need Cleaning
 
@@ -22,7 +22,7 @@ Identifying when your storm drains need cleaning can save you from future headac
 - Slow water drainage during heavy rains
 - Visible debris build-up in or around drains
 
-If you notice any of these issues, it's time to consider [our professional drain cleaning services](/service-offerings/drain-cleaning/).
+If you notice any of these issues, it's time to consider [our professional drain cleaning services](/service-offerings/drain-cleaning).
 
 ## Causes of Storm Drain Blockages
 
@@ -41,7 +41,7 @@ At Wade's Plumbing & Septic, we employ a comprehensive process to ensure your st
 
 ### Inspection
 
-Our team begins with a thorough inspection of your drainage system, identifying blockages and assessing the overall condition. We employ state-of-the-art [drain line inspection](/service-offerings/drain-line-inspection/) technology for precision.
+Our team begins with a thorough inspection of your drainage system, identifying blockages and assessing the overall condition. We employ state-of-the-art [drain line inspection](/service-offerings/drain-line-inspection) technology for precision.
 
 ### Cleaning
 
@@ -70,7 +70,7 @@ To maintain optimal drainage, consider these preventative measures:
 - Regularly clear leaves and debris from your property
 - Schedule periodic professional inspections
 - Install grates or covers to minimize debris entry
-- Consider [backflow prevention installations](/service-offerings/backflow-prevention-installation/)
+- Consider [backflow prevention installations](/service-offerings/backflow-prevention-installation)
 
 ## Frequently Asked Questions
 
@@ -94,7 +94,7 @@ Our contractors are fully licensed and certified, holding a C-42 license in Cali
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For a complete overview of our service areas, please visit our [main service-area overview](/service-areas/).
+For a complete overview of our service areas, please visit our [main service-area overview](/service-areas).
 
 Santa Cruz County's Trusted Experts
 
@@ -102,6 +102,6 @@ Santa Cruz County's Trusted Experts
 
 Protect your property from flooding and water damage with our expert storm drain cleaning services.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42 for California

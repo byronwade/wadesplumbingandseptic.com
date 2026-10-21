@@ -12,7 +12,7 @@ imageAlt: Industrial plumbing with pressure gauge
 updated: "2026-07-30"
 ---
 
-Are you experiencing recurring drain clogs or slow drainage in your home? Our hydro jetting [drain cleaning](/service-offerings/drain-cleaning/) service, available throughout Santa Cruz County, California, is the ultimate solution to ensure your plumbing system remains clear and efficient. This advanced method employs high-pressure water jets to thoroughly clean your drains and sewer lines, providing a more comprehensive solution than traditional snaking methods.
+Are you experiencing recurring drain clogs or slow drainage in your home? Our hydro jetting [drain cleaning](/service-offerings/drain-cleaning) service, available throughout Santa Cruz County, California, is the ultimate solution to ensure your plumbing system remains clear and efficient. This advanced method employs high-pressure water jets to thoroughly clean your drains and sewer lines, providing a more comprehensive solution than traditional snaking methods.
 
 ## Why Choose Hydro Jetting Drain Cleaning?
 
@@ -31,11 +31,11 @@ Recognizing the signs of a clogged drain can help you address issues before they
 - Unpleasant odors emanating from your drains
 - Water pooling around basement drains
 
-If you notice any of these signs, it's time to consider a professional [drain cleaning](/service-offerings/drain-cleaning/) service.
+If you notice any of these signs, it's time to consider a professional [drain cleaning](/service-offerings/drain-cleaning) service.
 
 ## Understanding the Hydro Jetting Process
 
-Hydro jetting involves the use of a specialized nozzle connected to a high-pressure hose. This nozzle propels water at pressures up to 4,000 PSI, effectively clearing blockages and cleaning the inner surfaces of your pipes. The process begins with a thorough [drain line inspection](/service-offerings/drain-line-inspection/) to assess the condition of your pipes and identify the exact location of blockages.
+Hydro jetting involves the use of a specialized nozzle connected to a high-pressure hose. This nozzle propels water at pressures up to 4,000 PSI, effectively clearing blockages and cleaning the inner surfaces of your pipes. The process begins with a thorough [drain line inspection](/service-offerings/drain-line-inspection) to assess the condition of your pipes and identify the exact location of blockages.
 
 ### Timeline and Cost Factors
 
@@ -49,15 +49,15 @@ After a successful hydro jetting service, there are steps you can take to mainta
 - Install drain strainers to catch debris.
 - Schedule routine maintenance with a professional plumber.
 
-For businesses, consider our [commercial drain cleaning](/service-offerings/commercial-drain-cleaning/) services to keep your systems in top shape.
+For businesses, consider our [commercial drain cleaning](/service-offerings/commercial-drain-cleaning) services to keep your systems in top shape.
 
 ## Why Trust Wade's Plumbing & Septic?
 
-At Wade's Plumbing & Septic, we are committed to delivering reliable and efficient plumbing solutions. With years of experience serving Santa Cruz County, California, our licensed and responsive team is equipped to handle all your plumbing needs. We pride ourselves on our local expertise and customer-centric approach. Don't let clogged drains disrupt your day. Contact us today to schedule your hydro jetting drain cleaning service and experience the benefits of a clear and efficient plumbing system. Call us now or visit our website to learn more about our [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines/) service.
+At Wade's Plumbing & Septic, we are committed to delivering reliable and efficient plumbing solutions. With years of experience serving Santa Cruz County, California, our licensed and responsive team is equipped to handle all your plumbing needs. We pride ourselves on our local expertise and customer-centric approach. Don't let clogged drains disrupt your day. Contact us today to schedule your hydro jetting drain cleaning service and experience the benefits of a clear and efficient plumbing system. Call us now or visit our website to learn more about our [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines) service.
 
 ## Clear Your Drains Today with Expert Hydro Jetting!
 
-Experience fast and effective drain clearing with our professional hydro jetting services in Santa Cruz County, California. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+Experience fast and effective drain clearing with our professional hydro jetting services in Santa Cruz County, California. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 ## Frequently Asked Questions
 

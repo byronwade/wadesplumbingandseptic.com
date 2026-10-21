@@ -64,9 +64,9 @@ Wade's Plumbing & Septic provides transparent pricing and works efficiently to m
 
 Preventing septic issues can save businesses from expensive repairs. Consider these tips:
 
-- Schedule regular [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement/).
+- Schedule regular [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement).
 - Train staff on proper disposal practices to avoid clogs.
-- Invest in [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines/) to maintain clear pipes.
+- Invest in [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines) to maintain clear pipes.
 
 ## Frequently Asked Questions
 
@@ -99,6 +99,6 @@ We are a licensed contractor in California (C-42) (state license), ensuring prof
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas/).
+For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas).
 
 Licensed Contractor: C-42 License

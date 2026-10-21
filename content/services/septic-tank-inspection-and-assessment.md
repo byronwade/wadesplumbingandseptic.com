@@ -89,7 +89,7 @@ Ensure Your System's Health
 
 Guarantee the reliability and efficiency of your septic system with our expert inspection services.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
 </
 

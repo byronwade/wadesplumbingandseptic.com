@@ -88,7 +88,7 @@ Wade's Plumbing & Septic serves the communities of Santa Cruz County, including 
 
 Recognizing early warning signs can save you from costly repairs and keep your plumbing running smoothly.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 ### Service Information
 

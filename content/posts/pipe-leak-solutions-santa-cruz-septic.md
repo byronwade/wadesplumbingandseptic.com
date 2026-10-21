@@ -64,7 +64,7 @@ Preventing pipe leaks starts with regular maintenance and inspections. Homeowner
 
 ## Maintaining Efficiency: Regular Septic System Inspections
 
-Regular inspections are vital for maintaining the efficiency of your septic system. By scheduling routine checks, you can catch potential issues before they become major problems. Wade's Plumbing & Septic offers [inspection services](/service-areas/) throughout Santa Cruz County, ensuring your system remains in optimal condition.
+Regular inspections are vital for maintaining the efficiency of your septic system. By scheduling routine checks, you can catch potential issues before they become major problems. Wade's Plumbing & Septic offers [inspection services](/service-areas) throughout Santa Cruz County, ensuring your system remains in optimal condition.
 
 ## Homeowner Options: DIY Monitoring vs. Calling a Professional
 
@@ -82,4 +82,4 @@ While some homeowners may feel comfortable performing basic checks on their sept
 
 ## Sources & Local References
 
-- [Plumbing & septic service areas overview](/service-areas/)
+- [Plumbing & septic service areas overview](/service-areas)

@@ -33,7 +33,7 @@ Understanding the root causes of clogged drains helps in prevention and timely i
 
 ## Our Drain Cleaning Process
 
-At Wade's Plumbing & Septic, we follow a thorough process to ensure effective [drain line inspection](/service-offerings/drain-line-inspection/) and cleaning:
+At Wade's Plumbing & Septic, we follow a thorough process to ensure effective [drain line inspection](/service-offerings/drain-line-inspection) and cleaning:
 
 ### Step-by-Step Execution
 
@@ -51,7 +51,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 Prevention is key to maintaining a healthy plumbing system. Here are some tips to keep your drains clear:
 
-- **Regular Maintenance:** Schedule routine [drain cleaning and maintenance](/service-offerings/commercial-plumbing-maintenance/) to prevent build-up.
+- **Regular Maintenance:** Schedule routine [drain cleaning and maintenance](/service-offerings/commercial-plumbing-maintenance) to prevent build-up.
 - **Mindful Disposal:** Avoid pouring grease down the sink and dispose of waste properly.
 - **Use Drain Guards:** Install guards to catch hair and debris in showers and sinks.
 

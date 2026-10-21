@@ -41,7 +41,7 @@ Slow drains can result from various factors, such as accumulated debris, hair, s
 
 ## The Importance of Professional Drain Cleaning
 
-Professional drain cleaning services are crucial for maintaining the health and efficiency of your plumbing system. Unlike DIY methods, which often provide only temporary relief, professional services use advanced techniques like [hydro jetting](/service-offerings/hydro-jetting/) to thoroughly clean and clear pipes. This ensures long-lasting results and prevents future issues.
+Professional drain cleaning services are crucial for maintaining the health and efficiency of your plumbing system. Unlike DIY methods, which often provide only temporary relief, professional services use advanced techniques like [hydro jetting](/service-offerings/hydro-jetting) to thoroughly clean and clear pipes. This ensures long-lasting results and prevents future issues.
 
 ## How Slow Drains Affect Your Home's Plumbing System
 
@@ -56,7 +56,7 @@ Ignoring slow drains can lead to more severe plumbing problems, such as complete
 
 ## Wade's Plumbing & Septic: Your Local Drain Cleaning Experts
 
-At Wade's Plumbing & Septic, we offer expert [drain cleaning services](/service-areas/) throughout Santa Cruz County. Our team is equipped with the latest tools and techniques to tackle any drain issue efficiently. Whether you reside in [Live Oak](/service-area/live-oak-ca-plumbing-septic-services/) or [Aptos](/service-area/aptos-ca-plumbing-septic-services/), we are your trusted local experts.
+At Wade's Plumbing & Septic, we offer expert [drain cleaning services](/service-areas) throughout Santa Cruz County. Our team is equipped with the latest tools and techniques to tackle any drain issue efficiently. Whether you reside in [Live Oak](/service-area/live-oak-ca-plumbing-septic-services) or [Aptos](/service-area/aptos-ca-plumbing-septic-services), we are your trusted local experts.
 
 ## Preventive Measures to Avoid Future Drain Issues
 
@@ -67,7 +67,7 @@ At Wade's Plumbing & Septic, we offer expert [drain cleaning services](/service-
 
 ## Customer Testimonials: Success Stories from Santa Cruz County
 
-Our satisfied customers in Santa Cruz County have experienced the benefits of our services firsthand. From swift solutions to personalized care, homeowners trust us for all their plumbing needs. Visit our [Customer Testimonials](/testimonials/) page to read more about their experiences.
+Our satisfied customers in Santa Cruz County have experienced the benefits of our services firsthand. From swift solutions to personalized care, homeowners trust us for all their plumbing needs. Visit our [Customer Testimonials](/testimonials) page to read more about their experiences.
 
 ### FAQ
 
@@ -115,4 +115,4 @@ Our team holds a C-42 contractor license for California, ensuring that all work 
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on our service areas, please visit our [main service-area overview](/service-areas/).
+For more information on our service areas, please visit our [main service-area overview](/service-areas).

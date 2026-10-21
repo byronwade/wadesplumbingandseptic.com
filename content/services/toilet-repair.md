@@ -57,10 +57,10 @@ By following these simple steps, you can extend the lifespan of your toilet and 
 ## Frequently Asked Questions
 
 - **How long does a toilet repair take?** Most minor repairs are completed within a few hours.
-- **What if my toilet keeps clogging?** Frequent clogs may indicate a larger issue, such as problems with the [drain line](/service-offerings/drain-cleaning/) or septic system.
+- **What if my toilet keeps clogging?** Frequent clogs may indicate a larger issue, such as problems with the [drain line](/service-offerings/drain-cleaning) or septic system.
 - **Can I fix a leaky toilet myself?** While some minor fixes can be DIY, it's best to consult a professional to avoid further damage.
 
-Choosing Wade's Plumbing & Septic for your toilet repair needs means choosing experience, trust, and a commitment to quality. Our licensed professionals are ready to assist homeowners in Santa Cruz County with all their plumbing concerns. Whether you're dealing with a simple leak or need a comprehensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/), we're here to help. Contact us today and let us restore your bathroom's functionality with our top-notch services.
+Choosing Wade's Plumbing & Septic for your toilet repair needs means choosing experience, trust, and a commitment to quality. Our licensed professionals are ready to assist homeowners in Santa Cruz County with all their plumbing concerns. Whether you're dealing with a simple leak or need a comprehensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement), we're here to help. Contact us today and let us restore your bathroom's functionality with our top-notch services.
 
 ## Serving Santa Cruz County, CA
 
@@ -84,7 +84,7 @@ Reliable Repair Services
 
 Ensure your bathroom fixtures operate efficiently with our trusted repair services.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 ### Trusted Septic Toilet Repair in Santa Cruz County
 

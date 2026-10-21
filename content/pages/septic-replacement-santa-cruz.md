@@ -18,7 +18,7 @@ Failing systems, failed perc tests, or aging conventional septic. Wade's deliver
 
 [Call Now · 831.225.4344](tel:8312254344)
 
-[Request A Free Estimate](/contact/)
+[Request A Free Estimate](/contact)
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -51,7 +51,7 @@ Phone calls are prioritized for fastest response and scheduling.
 
 [Call 831.225.4344](tel:8312254344)
 
-[Request a Free Estimate](/contact/)
+[Request a Free Estimate](/contact)
 
 ##### FAQ
 

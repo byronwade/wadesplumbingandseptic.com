@@ -207,17 +207,24 @@ test("llms.txt link text repeats only confirmed business facts", async () => {
 	assert.deepEqual(businessFactIssues(prose), [])
 })
 
-/** next.config redirect sources as anchored path patterns. */
+/** Configured redirects plus Next's automatic trailing-slash normalization. */
 async function redirectSources() {
 	const { default: nextConfig } = await import("../../next.config")
 	const rules = (await nextConfig.redirects?.()) ?? []
-	return rules.map((rule) => {
+	const sources = rules.map((rule) => {
 		const pattern = rule.source
 			.replace(/[.+?^${}()|[\]\\]/g, "\\$&")
 			.replace(/\/:\w+\*/g, "(?:/.*)?")
 			.replace(/:\w+/g, "[^/]+")
 		return { source: rule.source, test: new RegExp(`^${pattern}$`) }
 	})
+	if (!nextConfig.trailingSlash && !nextConfig.skipTrailingSlashRedirect) {
+		sources.push({
+			source: "Next.js trailing-slash normalization",
+			test: /^\/(?!\/).+\/$/,
+		})
+	}
+	return sources
 }
 
 test("llms.txt and llms-full.txt link only to live, indexable pages", async () => {
@@ -236,9 +243,7 @@ test("llms.txt and llms-full.txt link only to live, indexable pages", async () =
 				...body.matchAll(
 					/https:\/\/www\.wadesplumbingandseptic\.com[^\s)>\]"']*/g,
 				),
-			]
-				.map(([url]) => url.replace(/[#?].*$/, "").replace(/[.,;:]+$/, ""))
-				.map((url) => url.replace(/\/$/, "")),
+			].map(([url]) => url.replace(/[#?].*$/, "").replace(/[.,;:]+$/, "")),
 		)
 		assert.ok(links.size > 0, route)
 		const problems: string[] = []
@@ -246,7 +251,7 @@ test("llms.txt and llms-full.txt link only to live, indexable pages", async () =
 			const pathname = url.slice(siteConfig.url.length) || "/"
 			const redirect = redirects.find((rule) => rule.test.test(pathname))
 			if (redirect) problems.push(`${pathname} redirects (${redirect.source})`)
-			else if (!live.has(url) && url !== siteConfig.url)
+			else if (!live.has(url.replace(/\/$/, "")) && url !== siteConfig.url)
 				problems.push(`${pathname} is not in the sitemap`)
 		}
 		assert.deepEqual(problems, [], route)
@@ -260,9 +265,8 @@ test("Markdown internal links point at final URLs, not redirects", async () => {
 	const problems: string[] = []
 	for (const file of sourceFiles(["content"], /\.md$/)) {
 		const text = fs.readFileSync(file, "utf8")
-		for (const [, href] of text.matchAll(/\]\((\/[^)\s#?]*)/g)) {
-			const pathname = href.length > 1 ? href.replace(/\/$/, "") : href
-			const redirect = redirects.find((rule) => rule.test.test(pathname))
+		for (const [, href] of text.matchAll(/\]\((\/(?!\/)[^)\s#?]*)/g)) {
+			const redirect = redirects.find((rule) => rule.test.test(href))
 			if (redirect)
 				problems.push(`${file}: ${href} redirects (${redirect.source})`)
 		}

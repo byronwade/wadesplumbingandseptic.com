@@ -31,7 +31,7 @@ Call for filter service when you notice any of these:
 - High water alarms or effluent pump cycling more than normal
 - A recent inspection that flagged a dirty or damaged screen
 
-If several fixtures slow at once, treat it as a system issue, not a single clog. A [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment/) can confirm whether the filter, tank levels, or field is the real problem.
+If several fixtures slow at once, treat it as a system issue, not a single clog. A [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment) can confirm whether the filter, tank levels, or field is the real problem.
 
 ## Causes of Septic Filter Issues
 
@@ -74,14 +74,14 @@ Ask for a clear estimate when you call. We explain options before work begins.
 
 Small habits stretch the time between filter visits:
 
-- Schedule regular [septic tank maintenance](/service-offerings/septic-tank-maintenance-and-care/)
+- Schedule regular [septic tank maintenance](/service-offerings/septic-tank-maintenance-and-care)
 - Keep wipes, grease, and non-biodegradable trash out of toilets and sinks
 - Spread laundry and high water use across the week
 - Install and use risers so the filter is easy to reach
 - Book a filter check with every major inspection or real estate evaluation
 - Call early when drains slow house-wide instead of waiting for a backup
 
-Protecting the filter is one of the cheapest ways to protect a [leach field](/service-offerings/septic-tank-leach-field-repair-and-replacement/).
+Protecting the filter is one of the cheapest ways to protect a [leach field](/service-offerings/septic-tank-leach-field-repair-and-replacement).
 
 ## Frequently Asked Questions
 
@@ -105,7 +105,7 @@ Yes. Wade's Plumbing & Septic serves Santa Cruz County and selected Santa Clara 
 
 Protect the tank outlet and the drainfield with professional filter cleaning or replacement from a local licensed team.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 ## What Our Santa Cruz County Customers Are Saying
 

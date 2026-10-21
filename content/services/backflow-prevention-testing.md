@@ -62,7 +62,7 @@ If a device fails, our team can perform necessary repairs or replacements to res
 
 Choosing Wade's Plumbing & Septic for your backflow prevention testing needs in Santa Cruz County, California, means opting for a team of experienced, licensed professionals dedicated to protecting your water supply. We are responsive and committed to providing high-quality service to meet your needs.
 
-For more information on related services, consider exploring our [backflow prevention installation](/service-offerings/backflow-prevention-installation/) service or learn about our [drain cleaning](/service-offerings/drain-cleaning/) offerings to ensure your entire plumbing system is in top condition.
+For more information on related services, consider exploring our [backflow prevention installation](/service-offerings/backflow-prevention-installation) service or learn about our [drain cleaning](/service-offerings/drain-cleaning) offerings to ensure your entire plumbing system is in top condition.
 
 Contact Wade's Plumbing & Septic today to schedule your backflow prevention testing and ensure the safety and quality of your water supply. Our team is ready to assist you with all your plumbing and septic needs in Santa Cruz County, California.
 
@@ -76,7 +76,7 @@ Our team is fully licensed and certified
 
 Safeguard your home's drinking water with our expert backflow testing services in Santa Cruz County.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 

@@ -23,7 +23,7 @@ Recognizing the signs of pipe deterioration early can prevent significant damage
 - Low water pressure
 - Unusual noises from plumbing
 
-If you notice any of these signs, it’s crucial to seek professional [drain line inspection](/service-offerings/drain-line-inspection/) services to assess the condition of your pipes.
+If you notice any of these signs, it’s crucial to seek professional [drain line inspection](/service-offerings/drain-line-inspection) services to assess the condition of your pipes.
 
 ## Common Causes of Pipe Damage
 
@@ -35,7 +35,7 @@ Pipes can suffer damage due to various factors. Aging infrastructure, particular
 
 Our approach to pipe repair and replacement is thorough and streamlined. We begin with a detailed inspection to identify the extent of the damage. Depending on the findings, we may recommend targeted repairs or a complete repiping. Our technicians use state-of-the-art equipment to ensure precision and efficiency, minimizing disruption to your daily routine.
 
-We also offer related services like [drain cleaning](/service-offerings/drain-cleaning/) and [fixture installation](/service-offerings/fixture-installation/) to complement our pipe services, providing a comprehensive solution to all your plumbing needs.
+We also offer related services like [drain cleaning](/service-offerings/drain-cleaning) and [fixture installation](/service-offerings/fixture-installation) to complement our pipe services, providing a comprehensive solution to all your plumbing needs.
 
 ## Factors Affecting Pipe Repair Costs
 
@@ -82,7 +82,7 @@ Our team is fully licensed and insured, holding a C-42 license for California. W
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more information on our service areas, visit our [service area overview](/service-areas/).
+For more information on our service areas, visit our [service area overview](/service-areas).
 
 Swift and Reliable Solutions
 

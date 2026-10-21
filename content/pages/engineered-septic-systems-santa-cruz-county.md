@@ -49,7 +49,7 @@ Serving Santa Cruz County. Phone calls are prioritized for fastest response.
 
 If you cannot call immediately, use the contact form and include your city, issue type, and best callback time.
 
-[Go To Contact Form](/contact/)
+[Go To Contact Form](/contact)
 
 ## Frequently Asked Questions
 

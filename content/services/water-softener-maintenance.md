@@ -51,7 +51,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Water Softener Problems
 
-Preventative measures can prolong the life of your water softener. Regular maintenance, using high-quality salt, and ensuring proper system settings can make a significant difference. For more complex issues, our experts are equipped to handle [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement/) if needed.
+Preventative measures can prolong the life of your water softener. Regular maintenance, using high-quality salt, and ensuring proper system settings can make a significant difference. For more complex issues, our experts are equipped to handle [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) if needed.
 
 ## FAQs About Water Softener Maintenance
 
@@ -59,7 +59,7 @@ Preventative measures can prolong the life of your water softener. Regular maint
 
 **Can I perform maintenance myself?** While some basic tasks can be DIY, professional maintenance ensures a thorough check and avoids potential damage.
 
-**What if my water still feels hard?** There could be other plumbing issues. Consider our [leak detection service](/service-offerings/leak-detection/) to rule out other problems.
+**What if my water still feels hard?** There could be other plumbing issues. Consider our [leak detection service](/service-offerings/leak-detection) to rule out other problems.
 
 Choose Wade's Plumbing & Septic for your water softener maintenance needs in Santa Cruz County, California. Our experienced and licensed team is dedicated to providing responsive and reliable service. Contact us today to schedule your maintenance, ensuring your system operates efficiently and effectively. Trust us to keep your water softener in top condition, supporting a smooth and hassle-free plumbing system.
 
@@ -69,7 +69,7 @@ Maintain Your System's Efficiency
 
 Ensure your water treatment system operates at peak performance with our expert maintenance services in Santa Cruz County.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact/)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42 for California
 

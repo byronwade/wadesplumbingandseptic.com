@@ -56,7 +56,7 @@ To extend the life of your garbage disposal, follow these tips:
 - Run cold water while using the disposal.
 - Regularly clean with baking soda and vinegar.
 
-For more extensive maintenance needs, consider our [drain cleaning services](/service-offerings/drain-cleaning/) to keep your plumbing system in top shape.
+For more extensive maintenance needs, consider our [drain cleaning services](/service-offerings/drain-cleaning) to keep your plumbing system in top shape.
 
 ## Frequently Asked Questions
 
@@ -82,7 +82,7 @@ Contractor License: C-42 license for California
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-For more details on our service areas, visit our [main service-area overview](/service-areas/).
+For more details on our service areas, visit our [main service-area overview](/service-areas).
 
 Upgrade Your Kitchen Efficiency
 
