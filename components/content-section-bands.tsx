@@ -23,11 +23,16 @@ function extractBulletItems(body: string) {
 	return items
 }
 
-function classifyBand(heading: string, body: string): BandKind {
-	if (
-		/\bfaqs?\b|frequently asked/i.test(heading) ||
-		extractFaqPairs(body).length >= 2
-	) {
+/**
+ * Only real questions become an accordion. Step lists and descriptive
+ * subsections ("What We Help With", "Initial Assessment") stay as prose so
+ * their lists render as lists instead of a flattened "- a - b" answer.
+ */
+export function classifyBand(heading: string, body: string): BandKind {
+	const questions = extractFaqPairs(body).filter((pair) =>
+		pair.question.trim().endsWith("?"),
+	)
+	if (/\bfaqs?\b|frequently asked/i.test(heading) || questions.length >= 2) {
 		return "faq"
 	}
 

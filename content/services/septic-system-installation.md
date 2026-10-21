@@ -56,8 +56,8 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## FAQs About Septic System Installation
 
-- **What is the difference between conventional and engineered septic systems?** \- Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
-- **How can I maintain my septic tank?** \- Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services for expert assistance.
+- **What is the difference between conventional and engineered septic systems?** Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
+- **How can I maintain my septic tank?** Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care/) services for expert assistance.
 
 For professional, reliable septic system installation in Santa Cruz County, trust Wade's Plumbing & Septic. Our team is here to guide you through every step, ensuring a seamless experience and a system that serves your home efficiently for years to come. **Contact us today** to schedule your consultation and take the first step toward a worry-free septic solution.
 

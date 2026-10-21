@@ -51,9 +51,9 @@ Flat-rate pricing, quoted on site before work begins.
 
 ## Frequently Asked Questions About Septic Tank Maintenance
 
-- **How often should I schedule septic tank maintenance?** \- Generally, every 3-5 years, but frequency may vary based on system usage and size.
-- **What are the benefits of regular septic maintenance?** \- It prevents system failures, extends system life, and ensures regulatory compliance.
-- **Can I perform maintenance myself?** \- While basic tasks can be done by homeowners, professional maintenance is recommended for thoroughness and safety.
+- **How often should I schedule septic tank maintenance?** Generally, every 3-5 years, but frequency may vary based on system usage and size.
+- **What are the benefits of regular septic maintenance?** It prevents system failures, extends system life, and ensures regulatory compliance.
+- **Can I perform maintenance myself?** While basic tasks can be done by homeowners, professional maintenance is recommended for thoroughness and safety.
 
 Regular septic tank maintenance is vital for the health and functionality of your system. Trust Wade's Plumbing & Septic to provide expert care and guidance. To learn more about how to maintain your septic tank, visit our [How to Maintain Your Septic Tank for Long-Term Performance](/how-to-maintain-your-septic-tank-for-long-term-performance/).
 

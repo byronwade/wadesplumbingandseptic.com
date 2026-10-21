@@ -89,7 +89,8 @@ for (const collection of COLLECTIONS) {
 		}
 
 		// Spaced hyphen asides ("word - word"), excluding markdown list markers.
-		if (/(?<=\S) - (?=\S)/.test(source)) {
+		// An escaped "\-" renders the same hyphen, so it counts too.
+		if (/(?<=\S) \\?- (?=\S)/.test(source)) {
 			errors.push(
 				`${file}: spaced hyphen aside (" - ") is not allowed; use parentheses, a comma, a colon, or a new sentence`,
 			)
