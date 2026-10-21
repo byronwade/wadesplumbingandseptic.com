@@ -1,8 +1,8 @@
 ---
 title: Prevent Holiday Plumbing Issues in Santa Cruz County Homes
 description: >-
-  The holiday season is one of the busiest times of the year, and the last thing
-  you need during family gatherings, dinner parties, or overnight guests is a.
+  The last thing you need during holiday gatherings or overnight guests is a
+  plumbing problem. Here is how to prepare your plumbing for a full house.
 category: Plumbing Tips
 date: "2025-12-17"
 tags:

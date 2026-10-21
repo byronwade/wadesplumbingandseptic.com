@@ -1,8 +1,9 @@
 ---
 title: Efficient Septic Solutions for Santa Cruz County Homes
 description: >-
-  Santa Cruz County's unique geography presents both beautiful landscapes and
-  challenges for homeowners, particularly when it comes to maintaining septic.
+  Santa Cruz County's varied terrain and proximity to the coast can
+  significantly impact how septic systems function. Here is what homeowners
+  should know.
 category: Plumbing Tips
 date: "2026-04-11"
 tags:

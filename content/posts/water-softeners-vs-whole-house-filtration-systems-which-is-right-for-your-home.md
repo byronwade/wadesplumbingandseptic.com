@@ -1,8 +1,9 @@
 ---
 title: Choose the Best Home Water System in Santa Cruz County
 description: >-
-  If your tap water smells off, tastes strange, or leaves behind stains, it may
-  be time to install a filtration solution. In Santa Cruz County, hard water.
+  If your tap water smells off, tastes strange, or leaves stains, compare
+  whole-house filtration and water softeners to find the right fit for your
+  home.
 category: Plumbing Tips
 date: "2025-07-01"
 tags:

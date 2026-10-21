@@ -2,7 +2,7 @@
 title: Understanding Septic System Types for Santa Cruz Homes
 description: >-
   Understanding the different septic system types available for Santa Cruz homes
-  is essential for choosing the right solution for your property. With.
+  is essential for choosing the right solution for your property.
 category: Plumbing Tips
 date: "2026-04-09"
 tags:

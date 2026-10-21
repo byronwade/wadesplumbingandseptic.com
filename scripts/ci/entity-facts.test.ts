@@ -200,6 +200,55 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 	assert.deepEqual(businessFactIssues(body), [])
 })
 
+test("llms.txt link text repeats only confirmed business facts", async () => {
+	const body = await routeText("../../app/llms.txt/route")
+	// Slugs such as ".../a-weekend-diy-project" are addresses, not claims.
+	const prose = body.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, "")
+	assert.deepEqual(businessFactIssues(prose), [])
+})
+
+/** next.config redirect sources as anchored path patterns. */
+async function redirectSources() {
+	const { default: nextConfig } = await import("../../next.config")
+	const rules = (await nextConfig.redirects?.()) ?? []
+	return rules.map((rule) => {
+		const pattern = rule.source
+			.replace(/[.+?^${}()|[\]\\]/g, "\\$&")
+			.replace(/\/:\w+\*/g, "(?:/.*)?")
+			.replace(/:\w+/g, "[^/]+")
+		return { source: rule.source, test: new RegExp(`^${pattern}$`) }
+	})
+}
+
+test("llms.txt and llms-full.txt link only to live, indexable pages", async () => {
+	const { buildSitemapEntries } = await import("../../lib/sitemap")
+	const live = new Set(
+		(await buildSitemapEntries()).map((entry) => entry.url.replace(/\/$/, "")),
+	)
+	for (const file of ["llms.txt", LLMS_FULL_PATH.slice(1)])
+		live.add(`${siteConfig.url}/${file}`)
+	const redirects = await redirectSources()
+
+	for (const route of ["llms.txt", "llms-full.txt"]) {
+		const body = await routeText(`../../app/${route}/route`)
+		const links = new Set(
+			[...body.matchAll(/https:\/\/www\.wadesplumbingandseptic\.com[^\s)>\]"']*/g)]
+				.map(([url]) => url.replace(/[#?].*$/, "").replace(/[.,;:]+$/, ""))
+				.map((url) => url.replace(/\/$/, "")),
+		)
+		assert.ok(links.size > 0, route)
+		const problems: string[] = []
+		for (const url of links) {
+			const pathname = url.slice(siteConfig.url.length) || "/"
+			const redirect = redirects.find((rule) => rule.test.test(pathname))
+			if (redirect) problems.push(`${pathname} redirects (${redirect.source})`)
+			else if (!live.has(url) && url !== siteConfig.url)
+				problems.push(`${pathname} is not in the sitemap`)
+		}
+		assert.deepEqual(problems, [], route)
+	}
+})
+
 test("robots.txt welcomes search and AI crawlers with the same private paths blocked", async () => {
 	const { default: robots } = await import("../../app/robots")
 	const config = robots()

@@ -1,9 +1,9 @@
 ---
 title: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 description: >-
-  When you turn on the tap, you probably aren’t thinking about what’s in your
-  water, just that it’s flowing. But beyond the basics of hydration and
-  hygiene,.
+  Water high in calcium and magnesium is known as hard water, and it can
+  silently damage your plumbing and appliances. Here is why water quality
+  matters.
 category: Plumbing Tips
 date: "2025-07-29"
 tags:

@@ -1,9 +1,8 @@
 ---
 title: Maximize Septic Tank Lifespan in Santa Cruz County Homes
 description: >-
-  Your septic tank is one of the most critical components of your home’s
-  plumbing system. When maintained properly, it works quietly in the
-  background,.
+  Your septic tank is a critical part of your home’s plumbing. Maintained
+  properly, it safely processes waste and protects your property from backups.
 category: Plumbing Tips
 date: "2025-08-12"
 tags:

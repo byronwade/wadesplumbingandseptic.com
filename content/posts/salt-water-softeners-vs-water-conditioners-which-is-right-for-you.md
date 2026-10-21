@@ -1,9 +1,8 @@
 ---
 title: Choose the Best Water Softener for Your Santa Cruz Home
 description: >-
-  When it comes to water softening systems, homeowners have two main options:
-  salt-based water softeners and saltless water softeners. Both types of
-  systems.
+  Homeowners have two main water softening options: salt-based and saltless
+  softeners. Both have pros and cons worth understanding before you decide.
 category: Plumbing Tips
 date: "2025-05-11"
 tags:

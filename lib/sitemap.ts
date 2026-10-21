@@ -271,6 +271,11 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 	// Tag archives are noindex browsing aids, so none belong in the sitemap.
 
 	upsertEntry(entries, {
+		pathname: "/glossary",
+		priority: 0.8,
+		changeFrequency: "monthly",
+	})
+	upsertEntry(entries, {
 		pathname: "/glossary/plumbing",
 		priority: 0.72,
 		changeFrequency: "monthly",

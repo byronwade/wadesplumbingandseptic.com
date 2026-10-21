@@ -1,8 +1,8 @@
 ---
 title: Boost Shower Pressure in Santa Cruz County Homes
 description: >-
-  We recently helped a homeowner in Santa Cruz, CA who was dealing with an
-  unpredictable shower, fluctuating temperatures, inconsistent pressure, and a.
+  A Santa Cruz homeowner had unpredictable shower temperatures and pressure. The
+  cause was a faulty shower valve, and replacing it fixed the shower.
 category: Plumbing Tips
 date: "2025-08-05"
 tags:
