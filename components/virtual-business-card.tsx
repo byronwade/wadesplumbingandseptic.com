@@ -31,7 +31,7 @@ export function VirtualBusinessCard({
 		<section
 			aria-labelledby={`${id}-title`}
 			className={cn(
-				"overflow-hidden",
+				"min-w-0 overflow-hidden [overflow-wrap:anywhere]",
 				dark
 					? "rounded-xl border border-white/10 bg-white/[0.04]"
 					: "border-border bg-card rounded-xl border shadow-[var(--shadow-panel)]",
@@ -39,9 +39,9 @@ export function VirtualBusinessCard({
 			)}
 			id={id}
 		>
-			<div className="flex flex-col sm:flex-row sm:items-stretch">
-				<div className="flex min-w-0 flex-1 flex-col gap-5 p-5 sm:gap-6 sm:p-7">
-					<div className="flex items-center gap-3.5">
+			<div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-stretch">
+				<div className="flex min-w-0 flex-1 flex-col gap-5 p-5 px-[min(1.25rem,24px)] sm:basis-64 sm:gap-6 sm:p-7 sm:px-[min(1.75rem,32px)]">
+					<div className="flex flex-wrap items-center gap-3.5">
 						<Image
 							alt="Wade's Plumbing & Septic logo"
 							className="size-12 shrink-0 rounded-md sm:size-14"
@@ -49,7 +49,7 @@ export function VirtualBusinessCard({
 							src="/images/brand/wades-mark-sm.webp"
 							width={56}
 						/>
-						<div className="min-w-0">
+						<div className="min-w-0 flex-1 basis-32">
 							<p
 								className={cn(
 									"font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase",
@@ -142,7 +142,7 @@ export function VirtualBusinessCard({
 						</div>
 					</div>
 
-					<div className="grid gap-2 sm:hidden">
+					<div className="grid min-w-0 grid-cols-[minmax(0,1fr)] gap-2 sm:hidden">
 						<CallButton
 							className="w-full"
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -152,7 +152,7 @@ export function VirtualBusinessCard({
 						<ProtectedContactLink
 							ariaLabel={`Email us at ${contactInfo.email}`}
 							className={cn(
-								buttonVariants({ variant: "outline", size: "lg" }),
+								buttonVariants({ variant: "outline", size: "lg", wrap: true }),
 								"w-full",
 								dark ? "border-white/20 text-white" : undefined,
 							)}
@@ -179,7 +179,7 @@ export function VirtualBusinessCard({
 
 				<div
 					className={cn(
-						"hidden shrink-0 flex-col justify-center gap-3 border-t p-5 sm:flex sm:w-64 sm:border-t-0 sm:border-l sm:p-7",
+						"hidden max-w-full min-w-0 shrink-0 flex-col justify-center gap-3 border-t p-5 sm:flex sm:w-64 sm:border-t-0 sm:border-l sm:p-7",
 						dark ? "border-white/10" : "border-border",
 					)}
 				>

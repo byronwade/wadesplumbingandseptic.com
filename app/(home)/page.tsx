@@ -67,7 +67,7 @@ export default function HomePage() {
 							quoted on site before work begins.
 						</p>
 
-						<div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
+						<div className="flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
 							<CallButton
 								className="w-full sm:w-auto"
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}

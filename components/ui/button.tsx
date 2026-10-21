@@ -37,15 +37,24 @@ export const buttonVariants = cva(
 			 * columns and with enlarged text. Each size's height becomes a floor.
 			 */
 			wrap: {
-				true: "h-auto py-2 text-center whitespace-normal",
+				true: "h-auto min-w-0 max-w-full py-2 text-center whitespace-normal [overflow-wrap:anywhere]",
 				false: "",
 			},
 		},
 		compoundVariants: [
 			{ wrap: true, size: "default", class: "min-h-11" },
 			{ wrap: true, size: "sm", class: "min-h-9" },
-			{ wrap: true, size: "lg", class: "min-h-12" },
-			{ wrap: true, size: "xl", class: "min-h-14" },
+			// Keep enlarged padding from leaving only a few letters per line.
+			{
+				wrap: true,
+				size: "lg",
+				class: "min-h-12 px-[min(1.5rem,32px)]",
+			},
+			{
+				wrap: true,
+				size: "xl",
+				class: "min-h-14 px-[min(1.75rem,32px)]",
+			},
 		],
 		defaultVariants: {
 			variant: "default",

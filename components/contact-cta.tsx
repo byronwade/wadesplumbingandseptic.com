@@ -23,11 +23,10 @@ export function ContactCta({
 	showCall?: boolean
 }) {
 	/*
-	 * Two shapes, one component. The banner is a grid rather than a
-	 * justify-between flex row: as a flex row the copy column absorbed all the
-	 * shrinkage against the shrink-0 button group and collapsed to its longest
-	 * word. The compact shape stays stacked at every width - it lives in a
-	 * 20.5rem sidebar, where side-by-side xl buttons overflowed the card.
+	 * Give banner copy a text-sized basis and wrap whole columns before they
+	 * compete for space. Actions also wrap within their available width.
+	 * Compact sidebars stay stacked at every width because they have less
+	 * room than a page-wide banner.
 	 *
 	 * Compact sidebars omit the Call button by default: content/service pages
 	 * already offer Call in the hero and again in the end conversion band, and
@@ -46,12 +45,17 @@ export function ContactCta({
 		>
 			<div
 				className={cn(
-					"relative",
+					"relative min-w-0",
 					!compact &&
-						"container-shell grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12",
+						"container-shell flex flex-wrap items-center justify-between gap-8 md:gap-12",
 				)}
 			>
-				<div className={cn("section-head min-w-0", !compact && "max-w-2xl")}>
+				<div
+					className={cn(
+						"section-head min-w-0 [overflow-wrap:anywhere]",
+						!compact && "max-w-2xl flex-1 basis-96",
+					)}
+				>
 					<p className="spec-label">Wade&apos;s Plumbing &amp; Septic</p>
 					<h2 className={compact ? "type-subtitle" : "type-title"}>{title}</h2>
 					<p
@@ -72,13 +76,13 @@ export function ContactCta({
 						</ProtectedContactLink>
 					) : (
 						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
-							<span className="inline-flex items-center gap-2">
+							<span className="inline-flex min-w-0 items-center gap-2">
 								<Clock className="text-primary-bright size-4 shrink-0" />
 								{contactInfo.hours}
 							</span>
-							<span className="inline-flex items-center gap-2">
+							<span className="inline-flex min-w-0 items-center gap-2">
 								<Mail className="text-primary-bright size-4 shrink-0" />
-								<ProtectedEmailText className="transition-colors hover:text-white" />
+								<ProtectedEmailText className="break-all transition-colors hover:text-white" />
 							</span>
 						</div>
 					)}
@@ -86,8 +90,8 @@ export function ContactCta({
 
 				<div
 					className={cn(
-						"flex flex-col items-stretch gap-3",
-						compact ? "mt-5" : "sm:flex-row sm:items-center md:shrink-0",
+						"flex w-full max-w-full min-w-0 flex-col flex-wrap items-stretch gap-3",
+						compact ? "mt-5" : "sm:w-auto sm:flex-row sm:items-center",
 					)}
 				>
 					{includeCall ? (

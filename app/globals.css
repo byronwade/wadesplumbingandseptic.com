@@ -427,6 +427,7 @@
 	.section-head-row {
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 		gap: var(--space-stack);
 		align-items: flex-start;
 	}
