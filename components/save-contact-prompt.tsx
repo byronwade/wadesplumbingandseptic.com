@@ -29,6 +29,12 @@ export function SaveContactPrompt({
 				className="bg-card max-h-dvh gap-0 overflow-y-auto rounded-t-2xl sm:mx-auto sm:max-w-md sm:rounded-t-2xl"
 				side="bottom"
 				onCloseAutoFocus={onCloseAutoFocus}
+				onFocusCapture={(event) => {
+					// Radix wraps focus without scrolling clipped controls into view.
+					if (event.target instanceof HTMLElement) {
+						event.target.scrollIntoView({ block: "nearest", inline: "nearest" })
+					}
+				}}
 			>
 				<SheetHeader className="pb-2">
 					<SheetTitle>Ready to call?</SheetTitle>
