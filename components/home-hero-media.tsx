@@ -59,7 +59,11 @@ export function HomeHeroMedia() {
 				srcSet={portrait}
 				alt={common.alt}
 				className="absolute inset-0 size-full object-cover object-[50%_62%]"
-				decoding="async"
+				/*
+				  Sync decode: async decoding left the LCP image loaded but unpainted
+				  for ~2s under mobile Lighthouse (element render delay).
+				*/
+				decoding="sync"
 				fetchPriority="high"
 				loading="eager"
 			/>

@@ -45,29 +45,31 @@ export default function HomePage() {
 
 				{/* Top line: where we are, and the scroll cue's counterpart. */}
 				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
-					<p className="spec-label motion-fade text-primary-bright">
-						Santa Cruz County, CA
-					</p>
-					<p className="text-on-dark-subtle motion-fade hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
+					<p className="spec-label text-primary-bright">Santa Cruz County, CA</p>
+					<p className="text-on-dark-subtle hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
 						Est. family owned
 					</p>
 				</div>
 
 				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
-					<h1 className="type-cinematic motion-rise text-white">
+					{/*
+					  Title and lead paint immediately. Entrance motion on first-screen
+					  copy delayed LCP under mobile Lighthouse (~2s element render delay).
+					*/}
+					<h1 className="type-cinematic text-white">
 						Santa Cruz plumbing
 						<br />
 						<span className="text-primary-bright">and septic</span>
 					</h1>
 
-					<div className="motion-rise motion-delay-1 mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+					<div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
 							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
 							upselling, and local licensed professionals. Flat-rate pricing,
 							quoted on site before work begins.
 						</p>
 
-						<div className="flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
+						<div className="motion-rise flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
 							<CallButton
 								className="w-full sm:w-auto"
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}

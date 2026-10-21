@@ -177,29 +177,28 @@ export function ContentHero({
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="section-head">
 						{eyebrow ? (
-							<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+							<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 								{eyebrow}
 							</p>
 						) : null}
-						<h1 className="type-headline motion-rise text-foreground">
-							{title}
-						</h1>
-						<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
-							{description}
-						</p>
+						{/*
+						  No entrance motion on title/lead: they are common LCP nodes.
+						  motion-rise with fill-mode both delayed first paint by ~2s.
+						*/}
+						<h1 className="type-headline text-foreground">{title}</h1>
+						<p className="type-lead text-muted-foreground">{description}</p>
 					</div>
 					{meta ? (
-						<div className="motion-fade motion-delay-2 text-muted-foreground mt-6">
-							{meta}
-						</div>
+						<div className="text-muted-foreground mt-6">{meta}</div>
 					) : null}
 
 					{image ? (
-						<figure className="hero-article-media motion-rise motion-delay-2 mt-8 sm:mt-10">
+						<figure className="hero-article-media mt-8 sm:mt-10">
 							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[2/1]">
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={75}
@@ -224,19 +223,15 @@ export function ContentHero({
 					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
 						<div className="section-head max-w-2xl min-w-0">
 							{eyebrow ? (
-								<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+								<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 									{eyebrow}
 								</p>
 							) : null}
-							<h1 className="type-headline motion-rise text-foreground">
-								{title}
-							</h1>
-							<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
-								{description}
-							</p>
+							<h1 className="type-headline text-foreground">{title}</h1>
+							<p className="type-lead text-muted-foreground">{description}</p>
 						</div>
 						{actions ? (
-							<div className="motion-rise motion-delay-2 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+							<div className="motion-rise motion-delay-1 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -262,11 +257,12 @@ export function ContentHero({
 					</div>
 
 					{image ? (
-						<div className="hero-service-media motion-fade mt-8 sm:mt-10">
+						<div className="hero-service-media mt-8 sm:mt-10">
 							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[21/9] lg:aspect-[2.4/1]">
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={70}
@@ -307,22 +303,21 @@ export function ContentHero({
 					>
 						<div className="section-head max-w-2xl">
 							{eyebrow ? (
-								<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+								<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 									{eyebrow}
 								</p>
 							) : null}
-							<h1 className="type-headline motion-rise text-foreground">
-								{title}
-							</h1>
-							<p className="type-lead motion-rise motion-delay-1 text-muted-foreground max-w-xl">
+							<h1 className="type-headline text-foreground">{title}</h1>
+							<p className="type-lead text-muted-foreground max-w-xl">
 								{description}
 							</p>
 						</div>
 						{image ? (
-							<div className="motion-rise motion-delay-2 relative hidden aspect-[4/3] overflow-hidden rounded-md lg:block">
+							<div className="relative hidden aspect-[4/3] overflow-hidden rounded-md lg:block">
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
+									decoding="sync"
 									fill
 									priority
 									quality={65}
@@ -350,6 +345,7 @@ export function ContentHero({
 					<Image
 						alt=""
 						className="object-cover"
+						decoding="sync"
 						fill
 						priority
 						quality={50}
@@ -369,17 +365,15 @@ export function ContentHero({
 				<BreadcrumbTrail items={trail} tone="light" />
 				<div className="section-head max-w-2xl">
 					{eyebrow ? (
-						<p className="motion-fade text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+						<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 							{eyebrow}
 						</p>
 					) : null}
-					<h1 className="type-headline motion-rise text-foreground">{title}</h1>
-					<p className="type-lead motion-rise motion-delay-1 text-muted-foreground">
-						{description}
-					</p>
+					<h1 className="type-headline text-foreground">{title}</h1>
+					<p className="type-lead text-muted-foreground">{description}</p>
 				</div>
 				{actions ? (
-					<div className="motion-rise motion-delay-2 mt-8">
+					<div className="motion-rise motion-delay-1 mt-8">
 						{pageCta === "call" ? (
 							<CallButton
 								className="w-full sm:w-auto"
