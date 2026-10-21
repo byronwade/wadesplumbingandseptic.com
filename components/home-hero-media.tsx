@@ -5,8 +5,8 @@ import { getImageProps } from "next/image"
  * and portrait on a phone, so the two orientations get different photographs
  * rather than one image cropped badly at both ends.
  *
- * Desktop is the blue-hour rough-in: 1280px wide against a 1440px band, so it
- * upscales ~1.1x and stays sharp. The old pairing had this backwards, serving a
+ * Desktop is the blue-hour rough-in: 1200px wide against a 1440px band, so it
+ * upscales ~1.2x and stays sharp. The old pairing had this backwards, serving a
  * 768x1024 portrait to desktop (a 1.9x upscale) and a 640x400 landscape to
  * phones.
  *
@@ -30,9 +30,9 @@ export function HomeHeroMedia() {
 		props: { srcSet: desktopSrcSet, src: desktopSrc },
 	} = getImageProps({
 		...common,
-		width: 1280,
-		height: 961,
-		quality: 62,
+		width: 1200,
+		height: 900,
+		quality: 52,
 		src: "/images/team/byron-working.webp",
 	})
 
