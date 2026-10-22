@@ -582,7 +582,9 @@
 		min-width: 0;
 		overflow-wrap: anywhere;
 		padding: var(--space-card);
-		padding-inline: min(var(--space-card), 24px);
+		/* At 320px and normal text, keep the 24px cap. With enlarged text,
+		   reclaim up to 12px per side without reducing the chosen font size. */
+		padding-inline: min(var(--space-card), clamp(12px, 100vw - 18rem, 24px));
 	}
 
 	.panel-grid {
