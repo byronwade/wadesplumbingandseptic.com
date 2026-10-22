@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowLeft, Phone } from "@/components/icons"
 
+import { CallLabel } from "@/components/call-label"
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -8,7 +9,7 @@ import { cn } from "@/lib/utils"
 export default function NotFound() {
 	return (
 		<main className="surface-hero tex-grid" id="main-content">
-			<div className="container-shell grid min-h-[60vh] place-items-center py-[var(--space-section-y)]">
+			<div className="container-shell grid min-h-[60vh] grid-cols-1 place-items-center py-[var(--space-section-y)]">
 				<div className="section-head max-w-xl text-center">
 					<p className="spec-label spec-label-center">Error 404</p>
 					<h1 className="type-headline text-white">
@@ -21,7 +22,10 @@ export default function NotFound() {
 					<div className="flex flex-col justify-center gap-3 pt-3 sm:flex-row">
 						<Link
 							prefetch={false}
-							className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto")}
+							className={cn(
+								buttonVariants({ size: "lg", wrap: true }),
+								"w-full sm:w-auto",
+							)}
 							href="/"
 						>
 							<ArrowLeft aria-hidden="true" />
@@ -29,13 +33,15 @@ export default function NotFound() {
 						</Link>
 						<a
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
+								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
 								"w-full sm:w-auto",
 							)}
 							href={siteConfig.phoneHref}
 						>
-							<Phone aria-hidden="true" />
-							{siteConfig.phone}
+							<CallLabel
+								icon={<Phone aria-hidden="true" />}
+								label={siteConfig.phone}
+							/>
 						</a>
 					</div>
 				</div>

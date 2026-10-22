@@ -44,16 +44,19 @@ export const buttonVariants = cva(
 		compoundVariants: [
 			{ wrap: true, size: "default", class: "min-h-11" },
 			{ wrap: true, size: "sm", class: "min-h-9" },
-			// Keep enlarged padding from leaving only a few letters per line.
+			// Keep enlarged padding from leaving only a few letters per line. The
+			// `100vw - 18rem` term only wins when the screen is under about 20rem
+			// wide (enlarged text on a phone), leaving room for the phone number
+			// on one line. At normal text size it is inactive from 316px up.
 			{
 				wrap: true,
 				size: "lg",
-				class: "min-h-12 px-[min(1.5rem,32px)]",
+				class: "min-h-12 px-[min(1.5rem,32px,max(0.5rem,100vw_-_18rem))]",
 			},
 			{
 				wrap: true,
 				size: "xl",
-				class: "min-h-14 px-[min(1.75rem,32px)]",
+				class: "min-h-14 px-[min(1.75rem,32px,max(0.5rem,100vw_-_18rem))]",
 			},
 		],
 		defaultVariants: {

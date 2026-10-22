@@ -1,3 +1,4 @@
+import { CallLabel } from "@/components/call-label"
 import { Phone } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
@@ -21,14 +22,14 @@ export function MobileCallBar() {
 				<a
 					className={cn(
 						buttonVariants({ size: "lg" }),
-						"dark:bg-primary-bright dark:text-ink dark:hover:bg-primary-bright/90 h-auto min-h-12 flex-wrap px-4 py-3 whitespace-normal @max-[20rem]:py-2",
+						"dark:bg-primary-bright dark:text-ink dark:hover:bg-primary-bright/90 h-auto min-h-12 px-4 py-3 whitespace-normal @max-[20rem]:px-2 @max-[20rem]:py-2",
 					)}
 					href={siteConfig.phoneHref}
 				>
-					<Phone aria-hidden="true" className="@max-[20rem]:hidden" />
-					<span className="min-w-0 [overflow-wrap:anywhere]">
-						Call {siteConfig.phone}
-					</span>
+					<CallLabel
+						className="[overflow-wrap:anywhere]"
+						icon={<Phone aria-hidden="true" className="@max-[20rem]:hidden" />}
+					/>
 				</a>
 				<p className="text-muted-foreground text-center text-xs leading-4 @max-[20rem]:sr-only">
 					{siteConfig.hours}
