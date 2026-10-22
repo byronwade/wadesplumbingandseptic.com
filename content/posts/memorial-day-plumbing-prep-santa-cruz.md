@@ -105,7 +105,6 @@ Prepare your Capitola home for Memorial Day with a professional plumbing and sep
 
 - [Expert Tips](/expert-tips)
 - [Reference from wadesplumbingandseptic.com](/service-areas)
-- [Reference from news.google.com](https://news.google.com/rss/articles/CBMi-AFBVV95cUxNaXRNemZMUXdxZ2hjeFgzR2lhbFRiYTBoNUd4TTZUWi0yTzJralV1T2xnZ0dhQVZWYndwbEhWeXN6SWZFbzBWRmpoZmdlX2p3TFdYUUNzQjAtTXVwNHRMNEdSWnBDZUM4Snp5aG9sall4dWs4SUhRT0VOVlRDdzhFa1NiMUxIUlVMM1F1SWdoYkdhZ0c1NFlYOTFNZVVEVVBxcDJ4emVIM2lxWDZqd3czYlY2NFZyaGstQWNQdGRTOGV1QXkzZnRQRk5HOHlTeGh0LWdVVDJ5a21FU2xobmJDX2UyekhOdVFLQTV3YkJ)
 
 ## Seasonal Tip
 

@@ -95,14 +95,12 @@ Choosing a trusted local service provider for your septic system needs ensures q
 ## Sources & Local References
 
 - [Impact of 2020 Santa Cruz Mountains Fire on Local Infrastructure](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmN4el9xUkM4LTVPa0tiQ1pQbF9ad3BVaHRHT0FwNUpraU4zTWkydV82UF84QXk2ZVc4ZHdlNnZEVTRaRW9TZFE4XzV4ZWFnRlV3cko1MWhHT21aZzFmbDdvVjRSQ1ZKYWtnVUFzVFhyd21Ld0tybHo3WGc3eFZCMlVTeXU5SnVZV1RGSkJ4NldRTFl1LW1ud3hNbmJ1S0FIYmpz?oc=5)
-- [Post-Fire Septic System Recovery in Santa Cruz County](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEp)
 
 Contact Wade's Plumbing & Septic for expert advice and reliable septic system repair services in Santa Cruz County.
 
 ## Sources & Local References
 
 - [Residents Struggle to Recover from 2020 Santa Cruz Mountains Fire, govtech.com](https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmN4el9xUkM4LTVPa0tiQ1pQbF9ad3BVaHRHT0FwNUpraU4zTWkydV82UF84QXk2ZVc4ZHdlNnZEVTRaRW9TZFE4XzV4ZWFnRlV3cko1MWhHT21aZzFmbDdvVjRSQ1ZKYWtnVUFzVFhyd21Ld0tybHo3WGc3eFZCMlVTeXU5SnVZV1RGSkJ4NldRTFl1LW1ud3hNbmJ1S0FIYmpz?oc=5)
-- [Reference from news.google.com](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEp)
 
 ## Seasonal Tip
 

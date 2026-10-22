@@ -1,0 +1,46 @@
+{
+	"schema_version": 1,
+	"scope": "Manual removal of four unresolved article citations; no replacement or claim inferred",
+	"sources": [
+		{
+			"file": "content\\posts\\memorial-day-plumbing-prep-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNaXRNemZMUXdxZ2hjeFgzR2lhbFRiYTBoNUd4TTZUWi0yTzJralV1T2xnZ0dhQVZWYndwbEhWeXN6SWZFbzBWRmpoZmdlX2p3TFdYUUNzQjAtTXVwNHRMNEdSWnBDZUM4Snp5aG9sall4dWs4SUhRT0VOVlRDdzhFa1NiMUxIUlVMM1F1SWdoYkdhZ0c1NFlYOTFNZVVEVVBxcDJ4emVIM2lxWDZqd3czYlY2NFZyaGstQWNQdGRTOGV1QXkzZnRQRk5HOHlTeGh0LWdVVDJ5a21FU2xobmJDX2UyekhOdVFLQTV3YkJ",
+			"accessed_at": "2026-10-22T17:41:52.842402+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 400,
+			"sha256": "4679c31515d778544bf94d46d11cb04d6735eec9bcbd32296b3c2e0ef30639a2",
+			"classification": "FAILED",
+			"decision": "Remove all occurrences of this unresolved source URL; no replacement inferred."
+		},
+		{
+			"file": "content\\posts\\septic-system-challenges-santa-cruz-fire.md",
+			"url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEp",
+			"accessed_at": "2026-10-22T17:41:52.845422+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 400,
+			"sha256": "74909edd337c90d09590f2632eaa89dd47f1f0d9c543f4d057ac6c895db788f1",
+			"classification": "FAILED",
+			"decision": "Remove all occurrences of this unresolved source URL; no replacement inferred."
+		},
+		{
+			"file": "content\\posts\\septic-system-seasonal-maintenance-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWVJOV2VDM0lYbW9PcGRjdmttLWZDRVNVTFp0QVVIcm9pTWM1aHY2WlEzT0k0VXRCTW03SnJzbFRHUXVkVzdxTGVLcW55dE1MNHNOWTVLM1lEcVYzQ1BqMW9TNjhNM3RYbm5HX3pDbE5jc3JPdUV0eWsxQkNJNXpobzRfRWd5ZXA0OEswTnpSbVJqb3hNdXBxTEp1QnE0M1lIU1pkdFNDSVlfd2V0REI4WVNCMVNWUdIBuwFBVV95cUxObGR0UG42QmJfaGJhMVF6dkRXRGxLVUozVzBOejlSclhnajJrczZ2RXNIaUljWUx3NkRUbFpNeFA2X1llcjdRdmdBdHVtQXEzYjJwbU9leHVC",
+			"accessed_at": "2026-10-22T17:41:52.845422+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 400,
+			"sha256": "342eecf97d4a3d2878c8b390356a248ee5987576044ff341d05560369bbb4277",
+			"classification": "FAILED",
+			"decision": "Remove all occurrences of this unresolved source URL; no replacement inferred."
+		},
+		{
+			"file": "content\\posts\\septic-system-types-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZXZKME9oLVBCZERsQ19aY3YwNVZrNXNXSGRIcEhGeW1pdjAxXzRzQ3dVSE9QZS15R01vV2hiQ1U2QW1PZGU3bV9EMTNmaU1YUW5zRmEzNnNNR1JlNHplZkpNcmh4c0ZaNVFFX2NXYVFNdUF5bDc4aHF2b0pLTVVhUmlmTGtaR2UzT05MTzNiTVI5VnRfd0RlZXBRQW00",
+			"accessed_at": "2026-10-22T17:41:52.847413+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 400,
+			"sha256": "761ceaf354f12cb8886118010d16156090f25a0157d2678aa93d8f25019a3ac4",
+			"classification": "FAILED",
+			"decision": "Remove all occurrences of this unresolved source URL; no replacement inferred."
+		}
+	]
+}
