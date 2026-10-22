@@ -101,13 +101,9 @@ Another misconception is that only older systems require seasonal checks. In rea
 
 ## Sources & Local References
 
-For more information on maintaining your septic system, visit our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance) guide. For a comprehensive view of our service areas, check our [Plumbing & septic service areas overview](/service-areas). Additionally, explore this [news article](https://news.google.com/rss/articles/CBMitgFBVV95cUxQWVJOV2VDM0lYbW9PcGRjdmttLWZDRVNVTFp0QVVIcm9pTWM1aHY2WlEzT0k0VXRCTW03SnJzbFRHUXVkVzdxTGVLcW55dE1MNHNOWTVLM1lEcVYzQ1BqMW9TNjhNM3RYbm5HX3pDbE5jc3JPdUV0eWsxQkNJNXpobzRfRWd5ZXA0OEswTnpSbVJqb3hNdXBxTEp1QnE0M1lIU1pkdFNDSVlfd2V0REI4WVNCMVNWUdIBuwFBVV95cUxObGR0UG42QmJfaGJhMVF6dkRXRGxLVUozVzBOejlSclhnajJrczZ2RXNIaUljWUx3NkRUbFpNeFA2X1llcjdRdmdBdHVtQXEzYjJwbU9leHVC) for more insights on the importance of regular septic maintenance.
+For more information on maintaining your septic system, visit our [Septic System Maintenance Made Easy in Santa Cruz County](/the-complete-guide-to-septic-system-maintenance) guide. For a comprehensive view of our service areas, check our [Plumbing & septic service areas overview](/service-areas).
 
 Contact Wade's Plumbing & Septic today to schedule your seasonal septic maintenance and ensure your system runs smoothly all year round.
-
-## Sources & Local References
-
-- [Reference from news.google.com](https://news.google.com/rss/articles/CBMitgFBVV95cUxQWVJOV2VDM0lYbW9PcGRjdmttLWZDRVNVTFp0QVVIcm9pTWM1aHY2WlEzT0k0VXRCTW03SnJzbFRHUXVkVzdxTGVLcW55dE1MNHNOWTVLM1lEcVYzQ1BqMW9TNjhNM3RYbm5HX3pDbE5jc3JPdUV0eWsxQkNJNXpobzRfRWd5ZXA0OEswTnpSbVJqb3hNdXBxTEp1QnE0M1lIU1pkdFNDSVlfd2V0REI4WVNCMVNWUdIBuwFBVV95cUxObGR0UG42QmJfaGJhMVF6dkRXRGxLVUozVzBOejlSclhnajJrczZ2RXNIaUljWUx3NkRUbFpNeFA2X1llcjdRdmdBdHVtQXEzYjJwbU9leHVC)
 
 ## Seasonal Tip
 
