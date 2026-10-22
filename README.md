@@ -63,6 +63,17 @@ npm run ci:content
 npm run ci:self-hosted-policy
 ```
 
+After a production build, check archive HTML from a local preview in two terminals:
+
+```bash
+npm start -- --hostname 127.0.0.1 --port 38729
+npm run ci:archive-html -- http://127.0.0.1:38729
+```
+
+This checks all sitemap archives, ranked service archives and query variants for complete
+server-rendered cards, hydration data and one pair of document-closing tags. It
+tests ordinary browsers, GPTBot, Googlebot and Twitterbot user agents.
+
 ## Eve SEO Agent
 
 Eve is a private, backend-only SEO operations service at

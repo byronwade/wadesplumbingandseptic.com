@@ -2,7 +2,7 @@ import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
-import { FilterableArchive } from "@/components/filterable-archive"
+import { RequestArchive } from "@/components/request-archive"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import type { ContentDocument } from "@/lib/content"
@@ -24,7 +24,7 @@ async function RankedArticleArchive({
 	)
 
 	return (
-		<FilterableArchive
+		<RequestArchive
 			allLabel={title}
 			emptyLabel="No guides in this category."
 			items={items}

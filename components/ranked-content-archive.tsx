@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 
-import { FilterableArchive } from "@/components/filterable-archive"
+import { RequestArchive } from "@/components/request-archive"
 import { toArchiveItem, type ArchiveItem } from "@/lib/archive"
 import { getCollection } from "@/lib/content"
 import { sortArchiveItems, type ArchiveSort } from "@/lib/page-views/ranking"
@@ -49,7 +49,7 @@ async function RankedArchiveBody({
 	const ranked = lockedSort ? sortArchiveItems(withStats, sort) : withStats
 
 	return (
-		<FilterableArchive
+		<RequestArchive
 			allLabel={allLabel}
 			emptyLabel={emptyLabel}
 			items={ranked}
