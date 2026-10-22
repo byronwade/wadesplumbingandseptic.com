@@ -10,9 +10,12 @@ export function HomeFaq({
 	return (
 		<div className="divide-border border-border divide-y rounded-xl border">
 			{faqs.map((faq) => (
-				<details className="group px-5 py-1" key={faq.question}>
+				<details
+					className="group px-[min(1.25rem,20px)] py-1"
+					key={faq.question}
+				>
 					<summary className="focus-visible:ring-ring cursor-pointer list-none py-4 text-sm font-bold tracking-[-0.02em] marker:content-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden">
-						<span className="flex items-center justify-between gap-4 [overflow-wrap:anywhere]">
+						<span className="flex items-center justify-between gap-[min(1rem,16px)] [overflow-wrap:anywhere]">
 							{faq.question}
 							<span
 								aria-hidden="true"

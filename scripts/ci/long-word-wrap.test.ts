@@ -105,16 +105,96 @@ for (const source of [
 	})
 }
 
+const sourceFiles = ["app", "components", "lib"].flatMap((root) =>
+	fs
+		.readdirSync(root, { recursive: true, withFileTypes: true })
+		.filter((entry) => entry.isFile() && /\.[cm]?[jt]sx?$/.test(entry.name))
+		.map((entry) => path.join(entry.parentPath, entry.name)),
+)
+
 test("app, components and lib grids keep a phone-width column", () => {
-	const sources = ["app", "components", "lib"].flatMap((root) =>
-		fs
-			.readdirSync(root, { recursive: true, withFileTypes: true })
-			.filter((entry) => entry.isFile() && /\.[cm]?[jt]sx?$/.test(entry.name))
-			.map((entry) => path.join(entry.parentPath, entry.name)),
+	assert.ok(
+		sourceFiles.length > 100,
+		`only ${sourceFiles.length} source files found`,
 	)
-	assert.ok(sources.length > 100, `only ${sources.length} source files found`)
-	const problems = sources.flatMap((file) =>
+	const problems = sourceFiles.flatMap((file) =>
 		implicitColumnIssues(fs.readFileSync(file, "utf8"), file),
+	)
+	assert.deepEqual(problems, [])
+})
+
+function declarationOf(css: string, selector: string, property: string) {
+	const pattern = new RegExp(`(?:^|;|\\s)${property}:\\s*([^;]+);`, "g")
+	return cssRules(css)
+		.filter((rule) => rule.selectors.includes(selector))
+		.flatMap((rule) =>
+			[...rule.body.matchAll(pattern)].map((m) => m[1]!.trim()),
+		)
+		.at(-1)
+}
+
+// rem insets double with 200% text. On a 320px phone the gutter, the list
+// indent and the checklist badge each took a word's worth of width, so text
+// broke mid-word. Capping them in px keeps 100% text identical.
+test("the page gutter floor does not grow with enlarged text", () => {
+	assert.match(
+		declarationOf(globals, ":root", "--space-page-x") ?? "",
+		/^clamp\(min\([\d.]+rem,\s*\d+px\),/,
+	)
+})
+
+test("prose list indent shrinks toward 1em with enlarged text", () => {
+	for (const selector of [".prose ul", ".prose ol"]) {
+		assert.match(
+			declarationOf(globals, selector, "padding-left") ?? "",
+			/^min\([\d.]+rem,\s*max\(\d+px,\s*1em\)\)$/,
+		)
+	}
+})
+
+// The checklist rows: an icon badge beside the text in a flex row.
+function uncappedChecklistInsets(source: string, file: string) {
+	return [...source.matchAll(/["'`]([^"'`\n]*)["'`]/g)].flatMap((match) => {
+		const classes = match[1]!.split(/\s+/)
+		const line = source.slice(0, match.index).split("\n").length
+		const badge =
+			classes.includes("place-items-center") &&
+			classes.includes("shrink-0") &&
+			classes.includes("mt-0.5")
+		const row = classes.includes("panel-inset") && classes.includes("flex")
+		const problems: string[] = []
+		if (badge && classes.some((name) => /^size-[\d.]+$/.test(name))) {
+			problems.push(`${file}:${line}: badge size needs a px cap`)
+		}
+		if ((badge || row) && classes.some((name) => /^gap-[\d.]+$/.test(name))) {
+			problems.push(`${file}:${line}: row gap needs a px cap`)
+		}
+		return problems
+	})
+}
+
+for (const source of [
+	'<span className="mt-0.5 grid size-8 shrink-0 place-items-center" />',
+	'<li className="surface-panel panel-inset flex items-start gap-3" />',
+]) {
+	test(`rejects an uncapped checklist inset: ${source}`, () => {
+		assert.ok(uncappedChecklistInsets(source, "fixture.tsx").length > 0)
+	})
+}
+
+for (const source of [
+	'<span className="mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center" />',
+	'<li className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]" />',
+	'<div className="surface-panel panel-inset" />',
+]) {
+	test(`allows a capped checklist inset: ${source}`, () => {
+		assert.deepEqual(uncappedChecklistInsets(source, "fixture.tsx"), [])
+	})
+}
+
+test("checklist badges and row gaps keep their size at enlarged text", () => {
+	const problems = sourceFiles.flatMap((file) =>
+		uncappedChecklistInsets(fs.readFileSync(file, "utf8"), file),
 	)
 	assert.deepEqual(problems, [])
 })

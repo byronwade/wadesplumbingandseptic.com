@@ -40,7 +40,7 @@ export function VirtualBusinessCard({
 			id={id}
 		>
 			<div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-stretch">
-				<div className="flex min-w-0 flex-1 flex-col gap-5 p-5 px-[min(1.25rem,24px)] sm:basis-64 sm:gap-6 sm:p-7 sm:px-[min(1.75rem,32px)]">
+				<div className="flex min-w-0 flex-1 flex-col gap-5 p-5 px-[min(1.25rem,20px,max(12px,100vw_-_18rem))] sm:basis-64 sm:gap-6 sm:p-7 sm:px-[min(1.75rem,32px)]">
 					<div className="flex flex-wrap items-center gap-3.5">
 						<Image
 							alt="Wade's Plumbing & Septic logo"

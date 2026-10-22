@@ -167,7 +167,8 @@
 	/* --- Spacing scale ---
 	   Every vertical relationship resolves to one of these, so heading→body
 	   and header→grid gaps stop drifting between mt-2/3/4/5/6/7/8. */
-	--space-page-x: clamp(1.25rem, 4vw, 2.5rem);
+	/* The 20px floor keeps enlarged text on a phone from doubling the gutter. */
+	--space-page-x: clamp(min(1.25rem, 20px), 4vw, 2.5rem);
 	--space-section-y: clamp(3.5rem, 6vw, 5.5rem);
 	--space-section-y-tight: clamp(2.5rem, 4vw, 3.5rem);
 	--space-stack: 1.125rem;
@@ -1196,9 +1197,10 @@
 		text-decoration-thickness: 2.5px;
 	}
 
+	/* With enlarged text the indent shrinks toward 1em, still room for the marker. */
 	.prose ul,
 	.prose ol {
-		padding-left: 1.35rem;
+		padding-left: min(1.35rem, max(22px, 1em));
 	}
 
 	.prose ul {

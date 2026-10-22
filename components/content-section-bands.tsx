@@ -55,11 +55,11 @@ function BulletPanels({ items }: { items: string[] }) {
 		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel panel-inset flex items-start gap-3 text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
 					key={item}
 				>
-					<span className="bg-accent text-accent-foreground mt-0.5 grid size-8 shrink-0 place-items-center rounded-md">
-						<Check aria-hidden="true" className="size-4" />
+					<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center rounded-md">
+						<Check aria-hidden="true" className="size-[min(1rem,16px)]" />
 					</span>
 					<span className="leading-snug">
 						{item.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
