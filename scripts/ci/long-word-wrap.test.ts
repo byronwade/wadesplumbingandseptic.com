@@ -1,5 +1,6 @@
 import assert from "node:assert/strict"
 import fs from "node:fs"
+import path from "node:path"
 import test from "node:test"
 
 // Heading sizes are large enough that one long word ("Replacement",
@@ -54,4 +55,66 @@ test(".prose wraps long words such as raw URLs used as link text", () => {
 		overflowWrapOf(globals, ".prose") ?? "",
 		/^(break-word|anywhere)$/,
 	)
+})
+
+// Hero and section leads sit in flex and grid parents too.
+for (const selector of [
+	".type-lead",
+	".section-head-row",
+	".section-head-row .prose",
+]) {
+	test(`${selector} lets its parent shrink below one long word`, () => {
+		assert.equal(overflowWrapOf(globals, selector), "anywhere")
+	})
+}
+
+// A grid with columns only from a breakpoint up has one implicit `auto`
+// column below it, which grows to the widest word or button instead of the
+// screen. `grid-cols-1` is minmax(0, 1fr), which stays at the screen width.
+function implicitColumnIssues(source: string, file: string) {
+	return [...source.matchAll(/["'`]([^"'`\n]*)["'`]/g)].flatMap((match) => {
+		const classes = match[1]!.split(/\s+/)
+		if (!classes.includes("grid")) return []
+		if (!classes.some((name) => /^[\w-]+:grid-cols-/.test(name))) return []
+		if (classes.some((name) => /^(grid-cols-|panel-grid$)/.test(name))) {
+			return []
+		}
+		const line = source.slice(0, match.index).split("\n").length
+		return [`${file}:${line}: grid needs a base grid-cols-* for phones`]
+	})
+}
+
+for (const source of [
+	'<ul className="grid gap-4 md:grid-cols-2" />',
+	'<div className="reveal grid items-start lg:grid-cols-[minmax(0,1fr)_20rem]" />',
+	"cn(`grid gap-3 sm:grid-cols-2`, x)",
+]) {
+	test(`rejects a grid with breakpoint-only columns: ${source}`, () => {
+		assert.ok(implicitColumnIssues(source, "fixture.tsx").length > 0)
+	})
+}
+
+for (const source of [
+	'<ul className="grid grid-cols-1 gap-4 md:grid-cols-2" />',
+	'<ul className="panel-grid grid gap-4 lg:grid-cols-3" />',
+	'<div className="grid gap-4" />',
+	'<div className="hidden md:grid md:grid-cols-2" />',
+]) {
+	test(`allows a grid with a phone column or no columns: ${source}`, () => {
+		assert.deepEqual(implicitColumnIssues(source, "fixture.tsx"), [])
+	})
+}
+
+test("app, components and lib grids keep a phone-width column", () => {
+	const sources = ["app", "components", "lib"].flatMap((root) =>
+		fs
+			.readdirSync(root, { recursive: true, withFileTypes: true })
+			.filter((entry) => entry.isFile() && /\.[cm]?[jt]sx?$/.test(entry.name))
+			.map((entry) => path.join(entry.parentPath, entry.name)),
+	)
+	assert.ok(sources.length > 100, `only ${sources.length} source files found`)
+	const problems = sources.flatMap((file) =>
+		implicitColumnIssues(fs.readFileSync(file, "utf8"), file),
+	)
+	assert.deepEqual(problems, [])
 })
