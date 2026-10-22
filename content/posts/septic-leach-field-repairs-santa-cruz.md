@@ -78,7 +78,7 @@ While homeowners can monitor their septic systems for signs
 
 ## Sources & Local References
 
-- [Reference from wadesplumbingandseptic.com](/service-areas)
+- [Plumbing & septic service areas overview](/service-areas)
 
 ## Seasonal Tip
 

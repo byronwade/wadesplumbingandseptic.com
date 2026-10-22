@@ -83,7 +83,7 @@ Choosing a reliable local service provider like Wade's Plumbing &
 
 ## Sources & Local References
 
-- [Santa Cruz County opens seasonal groundwater testing window, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5)
+- [Santa Cruz County opens seasonal groundwater testing window, Lookout Santa Cruz](https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story)
 
 ## Seasonal Tip
 

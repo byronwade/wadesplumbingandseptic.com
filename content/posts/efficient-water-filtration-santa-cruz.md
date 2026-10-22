@@ -55,4 +55,4 @@ To find out more about our service areas, visit our
 
 ## Sources & Local References
 
-- [Reference from wadesplumbingandseptic.com](/service-areas)
+- [Plumbing & septic service areas overview](/service-areas)

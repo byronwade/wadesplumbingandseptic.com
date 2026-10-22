@@ -205,6 +205,26 @@ for (const collection of COLLECTIONS) {
 				`${file}: external link glued to the previous word "${glued[0]}"; add a space or wrap the citation in parentheses`,
 			)
 		}
+		// Google News RSS wrappers hide the publisher, redirect through Google and
+		// once pointed an article at Arizona's Santa Cruz River.
+		if (/\]\(https?:\/\/news\.google\.com\//i.test(prose)) {
+			errors.push(
+				`${file}: Google News link; open it, check the article fits the post, then link the publisher's own URL or drop the citation`,
+			)
+		}
+		const vagueLabel = prose.match(/\[Reference from [^\]]*\]/i)
+		if (vagueLabel) {
+			errors.push(
+				`${file}: vague link text "${vagueLabel[0]}"; name the page or source it opens`,
+			)
+		}
+		const sourceHeadings =
+			prose.match(/^#{2,3}\s+(?:Sources|References)\b.*$/gim) ?? []
+		if (sourceHeadings.length > 1) {
+			errors.push(
+				`${file}: ${sourceHeadings.length} source headings ("${sourceHeadings[0].trim()}"); keep one list of sources`,
+			)
+		}
 		if (/^Santa Cruz County Septic Experts$/m.test(prose)) {
 			errors.push(
 				`${file}: stray "Santa Cruz County Septic Experts" label left over from WordPress; remove it`,

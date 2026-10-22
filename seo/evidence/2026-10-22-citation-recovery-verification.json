@@ -1,0 +1,271 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-175928-codex-1",
+	"collected_at": "2026-10-22T22:06:33.057153+00:00",
+	"scope": "Independent recovery verification of hobby PR #182 and inherited commit 510bca2bca48f318ad9074b3c59182aa9426d9bc. Nine existing articles, citation blocks only; no new facts, pages or date changes.",
+	"source": "Repository sources and isolated browser source probes",
+	"source_url_or_tool": "Git b9eb8e9177e5fd2a6459c6b5b35a6768f06f0acb; Python Playwright with headless system Chrome; local npm acceptance commands",
+	"inherited_evidence": "seo/evidence/2026-10-22-google-news-citations-and-source-headings.json",
+	"public_source_probes": [
+		{
+			"original_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5",
+			"expected_destination": "https://lookout.co/with-atmospheric-river-soaking-region-santa-cruz-county-under-wind-and-flood-advisory-through-thursday-afternoon/story",
+			"accessed_at": "2026-10-22T22:01:31.269897+00:00",
+			"source_tier": "PUBLIC_WEB_UNTRUSTED",
+			"final_url": "https://lookout.co/with-atmospheric-river-soaking-region-santa-cruz-county-under-wind-and-flood-advisory-through-thursday-afternoon/story",
+			"title": "With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon\u00a0 - Lookout Santa Cruz",
+			"h1": [
+				"\n\t\t\tWith atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon\u00a0\t\t"
+			],
+			"html_sha256": "bce19279bc907784277b00e3e60dde9d2cd4faa404dc7b2785660f3eedbc8e07",
+			"initial_status": 200,
+			"destination_matches": true,
+			"classification": "LIVE_VERIFIED",
+			"context_terms": {
+				"arizona": false,
+				"mexico": false,
+				"groundwater": false,
+				"septic": false,
+				"flood": true,
+				"recovery": false,
+				"drain": false
+			}
+		},
+		{
+			"original_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5",
+			"expected_destination": "https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story",
+			"accessed_at": "2026-10-22T22:01:34.706864+00:00",
+			"source_tier": "PUBLIC_WEB_UNTRUSTED",
+			"final_url": "https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story",
+			"title": "Santa Cruz County opens seasonal groundwater testing window - Lookout Santa Cruz",
+			"h1": [
+				"\n\t\t\tSanta Cruz County opens seasonal groundwater testing window\t\t"
+			],
+			"html_sha256": "94b70712ae26a4bbaeab9ccaec6533efa775b443c9adfa7c0af8766c5b734f7e",
+			"initial_status": 200,
+			"destination_matches": true,
+			"classification": "LIVE_VERIFIED",
+			"context_terms": {
+				"arizona": false,
+				"mexico": false,
+				"groundwater": true,
+				"septic": true,
+				"flood": false,
+				"recovery": false,
+				"drain": true
+			}
+		},
+		{
+			"original_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5",
+			"expected_destination": "https://news.azpm.org/s/99273-two-rivers-one-lifeline-reclaiming-the-santa-cruz-across-borders/",
+			"accessed_at": "2026-10-22T22:01:37.380773+00:00",
+			"source_tier": "PUBLIC_WEB_UNTRUSTED",
+			"final_url": "https://news.azpm.org/s/99273-two-rivers-one-lifeline-reclaiming-the-santa-cruz-across-borders/",
+			"title": "Two rivers, one lifeline: Reclaiming the Santa Cruz across borders - AZPM",
+			"h1": [
+				"\n\t\t\t\t\tTwo rivers, one lifeline: Reclaiming the Santa Cruz across borders"
+			],
+			"html_sha256": "5e270ea3ef4141e4b95db65b489a080cee657f1e6c8ac7e4d1de8521a376a1ac",
+			"initial_status": 200,
+			"destination_matches": true,
+			"classification": "LIVE_VERIFIED",
+			"context_terms": {
+				"arizona": true,
+				"mexico": true,
+				"groundwater": true,
+				"septic": false,
+				"flood": true,
+				"recovery": false,
+				"drain": true
+			}
+		},
+		{
+			"original_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5",
+			"expected_destination": "https://www.santacruzsentinel.com/2025/08/13/5-years-later-taking-stock-of-the-ongoing-czu-lightning-complex-recovery/",
+			"accessed_at": "2026-10-22T22:01:42.147874+00:00",
+			"source_tier": "PUBLIC_WEB_UNTRUSTED",
+			"final_url": "https://www.santacruzsentinel.com/2025/08/13/5-years-later-taking-stock-of-the-ongoing-czu-lightning-complex-recovery/",
+			"title": "5 years later: Taking stock of the ongoing CZU Lightning Complex recovery \u2013 Santa Cruz Sentinel",
+			"h1": [
+				"\n\n\t\n\t\t\t\t\n\t\t\t5 years later: Taking stock of the ongoing CZU Lightning Complex recovery\t\t\n\n\n\n\t\n\t\n\t"
+			],
+			"html_sha256": "4650953c1aa6f5f835f6303f10f0be3718776a1be34c129ef94c47ef759b421a",
+			"initial_status": 200,
+			"destination_matches": true,
+			"classification": "LIVE_VERIFIED",
+			"context_terms": {
+				"arizona": true,
+				"mexico": true,
+				"groundwater": false,
+				"septic": false,
+				"flood": false,
+				"recovery": true,
+				"drain": false
+			}
+		}
+	],
+	"article_preservation": [
+		{
+			"file": "content/posts/efficient-water-filtration-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "4fc4f31b2ccfc4717985faa67ff033ac17ba6f9bdccb5aa533a7db623f4447d6",
+			"after_sha256": "a782bb7f42017e53dc4b219fa9119ed0489e32ab7e2c497dad43e2e1529c73d0"
+		},
+		{
+			"file": "content/posts/memorial-day-plumbing-prep-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "04c034319e5c3b58d3b699973e89b4bd69aa18cdd83786d9e2a57c57adefbef6",
+			"after_sha256": "12586c6f96368a61a57f59321bdc2f71aba52fcb10944ba1c47e4e8bff0e16e6"
+		},
+		{
+			"file": "content/posts/new-septic-installations-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "8c7f1809d0fcfa31233c71622a2da9ba1163493e5a3fa089f4a205edddcf38f9",
+			"after_sha256": "6d396dcf07c4189a066f05674795929fb8e09967bdab84904e25f86b1529f609"
+		},
+		{
+			"file": "content/posts/septic-leach-field-repairs-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "fc56b85edf46b503d93979c8fcc4b48cf63fbeb897707ff9702fc410c52faa97",
+			"after_sha256": "a949575401a5dc3c4bbea1512f1df656e0e6bcb418d1a2d179f9943433be5136"
+		},
+		{
+			"file": "content/posts/septic-safety-during-floods-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "d39e5e3ba117cf5af13c378b07ca64a4ecacdfcabc7f5af02193fa4336274e7e",
+			"after_sha256": "6fd19db1d5fd7f17b334086f81165520683f7611c8b51943721b34fd339e5276"
+		},
+		{
+			"file": "content/posts/septic-system-components-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "48808bafb47194f8778163f27575b6404bf7d674755f9b2fcc86d670314aa89e",
+			"after_sha256": "40da323ca914929b872c195a1c306d015d71ed819b0a547b192aa247a66cc4be"
+		},
+		{
+			"file": "content/posts/septic-trouble-signs-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "021ec0c6e8550e305736b5d25e81bf9b5a50b6c6010214000d885b6ebc82325b",
+			"after_sha256": "a6bfaa4147ce10ef443e0b8e293f4798f825282ce9305fa90c6f3bcf74dbfb26"
+		},
+		{
+			"file": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "2df142acaa84929933ff334123e2142466dde7f8a19b007255c82685a439ab50",
+			"after_sha256": "c22df9aaa624033dfe4374cea4b167af85abafd5059ca01538ec11bfa78f21e8"
+		},
+		{
+			"file": "content/posts/slow-drains-solutions-santa-cruz.md",
+			"frontmatter_identical": true,
+			"non_list_prose_identical": true,
+			"only_source_lines_changed": true,
+			"before_sha256": "1f8be4bb196739d827364a5a13d009866e8244a004e41d59c1173e6672416f5d",
+			"after_sha256": "f38b818d273ff0647da0ca5009fd383f52da241562d4d8bed80599b8e06f3865"
+		}
+	],
+	"deterministic_review": {
+		"preservation_checks_passed": 27,
+		"preservation_checks_failed": 0,
+		"guard_red_exit": 1,
+		"guard_red_errors": "12",
+		"guard_green_exit": 0
+	},
+	"required_local_commands": [
+		{
+			"name": "install",
+			"command": "npm ci",
+			"started_at": "2026-10-22T22:00:32.1696072+00:00",
+			"duration_seconds": 66.4951429,
+			"exit_code": 0
+		},
+		{
+			"name": "lint",
+			"command": "npm run lint",
+			"started_at": "2026-10-22T22:01:45.4851585+00:00",
+			"duration_seconds": 15.1456164,
+			"exit_code": 0
+		},
+		{
+			"name": "typecheck",
+			"command": "npm run typecheck",
+			"started_at": "2026-10-22T22:02:23.0826295+00:00",
+			"duration_seconds": 11.2431951,
+			"exit_code": 0
+		},
+		{
+			"name": "seo-check",
+			"command": "npm run seo:check",
+			"started_at": "2026-10-22T22:02:51.3231910+00:00",
+			"duration_seconds": 35.3442133,
+			"exit_code": 0
+		},
+		{
+			"name": "build",
+			"command": "npm run build",
+			"started_at": "2026-10-22T22:03:33.8034873+00:00",
+			"duration_seconds": 48.994755,
+			"exit_code": 0
+		}
+	],
+	"seo_suite": {
+		"passed": 185,
+		"failed": 0,
+		"public_files": 298,
+		"business_fact_violations": 0,
+		"markdown_files": 157,
+		"sitemap_urls": 284
+	},
+	"built_html": {
+		"classification": "MOCK_VERIFIED",
+		"built_html_files": 552,
+		"files_with_google_news_hrefs": 0,
+		"errors": []
+	},
+	"browser": {
+		"classification": "MOCK_VERIFIED",
+		"states": 54,
+		"passed": 487,
+		"failed": 0,
+		"wcag_violations": 0,
+		"page_errors": [],
+		"preview_stopped": true
+	},
+	"classification": "MOCK_VERIFIED",
+	"classification_scope": "Local preservation, content guard, acceptance, rendered browser and HTML checks only. Individual public-source probes are LIVE_VERIFIED only for observed destinations, titles and context. No production, ranking, indexing, lead-lift or Eve integration claim.",
+	"redaction": "No credentials, cookies, personal data or article bodies retained. Public titles, source URLs, context flags, hashes and verification summaries only.",
+	"retention_class": "Git evidence record",
+	"limitations": [
+		"Five existing high dependency advisories reported by npm ci; no dependency change.",
+		"Shared toolkit advisory reservation failed because its configured root is missing. Shared configuration unchanged; command logs and exit receipts retained in this job folder.",
+		"An initial scratch preservation script used the Windows default decoding for one UTF-8 article. Explicit UTF-8 decoding corrected the probe; repository content did not change.",
+		"Initial screenshots caught image-load scroll shifts; source-section captures repeated after images settled."
+	],
+	"facts_needing_owner": [
+		"Existing Memorial Day 30% system-lifespan statistic.",
+		"Existing credential, response, operating-history and guarantee claims listed in the notebook.",
+		"Existing installation-timeline disagreements and seasonal summer-rains statement remain unchanged."
+	],
+	"rollback": "Restore nine article source blocks and scripts/ci/validate-content.mjs from b9eb8e9177e5fd2a6459c6b5b35a6768f06f0acb.",
+	"stabilized_screenshot_capture": {
+		"passed": 289,
+		"failed": 0,
+		"states": 36,
+		"screenshots": 36,
+		"preview_stopped": true
+	}
+}
