@@ -1,0 +1,192 @@
+{
+	"recorded_at": 1792710690.959468,
+	"classification": "MOCK_VERIFIED",
+	"scope": "Offline HTML validity sweep and removal of the shared visual JSON-LD loading fallback.",
+	"source_commit": "d125922089ba9ae50a44b93e98bd6f6ec50ad032",
+	"acceptance": {
+		"commands": [
+			{
+				"command": "npm ci",
+				"exit_code": 0,
+				"packages_added": 583,
+				"packages_audited": 584,
+				"existing_high_advisories": 5
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0,
+				"seconds": 13.3017241
+			},
+			{
+				"command": "npm run typecheck",
+				"exit_code": 0,
+				"seconds": 12.6337892
+			},
+			{
+				"command": "npm run seo:check",
+				"exit_code": 0,
+				"seconds": 34.0450928
+			},
+			{
+				"command": "npm run build",
+				"exit_code": 0,
+				"seconds": 53.4207985
+			}
+		],
+		"passed": 5,
+		"failed": 0,
+		"seo_tests_passed": 185,
+		"seo_tests_failed": 0,
+		"lint_warnings": 0,
+		"static_pages": 564,
+		"public_source_files_checked": 298,
+		"business_fact_violations": 0
+	},
+	"audit": {
+		"validator": "html-validate 11.17.0",
+		"preset": "html-validate:standard",
+		"rule_exclusions": [],
+		"sitemap_routes": 284,
+		"baseline": {
+			"valid": 0,
+			"rule_findings": {
+				"aria-label-misuse": 284,
+				"close-order": 30
+			}
+		},
+		"final": {
+			"valid": 269,
+			"rule_findings": {
+				"close-order": 30
+			}
+		},
+		"invalid_labels_removed": 284,
+		"raw_http_matches_artifact_findings": true,
+		"remaining_findings": {
+			"rule": "close-order",
+			"count": 30,
+			"routes": [
+				"/category/diy-projects",
+				"/category/plumbing-maintenance",
+				"/category/plumbing-tips",
+				"/category/santa-cruz-plumbing",
+				"/category/septic-issues-in-santa-cruz-county",
+				"/category/septic-maintenance",
+				"/expert-tips",
+				"/service-category/commercial",
+				"/service-category/commercial-plumbing",
+				"/service-category/plumbing",
+				"/service-category/residential-plumbing",
+				"/service-category/septic",
+				"/service-category/septic-services",
+				"/service-category/specialty-services",
+				"/services"
+			],
+			"disposition": "Existing duplicate outer document closing tags in 15 streamed archive responses. Unchanged by this fix. Requires a separate investigation; full HTML validity is not claimed."
+		},
+		"parser_baseline": {
+			"artifact_files": 552,
+			"duplicate_id_pages": 0,
+			"notes": "Parser reports empty prerender shells and framework script trailers. No duplicate IDs found."
+		}
+	},
+	"preservation": {
+		"pages": 284,
+		"passed": 1988,
+		"failed": 0,
+		"fields": [
+			"main text",
+			"internal and external main links",
+			"image attributes",
+			"JSON-LD values",
+			"title and metadata",
+			"canonical"
+		],
+		"invalid_fallback_removed_on_all_routes": true
+	},
+	"browser": {
+		"baseline": {
+			"passed": 91,
+			"failed": 0,
+			"states": 30
+		},
+		"final": {
+			"functional_passed": 241,
+			"functional_failed": 0,
+			"states": 30,
+			"strict_pixel_probe_passed": 254,
+			"strict_pixel_probe_failed": 7
+		},
+		"axe_audits": 60,
+		"axe_violations": 0,
+		"page_errors": 0,
+		"horizontal_overflow_states": 0,
+		"screenshots": 40,
+		"pixel_identical_pairs": 13,
+		"image_only_differing_pairs": 5,
+		"image_and_small_paint_variation_pairs": 2,
+		"maximum_outside_image_channel_delta": 2,
+		"visual_review_passed": 20,
+		"visual_review_failed": 0,
+		"views": [
+			"1280px desktop, 100% text",
+			"390px mobile, 100% text",
+			"320px mobile, 200% text"
+		],
+		"themes": ["light", "dark"],
+		"routes": [
+			"/",
+			"/contact",
+			"/services",
+			"/service-offerings/drain-cleaning",
+			"/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county"
+		],
+		"capture_method": "Each source version rebuilt and served locally. Scrolled pages to activate lazy images, waited for decoding, disabled animation, and compared screenshots. Strict pixel differences classified against measured image bounds: 13 pairs exact, 5 image-only, and 2 with image differences plus outside-image paint variation of at most 2/255 per channel. Image attributes and source files unchanged. Representative pairs visually reviewed. Saved-document replay was rejected because previous stylesheet hashes were absent.",
+		"initial_capture": {
+			"passed": 538,
+			"failed": 7,
+			"disposition": "Seven strict pixel comparisons differed before explicit image loading/decoding waits. Replaced with settled source-build captures and measured image-bound classification. No strict pixel failure is represented as a passing exact match."
+		},
+		"screenshot_manifest_sha256": "b2777a9db61168f0131d8e940247c5d1fe7216c1367c43bb52c57f016bfd192b"
+	},
+	"review": {
+		"kind": "Five-axis self-review",
+		"findings": 0,
+		"independent_agent_review": false,
+		"notes": "Suspense remains around RootJsonLd. Only its nonvisual-resource fallback changed. No content, business facts, dates, images, dependencies, external settings or Eve runtime changed."
+	},
+	"references": [
+		"https://html-validate.org/usage/index.html",
+		"https://html-validate.org/rules/aria-label-misuse.html",
+		"https://www.w3.org/TR/wai-aria-1.2/#generic",
+		"node_modules/next/dist/docs/01-app/01-getting-started/05-server-and-client-components.md",
+		"node_modules/next/dist/docs/01-app/03-api-reference/04-functions/use-router.md"
+	],
+	"evidence": {
+		"npm-ci.log": "6ef7a1d4d695ed561dee3f335c0a23b915ec0dcde663dad82945759318581d71",
+		"baseline-build.log": "366bb0f41f8e40fb19cde186abdaa1d9d0a26e9e9e1106896d1a27434173c25e",
+		"build.log": "4f1ceebf6d99375d30f495fc42511f41bb1f15876a04e134c313b3f6a21d73f9",
+		"acceptance-partial.json": "c1f661a76c91b2ed91fe88f4ed6683dae0f933a6e229d7ffa087cff6fb689fcf",
+		"build-result.json": "9f2a3ccd4c08ee8feed9d1ac761a4329eb8bf8a163efe12214d9d759b2d3b317",
+		"html-baseline.json": "06e3335eab1875a92d3a3f807ad655ee185b7a0203e5d9e5e9b27ba77f25dd67",
+		"html-final.json": "1c06b209779235fe93a12b53d7c967e1a1bb30b4842104c4ef8d982aa9b35b62",
+		"http-baseline-first.json": "7e32d7e546081cb45cb262c5e52dc9c49ac6df4f12e2507349ab4139cbc79d8b",
+		"http-final.json": "078da7b11274a081154e5e9e7177f0d0235dc140d0514f58ffd32271d047c3d4",
+		"parser-baseline.json": "003ff3ba8942a26215a12da11169d7009060cd51476a3c846788c4ac5072db35",
+		"content-preservation.json": "5d5a60831ff59a029efa8257fbdd427b3709a8c1355ce5c86d2075027caefeb9",
+		"baseline/browser.json": "f7a0a5d7bb90292007a4e6344d69cfe920c0ffc05df8c7121315e2b6b6d8dd1a",
+		"final/browser.json": "14565de950a9edb5c103494ef2b78baf2a0d1327c07db5d95b065c9ea5f9aacd",
+		"baseline-settled/browser.json": "f75e03707e10179fdf328ac5671f426eca39dddd146e55da6ab06728626b006e",
+		"final-settled/browser.json": "17d1c90e5a4e13995b25d46d1af4d783a66c85a915099d1e43b78fcb28dd20c3",
+		"settled-commands.json": "622a85a87dcaa10ef566c52a483578a0cb8fa75386794d6a6323cb0d9cc864b3",
+		"screenshot-manifest.json": "b2777a9db61168f0131d8e940247c5d1fe7216c1367c43bb52c57f016bfd192b",
+		"screenshot-classification.json": "43273984434cbf1770038b83a97306a89c9f0d27a32f743212723fa433a9eb43",
+		"visual-review.json": "48804f17f048a1dcbd6bc39df00f0a97060e538f39cdd6c44ca3c1b2e5e6461a"
+	},
+	"limitations": [
+		"Local deterministic evidence only. No production, ranking or indexing claim.",
+		"Thirty existing document-closing findings remain on fifteen streamed archive routes.",
+		"Five existing high dependency advisories remain.",
+		"Shared toolkit reservation unavailable because its configured state root is missing. Snapshots worked; shared configuration unchanged."
+	]
+}

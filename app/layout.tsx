@@ -119,17 +119,7 @@ export default function RootLayout({
 						Skip to content
 					</a>
 					{children}
-					<Suspense
-						fallback={
-							<div
-								aria-busy="true"
-								aria-label="Loading structured data"
-								className="pointer-events-none fixed inset-x-0 bottom-0 z-[1] h-0.5 overflow-hidden bg-black/5"
-							>
-								<div className="bg-primary/60 h-full w-1/3 animate-pulse" />
-							</div>
-						}
-					>
+					<Suspense fallback={null}>
 						<RootJsonLd />
 					</Suspense>
 					<ThemeHotkey />
