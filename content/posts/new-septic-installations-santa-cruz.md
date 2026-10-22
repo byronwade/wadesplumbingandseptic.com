@@ -47,11 +47,11 @@ Santa Cruz County has specific septic system regulations. Compliance is crucial 
 
 ## Signs Your Septic Needs Attention
 
-Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) for more details.
+Indicators that your septic system may need attention include frequent backups, unpleasant odors, and slow drainage. If your system is over 20 years old, it might be time for professional assessment. Visit our [blog on septic failure signs](/septic-trouble-signs-santa-cruz) for more details.
 
 ## Choosing the Right Septic Solution
 
-Selecting a new septic system involves considering factors like household size, soil type, and local regulations. Consulting with professionals, such as Wade's Plumbing & Septic, ensures a system tailored to your needs. Explore our [engineered septic systems](/lp/service-offerings/engineered-septic-system-installation) for specialized solutions.
+Selecting a new septic system involves considering factors like household size, soil type, and local regulations. Consulting with professionals, such as Wade's Plumbing & Septic, ensures a system tailored to your needs. Explore our [engineered septic systems](/service-offerings/engineered-septic-system-installation) for specialized solutions. If your site needs an engineered design, our [engineered septic planning checklist](/what-you-need-to-know-about-engineered-septic-systems) covers parcel records, site evaluation, design, permits and maintenance.
 
 ## Installation Process Overview
 
@@ -90,10 +90,6 @@ The installation process typically takes a few days to a week, depending on the 
 ### What maintenance is required for a new septic system?
 
 Regular inspections, pumping, and addressing minor issues are crucial. Professional services can ensure comprehensive maintenance.
-
-## Myths to Address
-
-**Myth:** New septic
 
 ## Sources & Local References
 

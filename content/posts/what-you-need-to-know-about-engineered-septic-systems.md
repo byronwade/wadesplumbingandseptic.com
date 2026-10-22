@@ -45,7 +45,7 @@ Throughout this process, float switches and control panels often regulate the pu
 
 ## 3\. Types of Engineered Septic Systems
 
-There are several common types of engineered septic systems, each using a different method to treat wastewater. The appropriate type for a property depends on the specific site conditions and local regulations. Below we describe some of the most widely used engineered/alternative septic system designs:
+There are several common types of engineered septic systems, each using a different method to treat wastewater. The appropriate type for a property depends on the specific site conditions and local regulations. Below we describe some of the most widely used engineered/alternative septic system designs. For the county-approved MicroSepTec and Orenco AdvanTex units, see our [guide to advanced septic systems in Santa Cruz County](/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county).
 
 ### Mound System
 

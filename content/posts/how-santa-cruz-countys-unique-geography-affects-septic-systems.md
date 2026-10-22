@@ -38,7 +38,7 @@ The unique landscape of Santa Cruz County can lead to several challenges for sep
 - **Soil Composition:** Dense clay or sandy soils can affect the absorption and filtration of wastewater.
 - **High Water Tables:** These can cause flooding of septic systems, especially during heavy rains.
 
-Understanding septic system types suitable for different terrains is crucial. For instance, engineered septic systems are often needed in areas with poor drainage to ensure optimal functionality.
+Understanding septic system types suitable for different terrains is crucial. For instance, [engineered septic systems](/what-you-need-to-know-about-engineered-septic-systems) are often needed in areas with poor drainage to ensure optimal functionality.
 
 ## How Wade's Plumbing & Septic Can Help
 
@@ -47,6 +47,7 @@ At Wade's Plumbing & Septic, we offer a wide range of services to address the co
 1.  [Septic Tank Maintenance:](/service-offerings/septic-tank-maintenance-and-care) Regular inspections and maintenance to ensure your system runs efficiently.
 2.  [Leach Field Repair:](/service-offerings/septic-tank-leach-field-repair-and-replacement) Addressing issues such as blockages or damage due to soil composition.
 3.  [Septic Troubleshooting:](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) Identifying and resolving problems quickly to prevent system failure.
+4.  [Engineered Septic Installation:](/service-offerings/engineered-septic-system-installation) Installing engineered systems alongside engineers when a conventional tank and leach field will not work on the site.
 
 Our team provides expert advice on optimizing septic system health, tailored to your specific location and needs.
 
