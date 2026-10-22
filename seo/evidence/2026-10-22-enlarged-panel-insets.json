@@ -1,0 +1,164 @@
+{
+	"recorded_at": "2026-10-22T22:37:35.907495+00:00",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production-build browser verification, not live production, ranking, indexing or Eve integration evidence.",
+	"base_commit": "181c9d79dbde96e40efc516f3b24add6e6225c43",
+	"implementation_commit": "a4f719628520eaebde97460c75eb66bccd36ad7b",
+	"change": {
+		"file": "app/globals.css",
+		"selector": ".panel-inset",
+		"property": "padding-inline",
+		"before": "min(var(--space-card), 24px)",
+		"after": "min(var(--space-card), clamp(12px, 100vw - 18rem, 24px))",
+		"normal_16px_root_at_320px_and_wider": "unchanged",
+		"320px_at_200_percent_text": "24px to 12px horizontal padding, full font sizes and vertical padding preserved"
+	},
+	"acceptance": {
+		"node": "25.9.0",
+		"commands_passed": 5,
+		"commands_failed": 0,
+		"commands": [
+			{
+				"name": "install",
+				"command": "npm ci",
+				"exit_code": 0,
+				"duration_seconds": null,
+				"npm_reported_install_seconds": 54,
+				"packages_added": 583,
+				"packages_audited": 584,
+				"existing_high_advisories": 5,
+				"evidence": "install.log and completed direct terminal execution receipt"
+			},
+			{
+				"name": "lint",
+				"command": "npm run lint",
+				"started_at": "2026-10-22T22:28:49.1289079+00:00",
+				"duration_seconds": 19.0151123,
+				"exit_code": 0
+			},
+			{
+				"name": "typecheck",
+				"command": "npm run typecheck",
+				"started_at": "2026-10-22T22:29:13.1426613+00:00",
+				"duration_seconds": 14.86597,
+				"exit_code": 0
+			},
+			{
+				"name": "seo-check",
+				"command": "npm run seo:check",
+				"started_at": "2026-10-22T22:29:33.5965835+00:00",
+				"duration_seconds": 38.0103099,
+				"exit_code": 0
+			},
+			{
+				"name": "build",
+				"command": "npm run build",
+				"started_at": "2026-10-22T22:32:02.7465634+00:00",
+				"duration_seconds": 56.3650527,
+				"exit_code": 0
+			}
+		],
+		"seo_tests": {
+			"tests": 185,
+			"pass": 185,
+			"fail": 0
+		},
+		"generated_pages": 564
+	},
+	"browser": {
+		"routes": 115,
+		"baseline_assertions": {
+			"passed": 1141,
+			"failed": 0
+		},
+		"final_assertions": {
+			"passed": 2741,
+			"failed": 0
+		},
+		"final_states": 510,
+		"normal_states": 360,
+		"enlarged_320_routes": 115,
+		"broken_panel_words_before": 294,
+		"broken_panel_words_after": 174,
+		"broken_aside_recommendations_before": 49,
+		"broken_aside_recommendations_after": 0,
+		"axe_states": 70,
+		"axe_violations_before": 0,
+		"axe_violations_after": 0,
+		"page_errors": [],
+		"normal_screenshot_pairs": 30,
+		"identical_normal_screenshot_pairs": 30
+	},
+	"preservation": [
+		"All 360 normal-text states retain identical panel and character geometry.",
+		"All 510 final states preserve the baseline text, links, JSON-LD, font sizes and vertical padding.",
+		"No horizontal overflow in 510 final states.",
+		"No public content, business facts, dates, images, heading styles or dependencies changed.",
+		"The rule remains in the existing components layer, preserving utility precedence."
+	],
+	"screenshots": {
+		"captured": 80,
+		"matched_pairs": 40,
+		"normal_pairs_pixel_identical": 30,
+		"enlarged_pairs": 10,
+		"themes": ["light", "dark"],
+		"widths_px": [320, 390, 1280],
+		"scales_percent": [100, 200],
+		"manifest_file": "evidence/verification-summary.json in the job folder",
+		"manifest_sha256": "8015305dd1660c280d44d7f35740b7ea169454c58b8d2fa1b6c8238e764871e6",
+		"retention": "Temporary image and full geometry output is removed during job cleanup; the hash manifest and summary remain."
+	},
+	"evidence": {
+		"job_folder": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1022-1819",
+		"artifact_hashes": {
+			"install.log": {
+				"sha256": "e00589a5a79443f4f99eda0d5154fd4ea5ea7f36dc39129e630f9d37d29755dc",
+				"bytes": 429
+			},
+			"lint.log": {
+				"sha256": "1337db05a30f7e047003a9fbf6f03d695a605dd8da040163ca2ad4640074ac5a",
+				"bytes": 73
+			},
+			"typecheck.log": {
+				"sha256": "ba6cb5ab80995cb26d4dd2eaed7119e3b03fed705fab7982a535838f3a35f91d",
+				"bytes": 65
+			},
+			"seo-check.log": {
+				"sha256": "0813e94807bdac5cb717b6bca2a840127c814da85b473871dae8617042b62508",
+				"bytes": 20355
+			},
+			"build.log": {
+				"sha256": "fa36aecd6f9f3733c9f38a7b8a71b74b405dc81d17d5549e3062076979c1cd40",
+				"bytes": 6571
+			},
+			"panel-candidate.json": {
+				"sha256": "9e3300b5e196eaceb76827d40a8287f510ffe71a269ac99da89b3d51f230ee56",
+				"bytes": 147210884
+			},
+			"panel-baseline.json": {
+				"sha256": "153c3b4176156cbb1e4aeb2d1173fc681d3713b715f589f43af88b84a885ed46",
+				"bytes": 72972136
+			},
+			"panel-final.json": {
+				"sha256": "6152172f101c9a53f066a1f8aaf32455b52e3db60f4a32863a0f95ae32da8efe",
+				"bytes": 73201663
+			},
+			"verification-summary.json": {
+				"sha256": "8015305dd1660c280d44d7f35740b7ea169454c58b8d2fa1b6c8238e764871e6",
+				"bytes": 13809
+			},
+			"panel-route-inventory.json": {
+				"sha256": "a7c1e1342d16fbd988b54ead045f1401274138c01ab51bd2424f46c90c15c59a",
+				"bytes": 5964
+			}
+		}
+	},
+	"research_references": [
+		"https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+		"node_modules/next/dist/docs/01-app/01-getting-started/11-css.md"
+	],
+	"limitations": [
+		"Browser proof uses local headless Chromium on Windows; no live visitor or ranking measurement.",
+		"Five existing high dependency advisories remain."
+	]
+}
