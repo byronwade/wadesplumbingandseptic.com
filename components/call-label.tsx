@@ -4,9 +4,11 @@ import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
 
 /**
- * Call-button label that keeps the phone number on one line. With enlarged
- * text on a phone the label wraps only before the number ("Call" above
- * "831.225.4344"), and the icon stays beside the first word.
+ * Call-button label that wraps before the phone number instead of inside it.
+ * The icon rides inline with the first word rather than as a flex sibling, so
+ * the number gets the button's full width: with enlarged text on a phone the
+ * label reads "Call" above "831.225.4344". The number is not `nowrap`; in a
+ * box narrower than the number itself it still wraps rather than being cut off.
  */
 export function CallLabel({
 	label = `Call ${contactInfo.phoneDisplay}`,
@@ -41,9 +43,7 @@ export function CallLabel({
 				</span>
 			) : null}
 			{before ? " " : null}
-			<span className={cn("whitespace-nowrap", icon && !before && "ms-2")}>
-				{phone}
-			</span>
+			<span className={icon && !before ? "ms-2" : undefined}>{phone}</span>
 			{after}
 		</span>
 	)

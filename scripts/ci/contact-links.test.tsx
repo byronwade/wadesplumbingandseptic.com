@@ -64,7 +64,7 @@ function classOf(html: string) {
 	return html.match(/class="([^"]*)"/)?.[1].split(" ") ?? []
 }
 
-const wholeNumber = `<span class="whitespace-nowrap">${contactInfo.phoneDisplay}</span>`
+const wholeNumber = `<span>${contactInfo.phoneDisplay}</span>`
 
 function visibleText(html: string) {
 	return html
@@ -73,11 +73,20 @@ function visibleText(html: string) {
 		.trim()
 }
 
-test("call labels wrap only before the phone number, never inside it", () => {
-	const html = renderToStaticMarkup(createElement(CallLabel))
-	assert.ok(html.includes(wholeNumber), html)
+// A flex-sibling icon narrows the label below the number's width at 200%
+// text, which is what split "831.225.43 / 44". Inside the label it does not.
+function iconIsInsideLabel(html: string) {
+	const label = html.indexOf('<span class="min-w-0')
+	return label !== -1 && html.indexOf("<svg") > label
+}
+
+test("call labels wrap before the phone number, with the icon beside Call", () => {
+	const html = renderToStaticMarkup(
+		createElement(CallLabel, { icon: createElement("svg") }),
+	)
 	assert.equal(visibleText(html), `Call ${contactInfo.phoneDisplay}`)
-	assert.ok(html.includes(`Call</span> ${wholeNumber}`), html)
+	assert.ok(html.includes(`<svg></svg>Call</span> ${wholeNumber}`), html)
+	assert.ok(iconIsInsideLabel(html), html)
 })
 
 test("a number-only call label keeps the icon apart from the number", () => {
@@ -88,9 +97,7 @@ test("a number-only call label keeps the icon apart from the number", () => {
 		}),
 	)
 	assert.ok(
-		html.includes(
-			`<span class="whitespace-nowrap ms-2">${contactInfo.phoneDisplay}</span>`,
-		),
+		html.includes(`<span class="ms-2">${contactInfo.phoneDisplay}</span>`),
 		html,
 	)
 })
@@ -110,7 +117,8 @@ test("call buttons wrap a long label instead of cutting off the number", () => {
 		}),
 	)
 	const classes = classOf(html)
-	assert.ok(html.includes(wholeNumber), html)
+	assert.ok(html.includes(`Call</span> ${wholeNumber}`), html)
+	assert.ok(iconIsInsideLabel(html), html)
 	assert.ok(
 		html.includes(`aria-label="Call ${contactInfo.phoneDisplay}"`),
 		html,
@@ -142,7 +150,8 @@ test("header call buttons can keep their fixed one-line size", () => {
 test("mobile call bar keeps the number and full hours in its HTML", () => {
 	const html = renderToStaticMarkup(createElement(MobileCallBar))
 	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)
-	assert.ok(html.includes(wholeNumber), html)
+	assert.ok(html.includes(`Call</span> ${wholeNumber}`), html)
+	assert.ok(iconIsInsideLabel(html), html)
 	assert.ok(visibleText(html).startsWith(`Call ${siteConfig.phone}`), html)
 	assert.ok(html.includes(siteConfig.hours), html)
 })
@@ -159,7 +168,8 @@ test("wrapping call buttons shed side padding only for enlarged text", () => {
 	}
 })
 
-// Hand-written "Call {phone}" text can break mid-number; CallLabel cannot.
+// Hand-written "Call {phone}" text beside a flex icon breaks mid-number at
+// enlarged text sizes; CallLabel does not.
 test("call labels in app and components use CallLabel", () => {
 	const offenders: string[] = []
 	for (const dir of ["app", "components"]) {
