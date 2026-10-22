@@ -37,7 +37,7 @@ export function SiteFooter() {
 			  two identical CTAs back-to-back.
 			*/}
 			<div className="container-shell py-[var(--space-section-y-tight)]">
-				<div className="grid gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
+				<div className="grid grid-cols-1 gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
 					<div>
 						<Link
 							prefetch={false}
@@ -154,7 +154,7 @@ export function SiteFooter() {
 							Byron Wade
 						</a>
 					</p>
-					<p className="flex items-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
+					<p className="flex flex-wrap items-center justify-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
 						<span>Made with 🩷</span>
 						<span aria-hidden="true" className="text-white/20">
 							·

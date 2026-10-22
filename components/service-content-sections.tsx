@@ -96,7 +96,7 @@ function ProcessSteps({
 	steps: Array<{ title: string; body: string }>
 }) {
 	return (
-		<ol className="mt-[var(--space-block)] grid gap-[var(--space-grid)] lg:grid-cols-3">
+		<ol className="mt-[var(--space-block)] grid grid-cols-1 gap-[var(--space-grid)] lg:grid-cols-3">
 			{steps.map((step, index) => (
 				<li
 					className="surface-panel panel-inset flex h-full flex-col"
@@ -131,7 +131,7 @@ function IntroBand({
 	return (
 		<section className="section-y">
 			<div className="container-shell">
-				<div className="reveal grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)]">
+				<div className="reveal grid grid-cols-1 items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)]">
 					<div className="max-w-2xl">
 						<p className="spec-label">{section.eyebrow}</p>
 						<div className="[&_.prose_p]:text-foreground/90 [&_.prose_strong]:text-foreground mt-[var(--space-stack)] [&_.prose]:max-w-none [&_.prose_p]:text-[length:var(--type-lead)] [&_.prose_p]:leading-[1.55]">

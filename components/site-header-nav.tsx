@@ -156,10 +156,10 @@ function MegaFooter({
 function ServicesMegaMenu() {
 	return (
 		<div className="container-shell py-7 lg:py-8">
-			<div className="grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10">
+			<div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10">
 				<div>
 					<p className="spec-label mb-3">Service categories</p>
-					<ul className="grid gap-0.5 sm:grid-cols-2">
+					<ul className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
 						{serviceNavLinks.map((item) => (
 							<MegaLink key={item.href} {...item} />
 						))}
@@ -203,10 +203,10 @@ function ServicesMegaMenu() {
 function CompanyMegaMenu() {
 	return (
 		<div className="container-shell py-7 lg:py-8">
-			<div className="grid items-stretch gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
+			<div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
 				<div>
 					<p className="spec-label mb-3">Company</p>
-					<ul className="grid gap-0.5 sm:grid-cols-2">
+					<ul className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
 						{companyNavLinks.map((item) => (
 							<MegaLink key={item.href} {...item} />
 						))}

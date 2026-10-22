@@ -64,7 +64,7 @@ export function ContentGallery({
 	}
 
 	return (
-		<figure className="mb-[var(--space-block)] grid gap-[var(--space-grid)] sm:grid-cols-2">
+		<figure className="mb-[var(--space-block)] grid grid-cols-1 gap-[var(--space-grid)] sm:grid-cols-2">
 			{images.map((image, index) => (
 				<div
 					className={

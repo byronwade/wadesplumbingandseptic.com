@@ -424,6 +424,15 @@
 		margin-top: var(--space-stack);
 	}
 
+	/*
+	  Items here size to their content, so one long word at a large text size
+	  would set their width. anywhere lets them narrow to the row instead.
+	*/
+	.section-head-row,
+	.section-head-row .prose {
+		overflow-wrap: anywhere;
+	}
+
 	.section-head-row {
 		display: flex;
 		flex-direction: column;
@@ -1065,6 +1074,7 @@
 		line-height: 1.6;
 		color: var(--muted-foreground);
 		text-wrap: pretty;
+		overflow-wrap: anywhere;
 	}
 
 	.type-meta {

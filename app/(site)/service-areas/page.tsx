@@ -113,7 +113,7 @@ export default function ServiceAreasPage() {
 								<h2 className="type-title">{county.title}</h2>
 								<p className="type-lead">{county.summary}</p>
 							</div>
-							<ul className="border-border bg-border mt-8 grid gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:grid-cols-3">
+							<ul className="border-border bg-border mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:grid-cols-3">
 								{county.locations.map((location) => (
 									<li key={location.slug}>
 										<Link

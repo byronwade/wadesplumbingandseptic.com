@@ -76,7 +76,7 @@ export function HomeBelowFold() {
 					  against a taller card column its top and bottom edges lined up with
 					  nothing on the left.
 					*/}
-					<div className="reveal mt-[var(--space-block)] grid items-stretch gap-[var(--space-grid)] lg:grid-cols-2">
+					<div className="reveal mt-[var(--space-block)] grid grid-cols-1 items-stretch gap-[var(--space-grid)] lg:grid-cols-2">
 						<div className="panel-grid grid content-start gap-[var(--space-grid)]">
 							{specialtyPoints.map(({ icon: Icon, title, text }) => (
 								<div className="surface-panel panel-inset" key={title}>
@@ -297,7 +297,7 @@ export function HomeBelowFold() {
 			</section>
 
 			<section className="section-y section-defer">
-				<div className="container-shell grid items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+				<div className="container-shell grid grid-cols-1 items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
 					<div>
 						<div className="section-head">
 							<p className="spec-label">Why choose Wade&apos;s</p>
@@ -356,7 +356,7 @@ export function HomeBelowFold() {
 			</section>
 
 			<section className="section-y border-border surface-sunken section-defer border-y">
-				<div className="container-shell grid items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)]">
+				<div className="container-shell grid grid-cols-1 items-start gap-[var(--space-block)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)]">
 					<div className="section-head">
 						<p className="spec-label">Frequently asked</p>
 						<h2 className="type-title">

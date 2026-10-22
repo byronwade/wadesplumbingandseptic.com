@@ -11,6 +11,7 @@ export function GoogleReviewButton({ onDark = false }: { onDark?: boolean }) {
 					: undefined
 			}
 			variant="outline"
+			wrap
 		>
 			<a href={siteConfig.googleReviewUrl}>Review us on Google</a>
 		</Button>
