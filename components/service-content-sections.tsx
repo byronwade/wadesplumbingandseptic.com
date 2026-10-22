@@ -70,18 +70,18 @@ function BulletGrid({
 		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel panel-inset flex items-start gap-3 text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
 					key={item}
 				>
 					<span
 						className={cn(
-							"mt-0.5 grid size-8 shrink-0 place-items-center rounded-md",
+							"mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center rounded-md",
 							tone === "warning"
 								? "bg-primary/15 text-primary"
 								: "bg-accent text-accent-foreground",
 						)}
 					>
-						<Icon aria-hidden="true" className="size-4" />
+						<Icon aria-hidden="true" className="size-[min(1rem,16px)]" />
 					</span>
 					<span className="leading-snug">{item}</span>
 				</li>
@@ -230,16 +230,19 @@ function TimelineBand({
 						<p className="spec-label">{section.eyebrow}</p>
 						<h2 className="type-title">{section.heading}</h2>
 					</div>
-					<div className="surface-float border-border min-w-0 p-[var(--space-card)] [overflow-wrap:anywhere] sm:p-8">
+					<div className="surface-float border-border min-w-0 p-[var(--space-card)] px-[min(var(--space-card),24px)] [overflow-wrap:anywhere] sm:p-8 sm:px-[min(2rem,32px)]">
 						{section.bullets.length ? (
 							<ul className="grid gap-4">
 								{section.bullets.map((item) => (
 									<li
-										className="border-border flex items-start gap-3 border-b pb-4 text-sm font-bold last:border-0 last:pb-0"
+										className="border-border flex items-start gap-[min(0.75rem,12px)] border-b pb-4 text-sm font-bold last:border-0 last:pb-0"
 										key={item}
 									>
-										<span className="bg-accent text-accent-foreground mt-0.5 grid size-7 shrink-0 place-items-center rounded-md">
-											<Check aria-hidden="true" className="size-3.5" />
+										<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(1.75rem,28px)] shrink-0 place-items-center rounded-md">
+											<Check
+												aria-hidden="true"
+												className="size-[min(0.875rem,14px)]"
+											/>
 										</span>
 										<span className="leading-snug">{item}</span>
 									</li>
@@ -284,7 +287,7 @@ function TipsBand({
 						<ol className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 							{section.bullets.map((item, itemIndex) => (
 								<li
-									className="surface-panel panel-inset flex items-start gap-3"
+									className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]"
 									key={item}
 								>
 									<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">

@@ -117,7 +117,7 @@ export function GlossaryTopicHub({
 									<li key={term.slug}>
 										<Link
 											prefetch={false}
-											className="border-border bg-background hover:border-primary/40 hover:bg-muted/40 group flex h-full flex-col gap-2 rounded-lg border p-5 [overflow-wrap:anywhere] transition-colors"
+											className="border-border bg-background hover:border-primary/40 hover:bg-muted/40 group flex h-full flex-col gap-2 rounded-lg border p-5 px-[min(1.25rem,20px)] [overflow-wrap:anywhere] transition-colors"
 											href={glossaryTermPath(hub.topic, term.slug) as Route}
 										>
 											<span className="type-card-title group-hover:text-primary transition-colors">

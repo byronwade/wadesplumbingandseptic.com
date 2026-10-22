@@ -61,7 +61,7 @@ async function GlossaryIndexBody() {
 					<li key={hub.topic}>
 						<Link
 							prefetch={false}
-							className="border-border bg-background hover:border-primary/40 group flex h-full flex-col gap-4 rounded-lg border p-6 [overflow-wrap:anywhere] transition-colors"
+							className="border-border bg-background hover:border-primary/40 group flex h-full flex-col gap-4 rounded-lg border p-6 px-[min(1.5rem,24px)] [overflow-wrap:anywhere] transition-colors"
 							href={hub.href as Route}
 						>
 							<p className="spec-label">{hub.eyebrow}</p>

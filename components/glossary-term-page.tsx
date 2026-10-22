@@ -92,7 +92,7 @@ export function GlossaryTermPage({
 
 				<section
 					aria-labelledby="tip-heading"
-					className="border-border bg-muted/40 rounded-lg border p-5"
+					className="border-border bg-muted/40 rounded-lg border p-5 px-[min(1.25rem,20px)]"
 				>
 					<h2 className="type-card-title mb-2" id="tip-heading">
 						Homeowner tip
@@ -110,7 +110,7 @@ export function GlossaryTermPage({
 								<li key={service.slug}>
 									<Link
 										prefetch={false}
-										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold [overflow-wrap:anywhere] transition-colors"
+										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 px-[min(1rem,16px)] font-bold [overflow-wrap:anywhere] transition-colors"
 										href={`/service-offerings/${service.slug}` as Route}
 									>
 										{service.title}
