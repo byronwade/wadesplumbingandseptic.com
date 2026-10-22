@@ -1,0 +1,228 @@
+{
+	"recorded_at": 1792713119.0205724,
+	"classification": "MOCK_VERIFIED",
+	"scope": "Complete request-time HTML for existing service and guide archives, preserving the prerendered shell and existing interactions.",
+	"source_commit": "e463d90bc78020ec0cab177b176437fe8c70659c",
+	"runtime": {
+		"node": "v25.9.0",
+		"next": "16.3.0-preview.10"
+	},
+	"diagnosis": {
+		"trigger": "useSearchParams in FilterableArchive during prerendering",
+		"result": "Client rendering bailout omitted archive markup and emitted duplicate document closing pairs for ordinary and GPTBot responses. Googlebot/Twitterbot already received server-rendered cards.",
+		"fix": "A shared server component awaits next/cache io() before rendering FilterableArchive. Existing Suspense boundaries, hero shell and data caching remain.",
+		"trial": "Changing only ranked archives repaired services/expert-tips; shared wrapper then repaired all archive families without patching framework code."
+	},
+	"acceptance": {
+		"commands": [
+			{
+				"exit_code": 0,
+				"seconds": 67.1827181,
+				"command": "npm ci"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 12.6816835,
+				"command": "npm run lint"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 10.6147177,
+				"command": "npm run typecheck"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 28.490425,
+				"command": "npm run seo:check"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 41.2803556,
+				"command": "npm run build"
+			}
+		],
+		"passed": 5,
+		"failed": 0,
+		"seo_tests_passed": 185,
+		"seo_tests_failed": 0,
+		"lint_warnings": 0,
+		"static_pages": 564,
+		"public_source_files": 298,
+		"business_fact_violations": 0,
+		"existing_high_advisories": 5,
+		"supplemental": [
+			"Final lint and changed-file formatting: exit 0",
+			"npm run ci:archive: exit 0, synthetic fixture helpers only",
+			"git diff --check: exit 0"
+		]
+	},
+	"regression": {
+		"command": "npm run ci:archive-html -- http://127.0.0.1:38729",
+		"routes_and_query_cases": 20,
+		"user_agents": ["Mozilla/5.0", "GPTBot", "Googlebot", "Twitterbot"],
+		"rebuilt_original": {
+			"passed": 40,
+			"failed": 40
+		},
+		"final": {
+			"passed": 80,
+			"failed": 0
+		},
+		"checks": [
+			"HTTP 200",
+			"Exactly one closing html/body pair outside scripts",
+			"Server-rendered archive controls and cards",
+			"Hydration payload present"
+		],
+		"initial_broader_probe": {
+			"passed": 40,
+			"failed": 48,
+			"disposition": "Eight failures were pre-existing ranked expert-tip redirects to missing pages. Confirmed on original rendering sources and recorded separately. The final scoped test excludes these two unreachable endpoints."
+		}
+	},
+	"html_validity": {
+		"tool": "html-validate 11.17.0",
+		"preset": "html-validate:standard",
+		"rule_exclusions": [],
+		"previous_audit": {
+			"routes": 284,
+			"valid": 269,
+			"close_order_findings": 30
+		},
+		"final": {
+			"routes": 284,
+			"valid": 284,
+			"invalid": 0,
+			"non200": 0,
+			"findings": {}
+		},
+		"method": "Actual local production HTTP responses, including resumed streams. Partial prerender artifacts are not treated as complete documents."
+	},
+	"browser": {
+		"states": 35,
+		"content_and_geometry_checks": {
+			"passed": 350,
+			"failed": 0,
+			"fields": [
+				"main text",
+				"links",
+				"images",
+				"geometry",
+				"title",
+				"canonical",
+				"schema",
+				"cards",
+				"html count",
+				"body count"
+			]
+		},
+		"axe_audits": 35,
+		"axe_violations": 0,
+		"page_errors": 0,
+		"overflow_states": 0,
+		"interaction_assertions": {
+			"passed": 56,
+			"failed": 0,
+			"coverage": [
+				"pagination",
+				"category filtering",
+				"reload persistence",
+				"sort preserves filter",
+				"card navigation",
+				"back navigation",
+				"invalid query normalization"
+			]
+		},
+		"widths": [1280, 390, 320],
+		"text_scales": [1, 2],
+		"themes": ["light", "dark"],
+		"screenshot_pairs": 16,
+		"screenshots": 32,
+		"visual": {
+			"passed": 16,
+			"failed": 0,
+			"strict_pixel_exact_pairs": 0,
+			"strict_image_mask_passed": 15,
+			"strict_image_mask_failed": 1,
+			"decision": "All geometry and image attributes unchanged. Fifteen pairs differ only within measured image bounds. The remaining pair also has exactly one pixel outside an image rectangle, with a channel delta of 1/255 at the image edge. Accepted as paint variation after measured and representative visual review; no exact pixel equivalence claimed."
+		},
+		"capture_method": "Original rendering sources and final sources each rebuilt and served locally. Final sources restored byte-for-byte using recorded hashes. Waited for styles/fonts/images and animation frames; disabled animation and offscreen paint deferral consistently in both capture runs. Functional interactions use the unmodified UI.",
+		"initial_capture": {
+			"content_geometry_passed": 343,
+			"content_geometry_failed": 7,
+			"axe_violation_rules": 2,
+			"disposition": "Offscreen content-visibility changed innerText, one frame had unapplied site styles, and interaction probes included hidden Activity pages / waited for full navigation events. Retained raw results, verified ten fresh styled loads, and reran with settled captures and active-page selectors. No failed raw comparison is reported as exact."
+		}
+	},
+	"preservation": {
+		"business_facts": "Unchanged",
+		"content_dates_images": "Unchanged",
+		"query_filter_sort_ranking_logic": "Unchanged",
+		"data_caches": "Unchanged",
+		"sidecar": "Untouched",
+		"dependencies_and_settings": "Unchanged"
+	},
+	"review": {
+		"kind": "Focused self-review",
+		"independent_agent_review": false,
+		"findings": 0,
+		"checks": [
+			"All three archive callers retain their Suspense boundaries",
+			"Only the archive waits for runtime; hero and shell stay outside",
+			"Cached data and client filtering logic are unchanged",
+			"No content or business-fact changes",
+			"No new client package or sidecar imports"
+		]
+	},
+	"references": [
+		{
+			"source": "node_modules/next/dist/docs/01-app/03-api-reference/04-functions/io.md",
+			"scope": "Installed framework io() API and Cache Components behavior",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"source": "node_modules/next/dist/docs/01-app/03-api-reference/04-functions/use-search-params.md",
+			"scope": "Installed framework prerendering and query-hook behavior",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"source": "node_modules/next/dist/server/app-render/dynamic-rendering.js",
+			"scope": "useDynamicSearchParams prerender-ppr bailout path",
+			"classification": "MOCK_VERIFIED"
+		}
+	],
+	"limitations": [
+		"Local verification only; no production, ranking, indexing or Eve integration claim.",
+		"No exact screenshot pixel equivalence claimed. Fifteen pairs differ only inside image bounds; one additional pixel at a photo edge differs by 1/255 in one channel.",
+		"Existing expert-tips/popular and expert-tips/trending redirects lead to missing pages; queued separately.",
+		"Five existing high dependency advisories remain.",
+		"Shared toolkit reservation unavailable due to a missing configured root; snapshots and local receipts worked, shared configuration unchanged."
+	],
+	"artifact_sha256": {
+		"acceptance.json": "069c690bfa427405f9d327108928e78fedbd0b5c51ef695d674a285168ce386a",
+		"ci.log": "6ef7a1d4d695ed561dee3f335c0a23b915ec0dcde663dad82945759318581d71",
+		"run-lint.log": "1337db05a30f7e047003a9fbf6f03d695a605dd8da040163ca2ad4640074ac5a",
+		"run-typecheck.log": "ba6cb5ab80995cb26d4dd2eaed7119e3b03fed705fab7982a535838f3a35f91d",
+		"run-seo-check.log": "5e38c427a5fe1433aa4fe0ff5169bbe6d28e8ca719f2d7263b18ce0379e95248",
+		"run-build.log": "443bd39929426495554435df9078246af65dbd8aa9a12df406d99056e79a9169",
+		"final-lint.log": "1337db05a30f7e047003a9fbf6f03d695a605dd8da040163ca2ad4640074ac5a",
+		"settled-baseline-build.log": "c3934caa7d21095dc2598f568b11d6980473ba915ee7a86f514c247f2bd85bbf",
+		"settled-final-build.log": "afd57f4358b9211b65d88fdba45edfa47ab7e4a31ba429a59d6b93db74870223",
+		"archive-html-red-scoped.log": "1926c02dbe7da512fb66df2c9f58e03d7d2d29adf4dbed2e67fab219de826e04",
+		"archive-html-green.log": "f2d513b551adc67edd536efd0dc531b15fdff3528949993054843bd9d5c07bc3",
+		"html-validity.json": "13b9857db25b8a776facaf617f66ac46396bb6f77b3aaef940f697b7d491f0d9",
+		"baseline-browser.json": "acef981365a474cb86765d54359bce05bf1081b1f4c564a11c7f1e2a7a529c10",
+		"final-browser.json": "cfc30e297b0b9793547a07ae6406e8cbfa97283c5ee10bd61a839072c47bfeaf",
+		"browser-comparison.json": "eb3b7a4640ce50e68cb5e7780166f2677d3dcd789b226c1d4223a7816295a234",
+		"interactions.json": "044a7e5bce4a6e7b84b20fd20d3430fa510b62d319dc6b399c9bb288b7491868",
+		"visual-review.json": "3bac0770aff81d12608eb7e2a597b0347e48707c604074ce6c0d0333a5d3dbd2",
+		"pixel-details.json": "c51919037bc24389163858508a71f7d3fb6b899481e6e0cc62e074f897610eb6",
+		"style-diagnostic.json": "603d12fcbc483f3a9fb8379e8d6a947770b8838c5722fa75eb7c7df409dade1a",
+		"initial-baseline-browser.json": "a7317b15f419a485c13bf2262daf6b54717b3bcca464e04733e365d854e48387",
+		"initial-final-browser.json": "06f9040dc40cef31d0b7b4368d75cb7927187f1ad48d9224eb98a1594a28fed3",
+		"initial-browser-comparison.json": "fafcba68048baf66cd7af158333b0bcacf6fc40e839cbb66fbb47b7d9f515d24",
+		"rendering-sources.json": "a1405a46c69aaa293846befa04d73c0a04f727792d84a5aa7a89be76ea349256",
+		"screenshot-manifest.json": "1a24d38ca602818bc7ddf63bed06baa66252d8b256e2635b5bccaac263e92248",
+		"ranked-tip-redirects.json": "745e6bc67fdc1ab899893df045398079ef1fc95ca8136c3fff2ffeaf5ff2643b"
+	}
+}
