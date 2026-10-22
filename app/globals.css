@@ -998,6 +998,12 @@
 		font-family: var(--font-display);
 		font-weight: 800;
 		text-wrap: balance;
+		/*
+		  With enlarged text a single word can be wider than a phone screen.
+		  anywhere (not break-word) also shrinks the heading's min-content width,
+		  so grid and flex parents can narrow instead of widening the page.
+		*/
+		overflow-wrap: anywhere;
 	}
 
 	/*
@@ -1027,8 +1033,6 @@
 		font-size: var(--type-cinematic);
 		line-height: 0.9;
 		letter-spacing: -0.045em;
-		/* With enlarged text a single word can be wider than a phone screen. */
-		overflow-wrap: break-word;
 	}
 
 	.type-display {
@@ -1129,6 +1133,8 @@
 		font-size: 1.0625rem;
 		line-height: 1.75;
 		text-wrap: pretty;
+		/* Source lists use raw URLs as link text; let them wrap on phones. */
+		overflow-wrap: break-word;
 	}
 
 	.prose > * + * {
