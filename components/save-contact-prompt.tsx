@@ -1,5 +1,6 @@
 "use client"
 
+import { CallLabel } from "@/components/call-label"
 import { Phone } from "@/components/icons"
 import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
@@ -50,8 +51,7 @@ export function SaveContactPrompt({
 						kind="phone"
 						onClick={() => onOpenChange(false)}
 					>
-						<Phone aria-hidden="true" />
-						<span className="min-w-0">Call {contactInfo.phoneDisplay}</span>
+						<CallLabel icon={<Phone aria-hidden="true" />} />
 					</ProtectedContactLink>
 					<button
 						className={cn(

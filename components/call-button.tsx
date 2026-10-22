@@ -3,6 +3,7 @@
 import type { ReactNode } from "react"
 import { Phone } from "@/components/icons"
 
+import { CallLabel } from "@/components/call-label"
 import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
@@ -46,13 +47,19 @@ export function CallButton({
 				: `${dialLabel} ${contactInfo.phoneDisplay}`
 			: `Call ${contactInfo.phoneDisplay}`
 
+	const icon = showIcon ? (
+		<Phone aria-hidden="true" className="shrink-0" />
+	) : null
+
 	return (
 		<ProtectedContactLink ariaLabel={dialAria} className={styles} kind="phone">
-			{showIcon ? <Phone aria-hidden="true" className="shrink-0" /> : null}
 			{typeof dialLabel === "string" ? (
-				<span className="min-w-0">{dialLabel}</span>
+				<CallLabel icon={icon} label={dialLabel} />
 			) : (
-				dialLabel
+				<>
+					{icon}
+					{dialLabel}
+				</>
 			)}
 		</ProtectedContactLink>
 	)

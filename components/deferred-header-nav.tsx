@@ -4,6 +4,7 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
+import { CallLabel } from "@/components/call-label"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
@@ -58,7 +59,7 @@ function HeaderNavFallback() {
 				)}
 				href={contactInfo.phoneHref}
 			>
-				Call {contactInfo.phoneDisplay}
+				<CallLabel />
 			</a>
 		</nav>
 	)

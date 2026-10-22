@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowLeft, Phone } from "@/components/icons"
 
+import { CallLabel } from "@/components/call-label"
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -29,13 +30,15 @@ export default function NotFound() {
 						</Link>
 						<a
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg" }),
+								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
 								"w-full sm:w-auto",
 							)}
 							href={siteConfig.phoneHref}
 						>
-							<Phone aria-hidden="true" />
-							{siteConfig.phone}
+							<CallLabel
+								icon={<Phone aria-hidden="true" />}
+								label={siteConfig.phone}
+							/>
 						</a>
 					</div>
 				</div>

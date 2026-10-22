@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Check, Phone } from "@/components/icons"
 
+import { CallLabel } from "@/components/call-label"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
@@ -121,11 +122,15 @@ export default async function CityServicePage({
 					<p className="type-lead mt-4">{page.localAngle}</p>
 					<div className="mt-8 flex flex-col gap-3 sm:flex-row">
 						<a
-							className={cn(buttonVariants({ size: "lg" }), "justify-center")}
+							className={cn(
+								buttonVariants({ size: "lg", wrap: true }),
+								"justify-center",
+							)}
 							href={siteConfig.phoneHref}
 						>
-							<Phone aria-hidden="true" className="size-4" />
-							Call {siteConfig.phone}
+							<CallLabel
+								icon={<Phone aria-hidden="true" className="size-4" />}
+							/>
 						</a>
 						<Link
 							prefetch={false}
