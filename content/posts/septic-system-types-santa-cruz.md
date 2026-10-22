@@ -71,7 +71,7 @@ Traditional systems with a septic tank and leach field are prevalent. However, a
 
 ![Multi-tank septic excavation](/images/work/multi-tank-excavation.webp)
 
-Alternative systems often include additional treatment components or technologies to improve wastewater processing, making them suitable for areas with poor soil conditions or limited space.
+Alternative systems often include additional treatment components or technologies to improve wastewater processing, making them suitable for areas with poor soil conditions or limited space. Our [guide to engineered septic systems](/what-you-need-to-know-about-engineered-septic-systems) explains the main types and how to plan the work.
 
 ### What factors should I consider when choosing a septic system for my home?
 

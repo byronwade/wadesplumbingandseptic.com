@@ -320,6 +320,31 @@ test("Markdown internal links point at final URLs, not redirects", async () => {
 	assert.deepEqual(problems, [])
 })
 
+test("Markdown internal links point at pages that exist", async () => {
+	// The redirect guard above cannot see a link that matches no route at all
+	// (for example /lp/service-offerings/<slug>, which 404s).
+	const { buildSitemapEntries, SITEMAP_EXCLUDED_PATHS } =
+		await import("../../lib/sitemap")
+	const live = new Set([
+		...SITEMAP_EXCLUDED_PATHS,
+		...(await buildSitemapEntries()).map(
+			(entry) =>
+				entry.url.slice(siteConfig.url.length).replace(/\/$/, "") || "/",
+		),
+	])
+	const problems: string[] = []
+	for (const file of sourceFiles(["content"], /\.md$/)) {
+		const text = fs.readFileSync(file, "utf8")
+		for (const [, href] of text.matchAll(/\]\((\/(?!\/)[^)\s#?]*)/g)) {
+			const pathname = href.replace(/\/$/, "") || "/"
+			if (live.has(pathname)) continue
+			if (fs.existsSync(path.join("public", pathname))) continue
+			problems.push(`${file}: ${href} is not a page on the site`)
+		}
+	}
+	assert.deepEqual(problems, [])
+})
+
 test("robots.txt welcomes search and AI crawlers with the same private paths blocked", async () => {
 	const { default: robots } = await import("../../app/robots")
 	const config = robots()

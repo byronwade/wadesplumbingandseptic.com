@@ -48,7 +48,7 @@ If you notice these signs, it's essential to contact a professional for [septic 
 
 ## Consequences of Neglecting Septic Leach Field Issues
 
-Ignoring problems with your leach field can lead to severe consequences. Untreated wastewater can contaminate groundwater, posing health risks to your family and the community. Additionally, neglecting repairs can result in septic system failure, requiring costly replacements. Regular maintenance and timely repairs are crucial to avoid these issues.
+Ignoring problems with your leach field can lead to severe consequences. Untreated wastewater can contaminate groundwater, posing health risks to your family and the community. Additionally, neglecting repairs can result in septic system failure, requiring costly replacements. When a failed system cannot be replaced in kind, the replacement may need an [engineered septic system](/service-offerings/engineered-septic-system-installation). Regular maintenance and timely repairs are crucial to avoid these issues.
 
 ## Benefits of Professional Septic Leach Field Repair
 

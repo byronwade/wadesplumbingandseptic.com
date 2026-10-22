@@ -38,7 +38,7 @@ Sewer lines are essential components of your home's plumbing system. However, th
 
 ## Signs Your Sewer Line Needs Repair
 
-Early detection of sewer line issues can save you time and money. Watch out for signs such as slow drains, unusual odors, gurgling noises from toilets, or damp patches in your yard. If you notice any of these indicators, it may be time to consider a [sewer line repair](/lp/service-offerings/pipe-repair-and-replacement).
+Early detection of sewer line issues can save you time and money. Watch out for signs such as slow drains, unusual odors, gurgling noises from toilets, or damp patches in your yard. If you notice any of these indicators, it may be time to consider a [sewer line repair](/service-offerings/pipe-repair-and-replacement).
 
 ## The Importance of Regular Sewer Line Inspections
 
@@ -79,7 +79,7 @@ Contact Wade's Plumbing & Septic for expert sewer line repair services in Santa 
 ## Sources & Local References
 
 - [Plumbing & septic service areas overview](/service-areas)
-- [Plumbing Repair Services, Santa Cruz County](/lp/service-offerings/pipe-repair-and-replacement)
+- [Plumbing Repair Services, Santa Cruz County](/service-offerings/pipe-repair-and-replacement)
 
 ## Sources & Local References
 
