@@ -178,6 +178,33 @@ for (const collection of COLLECTIONS) {
 				)
 			}
 		}
+		// Imported citations used the address itself as link text and were glued
+		// to the previous word ("failure[www2.santacruzcountyca.gov](…)"). Readers
+		// get no source name and narrow screens break the address mid-word.
+		for (const [link, text] of prose.matchAll(
+			/\[([^\]]*)\]\(https?:\/\/[^)\s]+\)/g,
+		)) {
+			const label = text.replace(/[()[\],]/g, "").trim()
+			if (
+				label !== "wadesplumbingandseptic.com" &&
+				(/^https?:\/\//i.test(label) || /^[\w-]+(?:\.[\w-]+)+\/?$/.test(label))
+			) {
+				errors.push(
+					`${file}: link text "${text}" is a bare web address; name the source, e.g. [County LAMP update](https://…)`,
+				)
+			}
+			if (label === "") {
+				errors.push(
+					`${file}: link "${link.slice(0, 40)}" has no readable text; merge it into the neighbouring citation`,
+				)
+			}
+		}
+		const glued = prose.match(/[\p{L}\p{N}.,;:)]\[[^\]]+\]\(https?:\/\//u)
+		if (glued) {
+			errors.push(
+				`${file}: external link glued to the previous word "${glued[0]}"; add a space or wrap the citation in parentheses`,
+			)
+		}
 		if (/^Santa Cruz County Septic Experts$/m.test(prose)) {
 			errors.push(
 				`${file}: stray "Santa Cruz County Septic Experts" label left over from WordPress; remove it`,
