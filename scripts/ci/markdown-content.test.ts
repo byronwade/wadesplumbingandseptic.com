@@ -72,6 +72,28 @@ test("Markdown call links work in server HTML before JavaScript", () => {
 	assert.match(html, />Call Wade&#x27;s<\/a>/)
 })
 
+test("custom renderers never leak the syntax tree node into HTML attributes", () => {
+	const html = renderToStaticMarkup(
+		createElement(MarkdownContent, {
+			content: [
+				"# Demoted heading",
+				"",
+				`[Internal](/contact) [External](https://example.com) [Call](${siteConfig.phoneHref}) [Email](mailto:${siteConfig.email})`,
+				"",
+				"| Column |",
+				"| --- |",
+				"| Cell |",
+			].join("\n"),
+			demoteH1: true,
+		}),
+	)
+	assert.match(html, /<h2>Demoted heading<\/h2>/)
+	assert.match(html, /<table>/)
+	assert.equal((html.match(/<a\s/g) ?? []).length, 4, html)
+	assert.doesNotMatch(html, /\snode=/, html)
+	assert.doesNotMatch(html, /\sclass=""/, html)
+})
+
 test("Markdown still blocks unsafe and unsupported URL protocols", () => {
 	for (const url of [
 		"javascript:unsafe",

@@ -42,6 +42,16 @@ function MarkdownImage({ src, alt }: { src?: string; alt?: string }) {
 	)
 }
 
+/**
+ * react-markdown passes its syntax tree `node` to every custom renderer. Spread
+ * onto a DOM element it serializes as node="[object Object]".
+ */
+function withoutNode<T extends { node?: unknown }>(props: T): Omit<T, "node"> {
+	const rest = { ...props }
+	delete rest.node
+	return rest
+}
+
 /*
  * The measure comes from .prose (--measure, ~75 characters a line). It used to
  * carry max-w-none, so body copy ran the full width of the article column -
@@ -65,7 +75,8 @@ export function MarkdownContent({
 					url === siteConfig.phoneHref ? url : defaultUrlTransform(url)
 				}
 				components={{
-					a: ({ href = "", children, ...props }) => {
+					a: ({ href = "", children, ...rest }) => {
+						const props = withoutNode(rest)
 						if (href.startsWith("/")) {
 							return (
 								<Link prefetch={false} href={href as Route} {...props}>
@@ -105,14 +116,16 @@ export function MarkdownContent({
 					),
 					...(demoteH1
 						? {
-								h1: ({ children, ...props }) => <h2 {...props}>{children}</h2>,
+								h1: ({ children, ...props }) => (
+									<h2 {...withoutNode(props)}>{children}</h2>
+								),
 							}
 						: {}),
 					// Wide tables scroll inside their own box instead of pushing the
 					// page sideways on narrow screens.
 					table: ({ children, ...props }) => (
 						<div className="table-scroll">
-							<table {...props}>{children}</table>
+							<table {...withoutNode(props)}>{children}</table>
 						</div>
 					),
 				}}
