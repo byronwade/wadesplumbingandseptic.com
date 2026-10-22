@@ -96,10 +96,7 @@ test("a number-only call label keeps the icon apart from the number", () => {
 			label: contactInfo.phoneDisplay,
 		}),
 	)
-	assert.ok(
-		html.includes(`<span class="ms-2">${contactInfo.phoneDisplay}</span>`),
-		html,
-	)
+	assert.ok(html.includes(`me-2"><svg></svg></span><wbr/>${wholeNumber}`), html)
 })
 
 test("call labels without the number render unchanged", () => {

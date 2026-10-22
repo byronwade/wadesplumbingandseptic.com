@@ -37,13 +37,18 @@ export function CallLabel({
 	return (
 		<span className={cn("min-w-0", className)}>
 			{icon || before ? (
-				<span className="inline-flex h-[1lh] items-center gap-2 align-top whitespace-nowrap">
+				<span
+					className={cn(
+						"inline-flex h-[1lh] items-center gap-2 align-top whitespace-nowrap",
+						!before && "me-2",
+					)}
+				>
 					{icon}
 					{before}
 				</span>
 			) : null}
-			{before ? " " : null}
-			<span className={icon && !before ? "ms-2" : undefined}>{phone}</span>
+			{before ? " " : <wbr />}
+			<span>{phone}</span>
 			{after}
 		</span>
 	)
