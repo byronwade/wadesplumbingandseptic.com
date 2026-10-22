@@ -47,7 +47,7 @@ export function ProtectedContactLink({
 	return (
 		<a
 			aria-label={ariaLabel}
-			className={cn(className)}
+			className={cn(className) || undefined}
 			href={payload.href}
 			{...rest}
 		>
