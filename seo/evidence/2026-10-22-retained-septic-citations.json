@@ -1,0 +1,136 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-135929-codex-2",
+	"scope": "Manual source-block cleanup in two existing septic posts; no article claim changes",
+	"sources": [
+		{
+			"file": "septic-system-challenges-santa-cruz-fire",
+			"url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmN4el9xUkM4LTVPa0tiQ1pQbF9ad3BVaHRHT0FwNUpraU4zTWkydV82UF84QXk2ZVc4ZHdlNnZEVTRaRW9TZFE4XzV4ZWFnRlV3cko1MWhHT21aZzFmbDdvVjRSQ1ZKYWtnVUFzVFhyd21Ld0tybHo3WGc3eFZCMlVTeXU5SnVZV1RGSkJ4NldRTFl1LW1ud3hNbmJ1S0FIYmpz?oc=5",
+			"kind": "retained_rss",
+			"accessed_at": "2026-10-22T18:01:17.722675+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmN4el9xUkM4LTVPa0tiQ1pQbF9ad3BVaHRHT0FwNUpraU4zTWkydV82UF84QXk2ZVc4ZHdlNnZEVTRaRW9TZFE4XzV4ZWFnRlV3cko1MWhHT21aZzFmbDdvVjRSQ1ZKYWtnVUFzVFhyd21Ld0tybHo3WGc3eFZCMlVTeXU5SnVZV1RGSkJ4NldRTFl1LW1ud3hNbmJ1S0FIYmpz?oc=5&hl=en-US&gl=US&ceid=US:en",
+			"sha256": "76b8ab6ad308bc6891c7b9a55398d7044dae31037f982baf25f2ab02655a1b3a",
+			"classification": "LIVE_VERIFIED",
+			"titles": ["Google News"],
+			"keywords": {
+				"septic": 0,
+				"journalism": 0,
+				"rebuilding": 0
+			}
+		},
+		{
+			"file": "septic-system-types-santa-cruz",
+			"url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5",
+			"kind": "retained_rss",
+			"accessed_at": "2026-10-22T18:01:17.732346+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5&hl=en-US&gl=US&ceid=US:en",
+			"sha256": "5e255572eae3b05ce78f86df03e662146fa80a95ffa3025702b510a917da9f5f",
+			"classification": "LIVE_VERIFIED",
+			"titles": ["Google News"],
+			"keywords": {
+				"septic": 0,
+				"journalism": 0,
+				"rebuilding": 0
+			}
+		},
+		{
+			"url": "https://www.govtech.com/em/disaster/residents-struggle-to-recover-from-2020-santa-cruz-mountains-fire",
+			"kind": "title_matched_publisher",
+			"accessed_at": "2026-10-22T18:01:17.802189+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://www.govtech.com/em/disaster/residents-struggle-to-recover-from-2020-santa-cruz-mountains-fire",
+			"sha256": "30c469a552737ec044ae2be878645cfb823626ea3808f3d89214a4ef0cc292f5",
+			"classification": "LIVE_VERIFIED",
+			"titles": [
+				"Residents Struggle to Recover from 2020 Santa Cruz Mountains Fire",
+				"Residents Struggle to Recover from 2020 Santa Cruz Mountains Fire"
+			],
+			"keywords": {
+				"septic": 3,
+				"journalism": 0,
+				"rebuilding": 6
+			}
+		},
+		{
+			"url": "https://lookout.co/lookout-santa-cruzs-growing-impact/",
+			"kind": "title_matched_publisher",
+			"accessed_at": "2026-10-22T18:01:17.893263+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://lookout.co/lookout-santa-cruzs-growing-impact",
+			"sha256": "47afcdfdf1529a10c561c3da745e84c97804efce2af642cfb62f34af7c4ea2b5",
+			"classification": "LIVE_VERIFIED",
+			"titles": [
+				"Lookout Santa Cruz: Journalism that makes a difference - Lookout Santa Cruz",
+				"Lookout Santa Cruz: Journalism that makes a difference"
+			],
+			"keywords": {
+				"septic": 0,
+				"journalism": 24,
+				"rebuilding": 0
+			}
+		}
+	],
+	"browser_resolution": [
+		{
+			"url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmN4el9xUkM4LTVPa0tiQ1pQbF9ad3BVaHRHT0FwNUpraU4zTWkydV82UF84QXk2ZVc4ZHdlNnZEVTRaRW9TZFE4XzV4ZWFnRlV3cko1MWhHT21aZzFmbDdvVjRSQ1ZKYWtnVUFzVFhyd21Ld0tybHo3WGc3eFZCMlVTeXU5SnVZV1RGSkJ4NldRTFl1LW1ud3hNbmJ1S0FIYmpz?oc=5",
+			"accessed_at": "2026-10-22T18:01:57.955368+00:00",
+			"final_url": "https://www.govtech.com/em/disaster/residents-struggle-to-recover-from-2020-santa-cruz-mountains-fire",
+			"title": "Residents Struggle to Recover from 2020 Santa Cruz Mountains Fire",
+			"h1": [
+				"Residents Struggle to Recover from 2020 Santa Cruz Mountains Fire"
+			],
+			"status": 200,
+			"html_sha256": "1eb345592ea9185e619d401f6f631d7b27fdf33feda3152b8339f98354b9a935"
+		},
+		{
+			"url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5",
+			"accessed_at": "2026-10-22T18:02:01.275772+00:00",
+			"final_url": "https://lookout.co/lookout-santa-cruzs-growing-impact",
+			"title": "Lookout Santa Cruz: Journalism that makes a difference - Lookout Santa Cruz",
+			"h1": [
+				"\n\t\t\tLookout Santa Cruz: Journalism that makes a difference\t\t"
+			],
+			"status": 200,
+			"html_sha256": "93abfd6f20d18732d79d352ebca92655d8f4324e66d0a069c512e39c254511cf"
+		}
+	],
+	"decisions": [
+		{
+			"file": "content/posts/septic-system-challenges-santa-cruz-fire.md",
+			"decision": "Consolidate two differently labelled links to the same report into one direct publisher link with its verified title.",
+			"relevance": "The GovTech report discusses post-CZU rebuilding and septic replacement/upgrade hurdles. It supports local recovery context only, not fireproofing advice, technical instructions or Wade service claims."
+		},
+		{
+			"file": "content/posts/septic-system-types-santa-cruz.md",
+			"decision": "Remove both citations to the journalism-impact page and the resulting empty duplicate heading; retain the existing service-area link.",
+			"relevance": "The resolved Lookout page is about its reporting impact, not an explanation of septic system types. Its former Understanding Septic Systems label misrepresents the destination."
+		}
+	],
+	"preservation": [
+		{
+			"file": "content/posts/septic-system-challenges-santa-cruz-fire.md",
+			"outside_source_blocks_identical": true,
+			"frontmatter_identical": true,
+			"before_sha256": "b3a33bd083dd2ee8d60e1eec1c1e5f437d923db78195026119807b0251744120",
+			"after_sha256": "27a37c217d4e4c56efc63239c6aeee7034e782d2deb71319eeba400ea07ff704"
+		},
+		{
+			"file": "content/posts/septic-system-types-santa-cruz.md",
+			"outside_source_blocks_identical": true,
+			"frontmatter_identical": true,
+			"before_sha256": "2f989e50112136bc4013e4c80943b4d0c19f8c75a73a640af543ecc864013e03",
+			"after_sha256": "53845e36b85c075cd1a2bf82b7a941ff238d97e5b03a7bbc95db428f3734ed94"
+		}
+	],
+	"classification": "LIVE_VERIFIED",
+	"classification_scope": "Source availability and actual browser destinations only. Local article-preservation and acceptance checks are MOCK_VERIFIED, with no ranking, indexing, production or Eve integration claim.",
+	"redaction": "No cookies, tokens, personal data, raw source HTML or third-party article body retained. Titles, public URLs, bounded summaries and hashes only.",
+	"retention_class": "Git evidence record",
+	"rollback": "Restore the two source blocks from parent commit fc143ffd207afbfdf1fb7c75fbdd4432e88fac3a."
+}

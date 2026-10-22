@@ -93,12 +93,7 @@ Choosing a locally trusted provider like Wade's Plumbing & Septic ensures that y
 
 ## Sources & Local References
 
-- [Understanding Septic Systems](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5)
 - [Plumbing & septic service areas overview](/service-areas)
-
-## Sources & Local References
-
-- [Lookout Santa Cruz's growing impact, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYkhVTGpVWS1GX29id3VOWjllbDVQN2pjdUJQdFdNRzFqOGpWVFNCY19QUDF5RmxldU8yME10WUJDNDNXX1pDd093cF8yWEpVSE9XZU1FUE52aDBaLUJLTTZEMA?oc=5)
 
 ## Seasonal Tip
 
