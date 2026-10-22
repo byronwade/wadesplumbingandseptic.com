@@ -1,5 +1,5 @@
 {
-	"recorded_at": "2026-10-22T23:11:30.959468+00:00",
+	"recorded_at": 1792710690.959468,
 	"classification": "MOCK_VERIFIED",
 	"scope": "Offline HTML validity sweep and removal of the shared visual JSON-LD loading fallback.",
 	"source_commit": "d125922089ba9ae50a44b93e98bd6f6ec50ad032",
