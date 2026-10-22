@@ -87,7 +87,7 @@ export function ContentConversionCta({
 						<p className="spec-label spec-label-center mb-7">
 							What neighbors say
 						</p>
-						<ul className="grid gap-8 md:grid-cols-3 md:gap-10">
+						<ul className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
 							{conversion.testimonials.map((testimonial) => (
 								<li
 									className="reveal relative"

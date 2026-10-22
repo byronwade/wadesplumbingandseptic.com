@@ -94,7 +94,7 @@ export function VirtualBusinessCard({
 								)}
 							/>
 						</div>
-						<div className="grid gap-3 sm:grid-cols-2 sm:gap-6">
+						<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6">
 							<div className="min-w-0">
 								<p
 									className={cn(

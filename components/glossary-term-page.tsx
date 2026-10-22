@@ -105,12 +105,12 @@ export function GlossaryTermPage({
 						<h2 className="type-title" id="services-heading">
 							Related Wade&apos;s services
 						</h2>
-						<ul className="grid gap-3 sm:grid-cols-2">
+						<ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
 							{relatedServices.map((service) => (
 								<li key={service.slug}>
 									<Link
 										prefetch={false}
-										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold transition-colors"
+										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 font-bold [overflow-wrap:anywhere] transition-colors"
 										href={`/service-offerings/${service.slug}` as Route}
 									>
 										{service.title}

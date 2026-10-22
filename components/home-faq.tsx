@@ -12,11 +12,11 @@ export function HomeFaq({
 			{faqs.map((faq) => (
 				<details className="group px-5 py-1" key={faq.question}>
 					<summary className="focus-visible:ring-ring cursor-pointer list-none py-4 text-sm font-bold tracking-[-0.02em] marker:content-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden">
-						<span className="flex items-center justify-between gap-4">
+						<span className="flex items-center justify-between gap-4 [overflow-wrap:anywhere]">
 							{faq.question}
 							<span
 								aria-hidden="true"
-								className="text-muted-foreground text-lg leading-none transition group-open:rotate-45"
+								className="text-muted-foreground shrink-0 text-lg leading-none transition group-open:rotate-45"
 							>
 								+
 							</span>
