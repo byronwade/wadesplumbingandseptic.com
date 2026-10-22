@@ -26,6 +26,7 @@
 		"ci:self-hosted-policy": "node scripts/ci/assert-self-hosted-only.mjs",
 		"ci:search": "tsx scripts/ci/test-search.ts",
 		"ci:archive": "tsx scripts/ci/test-archive.ts && tsx scripts/ci/audit-archive-filters.ts",
+		"ci:archive-html": "node scripts/ci/test-archive-html.mjs",
 		"ci:related": "tsx scripts/ci/test-related-content.ts",
 		"ci:page-views": "tsx scripts/ci/test-page-views.ts",
 		"ci:sitemap": "tsx scripts/ci/test-sitemap.ts",

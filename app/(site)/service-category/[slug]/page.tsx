@@ -5,7 +5,7 @@ import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
-import { FilterableArchive } from "@/components/filterable-archive"
+import { RequestArchive } from "@/components/request-archive"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection, type ContentDocument } from "@/lib/content"
@@ -88,7 +88,7 @@ async function RankedCategoryArchive({
 	)
 
 	return (
-		<FilterableArchive
+		<RequestArchive
 			allLabel={`${label} services`}
 			emptyLabel="No services in this category."
 			items={items}
