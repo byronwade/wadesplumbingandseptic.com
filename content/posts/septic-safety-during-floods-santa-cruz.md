@@ -83,8 +83,8 @@ Contact a professional if you notice any signs of distress or after a flood to e
 
 ## Sources & Local References
 
-- [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon, Lookout Santa Cruz](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5)
-- [Reference from wadesplumbingandseptic.com](/service-areas)
+- [With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon, Lookout Santa Cruz](https://lookout.co/with-atmospheric-river-soaking-region-santa-cruz-county-under-wind-and-flood-advisory-through-thursday-afternoon/story)
+- [Plumbing & septic service areas overview](/service-areas)
 
 ## Seasonal Tip
 

@@ -1,0 +1,98 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-171954-cursor-1",
+	"scope": "Every remaining Google News RSS citation in content/posts (5 links, 5 posts), every duplicate source heading (2 posts) and every vague 'Reference from wadesplumbingandseptic.com' label (5 posts). Source blocks only; no article claim changes.",
+	"tool": "Playwright with system Chrome, headless; each RSS link opened in a fresh context and followed to its publisher",
+	"sources": [
+		{
+			"file": "content/posts/septic-safety-during-floods-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPX1JIZ2Vyc1F6WWZ1ZnVhV0lqTGFJYW92R21TRTRHcU9kb1N4NHlyVlBmaEFqVjZGajBvdEpyQnJZSXhFZk1ZQ2NkRjJEQ3FoRnE4SEstdl9lNGl1akc0cEhOR0xQaXBqbVJ5OUJZZVNUZDBQNUZsNWlxUXYyTm1GbkgxdUN2MndsRVhSb2pqSy10dHdrSTlKSzBjVkpjUk9qdlA3MW02VUxjNUM4bWl2X05weV9hT0hSNTRLSUFRUVVKNjdjcGFTVEpHZl9CaXphZGlz?oc=5",
+			"accessed_at": "2026-10-22T21:28:33.752927+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://lookout.co/with-atmospheric-river-soaking-region-santa-cruz-county-under-wind-and-flood-advisory-through-thursday-afternoon/story",
+			"title": "With atmospheric river soaking region, Santa Cruz County under wind and flood advisory through Thursday afternoon",
+			"published": "2025-11-13T21:10:09+00:00",
+			"html_sha256": "20d32533ed39aef72139671191d40e23dde18d1b666bf0e6b83ece30c7c24007",
+			"classification": "LIVE_VERIFIED",
+			"relevance": "Santa Cruz County flood advisory during an atmospheric river (minor urban flooding, rainfall totals). Local flood context for a post about septic safety during floods.",
+			"decision": "Keep; link the publisher URL directly with the existing (matching) title."
+		},
+		{
+			"file": "content/posts/septic-system-components-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5",
+			"accessed_at": "2026-10-22T21:28:40.279900+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story",
+			"title": "Santa Cruz County opens seasonal groundwater testing window",
+			"published": "2026-01-09T13:52:00+00:00",
+			"html_sha256": "0571fc02c15204ebc4cbb9e11ce702f9594c017172630dfd5102d045261fc1e8",
+			"classification": "LIVE_VERIFIED",
+			"relevance": "County groundwater monitoring for properties on on-site wastewater systems; explains the required vertical separation between the septic drain field and groundwater. Directly about a septic component.",
+			"decision": "Keep; link the publisher URL directly with the existing (matching) title."
+		},
+		{
+			"file": "content/posts/septic-trouble-signs-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMnhBeHN5Q3d1Q0ltdnNhdGZRUUd6b3Q5cW5fQlJBYlI2YTAtUHozVHRCWnpnNXc2MXZqR1F3NmM4V00xa25TZVBMOXczYW12RlpIVGtWS3M1NGJpTktyekUxaDZvZWdaMHkyU0pvdHdqS1FGaTJqYkNETWtUNjM0OVliS1J5a1NSbG5YcQ?oc=5",
+			"accessed_at": "2026-10-22T21:28:46.372473+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story",
+			"title": "Santa Cruz County opens seasonal groundwater testing window",
+			"published": "2026-01-09T13:52:00+00:00",
+			"html_sha256": "a1a27ee3df775cccbc6fa2340313bd122daf399aeb6012c2abda630d64c34c29",
+			"classification": "LIVE_VERIFIED",
+			"relevance": "The article names homeowners planning septic system repairs in areas with elevated groundwater as a group the testing window matters for. Fits a post on spotting septic trouble.",
+			"decision": "Keep; link the publisher URL directly with the existing (matching) title."
+		},
+		{
+			"file": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk1OZF8xVWdLNERqM0t3TnBKZ0ljT0VITDhKVU9fZW5IdmJtSjNNUWFYVDVUQlp0MXpkS3AwTXVwUHBKSERVNTVHbGsyTDF4RUFtSm45dWNUTG45OFFsVjRJQ3d1WTZvUTdEMnpfZHN4VVZMbzlQeVBSMllraG1jcXNFbHE2T2ZNRVVITVV1b1loRVdmNm12N3JLcw?oc=5",
+			"accessed_at": "2026-10-22T21:28:51.938539+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://news.azpm.org/s/99273-two-rivers-one-lifeline-reclaiming-the-santa-cruz-across-borders/",
+			"title": "Two rivers, one lifeline: Reclaiming the Santa Cruz across borders",
+			"html_sha256": "f725622f15a04e4d9f64f10be85f5ba4dca05fd6082d404f7a6be997d6441a77",
+			"classification": "LIVE_VERIFIED",
+			"relevance": "Arizona Public Media story about the Santa Cruz River across the Arizona/Mexico border (page text: 'arizona' 19 times, 'septic' 0). Not about Santa Cruz County, California or sewer lines.",
+			"decision": "Remove the citation and the duplicate 'Sources & Local References' heading it sat under; the first source list (service areas, pipe repair service) stays."
+		},
+		{
+			"file": "content/posts/slow-drains-solutions-santa-cruz.md",
+			"url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5",
+			"accessed_at": "2026-10-22T21:29:00.169533+00:00",
+			"tier": "PUBLIC_WEB_UNTRUSTED",
+			"status": 200,
+			"final_url": "https://www.santacruzsentinel.com/2025/08/13/5-years-later-taking-stock-of-the-ongoing-czu-lightning-complex-recovery/",
+			"title": "5 years later: Taking stock of the ongoing CZU Lightning Complex recovery",
+			"published": "2025-08-13T21:17:05+00:00",
+			"html_sha256": "9c0ace3bbe6e5db768a0a79e12c2ccc74911faff8052dcdc59ef8b68ecc91f8d",
+			"classification": "LIVE_VERIFIED",
+			"relevance": "Wildfire rebuilding and permitting story; page text mentions 'drain' 0 times. Nothing in it supports a post about slow household drains.",
+			"decision": "Remove the citation and its now-empty 'Sources & Local References' heading."
+		}
+	],
+	"label_and_heading_repairs": [
+		{
+			"file": "content/posts/memorial-day-plumbing-prep-santa-cruz.md",
+			"decision": "Merge two 'Sources & Local References' lists into the first one: add the Expert Tips link, drop the second heading and its duplicate /service-areas link labelled 'Reference from wadesplumbingandseptic.com'. The quote paragraph between them is unchanged."
+		},
+		{
+			"files": [
+				"content/posts/septic-safety-during-floods-santa-cruz.md",
+				"content/posts/septic-leach-field-repairs-santa-cruz.md",
+				"content/posts/new-septic-installations-santa-cruz.md",
+				"content/posts/efficient-water-filtration-santa-cruz.md"
+			],
+			"decision": "Rename the /service-areas link text 'Reference from wadesplumbingandseptic.com' to 'Plumbing & septic service areas overview', the label other posts already use for that page. Destination unchanged."
+		}
+	],
+	"guard": "scripts/ci/validate-content.mjs now fails on Google News links, '[Reference from ...]' link text, and more than one Sources/References heading in a file. Against the parent commit's content: 12 errors (5 Google News links, 5 vague labels, 2 duplicate headings). After the fix: pass.",
+	"classification": "LIVE_VERIFIED",
+	"classification_scope": "Publisher destinations and relevance reads only. Local build and browser checks are MOCK_VERIFIED; no ranking, indexing, production or Eve integration claim.",
+	"redaction": "No cookies, tokens, personal data or article bodies retained. Public URLs, titles, short relevance summaries and hashes only.",
+	"retention_class": "Git evidence record",
+	"rollback": "Restore the nine posts' source blocks and validate-content.mjs from parent commit b9eb8e9177e5fd2a6459c6b5b35a6768f06f0acb."
+}

@@ -79,10 +79,6 @@ Common causes include hair, soap scum, grease build-up, and foreign objects lodg
 
 ### How often should I schedule a professional drain cleaning service?
 
-## Sources & Local References
-
-- [5 years later: Taking stock of the ongoing CZU Lightning Complex recovery, Santa Cruz Sentinel](https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGlwbk5heTc4V3lkRU4tTFllaWtWX2VCR2UtNnNhRUFKRnptUk1GOGVhSHZnbkhRc1hVOHZ1X19vZWM1Qi1KMWRsUFFwT1pwaG1iQ3B3RFRRS09FeXpnWHhBbGJEQ1VuRHlXOEhVNGt2WGpoYmcybmlyaDJuTHQ1SFpfMlVpeGRlZDZSOF9JNVdveVZOekcycDJXeHNsTVZzd3FfQndUd2JlUVdtLVpXcjdnUkFsOWh1UFE?oc=5)
-
 ## Seasonal Tip
 
 As the rainy season approaches, ensure your drains are clear to prevent water backup and potential flooding.

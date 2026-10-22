@@ -93,7 +93,7 @@ Regular inspections, pumping, and addressing minor issues are crucial. Professio
 
 ## Sources & Local References
 
-- [Reference from wadesplumbingandseptic.com](/service-areas)
+- [Plumbing & septic service areas overview](/service-areas)
 
 ## Seasonal Tip
 

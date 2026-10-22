@@ -98,13 +98,9 @@ Choosing a trusted local service provider ensures you receive reliable and effic
 - [Wade's Plumbing & Septic](/)
 - [Plumbing & septic service areas overview](/service-areas)
 - [Capitola, CA Plumbing & Septic Services](/service-area/capitola-ca-plumbing-septic-services)
+- [Expert Tips](/expert-tips)
 
 Prepare your Capitola home for Memorial Day with a professional plumbing and septic inspection from Wade's Plumbing & Septic. **Contact us today for a free quote!**
-
-## Sources & Local References
-
-- [Expert Tips](/expert-tips)
-- [Reference from wadesplumbingandseptic.com](/service-areas)
 
 ## Seasonal Tip
 
