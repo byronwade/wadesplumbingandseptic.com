@@ -1,0 +1,185 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-075915-codex-1",
+	"collected_at": "2026-10-23T12:08:11.895815+00:00",
+	"source": "REPOSITORY_FACT and isolated local production builds",
+	"source_url_or_tool": "npm, tsx, Python Playwright, Chrome, axe-core 4.12.1, localhost:39879",
+	"scope": "Four measured section-heading substitutions in two existing blog guides",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, personal data or authenticated provider responses collected",
+	"retention_class": "committed compact local evidence",
+	"sha256": "66fc3ced95245267e5939d9708f62bcb9d06ae46e2058984edc80e5e3a216dd6",
+	"base_commit": "44e4ba1c41c4347ce8d3e5a84520ff7607d1cd57",
+	"node": "v25.9.0",
+	"sources": [
+		{
+			"path": "content/posts/5-types-of-toilets-how-to-choose-the-right-one-for-your-home.md",
+			"before_sha256": "86eef3a8b845bac3bfef3915cf951e3645f03f1e71eb79f9f6328efb361d13f8",
+			"after_sha256": "4ebcb4e06df71e4f9d5fa4138cb9ff29b9b2c544c70e9203f57f15f49ac85931"
+		},
+		{
+			"path": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
+			"before_sha256": "215372ff4e6438505c5f60a0b56254012b7fdd3d22d5675dbbd909962f4481f0",
+			"after_sha256": "631befa627e9268f51078bea3507a7b362c7c26375d097c697fee654876a2392"
+		}
+	],
+	"heading_changes": [
+		{
+			"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+			"old": "Understanding the importance of trustworthy plumbing services",
+			"new": "Why trusted plumbing services matter"
+		},
+		{
+			"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+			"old": "Researching local plumbing services",
+			"new": "How to research local plumbing services"
+		},
+		{
+			"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+			"old": "Reading customer reviews and testimonials",
+			"new": "Reading customer reviews and feedback"
+		},
+		{
+			"slug": "5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"old": "2\\. Push-Button Flush Toilets: Sleek & Low Maintenance",
+			"new": "2\\. Push-Button Flush Toilets: Sleek & Easy to Maintain"
+		}
+	],
+	"acceptance": [
+		{
+			"command": "npm ci",
+			"duration_seconds": 59.488193,
+			"exit_code": 0
+		},
+		{
+			"command": "npm run lint",
+			"exit_code": 0,
+			"started": "2026-10-23T12:04:26.4762074Z",
+			"duration_seconds": 22.48,
+			"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0759\\lint.log"
+		},
+		{
+			"command": "npm run typecheck",
+			"exit_code": 0,
+			"started": "2026-10-23T12:04:48.9846599Z",
+			"duration_seconds": 12.7,
+			"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0759\\typecheck.log"
+		},
+		{
+			"command": "npm run seo:check",
+			"exit_code": 0,
+			"started": "2026-10-23T12:05:01.6962910Z",
+			"duration_seconds": 52.18,
+			"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0759\\seo-check.log"
+		},
+		{
+			"command": "npm run build",
+			"exit_code": 0,
+			"started": "2026-10-23T12:05:53.8812397Z",
+			"duration_seconds": 49.65,
+			"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0759\\build.log"
+		}
+	],
+	"baseline_build": {
+		"command": "npm run build (unchanged baseline)",
+		"exit_code": 0,
+		"duration_seconds": 45.6827442
+	},
+	"seo": {
+		"passed": 194,
+		"failed": 0,
+		"markdown_documents": 157,
+		"public_files": 299,
+		"business_fact_violations": 0,
+		"build_pages": 564
+	},
+	"parser": {
+		"documents": 157,
+		"posts": 43,
+		"passed": 871,
+		"failed": 0,
+		"failures": []
+	},
+	"comparison": {
+		"passed": 3015,
+		"failed": 0,
+		"failures": [],
+		"beforeSplits": 10,
+		"afterSplits": 0,
+		"browserStates": 24,
+		"htmlPages": 552,
+		"changedHtmlPages": [
+			"5-types-of-toilets-how-to-choose-the-right-one-for-your-home.html",
+			"how-to-locate-trustworthy-plumbing-services-nearby.html"
+		],
+		"crawl": [
+			{
+				"slug": "5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+				"agent": "Mozilla/5.0",
+				"status": 200
+			},
+			{
+				"slug": "5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+				"agent": "GPTBot",
+				"status": 200
+			},
+			{
+				"slug": "5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+				"agent": "Googlebot",
+				"status": 200
+			},
+			{
+				"slug": "5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+				"agent": "ClaudeBot",
+				"status": 200
+			},
+			{
+				"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+				"agent": "Mozilla/5.0",
+				"status": 200
+			},
+			{
+				"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+				"agent": "GPTBot",
+				"status": 200
+			},
+			{
+				"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+				"agent": "Googlebot",
+				"status": 200
+			},
+			{
+				"slug": "how-to-locate-trustworthy-plumbing-services-nearby",
+				"agent": "ClaudeBot",
+				"status": 200
+			}
+		]
+	},
+	"screenshots": {
+		"captured": 24,
+		"opened_and_reviewed": 8,
+		"manifest_sha256": "15764e9462ffbe4a942a5339c377cf5d590535efcb8900a23a6285cfa2201840"
+	},
+	"preserved": [
+		"all nonheading source bytes",
+		"frontmatter and dates",
+		"parsed body outside planned headings",
+		"closing conversion",
+		"reading time",
+		"all 43 post recommendation seeds and cards/order",
+		"heading font family, size, line height and width",
+		"HTML links, metadata and JSON-LD across 552 pages",
+		"both llms files"
+	],
+	"limitations": [
+		"Local evidence only; no production, indexing, ranking or lead-lift proof",
+		"No independent-agent review",
+		"Existing five high development-tool dependency advisories are unchanged",
+		"Shared toolkit reserve fails on an existing missing configured root; shared configuration unchanged",
+		"Existing article credential, regulatory, timing and fixture-performance claims were not revalidated"
+	],
+	"probe_corrections": [
+		"A scratch console summary hit Windows cp1252 encoding; rerun with PYTHONIOENCODING=utf-8. Product checks had no failures."
+	],
+	"evidence_folder": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0759"
+}

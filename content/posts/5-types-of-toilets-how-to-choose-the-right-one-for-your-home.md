@@ -38,7 +38,7 @@ Look for toilets with the EPA WaterSense® label, which certifies that the fixtu
 - Environmentally responsible
 - Often qualify for rebates or incentives
 
-## 2\. Push-Button Flush Toilets: Sleek & Low Maintenance
+## 2\. Push-Button Flush Toilets: Sleek & Easy to Maintain
 
 Push-button flush toilets offer a modern look and simple functionality. Instead of a traditional lever, these toilets feature one or two buttons (often located on the tank lid) for flushing. Many push-button models are also dual-flush, helping you save water depending on the type of waste.
 
