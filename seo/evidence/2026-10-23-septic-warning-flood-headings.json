@@ -1,0 +1,114 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-023912-codex",
+	"collected_at": 1792738200,
+	"source_url_or_tool": [
+		"Original and updated local production builds",
+		"Python Playwright, installed Chrome, axe-core 4.14.0",
+		"Actual sanitizer/conversion parser and recommendation scorer via tsx",
+		"Local HTTP requests using browser, GPTBot, Googlebot and ClaudeBot user agents"
+	],
+	"scope": "Eighteen shorter section headings in three existing septic warning, leach-field and flood-safety guides. Full text enlargement preserved.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer data, production probes or analytics retained.",
+	"retention_class": "Compact reports, exact command logs and hashes retained after temporary screenshots, scripts and build output are removed.",
+	"baseline_commit": "91dc1c7510428857751722c9f3dce11eb4188f32",
+	"source": [
+		{
+			"file": "content\\posts\\septic-trouble-signs-santa-cruz.md",
+			"headings": 6,
+			"before_sha256": "a6bfaa4147ce10ef443e0b8e293f4798f825282ce9305fa90c6f3bcf74dbfb26",
+			"after_sha256": "d741c75a536410e93b04bc52e921a0fa8b02ffe482c785fb2cb59c755dabd0e9"
+		},
+		{
+			"file": "content\\posts\\septic-leach-field-repairs-santa-cruz.md",
+			"headings": 6,
+			"before_sha256": "a949575401a5dc3c4bbea1512f1df656e0e6bcb418d1a2d179f9943433be5136",
+			"after_sha256": "1b1090b84913235705834593194ac6b4e6eca1625e72fa328cd883e9f5e92494"
+		},
+		{
+			"file": "content\\posts\\septic-safety-during-floods-santa-cruz.md",
+			"headings": 6,
+			"before_sha256": "6fd19db1d5fd7f17b334086f81165520683f7611c8b51943721b34fd339e5276",
+			"after_sha256": "b33dcfcdc4b83f862175dbb2aa519befbf426a57cfc83af9873b9dfd2088b8d7"
+		}
+	],
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"command": "npm ci",
+				"exit_code": 0
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0,
+				"seconds": 13.81
+			},
+			{
+				"command": "npm run typecheck",
+				"exit_code": 0,
+				"seconds": 11.17
+			},
+			{
+				"command": "npm run seo:check",
+				"exit_code": 0,
+				"seconds": 58.22
+			},
+			{
+				"command": "npm run build",
+				"exit_code": 0,
+				"seconds": 56.19
+			}
+		],
+		"seo_tests_passed": 193,
+		"seo_tests_failed": 0,
+		"static_pages": 564
+	},
+	"parser_preservation": {
+		"passed": 51,
+		"failed": 0,
+		"scope": "Exact heading substitutions only in source and actual parsed article; original frontmatter, body, CTA and all 43 posts' recommendations preserved.",
+		"related_recommendation_changes": []
+	},
+	"browser": {
+		"before": {
+			"passed": 198,
+			"failed": 0,
+			"states": 36,
+			"axe_audits": 18,
+			"axe_violations": 0,
+			"heading_word_splits_320_200": 38,
+			"heading_word_splits_all_states": 48,
+			"screenshots": 18
+		},
+		"after": {
+			"passed": 4542,
+			"failed": 0,
+			"states": 36,
+			"axe_audits": 18,
+			"axe_violations": 0,
+			"heading_word_splits_320_200": 0,
+			"heading_word_splits_all_states": 0,
+			"screenshots": 18
+		},
+		"matrix": "Three guides at 320, 390 and 1280 CSS pixels, 100% and 200% root text, light and dark. All 36 states assert the requested enlargement.",
+		"preserved": "Article DOM outside headings, heading fonts/line heights/families/widths/structure, H1, metadata, canonical, JSON-LD, main links, images and native telephone links.",
+		"axe_version": "4.14.0",
+		"axe_sha256": "20c09fe157a8a34a30e241aaa1fcdade657734f08ab379ecfbeb7d45cc46e878"
+	},
+	"crawler_http": {
+		"passed": 216,
+		"failed": 0,
+		"responses": 12
+	},
+	"limitations": [
+		"Local evidence only; no production, indexing, ranking, lead-lift or Eve integration claim.",
+		"Existing article technical, lifespan, credential and service-capability claims remain unchanged and are not revalidated.",
+		"Five existing development-tool advisories remain under the documented October 29 recheck.",
+		"Shared-kit advisory reservation failed on its known missing configured root; RAM snapshots work and shared configuration is unchanged.",
+		"An initial baseline build launched before npm ci completed failed; a completed installation and fresh baseline build then passed.",
+		"One scratch console summary needed UTF-8 output; verification counts were unaffected."
+	]
+}
