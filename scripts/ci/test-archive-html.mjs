@@ -11,6 +11,7 @@ assert.ok(
 async function request(path, userAgent) {
 	const response = await fetch(new URL(path, base), {
 		headers: { "User-Agent": userAgent },
+		redirect: "manual",
 		signal: AbortSignal.timeout(15_000),
 	})
 	return { status: response.status, html: await response.text() }
@@ -31,6 +32,10 @@ const cases = [
 	...new Set(routes),
 	"/services/popular",
 	"/services/trending",
+	"/expert-tips/popular",
+	"/expert-tips/trending",
+	"/expert-tips/popular?page=2",
+	"/expert-tips/trending?category=plumbing-tips",
 	"/services?page=2",
 	"/services?category=septic",
 	"/expert-tips?sort=newest",

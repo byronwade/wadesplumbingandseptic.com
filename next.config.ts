@@ -341,7 +341,8 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/expert-tips/:slug",
+				// Ranked archives are real pages, not legacy article slugs.
+				source: "/expert-tips/:slug((?!(?:popular|trending)(?:/|$))[^/]+)",
 				destination: "/:slug",
 				permanent: true,
 			},

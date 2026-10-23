@@ -70,7 +70,7 @@ npm start -- --hostname 127.0.0.1 --port 38729
 npm run ci:archive-html -- http://127.0.0.1:38729
 ```
 
-This checks all sitemap archives, ranked service archives and query variants for complete
+This checks all sitemap archives, ranked service and guide archives and query variants for complete
 server-rendered cards, hydration data and one pair of document-closing tags. It
 tests ordinary browsers, GPTBot, Googlebot and Twitterbot user agents.
 
