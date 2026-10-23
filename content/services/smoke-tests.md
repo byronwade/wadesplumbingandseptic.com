@@ -96,6 +96,6 @@ At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests acros
 
 Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas).
 
-## Why Santa Cruz County Trusts Us for Septic Optimization
+## Why Santa Cruz County Trusts Us for Smoke Tests
 
 **Licensed Contractor:** C-42 License for California
