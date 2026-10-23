@@ -51,8 +51,6 @@ For guidance on choosing the best system, explore our [comparison of water softe
 
 When you choose Wade's Plumbing & Septic for your water filtration installation, expect a seamless and professional process. Our experienced technicians will assess your home's plumbing system, recommend the best filtration solution, and install the system with minimal disruption. This ensures you enjoy the benefits of clean water without hassle.
 
-To find out more about our service areas, visit our
-
 ## Sources and Local Links
 
 - [Plumbing & septic service areas overview](/service-areas)

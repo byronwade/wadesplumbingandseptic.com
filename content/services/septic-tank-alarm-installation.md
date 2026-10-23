@@ -55,6 +55,6 @@ Stay Alert with Confidence
 
 Ensure the smooth operation of your septic system with our reliable alarm installations.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact) </
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 Licensed Contractor: C-42

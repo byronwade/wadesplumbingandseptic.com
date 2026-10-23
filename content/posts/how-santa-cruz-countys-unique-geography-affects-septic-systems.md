@@ -75,7 +75,7 @@ The varied terrain, including coastal zones and hilly areas, affects soil draina
 
 ### What are common signs of septic system failure in this area?
 
-Signs include slow drains, sewage odors, and wet spots in the yard. These can be exacerbated
+Signs include slow drains, sewage odors, and wet spots in the yard.
 
 ## Serving Santa Cruz County, CA
 
