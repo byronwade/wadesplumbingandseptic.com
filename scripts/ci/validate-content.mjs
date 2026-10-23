@@ -271,6 +271,26 @@ for (const collection of COLLECTIONS) {
 			)
 		}
 
+		// Campaign briefs ("landing page for…", "built to qualify serious calls")
+		// leaked into hero leads, closing CTAs, meta descriptions and site search.
+		// Visitor copy describes the service, not the page or the lead funnel.
+		const visibleCopy = [
+			data.title,
+			data.description,
+			data.eyebrow,
+			plainText(body),
+		]
+			.filter(Boolean)
+			.join(" ")
+		const internalNote = visibleCopy.match(
+			/\blanding page\b|\bcall-first\b[^.]*?\bpage\b|\bbuilt to qualify\b|\bqualify serious\b|\bhigh-value (?:projects?|calls?|leads?)\b|\bhigh-value\b[^.]*?\bpage\b/i,
+		)
+		if (internalNote) {
+			errors.push(
+				`${file}: internal campaign wording "${internalNote[0]}" in visitor copy; describe the service instead of the page`,
+			)
+		}
+
 		if (
 			/\/(?:lp\/)?(?:engineered-septic-systems|failed-septic-repair|emergency-plumber|plumbing-repair-services|water-main-sewer-line-repair)-santa-cruz-county/i.test(
 				source,

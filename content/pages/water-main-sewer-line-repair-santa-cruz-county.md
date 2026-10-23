@@ -1,8 +1,8 @@
 ---
 title: "Water Main & Sewer Line Repair, Santa Cruz County"
 description: >-
-  High-value service line and sewer repair page built to qualify serious calls
-  and schedule inspections.
+  Water main, service line, and sewer line repair in Santa Cruz County,
+  starting with an inspection and clear repair options.
 order: 30
 image: /images/team/byron-working.webp
 imageAlt: Underground plumbing installation and excavation
@@ -12,7 +12,7 @@ noindex: true
 
 ## Water Main & Sewer Line Repair
 
-High-value service line and sewer repair page built to qualify serious calls and schedule inspections.
+Water main, service line, and sewer line repair in Santa Cruz County, starting with an inspection and clear repair options.
 
 [Call Now 831.225.4344](tel:8312254344)
 
