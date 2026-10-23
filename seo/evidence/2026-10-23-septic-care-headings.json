@@ -1,0 +1,165 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-005915-codex-1",
+	"collected_at": 1792732261,
+	"source_url_or_tool": [
+		"Original and updated local production builds",
+		"Python Playwright with installed Chrome and axe-core 4.14.0",
+		"Actual sanitizeArticleContent and extractContentConversion functions via tsx",
+		"Local HTTP requests using browser, GPTBot, Googlebot and ClaudeBot user agents"
+	],
+	"scope": "Twenty shorter section headings in three existing septic-care guides; full text enlargement and all nonheading source bytes preserved.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No secrets, customer data, production probes or analytics.",
+	"retention_class": "Compact reports, command logs and hashes retained after temporary screenshots, scripts and build output are removed.",
+	"baseline_commit": "a8efa279a3d2bc677dd4294caf488c6312388821",
+	"source": [
+		{
+			"file": "content/posts/septic-system-components-santa-cruz.md",
+			"headings_changed": 9,
+			"before_sha256": "40da323ca914929b872c195a1c306d015d71ed819b0a547b192aa247a66cc4be",
+			"after_sha256": "0273a276a2a505503b2f09f65374a89e194663c6894b1822e7ab90a3c5d68e94"
+		},
+		{
+			"file": "content/posts/pipe-leak-solutions-santa-cruz-septic.md",
+			"headings_changed": 6,
+			"before_sha256": "99da08240bbb825c0f25dd1c8aae92a64f32c4a401176255ff5a2bc7c28b3090",
+			"after_sha256": "64bdcaf17596f40d3b5fdd2d112448132a8314ddfa4ac3b5712150e092dd3734"
+		},
+		{
+			"file": "content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
+			"headings_changed": 5,
+			"before_sha256": "6eac2ec329cc149ff83984667403d7c7d320a6cd3c5a47ac27ade50b4948341a",
+			"after_sha256": "3c3e6df7cf72c5567a0d4b6d9ecf9f5e5633b1c4007e6aeda4dce737505278b8"
+		}
+	],
+	"runtime": {
+		"node": "25.9.0",
+		"npm": "11.12.1",
+		"next": "16.3.0-preview.10"
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"command": "npm ci",
+				"exit_code": 0,
+				"log": "npm-ci.log"
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0,
+				"seconds": 15.557,
+				"log": "lint.log"
+			},
+			{
+				"command": "npm run typecheck",
+				"exit_code": 0,
+				"seconds": 12.583,
+				"log": "typecheck.log"
+			},
+			{
+				"command": "npm run seo:check",
+				"exit_code": 0,
+				"seconds": 36.329,
+				"log": "seo-check.log"
+			},
+			{
+				"command": "npm run build",
+				"exit_code": 0,
+				"seconds": 47.806,
+				"log": "build.log"
+			}
+		],
+		"seo_tests_passed": 191,
+		"seo_tests_failed": 0,
+		"static_pages": 564
+	},
+	"parser_preservation": {
+		"passed": 52,
+		"failed": 0,
+		"scope": "Exact planned source substitutions, frontmatter, parsed article body outside headings and closing CTA."
+	},
+	"browser": {
+		"baseline": {
+			"pass": 235,
+			"fail": 0,
+			"states": 36,
+			"axe_audits": 18,
+			"screenshots": 18,
+			"splits320200": 50
+		},
+		"final": {
+			"pass": 4651,
+			"fail": 0,
+			"states": 36,
+			"axe_audits": 18,
+			"screenshots": 18,
+			"splits320200": 0
+		},
+		"all_state_splits_before": 60,
+		"all_state_splits_after": 0,
+		"axe_violations_before": 0,
+		"axe_violations_after": 0,
+		"preserved": "Heading levels, IDs, font sizes, line heights, families and widths; all nonheading article DOM; title, description, canonical, JSON-LD, CTA, links and image contents. Only the reviewed existing-card permutation is allowed."
+	},
+	"recommendations": {
+		"inventory_posts_checked": 43,
+		"changes": [
+			{
+				"slug": "septic-system-seasonal-maintenance-santa-cruz",
+				"before": {
+					"posts": [
+						"septic-leach-field-repairs-santa-cruz",
+						"septic-trouble-signs-santa-cruz",
+						"septic-system-challenges-santa-cruz-fire"
+					],
+					"services": [
+						"septic-tank-inspection-and-assessment",
+						"septic-tank-maintenance-and-care",
+						"septic-tank-leach-field-repair-and-replacement"
+					]
+				},
+				"after": {
+					"posts": [
+						"septic-trouble-signs-santa-cruz",
+						"septic-system-challenges-santa-cruz-fire",
+						"septic-leach-field-repairs-santa-cruz"
+					],
+					"services": [
+						"septic-tank-maintenance-and-care",
+						"septic-tank-inspection-and-assessment",
+						"septic-tank-leach-field-repair-and-replacement"
+					]
+				}
+			}
+		],
+		"decision": "Accept the automatic reorder of the same three guides and same three services on the seasonal guide; exact rendered order, text and link/image multisets verified. All other recommendation results match baseline."
+	},
+	"http": {
+		"pass": 232,
+		"fail": 0
+	},
+	"screenshots": {
+		"count": 36,
+		"scope": "Before/after section views of all three guides, both themes, 1440px and 390px normal text plus 320px/200%.",
+		"manifest_sha256": "7a070371a0f6fe4d15d150fe833c82c36ea62256ea2b408fe1f0ce5ce2cc9806"
+	},
+	"artifact_hashes": {
+		"heading-inventory.json": "9894256b25b21472b5dcd7b97d52546c13dad36039079bb22ef172eb31fd5a6f",
+		"parser-baseline.json": "41bfbd6cbba2bed884fd9fa1cec31b59a054dc87558571b0a34cc54c2c0a9cb8",
+		"parser-final.json": "fe3fcff55724054924d560fc527c559e42be7a253fcae9eee2d2e8dfbf6022cf",
+		"browser-baseline.json": "d5fe72ad1f5e5542192f15a003cb77c0e551d284f3edcadb15bc118c59748c89",
+		"browser-final.json": "d028dc47240419e05406cf55f59cb567c5c3b3e1d35b7a01182019f119259d3e",
+		"http.json": "011ca12c7535644fda797470109fde5a5f99022e4962c239dc61bf4e34400584",
+		"acceptance.json": "a47944ea0cf4e09b2c9147f1816bcb2ad626415d28cbc8c27606f7c1eb91eb11"
+	},
+	"limitations": [
+		"Local deterministic evidence only; no production, ranking, indexing, lead-lift or Eve integration claim.",
+		"Existing technical statistics, compliance and credential claims in article bodies remain unchanged and were not revalidated.",
+		"Five deferred development-tool advisories remain.",
+		"The first scan read styles before enlargement settled; corrected scan asserts actual enlarged font size. Initial HTTP proof had 16 false failures from expecting an explicit robots tag and untrimmed source descriptions; corrected to compare unchanged rendered metadata.",
+		"Shared toolkit reservation failed on its known configured missing root; snapshots work and no shared configuration changed."
+	]
+}
