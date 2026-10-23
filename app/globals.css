@@ -167,8 +167,15 @@
 	/* --- Spacing scale ---
 	   Every vertical relationship resolves to one of these, so heading→body
 	   and header→grid gaps stop drifting between mt-2/3/4/5/6/7/8. */
-	/* The 20px floor keeps enlarged text on a phone from doubling the gutter. */
-	--space-page-x: clamp(min(1.25rem, 20px), 4vw, 2.5rem);
+	/* The 20px floor keeps enlarged text on a phone from doubling the gutter.
+	   When the screen is under about 15 text sizes wide (200% text below
+	   ~490px), the floor eases to 12px so long heading words like "Plumbing"
+	   fit on one line. Normal text keeps 20px down to 260px screens. */
+	--space-page-x: clamp(
+		clamp(min(12px, 1.25rem), 100vw - 15rem, min(1.25rem, 20px)),
+		4vw,
+		2.5rem
+	);
 	--space-section-y: clamp(3.5rem, 6vw, 5.5rem);
 	--space-section-y-tight: clamp(2.5rem, 4vw, 3.5rem);
 	--space-stack: 1.125rem;
