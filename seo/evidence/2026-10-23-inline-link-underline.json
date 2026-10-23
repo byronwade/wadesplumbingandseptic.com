@@ -24,13 +24,22 @@
 	"built_html_scope": {
 		"pages_compared": 552,
 		"pages_changed": 99,
-		"changed_groups": { "glossary term and hub pages": 97, "home": 1, "service-areas": 1 },
+		"changed_groups": {
+			"glossary term and hub pages": 97,
+			"home": 1,
+			"service-areas": 1
+		},
 		"visible_text_identical": true,
 		"json_ld_identical": true,
 		"other_markup_differences": "95 glossary term pages lose two React <!-- --> text separators because Prettier merged the JSX text around the phone link; rendered text identical."
 	},
 	"link_probe": {
-		"routes": ["/service-areas", "/", "/glossary/plumbing", "/glossary/plumbing/anode-rod"],
+		"routes": [
+			"/service-areas",
+			"/",
+			"/glossary/plumbing",
+			"/glossary/plumbing/anode-rod"
+		],
 		"widths_and_text_scale": ["320px@200%", "390px@100%", "1280px@100%"],
 		"themes": ["light", "dark"],
 		"states": 24,
@@ -51,8 +60,16 @@
 		"viewport": "320px@200%",
 		"before_light": "link-in-text-block x1 on /service-areas, nothing else (reused from the 1023-0539 sweep on 38c2fba, same code)",
 		"before_dark": "link-in-text-block x1 on /service-areas, nothing else",
-		"after_light": { "violations": 0, "http_errors": 0, "document_overflow_pages": 0 },
-		"after_dark": { "violations": 0, "http_errors": 0, "document_overflow_pages": 0 }
+		"after_light": {
+			"violations": 0,
+			"http_errors": 0,
+			"document_overflow_pages": 0
+		},
+		"after_dark": {
+			"violations": 0,
+			"http_errors": 0,
+			"document_overflow_pages": 0
+		}
 	},
 	"screenshots": "32 captures (16 before, 16 after): the paragraph holding each link at 320px@200% and 1280px, light and dark, on the four routes"
 }
