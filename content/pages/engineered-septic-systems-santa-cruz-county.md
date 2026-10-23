@@ -1,8 +1,8 @@
 ---
 title: "Engineered Septic Systems, Santa Cruz County"
 description: >-
-  Specialized landing page for engineered septic installs, noncompliant system
-  upgrades, and high-value projects.
+  Engineered septic installation and upgrades for noncompliant or failed
+  systems in Santa Cruz County, with permit planning.
 order: 50
 image: >-
   /images/wordpress/a-large-machine-is-in-the-background-behind-a-fence-6b3089.webp
@@ -24,7 +24,7 @@ noindex: true
 
 ## Engineered Septic Systems & Upgrades
 
-Specialized landing page for engineered septic installs, noncompliant system upgrades, and high-value projects.
+Engineered septic installation and upgrades for noncompliant or failed systems in Santa Cruz County, with permit planning.
 
 [Call Now 831.225.4344](tel:8312254344)
 
