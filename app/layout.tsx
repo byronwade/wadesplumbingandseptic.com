@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next"
-import { Archivo, Manrope } from "next/font/google"
 import { cacheLife, cacheTag } from "next/cache"
+import localFont from "next/font/local"
 import { ThemeProvider } from "next-themes"
 import { Suspense } from "react"
 
@@ -11,12 +11,31 @@ import { getCollection } from "@/lib/content"
 import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
-const manrope = Manrope({
-	subsets: ["latin"],
+/*
+  Both faces are self-hosted from assets/fonts (SIL Open Font License, see the
+  OFL files beside them) so builds never fetch from Google Fonts. Each file is
+  the variable Latin subset Google serves, declared at only the weights the
+  site used before, so 500 and 600 still resolve to the nearest loaded weight.
+*/
+const manrope = localFont({
+	src: [
+		{
+			path: "../assets/fonts/manrope-latin.woff2",
+			weight: "400",
+			style: "normal",
+		},
+		{
+			path: "../assets/fonts/manrope-latin.woff2",
+			weight: "700",
+			style: "normal",
+		},
+	],
 	display: "swap",
 	variable: "--font-manrope",
 	preload: true,
-	weight: ["400", "700"],
+	/* Metrics live in globals.css so they match the old Google build exactly. */
+	adjustFontFallback: false,
+	fallback: ["Manrope Fallback"],
 })
 
 /*
@@ -24,13 +43,25 @@ const manrope = Manrope({
   contrast is what gives headings their own voice instead of running the body
   face at weight 800. Only the two display weights are loaded.
 */
-const archivo = Archivo({
-	subsets: ["latin"],
+const archivo = localFont({
+	src: [
+		{
+			path: "../assets/fonts/archivo-latin.woff2",
+			weight: "700",
+			style: "normal",
+		},
+		{
+			path: "../assets/fonts/archivo-latin.woff2",
+			weight: "800",
+			style: "normal",
+		},
+	],
 	display: "swap",
 	variable: "--font-archivo",
 	/* Body font covers first paint; Archivo is for display headings. */
 	preload: false,
-	weight: ["700", "800"],
+	adjustFontFallback: false,
+	fallback: ["Archivo Fallback"],
 })
 
 export const metadata: Metadata = {
