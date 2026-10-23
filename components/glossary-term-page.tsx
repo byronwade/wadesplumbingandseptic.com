@@ -149,16 +149,15 @@ export function GlossaryTermPage({
 					Also explore the{" "}
 					<Link
 						prefetch={false}
-						className="text-primary font-bold underline-offset-2 hover:underline"
+						className="text-link"
 						href={glossaryHubPath(otherTopic) as Route}
 					>
 						{otherTopic === "plumbing"
 							? "Plumbing Glossary"
 							: "Septic Glossary"}
 					</Link>{" "}
-					or call{" "}
-					<ProtectedPhoneText className="text-primary font-bold underline-offset-2 hover:underline" />{" "}
-					with questions about your property.
+					or call <ProtectedPhoneText className="text-link" /> with questions
+					about your property.
 				</p>
 			</article>
 

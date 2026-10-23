@@ -94,10 +94,7 @@ export default function ServiceAreasPage() {
 
 				<p className="text-muted-foreground container-shell mt-4 text-center text-sm font-bold">
 					{serviceAreaLocations.length} communities listed · Call{" "}
-					<a
-						className="text-primary underline-offset-2 hover:underline"
-						href={siteConfig.phoneHref}
-					>
+					<a className="text-link" href={siteConfig.phoneHref}>
 						{siteConfig.phone}
 					</a>{" "}
 					to confirm your address
