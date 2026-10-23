@@ -1,0 +1,106 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-154923-codex-1",
+	"collected_at": 1792785543,
+	"source": "repository and isolated local production build",
+	"source_url_or_tool": "npm acceptance commands, real sanitizer/conversion/service/recommendation modules, headless Chrome/Playwright and axe-core 4.12.1",
+	"scope": "three existing commercial services: three visible hero titles and fifteen measured section/CTA headings",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "no secrets, personal records or connector responses retained",
+	"retention_class": "compact committed verification summary",
+	"sha256": {
+		"content/services/commercial-drain-cleaning.md": "562fab5cd2f299c897dad79d275d484925557f57adbcd3ada472808e03d732f2",
+		"content/services/commercial-plumbing-maintenance.md": "1f0a603fe9d5a643fc206314f0435342dc1fc7992bd85376c035b9afe02ee0bf",
+		"content/services/commercial-septic-services.md": "f4624bcc7fdc73037561a9f35433bba7f22502001e99aa297d5cafd9ead8569d"
+	},
+	"acceptance": [
+		{
+			"command": "npm ci",
+			"exit_code": 0,
+			"evidence": "npm-ci.log and completed exec session 28325"
+		},
+		{
+			"command": "npm run lint",
+			"exit_code": 0,
+			"started": "2026-10-23T19:55:18.6121243Z",
+			"duration_seconds": 14.217253
+		},
+		{
+			"command": "npm run typecheck",
+			"duration_seconds": 18.9152408,
+			"exit_code": 0,
+			"started": "2026-10-23T19:55:33.7163616Z"
+		},
+		{
+			"duration_seconds": 47.5961417,
+			"exit_code": 0,
+			"started": "2026-10-23T19:55:53.1923039Z",
+			"command": "npm run seo:check"
+		},
+		{
+			"duration_seconds": 52.1166032,
+			"exit_code": 0,
+			"started": "2026-10-23T19:56:41.4155556Z",
+			"command": "npm run build"
+		}
+	],
+	"seo_tap": {
+		"tests": 194,
+		"pass": 194,
+		"fail": 0
+	},
+	"parser": {
+		"documents": 157,
+		"passed": 972,
+		"failed": 0,
+		"failures": []
+	},
+	"output_comparison": {
+		"passed": 3089,
+		"failed": 0,
+		"failures": [],
+		"beforeSplits": 48,
+		"afterSplits": 0,
+		"browserStates": 36,
+		"htmlPages": 552,
+		"changedOutputs": [
+			"service-offerings/commercial-drain-cleaning.html",
+			"service-offerings/commercial-plumbing-maintenance.html",
+			"service-offerings/commercial-septic-services.html",
+			"services/commercial-drain-cleaning.html",
+			"services/commercial-plumbing-maintenance.html",
+			"services/commercial-septic-services.html",
+			"llms-full.txt.body"
+		]
+	},
+	"browser": {
+		"before": {
+			"states": 18,
+			"splits": 48,
+			"axe_violations": 0,
+			"page_errors": 0,
+			"overflow": 0
+		},
+		"after": {
+			"states": 18,
+			"splits": 0,
+			"axe_violations": 0,
+			"page_errors": 0,
+			"overflow": 0
+		}
+	},
+	"preserved": [
+		"full SEO titles and descriptions",
+		"JSON-LD and links",
+		"body facts and authored dates",
+		"FAQ answers and section layouts",
+		"recommendation cards and order",
+		"heading font metrics and full text enlargement"
+	],
+	"planned_change": "Commercial septic closing CTA title uses Care in place of Maintenance; description and actions remain.",
+	"limitations": [
+		"Local browser/build evidence only; no ranking, lead-lift, production or Eve integration claim.",
+		"Two recommendation token sets change due to heading edits and the 1200-character cutoff; all recommendation cards and order remain.",
+		"Existing service qualification, promptness, performance, compliance and maintenance-frequency claims are unchanged and not revalidated."
+	]
+}
