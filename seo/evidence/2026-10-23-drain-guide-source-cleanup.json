@@ -1,0 +1,100 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-073916-codex",
+	"collected_at": 1792756246,
+	"source_url_or_tool": [
+		"git show HEAD:content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
+		"Actual sanitizeArticleContent and extractContentConversion via tsx",
+		"Two local production builds and Python HTMLParser",
+		"Headless Chrome via Python Playwright; axe-core 4.12.1"
+	],
+	"scope": "Remove only a trailing pipe and its blank line from the drain-clearing guide source.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, personal data, live listings or analytics collected.",
+	"retention_class": "Compact local command, parser, page and browser evidence retained in the scheduler job folder; build output removed after shipping.",
+	"baseline_commit": "57ec3d5503511327813c6ba228566856557fef98",
+	"source": {
+		"file": "content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
+		"before_sha256": "50765203850fe27ad2404401caa3aeeb799741c1860e32dc50a6cc660f1a741f",
+		"after_sha256": "d43b2484c63d90d15461eae6ab24497b0c1de7836953a63efb29ea946b2f5650"
+	},
+	"finding": "The notebook called the pipe visible. The real parser and baseline browser show it was already hidden within the extracted CTA. This is source cleanup with no visible behavior change.",
+	"parser": {
+		"documents": 157,
+		"passed": 785,
+		"failed": 0,
+		"failures": []
+	},
+	"generated_pages": {
+		"html_pages": 552,
+		"llms_files": 2,
+		"passed": 2763,
+		"failed": 0,
+		"compared": "Text, links and attributes, metadata, JSON-LD, standalone-pipe counts; exact llms file hashes."
+	},
+	"browser": {
+		"states_per_build": 6,
+		"builds": 2,
+		"http_200": 12,
+		"wcag_violations": 0,
+		"page_errors": 0,
+		"overflow_states": 0,
+		"pipe_paragraphs_before": 0,
+		"pipe_paragraphs_after": 0,
+		"cta_present_states": 12,
+		"screenshots": 12,
+		"pixel_identical_pairs": 6
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"node": "v25.9.0",
+		"seo_counts": {
+			"tests": 194,
+			"pass": 194,
+			"fail": 0
+		},
+		"commands": [
+			{
+				"command": "npm ci",
+				"exit_code": 0,
+				"started": "2026-10-23T11:45:33.8037210Z",
+				"duration_seconds": 81.23,
+				"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0739\\ci.log"
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0,
+				"started": "2026-10-23T11:46:55.0739128Z",
+				"duration_seconds": 32.7,
+				"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0739\\lint.log"
+			},
+			{
+				"command": "npm run typecheck",
+				"exit_code": 0,
+				"started": "2026-10-23T11:47:27.7835855Z",
+				"duration_seconds": 22.61,
+				"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0739\\typecheck.log"
+			},
+			{
+				"command": "npm run seo:check",
+				"exit_code": 0,
+				"started": "2026-10-23T11:47:50.3946687Z",
+				"duration_seconds": 41.92,
+				"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0739\\seo-check.log"
+			},
+			{
+				"command": "npm run build",
+				"exit_code": 0,
+				"started": "2026-10-23T11:48:32.3180522Z",
+				"duration_seconds": 51.61,
+				"log": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1023-0739\\build.log"
+			}
+		]
+	},
+	"limitations": [
+		"Local deterministic evidence only; no production, ranking, indexing, conversion or Eve integration claim.",
+		"Existing install audit reports five high advisories; no dependency changes in this item."
+	],
+	"next_action": "Ship through the authorized PR helper using the five passing local acceptance commands."
+}
