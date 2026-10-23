@@ -33,6 +33,9 @@ const manrope = localFont({
 	display: "swap",
 	variable: "--font-manrope",
 	preload: true,
+	/* Metrics live in globals.css so they match the old Google build exactly. */
+	adjustFontFallback: false,
+	fallback: ["Manrope Fallback"],
 })
 
 /*
@@ -57,6 +60,8 @@ const archivo = localFont({
 	variable: "--font-archivo",
 	/* Body font covers first paint; Archivo is for display headings. */
 	preload: false,
+	adjustFontFallback: false,
+	fallback: ["Archivo Fallback"],
 })
 
 export const metadata: Metadata = {

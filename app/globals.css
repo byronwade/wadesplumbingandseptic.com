@@ -260,6 +260,30 @@
 }
 
 /*
+  Size-matched Arial stand-ins shown until the self-hosted faces load (see
+  app/layout.tsx). These are the exact metrics next/font/google generated for
+  Manrope and Archivo. next/font/local derives slightly different numbers from
+  the font files, and those shifted homepage sections by a fraction of a pixel.
+*/
+@font-face {
+	font-family: "Manrope Fallback";
+	src: local("Arial");
+	ascent-override: 103.31%;
+	descent-override: 29.07%;
+	line-gap-override: 0%;
+	size-adjust: 103.19%;
+}
+
+@font-face {
+	font-family: "Archivo Fallback";
+	src: local("Arial");
+	ascent-override: 88.96%;
+	descent-override: 21.28%;
+	line-gap-override: 0%;
+	size-adjust: 98.7%;
+}
+
+/*
   Must stay in @layer base. An unlayered `* { border-color }` rule beats
   Tailwind utilities (border-transparent, border-white/*, etc.) and forces
   the light --border token (#dddcd7) onto every bordered control - which
