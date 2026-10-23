@@ -1,0 +1,191 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-210917-codex-1",
+	"collected_at": 1792718889.1490014,
+	"source": "Original and updated local production builds, source/parser preservation and isolated headless Chrome",
+	"source_url_or_tool": [
+		"npm ci",
+		"npm run lint",
+		"npm run typecheck",
+		"npm run seo:check",
+		"npm run build",
+		"Python Playwright with installed Chrome",
+		"node --import tsx parser-proof.mjs"
+	],
+	"scope": "Shorten 21 section headings in three existing septic guides for narrow phones with enlarged text.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer submissions, live analytics or external source probes.",
+	"retention_class": "Versioned compact verification summary and artifact hashes. Temporary screenshots and scratch scripts removed after review.",
+	"source_commit": "c647e13782b66d745d75557ca52a0729c9baa261",
+	"baseline_commit": "5700dec9b2dccc5c9c5c3eac8ca6cdc9b155985d",
+	"runtime": {
+		"node": "v25.9.0",
+		"next": "16.3.0-preview.10"
+	},
+	"diagnosis": {
+		"cause": "Long heading words exceed the 280px article column with full 200% text and fall back to mid-word breaks.",
+		"fix": "Use shorter plain-language section headings, retaining article titles, body text and all type sizes. Wording avoids the existing closing-CTA extractor."
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"exit_code": 0,
+				"duration_seconds": 72.5166663,
+				"command": "npm ci",
+				"started_at": 1792718634,
+				"log": "npm-ci-final.log"
+			},
+			{
+				"exit_code": 0,
+				"duration_seconds": 9.4066555,
+				"command": "npm run lint",
+				"started_at": 1792718706,
+				"log": "lint-final.log"
+			},
+			{
+				"exit_code": 0,
+				"duration_seconds": 4.9157905,
+				"command": "npm run typecheck",
+				"started_at": 1792718716,
+				"log": "typecheck-final.log"
+			},
+			{
+				"exit_code": 0,
+				"duration_seconds": 28.9719851,
+				"command": "npm run seo:check",
+				"started_at": 1792718721,
+				"log": "seo-check-final.log"
+			},
+			{
+				"exit_code": 0,
+				"duration_seconds": 45.4113304,
+				"command": "npm run build",
+				"started_at": 1792718750,
+				"log": "build-final.log"
+			}
+		],
+		"seo_tests_passed": 188,
+		"seo_tests_failed": 0,
+		"public_files": 299,
+		"business_fact_violations": 0,
+		"markdown_files": 157,
+		"sitemap_urls": 284,
+		"build_pages": 564,
+		"existing_high_advisories": 5
+	},
+	"source_preservation": {
+		"passed": 21,
+		"failed": 0,
+		"headings_changed": 21,
+		"files": [
+			{
+				"file": "content\\posts\\a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md",
+				"before_sha256": "c4cb8d8876a72f3e19a364715014309c8bed4396cc70ab9df325cacc02fcd82a",
+				"after_sha256": "51e435a4d0e4c4ed5c05250f2c90a9ceecba4cf85350054863095843b6239b76",
+				"headings": {
+					"Overview of Santa Cruz County Septic Regulations (Installation, Permits, and Inspections)": "Santa Cruz County Septic Rules",
+					"Installation and Permit Requirements": "Permits for Septic Work",
+					"New and Alternative Septic Technologies in Santa Cruz (MicroSepTec & Orenco Systems)": "New Septic Options in Santa Cruz",
+					"Conclusion": "Key Points"
+				}
+			},
+			{
+				"file": "content\\posts\\what-you-need-to-know-about-engineered-septic-systems.md",
+				"before_sha256": "cbf07acff975a7fa7853d9c695e580e8e21e556a197f79ca08e63d040735c5b3",
+				"after_sha256": "d35647b45a73f254e1ef3df7950c291916e03fad613b7f0072751d3e65b1bf2e",
+				"headings": {
+					"1. What is an Engineered Septic System?": "1. What Makes These Systems Different?",
+					"2. How Does an Engineered Septic System Work?": "2. How the System Works",
+					"3. Types of Engineered Septic Systems": "3. Types of Systems",
+					"4. Benefits of an Engineered Septic System": "4. Key Benefits",
+					"5. Factors to Consider Before Installing an Engineered Septic System": "5. Plan Your Septic Project",
+					"6. Maintenance Requirements for Engineered Septic Systems": "6. Septic Care and Upkeep",
+					"7. Common Misconceptions About Engineered Septic Systems": "7. Common Septic Myths",
+					"10. Conclusion": "10. Key Points"
+				}
+			},
+			{
+				"file": "content\\posts\\septic-system-types-santa-cruz.md",
+				"before_sha256": "88a69a0a18103f9acb9e9878a1e1542dd3a3f5f1f9bb63957c0f71d75b480660",
+				"after_sha256": "c8fe19deb766a9b321e9d32039a6a544e3df917ac3fa7e8b8b73952c8645dbfa",
+				"headings": {
+					"Quick Answer for Santa Cruz Homeowners": "Quick Guide for Santa Cruz Homes",
+					"Understanding Septic System Types for Santa Cruz Homes": "Septic System Types for Santa Cruz Homes",
+					"Introduction to Septic Systems": "Septic System Basics",
+					"Alternative Septic Systems: Options for Challenging Conditions": "Other Septic Options for Complex Sites",
+					"Components of a Septic System: What You Need to Know": "Parts of a Septic System",
+					"Maintenance Tips for Optimal Septic System Performance": "Septic Care Tips",
+					"DIY Monitoring vs. Professional Services": "DIY Septic Checks and Expert Help",
+					"Sources & Local References": "Sources and Local Links",
+					"Homeowner Action Checklist": "Your Septic Checklist"
+				}
+			}
+		],
+		"parser_passed": 9,
+		"parser_failed": 0,
+		"scope": "Unchanged frontmatter, nonheading bytes, links/images, FAQ questions, parsed article body outside headings and closing CTA."
+	},
+	"browser": {
+		"baseline_passed": 236,
+		"baseline_failed": 0,
+		"final_passed": 2348,
+		"final_failed": 0,
+		"states": 36,
+		"axe_audits_before": 18,
+		"axe_audits_after": 18,
+		"axe_violations_before": 0,
+		"axe_violations_after": 0,
+		"page_errors_before": [],
+		"page_errors_after": [],
+		"horizontal_overflow_states": 0,
+		"http_responses": 12,
+		"http_statuses": [200],
+		"preserved": "Heading types, fonts, line heights and widths; paragraphs, links, images, canonicals, indexability, titles, descriptions, JSON-LD and native telephone links."
+	},
+	"word_splits": {
+		"section_headings_all_states_before": 68,
+		"section_headings_all_states_after": 0,
+		"section_headings_320px_200percent_before": 56,
+		"section_headings_320px_200percent_after": 0,
+		"unchanged_article_title_splits_all_states": 14
+	},
+	"screenshots": {
+		"captured": 72,
+		"matched_state_pairs": 36,
+		"visually_reviewed_pairs": 6,
+		"pixel_identity_claim": false,
+		"manifest_sha256": "09e2ea5f56542063dc147c79cce606c111463d6bddd14a136b1b6bbfcc49658e"
+	},
+	"initial_failures": {
+		"baseline_scratch_phone_predicate": {
+			"passed": 200,
+			"failed": 36,
+			"disposition": "Corrected expected URI to the existing tel:+18312254344; baseline rerun passed."
+		},
+		"first_compiled_candidate": {
+			"passed": 2212,
+			"failed": 112,
+			"disposition": "100 checks exposed the CTA parser removing a section after a heading included Call. Changed that wording and preserved the complete article. The other 12 were a scratch H1 expectation mistake, corrected without editing titles."
+		},
+		"scratch_console_summary": "Retried one Windows Unicode console-print failure with explicit UTF-8; acceptance results were unaffected."
+	},
+	"limitations": [
+		"Local deterministic and browser evidence, not production, indexing, ranking or lead-lift proof.",
+		"Existing article-title word breaks remain; no font size was capped.",
+		"Five known high development-tool advisories remain under the documented recheck policy.",
+		"No existing business claim was revalidated or changed."
+	],
+	"artifact_sha256": {
+		"acceptance.json": "033b40fce67647f6cca78c68fb53c5416cf1bbcf6c43d76fb3ac22c569a350ba",
+		"browser-baseline.json": "cfa2783e82878ef67903be08c22abd2858876444bbf862fa104f53ec992b2444",
+		"browser-final.json": "d275f9b88929452f4180f8dd5dda28edf87f4620910f97fb1aaca6bbc1f2d471",
+		"browser-first-candidate.json": "2dc422dab3819ad4ad8f13d35b426da6b2f80850c00848463fbf47f1ca939871",
+		"browser-baseline-initial.json": "46adce4b7b22004a09cb8d8d7d43109a936dca6386c1946b567a4fa2236ecf70",
+		"source-preservation.json": "e8088ae6b41be72f720f33e62d5e99436cf62c28db0a404071bf65866f2dcdc5",
+		"parser-preservation.json": "1ca1bbe5ad4ac4d2840f0319db4904d79afea34c516fedab1e139158ca75b970",
+		"visual-review.json": "f6428efada61bf66050430f6c1a295f65b7004da06fe90539b91201de620c527"
+	},
+	"sha256": "42954cfbb36e19faef5eb4e5d32630e95f4567f9aae9456341afc074b3812b70"
+}
