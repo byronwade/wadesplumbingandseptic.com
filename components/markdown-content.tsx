@@ -1,7 +1,10 @@
 import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import ReactMarkdown, { defaultUrlTransform } from "react-markdown"
+import ReactMarkdown, {
+	defaultUrlTransform,
+	type ExtraProps,
+} from "react-markdown"
 import remarkGfm from "remark-gfm"
 
 import {
@@ -53,6 +56,27 @@ function withoutNode<T extends { node?: unknown }>(props: T): Omit<T, "node"> {
 	const rest = { ...props }
 	delete rest.node
 	return rest
+}
+
+type HastNode = NonNullable<ExtraProps["node"]>
+
+function textOf(node: HastNode | HastNode["children"][number]): string {
+	if (node.type === "text") return node.value
+	return "children" in node ? node.children.map(textOf).join("") : ""
+}
+
+/** "Table: Feature, Water Filter, Water Softener", from the header cells. */
+function tableLabel(table: HastNode | undefined) {
+	const headers: string[] = []
+	const collect = (node: HastNode) => {
+		for (const child of node.children) {
+			if (child.type !== "element") continue
+			if (child.tagName !== "th") collect(child)
+			else if (textOf(child).trim()) headers.push(textOf(child).trim())
+		}
+	}
+	if (table) collect(table)
+	return headers.length ? `Table: ${headers.join(", ")}` : "Table"
 }
 
 /*
@@ -125,10 +149,16 @@ export function MarkdownContent({
 							}
 						: {}),
 					// Wide tables scroll inside their own box instead of pushing the
-					// page sideways on narrow screens.
-					table: ({ children, ...props }) => (
-						<div className="table-scroll">
-							<table {...withoutNode(props)}>{children}</table>
+					// page sideways on narrow screens. The box is a named tab stop so
+					// keyboard users can scroll it with the arrow keys in every browser.
+					table: ({ children, node, ...props }) => (
+						<div
+							aria-label={tableLabel(node)}
+							className="table-scroll"
+							role="region"
+							tabIndex={0}
+						>
+							<table {...props}>{children}</table>
 						</div>
 					),
 				}}

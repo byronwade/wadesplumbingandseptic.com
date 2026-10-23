@@ -1285,6 +1285,12 @@
 		border-radius: var(--radius-md);
 	}
 
+	/* The box is a tab stop so keyboard users can scroll it with the arrow keys. */
+	.prose .table-scroll:focus-visible {
+		outline: 2px solid var(--primary-bright);
+		outline-offset: 2px;
+	}
+
 	.prose table {
 		width: 100%;
 		border-collapse: collapse;
