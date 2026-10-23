@@ -1,0 +1,93 @@
+{
+	"schemaVersion": 1,
+	"at": 1792720289,
+	"truthState": "MOCK_VERIFIED",
+	"baseCommit": "f84250536aafe9c7c34f56ecbd2675336809183c",
+	"testCommit": "d1995c90d11c858b22cfa9eb0b9c2cb7d5b3f44d",
+	"scope": "Audit existing page routes against legacy redirects and prevent the previously demonstrated ranked-archive collision from recurring.",
+	"sourceAudit": {
+		"paths": 295,
+		"configuredRedirects": 123,
+		"unexpectedCollisions": 0,
+		"intentionalCollision": {
+			"pathname": "/engineered-septic-systems-santa-cruz-county",
+			"origin": "noindex content",
+			"source": "/engineered-septic-systems-santa-cruz-county",
+			"destination": "/service-offerings/engineered-septic-system-installation"
+		},
+		"missingLiteralDestinations": []
+	},
+	"regressionGuard": {
+		"protectedPaths": 288,
+		"sitemapPaths": 284,
+		"additionalRankedArchives": 4,
+		"currentConfigPasses": 1,
+		"historicWildcardTestFailures": 1,
+		"historicWildcardCaughtPaths": [
+			"/expert-tips/popular",
+			"/expert-tips/trending"
+		],
+		"configRestoredByteForByte": true
+	},
+	"httpAudit": {
+		"builtPagePaths": 526,
+		"userAgents": ["browser", "GPTBot", "Googlebot", "ClaudeBot"],
+		"pageRequests": 2104,
+		"metadataPaths": 2,
+		"metadataRequests": 8,
+		"legacySources": 242,
+		"legacyRequests": 1936,
+		"rankedArchiveQueryAndSlashRequests": 32,
+		"unknownPageRequests": 12,
+		"assertionsPassed": 15154,
+		"assertionsFailed": 0,
+		"sitemapPathsCheckedForCanonicalAndIndexability": 284,
+		"checks": [
+			"HTTP status",
+			"no page redirect",
+			"one nonempty H1",
+			"one site canonical",
+			"sitemap canonical and indexability",
+			"browser and bot heading/metadata parity",
+			"metadata asset MIME types and bytes",
+			"permanent legacy redirects and query preservation",
+			"ranked archive query and trailing-slash behavior",
+			"unknown URL status, noindex and serialized not-found fallback"
+		]
+	},
+	"acceptance": {
+		"commandsPassed": 5,
+		"commandsFailed": 0,
+		"commands": [
+			"npm ci",
+			"npm run lint",
+			"npm run typecheck",
+			"npm run seo:check",
+			"npm run build"
+		],
+		"seoTestsPassed": 189,
+		"seoTestsFailed": 0,
+		"businessFactViolations": 0,
+		"staticPagesGenerated": 564
+	},
+	"review": "Self-review across correctness, simplicity, architecture, security and performance found no required change. No independent review is claimed.",
+	"initialAuditCorrections": {
+		"initialAssertionsPassed": 15075,
+		"initialAssertionsFailed": 17,
+		"laterRawHeadingAssumptionFailures": 4,
+		"reason": "Reclassified icon and web manifest as metadata assets; validated MIME types and bytes. Focused unknown-page requests verify documented streaming status, serialized not-found fallback content/digest and noindex. Original 17 failed assumptions and four later raw-heading assumptions retained separately. No application code changed."
+	},
+	"cleanup": {
+		"ownedPreviewStopped": true,
+		"portClosed": true
+	},
+	"limits": [
+		"No new redirect defect was found or fixed; the retired noindex campaign redirect is intentional.",
+		"Only an offline test and this evidence changed. Public rendering, business facts, content, dates, canonicals and redirect configuration are unchanged.",
+		"Source guard covers sitemap and static App Router pages; HTTP audit additionally covers built noindex pages, tag archives and service aliases.",
+		"Scratch inventory labeled seven sitemap URLs as static pages. Their additional 56 checks reused captured HTTP responses and were verified against actual sitemap XML.",
+		"Unknown URLs use Next's documented streamed 200 response for browsers and 404 for the tested bots, with noindex and serialized not-found fallback. No claim of a raw HTML H1 for that fallback is made.",
+		"Five existing high development-tool advisories remain under the documented scoped deferral; dependencies did not change.",
+		"No production, indexing, ranking, lead-lift or live Eve integration proof is claimed. No UI screenshots apply to this test-only change."
+	]
+}
