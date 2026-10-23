@@ -275,6 +275,29 @@ async function redirectSources() {
 	return sources
 }
 
+test("sitemap and static App Router pages are not shadowed by redirects", async () => {
+	const { buildSitemapEntries } = await import("../../lib/sitemap")
+	const paths = new Set(
+		(await buildSitemapEntries()).map((entry) => new URL(entry.url).pathname),
+	)
+	// Ranked archives are real pages even though the sitemap omits them.
+	for (const file of sourceFiles(["app"], /^page\.[jt]sx?$/)) {
+		const segments = path
+			.relative("app", path.dirname(file))
+			.split(path.sep)
+			.filter((segment) => !/^\(.*\)$/.test(segment))
+		if (segments.some((segment) => segment.includes("["))) continue
+		paths.add(`/${segments.join("/")}`)
+	}
+	const redirects = await redirectSources()
+	const problems: string[] = []
+	for (const pathname of paths) {
+		const redirect = redirects.find((rule) => rule.matches(pathname))
+		if (redirect) problems.push(`${pathname} redirects (${redirect.source})`)
+	}
+	assert.deepEqual(problems, [])
+})
+
 for (const archive of ["popular", "trending"]) {
 	test(`expert-tips ${archive} archive is not redirected`, async () => {
 		const { default: nextConfig } = await import("../../next.config")
