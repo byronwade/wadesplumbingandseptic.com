@@ -10,6 +10,8 @@
 		"postinstall": "node scripts/sync-maplibre-worker.mjs",
 		"lint": "eslint . --max-warnings=0",
 		"typecheck": "tsc --noEmit",
+		"audit:dependencies": "npm audit --audit-level=high",
+		"audit:production": "npm audit --omit=dev --audit-level=high",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"ci:content": "node scripts/ci/validate-content.mjs",

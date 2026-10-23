@@ -63,6 +63,18 @@ npm run ci:content
 npm run ci:self-hosted-policy
 ```
 
+Dependency security checks are separate from the deterministic site checks:
+
+```bash
+npm run audit:dependencies
+npm run audit:production
+```
+
+Run both before shipping. The full audit includes development and build tools;
+the production audit omits development dependencies. A production pass does not
+clear findings in the full audit. See [the dependency security review](docs/dependency-security.md)
+for the current unresolved advisory, its scope, and the next review date.
+
 After a production build, check archive HTML from a local preview in two terminals:
 
 ```bash
