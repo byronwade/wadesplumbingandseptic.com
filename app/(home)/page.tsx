@@ -45,7 +45,9 @@ export default function HomePage() {
 
 				{/* Top line: where we are, and the scroll cue's counterpart. */}
 				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
-					<p className="spec-label text-primary-bright">Santa Cruz County, CA</p>
+					<p className="spec-label text-primary-bright">
+						Santa Cruz County, CA
+					</p>
 					<p className="text-on-dark-subtle hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
 						Est. family owned
 					</p>
