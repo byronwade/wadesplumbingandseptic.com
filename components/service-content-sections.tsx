@@ -5,6 +5,7 @@ import { MarkdownContent } from "@/components/markdown-content"
 import {
 	parseServiceSections,
 	type ServiceSection,
+	type ServiceSectionBullet,
 } from "@/lib/service-sections"
 import { cn } from "@/lib/utils"
 
@@ -58,11 +59,34 @@ function SectionChrome({
 	)
 }
 
+function BulletText({
+	item,
+	className,
+}: {
+	item: ServiceSectionBullet
+	className?: string
+}) {
+	return (
+		<span
+			className={cn("leading-snug", className, item.label && "font-normal")}
+		>
+			{item.label ? (
+				<>
+					<strong className="font-bold">{item.label}</strong>
+					{item.text.slice(item.label.length)}
+				</>
+			) : (
+				item.text
+			)}
+		</span>
+	)
+}
+
 function BulletGrid({
 	items,
 	tone = "check",
 }: {
-	items: string[]
+	items: ServiceSectionBullet[]
 	tone?: "check" | "warning"
 }) {
 	const Icon = tone === "warning" ? Siren : Check
@@ -71,7 +95,7 @@ function BulletGrid({
 			{items.map((item) => (
 				<li
 					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
-					key={item}
+					key={item.text}
 				>
 					<span
 						className={cn(
@@ -83,7 +107,7 @@ function BulletGrid({
 					>
 						<Icon aria-hidden="true" className="size-[min(1rem,16px)]" />
 					</span>
-					<span className="leading-snug">{item}</span>
+					<BulletText item={item} />
 				</li>
 			))}
 		</ul>
@@ -236,7 +260,7 @@ function TimelineBand({
 								{section.bullets.map((item) => (
 									<li
 										className="border-border flex items-start gap-[min(0.75rem,12px)] border-b pb-4 text-sm font-bold last:border-0 last:pb-0"
-										key={item}
+										key={item.text}
 									>
 										<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(1.75rem,28px)] shrink-0 place-items-center rounded-md">
 											<Check
@@ -244,7 +268,7 @@ function TimelineBand({
 												className="size-[min(0.875rem,14px)]"
 											/>
 										</span>
-										<span className="leading-snug">{item}</span>
+										<BulletText item={item} />
 									</li>
 								))}
 							</ul>
@@ -288,12 +312,12 @@ function TipsBand({
 							{section.bullets.map((item, itemIndex) => (
 								<li
 									className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]"
-									key={item}
+									key={item.text}
 								>
 									<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">
 										{String(itemIndex + 1).padStart(2, "0")}
 									</span>
-									<span className="text-sm leading-snug font-bold">{item}</span>
+									<BulletText className="text-sm font-bold" item={item} />
 								</li>
 							))}
 						</ol>

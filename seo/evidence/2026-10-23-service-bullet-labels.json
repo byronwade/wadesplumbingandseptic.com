@@ -1,0 +1,75 @@
+{
+	"date": "2026-10-23",
+	"job": "wades-plumbing-1023-094911-codex",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production build and browser evidence, not a live integration or ranking result",
+	"base": "3e147f1c3ac8adbfcede1909d6ed7e9a7ba36b7f",
+	"change": "Retain authored leading service bullet labels and render them as strong text with regular-weight descriptions",
+	"sourceAudit": {
+		"services": 48,
+		"leadingBoldLabels": 144,
+		"labelsWithoutColon": 34,
+		"note": "Source counts include FAQ questions and lists that remain Markdown"
+	},
+	"structuredBulletAudit": {
+		"bullets": 588,
+		"retainedLabels": 115,
+		"affectedServices": 20,
+		"labelsWithoutColon": 5,
+		"normalizedSectionTreesUnchanged": 48
+	},
+	"acceptance": {
+		"node": "v25.9.0",
+		"commands": [
+			"npm ci",
+			"npm run lint",
+			"npm run typecheck",
+			"npm run seo:check",
+			"npm run build"
+		],
+		"passed": 5,
+		"failed": 0,
+		"seoTapPassed": 194,
+		"seoTapFailed": 0,
+		"generatedPages": 564,
+		"additionalChecks": "Final lint and typecheck passed after the renderer cleanup; formatting and git diff --check passed",
+		"focusedRegression": "Seven bullet forms failed on the old parser and passed on the updated parser"
+	},
+	"browser": {
+		"routes": [
+			"/services/septic-tank-inspection-and-assessment",
+			"/services/drain-cleaning",
+			"/services/water-filtration-system-installation",
+			"/services/septic-filter-cleaning-and-replacement"
+		],
+		"themes": ["light", "dark"],
+		"views": ["1280px at 100%", "390px at 100%", "320px at 200%"],
+		"baselineStates": 24,
+		"finalStates": 24,
+		"axeViolationsBefore": 0,
+		"axeViolationsAfter": 0,
+		"browserErrorsBefore": 0,
+		"browserErrorsAfter": 0,
+		"horizontalOverflowBefore": 0,
+		"horizontalOverflowAfter": 0,
+		"labelsCheckedAfter": 156,
+		"labelWeight": 700,
+		"descriptionWeight": 400,
+		"plainBulletWeightPreserved": true,
+		"screenshotsCaptured": 32,
+		"screenshotsReviewed": 6
+	},
+	"comparison": {
+		"passed": 4012,
+		"failed": 0,
+		"builtHtmlPages": 552,
+		"llmsFiles": 2,
+		"preserved": ["Text", "Links", "Metadata", "JSON-LD", "Both llms files"]
+	},
+	"limitations": [
+		"Browser coverage is four representative services, not a sitewide sweep",
+		"npm ci reports five existing high advisories; dependencies are unchanged",
+		"The shared toolkit reservation failed on a missing configured root; notebook ownership was recorded"
+	],
+	"evidenceDirectory": "C:/Users/bcw19/agent-tools/hobby-scheduler/jobs/wades-plumbing-hobby-1023-0949"
+}

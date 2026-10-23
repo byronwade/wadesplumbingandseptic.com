@@ -14,6 +14,12 @@ export type ServiceSectionStep = {
 	body: string
 }
 
+export type ServiceSectionBullet = {
+	text: string
+	/** Authored leading emphasis, present only when an explanation follows. */
+	label?: string
+}
+
 export type ServiceSection = {
 	kind: ServiceSectionKind
 	heading: string
@@ -22,7 +28,7 @@ export type ServiceSection = {
 	lead: string
 	/** Remaining body markdown when not fully consumed by structured parts. */
 	body: string
-	bullets: string[]
+	bullets: ServiceSectionBullet[]
 	steps: ServiceSectionStep[]
 	faqs: Array<{ question: string; answer: string }>
 }
@@ -36,7 +42,7 @@ function extractBulletItems(body: string) {
 	return items
 }
 
-/** Plain text for fields rendered outside Markdown (headings, step titles, bullets). */
+/** Plain text for fields rendered outside Markdown. */
 function stripInlineMarkdown(value: string) {
 	return value
 		.replace(/\*\*/g, "")
@@ -45,6 +51,15 @@ function stripInlineMarkdown(value: string) {
 		.replace(/`([^`]+)`/g, "$1")
 		.replace(/\\([\\`*_{}[\]()#+\-.!])/g, "$1")
 		.trim()
+}
+
+function serviceBullet(value: string): ServiceSectionBullet {
+	const text = stripInlineMarkdown(value)
+	const leading = value.match(/^(?:\*\*([^*]+)\*\*|__([^_]+)__)\s+\S/)
+	const label = leading
+		? stripInlineMarkdown(leading[1] ?? leading[2] ?? "")
+		: ""
+	return label && text.startsWith(label) ? { text, label } : { text }
 }
 
 /** The step card already shows "Step 01", so drop a numbered prefix from the title. */
@@ -327,7 +342,7 @@ function buildSection(heading: string, body: string): ServiceSection {
 			eyebrow: eyebrowFor(kind),
 			lead,
 			body: remainder,
-			bullets: bullets.map(stripInlineMarkdown),
+			bullets: bullets.map(serviceBullet),
 			steps: [],
 			faqs: [],
 		}
@@ -340,7 +355,7 @@ function buildSection(heading: string, body: string): ServiceSection {
 			eyebrow: eyebrowFor(kind),
 			lead: lead || body.trim(),
 			body: remainder,
-			bullets: bullets.map(stripInlineMarkdown),
+			bullets: bullets.map(serviceBullet),
 			steps: [],
 			faqs: [],
 		}
@@ -352,7 +367,7 @@ function buildSection(heading: string, body: string): ServiceSection {
 		eyebrow: eyebrowFor(kind === "prose" && bulletHeavy ? "tips" : kind),
 		lead: bulletHeavy ? lead : "",
 		body: bulletHeavy ? remainder : body.trim(),
-		bullets: bulletHeavy ? bullets.map(stripInlineMarkdown) : [],
+		bullets: bulletHeavy ? bullets.map(serviceBullet) : [],
 		steps: [],
 		faqs: [],
 	}
