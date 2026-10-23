@@ -36,13 +36,20 @@ function extractBulletItems(body: string) {
 	return items
 }
 
+/** Plain text for fields rendered outside Markdown (headings, step titles, bullets). */
 function stripInlineMarkdown(value: string) {
 	return value
 		.replace(/\*\*/g, "")
 		.replace(/__([^_]+)__/g, "$1")
 		.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
 		.replace(/`([^`]+)`/g, "$1")
+		.replace(/\\([\\`*_{}[\]()#+\-.!])/g, "$1")
 		.trim()
+}
+
+/** The step card already shows "Step 01", so drop a numbered prefix from the title. */
+function stepTitle(heading: string) {
+	return stripInlineMarkdown(heading).replace(/^\d+\.\s+/, "")
 }
 
 function splitH3Steps(body: string): {
@@ -60,7 +67,7 @@ function splitH3Steps(body: string): {
 		const start = match.index ?? 0
 		const next = matches[index + 1]
 		const end = next?.index ?? body.length
-		const title = match[0].replace(/^###\s+/, "").trim()
+		const title = stepTitle(match[0].replace(/^###\s+/, ""))
 		const stepBody = body.slice(start + match[0].length, end).trim()
 		return { title, body: stepBody }
 	})
@@ -382,7 +389,7 @@ export function parseServiceSections(content: string): {
 		const start = match.index ?? 0
 		const next = matches[index + 1]
 		const end = next?.index ?? content.length
-		const heading = match[0].replace(/^##\s+/, "").trim()
+		const heading = stripInlineMarkdown(match[0].replace(/^##\s+/, ""))
 		const body = content.slice(start + match[0].length, end).trim()
 		return buildSection(heading, body)
 	})

@@ -10,8 +10,6 @@ eyebrow: Septic Failure Response
 noindex: true
 ---
 
-Call-First Campaign Landing Page
-
 ## Failed Septic System Help
 
 Call-first page for septic backups, drain field failures, and replacement planning in Santa Cruz County.

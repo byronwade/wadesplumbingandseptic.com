@@ -1,7 +1,10 @@
 import assert from "node:assert/strict"
-import { readFileSync } from "node:fs"
+import { readdirSync, readFileSync } from "node:fs"
 import path from "node:path"
+import matter from "gray-matter"
 
+import { extractContentConversion } from "../../lib/content-conversion"
+import { sanitizeArticleContent } from "../../lib/sanitize-content"
 import { parseServiceSections } from "../../lib/service-sections"
 
 const samplePath = path.join(
@@ -44,5 +47,78 @@ assert.ok(signs.bullets.length >= 4, "expected sign bullets")
 const faq = sections.find((section) => section.kind === "faq")
 assert.ok(faq)
 assert.ok(faq.faqs.length >= 3, "expected FAQ pairs")
+
+// Headings, step titles and bullets render as plain text, outside Markdown.
+const fixture = parseServiceSections(
+	[
+		"## **What We Do**",
+		"",
+		"Intro.",
+		"",
+		"## Our Installation Process",
+		"",
+		"### 1\\. Initial Consultation",
+		"",
+		"We visit.",
+		"",
+		"### 2\\. Final Inspection",
+		"",
+		"We test.",
+	].join("\n"),
+)
+assert.deepEqual(
+	fixture.sections.map((section) => section.heading),
+	["What We Do", "Our Installation Process"],
+)
+assert.deepEqual(
+	fixture.sections[1]?.steps.map((step) => step.title),
+	["Initial Consultation", "Final Inspection"],
+)
+
+const MARKDOWN_LEFTOVER = /\*\*|__|\\[\\`*_{}[\]()#+\-.!]|\]\(/
+const contentFiles = (dir: string): string[] =>
+	readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+		const file = path.join(dir, entry.name)
+		if (entry.isDirectory()) return contentFiles(file)
+		return entry.name.endsWith(".md") ? [file] : []
+	})
+
+for (const file of contentFiles("content")) {
+	const { data, content } = matter(readFileSync(file, "utf8"))
+	const slug = path.basename(file, ".md")
+	const title = String(data.title ?? slug)
+	const parsed = extractContentConversion(sanitizeArticleContent(content), {
+		title,
+		description: String(data.description ?? ""),
+		slug,
+		eyebrow: data.eyebrow ? String(data.eyebrow) : undefined,
+	})
+
+	const { description } = parsed.conversion
+	assert.ok(
+		!MARKDOWN_LEFTOVER.test(description) && !description.startsWith("!"),
+		`${file}: closing CTA text shows Markdown: ${description}`,
+	)
+	// A dropped link leaves a word followed straight by punctuation or "and.".
+	assert.ok(
+		!/\s[,.]|,,|\b(?:and|or|for|at|about)\.$/.test(description),
+		`${file}: closing CTA text lost words: ${description}`,
+	)
+
+	if (!file.includes(`${path.sep}services${path.sep}`)) continue
+	for (const section of parseServiceSections(parsed.content).sections) {
+		const plain = [
+			section.heading,
+			...section.steps.map((step) => step.title),
+			...section.bullets,
+		]
+		for (const text of plain) {
+			assert.ok(
+				!MARKDOWN_LEFTOVER.test(text) && text.replace(/\W/g, ""),
+				`${file}: "${section.heading}" shows Markdown or is empty: ${text}`,
+			)
+		}
+	}
+}
 
 console.log("Service section parsing checks passed ✓")

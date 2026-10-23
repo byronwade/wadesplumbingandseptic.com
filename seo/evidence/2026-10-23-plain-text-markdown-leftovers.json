@@ -1,0 +1,78 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-081914-claude",
+	"collected_at": "2026-10-23T13:06:00Z",
+	"source": "REPOSITORY_FACT and isolated local production builds",
+	"source_url_or_tool": "npm, tsx, Node scripts, Python Playwright, Chrome, axe-core, localhost:39871",
+	"scope": "Plain-text fields built from Markdown (closing CTA description, service section headings, step titles) plus seven source cleanups",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, personal data or authenticated provider responses collected",
+	"retention_class": "committed compact local evidence",
+	"base_commit": "9e041a926443feb4e387d2847bf5d0d40a95714f",
+	"node": "v24.21.0",
+	"heading_scan": {
+		"question": "Do content/services and content/pages contain migration-flattened section headings like the 12 posts fixed in #199?",
+		"answer": "No. Short standalone lines are CTA kicker lines directly above a closing CTA heading, bold FAQ questions already parsed by extractServiceFaqs, license trust lines, and the internal campaign label removed here.",
+		"services_files_with_hits": 42,
+		"pages_files_with_hits": 8
+	},
+	"code_changes": [
+		"lib/content-conversion.ts firstParagraph: keep the words of inline links, drop only CTA button links, strip bold markers, skip image lines",
+		"lib/service-sections.ts: section headings and process step titles go through stripInlineMarkdown (now also unescapes Markdown backslashes); step titles drop a leading 'N. ' because the card shows 'Step 01'",
+		"scripts/ci/test-service-sections.ts: fixture plus a scan of every content file for Markdown leftovers or dropped words in these plain-text fields"
+	],
+	"content_changes": [
+		"septic-tank-inspection-and-assessment: empty 'Perfect For' section and stray '</' and '**' lines removed",
+		"smoke-tests: empty 'Customer Testimonials:' label removed",
+		"four campaign landing pages: internal 'Call-First Campaign Landing Page' line removed",
+		"septic-tank-troubleshooting-and-diagnostic-services: doubled comma"
+	],
+	"parser_harness": {
+		"documents": 157,
+		"conversion_changed": 19,
+		"conversion_titles_changed": 0,
+		"service_sections_changed": 4,
+		"service_section_kinds_changed": 1,
+		"service_faq_jsonld_changed": 0,
+		"note": "The one kinds change is the removed empty 'Perfect For' section."
+	},
+	"built_output": {
+		"html_pages_compared": 552,
+		"html_pages_changed": 34,
+		"json_ld_changed": 0,
+		"head_changed": 0,
+		"link_lists_changed": 2,
+		"link_change_note": "Both routes of the troubleshooting service: one related-post card changes because the related ranking seeds from the first 1200 characters and the comma fix shifts that window by one character.",
+		"llms_txt": "identical",
+		"llms_full_txt": "changed: only the removed 'Perfect For' / '- **' lines and 'Customer Testimonials:' label",
+		"debris_scan_before": {
+			"escaped-md": 14,
+			"bold-markers": 8,
+			"bare-asterisks": 15,
+			"empty-label": 4,
+			"lost-words": 25
+		},
+		"debris_scan_after": { "lost-words": 20, "empty-label": 2 },
+		"debris_after_note": "All remaining hits are scanner false positives: React '<!-- -->' markers between a word and a period on 20 city-service pages, and a bold 'Licensed Contractor:' label followed by its value."
+	},
+	"browser": {
+		"states": 42,
+		"routes": 7,
+		"viewports": ["320px at 200% text", "390px", "1280px"],
+		"themes": ["light", "dark"],
+		"http_status": [200],
+		"axe_wcag_a_aa_violations": 0,
+		"horizontal_overflow": 0,
+		"page_errors": 0,
+		"markdown_leftovers_in_ctas_and_headings": 0,
+		"screenshots": 28,
+		"screenshots_reviewed": 7
+	},
+	"acceptance": {
+		"npm_ci": "pass",
+		"lint": "pass",
+		"typecheck": "pass",
+		"seo_check": "pass, 194 tests passed, 0 failed; business facts 299 files, 0 violations",
+		"build": "pass, 564 of 564 pages"
+	}
+}

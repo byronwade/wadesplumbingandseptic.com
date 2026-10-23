@@ -14,6 +14,9 @@ export type ContentConversion = {
 const CTA_LINK_LINE =
 	/^\s*(?:\[(?:Call Us|Call Us Now|Call Us Today)[^\]]*\]\([^)]*\)\s*)+(?:\[Get a Free[^\]]*\]\([^)]*\))?/i
 
+const CTA_BUTTON_LINK =
+	/\s*\[(?:Call Us|Get a Free|Request service)[^\]]*\]\([^)]*\)/gi
+
 const TRUST_LINE =
 	/^(?:★★★★★|Licensed Contractor:|Fast(?:-|\s)?Response Guarantee:)/i
 
@@ -135,13 +138,20 @@ function firstParagraph(sectionBody: string) {
 
 	for (const line of lines) {
 		if (/^#{1,6}\s/.test(line)) continue
+		if (line.startsWith("![")) continue
 		if (CTA_LINK_LINE.test(line)) continue
 		if (TRUST_LINE.test(line)) continue
 		if (line.startsWith('"') || line.startsWith("“")) continue
 		if (/^What Our Customers Say/i.test(line)) continue
 		if (/★★★★★/.test(line) && line.includes("[")) continue
 		if (line.length < 40) continue
-		return line.replace(/\s*\[[^\]]+\]\([^)]+\)/g, "").trim()
+		// Rendered as plain text in the closing CTA: drop button links, keep the
+		// words of inline links (often the phone number) and bold markers.
+		return line
+			.replace(CTA_BUTTON_LINK, "")
+			.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+			.replace(/\*\*|__/g, "")
+			.trim()
 	}
 
 	return ""
