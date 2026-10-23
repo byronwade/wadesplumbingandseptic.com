@@ -26,7 +26,7 @@ While many plumbing problems can be solved with basic tools and a little know-ho
 
 At Wade’s Plumbing & Septic, we provide expert drain field repair and maintenance services throughout Santa Cruz County, helping homeowners identify and resolve issues before they become major problems. Here’s how to recognize when your drain field needs professional attention.
 
-Greener Grass Isn’t Always a Good Sign
+## Greener Grass Isn’t Always a Good Sign
 
 It might seem like a lush, green lawn is a sign of a healthy yard, but if that vibrant patch of grass is directly over your drain field, it could signal a leak.
 
@@ -41,7 +41,7 @@ Keep an eye out for:
 
 These are all signs that your septic system is not processing wastewater properly and needs immediate professional inspection.
 
-Slow Drains and Gurgling Noises Could Point to Drain Field Trouble
+## Slow Drains and Gurgling Noises Could Point to Drain Field Trouble
 
 Slow drains are one of the earliest red flags of a failing drain field. If water is draining slowly from your sinks, tubs, or showers (even after you’ve ruled out basic clogs), it could mean that the drain field is no longer absorbing and dispersing wastewater efficiently.
 
@@ -49,7 +49,7 @@ You may also hear gurgling sounds coming from your plumbing system, particularly
 
 Don’t ignore these symptoms. If they persist for more than a few days, contact a qualified plumber immediately to prevent further system damage.
 
-Toilet Problems and Foul Odors Can Signal Septic Issues
+## Toilet Problems and Foul Odors Can Signal Septic Issues
 
 Frequent toilet flushing, slow re-filling tanks, or bubbling water in the bowl can all point to a septic backup caused by drain field failure. If you find yourself needing to flush multiple times for a normal amount of waste, it’s time to consider that something deeper is wrong.
 
@@ -57,7 +57,7 @@ Another serious sign is a strong, unpleasant odor coming from your drains or toi
 
 These issues aren’t just inconveniences. They can pose health risks and cause long-term structural damage if not addressed.
 
-What Causes Drain Field Failure?
+## What Causes Drain Field Failure?
 
 Drain field problems often stem from:
 
@@ -69,7 +69,7 @@ Drain field problems often stem from:
 
 Routine inspections and proper septic system care are the best ways to prevent these issues.
 
-Don’t Wait, Call the Drain Field Experts
+## Don’t Wait, Call the Drain Field Experts
 
 If you’ve noticed any of these signs (green patches on your lawn, slow drainage, gurgling pipes, toilet troubles, or foul odors), it’s time to call Wade’s Plumbing & Septic. Ignoring a failing drain field can lead to raw sewage backups, contaminated groundwater, and full system replacement.
 

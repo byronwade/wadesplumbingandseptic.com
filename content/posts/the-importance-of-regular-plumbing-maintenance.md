@@ -24,45 +24,33 @@ Maintaining your home’s plumbing system is one of the smartest ways to avoid u
 
 At Wade’s Plumbing & Septic, we provide reliable plumbing inspections and preventive maintenance services for homeowners and businesses across Santa Cruz County. Here’s why routine maintenance is essential, and how it can save you time, money, and frustration in the long run.
 
-**6 Major Benefits of Plumbing Maintenance**
+## 6 Major Benefits of Regular Plumbing Care
 
-**1.**
-
-**Save Water, Save Money**
+### 1\. Save Water, Save Money
 
 Even a small leak can waste up to 10,000 gallons of water per year, driving up your utility bills and stressing your plumbing system. Regular inspections help identify leaks early, before they become costly problems.
 
-**2.**
-
-**Extend the Life of Your Plumbing System**
+### 2\. Extend the Life of Your Plumbing System
 
 Your plumbing system is a long-term investment. By maintaining it regularly (flushing water heaters, inspecting pipe joints, testing pressure), you can significantly prolong its lifespan and avoid premature replacement.
 
-**3.**
-
-**Prevent Water Damage and Mold**
+### 3\. Prevent Water Damage and Mold
 
 Slow leaks, corroded pipes, or sewer backups can lead to water damage, mold growth, and even structural damage. Maintenance helps prevent these risks by catching hidden issues early and ensuring your home stays dry and safe.
 
-**4.**
-
-**Improve Plumbing Performance**
+### 4\. Improve Plumbing Performance
 
 Routine cleaning and adjustments keep everything flowing properly. With clear drains, properly functioning fixtures, and optimal water pressure, your system works better, and you notice the difference every day.
 
-**5.**
-
-**Avoid Major Repairs**
+### 5\. Avoid Major Repairs
 
 A burst pipe or backed-up sewer line can lead to extensive damage. Regular maintenance can help identify problems before they develop into major repairs.
 
-**6.**
-
-**Stay Up to Code**
+### 6\. Stay Up to Code
 
 Our team ensures your plumbing system meets local regulations and safety codes. We spot outdated materials or installations that could cause issues during home sales or renovations.
 
-**How Often Should You Schedule Plumbing Maintenance?**
+## How Often Should Your Plumbing Be Checked?
 
 ![Advanced septic control panel](/images/work/advanced-septic-control-panel.webp)
 
@@ -78,13 +66,13 @@ During a professional inspection, we:
 
 Additionally, services like water heater flushing, drain cleaning, and sewer camera inspections should be performed regularly as part of a long-term plumbing maintenance routine.
 
-**Why Choose Wade’s Plumbing & Septic for Maintenance?**
+## Why Choose Wade’s Plumbing & Septic for Routine Care?
 
 We’ve been trusted by families and businesses across Santa Cruz, Capitola, Soquel, Aptos, and Watsonville for decades. Our skilled team uses advanced diagnostics, professional-grade tools, and deep plumbing experience to catch small problems before they become big ones.
 
 Some plumbing issues (like slow leaks, hairline cracks, or internal corrosion), aren’t visible to the naked eye. Our inspections help you avoid surprise failures, costly water damage, and DIY mistakes, all while keeping your home compliant with local plumbing codes.
 
-**Schedule Your Plumbing Maintenance Today**
+## Schedule Your Plumbing Checkup Today
 
 Don’t wait until you’re ankle-deep in water or facing a major repair. Proactive maintenance is the most affordable way to protect your home and keep your plumbing running at peak performance.
 

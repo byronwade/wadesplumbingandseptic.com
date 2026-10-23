@@ -26,7 +26,7 @@ The holiday season is one of the busiest times of the year, and the last thing y
 
 At Wade’s Plumbing & Septic, we help homeowners throughout Santa Cruz County prepare their plumbing systems for the holidays. Whether it’s routine maintenance or scheduled repairs, our team is ready to keep your holidays running smoothly. Here’s how to prevent some of the most common plumbing problems during the festive season.
 
-1\. Broken Washing Machines Can Disrupt Travel Plans
+## 1\. Broken Washing Machines Can Disrupt Travel Plans
 
 If you’re prepping for a holiday trip, the last thing you want is a broken washing machine just as you start packing. Leaks or malfunctions can leave you scrambling for clean clothes, and possibly stuck at a laundromat while others are celebrating.
 
@@ -37,7 +37,7 @@ Prevent this by:
 - Having a plumber check your laundry connections during routine maintenance
 - Cleaning your dryer lint trap frequently to avoid fire hazards
 
-2\. Dishwasher Failures Can Mean Piles of Holiday Dishes
+## 2\. Holiday Dishes Pile Up When Appliances Fail
 
 The dishwasher is one of the most-used appliances during the holidays. Between family dinners and parties, it’s working hard, and can easily break down under heavy use.
 
@@ -48,7 +48,7 @@ Avoid a holiday dishwasher disaster by:
 - Regularly checking and cleaning the drain and spray arms
 - Scheduling pre-holiday maintenance to ensure it’s running efficiently
 
-3\. Clogged Toilets Can Disrupt the Festivities
+## 3\. Clogged Toilets Can Disrupt the Festivities
 
 With extra guests using your bathrooms, toilets will be flushing more often, and that increases the chance of blockages.
 
@@ -59,7 +59,7 @@ To prevent backups and overflows:
 - Keep a plunger accessible near every toilet for quick fixes
 - Schedule a drain inspection if you’ve had clog issues in the past
 
-4\. Water Heater Failures Can Leave Guests in the Cold
+## 4\. Water Heater Failures Can Leave Guests in the Cold
 
 No one wants to face a cold shower on a chilly holiday morning. With more people showering, cooking, and cleaning, your water heater is under added stress. If it’s nearing the end of its lifespan or showing signs of failure, it may not keep up.
 
@@ -68,7 +68,7 @@ No one wants to face a cold shower on a chilly holiday morning. With more people
 - Ask your plumber if your tank’s capacity matches your home’s holiday demand
 - Consider upgrading to a more efficient or higher-capacity unit if yours is over 10 years old
 
-Be Proactive, Avoid Holiday Plumbing Problems
+## Be Proactive, Avoid Holiday Plumbing Problems
 
 With a few small steps and some preventative maintenance, you can avoid the stress and inconvenience of plumbing disasters during the holidays. At Wade’s Plumbing & Septic, we provide fast, reliable plumbing services to homeowners in Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding communities.
 
