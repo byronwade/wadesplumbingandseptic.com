@@ -1,0 +1,96 @@
+{
+	"recorded_at": "2026-10-23",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production-build browser verification in headless Chrome, 200% text simulated by root font-size. Not live production, ranking, indexing or Eve integration evidence.",
+	"base_commit": "d82ac3980ed9880261b9b0c7be0eba10855af571",
+	"change": {
+		"files": [
+			"components/protected-contact.tsx",
+			"components/contact-cta.tsx",
+			"components/home-below-fold.tsx",
+			"components/virtual-business-card.tsx",
+			"components/markdown-content.tsx",
+			"scripts/ci/contact-links.test.tsx",
+			"scripts/ci/markdown-content.test.ts"
+		],
+		"before": "email label rendered as plain text with word-break: break-all",
+		"after": "email label support@<wbr>wadesinc.io with overflow-wrap: anywhere; mailto href, aria-label and copied text unchanged",
+		"markdown": "mailto links in page Markdown whose text is the business address use the same label; other link text (Email us) unchanged"
+	},
+	"email_line_probe": {
+		"routes": ["/", "/services", "/contact", "/expert-tips", "/glossary"],
+		"widths": [320, 390, 768, 1280],
+		"scales": [100, 200],
+		"themes": ["light", "dark"],
+		"states": 80,
+		"before": {
+			"mid_word_splits": {
+				"320px@200%": 8,
+				"768px@200%": 2,
+				"1280px@200%": 2
+			},
+			"examples": [
+				"support@wadesin | c.io (contact band, 320px@200%)",
+				"support@wadesi | nc.io (contact page card, 1280px@200%)"
+			],
+			"document_overflow_states": 0
+		},
+		"after": {
+			"mid_word_splits": 0,
+			"wrapped_links": 12,
+			"wrapped_shape": "support@ | wadesinc.io in all 12",
+			"single_line_states_unchanged": "68 of 68",
+			"document_overflow_states": 0
+		}
+	},
+	"screenshots": "40 email-row and viewport captures per build (before and after); 36 identical pixel for pixel at 100% text, 4 differ by a 9x9px antialiasing shift at the @ glyph on the contact page card",
+	"axe_after": {
+		"audits": 18,
+		"violations": 0,
+		"page_errors": 0,
+		"note": "/, /services, /contact x light/dark x 320@200, 390@100, 1280@100; WCAG 2.2 A/AA tags. No before run: 0 after means no new violation.",
+		"prose_pages": {
+			"routes": [
+				"/privacy-policy",
+				"/careers",
+				"/service-offerings/engineered-septic-system-installation"
+			],
+			"audits": 18,
+			"violations": 0,
+			"page_errors": 0
+		}
+	},
+	"acceptance": {
+		"node": "24.21.0",
+		"npm ci": "pass",
+		"lint": "pass",
+		"typecheck": "pass",
+		"seo:check": "pass, 193 node tests / 0 failed",
+		"build": "pass, 564 static pages",
+		"guard_mutation": "restoring break-all on the contact band makes ci:contact-links fail 13 pass / 1 fail",
+		"markdown_guard_mutation": "removing the Markdown email label makes ci:markdown fail 14 pass / 1 fail"
+	},
+	"sitewide_probe": {
+		"routes": 284,
+		"widths": [320, 390],
+		"scale": 200,
+		"themes": ["light", "dark"],
+		"states": 1136,
+		"after_band_and_card_only": {
+			"theme": "light",
+			"width": 320,
+			"mid_word_splits": 10,
+			"where": "Markdown email links on /careers (and its three role pages), /privacy-policy, /terms-of-service, /service-offerings/engineered-septic-system-installation"
+		},
+		"after_markdown_fix": {
+			"email_links": 204,
+			"routes_with_email": 48,
+			"mid_word_splits": 0,
+			"wrapped": 118,
+			"wrapped_shape": "support@ | wadesinc.io in all 118",
+			"single_line": 86,
+			"document_overflow_states": 0
+		},
+		"note": "In running text at 390px@200% the address now wraps after the @ mid-sentence instead of moving whole to the next line."
+	}
+}

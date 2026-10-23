@@ -4,7 +4,10 @@ import Link from "next/link"
 import ReactMarkdown, { defaultUrlTransform } from "react-markdown"
 import remarkGfm from "remark-gfm"
 
-import { ProtectedContactLink } from "@/components/protected-contact"
+import {
+	EmailAddress,
+	ProtectedContactLink,
+} from "@/components/protected-contact"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -97,7 +100,7 @@ export function MarkdownContent({
 						if (href.startsWith("mailto:")) {
 							return (
 								<ProtectedContactLink kind="email" {...props}>
-									{children}
+									{children === siteConfig.email ? <EmailAddress /> : children}
 								</ProtectedContactLink>
 							)
 						}

@@ -12,6 +12,10 @@ import {
 
 import { CallButton } from "@/components/call-button"
 import { HomeFaq } from "@/components/home-faq"
+import {
+	EmailAddress,
+	ProtectedContactLink,
+} from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import {
 	Card,
@@ -388,12 +392,15 @@ export function HomeBelowFold() {
 						</p>
 						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
 							<span>{contactInfo.hours}</span>
-							<a
-								className="inline-flex min-h-11 min-w-0 items-center break-all transition-colors hover:text-white"
-								href={contactInfo.emailHref}
+							<ProtectedContactLink
+								className="inline-flex min-h-11 min-w-0 items-center transition-colors hover:text-white"
+								kind="email"
 							>
-								{contactInfo.email}
-							</a>
+								{/* One text box, so the wrap point after @ is not a flex item */}
+								<span className="min-w-0 [overflow-wrap:anywhere]">
+									<EmailAddress />
+								</span>
+							</ProtectedContactLink>
 						</div>
 					</div>
 					<div className="flex w-full max-w-full min-w-0 flex-col flex-wrap items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">

@@ -106,7 +106,7 @@ export function VirtualBusinessCard({
 								</p>
 								<ProtectedEmailText
 									className={cn(
-										"mt-1 block text-sm font-bold break-all transition-colors sm:text-base",
+										"mt-1 block text-sm font-bold [overflow-wrap:anywhere] transition-colors sm:text-base",
 										dark
 											? "hover:text-primary-bright text-white"
 											: "text-foreground hover:text-primary",

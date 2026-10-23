@@ -72,6 +72,22 @@ test("Markdown call links work in server HTML before JavaScript", () => {
 	assert.match(html, />Call Wade&#x27;s<\/a>/)
 })
 
+test("Markdown email addresses wrap only after the @, linked or bare", () => {
+	const wrappable = siteConfig.email.replace("@", "@<wbr/>")
+	for (const source of [
+		`Email [${siteConfig.email}](mailto:${siteConfig.email}).`,
+		`Or email ${siteConfig.email}.`,
+	]) {
+		const html = render(source)
+		assert.ok(html.includes(`href="mailto:${siteConfig.email}"`), html)
+		assert.ok(html.includes(`>${wrappable}</a>`), html)
+	}
+	assert.match(
+		render(`[Email us](mailto:${siteConfig.email})`),
+		/>Email us<\/a>/,
+	)
+})
+
 test("custom renderers never leak the syntax tree node into HTML attributes", () => {
 	const html = renderToStaticMarkup(
 		createElement(MarkdownContent, {
