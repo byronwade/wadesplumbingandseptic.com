@@ -73,7 +73,7 @@ test("the email wraps only after the @, adding no characters", () => {
 		"components/home-below-fold.tsx",
 		"components/virtual-business-card.tsx",
 	]) {
-		assert.doesNotMatch(fs.readFileSync(name, "utf8"), /break-all/, name)
+		assert.doesNotMatch(fs.readFileSync(name, "utf8"), /\bbreak-all\b/, name)
 	}
 })
 
