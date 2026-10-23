@@ -72,10 +72,6 @@ Regular maintenance is key to prolonging the life of your septic system. Conside
 - Practice mindful water usage
 - Avoid disposing of non-biodegradable materials
 
-## Checks at Home vs. Expert Care
-
-While homeowners can monitor their septic systems for signs
-
 ## Sources & Local References
 
 - [Plumbing & septic service areas overview](/service-areas)

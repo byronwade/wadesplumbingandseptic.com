@@ -77,10 +77,6 @@ Preventative maintenance is key to avoiding septic issues. Schedule regular insp
 
 While DIY monitoring can help you catch early signs of septic trouble, professional services are essential for comprehensive assessments and repairs. Homeowners can conduct basic inspections and practice preventative maintenance, but experts have the tools and knowledge to address underlying issues effectively. Balancing DIY efforts with professional expertise ensures your septic system remains in good condition.
 
-## Choosing a Local Septic Team
-
-Choosing a reliable local service provider like Wade's Plumbing &
-
 ## Sources & Local References
 
 - [Santa Cruz County opens seasonal groundwater testing window, Lookout Santa Cruz](https://lookout.co/santa-cruz-county-opens-seasonal-groundwater-testing-window/story)

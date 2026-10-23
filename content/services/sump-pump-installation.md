@@ -67,7 +67,7 @@ With years of experience and a commitment to quality, Wade's Plumbing & Septic i
 
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including Santa Cruz, Capitola, Scotts
+Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including Santa Cruz, Capitola and Scotts Valley.
 
 Protect Your Home
 
