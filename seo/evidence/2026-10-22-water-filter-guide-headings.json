@@ -1,0 +1,146 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-220916-codex-1",
+	"collected_at": 1792722398,
+	"source_url_or_tool": [
+		"Original and updated local production builds",
+		"node --import tsx parser-proof.mjs",
+		"Python Playwright and installed Chrome",
+		"Local HTTP probes with browser, GPTBot, Googlebot and ClaudeBot user agents"
+	],
+	"scope": "Seven shorter section headings in the existing water-filtration guide, with no font caps or changes to title, dates, body copy or CTA.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer data, live analytics or production probes.",
+	"retention_class": "Compact evidence, command logs and screenshot hashes. Temporary screenshots, scripts and build output removed after review.",
+	"baseline_commit": "b1836dd160b83825835c73eda6f088a017009d7d",
+	"source": {
+		"file": "content/posts/efficient-water-filtration-santa-cruz.md",
+		"before_sha256": "a782bb7f42017e53dc4b219fa9119ed0489e32ab7e2c497dad43e2e1529c73d0",
+		"after_sha256": "384f6f2e1417c602db2d881c03ed929a47807f5a8cfb4a95dff4d71e9e16ca44",
+		"headings_changed": 7
+	},
+	"runtime": {
+		"acceptance_node": "24.21.0",
+		"acceptance_npm": "11.19.0",
+		"baseline_build_node": "25.9.0",
+		"next": "16.3.0-preview.10"
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"log": "npm-ci-final.log",
+				"started_at": 1792721888,
+				"duration_seconds": 84.7510208,
+				"command": "npm ci",
+				"exit_code": 0
+			},
+			{
+				"log": "lint-final.log",
+				"started_at": 1792721973,
+				"duration_seconds": 20.4878615,
+				"command": "npm run lint",
+				"exit_code": 0
+			},
+			{
+				"log": "typecheck-final.log",
+				"started_at": 1792721993,
+				"duration_seconds": 15.2052954,
+				"command": "npm run typecheck",
+				"exit_code": 0
+			},
+			{
+				"log": "seo-check-final.log",
+				"started_at": 1792722009,
+				"duration_seconds": 41.8729371,
+				"command": "npm run seo:check",
+				"exit_code": 0
+			},
+			{
+				"log": "build-final.log",
+				"started_at": 1792722051,
+				"duration_seconds": 52.5326121,
+				"command": "npm run build",
+				"exit_code": 0
+			}
+		],
+		"seo_tests_passed": 189,
+		"seo_tests_failed": 0,
+		"static_pages": 564
+	},
+	"parser_preservation": {
+		"passed": 7,
+		"failed": 0,
+		"scope": "Exact frontmatter, all nonheading bytes, expected substitutions, parsed article body outside headings, and unchanged closing CTA."
+	},
+	"browser": {
+		"baseline_passed": 66,
+		"baseline_failed": 0,
+		"final_passed": 630,
+		"final_failed": 0,
+		"states": 12,
+		"section_word_splits_before": 6,
+		"section_word_splits_after": 0,
+		"axe_audits_before": 6,
+		"axe_audits_after": 6,
+		"axe_violations_before": 0,
+		"axe_violations_after": 0,
+		"page_errors": 0,
+		"horizontal_overflow_states": 0,
+		"preserved": "Heading structure, fonts, line heights and widths; article title, paragraphs, description, canonical, JSON-LD and closing CTA."
+	},
+	"reviewed_related_service_change": {
+		"cause": "The existing scorer reads article text, including headings.",
+		"before": "/service-offerings/engineered-septic-system-installation",
+		"after": "/service-offerings/water-filtration-system-installation",
+		"decision": "Accept the existing water-filtration service card as relevant to this guide. Its three links, title and image are verified as the only automatic related-card replacement; other links and images remain.",
+		"destination_http_status": 200,
+		"destination_canonical": "https://www.wadesplumbingandseptic.com/service-offerings/water-filtration-system-installation"
+	},
+	"http": {
+		"passed": 32,
+		"failed": 0,
+		"user_agents": 4,
+		"page_statuses": [200],
+		"scope": "Visible edited headings, original title, canonical, indexability, retained contextual guide link and native telephone link."
+	},
+	"visual_review": {
+		"reviewed_pairs": 6,
+		"qualified_original_captures": 12,
+		"themes": ["light", "dark"],
+		"states": ["1440px/100%", "390px/100%", "320px/200%"],
+		"findings": "Reviewed six side-by-side crops from actual baseline/final production screenshots. Heading words remain whole at enlarged text; type size, body copy and contrast remain. All new headings remain descriptive. Full-page captures include the existing fixed mobile call bar. No pixel-identity claim.",
+		"pixel_identity_claim": false
+	},
+	"initial_failures": {
+		"font_loader_build_attempts": {
+			"failed": 2,
+			"fresh_cache_builds_passed": 2,
+			"source_changed": false,
+			"inference": "Error matches upstream issue #99114; offending upstream CSS was not captured, so the exact trigger is inferred. No font/framework configuration was changed.",
+			"source": "https://github.com/vercel/next.js/issues/99114"
+		},
+		"invalid_mixed_source_baseline": "Discarded first 24-state baseline because runtime Markdown reads picked up edits during capture. Restored original files and restarted preview; accepted baseline remained unedited until preview stopped.",
+		"first_comparison": {
+			"passed": 570,
+			"failed": 60,
+			"disposition": "36 false UTF-8 decoding mismatches corrected in scratch comparison; 24 checks identified the reviewed related-service link/image replacement. Product source unchanged after the passing acceptance gate."
+		}
+	},
+	"limitations": [
+		"Local deterministic/browser evidence only, with no production, ranking, indexing, lead-lift or Eve integration claim.",
+		"Existing five high development-tool advisories remain under the recorded deferral.",
+		"Existing filtration health/safety and compliance claims were left unchanged and are not revalidated by this copy edit."
+	],
+	"artifact_sha256": {
+		"acceptance.json": "df064e7a1c689f061aa7e7dc95d215430f84b58d0a767ffe3a1df5bbaf625e22",
+		"parser-preservation.json": "99236703e4e0febd1399693e90707aa304e5a9b3d29ee1f511888c708a178358",
+		"browser-baseline.json": "89aacbc7c81e19f95fb94f086fe8b0bd838873a85575d0349fa95a3ac5454b25",
+		"browser-final.json": "6b2088823f57c8c0248bebd030d428daec9a1ebb8901290947f34d5557f64c96",
+		"browser-first-comparison.json": "f6279c6bda6d215fb38394791caea9c8225be840eb1e7be5171070511f4d2b71",
+		"http-proof.json": "0f5207d6a970777f716e569c49b8c2f538b50850e8cb44322ac5be6b4ef5e25b",
+		"screenshot-manifest.json": "a5adeb1a0a0d4ee1106163245dc72a63d3c39d6dca1b0f86706a72b982343d56",
+		"visual-review.json": "4a14f34e0d7979ba48588947351b8ed9d71264d9153391816dee96f124a831e8"
+	}
+}
