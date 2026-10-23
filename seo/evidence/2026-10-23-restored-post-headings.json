@@ -1,0 +1,138 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-040916-claude-1",
+	"collected_at": 1792745452,
+	"source_url_or_tool": [
+		"Original and updated local production builds (built HTML for all 43 posts, llms.txt, llms-full.txt)",
+		"Actual sanitizeArticleContent, extractContentConversion, related-content ranking and reading-time estimate via tsx, HEAD vs worktree, 43 posts and 48 services",
+		"Local next start preview with headless Chrome and axe-core 4 (WCAG 2.x A/AA tags plus heading-order)"
+	],
+	"scope": "Restore 74 section headings that the WordPress migration flattened into plain or bold-only paragraphs in 12 posts, as ## / ### headings. Copy unchanged except six headings reworded with shorter words so no heading word splits mid-word at 320px with 200% text.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer data, production probes or analytics retained.",
+	"retention_class": "Compact results and source hashes retained; temporary builds, HTML copies, screenshots and scripts removed.",
+	"baseline_commit": "061f04b3acedfd9fd591e9ddafdba04224b34735",
+	"reworded_headings": [
+		[
+			"3. Unexplained Low Water Pressure",
+			"3. Low Water Pressure With No Clear Cause"
+		],
+		[
+			"2. Dishwasher Failures Can Mean Piles of Holiday Dishes",
+			"2. Holiday Dishes Pile Up When Appliances Fail"
+		],
+		[
+			"6 Major Benefits of Plumbing Maintenance",
+			"6 Major Benefits of Regular Plumbing Care"
+		],
+		[
+			"How Often Should You Schedule Plumbing Maintenance?",
+			"How Often Should Your Plumbing Be Checked?"
+		],
+		[
+			"Why Choose Wade’s Plumbing & Septic for Maintenance?",
+			"Why Choose Wade’s Plumbing & Septic for Routine Care?"
+		],
+		[
+			"Schedule Your Plumbing Maintenance Today",
+			"Schedule Your Plumbing Checkup Today"
+		]
+	],
+	"left_plain_on_purpose": [
+		"Short kicker lines directly above a closing CTA H2 (orphanEyebrowBefore hides them; a # prefix would expose them)",
+		"Licensed Contractor / Fast-Response trust lines and other lines inside FAQ sections",
+		"Protect Your Home with Preventative Maintenance (why-is-dirty-water): as an H2 it matches SOFT_CTA_HEADING and its two paragraphs were pulled out of the article into the CTA band",
+		"how-to-maintain-your-septic-tank-for-long-term-performance: first numbered heading would read 1. Regularly Pump Your Septic Tank on an installer-only site; left for Byron",
+		"Emoji contact lines, Did you know sentence, Ask yourself sentence"
+	],
+	"source": [
+		{
+			"file": "content/posts/6-signs-you-have-a-hidden-water-leak.md",
+			"before_sha256": "6aba5d38869a1ea96e724dcfa9bb4c1caf5062cc965520de0d1b73260990fff6",
+			"after_sha256": "37088ccad7807ccc506ec838f4c0d11ff6c368303ee1c293f853541a45fdbefa"
+		},
+		{
+			"file": "content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
+			"before_sha256": "f75acddb99ae6f0e5b7986e22c28885dcf01a609d7b0022be98ca64834c15391",
+			"after_sha256": "4e6e229474d3d624af2eefda7bf37df2b7719108349a851ac31b16a30db88c29"
+		},
+		{
+			"file": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
+			"before_sha256": "e66f2c16ba24023030edefd95d89615c8aa4abc8af5c02236dda2b9bebcdd2d1",
+			"after_sha256": "215372ff4e6438505c5f60a0b56254012b7fdd3d22d5675dbbd909962f4481f0"
+		},
+		{
+			"file": "content/posts/plumbing-terms-every-homeowner-should-know.md",
+			"before_sha256": "6cb55f2c4090016d1e2469ee5b06776f47dea89eb01e3fc05a7877d1be23336a",
+			"after_sha256": "82e3f306928ad1aeb3e90a6d278d3e5d935f4bea44c5ccdf0dbdf27e4f21ab8b"
+		},
+		{
+			"file": "content/posts/should-you-call-a-plumber-or-fix-it-yourself.md",
+			"before_sha256": "603d572174223785bc0740cc32f1afd465eab9d42f5e1a0963cfe4ee8257b3c3",
+			"after_sha256": "cd2a2540415a79396b701108da885223f5f005a15c8c3e0b208828f8f69844fe"
+		},
+		{
+			"file": "content/posts/should-you-repair-or-replace-your-water-heater.md",
+			"before_sha256": "f99e2b0e44e8c4d36f36507b43393418a486ce327d9337b395da0c32c039f48d",
+			"after_sha256": "2d34220b5d93e7356c34d3d3ff5d59672990793ae75272e076b261b7aaf12f30"
+		},
+		{
+			"file": "content/posts/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure.md",
+			"before_sha256": "20dfcccb2aad7c7cd0e1e9efe799e59e60af5244cdce45657aca832431d0ab3d",
+			"after_sha256": "86678ead1fab15db8a9d47323c12f16a1c0deade7fb6755ac01cf67fb2434ebf"
+		},
+		{
+			"file": "content/posts/signs-your-drain-field-needs-professional-repair.md",
+			"before_sha256": "05331a825672d5e0571ca53d4102d90d716600a8f1075a557aa346e51192ed4d",
+			"after_sha256": "27c7b60f43258d085a0b989d5220ee51423b93b0109b9c9a7e02ac952efc1018"
+		},
+		{
+			"file": "content/posts/the-importance-of-regular-plumbing-maintenance.md",
+			"before_sha256": "86ffeccd528c8d34ef0c61c6785392f8676ea0e4ec5564c34c08e9aec92715ac",
+			"after_sha256": "01547eb83c89221ac872f3b9170e51c3748894696845fed97f70b860fc8b72e5"
+		},
+		{
+			"file": "content/posts/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home.md",
+			"before_sha256": "bc8bf35ef179cb6495d626533b67bb06a1e382dd12dad764b30093e6659a0e75",
+			"after_sha256": "e86ebce23c2f713beb82ee52179c4809a942cd24934fb79d194c255f689dce26"
+		},
+		{
+			"file": "content/posts/what-is-hard-water-why-does-it-matter-for-your-home.md",
+			"before_sha256": "9a080e5495eae570595f0fab5da6cd6762978225bcb972ec880ac1d512d4bea3",
+			"after_sha256": "74f24395eda5b706b827bfff594f8f9afe43a5f013b856041bb0088491baa453"
+		},
+		{
+			"file": "content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
+			"before_sha256": "0431c3392e96953fc0687bdef68b6fe6ff194b56ae98ab7f7144f11724e95950",
+			"after_sha256": "71a6450788135d7f71c66b1ceb8c9f8b6afaebcea854093bceda98f2bd31477d"
+		}
+	],
+	"results": {
+		"parser_documents": 91,
+		"parser_failures": 0,
+		"parser_checks": "conversion object deep-equal, body equal after removing heading markers and the six rewordings, related post/service cards equal, reading minutes equal",
+		"built_posts_compared": 43,
+		"headings_added": 74,
+		"headings_removed": 0,
+		"posts_with_jsonld_or_link_change": 0,
+		"posts_with_text_change": [
+			"6-signs-you-have-a-hidden-water-leak",
+			"how-to-avoid-common-holiday-plumbing-disasters",
+			"the-importance-of-regular-plumbing-maintenance"
+		],
+		"text_change_note": "Only the six reworded headings, and the importance post bold number lines merged into their headings (1. + Save Water, Save Money becomes 1. Save Water, Save Money).",
+		"llms_txt_and_llms_full_identical": true,
+		"browser_states": 72,
+		"browser_matrix": "12 changed posts x light/dark x 320px@200%, 390px@100%, 1280px@100%",
+		"new_heading_midword_splits": 0,
+		"hyphen_breaks": 6,
+		"preexisting_heading_midword_splits": 8,
+		"preexisting_split_note": "Understanding, trustworthy, Researching, testimonials in four unchanged H2s of how-to-locate-trustworthy-plumbing-services-nearby, both themes",
+		"overflow_states": 0,
+		"page_errors": 0,
+		"heading_order_violations": 0,
+		"axe_states_with_violations": 4,
+		"axe_note": "scrollable-region-focusable on .table-scroll in should-you-call-a-plumber-or-fix-it-yourself and water-softeners-vs-whole-house-filtration at 320px@200%, both themes; reproduced on the saved baseline HTML, so it predates this change",
+		"screenshots_reviewed": "plumbing-terms, water-heater, importance-of-maintenance at 1280px and 390px, light and dark (12)"
+	}
+}
