@@ -1,0 +1,57 @@
+{
+	"recorded_at": "2026-10-23",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production-build verification in headless Chrome, 200% text simulated by root font-size. Not live production, ranking, indexing or Eve integration evidence.",
+	"base_commit": "b26f326a15f7db3c4823c527f257905a75e3e58b",
+	"change": {
+		"files": [
+			"components/markdown-content.tsx",
+			"app/globals.css",
+			"scripts/ci/markdown-content.test.ts"
+		],
+		"before": "Markdown tables rendered inside <div class=\"table-scroll\"> with no role, name or tabindex",
+		"after": "<div aria-label=\"Table: <header cells>\" class=\"table-scroll\" role=\"region\" tabindex=\"0\">, label falls back to \"Table\"; 2px --primary-bright focus-visible ring, matching the .snap-rail photo rails",
+		"trade_off": "The box is a tab stop at every width, including where the table fits and does not scroll, the same as the photo rails. Making it conditional would need client JavaScript in MarkdownContent."
+	},
+	"built_html_scope": {
+		"pages_compared": 552,
+		"pages_changed": 2,
+		"changed": [
+			"should-you-call-a-plumber-or-fix-it-yourself (Table: DIY-Friendly, Call a Plumber)",
+			"water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home (Table: Feature, Water Filter, Water Softener)"
+		],
+		"only_wrapper_attributes_changed": true,
+		"visible_text_identical": true,
+		"json_ld_identical": true
+	},
+	"table_pages_probe": {
+		"widths_and_text_scale": ["320px@200%", "390px@100%", "1280px@100%"],
+		"themes": ["light", "dark"],
+		"states": 12,
+		"before": {
+			"axe_wcag_a_aa_violations": { "scrollable-region-focusable": 4 },
+			"box_scrolls_sideways": "4 states, all at 320px@200%",
+			"tab_reaches_box": "4 of 12 (Chrome's own keyboard-focusable scrollers, only while overflowing; unnamed, default outline)"
+		},
+		"after": {
+			"axe_wcag_a_aa_violations": 0,
+			"tab_reaches_box": "12 of 12 (8 Tab presses on mobile widths, 13 at 1280px)",
+			"focus_visible_ring": "solid 2px, offset 2px, both themes",
+			"arrow_right_scrolls_overflowing_box": "4 of 4 (scrollLeft 0 to 80)",
+			"document_overflow_px": 0,
+			"page_errors": 0
+		}
+	},
+	"sitewide_axe_after": {
+		"routes": 526,
+		"viewport": "320px@200%, light",
+		"http_errors": 0,
+		"scrollable-region-focusable": 0,
+		"scrolling_boxes_without_tabindex": 0,
+		"document_overflow_pages": 0,
+		"other_violations": [
+			"link-in-text-block x1 on /service-areas (app/(site)/service-areas/page.tsx:98 inline link with hover-only underline); route not changed by this work"
+		]
+	},
+	"screenshots": "16 captures (8 before, 8 after): both table posts at 320px@200% and 1280px, light and dark, with the box focused by real Tab presses when reachable"
+}

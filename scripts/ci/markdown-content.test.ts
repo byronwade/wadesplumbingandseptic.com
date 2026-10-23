@@ -110,6 +110,26 @@ test("custom renderers never leak the syntax tree node into HTML attributes", ()
 	assert.doesNotMatch(html, /\sclass=""/, html)
 })
 
+test("wide tables scroll in a named box keyboard users can reach", () => {
+	const html = render(
+		"| **DIY-Friendly** | **Call a Plumber** |\n| --- | --- |\n| Dripping faucet | Burst pipe |",
+	)
+	const wrapper = html.match(/<div([^>]*)><table>[\s\S]*<\/table><\/div>/)
+	assert.ok(wrapper, html)
+	const attributes = wrapper[1]
+	assert.match(attributes, /\sclass="table-scroll"/)
+	assert.match(attributes, /\srole="region"/)
+	assert.match(attributes, /\stabindex="0"/)
+	assert.match(attributes, /\saria-label="Table: DIY-Friendly, Call a Plumber"/)
+	assert.doesNotMatch(html, /\snode=/, html)
+
+	// A header row with no text still gives the box a name.
+	assert.match(
+		render("|   |   |\n| --- | --- |\n| a | b |"),
+		/\saria-label="Table"/,
+	)
+})
+
 test("Markdown still blocks unsafe and unsupported URL protocols", () => {
 	for (const url of [
 		"javascript:unsafe",
