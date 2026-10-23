@@ -3,6 +3,8 @@ import fs from "node:fs"
 import Module from "node:module"
 import path from "node:path"
 import test from "node:test"
+import { getPathMatch } from "next/dist/shared/lib/router/utils/path-match"
+import { unstable_getResponseFromNextConfig } from "next/experimental/testing/server"
 
 import type { ContentDocument } from "../../lib/content"
 import { contactInfo } from "../../lib/contact"
@@ -258,20 +260,64 @@ async function redirectSources() {
 	const { default: nextConfig } = await import("../../next.config")
 	const rules = (await nextConfig.redirects?.()) ?? []
 	const sources = rules.map((rule) => {
-		const pattern = rule.source
-			.replace(/[.+?^${}()|[\]\\]/g, "\\$&")
-			.replace(/\/:\w+\*/g, "(?:/.*)?")
-			.replace(/:\w+/g, "[^/]+")
-		return { source: rule.source, test: new RegExp(`^${pattern}$`) }
+		const match = getPathMatch(rule.source)
+		return {
+			source: rule.source,
+			matches: (pathname: string) => Boolean(match(pathname)),
+		}
 	})
 	if (!nextConfig.trailingSlash && !nextConfig.skipTrailingSlashRedirect) {
 		sources.push({
 			source: "Next.js trailing-slash normalization",
-			test: /^\/(?!\/).+\/$/,
+			matches: (pathname: string) => /^\/(?!\/).+\/$/.test(pathname),
 		})
 	}
 	return sources
 }
+
+for (const archive of ["popular", "trending"]) {
+	test(`expert-tips ${archive} archive is not redirected`, async () => {
+		const { default: nextConfig } = await import("../../next.config")
+		for (const query of ["", "?page=2&category=plumbing-tips"]) {
+			const response = await unstable_getResponseFromNextConfig({
+				url: `https://example.com/expert-tips/${archive}${query}`,
+				nextConfig,
+			})
+			assert.equal(response.status, 200)
+			assert.equal(response.headers.get("location"), null)
+		}
+	})
+}
+
+test("legacy expert-tip article redirects preserve destinations and query strings", async () => {
+	const { default: nextConfig } = await import("../../next.config")
+	for (const [slug, destination] of [
+		["septic-system-types-santa-cruz", "/septic-system-types-santa-cruz"],
+		["popular-plumbing-tips", "/popular-plumbing-tips"],
+		["trending-septic-tips", "/trending-septic-tips"],
+		["popular-guide", "/popular-guide"],
+		["trending-guide", "/trending-guide"],
+		[
+			"urgent-septic-failure-signs-santa-cruz",
+			"/septic-trouble-signs-santa-cruz",
+		],
+		[
+			"emergency-septic-solutions-santa-cruz",
+			"/service-offerings/septic-tank-repair-and-replacement",
+		],
+	]) {
+		const response = await unstable_getResponseFromNextConfig({
+			url: `https://example.com/expert-tips/${slug}?ref=guide`,
+			nextConfig,
+		})
+		assert.equal(response.status, 308, slug)
+		assert.equal(
+			response.headers.get("location"),
+			`https://example.com${destination}?ref=guide`,
+			slug,
+		)
+	}
+})
 
 test("llms.txt and llms-full.txt link only to live, indexable pages", async () => {
 	const { buildSitemapEntries } = await import("../../lib/sitemap")
@@ -295,7 +341,7 @@ test("llms.txt and llms-full.txt link only to live, indexable pages", async () =
 		const problems: string[] = []
 		for (const url of links) {
 			const pathname = url.slice(siteConfig.url.length) || "/"
-			const redirect = redirects.find((rule) => rule.test.test(pathname))
+			const redirect = redirects.find((rule) => rule.matches(pathname))
 			if (redirect) problems.push(`${pathname} redirects (${redirect.source})`)
 			else if (!live.has(url.replace(/\/$/, "")) && url !== siteConfig.url)
 				problems.push(`${pathname} is not in the sitemap`)
@@ -312,7 +358,7 @@ test("Markdown internal links point at final URLs, not redirects", async () => {
 	for (const file of sourceFiles(["content"], /\.md$/)) {
 		const text = fs.readFileSync(file, "utf8")
 		for (const [, href] of text.matchAll(/\]\((\/(?!\/)[^)\s#?]*)/g)) {
-			const redirect = redirects.find((rule) => rule.test.test(href))
+			const redirect = redirects.find((rule) => rule.matches(href))
 			if (redirect)
 				problems.push(`${file}: ${href} redirects (${redirect.source})`)
 		}

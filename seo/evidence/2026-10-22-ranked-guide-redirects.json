@@ -1,0 +1,230 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1022-195913-codex",
+	"collected_at": 1792714120.002943,
+	"source": "Local production builds and isolated browser/config tests",
+	"source_url_or_tool": [
+		"npm run ci:entity-facts",
+		"npm run ci:archive-html -- http://127.0.0.1:38959",
+		"Python Playwright with installed headless Chrome",
+		"https://nextjs.org/docs/app/api-reference/config/next-config-js/redirects"
+	],
+	"scope": "Restore the existing popular and trending expert-tip archives while retaining legacy article redirects.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer submissions, live analytics exports or third-party article text recorded.",
+	"retention_class": "Versioned compact local verification summary and artifact digests; temporary screenshots removed after review.",
+	"source_commit": "527d15eda33922cecf33db0e74b7a3342a2ce1e3",
+	"runtime": {
+		"node": "v25.9.0",
+		"next": "16.3.0-preview.10"
+	},
+	"diagnosis": {
+		"cause": "The legacy /expert-tips/:slug redirect runs before filesystem routes and also captured popular and trending.",
+		"before": "These archives redirected to /popular and /trending, which have no pages. Bots received 404; ordinary responses sometimes streamed a soft 404.",
+		"fix": "Exclude the exact ranked archive names from the generic article slug matcher. Retain permanent redirects and query strings for article slugs and earlier retired-service mappings.",
+		"docs": "Installed Next redirect and config-testing guides were read before edits; the framework config-testing API and typed path matcher exercise actual route syntax."
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"exit_code": 0,
+				"note": "Completed before source changes, 583 packages added; five existing high advisories.",
+				"command": "npm ci",
+				"log": "npm-ci.log"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 8.71405,
+				"command": "npm run lint",
+				"log": "run-lint.log"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 4.8477005,
+				"command": "npm run typecheck",
+				"log": "run-typecheck.log"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 30.5944047,
+				"command": "npm run seo:check",
+				"log": "run-seo-check.log"
+			},
+			{
+				"exit_code": 0,
+				"seconds": 47.0311163,
+				"command": "npm run build",
+				"log": "run-build.log"
+			}
+		],
+		"seo_tests_passed": 188,
+		"seo_tests_failed": 0,
+		"business_fact_scan": "Business facts: checked 299 public source files; 0 violations",
+		"build_pages": 564,
+		"existing_high_advisories": 5
+	},
+	"regression": {
+		"config_before": {
+			"passed": 15,
+			"failed": 2
+		},
+		"config_after": {
+			"passed": 17,
+			"failed": 0
+		},
+		"http_archive_before": {
+			"cases": 24,
+			"agents": 4,
+			"passed": 80,
+			"failed": 16
+		},
+		"http_archive_after": {
+			"cases": 24,
+			"agents": 4,
+			"passed": 96,
+			"failed": 0
+		},
+		"supplemental_http": {
+			"passed": 36,
+			"failed": 0,
+			"scope": "Archive status/canonicals/indexability/cards, legacy article/retired-service redirects, query retention and canonical trailing-slash redirects."
+		}
+	},
+	"browser": {
+		"states": 12,
+		"passed": 180,
+		"failed": 0,
+		"page_errors": [],
+		"axe_audits": 12,
+		"axe_violations": 0,
+		"viewports": [
+			[1280, 1],
+			[390, 1],
+			[320, 2]
+		],
+		"themes": ["light", "dark"],
+		"screenshots": [
+			{
+				"archive": "popular",
+				"theme": "light",
+				"width": 1280,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "popular-light-1280.png",
+				"sha256": "f8eda04fa738a42f084864c2cf3f9be71d0f0e481d4784ad78a85641b2516b3d"
+			},
+			{
+				"archive": "trending",
+				"theme": "light",
+				"width": 1280,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "trending-light-1280.png",
+				"sha256": "c26de888681f8fde29b7be2d8bed22de063b65caa56cd21443fdbb2615ab39e6"
+			},
+			{
+				"archive": "popular",
+				"theme": "light",
+				"width": 390,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "popular-light-390.png",
+				"sha256": "208a073234f58da871dc74f4628a9505c93a9e70148b1d4cc5a2d1eabf3e4fbe"
+			},
+			{
+				"archive": "trending",
+				"theme": "light",
+				"width": 390,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "trending-light-390.png",
+				"sha256": "f6f7c70353f0374e749b7596d12e520712328bf892ce8a5c965172d313440a31"
+			},
+			{
+				"archive": "popular",
+				"theme": "dark",
+				"width": 1280,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "popular-dark-1280.png",
+				"sha256": "ca4941cfbe43ce4fad09d20939358cad4b0a1fdb2efa5438e15da0830f995936"
+			},
+			{
+				"archive": "trending",
+				"theme": "dark",
+				"width": 1280,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "trending-dark-1280.png",
+				"sha256": "08f97d4d7d143cc124233224c49bd7d428f541a57cc497b061c57c993933852c"
+			},
+			{
+				"archive": "popular",
+				"theme": "dark",
+				"width": 390,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "popular-dark-390.png",
+				"sha256": "20ba92eac6921686bb1e8c146e25e36784c1ccca3444d63e66fa8d40b33d94eb"
+			},
+			{
+				"archive": "trending",
+				"theme": "dark",
+				"width": 390,
+				"scale": 1,
+				"axe": [],
+				"screenshot": "trending-dark-390.png",
+				"sha256": "6f305f4eb89725317f1c9f9e7f1c2053ff29d387c323b9b82a25b0106dff9b7b"
+			}
+		],
+		"representative_visual_review": [
+			"popular-light-1280.png",
+			"trending-light-390.png",
+			"popular-dark-390.png",
+			"trending-dark-1280.png"
+		],
+		"checks": "Direct navigation, canonical, heading, locked ranking, cards, call link, overflow, WCAG A/AA, pagination, category filters, reload, article navigation and back navigation."
+	},
+	"preservation": {
+		"app_components_content_lib_public_unchanged": true,
+		"business_facts_dates_images_ranking_implementation": "No source edits."
+	},
+	"verification_failures_corrected": [
+		{
+			"command": "npm run typecheck",
+			"exit_code": 2,
+			"issue": "The compiled path-to-regexp import lacks TypeScript declarations. Replaced with Next typed getPathMatch."
+		},
+		{
+			"command": "npm run typecheck",
+			"exit_code": 2,
+			"issue": "Matcher return type needed Boolean normalization to share the trailing-slash predicate interface. Corrected before the final five-command acceptance run."
+		}
+	],
+	"limitations": [
+		"Local deterministic proof only; no production deployment, live ranking/indexing or Eve integration claim.",
+		"Shared toolkit reservation failed because its configured root is missing; RAM snapshots succeeded. No shared configuration was changed."
+	],
+	"artifact_sha256": {
+		"acceptance.json": "a5d6933b6c06540858415307f1faef2d1c45cb0889d9cbb2dfb3c48ef50d18a1",
+		"baseline-http.json": "82ef514814ecebe391717ae950fa0f7a60a5a1742653ea60a5d9c4b46a3e012b",
+		"final-http.json": "d293e618ec1ee98822feebba77d6d3d98237da560d8a4ede43db2ee0ee0ff743",
+		"archive-html-baseline.log": "8aa9945f88dc881790f5747d811c79e4d25a48cf0c47a1827c737c6ea2ec096f",
+		"archive-html-final.log": "541a340ce8e7c8f3ba55b78082dabfeb7a194e5290b7eabfde00c939509d71ba",
+		"browser-proof.json": "fcbdb4d4750ada152b784d023f245e77b7e120da37b8c4d1c6c2dcdfa4d2f2ae",
+		"redirect-regression-red.log": "093e12a2cefd29db1da3bd752707cfd755ab8434e6e0abdc07149661b2696699",
+		"redirect-regression-green.log": "06a12333895dbd33c0ab096618f54559d5cc7f56fd8e59558155ec2dfcbc66d2",
+		"npm-ci.log": "6ef7a1d4d695ed561dee3f335c0a23b915ec0dcde663dad82945759318581d71",
+		"run-lint.log": "1337db05a30f7e047003a9fbf6f03d695a605dd8da040163ca2ad4640074ac5a",
+		"run-typecheck.log": "ba6cb5ab80995cb26d4dd2eaed7119e3b03fed705fab7982a535838f3a35f91d",
+		"run-seo-check.log": "84095378d66d4bff41f2d6f85b9f29d03c6570865b379605fbbdb91532e65199",
+		"run-build.log": "e9aac85eb50396f642347d04e6b3293818a593e97f015b9f644b171e1341a959",
+		"typecheck-first-attempt.log": "e57e2ffb4e1b10e2f1eb8c71f672956019837ec4f5f2df274a71c0776de539ec",
+		"typecheck-second-attempt.log": "50c45e20e6a1d44610ed82f861b7aecbed3ca32995805e27b796f392479fcdf0",
+		"baseline-preview-stop.json": "c3ea7b39265d84d4dc435c2937e81e1f3e98ca26fee4d937b38dfbdcfac2bcb0",
+		"final-preview-stop.json": "048f7b81b1b18cd731cdd0d5a80f1fc8911cdf95e8980753f02064f6a2d1b883"
+	},
+	"sha256": "17d9a34086d8fec4d808db90bd6cd7cbb1d163cf2d3b243c0816bd44456e0796"
+}
