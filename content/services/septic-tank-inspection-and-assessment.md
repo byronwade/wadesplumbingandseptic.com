@@ -59,10 +59,6 @@ This service helps you:
 - **Plan maintenance instead of dealing with problems**
 - **Protect your property value**
 
-## **Perfect For**
-
-- **
-
 ## Frequently Asked Questions
 
 ### How much does a thorough septic inspection cost in Santa Cruz County?
@@ -91,8 +87,4 @@ Guarantee the reliability and efficiency of your septic system with our expert i
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
-</
-
 Licensed Contractor: C-42 for California
-
-**

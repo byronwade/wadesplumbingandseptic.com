@@ -10,8 +10,6 @@ eyebrow: Fast Local Scheduling
 noindex: true
 ---
 
-Call-First Campaign Landing Page
-
 ## Plumbing Service & Repairs in Santa Cruz County
 
 Call-first plumbing repair page for homeowners needing fast scheduling and clear options before work starts.

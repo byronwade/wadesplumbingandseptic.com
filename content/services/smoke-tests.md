@@ -98,6 +98,4 @@ Our team is licensed under C-42 for California, ensuring professional and reliab
 
 ## Why Santa Cruz County Trusts Us for Septic Optimization
 
-**Customer Testimonials:**
-
 **Licensed Contractor:** C-42 License for California
