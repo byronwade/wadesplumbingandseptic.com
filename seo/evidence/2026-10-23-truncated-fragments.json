@@ -1,0 +1,90 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-025923-claude-1",
+	"collected_at": 1792740364,
+	"source_url_or_tool": [
+		"Original and updated local production builds (built HTML, llms-full.txt)",
+		"Node scan of content/{posts,pages,services} paragraphs and frontmatter",
+		"Actual sanitizer, content conversion and related-content scorer via tsx"
+	],
+	"scope": "Remove or complete six migration defects (five cut-off sentences and one stray tag) in four posts and two services, using existing text and already-served areas only.",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer data, production probes or analytics retained.",
+	"retention_class": "Compact results and source hashes retained; temporary builds, HTML copies and scripts removed.",
+	"baseline_commit": "7fc1313fa166af9d92376fd4562a5ad01599447d",
+	"history_check": "All fragments are present unchanged since the first migration commit d9f9b70; no fuller source text exists in git history.",
+	"source": [
+		{
+			"file": "content/posts/septic-trouble-signs-santa-cruz.md",
+			"change": "Removed empty H2 'Choosing a Local Septic Team' and its fragment 'Choosing a reliable local service provider like Wade's Plumbing &'.",
+			"before_sha256": "d741c75a536410e93b04bc52e921a0fa8b02ffe482c785fb2cb59c755dabd0e9",
+			"after_sha256": "bca0e938583f4bad56cb0dd09b7c7c7502c76322efa07474ca9ad0e004c00662"
+		},
+		{
+			"file": "content/posts/septic-leach-field-repairs-santa-cruz.md",
+			"change": "Removed empty H2 'Checks at Home vs. Expert Care' and its fragment 'While homeowners can monitor their septic systems for signs'.",
+			"before_sha256": "1b1090b84913235705834593194ac6b4e6eca1625e72fa328cd883e9f5e92494",
+			"after_sha256": "73e670582f63d5b7b69df0262a59ac11e81620053faeb40e65bcb9853b399805"
+		},
+		{
+			"file": "content/posts/efficient-water-filtration-santa-cruz.md",
+			"change": "Removed fragment 'To find out more about our service areas, visit our'; the /service-areas link remains directly below.",
+			"before_sha256": "384f6f2e1417c602db2d881c03ed929a47807f5a8cfb4a95dff4d71e9e16ca44",
+			"after_sha256": "df6b39e9b1c1885d3400188b6f289b2c2f772b0122d0205701db99c297d5844f"
+		},
+		{
+			"file": "content/posts/how-santa-cruz-countys-unique-geography-affects-septic-systems.md",
+			"change": "FAQ answer keeps its complete first sentence; dropped trailing fragment 'These can be exacerbated'.",
+			"before_sha256": "74dc84f8a1bb14eebacef1d84735e19ddd6806c50de07615206ab9f05e4c857c",
+			"after_sha256": "622592a6ec700e2b5c15f665241b7e010e5697d84578262ce120a1b165169c17"
+		},
+		{
+			"file": "content/services/sump-pump-installation.md",
+			"change": "City list 'Santa Cruz, Capitola, Scotts' completed as 'Santa Cruz, Capitola and Scotts Valley.' Scotts Valley is an existing service area (lib/city-service-pages.ts, lib/search.ts).",
+			"before_sha256": "2467798b19ea86e6a779327201d9f12a002e90454c7a528a32aa04d777a5e746",
+			"after_sha256": "5fe27b54fc47731659f1d1811849c2eceb975a849194c07379d83ccaacb6c125"
+		},
+		{
+			"file": "content/services/septic-tank-alarm-installation.md",
+			"change": "Removed stray '</' after the CTA links. It never rendered; rendered page text, links and JSON-LD are identical.",
+			"before_sha256": "eca9e5a7cba94cb85a53c9735331fa03bce7b5034020ee87d7edec89516eb2b2",
+			"after_sha256": "700138f1311afeb2a8666e11007ae9bf6e9cfce65d60c0025284ff99bb73cab9"
+		}
+	],
+	"scan": {
+		"paragraph_candidates": 176,
+		"defects_found": 9,
+		"fixed": 6,
+		"left_for_byron": [
+			"content/posts/6-signs-you-have-a-hidden-water-leak.md line 67: 'As a licensed contractor (C-42 license for CA / state license for GA), we ensure that all services are' is cut off and carries a license claim.",
+			"content/services/gas-line-repair.md line 99: 'Licensed Contractor: C-42 License #123456' differs from the site license CSLB #1087260 (not rendered; stripped by the conversion parser)."
+		],
+		"reverted": "Removing the unrendered 'Call Us NowGet a Free Quote' line on shower-installation-and-repair changed how its closing CTA band is parsed and exposed hidden text, including a license line. The edit was reverted; the line still never renders.",
+		"frontmatter_files_checked": 157,
+		"frontmatter_truncations": 0
+	},
+	"rendered_checks": {
+		"html_files_scanned": 552,
+		"fragment_pages_before": 6,
+		"fragment_pages_before_note": "Five pages plus the /services/sump-pump-installation alias route; the stray tag never rendered.",
+		"fragment_pages_after": 0,
+		"page_text_diff": "Five pages lose only the fragment text (two posts also lose the empty heading; two lines are replaced by their completed sentence). The alarm page text is identical. No other text added or removed; JSON-LD and link sets identical on all six.",
+		"related_and_conversion_parse": {
+			"documents": 91,
+			"changed": 0
+		},
+		"final_build_probe": "Final build: 0 pages contain any fixed fragment; the shower page text, links and JSON-LD are identical to baseline after the revert. Remaining probe hits are complete sibling headings in other guides and an unrelated complete sentence in the fire guide."
+	},
+	"acceptance": {
+		"node": "v24.21.0",
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			"npm ci",
+			"npm run lint",
+			"npm run typecheck",
+			"npm run seo:check (193 passed, 0 failed)",
+			"npm run build (564 pages)"
+		]
+	}
+}
