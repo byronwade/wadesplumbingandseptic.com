@@ -25,13 +25,13 @@ When you turn on the tap, you probably aren’t thinking about what’s in your 
 
 At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County test their water, diagnose hard water issues, and install reliable water softening solutions. Here’s what you need to know about hard water, how it forms, and what it can do to your home.
 
-How Does Water Become “Hard”?
+## How Does Water Become “Hard”?
 
 Rainwater is naturally soft when it falls. But as it travels through the ground, it picks up minerals like calcium and magnesium, especially when it flows through areas rich in limestone or chalk. By the time it reaches reservoirs and water supplies, it may carry high levels of these minerals, making the water “hard.”
 
 The exact hardness level of water depends on your region’s natural landscape and underground water sources. Even if water appears clear and tastes fine, high mineral content can still cause serious long-term issues.
 
-Why Is Hard Water a Problem?
+## Why Is Hard Water a Problem?
 
 While calcium and magnesium are essential nutrients for our bodies, they’re not so great for your pipes and appliances. Here’s why hard water can create problems in your home:
 
@@ -43,7 +43,7 @@ While calcium and magnesium are essential nutrients for our bodies, they’re no
 
 If left untreated, hard water can result in costly plumbing repairs, premature appliance replacement, and higher utility bills due to poor energy efficiency.
 
-How a Water Softener Helps
+## How a Water Softener Helps
 
 Installing a water softener can drastically improve your home’s water quality. These systems use ion exchange technology to remove calcium and magnesium from the water, replacing them with sodium or potassium.
 
@@ -57,7 +57,7 @@ Benefits of Water Softeners:
 
 Water softeners also help reduce your overall energy usage (especially in water heaters), because they allow systems to heat water more efficiently without working through layers of scale.
 
-Soft Water: Pros and Cons
+## Soft Water: Pros and Cons
 
 While soft water can solve many household problems, it’s not always perfect for every use.
 

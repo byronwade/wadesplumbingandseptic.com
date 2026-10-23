@@ -24,7 +24,7 @@ When a plumbing issue pops up, your first thought might be: Should I try to fix 
 
 At Wade’s Plumbing & Septic, we’ve seen it all, from successful DIY fixes to costly damage caused by well-meaning homeowners. Let’s break down when it makes sense to tackle a plumbing job yourself, and when it’s best to bring in the professionals.
 
-**1\. Consider Your Plumbing Knowledge and Experience**
+## 1\. Consider Your Plumbing Knowledge and Experience
 
 Ask yourself: Do I know what I’m doing?
 
@@ -38,7 +38,7 @@ On the other hand, if you’ve got experience and you’ve successfully handled 
 
 But when in doubt, it’s better to call the pros at Wade’s Plumbing & Septic to avoid causing unnecessary damage.
 
-**2\. Evaluate the Severity of the Problem**
+## 2\. Evaluate the Severity of the Problem
 
 Not all plumbing problems are created equal. Some minor issues can be handled with a wrench and a little know-how. Others, however, require specialized tools, training, and safety precautions.
 
@@ -51,7 +51,7 @@ Not all plumbing problems are created equal. Some minor issues can be handled wi
 
 Trying to fix serious problems (like a broken pipe or backflow issue), on your own can be risky and expensive. A licensed plumber will know how to handle these situations safely and effectively.
 
-**3\. Weigh the Time and Cost**
+## 3\. Weigh the Time and Cost
 
 DIY plumbing may save you on labor costs, but it’s not always the cheapest route in the long run, especially if a mistake leads to property damage or water leaks.
 
@@ -63,7 +63,7 @@ Ask yourself:
 
 In many cases, hiring a professional plumber not only gets the job done faster, but also ensures the repair is done correctly the first time, saving you money, stress, and repeat visits to the hardware store.
 
-**When in Doubt, Call Wade’s Plumbing & Septic**
+## When in Doubt, Call Wade’s Plumbing & Septic
 
 If you’re on the fence about a plumbing repair (or if you’ve already tried a DIY fix that didn’t hold), don’t risk further damage. Let the experts at Wade’s Plumbing & Septic handle it for you.
 

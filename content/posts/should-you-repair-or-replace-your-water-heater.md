@@ -24,7 +24,7 @@ A broken water heater can quickly disrupt your home life, no hot showers, ineffi
 
 At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County make informed, cost-effective choices about their plumbing systems. Here’s what you need to know about diagnosing water heater issues, estimating repair costs, and deciding whether it’s time for an upgrade.
 
-How Long Does a Water Heater Last?
+## How Long Does a Water Heater Last?
 
 Most traditional water heaters have a life expectancy of 10 to 15 years. That lifespan can vary depending on factors like:
 
@@ -35,7 +35,7 @@ Most traditional water heaters have a life expectancy of 10 to 15 years. That li
 
 If your water heater is approaching the 10-year mark and showing signs of failure, replacement might be the most cost-effective route.
 
-Key Signs You May Need a New Water Heater
+## Key Signs You May Need a New Water Heater
 
 - Water pooling around the base of the tank
 - Inconsistent hot water or long heating times
@@ -44,7 +44,7 @@ Key Signs You May Need a New Water Heater
 - Visible rust or corrosion on the tank
 - Frequent repair needs or high maintenance costs
 
-The 50% Rule: A Simple Repair vs. Replace Test
+## The 50% Rule: A Simple Repair vs. Replace Test
 
 Use the 50% rule as a cost-benefit guide:
 
@@ -58,7 +58,7 @@ Even if repair costs fall under 50%, consider:
 
 An older, inefficient water heater may still be costing you more in the long run, even if it can be fixed temporarily.
 
-Benefits of Replacing Your Water Heater
+## Benefits of Replacing Your Water Heater
 
 Over time, minerals in your water supply cause sediment buildup, leading to tank corrosion and eventual leaks. When the tank itself fails, replacement is the only option. Fortunately, new water heater models offer several benefits:
 
@@ -67,7 +67,7 @@ Over time, minerals in your water supply cause sediment buildup, leading to tank
 - Faster recovery times and more consistent hot water supply
 - More size and model options, including tankless systems
 
-Upgrade to Energy-Efficient Options
+## Upgrade to Energy-Efficient Options
 
 Today’s market offers a variety of advanced systems that may qualify for federal tax credits and deliver substantial savings over time:
 
@@ -79,7 +79,7 @@ Today’s market offers a variety of advanced systems that may qualify for feder
 
 Though these options often require a higher upfront investment, many homeowners find the long-term energy savings and rebates make them well worth the upgrade.
 
-Water Heater Repair: When It’s Still Worth Fixing
+## Water Heater Repair: When It’s Still Worth Fixing
 
 If your unit is under 8 to 10 years old and in decent condition, repair might be the smarter option. Regular maintenance and small repairs can keep your system running efficiently.
 

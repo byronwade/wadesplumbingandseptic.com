@@ -25,7 +25,7 @@ If your tap water smells off, tastes strange, or leaves behind stains, it may be
 
 At Wade’s Plumbing & Septic, we help homeowners identify the best system to protect their plumbing, appliances, and water quality. Here’s a detailed look at the differences between these systems, and how to decide which one meets your needs.
 
-What Is a Whole-House Filtration System?
+## What Is a Whole-House Filtration System?
 
 A whole-house filtration system is designed to purify all the water that enters your home. These systems are installed at the main water line and ensure that clean, filtered water flows to every fixture, from your kitchen sink to your shower.
 
@@ -38,7 +38,7 @@ Common filtration technologies include:
 
 Whole-house filters remove chlorine, heavy metals, VOCs (volatile organic compounds), sediments, and more, making your water safer for drinking, bathing, and cooking. This option is ideal for homes with noticeable water odor, discoloration, or known water quality concerns.
 
-What Is a Water Softener?
+## What Is a Water Softener?
 
 A water softener is a specialized filtration device focused solely on removing hard water minerals, primarily calcium and magnesium. These minerals don’t pose a health risk, but they do:
 
@@ -55,7 +55,7 @@ There are two main types of water softeners:
 
 Installing a water softener helps preserve your plumbing system, extend appliance life, and reduce maintenance costs over time.
 
-Water Filters vs. Water Softeners: Key Differences
+## Water Filters vs. Water Softeners: Key Differences
 
 | **Feature**             | **Water Filter**                          | **Water Softener**                              |
 | ----------------------- | ----------------------------------------- | ----------------------------------------------- |
@@ -67,13 +67,13 @@ Water Filters vs. Water Softeners: Key Differences
 
 While water softeners are a type of water filter, they serve a very specific purpose. In contrast, whole-house filters address a wider range of contaminants.
 
-Should You Install Both?
+## Should You Install Both?
 
 For homes with hard water and general water quality concerns, the best option may be a dual system that includes both a softener and a filtration unit. This combination ensures that all incoming water is filtered and softened, protecting your plumbing, appliances, and your family’s health.
 
 At Wade’s Plumbing & Septic, we can evaluate your home’s water supply, test for impurities, and recommend a system that addresses your specific issues.
 
-When to Consider a Filtration or Softening System
+## When to Consider a Filtration or Softening System
 
 You may need a water filtration or softening system if:
 
@@ -84,7 +84,7 @@ You may need a water filtration or softening system if:
 - You’ve had to replace water-using appliances prematurely
 - You’re on well water or have poor city water quality
 
-Upgrade Your Water Quality With Confidence
+## Upgrade Your Water Quality With Confidence
 
 If you’re noticing any of these symptoms in your Santa Cruz, Capitola, Soquel, Aptos, or Watsonville home, we can help. At Wade’s Plumbing & Septic, we specialize in the installation of whole-house filtration systems, water softeners, and custom water treatment solutions designed to meet your specific needs.
 

@@ -24,13 +24,13 @@ We recently helped a homeowner in Santa Cruz, CA who was dealing with an unpredi
 
 If you’ve ever turned the knob in your shower and been surprised by a blast of cold water (or been scalded unexpectedly), you may be dealing with the same issue. Here’s what to know about shower valve problems, how they affect your daily routine, and what goes into replacing them.
 
-What Does a Shower Valve Do?
+## What Does a Shower Valve Do?
 
 The shower valve is the hidden hero of your bathroom plumbing. Its main job is to control both the temperature and pressure of the water coming out of your showerhead. It blends the hot and cold water so you get the perfect temperature every time.
 
 Because shower valves are located behind your wall and tile, they’re not easily visible. That makes it hard to spot issues, until the symptoms start affecting your comfort and safety.
 
-Common Signs Your Shower Valve Needs to Be Replaced
+## Common Signs Your Shower Valve Needs to Be Replaced
 
 If you’re experiencing any of the following issues, your shower valve may be to blame:
 
@@ -42,7 +42,7 @@ If you’re experiencing any of the following issues, your shower valve may be t
 
 A malfunctioning valve not only disrupts your daily routine, but can also cause hidden water damage if it leaks behind walls.
 
-Our Recent Shower Valve Installation
+## Our Recent Shower Valve Installation
 
 For our Santa Cruz client, we decided to install a new pressure-balancing shower valve, a reliable and cost-effective choice that ensures a steady mix of hot and cold water, even when pressure fluctuates elsewhere in the home. This helped them regain full control over their water temperature and pressure, making their shower safe, smooth, and comfortable again.
 
@@ -51,7 +51,7 @@ Depending on your setup, other valve options may include:
 - Thermostatic Valves: Offer precise temperature control using heat-sensitive materials. More expensive, but ideal for homes with advanced or custom shower systems.
 - Transfer Valves: Allow switching between showerheads, hand showers, or tub spouts, ideal for multi-function systems or combo setups.
 
-Why a Faulty Shower Valve Needs Prompt Attention
+## Why a Faulty Shower Valve Needs Prompt Attention
 
 Ignoring a shower valve issue doesn’t just make for a frustrating shower. It can lead to:
 
