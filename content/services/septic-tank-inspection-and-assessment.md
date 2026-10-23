@@ -35,7 +35,7 @@ signs, we help you get answers you can trust.
 
 ## **What We Do**
 
-We perform a **full evaluation of your septic system’s key components** , focusing on performance, condition, and risk factors.
+We perform a **full evaluation of your septic system’s key components**, focusing on performance, condition, and risk factors.
 
 ### **Complete System Check Includes:**
 
