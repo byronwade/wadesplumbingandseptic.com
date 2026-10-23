@@ -1,7 +1,7 @@
 {
 	"schema_version": 1,
 	"run_id": "wades-plumbing-1023-111915-claude-1",
-	"collected_at": "2026-10-23T16:05:00Z",
+	"collected_at": "2026-10-23T15:50:19Z",
 	"source": "repository and isolated local production build (Node v24.21.0, Next.js 16.3.0-preview.10)",
 	"source_url_or_tool": "npm acceptance commands, built HTML / search-index / llms comparison against a baseline build of ff1dc8b, Chromium/Playwright and axe-core",
 	"scope": "Internal campaign wording replaced in the description and lead line of four noindex ad landing pages; ci:content now rejects that wording",
