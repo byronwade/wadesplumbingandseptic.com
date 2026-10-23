@@ -1,0 +1,97 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-100912-codex",
+	"collected_at": "2026-10-23T14:18:18.365565+00:00",
+	"source": "repository and isolated local production build",
+	"source_url_or_tool": "npm acceptance commands, current sanitizer/conversion/service/recommendation modules, Chromium/Playwright and axe-core 4.12.1",
+	"scope": "18 spaces removed before commas after bold text across two existing documents",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "no credentials, personal records or connector responses retained",
+	"retention_class": "compact committed verification summary",
+	"sha256": {
+		"content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md": "0c14cbcec1a84646e41f2d820db26a52a1f400630a41e1e8968bc65e6a913c34",
+		"content/services/septic-tank-inspection-and-assessment.md": "2885492e1d94c8076a74d2d02a6169f0695be589e5595b178c4be96977befc10"
+	},
+	"acceptance": [
+		{
+			"started": "2026-10-23T10:10:13.8233815-04:00",
+			"command": "npm ci",
+			"finished": "2026-10-23T10:11:21.5121857-04:00",
+			"exit_code": 0
+		},
+		{
+			"exit_code": 0,
+			"duration_seconds": 14.1448104,
+			"command": "npm run lint",
+			"started": "2026-10-23T14:14:19.5408902Z"
+		},
+		{
+			"duration_seconds": 12.0769163,
+			"started": "2026-10-23T14:14:34.2384726Z",
+			"exit_code": 0,
+			"command": "npm run typecheck"
+		},
+		{
+			"exit_code": 0,
+			"command": "npm run seo:check",
+			"started": "2026-10-23T14:14:46.8914161Z",
+			"duration_seconds": 40.8869661
+		},
+		{
+			"command": "npm run build",
+			"exit_code": 0,
+			"duration_seconds": 45.1440454,
+			"started": "2026-10-23T14:15:28.2242649Z"
+		}
+	],
+	"seo_tap": {
+		"tests": 194,
+		"pass": 194,
+		"fail": 0
+	},
+	"build_static_pages": 564,
+	"parser": {
+		"documents": 157,
+		"counts": {
+			"content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md": 17,
+			"content/services/septic-tank-inspection-and-assessment.md": 1
+		},
+		"passed": 1063,
+		"failed": 0,
+		"failures": []
+	},
+	"output_comparison": {
+		"passed": 2862,
+		"failed": 0,
+		"failures": [],
+		"changedHtmlPages": [
+			"a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.html",
+			"service-offerings\\septic-tank-inspection-and-assessment.html",
+			"services\\septic-tank-inspection-and-assessment.html"
+		],
+		"htmlPages": 552,
+		"browserStatesBefore": 12,
+		"browserStatesAfter": 12
+	},
+	"browser": {
+		"states_before": 12,
+		"states_after": 12,
+		"wcag_violations": 0,
+		"page_errors": 0,
+		"overflow": 0,
+		"comma_space_instances_before": 108,
+		"comma_space_instances_after": 0
+	},
+	"limitations": [
+		"Local deterministic evidence only; no live production, indexing, ranking, lead or Eve integration claim.",
+		"Existing five high dependency advisories were not changed.",
+		"No independent-agent review claimed."
+	],
+	"receipts": {
+		"acceptance.json": "aff47d718523051ab945f6437ead58770adcdffb8fa76c81b9acb5a63b939132",
+		"parser-proof.json": "b85a064630cfbabea550beee0a1df3a8a89ce4b522c9f11f0bb55da40ed87a56",
+		"comparison.json": "933e07f40c16ab803760666cfec8f85d7d7b9ba4ac156df73cdf23fad15e7bcb",
+		"before-browser.json": "2b6aa1e1b49a27398b51d8765c8e9e09f482852857de1d0d297ddd1e1b5b2b7d",
+		"after-browser.json": "ed812067378442fb764499707aeed934c3875450c1d187fac8c4ef31e4ce0856"
+	}
+}
