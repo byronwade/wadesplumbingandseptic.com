@@ -10,6 +10,7 @@ import { CallLabel } from "../../components/call-label"
 import { buttonVariants } from "../../components/ui/button"
 import { MobileCallBar } from "../../components/mobile-call-bar"
 import {
+	EmailAddress,
 	ProtectedContactLink,
 	ProtectedEmailText,
 	ProtectedPhoneText,
@@ -17,9 +18,13 @@ import {
 import { contactInfo } from "../../lib/contact"
 import { siteConfig } from "../../lib/site"
 
+const wrappableEmail = contactInfo.email
+	.replace("@", "@<wbr/>")
+	.replaceAll(".", "<wbr/>.")
+
 for (const [kind, href, label] of [
 	["phone", contactInfo.phoneHref, contactInfo.phoneDisplay],
-	["email", contactInfo.emailHref, contactInfo.email],
+	["email", contactInfo.emailHref, wrappableEmail],
 	["vcard", contactInfo.vcardPath, "Save contact"],
 ] as const) {
 	test(`${kind} links work in server HTML before JavaScript`, () => {
@@ -58,6 +63,21 @@ test("visible phone and email text are usable links without hydration", () => {
 	assert.ok(phone.includes(`href="${contactInfo.phoneHref}"`), phone)
 	assert.ok(email.includes(`href="${contactInfo.emailHref}"`), email)
 	assert.ok(email.includes(`aria-label="Email ${contactInfo.email}"`), email)
+})
+
+// break-all split the address at any letter ("support@wadesin" / "c.io").
+test("the email wraps only after @ or before a dot, adding no characters", () => {
+	const html = renderToStaticMarkup(createElement(EmailAddress))
+	assert.equal(html.replaceAll("<wbr/>", ""), contactInfo.email)
+	assert.equal(html, wrappableEmail)
+	assert.ok(html.includes("@<wbr/>"), html)
+	for (const name of [
+		"components/contact-cta.tsx",
+		"components/home-below-fold.tsx",
+		"components/virtual-business-card.tsx",
+	]) {
+		assert.doesNotMatch(fs.readFileSync(name, "utf8"), /break-all/, name)
+	}
 })
 
 function classOf(html: string) {
