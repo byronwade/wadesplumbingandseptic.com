@@ -1,0 +1,75 @@
+{
+	"recorded_at": "2026-10-23",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production-build verification in headless Chrome, 200% text simulated by root font-size. Not live production, ranking, indexing or Eve integration evidence.",
+	"base_commit": "38c2fbaaa432eb164fc83dbb42307bc52dbd2e82",
+	"change": {
+		"files": [
+			"app/globals.css",
+			"app/(site)/service-areas/page.tsx",
+			"components/glossary-hub.tsx",
+			"components/glossary-term-page.tsx",
+			"components/home-below-fold.tsx"
+		],
+		"before": "Five links inside sentences used text-primary with an underline only on hover. On /service-areas the sentence itself is bold, so the phone link differed from its text by color alone (axe link-in-text-block, serious). The other four were bold in regular text, which axe 4.12.1 accepts as a non-color cue.",
+		"after": "All five use one @utility text-link with the values of .prose a: color --primary, weight 700, underline at rest, 3px offset, 1.5px thickness, 2.5px on hover.",
+		"required_fix": "/service-areas phone link only. The other four changed for consistency with Markdown links, not because axe failed them.",
+		"left_unchanged": [
+			"service-area/[city]/[service] list links (alone in <li>, no surrounding text, rule does not apply)",
+			"components/markdown-content.tsx block link",
+			"components/ui/button.tsx link variant",
+			".prose a and its dark-surface overrides"
+		]
+	},
+	"built_html_scope": {
+		"pages_compared": 552,
+		"pages_changed": 99,
+		"changed_groups": {
+			"glossary term and hub pages": 97,
+			"home": 1,
+			"service-areas": 1
+		},
+		"visible_text_identical": true,
+		"json_ld_identical": true,
+		"other_markup_differences": "95 glossary term pages lose two React <!-- --> text separators because Prettier merged the JSX text around the phone link; rendered text identical."
+	},
+	"link_probe": {
+		"routes": [
+			"/service-areas",
+			"/",
+			"/glossary/plumbing",
+			"/glossary/plumbing/anode-rod"
+		],
+		"widths_and_text_scale": ["320px@200%", "390px@100%", "1280px@100%"],
+		"themes": ["light", "dark"],
+		"states": 24,
+		"before": {
+			"axe_wcag_a_aa_violations": { "link-in-text-block": 6 },
+			"in_sentence_links_without_resting_underline": 5
+		},
+		"after": {
+			"axe_wcag_a_aa_violations": 0,
+			"in_sentence_links_without_resting_underline": 0,
+			"hover_thickness": "2.5px (6 of 6 on a settled /service-areas page, both themes; one probe sample read 1.5px because the lazy map shifted the page under the pointer)",
+			"document_overflow_px": 0,
+			"page_errors": 0
+		}
+	},
+	"sitewide_axe": {
+		"routes": 526,
+		"viewport": "320px@200%",
+		"before_light": "link-in-text-block x1 on /service-areas, nothing else (reused from the 1023-0539 sweep on 38c2fba, same code)",
+		"before_dark": "link-in-text-block x1 on /service-areas, nothing else",
+		"after_light": {
+			"violations": 0,
+			"http_errors": 0,
+			"document_overflow_pages": 0
+		},
+		"after_dark": {
+			"violations": 0,
+			"http_errors": 0,
+			"document_overflow_pages": 0
+		}
+	},
+	"screenshots": "32 captures (16 before, 16 after): the paragraph holding each link at 320px@200% and 1280px, light and dark, on the four routes"
+}

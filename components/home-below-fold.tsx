@@ -368,10 +368,7 @@ export function HomeBelowFold() {
 						</h2>
 						<p className="type-lead">
 							Do not see your question? Call{" "}
-							<a
-								className="text-primary font-bold underline-offset-2 hover:underline"
-								href={contactInfo.phoneHref}
-							>
+							<a className="text-link" href={contactInfo.phoneHref}>
 								{contactInfo.phoneDisplay}
 							</a>{" "}
 							and talk to someone who understands the work.

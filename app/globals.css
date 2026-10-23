@@ -1316,6 +1316,20 @@
 	}
 }
 
+/* A link inside a sentence outside Markdown: same look as `.prose a`, so the
+   link never relies on color alone (axe link-in-text-block). */
+@utility text-link {
+	color: var(--primary);
+	font-weight: 700;
+	text-decoration-line: underline;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1.5px;
+
+	&:hover {
+		text-decoration-thickness: 2.5px;
+	}
+}
+
 /* Motion */
 @keyframes rise {
 	from {

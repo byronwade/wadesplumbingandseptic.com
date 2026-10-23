@@ -71,7 +71,7 @@ export function GlossaryTopicHub({
 						Looking for the other glossary? Browse the{" "}
 						<Link
 							prefetch={false}
-							className="text-primary font-bold underline-offset-2 hover:underline"
+							className="text-link"
 							href={glossaryHubPath(otherTopic.topic) as Route}
 						>
 							{otherTopic.label}
