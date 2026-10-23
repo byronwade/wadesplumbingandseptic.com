@@ -136,11 +136,99 @@ function declarationOf(css: string, selector: string, property: string) {
 // rem insets double with 200% text. On a 320px phone the gutter, the list
 // indent and the checklist badge each took a word's worth of width, so text
 // broke mid-word. Capping them in px keeps 100% text identical.
-test("the page gutter floor does not grow with enlarged text", () => {
-	assert.match(
-		declarationOf(globals, ":root", "--space-page-x") ?? "",
-		/^clamp\(min\([\d.]+rem,\s*\d+px\),/,
-	)
+// Evaluates a clamp/min/max length made of px, rem and vw at a given root
+// font size and viewport width, so the gutter is tested by what it renders.
+function lengthAt(value: string, rootPx: number, viewportPx: number) {
+	const tokens = value.match(/[\d.]+(?:px|rem|vw)?|[a-z]+|[(),+\-*/]/g) ?? []
+	let at = 0
+	const take = (expected?: string) => {
+		const token = tokens[at++]
+		if (token === undefined || (expected && token !== expected)) {
+			throw new Error(`unexpected ${token} in ${value}`)
+		}
+		return token
+	}
+	const unit = { px: 1, rem: rootPx, vw: viewportPx / 100 } as const
+	const fns: Record<string, (...args: number[]) => number> = {
+		clamp: (lo, v, hi) => Math.max(lo!, Math.min(v!, hi!)),
+		min: Math.min,
+		max: Math.max,
+	}
+	const factor = (): number => {
+		const token = take()
+		if (token === "(") {
+			const inner = sum()
+			take(")")
+			return inner
+		}
+		if (token in fns) {
+			take("(")
+			const args = [sum()]
+			while (tokens[at] === ",") {
+				take(",")
+				args.push(sum())
+			}
+			take(")")
+			return fns[token]!(...args)
+		}
+		const match = token.match(/^([\d.]+)(px|rem|vw)?$/)
+		if (!match) throw new Error(`unexpected ${token} in ${value}`)
+		return (
+			Number(match[1]) * (match[2] ? unit[match[2] as keyof typeof unit] : 1)
+		)
+	}
+	const product = () => {
+		let result = factor()
+		while (tokens[at] === "*" || tokens[at] === "/") {
+			result = take() === "*" ? result * factor() : result / factor()
+		}
+		return result
+	}
+	const sum = () => {
+		let result = product()
+		while (tokens[at] === "+" || tokens[at] === "-") {
+			result = take() === "+" ? result + product() : result - product()
+		}
+		return result
+	}
+	const result = sum()
+	assert.equal(at, tokens.length, `unparsed tail in ${value}`)
+	return result
+}
+
+test("lengthAt evaluates nested clamp, min and calc-style subtraction", () => {
+	assert.equal(lengthAt("clamp(min(1.25rem, 20px), 4vw, 2.5rem)", 16, 320), 20)
+	assert.equal(lengthAt("clamp(12px, 100vw - 15rem, 20px)", 32, 320), 12)
+	assert.equal(lengthAt("clamp(12px, 100vw - 15rem, 20px)", 16, 256), 16)
+})
+
+const gutter = declarationOf(globals, ":root", "--space-page-x") ?? ""
+
+test("the page gutter is unchanged at normal text on 260px and wider", () => {
+	const before = "clamp(min(1.25rem, 20px), 4vw, 2.5rem)"
+	for (let width = 260; width <= 1600; width += 10) {
+		assert.equal(
+			lengthAt(gutter, 16, width),
+			lengthAt(before, 16, width),
+			`${width}px`,
+		)
+	}
+})
+
+// rem insets double with 200% text. On a 320px phone a 20px gutter left a
+// 280px line, and "Plumbing" at headline size is 280.4px, so it broke.
+test("the page gutter gives enlarged text more room on phones", () => {
+	// The floor drops to 12px, so the 4vw preferred value shows through.
+	for (const width of [320, 360, 390, 430]) {
+		const expected = Math.max(12, width * 0.04)
+		assert.equal(lengthAt(gutter, 32, width), expected, `${width}px at 200%`)
+	}
+	for (let root = 16; root <= 48; root += 2) {
+		for (const width of [280, 320, 390, 430]) {
+			const value = lengthAt(gutter, root, width)
+			assert.ok(value >= 12 && value <= 20, `${width}px at ${root}px text`)
+		}
+	}
 })
 
 test("prose list indent shrinks toward 1em with enlarged text", () => {
