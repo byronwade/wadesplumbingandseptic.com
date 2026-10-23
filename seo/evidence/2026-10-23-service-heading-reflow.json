@@ -1,0 +1,108 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-102915-codex-1",
+	"collected_at": 1792766929,
+	"source": "repository and isolated local production build",
+	"source_url_or_tool": "npm acceptance commands, sanitizer/conversion/service/recommendation modules, headless Chrome/Playwright and axe-core 4.12.1",
+	"scope": "shorter visible service title and four measured section headings across two existing service pages",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "no credentials, personal records or connector responses retained",
+	"retention_class": "compact committed verification summary",
+	"sha256": {
+		"lib/content.ts": "755aa970513fbc1d8818fd9f664f7b12fbda2b33873d5ae44823710f0aadbf3f",
+		"components/service-landing-page.tsx": "34105f6c1dc98059180b603074f4c60659049a0b03e1323ffbb2c45b58696c3e",
+		"content/services/engineered-septic-system-installation.md": "770eadd2ffa35cdd063695fb367207d09e9b355c5f4632430673b29c08de21a7",
+		"content/services/smoke-tests.md": "447c4fbee9211bfa5328f717962ef3af36705a6d4798e43dd40fb8889f351d10"
+	},
+	"acceptance": [
+		{
+			"command": ["pwsh", "-NoProfile", "-Command", "npm ci"],
+			"exit_code": 0,
+			"duration_seconds": 60.46
+		},
+		{
+			"started": "2026-10-23T14:44:06.4721975Z",
+			"exit_code": 0,
+			"duration_seconds": 8.495217,
+			"command": "npm run lint"
+		},
+		{
+			"command": "npm run typecheck",
+			"exit_code": 0,
+			"duration_seconds": 4.7022538,
+			"started": "2026-10-23T14:44:15.4776807Z"
+		},
+		{
+			"command": "npm run seo:check",
+			"exit_code": 0,
+			"duration_seconds": 29.0215004,
+			"started": "2026-10-23T14:44:20.9252433Z"
+		},
+		{
+			"command": "npm run build",
+			"duration_seconds": 57.2325847,
+			"exit_code": 0,
+			"started": "2026-10-23T14:44:50.4179557Z"
+		}
+	],
+	"seo_tap": {
+		"tests": 194,
+		"pass": 194,
+		"fail": 0
+	},
+	"build_static_pages": 564,
+	"parser": {
+		"documents": 157,
+		"passed": 1063,
+		"failed": 0,
+		"failures": []
+	},
+	"output_comparison": {
+		"passed": 4835,
+		"failed": 0,
+		"failures": [],
+		"beforeSplits": 12,
+		"afterSplits": 0,
+		"browserStates": 24,
+		"htmlPages": 552,
+		"changedOutputs": [
+			"service-offerings/engineered-septic-system-installation.html",
+			"service-offerings/smoke-tests.html",
+			"services/engineered-septic-system-installation.html",
+			"services/smoke-tests.html",
+			"llms-full.txt.body"
+		]
+	},
+	"browser": {
+		"states_before": 12,
+		"states_after": 12,
+		"splits_before": 12,
+		"splits_after": 0,
+		"wcag_violations": 0,
+		"page_errors": 0,
+		"overflow": 0
+	},
+	"service_scan": {
+		"pages": 48,
+		"states_before": 96,
+		"states_after": 96,
+		"splits_before": 286,
+		"splits_after": 274,
+		"remaining_pages_with_splits": 41
+	},
+	"limitations": [
+		"Local isolated evidence only; no live production, indexing, ranking, lead or Eve integration claim.",
+		"Remaining splits on 41 service pages are recorded for focused follow-up.",
+		"Existing qualifications, performance, timing and service-area claims are unchanged and were not revalidated.",
+		"No independent-agent review claimed."
+	],
+	"receipts": {
+		"acceptance.json": "7dc7138c836d1fddb3cb5ed8ec6fb6dea79cecdb8a3cb4c84833e842949642aa",
+		"parser-proof.json": "2f6a46064c6c7099a565aef60c4e3877d999558b1214ccb9d7aa5aaa3e6edab0",
+		"comparison.json": "bf3305275e8fb11eb2433646cba1ffbe558bef2a34ef33bedd84d3a685c22bf4",
+		"before-browser.json": "d7b56495b8a1e07ecf54626be84f53aaef40e524d8979967e62621e306d433a7",
+		"after-browser.json": "6427010d8c6c16fd6e107dc12090a4661f3795e0cd81219f4283c811e5d82543",
+		"before-scan.json": "ad86a3749ad760143abae53d2839f6be7f41d92d409dac63161fe34ecef5c8c2",
+		"after-scan.json": "36c3229dd3108bcbae9e9c5dec3d8db4c32da88bab584153766db7f17d5f500a"
+	}
+}

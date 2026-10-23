@@ -24,6 +24,8 @@ export type ContentImage = {
 export type ContentDocument = {
 	slug: string
 	title: string
+	/** Optional shorter service heading; metadata and related cards keep title. */
+	heroTitle?: string
 	description: string
 	content: string
 	/** Page-specific end CTA parsed from WordPress-era markdown blocks. */
@@ -73,6 +75,9 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 	return {
 		slug,
 		title,
+		heroTitle: data.heroTitle
+			? String(data.heroTitle).trim() || undefined
+			: undefined,
 		description,
 		content: articleContent,
 		conversion,

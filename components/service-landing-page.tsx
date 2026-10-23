@@ -92,7 +92,7 @@ export function ServiceLandingPage({
 				image={image}
 				imageAlt={service.imageAlt ?? service.title}
 				parent={{ href: "/services", label: "Services" }}
-				title={service.title}
+				title={service.heroTitle ?? service.title}
 				variant="service"
 			/>
 
