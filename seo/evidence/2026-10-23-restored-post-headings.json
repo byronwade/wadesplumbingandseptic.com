@@ -132,7 +132,7 @@
 		"page_errors": 0,
 		"heading_order_violations": 0,
 		"axe_states_with_violations": 4,
-		"axe_note": "scrollable-region-focusable on .table-scroll in should-you-call-a-plumber-or-fix-it-yourself and water-softeners-vs-whole-house-filtration at 320px@200%, both themes; reproduced on the saved baseline HTML, so it predates this change",
-		"screenshots_reviewed": "plumbing-terms, water-heater, importance-of-maintenance at 1280px and 390px, light and dark (12)"
+		"axe_note": "scrollable-region-focusable on .table-scroll in should-you-call-a-plumber-or-fix-it-yourself and water-softeners-vs-whole-house-filtration at 320px@200%, both themes; reproduced on the saved HTML of the unchanged local baseline build (061f04b), so it predates this change",
+		"screenshots_reviewed": "12 captured (plumbing-terms, water-heater, importance-of-maintenance at 1280px and 390px, light and dark); 5 opened and reviewed: plumbing-terms 1280 light and 390 light, water-heater 1280 dark, importance 1280 light and 390 dark"
 	}
 }
