@@ -1,4 +1,4 @@
-import { Fragment, type ComponentPropsWithoutRef, type ReactNode } from "react"
+import type { ComponentPropsWithoutRef, ReactNode } from "react"
 
 import { contactInfo } from "@/lib/contact"
 import { cn } from "@/lib/utils"
@@ -6,18 +6,20 @@ import { cn } from "@/lib/utils"
 type ContactKind = "phone" | "email" | "vcard"
 
 /**
- * The business email with wrap points only after "@" and before each dot. In a
- * column narrower than the address (a phone with enlarged text) it reads
- * "support@" above "wadesinc.io" instead of splitting a word. `<wbr>` adds no
- * characters, so copied text and the accessible name stay the plain address.
+ * The business email with one wrap point, right after "@". In a column
+ * narrower than the address (a phone with enlarged text) it reads "support@"
+ * above "wadesinc.io" instead of splitting a word. `<wbr>` adds no characters,
+ * so copied text and the accessible name stay the plain address.
  */
 export function EmailAddress() {
-	return contactInfo.email.split(/(?<=@)|(?=\.)/).map((part, index) => (
-		<Fragment key={index}>
-			{index > 0 ? <wbr /> : null}
-			{part}
-		</Fragment>
-	))
+	const at = contactInfo.email.indexOf("@") + 1
+	return (
+		<>
+			{contactInfo.email.slice(0, at)}
+			<wbr />
+			{contactInfo.email.slice(at)}
+		</>
+	)
 }
 
 function payloadFor(kind: ContactKind) {

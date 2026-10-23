@@ -396,7 +396,7 @@ export function HomeBelowFold() {
 								className="inline-flex min-h-11 min-w-0 items-center transition-colors hover:text-white"
 								kind="email"
 							>
-								{/* One text box so the wrap points stay inline, not flex items */}
+								{/* One text box, so the wrap point after @ is not a flex item */}
 								<span className="min-w-0 [overflow-wrap:anywhere]">
 									<EmailAddress />
 								</span>

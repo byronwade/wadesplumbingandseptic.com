@@ -18,9 +18,7 @@ import {
 import { contactInfo } from "../../lib/contact"
 import { siteConfig } from "../../lib/site"
 
-const wrappableEmail = contactInfo.email
-	.replace("@", "@<wbr/>")
-	.replaceAll(".", "<wbr/>.")
+const wrappableEmail = contactInfo.email.replace("@", "@<wbr/>")
 
 for (const [kind, href, label] of [
 	["phone", contactInfo.phoneHref, contactInfo.phoneDisplay],
@@ -66,11 +64,10 @@ test("visible phone and email text are usable links without hydration", () => {
 })
 
 // break-all split the address at any letter ("support@wadesin" / "c.io").
-test("the email wraps only after @ or before a dot, adding no characters", () => {
+test("the email wraps only after the @, adding no characters", () => {
 	const html = renderToStaticMarkup(createElement(EmailAddress))
 	assert.equal(html.replaceAll("<wbr/>", ""), contactInfo.email)
 	assert.equal(html, wrappableEmail)
-	assert.ok(html.includes("@<wbr/>"), html)
 	for (const name of [
 		"components/contact-cta.tsx",
 		"components/home-below-fold.tsx",
