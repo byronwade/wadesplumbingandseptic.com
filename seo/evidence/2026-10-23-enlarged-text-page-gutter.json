@@ -1,0 +1,114 @@
+{
+	"recorded_at": "2026-10-23",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production-build browser verification in headless Chrome 155, 200% text simulated by root font-size, not live production, ranking, indexing or Eve integration evidence.",
+	"base_commit": "eb9a8df762fbed5f20b2cc57f72e28203a83cd4e",
+	"change": {
+		"file": "app/globals.css",
+		"property": ":root --space-page-x",
+		"before": "clamp(min(1.25rem, 20px), 4vw, 2.5rem)",
+		"after": "clamp(clamp(min(12px, 1.25rem), 100vw - 15rem, min(1.25rem, 20px)), 4vw, 2.5rem)",
+		"normal_text": "identical gutter at 260px and wider (unit test 260 to 1600px)",
+		"200_percent_text": "gutter max(12px, 4vw) below about 490px: 12.8px at 320px, 15.6px at 390px (was 20px)"
+	},
+	"h1_geometry_before": {
+		"note": "320/390 at 200%: 277 broken title words; 66 over the line by under 0.5px (Plumbing 280.4px vs 280px), 39 over by up to 24px, 172 over by more than 24px (cannot fit at full size)"
+	},
+	"h1_probe": {
+		"before": {
+			"h1_states": 568,
+			"broken_words": 277,
+			"article_hero": 88,
+			"at_320": 220,
+			"at_390": 57,
+			"overflow": 0
+		},
+		"after": {
+			"h1_states": 568,
+			"broken_words": 189,
+			"article_hero": 71,
+			"at_320": 135,
+			"at_390": 54,
+			"overflow": 0
+		}
+	},
+	"sitewide_word_break_probe": {
+		"routes": 284,
+		"theme": "light",
+		"before": {
+			"broken_words": {
+				"320px@100%": 0,
+				"320px@200%": 744,
+				"390px@100%": 0,
+				"390px@200%": 136
+			},
+			"split_phones": {
+				"320px@100%": 0,
+				"320px@200%": 0,
+				"390px@100%": 0,
+				"390px@200%": 0
+			},
+			"overflow_states": 0,
+			"errors": 0
+		},
+		"after": {
+			"broken_words": {
+				"320px@100%": 0,
+				"320px@200%": 501,
+				"390px@100%": 0,
+				"390px@200%": 121
+			},
+			"split_phones": {
+				"320px@100%": 0,
+				"320px@200%": 0,
+				"390px@100%": 0,
+				"390px@200%": 0
+			},
+			"overflow_states": 0,
+			"errors": 0
+		}
+	},
+	"normal_text_geometry_identity": {
+		"routes": 284,
+		"widths": [260, 280, 320, 390, 768, 1280],
+		"identical_states": 1703,
+		"differing_states": 1,
+		"difference": "/service-areas at 320px during map load; identical in 5/5 alternating new/old comparisons after settling"
+	},
+	"acceptance": {
+		"node": "24.21.0",
+		"npm ci": 0,
+		"lint": 0,
+		"typecheck": 0,
+		"seo:check": "0 (191 tests, 0 failed)",
+		"build": "0 (564 pages)",
+		"format:check": 0
+	},
+	"mutation": "restoring the old gutter fails 'the page gutter gives enlarged text more room on phones' (28 pass / 1 fail)",
+	"screenshots": {
+		"glossary_plumbing_plumbing-trap-1280-100-dark-after.png": "a6bef38757182dcf",
+		"glossary_plumbing_plumbing-trap-1280-100-light-after.png": "445054f0875659c0",
+		"glossary_plumbing_plumbing-trap-320-200-dark-after.png": "1caeee4628fb2583",
+		"glossary_plumbing_plumbing-trap-320-200-dark-before.png": "f53da594753c93c8",
+		"glossary_plumbing_plumbing-trap-320-200-light-after.png": "7cc167433fec057f",
+		"glossary_plumbing_plumbing-trap-320-200-light-before.png": "0de0bc764558d1fb",
+		"glossary_plumbing_plumbing-trap-390-100-dark-after.png": "57b18261aaedb1df",
+		"glossary_plumbing_plumbing-trap-390-100-light-after.png": "ace610c484b4f349",
+		"santa-cruz-1280-100-dark-after.png": "7a6a2c7b4fea5591",
+		"santa-cruz-1280-100-light-after.png": "ea4c59d590c7b5b8",
+		"santa-cruz-320-200-dark-after.png": "f95805cb195af059",
+		"santa-cruz-320-200-dark-before.png": "75089eca8cb3e5b4",
+		"santa-cruz-320-200-light-after.png": "9dbb6d813b6e44d2",
+		"santa-cruz-320-200-light-before.png": "20878f817542c7ab",
+		"santa-cruz-390-100-dark-after.png": "6fd4253cadb62ec0",
+		"santa-cruz-390-100-light-after.png": "fc770a64c9a07111",
+		"the-benefits-of-hydro-jetting-1280-100-dark-after.png": "2f389235483e0990",
+		"the-benefits-of-hydro-jetting-1280-100-light-after.png": "8d1102b77f450522",
+		"the-benefits-of-hydro-jetting-320-200-dark-after.png": "533a3e966cafa3f5",
+		"the-benefits-of-hydro-jetting-320-200-dark-before.png": "d20602ce00303d9d",
+		"the-benefits-of-hydro-jetting-320-200-light-after.png": "5e0ceb935670bece",
+		"the-benefits-of-hydro-jetting-320-200-light-before.png": "5005f7f06b63f8fd",
+		"the-benefits-of-hydro-jetting-390-100-dark-after.png": "ceb63a71ab3a9b3d",
+		"the-benefits-of-hydro-jetting-390-100-light-after.png": "8dcbec4693dbdc55"
+	}
+}
