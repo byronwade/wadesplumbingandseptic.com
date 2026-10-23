@@ -75,6 +75,31 @@ assert.deepEqual(
 	["Initial Consultation", "Final Inspection"],
 )
 
+// Preserve an authored leading label separately from its explanation. Plain
+// bullets and label-only bullets retain their existing single text treatment.
+const labeledBullets = parseServiceSections(
+	[
+		"## Common Causes",
+		"",
+		"- **Tank Condition** We inspect the tank.",
+		"- **Pressure:** Check the pressure.",
+		"- **[Filter](/services/filter):** Clean the `filter`.",
+		"- __Drainfield__ Check for odors.",
+		"- Plain bullet.",
+		"- **Label only**",
+		"- Text with **emphasis** inside.",
+	].join("\n"),
+).sections[0]!.bullets
+assert.deepEqual(labeledBullets, [
+	{ text: "Tank Condition We inspect the tank.", label: "Tank Condition" },
+	{ text: "Pressure: Check the pressure.", label: "Pressure:" },
+	{ text: "Filter: Clean the filter.", label: "Filter:" },
+	{ text: "Drainfield Check for odors.", label: "Drainfield" },
+	{ text: "Plain bullet." },
+	{ text: "Label only" },
+	{ text: "Text with emphasis inside." },
+])
+
 const MARKDOWN_LEFTOVER = /\*\*|__|\\[\\`*_{}[\]()#+\-.!]|\]\(/
 const contentFiles = (dir: string): string[] =>
 	readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -110,7 +135,7 @@ for (const file of contentFiles("content")) {
 		const plain = [
 			section.heading,
 			...section.steps.map((step) => step.title),
-			...section.bullets,
+			...section.bullets.map((bullet) => bullet.text),
 		]
 		for (const text of plain) {
 			assert.ok(
