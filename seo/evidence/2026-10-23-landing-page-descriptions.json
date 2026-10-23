@@ -1,0 +1,67 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1023-111915-claude-1",
+	"collected_at": "2026-10-23T16:05:00Z",
+	"source": "repository and isolated local production build (Node v24.21.0, Next.js 16.3.0-preview.10)",
+	"source_url_or_tool": "npm acceptance commands, built HTML / search-index / llms comparison against a baseline build of ff1dc8b, Chromium/Playwright and axe-core",
+	"scope": "Internal campaign wording replaced in the description and lead line of four noindex ad landing pages; ci:content now rejects that wording",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "no credentials, personal records or connector responses retained",
+	"retention_class": "compact committed verification summary",
+	"sha256": {
+		"content/pages/failed-septic-repair-replacement-santa-cruz-county.md": "7922b6742034ed4f24805be56bae95269ace36efa0bc970d07e48708464a2a60",
+		"content/pages/plumbing-repair-services-santa-cruz-county.md": "31b6149adea94cf0885f5ce91bee2db77e5d83845d6463b2cda593b470e1fbb8",
+		"content/pages/water-main-sewer-line-repair-santa-cruz-county.md": "3cb386f90ff95959963133969179b3cbcb87c6bb8d05769cbce6143aba94b066",
+		"content/pages/engineered-septic-systems-santa-cruz-county.md": "ff5412e0e0c66c62615e61932b9e762541bf127b96d7f0c2a8eea91b977e6c71",
+		"scripts/ci/validate-content.mjs": "c78fbb4cba23a3c74db6a48e5ece5627b76246f925af2c9ba0f5dbaab9eb4d70"
+	},
+	"guard": {
+		"command": "npm run ci:content",
+		"before_content_fix": "4 errors, exactly the four landing pages, 0 other files of 157",
+		"after_content_fix": "passed, 157 files"
+	},
+	"acceptance": [
+		{ "command": "npm ci", "exit_code": 0 },
+		{ "command": "npm run lint", "exit_code": 0 },
+		{ "command": "npm run typecheck", "exit_code": 0 },
+		{
+			"command": "npm run seo:check",
+			"exit_code": 0,
+			"node_test_pass": 194,
+			"node_test_fail": 0
+		},
+		{ "command": "npm run build", "exit_code": 0, "static_pages": 564 }
+	],
+	"output_comparison": {
+		"html_pages_compared": 552,
+		"html_pages_changed": 4,
+		"changed_fields": "visible description text (hero lead and closing CTA), meta/og/twitter description, JSON-LD description only",
+		"links_changed": 0,
+		"jsonld_changed_outside_description": 0,
+		"llms_txt": "identical",
+		"llms_full_txt": "identical",
+		"sitemap_xml": "identical",
+		"robots_txt": "identical",
+		"search_index_entries_changed": 4
+	},
+	"browser": {
+		"routes": 3,
+		"states": 18,
+		"viewports": ["320px at 200% text", "390px", "1280px"],
+		"themes": ["light", "dark"],
+		"http_status": [200],
+		"axe_wcag_a_aa_violations": 0,
+		"horizontal_overflow": 0,
+		"page_errors": 0,
+		"internal_wording_visible": 0
+	},
+	"unchanged_claims_for_owner": [
+		"fast scheduling / Fast Local Scheduling",
+		"Phone calls are prioritized for fastest response",
+		"arrive promptly",
+		"1 to 3 days repair durations",
+		"trenchless technology / latest technology",
+		"years of experience",
+		"meets all local regulations"
+	]
+}
