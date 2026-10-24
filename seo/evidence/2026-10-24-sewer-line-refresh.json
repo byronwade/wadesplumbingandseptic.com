@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-sewer-line-refresh-2026-10-24",
+	"collected_at": "2026-10-24T21:35:33+00:00",
+	"source": "santa-cruz-county-public-works-and-city-of-santa-cruz",
+	"source_url_or_tool": "https://cdi.santacruzcountyca.gov/PublicWorks/SewerWater/SewerLateralResources.aspx",
+	"scope": "Substantive refresh of a 700 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "8e6392b366140de2744f14848f383af5cc70aec3f7b878811dd6ab2d77fe2375",
+	"payload": {
+		"post": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsupported 'fraction of the time' trenchless claim, a utility bill savings claim, an 'inspection services' link pointing to /service-areas, generic trust copy, a seasonal tip referring to summer rains, and internal links presented as sources.",
+				"inference_limit": "Links now point to existing service pages; no new service claimed.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "county-lateral-resources",
+				"source_url": "https://cdi.santacruzcountyca.gov/PublicWorks/SewerWater/SewerLateralResources.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Owners own and are responsible for the lateral from the public main connection to the building, including cleaning, repairs, backflow devices and overflow costs; video inspection required at escrow or sale, remodels increasing fixture units or ADU connections, new buildings, and more than two overflows in 12 months.",
+				"inference_limit": "Santa Cruz County Sanitation District guidance.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "county-lateral-faq",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/FAQs%20-%20lateral%20program%20190913.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "By default the seller is responsible for inspection and repairs before escrow closes; only licensed plumbing contractors inspect; defects include fractured or deteriorated pipe, roots, infiltration, out of round pipe, sags, and Orangeburg, asbestos cement or cast iron; repairs need a no-cost sanitary sewer connection permit and inspection before cover; cleanout required before close of escrow; laterals under 20 years old inspected at install may be exempt.",
+				"inference_limit": "FAQ dated 2019-09-13; post advises confirming current rules.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "county-transfer-form",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/MASTER%20-%20Transfer%20of%20Responsibility%20Form%202023.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "With County approval, the buyer may assume required lateral repairs and device installations (cleanout, any required backflow device) and must complete them within 90 calendar days of approval; the seller still provides the inspection video, County-reviewed inspection form and County comments.",
+				"inference_limit": "Alternative to the default pre-closing requirement; requires agreement of both parties and County approval.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "city-sewer-system",
+				"source_url": "https://www.santacruzca.gov/Government/City-Departments/Public-Works/Wastewater/City-Sanitary-Sewer-System",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Private lateral maintenance has always been the property owner's responsibility, including the portion under the city street and the connection to the main; lateral should have an accessible cleanout; owner liable for spills from building sewer failure; time of sale rules on the separate lateral ordinance page.",
+				"inference_limit": "City of Santa Cruz only.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; all linked services and posts exist.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}

@@ -4041,44 +4041,74 @@
 		},
 		{
 			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/pipe-leak-solutions-santa-cruz-septic",
+			"anchor": "pipe leak guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/the-benefits-of-hydro-jetting",
+			"anchor": "hydro jetting guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/slow-drains-solutions-santa-cruz",
+			"anchor": "slow drain solutions",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/service-offerings/sewer-line-inspection",
+			"anchor": "sewer line inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/service-offerings/main-line-cleanout-installation",
+			"anchor": "main line cleanout installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/service-offerings/hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/service-offerings/pipe-repair-and-replacement",
-			"anchor": "sewer line repair",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/service-offerings/trenchless-sewer-line-replacement",
+			"anchor": "trenchless sewer line replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic and drain prep checklist",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "comprehensive inspection services",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/sewer-line-repair-essentials-santa-cruz",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/sewer-line-repair-essentials-santa-cruz",
-			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
-			"anchor": "Ben Lomond",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/sewer-line-repair-essentials-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/sewer-line-repair-essentials-santa-cruz",
-			"to": "/service-offerings/pipe-repair-and-replacement",
-			"anchor": "Plumbing Repair Services, Santa Cruz County",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/contact",
-			"anchor": "Get a Free Quote",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
