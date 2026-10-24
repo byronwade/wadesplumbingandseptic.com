@@ -4190,6 +4190,114 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/main-line-cleanout-installation",
+			"anchor": "main line cleanout installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "clearing a clogged drain",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/slow-drains-solutions-santa-cruz",
+			"anchor": "slow drain solutions",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/drain-line-inspection",
+			"anchor": "drain line inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/trenchless-sewer-line-replacement",
+			"anchor": "trenchless sewer line replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/sewer-line-repair-essentials-santa-cruz",
+			"anchor": "sewer line repair essentials",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"anchor": "avoiding holiday plumbing problems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/high-pressure-jetting-for-septic-lines",
+			"anchor": "high pressure jetting for septic lines",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/septic-leach-field-repairs-santa-cruz",
+			"anchor": "leach field repair guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/commercial-drain-cleaning",
+			"anchor": "commercial drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/grease-trap-cleaning",
+			"anchor": "grease trap cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/warranties",
 			"to": "/contact",
 			"anchor": "Contact us",

@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-hydro-jetting-refresh-2026-10-24",
+	"collected_at": "2026-10-24T21:21:28+00:00",
+	"source": "clemson-hgic-santa-cruz-sanitation-epa",
+	"source_url_or_tool": "https://hgic.clemson.edu/factsheet/f-o-g-fats-oils-and-grease-pollution/",
+	"scope": "Substantive refresh of a 680 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "fc752d596e4fd58e99cea8a3649392a5dbef1dc0b8260cce4f271491632af19b",
+	"payload": {
+		"post": "content/posts/the-benefits-of-hydro-jetting.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed claims that jetting is safe for any pipe material and leaves pipes practically like new, an unsourced annual or twice yearly schedule, a 4,000 PSI figure, a C-42 license line for drain work, a phone number outside the business-hours line, and an unrelated wastewater warning sign image.",
+				"inference_limit": "Post now says jetting suits intact pipes and that damaged pipes need repair; no new service claimed.",
+				"collected_at": "2026-10-24T21:21:28+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "clemson-fog",
+				"source_url": "https://hgic.clemson.edu/factsheet/f-o-g-fats-oils-and-grease-pollution/",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "FOG solidifies and accumulates in sewer pipes; cites EPA that grease is the most common cause (47 percent) of reported blockages; hot water and soap do not eliminate FOG.",
+				"inference_limit": "University extension fact sheet citing a 2012 EPA pretreatment document.",
+				"collected_at": "2026-10-24T21:21:28+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "sccsd-fog",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Env-FOG-Fats-Oil-Grease.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Santa Cruz County Sanitation District: never pour FOG down sinks or toilets; sewer spills pollute Monterey Bay; cool and bin grease, scrape plates, limit disposal use, use sink strainers.",
+				"inference_limit": "Local residential guidance.",
+				"collected_at": "2026-10-24T21:21:28+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Eliminate or limit garbage disposal use; never pour cooking oil or grease down the drain.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T21:21:28+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; all linked services and posts exist.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T21:21:28+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}
