@@ -73,7 +73,7 @@ This is the part many softener guides skip. Santa Cruz County's sewage disposal 
 County Environmental Health explains why. Its handout on softener discharge warns that the brine can harm the bacteria that treat waste in the tank, contribute to clogging in the leach field, and add flow that can lead to surfacing effluent. Its guidance, in order of preference:
 
 1. **No water softener.** No brine is produced. Cleaning products can handle hard water deposits on fixtures.
-2. **An exchange tank softener.** The softener connects to a separate tank that stores the brine and is swapped out on a regular basis, so nothing is discharged on the property.
+2. **An exchange tank softener.** A service company swaps out the softener tank when it is used up and regenerates it at its own facility, so no brine is produced or discharged on the property. This is different from a softener that regenerates itself at home.
 3. **A drywell or subsurface system separate from the septic system** for any brine that must be discharged.
 
 The handout also says never to discharge brine onto the ground.
