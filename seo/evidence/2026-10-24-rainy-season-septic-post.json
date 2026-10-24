@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-rainy-season-septic-post-2026-10-24",
+	"collected_at": "2026-10-24T18:51:57.408254+00:00",
+	"source": "us-epa-santa-cruz-county-environmental-health-and-repository-facts",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "New evidence-backed post planned in seo/manifests/local-demand-calendar.json (season-rainy-season-prep-2026)",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "e938a32d628dbe3c1bd2f43a5ea8b2283ae6b60a35f446b820985bcbd20afc7d",
+	"payload": {
+		"post": "content/posts/rainy-season-septic-and-drain-prep-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"summary": "Keep roof drains, sump pumps and rainwater drainage away from the drainfield; excess water slows or stops treatment. Typical inspection every three years, pumping every three to five years, alternative systems with mechanical parts generally inspected yearly. A leaky or running toilet can add as much as 200 gallons per day. Spread laundry across the week.",
+				"inference_limit": "General national homeowner guidance; not a Wade qualification, local code requirement, timing or price.",
+				"collected_at": "2026-10-24T18:51:57.408254+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "New post: rainy-season septic and drain prep"
+			},
+			{
+				"id": "epa-after-flood",
+				"source_url": "https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"summary": "Do not pump a tank during flooded or saturated drainfield conditions (tank can try to float and damage pipes). High water table raises backup risk; relieve pressure by using the system less. Do not use the system until drainfield water is below the level around the house. Avoid compacting saturated soil. Test flooded wells before drinking. Only trained specialists should open, clean or repair tanks.",
+				"inference_limit": "General national post-flood guidance; not a local flood forecast or Wade service claim.",
+				"collected_at": "2026-10-24T18:51:57.408254+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "New post: rainy-season septic and drain prep"
+			},
+			{
+				"id": "scceh-owts-repair",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"summary": "Santa Cruz County Environmental Health administers OWTS repair and upgrade standards.",
+				"inference_limit": "Cited only as the local authority for septic questions; no permit or approval claim.",
+				"collected_at": "2026-10-24T18:51:57.408254+00:00",
+				"classification": "LIVE_VERIFIED",
+				"scope": "New post: rainy-season septic and drain prep"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts, lib/llms.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"summary": "Hours Monday to Friday 9:00 AM to 5:00 PM; free quotes; flat-rate pricing quoted on site; septic tank pumping not offered.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T18:51:57.408254+00:00",
+				"classification": "MOCK_VERIFIED",
+				"scope": "New post: rainy-season septic and drain prep"
+			}
+		]
+	}
+}

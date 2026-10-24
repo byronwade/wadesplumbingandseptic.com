@@ -6,9 +6,13 @@
 	"redirect_sources": [],
 	"pages_with_json_ld": [
 		"/",
+		"/category/[slug]",
+		"/expert-tips",
 		"/glossary",
 		"/service-area/[city]/[service]",
-		"/service-areas"
+		"/service-areas",
+		"/service-category/[slug]",
+		"/services"
 	],
 	"findings": [
 		{
@@ -265,6 +269,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/rainy-season-septic-and-drain-prep-santa-cruz"
 		},
 		{
 			"severity": "info",

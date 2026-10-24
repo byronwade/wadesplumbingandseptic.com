@@ -591,6 +591,17 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"source_path": "content/posts/rainy-season-septic-and-drain-prep-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/rainy-season-septic-and-drain-prep-santa-cruz"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/rebates",
 			"source_path": "content/pages/rebates.md",
 			"kind": "STATIC_ROUTE",
