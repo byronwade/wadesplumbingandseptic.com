@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-pipe-leak-refresh-2026-10-24",
+	"collected_at": "2026-10-24T20:53:31.492677+00:00",
+	"source": "epa-septic-and-watersense",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of a 593 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "6432ddd669843d9fafedbb21d1950268c8dc45de2d2b25169b18d8bf24d56358",
+	"payload": {
+		"post": "content/posts/pipe-leak-solutions-santa-cruz-septic.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed the unsourced 'small leak can waste hundreds of gallons' claim, an 'inspection services' link pointing to /service-areas, and a sentence saying pipe leak repair is not a standalone service, which contradicted the existing Pipe Repair and Replacement and Leak Detection service pages.",
+				"inference_limit": "Links now point to existing service pages; no new service claimed.",
+				"collected_at": "2026-10-24T20:53:31.492677+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-how-septic-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "All household water leaves through one main drainage pipe into the septic tank; effluent then flows to the drainfield.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T20:53:31.492677+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "A single leaky or running toilet can add as much as 200 gallons per day; do not park or drive on the drainfield; plant trees an appropriate distance; only human waste and toilet paper in the toilet.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T20:53:31.492677+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-watersense-leaks",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Average household leaks can waste more than 9,300 gallons a year; meter test over two hours; toilet dye test within 10 minutes.",
+				"inference_limit": "National homeowner guidance.",
+				"collected_at": "2026-10-24T20:53:31.492677+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; all linked services exist under content/services.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T20:53:31.492677+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}
