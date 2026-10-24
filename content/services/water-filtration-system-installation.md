@@ -60,7 +60,7 @@ Improve your water quality today with our trusted **water filtration system inst
 
 At Wade's Plumbing & Septic, we proudly serve the communities within Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our expertise in enhancing home water quality is backed by our commitment to providing top-notch services across the region.
 
-Our team is fully licensed, holding a C-42 license for California, ensuring professional and reliable service. We are available to assist you during our regular office hours, Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
+Our team is fully licensed, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring professional and reliable service. We are available to assist you during our regular office hours, Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Wade's Plumbing & Septic is dedicated to improving water quality for homes throughout Santa Cruz County, CA, with a focus on delivering trusted and efficient solutions tailored to your needs.
 
@@ -72,7 +72,7 @@ Experience the benefits of clean, safe drinking water with our expert water filt
 
 [Call Us Now](tel:+18312254344)
 
-Wade's Plumbing & Septic is a licensed contractor (C-42) ensuring top-quality service and expertise.
+Wade's Plumbing & Septic is a licensed California contractor, CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring top-quality service and expertise.
 
 ## Service Areas for Water Filtration System Installation in Santa Cruz County
 

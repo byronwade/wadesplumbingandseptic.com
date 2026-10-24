@@ -82,6 +82,28 @@ for (const text of [
 	})
 }
 
+for (const text of [
+	"Licensed Contractor: C-42 license for California",
+	"**Contractor License:** C-42 (Sanitation System)",
+	"We are licensed under the C-42 classification in California.",
+	"Our team holds a C-42 license for California.",
+	"(C-42 license for CA / state license for GA)",
+]) {
+	test(`rejects incomplete license claim: ${text}`, () => {
+		assert.ok(businessFactIssues(text).includes("incomplete license claim"))
+	})
+}
+
+for (const text of [
+	"Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
+	"We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).",
+	"Septic work in California falls under the C-42 Sanitation System license classification.",
+]) {
+	test(`allows complete or educational license copy: ${text}`, () => {
+		assert.ok(!businessFactIssues(text).includes("incomplete license claim"))
+	})
+}
+
 test("conversion fallback never generates a customer testimonial", () => {
 	const conversion = normalizeConversion(null, {
 		title: "Drain cleaning",

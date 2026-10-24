@@ -78,7 +78,7 @@ Choosing Wade's Plumbing & Septic ensures you're working with a licensed, experi
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and surrounding communities. Our team is dedicated to providing reliable leak detection for septic systems, ensuring peace of mind for homeowners and businesses alike.
 
-We are fully licensed under the C-42 contractor license for California, ensuring professional and compliant services. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
+We are fully licensed under California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring professional and compliant services. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Expert Leak Detection
 
@@ -88,4 +88,4 @@ Detect and resolve septic leaks swiftly with our cutting-edge technology and exp
 
 [Call Us Now](tel:+18312254344)
 
-We are a licensed contractor (C-42), ensuring quality and compliance with local standards.
+We are a licensed California contractor, CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring quality and compliance with local standards.

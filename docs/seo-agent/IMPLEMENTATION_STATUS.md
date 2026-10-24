@@ -1323,3 +1323,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: substantive refresh of `/should-you-repair-or-replace-your-water-heater` at its existing URL. Original date kept, `updated: 2026-10-24` added. Removed an unsourced "up to 60% less electricity" heat pump claim, unsourced lifespan and repair age windows, "unlimited hot water" for tankless, a tax credit claim, an install time, a C-42 license line for water heater work, a septic excavation image and a broken list that turned a heading into a bullet. New content covers warning signs, repair versus replace criteria, efficient options (DOE and ENERGY STAR), the California water heater strapping law (Health and Safety Code 19211) and maintenance, with FAQ and sources. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: sources `LIVE_VERIFIED` on 2026-10-24 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-24-water-heater-refresh.json`.
+
+## 2026-10-24: Sitewide license claim accuracy
+
+- Scope: 71 existing pages, posts and service files named only a C-42 license (including on plumbing topics), and two said "state license for GA". Each now cites California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), matching `lib/site.ts`. Added an `incomplete license claim` rule to `scripts/ci/business-facts.ts` that flags first-person C-42 license claims without C-36 and any Georgia license claim, with tests. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-24-license-claims.json`.

@@ -74,7 +74,7 @@ At Wade's Plumbing & Septic, we proudly offer expert toilet repair for septic sy
 - Felton
 - Boulder Creek
 
-We are fully licensed with a C-42 contractor license for California, ensuring top-quality service and expertise. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
+We are fully licensed with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring top-quality service and expertise. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you are in the heart of Santa Cruz or in the surrounding areas, you can trust Wade's Plumbing & Septic for reliable and professional service.
 
@@ -88,4 +88,4 @@ Ensure your bathroom fixtures operate efficiently with our trusted repair servic
 
 ### Trusted Septic Toilet Repair in Santa Cruz County
 
-Licensed Contractor: C-42 (CA)
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

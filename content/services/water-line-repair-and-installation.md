@@ -84,7 +84,7 @@ Choosing Wade's Plumbing & Septic for your **water line repair in Santa Cruz** C
 
 At Wade's Plumbing & Septic, we proudly offer Premium Water Line Solutions to the residents and businesses of Santa Cruz County, CA. Our expert services extend to the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and the surrounding areas.
 
-As a licensed contractor, we hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety.
+As a licensed contractor, we hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our work meets the highest standards of quality and safety.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
@@ -98,4 +98,4 @@ Ensure the integrity of your water supply with our expert solutions tailored for
 
 ### Why Santa Cruz County Trusts Wade's Plumbing & Septic
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

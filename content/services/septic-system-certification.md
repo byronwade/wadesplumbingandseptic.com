@@ -71,4 +71,4 @@ Ensure your septic system complies with local regulations and operates efficient
 
 ## Trusted by Santa Cruz County Residents for Septic Certification Compliance
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

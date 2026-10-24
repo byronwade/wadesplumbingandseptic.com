@@ -117,7 +117,7 @@ Contact Wade's Plumbing & Septic today to schedule your new septic installation 
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, California area, including the communities of Santa Cruz, Watsonville, Scotts Valley, and Capitola. Our team is dedicated to providing top-notch septic installation services to homeowners throughout the region.
 
-Our commitment to quality is backed by our C-42 contractor license in California, ensuring that all our installations meet the highest standards of safety and efficiency.
+Our commitment to quality is backed by our California contractor license, CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all our installations meet the highest standards of safety and efficiency.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

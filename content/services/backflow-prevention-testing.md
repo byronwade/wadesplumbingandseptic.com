@@ -80,4 +80,4 @@ Safeguard your home's drinking water with our expert backflow testing services i
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

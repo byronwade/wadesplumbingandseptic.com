@@ -78,7 +78,7 @@ If you're ready to enhance your kitchen with a new garbage disposal, contact Wad
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Scotts Valley, and Capitola. Our team is committed to delivering top-quality garbage disposal installation services to all local residents.
 
-Contractor License: C-42 license for California
+Contractor License: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -92,4 +92,4 @@ Experience seamless waste management with our expert installation services, ensu
 
 [Call Us Now](tel:+18312254344)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

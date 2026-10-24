@@ -64,7 +64,7 @@ Our expert team at Wade's Plumbing & Septic is ready to detect hidden water leak
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County community, including Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team is fully equipped to handle all your plumbing and septic needs with precision and care.
 
-As a licensed contractor (C-42 license for CA / state license for GA), we ensure that all services are
+As a licensed contractor holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), we ensure that all services are
 
 ## Frequently Asked Questions
 

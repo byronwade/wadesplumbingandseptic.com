@@ -114,7 +114,7 @@ Ensure your septic system remains safe and functional during flood conditions wi
 
 ## Serving Santa Cruz County, CA
 
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), and [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services). We are licensed under the C-42 classification in California, ensuring our expertise and compliance with all local regulations.
+At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including communities such as [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), and [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services). We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -122,6 +122,6 @@ For a complete overview of our service areas, please visit our [main service-are
 
 ### Flood-Proof Your Septic System in Santa Cruz County, CA
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.

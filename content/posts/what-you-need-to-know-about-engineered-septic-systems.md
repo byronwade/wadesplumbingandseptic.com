@@ -164,7 +164,7 @@ Discover the benefits of engineered septic systems tailored for Santa Cruz Count
 
 Wade's Plumbing & Septic proudly serves the communities of Santa Cruz, Scotts Valley, Capitola, Watsonville, Aptos, and the surrounding areas. Our team is committed to providing expert engineered septic system solutions throughout Santa Cruz County.
 
-As a licensed contractor (C-42 license for CA), we ensure that all services are performed to the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
+As a licensed contractor holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), we ensure that all services are performed to the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 [Contact us](/contact) today to learn more about how we can assist with your septic system needs in Santa Cruz County, CA.
 

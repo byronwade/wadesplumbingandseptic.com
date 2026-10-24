@@ -57,4 +57,4 @@ Ensure the smooth operation of your septic system with our reliable alarm instal
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

@@ -54,6 +54,6 @@ Ensure uninterrupted operations with our expert drain cleaning services tailored
 
 [Call Us](tel:+18312254344)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 Scheduling: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.

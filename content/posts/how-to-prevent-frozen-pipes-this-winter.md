@@ -84,7 +84,7 @@ Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz, Watson
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-We holds a C-42 contractor license for California, ensuring you receive professional and certified service every time.
+We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring you receive professional and certified service every time.
 
 ## Frequently Asked Questions
 

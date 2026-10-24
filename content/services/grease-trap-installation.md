@@ -76,4 +76,4 @@ Ensure your kitchen runs smoothly with expert grease trap installation from Wade
 
 Our grease trap installation services are trusted by businesses across Santa Cruz County, ensuring the highest standards of quality and reliability.
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

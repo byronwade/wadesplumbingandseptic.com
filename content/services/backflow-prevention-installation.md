@@ -83,4 +83,4 @@ Ensure the safety and purity of your water supply with our professional backflow
 
 [Call Us](tel:+18312254344)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

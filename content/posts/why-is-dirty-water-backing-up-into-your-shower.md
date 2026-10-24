@@ -78,7 +78,7 @@ Experience quick and reliable solutions for shower backups in Santa Cruz County 
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is dedicated to providing expert plumbing solutions to solve shower backup issues and more.
 
-**Contractor License:** C-42 license for CA / state license for GA
+**Contractor License:** California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

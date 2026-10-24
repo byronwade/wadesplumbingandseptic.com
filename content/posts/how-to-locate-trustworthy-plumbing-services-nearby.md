@@ -119,7 +119,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area,
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
-Wade's Plumbing & Septic holds a C-42 contractor license for California, ensuring our services meet all regulatory standards and provide peace of mind to our valued customers.
+Wade's Plumbing & Septic holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring our services meet all regulatory standards and provide peace of mind to our valued customers.
 
 ## Frequently Asked Questions
 

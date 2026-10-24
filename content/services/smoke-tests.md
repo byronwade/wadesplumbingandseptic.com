@@ -94,8 +94,8 @@ At Wade's Plumbing & Septic, we proudly offer Efficient Septic Smoke Tests acros
 - [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 
-Our team is licensed under C-42 for California, ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas).
+Our team is licensed under California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring professional and reliable service. We are available during office hours from Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. For more details on our service areas, visit our [main service-area overview](/service-areas).
 
 ## Why Santa Cruz County Trusts Us for Smoke Tests
 
-**Licensed Contractor:** C-42 License for California
+**Licensed Contractor:** California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

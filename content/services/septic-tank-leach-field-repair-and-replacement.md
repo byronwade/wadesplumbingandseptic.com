@@ -86,7 +86,7 @@ Contact us today to schedule your septic leach field repair or to learn more abo
 
 Wade's Plumbing & Septic is proud to offer Expert Septic Leach Field Repair services to the communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos.
 
-Our team is fully licensed and insured, holding a C-42 license for California, ensuring that your septic needs are handled by qualified professionals.
+Our team is fully licensed and insured, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that your septic needs are handled by qualified professionals.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -118,4 +118,4 @@ Our certified team ensures your septic system operates efficiently, preventing c
 
 </
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

@@ -47,6 +47,24 @@ export function businessFactIssues(text: string): string[] {
 	) {
 		issues.push("wrong founding year")
 	}
+	// CSLB #1087260 covers C-36 Plumbing and C-42 Sanitation System; a claim
+	// naming only C-42 understates the license, and there is no Georgia license.
+	if (/\b(?:state )?licen[cs]e(?:d)? (?:for|in) (?:GA|Georgia)\b/i.test(text)) {
+		issues.push("incomplete license claim")
+	}
+	for (const rawLine of text.split("\n")) {
+		const line = rawLine.replace(/\*\*|__/g, "")
+		if (
+			/\bC-42\b/.test(line) &&
+			!/\bC-36\b/.test(line) &&
+			/\blicen[cs]|classification/i.test(line) &&
+			/\b(?:we|our|us|Wade's|Wade’s)\b|^\s*(?:[-*]\s*)?(?:Licensed Contractor|Contractor License):/i.test(
+				line,
+			)
+		) {
+			issues.push("incomplete license claim")
+		}
+	}
 	const unbolded = text.replace(/\*\*|__/g, "")
 	if (septicPumpingOffer.some((pattern) => pattern.test(unbolded))) {
 		issues.push("septic pumping offer")

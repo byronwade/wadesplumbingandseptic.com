@@ -79,7 +79,7 @@ Trust Wade's Plumbing & Septic for expert solutions in Santa Cruz County, CA.
 
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic proudly serves the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. As a licensed plumbing and septic service provider, we hold a C-42 license for California, ensuring that all our work meets state standards and regulations.
+Wade's Plumbing & Septic proudly serves the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. As a licensed plumbing and septic service provider, we hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all our work meets state standards and regulations.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

@@ -85,7 +85,7 @@ Ensure the longevity and efficiency of your septic system with expert repairs fr
 
 At Wade's Plumbing & Septic, we are proud to offer our expert drain field repair services throughout Santa Cruz County, California. Our service area includes the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more.
 
-We hold a C-42 license for California, ensuring that our work meets the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
+We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our work meets the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
 Whether you're in need of immediate assistance or planning a future project, Wade's Plumbing & Septic is here to serve the Santa Cruz County community with reliable and professional service.
 
