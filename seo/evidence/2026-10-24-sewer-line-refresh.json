@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "851bccb54bfc117d00631bf531683cc4773f8354c9b362ffb96569f3f7c28c73",
+	"sha256": "8e6392b366140de2744f14848f383af5cc70aec3f7b878811dd6ab2d77fe2375",
 	"payload": {
 		"post": "content/posts/sewer-line-repair-essentials-santa-cruz.md",
 		"observations": [
@@ -37,8 +37,18 @@
 				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/FAQs%20-%20lateral%20program%20190913.pdf",
 				"source_tier": "GOVERNMENT_OR_STANDARD",
 				"classification": "LIVE_VERIFIED",
-				"summary": "Seller responsible for inspection and repairs before escrow closes; only licensed plumbing contractors inspect; defects include fractured or deteriorated pipe, roots, infiltration, out of round pipe, sags, and Orangeburg, asbestos cement or cast iron; repairs need a no-cost sanitary sewer connection permit and inspection before cover; cleanout required before close of escrow; laterals under 20 years old inspected at install may be exempt.",
+				"summary": "By default the seller is responsible for inspection and repairs before escrow closes; only licensed plumbing contractors inspect; defects include fractured or deteriorated pipe, roots, infiltration, out of round pipe, sags, and Orangeburg, asbestos cement or cast iron; repairs need a no-cost sanitary sewer connection permit and inspection before cover; cleanout required before close of escrow; laterals under 20 years old inspected at install may be exempt.",
 				"inference_limit": "FAQ dated 2019-09-13; post advises confirming current rules.",
+				"collected_at": "2026-10-24T21:35:33+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "county-transfer-form",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/MASTER%20-%20Transfer%20of%20Responsibility%20Form%202023.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "With County approval, the buyer may assume required lateral repairs and device installations (cleanout, any required backflow device) and must complete them within 90 calendar days of approval; the seller still provides the inspection video, County-reviewed inspection form and County comments.",
+				"inference_limit": "Alternative to the default pre-closing requirement; requires agreement of both parties and County approval.",
 				"collected_at": "2026-10-24T21:35:33+00:00",
 				"scope": "Refresh of existing thin post"
 			},

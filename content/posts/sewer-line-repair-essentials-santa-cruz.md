@@ -49,9 +49,10 @@ County Public Works requires a sewer lateral video inspection in the Santa Cruz 
 
 The county's lateral program FAQ adds some details for sales:
 
-- The seller is responsible for the inspection and any required repairs, and they must be done before escrow closes.
+- By default, the seller is responsible for the inspection and any required repairs, and they must be done before escrow closes.
 - Only licensed California plumbing contractors may perform the inspection. The plumber records a video and an inspection report and submits them to the county.
 - A cleanout is required before close of escrow if the lateral does not have one.
+- Buyer and seller can instead use the county's transfer of responsibility form. With county approval, the buyer takes on the required repairs and devices, such as the cleanout, and must finish them within 90 calendar days of approval. The seller still provides the inspection video and the county reviewed inspection form.
 - A lateral less than 20 years old that was inspected and approved when installed may be exempt, if the county accepts the proof.
 
 The City of Santa Cruz has its own sewer lateral ordinance with time of sale requirements. Confirm current rules with your provider before listing a home.
@@ -81,7 +82,7 @@ Our post on [slow drain solutions](/slow-drains-solutions-santa-cruz) explains h
 
 ## How sewer lines are inspected and repaired
 
-**Inspection.** A camera on a cable travels down the line through a cleanout and records cracks, roots, sags and separated joints, along with their distance from the access point. See [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [sewer line inspection](/service-offerings/sewer-line-inspection). If there is no cleanout, a [main line cleanout installation](/service-offerings/main-line-cleanout-installation) makes inspection and future maintenance much easier, and it is required in the county district before a sale closes.
+**Inspection.** A camera on a cable travels down the line through a cleanout and records cracks, roots, sags and separated joints, along with their distance from the access point. See [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [sewer line inspection](/service-offerings/sewer-line-inspection). If there is no cleanout, a [main line cleanout installation](/service-offerings/main-line-cleanout-installation) makes inspection and future maintenance much easier, and in the county district it is required before a sale closes unless the buyer takes on the work through an approved transfer of responsibility.
 
 **Repair options**, based on what the camera shows:
 
@@ -110,7 +111,7 @@ In the Santa Cruz County Sanitation District and the City of Santa Cruz, the pro
 
 ### Do I need a sewer lateral inspection to sell my house?
 
-In the Santa Cruz County Sanitation District, yes. A licensed plumber records a video inspection, and any required repairs must be done before escrow closes. The City of Santa Cruz has its own time of sale ordinance.
+In the Santa Cruz County Sanitation District, yes. A licensed plumber records a video inspection, and any required repairs must be done before escrow closes unless the county approves a transfer of responsibility, which gives the buyer 90 days after approval to complete them. The City of Santa Cruz has its own time of sale ordinance.
 
 ### Does a sewer line repair need a permit?
 
@@ -124,6 +125,7 @@ No. It depends on the pipe's condition, layout and access. A camera inspection s
 
 - Santa Cruz County Public Works, [Sewer Lateral Resources](https://cdi.santacruzcountyca.gov/PublicWorks/SewerWater/SewerLateralResources.aspx)
 - Santa Cruz County Sanitation District, [Sewer Lateral FAQ](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/FAQs%20-%20lateral%20program%20190913.pdf)
+- Santa Cruz County Public Works, [Sewer Lateral Transfer of Responsibility Form](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/MASTER%20-%20Transfer%20of%20Responsibility%20Form%202023.pdf)
 - City of Santa Cruz, [City Sanitary Sewer System](https://www.santacruzca.gov/Government/City-Departments/Public-Works/Wastewater/City-Sanitary-Sewer-System)
 
 ## Need a sewer line inspected or repaired?
