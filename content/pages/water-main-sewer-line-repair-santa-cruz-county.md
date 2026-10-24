@@ -46,11 +46,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the water main and sewer line repair service?
 
 During the repair service, our team will first conduct a thorough inspection to identify the issue. We then use advanced techniques, including trenchless technology, to minimize disruption to your property. Our professionals ensure the site is clean and restored upon completion.
-
-### How long does a typical water main and sewer line repair take?
-
-The timeline for water main and sewer line repairs can vary depending on the issue's severity. Most repairs are completed within 1 to 3 days. Our team at Wade's Plumbing & Septic works efficiently to restore your service as quickly as possible.
-
-### Why choose Wade's Plumbing & Septic for your repair needs in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. Our professional team is dedicated to providing reliable, high-quality service using the latest technology, ensuring your water main and sewer lines are repaired efficiently and effectively.

@@ -53,11 +53,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the service process with Wade's Plumbing & Septic?
 
 Our team of professionals will conduct a thorough assessment, explain the necessary steps, and keep you informed throughout the service process. We prioritize minimizing disruptions to your daily routine.
-
-### How long does a typical plumbing or septic service take in Santa Cruz County?
-
-Service timelines vary depending on the complexity of the job. Most standard services are completed within a day, while more complex projects may take longer. We ensure timely and efficient service delivery.
-
-### Why choose Wade's Plumbing & Septic for your needs in Santa Cruz County, CA?
-
-Wade's Plumbing & Septic combines local expertise with a commitment to quality and customer satisfaction. Our licensed professionals use the latest technology to deliver reliable and efficient service.

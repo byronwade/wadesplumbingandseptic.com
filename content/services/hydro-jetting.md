@@ -68,11 +68,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the hydro jetting service?
 
 During the hydro jetting service, our skilled technicians will use high-pressure water jets to thoroughly clean your drain lines. This process effectively removes blockages and buildup, ensuring optimal flow and function.
-
-### How long does a typical hydro jetting service take?
-
-A typical hydro jetting service can take anywhere from one to three hours, depending on the severity of the blockage and the length of the drain system. Our team works efficiently to minimize disruption to your schedule.
-
-### Why choose Wade's Plumbing & Septic for hydro jetting in Santa Cruz County?
-
-Wade's Plumbing & Septic offers reliable and expert hydro jetting services, backed by years of experience and a commitment to customer satisfaction. We are a trusted local provider serving Santa Cruz County with a focus on quality and professionalism.

@@ -46,11 +46,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during a plumbing repair service?
 
 When you schedule a plumbing repair service with Wade's Plumbing & Septic, our professional team will arrive promptly, assess the issue, and provide a detailed explanation of the necessary repairs. We ensure minimal disruption to your routine and leave the work area clean.
-
-### How long does a typical plumbing repair take?
-
-The timeline for plumbing repairs in Santa Cruz County varies based on the nature of the issue. Most standard repairs can be completed within a few hours, while more complex problems may take a full day or longer.
-
-### Why should I choose Wade's Plumbing & Septic for my plumbing repairs?
-
-Wade's Plumbing & Septic is a trusted local provider in Santa Cruz County, known for our professional, friendly service and expertise. Our licensed team delivers high-quality repairs with a commitment to customer satisfaction.

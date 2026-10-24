@@ -46,11 +46,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the septic repair and replacement service?
 
 During the service, our professional team will conduct a thorough inspection to assess the damage and determine the best course of action. We ensure minimal disruption to your property and keep you informed throughout the process to ensure a smooth experience.
-
-### How long does a typical septic repair and replacement take?
-
-The timeline for septic repair and replacement varies depending on the complexity of the job. On average, you can expect the process to take between 1 to 3 days. We strive to complete the work efficiently while maintaining high-quality standards.
-
-### Why choose Wade's Plumbing & Septic for septic repair and replacement in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. Our licensed professionals provide reliable, high-quality service, ensuring your septic system functions efficiently and meets all local regulations.

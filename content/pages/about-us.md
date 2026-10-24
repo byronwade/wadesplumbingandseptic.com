@@ -102,10 +102,6 @@ Our professional team will conduct a thorough assessment of your plumbing or sep
 
 The timeline for commercial services in Santa Cruz County depends on the service type and complexity. Most projects are completed within a few days, with scheduling confirmed during business hours.
 
-### Why choose Wade's Plumbing & Septic for your commercial needs?
-
-Wade's Plumbing & Septic is a trusted provider in Santa Cruz County, known for our expertise, reliability, and commitment to customer satisfaction. Our certified team delivers top-quality service, ensuring your commercial plumbing and septic systems operate smoothly.
-
 ## Services and Contact Details
 
 Explore our [plumbing and septic services](/services), including [engineered septic system installation](/service-offerings/engineered-septic-system-installation). Check our [service-area guide](/service-areas) for the communities we cover.

@@ -76,12 +76,6 @@ Preventative measures can extend the life of your septic system:
 
 Our team provides expert advice and services to help you maintain a healthy septic system.
 
-## Why Choose Wade's Plumbing & Septic?
-
-With years of experience and a deep commitment to customer satisfaction, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, California. Our licensed technicians deliver reliable, responsive service tailored to meet your needs. We pride ourselves on being a locally authoritative resource for all your septic system challenges.
-
-Contact us today to schedule your septic leach field repair or to learn more about our comprehensive plumbing repair services. Trust Wade's Plumbing & Septic to restore your system’s performance efficiently and professionally.
-
 ## Serving Santa Cruz County, CA
 
 Wade's Plumbing & Septic is proud to offer Expert Septic Leach Field Repair services to the communities of Santa Cruz County, California, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos.
@@ -101,14 +95,6 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the septic leach field repair service?
 
 During the repair service, our team will assess the condition of your leach field, identify any issues, and implement the necessary repairs. We ensure minimal disruption to your property while maintaining clear communication throughout the process.
-
-### How long does a typical septic leach field repair take?
-
-A typical septic leach field repair in Santa Cruz County usually takes between one to three days, depending on the complexity of the repair. Our experts work efficiently to restore your system as quickly as possible.
-
-### Why choose Wade's Plumbing & Septic for your septic leach field repair?
-
-Wade's Plumbing & Septic is a trusted local provider with years of experience in Santa Cruz County. Our skilled technicians are dedicated to delivering reliable and efficient repair services, ensuring your septic system functions optimally.
 
 ## Expert Septic Leach Field Repair in Santa Cruz County
 
