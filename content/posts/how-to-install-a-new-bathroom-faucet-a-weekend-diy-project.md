@@ -137,7 +137,7 @@ Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz
 - Boulder Creek
 - Ben Lomond
 
-Our team holds a C-42 contractor license for California, ensuring top-quality service and compliance with all regulatory standards.
+Our team holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring top-quality service and compliance with all regulatory standards.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

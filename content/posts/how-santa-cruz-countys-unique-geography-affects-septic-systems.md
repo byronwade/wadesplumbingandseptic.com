@@ -89,7 +89,7 @@ At Wade's Plumbing & Septic, we proudly provide efficient septic solutions to th
 - [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 
-Our team holds a C-42 contractor license for California, ensuring you receive expert and compliant service every time.
+Our team holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring you receive expert and compliant service every time.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -105,6 +105,6 @@ Ensure your septic system operates smoothly with our expert solutions.
 
 ### What Our Customers Say
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 Fast-Response Guarantee: Available for all your septic needs.

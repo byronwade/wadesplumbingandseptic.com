@@ -75,4 +75,4 @@ Trust our certified professionals to quickly diagnose and resolve any septic iss
 
 ### Customer Trust and Satisfaction
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

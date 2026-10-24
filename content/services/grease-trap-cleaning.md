@@ -86,7 +86,7 @@ For dependable **grease trap cleaning Santa Cruz** services, contact Wade's Plum
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team is dedicated to providing efficient grease trap cleaning services to ensure the smooth operation of your commercial kitchen.
 
-As a licensed contractor (C-42 license for California), we guarantee quality and reliability in every job we undertake.
+As a licensed contractor holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), we guarantee quality and reliability in every job we undertake.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 

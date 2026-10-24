@@ -65,7 +65,7 @@ Call Us NowGet a Free Quote
 
 ### Transform Your Shower in Santa Cruz County Today
 
-Licensed Contractor: C-42 for California.
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 ## Transform Your Shower in Santa Cruz County Today
 
@@ -83,7 +83,7 @@ At Wade's Plumbing & Septic, we offer expert shower transformation services for 
 - Scotts Valley
 - Watsonville
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
 ## Upgrade Your Shower Experience in Santa Cruz County
 

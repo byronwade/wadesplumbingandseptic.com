@@ -109,4 +109,4 @@ Protect the tank outlet and the drainfield with professional filter cleaning or 
 
 ## What Our Santa Cruz County Customers Are Saying
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

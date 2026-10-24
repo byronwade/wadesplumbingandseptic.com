@@ -90,7 +90,7 @@ At Wade's Plumbing & Septic, we proudly offer expert septic box repair services 
 - Live Oak
 - Soquel
 
-Our contractors are fully licensed and equipped to handle all your septic needs. We holds a C-42 contractor license for California, ensuring compliance with all local regulations.
+Our contractors are fully licensed and equipped to handle all your septic needs. We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring compliance with all local regulations.
 
 Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
@@ -104,4 +104,4 @@ Ensure the optimal functioning of your septic system with our professional repai
 
 [Call Us](tel:+18312254344)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

@@ -90,7 +90,7 @@ For reliable and professional sewer line inspection services in Santa Cruz Count
 
 At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and the surrounding areas in Santa Cruz County, California. Our team is committed to ensuring your home's safety with comprehensive sewer inspections.
 
-We holds a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and professionalism.
+We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our services meet the highest standards of quality and professionalism.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
@@ -104,4 +104,4 @@ Safeguard your home with our advanced sewer inspection services, identifying pot
 
 ### Why Santa Cruz County Trusts Us for Sewer Inspections
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

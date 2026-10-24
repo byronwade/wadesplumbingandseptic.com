@@ -90,7 +90,7 @@ Choosing Wade's Plumbing & Septic for your storm drain cleaning services in Sant
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, California area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our team is committed to providing reliable storm drain clearing services to ensure your home remains safe from flooding and water damage.
 
-Our contractors are fully licensed and certified, holding a C-42 license in California, ensuring that all services are performed to the highest standards of quality and safety.
+Our contractors are fully licensed and certified, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all services are performed to the highest standards of quality and safety.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -104,4 +104,4 @@ Protect your property from flooding and water damage with our expert storm drain
 
 [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

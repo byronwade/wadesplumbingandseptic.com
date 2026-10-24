@@ -90,7 +90,7 @@ At Wade's Plumbing & Septic, we proudly offer expert fixture installation servic
 - Felton
 - Boulder Creek
 
-We are fully licensed and insured, holding a C-42 contractor license for California, ensuring compliance and quality in every project.
+We are fully licensed and insured, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring compliance and quality in every project.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 

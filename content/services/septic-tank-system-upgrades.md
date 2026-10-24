@@ -65,4 +65,4 @@ Enhance your home's efficiency and compliance with our expert septic system upgr
 
 ### What Our Santa Cruz County Customers Are Saying
 
-Licensed Contractor: C-42 License for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

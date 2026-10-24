@@ -67,7 +67,7 @@ Ready to experience the benefits of a tankless water heater in your home? Contac
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is dedicated to providing efficient tankless water heater installation services to ensure your home or business enjoys endless hot water with the latest energy-saving technology.
 
-We are fully licensed and insured, holding a C-42 license for California, ensuring that all work is completed to the highest standards of safety and quality.
+We are fully licensed and insured, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all work is completed to the highest standards of safety and quality.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
@@ -81,4 +81,4 @@ Experience the benefits of endless hot water and reduced energy bills with our e
 
 [Call Us](tel:+18312254344)
 
-Licensed Contractor: C-42 (California)
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

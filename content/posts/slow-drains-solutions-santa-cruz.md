@@ -107,7 +107,7 @@ Ensure your home's plumbing system remains efficient and trouble-free with our p
 
 At Wade's Plumbing & Septic, we proudly serve the communities of Santa Cruz County, CA, including [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Watsonville](/service-area/watsonville-ca-plumbing-septic-services). Our expert drain maintenance services are trusted by homeowners throughout the region.
 
-Our team holds a C-42 contractor license for California, ensuring that all work meets state standards and regulations.
+Our team holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all work meets state standards and regulations.
 
 Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

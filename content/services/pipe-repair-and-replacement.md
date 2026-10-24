@@ -78,7 +78,7 @@ At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, offe
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 - [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services)
 
-Our team is fully licensed and insured, holding a C-42 license for California. We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
+Our team is fully licensed and insured, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System). We are committed to delivering reliable and efficient plumbing solutions tailored to your needs.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

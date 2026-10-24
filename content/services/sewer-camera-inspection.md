@@ -72,7 +72,7 @@ If you suspect an issue with your sewer line, don’t wait until it becomes a ma
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is committed to providing top-notch sewer camera inspection services to ensure your drains are clear and functioning efficiently.
 
-We hold a C-42 contractor license for California, ensuring that our services meet the highest standards of quality and safety.
+We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our services meet the highest standards of quality and safety.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
@@ -84,4 +84,4 @@ Uncover hidden plumbing issues with precision using our advanced sewer camera in
 
 [Call Us Now](tel:+18312254344)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

@@ -57,7 +57,7 @@ When it comes to reliable and compliant **septic system abandonment in Santa Cru
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County area, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team of certified professionals is dedicated to providing top-notch septic system abandonment services with the highest level of expertise and care.
 
-Our contractor license information: C-42 license for California.
+Our contractor license: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -73,4 +73,4 @@ Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cru
 
 ### Effortless Septic Abandonment in Santa Cruz County, CA
 
-Licensed Contractor: C-42 License for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

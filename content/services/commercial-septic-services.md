@@ -3,7 +3,7 @@ title: Commercial Septic Services in Santa Cruz County
 heroTitle: Business Septic Services in Santa Cruz County
 description: >-
   Commercial septic inspection and repair for Santa Cruz County
-  businesses. Licensed C-42 septic support. Call 831.225.4344.
+  businesses. CSLB #1087260 (C-36, C-42). Call 831.225.4344.
 category: Commercial
 order: 24
 image: >-
@@ -96,10 +96,10 @@ Wade's Plumbing & Septic proudly offers reliable commercial septic maintenance s
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 - [Soquel](/service-area/soquel-ca-plumbing-septic-services)
 
-We are a licensed contractor in California (C-42) (state license), ensuring professional and compliant services.
+We are a licensed California contractor, CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring professional and compliant services.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 For a comprehensive overview of our service areas, visit our [main service-area overview](/service-areas).
 
-Licensed Contractor: C-42 License
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

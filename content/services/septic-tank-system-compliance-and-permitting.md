@@ -63,7 +63,7 @@ Choosing Wade's Plumbing & Septic means partnering with a trusted local expert i
 
 At Wade's Plumbing & Septic, we are proud to provide expert septic system compliance services throughout Santa Cruz County, CA. Our service area includes the vibrant communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos, among others. With our local expertise and commitment to quality, we ensure that your septic system meets all necessary compliance standards.
 
-Our team is fully licensed and certified, holding a C-42 license for California, ensuring that all work is performed to the highest standards of safety and professionalism.
+Our team is fully licensed and certified, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all work is performed to the highest standards of safety and professionalism.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 

@@ -59,7 +59,7 @@ To learn more about our septic tank design services and how we can assist you, [
 
 At Wade's Plumbing & Septic, we are proud to offer expert septic tank design services throughout Santa Cruz County, California. Our dedicated team is committed to serving the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and surrounding areas.
 
-Our licensed contractors, holding a C-42 license for California, ensure that every project is handled with the utmost professionalism and expertise.
+Our licensed contractors, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensure that every project is handled with the utmost professionalism and expertise.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 
@@ -75,4 +75,4 @@ Tailored septic systems for efficient and environmentally-friendly waste managem
 
 ## Trusted Septic Tank Design in Santa Cruz County, CA
 
-Licensed Contractor: C-42 for California
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

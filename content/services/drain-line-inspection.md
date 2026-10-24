@@ -100,7 +100,7 @@ Wade's Plumbing & Septic proudly offers expert drain line inspection services to
 - Soquel
 - Ben Lomond
 
-Our team is fully licensed with a C-42 license for California, ensuring you receive professional and reliable service. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
+Our team is fully licensed with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring you receive professional and reliable service. Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Whether you're in Santa Cruz or any of the surrounding communities, Wade's Plumbing & Septic is your trusted local expert for all drain line inspection needs.
 
@@ -112,4 +112,4 @@ Gain peace of mind with our thorough drain inspections, ensuring optimal perform
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
 
-Licensed Contractor: C-42
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

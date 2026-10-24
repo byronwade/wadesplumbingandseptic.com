@@ -66,4 +66,4 @@ Minimize disruption to your property with our seamless trenchless sewer replacem
 
 [Call Us Now](tel:+18312254344)
 
-Licensed Contractor: C-42 (California)
+Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
