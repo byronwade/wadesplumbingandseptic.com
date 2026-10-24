@@ -91,7 +91,7 @@ Homeowners may wonder whether to handle plumbing checks themselves or call in a 
 
 Choosing a trusted local service provider ensures you receive reliable and efficient solutions tailored to your specific needs. At Wade's Plumbing & Septic, we pride ourselves on our deep understanding of the local community and our commitment to customer satisfaction. Our team is ready to assist with all your plumbing and septic needs, ensuring your Memorial Day celebrations go off without a hitch.
 
-**Did You Know?** Regular septic system maintenance can extend the life of your system by up to 30%!
+**Did You Know?** EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
 
 ## Sources & Local References
 

@@ -1262,3 +1262,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: substantive refresh of the thinnest post on the site, `/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca` (190 words before, about 1,280 after), at its existing URL. Original date kept, `updated: 2026-10-24` added. Same six topics, each expanded into practical checks, plus a quick answer, leak tests from EPA WaterSense, a sewer and septic section, a seasonal routine, sources and internal links to nine services and five related guides. Description reworded to match. No new URL, no new business claims beyond confirmed hours, free quotes and flat-rate pricing.
 - Verification: `npm run seo:check`, `lint`, `typecheck`, `build`; rendered page checked locally.
 - Truth state: sources `LIVE_VERIFIED` on 2026-10-24 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-24-plumbing-maintenance-refresh.json`.
+
+## 2026-10-24: Unsourced septic lifespan claims replaced
+
+- Scope: four existing posts (`memorial-day-plumbing-prep-santa-cruz`, `septic-system-challenges-santa-cruz-fire`, `septic-system-seasonal-maintenance-santa-cruz`, `septic-trouble-signs-santa-cruz`) claimed regular maintenance extends septic life "by up to 30%", "up to 30 years" or "by decades", with no source. Each claim is replaced with cited EPA inspection guidance (every three years for typical household systems, about yearly for systems with pumps or mechanical parts). The septic trouble signs post's description, which repeated the 30% claim, now summarizes the article. No URL, date, business fact or schema change.
+- Verification: `npm run seo:check`, `lint`, `format:check`, `build`.
+- Truth state: source `LIVE_VERIFIED` on 2026-10-24 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-24-unsourced-septic-stats.json`.

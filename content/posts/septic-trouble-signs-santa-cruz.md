@@ -1,8 +1,8 @@
 ---
 title: Early Septic Detection for Santa Cruz County Homes
 description: >-
-  Did you know that regular septic inspections can extend the life of your
-  system by up to 30%?
+  Slow drains, odors and soggy ground can signal septic trouble. Learn the
+  warning signs Santa Cruz County homeowners should never ignore.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
 tags:
@@ -20,7 +20,7 @@ imageAlt: Early Septic Detection for Santa Cruz County Homes
 
 ## Did You Know?
 
-Did you know that regular septic inspections can extend the life of your system by up to 30%?
+EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
 
 ## Septic Warning Signs at a Glance
 

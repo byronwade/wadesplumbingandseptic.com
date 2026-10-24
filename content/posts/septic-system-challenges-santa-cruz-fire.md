@@ -90,7 +90,7 @@ Homeowners in Santa Cruz County may wonder whether to monitor their septic syste
 
 Choosing a trusted local service provider for your septic system needs ensures quality and reliability. Local professionals understand the unique challenges faced by Santa Cruz County homeowners and offer personalized solutions. Their commitment to quality service and customer satisfaction sets them apart from non-local competitors.
 
-**Did You Know?** Regular maintenance can extend the life of your septic system by decades, saving you money and hassle in the long run.
+**Did You Know?** EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
 
 ## Sources & Local References
 

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-unsourced-septic-stats-2026-10-24",
+	"collected_at": "2026-10-24T19:45:00.223742+00:00",
+	"source": "us-epa-septic-care",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Replace unsourced septic lifespan percentages in four existing posts with cited EPA guidance",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "7d8acb842dde5b943ee297cfd7a29a90718e335be278144b491a1fa58688ff7f",
+	"payload": {
+		"posts": [
+			"content/posts/memorial-day-plumbing-prep-santa-cruz.md",
+			"content/posts/septic-system-challenges-santa-cruz-fire.md",
+			"content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
+			"content/posts/septic-trouble-signs-santa-cruz.md"
+		],
+		"observations": [
+			{
+				"id": "removed-unsourced-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Four posts claimed maintenance extends septic life 'by up to 30%', 'up to 30 years' or 'by decades' with no source; no government or standards source supporting these figures was found.",
+				"inference_limit": "Claims removed rather than re-sourced.",
+				"collected_at": "2026-10-24T19:45:00.223742+00:00",
+				"scope": "Fact accuracy fix"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Typical household septic system inspected at least every three years; alternative systems with pumps or mechanical parts generally once a year.",
+				"inference_limit": "General national guidance; not a local code requirement or Wade service claim.",
+				"collected_at": "2026-10-24T19:45:00.223742+00:00",
+				"scope": "Fact accuracy fix"
+			}
+		]
+	}
+}

@@ -31,7 +31,7 @@ Regular septic maintenance in Santa Cruz is essential for ensuring the longevity
 
 Optimize Septic System Health with Seasonal Maintenance in Santa Cruz
 
-Did you know? Regular septic maintenance can extend the life of your system by up to 30 years, saving you from costly repairs!
+Did you know? EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
 
 ## Why Seasonal Septic Care Matters
 
