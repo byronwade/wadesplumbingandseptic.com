@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "52621e9a6ab9a31db8a7b793697e217456161a3dae2c7f83b3284fb60c8af665",
+	"sha256": "f7194fb7d47236941686001369e4ae2de85a8cd6c39d0d7b3296bb8ed281a4ac",
 	"payload": {
 		"post": "content/posts/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca.md",
 		"observations": [

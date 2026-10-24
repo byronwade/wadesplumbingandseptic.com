@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "7d8acb842dde5b943ee297cfd7a29a90718e335be278144b491a1fa58688ff7f",
+	"sha256": "b0d860ba3205833228e9cf79d1304faf3f979105c5f5266ee4d595907f96f2f1",
 	"payload": {
 		"posts": [
 			"content/posts/memorial-day-plumbing-prep-santa-cruz.md",
