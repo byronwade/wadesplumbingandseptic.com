@@ -633,14 +633,104 @@
 		},
 		{
 			"from": "/pipe-leak-solutions-santa-cruz-septic",
-			"to": "/service-areas",
-			"anchor": "inspection services",
+			"to": "/service-offerings/toilet-repair",
+			"anchor": "toilet repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "Leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/water-line-repair-and-installation",
+			"anchor": "water line repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "signs of a hidden water leak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/septic-leach-field-repairs-santa-cruz",
+			"anchor": "leach field repairs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "signs your drain field needs repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/sewer-line-inspection",
+			"anchor": "sewer line inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/smoke-tests",
+			"anchor": "smoke tests",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection and assessment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/main-line-cleanout-installation",
+			"anchor": "main line cleanout",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/trenchless-sewer-line-replacement",
+			"anchor": "trenchless sewer line replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/pipe-leak-solutions-santa-cruz-septic",
 			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/pipe-leak-solutions-santa-cruz-septic",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
