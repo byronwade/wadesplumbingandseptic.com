@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-leach-field-refresh-2026-10-24",
+	"collected_at": "2026-10-24T20:31:14.095234+00:00",
+	"source": "epa-septic-and-santa-cruz-county-eh",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-your-septic-system-works",
+	"scope": "Substantive refresh of a 602 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "1c89c21bd2fefa1d40c42112f7a87764e7285a9dad0eac48a5b8e2411f5d5cf0",
+	"payload": {
+		"post": "content/posts/septic-leach-field-repairs-santa-cruz.md",
+		"observations": [
+			{
+				"id": "removed-unsourced-claim",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed the unsourced 'leach field can last up to 25 years or more' claim and a link labeled septic leach field repair that pointed to /service-areas.",
+				"inference_limit": "Claim removed, not re-sourced.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-how-septic-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Tank separates sludge and scum; T-shaped outlet; effluent to perforated pipes or chambers in unsaturated soil; soil accepts, treats and disperses; overloaded drainfield can flood, surfacing sewage or causing backups; alternative systems use pumps or media.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Do not park or drive on the drainfield; plant trees an appropriate distance; keep roof drains, sump pumps and rainwater away; leaky toilet up to 200 gallons per day; spread laundry; inspect at least every three years, alternative systems about yearly.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "scceh-owts-repair-upgrade",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Repair: replacement of a permitted, correctly sized OWTS; repair standards apply if structures do not exceed permit, one time allowance under 500 sq ft with no added bedrooms; upgrade standards for more bedrooms, 500+ sq ft or more structures; unpermitted parcels meet new development standards; technical report for slopes over 30 percent; EH Files online lookup.",
+				"inference_limit": "County program summary; homeowners confirm specifics with EH.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "scceh-softener-handout",
+				"source_url": "https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Softener brine can damage tank bacteria, clog the leach field and increase hydraulic load; separate drywell preferred.",
+				"inference_limit": "County guidance handout.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; leach field repair and replacement is an existing service.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T20:31:14.095234+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}

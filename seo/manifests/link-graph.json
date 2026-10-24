@@ -885,8 +885,44 @@
 		},
 		{
 			"from": "/septic-leach-field-repairs-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "septic leach field repair",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "signs your drain field needs professional repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
+			"anchor": "Filter cleaning or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/septic-tank-distribution-box-repair-and-replacement",
+			"anchor": "Distribution box repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/high-pressure-jetting-for-septic-lines",
+			"anchor": "line jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
+			"anchor": "Leach field repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "troubleshooting visit",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -897,20 +933,32 @@
 		},
 		{
 			"from": "/septic-leach-field-repairs-santa-cruz",
-			"to": "/service-offerings/septic-tank-repair-and-replacement",
-			"anchor": "septic repair and replacement services",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "guide to how county geography affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-leach-field-repairs-santa-cruz",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic prep checklist",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-leach-field-repairs-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-leach-field-repairs-santa-cruz",
 			"to": "/contact",
-			"anchor": "Get a Free Quote",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
