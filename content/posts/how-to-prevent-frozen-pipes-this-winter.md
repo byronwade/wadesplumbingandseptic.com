@@ -7,6 +7,7 @@ description:
   repairs.
 category: Plumbing Tips
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - plumbing maintenance
@@ -72,20 +73,6 @@ If you cannot locate the frozen area, if the frozen area is not accessible, or i
 
 Taking these preventative measures can save you from the inconvenience and expense of dealing with burst pipes during the coldest months of the year.
 
-## Schedule Plumbing & Septic Services
-
-![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
-
-Count on Wade's Plumbing & Septic for scheduled plumbing services in Santa Cruz County, California.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and the surrounding areas. Our team is equipped to handle all your plumbing needs, including preventing frozen pipes this winter.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring you receive professional and certified service every time.
-
 ## Frequently Asked Questions
 
 ### How is pricing quoted for preventing frozen pipes in Santa Cruz County, CA?
@@ -96,10 +83,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During the service, our technicians will assess your plumbing system, insulate vulnerable pipes, and ensure all preventative measures are in place. We aim to provide a seamless experience with minimal disruption to your daily routine.
 
-### How long does it usually take to complete the service?
+## Need help with frozen or burst pipes?
 
-Preventing frozen pipes generally takes between 2 to 4 hours, depending on the size and complexity of your plumbing system. Our team works efficiently to ensure your home is protected as quickly as possible.
-
-### Why choose Wade's Plumbing & Septic for this service in Santa Cruz County, CA?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. Our professional team is dedicated to providing reliable service and ensuring your plumbing system is safeguarded against winter conditions.
+Wade's Plumbing & Septic handles [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) and [leak detection](/service-offerings/leak-detection) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

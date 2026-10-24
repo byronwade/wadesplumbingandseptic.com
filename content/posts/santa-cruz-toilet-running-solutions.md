@@ -6,6 +6,7 @@ description: >-
   repair.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
+updated: "2026-10-24"
 tags:
   - santa cruz
   - septic
@@ -102,6 +103,6 @@ Check your toilet's components for wear and tear before the holiday season to av
 - Clean mineral deposits from the tank components.
 - Contact a professional plumber if the problem persists.
 
-## Need Plumbing or Septic Help?
+## Need help with a running toilet?
 
-Contact Wade's Plumbing & Septic for expert toilet repair services in Santa Cruz County.
+Wade's Plumbing & Septic provides [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

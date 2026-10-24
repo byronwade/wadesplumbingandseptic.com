@@ -5,6 +5,7 @@ description: >-
   County homeowners, changing septic performance and maintenance needs.
 category: Plumbing Tips
 date: "2026-04-05"
+updated: "2026-10-24"
 tags:
   - santa cruz
   - septic
@@ -112,28 +113,6 @@ As the rainy season approaches, ensure your septic system is prepared to handle 
 - Check for signs of soil erosion near the septic system.
 - Maintain a buffer zone of vegetation to stabilize soil.
 
-## Need Plumbing or Septic Help?
+## Need help with a septic system after a fire?
 
-Contact Wade's Plumbing & Septic for expert advice and services to address your septic system issues in Santa Cruz County.
-
-## Septic System Concerns After Wildfires?
-
-Ensure your septic system is safe and functional with our expert services in Santa Cruz County, California.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic is proud to serve the communities of Santa Cruz County, including Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. We understand the unique challenges faced by residents in the aftermath of the 2020 fires and are here to help with all your septic needs.
-
-Our team is fully licensed and insured, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring the highest standards of professionalism and expertise.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Wade's Plumbing & Septic is committed to delivering reliable and trustworthy septic services throughout Santa Cruz County, CA.
-
-Septic Recovery After 2020 Fires
-
-## Restore Your Septic System with Confidence
-
-Trust Wade's Plumbing & Septic to rehabilitate your system efficiently and compliantly in Santa Cruz County.
-
-[Call Us Now](tel:+18312254344)
+Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [septic repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

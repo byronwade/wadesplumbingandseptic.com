@@ -8,6 +8,7 @@ description:
   tasks.
 category: Plumbing Tips
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - toilet flange installation
@@ -141,20 +142,6 @@ Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet instal
 📞 **(831) 225-4344**
 We’re here to help, fast, reliable, and local plumbing service in Santa Cruz County!
 
-## Secure Your Toilet Installation Today
-
-Experience hassle-free toilet flange installation with our expert team in Santa Cruz County, CA.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, California area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our expert team is ready to assist you with toilet flange installation and other plumbing needs.
-
-Our contractors are licensed with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring you receive professional and reliable service.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-We are committed to providing top-notch plumbing services to our neighbors throughout Santa Cruz County, CA.
-
 ## Frequently Asked Questions
 
 ### How is pricing quoted for installing a toilet flange in Santa Cruz County, CA?
@@ -165,20 +152,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During the service, our skilled technicians will carefully remove the old flange, inspect the area for any underlying issues, and install a new flange with precision to ensure a perfect fit and seal.
 
-### How long does it take to install a toilet flange?
+## Need help with a toilet flange?
 
-The installation of a toilet flange usually takes about 1 to 2 hours, depending on the condition of the existing plumbing and the specific requirements of your bathroom setup.
-
-### Why choose Wade's Plumbing & Septic for toilet flange installation in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert in Santa Cruz County, known for our professional service, attention to detail, and commitment to customer satisfaction. Our experienced team ensures a hassle-free installation process.
-
-### Service Information
-
-Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-## Skip the DIY, Get It Done Right
-
-While installing a toilet flange might seem straightforward, it can quickly become complex without the right expertise. Trust Wade's Plumbing & Septic in Santa Cruz County, CA, to handle your plumbing needs with precision and care.
+Wade's Plumbing & Septic handles [toilet repair](/service-offerings/toilet-repair) and [toilet installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

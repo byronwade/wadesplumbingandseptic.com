@@ -5,6 +5,7 @@ description:
   including guidelines and advanced technologies.
 category: Septic Maintenance
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - santa cruz county
   - advanced septic systems
@@ -142,10 +143,6 @@ Embracing these advanced septic systems means cleaner water, longer-lasting infr
 - Orenco Systems Inc.: [Orenco AdvanTex, Wastewater and Greywater Treatment Systems](https://www.orenco.com/products/treatment-systems)
 - Innoflow: [AdvanTex AX20 Package](https://www.innoflow.co.nz/products-resources/all-products/advantex-ax20-package/)
 
-## Upgrade Your Septic System Today
-
-Experience the benefits of advanced septic systems designed for efficiency and longevity in Santa Cruz County.
-
 ## Frequently Asked Questions
 
 ### How much does an advanced septic system cost in Santa Cruz County, CA?
@@ -156,10 +153,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During the installation, our team at Wade's Plumbing & Septic will conduct a thorough site assessment, obtain necessary permits, and ensure minimal disruption to your property. We prioritize efficient and clean service delivery.
 
-### How long does it typically take to install an advanced septic system?
+## Need help with a new septic system?
 
-The installation timeline for an advanced septic system generally spans 1 to 3 weeks, depending on the complexity of the project and weather conditions in Santa Cruz County.
-
-### Why choose Wade's Plumbing & Septic for advanced septic systems in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. Our professional team offers reliable service, ensuring your septic system is installed to the highest standards.
+Wade's Plumbing & Septic handles [septic system installation](/service-offerings/septic-system-installation) and [septic design and engineering](/service-offerings/septic-tank-design-and-engineering) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

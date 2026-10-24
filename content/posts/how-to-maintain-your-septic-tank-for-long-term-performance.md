@@ -5,6 +5,7 @@ description: >-
   properly, it safely processes waste and protects your property from backups.
 category: Plumbing Tips
 date: "2025-08-12"
+updated: "2026-10-24"
 tags:
   - santa cruz county
   - plumbing services
@@ -96,18 +97,6 @@ Whether you need jetting or a full inspection, Wade’s Plumbing & Septic is her
 
 Let us help you protect your home, save money, and keep your system running smoothly year after year.
 
-## Protect Your Septic System Today
-
-Ensure the longevity of your septic tank with expert care from Wade's Plumbing & Septic in Santa Cruz County, CA.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is committed to maximizing the lifespan of your septic tank with our expert services.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our work meets the highest standards of quality and compliance.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
 ## Frequently Asked Questions
 
 ### How much does it cost to maximize the lifespan of my septic tank in Santa Cruz County?
@@ -118,10 +107,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a septic tank service, our experts will conduct a thorough inspection, clean the tank, and address any potential issues. We ensure minimal disruption to your daily routine and provide detailed insights into your system's condition.
 
-### How long does a typical septic tank service take for homes in Santa Cruz County?
+## Need help with septic tank care?
 
-A standard septic tank service usually takes between 2 to 4 hours, depending on the tank's size and condition. Our team works efficiently to ensure timely and effective service.
-
-### Why should I choose Wade's Plumbing & Septic for my septic tank needs in Santa Cruz County?
-
-Wade's Plumbing & Septic offers unmatched expertise and local knowledge, ensuring top-tier service for Santa Cruz County residents. Our professional team is dedicated to extending your septic system's lifespan with reliable and friendly service.
+Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment), [filter service](/service-offerings/septic-filter-cleaning-and-replacement) and [tank repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
