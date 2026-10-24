@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-water-filtration-refresh-2026-10-24",
+	"collected_at": "2026-10-24T20:14:28.128891+00:00",
+	"source": "cdc-epa-drinking-water-and-watersense",
+	"source_url_or_tool": "https://www.epa.gov/watersense/point-use-reverse-osmosis-systems",
+	"scope": "Substantive refresh of a 510 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "3c43ba4f2a55385625e7dfea7b30a6611302d4e83ab1ef11d14ca88d80ec85aa",
+	"payload": {
+		"post": "content/posts/efficient-water-filtration-santa-cruz.md",
+		"observations": [
+			{
+				"id": "cdc-drinking-water",
+				"source_url": "https://www.cdc.gov/drinking-water/about/index.html",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "9 out of 10 people in the US get tap water from a public water system; utilities must meet EPA standards and notify customers of violations; private well owners are responsible for their water's safety.",
+				"inference_limit": "National context; not a statement about a specific Santa Cruz County system.",
+				"collected_at": "2026-10-24T20:14:28.128891+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-ccr",
+				"source_url": "https://www.epa.gov/ccr",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Community water systems publish annual Consumer Confidence Reports; consumers can find their local report.",
+				"inference_limit": "Pointer only.",
+				"collected_at": "2026-10-24T20:14:28.128891+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-private-wells",
+				"source_url": "https://www.epa.gov/privatewells/protect-your-homes-water",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Test private wells annually for total coliform bacteria, nitrates, total dissolved solids and pH; test after flooding, land disturbance, well repairs or a change in odor, color or taste; symptom to test table (stains: iron, copper, manganese; scale: hardness; taste or smell: hydrogen sulfide, corrosion, metals; lead plumbing: pH, lead, copper; cloudy or colored: color, detergents); use certified labs.",
+				"inference_limit": "General guidance; not a local code requirement.",
+				"collected_at": "2026-10-24T20:14:28.128891+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-watersense-ro",
+				"source_url": "https://www.epa.gov/watersense/point-use-reverse-osmosis-systems",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Point of use RO can remove lead, VOCs, PFAS, arsenic, bacteria and viruses; typical units reject 5+ gallons per gallon treated, inefficient up to 10; WaterSense labeled max 2.3; saves over 3,100 gallons per year on average; EPA does not promote RO for every application.",
+				"inference_limit": "Product category guidance; not a Wade product claim.",
+				"collected_at": "2026-10-24T20:14:28.128891+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated from siteConfig; water filtration installation is an existing service page.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T20:14:28.128891+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}

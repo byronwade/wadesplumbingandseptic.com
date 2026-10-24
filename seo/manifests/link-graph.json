@@ -334,13 +334,67 @@
 		{
 			"from": "/efficient-water-filtration-santa-cruz",
 			"to": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
-			"anchor": "comparison of water softeners and whole-house filtration systems",
+			"anchor": "water softeners versus whole house filtration",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-offerings/water-softener-maintenance",
+			"anchor": "water softener maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-offerings/water-filtration-system-installation",
+			"anchor": "whole house and point of use water filtration systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/efficient-water-filtration-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
