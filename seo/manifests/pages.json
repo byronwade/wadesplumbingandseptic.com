@@ -138,7 +138,7 @@
 		{
 			"metadata_declared": true,
 			"canonical_declared": false,
-			"json_ld_blocks": 0,
+			"json_ld_blocks": 1,
 			"url": "/category/[slug]",
 			"source_path": "app/(site)/category/[slug]/page.tsx",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/category/[slug]",
@@ -234,7 +234,7 @@
 		{
 			"metadata_declared": true,
 			"canonical_declared": false,
-			"json_ld_blocks": 0,
+			"json_ld_blocks": 1,
 			"url": "/expert-tips",
 			"source_path": "app/(site)/expert-tips/page.tsx",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/expert-tips",
@@ -607,6 +607,18 @@
 			"url": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"source_path": "content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"source_path": "content/posts/rainy-season-septic-and-drain-prep-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/rainy-season-septic-and-drain-prep-santa-cruz",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,
@@ -1218,7 +1230,7 @@
 		{
 			"metadata_declared": true,
 			"canonical_declared": false,
-			"json_ld_blocks": 0,
+			"json_ld_blocks": 1,
 			"url": "/service-category/[slug]",
 			"source_path": "app/(site)/service-category/[slug]/page.tsx",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/service-category/[slug]",
@@ -1818,7 +1830,7 @@
 		{
 			"metadata_declared": true,
 			"canonical_declared": false,
-			"json_ld_blocks": 0,
+			"json_ld_blocks": 1,
 			"url": "/services",
 			"source_path": "app/(site)/services/page.tsx",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/services",
