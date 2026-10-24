@@ -1185,26 +1185,110 @@
 		},
 		{
 			"from": "/septic-system-components-santa-cruz",
-			"to": "/the-complete-guide-to-septic-system-maintenance",
-			"anchor": "Septic System Maintenance Made Easy in Santa Cruz County",
+			"to": "/pipe-leak-solutions-santa-cruz-septic",
+			"anchor": "pipe leak guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-system-components-santa-cruz",
 			"to": "/service-offerings/septic-tank-repair-and-replacement",
-			"anchor": "septic repair or replacement",
+			"anchor": "septic tank repair and replacement",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-system-components-santa-cruz",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection and assessment",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-system-components-santa-cruz",
-			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
-			"anchor": "Ben Lomond",
+			"to": "/service-offerings/septic-tank-riser-installation",
+			"anchor": "septic tank riser installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
+			"anchor": "septic filter cleaning and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-offerings/septic-tank-alarm-installation",
+			"anchor": "septic tank alarm installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "troubleshooting and diagnostics",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-offerings/septic-tank-distribution-box-repair-and-replacement",
+			"anchor": "distribution box repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/septic-leach-field-repairs-santa-cruz",
+			"anchor": "leach field repair guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "signs your drain field needs repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/septic-system-types-santa-cruz",
+			"anchor": "septic system types",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/what-you-need-to-know-about-engineered-septic-systems",
+			"anchor": "engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how county geography affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-components-santa-cruz",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{

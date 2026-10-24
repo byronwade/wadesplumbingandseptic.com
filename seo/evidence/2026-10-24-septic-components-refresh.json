@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-components-refresh-2026-10-24",
+	"collected_at": "2026-10-24T21:49:44+00:00",
+	"source": "epa-septic",
+	"source_url_or_tool": "https://www.epa.gov/septic/types-septic-systems",
+	"scope": "Substantive refresh of a 700 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "b5156d9054ab3045d48dab2faae19cee7df30ac88be2606a10ac32d36861f525",
+	"payload": {
+		"post": "content/posts/septic-system-components-santa-cruz.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsourced '20 to 30 years' lifespan claim, an unsourced 'pump every three to five years' schedule, generic trust copy, a news article on groundwater testing used as the only source, and an image alt that repeated the title.",
+				"inference_limit": "No new service claimed; tank pumping is described as maintenance without implying Wade's provides it.",
+				"collected_at": "2026-10-24T21:49:44+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-how-septic-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "All water leaves through one main drainage pipe into the tank; solids settle as sludge, grease floats as scum; compartments and a T shaped outlet keep them in the tank; drainfield is a shallow covered excavation in unsaturated soil; soil accepts, treats and disperses wastewater.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T21:49:44+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-types",
+				"source_url": "https://www.epa.gov/septic/types-septic-systems",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Conventional systems pipe effluent to shallow gravel trenches; chamber systems use connected chambers; drip systems use a dose tank for timed delivery; mound systems pump to the mound in prescribed doses; sand filters pump effluent under low pressure; aerobic units inject oxygen and need ongoing maintenance.",
+				"inference_limit": "General national descriptions; local designs vary.",
+				"collected_at": "2026-10-24T21:49:44+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Household systems should be inspected by a professional at least every three years.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T21:49:44+00:00",
+				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; all linked services and posts exist.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T21:49:44+00:00",
+				"scope": "Refresh of existing thin post"
+			}
+		]
+	}
+}
