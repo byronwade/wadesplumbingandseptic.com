@@ -596,6 +596,90 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "signs of a hidden water leak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "tank",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/tankless-water-heater-installation",
+			"anchor": "tankless",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "Drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "clearing a clogged drain",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic prep checklist",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/main-line-cleanout-installation",
+			"anchor": "main line cleanout",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/plumbing-repair-services-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",

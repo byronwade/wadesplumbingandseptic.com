@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-plumbing-maintenance-refresh-2026-10-24",
+	"collected_at": "2026-10-24T19:18:39.515462+00:00",
+	"source": "us-epa-watersense-septic-and-repository-facts",
+	"source_url_or_tool": "https://www.epa.gov/watersense/fix-leak-week",
+	"scope": "Substantive refresh of a 190 word legacy post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "52621e9a6ab9a31db8a7b793697e217456161a3dae2c7f83b3284fb60c8af665",
+	"payload": {
+		"post": "content/posts/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca.md",
+		"observations": [
+			{
+				"id": "epa-watersense-leaks",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Average household leaks can waste more than 9,300 gallons a year; nine percent of homes have leaks wasting 50 gallons or more per day; common causes are worn flappers, dripping faucets and leaking valves. Meter test over two hours with no use; toilet dye test with result after 10 minutes.",
+				"inference_limit": "National homeowner guidance; not a Wade service claim or local statistic.",
+				"collected_at": "2026-10-24T19:18:39.515462+00:00",
+				"scope": "Refresh of existing thin legacy post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Typical household septic system inspected at least every three years; alternative systems with mechanical parts generally once a year.",
+				"inference_limit": "General guidance; not a local code requirement.",
+				"collected_at": "2026-10-24T19:18:39.515462+00:00",
+				"scope": "Refresh of existing thin legacy post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated from siteConfig.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T19:18:39.515462+00:00",
+				"scope": "Refresh of existing thin legacy post"
+			}
+		]
+	}
+}
