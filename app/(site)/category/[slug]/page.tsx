@@ -3,10 +3,15 @@ import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 
 import { ArticleArchive } from "@/components/article-archive"
+import { JsonLd } from "@/components/json-ld"
 import { getCollection, taxonomySlug } from "@/lib/content"
 import { postCategoryAliases } from "@/lib/post-categories"
 import { getRelatedForTopic } from "@/lib/related-content"
-import { buildPageMetadata } from "@/lib/seo"
+import {
+	breadcrumbJsonLd,
+	buildPageMetadata,
+	collectionPageJsonLd,
+} from "@/lib/seo"
 
 export async function generateStaticParams() {
 	const posts = await getCollection("posts")
@@ -79,13 +84,36 @@ async function CategoryArchive({ slug }: { slug: string }) {
 	const data = await getCategoryArchiveData(slug)
 	if (!data) return null
 
+	const description = `Practical ${data.label.toLowerCase()} from Wade's field experience.`
+	const pathname = `/category/${slug}`
+
 	return (
-		<ArticleArchive
-			description={`Practical ${data.label.toLowerCase()} from Wade's field experience.`}
-			posts={data.posts}
-			related={data.related}
-			title={data.label}
-		/>
+		<>
+			<ArticleArchive
+				description={description}
+				posts={data.posts}
+				related={data.related}
+				title={data.label}
+			/>
+			<JsonLd
+				data={[
+					collectionPageJsonLd({
+						name: data.label,
+						description,
+						pathname,
+						items: data.posts.map((post) => ({
+							name: post.title,
+							path: `/${post.slug}`,
+						})),
+					}),
+					breadcrumbJsonLd([
+						{ name: "Home", path: "/" },
+						{ name: "Expert Tips", path: "/expert-tips" },
+						{ name: data.label, path: pathname },
+					]),
+				]}
+			/>
+		</>
 	)
 }
 
