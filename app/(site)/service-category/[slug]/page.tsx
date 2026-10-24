@@ -5,13 +5,18 @@ import { Suspense } from "react"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
+import { JsonLd } from "@/components/json-ld"
 import { RequestArchive } from "@/components/request-archive"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { toArchiveItem } from "@/lib/archive"
 import { getCollection, type ContentDocument } from "@/lib/content"
 import { rankItemsWithLiveStats } from "@/lib/page-views/live"
 import { getRelatedForTopic } from "@/lib/related-content"
-import { buildPageMetadata } from "@/lib/seo"
+import {
+	breadcrumbJsonLd,
+	buildPageMetadata,
+	collectionPageJsonLd,
+} from "@/lib/seo"
 import {
 	serviceCategories,
 	serviceCategorySlugs,
@@ -143,6 +148,27 @@ export default async function ServiceCategoryPage({
 				servicesTitle="Related services"
 			/>
 			<ContactCta />
+			<JsonLd
+				data={[
+					collectionPageJsonLd({
+						name: `${data.category.label} Services`,
+						description: data.category.description,
+						pathname: `/service-category/${slug}`,
+						items: data.services.map((service) => ({
+							name: service.title,
+							path: `/service-offerings/${service.slug}`,
+						})),
+					}),
+					breadcrumbJsonLd([
+						{ name: "Home", path: "/" },
+						{ name: "Services", path: "/services" },
+						{
+							name: `${data.category.label} Services`,
+							path: `/service-category/${slug}`,
+						},
+					]),
+				]}
+			/>
 		</main>
 	)
 }
