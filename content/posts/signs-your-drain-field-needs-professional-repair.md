@@ -5,6 +5,7 @@ description: >-
   field is not one of them. Learn the signs it needs professional repair.
 category: Septic Maintenance
 date: "2025-07-08"
+updated: "2026-10-24"
 tags:
   - plumbing services
   - santa cruz plumbing
@@ -75,20 +76,6 @@ If you’ve noticed any of these signs (green patches on your lawn, slow drainag
 
 We offer prompt, professional drain field repair services across Santa Cruz, Soquel, Capitola, Aptos, Watsonville, and surrounding areas. Our team will assess the damage, determine the root cause, and restore your septic system’s performance before the issue worsens.
 
-## Repair Your Drain Field in Santa Cruz County Today
-
-![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
-
-Ensure the longevity and efficiency of your septic system with expert repairs from Wade's Plumbing & Septic.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we are proud to offer our expert drain field repair services throughout Santa Cruz County, California. Our service area includes the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our work meets the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you're in need of immediate assistance or planning a future project, Wade's Plumbing & Septic is here to serve the Santa Cruz County community with reliable and professional service.
-
 ## Frequently Asked Questions
 
 ### How much does it cost to repair a drain field in Santa Cruz County?
@@ -99,16 +86,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a drain field repair, our experienced technicians will assess the damage, identify the best repair method, and execute the necessary repairs to restore functionality. We ensure minimal disruption to your property while maintaining high-quality service standards.
 
-### How long does it typically take to repair a drain field?
+## Need help with a drain field?
 
-The timeline for repairing a drain field can vary based on the complexity of the issue. Typically, repairs can be completed within a few days. Our team at Wade's Plumbing & Septic works efficiently to ensure your system is back to optimal performance as quickly as possible.
-
-### Why should I choose Wade's Plumbing & Septic for my drain field repair?
-
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County, known for our expertise and commitment to customer satisfaction. With years of experience and a team of certified professionals, we provide reliable and efficient drain field repair services tailored to your needs.
-
-## Expert Drain Field Repair in Santa Cruz County, CA
-
-Ensure the efficiency and longevity of your septic system with our specialized drain field repair services.
-
-[Call Us Now](tel:+18312254344)
+Wade's Plumbing & Septic provides [drain field repair and replacement](/service-offerings/drainfield-repair-and-replacement) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

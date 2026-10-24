@@ -5,6 +5,7 @@ description: >-
   cause was a faulty shower valve, and replacing it fixed the shower.
 category: Plumbing Tips
 date: "2025-08-05"
+updated: "2026-10-24"
 tags:
   - santa cruz county
   - plumbing services
@@ -108,43 +109,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 Our skilled technicians will assess your shower system, identify any issues affecting water flow, and implement solutions to enhance performance. We prioritize minimal disruption and ensure a clean work environment.
 
-### How long does it typically take to optimize shower water flow?
+## Need help with a shower valve?
 
-The timeline for optimizing shower water flow can vary depending on the specific issues present. Generally, our services are completed within a few hours, ensuring efficient and timely service.
-
-### Why choose Wade's Plumbing & Septic for shower water flow optimization?
-
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County, offering professional, reliable, and locally authoritative plumbing services. Our commitment to customer satisfaction and quality workmanship sets us apart.
-
-Upgrade Your Home's Comfort
-
-## Enhance Shower Flow in Santa Cruz County Homes
-
-Experience a revitalized shower experience with our expert plumbing solutions.
-
-[Call Us](tel:+18312254344)
-
-## Enhance Shower Flow in Santa Cruz County Homes
-
-At Wade's Plumbing & Septic, we specialize in optimizing your home's shower flow to ensure a refreshing and consistent water experience. Our services are available to residential customers throughout Santa Cruz County, California. Whether you're experiencing low pressure or inconsistent flow, our expert team is here to help enhance your shower experience.
-
-- Aptos
-- Ben Lomond
-- Boulder Creek
-- Capitola
-- Corralitos
-- Davenport
-- Felton
-- Freedom
-- La Selva Beach
-- Live Oak
-
-- Lompico
-- Mount Hermon
-- Pajaro Dunes
-- Rio Del Mar
-- Santa Cruz
-- Scotts Valley
-- Soquel
-- Watsonville
-- Zayante
+Wade's Plumbing & Septic provides [shower installation and repair](/service-offerings/shower-installation-and-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

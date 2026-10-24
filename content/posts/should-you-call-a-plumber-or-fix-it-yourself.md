@@ -5,6 +5,7 @@ description: >-
   on your experience, how severe the issue is, and how much time you have.
 category: Plumbing Tips
 date: "2025-05-20"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - plumbing tips
@@ -71,20 +72,6 @@ We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and nearby co
 
 📞 Call Wade’s Plumbing & Septic today at (831) 225-4344
 
-## Don't Risk Costly Mistakes
-
-![Engineered septic site work](/images/work/engineered-retaining-wall.webp)
-
-Trust Wade's Plumbing & Septic for expert solutions in Santa Cruz County, CA.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic proudly serves the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. As a licensed plumbing and septic service provider, we hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all our work meets state standards and regulations.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you need trenchless sewer line replacement in Capitola or septic system certification in Watsonville, Wade's Plumbing & Septic is your trusted local expert in Santa Cruz County, CA.
-
 ## Frequently Asked Questions
 
 ### How much does it typically cost to hire a professional plumber in Santa Cruz County?
@@ -95,10 +82,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 Our professional team will arrive on time, assess the situation, and provide a clear explanation of the issue along with a recommended solution. We prioritize transparency and efficiency, ensuring minimal disruption to your home.
 
-### How long does a typical plumbing job take?
+## Need help with a plumbing repair?
 
-The timeline for plumbing services can vary, but most residential jobs are completed within a few hours. For more extensive projects, such as trenchless sewer line replacement, we will provide a detailed timeline during the initial consultation.
-
-### Why should I choose Wade's Plumbing & Septic for my plumbing needs in Santa Cruz County?
-
-Wade's Plumbing & Septic is a locally trusted provider known for its expertise, reliability, and commitment to customer satisfaction. Our licensed professionals are equipped to handle a wide range of plumbing and septic services with the utmost care.
+Wade's Plumbing & Septic handles [leaks](/service-offerings/leak-detection), [clogs](/service-offerings/drain-cleaning), [water heaters](/service-offerings/water-heater-installation) and [pipe repair](/service-offerings/pipe-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

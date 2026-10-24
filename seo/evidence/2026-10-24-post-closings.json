@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-post-closings-2026-10-24",
+	"collected_at": "2026-10-24T22:35:00+00:00",
+	"source": "repository-content",
+	"source_url_or_tool": "content/posts",
+	"scope": "Replace boilerplate closings on older posts with a standard closing that links a matching service and the service areas",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "e468fd2c25070a243011661305f106626661d1472f187687dc714eaed1e89a4f",
+	"payload": {
+		"posts": [
+			"content/posts/5-signs-you-need-to-call-a-professional-plumber.md",
+			"content/posts/5-types-of-toilets-how-to-choose-the-right-one-for-your-home.md",
+			"content/posts/6-signs-you-have-a-hidden-water-leak.md",
+			"content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md",
+			"content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
+			"content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
+			"content/posts/how-to-install-a-toilet-flange-in-8-easy-steps.md",
+			"content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
+			"content/posts/how-to-maintain-your-septic-tank-for-long-term-performance.md",
+			"content/posts/how-to-prevent-frozen-pipes-this-winter.md",
+			"content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
+			"content/posts/plumbing-terms-every-homeowner-should-know.md",
+			"content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
+			"content/posts/santa-cruz-toilet-running-solutions.md",
+			"content/posts/septic-system-challenges-santa-cruz-fire.md",
+			"content/posts/should-you-call-a-plumber-or-fix-it-yourself.md",
+			"content/posts/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure.md",
+			"content/posts/signs-your-drain-field-needs-professional-repair.md",
+			"content/posts/the-complete-guide-to-septic-system-maintenance.md",
+			"content/posts/the-importance-of-regular-plumbing-maintenance.md",
+			"content/posts/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades.md",
+			"content/posts/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home.md",
+			"content/posts/what-is-hard-water-why-does-it-matter-for-your-home.md",
+			"content/posts/what-you-need-to-know-about-engineered-septic-systems.md",
+			"content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
+			"content/posts/why-you-should-never-ignore-septic-system-warning-signs.md"
+		],
+		"observations": [
+			{
+				"id": "missing-internal-links",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "26 posts had no in-body link to a service page or to the service areas page. Each now ends with a standard closing linking one to four matching existing services and /service-areas.",
+				"inference_limit": "Internal links only; no new URL or service.",
+				"collected_at": "2026-10-24T22:35:00+00:00",
+				"scope": "Internal linking"
+			},
+			{
+				"id": "unsourced-faq-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed templated FAQ entries giving unsourced job durations ('a few hours', '1 to 2 hours') and 'why choose Wade's' trust claims (years of experience, reputation), plus duplicated 'Serving Santa Cruz County' blocks, short promo sections and call buttons. Pricing FAQs kept.",
+				"inference_limit": "Experience and reputation claims stay out until the owner confirms them.",
+				"collected_at": "2026-10-24T22:35:00+00:00",
+				"scope": "Fact accuracy"
+			}
+		]
+	}
+}

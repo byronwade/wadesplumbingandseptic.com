@@ -189,8 +189,80 @@
 		},
 		{
 			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
 			"to": "/contact",
-			"anchor": "Get a Free Quote",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/service-offerings/fixture-installation",
+			"anchor": "toilet and fixture installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/service-offerings/toilet-repair",
+			"anchor": "toilet repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -203,6 +275,30 @@
 			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
 			"to": "/service-offerings/engineered-septic-system-installation",
 			"anchor": "engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-offerings/septic-tank-design-and-engineering",
+			"anchor": "septic design and engineering",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -524,6 +620,186 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/service-offerings/garbage-disposal-installation",
+			"anchor": "garbage disposal installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
+			"to": "/service-offerings/fixture-installation",
+			"anchor": "faucet and fixture installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+			"to": "/service-offerings/toilet-repair",
+			"anchor": "toilet repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+			"to": "/service-offerings/fixture-installation",
+			"anchor": "toilet installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heaters",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
+			"anchor": "filter service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "tank repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/service-offerings/hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
 			"to": "/service-area/capitola-ca-plumbing-septic-services",
 			"anchor": "Capitola",
@@ -836,6 +1112,30 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/privacy-policy",
 			"to": "/contact",
 			"anchor": "contact page",
@@ -851,6 +1151,30 @@
 			"from": "/promotions",
 			"to": "/contact",
 			"anchor": "Discuss your project with our team",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/service-offerings/septic-tank-maintenance-and-care",
+			"anchor": "septic maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1013,6 +1337,24 @@
 			"from": "/santa-cruz-toilet-running-solutions",
 			"to": "/service-area/felton-ca-plumbing-septic-services",
 			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-toilet-running-solutions",
+			"to": "/service-offerings/toilet-repair",
+			"anchor": "toilet repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-toilet-running-solutions",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-toilet-running-solutions",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1181,6 +1523,30 @@
 			"from": "/septic-solutions",
 			"to": "/contact",
 			"anchor": "request a project consultation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-challenges-santa-cruz-fire",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-challenges-santa-cruz-fire",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "septic repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-challenges-santa-cruz-fire",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-challenges-santa-cruz-fire",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4196,6 +4562,42 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leaks",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "clogs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heaters",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
 			"anchor": "water softeners",
@@ -4221,6 +4623,48 @@
 		},
 		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
+			"to": "/service-offerings/shower-installation-and-repair",
+			"anchor": "shower installation and repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/service-offerings/drainfield-repair-and-replacement",
+			"anchor": "drain field repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
 			"to": "/contact",
 			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
@@ -4430,6 +4874,90 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/service-offerings/septic-tank-maintenance-and-care",
+			"anchor": "septic maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/fixture-installation",
+			"anchor": "fixture installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heaters",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/warranties",
 			"to": "/contact",
 			"anchor": "Contact us",
@@ -4439,6 +4967,54 @@
 			"from": "/water-main-sewer-line-repair-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"to": "/service-offerings/water-filtration-system-installation",
+			"anchor": "water filtration installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"to": "/service-offerings/water-softener-maintenance",
+			"anchor": "water softener maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-offerings/water-softener-maintenance",
+			"anchor": "water softener maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-offerings/water-filtration-system-installation",
+			"anchor": "water filtration installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4473,14 +5049,86 @@
 		},
 		{
 			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/service-offerings/septic-tank-design-and-engineering",
+			"anchor": "septic design and engineering",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/contact",
+			"anchor": "Request service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "septic troubleshooting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
 			"to": "/contact",
-			"anchor": "Get a Free Quote",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		}
 	]

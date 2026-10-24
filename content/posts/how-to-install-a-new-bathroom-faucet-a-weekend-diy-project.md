@@ -6,6 +6,7 @@ description:
   and install a new one properly with basic tools in just a few hours.
 category: DIY Projects
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - local plumbing experts
   - Santa Cruz County plumbing
@@ -118,31 +119,6 @@ While faucet installation is generally DIY-friendly, consider calling Wade's Plu
 
 Installing a new bathroom faucet is a satisfying DIY project that most homeowners can complete in 2-3 hours. With proper installation, your new faucet should provide years of reliable service while enhancing your bathroom's appearance.
 
-## Upgrade Your Bathroom Faucet Today
-
-![Pressure gauge on an industrial pipe](/images/wordpress/detailed-view-of-a-pressure-gauge-attached-to-a-red-industrial-pipe-measuring-psi-and-kpa-fab4a1.webp)
-
-Transform your bathroom with expert faucet installation services in Santa Cruz County, CA.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz County, including:
-
-- Santa Cruz
-- Capitola
-- Scotts Valley
-- Watsonville
-- Aptos
-- Felton
-- Boulder Creek
-- Ben Lomond
-
-Our team holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring top-quality service and compliance with all regulatory standards.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you need a new bathroom faucet installed or any other plumbing service, we are committed to providing reliable and professional service throughout Santa Cruz County, CA.
-
 ## Frequently Asked Questions
 
 ### How is pricing quoted for installing a new bathroom faucet in Santa Cruz County, CA?
@@ -153,10 +129,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During the installation, our expert plumbers will carefully remove the old faucet, check for any underlying issues, and install the new fixture with precision. We ensure minimal disruption and clean up thoroughly after the job is done.
 
-### How long does it typically take to install a bathroom faucet?
+## Need help with a faucet installation?
 
-A standard bathroom faucet installation usually takes between 1 to 2 hours. However, the timeline may vary based on specific requirements or unforeseen complications.
-
-### Why choose Wade's Plumbing & Septic for your faucet installation in Santa Cruz County, CA?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County, CA. Our professional team is committed to delivering high-quality service and ensuring customer satisfaction.
+Wade's Plumbing & Septic handles [faucet and fixture installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

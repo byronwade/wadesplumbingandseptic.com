@@ -6,6 +6,7 @@ description:
   you tackle common household clogs safely and effectively before calling a professional.
 category: DIY Projects
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - plumbing tips
@@ -132,16 +133,6 @@ While many clogs can be cleared with DIY methods, some situations require profes
 
 Our professional plumbers have specialized equipment like video cameras and high-pressure water jetters that can resolve even the most stubborn clogs without damaging your plumbing system. For persistent or complex drain issues, contact Wade's Plumbing & Septic for prompt, professional service.
 
-## Act Now for Reliable Septic Solutions
-
-Experience swift and efficient drain cleaning services to keep your plumbing flowing smoothly.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic proudly serves the entire Santa Cruz County, including the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our team is fully licensed with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring professional and reliable service.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
 ## Frequently Asked Questions
 
 ### How much does it cost to clear clogged drains in Santa Cruz County, CA?
@@ -152,18 +143,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 Our professional team will arrive promptly and assess the situation. We use advanced tools and techniques to efficiently clear the clog while ensuring minimal disruption to your home.
 
-### How long does it typically take to clear a clogged drain?
+## Need help with a stubborn clog?
 
-Most clogged drains can be cleared within an hour. However, the timeline may vary depending on the complexity of the clog and accessibility of the pipes.
-
-### Why choose Wade's Plumbing & Septic for drain clearing in Santa Cruz County, CA?
-
-Wade's Plumbing & Septic is a trusted local provider with a reputation for reliability and expertise. Our professional team is committed to delivering high-quality service and ensuring customer satisfaction.
-
-## Clear Clogged Drains Easily in Santa Cruz County, CA
-
-Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
-
-## Skip the DIY, Get It Done Right
-
-Trust Wade's Plumbing & Septic for professional drain cleaning services in Santa Cruz County, CA. Our expert team ensures your drains are cleared efficiently and effectively, saving you time and hassle.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning) and [hydro jetting](/service-offerings/hydro-jetting) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -5,6 +5,7 @@ description: >-
   main sewer line. Here is why it happens and how to resolve it.
 category: Plumbing Tips
 date: "2025-06-03"
+updated: "2026-10-24"
 tags:
   - santa cruz county
   - plumbing issues
@@ -68,22 +69,6 @@ Backups and sewer line clogs are preventable with proper care. If you’ve notic
 
 Acting quickly can prevent long-term damage, save money, and keep your home safe from health hazards and costly water damage.
 
-## Act Now for Reliable Septic Solutions
-
-![Water flowing from a bathroom faucet](/images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp)
-
-Experience quick and reliable solutions for shower backups in Santa Cruz County homes with our expert services.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is dedicated to providing expert plumbing solutions to solve shower backup issues and more.
-
-**Contractor License:** California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you're in the heart of Santa Cruz or the outskirts of Watsonville, we're here to help with all your plumbing needs.
-
 ## Frequently Asked Questions
 
 ### How much does it cost to solve shower backup issues in Santa Cruz County homes?
@@ -94,10 +79,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 Our experienced technicians will assess the situation, identify the cause of the backup, and implement effective solutions to restore proper drainage. We ensure minimal disruption to your daily routine while maintaining a clean work environment.
 
-### How long does it typically take to resolve a shower backup?
+## Need help with a shower backup?
 
-Most shower backup issues can be resolved within a few hours. However, the timeline may vary based on the complexity of the issue. Our team works efficiently to restore your shower's functionality as quickly as possible.
-
-### Why should I choose Wade's Plumbing & Septic for my shower backup issues?
-
-Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, CA, with a reputation for reliable, efficient service. Our skilled professionals are dedicated to providing top-quality solutions tailored to your needs.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

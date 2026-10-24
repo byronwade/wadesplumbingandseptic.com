@@ -5,6 +5,7 @@ description: >-
   underground chamber designed to hold and treat sewage from your home.
 category: Septic Maintenance
 date: "2025-05-11"
+updated: "2026-10-24"
 tags:
   - septic maintenance
   - septic repair
@@ -45,18 +46,6 @@ Lastly, it is important to be mindful of the landscaping around your septic tank
 
 In conclusion, regular maintenance and proper care are crucial for the proper functioning and longevity of your septic tank. By following the tips outlined in this blog post, you can ensure that your septic tank continues to operate effectively for years to come. Remember to avoid disposing of non-biodegradable materials in your septic tank, have your septic tank pumped and inspected regularly, and be mindful of the landscaping around your septic tank.
 
-## Ensure Your Septic System's Longevity Today
-
-Our expert team in Santa Cruz County, CA, is ready to provide you with top-notch septic tank care and maintenance.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we are proud to serve the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is dedicated to providing top-notch septic care and maintenance to ensure your system runs smoothly.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all our services meet the highest standards of quality and safety. Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for all your septic needs.
-
 ## Frequently Asked Questions
 
 ![Santa Cruz County engineered septic system](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612d82.webp)
@@ -69,14 +58,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During maintenance, our experts at Wade's Plumbing & Septic will inspect your tank and ensure all components are functioning properly. We prioritize efficiency and cleanliness to minimize any disruption to your property.
 
-### How long does a typical septic tank maintenance service take?
+## Need help with septic maintenance?
 
-A standard septic tank maintenance service in Santa Cruz County usually takes between 1 to 3 hours, depending on the tank's condition and accessibility.
-
-### Why choose Wade's Plumbing & Septic for my septic tank needs?
-
-Wade's Plumbing & Septic offers expert services backed by years of experience in Santa Cruz County. Our commitment to quality and customer satisfaction ensures your septic system is in the best hands.
-
-Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
-
-Fast-Response Guarantee: Available for Santa Cruz County, CA
+Wade's Plumbing & Septic provides [septic maintenance and care](/service-offerings/septic-tank-maintenance-and-care) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

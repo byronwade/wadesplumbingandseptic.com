@@ -5,6 +5,7 @@ description: >-
   trap seal helps you make informed decisions about repairs and installations.
 category: Plumbing Tips
 date: "2025-06-24"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - plumbing terms
@@ -118,10 +119,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a plumbing service visit, our professional team will assess the issue, provide a transparent estimate, and efficiently carry out the necessary repairs or installations. We ensure minimal disruption to your home and clean up after the job is done.
 
-### How long does a typical plumbing service take in Santa Cruz County?
+## Need help with a plumbing or septic question?
 
-The timeline for plumbing services varies; simple repairs can often be completed within a couple of hours, whereas larger projects like water line solutions or septic system work may take a few days to complete.
-
-### Why should I choose Wade's Plumbing & Septic for my plumbing needs?
-
-Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County with a reputation for reliability and expertise. Our certified professionals are committed to providing high-quality service and ensuring customer satisfaction.
+Wade's Plumbing & Septic handles plumbing repairs, [drain cleaning](/service-offerings/drain-cleaning) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

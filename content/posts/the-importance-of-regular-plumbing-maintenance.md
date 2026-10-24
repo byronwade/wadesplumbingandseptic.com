@@ -5,6 +5,7 @@ description: >-
   property from water damage, and extend the life of your plumbing system.
 category: Plumbing Tips
 date: "2025-05-13"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - local plumbing experts
@@ -66,26 +67,6 @@ During a professional inspection, we:
 
 Additionally, services like water heater flushing, drain cleaning, and sewer camera inspections should be performed regularly as part of a long-term plumbing maintenance routine.
 
-## Why Choose Wade’s Plumbing & Septic for Routine Care?
-
-We’ve been trusted by families and businesses across Santa Cruz, Capitola, Soquel, Aptos, and Watsonville for decades. Our skilled team uses advanced diagnostics, professional-grade tools, and deep plumbing experience to catch small problems before they become big ones.
-
-Some plumbing issues (like slow leaks, hairline cracks, or internal corrosion), aren’t visible to the naked eye. Our inspections help you avoid surprise failures, costly water damage, and DIY mistakes, all while keeping your home compliant with local plumbing codes.
-
-## Schedule Your Plumbing Checkup Today
-
-Don’t wait until you’re ankle-deep in water or facing a major repair. Proactive maintenance is the most affordable way to protect your home and keep your plumbing running at peak performance.
-
-📍 Serving: Santa Cruz, Capitola, Soquel, Aptos, and surrounding areas
-
-🔧 Services: Inspections, leak detection, water heater service, drain cleaning, pipe diagnostics
-
-📞 Call Wade’s Plumbing & Septic today at (831) 225-4344
-
-## Act Now to Prevent Costly Repairs
-
-Regular maintenance ensures your plumbing system in Santa Cruz County stays efficient and trouble-free.
-
 ## Frequently Asked Questions
 
 ### How much does regular plumbing maintenance cost in Santa Cruz County, CA?
@@ -96,10 +77,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a plumbing maintenance service, our technicians will inspect your system for leaks, check water pressure, and ensure all fixtures are functioning properly. We aim to identify potential issues before they become major problems.
 
-### How long does a typical plumbing maintenance service take?
+## Need help with plumbing maintenance?
 
-A typical plumbing maintenance service in Santa Cruz County takes about 1 to 2 hours, depending on the complexity and size of your system. Our team works efficiently to minimize disruption to your day.
-
-### Why choose Wade's Plumbing & Septic for plumbing maintenance in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local authority with years of experience in Santa Cruz County. Our professional team is dedicated to providing reliable and efficient plumbing maintenance services to ensure your system runs smoothly.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection) and [water heater service](/service-offerings/water-heater-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

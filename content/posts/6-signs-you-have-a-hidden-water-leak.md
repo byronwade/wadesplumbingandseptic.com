@@ -5,6 +5,7 @@ description: >-
   face. Learn six warning signs your home may have a hidden water leak.
 category: Plumbing Tips
 date: "2025-05-27"
+updated: "2026-10-24"
 tags:
   - santa cruz plumbing
   - water leak detection
@@ -54,18 +55,6 @@ If you’ve noticed any of these signs, don’t wait until the problem worsens. 
 
 Our experienced team will locate the source of the leak, assess any damage, and deliver reliable, long-lasting solutions to protect your home and your wallet.
 
-## Act Now for Reliable Septic Solutions
-
-![Leaking water pipe outdoors](/images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp)
-
-Our expert team at Wade's Plumbing & Septic is ready to detect hidden water leaks in your Santa Cruz County home.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County community, including Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos. Our team is fully equipped to handle all your plumbing and septic needs with precision and care.
-
-As a licensed contractor holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), we ensure that all services are
-
 ## Frequently Asked Questions
 
 ### How much does it cost to detect hidden water leaks in Santa Cruz County homes?
@@ -76,18 +65,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During our water leak detection service, our skilled technicians use advanced equipment to accurately locate leaks. We ensure minimal disruption to your home while providing a thorough inspection.
 
-### How long does a typical water leak detection service take?
+## Need help with a hidden leak?
 
-The timeline for detecting water leaks can vary depending on the complexity of the issue. Generally, our expert team can complete the service within a few hours, ensuring efficient and effective results.
-
-### Why choose Wade's Plumbing & Septic for water leak detection in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, known for our expertise and reliable service. Our commitment to customer satisfaction and use of cutting-edge technology makes us the ideal choice for leak detection.
-
-Protect Your Home
-
-## Detect Hidden Water Leaks in Santa Cruz County Homes
-
-Ensure your home's plumbing integrity with expert leak detection services from Wade's Plumbing & Septic.
-
-[Call Us Now](tel:+18312254344)
+Wade's Plumbing & Septic provides [leak detection](/service-offerings/leak-detection) and [pipe repair](/service-offerings/pipe-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

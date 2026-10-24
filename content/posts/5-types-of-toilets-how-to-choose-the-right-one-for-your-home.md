@@ -5,6 +5,7 @@ description: >-
   available, it can quickly become overwhelming.
 category: Plumbing Tips
 date: "2025-07-15"
+updated: "2026-10-24"
 tags:
   - local plumbing experts
   - home plumbing solutions
@@ -96,22 +97,6 @@ Choosing the right toilet is just the first step, installing it correctly is equ
 
 Whether you’re remodeling a bathroom or replacing an old, inefficient toilet, we’re here to help you make a smart, long-lasting investment in your home.
 
-## Upgrade Your Bathroom Today
-
-![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
-
-Experience unparalleled comfort and efficiency with our expert toilet installation services in Santa Cruz County.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we are proud to serve the diverse communities of Santa Cruz County, including Santa Cruz, Scotts Valley, Capitola, Watsonville, and Aptos. Our team is committed to providing exceptional plumbing services tailored to meet the needs of each unique community.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our services adhere to the highest industry standards.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Whether you are in need of expert toilet installation or any other plumbing service, Wade's Plumbing & Septic is here to support you with professional and reliable solutions throughout Santa Cruz County, CA.
-
 ## Frequently Asked Questions
 
 ### How is pricing quoted for installing a new toilet in Santa Cruz County?
@@ -122,14 +107,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 Our professional team at Wade's Plumbing & Septic ensures a seamless installation process. We remove the old toilet, install the new one, and clean up, ensuring everything is functioning perfectly before we leave.
 
-### How long does a typical toilet installation take?
+## Need help with a new toilet?
 
-A standard toilet installation usually takes about 1 to 2 hours. However, if additional plumbing adjustments are needed, it might take a bit longer.
-
-### Why should I choose Wade's Plumbing & Septic for toilet installation in Santa Cruz County?
-
-Wade's Plumbing & Septic offers expert service with a focus on customer satisfaction. Our licensed professionals bring years of experience and a commitment to quality, ensuring your toilet installation is done right the first time.
-
-### Skip the DIY, Get It Done Right
-
-Trust Wade's Plumbing & Septic to expertly install your new toilet in Santa Cruz County, CA. Our friendly, professional team ensures a hassle-free experience, saving you time and potential headaches.
+Wade's Plumbing & Septic handles [toilet and fixture installation](/service-offerings/fixture-installation) and [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

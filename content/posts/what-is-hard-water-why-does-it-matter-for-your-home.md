@@ -6,6 +6,7 @@ description: >-
   matters.
 category: Plumbing Tips
 date: "2025-07-29"
+updated: "2026-10-24"
 tags:
   - santa cruz county
   - local plumbing experts
@@ -81,22 +82,6 @@ If you’ve noticed scale buildup, water spots, low water pressure, or dry skin,
 
 We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding areas with trusted local plumbing expertise. Let us help you improve your water quality, so your home, plumbing, and appliances can perform at their best.
 
-## Act Now to Protect Your Home from Hard Water Damage
-
-![Treated wastewater warning near waterway](/images/wordpress/reflective-lake-scene-with-warning-sign-about-treated-wastewater-near-mountainous-landscape-67a3c8.webp)
-
-Ensure the longevity and efficiency of your plumbing with our expert water quality services in Santa Cruz County, CA.
-
-## Serving Santa Cruz County, CA
-
-Wade's Plumbing & Septic is proud to serve the diverse communities of Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our team is dedicated to providing top-notch plumbing and septic services to residents and businesses throughout the region.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring our work meets the highest standards of quality and safety.
-
-Our hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-At Wade's Plumbing & Septic, we are committed to being your trusted local experts in Santa Cruz County, CA.
-
 ## Frequently Asked Questions
 
 ### How much does it cost to address hard water issues in Santa Cruz County homes?
@@ -107,10 +92,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a hard water service appointment, our team will assess your water quality, inspect your plumbing system, and recommend the best solutions. We ensure minimal disruption and provide a thorough explanation of the process and expected outcomes.
 
-### How long does it typically take to resolve hard water problems?
+## Need help with hard water?
 
-Resolving hard water problems can typically take one to two days, depending on the complexity of the installation or repairs needed. Our experienced technicians work efficiently to ensure your home's water quality is enhanced promptly.
-
-### Why choose Wade's Plumbing & Septic for hard water solutions in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert with years of experience in Santa Cruz County. We offer customized solutions, reliable service, and a commitment to improving your home's water quality with professionalism and care.
+Wade's Plumbing & Septic handles [water softener maintenance](/service-offerings/water-softener-maintenance) and [water filtration installation](/service-offerings/water-filtration-system-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
