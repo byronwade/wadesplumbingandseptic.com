@@ -3,18 +3,28 @@ import type { Metadata } from "next"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { RankedContentArchive } from "@/components/ranked-content-archive"
-import { buildPageMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { getCollection } from "@/lib/content"
+import {
+	breadcrumbJsonLd,
+	buildPageMetadata,
+	collectionPageJsonLd,
+} from "@/lib/seo"
+
+const description =
+	"Practical plumbing and septic education for Santa Cruz County homeowners from Wade's licensed local team."
 
 export const metadata: Metadata = buildPageMetadata({
 	title: "Expert Plumbing & Septic Tips",
-	description:
-		"Practical plumbing and septic education for Santa Cruz County homeowners from Wade's licensed local team.",
+	description,
 	pathname: "/expert-tips",
 	image: "/images/team/byron-working.webp",
 	eyebrow: "Homeowner guides",
 })
 
-export default function ExpertTipsPage() {
+export default async function ExpertTipsPage() {
+	const items = await getCollection("posts")
+
 	return (
 		<main id="main-content">
 			<ContentHero
@@ -36,6 +46,23 @@ export default function ExpertTipsPage() {
 			/>
 
 			<ContactCta title="Have a plumbing or septic question?" />
+			<JsonLd
+				data={[
+					collectionPageJsonLd({
+						name: "Expert Plumbing & Septic Tips",
+						description,
+						pathname: "/expert-tips",
+						items: items.map((item) => ({
+							name: item.title,
+							path: `/${item.slug}`,
+						})),
+					}),
+					breadcrumbJsonLd([
+						{ name: "Home", path: "/" },
+						{ name: "Expert Tips", path: "/expert-tips" },
+					]),
+				]}
+			/>
 		</main>
 	)
 }
