@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "e938a32d628dbe3c1bd2f43a5ea8b2283ae6b60a35f446b820985bcbd20afc7d",
+	"sha256": "e02d7e5b39c133489df4328d618a65d5d38b584fe7e359ecedd69dc0fc7ecad8",
 	"payload": {
 		"post": "content/posts/rainy-season-septic-and-drain-prep-santa-cruz.md",
 		"observations": [

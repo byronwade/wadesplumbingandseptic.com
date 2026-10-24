@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "3c43ba4f2a55385625e7dfea7b30a6611302d4e83ab1ef11d14ca88d80ec85aa",
+	"sha256": "4d0cda14534cd1b54a4f33207aeda045c36bcc9ac825d552feeb2d836a08e44e",
 	"payload": {
 		"post": "content/posts/efficient-water-filtration-santa-cruz.md",
 		"observations": [
@@ -51,6 +51,26 @@
 				"inference_limit": "Product category guidance; not a Wade product claim.",
 				"collected_at": "2026-10-24T20:14:28.128891+00:00",
 				"scope": "Refresh of existing thin post"
+			},
+			{
+				"id": "scceh-softener-handout",
+				"source_url": "https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "County EH: softener brine can damage tank bacteria, clog the leach field and increase hydraulic load; best is no softener or exchange tank; discharge brine to a separate drywell or subsurface system; septic discharge highly discouraged; ground discharge prohibited; sewer properties discharge to sewer.",
+				"inference_limit": "County guidance handout.",
+				"collected_at": "2026-10-24T20:19:49.037911+00:00",
+				"scope": "Septic discharge note"
+			},
+			{
+				"id": "scc-lamp-ordinance",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "LAMP Appendix A sewage ordinance: discharge from water softeners, drinking water filters, swimming pool filter backwash and other non-domestic wastewater shall not be discharged to the septic system (raised by Codex review citing SCCC 7.38.150(A)(5)).",
+				"inference_limit": "Ordinance text as published by County EH; homeowners should confirm current requirements with EH.",
+				"collected_at": "2026-10-24T20:19:49.037911+00:00",
+				"scope": "Septic discharge note"
 			},
 			{
 				"id": "repo-facts",

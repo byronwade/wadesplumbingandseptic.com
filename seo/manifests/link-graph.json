@@ -339,12 +339,6 @@
 		},
 		{
 			"from": "/efficient-water-filtration-santa-cruz",
-			"to": "/the-complete-guide-to-septic-system-maintenance",
-			"anchor": "septic maintenance guide",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/efficient-water-filtration-santa-cruz",
 			"to": "/service-offerings/water-softener-maintenance",
 			"anchor": "water softener maintenance",
 			"classification": "MOCK_VERIFIED"

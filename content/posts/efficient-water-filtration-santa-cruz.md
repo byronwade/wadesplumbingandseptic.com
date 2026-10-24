@@ -71,7 +71,7 @@ Reverse osmosis works well, but it uses water to do it. According to EPA WaterSe
 
 EPA also says it does not intend to promote RO for every situation, because filtration that uses little or no water is sometimes enough. If you only want better tasting water, a carbon filter may be all you need.
 
-**On septic?** Every gallon of reject water from an RO unit, and the regeneration water from a softener, goes to your septic system along with everything else. Choosing an efficient model keeps that extra load down. Ask about the drain connection when planning the install, and see our [septic maintenance guide](/the-complete-guide-to-septic-system-maintenance) for more on keeping water use in check.
+**On septic?** Plan the drain before you buy. Santa Cruz County's sewage disposal ordinance says discharge from water softeners, drinking water filters and other non-domestic sources shall not be discharged to the septic system, and County Environmental Health warns that softener brine can harm tank bacteria, clog the leach field and add load that leads to surfacing effluent. Its guidance prefers no softener or an exchange tank softener, with a separate drywell or subsurface system for any brine that must be discharged, and never discharge onto the ground. Confirm an approved discharge arrangement with [County Environmental Health](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx) before installing an RO unit or softener on a septic property. Homes on sewer discharge softener waste through the sewer connection.
 
 ## Maintenance keeps it working
 
@@ -86,7 +86,7 @@ If a softener is part of the setup, keep salt topped up and have the control val
 
 ## Getting it installed
 
-A clean installation matters as much as the equipment: correct shutoff and bypass valves, a proper drain connection for RO and softener discharge, secure mounting and room to change filters later. Wade's Plumbing & Septic installs [whole house and point of use water filtration systems](/service-offerings/water-filtration-system-installation) across the county, including [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services) and [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services). If your concern is old piping rather than the water itself, [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) may be the better fix.
+A clean installation matters as much as the equipment: correct shutoff and bypass valves, a proper drain connection for RO and softener discharge (separate from the septic system on septic properties), secure mounting and room to change filters later. Wade's Plumbing & Septic installs [whole house and point of use water filtration systems](/service-offerings/water-filtration-system-installation) across the county, including [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services) and [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services). If your concern is old piping rather than the water itself, [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) may be the better fix.
 
 ## Frequently asked questions
 
@@ -106,12 +106,18 @@ Yes. A typical point of use RO system sends five gallons or more down the drain 
 
 No. A softener treats hardness minerals that cause scale. It does not remove most other contaminants, so it is often paired with a filter.
 
+### Can a water softener or RO system drain into my septic system?
+
+Not in Santa Cruz County. The county sewage disposal ordinance says discharge from water softeners and drinking water filters shall not go to the septic system. Check with County Environmental Health for an approved separate discharge before you install one.
+
 ## Sources
 
 - CDC, [About Drinking Water](https://www.cdc.gov/drinking-water/about/index.html)
 - U.S. EPA, [Consumer Confidence Reports](https://www.epa.gov/ccr)
 - U.S. EPA, [Protect Your Home's Water](https://www.epa.gov/privatewells/protect-your-homes-water)
 - U.S. EPA WaterSense, [Point of Use Reverse Osmosis Systems](https://www.epa.gov/watersense/point-use-reverse-osmosis-systems)
+- Santa Cruz County Environmental Health, [The Harmful Effects of Water Softener Discharge on Your Septic System](https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf)
+- Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 
 ## Need help choosing a water filter?
 
