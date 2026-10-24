@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-water-heater-refresh-2026-10-24",
+	"collected_at": "2026-10-24T22:03:42+00:00",
+	"source": "doe-energy-star-ca-hsc",
+	"source_url_or_tool": "https://www.energystar.gov/sites/default/files/tools/ES_Electric_WH_Factsheet_2020.pdf",
+	"scope": "Substantive refresh of an existing post at its URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "95dd6bff8a0f7b8a8bf7ca847dab911a40910db4830b90a5f3a9ee5858a186fd",
+	"payload": {
+		"post": "content/posts/should-you-repair-or-replace-your-water-heater.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsourced 'up to 60% less electricity' heat pump claim, an unsourced 10 to 15 year lifespan and 8 to 10 year repair window, 'unlimited hot water' for tankless, a federal tax credit claim, an unsourced 2 to 4 hour install time, a C-42 license line for water heater work, a septic excavation image, and a broken list that turned a heading into a bullet.",
+				"inference_limit": "Licenses remain as listed in lib/site.ts; no new service claimed.",
+				"collected_at": "2026-10-24T22:03:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "energy-star-factsheet",
+				"source_url": "https://www.energystar.gov/sites/default/files/tools/ES_Electric_WH_Factsheet_2020.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "ENERGY STAR certified electric (heat pump) water heaters use less than half the energy of standard electric water heater models.",
+				"inference_limit": "National program claim; dollar savings figure not repeated.",
+				"collected_at": "2026-10-24T22:03:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "doe-heat-pump",
+				"source_url": "https://bsesc.energy.gov/energy-basics/water-heaters-heat-pumps",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Heat pump water heaters move heat from the surrounding space into the tank and can be two to three times more efficient than conventional electric resistance water heaters.",
+				"inference_limit": "General national guidance.",
+				"collected_at": "2026-10-24T22:03:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "ca-hsc-19211",
+				"source_url": "https://pfwt.ssc.ca.gov/wp-content/uploads/sites/17/2020/08/health_and_safety_19211.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "All new and replacement water heaters and all existing residential water heaters shall be braced, anchored or strapped against earthquake motion; sellers must certify compliance to buyers in writing.",
+				"inference_limit": "California state law; applies to standard heaters up to 120 gallons with preengineered kits available.",
+				"collected_at": "2026-10-24T22:03:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; all linked services and posts exist.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T22:03:42+00:00",
+				"scope": "Refresh of existing post"
+			}
+		]
+	}
+}

@@ -4197,14 +4197,32 @@
 		},
 		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
+			"anchor": "water softeners",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-offerings/tankless-water-heater-installation",
+			"anchor": "tankless water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/service-areas",
-			"anchor": "service area overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/contact",
-			"anchor": "Get a Free Quote",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
