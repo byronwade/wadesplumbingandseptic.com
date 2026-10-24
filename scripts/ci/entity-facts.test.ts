@@ -15,6 +15,7 @@ import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
 import {
 	articleJsonLd,
 	businessId,
+	collectionPageJsonLd,
 	localBusinessJsonLd,
 	websiteId,
 	websiteJsonLd,
@@ -118,6 +119,20 @@ test("every schema node points at one business and one website @id", () => {
 	const article = articleJsonLd(document)
 	assert.equal(article.author["@id"], businessId)
 	assert.equal(article.publisher["@id"], businessId)
+
+	const collection = collectionPageJsonLd({
+		name: "Sample hub",
+		description: "Sample description",
+		pathname: "/sample-hub",
+		items: [{ name: "Sample", path: "/sample-article" }],
+	})
+	assert.deepEqual(collection.isPartOf, { "@id": websiteId })
+	assert.deepEqual(collection.about, { "@id": businessId })
+	assert.equal(collection.mainEntity.numberOfItems, 1)
+	assert.equal(
+		collection.mainEntity.itemListElement[0].url,
+		`${siteConfig.url}/sample-article`,
+	)
 
 	const handWritten = sourceFiles(["app", "components", "lib"], /\.tsx?$/)
 		.filter((file) => path.normalize(file) !== path.normalize("lib/seo.ts"))

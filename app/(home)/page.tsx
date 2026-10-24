@@ -59,8 +59,7 @@ export default function HomePage() {
 					  copy delayed LCP under mobile Lighthouse (~2s element render delay).
 					*/}
 					<h1 className="type-cinematic text-white">
-						Santa Cruz plumbing
-						<br />
+						Santa Cruz plumbing <br />
 						<span className="text-primary-bright">and septic</span>
 					</h1>
 

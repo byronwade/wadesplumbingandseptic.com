@@ -242,6 +242,46 @@ export function webPageJsonLd(document: ContentDocument) {
 	}
 }
 
+/**
+ * Hub page node for an archive (services, expert tips): names the page and
+ * lists every item it links to, so crawlers see the full set without running
+ * the client-side filters.
+ */
+export function collectionPageJsonLd({
+	name,
+	description,
+	pathname,
+	items,
+}: {
+	name: string
+	description: string
+	pathname: string
+	items: Array<{ name: string; path: string }>
+}) {
+	const url = absoluteUrl(pathname)
+	return {
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"@id": `${url}#collection`,
+		name,
+		description,
+		url,
+		isPartOf: { "@id": websiteId },
+		about: { "@id": businessId },
+		inLanguage: "en-US",
+		mainEntity: {
+			"@type": "ItemList",
+			numberOfItems: items.length,
+			itemListElement: items.map((item, index) => ({
+				"@type": "ListItem",
+				position: index + 1,
+				name: item.name,
+				url: absoluteUrl(item.path),
+			})),
+		},
+	}
+}
+
 export function breadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
 	return {
 		"@context": "https://schema.org",
