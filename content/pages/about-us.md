@@ -2,7 +2,7 @@
 title: About Us
 description: >-
   Wade's Plumbing & Septic is a family-owned plumbing and septic company serving
-  Santa Cruz County and selected Santa Clara County communities since 2005.
+  Santa Cruz County and selected Santa Clara County communities since 2021.
 order: 1
 image: /images/team/byron-working.webp
 imageAlt: Byron Wade working on a plumbing rough-in
@@ -32,7 +32,7 @@ eyebrow: About Wade's
 
 ## About Wade's Plumbing & Septic
 
-Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2005. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.
+Wade's Plumbing & Septic is a family-owned and operated business delivering reliable plumbing and septic solutions since 2021. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.
 
 ## Our Mission
 

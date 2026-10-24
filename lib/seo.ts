@@ -172,6 +172,7 @@ export function localBusinessJsonLd(
 			name: "CA CSLB License",
 			value: siteConfig.licenseNumber,
 		},
+		foundingDate: siteConfig.foundingYear,
 		hasCredential: siteConfig.licenseClassifications.map((license) => ({
 			"@type": "EducationalOccupationalCredential",
 			credentialCategory: "license",
