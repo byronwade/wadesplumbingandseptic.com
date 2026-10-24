@@ -103,6 +103,7 @@ test("license credentials match the displayed CSLB license", () => {
 		siteConfig.licenses,
 		"CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
 	)
+	assert.equal(localBusinessJsonLd().foundingDate, "2021")
 	const credentials = localBusinessJsonLd().hasCredential
 	assert.equal(credentials.length, siteConfig.licenseClassifications.length)
 	for (const credential of credentials) {

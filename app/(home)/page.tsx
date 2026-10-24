@@ -49,7 +49,7 @@ export default function HomePage() {
 						Santa Cruz County, CA
 					</p>
 					<p className="text-on-dark-subtle hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
-						Est. family owned
+						Est. 2021 · Family owned
 					</p>
 				</div>
 

@@ -1268,3 +1268,10 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: four existing posts (`memorial-day-plumbing-prep-santa-cruz`, `septic-system-challenges-santa-cruz-fire`, `septic-system-seasonal-maintenance-santa-cruz`, `septic-trouble-signs-santa-cruz`) claimed regular maintenance extends septic life "by up to 30%", "up to 30 years" or "by decades", with no source. Each claim is replaced with cited EPA inspection guidance (every three years for typical household systems, about yearly for systems with pumps or mechanical parts). The septic trouble signs post's description, which repeated the 30% claim, now summarizes the article. No URL, date, business fact or schema change.
 - Verification: `npm run seo:check`, `lint`, `format:check`, `build`.
 - Truth state: source `LIVE_VERIFIED` on 2026-10-24 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-24-unsourced-septic-stats.json`.
+
+## 2026-10-24: Founding year corrected to 2021
+
+- Scope: Byron confirmed in the project thread on 2026-10-24 that the business dates from 2021. The About page said "since 2005" in its description and body; both now say 2021. `siteConfig.foundingYear` holds the year once, and LocalBusiness JSON-LD (`foundingDate`), llms.txt (`Founded:`) and the homepage hero label ("Est. 2021 · Family owned") read from it.
+- Guard: `business-facts.ts` previously rejected "since 2021" as an unverified trust claim; it now accepts 2021 and rejects any other founding year after "since", "established", "est." or "founded". `entity-facts.test.ts` asserts `foundingDate` is 2021.
+- Verification: `npm run seo:check`, `lint`, `typecheck`, `format:check`.
+- Truth state: owner-confirmed business fact; site result `MOCK_VERIFIED` local evidence only.

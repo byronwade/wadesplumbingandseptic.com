@@ -18,6 +18,7 @@ test("confirmed hours and flat-rate copy pass", () => {
 		businessFactIssues(`${confirmedHours}\n${confirmedPricing}`),
 		[],
 	)
+	assert.deepEqual(businessFactIssues("Family owned since 2021"), [])
 })
 
 for (const text of [
@@ -31,7 +32,8 @@ for (const text of [
 	"Urgent repairs",
 	"4.9 local rating",
 	"5-star reviews",
-	"Family owned since 2021",
+	"Family owned since 2005",
+	"Est. 2019",
 	"Licensed in California & Georgia",
 	"Monday to Friday, 8 AM to 6 PM",
 	"Saturday, 9 AM to 3 PM",

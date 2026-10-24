@@ -37,6 +37,8 @@ export const siteConfig = {
 		latitude: 37.0891,
 		longitude: -122.0864,
 	},
+	/** Year the business was founded, confirmed by Byron, October 24, 2026. */
+	foundingYear: "2021",
 	licenses: `CA CSLB #${licenseNumber} (${licenseClassifications.map((item) => `${item.code} ${item.name}`).join(", ")})`,
 	licenseNumber,
 	licenseClassifications,

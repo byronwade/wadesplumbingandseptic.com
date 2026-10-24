@@ -36,12 +36,16 @@ export function businessFactIssues(text: string): string[] {
 	) {
 		issues.push("unavailable service claim")
 	}
+	if (/\b4\.9\b|\b5[ -]star\b|★|California\s*(?:&|and)\s*Georgia/i.test(text)) {
+		issues.push("unverified rating or trust claim")
+	}
+	// Founded in 2021 (owner confirmed October 24, 2026).
 	if (
-		/\b4\.9\b|\b5[ -]star\b|★|\bsince 2021\b|California\s*(?:&|and)\s*Georgia/i.test(
+		/\b(?:since|established|est\.?|founded(?: in)?)\s+(?!2021\b)(?:19|20)\d{2}\b/i.test(
 			text,
 		)
 	) {
-		issues.push("unverified rating or trust claim")
+		issues.push("wrong founding year")
 	}
 	const unbolded = text.replace(/\*\*|__/g, "")
 	if (septicPumpingOffer.some((pattern) => pattern.test(unbolded))) {
