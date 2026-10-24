@@ -172,6 +172,17 @@ export function localBusinessJsonLd(
 			name: "CA CSLB License",
 			value: siteConfig.licenseNumber,
 		},
+		hasCredential: siteConfig.licenseClassifications.map((license) => ({
+			"@type": "EducationalOccupationalCredential",
+			credentialCategory: "license",
+			name: `California ${license.code} ${license.name} contractor license`,
+			identifier: siteConfig.licenseNumber,
+			recognizedBy: {
+				"@type": "GovernmentOrganization",
+				name: "Contractors State License Board",
+				url: "https://www.cslb.ca.gov",
+			},
+		})),
 		areaServed: serviceAreasJsonLd().map((area) =>
 			"@id" in area ? { "@id": area["@id"] } : area,
 		),

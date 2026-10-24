@@ -98,6 +98,19 @@ test("schema hours are derived from the same hours shown on the site", () => {
 	assert.equal(contactInfo.hours, siteConfig.hours)
 })
 
+test("license credentials match the displayed CSLB license", () => {
+	assert.equal(
+		siteConfig.licenses,
+		"CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
+	)
+	const credentials = localBusinessJsonLd().hasCredential
+	assert.equal(credentials.length, siteConfig.licenseClassifications.length)
+	for (const credential of credentials) {
+		assert.equal(credential.identifier, siteConfig.licenseNumber)
+		assert.equal(credential.credentialCategory, "license")
+	}
+})
+
 test("every schema node points at one business and one website @id", () => {
 	assert.equal(businessId, `${siteConfig.url}/#business`)
 	assert.equal(localBusinessJsonLd()["@id"], businessId)

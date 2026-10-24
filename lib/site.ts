@@ -1,3 +1,10 @@
+/** CSLB license classifications; `siteConfig.licenses` is built from these. */
+const licenseNumber = "1087260"
+const licenseClassifications = [
+	{ code: "C-36", name: "Plumbing" },
+	{ code: "C-42", name: "Sanitation System" },
+] as const
+
 export const siteConfig = {
 	name: "Wade's Plumbing & Septic",
 	shortName: "Wade's",
@@ -30,8 +37,9 @@ export const siteConfig = {
 		latitude: 37.0891,
 		longitude: -122.0864,
 	},
-	licenses: "CA CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)",
-	licenseNumber: "1087260",
+	licenses: `CA CSLB #${licenseNumber} (${licenseClassifications.map((item) => `${item.code} ${item.name}`).join(", ")})`,
+	licenseNumber,
+	licenseClassifications,
 	googleMapsUrl:
 		"https://maps.google.com/?q=7737+Highway+9,+Ben+Lomond,+CA+95005",
 	/** Direct Google listing and review links confirmed by Byron, October 19, 2026. */
