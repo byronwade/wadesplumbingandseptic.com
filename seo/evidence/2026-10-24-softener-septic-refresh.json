@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-softener-septic-refresh-2026-10-24",
+	"collected_at": "2026-10-24T21:07:42+00:00",
+	"source": "ndsu-extension-and-santa-cruz-county-eh",
+	"source_url_or_tool": "https://www.ndsu.edu/agriculture/extension/publications/water-softening-ion-exchange",
+	"scope": "Substantive refresh of a 900 word post at its existing URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "560a2b510ac205133d03de1c535fd7f0ebc86b43c3b1444389e740be282e4f4c",
+	"payload": {
+		"post": "content/posts/salt-water-softeners-vs-water-conditioners-which-is-right-for-you.md",
+		"observations": [
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed claims that salt-free conditioners have a resin tank and a low-salt discharge that is safe for septic systems, that softener sodium on municipal sewer harms the environment, an unsourced 2 to 4 hour install time, a C-42 Sanitation license cited for softener work, and Consumer Reports and Angi sources that were not used for specific facts.",
+				"inference_limit": "Softener installation is plumbing work; licenses remain as listed in lib/site.ts.",
+				"collected_at": "2026-10-24T21:07:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "ndsu-ion-exchange",
+				"source_url": "https://www.ndsu.edu/agriculture/extension/publications/water-softening-ion-exchange",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Ion exchange swaps calcium and magnesium for sodium; resin is recharged by backflushing with salt brine; about 8 mg/L sodium added per grain of hardness removed; potassium chloride needs about 10 percent more; recharge water can overload small septic systems; magnetic conditioners lack consistent performance standards.",
+				"inference_limit": "General extension guidance, not product specific.",
+				"collected_at": "2026-10-24T21:07:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "scceh-softener-handout",
+				"source_url": "https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Brine harms tank bacteria, contributes to leach field clogging and surfacing effluent; preferred options are no softener, then an exchange tank softener, then a drywell or subsurface system separate from the septic; never discharge to the ground.",
+				"inference_limit": "Santa Cruz County guidance.",
+				"collected_at": "2026-10-24T21:07:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "lamp-appendix-a",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "County sewage disposal ordinance: discharge from water softeners, drinking water filters and other non-domestic sources shall not be discharged to the septic system.",
+				"inference_limit": "Applies to septic properties in Santa Cruz County; sewer homes follow their sewer provider.",
+				"collected_at": "2026-10-24T21:07:42+00:00",
+				"scope": "Refresh of existing post"
+			},
+			{
+				"id": "repo-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Hours, free quotes and flat-rate pricing restated; linked services and posts exist.",
+				"inference_limit": "Only confirmed business facts are restated.",
+				"collected_at": "2026-10-24T21:07:42+00:00",
+				"scope": "Refresh of existing post"
+			}
+		]
+	}
+}
