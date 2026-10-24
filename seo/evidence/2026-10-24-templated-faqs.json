@@ -1,0 +1,39 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-templated-faqs-2026-10-24",
+	"collected_at": "2026-10-24T22:55:00+00:00",
+	"source": "repository-content",
+	"source_url_or_tool": "content",
+	"scope": "Remove templated FAQ entries with unsourced job durations and unconfirmed experience claims from service pages and landing pages",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "2d3dd3b191e89e1e4e993beb755e821b99c112c93df4ccc0aba277ef565632b0",
+	"payload": {
+		"posts": [
+			"content/pages/about-us.md",
+			"content/pages/engineered-septic-systems-santa-cruz-county.md",
+			"content/pages/failed-septic-repair-replacement-santa-cruz-county.md",
+			"content/pages/financing.md",
+			"content/pages/plumbing-repair-services-santa-cruz-county.md",
+			"content/pages/testimonials.md",
+			"content/pages/water-main-sewer-line-repair-santa-cruz-county.md",
+			"content/posts/new-septic-installations-santa-cruz.md",
+			"content/services/hydro-jetting.md",
+			"content/services/septic-tank-inspection-and-assessment.md",
+			"content/services/septic-tank-leach-field-repair-and-replacement.md"
+		],
+		"observations": [
+			{
+				"id": "templated-faqs",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "11 files carried templated 'How long does X take' answers (a few hours, 1 to 3 days, 2 to 4 weeks) and 'Why choose Wade's' answers claiming years of experience or reputation. Removed; pricing and what-to-expect FAQs kept.",
+				"inference_limit": "Durations had no source and vary by job; experience claims stay out until the owner confirms them.",
+				"collected_at": "2026-10-24T22:55:00+00:00",
+				"scope": "Fact accuracy"
+			}
+		]
+	}
+}

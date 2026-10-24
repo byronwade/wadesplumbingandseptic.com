@@ -71,16 +71,6 @@ Flat-rate pricing, quoted on site before work begins.
 
 During a septic inspection, our certified experts will assess your system's components, check for any signs of wear or damage, and ensure compliance with local regulations. We provide a detailed report of our findings and recommendations.
 
-### How long does a typical septic inspection take?
-
-A thorough septic inspection usually takes a few hours, depending on the size and complexity of your system. Our team works efficiently to minimize disruption while ensuring a comprehensive evaluation.
-
-### Why choose Wade's Plumbing & Septic for your septic inspection needs?
-
-Wade's Plumbing & Septic is a trusted local authority in Santa Cruz County, known for our professional service and expertise. Our commitment to quality and customer satisfaction ensures your septic system is in good hands.
-
-Ensure Your System's Health
-
 ## Thorough Septic Inspections in Santa Cruz County, CA
 
 Guarantee the reliability and efficiency of your septic system with our expert inspection services.

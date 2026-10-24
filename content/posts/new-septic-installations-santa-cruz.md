@@ -83,10 +83,6 @@ Look for signs such as frequent backups, slow drainage, and foul odors. If your 
 
 Modern systems reduce pollutants, protect water sources, and are designed to operate more efficiently, minimizing environmental impact.
 
-### How long does a septic installation take?
-
-The installation process typically takes a few days to a week, depending on the complexity and site conditions.
-
 ### What maintenance is required for a new septic system?
 
 Regular inspections, pumping, and addressing minor issues are crucial. Professional services can ensure comprehensive maintenance.

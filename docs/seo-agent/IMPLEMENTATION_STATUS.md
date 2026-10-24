@@ -1335,3 +1335,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: 26 older posts that had no in-body link to a service page or the service areas page. Each now ends with the standard closing (matching existing services, `/service-areas`, flat-rate quote and office hours). Removed templated FAQ entries with unsourced job durations and "why choose Wade's" experience claims, duplicated "Serving Santa Cruz County" blocks, short promo sections and call buttons. Pricing FAQs kept; `updated: 2026-10-24` added where missing. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-24-post-closings.json`.
+
+## 2026-10-24: Templated FAQ cleanup on services and landing pages
+
+- Scope: removed templated "How long does X take" and "Why choose Wade's" FAQ entries from 11 service, post and landing page files (unsourced durations from a few hours to 4 weeks; unconfirmed experience and reputation claims). Pricing and what-to-expect FAQs kept; the curated `/faq` page and the privacy policy untouched. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-24-templated-faqs.json`.

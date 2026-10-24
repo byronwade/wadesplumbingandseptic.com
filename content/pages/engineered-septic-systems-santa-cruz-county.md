@@ -58,11 +58,3 @@ Flat-rate pricing, quoted on site before work begins.
 ### What should I expect during the engineered septic system installation service?
 
 During the installation of an engineered septic system, our team will conduct a thorough site evaluation, design a system tailored to your property's needs, and manage all necessary permits. We ensure minimal disruption to your property while maintaining high standards of safety and efficiency.
-
-### How long does it take to install an engineered septic system?
-
-The installation timeline for an engineered septic system typically ranges from 2 to 4 weeks, depending on site conditions, weather, and permitting processes. Wade's Plumbing & Septic prioritizes timely and efficient service to minimize inconvenience.
-
-### Why choose Wade's Plumbing & Septic for engineered septic systems in Santa Cruz County?
-
-Wade's Plumbing & Septic is a trusted local expert with extensive experience in engineered septic systems. Our commitment to quality workmanship, customer satisfaction, and local expertise makes us the preferred choice for residents in Santa Cruz County.
