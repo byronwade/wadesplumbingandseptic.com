@@ -134,11 +134,28 @@ export const proofPoints = [
 	},
 ] as const
 
-export const reasons = [
-	["No-pressure advice", "Only the work your property needs."],
-	["Flat-rate pricing", siteConfig.pricing],
-	["Clean workmanship", "Respectful service and a clean finish."],
-	["Long-term reliability", "Repairs and systems designed to last."],
+/**
+ * How a job runs, start to finish. Each step restates a fact published
+ * elsewhere on the site (free quotes, flat-rate pricing, licensed work), so
+ * the section explains the process without adding new claims.
+ */
+export const processSteps = [
+	{
+		title: "Call or send a message",
+		text: `Talk to a real person at ${siteConfig.phone} during office hours, or send a message any time.`,
+	},
+	{
+		title: "On-site look and a flat-rate quote",
+		text: "We see the problem in person, explain the options, and give you a flat-rate price before any work begins. Quotes are free.",
+	},
+	{
+		title: "Licensed work, done to code",
+		text: `Planned and permitted where the job needs it, under ${siteConfig.licenses}.`,
+	},
+	{
+		title: "Clean finish and walkthrough",
+		text: "We clean up, show you what was done, and answer questions before we leave.",
+	},
 ] as const
 
 export const testimonials = [
