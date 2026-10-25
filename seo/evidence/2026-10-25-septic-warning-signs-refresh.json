@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-warning-signs-refresh-2026-10-25",
+	"collected_at": "2026-10-25T23:10:00+00:00",
+	"source": "epa-why-maintain-septic",
+	"source_url_or_tool": "https://www.epa.gov/septic/why-maintain-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "5ef928a2e40b61d915d827387a367874abb1d6557fb920230c1a43b755a93184",
+	"payload": {
+		"post": "content/posts/why-you-should-never-ignore-septic-system-warning-signs.md",
+		"observations": [
+			{
+				"id": "epa-why-maintain",
+				"source_url": "https://www.epa.gov/septic/why-maintain-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Untreated wastewater contains disease-causing bacteria and viruses; poorly treated sewage can contaminate groundwater and surface water, spread disease and cause infections in swimmers; failing systems can lower property value; regular maintenance protects health, the environment and the home.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-25T23:10:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Inspection and pumping intervals, water efficiency and drainfield protection. Same source already cited by the merged septic maintenance post.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-25T23:10:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-point-of-sale",
+				"source_url": "https://www.santacruzcountyca.gov/Portals/0/County/CAO/press%20releases/2022/SepticOrdinance.10262022.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "County ordinance requires septic pumping and inspection at property sale, disclosure of results, and seller-paid repair of failing systems, effective July 1, 2023. Same source already cited elsewhere in the repository.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-25T23:10:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed unsourced claims about insurance coverage, fines, 'certified technicians' and 'expert technicians', urgency phrasing ('immediate professional attention'), and a templated FAQ. Added quick answer, county sale rules, what to do, FAQ, sources and the standard closing. Original date kept, updated set to 2026-10-25.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T23:10:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
