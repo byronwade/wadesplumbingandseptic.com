@@ -76,11 +76,62 @@ export const heroStats = [
 	{ label: "Office hours", value: siteConfig.hours },
 ] as const
 
-export const trustPoints = [
-	"Family owned & operated",
-	"Licensed & insured",
-	"Satisfaction guaranteed",
-	"Flat-rate pricing, quoted on site before work begins.",
+/**
+ * Hero shortcuts: the four jobs most visitors arrive with, so a phone visitor
+ * reaches the right page in one tap instead of opening the menu.
+ */
+export const heroQuickLinks = [
+	{
+		label: "Drains & sewer",
+		detail: "Clogs, backups, inspections",
+		href: "/service-offerings/drain-cleaning",
+		icon: "pipe",
+	},
+	{
+		label: "Water heaters",
+		detail: "Tank and tankless installs",
+		href: "/service-offerings/water-heater-installation",
+		icon: "fire",
+	},
+	{
+		label: "Leaks & pipes",
+		detail: "Detection, repair, repiping",
+		href: "/service-offerings/leak-detection",
+		icon: "wrench",
+	},
+	{
+		label: "Septic systems",
+		detail: "Install, repair, engineered",
+		href: "/service-category/septic",
+		icon: "hardhat",
+	},
+] as const
+
+/**
+ * Proof bar under the hero. Only facts the business has confirmed: the CSLB
+ * license, the founding year, and how pricing works.
+ */
+export const proofPoints = [
+	{
+		title: "Licensed contractor",
+		detail: `CSLB #${siteConfig.licenseNumber} (${siteConfig.licenseClassifications.map((item) => item.code).join(", ")})`,
+		icon: "shield",
+	},
+	{
+		title: "Family owned",
+		detail: `Local crew since ${siteConfig.foundingYear}`,
+		icon: "home",
+	},
+	{
+		title: "Flat-rate pricing",
+		detail: "Quoted on site before work begins",
+		icon: "wallet",
+	},
+	{
+		title: "Free quotes",
+		detail: "Straight answers, no sales pressure",
+		icon: "handshake",
+	},
 ] as const
 
 export const reasons = [
