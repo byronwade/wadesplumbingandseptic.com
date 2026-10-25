@@ -4978,6 +4978,30 @@
 		},
 		{
 			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/septic-system-components-santa-cruz",
+			"anchor": "septic system components",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
+			"anchor": "salt water softener guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic prep checklist",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
 			"to": "/service-offerings/septic-tank-maintenance-and-care",
 			"anchor": "septic maintenance and care",
 			"classification": "MOCK_VERIFIED"
