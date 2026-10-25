@@ -2,12 +2,20 @@ import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { ChevronRight } from "@/components/icons"
+import { BadgeCheck, ChevronRight } from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
+import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
+
+/* Confirmed facts only: the license, how pricing works, and free quotes. */
+const serviceHeroFacts = [
+	`CSLB #${siteConfig.licenseNumber}`,
+	"Flat-rate, quoted on site",
+	"Free quotes",
+] as const
 
 export type HeroBreadcrumb = {
 	label: string
@@ -216,22 +224,23 @@ export function ContentHero({
 	if (kind === "service") {
 		const actions = showActions ?? true
 
+		/*
+		  Split hero on a dark band, matching the home hero. Title, actions and
+		  the quick facts share the first screen with the work photo, instead of
+		  a full-width photo pushing the facts below the fold.
+		*/
 		return (
-			<header className="hero-service border-border border-b">
-				<div className="container-shell pt-10 pb-10 sm:pt-12 sm:pb-12">
-					<BreadcrumbTrail items={trail} tone="light" />
-					<div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
-						<div className="section-head max-w-2xl min-w-0">
-							{eyebrow ? (
-								<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-									{eyebrow}
-								</p>
-							) : null}
-							<h1 className="type-headline text-foreground">{title}</h1>
-							<p className="type-lead text-muted-foreground">{description}</p>
+			<header className="hero-service surface-hero tex-grid overflow-hidden">
+				<div className="container-shell grid grid-cols-1 items-center gap-8 pt-8 pb-10 sm:pt-10 sm:pb-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14 lg:py-14">
+					<div className="min-w-0">
+						<BreadcrumbTrail items={trail} tone="dark" />
+						<div className="section-head">
+							{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
+							<h1 className="type-headline text-white">{title}</h1>
+							<p className="type-lead text-on-dark-muted">{description}</p>
 						</div>
 						{actions ? (
-							<div className="motion-rise motion-delay-1 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
 								<CallButton
 									className="w-full sm:w-auto"
 									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -242,7 +251,7 @@ export function ContentHero({
 									prefetch={false}
 									className={cn(
 										buttonVariants({
-											variant: "outline",
+											variant: "inverse",
 											size: "xl",
 											wrap: true,
 										}),
@@ -254,26 +263,31 @@ export function ContentHero({
 								</Link>
 							</div>
 						) : null}
+						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+							{serviceHeroFacts.map((fact) => (
+								<li className="flex items-center gap-2" key={fact}>
+									<BadgeCheck
+										aria-hidden="true"
+										className="text-primary-bright size-4 shrink-0"
+									/>
+									{fact}
+								</li>
+							))}
+						</ul>
 					</div>
 
 					{image ? (
-						<div className="hero-service-media mt-8 sm:mt-10">
-							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[21/9] lg:aspect-[2.4/1]">
-								<Image
-									alt={imageAlt?.trim() || title}
-									className="object-cover"
-									decoding="sync"
-									fill
-									priority
-									quality={70}
-									sizes="(min-width: 1280px) 78rem, 100vw"
-									src={image}
-								/>
-								<div
-									aria-hidden="true"
-									className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent"
-								/>
-							</div>
+						<div className="hero-service-media relative aspect-[16/10] overflow-hidden rounded-xl shadow-[var(--shadow-float)] lg:aspect-[4/3]">
+							<Image
+								alt={imageAlt?.trim() || title}
+								className="object-cover"
+								decoding="sync"
+								fill
+								priority
+								quality={70}
+								sizes="(min-width: 1024px) 40vw, 100vw"
+								src={image}
+							/>
 						</div>
 					) : null}
 				</div>
@@ -332,15 +346,19 @@ export function ContentHero({
 		)
 	}
 
-	/* Quiet utility / company / area page hero. Less CTA noise than before. */
+	/*
+	  Company, area and utility pages. Same dark band as the home and service
+	  heroes so every template opens in the brand, with the page photo as a
+	  faded wash on the right and the call path in the first screen.
+	*/
 	const actions = showActions ?? true
 
 	return (
-		<header className="hero-page border-border relative overflow-hidden border-b">
+		<header className="hero-page surface-hero tex-grid relative overflow-hidden">
 			{image ? (
 				<div
 					aria-hidden="true"
-					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-[0.14] lg:w-1/2"
+					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-35 lg:w-3/5"
 				>
 					<Image
 						alt=""
@@ -349,11 +367,11 @@ export function ContentHero({
 						fill
 						priority
 						quality={50}
-						sizes="50vw"
+						sizes="60vw"
 						src={image}
 					/>
-					<div className="from-background via-background/80 absolute inset-0 bg-linear-to-r to-transparent" />
-					<div className="from-background absolute inset-0 bg-linear-to-t to-transparent" />
+					<div className="absolute inset-0 bg-linear-to-r from-[var(--dark-1)] via-[color-mix(in_srgb,var(--dark-1)_75%,transparent)] to-transparent" />
+					<div className="absolute inset-0 bg-linear-to-t from-[var(--dark-1)] to-transparent" />
 				</div>
 			) : null}
 
@@ -362,38 +380,50 @@ export function ContentHero({
 			) : null}
 
 			<div className="container-shell relative py-12 sm:py-16 lg:py-20">
-				<BreadcrumbTrail items={trail} tone="light" />
+				<BreadcrumbTrail items={trail} tone="dark" />
 				<div className="section-head max-w-2xl">
-					{eyebrow ? (
-						<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-							{eyebrow}
-						</p>
-					) : null}
-					<h1 className="type-headline text-foreground">{title}</h1>
-					<p className="type-lead text-muted-foreground">{description}</p>
+					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
+					<h1 className="type-headline text-white">{title}</h1>
+					<p className="type-lead text-on-dark-muted">{description}</p>
 				</div>
 				{actions ? (
-					<div className="motion-rise motion-delay-1 mt-8">
-						{pageCta === "call" ? (
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								prefer="dial"
-								size="lg"
-							/>
-						) : (
+					<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+						<CallButton
+							className="w-full sm:w-auto"
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							prefer="dial"
+							size="lg"
+						/>
+						{pageCta === "call" ? null : (
 							<Link
 								prefetch={false}
 								className={cn(
-									buttonVariants({ size: "lg", wrap: true }),
+									buttonVariants({
+										variant: "inverse",
+										size: "lg",
+										wrap: true,
+									}),
 									"w-full sm:w-auto",
 								)}
 								href="/contact"
 							>
-								Get in touch
+								Request a free quote
 							</Link>
 						)}
 					</div>
+				) : null}
+				{actions ? (
+					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+						{serviceHeroFacts.map((fact) => (
+							<li className="flex items-center gap-2" key={fact}>
+								<BadgeCheck
+									aria-hidden="true"
+									className="text-primary-bright size-4 shrink-0"
+								/>
+								{fact}
+							</li>
+						))}
+					</ul>
 				) : null}
 			</div>
 		</header>
