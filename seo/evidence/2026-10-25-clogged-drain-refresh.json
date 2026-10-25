@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "4cdbefd39da37d105b10299baafb74c86ff776387fbe2ba4516761ce8223f506",
+	"sha256": "8bd08be5e9c7a546eb318aad2f230eb5051dcc5fe56ca5f02f2c8b3bcbd2a97e",
 	"payload": {
 		"post": "content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
 		"observations": [
@@ -17,7 +17,7 @@
 				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
 				"source_tier": "GOVERNMENT_OR_STANDARD",
 				"classification": "LIVE_VERIFIED",
-				"summary": "Avoid chemical drain openers for a clogged drain; instead use boiling water or a drain snake. Pouring toxins down the drain can kill the organisms that treat waste and harm the septic system.",
+				"summary": "Avoid chemical drain openers for a clogged drain; instead use boiling water or a drain snake (post recommends hot tap water instead of boiling for plastic drains, following review). Pouring toxins down the drain can kill the organisms that treat waste and harm the septic system.",
 				"inference_limit": "Septic guidance.",
 				"collected_at": "2026-10-25T23:00:00+00:00",
 				"scope": "Post refresh"

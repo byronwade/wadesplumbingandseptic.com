@@ -22,7 +22,7 @@ imageAlt: Professional drain-clearing machine
 
 ## Quick answer
 
-Most single-drain clogs clear with a plunger, a hand snake or hot water, in that order. Skip chemical drain openers: they contain strong acids or lye that can burn skin and eyes, and EPA advises homes on septic to avoid them and use boiling water or a drain snake instead. If several drains are slow at once, or the toilet gurgles when the sink drains, the clog is likely in the main line or septic system and DIY methods will not reach it.
+Most single-drain clogs clear with a plunger, a hand snake or hot water, in that order. Skip chemical drain openers: they contain strong acids or lye that can burn skin and eyes, and EPA advises homes on septic to avoid them and use a drain snake or hot water instead. If several drains are slow at once, or the toilet gurgles when the sink drains, the clog is likely in the main line or septic system and DIY methods will not reach it.
 
 ![Metal drainpipe](/images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp)
 
@@ -64,7 +64,7 @@ For a kitchen sink, removing and cleaning the P-trap under the sink is often fas
 
 ## Step 4: Hot water for soap and grease
 
-Very hot water can help move soap scum and light grease in a sink drain. EPA suggests boiling water or a drain snake in place of chemical drain openers. Pour slowly and carefully, and do not pour boiling water into a toilet bowl.
+Hot water can help move soap scum and light grease in a sink drain. EPA suggests boiling water or a drain snake in place of chemical drain openers, but many homes have plastic (PVC or ABS) drain lines, and boiling water can soften plastic pipe. Unless you know your drain pipes are metal, use the hottest water from the tap instead, and never pour boiling water into a porcelain toilet bowl.
 
 ## Why to skip chemical drain openers
 
@@ -94,7 +94,7 @@ These point to a blockage in the main sewer line or, on septic, the tank or drai
 
 ### Are chemical drain cleaners safe for my pipes and septic system?
 
-EPA advises avoiding chemical drain openers on septic and using boiling water or a drain snake instead. The products contain strong acids or lye that can also cause serious burns.
+EPA advises avoiding chemical drain openers on septic and using boiling water or a drain snake instead. On plastic drain lines, use hot tap water rather than boiling water. The products contain strong acids or lye that can also cause serious burns.
 
 ### What is the best first step for a clogged sink?
 
