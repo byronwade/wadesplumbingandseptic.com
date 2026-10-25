@@ -4,9 +4,11 @@ import Link from "next/link"
 import {
 	ArrowRight,
 	Check,
+	Clock,
 	Droplets,
 	Gauge,
 	HardHat,
+	Mail,
 	MapPin,
 	MapPinned,
 	Quotes,
@@ -506,44 +508,63 @@ export function HomeBelowFold() {
 				</div>
 			</section>
 
-			<section className="surface-hero tex-grid tex-glow section-y-tight relative overflow-hidden">
-				<div className="container-shell relative flex flex-wrap items-center justify-between gap-8 md:gap-12">
-					<div className="section-head max-w-2xl min-w-0 flex-1 basis-96">
+			{/*
+			  Closing band. The number itself is the headline of the right-hand
+			  panel, set large enough to read from across a room, with hours and
+			  email on an aligned icon list beneath it.
+			*/}
+			<section className="surface-hero tex-grid tex-glow section-y relative overflow-hidden">
+				<div className="container-shell relative grid grid-cols-1 items-center gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:gap-16">
+					<div className="section-head max-w-2xl min-w-0">
 						<p className="spec-label">Wade&apos;s Plumbing &amp; Septic</p>
-						<h2 className="type-title">Ready to get started?</h2>
+						<h2 className="type-headline text-white">Ready to get started?</h2>
 						<p className="type-lead text-on-dark-muted text-pretty">
 							Talk to a local licensed professional and get clear options with
-							no pressure.
+							no pressure. Quotes are free, and the price is set before any work
+							begins.
 						</p>
-						<div className="text-on-dark-muted flex flex-wrap gap-x-6 gap-y-2 text-sm">
-							<span>{contactInfo.hours}</span>
-							<ProtectedContactLink
-								className="inline-flex min-h-11 min-w-0 items-center transition-colors hover:text-white"
-								kind="email"
-							>
-								{/* One text box, so the wrap point after @ is not a flex item */}
-								<span className="min-w-0 [overflow-wrap:anywhere]">
-									<EmailAddress />
-								</span>
-							</ProtectedContactLink>
-						</div>
 					</div>
-					<div className="flex w-full max-w-full min-w-0 flex-col flex-wrap items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
-						<CallButton
-							className="w-full sm:w-auto"
-							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							showIcon={false}
-							size="xl"
-						/>
+					<div className="surface-float min-w-0 rounded-xl p-[min(1.75rem,28px)] sm:p-8">
+						<p className="text-on-dark-subtle font-mono text-[0.6875rem] tracking-[0.16em] uppercase">
+							Call the office
+						</p>
+						<ProtectedContactLink
+							ariaLabel={`Call ${contactInfo.phoneDisplay}`}
+							className="font-display text-primary-bright mt-2 inline-flex min-h-11 items-center text-[clamp(2rem,5vw,2.75rem)] leading-none font-extrabold tracking-[-0.03em] [overflow-wrap:anywhere] transition-colors hover:text-white"
+							kind="phone"
+						>
+							{contactInfo.phoneDisplay}
+						</ProtectedContactLink>
+						<ul className="text-on-dark-muted mt-5 space-y-2.5 border-t border-white/10 pt-5 text-sm">
+							<li className="flex items-start gap-3">
+								<Clock
+									aria-hidden="true"
+									className="text-primary-bright mt-0.5 size-4 shrink-0"
+								/>
+								<span>{contactInfo.hours}</span>
+							</li>
+							<li className="flex items-start gap-3">
+								<Mail
+									aria-hidden="true"
+									className="text-primary-bright mt-0.5 size-4 shrink-0"
+								/>
+								<ProtectedContactLink
+									className="min-w-0 [overflow-wrap:anywhere] transition-colors hover:text-white"
+									kind="email"
+								>
+									<EmailAddress />
+								</ProtectedContactLink>
+							</li>
+						</ul>
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "xl", wrap: true }),
-								"w-full sm:w-auto",
+								buttonVariants({ variant: "default", size: "lg", wrap: true }),
+								"mt-6 w-full",
 							)}
 							href="/contact"
 						>
-							Send a Message
+							Send a message
 							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
