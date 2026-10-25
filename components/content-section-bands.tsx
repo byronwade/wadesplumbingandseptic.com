@@ -111,6 +111,74 @@ function SectionBand({
 	)
 }
 
+/** Short prose sections read better side by side than as near-empty bands. */
+const SHORT_SECTION_CHARS = 700
+
+function isShortProse(section: { heading: string; body: string }) {
+	return (
+		classifyBand(section.heading, section.body) === "prose" &&
+		section.body.length <= SHORT_SECTION_CHARS &&
+		!/^\s*\|/m.test(section.body) &&
+		!/!\[/.test(section.body)
+	)
+}
+
+type Section = { heading: string; body: string }
+type Group =
+	{ kind: "single"; section: Section } | { kind: "panels"; sections: Section[] }
+
+function groupSections(sections: Section[]): Group[] {
+	const groups: Group[] = []
+	let run: Section[] = []
+
+	const flush = () => {
+		if (run.length >= 2) groups.push({ kind: "panels", sections: run })
+		else if (run[0]) groups.push({ kind: "single", section: run[0] })
+		run = []
+	}
+
+	for (const section of sections) {
+		if (isShortProse(section)) {
+			run.push(section)
+			continue
+		}
+		flush()
+		groups.push({ kind: "single", section })
+	}
+	flush()
+	return groups
+}
+
+function PanelBand({
+	sections,
+	index,
+}: {
+	sections: Section[]
+	index: number
+}) {
+	return (
+		<section className={cn("section-y", bandSurface(index))}>
+			<div className="container-shell">
+				<div className="reveal grid gap-[var(--space-grid)] md:grid-cols-2">
+					{sections.map((section) => (
+						<article
+							className="surface-panel panel-inset rounded-lg"
+							key={section.heading}
+						>
+							<h2 className="type-title text-[length:var(--type-card)] sm:text-2xl">
+								{section.heading}
+							</h2>
+							<div className="mt-4">
+								<MarkdownContent content={section.body} demoteH1 />
+							</div>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+	)
+}
+
 /**
  * Turns markdown H2 sections into home-like alternating bands with panel
  * lists and FAQ accordions where the structure fits.
@@ -141,14 +209,22 @@ export function ContentSectionBands({ content }: { content: string }) {
 					</div>
 				</section>
 			) : null}
-			{sections.map((section, index) => (
-				<SectionBand
-					body={section.body}
-					heading={section.heading}
-					index={intro ? index + 1 : index}
-					key={section.heading}
-				/>
-			))}
+			{groupSections(sections).map((group, index) =>
+				group.kind === "panels" ? (
+					<PanelBand
+						index={intro ? index + 1 : index}
+						key={group.sections[0]?.heading}
+						sections={group.sections}
+					/>
+				) : (
+					<SectionBand
+						body={group.section.body}
+						heading={group.section.heading}
+						index={intro ? index + 1 : index}
+						key={group.section.heading}
+					/>
+				),
+			)}
 		</>
 	)
 }
