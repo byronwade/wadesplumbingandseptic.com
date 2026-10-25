@@ -13,6 +13,15 @@ import {
 import type { ArchiveItem } from "@/lib/archive"
 import { getServiceImage } from "@/lib/service-images"
 
+function formatCardDate(date: string) {
+	return new Intl.DateTimeFormat("en-US", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+		timeZone: "UTC",
+	}).format(new Date(`${date}T00:00:00Z`))
+}
+
 export function ContentCard({
 	item,
 	variant,
@@ -50,11 +59,11 @@ export function ContentCard({
 					sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
 					src={image}
 				/>
+				<span className="card-chip">{item.category}</span>
 			</Link>
 
 			<CardHeader className="flex-1 pb-[var(--space-card)]">
-				<p className="spec-tag">{item.category}</p>
-				<CardTitle className="group-hover:text-primary mt-2.5 transition-colors">
+				<CardTitle className="group-hover:text-primary transition-colors">
 					<Link prefetch={false} href={item.href as Route}>
 						{item.title}
 					</Link>
@@ -75,36 +84,32 @@ export function ContentCard({
 				</Link>
 			</CardHeader>
 
-			{/*
-			 * Extended footer band: same card width/radius/border as the body,
-			 * with a soft copper-tinted ground so the silhouette still reads as one card.
-			 */}
-			<div className="card-foot text-foreground border-border border-t bg-[color-mix(in_srgb,var(--muted)_86%,var(--primary)_14%)]">
-				<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-					{showViews ? (
-						<PageViewsStat
-							className="text-inherit"
-							preferTrending={preferTrending}
-							totalViews={item.totalViews}
-							trendingScore={item.trendingScore}
-							uniqueViews={item.uniqueViews}
-						/>
-					) : (
-						<span className="font-mono text-[0.6875rem] tracking-[0.08em] text-inherit uppercase">
-							{variant === "service" ? "Local service" : "Homeowner guide"}
-						</span>
-					)}
-					{showDate ? (
-						<p className="type-meta inline-flex items-center gap-2 font-bold text-inherit">
-							<CalendarDays
-								aria-hidden="true"
-								className="text-primary size-3.5 shrink-0"
+			{showViews || showDate ? (
+				<div className="card-foot border-border text-muted-foreground border-t">
+					<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+						{showViews ? (
+							<PageViewsStat
+								className="text-inherit"
+								preferTrending={preferTrending}
+								totalViews={item.totalViews}
+								trendingScore={item.trendingScore}
+								uniqueViews={item.uniqueViews}
 							/>
-							{item.date}
-						</p>
-					) : null}
+						) : (
+							<span />
+						)}
+						{showDate && item.date ? (
+							<p className="type-meta inline-flex items-center gap-2 font-bold text-inherit">
+								<CalendarDays
+									aria-hidden="true"
+									className="text-primary size-3.5 shrink-0"
+								/>
+								<time dateTime={item.date}>{formatCardDate(item.date)}</time>
+							</p>
+						) : null}
+					</div>
 				</div>
-			</div>
+			) : null}
 		</Card>
 	)
 }

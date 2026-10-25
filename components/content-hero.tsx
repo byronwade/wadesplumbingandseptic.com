@@ -298,36 +298,56 @@ export function ContentHero({
 	if (kind === "index") {
 		const tip = indexKind === "tip"
 
+		/*
+		  Catalog intro for /services and /expert-tips. Same dark brand band as
+		  the other heroes, with the photo framed on the right and the call path
+		  in the first screen.
+		*/
 		return (
-			<header
-				className={cn(
-					"hero-index border-border border-b",
-					tip ? "hero-index-tip" : "hero-index-service",
-				)}
-			>
-				<div className="container-shell py-12 sm:py-16 lg:py-20">
-					<BreadcrumbTrail items={trail} tone="light" />
+			<header className="hero-index surface-hero tex-grid relative overflow-hidden">
+				<div className="container-shell relative py-12 sm:py-16 lg:py-20">
+					<BreadcrumbTrail items={trail} tone="dark" />
 					<div
 						className={cn(
-							"grid items-end gap-8",
+							"grid items-center gap-10",
 							image
-								? "lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]"
+								? "lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)]"
 								: undefined,
 						)}
 					>
-						<div className="section-head max-w-2xl">
-							{eyebrow ? (
-								<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-									{eyebrow}
+						<div>
+							<div className="section-head max-w-2xl">
+								{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
+								<h1 className="type-headline text-white">{title}</h1>
+								<p className="type-lead text-on-dark-muted max-w-xl">
+									{description}
 								</p>
-							) : null}
-							<h1 className="type-headline text-foreground">{title}</h1>
-							<p className="type-lead text-muted-foreground max-w-xl">
-								{description}
-							</p>
+							</div>
+							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="lg"
+								/>
+								<Link
+									prefetch={false}
+									className={cn(
+										buttonVariants({
+											variant: "inverse",
+											size: "lg",
+											wrap: true,
+										}),
+										"w-full sm:w-auto",
+									)}
+									href={tip ? "/contact" : "/service-areas"}
+								>
+									{tip ? "Ask us a question" : "Check your town"}
+								</Link>
+							</div>
 						</div>
 						{image ? (
-							<div className="relative hidden aspect-[4/3] overflow-hidden rounded-md lg:block">
+							<div className="hero-service-media relative hidden aspect-[4/3] overflow-hidden rounded-lg lg:block">
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
@@ -335,7 +355,7 @@ export function ContentHero({
 									fill
 									priority
 									quality={65}
-									sizes="22rem"
+									sizes="26rem"
 									src={image}
 								/>
 							</div>
