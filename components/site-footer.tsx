@@ -4,13 +4,23 @@ import Link from "next/link"
 
 import { CompanyLogo } from "@/components/company-logos"
 import { GoogleReviewButton } from "@/components/google-reviews"
+import { serviceAreaLocations } from "@/lib/service-areas"
 import { companyNavigation, resourceNavigation, siteConfig } from "@/lib/site"
 
 const serviceLinks = [
 	{ href: "/service-offerings/drain-cleaning", label: "Drain Cleaning" },
+	{ href: "/service-offerings/leak-detection", label: "Leak Detection" },
+	{
+		href: "/service-offerings/water-heater-installation",
+		label: "Water Heaters",
+	},
 	{
 		href: "/service-offerings/tankless-water-heater-installation",
 		label: "Tankless Water Heaters",
+	},
+	{
+		href: "/service-offerings/sewer-camera-inspection",
+		label: "Sewer Camera Inspection",
 	},
 	{
 		href: "/service-offerings/septic-tank-inspection-and-assessment",
@@ -20,6 +30,15 @@ const serviceLinks = [
 		href: "/service-offerings/engineered-septic-system-installation",
 		label: "Engineered Septic Systems",
 	},
+	{ href: "/services", label: "All Services" },
+]
+
+/* Featured towns (the labeled map markers), then the full list. */
+const areaLinks = [
+	...serviceAreaLocations
+		.filter((location) => location.featured)
+		.map(({ href, name }) => ({ href, label: name })),
+	{ href: "/service-areas", label: "All Service Areas" },
 ]
 
 const socialLinks = [
@@ -37,8 +56,9 @@ export function SiteFooter() {
 			  two identical CTAs back-to-back.
 			*/}
 			<div className="container-shell py-[var(--space-section-y-tight)]">
-				<div className="grid grid-cols-1 gap-[var(--space-block)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
-					<div>
+				{/* Link columns pair up on phones; the brand block spans the row. */}
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(min(9.5rem,100%),1fr))] gap-x-6 gap-y-[var(--space-block)] [overflow-wrap:anywhere] sm:grid-cols-2 sm:gap-x-[var(--space-block)] lg:grid-cols-[minmax(0,1.3fr)_repeat(4,minmax(0,1fr))]">
+					<div className="col-span-full sm:col-span-2 lg:col-span-1">
 						<Link
 							prefetch={false}
 							aria-label="Wade's Plumbing & Septic home"
@@ -97,6 +117,7 @@ export function SiteFooter() {
 					</div>
 
 					<FooterColumn links={serviceLinks} title="Services" />
+					<FooterColumn links={areaLinks} title="Service Areas" />
 					<FooterColumn links={companyNavigation} title="Company" />
 					<FooterColumn links={resourceNavigation} title="Resources" />
 				</div>
