@@ -1970,6 +1970,19 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"source_path": "content/posts/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": [
+				"/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz"
+			],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/the-benefits-of-hydro-jetting",
 			"source_path": "content/posts/the-benefits-of-hydro-jetting.md",
 			"kind": "STATIC_ROUTE",
