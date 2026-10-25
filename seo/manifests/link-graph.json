@@ -622,6 +622,36 @@
 		},
 		{
 			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"anchor": "Thanksgiving kitchen and septic prep guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repairing or replacing a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/how-to-prevent-frozen-pipes-this-winter",
+			"anchor": "frozen pipes guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
 			"to": "/service-offerings/drain-cleaning",
 			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"

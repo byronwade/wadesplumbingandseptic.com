@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-holiday-plumbing-refresh-2026-10-25",
+	"collected_at": "2026-10-25T22:10:00+00:00",
+	"source": "ibhs-interior-water-damage",
+	"source_url_or_tool": "https://ibhs.org/how-to-prevent-interior-water-damage-from-plumbing-and-appliances/",
+	"scope": "Substantive refresh of an existing seasonal post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "e73f844cc0f84ae72c26074504347a17f8500142b627ba34bb69a8a824e1083c",
+	"payload": {
+		"post": "content/posts/how-to-avoid-common-holiday-plumbing-disasters.md",
+		"observations": [
+			{
+				"id": "ibhs-water-damage",
+				"source_url": "https://ibhs.org/how-to-prevent-interior-water-damage-from-plumbing-and-appliances/",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "IBHS (insurance research institute and FORTIFIED standards body): inspect washer hoses regularly, replace every 3 to 5 years, upgrade to braided stainless steel; inspect water heaters every 6 months, flush for sediment, replace after 7 to 10 years depending on water quality and usage; stop toilet overflows by lifting the float or shutting off the valve; know the main shut-off and turn it off when traveling.",
+				"inference_limit": "National guidance; no local statistics.",
+				"collected_at": "2026-10-25T22:10:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Only human waste and toilet paper in the toilet; a leaky or running toilet can waste up to 200 gallons per day; spread laundry across days on septic.",
+				"inference_limit": "Septic guidance applied to toilet habits generally.",
+				"collected_at": "2026-10-25T22:10:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsourced 10-year water heater upgrade rule, a 'fast, reliable' service claim and a templated what-to-expect FAQ; added quick answer, travel and septic sections, links to related posts and a sources section. Original date kept, updated added.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T22:10:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
