@@ -1371,3 +1371,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: substantive refresh of `/how-to-avoid-common-holiday-plumbing-disasters` at its existing URL ahead of the season. Original date kept, `updated: 2026-10-25`. Rebuilt around IBHS interior water damage guidance (washer hose inspection and 3 to 5 year replacement, water heater checks and sediment, toilet overflow shut-off, main shut-off when traveling) and EPA septic care (what to flush, running toilet waste), with a quick answer, a septic section, FAQ, links to the Thanksgiving, frozen pipes, running toilet, water heater and septic signs posts, and a sources section. Removed an unsourced 10-year water heater rule, a "fast, reliable" claim and a templated FAQ. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: sources `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-holiday-plumbing-refresh.json`.
+
+## 2026-10-25: Hidden water leak guide refresh
+
+- Scope: substantive refresh of `/6-signs-you-have-a-hidden-water-leak` at its existing URL. Original date kept, `updated: 2026-10-25`. Rebuilt around EPA WaterSense Fix a Leak guidance (household leak figures, winter use check, two-hour meter test, toilet dye test, flapper replacement) and EPA mold and moisture guidance, with a quick answer, a note for well homes, FAQ and sources. Replaced an uncited "national studies" figure with the EPA number and removed unsourced foundation and equipment claims and a templated FAQ. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: sources `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-hidden-leak-refresh.json`.
