@@ -1353,3 +1353,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: substantive refresh of `/how-to-prevent-frozen-pipes-this-winter` at its existing URL before winter. Original date kept, `updated: 2026-10-25`. Rewritten around American Red Cross guidance (which pipes freeze first, steady thermostat, 55F when away, cabinet doors, trickling faucets, safe thawing without open flame) with a Santa Cruz County angle (freezes uncommon on the coast, more likely at mountain elevations; backflow devices, detached garages and well pump houses), burst pipe steps, FAQ and a sources section. Removed a templated service FAQ. The business-facts guard now ignores external link targets (the Red Cross URL contains "emergencies"); link text and relative links are still checked, with a test. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: source `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-frozen-pipes-refresh.json`.
+
+## 2026-10-25: Oversized post image resize
+
+- Scope: the site serves `public/images` without the Next image optimizer (`images.unoptimized`), so source file size is what visitors download. Six post hero images referenced by content were 318 to 955 KB at 1500 to 1600 px wide. Re-encoded in place at 1200 px wide, WebP quality 72, cutting them from 3.48 MB to 1.51 MB combined. Same paths and aspect ratios; no content, URL or config change.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-25-post-image-sizing.json`.
