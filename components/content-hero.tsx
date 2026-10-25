@@ -346,15 +346,19 @@ export function ContentHero({
 		)
 	}
 
-	/* Quiet utility / company / area page hero. Less CTA noise than before. */
+	/*
+	  Company, area and utility pages. Same dark band as the home and service
+	  heroes so every template opens in the brand, with the page photo as a
+	  faded wash on the right and the call path in the first screen.
+	*/
 	const actions = showActions ?? true
 
 	return (
-		<header className="hero-page border-border relative overflow-hidden border-b">
+		<header className="hero-page surface-hero tex-grid relative overflow-hidden">
 			{image ? (
 				<div
 					aria-hidden="true"
-					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-[0.14] lg:w-1/2"
+					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-35 lg:w-3/5"
 				>
 					<Image
 						alt=""
@@ -363,11 +367,11 @@ export function ContentHero({
 						fill
 						priority
 						quality={50}
-						sizes="50vw"
+						sizes="60vw"
 						src={image}
 					/>
-					<div className="from-background via-background/80 absolute inset-0 bg-linear-to-r to-transparent" />
-					<div className="from-background absolute inset-0 bg-linear-to-t to-transparent" />
+					<div className="absolute inset-0 bg-linear-to-r from-[var(--dark-1)] via-[color-mix(in_srgb,var(--dark-1)_75%,transparent)] to-transparent" />
+					<div className="absolute inset-0 bg-linear-to-t from-[var(--dark-1)] to-transparent" />
 				</div>
 			) : null}
 
@@ -376,38 +380,50 @@ export function ContentHero({
 			) : null}
 
 			<div className="container-shell relative py-12 sm:py-16 lg:py-20">
-				<BreadcrumbTrail items={trail} tone="light" />
+				<BreadcrumbTrail items={trail} tone="dark" />
 				<div className="section-head max-w-2xl">
-					{eyebrow ? (
-						<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-							{eyebrow}
-						</p>
-					) : null}
-					<h1 className="type-headline text-foreground">{title}</h1>
-					<p className="type-lead text-muted-foreground">{description}</p>
+					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
+					<h1 className="type-headline text-white">{title}</h1>
+					<p className="type-lead text-on-dark-muted">{description}</p>
 				</div>
 				{actions ? (
-					<div className="motion-rise motion-delay-1 mt-8">
-						{pageCta === "call" ? (
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								prefer="dial"
-								size="lg"
-							/>
-						) : (
+					<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+						<CallButton
+							className="w-full sm:w-auto"
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							prefer="dial"
+							size="lg"
+						/>
+						{pageCta === "call" ? null : (
 							<Link
 								prefetch={false}
 								className={cn(
-									buttonVariants({ size: "lg", wrap: true }),
+									buttonVariants({
+										variant: "inverse",
+										size: "lg",
+										wrap: true,
+									}),
 									"w-full sm:w-auto",
 								)}
 								href="/contact"
 							>
-								Get in touch
+								Request a free quote
 							</Link>
 						)}
 					</div>
+				) : null}
+				{actions ? (
+					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+						{serviceHeroFacts.map((fact) => (
+							<li className="flex items-center gap-2" key={fact}>
+								<BadgeCheck
+									aria-hidden="true"
+									className="text-primary-bright size-4 shrink-0"
+								/>
+								{fact}
+							</li>
+						))}
+					</ul>
 				) : null}
 			</div>
 		</header>

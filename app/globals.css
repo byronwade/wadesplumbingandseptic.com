@@ -765,10 +765,6 @@
 		);
 	}
 
-	.hero-page {
-		background: var(--sunken);
-	}
-
 	/*
 	  Cinematic hero. Sized to the visible viewport minus the header, so the whole
 	  frame is on screen at once instead of being cropped by the sticky bar.
