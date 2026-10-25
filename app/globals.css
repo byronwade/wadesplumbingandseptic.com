@@ -919,6 +919,43 @@
 		letter-spacing: 0.04em;
 	}
 
+	/* Service cards: three-up once the rail turns into a grid. */
+	@media (width >= 40rem) {
+		.service-rail {
+			grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+		}
+	}
+
+	/* Town links on the home service-area band. */
+	.town-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(10.5rem, 100%), 1fr));
+		gap: 0.5rem;
+	}
+
+	.town-link {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		min-height: 2.75rem;
+		padding: 0.5rem 0.75rem;
+		overflow-wrap: anywhere;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-md);
+		background: var(--card);
+		font-size: 0.875rem;
+		font-weight: 700;
+		line-height: 1.25;
+		transition:
+			border-color 0.15s ease,
+			color 0.15s ease;
+	}
+
+	.town-link:hover {
+		border-color: var(--primary);
+		color: var(--primary);
+	}
+
 	/* Proof bar under the home hero. */
 	.proof-bar {
 		display: grid;

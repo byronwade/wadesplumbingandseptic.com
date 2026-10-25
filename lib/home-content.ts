@@ -3,6 +3,8 @@ import { siteConfig } from "@/lib/site"
 export const serviceGroups = [
 	{
 		title: "Residential Plumbing",
+		href: "/service-category/plumbing",
+		linkLabel: "Residential services",
 		image: "/images/work/precision-valve-installation.webp",
 		description:
 			"Repairs and installations completed cleanly, honestly, and to code.",
@@ -15,6 +17,8 @@ export const serviceGroups = [
 	},
 	{
 		title: "Commercial Plumbing",
+		href: "/service-category/commercial",
+		linkLabel: "Commercial services",
 		image: "/images/work/commercial-plumbing-installation.webp",
 		description:
 			"Dependable commercial service that keeps your property operating.",
@@ -27,6 +31,8 @@ export const serviceGroups = [
 	},
 	{
 		title: "New Construction",
+		href: "/contact",
+		linkLabel: "Discuss your build",
 		image: "/images/work/new-construction-rough-in.webp",
 		description:
 			"Code-compliant plumbing planned from rough-in through final testing.",

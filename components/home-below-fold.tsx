@@ -1,3 +1,4 @@
+import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -6,6 +7,8 @@ import {
 	Droplets,
 	Gauge,
 	HardHat,
+	MapPin,
+	MapPinned,
 	Quotes,
 	ShieldCheck,
 } from "@/components/icons"
@@ -17,13 +20,6 @@ import {
 	ProtectedContactLink,
 } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
 import { contactInfo } from "@/lib/contact"
 import {
 	faqs,
@@ -33,6 +29,7 @@ import {
 	trustedBrands,
 	workGallery,
 } from "@/lib/home-content"
+import { locationsByCounty } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
 const specialtyPoints = [
@@ -238,26 +235,42 @@ export function HomeBelowFold() {
 						</Link>
 					</div>
 
-					<div className="card-rail mt-[var(--space-block)]">
+					{/*
+					  Swipeable on phones (three tall stacked cards was most of a
+					  screen each), a three-up grid once there is room. The photo
+					  carries the title so each card reads as a place, not a form.
+					*/}
+					<div
+						aria-label="Service groups"
+						className="snap-rail service-rail mt-[var(--space-block)]"
+						role="region"
+						tabIndex={0}
+					>
 						{serviceGroups.map((group) => (
-							<Card className="reveal h-full overflow-hidden" key={group.title}>
-								<div className="bg-muted relative aspect-16/10">
+							<article
+								className="bg-card text-card-foreground border-border flex flex-col overflow-hidden rounded-xl border shadow-[var(--shadow-panel)]"
+								key={group.title}
+							>
+								<div className="bg-muted relative aspect-4/3 overflow-hidden">
 									<Image
-										alt={group.title}
+										alt=""
 										className="object-cover"
 										fill
 										quality={60}
-										sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+										sizes="(min-width: 1024px) 400px, (min-width: 640px) 33vw, 76vw"
 										src={group.image}
 										loading="lazy"
 									/>
+									<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+									<h3 className="font-display absolute inset-x-0 bottom-0 p-5 text-[1.375rem] leading-tight font-extrabold tracking-[-0.02em] text-white">
+										{group.title}
+									</h3>
 								</div>
-								<CardHeader>
-									<CardTitle>{group.title}</CardTitle>
-									<CardDescription>{group.description}</CardDescription>
-								</CardHeader>
-								<CardContent>
-									<ul className="text-muted-foreground space-y-2 text-sm">
+								<div className="flex flex-1 flex-col p-5 sm:p-6">
+									<p className="text-muted-foreground text-[0.9375rem] leading-relaxed">
+										{group.description}
+									</p>
+									<ul className="mt-4 mb-5 grid gap-2 text-sm">
 										{group.items.map((item) => (
 											<li className="flex items-start gap-2" key={item}>
 												<Check
@@ -268,9 +281,74 @@ export function HomeBelowFold() {
 											</li>
 										))}
 									</ul>
-								</CardContent>
-							</Card>
+									<Link
+										prefetch={false}
+										className="text-primary border-border mt-auto inline-flex items-center gap-1.5 border-t pt-4 text-sm font-bold hover:underline"
+										href={group.href as Route}
+									>
+										{group.linkLabel}
+										<ArrowRight aria-hidden="true" className="size-4" />
+									</Link>
+								</div>
+							</article>
 						))}
+					</div>
+				</div>
+			</section>
+
+			{/*
+			  Service area. Every town links to its own page, so the homepage
+			  states the coverage in plain HTML for people, crawlers, and AI
+			  assistants alike, and passes link weight to the local pages.
+			*/}
+			<section className="section-y section-defer">
+				<div className="container-shell grid grid-cols-1 gap-[var(--space-block)] lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
+					<div className="section-head">
+						<p className="spec-label">Service area</p>
+						<h2 className="type-title">Local to Santa Cruz County.</h2>
+						<p className="type-lead">
+							Our crew works across Santa Cruz County and selected Santa Clara
+							County communities. Not sure about your address? Call and ask.
+						</p>
+						<Link
+							prefetch={false}
+							className={cn(
+								buttonVariants({ variant: "outline", size: "lg", wrap: true }),
+								"w-full sm:w-auto",
+							)}
+							href="/service-areas"
+						>
+							<MapPinned aria-hidden="true" />
+							See the service area map
+						</Link>
+					</div>
+					<div className="grid gap-8">
+						{(["Santa Cruz County", "Santa Clara County"] as const).map(
+							(county) => (
+								<div key={county}>
+									<h3 className="text-muted-foreground font-mono text-[0.6875rem] font-semibold tracking-[0.16em] uppercase">
+										{county}
+									</h3>
+									<ul className="town-grid mt-4">
+										{locationsByCounty(county).map((town) => (
+											<li key={town.slug}>
+												<Link
+													prefetch={false}
+													className="town-link"
+													href={town.href as Route}
+												>
+													<MapPin
+														aria-hidden="true"
+														className="text-primary size-4 shrink-0"
+													/>
+													<span className="min-w-0">{town.name}</span>
+												</Link>
+											</li>
+										))}
+									</ul>
+								</div>
+							),
+						)}
 					</div>
 				</div>
 			</section>
