@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-hidden-leak-refresh-2026-10-25",
+	"collected_at": "2026-10-25T22:20:00+00:00",
+	"source": "epa-watersense-fix-a-leak",
+	"source_url_or_tool": "https://www.epa.gov/watersense/fix-leak-week",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "fa099d7061b34681313df52c972a599569b705ebfab4c9a00ea2670c375f964a",
+	"payload": {
+		"post": "content/posts/6-signs-you-have-a-hidden-water-leak.md",
+		"observations": [
+			{
+				"id": "epa-fix-a-leak",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Average household leaks can waste more than 9,300 gallons a year; 9 percent of homes have leaks wasting 50 gallons or more per day; family of four over 12,000 gallons a month in winter suggests serious leaks; two-hour meter test; toilet food coloring test after 10 minutes; replace flappers at least every five years.",
+				"inference_limit": "National figures; no local statistics.",
+				"collected_at": "2026-10-25T22:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-mold-moisture",
+				"source_url": "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "The key to mold control is moisture control; wet materials dried within 24 to 48 hours after a leak usually will not grow mold; fix plumbing leaks as soon as possible; a moldy smell without a visible source can indicate hidden mold.",
+				"inference_limit": "General guidance.",
+				"collected_at": "2026-10-25T22:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Replaced an uncited 'national studies' 180 gallons per week claim with the EPA figure; removed unsourced foundation erosion and 'advanced equipment' claims and a templated FAQ; added meter and dye tests, well-home note, FAQ and sources. Original date kept, updated added.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T22:20:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
