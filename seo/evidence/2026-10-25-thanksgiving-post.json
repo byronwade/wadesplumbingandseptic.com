@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-thanksgiving-post-2026-10-25",
+	"collected_at": "2026-10-25T01:50:00+00:00",
+	"source": "us-epa-santa-cruz-county-sanitation-district-clemson-hgic",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "New evidence-backed post planned in seo/manifests/local-demand-calendar.json (holiday-thanksgiving-2026), inside its 14 to 45 day lead window",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "a635d75f6b4ee7fca173b0d2285b41382fc0b6fb4fd250e1713ce484c8ad8304",
+	"payload": {
+		"post": "content/posts/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Never pour cooking oil or grease down the drain; eliminate or limit garbage disposal use (tank needs pumping more often with one); spreading laundry across the week; a running toilet can add up to 200 gallons per day; only human waste and toilet paper in the toilet.",
+				"inference_limit": "National homeowner guidance; not a local code requirement.",
+				"collected_at": "2026-10-25T01:50:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "sccsd-fog",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Env-FOG-Fats-Oil-Grease.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Never pour fats, oil or grease down sinks or toilets; pour cooled grease into a covered container for the garbage; soak up spills with absorbent material; do not push large amounts of food into the disposal; use sink strainers; sewer spills pollute Monterey Bay.",
+				"inference_limit": "District guidance for sewered homes; applied to septic homes alongside EPA advice.",
+				"collected_at": "2026-10-25T01:50:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "clemson-hgic-fog",
+				"source_url": "https://hgic.clemson.edu/factsheet/f-o-g-fats-oils-and-grease-pollution/",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Citing EPA: grease is the most common cause of reported sewer blockages (47 percent); hot water and soap do not remove grease.",
+				"inference_limit": "Extension summary of EPA data; national figure.",
+				"collected_at": "2026-10-25T01:50:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "repository-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Office hours Monday to Friday 9:00 AM to 5:00 PM, flat-rate pricing quoted on site; links only to existing services and posts. No holiday-day hours claimed.",
+				"inference_limit": "Business facts from site config.",
+				"collected_at": "2026-10-25T01:50:00+00:00",
+				"scope": "New seasonal post"
+			}
+		]
+	}
+}

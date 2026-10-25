@@ -1341,3 +1341,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: removed templated "How long does X take" and "Why choose Wade's" FAQ entries from 11 service, post and landing page files (unsourced durations from a few hours to 4 weeks; unconfirmed experience and reputation claims). Pricing and what-to-expect FAQs kept; the curated `/faq` page and the privacy policy untouched. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-24-templated-faqs.json`.
+
+## 2026-10-25: Thanksgiving kitchen and septic prep post
+
+- Scope: new post `/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz` planned in `seo/manifests/local-demand-calendar.json` (`holiday-thanksgiving-2026`), published 32 days before the holiday inside its 14 to 45 day lead window. Covers grease handling (Santa Cruz County Sanitation District, Clemson HGIC citing EPA), disposal limits and septic water use (EPA), guest bathroom prep, septic warning signs during the early wet season and what to do if a drain clogs, with FAQ from the planned questions and links to existing services and posts. Uses a kitchen drain image instead of the planned septic pumping illustration, since Wade's does not pump tanks. No new service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: sources `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-thanksgiving-post.json`.

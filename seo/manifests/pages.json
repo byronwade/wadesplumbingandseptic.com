@@ -1996,6 +1996,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"source_path": "content/posts/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/the-benefits-of-hydro-jetting",
 			"source_path": "content/posts/the-benefits-of-hydro-jetting.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/the-benefits-of-hydro-jetting",

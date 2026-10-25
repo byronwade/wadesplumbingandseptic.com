@@ -168,6 +168,7 @@
 		"/terms-of-service",
 		"/testimonials",
 		"/thank-you",
+		"/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
 		"/the-benefits-of-hydro-jetting",
 		"/the-complete-guide-to-septic-system-maintenance",
 		"/the-importance-of-regular-plumbing-maintenance",
@@ -4763,6 +4764,66 @@
 			"from": "/thank-you",
 			"to": "/service-areas",
 			"anchor": "See our service areas",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic prep checklist",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "clogged drain guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"anchor": "holiday plumbing tips",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/service-offerings/septic-tank-maintenance-and-care",
+			"anchor": "septic maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
