@@ -5248,6 +5248,18 @@
 		},
 		{
 			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
 			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
 			"anchor": "septic troubleshooting",
 			"classification": "MOCK_VERIFIED"
