@@ -824,6 +824,81 @@
 	}
 
 	/*
+	  Phones put the lead paragraph over the busiest part of the photograph, so
+	  the scrim carries more weight higher up the frame there.
+	*/
+	@media (width < 40rem) {
+		.hero-cinematic::before {
+			background: linear-gradient(
+				to top,
+				oklch(0 0 0 / 0.92) 0%,
+				oklch(0 0 0 / 0.8) 40%,
+				oklch(0 0 0 / 0.42) 72%,
+				oklch(0 0 0 / 0.5) 100%
+			);
+		}
+	}
+
+	/* Intent shortcut tiles in the home hero. */
+	.hero-pick {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		min-height: 3.75rem;
+		min-width: 0;
+		overflow-wrap: anywhere;
+		padding: 0.875rem;
+		border: 1px solid color-mix(in srgb, white 14%, transparent);
+		border-radius: var(--radius-lg);
+		background: oklch(0 0 0 / 0.5);
+		box-shadow: var(--hairline-top);
+		transition:
+			background-color 0.2s ease,
+			border-color 0.2s ease;
+	}
+
+	.hero-pick:hover {
+		border-color: color-mix(in srgb, var(--primary-bright) 70%, transparent);
+		background: oklch(0 0 0 / 0.68);
+	}
+
+	.hero-pick:focus-visible {
+		outline: 2px solid var(--primary-bright);
+		outline-offset: 2px;
+	}
+
+	@media (width >= 40rem) {
+		.hero-pick {
+			padding: 1rem 1.125rem;
+		}
+	}
+
+	/* Proof bar under the home hero. */
+	.proof-bar {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+		gap: 1.25rem 2rem;
+		padding-block: 1.5rem;
+	}
+
+	@media (width >= 64rem) {
+		.proof-bar {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 0;
+			padding-block: 1.75rem;
+		}
+
+		.proof-bar > li + li {
+			border-left: 1px solid var(--border);
+			padding-left: 2rem;
+		}
+
+		.proof-bar > li {
+			padding-right: 1rem;
+		}
+	}
+
+	/*
 	  Slow drift on the hero photograph. Cinematic movement comes from the frame,
 	  not from elements sliding in, so this is the only motion in the band.
 	*/

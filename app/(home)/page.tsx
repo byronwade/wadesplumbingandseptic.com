@@ -1,6 +1,18 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, BadgeCheck } from "@/components/icons"
+import {
+	ArrowRight,
+	ArrowUpRight,
+	Fire,
+	Handshake,
+	HardHat,
+	Home,
+	Pipe,
+	ShieldCheck,
+	Wallet,
+	Wrench,
+	type IconComponent,
+} from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
 import { HomeBelowFold } from "@/components/home-below-fold"
@@ -8,7 +20,12 @@ import { HomeHeroMedia } from "@/components/home-hero-media"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { faqs, heroStats, trustPoints } from "@/lib/home-content"
+import {
+	faqs,
+	heroQuickLinks,
+	heroStats,
+	proofPoints,
+} from "@/lib/home-content"
 import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
@@ -20,6 +37,24 @@ export const metadata: Metadata = buildPageMetadata({
 	image: "/images/locations/santa-cruz-redwoods.webp",
 	eyebrow: "Family owned · Local crew",
 })
+
+const quickLinkIcons: Record<
+	(typeof heroQuickLinks)[number]["icon"],
+	IconComponent
+> = {
+	pipe: Pipe,
+	fire: Fire,
+	wrench: Wrench,
+	hardhat: HardHat,
+}
+
+const proofIcons: Record<(typeof proofPoints)[number]["icon"], IconComponent> =
+	{
+		shield: ShieldCheck,
+		home: Home,
+		wallet: Wallet,
+		handshake: Handshake,
+	}
 
 export default function HomePage() {
 	return (
@@ -53,7 +88,7 @@ export default function HomePage() {
 					</p>
 				</div>
 
-				<div className="container-shell relative mt-auto pb-8 sm:pb-10">
+				<div className="container-shell relative mt-auto pt-10 pb-8 sm:pb-10">
 					{/*
 					  Title and lead paint immediately. Entrance motion on first-screen
 					  copy delayed LCP under mobile Lighthouse (~2s element render delay).
@@ -93,6 +128,46 @@ export default function HomePage() {
 							</Link>
 						</div>
 					</div>
+
+					{/*
+					  Intent shortcuts. Most visitors arrive with one job in mind, so
+					  the four common ones are a tap away from the first screen rather
+					  than behind the menu. Solid tint, no backdrop blur: blur over the
+					  drifting photo would repaint every frame.
+					*/}
+					<nav
+						aria-label="Popular services"
+						className="mt-8 grid grid-cols-2 gap-2 sm:mt-10 sm:gap-3 lg:grid-cols-4"
+					>
+						{heroQuickLinks.map(({ label, detail, href, icon }) => {
+							const Icon = quickLinkIcons[icon]
+							return (
+								<Link
+									prefetch={false}
+									className="hero-pick group"
+									href={href}
+									key={href}
+								>
+									<Icon
+										aria-hidden="true"
+										className="text-primary-bright size-6 shrink-0 sm:size-7"
+									/>
+									<span className="min-w-0">
+										<span className="block text-[0.9375rem] leading-tight font-bold text-white sm:text-base">
+											{label}
+										</span>
+										<span className="text-on-dark-subtle mt-1 hidden text-[0.8125rem] leading-snug sm:block">
+											{detail}
+										</span>
+									</span>
+									<ArrowUpRight
+										aria-hidden="true"
+										className="text-on-dark-subtle ml-auto size-4 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+									/>
+								</Link>
+							)
+						})}
+					</nav>
 				</div>
 
 				{/*
@@ -125,24 +200,33 @@ export default function HomePage() {
 			</section>
 
 			{/*
-			  Trust strip. Every item is left-aligned in its own column so the four
-			  labels share a baseline grid; centring each item individually made the
-			  row read ragged at the two-column breakpoint.
+			  Proof bar. Four confirmed facts, each with an icon tile and a one-line
+			  detail, so the strip carries evidence rather than a row of slogans.
+			  Columns are divided by hairlines from lg up and stack in pairs below.
 			*/}
-			<section className="border-border bg-card border-b">
-				<ul className="container-shell grid grid-cols-1 gap-x-8 gap-y-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
-					{trustPoints.map((item) => (
-						<li
-							className="text-muted-foreground flex items-center gap-2.5 text-sm font-bold"
-							key={item}
-						>
-							<BadgeCheck
-								className="text-primary size-4 shrink-0"
-								aria-hidden="true"
-							/>
-							{item}
-						</li>
-					))}
+			<section
+				aria-label="Why homeowners call Wade's"
+				className="bg-card border-border border-b"
+			>
+				<ul className="container-shell proof-bar">
+					{proofPoints.map(({ title, detail, icon }) => {
+						const Icon = proofIcons[icon]
+						return (
+							<li className="flex min-w-0 items-center gap-3.5" key={title}>
+								<span className="bg-accent text-accent-foreground grid size-11 shrink-0 place-items-center rounded-lg">
+									<Icon aria-hidden="true" className="size-5.5" />
+								</span>
+								<span className="min-w-0">
+									<span className="block text-[0.9375rem] leading-tight font-bold tracking-[-0.01em]">
+										{title}
+									</span>
+									<span className="text-muted-foreground mt-1 block text-[0.8125rem] leading-snug">
+										{detail}
+									</span>
+								</span>
+							</li>
+						)
+					})}
 				</ul>
 			</section>
 
