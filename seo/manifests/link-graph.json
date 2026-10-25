@@ -5158,6 +5158,18 @@
 		},
 		{
 			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "water heater repair or replace guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
+			"anchor": "softener versus conditioner comparison",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
 			"to": "/service-offerings/water-softener-maintenance",
 			"anchor": "water softener maintenance",
 			"classification": "MOCK_VERIFIED"

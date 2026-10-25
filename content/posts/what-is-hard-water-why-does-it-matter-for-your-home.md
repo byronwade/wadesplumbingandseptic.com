@@ -1,15 +1,13 @@
 ---
 title: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 description: >-
-  Water high in calcium and magnesium is known as hard water, and it can
-  silently damage your plumbing and appliances. Here is why water quality
-  matters.
+  What makes water hard, how hardness is measured, how hard local water is in
+  parts of Santa Cruz County, what it does to plumbing, and treatment options.
 category: Plumbing Tips
 date: "2025-07-29"
-updated: "2026-10-24"
+updated: "2026-10-25"
 tags:
   - santa cruz county
-  - local plumbing experts
   - plumbing issues
   - home water quality
   - hard water
@@ -20,77 +18,78 @@ image: /images/wordpress/img-1838-1.webp
 imageAlt: "Understanding Hard Water: Impact on Santa Cruz County Homes"
 ---
 
-When you turn on the tap, you probably aren’t thinking about what’s in your water, just that it’s flowing. But beyond the basics of hydration and hygiene, the quality of your water can significantly impact your home, plumbing, and health. If your water contains high levels of calcium and magnesium, it’s known as hard water, and it could be silently damaging your plumbing and appliances.
+**Quick answer:** Hard water carries dissolved minerals, mainly calcium and magnesium. USGS classifies water as soft up to 60 mg/L (as calcium carbonate), moderately hard at 61 to 120, hard at 121 to 180, and very hard above 180. It is not a health hazard, but it leaves scale in pipes, fixtures and water heaters and makes soap work less well. Soquel Creek Water District describes its water as hard to very hard. If you treat it with a softener and your home is on septic, the county does not allow softener discharge into the septic system.
 
 ![Water treatment tank system](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
 
-At Wade’s Plumbing & Septic, we help homeowners across Santa Cruz County test their water, diagnose hard water issues, and install reliable water softening solutions. Here’s what you need to know about hard water, how it forms, and what it can do to your home.
+## What makes water hard
 
-## How Does Water Become “Hard”?
+As water moves through soil and rock it dissolves minerals. USGS identifies calcium and magnesium as the main contributors to hardness. How much your water picks up depends on the geology around your water source, so hardness varies from one district, and even one well, to the next.
 
-Rainwater is naturally soft when it falls. But as it travels through the ground, it picks up minerals like calcium and magnesium, especially when it flows through areas rich in limestone or chalk. By the time it reaches reservoirs and water supplies, it may carry high levels of these minerals, making the water “hard.”
+## How hardness is measured
 
-The exact hardness level of water depends on your region’s natural landscape and underground water sources. Even if water appears clear and tastes fine, high mineral content can still cause serious long-term issues.
+Hardness is reported as calcium carbonate, in milligrams per liter (mg/L), parts per million (ppm) or grains per gallon (gpg). One grain per gallon equals 17.1 mg/L.
 
-## Why Is Hard Water a Problem?
+| Classification (USGS) | mg/L as calcium carbonate |
+| --------------------- | ------------------------- |
+| Soft                  | 0 to 60                   |
+| Moderately hard       | 61 to 120                 |
+| Hard                  | 121 to 180                |
+| Very hard             | More than 180             |
 
-While calcium and magnesium are essential nutrients for our bodies, they’re not so great for your pipes and appliances. Here’s why hard water can create problems in your home:
+## How hard is water in Santa Cruz County?
 
-- Scale Buildup in Pipes: Over time, minerals accumulate on the inner walls of your plumbing, narrowing the passageways and reducing water pressure.
-- Shorter Appliance Lifespan: Water heaters, dishwashers, and washing machines become less efficient and more prone to failure due to scale buildup.
-- Stains on Fixtures and Dishes: White or cloudy spots on your glassware, shower doors, and faucets are caused by mineral residue left behind when the water evaporates.
-- Soap Scum & Reduced Cleaning Power: Hard water interferes with soaps and detergents, causing more residue and requiring more product to get the job done.
-- Dry Skin & Hair: Hard water strips away natural oils, leaving skin and hair feeling dry or irritated after showers.
+It depends on your provider. Soquel Creek Water District, which serves Capitola, Soquel, Aptos and La Selva Beach, publishes these ranges from 2017 data:
 
-If left untreated, hard water can result in costly plumbing repairs, premature appliance replacement, and higher utility bills due to poor energy efficiency.
+- Capitola and Soquel (41st Avenue to Park Avenue): about 150 to 370 ppm
+- Soquel and Aptos (Park Avenue to State Park Drive): about 140 to 300 ppm
+- Aptos and Rio del Mar (State Park Drive to Mar Monte Avenue): about 150 to 200 ppm
+- La Selva Beach: about 100 to 200 ppm
 
-## How a Water Softener Helps
+Other providers list hardness in their annual water quality report, called a Consumer Confidence Report. You can find yours through your provider or EPA's [Consumer Confidence Report page](https://www.epa.gov/ccr). On a private well, a water test is the only way to know.
 
-Installing a water softener can drastically improve your home’s water quality. These systems use ion exchange technology to remove calcium and magnesium from the water, replacing them with sodium or potassium.
+## What hard water does in your home
 
-Benefits of Water Softeners:
+USGS links hardness to scale on equipment and to needing more soap and detergent. In practice that shows up as:
 
-- Prevent mineral buildup in pipes and appliances
-- Extend the life of water heaters, washing machines, and dishwashers
-- Improve soap and detergent performance
-- Eliminate cloudy spots and scale from fixtures
-- Make your skin and hair feel softer and cleaner
+- **Scale on fixtures and shower glass**, the white crust left when water evaporates.
+- **Scale in water heaters**, where minerals settle as sediment. Our [water heater repair or replace guide](/should-you-repair-or-replace-your-water-heater) covers water heater upkeep.
+- **Clogged aerators and showerheads**, which slowly lose flow.
+- **Spots on dishes and soap scum**, because soap reacts with the minerals instead of lathering.
 
-Water softeners also help reduce your overall energy usage (especially in water heaters), because they allow systems to heat water more efficiently without working through layers of scale.
+Both USGS and Soquel Creek Water District note that hardness itself is not a health hazard.
 
-## Soft Water: Pros and Cons
+## Treatment options
 
-While soft water can solve many household problems, it’s not always perfect for every use.
+- **Do nothing and clean regularly.** For moderately hard water, descaling aerators, showerheads and fixtures and flushing the water heater may be enough.
+- **Ion exchange water softener.** Swaps calcium and magnesium for sodium or potassium. Soquel Creek Water District notes that EPA recommends choosing a softener certified by NSF International, UL or the Water Quality Association. Regeneration produces salty brine that has to go somewhere.
+- **Salt-free conditioners.** These do not remove minerals; they are marketed to reduce scale. Our [softener versus conditioner comparison](/salt-water-softeners-vs-water-conditioners-which-is-right-for-you) covers the tradeoffs.
 
-Pros:
+### If your home is on septic
 
-- No mineral stains on dishes or fixtures
-- Better soap and shampoo performance
-- Increased appliance efficiency
-- Reduced maintenance and plumbing costs
+Santa Cruz County's sewage disposal ordinance says discharge from water softeners and drinking water filters shall not go to the septic system, and County Environmental Health warns that softener brine can harm tank bacteria and clog the leach field. Plan an approved discharge arrangement with County Environmental Health before installing a softener on a septic property. Homes on sewer discharge through the sewer connection.
 
-Cons:
+## Frequently asked questions
 
-- Higher sodium content: Softened water contains small amounts of sodium, which may not be ideal for those with high blood pressure or on low-sodium diets.
-- Not ideal for plants: Soft water can affect plant health due to its sodium content, especially when used for frequent watering.
+### Is hard water safe to drink?
 
-If health concerns are an issue, salt-free water conditioning systems may be a better choice, providing similar benefits without increasing sodium levels.
+USGS says the minerals that cause hardness are not toxic, and Soquel Creek Water District says hard water is not a health hazard.
 
-Worried About Hard Water? We Can Help.
+### How do I find out how hard my water is?
 
-If you’ve noticed scale buildup, water spots, low water pressure, or dry skin, you could be dealing with hard water. At Wade’s Plumbing & Septic, we offer professional water testing, softener installation, and custom water treatment solutions tailored to your household’s specific needs.
+Check your provider's annual Consumer Confidence Report or website. On a private well, have the water tested.
 
-We proudly serve Santa Cruz, Capitola, Soquel, Aptos, Watsonville, and surrounding areas with trusted local plumbing expertise. Let us help you improve your water quality, so your home, plumbing, and appliances can perform at their best.
+### Do I need a water softener?
 
-## Frequently Asked Questions
+Not always. It depends on how hard your water is, how much scale bothers you, and whether you are on septic. For many homes with moderately hard water, regular descaling is enough.
 
-### How much does it cost to address hard water issues in Santa Cruz County homes?
+## Sources
 
-Flat-rate pricing, quoted on site before work begins.
-
-### What should I expect during a hard water service appointment?
-
-During a hard water service appointment, our team will assess your water quality, inspect your plumbing system, and recommend the best solutions. We ensure minimal disruption and provide a thorough explanation of the process and expected outcomes.
+- USGS, [Do you have information about water hardness in the United States?](https://www.usgs.gov/faqs/do-you-have-information-about-water-hardness-united-states)
+- Soquel Creek Water District, [Water Hardness](https://www.soquelcreekwater.org/238/Water-Hardness)
+- U.S. EPA, [Consumer Confidence Reports](https://www.epa.gov/ccr)
+- Santa Cruz County Environmental Health, [The Harmful Effects of Water Softener Discharge on Your Septic System](https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf)
+- Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 
 ## Need help with hard water?
 

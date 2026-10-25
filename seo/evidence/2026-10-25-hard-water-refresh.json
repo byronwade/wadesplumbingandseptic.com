@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-hard-water-refresh-2026-10-25",
+	"collected_at": "2026-10-25T23:50:00+00:00",
+	"source": "usgs-water-hardness",
+	"source_url_or_tool": "https://www.usgs.gov/faqs/do-you-have-information-about-water-hardness-united-states",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "c955631065b374e4cefbb8a1f08ff6b0d3899e77fa2d9c6103675336f12eb8ac",
+	"payload": {
+		"post": "content/posts/what-is-hard-water-why-does-it-matter-for-your-home.md",
+		"observations": [
+			{
+				"id": "usgs-hardness",
+				"source_url": "https://www.usgs.gov/faqs/do-you-have-information-about-water-hardness-united-states",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Soft 0 to 60 mg/L, moderately hard 61 to 120, hard 121 to 180, very hard over 180, as calcium carbonate; calcium and magnesium are the main constituents; linked to scaling in equipment and more soap and detergent use; constituents are not toxic.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-25T23:50:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "soquel-creek-hardness",
+				"source_url": "https://www.soquelcreekwater.org/238/Water-Hardness",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "District water is hard to very hard; 2017 ranges about 150 to 370 ppm Capitola and Soquel, 140 to 300 Soquel and Aptos, 150 to 200 Aptos and Rio del Mar, 100 to 200 La Selva Beach; 1 gpg equals 17.1 mg/L; hard water is not a health hazard; EPA recommends softeners certified by NSF, UL or WQA.",
+				"inference_limit": "One local water district; other providers differ. Data year 2017 as published.",
+				"collected_at": "2026-10-25T23:50:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-softener-rule",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "County ordinance bars softener and drinking water filter discharge to septic; County Environmental Health handout warns brine harms tank bacteria and clogs the leach field. Same sources already cited by the merged water filtration post.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-25T23:50:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed claims of water testing and softener installation services not in the service list, unsourced skin, plant, energy and utility bill claims, 'trusted local plumbing expertise', a city list and a templated FAQ. Added hardness scale, local district ranges, septic rule, quick answer, FAQ and sources. Original date kept, updated set to 2026-10-25.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T23:50:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
