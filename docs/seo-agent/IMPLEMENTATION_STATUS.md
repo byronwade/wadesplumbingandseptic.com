@@ -1359,3 +1359,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: the site serves `public/images` without the Next image optimizer (`images.unoptimized`), so source file size is what visitors download. Six post hero images referenced by content were 318 to 955 KB at 1500 to 1600 px wide. Re-encoded in place at 1200 px wide, WebP quality 72, cutting them from 3.48 MB to 1.51 MB combined. Same paths and aspect ratios; no content, URL or config change.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-25-post-image-sizing.json`.
+
+## 2026-10-25: Image sizing, second pass
+
+- Scope: test re-encoded the thirteen remaining content-referenced images over 120 KB and replaced only the four that shrank by more than 25 percent: a post hero and three septic illustrations used across 11 service and post pages, 623 KB to 323 KB combined. Location heroes and the rest were already efficient and are unchanged. Same paths and aspect ratios; the one gallery image keeps its declared 1024x768 size.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-25-image-sizing-pass-2.json`.

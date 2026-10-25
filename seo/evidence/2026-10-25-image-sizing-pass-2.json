@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-image-sizing-pass-2-2026-10-25",
+	"collected_at": "2026-10-25T02:30:00+00:00",
+	"source": "repository-image-audit",
+	"source_url_or_tool": "sharp metadata and file sizes for images referenced by content",
+	"scope": "Second pass on referenced images over 120 KB served without the Next image optimizer",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "d94794e00620a3d334f99b5abdcc5517ee0530137db50438d71a58cd6485dec2",
+	"payload": {
+		"posts": [
+			"content/posts/plumbing-terms-every-homeowner-should-know.md",
+			"content/posts/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county.md",
+			"content/services/septic-tank-leach-field-repair-and-replacement.md",
+			"content/services/septic-tank-alarm-installation.md"
+		],
+		"observations": [
+			{
+				"id": "candidates",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Thirteen referenced images over 120 KB were test re-encoded at up to 1400 px wide (1200 px for portrait), WebP quality 72. Only files that shrank by more than 25 percent were replaced; the location heroes and the remaining images were already efficient and are unchanged.",
+				"inference_limit": "File size only; no field Core Web Vitals data collected.",
+				"collected_at": "2026-10-25T02:30:00+00:00",
+				"scope": "Image audit"
+			},
+			{
+				"id": "resized",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "img-1852 183->76 KB (1500x2000 to 1200x1600); ai-engineered-septic-systems-santa-cruz-county-612d82 179->83 KB and -612317 124->61 KB (1600x914 to 1400x800); image.webp 137->102 KB (1024x768, dimensions unchanged, matching its declared gallery size). Total 623 KB to 323 KB across four images used on 11 pages. Same paths and aspect ratios.",
+				"inference_limit": "Visual quality checked by spot inspection.",
+				"collected_at": "2026-10-25T02:30:00+00:00",
+				"scope": "Image resize"
+			}
+		]
+	}
+}
