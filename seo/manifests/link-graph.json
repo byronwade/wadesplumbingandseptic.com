@@ -820,6 +820,24 @@
 		},
 		{
 			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/why-is-dirty-water-backing-up-into-your-shower",
+			"anchor": "dirty water backing up into a shower",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"to": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"anchor": "Thanksgiving kitchen and septic guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
 			"to": "/service-offerings/drain-cleaning",
 			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"

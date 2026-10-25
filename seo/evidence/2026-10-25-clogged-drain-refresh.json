@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-clogged-drain-refresh-2026-10-25",
+	"collected_at": "2026-10-25T23:00:00+00:00",
+	"source": "epa-septic-care-and-medlineplus",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "8bd08be5e9c7a546eb318aad2f230eb5051dcc5fe56ca5f02f2c8b3bcbd2a97e",
+	"payload": {
+		"post": "content/posts/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide.md",
+		"observations": [
+			{
+				"id": "epa-drain-openers",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Avoid chemical drain openers for a clogged drain; instead use boiling water or a drain snake (post recommends hot tap water instead of boiling for plastic drains, following review). Pouring toxins down the drain can kill the organisms that treat waste and harm the septic system.",
+				"inference_limit": "Septic guidance.",
+				"collected_at": "2026-10-25T23:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "medlineplus-drain-opener",
+				"source_url": "https://medlineplus.gov/ency/article/002780.htm",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Drain opener harmful ingredients are hydrochloric acid, sulfuric acid, potassium hydroxide and sodium hydroxide (lye); burns to eyes may cause permanent vision loss; skin burns; call 911 or the Poison Help hotline after exposure.",
+				"inference_limit": "Medical encyclopedia summary; no treatment advice reproduced.",
+				"collected_at": "2026-10-25T23:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed unsourced baking soda and vinegar method, PVC boiling water claim, coat hanger hook advice, 'arrive promptly' and 'advanced tools' claims and a templated FAQ; added chemical splashback warning, main line and septic signs, prevention, FAQ and sources. Original date kept, updated added.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T23:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
