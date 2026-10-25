@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-post-image-sizing-2026-10-25",
+	"collected_at": "2026-10-25T02:20:00+00:00",
+	"source": "repository-image-audit",
+	"source_url_or_tool": "sharp metadata and file sizes for images referenced by content",
+	"scope": "Resize oversized post hero images served without the Next image optimizer",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "6e74874ea273eec2c0a86e317d0cfb1343916e5f2e72b3998a0aaa5ede2696d9",
+	"payload": {
+		"posts": [
+			"content/posts/signs-your-drain-field-needs-professional-repair.md",
+			"content/posts/6-signs-you-have-a-hidden-water-leak.md",
+			"content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
+			"content/posts/the-importance-of-regular-plumbing-maintenance.md",
+			"content/posts/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home.md",
+			"content/posts/should-you-call-a-plumber-or-fix-it-yourself.md"
+		],
+		"observations": [
+			{
+				"id": "unoptimized-images",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "next.config sets images.unoptimized, so files in public/images are sent to visitors as stored. Six referenced images were 318 to 955 KB at 1500 to 1600 px wide.",
+				"inference_limit": "File size only; no field Core Web Vitals data collected.",
+				"collected_at": "2026-10-25T02:20:00+00:00",
+				"scope": "Image audit"
+			},
+			{
+				"id": "resized",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Re-encoded in place at 1200 px wide, WebP quality 72: img-2109 955->437 KB, img-1011 726->328 KB, img-0073 587->253 KB, img-0503 505->202 KB, img-1206 389->157 KB, img-1669 318->134 KB. Total 3.48 MB to 1.51 MB. Same paths and aspect ratios, so no content or URL change.",
+				"inference_limit": "Visual quality checked by spot inspection.",
+				"collected_at": "2026-10-25T02:20:00+00:00",
+				"scope": "Image resize"
+			}
+		]
+	}
+}
