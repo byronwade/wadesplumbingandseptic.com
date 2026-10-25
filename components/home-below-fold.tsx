@@ -5,9 +5,9 @@ import {
 	Check,
 	Droplets,
 	Gauge,
-	Home,
+	HardHat,
+	Quotes,
 	ShieldCheck,
-	Wrench,
 } from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
@@ -27,7 +27,7 @@ import {
 import { contactInfo } from "@/lib/contact"
 import {
 	faqs,
-	reasons,
+	processSteps,
 	serviceGroups,
 	testimonials,
 	trustedBrands,
@@ -37,14 +37,14 @@ import { cn } from "@/lib/utils"
 
 const specialtyPoints = [
 	{
-		icon: ShieldCheck,
-		title: "Licensed & code-compliant",
-		text: "Properly planned and permitted for the property.",
+		icon: HardHat,
+		title: "Hillsides & tight lots",
+		text: "Systems planned around slopes, access, and setbacks.",
 	},
 	{
-		icon: Home,
-		title: "Family-owned & local",
-		text: "Not a franchise. We know these counties and codes.",
+		icon: ShieldCheck,
+		title: "Built with your engineer",
+		text: "Installed to the engineered design and the county permit.",
 	},
 	{
 		icon: Gauge,
@@ -300,46 +300,96 @@ export function HomeBelowFold() {
 				</div>
 			</section>
 
+			{/*
+			  How it works. A numbered process replaces the old grid of four
+			  wrench cards, which restated the trust bar. Steps run down a rail
+			  so the sequence reads at a glance; the testimonial panel sits beside
+			  it as the outcome of that process.
+			*/}
 			<section className="section-y section-defer">
-				<div className="container-shell grid grid-cols-1 items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+				<div className="container-shell grid grid-cols-1 items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
 					<div>
 						<div className="section-head">
-							<p className="spec-label">Why choose Wade&apos;s</p>
+							<p className="spec-label">How it works</p>
 							<h2 className="type-title">
 								Real people. Honest recommendations.
 							</h2>
 							<p className="type-lead">
-								We are not corporate plumbers trying to hit an upsell quota. We
-								explain the issue, show you practical options, and do quality
-								work at a fair price.
+								We are not corporate plumbers trying to hit an upsell quota.
+								Here is what happens after you call.
 							</p>
 						</div>
-						<div className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
-							{reasons.map(([title, text]) => (
-								<div className="surface-panel panel-inset" key={title}>
-									<Wrench className="text-primary size-5" aria-hidden="true" />
-									<h3 className="mt-3 font-bold tracking-[-0.02em]">{title}</h3>
-									<p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
-										{text}
-									</p>
-								</div>
+						<ol className="process-rail mt-[var(--space-block)]">
+							{processSteps.map(({ title, text }, index) => (
+								<li key={title}>
+									<span aria-hidden="true" className="process-num">
+										{String(index + 1).padStart(2, "0")}
+									</span>
+									<div className="min-w-0 pb-8">
+										<h3 className="type-subtitle text-[1.125rem]">{title}</h3>
+										<p className="text-muted-foreground mt-2 max-w-prose text-[0.9375rem] leading-relaxed">
+											{text}
+										</p>
+									</div>
+								</li>
 							))}
+						</ol>
+						<div className="flex w-full min-w-0 flex-col flex-wrap gap-3 sm:flex-row">
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								size="xl"
+							/>
+							<Link
+								prefetch={false}
+								className={cn(
+									buttonVariants({
+										variant: "outline",
+										size: "xl",
+										wrap: true,
+									}),
+									"w-full sm:w-auto",
+								)}
+								href="/contact"
+							>
+								Request a free quote
+								<ArrowRight aria-hidden="true" />
+							</Link>
 						</div>
 					</div>
 
-					<div className="surface-float @container relative overflow-hidden rounded-xl px-[min(1.75rem,28px)] py-7 sm:px-[min(2.25rem,36px)] sm:py-9">
-						<p className="spec-label">Real people, real results</p>
-						<div className="mt-8 space-y-7">
-							{testimonials.map(([quote, person]) => (
+					<div className="surface-float @container relative overflow-hidden rounded-xl px-[min(1.75rem,28px)] py-8 sm:px-[min(2.5rem,40px)] sm:py-10 lg:sticky lg:top-[calc(var(--header-h)+1.5rem)]">
+						<Quotes
+							aria-hidden="true"
+							className="text-primary-bright size-12 opacity-90"
+						/>
+						<p className="spec-label mt-6">What customers say</p>
+						<div className="mt-6 space-y-8">
+							{testimonials.map(([quote, person], index) => (
 								<blockquote
-									className="border-b border-white/10 pb-7 last:border-0 last:pb-0"
+									className="border-b border-white/10 pb-8 last:border-0 last:pb-0"
 									key={person}
 								>
-									<p className="mt-3 text-[1.0625rem] leading-relaxed text-pretty text-white">
+									<p
+										className={cn(
+											"leading-snug font-medium tracking-[-0.01em] text-pretty text-white",
+											index === 0
+												? "font-display text-[clamp(1.25rem,2.2vw,1.625rem)]"
+												: "text-[1.0625rem] leading-relaxed",
+										)}
+									>
 										“{quote}”
 									</p>
-									<footer className="text-on-dark-subtle mt-3 text-sm font-bold">
-										{person}
+									<footer className="mt-4 flex items-center gap-3">
+										<span
+											aria-hidden="true"
+											className="bg-primary text-primary-foreground grid size-9 shrink-0 place-items-center rounded-full text-sm font-bold"
+										>
+											{person.charAt(0)}
+										</span>
+										<span className="text-on-dark-muted text-sm font-bold">
+											{person}
+										</span>
 									</footer>
 								</blockquote>
 							))}
