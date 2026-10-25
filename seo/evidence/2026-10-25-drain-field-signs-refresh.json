@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-drain-field-signs-refresh-2026-10-25",
+	"collected_at": "2026-10-25T23:30:00+00:00",
+	"source": "epa-how-septic-works",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-your-septic-system-works",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "eaa8f38f8cf3b46918745643520af97ecedd512b50322b915a750f105bafb167",
+	"payload": {
+		"post": "content/posts/signs-your-drain-field-needs-professional-repair.md",
+		"observations": [
+			{
+				"id": "epa-how-septic-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Drainfield is a shallow covered excavation in unsaturated soil with perforated pipes or chambers; soil accepts, treats and disperses wastewater, removing coliform bacteria, viruses and nutrients; an overloaded drainfield can flood, sending sewage to the ground surface or causing backups in toilets and sinks.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-25T23:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Do not park or drive on the drainfield; plant trees an appropriate distance away; keep roof drains and sump pumps away; excess water slows or stops treatment; all laundry in one day could flood the drainfield; tank outlet keeps sludge and scum out of the drainfield; garbage disposals can push solids into the drainfield and clog pipes.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-25T23:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Retitled from 'Trusted Drain Field Repair Experts' to a descriptive title and corrected the hero alt text to match the photo. Removed 'expert', 'experienced technicians', 'prompt' and urgency claims ('immediate', 'immediately'), a city list, and a templated FAQ. Added quick answer, how it works, causes, protection, what to do, FAQ and sources. Original date kept, updated set to 2026-10-25.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T23:30:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
