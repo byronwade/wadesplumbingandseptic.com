@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-maintenance-refresh-2026-10-25",
+	"collected_at": "2026-10-25T22:40:00+00:00",
+	"source": "epa-septic-care",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "3d5191e73b500463098076a84db91030a9e162ae29a77e17eaccb99711d93767",
+	"payload": {
+		"post": "content/posts/the-complete-guide-to-septic-system-maintenance.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Inspect typical systems at least every three years and systems with pumps or floats generally once a year; pump typically every three to five years; frequency depends on household size, wastewater, solids and tank size; running toilet up to 200 gallons a day; older toilets 3.5 to 5 gallons per flush versus 1.6 or less; only human waste and toilet paper; keep grease, wipes, diapers, paper towels, cat litter, pharmaceuticals and chemicals out; no parking on drainfield, trees at a distance, roof drains away.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-25T22:40:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-softener-rule",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "County sewage disposal ordinance bars softener, drinking water filter and other non-domestic discharge to septic; County Environmental Health handout warns brine harms tank bacteria and clogs the leach field. Same sources already cited by the merged water filtration post.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-25T22:40:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsourced 25 to 30 year lifespan claim, 'certified experts' and 'specialized equipment' claims, a templated FAQ, and advice to install a demand-regenerating water softener, which conflicts with the county rule against softener discharge to septic. Added county softener section, quick answer, FAQ and sources. Original date kept, updated added.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-25T22:40:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

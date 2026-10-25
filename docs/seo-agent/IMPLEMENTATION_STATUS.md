@@ -1377,3 +1377,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: substantive refresh of `/6-signs-you-have-a-hidden-water-leak` at its existing URL. Original date kept, `updated: 2026-10-25`. Rebuilt around EPA WaterSense Fix a Leak guidance (household leak figures, winter use check, two-hour meter test, toilet dye test, flapper replacement) and EPA mold and moisture guidance, with a quick answer, a note for well homes, FAQ and sources. Replaced an uncited "national studies" figure with the EPA number and removed unsourced foundation and equipment claims and a templated FAQ. No new URL or service.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: sources `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-hidden-leak-refresh.json`.
+
+## 2026-10-25: Septic maintenance guide refresh
+
+- Scope: substantive refresh of `/the-complete-guide-to-septic-system-maintenance` at its existing URL. Original date kept, `updated: 2026-10-25`. Rebuilt around EPA septic care guidance (inspection and pumping intervals, water efficiency, what never goes down the drain, drainfield protection) plus the Santa Cruz County rule that softener and drinking water filter discharge must not go to septic. The old copy recommended a demand-regenerating softener on septic, which conflicts with that rule; it is removed, along with an unsourced 25 to 30 year lifespan claim, unverified credential claims and a templated FAQ. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: EPA source `LIVE_VERIFIED` on 2026-10-25 by direct fetch; county sources reused from the merged water filtration post; site result `MOCK_VERIFIED`. Evidence: `seo/evidence/2026-10-25-septic-maintenance-refresh.json`.
