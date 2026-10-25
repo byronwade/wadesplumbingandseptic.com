@@ -159,7 +159,7 @@ function PanelBand({
 	return (
 		<section className={cn("section-y", bandSurface(index))}>
 			<div className="container-shell">
-				<div className="reveal grid gap-[var(--space-grid)] md:grid-cols-2">
+				<div className="reveal grid grid-cols-1 gap-[var(--space-grid)] md:grid-cols-2">
 					{sections.map((section) => (
 						<article
 							className="surface-panel panel-inset rounded-lg"

@@ -4708,6 +4708,24 @@
 		},
 		{
 			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"anchor": "septic system warning signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County's geography affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/signs-your-drain-field-needs-professional-repair",
 			"to": "/service-offerings/drainfield-repair-and-replacement",
 			"anchor": "drain field repair and replacement",
 			"classification": "MOCK_VERIFIED"
