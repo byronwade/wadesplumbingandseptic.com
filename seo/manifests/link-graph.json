@@ -754,6 +754,12 @@
 		},
 		{
 			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden leak guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
 			"to": "/service-offerings/pipe-repair-and-replacement",
 			"anchor": "pipe repair and replacement",
 			"classification": "MOCK_VERIFIED"

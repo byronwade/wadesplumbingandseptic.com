@@ -1,13 +1,12 @@
 ---
 title: Prevent Frozen Pipes This Winter in Santa Cruz County, CA
-description:
-  Protect your home from costly water damage with these essential tips
-  for preventing frozen pipes during winter. Learn how to identify vulnerable pipes,
-  properly insulate them, and maintain adequate heating to avoid major
-  repairs.
+description: >-
+  Which pipes freeze first in Santa Cruz County homes, how to protect them on
+  cold nights, and how to safely thaw a frozen pipe, based on American Red
+  Cross guidance.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-10-25"
 tags:
   - santa cruz plumbing
   - plumbing maintenance
@@ -22,66 +21,86 @@ image: /images/work/new-construction-rough-in.webp
 imageAlt: "New construction plumbing rough-in"
 ---
 
-Winter brings the risk of frozen pipes, which can lead to bursts, flooding, and expensive repairs. Preventing frozen pipes is much easier and less costly than dealing with the aftermath of a pipe burst. Here's how to protect your home's plumbing during cold weather.
+## Quick answer
+
+Hard freezes are uncommon along the Santa Cruz County coast, but cold snaps do reach higher elevations and shaded canyons in the Santa Cruz Mountains, and the pipes most likely to freeze are the ones outside or in unheated spaces. Water expands as it freezes, which can split any kind of pipe. On nights near freezing, insulate exposed pipes, keep the heat steady, open sink cabinets on exterior walls and let a faucet trickle. If a pipe does freeze, thaw it with gentle heat, never an open flame.
+
+- Know where your main water shutoff is before you need it.
+- Insulate hose bibs, irrigation lines, backflow devices and pipes in garages, crawl spaces and pump houses.
+- Keep the thermostat at the same temperature day and night, and no lower than 55°F if you go away.
+- On the coldest nights, let cold water trickle from faucets served by exposed pipes.
+- Thaw a frozen pipe with a heating pad, hair dryer or warm towels; call a plumber if you cannot find or reach the frozen section.
 
 ![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 
-## Identify Vulnerable Pipes
+## Which pipes freeze first
 
-Start by identifying which pipes in your home are most at risk. These typically include:
+The American Red Cross lists the pipes that freeze most often:
 
-- Pipes in unheated areas like basements, attics, and garages
-- Pipes running along exterior walls
-- Outdoor spigots and irrigation systems
-- Pipes in cabinets under sinks on exterior walls
+- Outdoor hose bibs, swimming pool supply lines and sprinkler lines
+- Pipes in unheated interior spaces such as basements, crawl spaces, attics, garages and kitchen cabinets
+- Pipes that run along exterior walls with little insulation
 
-## Insulate Exposed Pipes
+Around Santa Cruz County, add a few local ones to that list: irrigation backflow preventers above ground, pipes in detached garages and sheds, and, on rural properties, the lines and pressure tank in a well pump house. Homes in the mountains, such as around Boulder Creek, Ben Lomond, Felton, Bonny Doon and the Summit area, are more likely to see freezing nights than homes near the coast.
 
-One of the most effective preventative measures is insulating vulnerable pipes:
+## Before a cold snap
 
-- Use foam pipe insulation sleeves, which are inexpensive and easy to install
-- Apply heat tape or thermostatically-controlled heat cables for pipes at high risk
-- Seal leaks that allow cold air to enter where pipes are located
-- Consider adding insulation to areas like basements and crawl spaces
+- **Find the main shutoff.** If a pipe bursts, shutting off the water quickly limits the damage. Make sure everyone in the house knows where it is.
+- **Insulate exposed pipes.** Foam pipe sleeves are inexpensive and work well on pipes in crawl spaces, garages and pump houses. Insulated covers fit over hose bibs and above-ground backflow devices.
+- **Disconnect garden hoses.** A hose left attached can trap water in the spigot.
+- **Drain irrigation lines** you will not use over the winter, following the manufacturer's instructions for your system.
+- **Seal drafts** near pipes, such as gaps where pipes pass through exterior walls.
 
-## Maintain Consistent Heat
+## On freezing nights
 
-Keep your home heated to at least 55°F, even when you're away. This consistent temperature helps prevent interior pipes from freezing. If you'll be away for an extended period during winter, consider these additional steps:
+The Red Cross recommends:
 
-- Ask a friend or neighbor to check your house regularly
-- Shut off and drain the water system
-- Install a smart thermostat that alerts you to temperature drops
+- **Keep the thermostat steady.** Set it to the same temperature day and night. It may cost a little more to run, but much less than repairing a burst pipe.
+- **Open cabinet doors** under kitchen and bathroom sinks so warm air reaches the plumbing. Move cleaners and chemicals out of children's reach.
+- **Let a faucet trickle.** When it is very cold, let cold water drip from faucets served by exposed pipes. Moving water is less likely to freeze.
+- **Keep garage doors closed** if water lines run through the garage.
 
-## Allow Faucets to Drip
+If you are leaving for the holidays, leave the heat on and set no lower than 55°F, and ask someone to check on the house.
 
-During extremely cold weather, allow faucets connected to vulnerable pipes to drip slightly. Running water, even at a trickle, helps prevent freezing. Focus on faucets furthest from where water enters your home.
+## If a pipe freezes
 
-## Keep Cabinet Doors Open
+Only a trickle from a faucet is the usual sign. The Red Cross advises:
 
-Open kitchen and bathroom cabinet doors to allow warmer air to circulate around plumbing, especially if sinks are on exterior walls.
+1. **Keep the faucet open.** As the ice melts, running water helps melt the rest.
+2. **Apply gentle heat** to the frozen section with an electric heating pad, a hair dryer, a portable space heater kept away from anything flammable, or towels soaked in hot water.
+3. **Never use an open flame.** No blowtorch, kerosene or propane heater, charcoal stove or similar device.
+4. **Keep heating until full pressure returns,** then check the other faucets in the house, since more than one pipe can freeze.
 
-## What to Do If Pipes Freeze
+Call a licensed plumber if you cannot find the frozen area, cannot reach it, or cannot thaw it. If the pipe has already split, shut off the main water valve first.
 
-If you turn on a faucet and only a trickle comes out, you likely have a frozen pipe. Some steps to take:
+## After a pipe bursts
 
-- Keep the faucet open as you treat the frozen pipe
-- Apply heat to the frozen section using an electric heating pad, hair dryer, or portable space heater (never use open flame devices)
-- Continue applying heat until full water pressure is restored
-- Check all other faucets for additional frozen pipes
+- Shut off the main water valve.
+- Turn off electricity to any area where water is near outlets or appliances, if it is safe to reach the panel.
+- Move belongings out of the water and start drying the area.
+- Have the damaged section repaired, and check nearby pipes for cracks that have not leaked yet. Our [hidden leak guide](/6-signs-you-have-a-hidden-water-leak) covers signs of leaks you cannot see.
 
-If you cannot locate the frozen area, if the frozen area is not accessible, or if you cannot thaw the pipe, contact a qualified plumber. Call Wade's Plumbing & Septic during business hours to schedule service.
+## Frequently asked questions
 
-Taking these preventative measures can save you from the inconvenience and expense of dealing with burst pipes during the coldest months of the year.
+### Do pipes really freeze in Santa Cruz County?
 
-## Frequently Asked Questions
+It is uncommon near the coast, but it does happen during cold snaps, especially at higher elevations in the Santa Cruz Mountains and in pipes that are outdoors or in unheated spaces.
 
-### How is pricing quoted for preventing frozen pipes in Santa Cruz County, CA?
+### What temperature should I keep my house at to prevent frozen pipes?
 
-Flat-rate pricing, quoted on site before work begins.
+The Red Cross recommends keeping the thermostat at the same temperature day and night, and no lower than 55°F when you are away.
 
-### What should I expect during the service to prevent frozen pipes?
+### Should I let faucets drip on cold nights?
 
-During the service, our technicians will assess your plumbing system, insulate vulnerable pipes, and ensure all preventative measures are in place. We aim to provide a seamless experience with minimal disruption to your daily routine.
+On very cold nights, yes, for faucets served by pipes on exterior walls or in unheated spaces. A slow trickle of cold water is enough.
+
+### How is pricing quoted for frozen or burst pipe repair?
+
+Flat rate, quoted on site before work begins.
+
+## Sources
+
+- American Red Cross, [Frozen Pipes](https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html)
 
 ## Need help with frozen or burst pipes?
 
