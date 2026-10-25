@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BadgeCheck } from "@/components/icons"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
@@ -15,12 +14,6 @@ import { getServiceImage } from "@/lib/service-images"
 import { parseServiceSections } from "@/lib/service-sections"
 import { breadcrumbJsonLd, serviceFaqJsonLd, serviceJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
-
-const trustPoints = [
-	"Family owned and operated",
-	"Licensed and insured",
-	"Clear options before work",
-] as const
 
 /** Answer-first facts for people and AI assistants: where, when, cost, booking. */
 function ServiceFacts() {
@@ -101,20 +94,6 @@ export function ServiceLandingPage({
 				className="border-border bg-card border-b"
 			>
 				<ServiceFacts />
-				<ul className="container-shell border-border grid grid-cols-1 gap-x-8 gap-y-3 border-t py-5 sm:grid-cols-3">
-					{trustPoints.map((item) => (
-						<li
-							className="text-muted-foreground flex items-center gap-2.5 text-sm font-bold"
-							key={item}
-						>
-							<BadgeCheck
-								aria-hidden="true"
-								className="text-primary size-4 shrink-0"
-							/>
-							{item}
-						</li>
-					))}
-				</ul>
 			</section>
 
 			{viewStats ? (

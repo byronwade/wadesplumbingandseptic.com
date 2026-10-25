@@ -735,11 +735,7 @@
 	.hero-article-media,
 	.hero-service-media {
 		width: 100%;
-		background: var(--muted);
-	}
-
-	.hero-service {
-		background: var(--background);
+		background: var(--panel-elevated);
 	}
 
 	.footer-credit {
