@@ -104,6 +104,18 @@ for (const text of [
 	})
 }
 
+test("external source URLs are not treated as copy", () => {
+	assert.deepEqual(
+		businessFactIssues(
+			"- American Red Cross, [Frozen Pipes](https://www.redcross.org/get-help/how-to-prepare-for-emergencies/frozen-pipes.html)",
+		),
+		[],
+	)
+	assert.ok(
+		businessFactIssues("[Emergency repairs](https://example.com)").length > 0,
+	)
+})
+
 test("conversion fallback never generates a customer testimonial", () => {
 	const conversion = normalizeConversion(null, {
 		title: "Drain cleaning",

@@ -1,0 +1,37 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-frozen-pipes-refresh-2026-10-25",
+	"collected_at": "2026-10-25T02:00:00+00:00",
+	"source": "american-red-cross-frozen-pipes",
+	"source_url_or_tool": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html",
+	"scope": "Substantive refresh of an existing post at its URL",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "ffd7a3209dee1b9e348f1ed60aec84a8af25a2722d27dea465a969f152086926",
+	"payload": {
+		"post": "content/posts/how-to-prevent-frozen-pipes-this-winter.md",
+		"observations": [
+			{
+				"id": "red-cross-frozen-pipes",
+				"source_url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Water expands as it freezes; most vulnerable pipes are outdoor hose bibs, pool and sprinkler lines, pipes in unheated spaces and along poorly insulated exterior walls; keep thermostat steady day and night, open sink cabinets, let cold water trickle, no lower than 55F when away; thaw with heating pad, hair dryer, space heater or hot towels, never an open flame; call a licensed plumber if the freeze cannot be found, reached or thawed.",
+				"inference_limit": "National guidance; local freeze frequency described qualitatively without statistics.",
+				"collected_at": "2026-10-25T02:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed a templated 'what to expect' FAQ describing an insulation service and generic copy with no source; added quick answer, local vulnerable pipes (backflow devices, pump houses, mountain communities), burst pipe steps and a Red Cross source.",
+				"inference_limit": "No new service claimed.",
+				"collected_at": "2026-10-25T02:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

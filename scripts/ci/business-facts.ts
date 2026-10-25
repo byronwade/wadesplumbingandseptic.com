@@ -23,7 +23,10 @@ const septicPumpingOffer = [
 ]
 
 /** Public copy rules confirmed by the owner on October 19, 2026. */
-export function businessFactIssues(text: string): string[] {
+export function businessFactIssues(source: string): string[] {
+	// External link targets are cited sources, not Wade's copy (a Red Cross URL
+	// contains "emergencies"). Relative links are still checked.
+	const text = source.replace(/\]\(https?:\/\/[^)\s]+\)/g, "]()")
 	const issues: string[] = []
 	if (/\$\s*\d|\b\d[\d,.]*\s*(?:dollars|USD)\b/i.test(text)) {
 		issues.push("numeric monetary amount")
