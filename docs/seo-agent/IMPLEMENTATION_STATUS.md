@@ -1365,3 +1365,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: test re-encoded the thirteen remaining content-referenced images over 120 KB and replaced only the four that shrank by more than 25 percent: a post hero and three septic illustrations used across 11 service and post pages, 623 KB to 323 KB combined. Location heroes and the rest were already efficient and are unchanged. Same paths and aspect ratios; the one gallery image keeps its declared 1024x768 size.
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: `MOCK_VERIFIED` repository evidence only. Evidence: `seo/evidence/2026-10-25-image-sizing-pass-2.json`.
+
+## 2026-10-25: Holiday plumbing guide refresh
+
+- Scope: substantive refresh of `/how-to-avoid-common-holiday-plumbing-disasters` at its existing URL ahead of the season. Original date kept, `updated: 2026-10-25`. Rebuilt around IBHS interior water damage guidance (washer hose inspection and 3 to 5 year replacement, water heater checks and sediment, toilet overflow shut-off, main shut-off when traveling) and EPA septic care (what to flush, running toilet waste), with a quick answer, a septic section, FAQ, links to the Thanksgiving, frozen pipes, running toilet, water heater and septic signs posts, and a sources section. Removed an unsourced 10-year water heater rule, a "fast, reliable" claim and a templated FAQ. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: sources `LIVE_VERIFIED` on 2026-10-25 by direct fetch; site result `MOCK_VERIFIED` local evidence only. Evidence: `seo/evidence/2026-10-25-holiday-plumbing-refresh.json`.
