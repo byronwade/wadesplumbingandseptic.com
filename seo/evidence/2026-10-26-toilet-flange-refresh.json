@@ -1,0 +1,37 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-toilet-flange-refresh-2026-10-26",
+	"collected_at": "2026-10-26T01:05:00+00:00",
+	"source": "oatey-install-toilet-flange",
+	"source_url_or_tool": "https://oatey.com/resources/project-guides/install-toilet-flange",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "19a4aba552a46fa2c392f993290109e045d270b746fcca747dd2619c1440fc13",
+	"payload": {
+		"post": "content/posts/how-to-install-a-toilet-flange-in-8-easy-steps.md",
+		"observations": [
+			{
+				"id": "oatey-flange-guide",
+				"source_url": "https://oatey.com/resources/project-guides/install-toilet-flange",
+				"source_tier": "MANUFACTURER",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Flange should sit on top of the finished floor; if flush or slightly below use a thicker wax ring or spacers; below the floor leads to poor wax compression and leaks; bolt slots at 9 and 3 o'clock; fasten through the finished floor into the subfloor with stainless or corrosion resistant screws, concrete anchors on slab; never rely on friction fit; cemented flange cannot be repositioned; new wax ring every time; repair rings and extension kits retrofit without cutting floors or ceilings.",
+				"inference_limit": "Manufacturer installation guidance, used only for product installation steps; not a code citation.",
+				"collected_at": "2026-10-26T01:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed 'fast, friendly', 'fast, reliable', 'expert', 'skilled technicians' and 'precision' claims, a 'no online booking' statement that conflicts with the site's request form, two bare phone CTAs, a city list, an unrelated septic design image, a duplicate FAQ block, and steps that said to unscrew or Dremel out glued flanges. Rewrote the eight steps to follow the manufacturer guide and added signs, repair versus replace, when to call, and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T01:05:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
