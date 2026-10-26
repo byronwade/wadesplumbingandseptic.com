@@ -5242,6 +5242,24 @@
 		},
 		{
 			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"anchor": "septic warning signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
+			"to": "/slow-drains-solutions-santa-cruz",
+			"anchor": "slow drains",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-is-dirty-water-backing-up-into-your-shower",
 			"to": "/service-offerings/drain-cleaning",
 			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
