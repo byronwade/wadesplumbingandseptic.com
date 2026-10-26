@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-shower-backup-refresh-2026-10-26",
+	"collected_at": "2026-10-26T00:40:00+00:00",
+	"source": "santa-cruz-county-preventing-overflow",
+	"source_url_or_tool": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "3f9279945bb96a6e7a55e388fd29e76c630ffd7fc088abed79665d06b44702e5",
+	"payload": {
+		"post": "content/posts/why-is-dirty-water-backing-up-into-your-shower.md",
+		"observations": [
+			{
+				"id": "county-preventing-overflow",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Kitchen grease is a leading cause of residential sewer line blockages; flushed solids and tree roots also cause clogs; property owner maintains the lateral to the main line connection; have a plumber clear the lateral mechanically at least every 2 years; learn the location of lines and cleanouts; call 911 if sewage flows to the street or a storm drain.",
+				"inference_limit": "County sanitation guidance; applies to county sewer service areas.",
+				"collected_at": "2026-10-26T00:40:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "city-sewer-system",
+				"source_url": "https://www.santacruzca.gov/Government/City-Departments/Public-Works/Wastewater/City-Sanitary-Sewer-System",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Lateral is the property owner's responsibility; lateral should have an accessible cleanout, usually in or near the sidewalk; owner liable for spills from a malfunctioning private lateral; fine for repeat spills.",
+				"inference_limit": "City of Santa Cruz only.",
+				"collected_at": "2026-10-26T00:40:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Replaced an unsourced 18 to 22 month cleaning interval with the county's at least every 2 years. Removed a fast-dissolving toilet paper claim, 'experienced technicians' and 'trusted' claims, a templated FAQ and a broken nested list. Retitled to the question the URL answers and corrected hero alt text to the photo (tree roots pulled from a sewer line). Added what to do, responsibility, prevention, septic note, FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T00:40:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
