@@ -4690,6 +4690,12 @@
 		},
 		{
 			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
+			"to": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"anchor": "hard water guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
 			"to": "/service-offerings/shower-installation-and-repair",
 			"anchor": "shower installation and repair",
 			"classification": "MOCK_VERIFIED"
