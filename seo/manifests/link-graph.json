@@ -190,6 +190,24 @@
 		},
 		{
 			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/why-is-dirty-water-backing-up-into-your-shower",
+			"anchor": "dirty water backing up into a shower",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repairing or replacing a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "signs of a hidden water leak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
 			"to": "/service-offerings/leak-detection",
 			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
