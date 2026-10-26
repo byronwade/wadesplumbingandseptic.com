@@ -18,7 +18,7 @@ import { getImageProps } from "next/image"
  * the portrait. The <img> is the homepage LCP, so it loads eagerly; <picture>
  * still fetches only the one matching source.
  */
-const HERO_SIZES = "(min-width: 1024px) 40vw, 100vw"
+const HERO_SIZES = "100vw"
 
 export function HomeHeroMedia() {
 	const common = {
@@ -58,7 +58,7 @@ export function HomeHeroMedia() {
 				{...rest}
 				srcSet={portrait}
 				alt={common.alt}
-				className="absolute inset-0 size-full object-cover object-[50%_55%]"
+				className="absolute inset-0 size-full object-cover object-[50%_62%]"
 				/*
 				  Sync decode: async decoding left the LCP image loaded but unpainted
 				  for ~2s under mobile Lighthouse (element render delay).
