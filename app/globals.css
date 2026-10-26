@@ -65,32 +65,32 @@
   can be reasoned about instead of eyeballed.
 */
 :root {
-	--ink: oklch(0.175 0.008 68);
-	--ink-soft: oklch(0.215 0.009 68);
-	--panel: oklch(0.215 0.009 68);
-	--panel-elevated: oklch(0.268 0.01 68);
-	--background: oklch(0.976 0.003 85);
-	--foreground: oklch(0.2 0.007 68);
+	--ink: oklch(0.19 0.045 260);
+	--ink-soft: oklch(0.23 0.05 260);
+	--panel: oklch(0.23 0.05 260);
+	--panel-elevated: oklch(0.28 0.055 260);
+	--background: oklch(0.985 0.004 250);
+	--foreground: oklch(0.21 0.035 260);
 	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.2 0.007 68);
+	--card-foreground: oklch(0.21 0.035 260);
 	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.2 0.007 68);
-	--primary: oklch(0.4859 0.1104 51.3);
+	--popover-foreground: oklch(0.21 0.035 260);
+	--primary: oklch(0.58 0.19 40);
 	--primary-hover: color-mix(in srgb, var(--primary) 88%, black);
 	--primary-foreground: oklch(1 0 0);
-	--primary-bright: oklch(0.7557 0.1133 66.7);
-	--secondary: oklch(0.942 0.004 85);
-	--secondary-foreground: oklch(0.24 0.008 68);
-	--muted: oklch(0.951 0.004 85);
-	--muted-foreground: oklch(0.49 0.011 68);
-	--accent: oklch(0.9243 0.0201 70);
-	--accent-foreground: oklch(0.4027 0.0855 54.6);
+	--primary-bright: oklch(0.78 0.15 60);
+	--secondary: oklch(0.955 0.008 250);
+	--secondary-foreground: oklch(0.25 0.04 260);
+	--muted: oklch(0.96 0.007 250);
+	--muted-foreground: oklch(0.48 0.03 255);
+	--accent: oklch(0.945 0.03 55);
+	--accent-foreground: oklch(0.47 0.16 40);
 	--destructive: oklch(0.5534 0.1739 38.4);
-	--border: oklch(0.893 0.006 85);
-	--border-strong: oklch(0.83 0.008 82);
-	--input: oklch(0.893 0.006 85);
-	--ring: oklch(0.4859 0.1104 51.3);
-	--radius: 0.5rem;
+	--border: oklch(0.9 0.01 250);
+	--border-strong: oklch(0.84 0.015 250);
+	--input: oklch(0.9 0.01 250);
+	--ring: oklch(0.58 0.19 40);
+	--radius: 0.875rem;
 	--shadow-edge: 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
 	--shadow-panel:
 		0 1px 2px color-mix(in srgb, var(--ink) 5%, transparent),
@@ -101,13 +101,13 @@
 	  so section rhythm never read. This is a deliberate, visible step down -
 	  L 0.9756 → 0.9483.
 	*/
-	--sunken: oklch(0.948 0.005 85);
+	--sunken: oklch(0.955 0.01 250);
 
 	/* Text ramp for ink/panel surfaces. Replaces three near-identical
 	   hardcoded whites (#ececea / #e4e5e7 / #e8e8e4) and ad-hoc white/NN. */
-	--on-dark: oklch(0.967 0.003 85);
-	--on-dark-muted: oklch(0.875 0.007 80);
-	--on-dark-subtle: oklch(0.712 0.011 75);
+	--on-dark: oklch(0.975 0.005 250);
+	--on-dark-muted: oklch(0.86 0.025 250);
+	--on-dark-subtle: oklch(0.74 0.035 250);
 
 	/*
 	  Dark elevation ramp. Every ink surface used to resolve to roughly the same
@@ -121,9 +121,9 @@
 	    dark-2   L .25   floating panels (mega menu, popovers)
 	    dark-3   L .285  cards resting on a panel
 	*/
-	--dark-1: oklch(0.215 0.009 68);
-	--dark-2: oklch(0.252 0.01 68);
-	--dark-3: oklch(0.288 0.011 68);
+	--dark-1: oklch(0.23 0.05 260);
+	--dark-2: oklch(0.27 0.055 260);
+	--dark-3: oklch(0.31 0.055 260);
 
 	/*
 	  Top inner highlight. A single light hairline along the top edge is what
@@ -138,10 +138,10 @@
 
 	/* Long-form copy. Was hardcoded #3f444b, which left every content page
 	   unreadable in dark mode. */
-	--prose-body: oklch(0.385 0.01 68);
-	--prose-quote: oklch(0.432 0.01 68);
-	--prose-quote-bg: oklch(0.954 0.005 85);
-	--prose-code-bg: oklch(0.943 0.004 85);
+	--prose-body: oklch(0.37 0.03 258);
+	--prose-quote: oklch(0.43 0.03 258);
+	--prose-quote-bg: oklch(0.955 0.01 250);
+	--prose-code-bg: oklch(0.945 0.01 250);
 
 	/* --- Type scale ---
 	   display  → home hero only
@@ -153,9 +153,9 @@
 	  measure of the viewport and reads edge to edge rather than sitting as a
 	  block of text on a photo.
 	*/
-	--type-cinematic: clamp(3.25rem, 13vw, 9rem);
+	--type-cinematic: clamp(2.4rem, 5.2vw + 0.6rem, 5.25rem);
 	--type-display: clamp(2.35rem, 5.4vw, 4.25rem);
-	--type-headline: clamp(1.95rem, 3.6vw, 3rem);
+	--type-headline: clamp(1.75rem, 3.6vw, 3.25rem);
 	--type-title: clamp(1.65rem, 2.6vw, 2.25rem);
 	--type-subtitle: clamp(1.3rem, 1.8vw, 1.5rem);
 	--type-card: 1.0625rem;
@@ -210,48 +210,48 @@
 }
 
 .dark {
-	--ink: oklch(0.13 0.006 68);
-	--ink-soft: oklch(0.185 0.008 68);
-	--panel: oklch(0.205 0.009 68);
-	--panel-elevated: oklch(0.255 0.01 68);
-	--background: oklch(0.165 0.007 68);
-	--foreground: oklch(0.96 0.004 85);
-	--card: oklch(0.205 0.008 68);
-	--card-foreground: oklch(0.96 0.004 85);
-	--popover: oklch(0.205 0.008 68);
-	--popover-foreground: oklch(0.96 0.004 85);
-	--primary: oklch(0.619 0.1364 50.7);
+	--ink: oklch(0.14 0.035 262);
+	--ink-soft: oklch(0.18 0.04 262);
+	--panel: oklch(0.2 0.04 262);
+	--panel-elevated: oklch(0.25 0.045 262);
+	--background: oklch(0.165 0.035 262);
+	--foreground: oklch(0.965 0.005 250);
+	--card: oklch(0.2 0.04 262);
+	--card-foreground: oklch(0.965 0.005 250);
+	--popover: oklch(0.2 0.04 262);
+	--popover-foreground: oklch(0.965 0.005 250);
+	--primary: oklch(0.68 0.18 48);
 	--primary-foreground: var(--ink);
 	--primary-hover: var(--primary-bright);
-	--primary-bright: oklch(0.7557 0.1133 66.7);
-	--secondary: oklch(0.235 0.009 68);
-	--secondary-foreground: oklch(0.93 0.005 85);
-	--muted: oklch(0.235 0.009 68);
-	--muted-foreground: oklch(0.745 0.012 78);
-	--accent: oklch(0.2554 0.0212 66.6);
-	--accent-foreground: oklch(0.7557 0.1133 66.7);
+	--primary-bright: oklch(0.78 0.15 60);
+	--secondary: oklch(0.23 0.04 262);
+	--secondary-foreground: oklch(0.93 0.008 250);
+	--muted: oklch(0.23 0.04 262);
+	--muted-foreground: oklch(0.77 0.03 250);
+	--accent: oklch(0.27 0.05 50);
+	--accent-foreground: oklch(0.8 0.14 62);
 	--destructive: oklch(0.6828 0.1741 40.3);
-	--border: oklch(0.295 0.01 68);
-	--border-strong: oklch(0.365 0.012 68);
-	--input: oklch(0.295 0.01 68);
-	--ring: oklch(0.7557 0.1133 66.7);
+	--border: oklch(0.3 0.04 262);
+	--border-strong: oklch(0.37 0.045 262);
+	--input: oklch(0.3 0.04 262);
+	--ring: oklch(0.78 0.15 60);
 	--shadow-edge: 0 0 0 1px color-mix(in srgb, white 8%, transparent);
 	--shadow-panel:
 		0 1px 2px color-mix(in srgb, black 30%, transparent),
 		0 8px 24px -12px color-mix(in srgb, black 45%, transparent);
 
-	--sunken: oklch(0.195 0.008 68);
+	--sunken: oklch(0.19 0.038 262);
 
-	--prose-body: oklch(0.83 0.01 80);
-	--prose-quote: oklch(0.864 0.009 80);
-	--prose-quote-bg: oklch(0.228 0.009 68);
-	--prose-code-bg: oklch(0.25 0.01 68);
+	--prose-body: oklch(0.84 0.02 250);
+	--prose-quote: oklch(0.87 0.02 250);
+	--prose-quote-bg: oklch(0.22 0.04 262);
+	--prose-code-bg: oklch(0.25 0.04 262);
 
 	/* Dark theme starts lower, so the ramp shifts down with it and keeps the
 	   same ~0.035 L separation between levels. */
-	--dark-1: oklch(0.195 0.008 68);
-	--dark-2: oklch(0.232 0.009 68);
-	--dark-3: oklch(0.268 0.01 68);
+	--dark-1: oklch(0.19 0.04 262);
+	--dark-2: oklch(0.23 0.045 262);
+	--dark-3: oklch(0.27 0.05 262);
 }
 
 /*
@@ -727,7 +727,18 @@
 		--ring-offset: var(--dark-1);
 		position: relative;
 		isolation: isolate;
-		background: var(--dark-1);
+		background:
+			radial-gradient(
+				ellipse 55% 80% at 0% 0%,
+				color-mix(in srgb, var(--primary) 22%, transparent),
+				transparent 70%
+			),
+			radial-gradient(
+				ellipse 50% 70% at 100% 100%,
+				oklch(0.55 0.16 250 / 0.3),
+				transparent 70%
+			),
+			var(--dark-1);
 		color: var(--on-dark);
 		box-shadow: var(--hairline-top);
 	}
@@ -761,7 +772,7 @@
 		background: linear-gradient(
 			180deg,
 			color-mix(in srgb, black 35%, var(--ink)) 0%,
-			oklch(0.12 0.008 68) 100%
+			oklch(0.12 0.035 262) 100%
 		);
 	}
 
@@ -773,62 +784,142 @@
 	  changes as the URL bar hides and makes the headline resize while you scroll.
 	  svh is the small (chrome-visible) viewport, which is stable.
 	*/
-	.hero-cinematic {
+	/*
+	  Home hero. Deep navy field with two soft light sources: a warm orange
+	  glow behind the headline and a cool blue one behind the photo, over the
+	  faint blueprint grid. Reads as lit, not flat, without any image cost.
+	*/
+	.hero-split {
 		--border: color-mix(in srgb, white 12%, transparent);
 		--muted-foreground: var(--on-dark-muted);
-		--ring-offset: oklch(0 0 0);
+		--ring-offset: var(--ink);
 		position: relative;
 		isolation: isolate;
-		display: flex;
-		flex-direction: column;
-		min-height: calc(100svh - var(--header-h));
 		overflow: clip;
-		background: var(--ink);
 		color: var(--on-dark);
+		background:
+			radial-gradient(
+				ellipse 60% 55% at 12% 30%,
+				color-mix(in srgb, var(--primary) 26%, transparent),
+				transparent 70%
+			),
+			radial-gradient(
+				ellipse 55% 60% at 88% 40%,
+				oklch(0.55 0.16 250 / 0.35),
+				transparent 70%
+			),
+			linear-gradient(
+					to right,
+					color-mix(in srgb, white 4%, transparent) 1px,
+					transparent 1px
+				)
+				0 0 / 56px 56px,
+			linear-gradient(
+					to bottom,
+					color-mix(in srgb, white 4%, transparent) 1px,
+					transparent 1px
+				)
+				0 0 / 56px 56px,
+			var(--ink);
+	}
+
+	.hero-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.45rem 0.9rem;
+		border: 1px solid color-mix(in srgb, white 16%, transparent);
+		border-radius: 999px;
+		background: color-mix(in srgb, white 6%, transparent);
+		color: var(--on-dark);
+		font-size: 0.8125rem;
+		font-weight: 700;
+	}
+
+	.hero-chip-dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 999px;
+		background: oklch(0.78 0.17 150);
+		box-shadow: 0 0 0 4px oklch(0.78 0.17 150 / 0.2);
+	}
+
+	/* Accent line of the headline. */
+	.hero-accent {
+		color: var(--primary-bright);
+	}
+
+	/* Framed photograph with a licence badge pinned to its lower edge. */
+	.hero-frame {
+		position: relative;
+		aspect-ratio: 4 / 3;
+		border-radius: calc(var(--radius) * 2);
+		background: var(--panel-elevated);
+		box-shadow:
+			0 0 0 1px color-mix(in srgb, white 12%, transparent),
+			var(--shadow-float);
+	}
+
+	.hero-frame > picture img {
+		border-radius: inherit;
+	}
+
+	@media (width >= 64rem) {
+		.hero-frame {
+			aspect-ratio: 1 / 1;
+			transform: rotate(1.5deg);
+		}
+	}
+
+	.hero-badge {
+		position: absolute;
+		left: 1rem;
+		bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		max-width: calc(100% - 2rem);
+		padding: 0.85rem 1.1rem;
+		border-radius: var(--radius-lg);
+		/* Always a light card, in both themes, so its text tokens are fixed. */
+		background: oklch(1 0 0);
+		color: var(--card-foreground);
+		box-shadow: var(--shadow-float);
+		--foreground: oklch(0.21 0.035 260);
+		--card-foreground: oklch(0.21 0.035 260);
+		--muted-foreground: oklch(0.48 0.03 255);
+	}
+
+	@media (width >= 64rem) {
+		.hero-badge {
+			left: -1.5rem;
+			bottom: 2rem;
+			transform: rotate(-1.5deg);
+		}
+	}
+
+	.hero-pick-icon {
+		display: grid;
+		place-items: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		flex-shrink: 0;
+		border-radius: var(--radius);
+		background: color-mix(in srgb, var(--primary) 22%, transparent);
+		color: var(--primary-bright);
+	}
+
+	@media (width >= 40rem) {
+		.hero-pick-icon {
+			width: 2.875rem;
+			height: 2.875rem;
+		}
 	}
 
 	/* Keep below-the-fold bands out of the critical rendering path. */
 	.section-defer {
 		content-visibility: auto;
 		contain-intrinsic-size: 1px 720px;
-	}
-
-	/*
-	  Bottom-weighted scrim. Two stops rather than a flat overlay: the top of the
-	  frame stays open so the photograph reads as a photograph, and the weight
-	  gathers only where the type sits.
-	*/
-	.hero-cinematic::before {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		pointer-events: none;
-		background:
-			linear-gradient(
-				to top,
-				oklch(0 0 0 / 0.88) 0%,
-				oklch(0 0 0 / 0.62) 26%,
-				oklch(0 0 0 / 0.18) 58%,
-				oklch(0 0 0 / 0.32) 100%
-			),
-			linear-gradient(to right, oklch(0 0 0 / 0.45) 0%, transparent 55%);
-	}
-
-	/*
-	  Phones put the lead paragraph over the busiest part of the photograph, so
-	  the scrim carries more weight higher up the frame there.
-	*/
-	@media (width < 40rem) {
-		.hero-cinematic::before {
-			background: linear-gradient(
-				to top,
-				oklch(0 0 0 / 0.92) 0%,
-				oklch(0 0 0 / 0.8) 40%,
-				oklch(0 0 0 / 0.42) 72%,
-				oklch(0 0 0 / 0.5) 100%
-			);
-		}
 	}
 
 	/* Intent shortcut tiles in the home hero. */
@@ -840,9 +931,9 @@
 		min-width: 0;
 		overflow-wrap: anywhere;
 		padding: 0.875rem;
-		border: 1px solid color-mix(in srgb, white 14%, transparent);
+		border: 1px solid color-mix(in srgb, white 12%, transparent);
 		border-radius: var(--radius-lg);
-		background: oklch(0 0 0 / 0.5);
+		background: color-mix(in srgb, white 5%, transparent);
 		box-shadow: var(--hairline-top);
 		transition:
 			background-color 0.2s ease,
@@ -851,7 +942,7 @@
 
 	.hero-pick:hover {
 		border-color: color-mix(in srgb, var(--primary-bright) 70%, transparent);
-		background: oklch(0 0 0 / 0.68);
+		background: color-mix(in srgb, white 10%, transparent);
 	}
 
 	.hero-pick:focus-visible {
@@ -1034,7 +1125,7 @@
 	.surface-dark,
 	.surface-dark-soft,
 	.surface-raised,
-	.hero-cinematic,
+	.hero-split,
 	.bg-ink,
 	.bg-panel {
 		--foreground: var(--on-dark);
@@ -1053,7 +1144,7 @@
 	.surface-dark .prose a,
 	.surface-dark-soft .prose a,
 	.surface-raised .prose a,
-	.hero-cinematic .prose a,
+	.hero-split .prose a,
 	.bg-ink .prose a,
 	.bg-panel .prose a {
 		color: var(--primary-bright);
@@ -1068,24 +1159,24 @@
 	.surface-hero .surface-panel,
 	.surface-dark .surface-panel,
 	.surface-dark-soft .surface-panel,
-	.hero-cinematic .surface-panel,
+	.hero-split .surface-panel,
 	.bg-ink .surface-panel,
 	.bg-panel .surface-panel {
-		--foreground: oklch(0.2 0.007 68);
-		--card-foreground: oklch(0.2 0.007 68);
-		--muted-foreground: oklch(0.49 0.011 68);
-		--prose-body: oklch(0.385 0.01 68);
-		--prose-quote: oklch(0.432 0.01 68);
-		--prose-quote-bg: oklch(0.954 0.005 85);
-		--prose-code-bg: oklch(0.943 0.004 85);
-		color: oklch(0.2 0.007 68);
+		--foreground: oklch(0.21 0.035 260);
+		--card-foreground: oklch(0.21 0.035 260);
+		--muted-foreground: oklch(0.48 0.03 255);
+		--prose-body: oklch(0.37 0.03 258);
+		--prose-quote: oklch(0.43 0.03 258);
+		--prose-quote-bg: oklch(0.955 0.01 250);
+		--prose-code-bg: oklch(0.945 0.01 250);
+		color: oklch(0.21 0.035 260);
 	}
 
 	.surface-float .surface-panel .prose a,
 	.surface-hero .surface-panel .prose a,
 	.surface-dark .surface-panel .prose a,
 	.surface-dark-soft .surface-panel .prose a,
-	.hero-cinematic .surface-panel .prose a,
+	.hero-split .surface-panel .prose a,
 	.bg-ink .surface-panel .prose a,
 	.bg-panel .surface-panel .prose a {
 		color: var(--primary);
@@ -1224,26 +1315,40 @@
 	*/
 	.type-cinematic {
 		font-size: var(--type-cinematic);
-		line-height: 0.9;
-		letter-spacing: -0.045em;
+		font-stretch: 125%;
+		font-weight: 900;
+		line-height: 0.92;
+		letter-spacing: -0.025em;
+		text-transform: uppercase;
 	}
 
+	/*
+	  Page and hero headlines use Archivo's wide cut in capitals. That, more than
+	  any colour, is what makes a page read as this brand at a glance.
+	*/
 	.type-display {
 		font-size: var(--type-display);
-		line-height: 1.02;
-		letter-spacing: -0.035em;
+		font-stretch: 125%;
+		font-weight: 900;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
 	}
 
 	.type-headline {
 		font-size: var(--type-headline);
-		line-height: 1.08;
-		letter-spacing: -0.03em;
+		font-stretch: 125%;
+		font-weight: 900;
+		line-height: 1.04;
+		letter-spacing: -0.015em;
+		text-transform: uppercase;
 	}
 
 	.type-title {
 		font-size: var(--type-title);
-		line-height: 1.12;
-		letter-spacing: -0.025em;
+		font-stretch: 112%;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
 	}
 
 	.type-subtitle {
@@ -1302,7 +1407,7 @@
 	.surface-float .spec-label,
 	.surface-hero .spec-label,
 	.surface-raised .spec-label,
-	.hero-cinematic .spec-label,
+	.hero-split .spec-label,
 	.bg-ink .spec-label,
 	.bg-panel .spec-label {
 		color: var(--primary-bright);

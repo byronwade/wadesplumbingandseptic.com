@@ -26,9 +26,9 @@ import { cn } from "@/lib/utils"
 
 /** Brand tokens from globals.css - MapLibre paint needs concrete colors. */
 const BRAND = {
-	primary: "#8f4a1a",
-	primaryBright: "#e0a15d",
-	ink: "#101214",
+	primary: "#d14300",
+	primaryBright: "#fc9e47",
+	ink: "#071328",
 } as const
 
 /** OpenFreeMap - reliable free vector basemap (Carto tiles often leave a blank white canvas). */
