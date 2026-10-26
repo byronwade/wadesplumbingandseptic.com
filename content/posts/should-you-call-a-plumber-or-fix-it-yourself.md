@@ -29,14 +29,16 @@ Before starting any repair, find the shutoff valve for the fixture and the main 
 
 ## Jobs homeowners can usually handle
 
-| Usually DIY friendly                      | Call a plumber                                    |
-| ----------------------------------------- | ------------------------------------------------- |
-| Plunging a sink, tub or toilet            | Several drains slow or backing up at once         |
-| Cleaning a sink trap or aerator           | Sewage coming up in a shower or floor drain       |
-| Replacing a toilet flapper or fill valve  | A water heater that leaks, smells of gas or fails |
-| Tightening a loose supply line connection | A burst, frozen or corroded pipe                  |
-| Replacing a faucet washer or cartridge    | Work inside walls, under slabs or on gas lines    |
-| Checking for leaks with a toilet dye test | Any job that needs a permit                       |
+| Usually DIY friendly                      | Call a plumber                                 |
+| ----------------------------------------- | ---------------------------------------------- |
+| Plunging a sink, tub or toilet            | Several drains slow or backing up at once      |
+| Cleaning a sink trap or aerator           | Sewage coming up in a shower or floor drain    |
+| Replacing a toilet flapper or fill valve  | A water heater that leaks or fails             |
+| Tightening a loose supply line connection | A burst, frozen or corroded pipe               |
+| Replacing a faucet washer or cartridge    | Work inside walls, under slabs or on gas lines |
+| Checking for leaks with a toilet dye test | Any job that needs a permit                    |
+
+**If you smell gas, this is not a plumbing appointment.** Federal pipeline safety guidance and PG&E both say to leave the area on foot right away, staying upwind, and to call 911 once you are a safe distance away. PG&E asks customers to call PG&E after 911. Do not turn switches on or off or use anything that could ignite the gas, including a phone, until you are away from the building. Plumbing work on a gas water heater or gas line comes after the area has been made safe.
 
 Our guides on a [running toilet](/santa-cruz-toilet-running-solutions) and [slow drains](/slow-drains-solutions-santa-cruz) cover the most common DIY fixes step by step. Sewage backing up is a different problem, covered in [why dirty water backs up into a shower](/why-is-dirty-water-backing-up-into-your-shower).
 
@@ -90,6 +92,8 @@ Flat rate pricing, quoted on site before work begins.
 ## Sources
 
 - County of Santa Cruz Community Development and Infrastructure, [When is a Plumbing Permit Required?](https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx)
+- U.S. Pipeline and Hazardous Materials Safety Administration, [Pipeline Leak Recognition and What to Do](https://www.phmsa.dot.gov/safety-awareness/pipeline/pipeline-leak-recognition-and-what-do)
+- PG&E, [Gas safety](https://www.pge.com/en/outages-and-safety/safety/gas-safety.html)
 - Contractors State License Board, [Handyperson exemption increase under AB 2622](https://www.cslb.ca.gov/Resources/PressReleases/2024/AB2622.FINAL.pdf)
 
 ## Need help with a plumbing repair?
