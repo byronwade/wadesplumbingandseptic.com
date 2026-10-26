@@ -26,7 +26,7 @@ Replacing a bathroom faucet is one of the more approachable plumbing projects in
 
 **Match the holes.** Count the holes in your sink or countertop and measure the distance between the outer ones. Common layouts are single hole, 4 inch centerset and 8 inch widespread. A single hole faucet can often cover extra holes with a deck plate.
 
-**Check the flow rate.** The federal standard for bathroom sink faucets is 2.2 gallons per minute. Faucets and aerators with the EPA WaterSense label flow no more than 1.5 gallons per minute, at least 30 percent less than the standard, and many models run at 1.0 to 1.2 gallons per minute. On a septic system, less water down the drain is a plus.
+**Check the flow rate.** California's appliance efficiency rules limit bathroom sink faucets and replacement aerators made on or after July 1, 2016 to 1.2 gallons per minute at 60 psi, so look for a model rated 1.2 or lower. That is stricter than the federal standard of 2.2 gallons per minute and the EPA WaterSense label, which allows up to 1.5. Many WaterSense models run at 1.0 to 1.2 gallons per minute. On a septic system, less water down the drain is a plus.
 
 **Look for lead free certification.** Federal law limits lead in faucets and other drinking water fixtures to a weighted average of 0.25 percent on the surfaces that touch water. Buy faucets that are certified to that standard, usually marked on the box or in the product listing.
 
@@ -93,7 +93,7 @@ New supply lines are inexpensive and often included with the faucet. Replace lin
 
 ### What does a WaterSense label mean on a faucet?
 
-It means the faucet or aerator meets EPA's specification of no more than 1.5 gallons per minute while still providing at least 0.8 gallons per minute at low pressure.
+It means the faucet or aerator meets EPA's specification of no more than 1.5 gallons per minute while still providing at least 0.8 gallons per minute at low pressure. In California, also check that the faucet is rated 1.2 gallons per minute or lower to meet the state limit.
 
 ### How is pricing quoted for faucet installation?
 
@@ -101,6 +101,7 @@ Flat rate pricing, quoted on site before work begins.
 
 ## Sources
 
+- California Energy Commission, [California Code of Regulations, Title 20, Appliance Efficiency Regulations, section 1605.3(h)(2)](https://www.energy.ca.gov/sites/default/files/2021-07/Title%2020%20Updated%20July%2023,%202021.pdf)
 - U.S. EPA WaterSense, [Bathroom Sink Faucets technical sheet](https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf)
 - U.S. EPA, [How does the Safe Drinking Water Act limit lead in pipes, plumbing fittings, fixtures, faucets, solder and flux?](https://www.epa.gov/lead/how-does-safe-drinking-water-act-limit-lead-pipes-plumbing-fittings-fixtures-faucets-solder)
 

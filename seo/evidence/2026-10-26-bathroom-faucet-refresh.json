@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "b47f6d86093ce9c7b192f5e4131dbff2995899e4946a730dd4e33d0a84fff73d",
+	"sha256": "f33d8882706c0e985a11f8ae578a9e49a73c4cfe1525bbaeb81e3e74f36c30fc",
 	"payload": {
 		"post": "content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
 		"observations": [
@@ -21,6 +21,16 @@
 				"inference_limit": "Federal voluntary label specification; not a California code requirement.",
 				"collected_at": "2026-10-26T01:30:00+00:00",
 				"scope": "Post refresh"
+			},
+			{
+				"id": "cec-title20-lavatory",
+				"source_url": "https://www.energy.ca.gov/sites/default/files/2021-07/Title%2020%20Updated%20July%2023,%202021.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Title 20 section 1605.3(h)(2): lavatory faucets and lavatory replacement aerators manufactured on or after July 1, 2016 shall be not greater than 1.2 gpm at 60 psi.",
+				"inference_limit": "State appliance standard text as compiled by CEC July 2021; applies to manufacture date, not to existing installed faucets.",
+				"collected_at": "2026-10-26T01:40:00+00:00",
+				"scope": "Post refresh; added after review feedback"
 			},
 			{
 				"id": "epa-sdwa-lead-free",
