@@ -5,12 +5,12 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 export const buttonVariants = cva(
-	"inline-flex shrink-0 items-center justify-center gap-2 rounded-md border-0 shadow-none text-sm font-bold whitespace-nowrap transition-[color,background-color,transform,opacity] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
+	"inline-flex shrink-0 items-center justify-center gap-2 rounded-full border-0 shadow-none text-sm font-bold whitespace-nowrap transition-[color,background-color,transform,opacity] duration-150 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
 	{
 		variants: {
 			variant: {
 				default:
-					"bg-primary text-primary-foreground shadow-[inset_0_0_0_1px_rgba(0,0,0,0.22)] hover:bg-primary-hover",
+					"bg-primary text-primary-foreground shadow-[0_10px_28px_-10px_color-mix(in_srgb,var(--primary)_75%,transparent)] hover:bg-primary-hover hover:-translate-y-px",
 				secondary:
 					"bg-secondary text-secondary-foreground hover:bg-[color-mix(in_srgb,var(--secondary)_85%,var(--ink))]",
 				outline:
@@ -18,16 +18,13 @@ export const buttonVariants = cva(
 				ghost:
 					"bg-transparent text-foreground hover:bg-transparent hover:text-primary",
 				link: "bg-transparent text-primary underline-offset-4 hover:underline",
-				/**
-				 * Dark-surface secondary CTA. No fill plate - light translucent
-				 * backgrounds create hard edges that read as white borders on ink.
-				 */
+				/** Dark-surface secondary CTA: an outlined pill that fills on hover. */
 				inverse:
-					"bg-transparent px-0 text-white hover:bg-transparent hover:text-primary-bright focus-visible:ring-offset-ink",
+					"border border-white/35 bg-transparent text-white hover:border-white/70 hover:bg-white/10 focus-visible:ring-offset-ink",
 			},
 			size: {
 				default: "h-11 px-4 py-2",
-				sm: "h-9 rounded-md px-3 text-xs",
+				sm: "h-9 px-3.5 text-xs",
 				lg: "h-12 px-6 text-base",
 				xl: "h-14 px-7 text-base tracking-[-0.01em]",
 				icon: "size-11",

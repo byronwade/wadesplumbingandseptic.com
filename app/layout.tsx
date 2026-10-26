@@ -41,21 +41,19 @@ const manrope = localFont({
 /*
   Display face. A squared grotesque against Manrope's humanist body - the
   contrast is what gives headings their own voice instead of running the body
-  face at weight 800. Only the two display weights are loaded.
+  face at weight 800. Weights 600 to 900 and widths 100 to 125 are loaded.
 */
 const archivo = localFont({
 	src: [
 		{
 			path: "../assets/fonts/archivo-latin.woff2",
-			weight: "700",
-			style: "normal",
-		},
-		{
-			path: "../assets/fonts/archivo-latin.woff2",
-			weight: "800",
+			weight: "600 900",
 			style: "normal",
 		},
 	],
+	/* The file keeps Archivo's width axis (100 to 125), so headings can set
+	   font-stretch for the wide display cut. */
+	declarations: [{ prop: "font-stretch", value: "100% 125%" }],
 	display: "swap",
 	variable: "--font-archivo",
 	/* Body font covers first paint; Archivo is for display headings. */
@@ -112,7 +110,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
-	themeColor: "#f7f7f5",
+	themeColor: "#f8fafd",
 }
 
 async function RootJsonLd() {
