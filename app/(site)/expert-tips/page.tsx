@@ -41,7 +41,7 @@ export default async function ExpertTipsPage() {
 				allLabel="All guides"
 				emptyLabel="No guides in this category."
 				noun={{ singular: "guide", plural: "guides" }}
-				pageSize={9}
+				pageSize={10}
 				variant="tip"
 			/>
 

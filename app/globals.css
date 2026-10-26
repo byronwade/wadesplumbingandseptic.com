@@ -552,6 +552,47 @@
 	}
 
 	/*
+	  Lead card on each archive page spans the row. Once the card is wide
+	  enough, the photo sits beside the copy; narrow it reads like the rest.
+	  The extra item per page keeps the rows below it full.
+	*/
+	.card-rail > .card-featured {
+		grid-column: 1 / -1;
+	}
+
+	.card-featured-body,
+	.card-featured-copy {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+
+	.card-featured-copy > .card-foot {
+		margin-top: auto;
+	}
+
+	@container card (width >= 44rem) {
+		.card-featured-body {
+			display: grid;
+			grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+		}
+
+		.card-featured-body > .card-media {
+			aspect-ratio: auto;
+			min-height: 20rem;
+		}
+
+		.card-featured-copy .card-head {
+			justify-content: center;
+			padding: 2.5rem;
+		}
+
+		.card-featured-copy .card-title {
+			font-size: var(--type-h3, 1.75rem);
+		}
+	}
+
+	/*
 	  Long archives skip layout and paint for off-screen rows. The intrinsic size
 	  keeps the scrollbar honest before a row has been rendered.
 	*/

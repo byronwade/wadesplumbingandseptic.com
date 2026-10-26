@@ -41,7 +41,7 @@ export default async function ServicesPage() {
 				allLabel="All services"
 				emptyLabel="No services in this category."
 				noun={{ singular: "service", plural: "services" }}
-				pageSize={12}
+				pageSize={13}
 				variant="service"
 			/>
 

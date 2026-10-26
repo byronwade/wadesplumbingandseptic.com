@@ -98,7 +98,7 @@ async function RankedCategoryArchive({
 			emptyLabel="No services in this category."
 			items={items}
 			noun={{ singular: "service", plural: "services" }}
-			pageSize={12}
+			pageSize={13}
 			showFilters={false}
 			variant="service"
 		/>

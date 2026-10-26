@@ -371,8 +371,9 @@ export function FilterableArchive({
 
 			{pageItems.length ? (
 				<div className="card-rail defer-paint">
-					{pageItems.map((item) => (
+					{pageItems.map((item, index) => (
 						<ContentCard
+							featured={index === 0}
 							item={item}
 							key={item.slug}
 							preferTrending={activeSort === "trending"}
