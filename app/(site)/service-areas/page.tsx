@@ -4,11 +4,12 @@ import Link from "next/link"
 
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
+import { MapPin } from "@/components/icons"
 import { JsonLd } from "@/components/json-ld"
 import { ServiceAreasMapLazy } from "@/components/service-areas-map-lazy"
 import type { ContentDocument } from "@/lib/content"
 import { normalizeConversion } from "@/lib/content-conversion"
-import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
+import { locationsByCounty } from "@/lib/service-areas"
 import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
@@ -28,20 +29,45 @@ export const metadata: Metadata = buildPageMetadata({
 	image: "/images/locations/santa-cruz-redwoods.webp",
 })
 
-const counties = [
-	{
-		title: "Santa Cruz County, California",
-		summary:
-			"Residential plumbing, commercial plumbing, septic diagnostics, conventional septic work, and engineered septic services throughout the county.",
-		locations: locationsByCounty("Santa Cruz County"),
-	},
-	{
-		title: "Santa Clara County, California",
-		summary:
-			"Foothill communities near the Santa Cruz County line (including Los Gatos and Saratoga) may be covered depending on the address. Call with the property address to confirm.",
-		locations: locationsByCounty("Santa Clara County"),
-	},
-] as const
+const santaCruz = {
+	title: "Santa Cruz County, California",
+	summary:
+		"Residential plumbing, commercial plumbing, septic diagnostics, conventional septic work, and engineered septic services throughout the county.",
+	locations: locationsByCounty("Santa Cruz County"),
+}
+
+const santaClara = {
+	title: "Santa Clara County, California",
+	summary:
+		"Foothill communities near the Santa Cruz County line (including Los Gatos and Saratoga) may be covered depending on the address. Call with the property address to confirm.",
+	locations: locationsByCounty("Santa Clara County"),
+}
+
+function TownList({
+	locations,
+}: {
+	locations: ReturnType<typeof locationsByCounty>
+}) {
+	return (
+		<ul className="town-grid mt-6">
+			{locations.map((location) => (
+				<li key={location.slug}>
+					<Link
+						prefetch={false}
+						className="town-link"
+						href={location.href as Route}
+					>
+						<MapPin
+							aria-hidden="true"
+							className="text-primary size-4 shrink-0"
+						/>
+						<span className="min-w-0">{location.name}</span>
+					</Link>
+				</li>
+			))}
+		</ul>
+	)
+}
 
 export default function ServiceAreasPage() {
 	const document: ContentDocument = {
@@ -70,61 +96,52 @@ export default function ServiceAreasPage() {
 			/>
 
 			<section className="section-y overflow-x-clip">
-				<div className="container-shell">
-					<div className="section-head reveal mx-auto max-w-3xl text-center">
-						<p className="spec-label spec-label-center">Coverage map</p>
+				<div className="container-shell section-head-row reveal">
+					<div className="section-head max-w-2xl">
+						<p className="spec-label">Coverage map</p>
 						<h2 className="type-title">
 							See where Wade&apos;s{" "}
 							<span className="text-primary">serves on the Central Coast</span>
 						</h2>
-						<p className="type-lead">
-							Mountain roads, coastal soils, older piping, steep lots, and
-							septic regulations change how a job should be diagnosed. The map
-							shows our approximate coverage: Santa Cruz County and the west
-							foothills into Los Gatos and Saratoga. Tap the shaded area or
-							browse communities below, and call to confirm your address.
-						</p>
 					</div>
+					<p className="type-lead max-w-xl">
+						Mountain roads, coastal soils, older piping, steep lots, and septic
+						regulations change how a job should be diagnosed. Tap the shaded
+						area or pick your community below, and call to confirm your address.
+					</p>
 				</div>
 
 				{/* Full-bleed on mobile; map JS loads only when this shell nears view. */}
 				<div className="mt-[var(--space-block)]">
 					<ServiceAreasMapLazy />
 				</div>
-
-				<p className="text-muted-foreground container-shell mt-4 text-center text-sm font-bold">
-					{serviceAreaLocations.length} communities listed · Call{" "}
-					<a className="text-link" href={siteConfig.phoneHref}>
-						{siteConfig.phone}
-					</a>{" "}
-					to confirm your address
-				</p>
 			</section>
 
 			<section className="surface-sunken border-border border-y">
-				<div className="container-shell section-y space-y-[var(--space-block)]">
-					{counties.map((county) => (
-						<div className="reveal" key={county.title}>
-							<div className="section-head max-w-3xl">
-								<p className="spec-label">County coverage</p>
-								<h2 className="type-title">{county.title}</h2>
-								<p className="type-lead">{county.summary}</p>
-							</div>
-							<ul className="border-border bg-border mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border sm:grid-cols-2 lg:grid-cols-3">
-								{county.locations.map((location) => (
-									<li key={location.slug}>
-										<Link
-											prefetch={false}
-											className="bg-background hover:bg-muted flex h-full items-center px-5 py-4 text-base font-bold tracking-[-0.02em] transition-colors"
-											href={location.href as Route}
-										>
-											{location.name}
-										</Link>
-									</li>
-								))}
-							</ul>
+				<div className="container-shell section-y grid grid-cols-1 gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] lg:gap-16">
+					<div className="reveal min-w-0">
+						<div className="section-head max-w-3xl">
+							<p className="spec-label">
+								{santaCruz.locations.length} communities
+							</p>
+							<h2 className="type-title">{santaCruz.title}</h2>
+							<p className="type-lead">{santaCruz.summary}</p>
 						</div>
-					))}
+						<TownList locations={santaCruz.locations} />
+					</div>
+
+					<aside className="reveal flex min-w-0 flex-col gap-[var(--space-grid)] lg:sticky lg:top-[calc(var(--header-h)+2rem)] lg:self-start">
+						<div className="surface-panel panel-inset rounded-lg">
+							<p className="spec-label">Foothill coverage</p>
+							<h2 className="type-title mt-3 text-[length:var(--type-card)] sm:text-2xl">
+								{santaClara.title}
+							</h2>
+							<p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+								{santaClara.summary}
+							</p>
+							<TownList locations={santaClara.locations} />
+						</div>
+					</aside>
 				</div>
 			</section>
 
