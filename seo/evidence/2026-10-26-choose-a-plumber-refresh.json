@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "f81cecc7c75eaf74445ebb1f07e1eda0f0e46975a1435eb1620e459f881af51a",
+	"sha256": "011ff31a1dc539d4fdd50c7188bfc87c0b4e1967747f68a9b7df2db4b5f47b49",
 	"payload": {
 		"post": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
 		"observations": [
@@ -30,6 +30,16 @@
 				"summary": "Hire licensed only; check license; three bids and references; get it in writing; confirm workers comp; limited down payment, no cash; payments not ahead of work; keep a job file; hold final payment until satisfied.",
 				"inference_limit": "State consumer guidance.",
 				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cslb-llc",
+				"source_url": "https://cslb.ca.gov/about_us/llc.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "LLC licensees must carry liability insurance under B&P Code 7071.19, with minimum limits scaled by personnel of record.",
+				"inference_limit": "Dollar limits omitted from the post because the site bars dollar amounts. Added after review feedback.",
+				"collected_at": "2026-10-26T02:50:00+00:00",
 				"scope": "Post refresh"
 			},
 			{

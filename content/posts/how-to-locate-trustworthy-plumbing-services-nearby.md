@@ -32,7 +32,7 @@ Wade's Plumbing & Septic holds CSLB license #1087260 with the C-36 Plumbing and 
 
 ## 2. Confirm insurance
 
-CSLB requires workers' compensation insurance for contractors with employees. Without it, CSLB warns, a homeowner can be liable for an injured worker's costs, and a homeowner's policy may not cover them. Ask for a certificate of insurance. Commercial general liability insurance is not required by the state, but it covers property damage, and a licensed contractor must state in the written contract whether they carry it.
+CSLB requires workers' compensation insurance for contractors with employees. Without it, CSLB warns, a homeowner can be liable for an injured worker's costs, and a homeowner's policy may not cover them. Ask for a certificate of insurance. General liability insurance, which covers property damage, is not required for most contractors. The exception is a contractor licensed as a limited liability company (LLC): CSLB says LLC licensees must carry liability insurance. Either way, a licensed contractor must state in the written contract whether they carry it, and you can check whether a license is held by an LLC in the CSLB lookup.
 
 Wade's Plumbing & Septic is insured.
 
@@ -79,7 +79,7 @@ Use the license lookup on the CSLB website and enter the license number or busin
 
 ### Do plumbers need insurance in California?
 
-Contractors with employees must carry workers' compensation insurance. General liability insurance is not required by the state, but the contract must say whether the contractor carries it.
+Contractors with employees must carry workers' compensation insurance. General liability insurance is not required for most contractors, but contractors licensed as LLCs must carry it. In every case, the contract must say whether the contractor carries it.
 
 ### How many quotes should I get?
 
@@ -92,6 +92,7 @@ Quotes are free and pricing is flat rate, quoted on site before work begins.
 ## Sources
 
 - Contractors State License Board, [How do I find the right licensed contractor?](https://www.cslb.ca.gov/consumers/hire_a_contractor/finding_the_right_contractor.aspx)
+- Contractors State License Board, [Limited Liability Company (LLC) Information](https://cslb.ca.gov/about_us/llc.aspx)
 - Contractors State License Board, [Ten Tips for Hiring a Contractor](https://web.cslb.ca.gov/Resources/GuidesAndPublications/TenTipsCard_DUAL0425_ADA.pdf)
 - County of Santa Cruz Community Development and Infrastructure, [When is a Plumbing Permit Required?](https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx)
 
