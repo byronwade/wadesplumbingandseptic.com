@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-bathroom-faucet-refresh-2026-10-26",
+	"collected_at": "2026-10-26T01:30:00+00:00",
+	"source": "epa-watersense-and-sdwa-lead-free",
+	"source_url_or_tool": "https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf",
+	"scope": "Bathroom faucet post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "f33d8882706c0e985a11f8ae578a9e49a73c4cfe1525bbaeb81e3e74f36c30fc",
+	"payload": {
+		"post": "content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
+		"observations": [
+			{
+				"id": "epa-watersense-faucet",
+				"source_url": "https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "WaterSense bathroom sink faucets flow a maximum of 1.5 gpm at 60 psi, no less than 0.8 gpm at 20 psi; federal standard 2.2 gpm; at least 30 percent lower; many models 1.0 to 1.2 gpm; faucets must meet lead free requirements of ASME A112.18.1/CSA B125.1.",
+				"inference_limit": "Federal voluntary label specification; not a California code requirement.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cec-title20-lavatory",
+				"source_url": "https://www.energy.ca.gov/sites/default/files/2021-07/Title%2020%20Updated%20July%2023,%202021.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Title 20 section 1605.3(h)(2): lavatory faucets and lavatory replacement aerators manufactured on or after July 1, 2016 shall be not greater than 1.2 gpm at 60 psi.",
+				"inference_limit": "State appliance standard text as compiled by CEC July 2021; applies to manufacture date, not to existing installed faucets.",
+				"collected_at": "2026-10-26T01:40:00+00:00",
+				"scope": "Post refresh; added after review feedback"
+			},
+			{
+				"id": "epa-sdwa-lead-free",
+				"source_url": "https://www.epa.gov/lead/how-does-safe-drinking-water-act-limit-lead-pipes-plumbing-fittings-fixtures-faucets-solder",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "SDWA lead free means a weighted average of 0.25 percent lead on wetted surfaces of pipes, fittings and fixtures; solder and flux 0.2 percent.",
+				"inference_limit": "Federal definition only; the post does not state an effective date.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an expert plumbers and precision FAQ answer, a local plumbing experts tag, a cost savings claim, a 2 to 3 hour duration claim and a years of service claim. Replaced blanket thread tape advice with a check of the instructions, added flushing the aerator, flow rate and lead free guidance, a troubleshooting table, shutoff valve FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

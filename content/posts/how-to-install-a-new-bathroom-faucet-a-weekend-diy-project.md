@@ -1,14 +1,12 @@
 ---
-title: Install Your New Bathroom Faucet in Santa Cruz County, CA
-description:
-  Transform your bathroom with this easy-to-follow guide for replacing
-  an outdated faucet. Learn how to select the right replacement, remove your old fixture,
-  and install a new one properly with basic tools in just a few hours.
+title: "How to Replace a Bathroom Faucet: Steps, Flow Rates and Lead Free Parts"
+description: >-
+  How to choose a bathroom faucet that fits your sink, replace it step by step,
+  check flow rate and lead free labels, fix common leaks, and know when to call.
 category: DIY Projects
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-10-26"
 tags:
-  - local plumbing experts
   - Santa Cruz County plumbing
   - bathroom faucet installation
   - diy plumbing tips
@@ -20,114 +18,92 @@ image: /images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-cl
 imageAlt: "Chrome bathroom faucet"
 ---
 
-Replacing an old or outdated bathroom faucet is a relatively simple DIY project that can dramatically improve the look and functionality of your bathroom. With basic tools and a few hours of time, you can install a new faucet and save on plumbing service costs. This guide walks you through the process step by step.
+Replacing a bathroom faucet is one of the more approachable plumbing projects in a home. Most of the work happens under the sink, and the parts you need usually come in the box. The steps below cover choosing a faucet that fits, removing the old one, installing the new one and checking for leaks. Always read the instructions that came with your faucet, because mounting hardware varies by brand and model.
 
 ![Water flowing from a bathroom faucet](/images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp)
 
-## Tools and Materials You'll Need
+## Choose a faucet that fits
 
-- New bathroom faucet kit
-- Adjustable wrench
-- Basin wrench or channel-lock pliers
-- Bucket or small container
-- Towels or rags
-- Plumber's putty or silicone caulk
-- Teflon tape
-- Flashlight
+**Match the holes.** Count the holes in your sink or countertop and measure the distance between the outer ones. Common layouts are single hole, 4 inch centerset and 8 inch widespread. A single hole faucet can often cover extra holes with a deck plate.
+
+**Check the flow rate.** California's appliance efficiency rules limit bathroom sink faucets and replacement aerators made on or after July 1, 2016 to 1.2 gallons per minute at 60 psi, so look for a model rated 1.2 or lower. That is stricter than the federal standard of 2.2 gallons per minute and the EPA WaterSense label, which allows up to 1.5. Many WaterSense models run at 1.0 to 1.2 gallons per minute. On a septic system, less water down the drain is a plus.
+
+**Look for lead free certification.** Federal law limits lead in faucets and other drinking water fixtures to a weighted average of 0.25 percent on the surfaces that touch water. Buy faucets that are certified to that standard, usually marked on the box or in the product listing.
+
+## Tools and materials
+
+- New faucet, with its gasket or a small tub of plumber's putty if the instructions call for it
+- Adjustable wrench and a basin wrench for nuts behind the sink bowl
+- New supply lines if the old ones are kinked, corroded or more than a few years old
+- Bucket, towels and a flashlight
 - Safety glasses
-- Penetrating oil (like WD-40) for stubborn nuts
 
-## Before You Begin
+## Step 1: Shut off the water and clear the cabinet
 
-1.  **Purchase the right faucet:** Ensure your new faucet matches your sink's hole configuration (single-hole, 4" centerset, or 8" widespread)
-2.  **Turn off the water:** Locate the water shut-off valves under the sink and turn them clockwise to shut off both hot and cold water
-3.  **Open the faucet:** Turn on the faucet to release pressure and drain remaining water
-4.  **Clear space:** Remove items from under the sink to give yourself room to work
+Empty the cabinet and turn both shutoff valves under the sink clockwise until they stop. Open the faucet to release pressure. If the shutoffs do not hold or will not turn, stop here. Forcing an old valve can break it, and it is better to replace it first.
 
-## Step 1: Remove the Old Faucet
+## Step 2: Remove the old faucet
 
-1.  Place a bucket under the water lines to catch any remaining water
-2.  Disconnect the water supply lines from the faucet by unscrewing the nuts connecting them (use the adjustable wrench)
-3.  Locate the mounting nuts that secure the faucet to the sink. These are usually located underneath the sink and might require a basin wrench to reach
-4.  Unscrew and remove these mounting nuts
-5.  Lift the old faucet from above the sink. You may need to wiggle it a bit if caulk or mineral deposits are holding it in place
-6.  Clean the sink surface thoroughly, removing any old putty, caulk, or debris
+Put a bucket under the connections and disconnect the supply lines from the shutoff valves or the faucet. Use the basin wrench to loosen the mounting nuts that hold the faucet to the sink. If you are also replacing the drain, loosen the P-trap slip nuts and remove the drain assembly. Lift the old faucet out and clean old putty, caulk and mineral buildup off the sink.
 
-## Step 2: Prepare the New Faucet
+## Step 3: Set the new faucet
 
-1.  Unpack your new faucet and review the manufacturer's instructions
-2.  Assemble any parts that need to be attached to the faucet before installation (this varies by model)
-3.  If your faucet uses a gasket, attach it to the bottom of the faucet base
-4.  If your faucet requires plumber's putty instead of a gasket:
+Attach the gasket to the faucet base, or apply a thin rope of plumber's putty if the instructions call for it. Feed the supply lines and mounting hardware through the holes, center the faucet, and thread on the mounting nuts from below. Snug them by hand, check the faucet is straight, then tighten with a wrench without overtightening. Wipe away any putty that squeezes out.
 
-- Roll a small amount of plumber's putty between your hands to form a thin "rope"
-- Apply it in a circle around the base of the faucet where it will contact the sink
+## Step 4: Connect the supply lines
 
-## Step 3: Install the New Faucet
+Connect hot to hot, usually on the left, and cold to cold. Many supply lines seal with a built-in washer, so check the instructions before adding thread tape. Tighten by hand, then about a quarter turn more with a wrench. Overtightening can crack plastic nuts or crush washers.
 
-1.  Feed the faucet's supply lines and mounting hardware through the holes in the sink
-2.  Position the faucet so it's straight and centered
-3.  From underneath, secure the faucet by screwing on the mounting nuts, tighten by hand first, then use a wrench for the final tightening, but be careful not to overtighten
-4.  Wipe away any excess putty that squeezed out from under the faucet
+## Step 5: Install the drain, if included
 
-## Step 4: Connect the Water Supply Lines
+Seat the new drain flange in the sink with the gasket or putty the instructions call for, tighten the nut and gasket from below, connect the pop-up linkage, and reconnect the P-trap to the new tailpiece.
 
-1.  Wrap the threaded ends of the water supply lines with 2-3 turns of Teflon tape (wrap clockwise in the direction of the threading)
-2.  Connect the supply lines to the shut-off valves (hot to hot, cold to cold)
+## Step 6: Flush and test
 
-- Hand-tighten first
-- Then give an additional quarter to half turn with a wrench
-- Be careful not to overtighten, which can damage the fittings
+Remove the aerator from the spout. Turn the shutoffs on slowly and run hot and cold water for a minute to clear debris, then reinstall the aerator. Check every connection with a dry paper towel, including the faucet base and the drain. Fill the sink, then drain it while watching the trap for drips.
 
-## Step 5: Install the Drain Assembly (if included)
+## Common problems after installation
 
-Many new faucets come with a matching drain assembly. If yours does:
+| Problem                     | Likely cause                              | What to try                                            |
+| --------------------------- | ----------------------------------------- | ------------------------------------------------------ |
+| Drip at a supply connection | Nut loose or washer seated crooked        | Shut off water, reseat the line, tighten a little more |
+| Water at the faucet base    | Gasket not seated or mounting nuts loose  | Tighten mounting nuts evenly from below                |
+| Low flow                    | Debris in the aerator or a valve not open | Clean the aerator and open both shutoffs fully         |
+| Leak at the drain           | Slip nut or drain gasket not seated       | Hand tighten slip nuts and check the drain gasket      |
+| Hot and cold reversed       | Supply lines swapped                      | Shut off water and swap the lines at the shutoffs      |
 
-1.  Remove the old drain by unscrewing the P-trap and the mounting nut connecting the drain to the sink
-2.  Apply plumber's putty under the flange of the new drain
-3.  Insert the new drain assembly from above the sink
-4.  From below, attach and tighten the gasket, washer, and mounting nut
-5.  Reconnect the P-trap to the new drain tail piece
+## When to call a plumber
 
-## Step 6: Test for Leaks
+Call for help if:
 
-1.  Turn the water supply back on by turning the shut-off valves counterclockwise
-2.  Turn on the faucet and check for leaks:
+- A shutoff valve will not close or leaks when you turn it
+- Pipes under the sink are corroded, cracked or need to be moved for the new faucet
+- A leak keeps coming back after you have reseated the connections
+- You find water damage in the cabinet or the wall behind the sink
 
-- Check all connections, under the sink, around the base of the faucet, and at the drain
-- Look for any dripping or moisture
-- If you find leaks, turn off the water and tighten the connections slightly
+## Frequently asked questions
 
-3.  Run both hot and cold water to ensure proper operation
-4.  Test the drain by filling the sink and then draining it while checking for leaks
+### Do I need to replace the shutoff valves too?
 
-## Troubleshooting Common Issues
+Not always. If the valves close fully and do not leak at the stem, they can stay. If they are stuck, corroded or drip when turned, replacing them while the faucet is out is easier than doing it later.
 
-- **Leaking from connection points:** Usually requires tightening or reapplying Teflon tape
-- **Leaking from faucet base:** May need more plumber's putty or tightening of mounting nuts
-- **Low water pressure:** Check if aerator is clogged or supply valves aren't fully open
-- **Handles not aligned:** Most handles can be removed and repositioned without affecting function
+### Should I replace the supply lines?
 
-## When to Call a Professional
+New supply lines are inexpensive and often included with the faucet. Replace lines that are kinked, bulging, corroded or rigid tubing that does not fit the new faucet.
 
-While faucet installation is generally DIY-friendly, consider calling Wade's Plumbing & Septic if:
+### What does a WaterSense label mean on a faucet?
 
-- You discover corroded or damaged pipes that need replacement
-- You need to modify your plumbing to accommodate the new faucet
-- You encounter persistent leaks that you can't resolve
-- Your home has complex plumbing or non-standard installations
+It means the faucet or aerator meets EPA's specification of no more than 1.5 gallons per minute while still providing at least 0.8 gallons per minute at low pressure. In California, also check that the faucet is rated 1.2 gallons per minute or lower to meet the state limit.
 
-Installing a new bathroom faucet is a satisfying DIY project that most homeowners can complete in 2-3 hours. With proper installation, your new faucet should provide years of reliable service while enhancing your bathroom's appearance.
+### How is pricing quoted for faucet installation?
 
-## Frequently Asked Questions
+Flat rate pricing, quoted on site before work begins.
 
-### How is pricing quoted for installing a new bathroom faucet in Santa Cruz County, CA?
+## Sources
 
-Flat-rate pricing, quoted on site before work begins.
-
-### What should I expect during the faucet installation service?
-
-During the installation, our expert plumbers will carefully remove the old faucet, check for any underlying issues, and install the new fixture with precision. We ensure minimal disruption and clean up thoroughly after the job is done.
+- California Energy Commission, [California Code of Regulations, Title 20, Appliance Efficiency Regulations, section 1605.3(h)(2)](https://www.energy.ca.gov/sites/default/files/2021-07/Title%2020%20Updated%20July%2023,%202021.pdf)
+- U.S. EPA WaterSense, [Bathroom Sink Faucets technical sheet](https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf)
+- U.S. EPA, [How does the Safe Drinking Water Act limit lead in pipes, plumbing fittings, fixtures, faucets, solder and flux?](https://www.epa.gov/lead/how-does-safe-drinking-water-act-limit-lead-pipes-plumbing-fittings-fixtures-faucets-solder)
 
 ## Need help with a faucet installation?
 
