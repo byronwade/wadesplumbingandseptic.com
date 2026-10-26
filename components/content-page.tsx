@@ -14,9 +14,11 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
+import { extractSectionHeadings } from "@/lib/heading-anchors"
 import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
 import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 
+import { ArticleAside } from "@/components/article-aside"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -186,14 +188,18 @@ export function ContentPage({
 					) : null}
 					<ContentSectionBands content={articleBody} />
 				</>
+			) : isPost ? (
+				<div className="article-wide-shell grid grid-cols-1 gap-16 pt-8 pb-[var(--space-section-y)] sm:pt-10 lg:grid-cols-[minmax(0,1fr)_17rem]">
+					<article className="min-w-0">
+						{document.gallery?.length ? (
+							<ContentGallery images={document.gallery} />
+						) : null}
+						<MarkdownContent anchorHeadings content={articleBody} demoteH1 />
+					</article>
+					<ArticleAside headings={extractSectionHeadings(articleBody)} />
+				</div>
 			) : (
-				<article
-					className={
-						isPost
-							? "article-shell pt-8 pb-[var(--space-section-y)] sm:pt-10"
-							: "article-shell section-y"
-					}
-				>
+				<article className="article-shell section-y">
 					{document.gallery?.length ? (
 						<ContentGallery images={document.gallery} />
 					) : null}

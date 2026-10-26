@@ -182,9 +182,9 @@ export function ContentHero({
 	if (kind === "article") {
 		return (
 			<header className="hero-article border-border border-b">
-				<div className="article-shell pt-10 pb-8 sm:pt-14 sm:pb-12">
+				<div className="article-wide-shell pt-10 pb-8 sm:pt-14 sm:pb-12">
 					<BreadcrumbTrail items={trail} tone="light" />
-					<div className="section-head">
+					<div className="section-head max-w-3xl">
 						{eyebrow ? (
 							<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
 								{eyebrow}
@@ -203,7 +203,7 @@ export function ContentHero({
 
 					{image ? (
 						<figure className="hero-article-media mt-8 sm:mt-10">
-							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[2/1]">
+							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[2/1] lg:aspect-[12/5]">
 								<Image
 									alt={imageAlt?.trim() || title}
 									className="object-cover"
@@ -211,7 +211,7 @@ export function ContentHero({
 									fill
 									priority
 									quality={75}
-									sizes="(min-width: 768px) 48rem, 100vw"
+									sizes="(min-width: 1200px) 72rem, 100vw"
 									src={image}
 								/>
 							</div>

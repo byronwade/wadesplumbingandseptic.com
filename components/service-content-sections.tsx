@@ -1,3 +1,5 @@
+import type { ReactNode } from "react"
+
 import { Check, Siren } from "@/components/icons"
 
 import { HomeFaq } from "@/components/home-faq"
@@ -13,50 +15,6 @@ function surfaceFor(index: number) {
 	if (index % 3 === 1) return "surface-sunken border-border border-y"
 	if (index % 3 === 2) return "border-border bg-card border-y"
 	return undefined
-}
-
-function SectionChrome({
-	eyebrow,
-	heading,
-	lead,
-	align = "start",
-}: {
-	eyebrow: string
-	heading: string
-	lead?: string
-	align?: "start" | "split"
-}) {
-	if (align === "split") {
-		return (
-			<div className="section-head-row reveal">
-				<div className="max-w-xl">
-					<p className="spec-label">{eyebrow}</p>
-					<h2 className="type-title mt-[var(--space-stack)]">{heading}</h2>
-				</div>
-				{lead ? (
-					<div className="max-w-md">
-						<MarkdownContent
-							className="text-muted-foreground text-base leading-relaxed [&_p]:text-[inherit]"
-							content={lead}
-							demoteH1
-						/>
-					</div>
-				) : null}
-			</div>
-		)
-	}
-
-	return (
-		<div className="section-head reveal max-w-3xl">
-			<p className="spec-label">{eyebrow}</p>
-			{heading ? <h2 className="type-title">{heading}</h2> : null}
-			{lead ? (
-				<div className="type-lead text-muted-foreground [&_.prose]:max-w-none [&_.prose]:text-[inherit] [&_.prose_p]:text-[length:inherit] [&_.prose_p]:leading-[inherit]">
-					<MarkdownContent content={lead} demoteH1 />
-				</div>
-			) : null}
-		</div>
-	)
 }
 
 function BulletText({
@@ -91,7 +49,7 @@ function BulletGrid({
 }) {
 	const Icon = tone === "warning" ? Siren : Check
 	return (
-		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
+		<ul className="panel-grid grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
 					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
@@ -120,7 +78,7 @@ function ProcessSteps({
 	steps: Array<{ title: string; body: string }>
 }) {
 	return (
-		<ol className="mt-[var(--space-block)] grid grid-cols-1 gap-[var(--space-grid)] lg:grid-cols-3">
+		<ol className="grid grid-cols-1 gap-[var(--space-grid)]">
 			{steps.map((step, index) => (
 				<li
 					className="surface-panel panel-inset flex h-full flex-col"
@@ -175,6 +133,64 @@ function IntroBand({
 	)
 }
 
+/** Leads this short sit under the heading; longer ones open the body. */
+const SHORT_LEAD_CHARS = 260
+
+/**
+ * Every band shares one composition: eyebrow, heading, and a short lead in a
+ * sticky left column, and the list, steps, FAQ, or prose on the right. Wide
+ * screens use the full row instead of a heading over a half-empty grid.
+ */
+function SplitBand({
+	section,
+	index,
+	children,
+}: {
+	section: ServiceSection
+	index: number
+	children?: ReactNode
+}) {
+	const lead = section.lead.trim()
+	const leadInHead = lead && lead.length <= SHORT_LEAD_CHARS
+	const leadInBody = lead && !leadInHead
+
+	return (
+		<section className={cn("section-y", surfaceFor(index))}>
+			<div className="container-shell band-split">
+				<div className="band-split-head section-head reveal">
+					<p className="spec-label">{section.eyebrow}</p>
+					{section.heading ? (
+						<h2 className="type-title">{section.heading}</h2>
+					) : null}
+					{leadInHead ? (
+						<MarkdownContent
+							className="text-muted-foreground text-base leading-relaxed [&_h3]:mt-4 [&_h3]:text-base [&_p]:text-[inherit]"
+							content={lead}
+							demoteH1
+						/>
+					) : null}
+				</div>
+				<div className="reveal flex min-w-0 flex-col gap-[var(--space-block)]">
+					{leadInBody ? (
+						<div className="max-w-3xl">
+							<MarkdownContent content={lead} demoteH1 />
+						</div>
+					) : null}
+					{children}
+				</div>
+			</div>
+		</section>
+	)
+}
+
+function BodyProse({ content }: { content: string }) {
+	return (
+		<div className="max-w-3xl">
+			<MarkdownContent content={content} demoteH1 />
+		</div>
+	)
+}
+
 function SignsBand({
 	section,
 	index,
@@ -183,26 +199,12 @@ function SignsBand({
 	index: number
 }) {
 	return (
-		<section className={cn("section-y", surfaceFor(index))}>
-			<div className="container-shell">
-				<SectionChrome
-					align="split"
-					eyebrow={section.eyebrow}
-					heading={section.heading}
-					lead={section.lead || undefined}
-				/>
-				{section.bullets.length ? (
-					<div className="reveal">
-						<BulletGrid items={section.bullets} tone="warning" />
-					</div>
-				) : null}
-				{section.body ? (
-					<div className="reveal mx-auto mt-[var(--space-block)] max-w-3xl">
-						<MarkdownContent content={section.body} demoteH1 />
-					</div>
-				) : null}
-			</div>
-		</section>
+		<SplitBand index={index} section={section}>
+			{section.bullets.length ? (
+				<BulletGrid items={section.bullets} tone="warning" />
+			) : null}
+			{section.body ? <BodyProse content={section.body} /> : null}
+		</SplitBand>
 	)
 }
 
@@ -214,28 +216,15 @@ function ProcessBand({
 	index: number
 }) {
 	return (
-		<section className={cn("section-y", surfaceFor(index))}>
-			<div className="container-shell">
-				<SectionChrome
-					eyebrow={section.eyebrow}
-					heading={section.heading}
-					lead={section.lead || undefined}
-				/>
-				{section.steps.length ? (
-					<div className="reveal">
-						<ProcessSteps steps={section.steps} />
-					</div>
-				) : section.bullets.length ? (
-					<div className="reveal">
-						<BulletGrid items={section.bullets} />
-					</div>
-				) : (
-					<div className="reveal mt-[var(--space-block)] max-w-3xl">
-						<MarkdownContent content={section.body || section.lead} demoteH1 />
-					</div>
-				)}
-			</div>
-		</section>
+		<SplitBand index={index} section={section}>
+			{section.steps.length ? (
+				<ProcessSteps steps={section.steps} />
+			) : section.bullets.length ? (
+				<BulletGrid items={section.bullets} />
+			) : section.body ? (
+				<BodyProse content={section.body} />
+			) : null}
+		</SplitBand>
 	)
 }
 
@@ -298,38 +287,24 @@ function TipsBand({
 	index: number
 }) {
 	return (
-		<section className={cn("section-y", surfaceFor(index))}>
-			<div className="container-shell">
-				<SectionChrome
-					align="split"
-					eyebrow={section.eyebrow}
-					heading={section.heading}
-					lead={section.lead || undefined}
-				/>
-				{section.bullets.length ? (
-					<div className="reveal">
-						<ol className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
-							{section.bullets.map((item, itemIndex) => (
-								<li
-									className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]"
-									key={item.text}
-								>
-									<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">
-										{String(itemIndex + 1).padStart(2, "0")}
-									</span>
-									<BulletText className="text-sm font-bold" item={item} />
-								</li>
-							))}
-						</ol>
-					</div>
-				) : null}
-				{section.body ? (
-					<div className="reveal mt-[var(--space-block)] max-w-3xl">
-						<MarkdownContent content={section.body} demoteH1 />
-					</div>
-				) : null}
-			</div>
-		</section>
+		<SplitBand index={index} section={section}>
+			{section.bullets.length ? (
+				<ol className="panel-grid grid gap-[var(--space-grid)]">
+					{section.bullets.map((item, itemIndex) => (
+						<li
+							className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]"
+							key={item.text}
+						>
+							<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">
+								{String(itemIndex + 1).padStart(2, "0")}
+							</span>
+							<BulletText className="text-sm font-bold" item={item} />
+						</li>
+					))}
+				</ol>
+			) : null}
+			{section.body ? <BodyProse content={section.body} /> : null}
+		</SplitBand>
 	)
 }
 
@@ -345,35 +320,10 @@ function FaqBand({
 	}
 
 	return (
-		<section className={cn("section-y", surfaceFor(index))}>
-			<div className="container-shell">
-				<div className="section-head-row reveal">
-					<div className="max-w-xl">
-						<p className="spec-label">{section.eyebrow}</p>
-						<h2 className="type-title mt-[var(--space-stack)]">
-							{section.heading}
-						</h2>
-					</div>
-					<p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-						Straight answers for Santa Cruz County homeowners before you
-						schedule.
-					</p>
-				</div>
-				<div className="reveal mx-auto mt-[var(--space-block)] max-w-3xl">
-					{section.lead ? (
-						<div className="mb-[var(--space-block)]">
-							<MarkdownContent content={section.lead} demoteH1 />
-						</div>
-					) : null}
-					<HomeFaq faqs={section.faqs} />
-					{section.body ? (
-						<div className="mt-[var(--space-block)]">
-							<MarkdownContent content={section.body} demoteH1 />
-						</div>
-					) : null}
-				</div>
-			</div>
-		</section>
+		<SplitBand index={index} section={section}>
+			<HomeFaq faqs={section.faqs} />
+			{section.body ? <BodyProse content={section.body} /> : null}
+		</SplitBand>
 	)
 }
 
@@ -384,30 +334,13 @@ function ProseBand({
 	section: ServiceSection
 	index: number
 }) {
-	const content = section.body || section.lead
-	if (!content && !section.bullets.length) return null
+	if (!section.body && !section.lead && !section.bullets.length) return null
 
 	return (
-		<section className={cn("section-y", surfaceFor(index))}>
-			<div className="container-shell">
-				<SectionChrome
-					align={section.lead || section.bullets.length ? "split" : "start"}
-					eyebrow={section.eyebrow}
-					heading={section.heading}
-					lead={section.lead || undefined}
-				/>
-				{section.bullets.length ? (
-					<div className="reveal">
-						<BulletGrid items={section.bullets} />
-					</div>
-				) : null}
-				{section.body || (!section.lead && content) ? (
-					<div className="reveal mt-[var(--space-block)] max-w-3xl">
-						<MarkdownContent content={section.body || content} demoteH1 />
-					</div>
-				) : null}
-			</div>
-		</section>
+		<SplitBand index={index} section={section}>
+			{section.bullets.length ? <BulletGrid items={section.bullets} /> : null}
+			{section.body ? <BodyProse content={section.body} /> : null}
+		</SplitBand>
 	)
 }
 

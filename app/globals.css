@@ -436,6 +436,16 @@
 		margin-inline: auto;
 	}
 
+	/* Expert tips: body column plus a guide rail, aligned with the hero. */
+	.article-wide-shell {
+		width: min(100% - (var(--space-page-x) * 2), 72rem);
+		margin-inline: auto;
+	}
+
+	.prose h2[id] {
+		scroll-margin-top: calc(var(--header-h) + 1.5rem);
+	}
+
 	.section-y {
 		padding-block: var(--space-section-y);
 	}
@@ -609,6 +619,29 @@
 	}
 
 	/* Keep enlarged text from spending its available width on panel insets. */
+	/*
+	  Content page bands: heading and section number on the left, body on the
+	  right, so lists and FAQs use the full row instead of leaving it empty.
+	*/
+	.band-split {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: var(--space-block);
+	}
+
+	@media (width >= 64rem) {
+		.band-split {
+			grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+			gap: 4rem;
+			align-items: start;
+		}
+
+		.band-split-head {
+			position: sticky;
+			top: calc(var(--header-h) + 2rem);
+		}
+	}
+
 	.panel-inset {
 		min-width: 0;
 		overflow-wrap: anywhere;
@@ -630,6 +663,11 @@
 				auto-fit,
 				minmax(min(100%, max(11rem, calc((100% - var(--space-grid)) / 2))), 1fr)
 			);
+		}
+
+		/* An odd item out spans the row instead of leaving a hole beside it. */
+		.band-split .panel-grid > li:last-child:nth-child(odd) {
+			grid-column: 1 / -1;
 		}
 	}
 
