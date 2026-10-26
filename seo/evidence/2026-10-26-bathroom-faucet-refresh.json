@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-bathroom-faucet-refresh-2026-10-26",
+	"collected_at": "2026-10-26T01:30:00+00:00",
+	"source": "epa-watersense-and-sdwa-lead-free",
+	"source_url_or_tool": "https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf",
+	"scope": "Bathroom faucet post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "b47f6d86093ce9c7b192f5e4131dbff2995899e4946a730dd4e33d0a84fff73d",
+	"payload": {
+		"post": "content/posts/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project.md",
+		"observations": [
+			{
+				"id": "epa-watersense-faucet",
+				"source_url": "https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "WaterSense bathroom sink faucets flow a maximum of 1.5 gpm at 60 psi, no less than 0.8 gpm at 20 psi; federal standard 2.2 gpm; at least 30 percent lower; many models 1.0 to 1.2 gpm; faucets must meet lead free requirements of ASME A112.18.1/CSA B125.1.",
+				"inference_limit": "Federal voluntary label specification; not a California code requirement.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-sdwa-lead-free",
+				"source_url": "https://www.epa.gov/lead/how-does-safe-drinking-water-act-limit-lead-pipes-plumbing-fittings-fixtures-faucets-solder",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "SDWA lead free means a weighted average of 0.25 percent lead on wetted surfaces of pipes, fittings and fixtures; solder and flux 0.2 percent.",
+				"inference_limit": "Federal definition only; the post does not state an effective date.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an expert plumbers and precision FAQ answer, a local plumbing experts tag, a cost savings claim, a 2 to 3 hour duration claim and a years of service claim. Replaced blanket thread tape advice with a check of the instructions, added flushing the aerator, flow rate and lead free guidance, a troubleshooting table, shutoff valve FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T01:30:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
