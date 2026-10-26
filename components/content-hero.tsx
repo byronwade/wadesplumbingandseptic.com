@@ -10,9 +10,10 @@ import { contactInfo } from "@/lib/contact"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
-/* Confirmed facts only: the license, how pricing works, and free quotes. */
+/* Confirmed facts only: license and insurance, how pricing works, free quotes. */
 const serviceHeroFacts = [
 	`CSLB #${siteConfig.licenseNumber}`,
+	"Licensed & insured",
 	"Flat-rate, quoted on site",
 	"Free quotes",
 ] as const
