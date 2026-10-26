@@ -119,7 +119,7 @@ export const heroQuickLinks = [
  */
 export const proofPoints = [
 	{
-		title: "Licensed contractor",
+		title: "Licensed & insured",
 		detail: `CSLB #${siteConfig.licenseNumber} (${siteConfig.licenseClassifications.map((item) => item.code).join(", ")})`,
 		icon: "shield",
 	},
