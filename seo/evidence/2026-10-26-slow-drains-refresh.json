@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-slow-drains-refresh-2026-10-26",
+	"collected_at": "2026-10-26T00:20:00+00:00",
+	"source": "epa-septic-care",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "ded75632a0b15789abb8a47a97ad68f7a39451e4b96fd505002db01b731cd0ba",
+	"payload": {
+		"post": "content/posts/slow-drains-solutions-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Avoid chemical drain openers and use a drain snake; chemicals can kill tank bacteria; keep grease, wipes and paper towels out of drains and toilets; garbage disposals push solids into the drainfield and can clog its pipes. Fetched directly on 2026-10-25 for earlier merged posts and reused.",
+				"inference_limit": "National septic guidance; applied to sewer homes only as general good practice.",
+				"collected_at": "2026-10-26T00:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "medlineplus-drain-opener",
+				"source_url": "https://medlineplus.gov/ency/article/002780.htm",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Drain openers contain strong acids or lye that cause serious burns. Same source already cited by the merged clogged drain post.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-26T00:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Retitled from 'Expert Drain Maintenance' to a descriptive title. Removed 'expert', 'latest tools', 'trusted' and testimonial claims, an unsupported geography claim, links labeled as services that pointed to the service area index, an FAQ question with no answer, a duplicated CTA block and a bare phone link. Added a one-versus-many diagnosis table, fixes, chemical opener warning, when to call, prevention, FAQ and sources. Added updated date; original date kept.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T00:20:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

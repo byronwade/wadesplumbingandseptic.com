@@ -4750,68 +4750,62 @@
 		},
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/why-is-dirty-water-backing-up-into-your-shower",
+			"anchor": "shower backup guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "step-by-step clogged drain guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"anchor": "septic warning signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "drain field trouble",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slow-drains-solutions-santa-cruz",
 			"to": "/service-offerings/hydro-jetting",
 			"anchor": "hydro jetting",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "drain cleaning services",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/live-oak-ca-plumbing-septic-services",
-			"anchor": "Live Oak",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspections",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "drain inspections",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/testimonials",
-			"anchor": "Customer Testimonials",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/slow-drains-solutions-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "main service-area overview",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
