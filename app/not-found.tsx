@@ -1,10 +1,39 @@
+import type { Route } from "next"
 import Link from "next/link"
-import { ArrowLeft, Phone } from "@/components/icons"
+import {
+	ArrowLeft,
+	ArrowRight,
+	BookOpen,
+	MapPin,
+	Phone,
+	PipeWrench,
+} from "@/components/icons"
 
 import { CallLabel } from "@/components/call-label"
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
+
+const destinations = [
+	{
+		href: "/services",
+		icon: PipeWrench,
+		title: "Services",
+		body: "Plumbing, septic, and commercial work.",
+	},
+	{
+		href: "/service-areas",
+		icon: MapPin,
+		title: "Service areas",
+		body: "Towns we cover across Santa Cruz County.",
+	},
+	{
+		href: "/expert-tips",
+		icon: BookOpen,
+		title: "Expert tips",
+		body: "Guides for common plumbing and septic problems.",
+	},
+] as const
 
 export default function NotFound() {
 	return (
@@ -45,6 +74,32 @@ export default function NotFound() {
 						</a>
 					</div>
 				</div>
+				<ul className="mt-[var(--space-block)] grid w-full max-w-4xl grid-cols-1 gap-[var(--space-grid)] sm:grid-cols-3">
+					{destinations.map(({ href, icon: Icon, title, body }) => (
+						<li key={href}>
+							<Link
+								prefetch={false}
+								className="group flex h-full flex-col rounded-lg border border-white/10 bg-white/5 p-5 transition-colors hover:border-[var(--primary-bright)]"
+								href={href as Route}
+							>
+								<Icon
+									aria-hidden="true"
+									className="text-primary-bright size-6 shrink-0"
+								/>
+								<span className="mt-4 flex items-center gap-2 font-bold text-white">
+									{title}
+									<ArrowRight
+										aria-hidden="true"
+										className="size-4 transition-transform group-hover:translate-x-0.5"
+									/>
+								</span>
+								<span className="text-on-dark-muted mt-1 text-sm leading-relaxed">
+									{body}
+								</span>
+							</Link>
+						</li>
+					))}
+				</ul>
 			</div>
 		</main>
 	)
