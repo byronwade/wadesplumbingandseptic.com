@@ -52,7 +52,7 @@ export function classifyBand(heading: string, body: string): BandKind {
 
 function BulletPanels({ items }: { items: string[] }) {
 	return (
-		<ul className="panel-grid mt-[var(--space-block)] grid gap-[var(--space-grid)]">
+		<ul className="panel-grid grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
 					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
@@ -74,38 +74,39 @@ function SectionBand({
 	heading,
 	body,
 	index,
+	number,
 }: {
 	heading: string
 	body: string
 	index: number
+	number: number
 }) {
 	const kind = classifyBand(heading, body)
 	const surface = bandSurface(index)
 
 	return (
 		<section className={cn("section-y", surface)}>
-			<div className="container-shell">
-				<div className="section-head reveal max-w-3xl">
+			<div className="container-shell band-split">
+				<div className="band-split-head section-head reveal">
+					<p aria-hidden="true" className="spec-label">
+						{String(number).padStart(2, "0")}
+					</p>
 					<h2 className="type-title">{heading}</h2>
 				</div>
 
-				{kind === "bullets" ? (
-					<div className="reveal max-w-5xl">
+				<div className="reveal min-w-0">
+					{kind === "bullets" ? (
 						<BulletPanels items={extractBulletItems(body)} />
-					</div>
-				) : null}
+					) : null}
 
-				{kind === "faq" ? (
-					<div className="reveal mt-[var(--space-block)] max-w-3xl">
-						<HomeFaq faqs={extractFaqPairs(body)} />
-					</div>
-				) : null}
+					{kind === "faq" ? <HomeFaq faqs={extractFaqPairs(body)} /> : null}
 
-				{kind === "prose" ? (
-					<div className="reveal mt-[var(--space-block)] max-w-3xl">
-						<MarkdownContent content={body} demoteH1 />
-					</div>
-				) : null}
+					{kind === "prose" ? (
+						<div className="max-w-3xl">
+							<MarkdownContent content={body} demoteH1 />
+						</div>
+					) : null}
+				</div>
 			</div>
 		</section>
 	)
@@ -147,6 +148,15 @@ function groupSections(sections: Section[]): Group[] {
 	}
 	flush()
 	return groups
+}
+
+/** Numbers each split band so long pages read as a sequence of steps. */
+function numberGroups(groups: Group[]) {
+	let number = 0
+	return groups.map((group) => {
+		if (group.kind === "single") number += 1
+		return { group, number }
+	})
 }
 
 function PanelBand({
@@ -209,7 +219,7 @@ export function ContentSectionBands({ content }: { content: string }) {
 					</div>
 				</section>
 			) : null}
-			{groupSections(sections).map((group, index) =>
+			{numberGroups(groupSections(sections)).map(({ group, number }, index) =>
 				group.kind === "panels" ? (
 					<PanelBand
 						index={intro ? index + 1 : index}
@@ -222,6 +232,7 @@ export function ContentSectionBands({ content }: { content: string }) {
 						heading={group.section.heading}
 						index={intro ? index + 1 : index}
 						key={group.section.heading}
+						number={number}
 					/>
 				),
 			)}
