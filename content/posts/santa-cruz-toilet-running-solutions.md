@@ -1,12 +1,11 @@
 ---
 title: "Why Your Santa Cruz Toilet Keeps Running: Solutions & Tips"
 description: >-
-  Why Santa Cruz toilets keep running, common flapper and fill-valve causes,
-  DIY checks that help, and when to call Wade's Plumbing & Septic for a lasting
-  repair.
+  Why a toilet keeps running, how to find the cause with EPA's dye test, simple
+  fixes for the flapper, chain and fill valve, and why it matters on septic.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
-updated: "2026-10-24"
+updated: "2026-10-25"
 tags:
   - santa cruz
   - septic
@@ -19,89 +18,57 @@ imageAlt: "Bathroom with toilet and sink"
 
 ![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
-## Quick Answer for Santa Cruz Homeowners
+**Quick answer:** A toilet that keeps running is almost always leaking water from the tank into the bowl through a worn flapper, or overfilling into the overflow tube because the fill valve or float is set too high. EPA says a running toilet can waste up to 200 gallons of water a day. Find out which it is with EPA's food coloring test, then replace the flapper, adjust the chain or float, or replace the fill valve. On a septic system, fix it quickly, because that extra water goes straight to your drain field.
 
-A running toilet can be a nuisance, leading to increased water bills and potential plumbing issues. Learn how to address this common problem with effective solutions and tips tailored for Santa Cruz County homeowners.
+## How a toilet tank works
 
-- Identify the root cause of a running toilet to prevent water waste.
-- Regular maintenance can help avoid costly repairs.
-- Consider professional plumbing services for persistent issues.
-- A running toilet might indicate other underlying plumbing problems.
-- Timely repairs can enhance the efficiency of your home's plumbing system.
+When you flush, the flapper at the bottom of the tank lifts and the tank empties into the bowl. The flapper drops back and seals, and the fill valve refills the tank until the float rises to the shut-off point. Any water above the top of the overflow tube (the open pipe in the middle of the tank) drains into the bowl. A toilet runs when either the flapper does not seal or the water never reaches the shut-off point before spilling into the overflow tube.
 
-## Understanding Why Your Toilet Keeps Running
+## Find the cause
 
-Is your toilet training for a marathon? If so, it might be time to get it back to a sprint with expert solutions. A toilet that keeps running isn't just an annoyance; it can lead to significant water waste and higher utility bills. For homeowners in Santa Cruz County, addressing this issue promptly can save both water and money.
+1. **Take the lid off and look.** If water is pouring into the overflow tube, the water level is too high: a fill valve or float problem.
+2. **If the water level is below the overflow tube, do EPA's dye test.** Put a few drops of food coloring in the tank and wait 10 minutes without flushing. If color shows up in the bowl, the flapper is leaking. Flush afterward so the dye does not stain.
+3. **Listen.** A toilet that refills on its own every so often, with no one using it, usually has a slow flapper leak.
 
-## Common Causes of a Running Toilet
+## Common fixes
 
-There are several reasons why your toilet might keep running. The most common culprits include a faulty flapper, a malfunctioning fill valve, or an improperly adjusted float. These components can wear out over time, leading to continuous water flow. It's essential to identify the root cause to apply the correct fix.
+- **Flapper.** Flappers wear out, warp or collect mineral buildup and stop sealing. EPA recommends replacing them at least every five years. Shut off the water at the valve behind the toilet, flush to empty the tank, unclip the old flapper and take it to the store so you get a match.
+- **Chain.** A chain that is too short holds the flapper open; one that is too long can get caught under it. Leave a little slack when the flapper is closed.
+- **Float.** If the water rises into the overflow tube, lower the float so the tank stops filling below the top of the tube. Many tanks have a water line marked inside.
+- **Fill valve.** If the valve keeps hissing or will not shut off after the float is adjusted, cleaning or replacing it usually solves it.
+- **Flush valve seat.** If a new flapper still leaks, the seat it closes on may be cracked or rough, and the flush valve may need replacing.
 
-## DIY Fixes for a Running Toilet
+## Why it matters, especially on septic
 
-- **Check the Flapper:** Ensure the flapper is sealing properly. If it's worn or damaged, replacing it is a simple fix.
-- **Adjust the Float:** If the water level is too high, adjust the float to stop the water at the correct level.
-- **Inspect the Fill Valve:** If the fill valve is faulty, it may need cleaning or replacement.
+A running toilet wastes water whether you are on a water district or a private well. On septic, EPA lists a running toilet as one of the leaks to fix to protect the system, because the extra water flows through the tank to the drain field. Too much water can slow treatment and flood the field. See our guides to [septic system maintenance](/the-complete-guide-to-septic-system-maintenance) and [drain field warning signs](/signs-your-drain-field-needs-professional-repair).
 
-These DIY solutions can be effective for minor issues; however, if the problem persists, it might be time to seek professional assistance.
+A toilet that leaks silently is also one of the most common hidden household leaks. Our [hidden water leak guide](/6-signs-you-have-a-hidden-water-leak) covers the water meter test.
 
-## When to Call a Professional Plumbing Service
+## When to call a plumber
 
-If your toilet keeps running despite your best DIY efforts, it may be time to call in the experts. A professional toilet keeps running plumbing service can diagnose and fix more complex issues that might not be apparent. In Santa Cruz County, Wade's Plumbing & Septic offers [comprehensive plumbing services](/service-areas) to ensure your toilet functions efficiently.
+- The toilet still runs after a new flapper and fill valve.
+- Water is leaking around the base of the toilet or onto the floor.
+- The tank is cracked.
+- The shut-off valve behind the toilet will not turn or is leaking.
 
-## The Benefits of Timely Toilet Repairs
+## Frequently asked questions
 
-Timely repairs can prevent further damage to your plumbing system and save on costly water bills. A running toilet can waste up to 200 gallons of water per day, significantly impacting your utility expenses. By addressing the issue promptly, you not only conserve water but also ensure the longevity of your plumbing system.
+### How much water does a running toilet waste?
 
-## How Wade's Plumbing & Septic Can Help
+EPA says a running toilet can waste up to 200 gallons of water a day.
 
-At Wade's Plumbing & Septic, we understand the unique plumbing needs of Santa Cruz County homeowners. Our expert technicians are equipped to handle all types of toilet issues, ensuring your bathroom fixtures operate efficiently. Whether you're in [Aptos](/service-area/aptos-ca-plumbing-septic-services) or [Felton](/service-area/felton-ca-plumbing-septic-services), our team is ready to assist you with professional and reliable service.
+### How can I stop a running toilet for now?
 
-## DIY Monitoring vs. Calling a Professional
+Turn the shut-off valve behind the toilet clockwise until it stops. Turn it back on to flush, or until the repair is done.
 
-While DIY monitoring can help address minor issues, persistent problems often require professional intervention. A trusted plumbing service can provide a thorough inspection and long-lasting solutions, ensuring peace of mind for homeowners. Choosing a professional service not only resolves current issues but also helps prevent future plumbing problems.
+### How often should I replace the flapper?
 
-## Trusted Local Service Quality
+EPA recommends at least every five years, or sooner if the dye test shows a leak.
 
-Choosing a local service like Wade's Plumbing & Septic ensures you receive personalized and attentive care. Our team is familiar with the plumbing challenges specific to Santa Cruz County and is committed to providing high-quality service. We pride ourselves on our reputation for reliability and expertise in the community.
+## Sources
 
-### Did You Know?
-
-![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
-
-A running toilet can waste more than 200 gallons of water per day, significantly impacting your water bill and the environment.
-
-## FAQ Section
-
-### What are the most common reasons a toilet keeps running?
-
-The most common reasons include a faulty flapper, a malfunctioning fill valve, or an improperly adjusted float.
-
-### Can a running toilet increase my water bill?
-
-Yes, a running toilet can significantly increase your water bill by wasting hundreds of gallons of water daily.
-
-### How can I temporarily stop my toilet from running?
-
-Temporarily stop a running toilet by adjusting the float or ensuring the flapper is properly sealed. If these don't work, consider seeking professional help.
-
-### Why should I hire a professional for toilet repairs?
-
-Hiring a professional ensures accurate diagnosis and long-lasting solutions, preventing further damage and saving money in the long run.
-
-## Seasonal Tip
-
-Check your toilet's components for wear and tear before the holiday season to avoid unexpected issues during gatherings.
-
-## Homeowner Action Checklist
-
-- Check the flapper for wear and replace if necessary.
-- Inspect the fill valve for proper operation and adjust as needed.
-- Ensure the float arm is not sticking or set too high.
-- Test for leaks by adding food coloring to the tank and checking the bowl.
-- Adjust the chain length if it's too short or too long.
-- Clean mineral deposits from the tank components.
-- Contact a professional plumber if the problem persists.
+- U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
+- U.S. EPA WaterSense, [Fix a Leak Week](https://www.epa.gov/watersense/fix-leak-week)
 
 ## Need help with a running toilet?
 

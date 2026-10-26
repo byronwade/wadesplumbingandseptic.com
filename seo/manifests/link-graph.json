@@ -1384,20 +1384,20 @@
 		},
 		{
 			"from": "/santa-cruz-toilet-running-solutions",
-			"to": "/service-areas",
-			"anchor": "comprehensive plumbing services",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic system maintenance",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/santa-cruz-toilet-running-solutions",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "drain field warning signs",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/santa-cruz-toilet-running-solutions",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden water leak guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
