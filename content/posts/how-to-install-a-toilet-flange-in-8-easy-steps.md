@@ -1,14 +1,11 @@
 ---
-title: Install a Toilet Flange Easily in Santa Cruz County, CA
-description:
-  This guide from Wade’s Plumbing & Septic simplifies toilet flange installation,
-  covering preparation, required tools, and step-by-step instructions. It emphasizes
-  the importance of a proper seal in preventing leaks and advises when to call professionals
-  for assistance. The guide aims to save time and money for homeowners tackling plumbing
-  tasks.
+title: "How to Replace a Toilet Flange: Steps, Height and When to Call"
+description: >-
+  How to tell a toilet flange is failing, repair rings versus full replacement,
+  step by step installation with manufacturer specs, and when to call a plumber.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-10-26"
 tags:
   - santa cruz plumbing
   - toilet flange installation
@@ -23,134 +20,64 @@ image: /images/wordpress/cozy-rustic-bathroom-with-wooden-design-featuring-toile
 imageAlt: "Bathroom with toilet and sink"
 ---
 
-Installing a new toilet or replacing a damaged toilet flange doesn’t have to be stressful. You might be upgrading your bathroom. You could also be dealing with a leaking base. Learning how to install a toilet flange can save you time. It can also save you money and future headaches.
-
-![Advanced septic system design](/images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp)
-
-In this guide, the pros at Wade’s Plumbing & Septic help you. They walk you through the essential steps to a successful toilet flange installation. We’ll also cover common issues, must-have tools, and when to call a professional for help.
-
-## What Is a Toilet Flange?
-
-A toilet flange (also called a closet flange) connects your toilet to the drainpipe and secures it to the floor. A proper flange ensures a tight seal, preventing water leaks and foul sewer gas odors from entering your home.
-
-## Step-by-Step Guide to Replace a Toilet Flange
-
-### 1\. Gather the Right Tools and Materials
-
-Before you begin, make sure you have the following on hand:
-
-- New toilet flange
-- Adjustable wrench
-- Wax ring or bowl seal
-- Flathead and Phillips screwdrivers
-- Closet bolts (T-bolts)
-- Hammer
-- Chisel or pry bar
-- Putty knife
-- Old rags or towels
-- Hacksaw (for rusty bolts)
-- PVC cement (for PVC systems)
-- Adhesive remover (if needed)
-- Dremel tool (for cutting stuck flanges)
-
-✅ **Tip:** If you're in Santa Cruz County and something goes wrong during installation, call Wade’s Plumbing & Septic. Call during business hours to schedule service.
-
-### 2\. Prepare the Work Area
-
-- Turn off the water supply to the toilet.
-- Flush the toilet and soak up remaining water with rags.
-- Disconnect the water supply line.
-- Remove bolts from the tank and carefully lift it off.
-- Unscrew the bolts holding the toilet base to the floor.
-- Gently rock the toilet to break the wax seal and lift the bowl straight up.
-- Set it aside on a towel or soft surface.
-
-### 3\. Remove the Old Wax Ring and Clean the Area
-
-- Scrape away the wax residue from both the base of the toilet and the floor flange using a putty knife.
-- Inspect the flange and drain pipe for cracks or damage.
-- Plug the pipe with a rag to block sewer gases.
-
-### 4\. Take Out the Old Toilet Flange
-
-- Unscrew the old flange from the floor.
-- If it’s stuck, try using a wrench or apply adhesive remover.
-- Use a hammer and chisel or a Dremel tool if necessary.
-- Clear debris and prepare the area for the new flange.
-
-### 5\. Insert the T-Bolts into the New Flange
-
-- Place the T-bolts into the slots of the new flange.
-- Ensure the bolts are aligned equally from the back wall so the toilet sits straight.
-
-### 6\. Position the New Toilet Flange
-
-- Press the flange into the drain opening.
-- The top of the flange should sit **¼ inch above** the finished floor, not flush.
-- Ensure the bolts are straight and evenly spaced.
-
-### 7\. Secure the Flange to the Floor
-
-- Use screws or bolts to attach the flange securely.
-- Make sure the fasteners don’t protrude above the top of the flange.
-
-### 8\. Install the Wax Ring and Reconnect the Toilet
-
-- Press the wax ring onto the flange.
-- Carefully lower the toilet bowl onto the bolts.
-- Push down firmly to compress the seal.
-- Tighten the nuts evenly on both sides.
-- Reconnect the water supply and tank.
-- Turn on the water and test for leaks.
-
-## When to Call a Professional Plumber
-
-Even the most confident DIYers can run into unexpected issues. If you notice cracks, leaks, or anything that looks unusual, play it safe and give us a call.
-
-We provide expert toilet flange installation and toilet repairs throughout:
-
-- Santa Cruz
-- Capitola
-- Soquel
-- Aptos
-- Watsonville
-- Surrounding areas
-
-📞 **Call now: (831) 225-4344**
-We don’t offer online booking, just fast, friendly phone service!
-
-## Toilet Flange FAQs
-
-**Should a toilet flange sit on top of the finished floor?**
-Yes, the flange should be installed approximately ¼ inch above the finished flooring to avoid leaks.
-
-**Do I put the wax ring on the flange or the toilet?**
-Always install the wax ring on the flange before setting the toilet.
-
-**Can I install a toilet flange myself?**
-Yes, if the pipe and subfloor are in good condition and you have the proper tools. Otherwise, contact a licensed plumber.
-
-**What if the old flange is glued in?**
-A Dremel tool can help you safely cut out glued or stuck flanges. Use caution to avoid damaging the pipe.
-
-## Need Help With Toilet Repairs?
+**Quick answer:** The toilet flange is the fitting on the floor that the toilet bolts to and seals against. A rocking toilet, water around the base or a sewer smell are the usual signs it is broken or loose. If only the ring is damaged, a repair ring or extension kit can fix it without cutting the pipe. When replacing it, Oatey's installation guide says the flange should sit on top of the finished floor, be screwed through the flooring into the subfloor with corrosion resistant screws, have its bolt slots at the 3 and 9 o'clock positions, and get a new wax ring every time.
 
 ![Modern dual-flush toilet](/images/wordpress/close-up-of-a-modern-dual-flush-toilet-with-a-chrome-button-highlighting-clean-and-contemporary-design-1847bb.webp)
 
-Wade’s Plumbing & Septic is your local go-to for toilet repairs, toilet installation, and expert toilet flange replacement. If you’re unsure about the project or just want it done right the first time, give us a call.
+## What a toilet flange does
 
-📞 **(831) 225-4344**
-We’re here to help, fast, reliable, and local plumbing service in Santa Cruz County!
+A toilet flange (also called a closet flange) is the round fitting on top of the drain pipe under the toilet. The closet bolts hook into its slots to hold the toilet down, and the wax ring seals between the flange and the toilet so water and sewer gas stay in the pipe.
 
-## Frequently Asked Questions
+## Signs the flange needs attention
 
-### How is pricing quoted for installing a toilet flange in Santa Cruz County, CA?
+- **The toilet rocks** even after the bolts are snug.
+- **Water seeps around the base** after flushing.
+- **A sewer smell** near the toilet.
+- **Stained or soft flooring** around the toilet, or a stain on the ceiling below.
+- **A bolt slot is broken** and the bolt pulls free.
 
-Flat-rate pricing, quoted on site before work begins.
+## Repair or replace?
 
-### What should I expect during the toilet flange installation service?
+- **Repair ring or extension kit.** If the flange ring is cracked or broken but the pipe is fine, a metal repair ring screws down over it. If the flange sits too low after new flooring, an extension kit raises it. Oatey notes these let you retrofit without cutting into floors or ceilings.
+- **Full replacement.** Needed when the flange or the pipe connection is badly damaged. A flange glued into plastic pipe usually has to be cut out from inside the pipe, which is a good point to call a plumber if you are unsure.
 
-During the service, our skilled technicians will carefully remove the old flange, inspect the area for any underlying issues, and install a new flange with precision to ensure a perfect fit and seal.
+## Step by step replacement
+
+1. **Gather tools and parts:** new flange, new wax ring, closet bolts, corrosion resistant screws, putty knife, adjustable wrench, rags, and a bucket. For plastic pipe you may need primer and solvent cement.
+2. **Remove the toilet.** Turn off the water at the valve, flush and sponge out the remaining water, disconnect the supply line, remove the nuts at the base, and lift the toilet straight up onto a towel.
+3. **Clean and inspect.** Scrape off the old wax, stuff a rag in the pipe to block sewer gas, and check the pipe and subfloor for damage or rot.
+4. **Remove the old flange** (for a full replacement). Unscrew it from the floor. A glued flange has to be cut out of the pipe.
+5. **Dry fit the new flange.** Turn it so the bolt slots sit at the 3 and 9 o'clock positions, parallel to the wall behind the toilet, and mark the position. Oatey warns a cemented flange cannot be repositioned once the cement sets.
+6. **Set the height.** The flange should sit on top of the finished floor. Oatey warns that a flange below the floor leads to poor wax ring compression and leaks; if it ends up flush or slightly low, use a thicker wax ring or flange spacers.
+7. **Fasten it down.** Screw the flange through the finished floor into the subfloor with stainless or corrosion resistant screws, or use concrete anchors on a slab. Oatey says never to rely on a friction fit alone.
+8. **Reset the toilet.** Put the bolts in the slots, place a new wax ring on the flange (never reuse the old one), lower the toilet straight down onto the bolts, press it down evenly, and tighten the nuts a little at a time on each side. Reconnect the water and check for leaks.
+
+Do not overtighten the toilet bolts. A porcelain base can crack.
+
+## When to call a plumber
+
+- The drain pipe under the flange is cracked or the joint below is leaking.
+- The subfloor is soft or rotted.
+- The old flange is glued in and you are not comfortable cutting it out.
+- The toilet still rocks or leaks after a new flange and wax ring.
+
+## Frequently asked questions
+
+### Should the flange sit on top of the finished floor?
+
+Yes. Oatey's guide says the flange should sit on top of the finished floor. If it is flush or slightly below, use a thicker wax ring or flange spacers.
+
+### Do I put the wax ring on the flange or the toilet?
+
+Oatey's guide places the new wax ring on the flange before setting the toilet. Never reuse an old wax ring.
+
+### Can I fix a broken flange without replacing it?
+
+Often, yes. A repair ring or extension kit can fix a cracked or low flange without cutting the pipe, as long as the pipe itself is sound.
+
+## Sources
+
+- Oatey (manufacturer), [How to Install a Toilet Flange](https://oatey.com/resources/project-guides/install-toilet-flange)
 
 ## Need help with a toilet flange?
 
