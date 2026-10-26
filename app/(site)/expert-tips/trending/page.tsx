@@ -63,7 +63,7 @@ export default function TrendingTipsPage() {
 				emptyLabel="No guides in this category."
 				lockedSort
 				noun={{ singular: "guide", plural: "guides" }}
-				pageSize={9}
+				pageSize={10}
 				sort="trending"
 				variant="tip"
 			/>

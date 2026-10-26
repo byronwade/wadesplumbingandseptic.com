@@ -29,7 +29,7 @@ async function RankedArticleArchive({
 			emptyLabel="No guides in this category."
 			items={items}
 			noun={{ singular: "guide", plural: "guides" }}
-			pageSize={9}
+			pageSize={10}
 			showFilters={false}
 			variant="tip"
 		/>

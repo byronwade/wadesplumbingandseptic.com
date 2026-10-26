@@ -63,7 +63,7 @@ export default function TrendingServicesPage() {
 				emptyLabel="No services in this category."
 				lockedSort
 				noun={{ singular: "service", plural: "services" }}
-				pageSize={12}
+				pageSize={13}
 				sort="trending"
 				variant="service"
 			/>
