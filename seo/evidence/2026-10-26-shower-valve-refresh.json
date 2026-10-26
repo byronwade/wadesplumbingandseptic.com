@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-shower-valve-refresh-2026-10-26",
+	"collected_at": "2026-10-26T00:55:00+00:00",
+	"source": "cpsc-tap-water-scalds",
+	"source_url_or_tool": "https://www.cpsc.gov/s3fs-public/5098-Tap-Water-Scalds.pdf",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "1b1929bc306e8a8440e5b8acbe80506664075dd2dc22a5e6db55a0c060830bf0",
+	"payload": {
+		"post": "content/posts/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure.md",
+		"observations": [
+			{
+				"id": "cpsc-scalds",
+				"source_url": "https://www.cpsc.gov/s3fs-public/5098-Tap-Water-Scalds.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Most tap water scald injuries and deaths are to the elderly and children under five; 140 degree water can cause third degree burns in six seconds; CPSC urges lowering water heaters to 120 degrees Fahrenheit.",
+				"inference_limit": "National consumer safety guidance; does not address shower valves.",
+				"collected_at": "2026-10-26T00:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "truckee-temperature-limiting",
+				"source_url": "https://www.townoftruckee.gov/DocumentCenter/View/118",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Town of Truckee building handout 'Water Temperature Limiting Devices': the code requires an ASSE 1016 valve for showers and tub shower combinations, described as pressure balancing, thermostatic mixing and temperature limiting, with a maximum delivered water temperature of 120F; the water heater thermostat cannot serve this function.",
+				"inference_limit": "A California jurisdiction's summary of the California Plumbing Code, not the code text; Santa Cruz County inspectors were not consulted.",
+				"collected_at": "2026-10-26T00:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Retitled from 'Boost Shower Pressure' (the post is about valves) to a descriptive title and corrected hero alt text to the valve diagram. Removed 'expert', 'skilled technicians' and 'quickly' claims, an 18-town list, water efficiency and utility bill claims, a duplicate CTA and a templated FAQ. Kept a shortened version of the company's own job story. Added repair versus replace, valve types, code note, scald safety, FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T00:55:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
