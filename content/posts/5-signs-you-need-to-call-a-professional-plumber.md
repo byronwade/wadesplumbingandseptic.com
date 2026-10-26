@@ -42,7 +42,7 @@ Rumbling or popping, rusty hot water, a leak at the base of the tank, or a tempe
 
 Stains on ceilings or walls, soft or warped flooring, peeling paint and a musty smell with no visible source can all mean a hidden leak. EPA says mold usually will not grow if wet materials are dried within 24 to 48 hours, so finding the water quickly matters. EPA also notes that hidden mold can grow inside walls around leaking pipes.
 
-**Check first:** EPA recommends reading your water meter, waiting two hours without using any water, and reading it again. If the meter changes at all, you probably have a leak. EPA also says most homeowners can clean mold patches smaller than about 10 square feet themselves, once the water problem is fixed. Our guide to [signs of a hidden water leak](/6-signs-you-have-a-hidden-water-leak) has more checks.
+**Check first:** EPA recommends reading your water meter, waiting two hours without using any water, and reading it again. If the meter changes at all, you probably have a leak. EPA also says most homeowners can clean mold patches smaller than about 10 square feet themselves, once the water problem is fixed. The exception is damage from sewage or other contaminated water, such as a sewer backup or a leaking drain line. EPA says to call in a professional experienced with contaminated water cleanup in that case, whatever the size of the area. Our guide to [signs of a hidden water leak](/6-signs-you-have-a-hidden-water-leak) has more checks.
 
 ## 5. The same problem keeps coming back
 

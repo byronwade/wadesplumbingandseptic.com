@@ -8,7 +8,7 @@
 	"classification": "LIVE_VERIFIED",
 	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
 	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
-	"sha256": "365f0ee258fd3a3f26356425a80d115461355992d7cb3e380b17de24c7168afb",
+	"sha256": "711480c5f3fdd33a9bdd4cc67de34e478da3b63232d12e490c1da36968683393",
 	"payload": {
 		"post": "content/posts/5-signs-you-need-to-call-a-professional-plumber.md",
 		"observations": [
@@ -27,7 +27,7 @@
 				"source_url": "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
 				"source_tier": "GOVERNMENT_OR_STANDARD",
 				"classification": "LIVE_VERIFIED",
-				"summary": "Dry water-damaged areas within 24 to 48 hours to prevent mold; fix plumbing leaks as soon as possible; under about 10 square feet most people can clean up themselves; hidden mold may be inside walls around leaking pipes.",
+				"summary": "Dry water-damaged areas within 24 to 48 hours to prevent mold; fix plumbing leaks as soon as possible; under about 10 square feet most people can clean up themselves; hidden mold may be inside walls around leaking pipes. If damage was caused by sewage or other contaminated water, call in a professional experienced with contaminated water (added after review feedback).",
 				"inference_limit": "General homeowner guidance; no health claims added.",
 				"collected_at": "2026-10-26T02:05:00+00:00",
 				"scope": "Post refresh"
