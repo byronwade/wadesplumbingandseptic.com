@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-running-toilet-refresh-2026-10-25",
+	"collected_at": "2026-10-26T00:05:00+00:00",
+	"source": "epa-septic-care",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "fb612820396c8aa1c9bc9cd9da1b16604df1cdf34090c015f727b08b3c92cf01",
+	"payload": {
+		"post": "content/posts/santa-cruz-toilet-running-solutions.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "A running toilet can waste up to 200 gallons a day; fixing leaks is part of efficient water use that protects the septic system; excess water slows or stops treatment and can flood the drainfield. Fetched directly on 2026-10-25 for the merged septic maintenance and drain field posts.",
+				"inference_limit": "National guidance.",
+				"collected_at": "2026-10-26T00:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-fix-a-leak",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Toilet food coloring test: wait 10 minutes without flushing, color in the bowl means a leak; replace flappers at least every five years. Same source already cited by the merged hidden leak post.",
+				"inference_limit": "Reused repository citation; not re-fetched in this run.",
+				"collected_at": "2026-10-26T00:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an uncited 'more than 200 gallons' figure (replaced with EPA's 'up to 200 gallons'), 'expert technicians', 'trusted' and reputation claims, repeated filler sections, a templated FAQ and an unrelated construction image. Added how the tank works, diagnosis steps, fixes, the septic angle, when to call, FAQ and sources. Original date kept, updated set to 2026-10-25.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T00:05:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
