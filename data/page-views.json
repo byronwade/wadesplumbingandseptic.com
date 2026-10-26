@@ -1,6 +1,6 @@
 {
 	"version": 1,
-	"updatedAt": "2026-10-25T21:44:07.596Z",
+	"updatedAt": "2026-10-26T01:25:35.229Z",
 	"pages": {
 		"service:backflow-prevention-installation": {
 			"unique": 18,
@@ -48,10 +48,11 @@
 			}
 		},
 		"service:drain-cleaning": {
-			"unique": 56,
-			"views": 98,
+			"unique": 61,
+			"views": 104,
 			"daily": {
-				"2026-10-25": 3
+				"2026-10-25": 3,
+				"2026-10-26": 5
 			}
 		},
 		"service:video-inspections": {

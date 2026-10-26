@@ -881,7 +881,8 @@
 		max-width: calc(100% - 2rem);
 		padding: 0.85rem 1.1rem;
 		border-radius: var(--radius-lg);
-		background: var(--card);
+		/* Always a light card, in both themes, so its text tokens are fixed. */
+		background: oklch(1 0 0);
 		color: var(--card-foreground);
 		box-shadow: var(--shadow-float);
 		--foreground: oklch(0.21 0.035 260);
