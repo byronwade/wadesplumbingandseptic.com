@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-plumber-or-diy-refresh-2026-10-26",
+	"collected_at": "2026-10-26T01:45:00+00:00",
+	"source": "santa-cruz-county-cdi-and-cslb",
+	"source_url_or_tool": "https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx",
+	"scope": "Plumber or DIY post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "77681d20d22e981a5944c33f7301e6f072e9f95e234eeb1929769bc47bda6237",
+	"payload": {
+		"post": "content/posts/should-you-call-a-plumber-or-fix-it-yourself.md",
+		"observations": [
+			{
+				"id": "county-plumbing-permit",
+				"source_url": "https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Plumbing permit required for plumbing, gas or drainage piping work, or when any fixture or water heating or treatment equipment is installed, altered, repaired or replaced, unless exempted by the CPC or county ordinance. Exempt: stopping leaks in drain, soil, waste or vent pipe; clearing stoppages; repairing leaks in pipes, valves or fixtures without replacement or rearrangement. A plumbing permit is required to replace a water heater.",
+				"inference_limit": "Unincorporated County of Santa Cruz only; cities issue their own permits.",
+				"collected_at": "2026-10-26T01:45:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cslb-ab2622",
+				"source_url": "https://www.cslb.ca.gov/Resources/PressReleases/2024/AB2622.FINAL.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "AB 2622 raised the license threshold from $500 to $1,000 effective January 1, 2025; total of labor, materials and all other items; exemption applies only if no workers are employed and no building permits are required.",
+				"inference_limit": "State licensing rule; not legal advice.",
+				"collected_at": "2026-10-26T01:45:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed \"seen it all\", \"trusted, same-day\", \"experts\", \"arrive on time\" and \"faster\" claims, a city list, a bare phone CTA, an unrelated septic tank image and a templated FAQ answer. Corrected hero alt text to the photo. Added permit and license sections, internal links to merged guides, FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T01:45:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

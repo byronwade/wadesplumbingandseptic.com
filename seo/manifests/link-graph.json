@@ -4624,6 +4624,30 @@
 		},
 		{
 			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/slow-drains-solutions-santa-cruz",
+			"anchor": "slow drains",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/why-is-dirty-water-backing-up-into-your-shower",
+			"anchor": "why dirty water backs up into a shower",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repairing or replacing a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
 			"to": "/service-offerings/leak-detection",
 			"anchor": "leaks",
 			"classification": "MOCK_VERIFIED"
