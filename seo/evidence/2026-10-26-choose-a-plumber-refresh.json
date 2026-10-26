@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-choose-a-plumber-refresh-2026-10-26",
+	"collected_at": "2026-10-26T02:35:00+00:00",
+	"source": "cslb-consumer-guidance",
+	"source_url_or_tool": "https://www.cslb.ca.gov/consumers/hire_a_contractor/finding_the_right_contractor.aspx",
+	"scope": "Choosing a plumber post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "011ff31a1dc539d4fdd50c7188bfc87c0b4e1967747f68a9b7df2db4b5f47b49",
+	"payload": {
+		"post": "content/posts/how-to-locate-trustworthy-plumbing-services-nearby.md",
+		"observations": [
+			{
+				"id": "cslb-finding-contractor",
+				"source_url": "https://www.cslb.ca.gov/consumers/hire_a_contractor/finding_the_right_contractor.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "At least three written bids on identical scope; caution on much lower bids; references from friends, past customers, suppliers, building department; verify license online, number alone does not prove validity; match person to pocket license and ID; workers comp required with employees, homeowner may be liable otherwise; CGL not required but contract must disclose both; down payment generally limited to 10 percent with a cap unless blanket bond on file.",
+				"inference_limit": "State consumer guidance; dollar cap omitted from the post because the site bars dollar amounts.",
+				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cslb-ten-tips",
+				"source_url": "https://web.cslb.ca.gov/Resources/GuidesAndPublications/TenTipsCard_DUAL0425_ADA.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Hire licensed only; check license; three bids and references; get it in writing; confirm workers comp; limited down payment, no cash; payments not ahead of work; keep a job file; hold final payment until satisfied.",
+				"inference_limit": "State consumer guidance.",
+				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cslb-llc",
+				"source_url": "https://cslb.ca.gov/about_us/llc.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "LLC licensees must carry liability insurance under B&P Code 7071.19, with minimum limits scaled by personnel of record.",
+				"inference_limit": "Dollar limits omitted from the post because the site bars dollar amounts. Added after review feedback.",
+				"collected_at": "2026-10-26T02:50:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-plumbing-permit",
+				"source_url": "https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reused from the merged plumber or DIY refresh (fetched 2026-10-26).",
+				"inference_limit": "Unincorporated county only.",
+				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "wade-facts",
+				"source_url": "lib/site.ts and Byron Wade confirmation 2026-10-26",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "CSLB #1087260 with C-36 and C-42 from lib/site.ts; insured confirmed by Byron Wade in the project chat on 2026-10-26.",
+				"inference_limit": "No insurance type or carrier stated.",
+				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Replaced about 1,700 words of generic filler with a sourced checklist. Removed warranty, ongoing training, \"rigorous training\", \"experienced technicians\" and satisfaction claims, an unrelated San Francisco drain cover image and an unrelated sink drain image, and repetitive tags. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T02:35:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

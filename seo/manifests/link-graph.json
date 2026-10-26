@@ -748,6 +748,12 @@
 		},
 		{
 			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
+			"to": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"anchor": "calling a plumber or doing it yourself",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
 			"to": "/service-offerings/drain-cleaning",
 			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
