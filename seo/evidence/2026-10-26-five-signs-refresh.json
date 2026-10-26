@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-five-signs-refresh-2026-10-26",
+	"collected_at": "2026-10-26T02:05:00+00:00",
+	"source": "epa-watersense-epa-mold-county-sewer",
+	"source_url_or_tool": "https://www.epa.gov/watersense/fix-leak-week",
+	"scope": "Five signs to call a plumber post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "365f0ee258fd3a3f26356425a80d115461355992d7cb3e380b17de24c7168afb",
+	"payload": {
+		"post": "content/posts/5-signs-you-need-to-call-a-professional-plumber.md",
+		"observations": [
+			{
+				"id": "epa-fix-a-leak",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Average household leaks can waste more than 9,300 gallons a year; 9 percent of homes lose at least 50 gallons a day; meter test: read, wait two hours with no water use, read again, any change probably means a leak; family of four using more than 12,000 gallons a month in winter may have serious leaks.",
+				"inference_limit": "National estimates, not local data.",
+				"collected_at": "2026-10-26T02:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-mold-guide",
+				"source_url": "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Dry water-damaged areas within 24 to 48 hours to prevent mold; fix plumbing leaks as soon as possible; under about 10 square feet most people can clean up themselves; hidden mold may be inside walls around leaking pipes.",
+				"inference_limit": "General homeowner guidance; no health claims added.",
+				"collected_at": "2026-10-26T02:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-sewer-overflow",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reused from the merged shower backup refresh (fetched 2026-10-26): grease, flushed solids and roots cause blockages; owner maintains the lateral to the public sewer.",
+				"inference_limit": "County sewer districts only.",
+				"collected_at": "2026-10-26T02:05:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "phmsa-gas-leak",
+				"source_url": "https://www.phmsa.dot.gov/safety-awareness/pipeline/pipeline-leak-recognition-and-what-do",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Leave the area by foot immediately, stay upwind, do not use phones, switches or ignition sources, call 911 from a safe location.",
+				"inference_limit": "Federal pipeline leak guidance applied to an indoor gas odor; reused from the merged plumber or DIY refresh.",
+				"collected_at": "2026-10-26T02:22:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "pge-gas-safety",
+				"source_url": "https://www.pge.com/en/outages-and-safety/safety/gas-safety.html",
+				"source_tier": "PUBLIC_WEB_UNTRUSTED",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Call 911 and then PG&E; leave upwind; never turn switches on or off.",
+				"inference_limit": "Used only for the instruction to call PG&E after 911; corroborated by PHMSA.",
+				"collected_at": "2026-10-26T02:22:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an explosion claim, \"team of licensed professionals\", hydro-jetter equipment and \"schedule regular inspections\" claims, a septic appointment FAQ answer in a plumbing post, two unrelated inline images and septic tags. Added a check-first step per sign, leak statistics, internal links to merged guides, FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T02:05:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

@@ -1,66 +1,84 @@
 ---
-title: 5 Signs You Need to Call a Professional Plumber
-description:
-  Learn to recognize the warning signs that indicate it's time to call
-  a professional plumber instead of attempting DIY repairs. From persistent low water
-  pressure to multiple clogged drains, these symptoms require expert attention.
+title: "5 Signs You Need to Call a Plumber, and What to Check First"
+description: >-
+  Five plumbing warning signs that point to a bigger problem, from low pressure
+  and several slow drains to hidden leaks and mold, with simple checks to do
+  before you call.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-20"
+updated: "2026-10-26"
 tags:
   - santa cruz county
-  - septic services
-  - septic help
   - plumbing issues
   - low water pressure
-  - professional plumbing
-  - wade's plumbing
+  - hidden leaks
+  - main line clog
   - plumbing signs
 image: /images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp
 imageAlt: "Warning sign on a wooden post"
 ---
 
-When it comes to plumbing issues, knowing when to call a professional can save you time, money, and prevent major damage to your home. While some minor problems can be handled with DIY solutions, others require expert attention. Here are five clear signs it's time to call Wade's Plumbing & Septic.
+Some plumbing problems stay small: one slow sink, one drippy faucet. Others are symptoms of something bigger that a plunger or a new washer will not fix. These five signs usually mean the problem is in the pipes, the main line or the water heater rather than a single fixture. Each one includes a quick check you can do first, so you know what to tell a plumber when you call.
 
-![Outdoor plumbing pipes with gauges](/images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp)
+## 1. Low water pressure throughout the house
 
-## 1\. Persistent Low Water Pressure
+Low pressure at one faucet is usually a clogged aerator or a partly closed valve. Low pressure everywhere is different. It can come from a leak, corroded pipes, a failing pressure regulator or a problem on the supply line.
 
-If you've noticed consistently low water pressure throughout your home that doesn't improve, this could indicate serious problems like hidden leaks, pipe corrosion, or main line issues. A professional plumber can diagnose the root cause and recommend the appropriate solution.
+**Check first:** clean the aerator on the affected faucet and confirm the main shutoff is fully open. Ask neighbors whether their pressure has dropped, which points to the water provider rather than your house. If pressure stays low only in your home, it is time for a plumber.
 
-## 2\. Multiple Clogged Drains
+## 2. Several drains slow or backing up at once
 
-When several drains in your home are slow or clogged simultaneously, this suggests a problem in your main sewer line rather than individual fixtures. Professional plumbers have specialized equipment like video cameras and hydro-jetters that can locate and clear main line blockages effectively.
+One slow drain is usually a local clog. When the tub, toilet and sinks are all slow, or water comes up in a shower when the toilet flushes, the blockage is usually in the main line. Santa Cruz County Public Works names grease, flushed solids and tree roots as the main causes of sewer line blockages, and notes that homeowners are responsible for the lateral from the house to the public sewer.
 
-## 3\. Water Heater Issues
+**Check first:** stop running water and avoid flushing. If you know where the cleanout is, note it for the plumber. On a septic system, slow drains throughout the house can also point to the septic tank or drain field. Our guide to [dirty water backing up into a shower](/why-is-dirty-water-backing-up-into-your-shower) covers what to do right away.
 
-If your water heater is making unusual noises, leaking, or not providing consistent hot water, it's time to call a professional. Water heater problems can range from simple thermostat issues to serious problems that could lead to flooding or even explosions if not addressed properly.
+## 3. Water heater problems
 
-## 4\. Visible Water Damage or Mold
+Rumbling or popping, rusty hot water, a leak at the base of the tank, or a temperature and pressure relief valve that keeps dripping are all reasons to call. A leaking tank rarely repairs itself, and the relief valve exists for safety, so do not plug or cap it.
 
-Water stains on walls or ceilings, warped flooring, or visible mold growth are serious indicators of hidden plumbing leaks. These issues require immediate professional attention to identify the source of the leak and prevent structural damage and health hazards from mold exposure.
+**Check first:** look at the age on the label and note whether the leak is from a fitting at the top or from the tank itself. If you smell gas, stop: this is not a plumbing appointment. Federal pipeline safety guidance and PG&E both say to leave on foot right away, stay upwind, avoid switches, phones or anything that could spark until you are away from the building, and call 911 from a safe distance, then PG&E. Our guide to [repairing or replacing a water heater](/should-you-repair-or-replace-your-water-heater) explains the decision.
 
-## 5\. Recurring Plumbing Issues
+## 4. Water stains, warped floors or a musty smell
 
-If you find yourself repeatedly dealing with the same plumbing problem despite attempts to fix it, this indicates there's likely a larger underlying issue that DIY methods aren't addressing. A professional plumber can provide a comprehensive solution that addresses the root cause.
+Stains on ceilings or walls, soft or warped flooring, peeling paint and a musty smell with no visible source can all mean a hidden leak. EPA says mold usually will not grow if wet materials are dried within 24 to 48 hours, so finding the water quickly matters. EPA also notes that hidden mold can grow inside walls around leaking pipes.
 
-## When to Call Wade's Plumbing & Septic
+**Check first:** EPA recommends reading your water meter, waiting two hours without using any water, and reading it again. If the meter changes at all, you probably have a leak. EPA also says most homeowners can clean mold patches smaller than about 10 square feet themselves, once the water problem is fixed. Our guide to [signs of a hidden water leak](/6-signs-you-have-a-hidden-water-leak) has more checks.
 
-Our team of licensed professionals can handle everything from routine maintenance to complex repairs. Don't wait until a minor issue becomes a major problem, contact us at the first sign of these warning indicators.
+## 5. The same problem keeps coming back
 
-Remember, proper maintenance is the best way to avoid serious plumbing problems. Schedule regular inspections of your home's plumbing system to catch potential problems before they require expensive repairs.
+A drain that clogs every few weeks, a toilet that keeps running after new parts, or a leak that returns after each repair usually means the real cause has not been found. Repeated clogs in the same line can be roots, a sag or a broken section of pipe, which a camera inspection can show.
 
-## Frequently Asked Questions
+**Check first:** keep a short note of when the problem happens and what was done last time. That history helps a plumber find the cause faster.
 
-![Outdoor water treatment tanks](/images/wordpress/four-beige-tanks-in-an-outdoor-water-treatment-setup-with-blue-piping-195954.webp)
+## Leaks add up
 
-### How is pricing quoted for plumbing and septic services in Santa Cruz County, CA?
+EPA estimates that household leaks waste more than 9,300 gallons of water a year in the average home, and that about 9 percent of homes have leaks that waste 50 gallons or more a day. EPA suggests checking winter water use: a family of four using more than 12,000 gallons a month probably has a serious leak. On a septic system, that extra water also goes to the drain field.
 
-Flat-rate pricing, quoted on site before work begins.
+## Frequently asked questions
 
-### What should I expect during a plumbing or septic service appointment?
+### Is low water pressure in the whole house a plumbing problem?
 
-During a septic service appointment, our team will assess your system's condition, identify any issues, and perform necessary maintenance or repairs. We ensure minimal disruption to your property and provide a detailed explanation of the work completed.
+It can be. If neighbors have normal pressure and your aerators are clean, the cause is likely inside your property, such as a leak, corroded pipe or a failing pressure regulator.
+
+### Why are all my drains slow at the same time?
+
+Several slow drains at once usually point to a blockage in the main line, not the individual fixtures. On a septic system, it can also be the tank or drain field.
+
+### How do I check for a hidden leak?
+
+Turn off all water, read the meter, wait two hours and read it again. EPA says any change probably means a leak.
+
+### How is pricing quoted for plumbing repairs?
+
+Flat rate pricing, quoted on site before work begins.
+
+## Sources
+
+- U.S. EPA WaterSense, [Fix a Leak Week](https://www.epa.gov/watersense/fix-leak-week)
+- U.S. EPA, [A Brief Guide to Mold, Moisture and Your Home](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home)
+- U.S. Pipeline and Hazardous Materials Safety Administration, [Pipeline Leak Recognition and What to Do](https://www.phmsa.dot.gov/safety-awareness/pipeline/pipeline-leak-recognition-and-what-do)
+- PG&E, [Gas safety](https://www.pge.com/en/outages-and-safety/safety/gas-safety.html)
+- Santa Cruz County Public Works, [Preventing Sewer Overflows](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf)
 
 ## Need help with plumbing warning signs?
 
