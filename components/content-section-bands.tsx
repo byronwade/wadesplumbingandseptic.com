@@ -212,8 +212,11 @@ export function ContentSectionBands({ content }: { content: string }) {
 		<>
 			{intro ? (
 				<section className="section-y">
-					<div className="container-shell">
-						<div className="reveal max-w-3xl">
+					<div className="container-shell band-split">
+						<div className="band-split-head reveal">
+							<p className="spec-label">Overview</p>
+						</div>
+						<div className="reveal max-w-3xl min-w-0">
 							<MarkdownContent content={intro} demoteH1 />
 						</div>
 					</div>
