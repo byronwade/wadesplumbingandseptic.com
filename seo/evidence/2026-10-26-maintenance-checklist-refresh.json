@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-maintenance-checklist-refresh-2026-10-26",
+	"collected_at": "2026-10-26T02:55:00+00:00",
+	"source": "doe-energy-saver-epa-county",
+	"source_url_or_tool": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf",
+	"scope": "Plumbing maintenance post refresh",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "3844546e66e139479902da3b347f7d661a9c831e8283c9262e60eb0c96687d54",
+	"payload": {
+		"post": "content/posts/the-importance-of-regular-plumbing-maintenance.md",
+		"observations": [
+			{
+				"id": "doe-energy-saver",
+				"source_url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Drain a quart of water from the water tank every 3 months to remove sediment, following manufacturer directions; set water heater to 120F; consider insulating hot water pipes; repair leaky faucets promptly.",
+				"inference_limit": "National consumer guidance, 2022 edition.",
+				"collected_at": "2026-10-26T02:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-fix-a-leak",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reused from the merged five signs refresh: 9,300 gallons a year, two hour meter test, 12,000 gallons a month winter threshold for a family of four.",
+				"inference_limit": "National estimates.",
+				"collected_at": "2026-10-26T02:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-sewer-overflow",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reused: clear the lateral mechanically at least every 2 years; owner maintains the lateral; know cleanouts; grease, flushed solids and roots cause blockages.",
+				"inference_limit": "County sewer districts.",
+				"collected_at": "2026-10-26T02:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reused: inspect typical systems at least every three years, alternative systems yearly; pumping every three to five years; spread laundry; keep roof drains away from the drainfield.",
+				"inference_limit": "Wade does not pump septic tanks; the post states the EPA interval without offering pumping.",
+				"collected_at": "2026-10-26T02:55:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an uncited 10,000 gallon leak figure, \"local plumbing experts\" tag, \"our team ensures code compliance\" and annual inspection recommendation claims, an unrelated septic control panel image and pipes image, and a templated FAQ. Corrected hero alt text to the photo (pressure regulator on copper line). Added a schedule by frequency, internal links, FAQ and sources. Original date kept, updated set to 2026-10-26.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T02:55:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
