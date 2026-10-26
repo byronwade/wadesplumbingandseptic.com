@@ -65,7 +65,7 @@ export function GlossaryTermPage({
 				variant="article"
 			/>
 
-			<article className="article-shell section-y space-y-8">
+			<article className="article-wide-shell section-y space-y-8 [&>*]:max-w-3xl">
 				{term.alsoKnownAs?.length ? (
 					<p className="type-meta text-muted-foreground font-bold">
 						Also called: {term.alsoKnownAs.join(", ")}

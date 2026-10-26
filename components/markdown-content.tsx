@@ -11,6 +11,7 @@ import {
 	EmailAddress,
 	ProtectedContactLink,
 } from "@/components/protected-contact"
+import { headingAnchor } from "@/lib/heading-anchors"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -89,10 +90,13 @@ export function MarkdownContent({
 	content,
 	/** Pages that already render an H1 in ContentHero should demote markdown #. */
 	demoteH1 = false,
+	/** Give section headings fragment ids so an article guide can link to them. */
+	anchorHeadings = false,
 }: {
 	className?: string
 	content: string
 	demoteH1?: boolean
+	anchorHeadings?: boolean
 }) {
 	return (
 		<div className={cn("prose", className)}>
@@ -143,8 +147,29 @@ export function MarkdownContent({
 					),
 					...(demoteH1
 						? {
-								h1: ({ children, ...props }) => (
-									<h2 {...withoutNode(props)}>{children}</h2>
+								h1: ({ children, node, ...props }) => (
+									<h2
+										id={
+											anchorHeadings && node
+												? headingAnchor(textOf(node))
+												: undefined
+										}
+										{...props}
+									>
+										{children}
+									</h2>
+								),
+							}
+						: {}),
+					...(anchorHeadings
+						? {
+								h2: ({ children, node, ...props }) => (
+									<h2
+										id={node ? headingAnchor(textOf(node)) : undefined}
+										{...props}
+									>
+										{children}
+									</h2>
 								),
 							}
 						: {}),

@@ -436,6 +436,16 @@
 		margin-inline: auto;
 	}
 
+	/* Expert tips: body column plus a guide rail, aligned with the hero. */
+	.article-wide-shell {
+		width: min(100% - (var(--space-page-x) * 2), 72rem);
+		margin-inline: auto;
+	}
+
+	.prose h2[id] {
+		scroll-margin-top: calc(var(--header-h) + 1.5rem);
+	}
+
 	.section-y {
 		padding-block: var(--space-section-y);
 	}
