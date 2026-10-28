@@ -46,9 +46,7 @@ export function ContentCard({
 	const media = (
 		<Link
 			prefetch={false}
-			aria-label={
-				variant === "service" ? `View ${item.title}` : `Read ${item.title}`
-			}
+			aria-label={`${item.category}: ${variant === "service" ? "View" : "Read"} ${item.title}`}
 			className="card-media bg-muted relative block aspect-16/9 overflow-hidden"
 			href={item.href as Route}
 
