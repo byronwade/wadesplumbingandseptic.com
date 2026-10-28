@@ -63,8 +63,6 @@ Preventative measures can prolong the life of your water softener. Regular maint
 
 Choose Wade's Plumbing & Septic for your water softener maintenance needs in Santa Cruz County, California. Our experienced and licensed team is dedicated to providing responsive and reliable service. Contact us today to schedule your maintenance, ensuring your system operates efficiently and effectively. Trust us to keep your water softener in top condition, supporting a smooth and hassle-free plumbing system.
 
-Maintain Your System's Efficiency
-
 ## Reliable Water Softener Maintenance
 
 Ensure your water treatment system operates at peak performance with our expert maintenance services in Santa Cruz County.

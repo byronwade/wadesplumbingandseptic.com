@@ -73,8 +73,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 With Wade's Plumbing & Septic, you can trust in our commitment to excellence and our deep roots in Santa Cruz County, CA, to deliver reliable and professional service every time.
 
-Upgrade Your Home's Efficiency
-
 ## Energy-Efficient Tankless Water Heaters
 
 Experience the benefits of endless hot water and reduced energy bills with our expert tankless water heater installations in Santa Cruz County.

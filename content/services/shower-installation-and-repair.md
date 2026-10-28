@@ -110,8 +110,6 @@ At Wade's Plumbing & Septic, we are dedicated to enhancing your home's comfort a
 - Watsonville
 - Zayante
 
-Transform Your Bathroom
-
 ## Upgrade Your Shower in Santa Cruz County for Luxury
 
 Experience the ultimate in comfort and style with our premium shower installations, tailored to enhance your bathroom's elegance.

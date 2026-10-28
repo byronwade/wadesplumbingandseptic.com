@@ -69,8 +69,6 @@ As a fully licensed contractor holding California contractor license CSLB #10872
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-Septic Installations Made Easy
-
 ## Top-Tier Septic Installations in Santa Cruz County, CA
 
 Experience seamless and efficient septic installations with Wade's Plumbing & Septic, your trusted local experts.

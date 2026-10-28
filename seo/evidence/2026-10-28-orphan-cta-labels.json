@@ -1,0 +1,532 @@
+{
+	"date": "2026-10-28",
+	"item": "Classify migration-era CTA labels and remove only inert neutral labels",
+	"classification": "MOCK_VERIFIED",
+	"base_commit": "b3e94b0d00f47608d39973f653c6773cf54d96a0",
+	"scope": "Local repository inventory, production builds and isolated browser proof. No live production, integration, ranking or lead-lift claim.",
+	"method": {
+		"documents": 159,
+		"candidate_rule": "Standalone plain text blocks of at most 72 characters, without leading Markdown/list/number syntax, links, HTML, or terminal sentence punctuation/colon. All three Markdown collections, recursively.",
+		"counterfactual": "Delete each candidate in memory; compare actual sanitizeArticleContent and extractContentConversion outputs, splitContentBands and parseServiceSections. Do not promote candidates to headings.",
+		"limitations": "This is a bounded CTA-kicker census, not an audit of every prose heading, bold line, FAQ, or long paragraph. Safe candidates were then filtered to retain existing qualification, trust and performance assertions.",
+		"runtime_changed": false,
+		"frontmatter_or_business_facts_changed": false,
+		"source_labels_removed": 20,
+		"claim_bearing_labels_retained": 12,
+		"rendered_or_parser_sensitive_lines_retained": 12
+	},
+	"candidates": [
+		{
+			"file": "content/pages/privacy-policy.md",
+			"source_line_before_cleanup": 12,
+			"text": "Last updated: July 30, 2026",
+			"next_nonempty_line": "Wade's Plumbing & Septic (\"Wade's,\" \"we,\" \"us,\" or \"our\") respects your privacy.",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/pages/terms-of-service.md",
+			"source_line_before_cleanup": 12,
+			"text": "Last updated: July 30, 2026",
+			"next_nonempty_line": "These Terms of Service (\"Terms\") govern your use of",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/posts/how-santa-cruz-countys-unique-geography-affects-septic-systems.md",
+			"source_line_before_cleanup": 98,
+			"text": "Efficient Septic Solutions",
+			"next_nonempty_line": "## Reliable Septic Services for Santa Cruz County Homes",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/posts/memorial-day-plumbing-prep-santa-cruz.md",
+			"source_line_before_cleanup": 123,
+			"text": "Get Ready for the Holiday",
+			"next_nonempty_line": "## Prepare Capitola Plumbing for Memorial Day",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/posts/new-septic-installations-santa-cruz.md",
+			"source_line_before_cleanup": 122,
+			"text": "Transform Your Waste Management",
+			"next_nonempty_line": "## Upgrade to Premier Septic Systems in Santa Cruz County",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/posts/septic-safety-during-floods-santa-cruz.md",
+			"source_line_before_cleanup": 107,
+			"text": "Stay Prepared",
+			"next_nonempty_line": "## Septic Safety in Floods: Protect Your Santa Cruz Home",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
+			"source_line_before_cleanup": 32,
+			"text": "Optimize Septic System Health with Seasonal Maintenance in Santa Cruz",
+			"next_nonempty_line": "Did you know? EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/posts/septic-trouble-signs-santa-cruz.md",
+			"source_line_before_cleanup": 92,
+			"text": "Early Detection Matters",
+			"next_nonempty_line": "## Identify Septic Issues Early in Santa Cruz County Homes",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/backflow-prevention-installation.md",
+			"source_line_before_cleanup": 78,
+			"text": "Backflow Prevention Services",
+			"next_nonempty_line": "## Protect Your Home with Expert Backflow Prevention",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/backflow-prevention-testing.md",
+			"source_line_before_cleanup": 73,
+			"text": "Our team is fully licensed and certified",
+			"next_nonempty_line": "## Ensure Safe Water with Backflow Testing",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/commercial-drain-cleaning.md",
+			"source_line_before_cleanup": 49,
+			"text": "Keep Your Business Running Smoothly",
+			"next_nonempty_line": "## Efficient Commercial Drain Cleaning in Santa Cruz County",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/commercial-plumbing-maintenance.md",
+			"source_line_before_cleanup": 75,
+			"text": "Professional Solutions for Your Business",
+			"next_nonempty_line": "## Expert Commercial Plumbing Services",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/drain-line-inspection.md",
+			"source_line_before_cleanup": 107,
+			"text": "Ensure Your Home's Plumbing Integrity",
+			"next_nonempty_line": "## Expert Drain Inspections for Santa Cruz County Homes",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/fixture-installation.md",
+			"source_line_before_cleanup": 99,
+			"text": "Transform Your Living Space",
+			"next_nonempty_line": "## Upgrade Your Home with Expert Fixture Installations in Santa Cruz",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/garbage-disposal-installation.md",
+			"source_line_before_cleanup": 87,
+			"text": "Upgrade Your Kitchen Efficiency",
+			"next_nonempty_line": "## Top-Quality Garbage Disposal Installation in Santa Cruz",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/gas-line-repair.md",
+			"source_line_before_cleanup": 89,
+			"text": "Ensure Safety and Functionality",
+			"next_nonempty_line": "## Reliable Gas Line Repair for Santa Cruz County Homes",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/grease-trap-installation.md",
+			"source_line_before_cleanup": 67,
+			"text": "Serving Santa Cruz County Businesses",
+			"next_nonempty_line": "## Professional Grease Trap Installation",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/leak-detection.md",
+			"source_line_before_cleanup": 83,
+			"text": "Expert Leak Detection",
+			"next_nonempty_line": "## Septic Leak Detection Pros in Santa Cruz County, CA",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/main-line-cleanout-installation.md",
+			"source_line_before_cleanup": 72,
+			"text": "Ensure Your Plumbing Runs Smoothly",
+			"next_nonempty_line": "## Reliable Main Line Cleanout in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/pipe-repair-and-replacement.md",
+			"source_line_before_cleanup": 87,
+			"text": "Swift and Reliable Solutions",
+			"next_nonempty_line": "## Expert Pipe Repair & Replacement",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/septic-system-abandonment.md",
+			"source_line_before_cleanup": 66,
+			"text": "Septic System Abandonment",
+			"next_nonempty_line": "## Ensure Safe Environmental Compliance",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/septic-system-certification.md",
+			"source_line_before_cleanup": 64,
+			"text": "Expert Septic Services",
+			"next_nonempty_line": "## Certified Septic Experts for Santa Cruz County Homes",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/septic-system-installation.md",
+			"source_line_before_cleanup": 72,
+			"text": "Septic Installations Made Easy",
+			"next_nonempty_line": "## Top-Tier Septic Installations in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/septic-tank-alarm-installation.md",
+			"source_line_before_cleanup": 52,
+			"text": "Stay Alert with Confidence",
+			"next_nonempty_line": "## Septic Tank Alarm Installation in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/septic-tank-design-and-engineering.md",
+			"source_line_before_cleanup": 68,
+			"text": "Custom Septic Solutions",
+			"next_nonempty_line": "## Expert Septic Tank Design in Santa Cruz County",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/septic-tank-distribution-box-repair-and-replacement.md",
+			"source_line_before_cleanup": 99,
+			"text": "Expert Septic Solutions",
+			"next_nonempty_line": "## Septic Box Repair Experts in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/septic-tank-maintenance-and-care.md",
+			"source_line_before_cleanup": 62,
+			"text": "Keep Your Septic System Running Smoothly",
+			"next_nonempty_line": "## Expert Septic Maintenance in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/septic-tank-repair-and-replacement.md",
+			"source_line_before_cleanup": 83,
+			"text": "Fast & Reliable Service",
+			"next_nonempty_line": "## Top Septic Repair & Replacement in Santa Cruz County",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/septic-tank-riser-installation.md",
+			"source_line_before_cleanup": 80,
+			"text": "Effortless Access to Your Septic System",
+			"next_nonempty_line": "## Septic Riser Installation for Easy Access in Santa Cruz",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/septic-tank-system-compliance-and-permitting.md",
+			"source_line_before_cleanup": 70,
+			"text": "Septic System Compliance",
+			"next_nonempty_line": "## Ensure Your Home Meets Local Regulations",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/septic-tank-system-upgrades.md",
+			"source_line_before_cleanup": 58,
+			"text": "Santa Cruz County Septic Upgrades",
+			"next_nonempty_line": "## Upgrade Your Septic System Today",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/sewer-camera-inspection.md",
+			"source_line_before_cleanup": 79,
+			"text": "Quick & Accurate Diagnostics",
+			"next_nonempty_line": "## Swift Sewer Camera Inspections",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/sewer-line-inspection.md",
+			"source_line_before_cleanup": 97,
+			"text": "Stay Ahead of Plumbing Issues",
+			"next_nonempty_line": "## Ensure Home Safety with Santa Cruz Sewer Inspections",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/shower-installation-and-repair.md",
+			"source_line_before_cleanup": 64,
+			"text": "Call Us NowGet a Free Quote",
+			"next_nonempty_line": "### Transform Your Shower in Santa Cruz County Today",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/shower-installation-and-repair.md",
+			"source_line_before_cleanup": 113,
+			"text": "Transform Your Bathroom",
+			"next_nonempty_line": "## Upgrade Your Shower in Santa Cruz County for Luxury",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/storm-drain-cleaning.md",
+			"source_line_before_cleanup": 99,
+			"text": "Santa Cruz County's Trusted Experts",
+			"next_nonempty_line": "## Ensure Reliable Storm Drain Clearing",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/sump-pump-installation.md",
+			"source_line_before_cleanup": 72,
+			"text": "Protect Your Home",
+			"next_nonempty_line": "## Expert Sump Pump Installation",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/tankless-water-heater-installation.md",
+			"source_line_before_cleanup": 76,
+			"text": "Upgrade Your Home's Efficiency",
+			"next_nonempty_line": "## Energy-Efficient Tankless Water Heaters",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/toilet-repair.md",
+			"source_line_before_cleanup": 81,
+			"text": "Reliable Repair Services",
+			"next_nonempty_line": "## Expert Septic Toilet Repair in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/trenchless-sewer-line-replacement.md",
+			"source_line_before_cleanup": 61,
+			"text": "Santa Cruz County's Trusted Sewer Experts",
+			"next_nonempty_line": "## Effortless Trenchless Sewer Replacement",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/video-inspections.md",
+			"source_line_before_cleanup": 77,
+			"text": "Proactive Maintenance",
+			"next_nonempty_line": "## Ensure Clear Pipes with Video Inspections",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		},
+		{
+			"file": "content/services/water-filtration-system-installation.md",
+			"source_line_before_cleanup": 67,
+			"text": "Water Quality Solutions",
+			"next_nonempty_line": "## Enhance Your Home's Water Quality",
+			"visible_in_parsed_body": true,
+			"body_same_if_removed": false,
+			"cta_same_if_removed": true,
+			"decision": "retain_rendered_or_parser_sensitive"
+		},
+		{
+			"file": "content/services/water-line-repair-and-installation.md",
+			"source_line_before_cleanup": 91,
+			"text": "Reliable Water Line Services",
+			"next_nonempty_line": "## Premium Water Line Solutions in Santa Cruz County, CA",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "retain_existing_claim"
+		},
+		{
+			"file": "content/services/water-softener-maintenance.md",
+			"source_line_before_cleanup": 66,
+			"text": "Maintain Your System's Efficiency",
+			"next_nonempty_line": "## Reliable Water Softener Maintenance",
+			"visible_in_parsed_body": false,
+			"body_same_if_removed": true,
+			"cta_same_if_removed": true,
+			"decision": "remove_hidden_label"
+		}
+	],
+	"acceptance": {
+		"commands_passed": 5,
+		"commands_failed": 0,
+		"commands": {
+			"npm ci": {
+				"exit_code": 0,
+				"elapsed_seconds": 72.88
+			},
+			"npm run lint": {
+				"exit_code": 0,
+				"elapsed_seconds": 15.27
+			},
+			"npm run typecheck": {
+				"exit_code": 0,
+				"elapsed_seconds": 5.42
+			},
+			"npm run seo:check": {
+				"exit_code": 0,
+				"elapsed_seconds": 32.1
+			},
+			"npm run build": {
+				"exit_code": 0,
+				"elapsed_seconds": 48.66
+			}
+		},
+		"seo_tests_passed": 205,
+		"seo_tests_failed": 0,
+		"generated_pages": 566,
+		"npm_ci_existing_high_advisories": 5
+	},
+	"comparison": {
+		"passed": 3878,
+		"failed": 0,
+		"documents": 159,
+		"search_records": 281,
+		"html_pages": 554,
+		"crawler_files": 4,
+		"browser_states": 24,
+		"axe_violations": 0,
+		"page_errors": 0,
+		"horizontal_overflow_states": 0,
+		"source_labels_removed": 20,
+		"remaining_candidates": 24,
+		"classification": "MOCK_VERIFIED"
+	},
+	"screenshots": {
+		"matched_pairs": 12,
+		"pixel_identical_pairs": 12,
+		"final_screenshots_visually_reviewed": 4,
+		"widths": [1280, 390],
+		"themes": ["light", "dark"],
+		"pages": [
+			"/service-offerings/sump-pump-installation",
+			"/service-offerings/shower-installation-and-repair",
+			"/septic-safety-during-floods-santa-cruz"
+		]
+	},
+	"proof_hashes": {
+		"before-parser.json": "b00b7b94ae2df152589cac030ed6fcd59958f5a05fb6b71953bd7dc21865a617",
+		"after-parser.json": "b00b7b94ae2df152589cac030ed6fcd59958f5a05fb6b71953bd7dc21865a617",
+		"before-html.json": "9dbbc1c0c19826596717a806ff804dffda8299fc795816fc43a0b726fefd580e",
+		"after-html.json": "9dbbc1c0c19826596717a806ff804dffda8299fc795816fc43a0b726fefd580e",
+		"comparison.json": "c778744afdf1bac950198b42ce55fc2a4e6b645da4f80dca46e46063c0f532b3",
+		"screenshot-comparison.json": "d8227ce8a8be82cfc32ffdce9b7d8adfd276d62016053b65249fd397ddf73f94"
+	},
+	"evidence": "Hobby scheduler job wades-plumbing-hobby-1028-1209: per-command JSON receipts/logs, census.ts and snapshot.ts (copy into scripts to resolve repository imports), before/after snapshots, comparison.py, browser.py and final screenshots.",
+	"known_existing_items": [
+		"Five high npm advisories; no dependency changed.",
+		"Shared-kit reservation fails on an existing missing configured root. No shared configuration changed.",
+		"The hidden shower line Call Us NowGet a Free Quote remains parser-sensitive; removing it exposes other source content. Retained.",
+		"Existing trust, performance and qualification assertions are unchanged and require separate fact review."
+	]
+}

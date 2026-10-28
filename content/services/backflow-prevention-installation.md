@@ -75,8 +75,6 @@ With years of experience serving Santa Cruz County, California, Wade's Plumbing 
 
 Contact us today to schedule your backflow prevention service and protect your home's water supply with confidence.
 
-Backflow Prevention Services
-
 ## Protect Your Home with Expert Backflow Prevention
 
 Ensure the safety and purity of your water supply with our professional backflow prevention installation in Santa Cruz County.

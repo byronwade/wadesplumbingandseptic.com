@@ -67,8 +67,6 @@ Our team is fully licensed and certified, holding California contractor license 
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-Septic System Compliance
-
 ## Ensure Your Home Meets Local Regulations
 
 Guarantee peace of mind with our expert septic compliance services in Santa Cruz County.
