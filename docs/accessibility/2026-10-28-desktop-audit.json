@@ -1,0 +1,368 @@
+{
+	"truth_state": "MOCK_VERIFIED",
+	"observed_at_epoch": 1793209899.8704882,
+	"scope": "Local production build and Chromium browser proof; no production, ranking, lead, or full WCAG conformance claim.",
+	"change": "Include visible category chips in shared card image-link names and remove extra opacity from unique-count labels; preserve counters, destinations, image alt text and keyboard stops.",
+	"engine": {
+		"versions": {
+			"browser": "155.0.8059.85",
+			"axe": "4.14.0"
+		},
+		"source_url": "https://cdn.jsdelivr.net/npm/axe-core@4.14.0/axe.min.js",
+		"sha256": "20c09fe157a8a34a30e241aaa1fcdade657734f08ab379ecfbeb7d45cc46e878"
+	},
+	"audit": {
+		"summary": {
+			"routes": 529,
+			"states": 1058,
+			"public_html_routes": 528,
+			"limited": false,
+			"complete": true,
+			"budget_exhausted": false,
+			"violations": 0,
+			"incomplete": 1058,
+			"incomplete_nodes": 29856,
+			"errors": 0,
+			"overflow": 0,
+			"elapsed_seconds": 1676.56
+		},
+		"viewport": {
+			"width": 1280,
+			"height": 900
+		},
+		"themes": ["light", "dark"],
+		"rule_tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"],
+		"manifest_sha256": "c729e9772ce9e10ee31c74fe1293243ad1eaa773e0c31a197f882750fc2cc16c",
+		"requested_routes": 529,
+		"final_paths": 528,
+		"statuses": {
+			"200": 1058
+		},
+		"sitemap_urls_covered": 286,
+		"sitemap_urls_missing": [],
+		"redirects": 2,
+		"incomplete_nodes_by_rule": {
+			"color-contrast": 29856
+		},
+		"incomplete_examples": {
+			"color-contrast": [
+				{
+					"target": [".pt-8 > .spec-label.text-primary-bright"],
+					"summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+				},
+				{
+					"target": [
+						".tracking-\\[0\\.14em\\].text-\\[0\\.6875rem\\].sm\\:block"
+					],
+					"summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+				},
+				{
+					"target": ["h1"],
+					"summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+				}
+			]
+		},
+		"limitation": "Incomplete contrast checks over pseudo elements, gradients and images require manual assessment. Open controls are checked separately."
+	},
+	"acceptance": {
+		"passed": 5,
+		"failed": 0,
+		"commands": [
+			{
+				"command": "npm ci",
+				"exit_code": 0
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0
+			},
+			{
+				"command": "npm run typecheck",
+				"exit_code": 0
+			},
+			{
+				"command": "npm run seo:check",
+				"exit_code": 0
+			},
+			{
+				"command": "npm run build",
+				"exit_code": 0
+			}
+		],
+		"seo_tests": {
+			"passed": 205,
+			"failed": 0
+		}
+	},
+	"regression": {
+		"states": 6,
+		"before_failing_states": 4,
+		"before_violating_link_instances": 18,
+		"after_violations": 0
+	},
+	"contrast": {
+		"states": 4,
+		"values_preserved": true,
+		"before": [
+			{
+				"width": 1280,
+				"theme": "light",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "0.7",
+						"color": "lab(40.8387 1.42306 3.93878)",
+						"background": "lab(100 0 0)",
+						"fg": [101, 95, 90],
+						"bg": [255, 255, 255],
+						"ratio": 3.2065764869291336
+					}
+				],
+				"violations": [
+					{
+						"id": "color-contrast",
+						"nodes": [
+							{
+								"target": [".opacity-70"],
+								"summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.2 (foreground color: #938f8b, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+							}
+						]
+					}
+				]
+			},
+			{
+				"width": 1280,
+				"theme": "dark",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "0.7",
+						"color": "lab(70.4477 0.855863 4.5115)",
+						"background": "lab(7.77923 1.06137 2.64239)",
+						"fg": [177, 172, 164],
+						"bg": [26, 23, 19],
+						"ratio": 4.508262100950336
+					}
+				],
+				"violations": [
+					{
+						"id": "color-contrast",
+						"nodes": [
+							{
+								"target": [".opacity-70"],
+								"summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #837f79, background color: #1a1713, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+							}
+						]
+					}
+				]
+			},
+			{
+				"width": 390,
+				"theme": "light",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "0.7",
+						"color": "lab(40.8387 1.42306 3.93878)",
+						"background": "lab(100 0 0)",
+						"fg": [101, 95, 90],
+						"bg": [255, 255, 255],
+						"ratio": 3.2065764869291336
+					}
+				],
+				"violations": [
+					{
+						"id": "color-contrast",
+						"nodes": [
+							{
+								"target": [".opacity-70"],
+								"summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.2 (foreground color: #938f8b, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+							}
+						]
+					}
+				]
+			},
+			{
+				"width": 390,
+				"theme": "dark",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "0.7",
+						"color": "lab(70.4477 0.855863 4.5115)",
+						"background": "lab(7.77923 1.06137 2.64239)",
+						"fg": [177, 172, 164],
+						"bg": [26, 23, 19],
+						"ratio": 4.508262100950336
+					}
+				],
+				"violations": [
+					{
+						"id": "color-contrast",
+						"nodes": [
+							{
+								"target": [".opacity-70"],
+								"summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #837f79, background color: #1a1713, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+							}
+						]
+					}
+				]
+			}
+		],
+		"after": [
+			{
+				"width": 1280,
+				"theme": "light",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "1",
+						"color": "lab(40.8387 1.42306 3.93878)",
+						"background": "lab(100 0 0)",
+						"fg": [101, 95, 90],
+						"bg": [255, 255, 255],
+						"ratio": 6.291454414317769
+					}
+				],
+				"violations": []
+			},
+			{
+				"width": 1280,
+				"theme": "dark",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "1",
+						"color": "lab(70.4477 0.855863 4.5115)",
+						"background": "lab(7.77923 1.06137 2.64239)",
+						"fg": [177, 172, 164],
+						"bg": [26, 23, 19],
+						"ratio": 7.914468095496178
+					}
+				],
+				"violations": []
+			},
+			{
+				"width": 390,
+				"theme": "light",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "1",
+						"color": "lab(40.8387 1.42306 3.93878)",
+						"background": "lab(100 0 0)",
+						"fg": [101, 95, 90],
+						"bg": [255, 255, 255],
+						"ratio": 6.291454414317769
+					}
+				],
+				"violations": []
+			},
+			{
+				"width": 390,
+				"theme": "dark",
+				"labels": [
+					{
+						"text": " \u00b7 61 unique",
+						"opacity": "1",
+						"color": "lab(70.4477 0.855863 4.5115)",
+						"background": "lab(7.77923 1.06137 2.64239)",
+						"fg": [177, 172, 164],
+						"bg": [26, 23, 19],
+						"ratio": 7.914468095496178
+					}
+				],
+				"violations": []
+			}
+		]
+	},
+	"keyboard": {
+		"passed": 40,
+		"failed": 0
+	},
+	"comparison": {
+		"html_routes": 528,
+		"crawler_files": 4,
+		"cards": 24,
+		"screenshots": [
+			{
+				"width": 1280,
+				"theme": "light",
+				"changed_pixels": 18886,
+				"bounds": [41, 810, 423, 900],
+				"outside_photos": 0,
+				"max_channel_delta": [
+					[0, 5],
+					[0, 5],
+					[0, 7]
+				]
+			},
+			{
+				"width": 1280,
+				"theme": "dark",
+				"changed_pixels": 50837,
+				"bounds": [41, 227, 423, 442],
+				"outside_photos": 0,
+				"max_channel_delta": [
+					[0, 7],
+					[0, 3],
+					[0, 13]
+				]
+			},
+			{
+				"width": 390,
+				"theme": "light",
+				"changed_pixels": 0,
+				"bounds": null,
+				"outside_photos": 0,
+				"max_channel_delta": [
+					[0, 0],
+					[0, 0],
+					[0, 0]
+				]
+			},
+			{
+				"width": 390,
+				"theme": "dark",
+				"changed_pixels": 0,
+				"bounds": null,
+				"outside_photos": 0,
+				"max_channel_delta": [
+					[0, 0],
+					[0, 0],
+					[0, 0]
+				]
+			}
+		],
+		"passed": 2176,
+		"failed": 0
+	},
+	"interactions": {
+		"states": 14,
+		"widths": [1280, 390],
+		"themes": ["light", "dark"],
+		"violations": 0,
+		"errors": 0,
+		"overflow": 0,
+		"incomplete_rule_results": 32,
+		"incomplete_rules": [
+			"aria-hidden-focus",
+			"aria-prohibited-attr",
+			"color-contrast"
+		],
+		"controls": [
+			"Desktop Services and Company menus opened by keyboard",
+			"Mobile main menu",
+			"Empty search and septic search results"
+		]
+	},
+	"harness": {
+		"budget_exhaustion_returns_failure": true,
+		"limited_sample_marked": true,
+		"external_requests_blocked": true,
+		"page_view_recording_intercepted": true
+	},
+	"existing_dependencies": "npm ci reports five existing high advisories. No dependency or lockfile change.",
+	"review": "Self review only; no independent agent review claimed.",
+	"local_evidence_folder": "wades-plumbing-hobby-1028-1239"
+}

@@ -10,11 +10,17 @@ are excluded. A deliberately missing public URL exercises the visitor-facing 404
 Redirect sources are checked through their real destination, with both requested
 and final paths recorded.
 
+The missing-page check requires the real error heading and `noindex` metadata.
+It accepts HTTP 404 or the HTTP 200 that Next.js documents for
+[streamed not-found responses](https://nextjs.org/docs/app/api-reference/file-conventions/not-found).
+An ordinary successful page at the fixture URL fails this check.
+
 ## Run
 
 Run `npm ci` and `npm run build`, then start a production preview on an available
-port. Use an existing Python environment with Playwright installed. Download a
-pinned axe-core script to a local evidence folder, outside the repository:
+port. Use an existing Python environment with Playwright installed. Set
+`$evidenceDir` to an existing writable evidence folder on C:, outside the repository.
+Download the pinned axe-core script there:
 
 ```powershell
 Invoke-WebRequest 'https://cdn.jsdelivr.net/npm/axe-core@4.14.0/axe.min.js' -OutFile "$evidenceDir/axe.min.js" -TimeoutSec 30
@@ -35,12 +41,12 @@ is explicitly marked limited and cannot establish sitewide coverage.
 
 The report records the browser and axe versions, script and route-manifest hashes,
 requested and final paths, HTTP status, applied theme, horizontal overflow,
-browser errors, violations, and incomplete checks. It checkpoints every 25 states.
+uncaught page errors, violations, and incomplete checks. It checkpoints every 25 states.
 Exit code 1 means a violation, error, wrong HTTP status, wrong theme, or overflow.
 A completed full run has `complete: true` and `limited: false`.
 
-Navigation, selectors, font loading, scrolling, and the axe call have bounded timeouts. The
-browser is headless and closes on exit. Network access is restricted to the local
+Navigation, selectors, font loading, scrolling, and the axe call have bounded
+timeouts. The browser is headless and closes on exit. Network access is restricted to the local
 preview, and page-view requests are intercepted to avoid changing visit records.
 The default overall budget is 3,600 seconds, checked between pages; use
 `--max-seconds` to override it. Budget exhaustion records an incomplete report and
@@ -57,3 +63,6 @@ Use a recent pinned engine when repeating this audit. The older 4.10.3 sample
 missed category-chip link-name mismatches that 4.14.0 reported. Upstream documents
 the [label-content-name-mismatch rule](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch)
 and [engine changes](https://github.com/dequelabs/axe-core/releases).
+
+The [October 28, 2026 audit record](accessibility/2026-10-28-desktop-audit.json)
+contains the local run's scope, versions, results, and manual-review limits.

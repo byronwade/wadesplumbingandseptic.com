@@ -117,8 +117,20 @@ with sync_playwright() as p:
                       title:document.title, finalPath:location.pathname
                     })'''))
                     row['status'] = response.status
-                    expected_status = 404 if route == missing_route else 200
-                    row['status_error'] = response.status != expected_status
+                    if route == missing_route:
+                        # Next's streamed not-found responses can use HTTP 200.
+                        # Verify the actual error UI and noindex, not status alone.
+                        row['missing_page'] = page.evaluate('''() => ({
+                          heading:document.querySelector('main h1')?.textContent.trim(),
+                          robots:[...document.querySelectorAll('meta[name="robots"]')].map(e=>e.content)
+                        })''')
+                        missing = row['missing_page']
+                        has_noindex = any('noindex' in value.lower().replace(',', ' ').split()
+                                          for value in missing['robots'])
+                        row['status_error'] = (response.status not in (200, 404) or not has_noindex
+                            or missing['heading'] != 'This page could not be found.')
+                    else:
+                        row['status_error'] = response.status != 200
                     row['theme_error'] = theme not in row['actualTheme'].split()
                     page.add_script_tag(content=axe)
                     row.update(page.evaluate('''async () => {
