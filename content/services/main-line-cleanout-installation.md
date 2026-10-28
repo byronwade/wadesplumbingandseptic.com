@@ -69,8 +69,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 For more information on the areas we serve, please visit our [service area overview](/service-areas).
 
-Ensure Your Plumbing Runs Smoothly
-
 ## Reliable Main Line Cleanout in Santa Cruz County, CA
 
 Keep your plumbing system in top condition with our expert main line cleanout services.

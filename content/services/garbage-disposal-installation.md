@@ -84,8 +84,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 For more details on our service areas, visit our [main service-area overview](/service-areas).
 
-Upgrade Your Kitchen Efficiency
-
 ## Top-Quality Garbage Disposal Installation in Santa Cruz
 
 Experience seamless waste management with our expert installation services, ensuring your kitchen runs smoothly and efficiently.

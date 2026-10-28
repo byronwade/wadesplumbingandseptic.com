@@ -104,8 +104,6 @@ Our team is fully licensed with California contractor license CSLB #1087260 (C-3
 
 Whether you're in Santa Cruz or any of the surrounding communities, Wade's Plumbing & Septic is your trusted local expert for all drain line inspection needs.
 
-Ensure Your Home's Plumbing Integrity
-
 ## Expert Drain Inspections for Santa Cruz County Homes
 
 Gain peace of mind with our thorough drain inspections, ensuring optimal performance and preventing costly repairs.

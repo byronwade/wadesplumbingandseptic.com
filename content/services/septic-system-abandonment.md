@@ -63,8 +63,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, you can trust our local expertise to handle your septic system needs efficiently and effectively.
 
-Septic System Abandonment
-
 ## Ensure Safe Environmental Compliance
 
 Trust Wade's Plumbing & Septic for expert septic system abandonment in Santa Cruz County, ensuring environmental safety and regulatory compliance.
