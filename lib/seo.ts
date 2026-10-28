@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import {
+	locationsByCounty,
 	serviceAreaLocations,
 	type ServiceAreaLocation,
 } from "@/lib/service-areas"
@@ -16,6 +17,15 @@ export const OG_DESCRIPTION_MAX = 125
 /** Stable schema.org node IDs: every page references the same business entity. */
 export const businessId = `${siteConfig.url}/#business`
 export const websiteId = `${siteConfig.url}/#website`
+
+/**
+ * Santa Cruz County is served countywide. Santa Clara County coverage is
+ * selected communities only, so it is never named as a whole served area.
+ */
+const santaCruzCountyJsonLd = {
+	"@type": "AdministrativeArea",
+	name: "Santa Cruz County, California",
+} as const
 
 export function absoluteUrl(pathname: string) {
 	if (pathname.startsWith("http")) return pathname
@@ -184,9 +194,17 @@ export function localBusinessJsonLd(
 				url: "https://www.cslb.ca.gov",
 			},
 		})),
-		areaServed: serviceAreasJsonLd().map((area) =>
-			"@id" in area ? { "@id": area["@id"] } : area,
-		),
+		// Santa Cruz communities sit inside the named county, so a reference is
+		// enough. Santa Clara communities are spelled out: that county is not.
+		areaServed: [
+			santaCruzCountyJsonLd,
+			...serviceAreaLocations.map((location) => {
+				const place = serviceAreaPlaceJsonLd(location)
+				return location.county === "Santa Cruz County"
+					? { "@id": place["@id"] }
+					: place
+			}),
+		],
 		openingHoursSpecification: [openingHoursJsonLd()],
 		sameAs: [
 			siteConfig.googleBusinessUrl,
@@ -341,8 +359,8 @@ export function serviceJsonLd(service: ContentDocument) {
 		serviceType: service.category ?? "Service",
 		category: service.category,
 		areaServed: [
-			{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
-			{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+			santaCruzCountyJsonLd,
+			...locationsByCounty("Santa Clara County").map(serviceAreaPlaceJsonLd),
 		],
 		provider: { "@id": businessId },
 		brand: { "@type": "Brand", name: siteConfig.name },
@@ -421,8 +439,7 @@ export function serviceAreaPlaceJsonLd(location: ServiceAreaLocation) {
 
 export function serviceAreasJsonLd() {
 	return [
-		{ "@type": "AdministrativeArea", name: "Santa Cruz County, California" },
-		{ "@type": "AdministrativeArea", name: "Santa Clara County, California" },
+		santaCruzCountyJsonLd,
 		...serviceAreaLocations.map(serviceAreaPlaceJsonLd),
 	]
 }
