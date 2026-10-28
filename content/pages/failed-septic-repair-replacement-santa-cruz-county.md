@@ -1,5 +1,6 @@
 ---
 title: "Failed Septic Repair & Replacement, Santa Cruz County"
+heroTitle: Failed Septic System Help
 description: >-
   Septic backup, drain field, and failed system help in Santa Cruz County,
   from on-site assessment to repair or replacement.
