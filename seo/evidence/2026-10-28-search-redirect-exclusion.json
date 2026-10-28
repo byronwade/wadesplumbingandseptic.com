@@ -1,0 +1,56 @@
+{
+	"date": "2026-10-28",
+	"item": "Exclude retired redirect source URLs from site search",
+	"classification": "MOCK_VERIFIED",
+	"scope": "Local production build, real content inventory and browser proof. No live indexing, ranking or lead-lift claim.",
+	"implementation": {
+		"redirectPolicy": "One shared routing configuration, reused by Next and the server search builder",
+		"filter": "Exclude literal unconditional redirect sources after document scoring",
+		"noindexPolicy": "Keep the three live campaign pages searchable; keep existing utility exclusions",
+		"businessFactsChanged": false,
+		"contentChanged": false
+	},
+	"acceptance": {
+		"npm ci": "PASS, exit 0; five existing high advisories",
+		"npm run lint": "PASS, exit 0",
+		"npm run typecheck": "PASS, exit 0; repeated after restoring generated next-env.d.ts",
+		"npm run seo:check": "PASS, exit 0; TAP 205 passed, 0 failed",
+		"npm run build": "PASS, exit 0; 566 generated pages",
+		"commandsPassed": 5,
+		"commandsFailed": 0
+	},
+	"regression": {
+		"before": "Fails on retired engineered-septic landing page in actual inventory",
+		"after": "137 passed, 0 failed; existing search quality suite also passes",
+		"documentsBefore": 282,
+		"documentsAfter": 281,
+		"removed": ["/engineered-septic-systems-santa-cruz-county"],
+		"remainingFieldsAndOrderIdentical": true,
+		"redirectDefinitionsUnchanged": 123,
+		"compiledRedirectsUnchanged": 124,
+		"compiledRedirectMatchesInFinalIndex": 0,
+		"builtApiMatchesInventory": true
+	},
+	"comparison": {
+		"passed": 2547,
+		"failed": 0,
+		"htmlPages": 554,
+		"crawlerFiles": 4,
+		"pageTextLinksMetadataJsonLdUnchanged": true,
+		"llmsSitemapRobotsUnchanged": true,
+		"browserStatesBeforeAndAfter": 8,
+		"widths": [1280, 390],
+		"themes": ["light", "dark"],
+		"axeViolations": 0,
+		"pageErrors": 0,
+		"horizontalOverflowStates": 0,
+		"finalScreenshotsReviewed": 4,
+		"focusKeyboardSelectionAndCanonicalNavigation": "PASS"
+	},
+	"limitations": [
+		"Parameterized legacy routes currently match no generated search URLs. Production filtering covers literal redirect sources; all compiled patterns were checked against the full final inventory.",
+		"An initial SEO run flagged legacy routing strings when the shared configuration was placed under lib. Moving routing definitions to config resolved this without changing validators.",
+		"Shared-kit reservation failed on its existing missing configured root; notebook ownership was recorded and shared configuration was left unchanged."
+	],
+	"evidence": "Hobby scheduler job wades-plumbing-hobby-1028-1139: per-command receipts, before/after inventory, compiled routes, HTML/browser comparisons and reviewed screenshots"
+}
