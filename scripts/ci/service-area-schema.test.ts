@@ -36,7 +36,15 @@ test("business schema links every existing mapped community exactly once", () =>
 		)
 		assert.equal(matches.length, 1, location.name)
 	}
-	assert.equal(areas.length, serviceAreaLocations.length + 2)
+	// One countywide entry (Santa Cruz) plus every mapped community.
+	assert.equal(areas.length, serviceAreaLocations.length + 1)
+	assert.ok(
+		!areas.some(
+			(area) =>
+				(area as { name?: string }).name === "Santa Clara County, California",
+		),
+		"Santa Clara is covered by selected communities, never countywide",
+	)
 })
 
 test("community schema reuses its existing URL, name and county", () => {

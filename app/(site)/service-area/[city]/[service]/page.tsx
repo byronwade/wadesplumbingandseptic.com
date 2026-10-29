@@ -94,7 +94,7 @@ export default async function CityServicePage({
 			{ name: location.name, path: location.href },
 			{ name: page.serviceTitle, path: pathname },
 		]),
-		...(page.faq?.length ? [faqPageJsonLd(page.faq)] : []),
+		...(faqSchema ? [faqSchema] : []),
 	]
 
 	return (
