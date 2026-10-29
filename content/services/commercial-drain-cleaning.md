@@ -46,8 +46,6 @@ Investing in [commercial plumbing maintenance](/service-offerings/commercial-plu
 
 Choosing Wade's Plumbing & Septic means partnering with a team of licensed professionals dedicated to quality and efficiency. Serving Santa Cruz County, we bring local expertise and responsive service to every job. If you're experiencing drain issues or want to discuss a preventative maintenance plan, contact us today to ensure your business operates smoothly. Trust Wade's Plumbing & Septic for reliable commercial drain cleaning solutions.
 
-Keep Your Business Running Smoothly
-
 ## Efficient Commercial Drain Cleaning in Santa Cruz County
 
 Ensure uninterrupted operations with our expert drain cleaning services tailored for commercial environments.

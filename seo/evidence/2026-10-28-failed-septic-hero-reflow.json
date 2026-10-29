@@ -1,0 +1,148 @@
+{
+	"schema_version": 1,
+	"run_id": "wades-plumbing-1028-110945-codex-1",
+	"collected_at": "2026-10-28T15:21:00.200650+00:00",
+	"source": "REPOSITORY_FACT",
+	"source_url_or_tool": "Local production builds, actual Markdown/parser comparison and Chromium Playwright/axe",
+	"scope": "Failed-septic page visible hero heading and existing ContentPage heroTitle fallback",
+	"classification": "MOCK_VERIFIED",
+	"redaction": "No credentials, customer data or provider responses captured",
+	"retention_class": "Committed compact local verification summary",
+	"baseline_commit": "e586f102daa3892d9e3e80e4df6d30d0942441aa",
+	"changes": [
+		"Use existing heroTitle frontmatter in ContentPage, falling back to document.title",
+		"Reuse existing phrase Failed Septic System Help for the visible hero and breadcrumb",
+		"Keep full search/schema/card title and every existing business fact"
+	],
+	"acceptance": {
+		"required_commands_passed": 5,
+		"required_commands_failed": 0,
+		"commands": [
+			{
+				"exit_code": 0,
+				"command": "npm ci",
+				"duration_seconds": 156.0779799
+			},
+			{
+				"command": "npm run lint",
+				"exit_code": 0,
+				"duration_seconds": 13.6025387,
+				"started": "2026-10-28T15:17:15.7811894Z"
+			},
+			{
+				"command": "npm run typecheck",
+				"duration_seconds": 11.9473007,
+				"exit_code": 0,
+				"started": "2026-10-28T15:17:30.2420152Z"
+			},
+			{
+				"exit_code": 0,
+				"duration_seconds": 35.3743128,
+				"started": "2026-10-28T15:17:42.6890992Z",
+				"command": "npm run seo:check"
+			},
+			{
+				"exit_code": 0,
+				"started": "2026-10-28T15:18:18.6801609Z",
+				"duration_seconds": 47.4862883,
+				"command": "npm run build"
+			},
+			{
+				"command": "npm run typecheck",
+				"duration_seconds": 6.1112732,
+				"started": "2026-10-28T15:19:42.3288664Z",
+				"exit_code": 0
+			}
+		],
+		"seo_tests_passed": 205,
+		"seo_tests_failed": 0,
+		"build_pages": 566
+	},
+	"parser": {
+		"documents": 159,
+		"passed": 890,
+		"failed": 0,
+		"failures": []
+	},
+	"output_and_browser": {
+		"passed": 3675,
+		"failed": 0,
+		"failures": [],
+		"artifacts": 558,
+		"changedText": ["failed-septic-repair-replacement-santa-cruz-county.html"],
+		"browserStates": 36,
+		"targetH1SplitsBefore": 2,
+		"targetH1SplitsAfter": 0
+	},
+	"browser": {
+		"states_before": 18,
+		"states_after": 18,
+		"routes": [
+			"failed-septic-repair-replacement-santa-cruz-county",
+			"contact",
+			"should-you-call-a-plumber-or-fix-it-yourself"
+		],
+		"viewports": ["1280px at 100%", "390px at 100%", "320px at 200%"],
+		"themes": ["light", "dark"],
+		"axe_violations": 0,
+		"page_errors": 0,
+		"overflow_states": 0,
+		"font_sizes_unchanged": true,
+		"target_h1_splits_before": 2,
+		"target_h1_splits_after": 0,
+		"unchanged_preexisting_other_heading_splits_after": 2
+	},
+	"preserved": [
+		"Body text and frontmatter other than added heroTitle",
+		"Dates, reading times, FAQ, CTA, recommendation cards/order",
+		"All 554 built HTML metadata, links and JSON-LD",
+		"llms.txt, llms-full.txt, sitemap.xml and robots.txt"
+	],
+	"screenshots": [
+		{
+			"file": "after-0-1280-100-dark.png",
+			"sha256": "e93bcc2f863735ef7678a3a49abaa1e684eaea9adb1727f2fd0ab170bafa1f5c",
+			"visually_reviewed": true
+		},
+		{
+			"file": "after-0-1280-100-light.png",
+			"sha256": "38e73bcd1564390ff7f32ec6db9648363964fdcc7f7e3b8b0c120e253df233c8",
+			"visually_reviewed": true
+		},
+		{
+			"file": "after-0-320-200-dark.png",
+			"sha256": "5d03d1a3b9929d59f3400a9d2ee53c8e83bc4faca66de505204b697f062727c4",
+			"visually_reviewed": true
+		},
+		{
+			"file": "after-0-320-200-light.png",
+			"sha256": "bf7023b046f2dbf288171d49a58d9412007e615d13dd1c6beaf7327f427eda69",
+			"visually_reviewed": true
+		},
+		{
+			"file": "after-0-390-100-dark.png",
+			"sha256": "7a793af2a42c630544ea9d1ee31218fca4d8524e85c85d65459941123bad86c0",
+			"visually_reviewed": true
+		},
+		{
+			"file": "after-0-390-100-light.png",
+			"sha256": "a25cb4a5895ac05651445c28bf0b01fe5857d3a343e637874c0d5e14dbeec69a",
+			"visually_reviewed": true
+		}
+	],
+	"limitations": [
+		"Local proof only; no production, indexing, ranking or lead-lift claim",
+		"Five high dependency advisories reported by npm ci; no dependency changes",
+		"Shared-kit reservation failed on an existing missing configured root; notebook claim used without changing shared settings",
+		"No independent-agent review claimed"
+	],
+	"evidence_directory": "C:\\Users\\bcw19\\agent-tools\\hobby-scheduler\\jobs\\wades-plumbing-hobby-1028-1109",
+	"sha256": {
+		"comparison.json": "1321da3313e9ef5df5eec74e2fa3dcf5c04f8404672a9fbb4f1d2c2f3d50fdd9",
+		"parser-proof.json": "34960fcee253a67248b47238823787419f10e373865067146c879d63b1dbe445",
+		"before-browser.json": "5ae313cc4c501bd90d1bea7d87b79009db8fe3e495165a603120d65a9fccbc82",
+		"after-browser.json": "544f14daca3c84a721737e4aa6def239995f5a7310ac6c8fe9347bc95b745167",
+		"before-html.json": "e44cd87d7682173cb9da5073a647e24b965edbbd410459893e61206f3c4255f1",
+		"after-html.json": "fba833726818d21c90bb72d990c93399acbaae746fc95791bde7ac4046eb25c1"
+	}
+}

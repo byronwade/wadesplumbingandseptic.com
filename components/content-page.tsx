@@ -161,7 +161,7 @@ export function ContentPage({
 				}
 				parent={parent}
 				showActions={!isPost}
-				title={document.title}
+				title={document.heroTitle ?? document.title}
 				variant={isPost ? "article" : "page"}
 			/>
 

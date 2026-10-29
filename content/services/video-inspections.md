@@ -74,8 +74,6 @@ Yes, our equipment is designed to safely navigate your pipes without causing dam
 
 Choosing Wade's Plumbing & Septic means choosing reliability and expertise. Serving Santa Cruz County, California, we are committed to delivering prompt, professional service with a focus on long-term solutions. Contact us today to schedule your **sewer line video inspection** and ensure the health of your plumbing system. Trust our licensed and experienced team to keep your home running smoothly.
 
-Proactive Maintenance
-
 ## Ensure Clear Pipes with Video Inspections
 
 Experience peace of mind with our state-of-the-art video inspections, ensuring your plumbing system in Santa Cruz County operates flawlessly.

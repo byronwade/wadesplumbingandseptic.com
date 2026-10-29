@@ -64,10 +64,7 @@ export function PageViewsStat({
 					{formatCount(trendingScore)}{" "}
 					{trendingScore === 1 ? "reader" : "readers"} this week
 					{showUnique ? (
-						<span className="opacity-70">
-							{" "}
-							· {formatCount(uniqueViews)} unique
-						</span>
+						<span> · {formatCount(uniqueViews)} unique</span>
 					) : null}
 				</span>
 			</p>

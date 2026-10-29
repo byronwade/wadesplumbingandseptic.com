@@ -24,7 +24,7 @@ export type ContentImage = {
 export type ContentDocument = {
 	slug: string
 	title: string
-	/** Optional shorter service heading; metadata and related cards keep title. */
+	/** Optional shorter hero heading; metadata and related cards keep title. */
 	heroTitle?: string
 	description: string
 	content: string

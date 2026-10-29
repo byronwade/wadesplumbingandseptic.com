@@ -104,8 +104,6 @@ Before the rainy season, ensure your septic system is inspected and maintained t
 
 Contact Wade's Plumbing & Septic for expert advice and services to protect your septic system during floods.
 
-Stay Prepared
-
 ## Septic Safety in Floods: Protect Your Santa Cruz Home
 
 Ensure your septic system remains safe and functional during flood conditions with our expert services.

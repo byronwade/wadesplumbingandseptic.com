@@ -2,6 +2,7 @@ import "server-only"
 
 import { cacheLife, cacheTag } from "next/cache"
 
+import { redirectSourcePaths } from "@/config/redirects"
 import {
 	cityServicePages,
 	cityServicePath,
@@ -479,6 +480,7 @@ export async function getSearchIndex(): Promise<SearchDocument[]> {
 		...cityServiceDocs,
 		...navDocs,
 	]) {
+		if (redirectSourcePaths.has(document.href)) continue
 		const existing = deduped.get(document.href)
 		if (!existing || (document.popularity ?? 0) > (existing.popularity ?? 0)) {
 			deduped.set(document.href, document)

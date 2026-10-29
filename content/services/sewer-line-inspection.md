@@ -94,8 +94,6 @@ We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitat
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-Stay Ahead of Plumbing Issues
-
 ## Ensure Home Safety with Santa Cruz Sewer Inspections
 
 Safeguard your home with our advanced sewer inspection services, identifying potential issues before they become costly repairs.

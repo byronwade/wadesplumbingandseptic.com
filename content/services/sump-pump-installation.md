@@ -69,8 +69,6 @@ With years of experience and a commitment to quality, Wade's Plumbing & Septic i
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including Santa Cruz, Capitola and Scotts Valley.
 
-Protect Your Home
-
 ## Expert Sump Pump Installation
 
 Ensure your Santa Cruz County home stays dry and safe with our reliable sump pump installation services.

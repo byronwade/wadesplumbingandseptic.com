@@ -96,8 +96,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumbing & Septic is your trusted partner for all fixture installation needs in Santa Cruz County, CA.
 
-Transform Your Living Space
-
 ## Upgrade Your Home with Expert Fixture Installations in Santa Cruz
 
 Enhance the functionality and aesthetics of your home with our professional fixture installation services, tailored for Santa Cruz County, CA.

@@ -86,8 +86,6 @@ We are fully licensed and insured, holding California contractor license CSLB #1
 
 Whether you're in the heart of Santa Cruz or the surrounding communities, you can trust Wade's Plumbing & Septic for reliable and prompt gas line repair services.
 
-Ensure Safety and Functionality
-
 ## Reliable Gas Line Repair for Santa Cruz County Homes
 
 Trust Wade's Plumbing & Septic for expert gas line repair services, ensuring the safety and efficiency of your home in Santa Cruz County.
