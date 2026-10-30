@@ -3,7 +3,8 @@
  * resolve to live posts. Shared by the route and the sitemap.
  */
 export const postCategoryAliases: Record<string, string[]> = {
-	"santa-cruz-plumbing": ["Plumbing Maintenance", "Santa Cruz Plumbing"],
+	// The first label names the archive, so it must differ from every other slug's.
+	"santa-cruz-plumbing": ["Santa Cruz Plumbing", "Plumbing Maintenance"],
 	"septic-issues-in-santa-cruz-county": [
 		"Septic Guidance",
 		"Septic Maintenance",

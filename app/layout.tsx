@@ -8,7 +8,7 @@ import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
 import { ThemeHotkey } from "@/components/theme-hotkey"
 import { getCollection } from "@/lib/content"
-import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
+import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 /*
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL(siteConfig.url),
 	title: {
 		default: "Wade's Plumbing & Septic",
-		template: "%s | Wade's Plumbing & Septic",
+		template: `%s${TITLE_SUFFIX}`,
 	},
 	description: siteConfig.description,
 	applicationName: siteConfig.name,
