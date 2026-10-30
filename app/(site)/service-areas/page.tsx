@@ -138,6 +138,8 @@ export default function ServiceAreasPage() {
 									name,
 									href,
 									county,
+									// The foothill summary: coverage there depends on the address.
+									byAddress: county === "Santa Clara County",
 								}),
 							)}
 						/>

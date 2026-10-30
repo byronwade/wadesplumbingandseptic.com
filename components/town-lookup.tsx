@@ -8,7 +8,14 @@ import { CallButton } from "@/components/call-button"
 import { MapPin } from "@/components/icons"
 import { contactInfo } from "@/lib/contact"
 
-type Town = { slug: string; name: string; href: string; county: string }
+type Town = {
+	slug: string
+	name: string
+	href: string
+	county: string
+	/** Served only at some addresses, so the answer is never a plain yes. */
+	byAddress: boolean
+}
 
 const normalize = (value: string) =>
 	value
@@ -47,29 +54,46 @@ export function TownLookup({ towns }: { towns: Town[] }) {
 			/>
 			<div aria-live="polite" className="mt-4 text-sm">
 				{!search ? null : matches.length ? (
-					<ul className="flex flex-col gap-[min(0.5rem,8px)]">
-						{matches.map((town) => (
-							<li key={town.slug}>
-								<Link
-									prefetch={false}
-									className="town-link"
-									href={town.href as Route}
-								>
-									<MapPin
-										aria-hidden="true"
-										className="text-primary size-4 shrink-0"
-									/>
-									<span className="min-w-0">
-										Yes, we serve {town.name}
-										<span className="text-muted-foreground font-normal">
-											{" "}
-											({town.county})
+					<div className="flex flex-col gap-[min(0.75rem,12px)]">
+						<ul className="flex flex-col gap-[min(0.5rem,8px)]">
+							{matches.map((town) => (
+								<li key={town.slug}>
+									<Link
+										prefetch={false}
+										className="town-link"
+										href={town.href as Route}
+									>
+										<MapPin
+											aria-hidden="true"
+											className="text-primary size-4 shrink-0"
+										/>
+										<span className="min-w-0">
+											{town.byAddress
+												? `Parts of ${town.name}, by address`
+												: `Yes, we serve ${town.name}`}
+											<span className="text-muted-foreground font-normal">
+												{" "}
+												({town.county})
+											</span>
 										</span>
-									</span>
-								</Link>
-							</li>
-						))}
-					</ul>
+									</Link>
+								</li>
+							))}
+						</ul>
+						{matches.some((town) => town.byAddress) ? (
+							<>
+								<p>
+									Coverage there depends on the address. Call with the address
+									to confirm.
+								</p>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									size="lg"
+								/>
+							</>
+						) : null}
+					</div>
 				) : (
 					<div className="flex flex-col gap-[min(0.75rem,12px)]">
 						<p>
