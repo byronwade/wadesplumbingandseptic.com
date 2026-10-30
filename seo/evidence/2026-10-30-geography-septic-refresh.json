@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-geography-septic-refresh-2026-10-30",
+	"collected_at": "2026-10-30T21:00:00+00:00",
+	"source": "scc-lamp-ordinance-site-evaluation",
+	"source_url_or_tool": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "5a27fa22f0c639fdb86930374962cc9d7d421d2c1b2d3b2ece2b91fc1db51a08",
+	"payload": {
+		"post": "content/posts/how-santa-cruz-countys-unique-geography-affects-septic-systems.md",
+		"observations": [
+			{
+				"id": "scc-site-evaluation",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/SiteEvaluation.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Site evaluation by owner hired qualified professional with Environmental Health: parcel record review, site visit, soil profile study (usually backhoe excavation 10 feet below anticipated trench bottom), percolation tests, groundwater and seasonal water table determinations during rainy season; technical report required for dispersal field on slopes over 30 percent; not all components required if prior data still relevant; EH says which components are required after the first two steps.",
+				"inference_limit": "County program page; does not set separation distances.",
+				"collected_at": "2026-10-30T21:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-ordinance-slopes-karst",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "7.38.130(F) no dispersal on slopes over 30 percent for new development; replacement 30 to 50 percent with approved slope stability report; graded slopes from over 30 percent do not count. 7.38.095 replacement on 30 to 50 percent slopes needs soils at least seven feet deep and a slope stability report. 7.38.120(F) technical report by certified engineering geologist or registered geologist for slopes over 30 percent or instability risk; no component within 100 feet of unstable land mass unless geotechnical report approves. 7.38.120(D) soils over 40 percent clay unacceptable. 7.38.120(E) karst: geologist evaluates 200 feet around dispersal, 100 feet from sinkholes, 250 feet from wells and surface water for fractured formations.",
+				"inference_limit": "Ordinance text dated 8.2.2021 in LAMP Appendix A; site specific approvals by the Health Officer.",
+				"collected_at": "2026-10-30T21:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-ordinance-groundwater",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "7.38.120(B) wet weather observation only after cumulative rainfall reaches 60 percent of mean annual and six inches in prior 30 days; piezometers may be required; may be waived for repairs and in dry winters if a qualified professional estimates seasonal high level. 7.38.091(C) extension to next rainy season when rainfall inadequate. 7.38.150(B)(9) table: conventional new system over 100 feet from stream 1 to 5 MPI not permitted in nitrate concern area, 20 feet outside; 5 to 29.9 MPI 8 feet; 30 to 60 MPI 5 feet; enhanced treatment mostly 2 feet (4 feet repair at 25 to 50 feet stream setback); footnote a enhanced treatment with nitrogen reduction for new, repaired and replacement systems in soils faster than 5 MPI in nitrate concern areas. 7.38.130(E) trench percolation 1 to 60 MPI in first three feet.",
+				"inference_limit": "Table values summarized with examples only; full table governs.",
+				"collected_at": "2026-10-30T21:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-ordinance-nitrate-setbacks",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "7.38.030(T2) nitrate concern areas include San Lorenzo River Watershed, North Coast Water Supply Watersheds, Valencia Creek Watershed and La Selva Beach area. 7.38.095 watercourse setback over 100 feet if possible, seasonal drainage way at least 25 feet. 7.38.042(G) undeveloped parcel on slopes over 30 percent or within 100 feet of a well or water body prohibited; 7.38.043 larger setbacks to public water wells and intakes.",
+				"inference_limit": "Ordinance text; mapped boundaries kept by the Director of Environmental Health.",
+				"collected_at": "2026-10-30T21:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed unsourced claims about saltwater intrusion and coastal erosion affecting septic systems, a reference to alternative solutions post 2020, trusted, expert, fast response and guarantee claims, a city list, a duplicate CTA block and customer section heading with no reviews, a templated FAQ, off-topic tags and two AI generated inline images; corrected the hero alt text to the photo (drainage pipe and excavator boom); retitled within 60 characters; rebuilt around the county ordinance and site evaluation rules. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T21:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}

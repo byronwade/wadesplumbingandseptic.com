@@ -579,79 +579,49 @@
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"to": "/what-you-need-to-know-about-engineered-septic-systems",
-			"anchor": "engineered septic systems",
+			"anchor": "engineered or enhanced treatment systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-offerings/septic-tank-maintenance-and-care",
-			"anchor": "Septic Tank Maintenance:",
+			"to": "/septic-system-types-santa-cruz",
+			"anchor": "septic system types",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
-			"anchor": "Leach Field Repair:",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
-			"anchor": "Septic Troubleshooting:",
+			"anchor": "septic troubleshooting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"to": "/service-offerings/septic-tank-leach-field-repair-and-replacement",
+			"anchor": "leach field repair",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "Engineered Septic Installation:",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
-			"anchor": "Ben Lomond",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
-			"anchor": "Boulder Creek",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"to": "/service-areas",
-			"anchor": "main service-area overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
