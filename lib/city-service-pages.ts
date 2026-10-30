@@ -371,3 +371,21 @@ export function getCityServiceLinksForHub(hubPathname: string) {
 			cityName: location.name,
 		}))
 }
+
+/** The city spokes for one service page, so the service links to them. */
+export function getCityServiceLinksForService(serviceSlug: string) {
+	return cityServicePages
+		.filter((page) => page.serviceSlug === serviceSlug)
+		.flatMap((page) => {
+			const location = getCityLocation(page.citySlug)
+			return location
+				? [
+						{
+							cityName: location.name,
+							href: cityServicePath(page.citySlug, page.serviceSlug),
+							title: page.serviceTitle,
+						},
+					]
+				: []
+		})
+}
