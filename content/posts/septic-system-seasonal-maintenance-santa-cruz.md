@@ -28,7 +28,7 @@ Septic care does not need to happen every season, but timing matters in Santa Cr
 
 This is the best window for anything that involves digging or opening the system.
 
-- **Schedule inspections and repairs while the soil is dry.** Work in dry ground is easier, and it avoids the extra erosion control steps the county requires for septic work between October 15 and April 15.
+- **Schedule inspections and repairs while the soil is dry.** Dry ground is easier to work in. If an installation or replacement will leave bare soil, doing it before October 15 also avoids the county's rainy season erosion control requirements, which apply through April 15.
 - **Check lids, risers and the effluent filter.** Loose lids let rainwater into the tank, and a clogged [effluent filter](/service-offerings/septic-filter-cleaning-and-replacement) can back up into the house during heavy use.
 - **Test pumps and alarms.** If your system has a pump tank, make sure the [high water alarm](/service-offerings/septic-tank-alarm-installation) works before storms arrive.
 - **Redirect water away from the drainfield.** EPA says to keep roof drains, sump pumps and other rainwater drainage away from the drainfield, because extra water slows or stops treatment. Fall is a good time to check gutters and downspouts.
@@ -59,7 +59,7 @@ Our [rainy season septic and drain prep guide](/rainy-season-septic-and-drain-pr
 
 ### When is the best time of year for septic work in Santa Cruz County?
 
-Late summer and early fall, while the soil is dry and before the county's October 15 to April 15 rainy season. Wet ground makes digging harder and brings added erosion control requirements.
+Late summer and early fall, while the soil is dry and before the county's October 15 to April 15 rainy season. Wet ground makes digging harder, and installation work that leaves bare soil in that period needs county erosion control measures.
 
 ### How often should a septic system be inspected?
 
