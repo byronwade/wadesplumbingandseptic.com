@@ -1,5 +1,5 @@
 ---
-title: "Plumber or DIY? How to Decide, Including Permits and License Rules"
+title: "Plumber or DIY? How to Decide, Including Permits"
 description: >-
   Which plumbing repairs homeowners can usually handle, which ones need a
   plumber, when Santa Cruz County requires a plumbing permit, and what California

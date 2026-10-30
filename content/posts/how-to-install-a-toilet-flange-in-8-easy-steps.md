@@ -1,5 +1,5 @@
 ---
-title: "How to Replace a Toilet Flange: Steps, Height and When to Call"
+title: "How to Replace a Toilet Flange: Steps and When to Call"
 description: >-
   How to tell a toilet flange is failing, repair rings versus full replacement,
   step by step installation with manufacturer specs, and when to call a plumber.

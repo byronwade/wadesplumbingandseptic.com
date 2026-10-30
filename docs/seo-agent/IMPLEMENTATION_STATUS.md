@@ -1488,3 +1488,9 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Scope: added a "Frequently Asked Questions" section (four questions each) to all 30 existing city pages under `content/pages/service-area/`, placed before each page's closing call to action, and emitted FAQPage JSON-LD for those pages from that section (the same path About Us already uses). Every answer restates claims already present in the same file, so assistants and search engines get short, quotable answers. No new URL, service, price, hour, license or local fact. Added `ci:city-faq` to `seo:check`.
 - Verification: `npm run typecheck`, `lint`, `format:check`, `seo:check` exit 0; `ci:city-faq` 30 passed. Local production build crawled: 286 sitemap URLs return 200 with one H1 each and valid JSON-LD; all 30 city pages emit FAQPage.
 - Truth state: `MOCK_VERIFIED` local build only. Copy drafted from each page's own text for Byron to review; no live, ranking or indexing claim.
+
+## 2026-10-30: Guide titles within 60 characters
+
+- Scope: shortened the `title` of the 9 guides over 60 characters so search results show them whole, keeping each title's meaning; updated one link whose anchor repeated an old title. No URL, date, body, fact or frontmatter other than `title` changed. Added a check to `ci:seo-meta` that fails on any guide title over 60 characters.
+- Verification: `npm run seo:check` (with the new check), `ci:dashes`, `ci:markdown` and `format:check` exit 0; the new check fails on the old titles and passes on the new ones.
+- Truth state: `MOCK_VERIFIED` local checks only. Titles shortened at Byron's request; no live, ranking or indexing claim.

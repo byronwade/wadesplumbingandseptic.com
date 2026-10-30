@@ -1,5 +1,5 @@
 ---
-title: Optimize Septic System Health with Seasonal Maintenance in Santa Cruz
+title: "Seasonal Septic Maintenance in Santa Cruz County"
 description: >-
   Regular septic maintenance keeps your Santa Cruz system efficient and
   long-lasting. Seasonal check-ups can prevent costly repairs and system

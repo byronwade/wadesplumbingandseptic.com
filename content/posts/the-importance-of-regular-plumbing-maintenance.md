@@ -1,5 +1,5 @@
 ---
-title: "A Home Plumbing Maintenance Checklist: Monthly, Yearly and Every Few Years"
+title: "Home Plumbing Maintenance Checklist: Monthly and Yearly"
 description: >-
   A simple plumbing maintenance schedule for Santa Cruz County homes, from
   monthly leak checks to water heater care, sewer lateral cleaning and septic

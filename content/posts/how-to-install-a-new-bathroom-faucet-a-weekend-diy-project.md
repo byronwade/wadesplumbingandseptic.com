@@ -1,5 +1,5 @@
 ---
-title: "How to Replace a Bathroom Faucet: Steps, Flow Rates and Lead Free Parts"
+title: "How to Replace a Bathroom Faucet: Steps and Lead Free Parts"
 description: >-
   How to choose a bathroom faucet that fits your sink, replace it step by step,
   check flow rate and lead free labels, fix common leaks, and know when to call.

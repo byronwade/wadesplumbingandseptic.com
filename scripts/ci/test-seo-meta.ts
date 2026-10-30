@@ -1,4 +1,7 @@
 import assert from "node:assert/strict"
+import { readdirSync, readFileSync } from "node:fs"
+
+import matter from "gray-matter"
 
 import {
 	OG_DESCRIPTION_MAX,
@@ -76,5 +79,16 @@ assert.deepEqual(documentTitle(longTitle), { absolute: longTitle })
 const named = "Careers at Wade's Plumbing & Septic"
 assert.deepEqual(documentTitle(named), { absolute: named })
 assert.deepEqual(home.title, "Santa Cruz Plumbing & Septic")
+
+// Guide titles are the search result headline, so they must fit what Google shows.
+for (const file of readdirSync("content/posts")) {
+	if (!file.endsWith(".md")) continue
+	const { data } = matter(readFileSync(`content/posts/${file}`, "utf8"))
+	const title = String(data.title ?? "")
+	assert.ok(
+		title.length <= TITLE_MAX,
+		`content/posts/${file}: title is ${title.length} characters, over ${TITLE_MAX}: ${title}`,
+	)
+}
 
 console.log("seo meta helpers ok")
