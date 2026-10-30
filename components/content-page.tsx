@@ -19,6 +19,7 @@ import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
 import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 
 import { ArticleAside } from "@/components/article-aside"
+import { CityServiceGuides } from "@/components/city-service-guides"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -208,6 +209,10 @@ export function ContentPage({
 			)}
 
 			{document.slug === "contact" ? <GoogleReviewInvite /> : null}
+
+			{isServiceArea ? (
+				<CityServiceGuides pathname={`/${document.slug}`} />
+			) : null}
 
 			{related ? <RelatedContentSectionsWithStats related={related} /> : null}
 			<ContentConversionCta

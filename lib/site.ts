@@ -83,5 +83,13 @@ export const resourceNavigation = [
 		href: "/compare/conventional-vs-engineered-septic",
 		label: "Septic System Comparison",
 	},
+	{
+		href: "/compare/hydro-jetting-vs-snaking",
+		label: "Hydro Jetting vs Snaking",
+	},
+	{
+		href: "/compare/repair-vs-replace-water-heater",
+		label: "Water Heater: Repair or Replace",
+	},
 	{ href: "/septic-solutions", label: "Septic Solutions" },
 ] as const

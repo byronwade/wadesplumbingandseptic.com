@@ -351,3 +351,23 @@ export function getNearbyCityLocations(slugs: string[]) {
 			Boolean(location),
 		)
 }
+
+/**
+ * The city × service spokes for one city hub page, by the hub's pathname.
+ * The hub links to them so they are reachable from the site, not only the
+ * sitemap.
+ */
+export function getCityServiceLinksForHub(hubPathname: string) {
+	const location = serviceAreaLocations.find(
+		(item) => item.href === hubPathname,
+	)
+	if (!location) return []
+
+	return cityServicePages
+		.filter((page) => page.citySlug === location.slug)
+		.map((page) => ({
+			title: page.serviceTitle,
+			href: cityServicePath(page.citySlug, page.serviceSlug),
+			cityName: location.name,
+		}))
+}
