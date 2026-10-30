@@ -144,7 +144,7 @@ export const siteRedirects: SiteRedirect[] = [
 	},
 	{
 		source: "/about-us/promotions",
-		destination: "/promotions",
+		destination: "/financing",
 		permanent: true,
 	},
 	{
@@ -159,9 +159,46 @@ export const siteRedirects: SiteRedirect[] = [
 	},
 	{
 		source: "/santa-cruz/water-heater-replacment",
-		destination: "/santa-cruz/water-heater-replacement",
+		destination: "/service-area/santa-cruz/water-heater-installation",
 		permanent: true,
 	},
+	// Category aliases that listed the same services as a main category.
+	...[
+		["residential-plumbing", "plumbing"],
+		["specialty-services", "plumbing"],
+		["commercial-plumbing", "commercial"],
+		["septic-services", "septic"],
+	].map(([alias, category]) => ({
+		source: `/service-category/${alias}`,
+		destination: `/service-category/${category}`,
+		permanent: true,
+	})),
+	// Expert tip archives that repeated the Plumbing Tips archive.
+	...["plumbing-maintenance", "santa-cruz-plumbing"].map((slug) => ({
+		source: `/category/${slug}`,
+		destination: "/category/plumbing-tips",
+		permanent: true,
+	})),
+	// WordPress-era landing pages, each replaced by a fuller page.
+	...[
+		["/santa-cruz", "/service-area/santa-cruz-ca-plumbing-septic-services"],
+		[
+			"/santa-cruz/santa-cruz-plumbers-near-me",
+			"/service-area/santa-cruz-ca-plumbing-septic-services",
+		],
+		["/santa-cruz/drain-clearing", "/service-area/santa-cruz/drain-cleaning"],
+		[
+			"/santa-cruz/water-heater-replacement",
+			"/service-area/santa-cruz/water-heater-installation",
+		],
+		[
+			"/santa-cruz/commercial-plumbing",
+			"/service-offerings/commercial-plumbing-maintenance",
+		],
+		["/san-jose", "/service-areas"],
+		["/monterey", "/service-areas"],
+		["/promotions", "/financing"],
+	].map(([source, destination]) => ({ source, destination, permanent: true })),
 	{
 		source: "/services/categories/:slug",
 		destination: "/service-category/:slug",

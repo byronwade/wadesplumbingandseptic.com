@@ -92,4 +92,10 @@ export const resourceNavigation = [
 		label: "Water Heater: Repair or Replace",
 	},
 	{ href: "/septic-solutions", label: "Septic Solutions" },
+	{
+		href: "/how-to-locate-trustworthy-plumbing-services-nearby",
+		label: "How to Choose a Plumber",
+	},
+	{ href: "/rebates", label: "Equipment Rebates" },
+	{ href: "/insurance-claims", label: "Insurance Claim Help" },
 ] as const
