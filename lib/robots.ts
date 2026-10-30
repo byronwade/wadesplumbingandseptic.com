@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next"
 
-/** Private or utility paths no crawler needs. */
+/**
+ * Private or utility paths no crawler needs. `/_next/` stays crawlable: it
+ * serves the CSS, JavaScript and fonts Google needs to render each page.
+ */
 export const crawlerDisallow = [
-	"/_next/",
 	"/api/",
 	"/thank-you",
 	"/contact-call-first",
