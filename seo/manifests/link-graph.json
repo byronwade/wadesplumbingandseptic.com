@@ -794,6 +794,30 @@
 		},
 		{
 			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic system maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/septic-system-components-santa-cruz",
+			"anchor": "septic system components",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"to": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"anchor": "water softener versus filter guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
 			"to": "/service-offerings/septic-tank-inspection-and-assessment",
 			"anchor": "septic inspections",
 			"classification": "MOCK_VERIFIED"
