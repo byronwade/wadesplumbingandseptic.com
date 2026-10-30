@@ -17,7 +17,6 @@ import {
 	serviceAreasJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
 
 const description =
 	"Interactive map of Wade's Plumbing & Septic coverage across Santa Cruz County and the mountain foothills into Los Gatos and Saratoga, generally west of Highway 101."
@@ -160,11 +159,10 @@ export default function ServiceAreasPage() {
 						"@context": "https://schema.org",
 						"@type": "Service",
 						name: "Plumbing and septic service areas",
-						provider: {
-							"@type": "Plumber",
-							"@id": businessId,
-							name: siteConfig.name,
-						},
+						// A reference to the sitewide business node. A typed Plumber
+						// here is a second LocalBusiness with no address or phone,
+						// which validators report as a markup error.
+						provider: { "@id": businessId },
 						areaServed: serviceAreasJsonLd(),
 					},
 				]}
