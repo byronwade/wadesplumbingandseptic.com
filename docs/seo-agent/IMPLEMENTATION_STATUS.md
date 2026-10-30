@@ -1462,6 +1462,12 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Verification: `npm run seo:check`, `format:check`.
 - Truth state: CSLB sources `LIVE_VERIFIED` on 2026-10-26 by direct fetch; county source reused from the merged plumber or DIY post; insured status is a first-party owner confirmation; site result `MOCK_VERIFIED`. Evidence: `seo/evidence/2026-10-26-choose-a-plumber-refresh.json`.
 
+## 2026-10-26: Plumbing maintenance checklist post refresh
+
+- Scope: substantive refresh of `/the-importance-of-regular-plumbing-maintenance` at its existing URL. Original date kept, `updated: 2026-10-26`. Retitled to a schedule-based checklist and corrected the hero alt text to the photo (pressure regulator and shutoff on a copper line). Rebuilt into monthly, quarterly, yearly and multi-year tasks sourced from the Energy Department (drain about a quart from a storage water heater every three months, 120°F setting, insulate hot water pipes), EPA WaterSense leak checks, Santa Cruz County Public Works (clean the sewer lateral at least every two years) and EPA septic care (inspect at least every three years), with a hot water drain caution, internal links to merged guides, FAQ and sources. Removed unsourced claims and generic filler. No new URL or service.
+- Verification: `npm run seo:check`, `format:check`.
+- Truth state: Energy Department and EPA sources `LIVE_VERIFIED` on 2026-10-26 by direct fetch; county source reused from merged posts fetched the same day; site result `MOCK_VERIFIED`. Evidence: `seo/evidence/2026-10-26-maintenance-checklist-refresh.json`.
+
 ## 2026-10-28: Failed-septic page hero reflow
 
 - Scope: fix the measured H1 word split at 320px with 200% text on the existing noindex failed-septic page. ContentPage now uses the already parsed heroTitle with document.title fallback, matching services. The shorter visible heading and breadcrumb reuse the existing phrase "Failed Septic System Help". Full SEO/schema/card titles, description, business facts, body, dates, FAQs, CTAs and recommendations remain unchanged. No new URL, claim or dependency.
