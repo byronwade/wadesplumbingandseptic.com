@@ -150,9 +150,9 @@ export function ProblemFinder({
 									) : null}
 								</div>
 
-								<div className="mt-auto flex flex-col gap-[min(0.5rem,8px)] sm:flex-row">
+								<div className="mt-auto flex flex-wrap gap-[min(0.5rem,8px)]">
 									<CallButton
-										className="w-full sm:w-auto"
+										className="w-full sm:w-auto sm:grow"
 										desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 										size="lg"
 									/>
@@ -160,7 +160,7 @@ export function ProblemFinder({
 										prefetch={false}
 										className={cn(
 											buttonVariants({ variant: "outline", size: "lg" }),
-											"w-full sm:w-auto",
+											"w-full sm:w-auto sm:grow",
 										)}
 										href="/contact"
 									>
