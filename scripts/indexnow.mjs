@@ -6,6 +6,9 @@
  *
  *   node scripts/indexnow.mjs --all                 every URL in the live sitemap
  *   node scripts/indexnow.mjs --changed BASE HEAD   pages whose content changed
+ *   node scripts/indexnow.mjs --since-last-deploy   pages changed since the
+ *     previous successful production deploy (needs GITHUB_REPOSITORY,
+ *     GITHUB_TOKEN and DEPLOYMENT_ID; falls back to the sitemap)
  *   add --dry-run to print the URLs without submitting them
  *
  * The key is public by design: search engines confirm it by fetching
@@ -63,6 +66,64 @@ export function changedUrls(base, head) {
 	]
 }
 
+/**
+ * Commit of the last production deploy that succeeded before this one. A
+ * deploy can ship several commits when Vercel skips the builds between them,
+ * so diffing against HEAD~1 alone would miss pages. Null when there is none.
+ */
+export async function previousDeploySha({
+	repo,
+	token,
+	currentId,
+	environment = "Production",
+	fetchImpl = fetch,
+}) {
+	const get = async (route) => {
+		const response = await fetchImpl(
+			`https://api.github.com/repos/${repo}${route}`,
+			{
+				headers: {
+					Accept: "application/vnd.github+json",
+					Authorization: `Bearer ${token}`,
+				},
+			},
+		)
+		if (!response.ok) {
+			throw new Error(`GitHub ${route} returned ${response.status}`)
+		}
+		return response.json()
+	}
+
+	// Newest first, so the deploys after this one in the list are older.
+	const deployments = await get(
+		`/deployments?environment=${encodeURIComponent(environment)}&per_page=30`,
+	)
+	const index = deployments.findIndex(
+		(deployment) => String(deployment.id) === String(currentId),
+	)
+	if (index === -1) return null
+	for (const deployment of deployments.slice(index + 1, index + 11)) {
+		const statuses = await get(
+			`/deployments/${deployment.id}/statuses?per_page=100`,
+		)
+		if (statuses.some((status) => status.state === "success")) {
+			return deployment.sha
+		}
+	}
+	return null
+}
+
+function isCommit(sha) {
+	try {
+		execFileSync("git", ["cat-file", "-e", `${sha}^{commit}`], {
+			stdio: "ignore",
+		})
+		return true
+	} catch {
+		return false
+	}
+}
+
 async function sitemapUrls() {
 	const response = await fetch(`${SITE}/sitemap.xml`)
 	if (!response.ok) throw new Error(`sitemap returned ${response.status}`)
@@ -98,9 +159,22 @@ async function main(argv) {
 		urls = await sitemapUrls()
 	} else if (args[0] === "--changed" && args[1] && args[2]) {
 		urls = changedUrls(args[1], args[2])
+	} else if (args[0] === "--since-last-deploy") {
+		const base = await previousDeploySha({
+			repo: process.env.GITHUB_REPOSITORY,
+			token: process.env.GITHUB_TOKEN,
+			currentId: process.env.DEPLOYMENT_ID,
+		})
+		if (base && isCommit(base)) {
+			console.log(`Comparing with the last production deploy, ${base}.`)
+			urls = changedUrls(base, "HEAD")
+		} else {
+			console.log("No earlier production deploy to compare; using sitemap.")
+			urls = await sitemapUrls()
+		}
 	} else {
 		console.error(
-			"usage: indexnow.mjs (--all | --changed BASE HEAD) [--dry-run]",
+			"usage: indexnow.mjs (--all | --changed BASE HEAD | --since-last-deploy) [--dry-run]",
 		)
 		process.exit(2)
 	}
