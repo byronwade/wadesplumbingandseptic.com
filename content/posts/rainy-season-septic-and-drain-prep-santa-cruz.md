@@ -69,7 +69,7 @@ Call for an evaluation if you notice any of these, during or after a storm:
 - Wastewater backing up into a tub, shower or floor drain
 - A septic alarm that sounds or stays lit
 
-If sewage is backing up into the house, stop using water as much as you can. Our posts on [signs your drain field needs professional repair](/signs-your-drain-field-needs-professional-repair) and [flood-proofing your septic system](/septic-safety-during-floods-santa-cruz) go deeper on what each symptom can mean. A [septic inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) or [troubleshooting visit](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) can find the cause, whether it is a clogged filter, a failed pump, a damaged pipe or a drainfield that needs [repair or replacement](/service-offerings/drainfield-repair-and-replacement).
+If sewage is backing up into the house, stop using water as much as you can. Our posts on [signs your drain field needs professional repair](/signs-your-drain-field-needs-professional-repair) and [septic safety during and after floods](/septic-safety-during-floods-santa-cruz) go deeper on what each symptom can mean. A [septic inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) or [troubleshooting visit](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services) can find the cause, whether it is a clogged filter, a failed pump, a damaged pipe or a drainfield that needs [repair or replacement](/service-offerings/drainfield-repair-and-replacement).
 
 ## After a heavy storm or flood
 

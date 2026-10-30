@@ -1562,62 +1562,44 @@
 		},
 		{
 			"from": "/septic-safety-during-floods-santa-cruz",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic and drain prep guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-safety-during-floods-santa-cruz",
+			"to": "/service-offerings/sump-pump-installation",
+			"anchor": "sump pump",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-safety-during-floods-santa-cruz",
 			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
-			"anchor": "septic failure signs",
+			"anchor": "septic troubleshooting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-safety-during-floods-santa-cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-safety-during-floods-santa-cruz",
+			"to": "/service-offerings/septic-tank-alarm-installation",
+			"anchor": "septic alarm installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-safety-during-floods-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "septic leak detection experts",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "sump pump installation services",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"anchor": "how county terrain affects septic systems",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-safety-during-floods-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "main service-area page",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
