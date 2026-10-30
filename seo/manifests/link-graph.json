@@ -950,50 +950,56 @@
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "local regulations",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County terrain affects septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
-			"to": "/septic-trouble-signs-santa-cruz",
-			"anchor": "blog on septic failure signs",
+			"to": "/septic-system-types-santa-cruz",
+			"anchor": "septic system types",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
-			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "engineered septic systems",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic system maintenance guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/what-you-need-to-know-about-engineered-septic-systems",
-			"anchor": "engineered septic planning checklist",
+			"anchor": "engineered septic system guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "septic compliance and permitting help",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/septic-replacement-santa-cruz",
-			"anchor": "septic system replacement service",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/new-septic-installations-santa-cruz",
-			"to": "/septic-system-seasonal-maintenance-santa-cruz",
-			"anchor": "seasonal maintenance tips",
+			"anchor": "septic replacement",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "main service-area overview",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1575,7 +1581,7 @@
 		{
 			"from": "/septic-safety-during-floods-santa-cruz",
 			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
-			"anchor": "efficient septic solutions",
+			"anchor": "how county terrain affects septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
