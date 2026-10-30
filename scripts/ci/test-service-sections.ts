@@ -93,7 +93,12 @@ const labeledBullets = parseServiceSections(
 assert.deepEqual(labeledBullets, [
 	{ text: "Tank Condition We inspect the tank.", label: "Tank Condition" },
 	{ text: "Pressure: Check the pressure.", label: "Pressure:" },
-	{ text: "Filter: Clean the filter.", label: "Filter:" },
+	{
+		text: "Filter: Clean the filter.",
+		label: "Filter:",
+		// Links render as links, so the authored line rides along.
+		markdown: "**[Filter](/services/filter):** Clean the `filter`.",
+	},
 	{ text: "Drainfield Check for odors.", label: "Drainfield" },
 	{ text: "Plain bullet." },
 	{ text: "Label only" },

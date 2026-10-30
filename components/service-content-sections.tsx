@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 import { Check, Siren } from "@/components/icons"
 
 import { HomeFaq } from "@/components/home-faq"
-import { MarkdownContent } from "@/components/markdown-content"
+import { MarkdownContent, MarkdownInline } from "@/components/markdown-content"
 import {
 	parseServiceSections,
 	type ServiceSection,
@@ -26,9 +26,15 @@ function BulletText({
 }) {
 	return (
 		<span
-			className={cn("leading-snug", className, item.label && "font-normal")}
+			className={cn(
+				"inline-links leading-snug",
+				className,
+				item.label && "font-normal",
+			)}
 		>
-			{item.label ? (
+			{item.markdown ? (
+				<MarkdownInline content={item.markdown} />
+			) : item.label ? (
 				<>
 					<strong className="font-bold">{item.label}</strong>
 					{item.text.slice(item.label.length)}
