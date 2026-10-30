@@ -26,7 +26,7 @@ Septic tank maintenance involves a series of inspections, cleanings, and adjustm
 - Pump and alarm testing for advanced systems
 - Drainfield evaluation
 
-Regular maintenance extends the life of your septic system, prevents blockages, and ensures compliance with local regulations. For more detailed guidance, visit our [Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide](/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide).
+Regular maintenance extends the life of your septic system, prevents blockages, and ensures compliance with local regulations. For more detailed guidance, visit our [septic tank care and maintenance guide](/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide).
 
 ## Signs You Need Septic Tank Maintenance
 

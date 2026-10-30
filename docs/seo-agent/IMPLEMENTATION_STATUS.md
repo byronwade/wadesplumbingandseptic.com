@@ -1489,6 +1489,12 @@ Human approval is required to create/link the separate Vercel sidecar project an
 - Verification: `npm run typecheck`, `lint`, `format:check`, `seo:check` exit 0; `ci:city-faq` 30 passed. Local production build crawled: 286 sitemap URLs return 200 with one H1 each and valid JSON-LD; all 30 city pages emit FAQPage.
 - Truth state: `MOCK_VERIFIED` local build only. Copy drafted from each page's own text for Byron to review; no live, ranking or indexing claim.
 
+## 2026-10-30: Guide titles within 60 characters
+
+- Scope: shortened the `title` of the 9 guides over 60 characters so search results show them whole, keeping each title's meaning; updated one link whose anchor repeated an old title. No URL, date, body, fact or frontmatter other than `title` changed. Added a check to `ci:seo-meta` that fails on any guide title over 60 characters.
+- Verification: `npm run seo:check` (with the new check), `ci:dashes`, `ci:markdown` and `format:check` exit 0; the new check fails on the old titles and passes on the new ones.
+- Truth state: `MOCK_VERIFIED` local checks only. Titles shortened at Byron's request; no live, ranking or indexing claim.
+
 ## 2026-10-30: Redirect duplicate and legacy pages, link the rest
 
 - Scope: at Byron's request, every sitemap page now has an internal link. Removed eight thin WordPress-era landing pages (`/santa-cruz` and four `/santa-cruz/*` pages, `/san-jose`, `/monterey`, `/promotions`) and 301 each to the fuller page that covers it (the Santa Cruz city page or its local service pages, the commercial maintenance service, `/service-areas`, `/financing`), including their `/lp/` and `/expert-tips/` forms so no request takes two hops. The four service category aliases and two tip archives that repeated Plumbing Tips 301 to their main archive and leave the sitemap; the one "Plumbing Maintenance" guide is filed under Plumbing Tips. Rebates, insurance claim help and the plumber checklist are linked from the footer, and Expert Tips links each topic archive. No business fact, price or service area changed; the removed pages held no fact the replacement pages lack.
