@@ -230,6 +230,24 @@
 		},
 		{
 			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/how-to-install-a-toilet-flange-in-8-easy-steps",
+			"anchor": "toilet flange guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
+			"to": "/rebates",
+			"anchor": "rebates page",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
 			"to": "/service-offerings/fixture-installation",
 			"anchor": "toilet and fixture installation",
 			"classification": "MOCK_VERIFIED"

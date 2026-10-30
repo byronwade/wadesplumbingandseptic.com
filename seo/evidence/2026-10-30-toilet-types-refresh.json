@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-toilet-types-refresh-2026-10-30",
+	"collected_at": "2026-10-30T18:30:00+00:00",
+	"source": "epa-cec-sb407-ada-toilets",
+	"source_url_or_tool": "https://www.epa.gov/system/files/documents/2024-05/ws-products-indoor-tank-type-toilets-v2-final-spec.pdf",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "f0d394ab6dcf502aef81d0220c0badf7c3c5f3f748b13ef7b472fb7a8b1523f7",
+	"payload": {
+		"post": "content/posts/5-types-of-toilets-how-to-choose-the-right-one-for-your-home.md",
+		"observations": [
+			{
+				"id": "iapmo-cec-toilets",
+				"source_url": "https://iapmo.org/newsroom/press-releases/important-notification-re-governor-brown-s-executive-order-cec-new-regulation",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "California Energy Commission regulations: toilets no more than 1.28 gallons per flush, effective January 1, 2016.",
+				"inference_limit": "Code body summary of the regulation; reused from the plumbing terms refresh fetched 2026-10-26.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-watersense-toilets",
+				"source_url": "https://www.epa.gov/watersense/residential-toilets",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Federal standard 1.6 gpf; WaterSense 1.28 or less; older toilets as much as 6 gpf; toilets nearly 30 percent of average indoor home water use.",
+				"inference_limit": "National figures.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-watersense-tank-spec-v2",
+				"source_url": "https://www.epa.gov/system/files/documents/2024-05/ws-products-indoor-tank-type-toilets-v2-final-spec.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Section 3.1 single flush max 1.28 gpf; Section 3.2 dual flush: neither mode may exceed 1.28 gpf; Section 4.1 must completely clear all test media in a single flush in at least four of five attempts; Section 1.0 toilets with user or plumber adjustable settings that override the rated volume are not eligible.",
+				"inference_limit": "Label specification, not a code requirement.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "ca-sb407-civil-code-1101",
+				"source_url": "https://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_0401-0450/sb_407_bill_20090915_enrolled.html",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Applies to property built and available for use on or before January 1, 1994; noncompliant toilet is one manufactured to use more than 1.6 gpf; single-family owners replace by January 1, 2017; from January 1, 2014 permit applicants for alterations or improvements replace noncompliant fixtures as a condition of final approval; from January 1, 2017 sellers disclose the requirement and any noncompliant fixtures.",
+				"inference_limit": "Enrolled bill text; exemptions in Section 1101.7 not summarized in the post.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "ada-2010-604-4",
+				"source_url": "https://www.access-board.gov/ada/#ada-604",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "2010 ADA Standards 604.4: water closet seat height 17 inches minimum and 19 inches maximum above the finish floor.",
+				"inference_limit": "Text read from the corada.com mirror of the 2010 ADA Standards because the Access Board page was truncated; applies to accessible facilities, cited in the post only as a reference height for homeowners.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Corrected an outdated 1.6 gallon single flush figure and an 0.8 and 1.6 gallon dual flush figure that exceed California limits; removed a 3.5 gallon older standard claim, utility bill savings claims, a fewer moving parts claim, a precision and care claim, a city list, a templated FAQ answer, off-topic tags and an inline stock image; corrected the hero alt text to the photo; added pressure assisted toilets, California Civil Code 1101.4, WaterSense testing, seat height and rough-in guidance, and links to the running toilet, flange and rebates pages. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T18:30:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
