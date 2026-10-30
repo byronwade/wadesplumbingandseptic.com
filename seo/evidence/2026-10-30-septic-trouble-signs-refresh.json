@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-trouble-signs-refresh-2026-10-30",
+	"collected_at": "2026-10-31T01:00:00+00:00",
+	"source": "epa-septic-pages",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-your-septic-system-works",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "fa629e5140e8441aaaa185e217a9276cf03db6b598cc8dd30f6ea14e5532fdda",
+	"payload": {
+		"post": "content/posts/septic-trouble-signs-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-how-it-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "All water leaves the house through one main drainage pipe into the tank; solids settle as sludge, oil and grease float as scum; compartments and a T-shaped outlet keep sludge and scum in the tank; effluent goes to the drainfield where soil treats it; an overloaded drainfield can flood, causing sewage to flow to the surface or back up into toilets and sinks.",
+				"inference_limit": "Federal homeowner guidance; the symptom table in the post is an interpretation labeled as starting points, not EPA text.",
+				"collected_at": "2026-10-31T01:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Pump if the bottom of the scum layer is within six inches of the outlet, the top of the sludge within 12 inches, or sludge and scum exceed 25 percent of liquid depth; mechanical systems generally inspected once a year.",
+				"inference_limit": "Federal homeowner guidance.",
+				"collected_at": "2026-10-31T01:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-why-maintain",
+				"source_url": "https://www.epa.gov/septic/why-maintain-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "A tank never pumped without problems may mean minimal use, a leaking tank, or a tank full of solids slowly migrating that may clog the drainfield; additives are not necessary and may decrease drainfield performance; many pumps and controls need replacement every 10 to 20 years; drainfields over 25 to 30 years old can develop a thickened biomat causing ponding, surfacing or backups.",
+				"inference_limit": "Federal homeowner guidance; page also lists dollar figures not repeated per site pricing policy.",
+				"collected_at": "2026-10-31T01:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-after-flood",
+				"source_url": "https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "After flooding the scum layer may lift and partially plug the outlet tee; if the system backs up into the house, check the tank first for outlet blockage.",
+				"inference_limit": "Reused from the flood safety refresh collected the same day.",
+				"collected_at": "2026-10-31T01:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed a news article source, a claim that lush grass means a septic leak, a home inspection section implying a full evaluation, expert, top-notch and costly repair claims, wording implying cleaning services, a templated seasonal tip, generic checklist, a city list, a duplicate call to action block, off-topic tags and two unrelated inline images; replaced an unrelated no swimming sign hero image with a septic alarm panel photo; retitled within 60 characters; rebuilt as a symptom guide on EPA guidance, noting the business does not pump tanks. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-31T01:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
