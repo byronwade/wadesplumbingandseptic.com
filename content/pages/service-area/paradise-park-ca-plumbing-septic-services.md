@@ -56,7 +56,7 @@ Paradise Park is entirely on onsite septic. Because homes sit along the San Lore
 
 ### How often should a seasonal Paradise Park cabin have its septic tank pumped?
 
-A Paradise Park cabin used eight weekends a year still needs periodic pumping, but over-pumping a lightly used tank wastes money. Wade's bases pumping intervals on how the home is actually used.
+A Paradise Park cabin used eight weekends a year still needs periodic pumping, but over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used. Wade's does not pump tanks, so book the pumping itself with a septic pumping company.
 
 ### Why do Paradise Park drains run slow in winter?
 
