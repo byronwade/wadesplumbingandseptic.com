@@ -59,6 +59,65 @@ function withoutNode<T extends { node?: unknown }>(props: T): Omit<T, "node"> {
 	return rest
 }
 
+function MarkdownLink({
+	href = "",
+	children,
+	...rest
+}: React.ComponentProps<"a"> & ExtraProps) {
+	const props = withoutNode(rest)
+	if (href.startsWith("/")) {
+		return (
+			<Link prefetch={false} href={href as Route} {...props}>
+				{children}
+			</Link>
+		)
+	}
+
+	// Native contact links use the shared business destinations.
+	if (href.startsWith("tel:")) {
+		return (
+			<ProtectedContactLink kind="phone" {...props}>
+				{children}
+			</ProtectedContactLink>
+		)
+	}
+
+	if (href.startsWith("mailto:")) {
+		return (
+			<ProtectedContactLink kind="email" {...props}>
+				{children === siteConfig.email ? <EmailAddress /> : children}
+			</ProtectedContactLink>
+		)
+	}
+
+	return (
+		<a href={href} rel="noreferrer" target="_blank" {...props}>
+			{children}
+		</a>
+	)
+}
+
+function markdownUrlTransform(url: string) {
+	return url === siteConfig.phoneHref ? url : defaultUrlTransform(url)
+}
+
+/**
+ * One line of markdown (a list item, a label) rendered as phrasing content:
+ * links stay links, emphasis stays emphasis, and no block wrapper is added.
+ */
+export function MarkdownInline({ content }: { content: string }) {
+	return (
+		<ReactMarkdown
+			allowedElements={["a", "strong", "em", "code"]}
+			components={{ a: MarkdownLink }}
+			unwrapDisallowed
+			urlTransform={markdownUrlTransform}
+		>
+			{content}
+		</ReactMarkdown>
+	)
+}
+
 type HastNode = NonNullable<ExtraProps["node"]>
 
 function textOf(node: HastNode | HastNode["children"][number]): string {
@@ -102,43 +161,9 @@ export function MarkdownContent({
 		<div className={cn("prose", className)}>
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
-				urlTransform={(url) =>
-					url === siteConfig.phoneHref ? url : defaultUrlTransform(url)
-				}
+				urlTransform={markdownUrlTransform}
 				components={{
-					a: ({ href = "", children, ...rest }) => {
-						const props = withoutNode(rest)
-						if (href.startsWith("/")) {
-							return (
-								<Link prefetch={false} href={href as Route} {...props}>
-									{children}
-								</Link>
-							)
-						}
-
-						// Native contact links use the shared business destinations.
-						if (href.startsWith("tel:")) {
-							return (
-								<ProtectedContactLink kind="phone" {...props}>
-									{children}
-								</ProtectedContactLink>
-							)
-						}
-
-						if (href.startsWith("mailto:")) {
-							return (
-								<ProtectedContactLink kind="email" {...props}>
-									{children === siteConfig.email ? <EmailAddress /> : children}
-								</ProtectedContactLink>
-							)
-						}
-
-						return (
-							<a href={href} rel="noreferrer" target="_blank" {...props}>
-								{children}
-							</a>
-						)
-					},
+					a: MarkdownLink,
 					img: ({ src, alt }) => (
 						<MarkdownImage
 							alt={alt}

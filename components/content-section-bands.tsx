@@ -1,7 +1,7 @@
 import { Check } from "@/components/icons"
 
 import { HomeFaq } from "@/components/home-faq"
-import { MarkdownContent } from "@/components/markdown-content"
+import { MarkdownContent, MarkdownInline } from "@/components/markdown-content"
 import { splitContentBands } from "@/lib/content-conversion"
 import { extractFaqPairs } from "@/lib/seo"
 import { cn } from "@/lib/utils"
@@ -61,8 +61,11 @@ function BulletPanels({ items }: { items: string[] }) {
 					<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center rounded-md">
 						<Check aria-hidden="true" className="size-[min(1rem,16px)]" />
 					</span>
-					<span className="leading-snug">
-						{item.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
+					{/* The panel is already bold, so bold markers are dropped, but
+					    links stay links: "Open roles" lists are how the job pages
+					    are reached at all. */}
+					<span className="[&_a]:text-primary leading-snug [&_a]:underline [&_a]:underline-offset-4">
+						<MarkdownInline content={item.replace(/\*\*/g, "")} />
 					</span>
 				</li>
 			))}

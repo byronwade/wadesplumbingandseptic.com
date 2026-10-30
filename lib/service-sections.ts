@@ -18,6 +18,8 @@ export type ServiceSectionBullet = {
 	text: string
 	/** Authored leading emphasis, present only when an explanation follows. */
 	label?: string
+	/** The authored line, present only when it holds a link to keep. */
+	markdown?: string
 }
 
 export type ServiceSection = {
@@ -59,7 +61,10 @@ function serviceBullet(value: string): ServiceSectionBullet {
 	const label = leading
 		? stripInlineMarkdown(leading[1] ?? leading[2] ?? "")
 		: ""
-	return label && text.startsWith(label) ? { text, label } : { text }
+	const bullet: ServiceSectionBullet =
+		label && text.startsWith(label) ? { text, label } : { text }
+	if (/\[[^\]]+\]\([^)]+\)/.test(value)) bullet.markdown = value
+	return bullet
 }
 
 /** The step card already shows "Step 01", so drop a numbered prefix from the title. */
