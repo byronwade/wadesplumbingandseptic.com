@@ -60,7 +60,7 @@ function FilterChip({
 			className={cn(
 				"focus-visible:ring-ring inline-flex shrink-0 items-center gap-2 rounded-md border px-3.5 py-2 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]",
 				selected
-					? "border-ink bg-ink text-white"
+					? "border-ink bg-ink text-on-dark"
 					: "border-border-strong bg-card text-foreground hover:border-primary/40 hover:bg-muted",
 			)}
 			onClick={onSelect}
@@ -70,7 +70,7 @@ function FilterChip({
 			<span
 				className={cn(
 					"font-mono text-[0.6875rem] tabular-nums",
-					selected ? "text-white/60" : "text-muted-foreground",
+					selected ? "text-on-dark/60" : "text-muted-foreground",
 				)}
 			>
 				{count}
@@ -94,9 +94,7 @@ function ArchiveSelect({
 }) {
 	return (
 		<label className="grid gap-1.5" htmlFor={id}>
-			<span className="text-muted-foreground font-mono text-[0.6875rem] font-semibold tracking-[0.12em] uppercase">
-				{label}
-			</span>
+			<span className="text-muted-foreground text-xs font-medium">{label}</span>
 			<span className="relative block">
 				<select
 					className="border-border-strong bg-card text-foreground focus-visible:ring-ring w-full appearance-none rounded-md border py-3 pr-11 pl-3.5 text-sm font-bold outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"

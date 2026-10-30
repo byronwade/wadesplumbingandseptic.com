@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
  * with the eyebrow style it sat next to.
  */
 export const badgeVariants = cva(
-	"inline-flex items-center font-mono text-[length:var(--type-label)] font-semibold tracking-[0.14em] uppercase",
+	"inline-flex items-center text-[length:var(--type-label)] font-medium",
 	{
 		variants: {
 			tone: {

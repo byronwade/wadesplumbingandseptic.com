@@ -90,7 +90,7 @@ function ProcessSteps({
 					className="surface-panel panel-inset flex h-full flex-col"
 					key={step.title}
 				>
-					<span className="text-primary font-mono text-[0.6875rem] font-bold tracking-[0.16em] uppercase">
+					<span className="text-primary text-xs font-medium">
 						Step {String(index + 1).padStart(2, "0")}
 					</span>
 					<h3 className="type-subtitle mt-3 text-[1.0625rem]">{step.title}</h3>

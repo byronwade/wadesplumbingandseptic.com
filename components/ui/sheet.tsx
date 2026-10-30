@@ -28,7 +28,7 @@ export function SheetOverlay({
 }
 
 const sheetVariants = cva(
-	"fixed z-[60] flex flex-col gap-4 bg-card text-card-foreground shadow-[var(--shadow-edge)] transition ease-out data-[state=closed]:duration-200 data-[state=open]:duration-300",
+	"fixed z-[60] flex flex-col gap-4 bg-card text-card-foreground shadow-[var(--shadow-edge)] transition ease-out data-[state=closed]:duration-200 data-[state=open]:duration-200",
 	{
 		variants: {
 			side: {
@@ -103,7 +103,7 @@ export function SheetTitle({
 	return (
 		<SheetPrimitive.Title
 			className={cn(
-				"text-foreground font-display text-lg font-extrabold tracking-[-0.02em]",
+				"text-foreground font-display text-lg font-semibold tracking-[-0.02em]",
 				className,
 			)}
 			{...props}

@@ -12,12 +12,12 @@ export function ContentGallery({
 }) {
 	if (variant === "rail") {
 		return (
-			<section className="surface-hero tex-grid section-y overflow-hidden">
+			<section className="surface-hero section-y overflow-hidden">
 				<div className="container-shell">
 					<div className="section-head-row reveal">
 						<div className="section-head max-w-2xl">
 							<p className="spec-label">Project gallery</p>
-							<h2 className="type-title text-white">
+							<h2 className="type-title text-on-dark">
 								Work from the Wade&apos;s team
 							</h2>
 							<p className="type-lead text-on-dark-muted">

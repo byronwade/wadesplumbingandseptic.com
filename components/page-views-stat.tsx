@@ -54,7 +54,7 @@ export function PageViewsStat({
 		return (
 			<p
 				className={cn(
-					"inline-flex items-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] uppercase tabular-nums",
+					"inline-flex items-center gap-2 font-mono text-xs tabular-nums",
 					muted,
 					className,
 				)}
@@ -83,7 +83,7 @@ export function PageViewsStat({
 	return (
 		<p
 			className={cn(
-				"inline-flex items-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] uppercase tabular-nums",
+				"inline-flex items-center gap-2 font-mono text-xs tabular-nums",
 				muted,
 				className,
 			)}

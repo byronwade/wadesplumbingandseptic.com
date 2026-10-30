@@ -134,7 +134,7 @@ export function HomeBelowFold() {
 									src="/images/work/completed-multi-tank.webp"
 									loading="lazy"
 								/>
-								<span className="bg-ink/85 absolute top-3 left-3 rounded-md px-2.5 py-1.5 font-mono text-[0.625rem] tracking-[0.14em] text-white uppercase">
+								<span className="bg-ink/85 text-on-dark absolute top-3 left-3 rounded-md px-2.5 py-1.5 text-xs">
 									Engineered ATU
 								</span>
 							</div>
@@ -159,12 +159,12 @@ export function HomeBelowFold() {
 				</div>
 			</section>
 
-			<section className="surface-hero tex-grid section-y section-defer overflow-hidden">
+			<section className="surface-hero section-y section-defer overflow-hidden">
 				<div className="container-shell">
 					<div className="section-head-row reveal">
 						<div className="section-head max-w-2xl">
 							<p className="spec-label">Project gallery</p>
-							<h2 className="type-title text-white">
+							<h2 className="type-title text-on-dark">
 								Real work from the Wade&apos;s team.
 							</h2>
 							<p className="type-lead text-on-dark-muted">
@@ -263,8 +263,8 @@ export function HomeBelowFold() {
 										src={group.image}
 										loading="lazy"
 									/>
-									<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-									<h3 className="font-display absolute inset-x-0 bottom-0 p-5 text-[1.375rem] leading-tight font-extrabold tracking-[-0.02em] text-white">
+									<div className="absolute inset-0 bg-black/50" />
+									<h3 className="font-display text-on-dark absolute inset-x-0 bottom-0 p-5 text-[1.375rem] leading-tight font-semibold tracking-[-0.02em]">
 										{group.title}
 									</h3>
 								</div>
@@ -328,7 +328,7 @@ export function HomeBelowFold() {
 						{(["Santa Cruz County", "Santa Clara County"] as const).map(
 							(county) => (
 								<div key={county}>
-									<h3 className="text-muted-foreground font-mono text-[0.6875rem] font-semibold tracking-[0.16em] uppercase">
+									<h3 className="text-muted-foreground text-xs font-medium">
 										{county}
 									</h3>
 									<ul className="town-grid mt-4">
@@ -452,7 +452,7 @@ export function HomeBelowFold() {
 								>
 									<p
 										className={cn(
-											"leading-snug font-medium tracking-[-0.01em] text-pretty text-white",
+											"text-on-dark leading-snug font-medium tracking-[-0.01em] text-pretty",
 											index === 0
 												? "font-display text-[clamp(1.25rem,2.2vw,1.625rem)]"
 												: "text-[1.0625rem] leading-relaxed",
@@ -513,11 +513,13 @@ export function HomeBelowFold() {
 			  panel, set large enough to read from across a room, with hours and
 			  email on an aligned icon list beneath it.
 			*/}
-			<section className="surface-hero tex-grid tex-glow section-y relative overflow-hidden">
+			<section className="surface-hero section-y relative overflow-hidden">
 				<div className="container-shell relative grid grid-cols-1 items-center gap-[var(--space-block)] lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:gap-16">
 					<div className="section-head max-w-2xl min-w-0">
 						<p className="spec-label">Wade&apos;s Plumbing &amp; Septic</p>
-						<h2 className="type-headline text-white">Ready to get started?</h2>
+						<h2 className="type-headline text-on-dark">
+							Ready to get started?
+						</h2>
 						<p className="type-lead text-on-dark-muted text-pretty">
 							Talk to a local licensed professional and get clear options with
 							no pressure. Quotes are free, and the price is set before any work
@@ -525,12 +527,10 @@ export function HomeBelowFold() {
 						</p>
 					</div>
 					<div className="surface-float min-w-0 rounded-xl p-[min(1.75rem,28px)] sm:p-8">
-						<p className="text-on-dark-subtle font-mono text-[0.6875rem] tracking-[0.16em] uppercase">
-							Call the office
-						</p>
+						<p className="text-on-dark-subtle text-xs">Call the office</p>
 						<ProtectedContactLink
 							ariaLabel={`Call ${contactInfo.phoneDisplay}`}
-							className="font-display text-primary-bright mt-2 inline-flex min-h-11 items-center text-[clamp(2rem,5vw,2.75rem)] leading-none font-extrabold tracking-[-0.03em] [overflow-wrap:anywhere] transition-colors hover:text-white"
+							className="font-display text-primary-bright hover:text-on-dark mt-2 inline-flex min-h-11 items-center text-[clamp(2rem,5vw,2.75rem)] leading-none font-semibold tracking-[-0.03em] [overflow-wrap:anywhere] transition-colors"
 							kind="phone"
 						>
 							{contactInfo.phoneDisplay}
@@ -549,7 +549,7 @@ export function HomeBelowFold() {
 									className="text-primary-bright mt-0.5 size-4 shrink-0"
 								/>
 								<ProtectedContactLink
-									className="min-w-0 [overflow-wrap:anywhere] transition-colors hover:text-white"
+									className="hover:text-on-dark min-w-0 [overflow-wrap:anywhere] transition-colors"
 									kind="email"
 								>
 									<EmailAddress />

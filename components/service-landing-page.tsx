@@ -108,7 +108,7 @@ export function ServiceLandingPage({
 								uniqueViews={viewStats.unique}
 							/>
 						) : (
-							<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+							<p className="text-muted-foreground text-xs">
 								New on the site · your visit counts
 							</p>
 						)}

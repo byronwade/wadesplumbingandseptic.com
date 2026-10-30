@@ -72,7 +72,7 @@ const megaIcons: Record<MegaNavItem["icon"], IconComponent> = {
 }
 
 const triggerClassName =
-	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-white hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent @max-[80rem]/header:px-2.5"
+	"hover:text-primary-bright focus:text-primary-bright data-[active]:text-primary-bright data-[state=open]:text-primary-bright bg-transparent text-on-dark hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent @max-[80rem]/header:px-2.5"
 
 function MegaLink({ href, label, description, icon }: MegaNavItem) {
 	const Icon = megaIcons[icon]
@@ -89,7 +89,7 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 						<Icon className="size-[1.125rem]" aria-hidden="true" />
 					</span>
 					<span className="min-w-0">
-						<span className="group-hover:text-primary-bright block text-sm font-bold tracking-[-0.01em] text-white transition-colors">
+						<span className="group-hover:text-primary-bright text-on-dark block text-sm font-bold tracking-[-0.01em] transition-colors">
 							{label}
 						</span>
 						{description ? (
@@ -115,7 +115,7 @@ function MegaFooter({
 }) {
 	return (
 		<div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-			<p className="text-on-dark-subtle flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+			<p className="text-on-dark-subtle flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
 				<span className="inline-flex items-center gap-2">
 					<BadgeCheck
 						aria-hidden="true"
@@ -177,7 +177,7 @@ function ServicesMegaMenu() {
 										className="focus-visible:ring-ring group block rounded-md p-2.5 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 										href={item.href as Route}
 									>
-										<span className="group-hover:text-primary-bright flex items-center justify-between gap-3 text-sm font-bold tracking-[-0.01em] text-white transition-colors">
+										<span className="group-hover:text-primary-bright text-on-dark flex items-center justify-between gap-3 text-sm font-bold tracking-[-0.01em] transition-colors">
 											{item.label}
 											<ArrowRight
 												aria-hidden="true"
@@ -224,15 +224,15 @@ function CompanyMegaMenu() {
 						<div className="relative aspect-16/10 lg:aspect-auto lg:h-full lg:min-h-56">
 							<Image
 								alt="Coastal redwoods in Wade's Santa Cruz County service area"
-								className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+								className="object-cover"
 								fill
 								sizes="(min-width: 1024px) 24rem, 100vw"
 								src="/images/locations/santa-cruz-redwoods.webp"
 							/>
-							<div className="from-dark-3 via-dark-3/55 absolute inset-0 bg-linear-to-t to-transparent" />
+							<div className="bg-dark-3/70 absolute inset-0" />
 							<div className="absolute inset-x-0 bottom-0 p-4">
 								<p className="spec-label">Where we work</p>
-								<p className="mt-2 flex items-center gap-2 text-[0.9375rem] font-bold tracking-[-0.02em] text-white">
+								<p className="text-on-dark mt-2 flex items-center gap-2 text-[0.9375rem] font-bold tracking-[-0.02em]">
 									Santa Cruz County and the foothills
 									<ArrowRight
 										aria-hidden="true"
@@ -324,7 +324,7 @@ export function SiteHeaderNav() {
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-white hover:bg-transparent"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark hover:bg-transparent"
 					aria-label="Search services, tips, and pages"
 					onMouseEnter={() => void prefetchSearchIndex()}
 					onFocus={() => void prefetchSearchIndex()}
@@ -348,7 +348,7 @@ export function SiteHeaderNav() {
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[16px]"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[16px]"
 					aria-label="Search services, tips, and pages"
 					onMouseEnter={() => void prefetchSearchIndex()}
 					onFocus={() => void prefetchSearchIndex()}
@@ -356,13 +356,13 @@ export function SiteHeaderNav() {
 				>
 					<Search aria-hidden="true" className="size-5" />
 				</Button>
-				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] rounded-md text-white hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[20px]" />
+				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] rounded-md hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[20px]" />
 				<Button
 					ref={mobileMenuTriggerRef}
 					type="button"
 					variant="ghost"
 					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink size-[44px] text-white hover:bg-transparent [&_svg]:size-[16px]"
+					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] hover:bg-transparent [&_svg]:size-[16px]"
 					aria-label="Open main menu"
 					aria-expanded={mobileMenuOpen}
 					aria-haspopup="dialog"

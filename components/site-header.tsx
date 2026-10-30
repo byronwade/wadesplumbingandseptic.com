@@ -7,13 +7,13 @@ import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
 	return (
-		<header className="bg-ink sticky top-0 z-50 text-white shadow-[0_1px_0_0_rgba(0,0,0,0.45)]">
+		<header className="bg-ink text-on-dark sticky top-0 z-50 shadow-[0_1px_0_0_oklch(1_0_0/0.07)]">
 			<div className="bg-ink-soft hidden sm:block">
 				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-bold">
 					<OfficeHoursStatus />
 					<Link
 						prefetch={false}
-						className="transition-colors hover:text-white"
+						className="hover:text-on-dark transition-colors"
 						href="/service-areas"
 					>
 						{siteConfig.serviceArea}
@@ -46,10 +46,10 @@ export function SiteHeader() {
 								width={44}
 							/>
 							<span className="min-w-0 leading-none @max-[7.5rem]:hidden">
-								<span className="font-display block text-[0.9375rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-lg @min-[64rem]/header:whitespace-nowrap">
+								<span className="font-display text-on-dark block text-[0.9375rem] leading-tight font-semibold tracking-[-0.03em] sm:text-lg @min-[64rem]/header:whitespace-nowrap">
 									Wade&apos;s Plumbing
 								</span>
-								<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
+								<span className="text-primary-bright mt-1 block text-xs leading-none font-medium">
 									&amp; Septic
 								</span>
 							</span>

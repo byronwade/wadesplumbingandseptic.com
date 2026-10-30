@@ -14,54 +14,36 @@ import { siteConfig } from "@/lib/site"
 /*
   Both faces are self-hosted from assets/fonts (SIL Open Font License, see the
   OFL files beside them) so builds never fetch from Google Fonts. Each file is
-  the variable Latin subset Google serves, declared at only the weights the
-  site used before, so 500 and 600 still resolve to the nearest loaded weight.
+  the variable Latin subset, so every weight between 400 and 700 resolves
+  from one download. Inter carries the UI and headings; Geist Mono carries
+  phone numbers, licence numbers and other figures that must read exactly.
 */
-const manrope = localFont({
+const inter = localFont({
 	src: [
 		{
-			path: "../assets/fonts/manrope-latin.woff2",
-			weight: "400",
-			style: "normal",
-		},
-		{
-			path: "../assets/fonts/manrope-latin.woff2",
-			weight: "700",
+			path: "../assets/fonts/inter-latin.woff2",
+			weight: "100 900",
 			style: "normal",
 		},
 	],
 	display: "swap",
-	variable: "--font-manrope",
+	variable: "--font-inter",
 	preload: true,
-	/* Metrics live in globals.css so they match the old Google build exactly. */
-	adjustFontFallback: false,
-	fallback: ["Manrope Fallback"],
 })
 
-/*
-  Display face. A squared grotesque against Manrope's humanist body - the
-  contrast is what gives headings their own voice instead of running the body
-  face at weight 800. Only the two display weights are loaded.
-*/
-const archivo = localFont({
+const geistMono = localFont({
 	src: [
 		{
-			path: "../assets/fonts/archivo-latin.woff2",
-			weight: "700",
-			style: "normal",
-		},
-		{
-			path: "../assets/fonts/archivo-latin.woff2",
-			weight: "800",
+			path: "../assets/fonts/geist-mono-latin.woff2",
+			weight: "100 900",
 			style: "normal",
 		},
 	],
 	display: "swap",
-	variable: "--font-archivo",
-	/* Body font covers first paint; Archivo is for display headings. */
+	variable: "--font-geist-mono",
+	/* Mono is for figures and labels, never first paint. */
 	preload: false,
 	adjustFontFallback: false,
-	fallback: ["Archivo Fallback"],
 })
 
 export const metadata: Metadata = {
@@ -112,7 +94,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
-	themeColor: "#f7f7f5",
+	themeColor: "#0a0a0a",
 }
 
 async function RootJsonLd() {
@@ -139,12 +121,12 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`${manrope.variable} ${archivo.variable}`}
+			className={`${inter.variable} ${geistMono.variable}`}
 		>
-			<body className={manrope.className}>
-				<ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+			<body className={inter.className}>
+				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 					<a
-						className="sr-only z-[100] rounded-br-lg bg-white p-3 text-black focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+						className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
 						href="#main-content"
 					>
 						Skip to content

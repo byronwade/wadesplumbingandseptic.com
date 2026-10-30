@@ -7,7 +7,7 @@ export function GoogleReviewButton({ onDark = false }: { onDark?: boolean }) {
 			asChild
 			className={
 				onDark
-					? "focus-visible:ring-offset-ink border-white/30 bg-transparent text-white hover:border-white/50 hover:bg-white/10 focus-visible:ring-white"
+					? "focus-visible:ring-offset-ink text-on-dark border-white/30 bg-transparent hover:border-white/50 hover:bg-white/10 focus-visible:ring-white"
 					: undefined
 			}
 			variant="outline"

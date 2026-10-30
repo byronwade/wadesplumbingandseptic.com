@@ -38,12 +38,12 @@ export function ContentConversionCta({
 		Boolean(secondary.href?.startsWith("tel:"))
 
 	return (
-		<section className="surface-hero tex-grid tex-glow overflow-hidden">
+		<section className="surface-hero overflow-hidden">
 			<div className="container-shell section-y relative">
 				<div className="mx-auto max-w-3xl text-center">
 					<div className="section-head reveal items-center text-center">
 						<p className="spec-label spec-label-center">{conversion.eyebrow}</p>
-						<h2 className="type-title text-white">{conversion.title}</h2>
+						<h2 className="type-title text-on-dark">{conversion.title}</h2>
 						<p className="type-lead text-on-dark-muted mx-auto max-w-2xl">
 							{conversion.description}
 						</p>
@@ -97,7 +97,7 @@ export function ContentConversionCta({
 										<p className="text-on-dark-muted text-[0.9375rem] leading-relaxed text-pretty">
 											&ldquo;{testimonial.quote}&rdquo;
 										</p>
-										<footer className="mt-4 text-sm font-bold text-white">
+										<footer className="text-on-dark mt-4 text-sm font-bold">
 											{testimonial.name}
 											{testimonial.location ? (
 												<span className="text-on-dark-subtle font-normal">
@@ -120,15 +120,11 @@ export function ContentConversionCta({
 			*/}
 			<div className="relative border-t border-white/12 bg-black/25">
 				<div className="container-shell flex flex-wrap items-center justify-center gap-x-7 gap-y-2 py-3.5 sm:justify-between">
-					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
+					<p className="text-on-dark-subtle text-xs">
 						Flat-rate pricing, quoted on site before work begins.
 					</p>
-					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-						{contactInfo.licenses}
-					</p>
-					<p className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-						{contactInfo.hours}
-					</p>
+					<p className="text-on-dark-subtle text-xs">{contactInfo.licenses}</p>
+					<p className="text-on-dark-subtle text-xs">{contactInfo.hours}</p>
 				</div>
 			</div>
 		</section>

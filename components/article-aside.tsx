@@ -13,10 +13,7 @@ export function ArticleAside({
 		<aside className="hidden min-w-0 lg:block">
 			<div className="sticky top-[calc(var(--header-h)+2rem)] flex flex-col gap-[var(--space-grid)]">
 				{headings.length >= 3 ? (
-					<nav
-						aria-label="In this guide"
-						className="border-border border-l pl-5"
-					>
+					<nav aria-label="In this guide" className="surface-panel panel-inset">
 						<p className="spec-label">In this guide</p>
 						<ol className="mt-4 grid gap-2.5 text-sm">
 							{headings.map((heading) => (

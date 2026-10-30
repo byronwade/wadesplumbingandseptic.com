@@ -19,11 +19,11 @@ export default function Error({
 	}, [error])
 
 	return (
-		<main className="surface-hero tex-grid" id="main-content">
+		<main className="surface-hero" id="main-content">
 			<div className="container-shell grid min-h-[60vh] place-items-center py-[var(--space-section-y)]">
 				<div className="section-head max-w-xl text-center" role="alert">
 					<p className="spec-label spec-label-center">Something went wrong</p>
-					<h1 className="type-headline text-white">
+					<h1 className="type-headline text-on-dark">
 						We hit an unexpected error.
 					</h1>
 					<p className="type-lead text-on-dark-muted">

@@ -54,7 +54,7 @@ export function ContentCard({
 		>
 			<Image
 				alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
-				className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+				className="object-cover"
 				fill
 				quality={60}
 				sizes={

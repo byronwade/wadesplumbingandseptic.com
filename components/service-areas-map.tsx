@@ -232,7 +232,7 @@ export function ServiceAreasMap() {
 							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
 							<div className="space-y-2.5 pr-6 font-sans antialiased">
-								<p className="text-foreground font-display text-lg leading-snug font-extrabold tracking-tight">
+								<p className="text-foreground font-display text-lg leading-snug font-semibold tracking-tight">
 									{selected.properties.name}
 								</p>
 								<p className="text-primary text-sm font-bold tracking-normal">
