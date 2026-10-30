@@ -38,6 +38,14 @@ const SERVICE_AREA_CITIES = [
 	"zayante",
 ] as const
 
+/** Service categories that listed the same services as a main category. */
+const SERVICE_CATEGORY_ALIASES = [
+	["residential-plumbing", "plumbing"],
+	["specialty-services", "plumbing"],
+	["commercial-plumbing", "commercial"],
+	["septic-services", "septic"],
+] as const
+
 /** Routing configuration shared by Next and the server-side search inventory. */
 export const siteRedirects: SiteRedirect[] = [
 	// Retired availability pages resolve directly to a schedulable service.
@@ -163,12 +171,7 @@ export const siteRedirects: SiteRedirect[] = [
 		permanent: true,
 	},
 	// Category aliases that listed the same services as a main category.
-	...[
-		["residential-plumbing", "plumbing"],
-		["specialty-services", "plumbing"],
-		["commercial-plumbing", "commercial"],
-		["septic-services", "septic"],
-	].map(([alias, category]) => ({
+	...SERVICE_CATEGORY_ALIASES.map(([alias, category]) => ({
 		source: `/service-category/${alias}`,
 		destination: `/service-category/${category}`,
 		permanent: true,
@@ -198,7 +201,19 @@ export const siteRedirects: SiteRedirect[] = [
 		["/san-jose", "/service-areas"],
 		["/monterey", "/service-areas"],
 		["/promotions", "/financing"],
-	].map(([source, destination]) => ({ source, destination, permanent: true })),
+	].flatMap(([source, destination]) =>
+		// The /lp/ and /expert-tips/ prefixes below would otherwise add a hop.
+		(source.split("/").length === 2
+			? [source, `/lp${source}`, `/expert-tips${source}`]
+			: [source]
+		).map((from) => ({ source: from, destination, permanent: true })),
+	),
+	// Same for the old category prefix, which maps straight onto these slugs.
+	...SERVICE_CATEGORY_ALIASES.map(([alias, category]) => ({
+		source: `/services/categories/${alias}`,
+		destination: `/service-category/${category}`,
+		permanent: true,
+	})),
 	{
 		source: "/services/categories/:slug",
 		destination: "/service-category/:slug",
