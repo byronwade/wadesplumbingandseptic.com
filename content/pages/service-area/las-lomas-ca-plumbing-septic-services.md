@@ -48,6 +48,24 @@ Many homes here support extended families, higher daily water use and more load 
 
 Hard well water accelerates scale in water heaters and leaves stains on fixtures. Plumbing maintenance in Las Lomas works best when water quality is part of the conversation, not an afterthought.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Las Lomas?
+
+Yes. Wade's Plumbing & Septic serves Las Lomas as part of its south county coverage in Santa Cruz County.
+
+### How big are septic tanks in Las Lomas homes?
+
+Private septic systems serve virtually every Las Lomas residence, and tank sizes typically range from 750 to 1,500 gallons depending on bedroom count and when the home was built.
+
+### Should I rethink my septic pumping schedule after adding an ADU in Las Lomas?
+
+Yes. If you have added bedrooms, an ADU, or regular guests to a Las Lomas home, your pumping interval and system capacity deserve a second look, because extra daily water use puts more load on septic systems than original designs anticipated.
+
+### Why do Las Lomas water heaters wear out early?
+
+Hard well water in Las Lomas accelerates scale in water heaters and leaves stains on fixtures. Wade's replaces water heaters when sediment and hard water have shortened tank life.
+
 ## Schedule service in Las Lomas
 
 Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Las Lomas. We cover Santa Cruz County and can usually schedule service within a reasonable window, tell us if you are facing an active backup or leak.

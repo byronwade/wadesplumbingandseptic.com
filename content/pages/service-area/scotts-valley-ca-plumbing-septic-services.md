@@ -46,6 +46,24 @@ Many households run dual schedules: heavy morning use before the commute over 17
 
 Commercial properties near the Kings Village and Scotts Valley Drive corridors add another layer, grease interceptors, restroom clusters, and irrigation cross-connections that can masquerade as residential drain problems when tenants call outside business hours.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Scotts Valley?
+
+Yes. Wade's Plumbing & Septic is family-owned, Santa Cruz County-based, and licensed (CSLB #1087260), and serves Scotts Valley homeowners. Call 831.225.4344.
+
+### Are Scotts Valley homes on city sewer or septic?
+
+Much of the Scotts Valley core connects to city sewer, especially around the commercial corridor and established subdivisions. Parcels bordering open space toward Pasatiempo, the north end of town, or roads climbing toward Mount Hermon may still use septic tanks and drainfields.
+
+### Can my Scotts Valley plumbing handle an ADU or garage conversion?
+
+Garage conversions and ADUs are common in Scotts Valley as families grow. Wade's verifies that existing lines and water heaters can handle the added fixtures, or flags what needs upgrading before drywall closes.
+
+### Do Scotts Valley homes face freeze risk?
+
+Inland Scotts Valley sees colder overnight lows than the coast, occasionally enough to threaten exposed hose bibs and poorly insulated lines in crawlspaces.
+
 ## Scotts Valley Appointments
 
 Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).

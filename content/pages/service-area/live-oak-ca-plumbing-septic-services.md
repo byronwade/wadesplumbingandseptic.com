@@ -46,6 +46,24 @@ Live Oak's location means marine fog rolls in regularly, keeping crawlspaces dam
 
 Proximity to the coast adds mild salt exposure on exterior fixtures for homes west of the freeway. Winter storms test outdoor drains and downspout tie-ins, especially where owners added patio slabs without updating slope. We look at the whole path water takes, not just the fixture that complained first.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Live Oak?
+
+Yes. Wade's Plumbing & Septic is family-owned (CSLB #1087260) and works Live Oak daily.
+
+### Are Live Oak homes on sewer or septic?
+
+Both. Some Live Oak properties connect to Santa Cruz city sewer, while others remain on onsite wastewater, particularly larger parcels toward the hills or older rural lanes. If you are unsure what serves your address, Wade's helps trace cleanouts and tank locations.
+
+### What plumbing problems are common in Live Oak homes?
+
+Common Live Oak calls include roots invading drain lines from street trees or backyard oaks, corroded galvanized and copper supply lines that show up as discolored water or dropping pressure, and leaks under slabs. Marine fog also keeps crawlspaces damp, which encourages sweating pipes and slow-drying leaks.
+
+### What should Live Oak homeowners know before adding an ADU?
+
+Before concrete is poured on a Live Oak ADU or multi-family conversion, Wade's evaluates whether the existing laterals and venting can support the added fixtures.
+
 ## Live Oak Service from Wade's
 
 Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Live Oak.

@@ -48,6 +48,24 @@ The community sits between Watsonville city services and fully rural south count
 
 Older homes may have plumbing vents that no longer meet code, or additions tied into original drain lines without adequate slope. These details matter when you remodel or when recurring clogs suggest a design problem, not a one-time blockage.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Interlaken?
+
+Yes. Wade's Plumbing & Septic provides licensed plumbing and septic service throughout Santa Cruz County, including Interlaken.
+
+### Do Interlaken homes have septic or sewer?
+
+Septic systems dominate Interlaken residential properties, but some streets are closer to sewer availability than others. Wade's verifies what infrastructure your specific address has before recommending septic work or sewer lateral repairs.
+
+### What causes low water pressure in Interlaken homes?
+
+Water pressure issues in Interlaken often trace to well systems or aging pressure tanks rather than municipal supply. Wade's checks the full path from well to fixture.
+
+### Does a soggy drainfield after winter rain mean my Interlaken system has failed?
+
+Not necessarily. Saturated soils after Interlaken winter rains can temporarily overwhelm a marginal drainfield, and Wade's distinguishes between weather-related saturation and a system that genuinely needs repair or replacement.
+
 ## Schedule service in Interlaken
 
 Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing. We will schedule a visit and come prepared for south county conditions.

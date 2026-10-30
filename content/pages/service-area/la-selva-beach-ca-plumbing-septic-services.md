@@ -46,6 +46,24 @@ Wooded inland lots face different stress: root growth, debris-filled gutters, an
 
 La Selva Beach's proximity to Watsonville and Corralitos also means some owners commute south for work while maintaining a coastal lifestyle here. That split schedule can delay noticing slow leaks or septic alarms until a Friday arrival. Another reason we prioritize clear written summaries after each visit.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve La Selva Beach?
+
+Yes. Wade's Plumbing & Septic is family-owned, licensed (CSLB #1087260), and serves La Selva Beach homeowners.
+
+### Are La Selva Beach homes on septic?
+
+La Selva Beach relies heavily on septic systems. Sewer service is limited to certain corridors, and most owners manage tanks, drainfields, and county inspection cycles themselves.
+
+### What problems do La Selva Beach second-home owners find on arrival?
+
+Owners who rent seasonally or visit monthly often discover stagnant traps, dried seals, or a septic alarm that tripped while the La Selva Beach house sat empty.
+
+### How do winter storms affect La Selva Beach septic systems?
+
+La Selva Beach sits low enough that winter storms raise local groundwater and test drainfields that performed fine in September. Wade's recommends maintenance schedules tied to how the home is used, not an arbitrary calendar.
+
 ## La Selva Beach Contact
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for service in La Selva Beach.

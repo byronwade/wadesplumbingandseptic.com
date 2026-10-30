@@ -52,6 +52,24 @@ Steep lots send effluent where gravity prefers. A drainfield that worked at inst
 
 Residents share roads and watershed with [Zayante](/service-area/zayante-ca-plumbing-septic-services) and shop through [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) for daily life. We cover both from the same mountain crew.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Lompico?
+
+Yes. Wade's Plumbing & Septic is family-owned and county-based, and serves Lompico along with neighboring Zayante and Boulder Creek from the same mountain crew.
+
+### Is there sewer service in Lompico?
+
+No. Sewer doesn't exist in Lompico, and onsite septic remains each homeowner's responsibility, even though Lompico's CSD handles water and some community infrastructure.
+
+### Why do pipes freeze in Lompico homes?
+
+In Lompico, winter storms knock out power, well pumps stop, and pipes in uninsulated floors freeze. Lompico's elevation and canopy mean freeze risk runs longer than in coastal Santa Cruz.
+
+### What if I don't know where my Lompico septic tank is?
+
+Wade's handles septic tank location and lid exposure for Lompico homes when records are missing. Lompico systems range from maintained and inspected to ones whose owners are not sure where the tank is.
+
 ## Schedule a visit
 
 Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time.

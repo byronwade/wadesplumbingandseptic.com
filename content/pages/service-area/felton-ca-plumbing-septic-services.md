@@ -49,6 +49,24 @@ Felton also sits at the junction of several micro-climates: fog lingers in the l
 
 We regularly work in [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), [Mount Hermon](/service-area/mount-hermon-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Paradise Park](/service-area/paradise-park-ca-plumbing-septic-services), the same San Lorenzo watershed, the same septic-and-well reality.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Felton?
+
+Yes. Wade's Plumbing & Septic is a family-owned Santa Cruz County shop that works in Felton and regularly serves nearby Ben Lomond, Mount Hermon, Scotts Valley, and Paradise Park.
+
+### Are most Felton homes on septic?
+
+Yes. Most Felton parcels are on individual septic systems, and tank size, soil percolation, and setback distances vary block by block.
+
+### What well problems do Felton homeowners call about?
+
+Felton homeowners on wells call Wade's about low pressure at the far end of the house, air in lines, and sediment at taps. Well sediment in Felton can also clog fixtures and wear out tankless heaters faster than in coastal homes.
+
+### How does weekend or part-time use affect a Felton septic system?
+
+Part-time occupancy changes how septic systems load, so a Felton cabin used only on weekends behaves differently than a family of five living there year-round. Wade's factors that into maintenance schedules and system evaluations.
+
 ## Schedule service
 
 For plumbing or septic help in Felton, call Wade's at **[831.225.4344](tel:+18312254344)**. Browse all coverage on our [service areas](/service-areas) page, learn more about [septic solutions](/septic-solutions), or [contact us](/contact) with questions about your property.

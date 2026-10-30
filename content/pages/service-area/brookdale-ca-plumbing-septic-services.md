@@ -51,6 +51,24 @@ We're family-owned and based in the county. We know the difference between a Bro
 
 Brookdale sits between [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services). We serve both daily, the same San Lorenzo River watershed, the same septic-and-well fundamentals.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Brookdale?
+
+Yes. Wade's Plumbing & Septic is family-owned and based in Santa Cruz County, and serves Brookdale along with its Highway 9 neighbors Boulder Creek and Ben Lomond. Call 831.225.4344 for Brookdale plumbing or septic service.
+
+### Is there sewer service in Brookdale?
+
+No. There is no municipal sewer grid threading through Brookdale lots. Septic systems sit on hillsides, and water often arrives from a well or a shared supply.
+
+### What plumbing problems are common in Brookdale homes?
+
+Common Brookdale plumbing problems include galvanized and mixed materials corroding at joints in older walls, low well yield on parcels tucked against the canyon wall, and root damage in sewer laterals running through established redwood root zones.
+
+### Can a Brookdale septic tank fail without obvious warning?
+
+Yes. A Brookdale tank that hasn't been pumped in fifteen years doesn't always fail loudly. Sometimes it sends solids into the leach field until the only fix is replacement, which Wade's would rather catch on a routine visit.
+
 ## Contact Wade's
 
 For Brookdale plumbing or septic service, call **[831.225.4344](tel:+18312254344)**. View all communities on [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms.

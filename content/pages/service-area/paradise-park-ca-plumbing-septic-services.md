@@ -44,6 +44,24 @@ Services include inspections, certifications, filter service, riser installs, dr
 
 Paradise Park residents rely on [Felton](/service-area/felton-ca-plumbing-septic-services) for mail, supplies, and the first mile of every service call. We also serve [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services) and the wider San Lorenzo Valley from the same crew.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Paradise Park?
+
+Yes. Wade's Plumbing & Septic, a family-owned Santa Cruz County company, serves Paradise Park for plumbing and septic, along with Felton, Santa Cruz, and the wider San Lorenzo Valley. Call 831.225.4344.
+
+### Are Paradise Park homes on septic or sewer?
+
+Paradise Park is entirely on onsite septic. Because homes sit along the San Lorenzo River corridor, setbacks, soil conditions, and seasonal groundwater deserve an honest assessment.
+
+### How often should a seasonal Paradise Park cabin have its septic tank pumped?
+
+A Paradise Park cabin used eight weekends a year still needs periodic pumping, but over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used. Wade's does not pump tanks, so book the pumping itself with a septic pumping company.
+
+### Why do Paradise Park drains run slow in winter?
+
+In wet Paradise Park winters, saturated soils reduce drainfield capacity, so slow drains in February are not always a clog and can be a full leach line. Wade's distinguishes septic failure from plumbing blockage.
+
 ## Before the weekend goes wrong
 
 Call Wade's at **[831.225.4344](tel:+18312254344)** for Paradise Park plumbing or septic. See [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact), especially before peak season if the tank hasn't been touched in years.
