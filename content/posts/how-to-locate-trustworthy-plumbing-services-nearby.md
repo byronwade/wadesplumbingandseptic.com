@@ -1,5 +1,5 @@
 ---
-title: "How to Choose a Plumber in Santa Cruz County: A License and Bid Checklist"
+title: "How to Choose a Plumber in Santa Cruz County"
 description: >-
   A practical checklist for hiring a plumber in California: check the CSLB
   license and classification, confirm insurance, compare written bids, and keep

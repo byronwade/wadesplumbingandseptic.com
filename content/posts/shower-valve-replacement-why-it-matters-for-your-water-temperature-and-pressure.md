@@ -1,5 +1,5 @@
 ---
-title: "Shower Valve Replacement: Fixing Temperature and Pressure Swings"
+title: "Shower Valve Replacement: Fix Temperature and Pressure"
 description: >-
   How a shower valve controls temperature, the signs it is failing, the valve
   types California's plumbing code allows, and why scald protection matters.

@@ -1,5 +1,5 @@
 ---
-title: "Slow Drains: Causes, Simple Fixes and When It Is the Main Line"
+title: "Slow Drains: Causes, Fixes and When It Is the Main Line"
 description: >-
   How to tell a single slow drain from a main line or septic problem, the usual
   causes, simple fixes to try first, and how to keep drains flowing.
