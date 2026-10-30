@@ -60,7 +60,7 @@ We provide residential plumbing, commercial plumbing, septic diagnostics, conven
 - [Watsonville](/service-area/watsonville-ca-plumbing-septic-services)
 - [Zayante](/service-area/zayante-ca-plumbing-septic-services)
 
-Explore our [Santa Cruz County plumbing and septic page](/santa-cruz).
+Explore our [Santa Cruz plumbing and septic page](/service-area/santa-cruz-ca-plumbing-septic-services).
 
 ## Santa Clara County, California
 

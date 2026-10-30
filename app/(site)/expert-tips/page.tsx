@@ -4,6 +4,7 @@ import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { RankedContentArchive } from "@/components/ranked-content-archive"
 import { JsonLd } from "@/components/json-ld"
+import { TipTopicLinks } from "@/components/tip-topic-links"
 import { getCollection } from "@/lib/content"
 import {
 	breadcrumbJsonLd,
@@ -36,6 +37,8 @@ export default async function ExpertTipsPage() {
 				title="Expert Tips"
 				variant="index"
 			/>
+
+			<TipTopicLinks />
 
 			<RankedContentArchive
 				allLabel="All guides"

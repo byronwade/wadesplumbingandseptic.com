@@ -10,13 +10,6 @@ export const serviceCategories = {
 			"Residential plumbing repairs, drains, water heaters, fixtures, piping, sewers, and specialty diagnostics.",
 		image: "/images/work/precision-valve-installation.webp",
 	},
-	"residential-plumbing": {
-		label: "Residential Plumbing",
-		contentCategory: "Plumbing",
-		description:
-			"Complete plumbing service for homes, including repairs, replacements, and maintenance.",
-		image: "/images/services/drain-clearing.webp",
-	},
 	commercial: {
 		label: "Commercial",
 		contentCategory: "Commercial",
@@ -24,33 +17,12 @@ export const serviceCategories = {
 			"Commercial repairs, maintenance, drains, grease traps, backflow devices, water heaters, and septic support.",
 		image: "/images/services/commercial-plumbing.webp",
 	},
-	"commercial-plumbing": {
-		label: "Commercial Plumbing",
-		contentCategory: "Commercial",
-		description:
-			"Professional plumbing service that helps businesses minimize downtime and maintain safe, code-compliant systems.",
-		image: "/images/work/commercial-plumbing-installation.webp",
-	},
 	septic: {
 		label: "Septic",
 		contentCategory: "Septic",
 		description:
 			"Septic inspections, diagnostics, repairs, maintenance, permitting, installation, and engineered treatment systems.",
 		image: "/images/work/engineered-septic-hero.webp",
-	},
-	"septic-services": {
-		label: "Septic Services",
-		contentCategory: "Septic",
-		description:
-			"Complete conventional and advanced septic support for tanks, pumps, controls, treatment, and drain fields.",
-		image: "/images/work/completed-multi-tank.webp",
-	},
-	"specialty-services": {
-		label: "Specialty Services",
-		contentCategory: "Plumbing",
-		description:
-			"Advanced inspection, hydro jetting, trenchless work, smoke testing, water treatment, and difficult plumbing diagnostics.",
-		image: "/images/work/new-construction-rough-in.webp",
 	},
 } as const
 

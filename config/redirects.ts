@@ -38,6 +38,14 @@ const SERVICE_AREA_CITIES = [
 	"zayante",
 ] as const
 
+/** Service categories that listed the same services as a main category. */
+const SERVICE_CATEGORY_ALIASES = [
+	["residential-plumbing", "plumbing"],
+	["specialty-services", "plumbing"],
+	["commercial-plumbing", "commercial"],
+	["septic-services", "septic"],
+] as const
+
 /** Routing configuration shared by Next and the server-side search inventory. */
 export const siteRedirects: SiteRedirect[] = [
 	// Retired availability pages resolve directly to a schedulable service.
@@ -144,7 +152,7 @@ export const siteRedirects: SiteRedirect[] = [
 	},
 	{
 		source: "/about-us/promotions",
-		destination: "/promotions",
+		destination: "/financing",
 		permanent: true,
 	},
 	{
@@ -159,9 +167,53 @@ export const siteRedirects: SiteRedirect[] = [
 	},
 	{
 		source: "/santa-cruz/water-heater-replacment",
-		destination: "/santa-cruz/water-heater-replacement",
+		destination: "/service-area/santa-cruz/water-heater-installation",
 		permanent: true,
 	},
+	// Category aliases that listed the same services as a main category.
+	...SERVICE_CATEGORY_ALIASES.map(([alias, category]) => ({
+		source: `/service-category/${alias}`,
+		destination: `/service-category/${category}`,
+		permanent: true,
+	})),
+	// Expert tip archives that repeated the Plumbing Tips archive.
+	...["plumbing-maintenance", "santa-cruz-plumbing"].map((slug) => ({
+		source: `/category/${slug}`,
+		destination: "/category/plumbing-tips",
+		permanent: true,
+	})),
+	// WordPress-era landing pages, each replaced by a fuller page.
+	...[
+		["/santa-cruz", "/service-area/santa-cruz-ca-plumbing-septic-services"],
+		[
+			"/santa-cruz/santa-cruz-plumbers-near-me",
+			"/service-area/santa-cruz-ca-plumbing-septic-services",
+		],
+		["/santa-cruz/drain-clearing", "/service-area/santa-cruz/drain-cleaning"],
+		[
+			"/santa-cruz/water-heater-replacement",
+			"/service-area/santa-cruz/water-heater-installation",
+		],
+		[
+			"/santa-cruz/commercial-plumbing",
+			"/service-offerings/commercial-plumbing-maintenance",
+		],
+		["/san-jose", "/service-areas"],
+		["/monterey", "/service-areas"],
+		["/promotions", "/financing"],
+	].flatMap(([source, destination]) =>
+		// The /lp/ and /expert-tips/ prefixes below would otherwise add a hop.
+		(source.split("/").length === 2
+			? [source, `/lp${source}`, `/expert-tips${source}`]
+			: [source]
+		).map((from) => ({ source: from, destination, permanent: true })),
+	),
+	// Same for the old category prefix, which maps straight onto these slugs.
+	...SERVICE_CATEGORY_ALIASES.map(([alias, category]) => ({
+		source: `/services/categories/${alias}`,
+		destination: `/service-category/${category}`,
+		permanent: true,
+	})),
 	{
 		source: "/services/categories/:slug",
 		destination: "/service-category/:slug",
