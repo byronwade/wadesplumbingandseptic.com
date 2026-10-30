@@ -63,7 +63,7 @@ export function ProblemFinder({
 									<button
 										aria-pressed={selected}
 										className={cn(
-											"surface-panel flex min-h-12 w-full items-center px-4 py-3 text-left text-sm font-bold transition-colors",
+											"surface-panel flex min-h-12 w-full items-center px-4 py-3 text-left text-sm font-bold [overflow-wrap:anywhere] transition-colors",
 											"focus-visible:ring-ring focus-visible:ring-2 focus-visible:outline-none",
 											selected
 												? "border-primary bg-accent text-accent-foreground"
@@ -89,11 +89,16 @@ export function ProblemFinder({
 									<p className="spec-label">Best fit</p>
 									<Link
 										prefetch={false}
-										className="type-subtitle text-primary mt-2 inline-flex items-center gap-2 underline-offset-4 hover:underline"
+										className="type-subtitle text-primary mt-2 flex max-w-full items-start gap-2 underline-offset-4 hover:underline"
 										href={`/service-offerings/${best.slug}` as Route}
 									>
-										{best.label}
-										<ArrowRight aria-hidden="true" className="size-4" />
+										<span className="min-w-0 [overflow-wrap:anywhere]">
+											{best.label}
+										</span>
+										<ArrowRight
+											aria-hidden="true"
+											className="mt-1 size-4 shrink-0"
+										/>
 									</Link>
 									{others.length ? (
 										<p className="text-muted-foreground mt-2 text-sm">
@@ -159,7 +164,11 @@ export function ProblemFinder({
 									<Link
 										prefetch={false}
 										className={cn(
-											buttonVariants({ variant: "outline", size: "lg" }),
+											buttonVariants({
+												variant: "outline",
+												size: "lg",
+												wrap: true,
+											}),
 											"w-full sm:w-auto sm:grow",
 										)}
 										href="/contact"
