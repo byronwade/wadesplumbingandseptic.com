@@ -13,6 +13,22 @@ import { siteConfig } from "@/lib/site"
 export const META_DESCRIPTION_MAX = 155
 /** Social previews (and opengraph.xyz) prefer ~125 characters. */
 export const OG_DESCRIPTION_MAX = 125
+/** Google cuts most result titles off around this length. */
+export const TITLE_MAX = 60
+/** Must match the root layout's title template. */
+export const TITLE_SUFFIX = ` | ${siteConfig.name}`
+
+/**
+ * The document title for a page. The layout template appends the brand, but
+ * when that would push the title past what Google shows (or the title already
+ * names the business) the page title stands alone, so the words people search
+ * for are not the part that gets cut off.
+ */
+export function documentTitle(title: string): Metadata["title"] {
+	if (title.includes(siteConfig.name)) return { absolute: title }
+	if (title.length + TITLE_SUFFIX.length > TITLE_MAX) return { absolute: title }
+	return title
+}
 
 /** Stable schema.org node IDs: every page references the same business entity. */
 export const businessId = `${siteConfig.url}/#business`
@@ -80,7 +96,7 @@ export function buildPageMetadata({
 	const ogAlt = `${title}. Call ${siteConfig.phone} for service.`
 
 	return {
-		title,
+		title: documentTitle(title),
 		description: metaDescription,
 		alternates: { canonical: pathname },
 		openGraph: {
