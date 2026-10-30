@@ -50,6 +50,24 @@ Access matters. Some Day Valley driveways are long, narrow, and steep. Service t
 
 The area sits between Aptos flatlands and mountain communities like Corralitos and the San Lorenzo Valley. Soil and elevation change quickly; what works on a valley lot may not apply on your hillside parcel.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Day Valley?
+
+Yes. Wade's Plumbing & Septic serves Day Valley homeowners and works throughout Santa Cruz County, including the hill-country conditions that shape plumbing and septic work in Day Valley.
+
+### Do Day Valley homes usually have septic systems?
+
+Yes, septic is the standard in Day Valley. Septic systems, private wells, and barn plumbing are as common there as suburban sewer lines are elsewhere.
+
+### What plumbing problems are common in Day Valley homes?
+
+Drain lines on Day Valley hillside lots depend on proper slope and venting, and problems show up as gurgling fixtures or slow drains when those fundamentals are compromised. Tree roots from the oak woodland also seek moisture in sewer laterals and septic lines.
+
+### What should Day Valley homeowners mention when scheduling service?
+
+Some Day Valley driveways are long, narrow, and steep, so tell Wade's about access constraints when you schedule. That way the crew arrives with the right equipment and time allowance.
+
 ## Schedule service in Day Valley
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Day Valley. We serve all of Santa Cruz County and are familiar with the Aptos hills and surrounding oak country.

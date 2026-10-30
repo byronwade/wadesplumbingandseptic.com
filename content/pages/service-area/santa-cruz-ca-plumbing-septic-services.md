@@ -44,6 +44,24 @@ Santa Cruz's marine layer keeps soils damp much of the year. That moisture feeds
 
 Salt air accelerates corrosion on exterior hose bibs and some tank hardware near the coast. High-turnover rentals (common near the beach and campus), often see garbage disposals pushed past their limits and water heaters die early from heavy use. We document what we see so property managers and owners can plan maintenance instead of reacting to the same repair twice a year.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Santa Cruz?
+
+Yes. Wade's Plumbing & Septic is a family-owned Santa Cruz County contractor (CSLB #1087260) serving owner-occupied homes, rentals, and hillside properties in Santa Cruz. Call 831.225.4344.
+
+### Are Santa Cruz homes on sewer or septic?
+
+The Santa Cruz city core (downtown, much of the Westside, and many Eastside neighborhoods) is on municipal sewer. Uphill toward the university, on certain canyon roads, or on larger parcels on the north edge of town, septic systems and private laterals become common.
+
+### What plumbing problems are common in older Santa Cruz homes?
+
+Santa Cruz plumbing ranges from galvanized supply lines in pre-war Victorians to polybutylene in some 1980s remodels and cast-iron drains that have handled decades of tree roots. Common calls include seized or missing shutoff valves, water heater replacement, drain cleaning, and leak detection.
+
+### How does coastal weather affect Santa Cruz plumbing?
+
+The Santa Cruz marine layer keeps soils damp much of the year, which feeds root growth toward sewer and septic lines. Salt air near the coast also accelerates corrosion on exterior hose bibs and some tank hardware.
+
 ## Schedule Service in Santa Cruz
 
 Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344).

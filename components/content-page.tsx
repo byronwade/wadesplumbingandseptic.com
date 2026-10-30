@@ -76,10 +76,11 @@ export function ContentPage({
 			: undefined
 
 	// About Us has a reviewed general FAQ and a separate legacy commercial
-	// section. Only the reviewed answers belong in its structured data.
+	// section. Only the reviewed answers belong in its structured data. City
+	// pages carry the same "Frequently Asked Questions" section.
 	const faqContent = isFaq
 		? document.content
-		: document.slug === "about-us"
+		: document.slug === "about-us" || isServiceArea
 			? splitContentBands(document.content).sections.find(
 					(section) => section.heading === "Frequently Asked Questions",
 				)?.body

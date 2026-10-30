@@ -44,6 +44,24 @@ The Pajaro River basin and local aquifer mean high groundwater in wet winters. Y
 
 Agricultural dust and debris find their way into outdoor cleanouts on properties bordering fields. We clear lines and explain maintenance habits that reduce repeat calls. For rental and multi-family housing near downtown, high tenant turnover accelerates wear on water heaters and kitchen drains. We prioritize durable repairs where it makes sense.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Watsonville?
+
+Yes. Wade's Plumbing & Septic is family-owned and licensed (CSLB #1087260) and serves Watsonville and the surrounding valley. Call 831.225.4344 for plumbing or septic service.
+
+### Are Watsonville homes on sewer or septic?
+
+Central Watsonville and many in-town subdivisions connect to city sewer. Toward Amesti, Interlaken, or the hills above Corralitos, onsite wastewater dominates, and some older homes sit on systems undersized for modern household use.
+
+### What are signs of drainfield failure on a Watsonville property?
+
+Signs of drainfield failure on Watsonville properties include persistent odors, wet strips in the yard, and gurgling after laundry.
+
+### How does hard water affect Watsonville plumbing?
+
+Hard water mineral buildup shows up on fixtures throughout the Pajaro Valley, including Watsonville. Wade's addresses symptoms at the fixture and flags when whole-house treatment or pipe scaling may be contributing.
+
 ## Watsonville Area Contact
 
 Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+18312254344) for plumbing or septic service.

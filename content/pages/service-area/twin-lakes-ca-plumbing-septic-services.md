@@ -46,6 +46,24 @@ Twin Lakes also sees concentrated use during holiday weekends. Systems that cope
 
 The neighborhood's position between two larger cities means some owners assume Santa Cruz or Capitola rules apply to permits and sewer extensions. They do not always. We clarify county versus city jurisdiction when work touches laterals near the municipal boundary so you are not surprised mid-project.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Twin Lakes?
+
+Yes. Wade's Plumbing & Septic is family-owned and licensed in California (CSLB #1087260), and serves Twin Lakes homeowners, long-term renters, and property managers. Call 831.225.4344.
+
+### Are Twin Lakes homes on sewer or septic?
+
+Lower Twin Lakes properties generally connect to municipal sewer lines serving the coastal grid. Up the bluff or on slightly larger parcels, septic systems appear, sometimes legacy tanks predating modern setback rules.
+
+### Do Santa Cruz or Capitola rules apply to Twin Lakes plumbing permits?
+
+Not always. Some Twin Lakes owners assume Santa Cruz or Capitola rules apply to permits and sewer extensions, so Wade's clarifies county versus city jurisdiction when work touches laterals near the municipal boundary.
+
+### How does the ocean affect Twin Lakes plumbing?
+
+Ocean proximity in Twin Lakes accelerates corrosion on hose bibs, exterior shutoffs, and some tank components, and sand finds its way into drains not designed for heavy grit.
+
 ## Twin Lakes Appointments
 
 Contact Wade's at [831.225.4344](tel:+18312254344) for Twin Lakes plumbing or septic service.

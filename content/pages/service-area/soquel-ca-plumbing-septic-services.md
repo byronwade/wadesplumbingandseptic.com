@@ -46,6 +46,24 @@ Soquel collects moisture from creek drainage and coastal fog, keeping soils damp
 
 Agricultural and nursery operations on the outskirts sometimes share water supply infrastructure with residential plumbing. We separate irrigation issues from domestic line failures so you are not paying to excavate the wrong problem.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Soquel?
+
+Yes. Wade's Plumbing & Septic is family-owned, based in Santa Cruz County, and licensed (CSLB #1087260), and works with Soquel residents on the flat and on hillside properties. Call 831.225.4344.
+
+### Do Soquel homes usually have septic systems?
+
+The Soquel wastewater picture is split. Denser areas and newer sewer extensions connect to municipal systems, while larger parcels, legacy homes, and mountain roads frequently rely on septic tanks and drainfields permitted under county rules.
+
+### What plumbing problems are common in Soquel homes?
+
+Common Soquel jobs include root-related drain cleaning along streets where mature trees line Soquel Creek, water heater replacement, leak detection under slabs and in crawlspaces, and sewer line video inspection before buying a home.
+
+### How do ADUs and rebuilds affect Soquel plumbing?
+
+In Soquel, post-fire rebuilds and ADU additions increase fixture counts on septic or sewer systems that were never designed for them.
+
 ## Soquel Service Contact
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).

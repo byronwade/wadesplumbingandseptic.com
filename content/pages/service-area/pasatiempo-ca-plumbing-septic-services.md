@@ -48,6 +48,24 @@ The golf course and canyon drainage patterns influence storm runoff on some lots
 
 Many Pasatiempo homes have been renovated multiple times. Kitchen and bath upgrades without full drain reconfiguration can leave you with undersized lines or improper venting. We flag these issues when we see them.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Pasatiempo?
+
+Yes. Wade's Plumbing & Septic serves Pasatiempo as part of its Santa Cruz County coverage and knows the hillside communities between Scotts Valley and Santa Cruz. Call 831.225.4344.
+
+### Are Pasatiempo homes on sewer or septic?
+
+The majority of Pasatiempo properties are on sewer service through the local sanitation district, though a small number of parcels on the community's edges or adjacent undeveloped lots may still use septic. If you are unsure, Wade's can verify which system serves your address during a service visit.
+
+### What causes recurring backups in sewer-connected Pasatiempo homes?
+
+In Pasatiempo, mature oaks, redwoods, and ornamental plantings root aggressively toward sewer laterals. Recurring backups on sewer-connected homes often trace to root intrusion, not a full main line blockage.
+
+### Why do drains in older Pasatiempo homes run slow?
+
+Venting problems in older Pasatiempo homes sometimes cause slow drains that look like clogs but trace back to design issues, and remodels without full drain reconfiguration can leave undersized lines or improper venting. Wade's diagnoses the full system rather than clearing one fixture.
+
 ## Schedule service in Pasatiempo
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing service in Pasatiempo. We serve Santa Cruz County and know the hillside communities between Scotts Valley and Santa Cruz.

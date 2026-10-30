@@ -52,6 +52,24 @@ If your property was affected by wildfire rebuild requirements, septic setbacks 
 
 From Ben Lomond we reach [Felton](/service-area/felton-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), and [Brookdale](/service-area/brookdale-ca-plumbing-septic-services) daily. Same watershed, same technical challenges.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Ben Lomond?
+
+Yes. Wade's Plumbing & Septic is a family-owned Santa Cruz County company that has spent years working in the Ben Lomond canyons. Call 831.225.4344 about a slow drain, a wet spot in the yard, or a well that can't keep up.
+
+### Do Ben Lomond homes usually have septic systems?
+
+Yes. Nearly every Ben Lomond parcel relies on onsite wastewater treatment, and percolation rates change with elevation, so even neighboring lots can behave differently.
+
+### Why does every drain gurgle in my Ben Lomond house?
+
+In Ben Lomond the problem isn't always inside the walls. On septic, a saturated drainfield on a shaded slope looks a lot like a main-line blockage until both are inspected.
+
+### Why do aerators and showerheads clog in Ben Lomond homes?
+
+Many Ben Lomond homes draw from private wells with iron, manganese, or fine sediment that clogs aerators and showerheads, so plumbing symptoms sometimes start at the source, not the fixture.
+
 ## Call Wade's
 
 Questions about a slow drain, a wet spot in the yard, or a well that can't keep up? Call **[831.225.4344](tel:+18312254344)**. See our full [service areas](/service-areas) map, read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your property before we roll a truck.

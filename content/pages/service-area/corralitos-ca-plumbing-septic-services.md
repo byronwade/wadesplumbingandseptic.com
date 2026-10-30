@@ -50,6 +50,24 @@ Corralitos roads can be narrow and steep. We plan truck access for septic work a
 
 Fire-season awareness matters here too. Hose bibs, backup water supplies, and exterior plumbing should be maintained and tested before summer, not after a red-flag warning.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Corralitos?
+
+Yes. Wade's Plumbing & Septic serves all of Santa Cruz County and regularly works along the Corralitos corridor and surrounding hills. Call 831.225.4344 for Corralitos plumbing or septic service.
+
+### Do Corralitos homes have septic systems?
+
+Yes, septic is standard in Corralitos. Hillside lots may use engineered systems, pressure distribution, or ATUs, while orchard parcels on flatter ground often have older conventional tanks and leach lines in service for thirty or forty years.
+
+### Can nearby orchard irrigation affect a Corralitos septic system?
+
+Yes. Even if you are not farming your Corralitos parcel, neighboring irrigation can raise shallow groundwater and stress nearby septic fields after heavy rain.
+
+### What should Corralitos homeowners tell Wade's when booking septic work?
+
+Corralitos roads can be narrow and steep. If your tank is far from the road, tell Wade's when you call so adequate time is allowed for the visit.
+
 ## Schedule service in Corralitos
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for Corralitos plumbing or septic service. We serve all of Santa Cruz County and regularly work along the Corralitos corridor and surrounding hills.

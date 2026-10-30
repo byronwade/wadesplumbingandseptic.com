@@ -48,6 +48,24 @@ Agricultural activity nearby means dust, debris, and occasional chemical storage
 
 Well water hardness and iron staining are frequent complaints. Addressing the water heater and fixtures without acknowledging water quality leads to repeat problems. We note what we observe and suggest practical steps.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Amesti?
+
+Yes. Wade's Plumbing & Septic works across south Santa Cruz County every day and schedules plumbing and septic service in Amesti. Call 831.225.4344 to book a visit.
+
+### Do Amesti homes usually have septic systems?
+
+Yes. Nearly every Amesti residence operates on a private septic system, and tank sizes, field layouts, and installation dates vary widely.
+
+### Why do Amesti septic systems back up after winter rain?
+
+After sustained winter rain, low-lying Amesti parcels near Amesti Creek can end up with saturated drainfields. Wade's sees more septic backups then, not because the tank is full, but because the soil cannot accept more effluent until conditions dry out.
+
+### What plumbing problems are common in Amesti homes?
+
+Common Amesti plumbing calls include kitchen and bathroom drain clogs, water heater failures often linked to hard well water, leaking hose bibs and laundry connections, and low water pressure traced to well equipment or sediment-clogged aerators.
+
 ## Schedule service in Amesti
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) to schedule plumbing or septic service in Amesti. We cover all of Santa Cruz County and prioritize clear communication about timing, access, and what to expect on arrival.

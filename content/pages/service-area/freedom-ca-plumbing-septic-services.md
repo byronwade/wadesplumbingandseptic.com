@@ -47,6 +47,24 @@ Hard water from local wells is common, which accelerates scale buildup in water 
 
 We factor these conditions into every Freedom service call, not generic advice, but recommendations shaped by what we see in south county every week.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Freedom?
+
+Yes. Wade's Plumbing & Septic serves Freedom homeowners, renters, and small commercial properties as part of its work throughout Santa Cruz County.
+
+### Are Freedom properties on sewer or septic?
+
+Septic is the norm in Freedom, and most properties there are not on municipal sewer. Wells, septic systems, and agricultural water lines are everyday infrastructure.
+
+### Why do leach fields struggle after winter rains in Freedom?
+
+Pajaro Valley clay and high groundwater in low areas can shorten leach field life in Freedom or cause surfacing effluent after heavy winter rains. Seasonal groundwater rise can also stress marginal leach fields that performed fine in summer.
+
+### Should I get a septic inspection when buying a home in Freedom?
+
+A septic inspection before closing can prevent costly surprises when buying or selling along Freedom Boulevard or on surrounding ag-residential parcels. Wade's documents what it finds and walks you through realistic next steps.
+
 ## Schedule service in Freedom
 
 For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for scheduled work.

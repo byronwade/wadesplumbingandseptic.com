@@ -51,6 +51,24 @@ Winter storms saturate hillside soils. Septic drainfields on marginal sites may 
 
 Fire-season preparedness matters in the foothills. Exterior hose bibs and backup water sources should be tested before summer, not assumed functional because they worked last year.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Saratoga?
+
+Wade's Plumbing & Septic serves selected Saratoga addresses near the Santa Cruz County line and mountain foothills, not all of Saratoga or Santa Clara County. Call 831.225.4344 with your full address to confirm coverage before scheduling.
+
+### Do Saratoga homes have septic systems?
+
+Most Saratoga homes connect to municipal sewer, but some western hillside and legacy parcels near the county border may still use private septic systems, especially on larger lots and older builds.
+
+### Which county handles septic permits for Saratoga properties?
+
+Septic permitting on the Santa Clara County side follows different procedures than Santa Cruz County. Wade's clarifies which county governs your Saratoga property when confirming your address.
+
+### What should Saratoga foothill homeowners check before fire season?
+
+In the Saratoga foothills, exterior hose bibs and backup water sources should be tested before summer, not assumed functional because they worked last year.
+
 ## Confirm coverage and schedule service
 
 **Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344).

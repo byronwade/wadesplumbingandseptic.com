@@ -50,6 +50,24 @@ An undersized or failed system isn't a footnote on a rural property. It's a gate
 
 Bonny Doon connects mentally to the coast and the valley. We serve [Davenport](/service-area/davenport-ca-plumbing-septic-services) to the west, [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) via the San Lorenzo drainage, and [Felton](/service-area/felton-ca-plumbing-septic-services) for the Highway 9 link, same county, different access roads, same need for technicians who don't get lost or give up at a locked gate.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Bonny Doon?
+
+Yes. Wade's Plumbing & Septic is family-owned in Santa Cruz County and works Bonny Doon as mountain specialists. Call 831.225.4344 and share your road name and gate notes so Wade's can plan the visit right the first time.
+
+### Why do so many Bonny Doon properties need engineered septic systems?
+
+Flat leach fields are rare on Bonny Doon ridges, and percolation varies within a single parcel. Wade's septic repair and replacement work in Bonny Doon is heavily weighted toward engineered septic systems when gravity layouts won't work.
+
+### Why is water pressure low in my Bonny Doon home?
+
+Many Bonny Doon homes depend on wells with storage tanks, booster pumps, and filtration for iron or sediment. Low pressure at the master bath might be a failing pump three hundred feet uphill.
+
+### What plumbing issues come with Bonny Doon fire rebuilds?
+
+CZU losses brought new construction to Bonny Doon with modern plumbing codes, often tied to older site utilities. Wade's reconciles what's new inside the house with what's still in the ground from the previous structure.
+
 ## Ridge-top service, straight answers
 
 Call Wade's at **[831.225.4344](tel:+18312254344)** for Bonny Doon plumbing or septic. Browse [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and gate notes. We'll plan the visit right the first time.

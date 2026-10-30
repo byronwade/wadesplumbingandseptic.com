@@ -46,6 +46,24 @@ Redwood root balls don't stop at the property pin on the map. We've replaced lat
 
 Mount Hermon draws mail from Scotts Valley but lives like the mountains. We routinely work in [Felton](/service-area/felton-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Zayante](/service-area/zayante-ca-plumbing-septic-services), neighbors who share wells, watershed, and septic realities.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Mount Hermon?
+
+Yes. Wade's Plumbing & Septic serves Mount Hermon homeowners who live there full-time and those whose homes sit partially empty between seasons.
+
+### Is Mount Hermon on sewer or septic?
+
+Mount Hermon is overwhelmingly on septic, not sewer. Lots are wooded, slopes are moderate to steep, and original systems vary widely in age and design.
+
+### How does seasonal use affect plumbing in Mount Hermon homes?
+
+Homes near the Mount Hermon conference area may see bursts of occupancy that spike water use and septic loading. Wade's helps owners catch small leaks before they run up a pump bill on an empty house.
+
+### Why do Mount Hermon homes get air or sediment at the faucets?
+
+In Mount Hermon homes on private wells, short cycling, air locks, and sediment at fixtures often trace back to the well house, not the kitchen faucet.
+
 ## Talk to a local team
 
 Call Wade's Plumbing & Septic at **[831.225.4344](tel:+18312254344)** for Mount Hermon service. Browse [service areas](/service-areas), read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your home, year-round or seasonal, and we'll recommend a sensible first step.

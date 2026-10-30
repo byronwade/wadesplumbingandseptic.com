@@ -46,6 +46,24 @@ Redwood root systems do not respect pipe joints. Aptos hillside lots see recurri
 
 Salt air is milder than Capitola but still affects exterior spigots and some tank components on bluff-adjacent streets. Combined with sandy and clay mixes depending on elevation, soil conditions change block by block, one reason percolation and drainfield performance vary sharply across Aptos.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Aptos?
+
+Yes. Wade's Plumbing & Septic is a family-owned Santa Cruz County contractor (CSLB #1087260) serving Aptos homeowners, multi-generational family properties, and second-home owners. Call 831.225.4344 for plumbing or septic help in Aptos.
+
+### Are Aptos homes on septic or sewer?
+
+Both exist in Aptos. A large share of Aptos, especially toward Aptos Hills, Larkin Valley roads, and larger lots east of Highway 1, relies on onsite wastewater, while sewer exists along parts of the main corridors. If you are unsure what serves your parcel, Wade's can help clarify before you budget a remodel or ADU.
+
+### Why do roots keep getting into Aptos sewer lines?
+
+Redwood root systems do not respect pipe joints, and oak and redwood roots find clay or Orangeburg pipe, so Aptos hillside lots see recurring root intrusion in main lines. Wade's handles sewer line clearing and video inspection for these problems.
+
+### Why does drainfield performance vary so much across Aptos?
+
+Aptos soils range from sandy to clay mixes depending on elevation, and conditions change block by block. That is one reason percolation and drainfield performance vary sharply across Aptos.
+
 ## Aptos Service from Wade's
 
 Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Aptos.

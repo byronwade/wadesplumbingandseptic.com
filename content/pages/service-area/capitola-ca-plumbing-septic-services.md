@@ -44,6 +44,24 @@ Capitola's vacation rental market puts extra cycles on disposals, washers, and w
 
 The city sits low enough that groundwater and lagoon influence matter on certain streets. Combined with heavy clay in spots, yard drainage and foundation perimeter lines occasionally tie into plumbing complaints that look like sewer problems but start with surface water. We trace the source instead of assuming the worst.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Capitola?
+
+Yes. Wade's Plumbing & Septic is family-owned, licensed in California (CSLB #1087260), and based in Santa Cruz County, working with Capitola year-round residents, HOA-managed complexes, and short-term rental owners. Call 831.225.4344 for plumbing or septic service in Capitola.
+
+### Are Capitola homes on sewer or septic?
+
+Most homes in the flat Capitola grid connect to municipal sewer. Moving east toward Soquel Drive or south toward the Aptos hills, septic tanks and drainfields appear on larger parcels and older rural pockets absorbed into the city over time.
+
+### Why do plumbing fixtures corrode faster in Capitola?
+
+Capitola's proximity to Monterey Bay means exterior fixtures and exposed drain hardware see more corrosion than inland Scotts Valley homes.
+
+### What should Capitola vacation rental owners know about plumbing?
+
+Capitola's vacation rental market puts extra cycles on disposals, washers, and water heaters, and a property that runs fine for owner-occupancy can struggle when sleeping capacity doubles. Scheduling preventive drain cleaning before peak season is cheaper than a repair call during Art & Wine weekend.
+
 ## Call Wade's in Capitola
 
 For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+18312254344).

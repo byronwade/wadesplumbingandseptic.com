@@ -51,6 +51,24 @@ Tree root intrusion, ground movement on slopes, and aging cast-iron or clay sewe
 
 Properties near the border often feel more like Santa Cruz Mountain communities than Silicon Valley suburbs. That is the geography Wade's is built for, and why our Los Gatos coverage is intentional and limited rather than county-wide.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Los Gatos?
+
+Only selected addresses. Wade's Plumbing & Septic serves Los Gatos properties near the Santa Cruz County line, not all of Los Gatos or Santa Clara County, so call 831.225.4344 with your property address to confirm before scheduling.
+
+### Are downtown Los Gatos addresses in Wade's service area?
+
+Downtown, east-side, and central valley Los Gatos addresses are generally outside Wade's range. Wade's Los Gatos coverage is intentional and limited to properties near the Santa Cruz County border.
+
+### Do Los Gatos homes have septic systems?
+
+Los Gatos is predominantly sewer-served, especially in flatter neighborhoods closer to town. Hillside and mountain-adjacent parcels near the Santa Cruz County border may still operate on private septic, particularly on larger lots and legacy properties.
+
+### Which county's permit rules apply to Los Gatos septic work?
+
+Santa Clara County permitting applies to septic work on the Santa Clara side of the line. Wade's clarifies jurisdiction and requirements when it confirms your Los Gatos address.
+
 ## Confirm coverage and schedule service
 
 **Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area.

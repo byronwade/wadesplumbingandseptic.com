@@ -46,6 +46,24 @@ Winter storms push sand and debris into outdoor drains and test whether downspou
 
 The State Park border and Aptos Creek outlet nearby mean some streets see more foot traffic and parked visitors than typical residential blocks. That extra activity does not change pipe sizing, but it does mean exterior cleanouts and hose bibs take more abuse, worth checking before listing a home or opening a short-term rental.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Rio Del Mar?
+
+Yes. Wade's Plumbing & Septic is family-owned (CSLB #1087260) and serves Rio Del Mar from its Santa Cruz County base. Call 831.225.4344 for plumbing or septic service.
+
+### Are Rio Del Mar homes on sewer or septic?
+
+Many Rio Del Mar flats connect to sewer infrastructure serving the coastal corridor, while properties on larger inland lots or above the main grid may remain on septic. If you are buying in Rio Del Mar, confirm the wastewater type early.
+
+### What plumbing problems are common in Rio Del Mar beach homes?
+
+Rio Del Mar homes near the ocean often have slab foundations, exterior water heaters, and drains that have seen decades of sand and sunscreen. Wade's regularly handles drain cleaning, water heater repair and replacement, slab leak detection, and hose bib replacement where salt corrosion causes sudden yard floods.
+
+### How does seasonal occupancy affect Rio Del Mar plumbing?
+
+Rio Del Mar homes can sit closed for weeks, then run at full capacity during summer, stressing water heaters and septic systems sized for lighter use. Salt air also corrodes exterior plumbing faster than owners who live inland most of the year expect.
+
 ## Rio Del Mar Appointments
 
 Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service in Rio Del Mar.

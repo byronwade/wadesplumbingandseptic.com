@@ -53,6 +53,24 @@ We also see more owner-maintained systems here, DIY riser installs, unpermitted 
 
 We connect Boulder Creek with [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), [Brookdale](/service-area/brookdale-ca-plumbing-septic-services), [Bonny Doon](/service-area/bonny-doon-ca-plumbing-septic-services), and [Felton](/service-area/felton-ca-plumbing-septic-services) on the same Highway 9 corridor.
 
+## Frequently Asked Questions
+
+### Does Wade's Plumbing & Septic serve Boulder Creek?
+
+Yes. Wade's Plumbing & Septic is family-owned and rooted in Santa Cruz County, and has helped homeowners from downtown Boulder Creek out toward Brookdale and Bonny Doon Road. Call 831.225.4344 for plumbing or septic service in Boulder Creek.
+
+### Are most Boulder Creek homes on septic?
+
+Yes. If you're on city sewer in Boulder Creek, you're the exception. Most parcels depend on a tank-and-leach-field system sized for soils that can change within a single acre.
+
+### What are the warning signs of a failing drainfield in Boulder Creek?
+
+In Boulder Creek, surfacing in the yard, odors after laundry, or backups when the dishwasher runs are warning signs of a failed or failing drainfield, not quirks to live with.
+
+### Do pipes freeze in Boulder Creek?
+
+Yes. Boulder Creek's upstream canyons freeze harder than Felton, so hose bibs, crawlspace pipes, and uninsulated guest units need attention. Wade's repairs burst lines and helps homeowners prevent the next freeze.
+
 ## Get help upstream
 
 Call Wade's at **[831.225.4344](tel:+18312254344)** for plumbing or septic service in Boulder Creek. Explore [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) to talk through your lot before we schedule a visit.
