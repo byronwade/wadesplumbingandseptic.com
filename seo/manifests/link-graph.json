@@ -1359,7 +1359,7 @@
 		{
 			"from": "/rainy-season-septic-and-drain-prep-santa-cruz",
 			"to": "/septic-safety-during-floods-santa-cruz",
-			"anchor": "flood-proofing your septic system",
+			"anchor": "septic safety during and after floods",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1754,32 +1754,74 @@
 		},
 		{
 			"from": "/septic-system-seasonal-maintenance-santa-cruz",
-			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
-			"anchor": "septic filter cleaning",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-system-seasonal-maintenance-santa-cruz",
-			"to": "/service-offerings/septic-system-certification",
-			"anchor": "certified septic experts",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-system-seasonal-maintenance-santa-cruz",
-			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "alternative septic system installations",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-system-seasonal-maintenance-santa-cruz",
 			"to": "/the-complete-guide-to-septic-system-maintenance",
-			"anchor": "Septic System Maintenance Made Easy in Santa Cruz County",
+			"anchor": "septic system maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
+			"anchor": "effluent filter",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/service-offerings/septic-tank-alarm-installation",
+			"anchor": "high water alarm",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic and drain prep guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/septic-safety-during-floods-santa-cruz",
+			"anchor": "flood safety guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County terrain affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
+			"anchor": "filter service",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "septic troubleshooting",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-system-seasonal-maintenance-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
