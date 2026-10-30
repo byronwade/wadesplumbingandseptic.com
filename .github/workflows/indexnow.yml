@@ -1,0 +1,47 @@
+name: IndexNow
+
+# After a production deploy, tell IndexNow search engines (Bing and partners)
+# which pages' content changed so they recrawl them promptly. Run it by hand
+# with "all" to submit every sitemap URL once.
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "changed (last commit) or all (every sitemap URL)"
+        default: changed
+        type: choice
+        options: [changed, all]
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    name: Submit changed pages
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: [self-hosted, linux, x64, wades, wades-ci]
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+          fetch-depth: 2
+
+      - name: Submit to IndexNow
+        env:
+          SCOPE: ${{ inputs.scope || 'changed' }}
+        run: |
+          if [ "$SCOPE" = "all" ]; then
+            node scripts/indexnow.mjs --all
+          else
+            node scripts/indexnow.mjs --changed HEAD~1 HEAD
+          fi
