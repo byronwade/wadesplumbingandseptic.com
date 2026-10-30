@@ -18,6 +18,7 @@ import { CallButton } from "@/components/call-button"
 import { HomeBelowFold } from "@/components/home-below-fold"
 import { HomeHeroMedia } from "@/components/home-hero-media"
 import { JsonLd } from "@/components/json-ld"
+import { ProblemFinder } from "@/components/problem-finder"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import {
@@ -26,6 +27,7 @@ import {
 	heroStats,
 	proofPoints,
 } from "@/lib/home-content"
+import { finderProblems, finderSpokes, finderTowns } from "@/lib/problem-finder"
 import { buildPageMetadata } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
@@ -229,6 +231,12 @@ export default function HomePage() {
 					})}
 				</ul>
 			</section>
+
+			<ProblemFinder
+				problems={finderProblems}
+				spokes={finderSpokes}
+				towns={finderTowns}
+			/>
 
 			<HomeBelowFold />
 			<JsonLd
