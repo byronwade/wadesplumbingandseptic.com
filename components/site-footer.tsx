@@ -49,7 +49,7 @@ const socialLinks = [
 
 export function SiteFooter() {
 	return (
-		<footer className="bg-ink text-white">
+		<footer className="bg-ink text-on-dark">
 			{/*
 			  No Call strip here. Page-level ContactCta / conversion bands already
 			  offer Call + hours; stacking another dial bar on the footer reads as
@@ -73,10 +73,10 @@ export function SiteFooter() {
 								width={44}
 							/>
 							<span>
-								<span className="font-display block text-lg leading-tight font-extrabold tracking-[-0.03em]">
+								<span className="font-display block text-lg leading-tight font-semibold tracking-[-0.03em]">
 									Wade&apos;s Plumbing
 								</span>
-								<span className="text-primary-bright mt-1 block font-mono text-[0.625rem] leading-none font-semibold tracking-[0.2em] uppercase">
+								<span className="text-primary-bright mt-1 block text-xs leading-none font-medium">
 									&amp; Septic
 								</span>
 							</span>
@@ -94,7 +94,7 @@ export function SiteFooter() {
 						<div className="mt-5 flex flex-col items-start gap-2">
 							<GoogleReviewButton onDark />
 							<a
-								className="inline-flex min-h-11 items-center rounded-sm text-sm underline decoration-white/30 underline-offset-4 outline-none hover:text-white focus-visible:ring-2 focus-visible:ring-white"
+								className="hover:text-on-dark inline-flex min-h-11 items-center rounded-sm text-sm underline decoration-white/30 underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-white"
 								href={siteConfig.googleBusinessUrl}
 							>
 								Find us on Google
@@ -127,21 +127,21 @@ export function SiteFooter() {
 					<div className="flex flex-wrap gap-x-6 gap-y-2">
 						<Link
 							prefetch={false}
-							className="transition-colors hover:text-white"
+							className="hover:text-on-dark transition-colors"
 							href="/privacy-policy"
 						>
 							Privacy Policy
 						</Link>
 						<Link
 							prefetch={false}
-							className="transition-colors hover:text-white"
+							className="hover:text-on-dark transition-colors"
 							href="/terms-of-service"
 						>
 							Terms
 						</Link>
 						<Link
 							prefetch={false}
-							className="transition-colors hover:text-white"
+							className="hover:text-on-dark transition-colors"
 							href="/sitemap.xml"
 						>
 							Sitemap
@@ -151,23 +151,15 @@ export function SiteFooter() {
 			</div>
 
 			<div className="footer-credit relative overflow-hidden">
-				<div
-					aria-hidden="true"
-					className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_120%_at_50%_-20%,color-mix(in_srgb,var(--primary)_28%,transparent),transparent_55%)]"
-				/>
-				<div
-					aria-hidden="true"
-					className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
-				/>
 				<div className="container-shell relative flex flex-col items-center gap-3 py-8 text-center sm:gap-3.5 sm:py-10">
-					<p className="text-primary-bright/90 font-mono text-[0.625rem] font-semibold tracking-[0.22em] uppercase">
+					<p className="text-primary-bright/90 text-xs font-medium">
 						Also a tech company
 					</p>
-					<p className="max-w-[22rem] text-[0.9375rem] leading-snug text-pretty text-white/78 sm:max-w-lg sm:text-base sm:leading-relaxed">
+					<p className="text-on-dark/78 max-w-[22rem] text-[0.9375rem] leading-snug text-pretty sm:max-w-lg sm:text-base sm:leading-relaxed">
 						Wade&apos;s Plumbing &amp; Septic and Wade&apos;s Inc. were
 						developed and designed by{" "}
 						<a
-							className="hover:text-primary-bright hover:decoration-primary-bright/50 font-semibold text-white underline decoration-white/25 underline-offset-[0.2em] transition-colors"
+							className="hover:text-primary-bright hover:decoration-primary-bright/50 text-on-dark font-semibold underline decoration-white/25 underline-offset-[0.2em] transition-colors"
 							href="https://byronwade.com"
 							rel="noopener noreferrer"
 							target="_blank"
@@ -175,13 +167,13 @@ export function SiteFooter() {
 							Byron Wade
 						</a>
 					</p>
-					<p className="flex flex-wrap items-center justify-center gap-2 font-mono text-[0.6875rem] tracking-[0.08em] text-white/45">
+					<p className="text-on-dark/55 flex flex-wrap items-center justify-center gap-2 text-xs">
 						<span>Made with 🩷</span>
-						<span aria-hidden="true" className="text-white/20">
+						<span aria-hidden="true" className="text-on-dark/20">
 							·
 						</span>
 						<a
-							className="transition-colors hover:text-white"
+							className="hover:text-on-dark transition-colors"
 							href="https://byronwade.com"
 							rel="noopener noreferrer"
 							target="_blank"

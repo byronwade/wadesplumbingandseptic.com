@@ -136,7 +136,7 @@ function ResultCard({
 						src={hit.image}
 						alt={hit.title}
 						fill
-						className="object-cover transition-transform duration-150 group-hover:scale-[1.03]"
+						className="object-cover"
 						sizes="120px"
 					/>
 				) : (
@@ -161,13 +161,13 @@ function ResultCard({
 						</span>
 					) : null}
 				</div>
-				<p className="font-display mt-1.5 text-[1.0625rem] leading-tight font-extrabold tracking-[-0.03em] text-white sm:text-[1.1875rem]">
+				<p className="font-display text-on-dark mt-1.5 text-[1.0625rem] leading-tight font-semibold tracking-[-0.03em] sm:text-[1.1875rem]">
 					<HighlightedTitle title={hit.title} query={query} />
 				</p>
 				<p className="text-on-dark-subtle mt-1 line-clamp-2 text-sm leading-snug">
 					{hit.description}
 				</p>
-				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-bold transition-colors group-hover:text-[var(--primary-bright)]">
+				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-semibold transition-colors group-hover:text-[var(--primary-bright)]">
 					Open
 					<ArrowUpRight className="size-3.5" aria-hidden />
 				</div>
@@ -292,11 +292,11 @@ export function GlobalSearch({
 			<DialogContent
 				showCloseButton={false}
 				className={cn(
-					"bg-ink fixed inset-0 top-0 left-0 z-50 flex h-[100dvh] max-h-[100dvh] w-full max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 text-white shadow-none duration-0",
+					"bg-ink text-on-dark fixed inset-0 top-0 left-0 z-50 flex h-[100dvh] max-h-[100dvh] w-full max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 shadow-none duration-0",
 					"!animate-none data-[state=closed]:!animate-none data-[state=open]:!animate-none",
 					"focus:outline-none",
 				)}
-				overlayClassName="!animate-none bg-ink/90 duration-0 backdrop-blur-[2px] data-[state=closed]:!animate-none data-[state=open]:!animate-none"
+				overlayClassName="!animate-none bg-ink/85 duration-0 data-[state=closed]:!animate-none data-[state=open]:!animate-none"
 				onOpenAutoFocus={(event) => {
 					event.preventDefault()
 					inputRef.current?.focus({ preventScroll: true })
@@ -304,7 +304,7 @@ export function GlobalSearch({
 			>
 				<div
 					aria-hidden
-					className="tex-glow bg-ink pointer-events-none absolute inset-0"
+					className="bg-ink pointer-events-none absolute inset-0"
 				/>
 
 				<div className="relative flex h-full min-h-0 flex-col">
@@ -317,7 +317,7 @@ export function GlobalSearch({
 						>
 							<div className="min-w-0">
 								<p className="spec-label">Wade&apos;s</p>
-								<DialogTitle className="type-headline mt-2 text-white">
+								<DialogTitle className="type-headline text-on-dark mt-2">
 									Looking for something?
 								</DialogTitle>
 								<DialogDescription className="sr-only">
@@ -325,7 +325,7 @@ export function GlobalSearch({
 								</DialogDescription>
 							</div>
 
-							<DialogClose className="text-on-dark-muted flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-75 hover:bg-white/[0.06] hover:text-white focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
+							<DialogClose className="text-on-dark-muted hover:text-on-dark flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-75 hover:bg-white/[0.06] focus-visible:ring-2 focus-visible:ring-[var(--primary-bright)] focus-visible:outline-none">
 								<X className="size-5" />
 								<span className="sr-only">Close search</span>
 							</DialogClose>
@@ -362,7 +362,7 @@ export function GlobalSearch({
 											? `search-option-${flatHits[safeActiveIndex].id}`
 											: undefined
 									}
-									className="font-display h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-extrabold tracking-[-0.03em] text-white caret-[var(--primary-bright)] outline-none placeholder:font-bold placeholder:text-white/30 focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
+									className="font-display text-on-dark placeholder:text-on-dark/30 h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-semibold tracking-[-0.03em] caret-[var(--primary-bright)] outline-none placeholder:font-semibold focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
 								/>
 							</label>
 
@@ -413,7 +413,7 @@ export function GlobalSearch({
 
 							{showEmpty ? (
 								<div className="section-head mx-auto max-w-lg py-14 text-center">
-									<p className="type-title text-white">
+									<p className="type-title text-on-dark">
 										Nothing for “{query.trim()}”
 									</p>
 									<p className="type-lead text-on-dark-muted">
@@ -431,7 +431,7 @@ export function GlobalSearch({
 												? "Start here"
 												: `${flatHits.length} match${flatHits.length === 1 ? "" : "es"}`}
 										</p>
-										<p className="text-xs text-white/30 sm:hidden">
+										<p className="text-on-dark/30 text-xs sm:hidden">
 											Tap a result
 										</p>
 									</div>
@@ -484,7 +484,7 @@ export function GlobalSearch({
 						<div
 							className={cn(
 								SEARCH_SHELL,
-								"flex items-center justify-between gap-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs text-white/35",
+								"text-on-dark/35 flex items-center justify-between gap-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] text-xs",
 							)}
 						>
 							<span>

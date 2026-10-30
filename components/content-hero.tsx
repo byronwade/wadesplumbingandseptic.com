@@ -92,7 +92,7 @@ function BreadcrumbTrail({
 								prefetch={false}
 								className={cn(
 									"transition-colors",
-									light ? "hover:text-foreground" : "hover:text-white",
+									light ? "hover:text-foreground" : "hover:text-on-dark",
 								)}
 								href={item.href}
 							>
@@ -115,7 +115,7 @@ function BreadcrumbTrail({
 							aria-current="page"
 							className={cn(
 								"min-w-0 text-pretty break-words",
-								light ? "text-foreground/80" : "text-white/85",
+								light ? "text-foreground/80" : "text-on-dark/85",
 							)}
 						>
 							{current.label}
@@ -186,9 +186,7 @@ export function ContentHero({
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="section-head max-w-3xl">
 						{eyebrow ? (
-							<p className="text-primary font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
-								{eyebrow}
-							</p>
+							<p className="text-primary text-xs font-medium">{eyebrow}</p>
 						) : null}
 						{/*
 						  No entrance motion on title/lead: they are common LCP nodes.
@@ -231,13 +229,13 @@ export function ContentHero({
 		  a full-width photo pushing the facts below the fold.
 		*/
 		return (
-			<header className="hero-service surface-hero tex-grid overflow-hidden">
+			<header className="hero-service surface-hero overflow-hidden">
 				<div className="container-shell grid grid-cols-1 items-center gap-8 pt-8 pb-10 sm:pt-10 sm:pb-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14 lg:py-14">
 					<div className="min-w-0">
 						<BreadcrumbTrail items={trail} tone="dark" />
 						<div className="section-head">
 							{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
-							<h1 className="type-headline text-white">{title}</h1>
+							<h1 className="type-headline text-on-dark">{title}</h1>
 							<p className="type-lead text-on-dark-muted">{description}</p>
 						</div>
 						{actions ? (
@@ -264,7 +262,7 @@ export function ContentHero({
 								</Link>
 							</div>
 						) : null}
-						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
 							{serviceHeroFacts.map((fact) => (
 								<li className="flex items-center gap-2" key={fact}>
 									<BadgeCheck
@@ -305,7 +303,7 @@ export function ContentHero({
 		  in the first screen.
 		*/
 		return (
-			<header className="hero-index surface-hero tex-grid relative overflow-hidden">
+			<header className="hero-index surface-hero relative overflow-hidden">
 				<div className="container-shell relative py-12 sm:py-16 lg:py-20">
 					<BreadcrumbTrail items={trail} tone="dark" />
 					<div
@@ -319,7 +317,7 @@ export function ContentHero({
 						<div>
 							<div className="section-head max-w-2xl">
 								{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
-								<h1 className="type-headline text-white">{title}</h1>
+								<h1 className="type-headline text-on-dark">{title}</h1>
 								<p className="type-lead text-on-dark-muted max-w-xl">
 									{description}
 								</p>
@@ -375,7 +373,7 @@ export function ContentHero({
 	const actions = showActions ?? true
 
 	return (
-		<header className="hero-page surface-hero tex-grid relative overflow-hidden">
+		<header className="hero-page surface-hero relative overflow-hidden">
 			{image ? (
 				<div
 					aria-hidden="true"
@@ -391,8 +389,7 @@ export function ContentHero({
 						sizes="60vw"
 						src={image}
 					/>
-					<div className="absolute inset-0 bg-linear-to-r from-[var(--dark-1)] via-[color-mix(in_srgb,var(--dark-1)_75%,transparent)] to-transparent" />
-					<div className="absolute inset-0 bg-linear-to-t from-[var(--dark-1)] to-transparent" />
+					<div className="absolute inset-0 bg-[color-mix(in_oklab,var(--dark-1)_45%,transparent)]" />
 				</div>
 			) : null}
 
@@ -404,7 +401,7 @@ export function ContentHero({
 				<BreadcrumbTrail items={trail} tone="dark" />
 				<div className="section-head max-w-2xl">
 					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
-					<h1 className="type-headline text-white">{title}</h1>
+					<h1 className="type-headline text-on-dark">{title}</h1>
 					<p className="type-lead text-on-dark-muted">{description}</p>
 				</div>
 				{actions ? (
@@ -434,7 +431,7 @@ export function ContentHero({
 					</div>
 				) : null}
 				{actions ? (
-					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
 						{serviceHeroFacts.map((fact) => (
 							<li className="flex items-center gap-2" key={fact}>
 								<BadgeCheck

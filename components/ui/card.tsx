@@ -31,7 +31,7 @@ export function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
 	return (
 		<h3
 			className={cn(
-				"card-title font-display leading-snug font-extrabold tracking-[-0.02em] text-balance",
+				"card-title font-display leading-snug font-semibold tracking-[-0.02em] text-balance",
 				className,
 			)}
 			{...props}

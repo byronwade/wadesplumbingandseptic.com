@@ -157,7 +157,7 @@ export default async function CityServicePage({
 						<ul className="mt-[var(--space-block)] grid gap-[var(--space-grid)]">
 							{page.commonIssues.map((issue) => (
 								<li
-									className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
+									className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-semibold"
 									key={issue}
 								>
 									<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center rounded-md">
@@ -190,7 +190,7 @@ export default async function CityServicePage({
 						context across plumbing and septic, start at the {location.name}{" "}
 						hub.
 					</p>
-					<ul className="mt-8 flex flex-col gap-3 text-sm font-bold sm:flex-row sm:flex-wrap">
+					<ul className="mt-8 flex flex-col gap-3 text-sm font-semibold sm:flex-row sm:flex-wrap">
 						<li>
 							<Link
 								prefetch={false}
@@ -244,7 +244,7 @@ export default async function CityServicePage({
 								<li key={item.slug}>
 									<Link
 										prefetch={false}
-										className="surface-panel inline-flex px-4 py-2 text-sm font-bold"
+										className="surface-panel inline-flex px-4 py-2 text-sm font-semibold"
 										href={item.href as Route}
 									>
 										{item.name}

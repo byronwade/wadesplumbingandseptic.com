@@ -26,9 +26,9 @@ import { cn } from "@/lib/utils"
 
 /** Brand tokens from globals.css - MapLibre paint needs concrete colors. */
 const BRAND = {
-	primary: "#8f4a1a",
+	primary: "#bc6f30",
 	primaryBright: "#e0a15d",
-	ink: "#101214",
+	ink: "#0a0a0a",
 } as const
 
 /** OpenFreeMap - reliable free vector basemap (Carto tiles often leave a blank white canvas). */
@@ -232,10 +232,10 @@ export function ServiceAreasMap() {
 							className="w-[min(22rem,calc(100vw-2.5rem))] max-w-none"
 						>
 							<div className="space-y-2.5 pr-6 font-sans antialiased">
-								<p className="text-foreground font-display text-lg leading-snug font-extrabold tracking-tight">
+								<p className="text-foreground font-display text-lg leading-snug font-semibold tracking-tight">
 									{selected.properties.name}
 								</p>
-								<p className="text-primary text-sm font-bold tracking-normal">
+								<p className="text-primary text-sm font-semibold tracking-normal">
 									{selected.properties.tier === "primary"
 										? "Primary coverage"
 										: "Selected coverage: confirm address"}
@@ -250,7 +250,7 @@ export function ServiceAreasMap() {
 			</div>
 
 			<ul className="text-muted-foreground flex flex-col items-center gap-2 px-[var(--space-page-x)] text-center text-sm sm:gap-2.5">
-				<li className="flex items-center justify-center gap-2.5 font-bold">
+				<li className="flex items-center justify-center gap-2.5 font-semibold">
 					<span
 						aria-hidden="true"
 						className={cn("size-3.5 shrink-0 rounded-sm")}

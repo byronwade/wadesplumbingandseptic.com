@@ -111,7 +111,7 @@ async function GlossaryIndexBody() {
 										<li key={term.slug}>
 											<Link
 												prefetch={false}
-												className="border-border bg-background hover:border-primary hover:text-primary inline-flex rounded-md border px-3 py-1.5 text-sm font-bold transition-colors"
+												className="border-border bg-background hover:border-primary hover:text-primary inline-flex rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors"
 												href={glossaryTermPath(hub.topic, term.slug) as Route}
 											>
 												{term.term}

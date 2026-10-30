@@ -108,7 +108,7 @@ export function ContentPage({
 
 	const articleMeta = isPost ? (
 		<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-			<p className="type-meta text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-bold">
+			<p className="type-meta text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-semibold">
 				{document.date ? (
 					<span>
 						Published{" "}

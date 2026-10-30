@@ -21,7 +21,7 @@ export function TipTopicLinks() {
 					<li className="max-w-full min-w-0" key={topic.href}>
 						<Link
 							prefetch={false}
-							className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-bold [overflow-wrap:anywhere]"
+							className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
 							href={topic.href as Route}
 						>
 							{topic.label}

@@ -27,24 +27,28 @@ function ServiceFacts() {
 			</h2>
 			<dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
 				<div>
-					<dt className="text-muted-foreground text-xs font-bold">
+					<dt className="text-muted-foreground text-xs font-semibold">
 						Service area
 					</dt>
-					<dd className="mt-1 text-sm font-bold">{siteConfig.serviceArea}</dd>
+					<dd className="mt-1 text-sm font-semibold">
+						{siteConfig.serviceArea}
+					</dd>
 				</div>
 				<div>
-					<dt className="text-muted-foreground text-xs font-bold">Hours</dt>
-					<dd className="mt-1 text-sm font-bold">{`${siteConfig.hours}.`}</dd>
+					<dt className="text-muted-foreground text-xs font-semibold">Hours</dt>
+					<dd className="mt-1 text-sm font-semibold">{`${siteConfig.hours}.`}</dd>
 				</div>
 				<div>
-					<dt className="text-muted-foreground text-xs font-bold">Pricing</dt>
-					<dd className="mt-1 text-sm font-bold">{siteConfig.pricing}</dd>
+					<dt className="text-muted-foreground text-xs font-semibold">
+						Pricing
+					</dt>
+					<dd className="mt-1 text-sm font-semibold">{siteConfig.pricing}</dd>
 				</div>
 				<div>
-					<dt className="text-muted-foreground text-xs font-bold">
+					<dt className="text-muted-foreground text-xs font-semibold">
 						How to book
 					</dt>
-					<dd className="mt-1 text-sm font-bold">
+					<dd className="mt-1 text-sm font-semibold">
 						Call{" "}
 						<a className={linkClass} href={siteConfig.phoneHref}>
 							{siteConfig.phone}
@@ -108,7 +112,7 @@ export function ServiceLandingPage({
 								uniqueViews={viewStats.unique}
 							/>
 						) : (
-							<p className="text-muted-foreground font-mono text-[0.6875rem] tracking-[0.08em] uppercase">
+							<p className="text-muted-foreground text-xs">
 								New on the site · your visit counts
 							</p>
 						)}

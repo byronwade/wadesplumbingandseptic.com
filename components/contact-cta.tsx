@@ -39,7 +39,7 @@ export function ContactCta({
 		<section
 			className={cn(
 				"relative overflow-hidden",
-				compact ? "surface-float" : "surface-hero tex-grid tex-glow",
+				compact ? "surface-float" : "surface-hero",
 				compact ? "rounded-lg p-[var(--space-card)] sm:p-7" : "section-y-tight",
 			)}
 		>
@@ -68,7 +68,7 @@ export function ContactCta({
 					</p>
 					{compact ? (
 						<ProtectedContactLink
-							className="text-primary-bright inline-flex items-center gap-2 text-sm font-bold transition-colors hover:text-white"
+							className="text-primary-bright hover:text-on-dark inline-flex items-center gap-2 text-sm font-semibold transition-colors"
 							kind="phone"
 						>
 							<Phone aria-hidden="true" className="size-4 shrink-0" />
@@ -82,7 +82,7 @@ export function ContactCta({
 							</span>
 							<span className="inline-flex min-w-0 items-center gap-2">
 								<Mail className="text-primary-bright size-4 shrink-0" />
-								<ProtectedEmailText className="[overflow-wrap:anywhere] transition-colors hover:text-white" />
+								<ProtectedEmailText className="hover:text-on-dark [overflow-wrap:anywhere] transition-colors" />
 							</span>
 						</div>
 					)}

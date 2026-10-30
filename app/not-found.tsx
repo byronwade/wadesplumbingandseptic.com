@@ -37,11 +37,11 @@ const destinations = [
 
 export default function NotFound() {
 	return (
-		<main className="surface-hero tex-grid" id="main-content">
+		<main className="surface-hero" id="main-content">
 			<div className="container-shell grid min-h-[60vh] grid-cols-1 place-items-center py-[var(--space-section-y)]">
 				<div className="section-head max-w-xl text-center">
 					<p className="spec-label spec-label-center">Error 404</p>
-					<h1 className="type-headline text-white">
+					<h1 className="type-headline text-on-dark">
 						This page could not be found.
 					</h1>
 					<p className="type-lead text-on-dark-muted">
@@ -86,7 +86,7 @@ export default function NotFound() {
 									aria-hidden="true"
 									className="text-primary-bright size-6 shrink-0"
 								/>
-								<span className="mt-4 flex items-center gap-2 font-bold text-white">
+								<span className="text-on-dark mt-4 flex items-center gap-2 font-semibold">
 									{title}
 									<ArrowRight
 										aria-hidden="true"

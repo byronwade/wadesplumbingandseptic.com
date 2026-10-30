@@ -54,7 +54,7 @@ export function ContentCard({
 		>
 			<Image
 				alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
-				className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+				className="object-cover"
 				fill
 				quality={60}
 				sizes={
@@ -81,7 +81,7 @@ export function ContentCard({
 				</CardDescription>
 				<Link
 					prefetch={false}
-					className="text-primary mt-4 inline-flex items-center gap-2 text-sm font-bold"
+					className="text-primary mt-4 inline-flex items-center gap-2 text-sm font-semibold"
 					href={item.href as Route}
 				>
 					{variant === "service" ? "Learn more" : "Read guide"}
@@ -107,7 +107,7 @@ export function ContentCard({
 							<span />
 						)}
 						{showDate && item.date ? (
-							<p className="type-meta inline-flex items-center gap-2 font-bold text-inherit">
+							<p className="type-meta inline-flex items-center gap-2 font-semibold text-inherit">
 								<CalendarDays
 									aria-hidden="true"
 									className="text-primary size-3.5 shrink-0"

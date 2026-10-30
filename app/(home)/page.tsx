@@ -69,23 +69,20 @@ export default function HomePage() {
 			  minimal chrome, one oversized statement, credentials pinned to the
 			  bottom edge as a hairline bar.
 
-			  The photograph is the argument here, so it is not boxed, tinted, or
-			  reduced to texture. Only motion in the band is the slow drift on the
-			  frame itself.
+			  The photograph is the argument here, so it is not boxed or reduced to
+			  texture. It holds still: one flat scrim keeps the type legible.
 			*/}
 			<section className="hero-cinematic">
 				<div className="absolute inset-0 -z-20">
-					<div className="media-drift relative size-full">
+					<div className="relative size-full">
 						<HomeHeroMedia />
 					</div>
 				</div>
 
-				{/* Top line: where we are, and the scroll cue's counterpart. */}
+				{/* Top line: where we are. */}
 				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
-					<p className="spec-label text-primary-bright">
-						Santa Cruz County, CA
-					</p>
-					<p className="text-on-dark-subtle hidden font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:block">
+					<p className="spec-label text-on-dark-muted">Santa Cruz County, CA</p>
+					<p className="text-on-dark-subtle hidden text-xs sm:block">
 						Est. 2021 · Family owned
 					</p>
 				</div>
@@ -95,7 +92,7 @@ export default function HomePage() {
 					  Title and lead paint immediately. Entrance motion on first-screen
 					  copy delayed LCP under mobile Lighthouse (~2s element render delay).
 					*/}
-					<h1 className="type-cinematic text-white">
+					<h1 className="type-cinematic text-on-dark">
 						Santa Cruz plumbing <br />
 						<span className="text-primary-bright">and septic</span>
 					</h1>
@@ -135,7 +132,7 @@ export default function HomePage() {
 					  Intent shortcuts. Most visitors arrive with one job in mind, so
 					  the four common ones are a tap away from the first screen rather
 					  than behind the menu. Solid tint, no backdrop blur: blur over the
-					  drifting photo would repaint every frame.
+					  photo would repaint every scroll frame.
 					*/}
 					<nav
 						aria-label="Popular services"
@@ -155,7 +152,7 @@ export default function HomePage() {
 										className="text-primary-bright size-6 shrink-0 sm:size-7"
 									/>
 									<span className="min-w-0">
-										<span className="block text-[0.9375rem] leading-tight font-bold text-white sm:text-base">
+										<span className="text-on-dark block text-[0.9375rem] leading-tight font-semibold sm:text-base">
 											{label}
 										</span>
 										<span className="text-on-dark-subtle mt-1 hidden text-[0.8125rem] leading-snug sm:block">
@@ -164,7 +161,7 @@ export default function HomePage() {
 									</span>
 									<ArrowUpRight
 										aria-hidden="true"
-										className="text-on-dark-subtle ml-auto size-4 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+										className="text-on-dark-subtle group-hover:text-on-dark ml-auto size-4 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
 									/>
 								</Link>
 							)
@@ -177,34 +174,26 @@ export default function HomePage() {
 				  first frame without adding another row of chips, and gives the
 				  photograph a hard bottom rule to sit on.
 				*/}
-				<div className="relative border-t border-white/12 bg-black/55">
+				<div className="relative bg-black/55 shadow-[inset_0_1px_0_oklch(1_0_0/0.1)]">
 					<div className="container-shell flex items-center justify-between gap-6 py-3.5">
 						<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
 							{heroStats.map(({ label, value }) => (
 								<div className="flex items-baseline gap-2" key={label}>
-									<dt className="text-on-dark-subtle font-mono text-[0.625rem] tracking-[0.16em] uppercase">
-										{label}
-									</dt>
-									<dd className="text-[0.8125rem] font-bold text-white">
+									<dt className="text-on-dark-subtle text-xs">{label}</dt>
+									<dd className="text-on-dark font-mono text-[0.8125rem] font-medium tabular-nums">
 										{value}
 									</dd>
 								</div>
 							))}
 						</dl>
-						{/* Centred in the bar, not hanging below it, where overflow: clip
-						    cut it off and it read as a stray hairline. */}
-						<span
-							aria-hidden="true"
-							className="scroll-cue hidden shrink-0 self-center lg:block"
-						/>
 					</div>
 				</div>
 			</section>
 
 			{/*
-			  Proof bar. Four confirmed facts, each with an icon tile and a one-line
+			  Proof bar. Four confirmed facts, each with a copper mark and a one-line
 			  detail, so the strip carries evidence rather than a row of slogans.
-			  Columns are divided by hairlines from lg up and stack in pairs below.
+			  Spacing separates the columns; there are no dividing lines.
 			*/}
 			<section
 				aria-label="Why homeowners call Wade's"
@@ -214,12 +203,13 @@ export default function HomePage() {
 					{proofPoints.map(({ title, detail, icon }) => {
 						const Icon = proofIcons[icon]
 						return (
-							<li className="flex min-w-0 items-center gap-3.5" key={title}>
-								<span className="bg-accent text-accent-foreground grid size-11 shrink-0 place-items-center rounded-lg">
-									<Icon aria-hidden="true" className="size-5.5" />
-								</span>
+							<li className="flex min-w-0 items-start gap-3" key={title}>
+								<Icon
+									aria-hidden="true"
+									className="text-primary mt-0.5 size-5 shrink-0"
+								/>
 								<span className="min-w-0">
-									<span className="block text-[0.9375rem] leading-tight font-bold tracking-[-0.01em]">
+									<span className="block text-[0.9375rem] leading-tight font-semibold tracking-[-0.01em]">
 										{title}
 									</span>
 									<span className="text-muted-foreground mt-1 block text-[0.8125rem] leading-snug">

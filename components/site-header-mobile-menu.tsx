@@ -60,7 +60,7 @@ function MobileNavLink({
 		>
 			<span
 				className={cn(
-					"text-foreground block font-bold tracking-[-0.02em]",
+					"text-foreground block font-semibold tracking-[-0.02em]",
 					compact ? "text-[0.9375rem]" : "text-base",
 				)}
 			>
@@ -181,7 +181,7 @@ export function SiteHeaderMobileMenu({
 							<li>
 								<button
 									type="button"
-									className="text-primary hover:bg-muted focus-visible:ring-ring flex w-full items-center gap-1.5 rounded-md px-3 py-2 text-left text-[0.9375rem] font-bold outline-none focus-visible:ring-2"
+									className="text-primary hover:bg-muted focus-visible:ring-ring flex w-full items-center gap-1.5 rounded-md px-3 py-2 text-left text-[0.9375rem] font-semibold outline-none focus-visible:ring-2"
 									onClick={() => {
 										closeMenu()
 										router.push("/services")

@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 /*
- * Category mark, not a pill. Matches the .spec-label plate treatment in
+ * Category mark, not a pill. Matches the quiet .spec-label treatment in
  * globals.css so cards, heroes, and section heads all label things the same
  * way - the old rounded chip fought the "no pill clusters" rule and doubled up
  * with the eyebrow style it sat next to.
  */
 export const badgeVariants = cva(
-	"inline-flex items-center font-mono text-[length:var(--type-label)] font-semibold tracking-[0.14em] uppercase",
+	"inline-flex items-center text-[length:var(--type-label)] font-medium",
 	{
 		variants: {
 			tone: {
