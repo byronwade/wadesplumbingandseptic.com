@@ -1880,14 +1880,32 @@
 		},
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/septic-replacement-santa-cruz",
-			"anchor": "septic system replacement",
+			"to": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"anchor": "what happens when septic warning signs are ignored",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "septic maintenance services",
+			"to": "/septic-system-components-santa-cruz",
+			"anchor": "septic system components",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-trouble-signs-santa-cruz",
+			"to": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"anchor": "troubleshooting visit",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-trouble-signs-santa-cruz",
+			"to": "/signs-your-drain-field-needs-professional-repair",
+			"anchor": "signs your drain field needs professional repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-trouble-signs-santa-cruz",
+			"to": "/service-offerings/septic-tank-alarm-installation",
+			"anchor": "high water alarm",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1898,32 +1916,26 @@
 		},
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/septic-trouble-signs-santa-cruz",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/service-offerings/drainfield-repair-and-replacement",
+			"anchor": "drainfield repair",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
 			"to": "/service-areas",
-			"anchor": "service area overview page",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-trouble-signs-santa-cruz",
+			"to": "/contact",
+			"anchor": "Request service",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
