@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-tank-lifespan-refresh-2026-10-30",
+	"collected_at": "2026-10-30T19:00:00+00:00",
+	"source": "epa-scc-lamp-osu-septic",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "107b589e6652d221f72044615b137c580d8dfe0b92bd5f66b393148119557ae9",
+	"payload": {
+		"post": "content/posts/how-to-maintain-your-septic-tank-for-long-term-performance.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Inspect at least every three years; mechanical systems generally once a year; tanks typically pumped every three to five years depending on household size, wastewater, solids and tank size; provider inspects for leaks and scum and sludge layers; do not park or drive on drainfield, do not build on or pave it, plant grasses rather than trees or shrubs.",
+				"inference_limit": "Federal homeowner guidance; page does not address additives or effluent filters.",
+				"collected_at": "2026-10-30T19:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-lamp-ordinance",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "SCCC 7.38.140(D) riser from each manhole cover to the surface to facilitate inspection and maintenance; 7.38.140(G) solids over 3/16 inch kept from the dispersal system, which an approved effluent filter may satisfy; 7.38.150(A)(5) softener and drinking water filter discharge shall not be discharged to the septic system.",
+				"inference_limit": "County ordinance text for new and repaired systems; existing systems may predate these requirements.",
+				"collected_at": "2026-10-30T19:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "osu-septic-additives",
+				"source_url": "https://smallfarms.oregonstate.edu/septic-system-additives-more-harm-help",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Oregon State University Extension, citing EPA SepticSmart: additives are unnecessary and can harm the system and environment; biological additives can disrupt treatment; chemical additives can contaminate groundwater; many products lack independent research.",
+				"inference_limit": "University extension article adapted from EPA materials.",
+				"collected_at": "2026-10-30T19:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed advice to add bacteria additives, an unsourced pump every 1 to 3 years schedule, an unsourced jet septic lines every 5 years schedule, a statement implying Wade s cleans tanks (the business does not pump), expert and money saving claims, a city list, a templated FAQ answer, off-topic tags and two unrelated drain images; corrected the hero alt text to the treatment tank photo; refocused the post on parts that wear out, habits and myths, linking the sourced septic maintenance guide to avoid duplicating it. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T19:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
