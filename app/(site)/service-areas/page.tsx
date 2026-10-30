@@ -7,9 +7,10 @@ import { ContentHero } from "@/components/content-hero"
 import { MapPin } from "@/components/icons"
 import { JsonLd } from "@/components/json-ld"
 import { ServiceAreasMapLazy } from "@/components/service-areas-map-lazy"
+import { TownLookup } from "@/components/town-lookup"
 import type { ContentDocument } from "@/lib/content"
 import { normalizeConversion } from "@/lib/content-conversion"
-import { locationsByCounty } from "@/lib/service-areas"
+import { locationsByCounty, serviceAreaLocations } from "@/lib/service-areas"
 import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
@@ -130,6 +131,16 @@ export default function ServiceAreasPage() {
 					</div>
 
 					<aside className="reveal flex min-w-0 flex-col gap-[var(--space-grid)] lg:sticky lg:top-[calc(var(--header-h)+2rem)] lg:self-start">
+						<TownLookup
+							towns={serviceAreaLocations.map(
+								({ slug, name, href, county }) => ({
+									slug,
+									name,
+									href,
+									county,
+								}),
+							)}
+						/>
 						<div className="surface-panel panel-inset rounded-lg">
 							<p className="spec-label">Foothill coverage</p>
 							<h2 className="type-title mt-3 text-[length:var(--type-card)] sm:text-2xl">
