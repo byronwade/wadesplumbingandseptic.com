@@ -451,6 +451,13 @@ test("robots.txt welcomes search and AI crawlers with the same private paths blo
 	const star = rules.find((rule) => rule.userAgent === "*")
 	assert.ok(star)
 	assert.deepEqual(star.disallow, crawlerDisallow)
+	// Blocking build assets keeps Google from rendering pages the way people see them.
+	assert.ok(
+		crawlerDisallow.every(
+			(path) => !"/_next/static/chunks/app.js".startsWith(path),
+		),
+		"robots.txt must not block /_next/ assets",
+	)
 
 	for (const bot of [
 		"GPTBot",
