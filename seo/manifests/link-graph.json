@@ -44,25 +44,17 @@
 		"/insurance-claims",
 		"/maintenance-guide",
 		"/memorial-day-plumbing-prep-santa-cruz",
-		"/monterey",
 		"/new-septic-installations-santa-cruz",
 		"/pipe-leak-solutions-santa-cruz-septic",
 		"/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
 		"/plumbing-repair-services-santa-cruz-county",
 		"/plumbing-terms-every-homeowner-should-know",
 		"/privacy-policy",
-		"/promotions",
 		"/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 		"/rainy-season-septic-and-drain-prep-santa-cruz",
 		"/rebates",
 		"/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
-		"/san-jose",
-		"/santa-cruz",
 		"/santa-cruz-toilet-running-solutions",
-		"/santa-cruz/commercial-plumbing",
-		"/santa-cruz/drain-clearing",
-		"/santa-cruz/santa-cruz-plumbers-near-me",
-		"/santa-cruz/water-heater-replacement",
 		"/septic-leach-field-repairs-santa-cruz",
 		"/septic-replacement-santa-cruz",
 		"/septic-safety-during-floods-santa-cruz",
@@ -1198,6 +1190,30 @@
 		},
 		{
 			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"anchor": "water softeners and whole house filtration",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/why-is-dirty-water-backing-up-into-your-shower",
+			"anchor": "dirty water backing up into a shower",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/how-to-maintain-your-septic-tank-for-long-term-performance",
+			"anchor": "how to care for a septic system",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
+			"to": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
+			"anchor": "bathroom faucet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-terms-every-homeowner-should-know",
 			"to": "/service-offerings/drain-cleaning",
 			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
@@ -1230,12 +1246,6 @@
 			"from": "/privacy-policy",
 			"to": "/service-areas",
 			"anchor": "areas we serve",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/promotions",
-			"to": "/contact",
-			"anchor": "Discuss your project with our team",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4037,7 +4047,7 @@
 		{
 			"from": "/service-offerings/septic-tank-maintenance-and-care",
 			"to": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
-			"anchor": "Proper Care and Maintenance of Your Septic Tank: A Comprehensive Guide",
+			"anchor": "septic tank care and maintenance guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{

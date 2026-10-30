@@ -1,0 +1,87 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-plumbing-terms-refresh-2026-10-26",
+	"collected_at": "2026-10-26T03:20:00+00:00",
+	"source": "usgs-epa-cpc-plumbing-terms",
+	"source_url_or_tool": "https://www.epa.gov/watersense/residential-toilets",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "fe024f87b39b28039d6bb298112acc6409b741266878927b150169f6a10d2c9c",
+	"payload": {
+		"post": "content/posts/plumbing-terms-every-homeowner-should-know.md",
+		"observations": [
+			{
+				"id": "usgs-hardness",
+				"source_url": "https://www.usgs.gov/water-science-school/science/hardness-water",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Hardness is the amount of dissolved calcium and magnesium; hard water leaves calcium carbonate scale in water heaters and pipes and forms soap scum; classes: soft 0 to 60, moderately hard 61 to 120, hard 121 to 180, very hard above 180 mg/L as calcium carbonate.",
+				"inference_limit": "General definition; no local water quality data.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-watersense-toilets",
+				"source_url": "https://www.epa.gov/watersense/residential-toilets",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Federal standard 1.6 gallons per flush; WaterSense labeled toilets use 1.28 or less; older toilets use as much as 6 gallons per flush.",
+				"inference_limit": "Federal and label figures; California figure from a separate source.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "iapmo-cec-toilets",
+				"source_url": "https://iapmo.org/newsroom/press-releases/important-notification-re-governor-brown-s-executive-order-cec-new-regulation",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "IAPMO notice dated 2015-04-09: California Energy Commission regulations require toilets to use no more than 1.28 gallons per flush, effective January 1, 2016 (prison and mental health facility toilets exempt).",
+				"inference_limit": "Code body summary of the CEC regulation, not the regulation text; applies to toilets sold, not installed toilets.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-how-it-works",
+				"source_url": "https://www.epa.gov/septic/how-your-septic-system-works",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Solids settle to form sludge, oil and grease float as scum; liquid leaving the tank is effluent; drainfield is a shallow covered excavation in unsaturated soil; an overloaded drainfield can flood, causing sewage to surface or back up into toilets and sinks.",
+				"inference_limit": "General guidance; local systems vary.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "cpc-chapter15-graywater",
+				"source_url": "https://www.ebmud.com/application/files/3217/6721/2033/California_Plumbing_Code_-_Graywater.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "CPC Section 1502.1.1: clothes washer (laundry to landscape) graywater systems need no construction permit when they have no potable water connection or pump other than the washer pump, stay on site, cause no ponding or runoff, can divert to the sewer with labeling, send diaper and infectious garment water to the sewer, exclude hazardous chemicals, provide an operation manual; local agencies may add rules.",
+				"inference_limit": "Utility published excerpt of the code; the excerpt does not include the code definition of graywater.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "county-sewer-lateral",
+				"source_url": "https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Property owner maintains the sewer lateral to the public main.",
+				"inference_limit": "Reused from merged posts fetched 2026-10-26.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an expert team and right the first time claim, a city list, a duplicate CTA heading, a templated FAQ answer, six off-topic tags and two unrelated septic images; corrected the hero alt text to the radiant floor tubing photo; regrouped terms by system and added shutoff valve, pressure regulator, PEX, vent, cleanout, sewer lateral, effluent and GPM; corrected the GPF entry with the California 1.28 limit; added safe use notes for blow bags and thread sealants. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-26T03:20:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
