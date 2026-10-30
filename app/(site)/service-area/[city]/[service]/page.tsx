@@ -22,8 +22,8 @@ import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
 	businessId,
-	faqPageJsonLd,
 	serviceAreaPlaceJsonLd,
+	serviceFaqJsonLd,
 } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -85,6 +85,7 @@ export default async function CityServicePage({
 		},
 	}
 
+	const faqSchema = page.faq ? serviceFaqJsonLd(page.faq) : null
 	const jsonLd = [
 		schema,
 		breadcrumbJsonLd([
@@ -93,7 +94,7 @@ export default async function CityServicePage({
 			{ name: location.name, path: location.href },
 			{ name: page.serviceTitle, path: pathname },
 		]),
-		...(page.faq?.length ? [faqPageJsonLd(page.faq)] : []),
+		...(faqSchema ? [faqSchema] : []),
 	]
 
 	return (
