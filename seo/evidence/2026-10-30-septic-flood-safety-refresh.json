@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-flood-safety-refresh-2026-10-30",
+	"collected_at": "2026-10-30T23:00:00+00:00",
+	"source": "epa-flood-septic-scceh",
+	"source_url_or_tool": "https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "71f0185f83be4f325b4bdc2c4c59c23fbec87bfc889a065fee048ff52da2d3ff",
+	"payload": {
+		"post": "content/posts/septic-safety-during-floods-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-after-flood",
+				"source_url": "https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Do not pump during flooded or saturated drainfield conditions (temporary at best; tank may float out and damage inlet and outlet pipes; newer systems pop out more readily); reduce water use, the only way to prevent backup when water table is high; do not use system until drainfield water is lower than water around the house; do not drink well water until tested, contact local health department; check electrical connections; secure manhole cover and inspection ports; inspect if settling or not accepting water; most tanks not damaged but tanks and pump chambers can fill with silt; pump tank and lift station after flood; clogged absorption field may need a new system; only trained specialists clean or repair tanks (dangerous gases); disinfect backed up areas with half cup bleach per gallon; do not compact saturated soil or dig; do not dump floodwater into sinks or toilets, floodwater through the tank pushes solids to the drainfield; avoid flooded electrical or mechanical devices; scum may plug the outlet tee, check outlet first; aerobic plants and media filters clog with mud and need cleaning; business chemicals need extra precautions. Page last updated August 24, 2026.",
+				"inference_limit": "Federal homeowner guidance; sump pump discharge statement in the post is an inference from the floodwater through the tank guidance.",
+				"collected_at": "2026-10-30T23:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scceh-qualified-professionals",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/QualifiedProfessionals.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "County Environmental Health registers liquid waste haulers and publishes a Sewage Liquid Waste Hauler List; haulers need a separate county license under Chapter 7.42.",
+				"inference_limit": "County program page.",
+				"collected_at": "2026-10-30T23:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed a teaser opening, claims about advanced leak detection techniques, expert and peace of mind claims, sump pumps as reducing strain on the septic system, a news article source about a past storm advisory, an empty myths section, a templated seasonal tip, generic checklist, a city list, two duplicate call to action blocks, off-topic tags and two inline images; corrected the hero alt text to the photo (three tank lids below a retaining wall); retitled within 60 characters; rebuilt around EPA flood guidance and the business not pumping tanks. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T23:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
