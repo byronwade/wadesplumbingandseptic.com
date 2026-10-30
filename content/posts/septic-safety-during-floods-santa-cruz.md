@@ -53,7 +53,7 @@ A reliable sump pump installation can be a game-changer for homeowners facing fr
 
 ## Why Expert Septic Care Matters
 
-Professional septic services offer expertise and equipment that DIY solutions cannot match. From [efficient septic solutions](/how-santa-cruz-countys-unique-geography-affects-septic-systems) to comprehensive inspections, our team provides peace of mind by ensuring your system is flood-ready and compliant with local regulations.
+Professional septic services offer expertise and equipment that DIY solutions cannot match. From [how county terrain affects septic systems](/how-santa-cruz-countys-unique-geography-affects-septic-systems) to comprehensive inspections, our team provides peace of mind by ensuring your system is flood-ready and compliant with local regulations.
 
 ## Septic Care in Santa Cruz County
 
