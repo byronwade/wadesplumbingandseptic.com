@@ -64,7 +64,7 @@ function BulletPanels({ items }: { items: string[] }) {
 					{/* The panel is already bold, so bold markers are dropped, but
 					    links stay links: "Open roles" lists are how the job pages
 					    are reached at all. */}
-					<span className="[&_a]:text-primary leading-snug [&_a]:underline [&_a]:underline-offset-4">
+					<span className="inline-links leading-snug">
 						<MarkdownInline content={item.replace(/\*\*/g, "")} />
 					</span>
 				</li>

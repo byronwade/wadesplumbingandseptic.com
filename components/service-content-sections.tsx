@@ -27,7 +27,7 @@ function BulletText({
 	return (
 		<span
 			className={cn(
-				"[&_a]:text-primary leading-snug [&_a]:underline [&_a]:underline-offset-4",
+				"inline-links leading-snug",
 				className,
 				item.label && "font-normal",
 			)}

@@ -1125,6 +1125,7 @@
 		--prose-quote: var(--on-dark-muted);
 		--prose-quote-bg: color-mix(in srgb, white 7%, transparent);
 		--prose-code-bg: color-mix(in srgb, white 9%, transparent);
+		--inline-link: var(--primary-bright);
 	}
 
 	.surface-float .prose a,
@@ -1157,7 +1158,19 @@
 		--prose-quote: oklch(0.432 0.01 68);
 		--prose-quote-bg: oklch(0.954 0.005 85);
 		--prose-code-bg: oklch(0.943 0.004 85);
+		--inline-link: var(--primary);
 		color: oklch(0.2 0.007 68);
+	}
+
+	/*
+	  Links inside one-line markdown (bullet panels, timeline rows). Dark
+	  surfaces and light cards on them set --inline-link above, matching what
+	  .prose links get in the same place.
+	*/
+	.inline-links a {
+		color: var(--inline-link, var(--primary));
+		text-decoration-line: underline;
+		text-underline-offset: 4px;
 	}
 
 	.surface-float .surface-panel .prose a,
