@@ -121,3 +121,20 @@ test("every mapped community links to existing content with unique identifiers",
 		slugs.add(location.slug)
 	}
 })
+
+test("only the sitewide business node is typed as a Plumber", () => {
+	// Other nodes reference it by @id. A second typed Plumber without an
+	// address or phone is reported as a LocalBusiness markup error.
+	const offenders = ["app", "lib", "components"]
+		.flatMap((root) =>
+			fs
+				.readdirSync(root, { recursive: true, withFileTypes: true })
+				.filter((entry) => entry.isFile() && /\.tsx?$/.test(entry.name))
+				.map((entry) => path.join(entry.parentPath, entry.name)),
+		)
+		.filter((file) => file !== path.join("lib", "seo.ts"))
+		.filter((file) =>
+			/"@type":\s*(?:\[[^\]]*)?"Plumber"/.test(fs.readFileSync(file, "utf8")),
+		)
+	assert.deepEqual(offenders, [])
+})

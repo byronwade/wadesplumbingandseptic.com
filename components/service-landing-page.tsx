@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { ContentConversionCta } from "@/components/content-conversion-cta"
+import { ServiceCityLinks } from "@/components/city-service-guides"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { PageViewTracker } from "@/components/page-view-tracker"
@@ -125,6 +126,8 @@ export function ServiceLandingPage({
 				category={category}
 				content={service.content}
 			/>
+
+			<ServiceCityLinks serviceSlug={service.slug} />
 
 			{related ? (
 				<RelatedContentSectionsWithStats
