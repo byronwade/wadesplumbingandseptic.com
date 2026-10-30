@@ -58,7 +58,7 @@ Some homes use both: a filter for taste, odor or sediment and a softener for har
 
 If your home is on a septic system, softener brine is a real concern. Santa Cruz County Environmental Health says brine can harm the bacteria in the septic tank, reduce tank capacity, clog the leach field and add enough water to cause effluent to surface. Discharging brine to the ground is prohibited under the County Code. Homes on sewer must send softener waste to the sewer.
 
-The county's guidance, in order of preference: skip the softener, use an exchange tank service where the brine stays in a tank that is swapped out, or, if brine must be discharged, use a separate drywell or subsurface system kept apart from the septic system. Discharging brine into the septic system is highly discouraged. See our guide on [septic leach field repairs](/septic-leach-field-repairs-santa-cruz) for what an overloaded field looks like.
+The county sewage disposal ordinance (County Code Section 7.38.150) says discharge from water softeners and drinking water filters shall not be discharged to the septic system. Environmental Health's guidance, in order of preference: skip the softener, use an exchange tank service where the brine stays in a tank that is swapped out, or, if brine must be discharged, use a separate drywell or subsurface system kept apart from the septic system. See our guide on [septic leach field repairs](/septic-leach-field-repairs-santa-cruz) for what an overloaded field looks like.
 
 ## Keeping a system working
 
@@ -74,7 +74,7 @@ A softener treats hardness and scale. A filter treats sediment, chlorine taste a
 
 ### Can a water softener drain into a septic system in Santa Cruz County?
 
-The county highly discourages it and recommends an exchange tank service or a separate drywell or subsurface system. Ground discharge of brine is prohibited.
+No. The county sewage disposal ordinance says softener and drinking water filter discharge shall not go to the septic system. Environmental Health recommends an exchange tank service or a separate drywell or subsurface system, and ground discharge of brine is prohibited.
 
 ### How do I know what a filter removes?
 
@@ -90,6 +90,7 @@ Flat rate pricing, quoted on site before work begins.
 - U.S. EPA, [Consumer Confidence Report Information for Consumers](https://www.epa.gov/ccr/ccr-information-consumers)
 - U.S. EPA, [Private Drinking Water Wells](https://www.epa.gov/privatewells)
 - CDC, [Choosing Home Water Filters](https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html)
+- Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 - Santa Cruz County Environmental Health, [The Harmful Effects of Water Softener Discharge on Your Septic System](https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf)
 
 ## Need help with water treatment?
