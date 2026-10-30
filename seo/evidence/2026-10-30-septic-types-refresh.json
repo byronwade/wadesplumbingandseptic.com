@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-septic-types-refresh-2026-10-30",
+	"collected_at": "2026-10-30T19:20:00+00:00",
+	"source": "epa-scceh-lamp-septic-types",
+	"source_url_or_tool": "https://www.epa.gov/septic/types-septic-systems",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "7ba105ccbe06c09402022c3c476fe85d81769ca3f93e9ec4e643b22a8138410c",
+	"payload": {
+		"post": "content/posts/septic-system-types-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-septic-types",
+				"source_url": "https://www.epa.gov/septic/types-septic-systems",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Conventional (tank and gravel drainfield, typical single-family, large footprint); chamber (high groundwater, scarce gravel); drip distribution (dose tank and power); mound (shallow soil, high groundwater, shallow bedrock); recirculating sand filter (nutrient treatment, high water tables or near water); aerobic treatment unit (smaller lots, poor soil, sensitive surface water, regular maintenance); evapotranspiration (arid only); constructed wetland; cluster (two or more dwellings).",
+				"inference_limit": "Federal overview; local approval rules differ.",
+				"collected_at": "2026-10-30T19:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Inspect at least every three years; systems with mechanical parts generally once a year.",
+				"inference_limit": "Reused from same-day fetch.",
+				"collected_at": "2026-10-30T19:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scceh-lamp-appendix-c",
+				"source_url": "https://www.scceh.org/Portals/6/Pdfs/LAMP%20Appendix%20C%20Summary%20of%20Requirements%20LAMP%20with%20changes%208.16.2022.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Conventional and enhanced treatment categories (intermittent sand filters, recirculating sand filters, trickling filters, NSF/ANSI certified proprietary units); new systems need enhanced treatment for reduced groundwater separation or fast or slow percolation; repairs for reduced groundwater or surface water separation, fast or slow percolation, under pavement, reduced dispersal area, existing seepage pits; nitrogen reduction for soils faster than 5 MPI in nitrate concern areas; new systems on undeveloped parcels not permitted within set stream distances; enhanced treatment requires maintenance contract, deed recordation, periodic inspection and annual fee.",
+				"inference_limit": "County summary table as amended 2022-08-16; parcel-specific approval depends on site evaluation.",
+				"collected_at": "2026-10-30T19:20:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an etymology aside, unsourced inspect every 1 to 3 years advice, trusted and expert claims, a spring seasonal tip, a generic checklist, a sources section with only an internal link, links to jetting and certification services, a duplicate CTA and a templated hero alt; added EPA type descriptions, the county LAMP enhanced treatment triggers, nitrogen and stream rules and ongoing obligations, and links to related merged guides. Original date kept, updated added as 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T19:20:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
