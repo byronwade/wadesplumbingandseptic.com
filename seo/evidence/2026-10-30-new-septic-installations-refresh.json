@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-new-septic-installations-refresh-2026-10-30",
+	"collected_at": "2026-10-30T22:00:00+00:00",
+	"source": "scceh-owts-pages-lamp-ordinance",
+	"source_url_or_tool": "https://scceh.com/NewHome/Programs/LandUse/OWTSNewDevelopment.aspx",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "9d8d954c3678936d63d5ea369d4176727f290e0d1504ba463a6e3a51a448ec83",
+	"payload": {
+		"post": "content/posts/new-septic-installations-santa-cruz.md",
+		"observations": [
+			{
+				"id": "scceh-new-development",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSNewDevelopment.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Primary consideration for raw land is liquid waste handling; often only an enhanced OWTS is possible. Challenges: 1 acre minimum parcel for raw land development, 10 acre minimum for new parcels in drinking water watersheds; steep slopes and cuts (effluent can leach out, slope failure), no OWTS on graded property; clay soils need larger leach field, sandy soils need enhanced treatment; high groundwater requires enhanced treatment. Hire a qualified professional, file Site Evaluation; qualified professional applies for new OWTS. Sewage Disposal Permit required for anyone to install, upgrade, enlarge, replace, modify, repair, abandon or destroy an OWTS. Complete application includes design with scaled plot plan, test results, fees, grading plan when required, easement letters, slope stability or geotechnical report if required.",
+				"inference_limit": "County page also states an enhanced system costs at least a stated dollar figure; not repeated per site pricing policy.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scceh-repair-upgrades",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Check EH Files online for a permitted OWTS and its permitted structures, bedrooms and square footage; unpermitted parcels meet new development standards. Repair standards when structures do not exceed the permit, with a one time per parcel allowance under 500 square feet with no added bedrooms. Upgrade standards for more bedrooms, over 500 added square feet or more structures; adding an OWTS or tank for an ADU is an upgrade. Bedroom is any room other than a kitchen, bathroom and one living space.",
+				"inference_limit": "County program page.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scceh-qualified-professionals",
+				"source_url": "https://scceh.com/NewHome/Programs/LandUse/QualifiedProfessionals.aspx",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Site evaluations, soil investigations, percolation tests and designs by California registered civil engineer, professional geologist, certified engineering geologist (evaluations), registered environmental health specialist or other EH approved professional; slope stability reports by licensed professional geologist or certified engineering geologist; installers must be CSLB licensed Class A, B, C-36 or C-42, with Class B limited to new construction; OSSPs approved by EH and certified by the manufacturer maintain enhanced and alternative systems.",
+				"inference_limit": "County program page.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-ordinance-permits-inspections",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "7.38.093 sewage disposal permit valid unless the building permit becomes invalid; expired permit requires new application and current rules. 7.38.200 approved design kept on the job site until approval; one or more inspections of each new installation; inspection request at least one business day before work begins; stop work order for improper installation until cleared.",
+				"inference_limit": "Ordinance text dated 8.2.2021 in LAMP Appendix A.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "business-license",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "CSLB #1087260 with C-36 Plumbing and C-42 Sanitation System classes; engineered septic installation is an existing service offering.",
+				"inference_limit": "Repository record of business facts.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed unsourced property value, efficiency and environmental benefit claims, a 20 to 30 year lifespan claim, a few days to a week timeline, expert, certified, trusted, premier and top tier claims, a templated seasonal tip, generic checklist, a city list, a duplicate call to action block, off-topic tags and two unrelated stock images; corrected the hero alt text to describe the illustration; rebuilt around county new development, repair and upgrade, qualified professional, permit and inspection rules. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-30T22:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
