@@ -5228,6 +5228,12 @@
 		},
 		{
 			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
+			"to": "/septic-leach-field-repairs-santa-cruz",
+			"anchor": "septic leach field repairs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
 			"to": "/service-offerings/water-filtration-system-installation",
 			"anchor": "water filtration installation",
 			"classification": "MOCK_VERIFIED"
