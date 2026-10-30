@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-seasonal-septic-refresh-2026-10-30",
+	"collected_at": "2026-10-31T00:00:00+00:00",
+	"source": "epa-scceh-seasonal-septic",
+	"source_url_or_tool": "https://www.epa.gov/septic/how-care-your-septic-system",
+	"scope": "Substantive refresh of an existing post at its URL, adding sources",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "4609e4eb1ca5ef8c15af88dab89b6f3a7e1dc49c8048c9f87ed9be0e5bcb599f",
+	"payload": {
+		"post": "content/posts/septic-system-seasonal-maintenance-santa-cruz.md",
+		"observations": [
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Inspect at least every three years; alternative systems with float switches, pumps or mechanical parts generally once a year with a service contract; tanks typically pumped every three to five years depending on household size, wastewater, solids and tank size; provider examines scum and sludge layers; keep records; one leaky or running toilet can add as much as 200 gallons per day; spread laundry through the week, doing it all in one day could flood the drainfield; do not park or drive on drainfield; plant trees an appropriate distance; keep roof drains, sump pumps and other rainwater drainage away from the drainfield because excess water slows or stops treatment.",
+				"inference_limit": "Federal homeowner guidance; not specific to Santa Cruz County climate.",
+				"collected_at": "2026-10-31T00:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "epa-after-flood",
+				"source_url": "https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Reduce water use and do not pump a tank in saturated soil; after flooding repair erosion and reseed areas over the tank and absorption field with turf grass.",
+				"inference_limit": "Reused from the flood safety refresh collected the same day.",
+				"collected_at": "2026-10-31T00:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scceh-erosion-control",
+				"source_url": "https://scceh.com/Portals/6/Env_Health/Land%20Use/Land%20Use%20Documents/ErosionControlRequirements.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Erosion control required during and after any septic installation, particularly during the rainy season of October 15 through April 15; bare soil or fill from installation seeded and mulched or otherwise treated between October 15 and April 15; EHS will not final the septic permit until erosion control measures are in place in that period.",
+				"inference_limit": "County handout linked from the OWTS New Development page.",
+				"collected_at": "2026-10-31T00:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "scc-ordinance-wet-weather",
+				"source_url": "https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "7.38.120(B) when required by the Health Officer, seasonal high water table observation only during the rainy season after 60 percent of mean annual rainfall and six inches in the prior 30 days.",
+				"inference_limit": "Reused from the terrain refresh collected the same day.",
+				"collected_at": "2026-10-31T00:00:00+00:00",
+				"scope": "Post refresh"
+			},
+			{
+				"id": "removed-claims",
+				"source_url": "repository content",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Removed an unsourced every 3 to 5 years maintenance answer presented as inspection guidance, a schedule an inspection each season checklist item, cost saving and property value claims, expert, certified, trusted and specialized equipment claims, a myths section, a templated seasonal tip, generic checklist, keyword stuffed phrasing, a stray heading line, off-topic tags and two unrelated inline images; corrected the hero alt text to the photo; rebuilt as a season by season calendar on EPA guidance and county rainy season rules, noting the business does not pump tanks. Original date kept, updated set to 2026-10-30.",
+				"inference_limit": "Repository change only.",
+				"collected_at": "2026-10-31T00:00:00+00:00",
+				"scope": "Post refresh"
+			}
+		]
+	}
+}
