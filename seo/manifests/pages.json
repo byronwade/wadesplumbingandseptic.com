@@ -508,18 +508,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/monterey",
-			"source_path": "content/pages/monterey.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/monterey",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/new-septic-installations-santa-cruz",
 			"source_path": "content/posts/new-septic-installations-santa-cruz.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/new-septic-installations-santa-cruz",
@@ -592,18 +580,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/promotions",
-			"source_path": "content/pages/promotions.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/promotions",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"source_path": "content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
@@ -652,81 +628,9 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"url": "/san-jose",
-			"source_path": "content/pages/san-jose.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/san-jose",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/santa-cruz",
-			"source_path": "content/pages/santa-cruz.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"url": "/santa-cruz-toilet-running-solutions",
 			"source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz-toilet-running-solutions",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/santa-cruz/commercial-plumbing",
-			"source_path": "content/pages/santa-cruz/commercial-plumbing.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/commercial-plumbing",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/santa-cruz/drain-clearing",
-			"source_path": "content/pages/santa-cruz/drain-clearing.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/drain-clearing",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/santa-cruz/santa-cruz-plumbers-near-me",
-			"source_path": "content/pages/santa-cruz/santa-cruz-plumbers-near-me.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/santa-cruz-plumbers-near-me",
-			"type": "markdown_content",
-			"lifecycle": "CONTENT_MANAGED",
-			"owner": null,
-			"metadata_declared": true,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"url": "/santa-cruz/water-heater-replacement",
-			"source_path": "content/pages/santa-cruz/water-heater-replacement.md",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz/water-heater-replacement",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,

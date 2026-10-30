@@ -488,17 +488,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/monterey",
-			"source_path": "content/pages/monterey.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/monterey"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/new-septic-installations-santa-cruz",
 			"source_path": "content/posts/new-septic-installations-santa-cruz.md",
 			"kind": "STATIC_ROUTE",
@@ -567,17 +556,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/promotions",
-			"source_path": "content/pages/promotions.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/promotions"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"source_path": "content/posts/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide.md",
 			"kind": "STATIC_ROUTE",
@@ -626,77 +604,11 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/san-jose",
-			"source_path": "content/pages/san-jose.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/san-jose"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz",
-			"source_path": "content/pages/santa-cruz.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
 			"route_pattern": "/santa-cruz-toilet-running-solutions",
 			"source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/santa-cruz-toilet-running-solutions"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/commercial-plumbing",
-			"source_path": "content/pages/santa-cruz/commercial-plumbing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/commercial-plumbing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/drain-clearing",
-			"source_path": "content/pages/santa-cruz/drain-clearing.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/drain-clearing"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/santa-cruz-plumbers-near-me",
-			"source_path": "content/pages/santa-cruz/santa-cruz-plumbers-near-me.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/santa-cruz-plumbers-near-me"],
-			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
-			"data_source_paths": [],
-			"classification": "MOCK_VERIFIED",
-			"reason": "Static route pattern is directly declared in the repository."
-		},
-		{
-			"route_pattern": "/santa-cruz/water-heater-replacement",
-			"source_path": "content/pages/santa-cruz/water-heater-replacement.md",
-			"kind": "STATIC_ROUTE",
-			"parameters": [],
-			"materialized_routes": ["/santa-cruz/water-heater-replacement"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",

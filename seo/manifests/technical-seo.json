@@ -228,11 +228,6 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/monterey"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/new-septic-installations-santa-cruz"
 		},
 		{
@@ -263,11 +258,6 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/promotions"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide"
 		},
 		{
@@ -288,37 +278,7 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/san-jose"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/santa-cruz-toilet-running-solutions"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz/commercial-plumbing"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz/drain-clearing"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz/santa-cruz-plumbers-near-me"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/santa-cruz/water-heater-replacement"
 		},
 		{
 			"severity": "info",
