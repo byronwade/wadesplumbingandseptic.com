@@ -15,12 +15,12 @@ export function CityServiceGuides({ pathname }: { pathname: string }) {
 			<div className="mx-auto max-w-3xl">
 				<p className="spec-label">Local services</p>
 				<h2 className="type-title mt-3">Services in {cityName}</h2>
-				<ul className="mt-6 flex flex-wrap gap-3">
+				<ul className="mt-6 flex flex-wrap gap-[min(0.75rem,12px)]">
 					{links.map((link) => (
-						<li key={link.href}>
+						<li className="max-w-full min-w-0" key={link.href}>
 							<Link
 								prefetch={false}
-								className="surface-panel inline-flex px-4 py-2 text-sm font-bold"
+								className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-bold [overflow-wrap:anywhere]"
 								href={link.href as Route}
 							>
 								{link.title} in {cityName}
