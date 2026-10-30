@@ -50,7 +50,7 @@ export function ContentGallery({
 										/>
 									</div>
 									{image.caption ? (
-										<figcaption className="text-on-dark-muted px-4 py-3 text-sm font-bold">
+										<figcaption className="text-on-dark-muted px-4 py-3 text-sm font-semibold">
 											{image.caption}
 										</figcaption>
 									) : null}

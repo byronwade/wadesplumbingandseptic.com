@@ -30,7 +30,7 @@ function RelatedGroup({
 				</div>
 				<Link
 					prefetch={false}
-					className="text-primary inline-flex items-center gap-2 text-sm font-bold"
+					className="text-primary inline-flex items-center gap-2 text-sm font-semibold"
 					href={viewAllHref}
 				>
 					{viewAllLabel}

@@ -106,7 +106,7 @@ export function VirtualBusinessCard({
 								</p>
 								<ProtectedEmailText
 									className={cn(
-										"mt-1 block text-sm font-bold [overflow-wrap:anywhere] transition-colors sm:text-base",
+										"mt-1 block text-sm font-semibold [overflow-wrap:anywhere] transition-colors sm:text-base",
 										dark
 											? "hover:text-primary-bright text-on-dark"
 											: "text-foreground hover:text-primary",
@@ -124,7 +124,7 @@ export function VirtualBusinessCard({
 								</p>
 								<p
 									className={cn(
-										"mt-1 text-sm leading-snug font-bold sm:text-base",
+										"mt-1 text-sm leading-snug font-semibold sm:text-base",
 										dark ? "text-on-dark" : "text-foreground",
 									)}
 								>
@@ -163,7 +163,7 @@ export function VirtualBusinessCard({
 						</ProtectedContactLink>
 						<SaveContactButton
 							className={cn(
-								"w-full justify-center text-sm font-bold underline-offset-2 hover:underline",
+								"w-full justify-center text-sm font-semibold underline-offset-2 hover:underline",
 								dark
 									? "text-on-dark-muted hover:text-on-dark"
 									: "text-muted-foreground hover:text-foreground",
@@ -212,7 +212,7 @@ export function VirtualBusinessCard({
 					</ProtectedContactLink>
 					<SaveContactButton
 						className={cn(
-							"w-full justify-center text-sm font-bold underline-offset-2 hover:underline",
+							"w-full justify-center text-sm font-semibold underline-offset-2 hover:underline",
 							dark
 								? "text-on-dark-muted hover:text-on-dark"
 								: "text-muted-foreground hover:text-foreground",

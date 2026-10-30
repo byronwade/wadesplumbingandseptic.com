@@ -86,7 +86,7 @@ export default function NotFound() {
 									aria-hidden="true"
 									className="text-primary-bright size-6 shrink-0"
 								/>
-								<span className="text-on-dark mt-4 flex items-center gap-2 font-bold">
+								<span className="text-on-dark mt-4 flex items-center gap-2 font-semibold">
 									{title}
 									<ArrowRight
 										aria-hidden="true"

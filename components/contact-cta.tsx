@@ -68,7 +68,7 @@ export function ContactCta({
 					</p>
 					{compact ? (
 						<ProtectedContactLink
-							className="text-primary-bright hover:text-on-dark inline-flex items-center gap-2 text-sm font-bold transition-colors"
+							className="text-primary-bright hover:text-on-dark inline-flex items-center gap-2 text-sm font-semibold transition-colors"
 							kind="phone"
 						>
 							<Phone aria-hidden="true" className="size-4 shrink-0" />

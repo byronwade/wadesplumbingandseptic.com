@@ -63,7 +63,7 @@ export function ProblemFinder({
 									<button
 										aria-pressed={selected}
 										className={cn(
-											"surface-panel flex min-h-12 w-full items-center px-4 py-3 text-left text-sm font-bold [overflow-wrap:anywhere] transition-colors",
+											"surface-panel flex min-h-12 w-full items-center px-4 py-3 text-left text-sm font-semibold [overflow-wrap:anywhere] transition-colors",
 											"focus-visible:ring-ring focus-visible:ring-2 focus-visible:outline-none",
 											selected
 												? "border-primary bg-accent text-accent-foreground"
@@ -108,7 +108,7 @@ export function ProblemFinder({
 													{index ? ", " : null}
 													<Link
 														prefetch={false}
-														className="text-foreground font-bold underline underline-offset-4"
+														className="text-foreground font-semibold underline underline-offset-4"
 														href={`/service-offerings/${item.slug}` as Route}
 													>
 														{item.label}
@@ -120,11 +120,14 @@ export function ProblemFinder({
 								</div>
 
 								<div>
-									<label className="text-sm font-bold" htmlFor={townFieldId}>
+									<label
+										className="text-sm font-semibold"
+										htmlFor={townFieldId}
+									>
 										Your town (optional)
 									</label>
 									<select
-										className="border-input bg-card mt-2 block min-h-12 w-full rounded-md border px-3 text-base"
+										className="border-input bg-field mt-2 block min-h-12 w-full rounded-md border px-3 text-base shadow-[inset_0_1px_1px_oklch(0_0_0/0.18)]"
 										id={townFieldId}
 										onChange={(event) => setTownSlug(event.target.value)}
 										value={townSlug}
@@ -140,7 +143,7 @@ export function ProblemFinder({
 										<p className="mt-3 text-sm">
 											<Link
 												prefetch={false}
-												className="font-bold underline underline-offset-4"
+												className="font-semibold underline underline-offset-4"
 												href={
 													(localService
 														? `/service-area/${town.slug}/${localService.slug}`

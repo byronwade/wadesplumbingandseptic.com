@@ -97,7 +97,7 @@ export function ContentConversionCta({
 										<p className="text-on-dark-muted text-[0.9375rem] leading-relaxed text-pretty">
 											&ldquo;{testimonial.quote}&rdquo;
 										</p>
-										<footer className="text-on-dark mt-4 text-sm font-bold">
+										<footer className="text-on-dark mt-4 text-sm font-semibold">
 											{testimonial.name}
 											{testimonial.location ? (
 												<span className="text-on-dark-subtle font-normal">

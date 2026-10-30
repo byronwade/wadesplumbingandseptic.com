@@ -25,28 +25,28 @@ function HeaderNavFallback() {
 			<div className="hidden items-center gap-1 lg:flex">
 				<Link
 					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/services"
 				>
 					Services
 				</Link>
 				<Link
 					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/service-areas"
 				>
 					Areas
 				</Link>
 				<Link
 					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/expert-tips"
 				>
 					Tips
 				</Link>
 				<Link
 					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/contact"
 				>
 					Contact

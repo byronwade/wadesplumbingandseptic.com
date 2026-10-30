@@ -48,7 +48,7 @@ export function NavigationMenuList({
 export const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 export const navigationMenuTriggerStyle = cva(
-	"group inline-flex h-10 w-max items-center justify-center rounded-md px-3.5 py-2 text-sm font-bold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+	"group inline-flex h-10 w-max items-center justify-center rounded-md px-3.5 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
 )
 
 export function NavigationMenuTrigger({

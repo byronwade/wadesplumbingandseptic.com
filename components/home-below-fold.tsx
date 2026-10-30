@@ -139,7 +139,7 @@ export function HomeBelowFold() {
 								</span>
 							</div>
 							<figcaption className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2 px-2 pt-3 pb-1">
-								<span className="text-[0.8125rem] leading-snug font-bold">
+								<span className="text-[0.8125rem] leading-snug font-semibold">
 									Three-tank engineered septic system
 									<span className="text-muted-foreground block font-normal">
 										Hillside property, Santa Cruz Mountains
@@ -147,7 +147,7 @@ export function HomeBelowFold() {
 								</span>
 								<Link
 									prefetch={false}
-									className="text-primary inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-bold"
+									className="text-primary inline-flex shrink-0 items-center gap-1.5 text-[0.8125rem] font-semibold"
 									href="/service-category/septic"
 								>
 									Septic work
@@ -204,7 +204,7 @@ export function HomeBelowFold() {
 										loading="lazy"
 									/>
 								</div>
-								<figcaption className="text-on-dark-subtle mt-3 text-sm font-bold">
+								<figcaption className="text-on-dark-subtle mt-3 text-sm font-semibold">
 									{image.caption}
 								</figcaption>
 							</figure>
@@ -285,7 +285,7 @@ export function HomeBelowFold() {
 									</ul>
 									<Link
 										prefetch={false}
-										className="text-primary border-border mt-auto inline-flex items-center gap-1.5 border-t pt-4 text-sm font-bold hover:underline"
+										className="text-primary border-border mt-auto inline-flex items-center gap-1.5 border-t pt-4 text-sm font-semibold hover:underline"
 										href={group.href as Route}
 									>
 										{group.linkLabel}
@@ -463,11 +463,11 @@ export function HomeBelowFold() {
 									<footer className="mt-4 flex items-center gap-3">
 										<span
 											aria-hidden="true"
-											className="bg-primary text-primary-foreground grid size-9 shrink-0 place-items-center rounded-full text-sm font-bold"
+											className="bg-primary text-primary-foreground grid size-9 shrink-0 place-items-center rounded-full text-sm font-semibold"
 										>
 											{person.charAt(0)}
 										</span>
-										<span className="text-on-dark-muted text-sm font-bold">
+										<span className="text-on-dark-muted text-sm font-semibold">
 											{person}
 										</span>
 									</footer>

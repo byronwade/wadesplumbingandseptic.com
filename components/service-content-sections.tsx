@@ -36,7 +36,7 @@ function BulletText({
 				<MarkdownInline content={item.markdown} />
 			) : item.label ? (
 				<>
-					<strong className="font-bold">{item.label}</strong>
+					<strong className="font-semibold">{item.label}</strong>
 					{item.text.slice(item.label.length)}
 				</>
 			) : (
@@ -58,7 +58,7 @@ function BulletGrid({
 		<ul className="panel-grid grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-semibold"
 					key={item.text}
 				>
 					<span
@@ -254,7 +254,7 @@ function TimelineBand({
 							<ul className="grid gap-4">
 								{section.bullets.map((item) => (
 									<li
-										className="border-border flex items-start gap-[min(0.75rem,12px)] border-b pb-4 text-sm font-bold last:border-0 last:pb-0"
+										className="border-border flex items-start gap-[min(0.75rem,12px)] border-b pb-4 text-sm font-semibold last:border-0 last:pb-0"
 										key={item.text}
 									>
 										<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(1.75rem,28px)] shrink-0 place-items-center rounded-md">
@@ -301,10 +301,10 @@ function TipsBand({
 							className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)]"
 							key={item.text}
 						>
-							<span className="text-primary shrink-0 font-mono text-[0.75rem] font-bold tracking-[0.12em]">
+							<span className="text-primary shrink-0 font-mono text-[0.75rem] font-semibold tracking-[0.12em]">
 								{String(itemIndex + 1).padStart(2, "0")}
 							</span>
-							<BulletText className="text-sm font-bold" item={item} />
+							<BulletText className="text-sm font-semibold" item={item} />
 						</li>
 					))}
 				</ol>

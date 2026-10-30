@@ -167,7 +167,7 @@ function ResultCard({
 				<p className="text-on-dark-subtle mt-1 line-clamp-2 text-sm leading-snug">
 					{hit.description}
 				</p>
-				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-bold transition-colors group-hover:text-[var(--primary-bright)]">
+				<div className="text-on-dark-subtle mt-2 flex items-center gap-1 text-xs font-semibold transition-colors group-hover:text-[var(--primary-bright)]">
 					Open
 					<ArrowUpRight className="size-3.5" aria-hidden />
 				</div>
@@ -362,7 +362,7 @@ export function GlobalSearch({
 											? `search-option-${flatHits[safeActiveIndex].id}`
 											: undefined
 									}
-									className="font-display text-on-dark placeholder:text-on-dark/30 h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-semibold tracking-[-0.03em] caret-[var(--primary-bright)] outline-none placeholder:font-bold focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
+									className="font-display text-on-dark placeholder:text-on-dark/30 h-16 w-full border-0 border-b border-white/15 bg-transparent pr-4 pl-10 text-[1.35rem] font-semibold tracking-[-0.03em] caret-[var(--primary-bright)] outline-none placeholder:font-semibold focus:border-[var(--primary-bright)] sm:h-[4.5rem] sm:pl-12 sm:text-[2rem]"
 								/>
 							</label>
 

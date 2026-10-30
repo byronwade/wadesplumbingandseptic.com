@@ -16,28 +16,28 @@ export function StaticHeaderNav() {
 		>
 			<div className="hidden items-center gap-1 lg:flex">
 				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/services"
 					prefetch={false}
 				>
 					Services
 				</Link>
 				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/service-areas"
 					prefetch={false}
 				>
 					Areas
 				</Link>
 				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/expert-tips"
 					prefetch={false}
 				>
 					Tips
 				</Link>
 				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-bold transition-colors"
+					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
 					href="/contact"
 					prefetch={false}
 				>

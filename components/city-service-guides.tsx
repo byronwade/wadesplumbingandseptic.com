@@ -23,7 +23,7 @@ export function CityServiceGuides({ pathname }: { pathname: string }) {
 						<li className="max-w-full min-w-0" key={link.href}>
 							<Link
 								prefetch={false}
-								className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-bold [overflow-wrap:anywhere]"
+								className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
 								href={link.href as Route}
 							>
 								{link.title} in {cityName}
@@ -51,7 +51,7 @@ export function ServiceCityLinks({ serviceSlug }: { serviceSlug: string }) {
 						<li className="max-w-full min-w-0" key={link.href}>
 							<Link
 								prefetch={false}
-								className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-bold [overflow-wrap:anywhere]"
+								className="surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
 								href={link.href as Route}
 							>
 								{link.title} in {link.cityName}

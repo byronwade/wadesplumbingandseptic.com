@@ -89,7 +89,7 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 						<Icon className="size-[1.125rem]" aria-hidden="true" />
 					</span>
 					<span className="min-w-0">
-						<span className="group-hover:text-primary-bright text-on-dark block text-sm font-bold tracking-[-0.01em] transition-colors">
+						<span className="group-hover:text-primary-bright text-on-dark block text-sm font-semibold tracking-[-0.01em] transition-colors">
 							{label}
 						</span>
 						{description ? (
@@ -177,7 +177,7 @@ function ServicesMegaMenu() {
 										className="focus-visible:ring-ring group block rounded-md p-2.5 transition-colors outline-none hover:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ring-offset)]"
 										href={item.href as Route}
 									>
-										<span className="group-hover:text-primary-bright text-on-dark flex items-center justify-between gap-3 text-sm font-bold tracking-[-0.01em] transition-colors">
+										<span className="group-hover:text-primary-bright text-on-dark flex items-center justify-between gap-3 text-sm font-semibold tracking-[-0.01em] transition-colors">
 											{item.label}
 											<ArrowRight
 												aria-hidden="true"
@@ -232,7 +232,7 @@ function CompanyMegaMenu() {
 							<div className="bg-dark-3/70 absolute inset-0" />
 							<div className="absolute inset-x-0 bottom-0 p-4">
 								<p className="spec-label">Where we work</p>
-								<p className="text-on-dark mt-2 flex items-center gap-2 text-[0.9375rem] font-bold tracking-[-0.02em]">
+								<p className="text-on-dark mt-2 flex items-center gap-2 text-[0.9375rem] font-semibold tracking-[-0.02em]">
 									Santa Cruz County and the foothills
 									<ArrowRight
 										aria-hidden="true"

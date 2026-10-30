@@ -45,7 +45,7 @@ export function TownLookup({ towns }: { towns: Town[] }) {
 			</label>
 			<input
 				autoComplete="address-level2"
-				className="border-input bg-card mt-3 block min-h-12 w-full rounded-md border px-3 text-base"
+				className="border-input bg-field mt-3 block min-h-12 w-full rounded-md border px-3 text-base shadow-[inset_0_1px_1px_oklch(0_0_0/0.18)]"
 				id={inputId}
 				onChange={(event) => setQuery(event.target.value)}
 				placeholder="Start typing a town, like Felton"

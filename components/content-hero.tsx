@@ -262,7 +262,7 @@ export function ContentHero({
 								</Link>
 							</div>
 						) : null}
-						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
 							{serviceHeroFacts.map((fact) => (
 								<li className="flex items-center gap-2" key={fact}>
 									<BadgeCheck
@@ -431,7 +431,7 @@ export function ContentHero({
 					</div>
 				) : null}
 				{actions ? (
-					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-bold">
+					<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
 						{serviceHeroFacts.map((fact) => (
 							<li className="flex items-center gap-2" key={fact}>
 								<BadgeCheck

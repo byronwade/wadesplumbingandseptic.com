@@ -67,7 +67,7 @@ export function GlossaryTermPage({
 
 			<article className="article-wide-shell section-y space-y-8 [&>*]:max-w-3xl">
 				{term.alsoKnownAs?.length ? (
-					<p className="type-meta text-muted-foreground font-bold">
+					<p className="type-meta text-muted-foreground font-semibold">
 						Also called: {term.alsoKnownAs.join(", ")}
 					</p>
 				) : null}
@@ -110,7 +110,7 @@ export function GlossaryTermPage({
 								<li key={service.slug}>
 									<Link
 										prefetch={false}
-										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 px-[min(1rem,16px)] font-bold [overflow-wrap:anywhere] transition-colors"
+										className="border-border hover:border-primary/40 hover:bg-muted/40 block rounded-lg border p-4 px-[min(1rem,16px)] font-semibold [overflow-wrap:anywhere] transition-colors"
 										href={`/service-offerings/${service.slug}` as Route}
 									>
 										{service.title}
@@ -134,7 +134,7 @@ export function GlossaryTermPage({
 								<li key={related.slug}>
 									<Link
 										prefetch={false}
-										className="border-border hover:border-primary/40 hover:bg-muted/40 inline-flex rounded-md border px-3 py-1.5 text-sm font-bold transition-colors"
+										className="border-border hover:border-primary/40 hover:bg-muted/40 inline-flex rounded-md border px-3 py-1.5 text-sm font-semibold transition-colors"
 										href={glossaryTermPath(topic, related.slug) as Route}
 									>
 										{related.term}

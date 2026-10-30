@@ -152,7 +152,7 @@ export default function HomePage() {
 										className="text-primary-bright size-6 shrink-0 sm:size-7"
 									/>
 									<span className="min-w-0">
-										<span className="text-on-dark block text-[0.9375rem] leading-tight font-bold sm:text-base">
+										<span className="text-on-dark block text-[0.9375rem] leading-tight font-semibold sm:text-base">
 											{label}
 										</span>
 										<span className="text-on-dark-subtle mt-1 hidden text-[0.8125rem] leading-snug sm:block">
@@ -209,7 +209,7 @@ export default function HomePage() {
 									className="text-primary mt-0.5 size-5 shrink-0"
 								/>
 								<span className="min-w-0">
-									<span className="block text-[0.9375rem] leading-tight font-bold tracking-[-0.01em]">
+									<span className="block text-[0.9375rem] leading-tight font-semibold tracking-[-0.01em]">
 										{title}
 									</span>
 									<span className="text-muted-foreground mt-1 block text-[0.8125rem] leading-snug">

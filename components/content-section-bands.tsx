@@ -55,7 +55,7 @@ function BulletPanels({ items }: { items: string[] }) {
 		<ul className="panel-grid grid gap-[var(--space-grid)]">
 			{items.map((item) => (
 				<li
-					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-bold"
+					className="surface-panel panel-inset flex items-start gap-[min(0.75rem,12px)] text-sm font-semibold"
 					key={item}
 				>
 					<span className="bg-accent text-accent-foreground mt-0.5 grid size-[min(2rem,32px)] shrink-0 place-items-center rounded-md">

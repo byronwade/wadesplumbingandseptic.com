@@ -9,7 +9,7 @@ export function SiteHeader() {
 	return (
 		<header className="bg-ink text-on-dark sticky top-0 z-50 shadow-[0_1px_0_0_oklch(1_0_0/0.07)]">
 			<div className="bg-ink-soft hidden sm:block">
-				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-bold">
+				<div className="container-shell text-on-dark-muted flex items-center justify-between gap-4 py-2 text-xs font-semibold">
 					<OfficeHoursStatus />
 					<Link
 						prefetch={false}
