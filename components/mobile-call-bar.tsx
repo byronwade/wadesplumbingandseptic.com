@@ -1,5 +1,6 @@
 import { CallLabel } from "@/components/call-label"
 import { Phone } from "@/components/icons"
+import { OfficeHoursStatus } from "@/components/office-status"
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -32,7 +33,7 @@ export function MobileCallBar() {
 					/>
 				</a>
 				<p className="text-muted-foreground text-center text-xs leading-4 @max-[20rem]:sr-only">
-					{siteConfig.hours}
+					<OfficeHoursStatus className="justify-center" />
 				</p>
 			</div>
 		</nav>
