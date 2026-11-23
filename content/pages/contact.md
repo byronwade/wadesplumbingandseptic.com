@@ -34,9 +34,10 @@ Best for photos, permit questions, and follow-up questions. Include the property
 
 **Wade's Plumbing & Septic**  
 7737 Highway 9  
-Ben Lomond, CA 95005
+Ben Lomond, CA 95005  
+Phone: [831.225.4344](tel:+18312254344)
 
-We are based in the San Lorenzo Valley and dispatch across Santa Cruz County and selected Santa Clara County foothill communities (including Los Gatos and Saratoga, generally west of Highway 101). Confirm coverage when you call. Browse the [service area map](/service-areas) for approximate coverage.
+We are based in the San Lorenzo Valley and dispatch across Santa Cruz County and selected Santa Clara County foothill communities (including Los Gatos and Saratoga, generally west of Highway 101). Confirm coverage when you call. Browse the [service area map](/service-areas) for the full town list, or [find us on Google Maps](https://www.google.com/maps?cid=7910009961732981689).
 
 ## Hours
 
@@ -54,7 +55,7 @@ Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineSe
 
 ## Service area
 
-We regularly serve communities across Santa Cruz County (including Santa Cruz, Capitola, Scotts Valley, Aptos, Watsonville, Felton, Ben Lomond, Boulder Creek, and nearby towns) plus selected Santa Clara County foothill addresses. If you are unsure whether your property is in range, call with the street address and we will tell you straight.
+We regularly serve communities across Santa Cruz County, including Santa Cruz, Scotts Valley, Ben Lomond, Felton, Boulder Creek, Capitola, Aptos, Watsonville, Live Oak, Soquel, and the other towns listed on our [service areas](/service-areas) page, plus selected Santa Clara County foothill addresses in Los Gatos and Saratoga. If you are unsure whether your property is in range, call with the street address and we will tell you straight.
 
 ## Request service
 

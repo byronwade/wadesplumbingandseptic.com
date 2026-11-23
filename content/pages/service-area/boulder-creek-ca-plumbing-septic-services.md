@@ -39,7 +39,7 @@ If you're on city sewer in Boulder Creek, you're the exception. Most parcels dep
 
 **Failed or failing drainfields.** Boulder Creek's combination of clay, rock, and slope pushes effluent where it shouldn't go. Surfacing in the yard, odors after laundry, or backups when the dishwasher runs are warning signs, not quirks to live with.
 
-**Permits and engineered systems.** When a standard leach field won't fit or won't perk, Santa Cruz County often requires an engineered alternative. We work with [engineered septic system](/service-offerings/engineered-septic-system-installation) designers and installers who understand mountain lots, not flat farmland specs copied onto a hillside.
+**Permits and engineered systems.** When a standard leach field won't fit or won't perk, Santa Cruz County often requires an engineered alternative. We install [engineered septic systems](/service-offerings/engineered-septic-system-installation) to the plan, working with your engineer on mountain lots rather than copying a flat-farmland spec onto a hillside. We also handle [septic system installation](/service-offerings/septic-system-installation) where a conventional design still fits. We do not pump tanks.
 
 **Real estate and compliance.** Buying or selling? We provide inspections and certifications that reflect what inspectors actually look for in the SLV.
 
@@ -74,3 +74,5 @@ Yes. Boulder Creek's upstream canyons freeze harder than Felton, so hose bibs, c
 ## Get help upstream
 
 Call Wade's at **[831.225.4344](tel:+18312254344)** for plumbing or septic service in Boulder Creek. Explore [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) to talk through your lot before we schedule a visit.
+
+**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic care](/service-offerings/septic-tank-maintenance-and-care) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)

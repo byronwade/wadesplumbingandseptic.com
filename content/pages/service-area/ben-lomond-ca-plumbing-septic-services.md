@@ -36,7 +36,7 @@ Wade's septic services include:
 - **County inspections and certifications** when you're buying, selling, or refinancing
 - **Filter service, risers, and alarm checks**, small upgrades that prevent expensive problems
 - **Leach field evaluation** when wet spots appear downhill from the tank or toilets back up during laundry
-- **System repair and replacement**, including [engineered septic designs](/service-offerings/engineered-septic-system-installation) when Ben Lomond's slopes won't support a standard gravity layout
+- **System repair and [septic system installation](/service-offerings/septic-system-installation)**, including [engineered septic designs](/service-offerings/engineered-septic-system-installation) when Ben Lomond's slopes won't support a standard gravity layout. We work with your engineer on those designs. We do not pump tanks.
 
 If your property was affected by wildfire rebuild requirements, septic setbacks and water supply upgrades often go hand in hand. We coordinate both sides so you're not solving plumbing in a vacuum.
 
@@ -73,3 +73,5 @@ Many Ben Lomond homes draw from private wells with iron, manganese, or fine sedi
 ## Call Wade's
 
 Questions about a slow drain, a wet spot in the yard, or a well that can't keep up? Call **[831.225.4344](tel:+18312254344)**. See our full [service areas](/service-areas) map, read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your property before we roll a truck.
+
+**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic system installation](/service-offerings/septic-system-installation) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation) · [Septic care](/service-offerings/septic-tank-maintenance-and-care)

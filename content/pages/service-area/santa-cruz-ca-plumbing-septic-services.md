@@ -9,9 +9,9 @@ image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwood-lined hillside near Santa Cruz with residential plumbing service area
 ---
 
-From the Westside flats along Mission Street to the redwood pockets above UC Santa Cruz, Santa Cruz homes sit in a tight band between ocean fog and canyon runoff. Wade's Plumbing & Septic has worked this town long enough to know that a Seabright bungalow from the 1920s and a Harvey West condo built in the 2000s rarely fail for the same reason, and that matters when you're standing in a wet hallway at 10 p.m.
+From the Westside flats along Mission Street to the redwood pockets above UC Santa Cruz, Santa Cruz homes sit in a tight band between ocean fog and canyon runoff. Wade's Plumbing & Septic works this mix of housing stock often enough to know that a Seabright bungalow from the 1920s and a Harvey West condo built in the 2000s rarely fail for the same reason, and that matters when a kitchen drain backs up or a hall floor is wet.
 
-We are a family-owned Santa Cruz County contractor (CSLB #1087260) serving owner-occupied homes, rentals near the boardwalk, and properties tucked into the hills around Pasatiempo and the upper Westside. Whether you are dealing with a slow kitchen drain in the Beach Flats or a backed-up line on the Eastside near Branciforte, we diagnose first and explain what we find before recommending work.
+We are a family-owned Santa Cruz County contractor (CSLB #1087260) serving owner-occupied homes, rentals near the boardwalk, and properties tucked into the hills around Pasatiempo and the upper Westside. Whether you are dealing with a slow kitchen drain in the Beach Flats or a backed-up line on the Eastside near Branciforte, we diagnose first and explain what we find before recommending work. Office hours are Monday to Friday, 9:00 AM to 5:00 PM.
 
 ## Plumbing for Santa Cruz's Mixed Housing Stock
 
@@ -33,8 +33,11 @@ We help Santa Cruz homeowners with:
 
 - Sewer lateral troubleshooting when backups affect one fixture versus the whole house
 - Drainfield assessments when wet spots appear uphill from the tank or odors persist after pumping
+- [Septic system installation](/service-offerings/septic-system-installation) for new or replacement systems, including work with your engineer
 - Guidance on [engineered septic systems](/service-offerings/engineered-septic-system-installation) when slope or setback limits standard designs
 - [Failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when an aging system can no longer meet county requirements
+
+We install, repair, and inspect septic systems. We do not pump tanks.
 
 If you are buying or remodeling, knowing whether you are on sewer or septic changes budget and timeline. We can clarify what is on your parcel before you commit to a major project.
 
@@ -67,5 +70,7 @@ The Santa Cruz marine layer keeps soils damp much of the year, which feeds root 
 Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344).
 
 **Nearby service areas:** [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Twin Lakes](/service-area/twin-lakes-ca-plumbing-septic-services), [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
+
+**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic system installation](/service-offerings/septic-system-installation) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)
 
 **Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)

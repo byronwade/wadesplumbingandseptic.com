@@ -12,7 +12,7 @@ imageAlt: Industrial plumbing system
 updated: "2026-10-20"
 ---
 
-In Santa Cruz County, California, businesses of all sizes rely on efficient septic systems to manage waste effectively. Wade's Plumbing & Septic offers comprehensive **commercial septic services** to ensure that your business runs smoothly, without the disruption of septic system failures. Our expertise covers system design, installation, repairs, and maintenance, tailored to meet the specific demands of commercial properties.
+Commercial septic services for Santa Cruz County businesses cover system inspection, repair, and installation, not tank pumping, which we do not offer. Wade's Plumbing & Septic assesses the system, explains the options, and works with engineers when an engineered design is required. Quotes are free, and pricing is a flat rate quoted on site.
 
 ## About Business Septic System Needs
 

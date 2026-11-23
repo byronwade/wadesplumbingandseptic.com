@@ -12,9 +12,9 @@ featured: true
 updated: "2026-10-20"
 ---
 
-When a conventional tank and leach field will not work, that is our specialty. Wade's Plumbing & Septic designs and installs **engineered septic systems** for Santa Cruz County properties with steep slopes, shallow soils, high groundwater, rocky ground, small lots, or environmentally sensitive sites.
+When a conventional tank and leach field will not work, that is our specialty. Wade's Plumbing & Septic installs **engineered septic systems** on Santa Cruz County lots where slope, soil, setbacks, or a sensitive site make a standard design a poor fit. We install to the engineered plan and the county permit, including advanced treatment systems, and we work alongside your engineer. We do not pump tanks.
 
-We handle site evaluation support, system selection, permitting coordination, installation, startup, and owner guidance. Clear recommendations before money changes hands.
+We handle site evaluation support, system selection, permitting coordination, installation, startup, and owner guidance. Clear recommendations before money changes hands. Quotes are free.
 
 ## What is an engineered septic system?
 

@@ -34,7 +34,10 @@ Our wastewater services include:
 - Lateral inspections before listing a home or after recurring backups
 - Drainfield assessments when lawns stay soggy long after rain stops
 - Guidance through [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement) when systems age out
+- [Septic system installation](/service-offerings/septic-system-installation) when a new or replacement system is the right path
 - [Engineered septic designs](/service-offerings/engineered-septic-system-installation) for steep or rocky sites common on hillside lots
+
+We install septic systems with your engineer when the site needs that design. We do not pump tanks.
 
 Knowing your connection type before a kitchen expansion saves rework. We help owners map tank locations, cleanouts, and lateral paths when records are thin.
 
@@ -69,5 +72,7 @@ Inland Scotts Valley sees colder overnight lows than the coast, occasionally eno
 Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).
 
 **Nearby service areas:** [Mount Hermon](/service-area/mount-hermon-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services), [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services)
+
+**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic care](/service-offerings/septic-tank-maintenance-and-care) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)
 
 **Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)
