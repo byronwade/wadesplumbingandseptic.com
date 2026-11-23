@@ -1,8 +1,8 @@
 ---
 title: Septic Tank Repair and Replacement in Santa Cruz County
 description: >-
-  Septic tank repair and replacement for cracked, outdated, or failing tanks in
-  Santa Cruz County. Call 831.225.4344.
+  Septic tank repair and replacement for Santa Cruz County homes, including
+  engineered installs with your engineer. Not pumping. Quotes are free.
 category: Septic
 order: 7
 image: >-
@@ -11,7 +11,7 @@ imageAlt: Stacked concrete pipes for underground systems
 updated: "2026-07-30"
 ---
 
-If you’re experiencing issues with your septic system, it may be time for a professional septic tank repair in Santa Cruz. At Wade's Plumbing & Septic, we specialize in diagnosing and addressing all your septic tank needs, ensuring your system operates efficiently. Our expert team is ready to handle repairs or replacements with precision and care, minimizing disruption to your Santa Cruz County home.
+Wade's Plumbing & Septic repairs and replaces septic tanks for Santa Cruz County homes when a tank is cracked, outdated, or no longer meeting how the house is used. Replacements that need an engineered design are installed alongside your engineer. We do not pump tanks. Quotes are free, and pricing is a flat rate quoted on site.
 
 ## Signs You Need Septic Tank Repair in Santa Cruz
 

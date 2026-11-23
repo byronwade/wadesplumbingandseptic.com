@@ -46,6 +46,8 @@ Winter storms push sand and debris into outdoor drains and test whether downspou
 
 The State Park border and Aptos Creek outlet nearby mean some streets see more foot traffic and parked visitors than typical residential blocks. That extra activity does not change pipe sizing, but it does mean exterior cleanouts and hose bibs take more abuse, worth checking before listing a home or opening a short-term rental.
 
+Wade's septic work in Rio Del Mar is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Rio Del Mar?
@@ -66,8 +68,4 @@ Rio Del Mar homes can sit closed for weeks, then run at full capacity during sum
 
 ## Rio Del Mar Appointments
 
-Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service in Rio Del Mar.
-
-**Nearby service areas:** [Aptos](/service-area/aptos-ca-plumbing-septic-services), [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)
+Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service in Rio Del Mar. Quotes are free: [Get a Free Quote](/contact).

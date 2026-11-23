@@ -2,7 +2,7 @@
 title: Drain Cleaning in Santa Cruz County
 description: >-
   Professional drain cleaning for slow sinks, tubs, and main lines in Santa Cruz
-  County. Camera options when needed. Call 831.225.4344.
+  County. Camera options when needed. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 28
 featured: true
@@ -65,7 +65,7 @@ It's advisable to have your drains cleaned annually to prevent major clogs and e
 
 Backups occur when there is a blockage in your pipes. Regular cleaning can help prevent such issues.
 
-For reliable **drain cleaning Santa Cruz** services, trust the experts at Wade's Plumbing & Septic. Our team combines experience, local knowledge, and a commitment to customer satisfaction. Contact us today to schedule your service and keep your drains in top condition.
+For drain cleaning in Santa Cruz County, Wade's Plumbing & Septic clears the blockage and, when needed, cameras the line before recommending the next step. Quotes are free.
 
 ## Act Now to Prevent Costly Drain Issues
 

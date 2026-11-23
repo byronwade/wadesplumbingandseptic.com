@@ -287,6 +287,8 @@ test("llms.txt link text repeats only confirmed business facts", async () => {
 
 test("review pages and thank-you link the Google review URL", () => {
 	for (const file of [
+		"content/pages/about-us.md",
+		"content/pages/contact.md",
 		"content/pages/testimonials.md",
 		"content/pages/thank-you.md",
 	]) {

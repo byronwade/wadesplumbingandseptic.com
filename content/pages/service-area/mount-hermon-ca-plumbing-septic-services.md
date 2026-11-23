@@ -46,6 +46,8 @@ Redwood root balls don't stop at the property pin on the map. We've replaced lat
 
 Mount Hermon draws mail from Scotts Valley but lives like the mountains. We routinely work in [Felton](/service-area/felton-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), and [Zayante](/service-area/zayante-ca-plumbing-septic-services), neighbors who share wells, watershed, and septic realities.
 
+Wade's septic work in Mount Hermon is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Mount Hermon?
@@ -66,4 +68,4 @@ In Mount Hermon homes on private wells, short cycling, air locks, and sediment a
 
 ## Talk to a local team
 
-Call Wade's Plumbing & Septic at **[831.225.4344](tel:+18312254344)** for Mount Hermon service. Browse [service areas](/service-areas), read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your home, year-round or seasonal, and we'll recommend a sensible first step.
+Call Wade's Plumbing & Septic at **[831.225.4344](tel:+18312254344)** for Mount Hermon service. Browse [service areas](/service-areas), read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your home, year-round or seasonal, and we'll recommend a sensible first step. Quotes are free: [Get a Free Quote](/contact).

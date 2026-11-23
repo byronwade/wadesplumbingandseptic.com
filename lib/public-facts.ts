@@ -13,6 +13,10 @@ export const notOfferedSummary = "septic tank pumping"
 
 export const quotesSummary = "Free"
 
+/** Visible quote CTA used on service, town, and contact conversion paths. */
+export const freeQuoteCtaLabel = "Get a Free Quote"
+export const freeQuotePath = "/contact"
+
 /**
  * High-intent services named in the short llms.txt index. Full catalog and
  * page text live in llms-full.txt so this file stays a summary.

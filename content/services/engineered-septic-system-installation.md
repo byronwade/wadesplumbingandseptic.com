@@ -3,7 +3,7 @@ title: Engineered Septic System Installation in Santa Cruz County
 heroTitle: Septic System Design and Build in Santa Cruz County
 description: >-
   Engineered septic design and installation for difficult Santa Cruz County
-  lots. ATU and advanced treatment support. Call 831.225.4344.
+  lots. ATU and advanced treatment support. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 1
 image: /images/work/completed-multi-tank.webp

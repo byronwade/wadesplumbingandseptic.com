@@ -2,7 +2,7 @@
 title: High-Pressure Jetting for Septic Lines in Santa Cruz County
 description: >-
   High-pressure jetting to clear septic and effluent lines in Santa Cruz County.
-  Safer than harsh chemicals. Call 831.225.4344.
+  Not tank pumping. Quotes are free. Call 831.225.4344.
 category: Septic
 order: 11
 image: >-
@@ -11,7 +11,7 @@ imageAlt: Industrial plumbing with pressure gauge
 updated: "2026-07-30"
 ---
 
-High pressure jetting septic lines is an essential service for homeowners in Santa Cruz County, California, looking to maintain optimal septic system performance. Using specialized high-pressure water jets, this process effectively clears blockages, removes build-up, and restores proper flow within your septic lines. It's a preventative maintenance strategy that helps avoid costly repairs and prolongs the life of your septic system.
+High-pressure jetting of septic and effluent lines for Santa Cruz County homes clears roots, sludge, and buildup in the pipes, not the tank. Wade's Plumbing & Septic does not pump tanks. Quotes are free, and pricing is a flat rate quoted on site.
 
 ## Understanding High Pressure Jetting for Septic Lines
 
@@ -79,7 +79,7 @@ It depends on your system's usage and condition, but generally every 1-3 years i
 
 Yes, it's safe for most systems, including engineered septic systems. Our team is equipped to handle the specific needs of your system.
 
-At Wade's Plumbing & Septic, we pride ourselves on providing reliable and efficient high pressure jetting septic lines services to Santa Cruz County residents. With years of experience and a commitment to customer satisfaction, our licensed professionals are ready to help you maintain a healthy septic system. **Contact Wade's Plumbing & Septic** today to schedule your service or to learn more about how to maintain septic tank health. Trust us to keep your septic system running smoothly and efficiently.
+At Wade's Plumbing & Septic, we pride ourselves on providing reliable and efficient high pressure jetting septic lines services to Santa Cruz County residents. our licensed professionals are ready to help you maintain a healthy septic system. **Contact Wade's Plumbing & Septic** today to schedule your service or to learn more about how to maintain septic tank health. Trust us to keep your septic system running smoothly and efficiently.
 
 ## Serving Santa Cruz County, CA
 

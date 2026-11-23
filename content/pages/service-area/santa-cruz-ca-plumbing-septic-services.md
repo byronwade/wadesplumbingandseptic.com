@@ -67,10 +67,4 @@ The Santa Cruz marine layer keeps soils damp much of the year, which feeds root 
 
 ## Schedule Service in Santa Cruz
 
-Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344).
-
-**Nearby service areas:** [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Twin Lakes](/service-area/twin-lakes-ca-plumbing-septic-services), [Pasatiempo](/service-area/pasatiempo-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services)
-
-**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic system installation](/service-offerings/septic-system-installation) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)
-
-**Helpful links:** [All service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)
+Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).

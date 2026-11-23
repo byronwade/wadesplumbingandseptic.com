@@ -47,6 +47,10 @@ Hard water from local wells is common, which accelerates scale buildup in water 
 
 We factor these conditions into every Freedom service call, not generic advice, but recommendations shaped by what we see in south county every week.
 
+Wade's septic work in Freedom is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Freedom jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Freedom?
@@ -67,8 +71,4 @@ A septic inspection before closing can prevent costly surprises when buying or s
 
 ## Schedule service in Freedom
 
-For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for scheduled work.
-
-**Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Amesti](/service-area/amesti-ca-plumbing-septic-services), [Las Lomas](/service-area/las-lomas-ca-plumbing-septic-services), and [Corralitos](/service-area/corralitos-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)
+For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for scheduled work. Quotes are free: [Get a Free Quote](/contact).

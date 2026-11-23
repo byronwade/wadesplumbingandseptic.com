@@ -51,6 +51,8 @@ We're family-owned and based in the county. We know the difference between a Bro
 
 Brookdale sits between [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services). We serve both daily, the same San Lorenzo River watershed, the same septic-and-well fundamentals.
 
+Wade's septic work in Brookdale is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Brookdale?
@@ -71,4 +73,4 @@ Yes. A Brookdale tank that hasn't been pumped in fifteen years doesn't always fa
 
 ## Contact Wade's
 
-For Brookdale plumbing or septic service, call **[831.225.4344](tel:+18312254344)**. View all communities on [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms.
+For Brookdale plumbing or septic service, call **[831.225.4344](tel:+18312254344)**. View all communities on [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. Quotes are free: [Get a Free Quote](/contact).

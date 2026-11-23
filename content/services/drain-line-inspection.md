@@ -2,7 +2,7 @@
 title: Drain Line Inspection in Santa Cruz County
 description: >-
   Camera drain line inspection for Santa Cruz County homes. Find roots, breaks,
-  and bellies before you dig. Call 831.225.4344.
+  and bellies before you dig. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 44
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 When it comes to maintaining the integrity of your home's plumbing system, a professional **drain line inspection** is crucial. In Santa Cruz County, California, homeowners trust Wade's Plumbing & Septic for expert inspection services that ensure your pipes are in top condition. By using advanced camera technology, we can visually assess your drain lines to locate blockages, identify pipe damage, and detect potential problem areas before they lead to costly repairs.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## What is Drain Line Inspection and Why is it Essential?
 

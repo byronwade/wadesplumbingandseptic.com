@@ -47,6 +47,8 @@ Forest fire history in the wider SLV changed how some owners think about access 
 
 **Neighbors.** Zayante ties to [Lompico](/service-area/lompico-ca-plumbing-septic-services) to the north, [Felton](/service-area/felton-ca-plumbing-septic-services) to the west, and [Mount Hermon](/service-area/mount-hermon-ca-plumbing-septic-services) toward Scotts Valley. Same county permits, same soils, same root problems.
 
+Wade's septic work in Zayante is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Zayante?
@@ -67,4 +69,4 @@ Older Zayante systems may lack as-built drawings, so Wade's builds a picture fro
 
 ## Call before the backup needs a repair
 
-Wade's at **[831.225.4344](tel:+18312254344)** for Zayante plumbing and septic. See all coverage on [service areas](/service-areas), explore [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and symptoms. We'll tell you what to check before we drive out.
+Wade's at **[831.225.4344](tel:+18312254344)** for Zayante plumbing and septic. See all coverage on [service areas](/service-areas), explore [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and symptoms. We'll tell you what to check before we drive out. Quotes are free: [Get a Free Quote](/contact).

@@ -2,7 +2,7 @@
 title: Plumbing Fixture Installation in Santa Cruz County
 description: >-
   Sink, faucet, toilet, and fixture installation for Santa Cruz County homes.
-  Clean workmanship and code-compliant connections. Call 831.225.4344.
+  Clean workmanship and code-compliant connections. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 27
 image: >-
@@ -13,9 +13,11 @@ updated: "2026-07-30"
 
 When it comes to fixture installation in Santa Cruz County, ensuring expert service is essential for long-lasting performance and efficiency. Whether you're upgrading your kitchen faucet, installing a new showerhead, or replacing an outdated toilet, Wade's Plumbing & Septic is your trusted partner for professional plumbing solutions.
 
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+
 ## Why Choose Wade's Plumbing & Septic for Fixture Installation in Santa Cruz County?
 
-Choosing the right team for your fixture installation in Santa Cruz County means selecting professionals who prioritize quality and reliability. At Wade's Plumbing & Septic, we bring years of experience and a commitment to excellence to every project. Our licensed and highly-trained plumbers ensure that each installation is completed to code, with meticulous attention to detail, preventing leaks and enhancing the lifespan of your plumbing fixtures.
+Choosing the right team for your fixture installation in Santa Cruz County means selecting professionals who prioritize quality and reliability. At Wade's Plumbing & Septic, we complete each installation to code. Our licensed and highly-trained plumbers ensure that each installation is completed to code, with meticulous attention to detail, preventing leaks and enhancing the lifespan of your plumbing fixtures.
 
 Our local presence in Santa Cruz County allows us to provide prompt service and responsive support, ensuring your plumbing needs are met efficiently. We understand the unique characteristics of the homes in this area, allowing us to tailor our services to meet your specific requirements.
 

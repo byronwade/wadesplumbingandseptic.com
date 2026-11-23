@@ -7,6 +7,7 @@ import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
 import { contactInfo } from "@/lib/contact"
+import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
 import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
@@ -24,8 +25,8 @@ export function ContentConversionCta({
 	}
 }) {
 	const secondary = secondaryAction ?? {
-		href: "/contact",
-		label: "Get a Free Quote",
+		href: freeQuotePath,
+		label: freeQuoteCtaLabel,
 		external: false,
 	}
 	const secondaryClassName = cn(

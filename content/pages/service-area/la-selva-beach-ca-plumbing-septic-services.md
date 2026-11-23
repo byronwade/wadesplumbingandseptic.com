@@ -46,6 +46,8 @@ Wooded inland lots face different stress: root growth, debris-filled gutters, an
 
 La Selva Beach's proximity to Watsonville and Corralitos also means some owners commute south for work while maintaining a coastal lifestyle here. That split schedule can delay noticing slow leaks or septic alarms until a Friday arrival. Another reason we prioritize clear written summaries after each visit.
 
+Wade's septic work in La Selva Beach is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve La Selva Beach?
@@ -66,8 +68,5 @@ La Selva Beach sits low enough that winter storms raise local groundwater and te
 
 ## La Selva Beach Contact
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for service in La Selva Beach.
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for service in La Selva Beach. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby service areas:** [Rio Del Mar](/service-area/rio-del-mar-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

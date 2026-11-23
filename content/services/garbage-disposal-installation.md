@@ -2,7 +2,7 @@
 title: Garbage Disposal Installation in Santa Cruz County
 description: >-
   Garbage disposal installation and replacement for Santa Cruz County kitchens.
-  Proper wiring, drain fit, and testing. Call 831.225.4344.
+  Proper wiring, drain fit, and testing. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 45
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Are you considering a new garbage disposal installation to enhance your kitchen's efficiency? At Wade's Plumbing & Septic, we specialize in professional garbage disposal installation services in Santa Cruz County, California. Our team ensures that your new unit is installed seamlessly, providing you with the convenience and functionality you need in your kitchen.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Why Choose Garbage Disposal Installation?
 

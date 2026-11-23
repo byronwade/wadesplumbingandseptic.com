@@ -48,6 +48,10 @@ The golf course and canyon drainage patterns influence storm runoff on some lots
 
 Many Pasatiempo homes have been renovated multiple times. Kitchen and bath upgrades without full drain reconfiguration can leave you with undersized lines or improper venting. We flag these issues when we see them.
 
+Wade's septic work in Pasatiempo is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Pasatiempo jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Pasatiempo?
@@ -68,8 +72,5 @@ Venting problems in older Pasatiempo homes sometimes cause slow drains that look
 
 ## Schedule service in Pasatiempo
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing service in Pasatiempo. We serve Santa Cruz County and know the hillside communities between Scotts Valley and Santa Cruz.
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing service in Pasatiempo. We serve Santa Cruz County and know the hillside communities between Scotts Valley and Santa Cruz. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby communities we serve:** [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Bonny Doon](/service-area/bonny-doon-ca-plumbing-septic-services), and [Felton](/service-area/felton-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)

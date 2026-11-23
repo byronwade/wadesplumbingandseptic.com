@@ -46,6 +46,8 @@ Live Oak's location means marine fog rolls in regularly, keeping crawlspaces dam
 
 Proximity to the coast adds mild salt exposure on exterior fixtures for homes west of the freeway. Winter storms test outdoor drains and downspout tie-ins, especially where owners added patio slabs without updating slope. We look at the whole path water takes, not just the fixture that complained first.
 
+Wade's septic work in Live Oak is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Live Oak?
@@ -66,8 +68,5 @@ Before concrete is poured on a Live Oak ADU or multi-family conversion, Wade's e
 
 ## Live Oak Service from Wade's
 
-Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Live Oak.
+Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Live Oak. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby service areas:** [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Twin Lakes](/service-area/twin-lakes-ca-plumbing-septic-services)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

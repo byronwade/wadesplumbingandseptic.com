@@ -48,6 +48,10 @@ The community sits between Watsonville city services and fully rural south count
 
 Older homes may have plumbing vents that no longer meet code, or additions tied into original drain lines without adequate slope. These details matter when you remodel or when recurring clogs suggest a design problem, not a one-time blockage.
 
+Wade's septic work in Interlaken is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Interlaken jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Interlaken?
@@ -68,8 +72,4 @@ Not necessarily. Saturated soils after Interlaken winter rains can temporarily o
 
 ## Schedule service in Interlaken
 
-Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing. We will schedule a visit and come prepared for south county conditions.
-
-**Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Freedom](/service-area/freedom-ca-plumbing-septic-services), [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services), and [Amesti](/service-area/amesti-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)
+Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing. We will schedule a visit and come prepared for south county conditions. Quotes are free: [Get a Free Quote](/contact).

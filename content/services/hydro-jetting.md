@@ -1,8 +1,8 @@
 ---
 title: Hydro Jetting in Santa Cruz County
 description: >-
-  Hydro jetting for stubborn grease, scale, and roots in Santa Cruz County drain
-  and sewer lines. Call 831.225.4344.
+  Hydro jetting for grease, scale, and roots in Santa Cruz County drain and
+  sewer lines. Quotes are free. Call 831.225.4344.
 category: Plumbing
 order: 32
 featured: true
@@ -12,7 +12,7 @@ imageAlt: Industrial plumbing with pressure gauge
 updated: "2026-07-30"
 ---
 
-Are you experiencing recurring drain clogs or slow drainage in your home? Our hydro jetting [drain cleaning](/service-offerings/drain-cleaning) service, available throughout Santa Cruz County, California, is the ultimate solution to ensure your plumbing system remains clear and efficient. This advanced method employs high-pressure water jets to thoroughly clean your drains and sewer lines, providing a more comprehensive solution than traditional snaking methods.
+Hydro jetting for Santa Cruz County homes and businesses uses high-pressure water to clear grease, scale, and roots that keep coming back after snaking. Wade's Plumbing & Septic cameras the line when the pipe history is unknown, then quotes a flat rate before work begins. Quotes are free. This is drain and sewer cleaning, not septic tank pumping.
 
 ## Why Choose Hydro Jetting Drain Cleaning?
 
@@ -53,11 +53,11 @@ For businesses, consider our [commercial drain cleaning](/service-offerings/comm
 
 ## Why Trust Wade's Plumbing & Septic?
 
-At Wade's Plumbing & Septic, we are committed to delivering reliable and efficient plumbing solutions. With years of experience serving Santa Cruz County, California, our licensed and responsive team is equipped to handle all your plumbing needs. We pride ourselves on our local expertise and customer-centric approach. Don't let clogged drains disrupt your day. Contact us today to schedule your hydro jetting drain cleaning service and experience the benefits of a clear and efficient plumbing system. Call us now or visit our website to learn more about our [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines) service.
+At Wade's Plumbing & Septic, we are committed to delivering reliable and efficient plumbing solutions. our licensed and responsive team is equipped to handle all your plumbing needs. We pride ourselves on our local expertise and customer-centric approach. Don't let clogged drains disrupt your day. Contact us today to schedule your hydro jetting drain cleaning service and experience the benefits of a clear and efficient plumbing system. Call us now or visit our website to learn more about our [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines) service.
 
 ## Clear Your Drains Today with Expert Hydro Jetting!
 
-Experience fast and effective drain clearing with our professional hydro jetting services in Santa Cruz County, California. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+Clear stubborn drain and sewer lines with professional hydro jetting in Santa Cruz County. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
 
 ## Frequently Asked Questions
 

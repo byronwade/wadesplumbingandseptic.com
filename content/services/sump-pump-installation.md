@@ -2,7 +2,7 @@
 title: Sump Pump Installation in Santa Cruz County
 description: >-
   Sump pump installation and replacement for wet basements and crawl spaces in
-  Santa Cruz County. Call 831.225.4344.
+  Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 38
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Protecting your home from basement flooding is essential, and a reliable sump pump installation can be your first line of defense. At Wade's Plumbing & Septic, we offer expert sump pump installation services to homeowners in Santa Cruz County, California. Our comprehensive approach ensures your property remains safe and dry, even during heavy rains or unexpected water leaks.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Why a Sump Pump Installation is Essential
 
@@ -63,7 +65,7 @@ Typically, sump pumps last around 7-10 years. Regular maintenance can extend the
 
 ## Choose Wade's Plumbing & Septic for Your Sump Pump Needs
 
-With years of experience and a commitment to quality, Wade's Plumbing & Septic is your trusted partner for sump pump installation in Santa Cruz County, California. Our licensed and responsive team is dedicated to providing reliable solutions tailored to your home's unique requirements. Contact us today to schedule your installation and protect your home from potential water damage. If you're considering other plumbing enhancements, explore our [fixture installation services](/service-offerings/fixture-installation) for more options.
+Wade's Plumbing & Septic is your trusted partner for sump pump installation in Santa Cruz County, California. Our licensed and responsive team is dedicated to providing reliable solutions tailored to your home's unique requirements. Contact us today to schedule your installation and protect your home from potential water damage. If you're considering other plumbing enhancements, explore our [fixture installation services](/service-offerings/fixture-installation) for more options.
 
 ## Serving Santa Cruz County, CA
 

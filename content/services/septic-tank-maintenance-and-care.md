@@ -2,7 +2,7 @@
 title: Septic Tank Maintenance in Santa Cruz County
 description: >-
   Ongoing septic tank maintenance plans for Santa Cruz County homeowners.
-  Inspections, filters, and practical care advice. Call 831.225.4344.
+  Inspections, filters, and practical care advice. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 16
 image: /images/work/new-construction-rough-in.webp
@@ -12,9 +12,11 @@ updated: "2026-10-20"
 
 Septic system care for Santa Cruz County homes includes inspections, filter service, troubleshooting, and repairs that protect the tank and drainfield. Wade's Plumbing & Septic does not pump septic tanks; for routine pumping you will need a pumping company. If you need an inspection, a repair, or help planning a replacement, including engineered installation with your engineer, call 831.225.4344 during office hours.
 
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+
 ## Why Choose Wade's Plumbing & Septic for Septic Tank Maintenance?
 
-With years of experience serving Santa Cruz County, Wade's Plumbing & Septic is your reliable partner for all septic system needs. Our licensed and expert team is committed to providing professional, responsive services that cater to your schedule and system requirements. We pride ourselves on being locally authoritative and trustworthy, ensuring your septic system receives the best care possible.
+Wade's Plumbing & Septic cares for Santa Cruz County septic systems with inspections, filter service, and repairs. We do not pump tanks. Quotes are free.
 
 ## Understanding Septic Tank Maintenance: What It Involves
 
