@@ -52,7 +52,7 @@ We ensure all work complies with [local regulations](/service-offerings/septic-t
 
 ### Testing and Final Checks
 
-After installation, we conduct comprehensive testing to ensure the system operates efficiently. Our commitment to quality and customer satisfaction guarantees peace of mind for homeowners.
+After installation, we conduct comprehensive testing to confirm the system operates as designed.
 
 ## Factors Affecting Repair Costs
 

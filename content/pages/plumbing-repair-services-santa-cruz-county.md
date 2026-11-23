@@ -1,22 +1,22 @@
 ---
 title: "Plumbing Repair Services, Santa Cruz County"
 description: >-
-  Drain, leak, water heater, and fixture repair in Santa Cruz County with fast
-  scheduling and clear options before work starts.
+  Drain, leak, water heater, and fixture repair in Santa Cruz County with free
+  quotes and clear options before work starts.
 order: 20
 image: /images/work/precision-valve-installation.webp
 imageAlt: Professional valve and piping repair
-eyebrow: Fast Local Scheduling
+eyebrow: Santa Cruz County
 noindex: true
 ---
 
 ## Plumbing Service & Repairs in Santa Cruz County
 
-Drain, leak, water heater, and fixture repair in Santa Cruz County with fast scheduling and clear options before work starts.
+Drain, leak, water heater, and fixture repair in Santa Cruz County with free quotes and clear options before work starts.
 
 [Call Now 831.225.4344](tel:8312254344)
 
-Serving Santa Cruz County. Phone calls are prioritized for fastest response.
+Serving Santa Cruz County. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 
 ### What We Help With
 

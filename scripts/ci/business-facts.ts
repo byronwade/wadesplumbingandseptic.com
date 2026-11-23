@@ -42,13 +42,18 @@ export function businessFactIssues(source: string): string[] {
 	if (/\b4\.9\b|\b5[ -]star\b|★|California\s*(?:&|and)\s*Georgia/i.test(text)) {
 		issues.push("unverified rating or trust claim")
 	}
-	// Founded in 2021 (owner confirmed October 24, 2026).
 	if (
-		/\b(?:since|established|est\.?|founded(?: in)?)\s+(?!2021\b)(?:19|20)\d{2}\b/i.test(
+		/\b(?:since|established|est\.?|founded(?: in)?)\s+(?:19|20)\d{2}\b/i.test(
 			text,
 		)
 	) {
-		issues.push("wrong founding year")
+		issues.push("founding year claim")
+	}
+	if (/\b(?:100\s*%\s+)?satisfaction\s+guarantee(?:d)?\b/i.test(text)) {
+		issues.push("satisfaction guarantee")
+	}
+	if (/\b(?:fast(?:est)?|quick)\s+response(?:\s+times?)?\b/i.test(text)) {
+		issues.push("unverified response-time claim")
 	}
 	// CSLB #1087260 covers C-36 Plumbing and C-42 Sanitation System; a claim
 	// naming only C-42 understates the license, and there is no Georgia license.

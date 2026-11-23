@@ -83,7 +83,7 @@ export default function HomePage() {
 				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
 					<p className="spec-label text-on-dark-muted">Santa Cruz County, CA</p>
 					<p className="text-on-dark-subtle hidden text-xs sm:block">
-						Est. 2021 · Family owned
+						Family owned
 					</p>
 				</div>
 
