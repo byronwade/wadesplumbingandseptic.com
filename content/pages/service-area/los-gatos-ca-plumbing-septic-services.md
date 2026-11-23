@@ -53,7 +53,7 @@ Properties near the border often feel more like Santa Cruz Mountain communities 
 
 Wade's septic work in Los Gatos is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
 
-Typical Los Gatos jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+Typical jobs in parts of Los Gatos, by address, include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit. Coverage there depends on the address. Call with the address to confirm.
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,3 @@ Santa Clara County permitting applies to septic work on the Santa Clara side of 
 ## Confirm coverage and schedule service
 
 **Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area. Quotes are free: [Get a Free Quote](/contact).
-

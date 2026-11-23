@@ -27,6 +27,7 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 
 	const nearby = nearbyTownsFor(location)
 	const services = townServiceLinks()
+	const byAddress = location.county === "Santa Clara County"
 
 	return (
 		<section className="border-border bg-card border-y">
@@ -34,12 +35,27 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 				<div className="mx-auto max-w-3xl">
 					<p className="spec-label">Local plumbing and septic</p>
 					<h2 className="type-title mt-3">
-						Services Wade&apos;s provides in {location.name}
+						{byAddress ? (
+							<>Parts of {location.name}, by address</>
+						) : (
+							<>Services Wade&apos;s provides in {location.name}</>
+						)}
 					</h2>
 					<p className="type-lead mt-4">
-						Residential and commercial plumbing, drain, water heater, and septic
-						work for {location.name} homes in {location.county}. Septic:{" "}
-						{septicSummary} Quotes are free.
+						{byAddress ? (
+							<>
+								Coverage there depends on the address. Call with the address to
+								confirm. Residential and commercial plumbing, drain, water
+								heater, and septic work for confirmed {location.name} addresses
+								in {location.county}. Septic: {septicSummary} Quotes are free.
+							</>
+						) : (
+							<>
+								Residential and commercial plumbing, drain, water heater, and
+								septic work for {location.name} homes in {location.county}.
+								Septic: {septicSummary} Quotes are free.
+							</>
+						)}
 					</p>
 					<ul className="mt-6 flex flex-wrap gap-[min(0.75rem,12px)]">
 						{services.map((service) => (
@@ -56,7 +72,9 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 					</ul>
 
 					<p className="spec-label mt-12">Nearby towns</p>
-					<h3 className="type-subtitle mt-3">Nearby communities we serve</h3>
+					<h3 className="type-subtitle mt-3">
+						{byAddress ? "Nearby communities" : "Nearby communities we serve"}
+					</h3>
 					<ul className="mt-6 flex flex-wrap gap-[min(0.75rem,12px)]">
 						{nearby.map((town) => (
 							<li className="max-w-full min-w-0" key={town.slug}>

@@ -13,7 +13,7 @@ updated: "2026-07-30"
 
 Maintaining a well-functioning commercial plumbing system is essential for the smooth operation of your business. Our **commercial plumbing maintenance** programs at Wade's Plumbing & Septic ensure that your plumbing infrastructure remains in top condition, preventing costly repairs and minimizing business interruptions. Serving Santa Cruz County, California, we offer customized solutions tailored to your facility's specific needs and usage patterns.
 
-This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+This service is for Santa Cruz County businesses and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Business Plumbing Service
 

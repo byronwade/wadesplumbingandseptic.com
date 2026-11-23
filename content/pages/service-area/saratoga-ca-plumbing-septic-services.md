@@ -53,7 +53,7 @@ Fire-season preparedness matters in the foothills. Exterior hose bibs and backup
 
 Wade's septic work in Saratoga is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
 
-Typical Saratoga jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+Typical jobs in parts of Saratoga, by address, include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit. Coverage there depends on the address. Call with the address to confirm.
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,3 @@ In the Saratoga foothills, exterior hose bibs and backup water sources should be
 ## Confirm coverage and schedule service
 
 **Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
-

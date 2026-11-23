@@ -13,7 +13,7 @@ updated: "2026-07-30"
 
 In the bustling commercial environments of Santa Cruz County, California, efficient plumbing is crucial to maintaining smooth business operations. At Wade's Plumbing & Septic, our **commercial[drain cleaning](/service-offerings/drain-cleaning)** services are designed to tackle the unique challenges faced by business plumbing systems, ensuring your operations run without disruption.
 
-This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+This service is for Santa Cruz County businesses and selected nearby foothill addresses. Quotes are free.
 
 ## Why Business Drain Cleaning Matters
 
