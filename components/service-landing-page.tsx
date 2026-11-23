@@ -1,7 +1,6 @@
-import Link from "next/link"
-
-import { ContentConversionCta } from "@/components/content-conversion-cta"
+import { CompactBusinessFacts } from "@/components/business-facts"
 import { ServiceCityLinks } from "@/components/city-service-guides"
+import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { PageViewTracker } from "@/components/page-view-tracker"
@@ -14,56 +13,6 @@ import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { parseServiceSections } from "@/lib/service-sections"
 import { breadcrumbJsonLd, serviceFaqJsonLd, serviceJsonLd } from "@/lib/seo"
-import { siteConfig } from "@/lib/site"
-
-/** Answer-first facts for people and AI assistants: where, when, cost, booking. */
-function ServiceFacts() {
-	const linkClass =
-		"text-primary underline decoration-current/40 underline-offset-4 hover:decoration-current"
-	return (
-		<div className="container-shell py-6">
-			<h2 className="spec-label" id="service-facts-heading">
-				At a glance
-			</h2>
-			<dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-				<div>
-					<dt className="text-muted-foreground text-xs font-semibold">
-						Service area
-					</dt>
-					<dd className="mt-1 text-sm font-semibold">
-						{siteConfig.serviceArea}
-					</dd>
-				</div>
-				<div>
-					<dt className="text-muted-foreground text-xs font-semibold">Hours</dt>
-					<dd className="mt-1 text-sm font-semibold">{`${siteConfig.hours}.`}</dd>
-				</div>
-				<div>
-					<dt className="text-muted-foreground text-xs font-semibold">
-						Pricing
-					</dt>
-					<dd className="mt-1 text-sm font-semibold">{siteConfig.pricing}</dd>
-				</div>
-				<div>
-					<dt className="text-muted-foreground text-xs font-semibold">
-						How to book
-					</dt>
-					<dd className="mt-1 text-sm font-semibold">
-						Call{" "}
-						<a className={linkClass} href={siteConfig.phoneHref}>
-							{siteConfig.phone}
-						</a>{" "}
-						or{" "}
-						<Link className={linkClass} href="/contact" prefetch={false}>
-							request a free quote
-						</Link>
-						.
-					</dd>
-				</div>
-			</dl>
-		</div>
-	)
-}
 
 export function ServiceLandingPage({
 	service,
@@ -98,7 +47,7 @@ export function ServiceLandingPage({
 				aria-labelledby="service-facts-heading"
 				className="border-border bg-card border-b"
 			>
-				<ServiceFacts />
+				<CompactBusinessFacts />
 			</section>
 
 			{viewStats ? (

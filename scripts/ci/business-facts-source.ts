@@ -28,7 +28,7 @@ export function sourceBusinessFactIssues(
 			check(jsxText(node), node)
 		if (
 			ts.isPropertyAssignment(node) &&
-			/^(?:priceRange|price|lowPrice|highPrice|aggregateRating|reviewCount|ratingValue|foundingDate)$/.test(
+			/^(?:priceRange|price|lowPrice|highPrice|aggregateRating|reviewCount|ratingValue|foundingDate|review|reviews)$/.test(
 				node.name.getText(tree).replaceAll('"', "").replaceAll("'", ""),
 			)
 		) {
