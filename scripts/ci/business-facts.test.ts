@@ -18,7 +18,7 @@ test("confirmed hours and flat-rate copy pass", () => {
 		businessFactIssues(`${confirmedHours}\n${confirmedPricing}`),
 		[],
 	)
-	assert.deepEqual(businessFactIssues("Family owned since 2021"), [])
+	assert.deepEqual(businessFactIssues("Family owned in Santa Cruz County"), [])
 })
 
 for (const text of [
@@ -33,7 +33,13 @@ for (const text of [
 	"4.9 local rating",
 	"5-star reviews",
 	"Family owned since 2005",
+	"Family owned since 2021",
 	"Est. 2019",
+	"Satisfaction guaranteed",
+	"100% satisfaction guarantee",
+	"Fast response",
+	"Phone calls are prioritized for fastest response",
+	"quick response times",
 	"Licensed in California & Georgia",
 	"Monday to Friday, 8 AM to 6 PM",
 	"Saturday, 9 AM to 3 PM",
@@ -129,6 +135,7 @@ for (const source of [
 	"const c = <p>Monday to Friday <strong>8 AM to 6 PM</strong></p>",
 	'const c = "safe".replace("safe", "Emergency repairs")',
 	'const c = { priceRange: "$$" }',
+	'const c = { foundingDate: "2005" }',
 ]) {
 	test(`source guard rejects conflicting public copy: ${source}`, () => {
 		assert.ok(sourceBusinessFactIssues(source, "fixture.tsx").length > 0)

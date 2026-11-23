@@ -28,11 +28,11 @@ export function sourceBusinessFactIssues(
 			check(jsxText(node), node)
 		if (
 			ts.isPropertyAssignment(node) &&
-			/^(?:priceRange|price|lowPrice|highPrice|aggregateRating|reviewCount|ratingValue)$/.test(
+			/^(?:priceRange|price|lowPrice|highPrice|aggregateRating|reviewCount|ratingValue|foundingDate)$/.test(
 				node.name.getText(tree).replaceAll('"', "").replaceAll("'", ""),
 			)
 		) {
-			errors.push(`${file}: unverified price or rating schema property`)
+			errors.push(`${file}: unverified schema property`)
 		}
 		if (
 			ts.isStringLiteralLike(node) ||

@@ -83,7 +83,7 @@ While DIY methods exist, professional inspections are more thorough and accurate
 
 ## Why Choose Wade's Plumbing & Septic?
 
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County, CA. Our team of licensed professionals offers decades of experience in plumbing and septic services. With a commitment to quality and customer satisfaction, we provide fast, reliable service when you need it most. By choosing us, you ensure that your home's plumbing system receives the best care possible.
+Wade's Plumbing & Septic is a trusted name in Santa Cruz County, CA. Our team of licensed professionals offers decades of experience in plumbing and septic services. We serve Santa Cruz County with free quotes and flat-rate pricing quoted on site before work begins. By choosing us, you ensure that your home's plumbing system receives the best care possible.
 
 Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or learn about our [drain cleaning service](/service-offerings/drain-cleaning) for help with clogs and maintaining a healthy plumbing system.
 

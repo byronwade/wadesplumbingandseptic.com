@@ -80,8 +80,6 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that our work meets all state regulations and standards. Our office is open Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-Fast & Reliable Service
-
 ## Top Septic Repair & Replacement in Santa Cruz County
 
 Ensure your septic system is in top condition with our expert repair and replacement services.

@@ -115,7 +115,7 @@ export const heroQuickLinks = [
 
 /**
  * Proof bar under the hero. Only facts the business has confirmed: the CSLB
- * license, the founding year, and how pricing works.
+ * license, Santa Cruz County service, and how pricing works.
  */
 export const proofPoints = [
 	{
@@ -125,7 +125,7 @@ export const proofPoints = [
 	},
 	{
 		title: "Family owned",
-		detail: `Local crew since ${siteConfig.foundingYear}`,
+		detail: "Serves Santa Cruz County",
 		icon: "home",
 	},
 	{

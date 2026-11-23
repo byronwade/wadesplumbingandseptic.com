@@ -51,8 +51,6 @@ To prolong the lifespan of your shower head, regular cleaning to remove mineral 
 
 **Q: Can I replace the shower head myself?** A: While DIY is possible, professional installation ensures optimal performance and longevity.
 
-**Q: Does Wade's Plumbing & Septic offer any guarantees?** A: Yes, we provide a satisfaction guarantee on all our services, ensuring peace of mind for our customers.
-
 Choosing Wade's Plumbing & Septic for your **shower head replacement santa cruz** needs means partnering with a trusted, local expert. Our licensed technicians bring years of experience and dedication to every job, ensuring your home's plumbing operates seamlessly. Serving Santa Cruz County, we pride ourselves on being responsive and reliable.
 
 Ready to enhance your shower experience? Contact Wade's Plumbing & Septic today to schedule your [fixture installation](/service-offerings/fixture-installation) and enjoy a revitalized bathroom space. Let us provide you with the quality service you deserve in Santa Cruz County.

@@ -10,7 +10,7 @@ imageAlt: Septic System Replacement in Santa Cruz County
 eyebrow: Santa Cruz County
 ---
 
-**Licensed California Contractor** · Fast response · Santa Cruz, CA service area
+**Licensed California Contractor** · Santa Cruz, CA service area
 
 ## Septic System Replacement in Santa Cruz County
 
@@ -22,7 +22,7 @@ Failing systems, failed perc tests, or aging conventional septic. Wade's deliver
 
 Flat-rate pricing, quoted on site before work begins.
 
-Phone calls are prioritized for fastest response and scheduling.
+Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 
 **Licensed California Contractor**
 

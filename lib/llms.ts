@@ -26,7 +26,6 @@ Address: ${siteConfig.address.display}
 Hours: ${siteConfig.hours}
 Pricing: ${siteConfig.pricing}
 Quotes: Free
-Founded: ${siteConfig.foundingYear}
 License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
 Towns: ${serviceAreaLocations.map((location) => location.name).join(", ")}

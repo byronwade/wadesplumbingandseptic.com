@@ -17,7 +17,7 @@ Septic backup, drain field, and failed system help in Santa Cruz County, from on
 
 [Call Now 831.225.4344](tel:8312254344)
 
-Serving Santa Cruz County. Phone calls are prioritized for fastest response.
+Serving Santa Cruz County. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 
 ### What We Help With
 
