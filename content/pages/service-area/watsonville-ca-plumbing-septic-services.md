@@ -1,8 +1,8 @@
 ---
 title: "Watsonville, CA Plumbing & Septic Services"
 description: >-
-  Watsonville & Pajaro Valley plumbing, septic & ag-property wastewater. Wade's
-  family-owned, CSLB #1087260. Call 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
+  Watsonville and Pajaro Valley plumbing and septic for city lots and ag-adjacent
+  parcels. Wade's, CSLB #1087260. Call 831.225.4344.
 eyebrow: "Watsonville, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
@@ -44,6 +44,8 @@ The Pajaro River basin and local aquifer mean high groundwater in wet winters. Y
 
 Agricultural dust and debris find their way into outdoor cleanouts on properties bordering fields. We clear lines and explain maintenance habits that reduce repeat calls. For rental and multi-family housing near downtown, high tenant turnover accelerates wear on water heaters and kitchen drains. We prioritize durable repairs where it makes sense.
 
+Wade's septic work in Watsonville is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Watsonville?
@@ -64,8 +66,5 @@ Hard water mineral buildup shows up on fixtures throughout the Pajaro Valley, in
 
 ## Watsonville Area Contact
 
-Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+18312254344) for plumbing or septic service.
+Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+18312254344) for plumbing or septic service. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby service areas:** [Freedom](/service-area/freedom-ca-plumbing-septic-services), [Amesti](/service-area/amesti-ca-plumbing-septic-services), [Interlaken](/service-area/interlaken-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)

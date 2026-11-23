@@ -52,6 +52,8 @@ Steep lots send effluent where gravity prefers. A drainfield that worked at inst
 
 Residents share roads and watershed with [Zayante](/service-area/zayante-ca-plumbing-septic-services) and shop through [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) for daily life. We cover both from the same mountain crew.
 
+Wade's septic work in Lompico is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Lompico?
@@ -72,4 +74,4 @@ Wade's handles septic tank location and lid exposure for Lompico homes when reco
 
 ## Schedule a visit
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time.
+Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time. Quotes are free: [Get a Free Quote](/contact).

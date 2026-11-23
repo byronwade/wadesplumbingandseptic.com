@@ -2,7 +2,7 @@
 title: Septic Tank Alarm Installation in Santa Cruz County
 description: >-
   Septic tank high-level alarm installation so pump failures are caught early in
-  Santa Cruz County. Call 831.225.4344.
+  Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 12
 image: /images/wordpress/ai-engineered-septic-systems-santa-cruz-county-612317.webp
@@ -11,6 +11,8 @@ updated: "2026-07-30"
 ---
 
 In the ever-evolving world of septic systems, having a reliable septic tank alarm installation is essential for homeowners who want to prevent costly repairs and ensure the smooth operation of their systems. At Wade's Plumbing & Septic, we specialize in installing top-of-the-line septic tank alarms that alert you to any potential issues, such as high water levels or pump failures, before they escalate into major problems. Serving Santa Cruz County, California, our team of licensed professionals is committed to providing quality service that you can trust.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Understanding Septic Tank Alarm Installation
 

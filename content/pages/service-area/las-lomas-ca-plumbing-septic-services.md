@@ -48,6 +48,10 @@ Many homes here support extended families, higher daily water use and more load 
 
 Hard well water accelerates scale in water heaters and leaves stains on fixtures. Plumbing maintenance in Las Lomas works best when water quality is part of the conversation, not an afterthought.
 
+Wade's septic work in Las Lomas is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Las Lomas jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Las Lomas?
@@ -68,8 +72,4 @@ Hard well water in Las Lomas accelerates scale in water heaters and leaves stain
 
 ## Schedule service in Las Lomas
 
-Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Las Lomas. We cover Santa Cruz County and can usually schedule service within a reasonable window, tell us if you are facing an active backup or leak.
-
-**Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Freedom](/service-area/freedom-ca-plumbing-septic-services), [Amesti](/service-area/amesti-ca-plumbing-septic-services), and [Interlaken](/service-area/interlaken-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic services](/service-category/septic) · [Contact us](/contact)
+Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Las Lomas. We cover Santa Cruz County and can usually schedule service within a reasonable window, tell us if you are facing an active backup or leak. Quotes are free: [Get a Free Quote](/contact).

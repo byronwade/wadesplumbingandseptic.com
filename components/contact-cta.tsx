@@ -8,6 +8,7 @@ import {
 } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
+import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
 import { cn } from "@/lib/utils"
 
 export function ContactCta({
@@ -112,9 +113,9 @@ export function ContactCta({
 							}),
 							actionWidth,
 						)}
-						href="/contact"
+						href={freeQuotePath}
 					>
-						{compact ? "Request service" : "Send a Message"}
+						{freeQuoteCtaLabel}
 						<ArrowRight aria-hidden="true" />
 					</Link>
 				</div>

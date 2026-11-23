@@ -67,10 +67,5 @@ Aptos soils range from sandy to clay mixes depending on elevation, and condition
 
 ## Aptos Service from Wade's
 
-Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Aptos.
+Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Aptos. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby service areas:** [Rio Del Mar](/service-area/rio-del-mar-ca-plumbing-septic-services), [Day Valley](/service-area/day-valley-ca-plumbing-septic-services), [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Aptos Hills Larkin Valley](/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services)
-
-**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Hydro jetting](/service-offerings/hydro-jetting) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic system installation](/service-offerings/septic-system-installation) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact](/contact) · [About Wade's](/about-us)

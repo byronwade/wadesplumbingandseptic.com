@@ -2,7 +2,7 @@
 title: Pipe Repair and Replacement in Santa Cruz County
 description: >-
   Pipe repair and repiping for Santa Cruz County homes. Fix leaks, corrosion,
-  and outdated lines with lasting materials. Call 831.225.4344.
+  and outdated lines with lasting materials. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 31
 image: >-

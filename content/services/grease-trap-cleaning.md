@@ -2,7 +2,7 @@
 title: Grease Trap Cleaning in Santa Cruz County
 description: >-
   Grease trap cleaning for Santa Cruz County restaurants and commercial
-  kitchens. Keep drains clear and inspections simple. Call 831.225.4344.
+  kitchens. Keep drains clear and inspections simple. Call 831.225.4344. Quotes are free.
 category: Commercial
 order: 22
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Grease trap cleaning is a critical service for any food establishment or household kitchen in Santa Cruz County, California. The process involves the meticulous removal of fats, oils, and grease (FOG) that accumulate in grease traps, ensuring compliance with local regulations and preventing potential plumbing issues. Our professional **grease trap cleaning Santa Cruz** service is designed to maintain the efficiency of your kitchen drainage systems, eliminate odors, and avoid costly repairs.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Grease Trap Cleaning
 

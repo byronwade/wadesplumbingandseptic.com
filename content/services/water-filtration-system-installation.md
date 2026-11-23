@@ -2,7 +2,7 @@
 title: Water Filtration System Installation in Santa Cruz County
 description: >-
   Whole-home and point-of-use water filtration installation for Santa Cruz
-  County water quality concerns. Call 831.225.4344.
+  County water quality concerns. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 33
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Enhance the quality of your home's water with our expert **water filtration system installation in Santa Cruz County**. At Wade's Plumbing & Septic, we understand the importance of clean, safe drinking water for you and your family. Our comprehensive solutions range from whole-house systems to point-of-use filters, ensuring that your water is free from contaminants. Whether you're looking to address specific issues like hard water or require specialized filtration, our seasoned professionals have you covered.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Water Filtration System Installation in Santa Cruz County
 
@@ -23,7 +25,7 @@ Identifying the need for a water filtration system can be straightforward if you
 
 ## Why Choose Wade's Plumbing & Septic for Your Installation?
 
-Wade's Plumbing & Septic offers unparalleled expertise in **water filtration system installation in Santa Cruz County**. Our team is fully licensed and has years of experience delivering high-quality plumbing services. We are committed to local communities, offering responsive service tailored to your specific water needs. When you choose us, you're choosing reliability and peace of mind.
+Wade's Plumbing & Septic offers unparalleled expertise in **water filtration system installation in Santa Cruz County**. Our team is licensed for the plumbing work we perform. We are committed to local communities, offering responsive service tailored to your specific water needs. When you choose us, you're choosing reliability and peace of mind.
 
 ## Our Installation Process and Timeline
 

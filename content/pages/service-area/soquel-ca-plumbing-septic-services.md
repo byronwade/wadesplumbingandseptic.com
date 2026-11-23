@@ -46,6 +46,8 @@ Soquel collects moisture from creek drainage and coastal fog, keeping soils damp
 
 Agricultural and nursery operations on the outskirts sometimes share water supply infrastructure with residential plumbing. We separate irrigation issues from domestic line failures so you are not paying to excavate the wrong problem.
 
+Wade's septic work in Soquel is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Soquel?
@@ -66,8 +68,5 @@ In Soquel, post-fire rebuilds and ADU additions increase fixture counts on septi
 
 ## Soquel Service Contact
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344).
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby service areas:** [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Day Valley](/service-area/day-valley-ca-plumbing-septic-services)
-
-**Helpful links:** [All service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Expert tips](/expert-tips) · [Contact us](/contact) · [About Wade's](/about-us)

@@ -2,13 +2,15 @@ import type { Metadata } from "next"
 import type { Route } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Check, Phone } from "@/components/icons"
+import { Check } from "@/components/icons"
 
-import { CallLabel } from "@/components/call-label"
+import { CallButton } from "@/components/call-button"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
+import { contactInfo } from "@/lib/contact"
+import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
 import {
 	cityServicePath,
 	getCityLocation,
@@ -45,7 +47,7 @@ export async function generateMetadata({
 
 	return buildPageMetadata({
 		title: `${page.serviceTitle} in ${location.name}, CA`,
-		description: `${page.serviceTitle} for ${location.name} homes: ${page.commonIssues[0]!.replace(/\.$/, "")}. Licensed and insured. Call 831.225.4344.`,
+		description: `${page.serviceTitle} for ${location.name} homes: ${page.commonIssues[0]!.replace(/\.$/, "")}. Quotes are free. Call 831.225.4344.`,
 		pathname: cityServicePath(city, service),
 		image: "/images/locations/santa-cruz-plumber.webp",
 	})
@@ -106,7 +108,7 @@ export default async function CityServicePage({
 					{ href: cityHubHref, label: location.name },
 					{ label: page.serviceTitle },
 				]}
-				description={`${page.serviceTitle} for ${location.name}, ${location.county}. Local licensed help with clear pricing before work begins.`}
+				description={`${page.serviceTitle} for ${location.name}, ${location.county}. Local licensed help with a free quote and flat-rate pricing quoted on site.`}
 				eyebrow={`${location.name}, CA`}
 				image={image}
 				imageAlt={`${page.serviceTitle} in ${location.name}`}
@@ -121,27 +123,25 @@ export default async function CityServicePage({
 						Why this matters in {location.name}
 					</h2>
 					<p className="type-lead mt-4">{page.localAngle}</p>
-					<div className="mt-8 flex flex-col gap-3 sm:flex-row">
-						<a
-							className={cn(
-								buttonVariants({ size: "lg", wrap: true }),
-								"justify-center",
-							)}
-							href={siteConfig.phoneHref}
-						>
-							<CallLabel
-								icon={<Phone aria-hidden="true" className="size-4" />}
-							/>
-						</a>
+					<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+						<CallButton
+							className="w-full sm:w-auto"
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							size="lg"
+						/>
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "outline", size: "lg" }),
-								"justify-center",
+								buttonVariants({
+									variant: "outline",
+									size: "lg",
+									wrap: true,
+								}),
+								"w-full sm:w-auto justify-center",
 							)}
-							href={"/contact" as Route}
+							href={freeQuotePath as Route}
 						>
-							Request service
+							{freeQuoteCtaLabel}
 						</Link>
 					</div>
 				</div>

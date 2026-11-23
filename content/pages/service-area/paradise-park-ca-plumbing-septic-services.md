@@ -64,4 +64,4 @@ In wet Paradise Park winters, saturated soils reduce drainfield capacity, so slo
 
 ## Before the weekend goes wrong
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for Paradise Park plumbing or septic. See [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact), especially before peak season if the tank hasn't been touched in years.
+Call Wade's at **[831.225.4344](tel:+18312254344)** for Paradise Park plumbing or septic. See [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact), especially before peak season if the tank hasn't been touched in years. Quotes are free: [Get a Free Quote](/contact).

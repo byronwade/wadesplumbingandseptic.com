@@ -7,6 +7,7 @@ import { BadgeCheck, ChevronRight } from "@/components/icons"
 import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
+import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -256,9 +257,9 @@ export function ContentHero({
 										}),
 										"w-full sm:w-auto",
 									)}
-									href="/contact"
+									href={freeQuotePath}
 								>
-									Request service
+									{freeQuoteCtaLabel}
 								</Link>
 							</div>
 						) : null}
@@ -423,9 +424,9 @@ export function ContentHero({
 									}),
 									"w-full sm:w-auto",
 								)}
-								href="/contact"
+								href={freeQuotePath}
 							>
-								Request a free quote
+								{freeQuoteCtaLabel}
 							</Link>
 						)}
 					</div>

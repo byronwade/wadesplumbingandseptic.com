@@ -50,6 +50,10 @@ Fire season demands attention to exterior plumbing. Hose bibs, pool fillers, and
 
 Driveways can be long and steep. Service trucks and equipment need adequate turnaround space. Mention access details when you call so we plan accordingly.
 
+Wade's septic work in Aptos Hills-Larkin Valley is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Aptos Hills-Larkin Valley jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Aptos Hills-Larkin Valley?
@@ -70,8 +74,4 @@ Driveways in Aptos Hills-Larkin Valley can be long and steep, and service trucks
 
 ## Schedule service in Aptos Hills-Larkin Valley
 
-Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Aptos Hills-Larkin Valley. We serve Santa Cruz County and regularly work the Aptos hills and Larkin Valley corridor.
-
-**Nearby communities we serve:** [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Day Valley](/service-area/day-valley-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services), and [Soquel](/service-area/soquel-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic services](/service-category/septic) · [Contact us](/contact)
+Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Aptos Hills-Larkin Valley. We serve Santa Cruz County and regularly work the Aptos hills and Larkin Valley corridor. Quotes are free: [Get a Free Quote](/contact).

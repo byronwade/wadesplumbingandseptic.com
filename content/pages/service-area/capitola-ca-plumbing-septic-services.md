@@ -67,10 +67,4 @@ Capitola's vacation rental market puts extra cycles on disposals, washers, and w
 
 ## Call Wade's in Capitola
 
-For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+18312254344).
-
-**Nearby service areas:** [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services)
-
-**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic system installation](/service-offerings/septic-system-installation) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)
-
-**Helpful links:** [Service areas](/service-areas) · [Plumbing](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Failed septic repair](/service-offerings/septic-tank-repair-and-replacement) · [Expert tips](/expert-tips) · [Contact](/contact) · [About us](/about-us)
+For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).

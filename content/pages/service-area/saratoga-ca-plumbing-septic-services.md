@@ -51,6 +51,10 @@ Winter storms saturate hillside soils. Septic drainfields on marginal sites may 
 
 Fire-season preparedness matters in the foothills. Exterior hose bibs and backup water sources should be tested before summer, not assumed functional because they worked last year.
 
+Wade's septic work in Saratoga is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Saratoga jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Saratoga?
@@ -71,8 +75,5 @@ In the Saratoga foothills, exterior hose bibs and backup water sources should be
 
 ## Confirm coverage and schedule service
 
-**Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344).
+**Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
 
-**Santa Cruz County communities we regularly serve:** [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), [Los Gatos](/service-area/los-gatos-ca-plumbing-septic-services) (selected coverage: confirm address), and [Felton](/service-area/felton-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)

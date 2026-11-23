@@ -2,7 +2,7 @@
 title: Water Heater Installation in Santa Cruz County
 description: >-
   Tank and tankless water heater installation for Santa Cruz County homes.
-  Code-compliant installs and clear options. Call 831.225.4344.
+  Code-compliant installs and clear options. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 25
 image: /images/work/water-heater-installation.webp
@@ -18,7 +18,7 @@ connections, and permit needs for your property before work begins.
 
 ## Why Choose Wade's Plumbing & Septic for Water Heater Installation?
 
-At Wade's Plumbing & Septic, we bring years of experience and a commitment to quality service. As a licensed and locally respected company, we understand the unique plumbing needs of Santa Cruz County residents. Our team is responsive and dedicated to providing top-notch service, ensuring that your water heater installation is seamless and efficient.
+At Wade's Plumbing & Septic, we complete water heater work to code. As a licensed and locally respected company, we understand the unique plumbing needs of Santa Cruz County residents. Our team is responsive and dedicated to providing top-notch service, ensuring that your water heater installation is seamless and efficient.
 
 ## Signs You Need a New Water Heater
 

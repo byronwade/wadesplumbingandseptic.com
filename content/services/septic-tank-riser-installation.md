@@ -2,7 +2,7 @@
 title: Septic Tank Riser Installation in Santa Cruz County
 description: >-
   Septic tank riser installation for easier access and inspections in
-  Santa Cruz County. Call 831.225.4344.
+  Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 4
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-10-20"
 ---
 
 Septic tank riser installation is an essential service for homeowners looking to simplify the maintenance and inspection of their septic systems. By bringing the tank access points to the surface, risers eliminate the need for labor-intensive digging, saving both time and money. At Wade's Plumbing & Septic, we specialize in installing durable, watertight risers with secure, childproof lids that blend seamlessly with your landscaping. Servicing Santa Cruz County, California, our expert team ensures that your septic system remains easily accessible for routine care and repair interventions.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Why Septic Tank Riser Installation is Essential
 

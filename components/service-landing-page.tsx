@@ -1,5 +1,6 @@
 import { CompactBusinessFacts } from "@/components/business-facts"
 import { ServiceCityLinks } from "@/components/city-service-guides"
+import { ServiceTownLinks } from "@/components/service-town-links"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
@@ -81,6 +82,7 @@ export function ServiceLandingPage({
 			/>
 
 			<ServiceCityLinks serviceSlug={service.slug} />
+			<ServiceTownLinks />
 
 			{related ? (
 				<RelatedContentSectionsWithStats

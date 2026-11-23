@@ -2,7 +2,7 @@
 title: Backflow Prevention Installation in Santa Cruz County
 description: >-
   Licensed backflow preventer installation for Santa Cruz County homes and
-  businesses. Code-compliant protection for potable water. Call 831.225.4344.
+  businesses. Code-compliant protection for potable water. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 40
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Ensuring the safety and purity of your water supply is paramount, which is why our professional backflow prevention installation service is essential for homeowners in Santa Cruz County, California. Backflow prevention devices protect your water system from contamination by preventing the reverse flow of water, which can carry harmful pollutants into your clean water supply. At Wade's Plumbing & Septic, our certified technicians are experienced in installing various types of backflow preventers, such as pressure vacuum breakers, double-check valves, and reduced pressure zone devices, ensuring compliance with local plumbing codes and manufacturer specifications.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Understanding Backflow Prevention Installation
 
@@ -71,7 +73,7 @@ For homeowners exploring other options, we also offer [alternative septic system
 
 ## Choose Wade's Plumbing & Septic for Your Backflow Needs
 
-With years of experience serving Santa Cruz County, California, Wade's Plumbing & Septic is your trusted partner for backflow prevention installation. Our licensed and responsive team is dedicated to providing top-notch service, ensuring your water supply remains safe and secure. Whether you need a new installation, regular maintenance, or [backflow prevention testing](/service-offerings/backflow-prevention-testing), we've got you covered.
+Wade's Plumbing & Septic is your trusted partner for backflow prevention installation. Our licensed and responsive team is dedicated to providing top-notch service, ensuring your water supply remains safe and secure. Whether you need a new installation, regular maintenance, or [backflow prevention testing](/service-offerings/backflow-prevention-testing), we've got you covered.
 
 Contact us today to schedule your backflow prevention service and protect your home's water supply with confidence.
 

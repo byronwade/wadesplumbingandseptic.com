@@ -2,7 +2,7 @@
 title: Video Pipe Inspections in Santa Cruz County
 description: >-
   Video pipe inspections for drains, sewers, and septic lines in Santa Cruz
-  County. See the problem before you repair. Call 831.225.4344.
+  County. See the problem before you repair. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 1
 image: /images/work/drain-cleaning-equipment.webp
@@ -11,6 +11,8 @@ updated: "2026-07-30"
 ---
 
 Maintaining a healthy plumbing system is crucial for any homeowner, and a sewer line video inspection is an invaluable service to ensure everything is functioning optimally. At Wade's Plumbing & Septic, we offer state-of-the-art video inspections in Santa Cruz County, California, using advanced waterproof cameras to diagnose and resolve issues within your sewer and septic systems efficiently and effectively.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need a Sewer Line Video Inspection
 

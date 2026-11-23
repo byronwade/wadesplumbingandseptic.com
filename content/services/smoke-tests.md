@@ -2,7 +2,7 @@
 title: Plumbing Smoke Testing in Santa Cruz County
 description: >-
   Smoke testing to find sewer gas leaks, illegal connections, and vent issues in
-  Santa Cruz County. Call 831.225.4344.
+  Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 34
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 When it comes to maintaining the integrity of your plumbing system, a smoke test plumbing service is an invaluable tool. This technique is used to locate leaks, breaks, and improper connections in sewer systems and drain lines. At Wade's Plumbing & Septic, we introduce non-toxic, odorless smoke into the system, which escapes through defects, making them easy to identify. Whether you're dealing with unpleasant odors or looking for infiltration points, our smoke tests offer a non-invasive, efficient solution for homeowners in Santa Cruz County, California.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You May Need a Smoke Test Plumbing Service
 
@@ -69,7 +71,7 @@ No, it is not necessary to leave your home. Our technicians perform the test qui
 
 ## Why Choose Wade's Plumbing & Septic?
 
-With years of experience and a commitment to quality, Wade's Plumbing & Septic is the trusted choice for plumbing services in Santa Cruz County. Our team is licensed, local, and responsive, ensuring you receive the best service possible. We pride ourselves on our expertise and customer satisfaction.
+Wade's Plumbing & Septic is the trusted choice for plumbing services in Santa Cruz County. Our team is licensed, local, and responsive, ensuring you receive the best service possible. We pride ourselves on our expertise and customer satisfaction.
 
 For reliable smoke test plumbing services, contact Wade's Plumbing & Septic today. Our expert team is ready to help you maintain a safe and efficient plumbing system. Schedule your appointment now and experience the peace of mind that comes with knowing your home is in good hands.
 

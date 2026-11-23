@@ -73,6 +73,5 @@ Yes. Boulder Creek's upstream canyons freeze harder than Felton, so hose bibs, c
 
 ## Get help upstream
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for plumbing or septic service in Boulder Creek. Explore [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) to talk through your lot before we schedule a visit.
+Call Wade's at **[831.225.4344](tel:+18312254344)** for plumbing or septic service in Boulder Creek. Explore [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) to talk through your lot before we schedule a visit. Quotes are free: [Get a Free Quote](/contact).
 
-**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic care](/service-offerings/septic-tank-maintenance-and-care) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)

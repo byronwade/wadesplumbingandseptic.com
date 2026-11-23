@@ -2,7 +2,7 @@
 title: Septic Filter Cleaning and Replacement in Santa Cruz County
 description: >-
   Septic effluent filter cleaning and replacement to protect Santa Cruz County
-  drainfields. Call 831.225.4344.
+  drainfields. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 10
 image: /images/services/septic-pumping-illustration.webp
@@ -13,6 +13,8 @@ updated: "2026-10-20"
 The effluent filter is a small part with a big job. It catches solids before wastewater leaves the tank, so your drainfield stays open and healthy. At Wade's Plumbing & Septic, **septic filter cleaning in Santa Cruz County** is careful, scheduled work that prevents backups and expensive field repairs.
 
 Most systems with an effluent screen need attention every one to three years. Household size, water use, and whether the home has a garbage disposal all change that timing. We inspect the filter, clean or replace it, and confirm flow before we leave.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Understanding Septic Filter Cleaning and Replacement
 

@@ -57,9 +57,11 @@ Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineSe
 
 We regularly serve communities across Santa Cruz County, including Santa Cruz, Scotts Valley, Ben Lomond, Felton, Boulder Creek, Capitola, Aptos, Watsonville, Live Oak, Soquel, and the other towns listed on our [service areas](/service-areas) page, plus selected Santa Clara County foothill addresses in Los Gatos and Saratoga. If you are unsure whether your property is in range, call with the street address and we will tell you straight.
 
-## Request service
+## Request a free quote
 
-Tell us what is going on and we will point you to the right next step: inspection, repair, water heater work, drain clearing, or engineered septic options. Flat-rate pricing, quoted on site before work begins. No sales pressure.
+Tell us what is going on and we will point you to the right next step: inspection, repair, water heater work, drain clearing, or engineered septic options. Quotes are free. Flat-rate pricing, quoted on site before work begins. No sales pressure. Call or text the number on the card, or email photos and the property address.
+
+If we recently finished work at your home, you can [leave us a review on Google](https://g.page/r/CblD5bImAMZtEAE/review).
 
 ## Frequently asked questions
 

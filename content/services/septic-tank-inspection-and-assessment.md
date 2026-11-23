@@ -2,7 +2,7 @@
 title: Septic Tank Inspection in Santa Cruz County
 description: >-
   Thorough septic tank inspection and assessment for home sales, maintenance,
-  and early problem detection in Santa Cruz County. Call 831.225.4344.
+  and early problem detection in Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 2
 image: /images/services/septic-pumping-illustration.webp
@@ -18,6 +18,8 @@ tanks as part of this service.
 County and lender requirements change over time. We inspect to current
 practical standards for your property and explain findings in plain language so
 you can decide what to do next.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Septic tank inspection and assessment
 

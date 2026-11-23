@@ -50,6 +50,8 @@ Wind exposure, salt air, and marine-layer humidity differentiate Davenport from 
 
 We also serve neighbors in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services) to the south and Bonny Doon to the east, linked by Highway 1 and shared county permitting, distinct in daily living.
 
+Wade's septic work in Davenport is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Davenport?
@@ -70,4 +72,4 @@ In Davenport, marine air accelerates wear on exposed plumbing, leading to corrod
 
 ## North Coast service without the runaround
 
-For Davenport plumbing or septic, call Wade's at **[831.225.4344](tel:+18312254344)**. Explore all communities on [service areas](/service-areas), read [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. We'll tell you whether it's plumbing, septic, or both before we head up Highway 1.
+For Davenport plumbing or septic, call Wade's at **[831.225.4344](tel:+18312254344)**. Explore all communities on [service areas](/service-areas), read [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. We'll tell you whether it's plumbing, septic, or both before we head up Highway 1. Quotes are free: [Get a Free Quote](/contact).

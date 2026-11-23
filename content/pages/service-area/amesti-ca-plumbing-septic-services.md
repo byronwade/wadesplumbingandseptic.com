@@ -48,6 +48,10 @@ Agricultural activity nearby means dust, debris, and occasional chemical storage
 
 Well water hardness and iron staining are frequent complaints. Addressing the water heater and fixtures without acknowledging water quality leads to repeat problems. We note what we observe and suggest practical steps.
 
+Wade's septic work in Amesti is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Amesti jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Amesti?
@@ -68,8 +72,5 @@ Common Amesti plumbing calls include kitchen and bathroom drain clogs, water hea
 
 ## Schedule service in Amesti
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) to schedule plumbing or septic service in Amesti. We cover all of Santa Cruz County and prioritize clear communication about timing, access, and what to expect on arrival.
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) to schedule plumbing or septic service in Amesti. We cover all of Santa Cruz County and prioritize clear communication about timing, access, and what to expect on arrival. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby communities we serve:** [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Freedom](/service-area/freedom-ca-plumbing-septic-services), [Las Lomas](/service-area/las-lomas-ca-plumbing-septic-services), and [Interlaken](/service-area/interlaken-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic services](/service-category/septic) · [Contact us](/contact)

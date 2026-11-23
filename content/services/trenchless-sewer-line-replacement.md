@@ -2,7 +2,7 @@
 title: Trenchless Sewer Line Replacement in Santa Cruz County
 description: >-
   Trenchless sewer line replacement to limit yard damage on Santa Cruz County
-  properties. Call 831.225.4344.
+  properties. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 26
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 When sewer issues arise, the disruption can be a major inconvenience for homeowners. Fortunately, our trenchless sewer line replacement service in Santa Cruz County offers a solution that minimizes property disruption while effectively addressing damaged or deteriorated sewer pipes. By utilizing innovative techniques such as pipe bursting or pipe lining technology, we can install new sewer lines without extensive excavation, preserving your landscaping and hardscaping.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Why Opt for Trenchless Sewer Line Replacement in Santa Cruz County?
 

@@ -21,6 +21,7 @@ import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 import { ArticleAside } from "@/components/article-aside"
 import { CompanyFacts } from "@/components/business-facts"
 import { CityServiceGuides } from "@/components/city-service-guides"
+import { TownPageLinks } from "@/components/town-page-links"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
 import { ContentHero } from "@/components/content-hero"
@@ -185,6 +186,12 @@ export function ContentPage({
 			) : null}
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
+			{document.slug === "about-us" ? (
+				<GoogleReviewInvite
+					buttonLabel="Leave us a review on Google"
+					message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google."
+				/>
+			) : null}
 			{document.slug === "thank-you" ? (
 				<GoogleReviewInvite
 					buttonLabel="Leave us a Google review"
@@ -218,10 +225,18 @@ export function ContentPage({
 				</article>
 			)}
 
-			{document.slug === "contact" ? <GoogleReviewInvite /> : null}
+			{document.slug === "contact" ? (
+				<GoogleReviewInvite
+					buttonLabel="Leave us a review on Google"
+					message="If we recently finished work at your home, you can leave us a review on Google."
+				/>
+			) : null}
 
 			{isServiceArea ? (
-				<CityServiceGuides pathname={`/${document.slug}`} />
+				<>
+					<TownPageLinks pathname={`/${document.slug}`} />
+					<CityServiceGuides pathname={`/${document.slug}`} />
+				</>
 			) : null}
 
 			{related ? <RelatedContentSectionsWithStats related={related} /> : null}

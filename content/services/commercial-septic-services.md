@@ -2,8 +2,8 @@
 title: Commercial Septic Services in Santa Cruz County
 heroTitle: Business Septic Services in Santa Cruz County
 description: >-
-  Commercial septic inspection and repair for Santa Cruz County
-  businesses. CSLB #1087260 (C-36, C-42). Call 831.225.4344.
+  Commercial septic inspection, repair, and installation for Santa Cruz County
+  businesses. Not pumping. Quotes are free. Call 831.225.4344.
 category: Commercial
 order: 24
 image: >-
@@ -13,6 +13,8 @@ updated: "2026-10-20"
 ---
 
 Commercial septic services for Santa Cruz County businesses cover system inspection, repair, and installation, not tank pumping, which we do not offer. Wade's Plumbing & Septic assesses the system, explains the options, and works with engineers when an engineered design is required. Quotes are free, and pricing is a flat rate quoted on site.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. Quotes are free.
 
 ## About Business Septic System Needs
 
@@ -42,10 +44,10 @@ Commercial septic systems can fail due to a variety of reasons:
 
 Wade's Plumbing & Septic follows a thorough process to ensure reliable septic services:
 
-1.  **Inspection:** Begin with a detailed inspection to diagnose issues.
-2.  **Design and Planning:** Tailor solutions to fit your business needs and regulatory requirements.
-3.  **Installation and Repair:** Implement durable and efficient system solutions.
-4.  **Maintenance:** Schedule regular maintenance to prevent future problems.
+1. **Inspection:** Begin with a detailed inspection to diagnose issues.
+2. **Design and Planning:** Tailor solutions to fit your business needs and regulatory requirements.
+3. **Installation and Repair:** Implement durable and efficient system solutions.
+4. **Maintenance:** Schedule regular maintenance to prevent future problems.
 
 Our commitment to quality ensures that your septic system functions optimally, minimizing disruptions to your operations.
 

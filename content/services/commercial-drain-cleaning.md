@@ -3,7 +3,7 @@ title: Commercial Drain Cleaning in Santa Cruz County
 heroTitle: Business Drain Cleaning in Santa Cruz County
 description: >-
   Commercial drain cleaning for restaurants, retail, and offices in Santa Cruz
-  County. Fast clearing, less downtime. Call 831.225.4344.
+  County. Fast clearing, less downtime. Call 831.225.4344. Quotes are free.
 category: Commercial
 order: 21
 image: /images/work/commercial-plumbing-installation.webp
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 In the bustling commercial environments of Santa Cruz County, California, efficient plumbing is crucial to maintaining smooth business operations. At Wade's Plumbing & Septic, our **commercial[drain cleaning](/service-offerings/drain-cleaning)** services are designed to tackle the unique challenges faced by business plumbing systems, ensuring your operations run without disruption.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Why Business Drain Cleaning Matters
 

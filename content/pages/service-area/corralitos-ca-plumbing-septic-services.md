@@ -50,6 +50,10 @@ Corralitos roads can be narrow and steep. We plan truck access for septic work a
 
 Fire-season awareness matters here too. Hose bibs, backup water supplies, and exterior plumbing should be maintained and tested before summer, not after a red-flag warning.
 
+Wade's septic work in Corralitos is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Corralitos jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Corralitos?
@@ -70,8 +74,5 @@ Corralitos roads can be narrow and steep. If your tank is far from the road, tel
 
 ## Schedule service in Corralitos
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for Corralitos plumbing or septic service. We serve all of Santa Cruz County and regularly work along the Corralitos corridor and surrounding hills.
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for Corralitos plumbing or septic service. We serve all of Santa Cruz County and regularly work along the Corralitos corridor and surrounding hills. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby communities we serve:** [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Freedom](/service-area/freedom-ca-plumbing-septic-services), and [Day Valley](/service-area/day-valley-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)

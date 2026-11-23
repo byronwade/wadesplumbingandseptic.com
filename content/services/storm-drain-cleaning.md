@@ -2,7 +2,7 @@
 title: Storm Drain Cleaning in Santa Cruz County
 description: >-
   Storm drain cleaning to reduce flooding and debris backups around Santa Cruz
-  County properties. Call 831.225.4344.
+  County properties. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 29
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 Storm [drain cleaning](/service-offerings/drain-cleaning) is a crucial service for homeowners in Santa Cruz County, California, ensuring your property remains safe from flooding and water damage. At Wade's Plumbing & Septic, we use advanced equipment and techniques to effectively remove leaves, sediment, debris, and other obstructions from your storm drains, catch basins, and drainage systems. Regular maintenance is essential to prevent costly water damage and extend the lifespan of your drainage infrastructure. Our experienced team also offers preventative maintenance programs tailored for commercial properties, securing your investment against potential water-related disasters.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs Your Storm Drains Need Cleaning
 
@@ -84,7 +86,7 @@ Neglecting regular storm drain cleaning can lead to severe blockages, resulting 
 
 ## Trust Wade's Plumbing & Septic for Your Storm Drain Needs
 
-Choosing Wade's Plumbing & Septic for your storm drain cleaning services in Santa Cruz County means trusting a licensed, locally authoritative team with years of experience. Our responsive service and commitment to quality ensure that your property remains protected year-round. Contact us today to schedule an inspection or learn more about how we can help keep your drainage systems in top condition.
+Wade's Plumbing & Septic provides storm drain cleaning in Santa Cruz County. Our responsive service and commitment to quality ensure that your property remains protected year-round. Contact us today to schedule an inspection or learn more about how we can help keep your drainage systems in top condition.
 
 ## Serving Santa Cruz County, CA
 

@@ -9,7 +9,7 @@ imageAlt: Hillside homes in the Los Gatos foothills near the Santa Cruz County b
 
 Los Gatos sits in the western Santa Clara Valley, upscale hillside neighborhoods, older downtown charm, and mountain-adjacent properties where Santa Clara County meets the Santa Cruz Mountains. Wade's Plumbing & Septic is based in Santa Cruz County, and our work in Los Gatos is **selected coverage only**: plumbing and project service for properties **near the Santa Cruz County line**, not blanket service across all of Los Gatos or Santa Clara County.
 
-If you are on the mountain side of town, closer to [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), or the county border. We may be able to help. **Call [831.225.4344](tel:+18312254344) with your property address** and we will confirm whether your location falls within our service area before scheduling.
+If you are on the mountain side of town, closer to [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), or the county border, we may be able to help. **Call [831.225.4344](tel:+18312254344) with your property address** and we will confirm whether your location falls within our service area before scheduling. Quotes are free: [Get a Free Quote](/contact).
 
 ## Plumbing services near Los Gatos
 
@@ -51,6 +51,10 @@ Tree root intrusion, ground movement on slopes, and aging cast-iron or clay sewe
 
 Properties near the border often feel more like Santa Cruz Mountain communities than Silicon Valley suburbs. That is the geography Wade's is built for, and why our Los Gatos coverage is intentional and limited rather than county-wide.
 
+Wade's septic work in Los Gatos is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Los Gatos jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Los Gatos?
@@ -71,8 +75,5 @@ Santa Clara County permitting applies to septic work on the Santa Clara side of 
 
 ## Confirm coverage and schedule service
 
-**Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area.
+**Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area. Quotes are free: [Get a Free Quote](/contact).
 
-**Santa Cruz County communities we regularly serve:** [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services), and [Saratoga](/service-area/saratoga-ca-plumbing-septic-services) (selected coverage: confirm address).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)

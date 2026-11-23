@@ -50,6 +50,10 @@ Access matters. Some Day Valley driveways are long, narrow, and steep. Service t
 
 The area sits between Aptos flatlands and mountain communities like Corralitos and the San Lorenzo Valley. Soil and elevation change quickly; what works on a valley lot may not apply on your hillside parcel.
 
+Wade's septic work in Day Valley is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
+
+Typical Day Valley jobs include [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater installation](/service-offerings/water-heater-installation), and [engineered septic installation](/service-offerings/engineered-septic-system-installation) when a conventional system will not fit.
+
 ## Frequently Asked Questions
 
 ### Does Wade's Plumbing & Septic serve Day Valley?
@@ -70,8 +74,5 @@ Some Day Valley driveways are long, narrow, and steep, so tell Wade's about acce
 
 ## Schedule service in Day Valley
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Day Valley. We serve all of Santa Cruz County and are familiar with the Aptos hills and surrounding oak country.
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Day Valley. We serve all of Santa Cruz County and are familiar with the Aptos hills and surrounding oak country. Quotes are free: [Get a Free Quote](/contact).
 
-**Nearby communities we serve:** [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Aptos Hills-Larkin Valley](/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services), [Corralitos](/service-area/corralitos-ca-plumbing-septic-services), and [Soquel](/service-area/soquel-ca-plumbing-septic-services).
-
-**Related resources:** [Service areas](/service-areas) · [Plumbing services](/service-category/plumbing) · [Septic solutions](/septic-solutions) · [Contact us](/contact)

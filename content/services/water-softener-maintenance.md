@@ -2,7 +2,7 @@
 title: Water Softener Maintenance in Santa Cruz County
 description: >-
   Water softener maintenance, salt system service, and performance checks for
-  Santa Cruz County homes. Call 831.225.4344.
+  Santa Cruz County homes. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 39
 image: /images/work/tankless-water-heater-installation.webp
@@ -11,6 +11,8 @@ updated: "2026-07-30"
 ---
 
 Regular water softener maintenance is crucial for ensuring the longevity and efficiency of your water treatment system. Wade's Plumbing & Septic, serving Santa Cruz County, California, offers comprehensive services that include inspecting all components and cleaning crucial parts like the brine tank and venturi valve. By keeping your water softener well-maintained, you can prevent common issues associated with hard water, ensuring your home's plumbing runs smoothly.
+
+This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Water Softener Maintenance
 

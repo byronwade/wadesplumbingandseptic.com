@@ -2,7 +2,7 @@
 title: Septic Troubleshooting in Santa Cruz County
 description: >-
   Septic troubleshooting and diagnostics for odors, backups, and alarms in Santa
-  Cruz County. Call 831.225.4344.
+  Cruz County. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 9
 image: /images/work/engineered-septic-hero.webp
@@ -11,6 +11,8 @@ updated: "2026-07-30"
 ---
 
 When your septic system isn't working as it should, the need for expert septic tank troubleshooting becomes critical. In Santa Cruz County, California, Wade's Plumbing & Septic provides comprehensive diagnostic services to swiftly identify and resolve septic issues. Our licensed and experienced team uses state-of-the-art techniques to ensure your system operates smoothly and efficiently, preventing costly repairs and health hazards.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Septic Tank Troubleshooting
 

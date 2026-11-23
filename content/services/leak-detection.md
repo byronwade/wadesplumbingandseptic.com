@@ -2,7 +2,7 @@
 title: Leak Detection in Santa Cruz County
 description: >-
   Plumbing and septic leak detection for Santa Cruz County homes. Find hidden
-  leaks before they damage floors and soils. Call 831.225.4344.
+  leaks before they damage floors and soils. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 41
 featured: true
@@ -31,10 +31,10 @@ If you notice any of these signs, it's crucial to seek professional **leak detec
 
 Understanding the root causes of leaks can help in preventing them. Some common causes include:
 
-1.  **Corrosion:** Over time, pipes can corrode, leading to leaks.
-2.  **High Water Pressure:** Excessive pressure can strain pipes and cause them to burst.
-3.  **Tree Root Intrusion:** Roots can invade and damage pipes, especially older ones.
-4.  **Age of Pipes:** Older pipes are more prone to wear and tear, leading to potential leaks.
+1. **Corrosion:** Over time, pipes can corrode, leading to leaks.
+2. **High Water Pressure:** Excessive pressure can strain pipes and cause them to burst.
+3. **Tree Root Intrusion:** Roots can invade and damage pipes, especially older ones.
+4. **Age of Pipes:** Older pipes are more prone to wear and tear, leading to potential leaks.
 
 ### The Leak Detection Process
 

@@ -21,7 +21,9 @@ for (const file of files) {
 			(section) => section.heading === "Frequently Asked Questions",
 		)
 		assert.ok(index >= 0, "missing Frequently Asked Questions section")
-		assert.ok(index < sections.length - 1, "FAQ must not be the last section")
+		// Town hubs append related services, nearby towns, and the free-quote
+		// CTA in the page layout after the markdown, so FAQ may close the
+		// article without a leftover boilerplate closer.
 
 		const pairs = extractFaqPairs(sections[index]!.body)
 		assert.ok(

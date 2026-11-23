@@ -2,7 +2,7 @@
 title: Septic System Certification in Santa Cruz County
 description: >-
   Septic system certification and compliance support for Santa Cruz County
-  property transfers and permits. Call 831.225.4344.
+  property transfers and permits. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 5
 image: /images/wordpress/ai-engineered-septic-systems-santa-cruz-county-e7ee4c.webp
@@ -11,6 +11,8 @@ updated: "2026-07-30"
 ---
 
 When it comes to ensuring your septic system operates efficiently, septic system certification is crucial, especially in Santa Cruz County. This service not only guarantees that your system complies with local regulations but also provides peace of mind whether you're buying, selling, or refinancing a property. At Wade's Plumbing & Septic, we offer comprehensive septic system certifications performed by experienced professionals who understand the unique challenges faced by systems in this region.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Understanding Septic System Certification in Santa Cruz County
 
@@ -50,7 +52,7 @@ Regular maintenance is key to extending the life of your septic system. Consider
 
 ## Why Choose Wade's Plumbing & Septic?
 
-With years of experience serving Santa Cruz County, Wade's Plumbing & Septic stands out for our commitment to quality and customer satisfaction. Our team is licensed, local, and responsive, understanding the specific needs of properties in this area. We also offer related services such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement) and [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement) to ensure your system is always at its best.
+Wade's Plumbing & Septic stands out for our commitment to quality and customer satisfaction. Our team is licensed, local, and responsive, understanding the specific needs of properties in this area. We also offer related services such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement) and [septic filter cleaning and replacement](/service-offerings/septic-filter-cleaning-and-replacement) to ensure your system is always at its best.
 
 ## Frequently Asked Questions
 

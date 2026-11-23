@@ -2,7 +2,7 @@
 title: Drainfield Repair and Replacement in Santa Cruz County
 description: >-
   Septic drainfield repair and replacement for Santa Cruz County soils and
-  slopes. Honest assessment before major work. Call 831.225.4344.
+  slopes. Honest assessment before major work. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 17
 image: >-
@@ -12,6 +12,8 @@ updated: "2026-07-30"
 ---
 
 In Santa Cruz County, a reliable septic system is essential for maintaining a healthy and functional home. When issues arise, it’s crucial to address them promptly with professional drainfield repair services. At Wade’s Plumbing & Septic, our expert team offers comprehensive drainfield repair in Santa Cruz to restore your septic system’s efficiency and longevity.
+
+We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Signs You Need Drainfield Repair in Santa Cruz
 
@@ -70,6 +72,6 @@ Yes, many issues can be repaired, but severe cases might require a complete repl
 
 ## Why Choose Wade's Plumbing & Septic?
 
-With years of experience serving Santa Cruz County, Wade’s Plumbing & Septic is your trusted partner for drainfield repair. Our licensed professionals are known for their responsive service and commitment to quality. We’re dedicated to restoring your septic system to optimal condition with minimal disruption to your daily life.
+Wade’s Plumbing & Septic is your trusted partner for drainfield repair. Our licensed professionals are known for their responsive service and commitment to quality. We’re dedicated to restoring your septic system to optimal condition with minimal disruption to your daily life.
 
 If you’re experiencing drainfield issues, don’t wait for the problem to escalate. Contact Wade’s Plumbing & Septic today for expert drainfield repair in Santa Cruz. Our friendly team is ready to assist you in maintaining the health and functionality of your septic system. **Call us now to schedule a consultation!**

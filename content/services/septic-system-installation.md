@@ -2,7 +2,7 @@
 title: Septic System Installation in Santa Cruz County
 description: >-
   New septic system installation for Santa Cruz County homes, including
-  conventional and engineered options. Call 831.225.4344.
+  conventional and engineered options. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 18
 image: /images/work/engineered-septic-hero.webp
@@ -37,7 +37,7 @@ If you experience any of these issues, it may indicate a [failed septic repair r
 
 ## Why Choose Wade's Plumbing & Septic?
 
-Choosing Wade's Plumbing & Septic means opting for over a decade of experience, comprehensive expertise, and a commitment to local service excellence. Our licensed team is dedicated to providing responsive and reliable service throughout Santa Cruz County, ensuring your home's septic needs are met with precision and care. We understand the unique challenges of septic systems in our area and are equipped to handle any situation.
+Wade's Plumbing & Septic is a Santa Cruz County contractor that installs septic systems, including engineered systems with your engineer. We do not pump tanks. Quotes are free, and pricing is a flat rate quoted on site.
 
 ### The Septic System Installation Process
 
