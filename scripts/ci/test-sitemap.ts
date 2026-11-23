@@ -70,6 +70,8 @@ async function main() {
 	assert.ok(pathSet.has("/expert-tips"), "Expert tips hub must be present")
 	assert.ok(pathSet.has("/contact"), "Contact must be present")
 	assert.ok(pathSet.has("/glossary"), "Glossary hub must be present")
+	assert.ok(pathSet.has("/llms.txt"), "llms.txt must be present")
+	assert.ok(pathSet.has("/llms-full.txt"), "llms-full.txt must be present")
 
 	const home = entries.find((entry) => pathFromUrl(entry.url) === "/")
 	assert.equal(home?.priority, 1)

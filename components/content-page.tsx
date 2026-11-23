@@ -19,6 +19,7 @@ import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
 import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 
 import { ArticleAside } from "@/components/article-aside"
+import { CompanyFacts } from "@/components/business-facts"
 import { CityServiceGuides } from "@/components/city-service-guides"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentGallery } from "@/components/content-gallery"
@@ -166,6 +167,8 @@ export function ContentPage({
 				title={document.heroTitle ?? document.title}
 				variant={isPost ? "article" : "page"}
 			/>
+
+			{document.slug === "about-us" ? <CompanyFacts /> : null}
 
 			{document.slug === "contact" ? (
 				<section className="container-shell section-y-tight">

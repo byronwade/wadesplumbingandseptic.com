@@ -4,6 +4,63 @@ export const confirmedHours =
 export const confirmedPricing =
 	"Flat-rate pricing, quoted on site before work begins."
 
+/** Phrases that must never appear in generated llms text or JSON-LD. */
+export const bannedPublicPhrases = [
+	"Satisfaction guaranteed",
+	"Since 2005",
+	"Fast response",
+] as const
+
+const bannedSchemaKeys =
+	/^(?:priceRange|price|lowPrice|highPrice|aggregateRating|reviewCount|ratingValue|foundingDate|review|reviews)$/
+
+function schemaTypes(value: unknown) {
+	if (typeof value === "string") return [value]
+	if (Array.isArray(value))
+		return value.filter((entry): entry is string => typeof entry === "string")
+	return []
+}
+
+/**
+ * Walk generated JSON-LD for unverified schema fields and copy that would fail
+ * the public business-fact rules (prices, emergency claims, pumping offers).
+ */
+export function jsonLdBusinessFactIssues(data: unknown, path = "$"): string[] {
+	const issues: string[] = []
+
+	function visit(value: unknown, here: string) {
+		if (Array.isArray(value)) {
+			value.forEach((item, index) => visit(item, `${here}[${index}]`))
+			return
+		}
+		if (value && typeof value === "object") {
+			for (const [key, child] of Object.entries(value)) {
+				if (bannedSchemaKeys.test(key))
+					issues.push(`${here}.${key}: unverified schema property`)
+				if (key === "@type") {
+					for (const type of schemaTypes(child)) {
+						if (type === "Review" || type === "AggregateRating")
+							issues.push(`${here}: banned schema type ${type}`)
+					}
+				}
+				visit(child, `${here}.${key}`)
+			}
+			return
+		}
+		if (typeof value === "string") {
+			for (const issue of businessFactIssues(value))
+				issues.push(`${here}: ${issue}`)
+			for (const phrase of bannedPublicPhrases) {
+				if (value.toLowerCase().includes(phrase.toLowerCase()))
+					issues.push(`${here}: banned phrase "${phrase}"`)
+			}
+		}
+	}
+
+	visit(data, path)
+	return [...new Set(issues)]
+}
+
 /**
  * Wade's installs septic systems alongside engineers and does not pump tanks
  * (owner confirmed October 20, 2026). Educational advice such as "most tanks

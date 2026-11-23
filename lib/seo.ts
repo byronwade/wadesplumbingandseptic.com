@@ -243,16 +243,22 @@ export function localBusinessJsonLd(
 }
 
 export function articleJsonLd(document: ContentDocument) {
+	const url = absoluteUrl(`/${document.slug}`)
+	const published = document.date
+	const modified = document.updated ?? document.date
 	return {
 		"@context": "https://schema.org",
-		"@type": "Article",
+		"@type": ["BlogPosting", "Article"],
 		headline: document.title,
 		description: document.description,
-		datePublished: document.date,
-		dateModified: document.updated ?? document.date,
-		image: absoluteUrl(
-			document.image ?? "/images/work/precision-valve-installation.webp",
-		),
+		image: {
+			"@type": "ImageObject",
+			url: absoluteUrl(
+				document.image ?? "/images/work/precision-valve-installation.webp",
+			),
+		},
+		...(published ? { datePublished: published } : {}),
+		...(modified ? { dateModified: modified } : {}),
 		author: {
 			"@type": "Organization",
 			"@id": businessId,
@@ -266,9 +272,15 @@ export function articleJsonLd(document: ContentDocument) {
 			logo: {
 				"@type": "ImageObject",
 				url: absoluteUrl("/images/brand/wades-mark.webp"),
+				width: 956,
+				height: 1024,
 			},
 		},
-		mainEntityOfPage: absoluteUrl(`/${document.slug}`),
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": url,
+		},
+		inLanguage: "en-US",
 	}
 }
 

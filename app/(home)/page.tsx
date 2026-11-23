@@ -28,7 +28,7 @@ import {
 	proofPoints,
 } from "@/lib/home-content"
 import { finderProblems, finderSpokes, finderTowns } from "@/lib/problem-finder"
-import { buildPageMetadata } from "@/lib/seo"
+import { buildPageMetadata, faqPageJsonLd } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = buildPageMetadata({
@@ -229,20 +229,7 @@ export default function HomePage() {
 			/>
 
 			<HomeBelowFold />
-			<JsonLd
-				data={{
-					"@context": "https://schema.org",
-					"@type": "FAQPage",
-					mainEntity: faqs.map((faq) => ({
-						"@type": "Question",
-						name: faq.question,
-						acceptedAnswer: {
-							"@type": "Answer",
-							text: faq.answer,
-						},
-					})),
-				}}
-			/>
+			<JsonLd data={faqPageJsonLd(faqs)} />
 		</main>
 	)
 }

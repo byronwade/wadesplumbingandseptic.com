@@ -6,9 +6,11 @@ import {
 	normalizeConversion,
 } from "../../lib/content-conversion"
 import {
+	bannedPublicPhrases,
 	businessFactIssues,
 	confirmedHours,
 	confirmedPricing,
+	jsonLdBusinessFactIssues,
 } from "./business-facts"
 import { sourceBusinessFactIssues } from "./business-facts-source"
 
@@ -136,6 +138,7 @@ for (const source of [
 	'const c = "safe".replace("safe", "Emergency repairs")',
 	'const c = { priceRange: "$$" }',
 	'const c = { foundingDate: "2005" }',
+	"const c = { review: [] }",
 ]) {
 	test(`source guard rejects conflicting public copy: ${source}`, () => {
 		assert.ok(sourceBusinessFactIssues(source, "fixture.tsx").length > 0)
@@ -150,6 +153,28 @@ test("regex capture replacements and comments are not prices or copy", () => {
 		),
 		[],
 	)
+})
+
+test("JSON-LD walker rejects ratings, reviews, and banned phrases", () => {
+	assert.ok(
+		jsonLdBusinessFactIssues({
+			"@type": "LocalBusiness",
+			aggregateRating: { "@type": "AggregateRating", ratingValue: "5" },
+		}).length > 0,
+	)
+	assert.ok(
+		jsonLdBusinessFactIssues({
+			"@type": "Review",
+			reviewBody: "Great work",
+		}).some((issue) => issue.includes("banned schema type")),
+	)
+	assert.ok(
+		jsonLdBusinessFactIssues({
+			description: "Satisfaction guaranteed",
+		}).some((issue) => issue.includes("banned phrase")),
+	)
+	for (const phrase of bannedPublicPhrases)
+		assert.ok(businessFactIssues(phrase).length > 0, phrase)
 })
 
 test("a scheduling CTA is extracted without requiring a rating or testimonial", () => {

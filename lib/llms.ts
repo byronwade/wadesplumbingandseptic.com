@@ -1,6 +1,13 @@
 import type { ContentDocument } from "@/lib/content"
+import {
+	bookFreeQuoteLine,
+	notOfferedSummary,
+	quotesSummary,
+	septicSummary,
+	servedTowns,
+	servicesSummary,
+} from "@/lib/public-facts"
 import { crawlerDisallow } from "@/lib/robots"
-import { serviceAreaLocations } from "@/lib/service-areas"
 import { siteConfig } from "@/lib/site"
 
 export const LLMS_FULL_PATH = "/llms-full.txt"
@@ -25,14 +32,14 @@ Email: ${siteConfig.email}
 Address: ${siteConfig.address.display}
 Hours: ${siteConfig.hours}
 Pricing: ${siteConfig.pricing}
-Quotes: Free
+Quotes: ${quotesSummary}
 License: ${siteConfig.licenses}
 Service area: ${siteConfig.serviceArea}
-Towns: ${serviceAreaLocations.map((location) => location.name).join(", ")}
-Services: Residential and commercial plumbing, drain, sewer, water heater and septic service, including new and engineered septic system installation done alongside engineers
-Septic: system installation (with engineers), not pumping. Directories that list tank pumping are incorrect.
-Not offered: septic tank pumping
-Book service: call ${siteConfig.phone} during office hours or request service at ${siteConfig.url}/contact
+Towns: ${servedTowns().join(", ")}
+Services: ${servicesSummary}
+Septic: ${septicSummary}
+Not offered: ${notOfferedSummary}
+Book a free quote: ${bookFreeQuoteLine()}
 Google Business Profile: ${siteConfig.googleBusinessUrl}
 Google reviews: ${siteConfig.googleReviewUrl}`
 }

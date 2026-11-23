@@ -2,12 +2,20 @@ import assert from "node:assert/strict"
 import fs from "node:fs"
 import path from "node:path"
 
-import { localBusinessJsonLd } from "../../lib/seo"
+import { faqs } from "../../lib/home-content"
+import { compactFactRows, publicFactRows } from "../../lib/public-facts"
+import {
+	faqPageJsonLd,
+	localBusinessJsonLd,
+	websiteJsonLd,
+} from "../../lib/seo"
 import { siteConfig } from "../../lib/site"
 import {
+	bannedPublicPhrases,
 	businessFactIssues,
 	confirmedHours,
 	confirmedPricing,
+	jsonLdBusinessFactIssues,
 } from "./business-facts"
 
 import { sourceBusinessFactIssues } from "./business-facts-source"
@@ -54,6 +62,42 @@ assert.deepEqual(localBusinessJsonLd().openingHoursSpecification, [
 		closes: "17:00",
 	},
 ])
+
+for (const row of [...publicFactRows(), ...compactFactRows()]) {
+	const factErrors = businessFactIssues(`${row.term}. ${row.detail}`)
+	if (factErrors.length)
+		errors.push(`public facts "${row.term}": ${factErrors.join(", ")}`)
+	for (const phrase of bannedPublicPhrases) {
+		if (
+			`${row.term} ${row.detail}`.toLowerCase().includes(phrase.toLowerCase())
+		)
+			errors.push(`public facts "${row.term}": banned phrase "${phrase}"`)
+	}
+}
+
+const business = publicFactRows().find((row) => row.term === "Business")
+const hours = publicFactRows().find((row) => row.term === "Hours")
+const pricing = publicFactRows().find((row) => row.term === "Pricing")
+const phone = publicFactRows().find((row) => row.term === "Phone")
+const office = publicFactRows().find((row) => row.term === "Office")
+if (business?.detail !== siteConfig.name)
+	errors.push("public facts Business does not match siteConfig.name")
+if (hours?.detail !== siteConfig.hours)
+	errors.push("public facts Hours does not match siteConfig.hours")
+if (pricing?.detail !== siteConfig.pricing)
+	errors.push("public facts Pricing does not match siteConfig.pricing")
+if (phone?.detail !== siteConfig.phone)
+	errors.push("public facts Phone does not match siteConfig.phone")
+if (office?.detail !== siteConfig.address.display)
+	errors.push("public facts Office does not match siteConfig.address")
+
+for (const [name, schema] of [
+	["LocalBusiness", localBusinessJsonLd()],
+	["WebSite", websiteJsonLd()],
+	["homepage FAQPage", faqPageJsonLd(faqs)],
+] as const) {
+	for (const issue of jsonLdBusinessFactIssues(schema, name)) errors.push(issue)
+}
 
 console.log(
 	`Business facts: checked ${count} public source files; ${errors.length} violations`,

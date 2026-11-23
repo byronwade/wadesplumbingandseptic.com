@@ -11,19 +11,30 @@ import { contactInfo } from "../../lib/contact"
 import { normalizeConversion } from "../../lib/content-conversion"
 import { faqs } from "../../lib/home-content"
 import { LLMS_FULL_PATH, llmsFullPageSlugs } from "../../lib/llms"
+import {
+	bestGuideHrefs,
+	coreServiceSlugs,
+	publicFactRows,
+} from "../../lib/public-facts"
 import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
 import {
 	articleJsonLd,
 	businessId,
 	collectionPageJsonLd,
+	faqPageJsonLd,
 	localBusinessJsonLd,
+	serviceJsonLd,
 	websiteId,
 	websiteJsonLd,
 } from "../../lib/seo"
 import { serviceAreaLocations } from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
 import { buildBusinessVCard } from "../../lib/vcard"
-import { businessFactIssues } from "./business-facts"
+import {
+	bannedPublicPhrases,
+	businessFactIssues,
+	jsonLdBusinessFactIssues,
+} from "./business-facts"
 
 // lib/content and the llms routes are Next server modules; stub runtime-only imports.
 type Loader = (
@@ -104,9 +115,15 @@ test("schema hours are derived from the same hours shown on the site", () => {
 		siteConfig.googleBusinessUrl,
 		"hasMap and sameAs should point at the same Google listing",
 	)
-	assert.ok(
-		localBusinessJsonLd().sameAs.includes(siteConfig.googleBusinessUrl),
-		"LocalBusiness sameAs must include the Google listing",
+	assert.deepEqual(
+		localBusinessJsonLd().sameAs,
+		[
+			siteConfig.googleBusinessUrl,
+			siteConfig.social.facebook,
+			siteConfig.social.instagram,
+			siteConfig.social.linkedin,
+		],
+		"LocalBusiness sameAs must list only confirmed profiles",
 	)
 })
 
@@ -139,6 +156,7 @@ test("every schema node points at one business and one website @id", () => {
 		slug: "sample-article",
 		title: "Sample",
 		description: "Sample description",
+		date: "2026-04-13",
 		content: "",
 		conversion: normalizeConversion(null, {
 			slug: "sample-article",
@@ -147,8 +165,16 @@ test("every schema node points at one business and one website @id", () => {
 		}),
 	}
 	const article = articleJsonLd(document)
+	assert.deepEqual(article["@type"], ["BlogPosting", "Article"])
+	assert.equal(article.datePublished, "2026-04-13")
+	assert.equal(article.dateModified, "2026-04-13")
 	assert.equal(article.author["@id"], businessId)
 	assert.equal(article.publisher["@id"], businessId)
+	assert.equal(article.publisher.logo["@type"], "ImageObject")
+	assert.equal(
+		article.mainEntityOfPage["@id"],
+		`${siteConfig.url}/sample-article`,
+	)
 
 	const collection = collectionPageJsonLd({
 		name: "Sample hub",
@@ -286,6 +312,83 @@ test("llms.txt names the core services, including engineered septic installation
 		"engineered septic system installation done alongside engineers",
 	])
 		assert.ok(services.includes(service), `Services line: ${service}`)
+})
+
+test("llms.txt lists core services and best guides instead of dumping every post", async () => {
+	const body = await routeText("../../app/llms.txt/route")
+	assert.ok(body.includes("## Best guides"))
+	assert.equal(body.includes("## Expert tips"), false)
+	for (const slug of coreServiceSlugs) {
+		assert.ok(
+			body.includes(`${siteConfig.url}/service-offerings/${slug}`),
+			slug,
+		)
+		assert.ok(
+			fs.existsSync(path.join("content", "services", `${slug}.md`)),
+			`${slug}.md`,
+		)
+	}
+	for (const href of bestGuideHrefs)
+		assert.ok(body.includes(`${siteConfig.url}${href}`), href)
+	for (const phrase of bannedPublicPhrases)
+		assert.equal(
+			body.toLowerCase().includes(phrase.toLowerCase()),
+			false,
+			phrase,
+		)
+})
+
+test("JSON-LD for the business, articles, services and homepage FAQ matches confirmed facts", () => {
+	const document: ContentDocument = {
+		slug: "drain-cleaning",
+		title: "Drain Cleaning",
+		description: "Drain cleaning in Santa Cruz County.",
+		date: "2026-04-13",
+		category: "Plumbing",
+		content: "",
+		conversion: normalizeConversion(null, {
+			slug: "drain-cleaning",
+			title: "Drain Cleaning",
+			description: "Drain cleaning in Santa Cruz County.",
+		}),
+	}
+	const facts = publicFactRows()
+	assert.equal(
+		facts.find((row) => row.term === "Hours")?.detail,
+		siteConfig.hours,
+	)
+	assert.equal(
+		facts.find((row) => row.term === "Pricing")?.detail,
+		siteConfig.pricing,
+	)
+	assert.equal(
+		facts.find((row) => row.term === "Phone")?.detail,
+		siteConfig.phone,
+	)
+
+	const schema = [
+		localBusinessJsonLd(),
+		websiteJsonLd(),
+		articleJsonLd(document),
+		serviceJsonLd(document),
+		faqPageJsonLd(faqs),
+	]
+	for (const node of schema) {
+		assert.deepEqual(
+			jsonLdBusinessFactIssues(node),
+			[],
+			JSON.stringify(node["@type"]),
+		)
+		for (const phrase of bannedPublicPhrases)
+			assert.equal(
+				JSON.stringify(node).toLowerCase().includes(phrase.toLowerCase()),
+				false,
+				phrase,
+			)
+	}
+	assert.equal(serviceJsonLd(document).provider["@id"], businessId)
+	assert.equal("aggregateRating" in localBusinessJsonLd(), false)
+	assert.equal("review" in localBusinessJsonLd(), false)
 })
 
 test("homepage FAQ answers what Wade's does with confirmed facts", () => {

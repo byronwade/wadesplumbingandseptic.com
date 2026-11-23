@@ -204,6 +204,19 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		images: absoluteImages("/images/team/byron-working.webp"),
 	})
 
+	upsertEntry(entries, {
+		pathname: "/llms.txt",
+		priority: 0.4,
+		changeFrequency: "weekly",
+		lastModified: newestContent,
+	})
+	upsertEntry(entries, {
+		pathname: "/llms-full.txt",
+		priority: 0.35,
+		changeFrequency: "weekly",
+		lastModified: newestContent,
+	})
+
 	for (const page of indexablePages) {
 		upsertEntry(entries, {
 			pathname: `/${page.slug}`,

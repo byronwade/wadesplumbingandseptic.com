@@ -1,32 +1,34 @@
-import { getAllRoutes } from "@/lib/content"
 import {
 	cityServicePages,
 	cityServicePath,
 	getCityLocation,
 } from "@/lib/city-service-pages"
+import { getAllRoutes } from "@/lib/content"
 import { LLMS_FULL_PATH, llmsBusinessSummary } from "@/lib/llms"
+import { bestGuides, coreServiceSlugs, keyPages } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
-	const { services, posts, pages } = await getAllRoutes()
+	const { services, pages } = await getAllRoutes()
 
 	const serviceAreas = pages.filter((page) =>
 		page.slug.startsWith("service-area/"),
 	)
 
-	const serviceLines = services
+	const coreServices = coreServiceSlugs.flatMap((slug) => {
+		const service = services.find((entry) => entry.slug === slug)
+		return service ? [service] : []
+	})
+
+	const serviceLines = coreServices
 		.map(
 			(service) =>
 				`- [${service.title}](${siteConfig.url}/service-offerings/${service.slug}): ${service.description}`,
 		)
 		.join("\n")
 
-	const tipLines = posts
-		.slice(0, 40)
-		.map(
-			(post) =>
-				`- [${post.title}](${siteConfig.url}/${post.slug}): ${post.description}`,
-		)
+	const guideLines = bestGuides()
+		.map((guide) => `- [${guide.title}](${siteConfig.url}${guide.href})`)
 		.join("\n")
 
 	const areaLines = serviceAreas
@@ -43,16 +45,24 @@ export async function GET() {
 		})
 		.join("\n")
 
+	const keyPageLines = keyPages
+		.map((page) => `- [${page.title}](${siteConfig.url}${page.href})`)
+		.join("\n")
+
 	const body = `${llmsBusinessSummary()}
-Full text of services and key pages: ${siteConfig.url}${LLMS_FULL_PATH}
+Full text of every service and key pages: ${siteConfig.url}${LLMS_FULL_PATH}
 
 ## Services
 
 ${serviceLines}
 
-## Expert tips
+- [All Services](${siteConfig.url}/services)
 
-${tipLines}
+## Best guides
+
+${guideLines}
+
+- [Expert Tips](${siteConfig.url}/expert-tips)
 
 ## Service areas
 
@@ -64,16 +74,7 @@ ${cityServiceLines}
 
 ## Important pages
 
-- [All Services](${siteConfig.url}/services)
-- [Service Areas](${siteConfig.url}/service-areas)
-- [About Us](${siteConfig.url}/about-us)
-- [Expert Tips](${siteConfig.url}/expert-tips)
-- [Plumbing & Septic Glossary](${siteConfig.url}/glossary)
-- [Plumbing Glossary](${siteConfig.url}/glossary/plumbing)
-- [Septic Glossary](${siteConfig.url}/glossary/septic)
-- [Warranties](${siteConfig.url}/warranties)
-- [Financing](${siteConfig.url}/financing)
-- [Contact](${siteConfig.url}/contact)
+${keyPageLines}
 `
 
 	return new Response(body, {
