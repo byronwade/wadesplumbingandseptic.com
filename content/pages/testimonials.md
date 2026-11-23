@@ -19,6 +19,8 @@ Office Hours: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 Call 831.225.4344 during business hours to schedule plumbing or septic service.
 
+If we recently finished work at your home, [leave us a Google review](https://g.page/r/CblD5bImAMZtEAE/review). You can also [read reviews on our Google listing](https://www.google.com/maps?cid=7910009961732981689).
+
 ## Frequently Asked Questions
 
 ### How is pricing determined for plumbing services in Santa Cruz County?

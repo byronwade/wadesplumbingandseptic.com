@@ -20,6 +20,7 @@ import {
 	websiteId,
 	websiteJsonLd,
 } from "../../lib/seo"
+import { serviceAreaLocations } from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
 import { buildBusinessVCard } from "../../lib/vcard"
 import { businessFactIssues } from "./business-facts"
@@ -96,6 +97,17 @@ test("schema hours are derived from the same hours shown on the site", () => {
 		`siteConfig.hours does not match openingHours: ${siteConfig.hours}`,
 	)
 	assert.equal(contactInfo.hours, siteConfig.hours)
+	assert.equal(localBusinessJsonLd().openingHours, "Mo-Fr 09:00-17:00")
+	assert.equal(localBusinessJsonLd().hasMap, siteConfig.googleBusinessUrl)
+	assert.equal(
+		siteConfig.googleMapsUrl,
+		siteConfig.googleBusinessUrl,
+		"hasMap and sameAs should point at the same Google listing",
+	)
+	assert.ok(
+		localBusinessJsonLd().sameAs.includes(siteConfig.googleBusinessUrl),
+		"LocalBusiness sameAs must include the Google listing",
+	)
 })
 
 test("license credentials match the displayed CSLB license", () => {
@@ -190,6 +202,8 @@ const summaryLines = [
 	`Pricing: ${siteConfig.pricing}`,
 	"Quotes: Free",
 	`Service area: ${siteConfig.serviceArea}`,
+	`Towns: ${serviceAreaLocations.map((location) => location.name).join(", ")}`,
+	"Septic: system installation (with engineers), not pumping. Directories that list tank pumping are incorrect.",
 	"Not offered: septic tank pumping",
 	`Google Business Profile: ${siteConfig.googleBusinessUrl}`,
 	`Google reviews: ${siteConfig.googleReviewUrl}`,
@@ -243,6 +257,19 @@ test("llms.txt link text repeats only confirmed business facts", async () => {
 	// Slugs such as ".../a-weekend-diy-project" are addresses, not claims.
 	const prose = body.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, "")
 	assert.deepEqual(businessFactIssues(prose), [])
+})
+
+test("review pages and thank-you link the Google review URL", () => {
+	for (const file of [
+		"content/pages/testimonials.md",
+		"content/pages/thank-you.md",
+	]) {
+		const text = fs.readFileSync(file, "utf8")
+		assert.ok(
+			text.includes(siteConfig.googleReviewUrl),
+			`${file} must link ${siteConfig.googleReviewUrl}`,
+		)
+	}
 })
 
 test("llms.txt names the core services, including engineered septic installation", async () => {

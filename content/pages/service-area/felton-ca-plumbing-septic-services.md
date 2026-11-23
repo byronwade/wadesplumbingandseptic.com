@@ -35,7 +35,7 @@ Wade's septic work in Felton includes:
 - **Inspections and certifications** for real estate, refinancing, or county requirements
 - **Riser installs, alarms, and effluent filters** so you can maintain the system without digging up the yard each time
 - **Drainfield troubleshooting**, surfacing effluent, slow drains throughout the house, or odors near the leach area
-- **Repairs and replacements**, including coordination with [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Felton's slopes and setbacks demand an alternative design
+- **Repairs, replacements, and [septic system installation](/service-offerings/septic-system-installation)**, including coordination with [engineered septic systems](/service-offerings/engineered-septic-system-installation) when Felton's slopes and setbacks demand an alternative design. We work with your engineer. We do not pump tanks.
 
 Steep lots near the river corridor can limit conventional leach field placement. We explain what the county will approve and what your property can support, before you spend money on a plan that won't pass.
 
@@ -70,3 +70,5 @@ Part-time occupancy changes how septic systems load, so a Felton cabin used only
 ## Schedule service
 
 For plumbing or septic help in Felton, call Wade's at **[831.225.4344](tel:+18312254344)**. Browse all coverage on our [service areas](/service-areas) page, learn more about [septic solutions](/septic-solutions), or [contact us](/contact) with questions about your property.
+
+**Related services:** [Drain cleaning](/service-offerings/drain-cleaning) · [Water heater installation](/service-offerings/water-heater-installation) · [Leak detection](/service-offerings/leak-detection) · [Pipe repair and repiping](/service-offerings/pipe-repair-and-replacement) · [Septic inspections](/service-offerings/septic-tank-inspection-and-assessment) · [Septic care](/service-offerings/septic-tank-maintenance-and-care) · [Engineered septic systems](/service-offerings/engineered-septic-system-installation)

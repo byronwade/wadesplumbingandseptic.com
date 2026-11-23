@@ -10,10 +10,10 @@ imageAlt: Septic system service access on a residential property
 updated: "2026-07-30"
 ---
 
-A septic inspection gives you a clear picture of what is happening underground
-before a small issue becomes a failed drainfield. Wade's Plumbing & Septic
-provides thorough septic tank inspection and assessment for property transfers,
-maintenance planning, and early warning signs across Santa Cruz County.
+Septic tank inspection and assessment for Santa Cruz County homes covers sales,
+maintenance questions, and early problem detection. Wade's Plumbing & Septic
+inspects the system and explains what we find in plain language. We do not pump
+tanks as part of this service.
 
 County and lender requirements change over time. We inspect to current
 practical standards for your property and explain findings in plain language so

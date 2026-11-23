@@ -11,7 +11,7 @@ imageAlt: Drain clearing service
 updated: "2026-07-30"
 ---
 
-Proper drain cleaning is essential for maintaining a healthy plumbing system in your home. At Wade's Plumbing & Septic, we offer expert **drain cleaning Santa Cruz** services, ensuring your drains are free from clogs and build-up. Serving Santa Cruz County, California, our professional team is equipped with the latest tools and technology to tackle any drainage issue, providing you with peace of mind and a smoothly running home.
+Professional drain cleaning for slow sinks, tubs, and main lines is a core service for Santa Cruz County homes. Wade's Plumbing & Septic clears the blockage and, when we need a clearer picture, inspects the line with a camera before recommending the next step. Quotes are free, and pricing is a flat rate quoted on site.
 
 ## Signs You Need Drain Cleaning in Santa Cruz
 

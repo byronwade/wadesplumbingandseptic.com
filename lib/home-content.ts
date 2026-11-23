@@ -211,6 +211,6 @@ export const faqs = [
 	{
 		question: "What areas do you serve?",
 		answer:
-			"We serve Santa Cruz County and selected Santa Clara County communities in California. Call us if you are unsure whether a specific address is inside the current service area.",
+			"We serve Santa Cruz County and selected Santa Clara County communities in California, including Los Gatos and Saratoga (generally west of Highway 101). Call us if you are unsure whether a specific address is inside the current service area.",
 	},
 ]

@@ -11,7 +11,7 @@ imageAlt: Leaking water pipe outdoors
 updated: "2026-07-30"
 ---
 
-At Wade's Plumbing & Septic, we understand the importance of maintaining a reliable plumbing system. Our specialized pipe repair and replacement services cater to residents and businesses throughout Santa Cruz County, ensuring that your piping infrastructure remains in optimal condition. Whether you're dealing with a minor leak or require extensive repiping, our expert team is equipped to handle all types of pipe materials, including copper, PEX, PVC, and galvanized steel. With our comprehensive approach, we can address your "pipe repair Santa Cruz County" needs efficiently and effectively.
+Pipe repair and replacement for Santa Cruz County homes covers a single failed section and larger repiping when corrosion or low pressure shows up throughout the house. Wade's Plumbing & Septic works with copper, PEX, PVC, and galvanized lines, looks at the problem on site, explains the options, and quotes a flat rate before work begins. Quotes are free.
 
 ## Signs You Need Pipe Repair in Santa Cruz County
 

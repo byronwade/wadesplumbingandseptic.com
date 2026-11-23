@@ -24,7 +24,7 @@ gallery:
 
 ## One team for the complete septic system
 
-Wade's works on the tank, distribution components, pumps, alarms, treatment equipment, controls, and dispersal field. That complete-system view helps separate a maintenance issue from a hydraulic, mechanical, electrical, or site failure.
+Wade's works on the tank, distribution components, pumps, alarms, treatment equipment, controls, and dispersal field. That complete-system view helps separate a maintenance issue from a hydraulic, mechanical, electrical, or site failure. We install septic systems, including engineered systems built with your engineer. We do not pump tanks; directories that list pumping for this company are incorrect.
 
 ## Septic services
 
