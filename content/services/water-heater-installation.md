@@ -10,10 +10,7 @@ imageAlt: Water heater installation on a residential job
 updated: "2026-07-30"
 ---
 
-Need reliable hot water again? Wade's Plumbing & Septic installs conventional
-tank and tankless water heaters for homes across Santa Cruz County and selected
-nearby foothill communities. We help you compare practical options, install to
-code, and leave the system tested and ready to use.
+Wade's Plumbing & Septic handles water heater installation for Santa Cruz County homes and selected nearby foothill addresses, including conventional tank and tankless units. We help you compare practical options, explain venting, connections, and permit needs, and install to code. Quotes are free, and the price is a flat rate quoted on site.
 
 California efficiency rules and local code requirements change over time. We
 install current, compliant equipment and will explain venting, electrical or gas

@@ -57,7 +57,7 @@ export const cityServicePages: CityServicePage[] = [
 		serviceSlug: "engineered-septic-system-installation",
 		serviceTitle: serviceTitles["engineered-septic-system-installation"]!,
 		localAngle:
-			"Ben Lomond hillside and creek-adjacent parcels often fail conventional percolation or setback tests. Engineered and advanced treatment options are how many rebuilds and additions stay viable without a full sewer connection.",
+			"Ben Lomond hillside and creek-adjacent parcels often fail conventional percolation or setback tests. Engineered and advanced treatment options are how many rebuilds and additions stay viable without a full sewer connection. We install to the engineer's plan; we do not pump tanks.",
 		commonIssues: [
 			"Failed perc tests on tight soils",
 			"Small usable envelopes between wells, slopes, and structures",

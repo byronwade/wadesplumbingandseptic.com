@@ -15,6 +15,10 @@ Thanks for reaching out to Wade's Plumbing & Septic. A real person on our team w
 
 Call or text [831.225.4344](tel:+18312254344) during business hours, Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
+### If we recently completed work
+
+The most helpful place to share how the job went is Google. [Leave us a Google review](https://g.page/r/CblD5bImAMZtEAE/review). Honest notes about the actual work (and the town, if you want) help neighbors choose a licensed local company.
+
 ### While you wait
 
 - For active leaks, shut off water at the nearest fixture valve or the main shutoff if it is safe to do so.

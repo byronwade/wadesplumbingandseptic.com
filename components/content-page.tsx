@@ -182,6 +182,12 @@ export function ContentPage({
 			) : null}
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
+			{document.slug === "thank-you" ? (
+				<GoogleReviewInvite
+					buttonLabel="Leave us a Google review"
+					message="If we recently finished plumbing or septic work at your home, the most helpful place to leave a review is Google."
+				/>
+			) : null}
 
 			{marketing ? (
 				<>

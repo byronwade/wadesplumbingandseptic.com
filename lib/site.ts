@@ -42,12 +42,13 @@ export const siteConfig = {
 	licenses: `CA CSLB #${licenseNumber} (${licenseClassifications.map((item) => `${item.code} ${item.name}`).join(", ")})`,
 	licenseNumber,
 	licenseClassifications,
-	googleMapsUrl:
-		"https://maps.google.com/?q=7737+Highway+9,+Ben+Lomond,+CA+95005",
+	/** Direct Google listing (CID) used for hasMap, sameAs, and Maps links. */
+	googleMapsUrl: "https://www.google.com/maps?cid=7910009961732981689",
 	/** Direct Google listing and review links confirmed by Byron, October 19, 2026. */
 	googleBusinessUrl: "https://www.google.com/maps?cid=7910009961732981689",
 	googleReviewUrl: "https://g.page/r/CblD5bImAMZtEAE/review",
-	serviceArea: "Santa Cruz County & selected Santa Clara County, CA",
+	serviceArea:
+		"Santa Cruz County and selected Santa Clara County communities (Los Gatos and Saratoga), CA",
 	social: {
 		facebook: "https://www.facebook.com/wadesplumbingandseptic/",
 		instagram: "https://www.instagram.com/wadesplumbing/",

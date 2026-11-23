@@ -33,10 +33,10 @@ const serviceLinks = [
 	{ href: "/services", label: "All Services" },
 ]
 
-/* Featured towns (the labeled map markers), then the full list. */
+/* Featured towns (the labeled map markers), plus the Ben Lomond office town. */
 const areaLinks = [
 	...serviceAreaLocations
-		.filter((location) => location.featured)
+		.filter((location) => location.featured || location.slug === "ben-lomond")
 		.map(({ href, name }) => ({ href, label: name })),
 	{ href: "/service-areas", label: "All Service Areas" },
 ]
@@ -87,6 +87,17 @@ export function SiteFooter() {
 						</p>
 						<p className="text-on-dark-muted mt-4 max-w-xs text-sm leading-relaxed">
 							{siteConfig.address.display}
+						</p>
+						<p className="text-on-dark-muted mt-2 max-w-xs text-sm leading-relaxed">
+							<a
+								className="hover:text-on-dark underline decoration-white/30 underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-white"
+								href={siteConfig.phoneHref}
+							>
+								{siteConfig.phone}
+							</a>
+						</p>
+						<p className="text-on-dark-muted mt-2 max-w-xs text-sm leading-relaxed">
+							{siteConfig.hours}
 						</p>
 						<p className="text-on-dark-subtle mt-4 font-mono text-xs tracking-[0.06em]">
 							{siteConfig.licenses}

@@ -192,7 +192,7 @@ export function localBusinessJsonLd(
 			latitude: siteConfig.geo.latitude,
 			longitude: siteConfig.geo.longitude,
 		},
-		hasMap: siteConfig.googleMapsUrl,
+		hasMap: siteConfig.googleBusinessUrl,
 		identifier: {
 			"@type": "PropertyValue",
 			name: "CA CSLB License",
@@ -221,6 +221,7 @@ export function localBusinessJsonLd(
 					: place
 			}),
 		],
+		openingHours: "Mo-Fr 09:00-17:00",
 		openingHoursSpecification: [openingHoursJsonLd()],
 		sameAs: [
 			siteConfig.googleBusinessUrl,
