@@ -60,7 +60,7 @@ export function SheetContent({
 				{...props}
 			>
 				{children}
-				<SheetPrimitive.Close className="text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-ring absolute top-4 right-4 grid size-10 place-items-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none">
+				<SheetPrimitive.Close className="text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:ring-ring absolute top-4 right-4 grid size-11 place-items-center rounded-md transition-colors focus-visible:ring-2 focus-visible:outline-none">
 					<X className="size-4" />
 					<span className="sr-only">Close</span>
 				</SheetPrimitive.Close>

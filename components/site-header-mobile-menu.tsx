@@ -26,6 +26,7 @@ import {
 	serviceNavLinks,
 	type NavLink,
 } from "@/lib/navigation"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -42,7 +43,7 @@ function MobileNavLink({
 		<Link
 			prefetch={false}
 			className={cn(
-				"hover:bg-muted focus-visible:ring-ring block rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
+				"hover:bg-muted focus-visible:ring-ring flex min-h-11 flex-col justify-center rounded-md px-3 transition-colors outline-none focus-visible:ring-2",
 				compact ? "py-2" : "py-2.5",
 			)}
 			href={href as Route}
@@ -181,7 +182,7 @@ export function SiteHeaderMobileMenu({
 							<li>
 								<button
 									type="button"
-									className="text-primary hover:bg-muted focus-visible:ring-ring flex w-full items-center gap-1.5 rounded-md px-3 py-2 text-left text-[0.9375rem] font-semibold outline-none focus-visible:ring-2"
+									className="text-primary hover:bg-muted focus-visible:ring-ring flex min-h-11 w-full items-center gap-1.5 rounded-md px-3 py-2 text-left text-[0.9375rem] font-semibold outline-none focus-visible:ring-2"
 									onClick={() => {
 										closeMenu()
 										router.push("/services")
@@ -236,15 +237,15 @@ export function SiteHeaderMobileMenu({
 					<button
 						type="button"
 						className={cn(
-							buttonVariants({ variant: "outline", size: "lg" }),
+							buttonVariants({ variant: "outline", size: "lg", wrap: true }),
 							"w-full",
 						)}
 						onClick={() => {
 							closeMenu()
-							router.push("/contact")
+							router.push(freeQuoteHref)
 						}}
 					>
-						Get a Free Quote
+						{freeQuoteCtaLabel}
 					</button>
 				</SheetFooter>
 			</SheetContent>

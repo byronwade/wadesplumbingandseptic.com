@@ -85,7 +85,7 @@
 	--secondary: oklch(0.932 0.012 84.6);
 	--secondary-foreground: oklch(0.224 0.014 72);
 	--muted: oklch(0.945 0.01 84.6);
-	--muted-foreground: oklch(0.47 0.012 72);
+	--muted-foreground: oklch(0.4 0.012 72);
 	--accent: oklch(0.925 0.026 60);
 	--accent-foreground: oklch(0.45 0.1 50);
 	--destructive: oklch(0.55 0.19 25);
@@ -403,6 +403,44 @@
 
 	.prose h2[id] {
 		scroll-margin-top: calc(var(--header-h) + 1.5rem);
+	}
+
+	#quote {
+		scroll-margin-top: calc(var(--header-h) + 1.25rem);
+	}
+
+	/*
+	  Quote form and problem-finder fields. 48px floor for tap targets, a
+	  visible focus ring, and the inset well that the rest of the chrome uses.
+	*/
+	.field-input {
+		min-height: 3rem;
+		border: 1px solid var(--input);
+		border-radius: var(--radius-md);
+		background: var(--field);
+		padding: 0.7rem 0.875rem;
+		font-size: 1rem;
+		line-height: 1.4;
+		color: var(--foreground);
+		box-shadow: inset 0 1px 1px oklch(0 0 0 / 0.18);
+		outline: none;
+	}
+
+	.field-input:focus-visible {
+		border-color: var(--ring);
+		box-shadow:
+			0 0 0 2px var(--ring-offset),
+			0 0 0 4px var(--ring);
+	}
+
+	.field-input[aria-invalid="true"] {
+		border-color: var(--destructive);
+	}
+
+	.field-input[aria-invalid="true"]:focus-visible {
+		box-shadow:
+			0 0 0 2px var(--ring-offset),
+			0 0 0 4px var(--destructive);
 	}
 
 	.section-y {
@@ -1194,11 +1232,17 @@
 	.prose {
 		max-width: var(--measure);
 		color: var(--prose-body);
-		font-size: 1.0625rem;
-		line-height: 1.75;
+		font-size: 1.125rem;
+		line-height: 1.8;
 		text-wrap: pretty;
 		/* Source lists use raw URLs as link text; let them wrap on phones. */
 		overflow-wrap: break-word;
+	}
+
+	@media (width >= 48rem) {
+		.prose {
+			font-size: 1.1875rem;
+		}
 	}
 
 	.prose > * + * {

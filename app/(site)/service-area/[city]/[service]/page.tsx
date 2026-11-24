@@ -10,7 +10,7 @@ import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import {
 	cityServicePath,
 	getCityLocation,
@@ -139,7 +139,7 @@ export default async function CityServicePage({
 								}),
 								"w-full justify-center sm:w-auto",
 							)}
-							href={freeQuotePath as Route}
+							href={freeQuoteHref as Route}
 						>
 							{freeQuoteCtaLabel}
 						</Link>

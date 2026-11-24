@@ -31,6 +31,7 @@ import {
 	trustedBrands,
 	workGallery,
 } from "@/lib/home-content"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { locationsByCounty } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
@@ -179,9 +180,9 @@ export function HomeBelowFold() {
 								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
 								"w-full shrink-0 sm:w-auto",
 							)}
-							href="/contact"
+							href={freeQuoteHref as Route}
 						>
-							Discuss your project
+							{freeQuoteCtaLabel}
 							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>
@@ -430,9 +431,9 @@ export function HomeBelowFold() {
 									}),
 									"w-full sm:w-auto",
 								)}
-								href="/contact"
+								href={freeQuoteHref as Route}
 							>
-								Request a free quote
+								{freeQuoteCtaLabel}
 								<ArrowRight aria-hidden="true" />
 							</Link>
 						</div>
@@ -562,9 +563,9 @@ export function HomeBelowFold() {
 								buttonVariants({ variant: "default", size: "lg", wrap: true }),
 								"mt-6 w-full",
 							)}
-							href="/contact"
+							href={freeQuoteHref as Route}
 						>
-							Send a message
+							{freeQuoteCtaLabel}
 							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>

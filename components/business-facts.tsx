@@ -1,7 +1,12 @@
 import type { Route } from "next"
 import Link from "next/link"
 
-import { compactFactRows, factLinks, publicFactRows } from "@/lib/public-facts"
+import {
+	compactFactRows,
+	factLinks,
+	freeQuoteHref,
+	publicFactRows,
+} from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 const linkClass =
@@ -65,7 +70,11 @@ export function CompactBusinessFacts() {
 								{siteConfig.phone}
 							</a>{" "}
 							or{" "}
-							<Link className={linkClass} href="/contact" prefetch={false}>
+							<Link
+								className={linkClass}
+								href={freeQuoteHref as Route}
+								prefetch={false}
+							>
 								request a free quote
 							</Link>
 							.

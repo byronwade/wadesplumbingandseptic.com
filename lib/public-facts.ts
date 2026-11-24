@@ -16,6 +16,9 @@ export const quotesSummary = "Free"
 /** Visible quote CTA used on service, town, and contact conversion paths. */
 export const freeQuoteCtaLabel = "Get a Free Quote"
 export const freeQuotePath = "/contact"
+/** Contact-page form fragment. Quote CTAs deep-link here. */
+export const freeQuoteHash = "quote"
+export const freeQuoteHref = `${freeQuotePath}#${freeQuoteHash}`
 
 /**
  * High-intent services named in the short llms.txt index. Full catalog and

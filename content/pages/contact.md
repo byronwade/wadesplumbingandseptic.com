@@ -59,7 +59,7 @@ We regularly serve communities across Santa Cruz County, including Santa Cruz, S
 
 ## Request a free quote
 
-Tell us what is going on and we will point you to the right next step: inspection, repair, water heater work, drain clearing, or engineered septic options. Quotes are free. Flat-rate pricing, quoted on site before work begins. No sales pressure. Call or text the number on the card, or email photos and the property address.
+Use the form at the top of this page, or call or text the number on the card. Quotes are free. Flat-rate pricing, quoted on site before work begins. No sales pressure. Email works too if you have photos of the issue.
 
 If we recently finished work at your home, you can [leave us a review on Google](https://g.page/r/CblD5bImAMZtEAE/review).
 
@@ -67,7 +67,7 @@ If we recently finished work at your home, you can [leave us a review on Google]
 
 ### How do I get a quote?
 
-Call or text, or email us with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
+Use the form on this page, call or text, or email us with the property address and a description of the problem. Many jobs need an on-site look before we can give a firm number. We explain options before work starts.
 
 ### When can I schedule plumbing service?
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Route } from "next"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import {
@@ -27,6 +27,7 @@ import {
 	heroStats,
 	proofPoints,
 } from "@/lib/home-content"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { finderProblems, finderSpokes, finderTowns } from "@/lib/problem-finder"
 import { buildPageMetadata, faqPageJsonLd } from "@/lib/seo"
 import { cn } from "@/lib/utils"
@@ -124,9 +125,9 @@ export default function HomePage() {
 									}),
 									"w-full sm:w-auto",
 								)}
-								href="/services"
+								href={freeQuoteHref as Route}
 							>
-								Our Services
+								{freeQuoteCtaLabel}
 								<ArrowRight aria-hidden="true" />
 							</Link>
 						</div>

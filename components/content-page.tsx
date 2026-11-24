@@ -32,7 +32,7 @@ import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
-import { VirtualBusinessCard } from "@/components/virtual-business-card"
+import { ContactLead } from "@/components/contact-lead"
 
 function formatPostDate(date: string) {
 	return new Intl.DateTimeFormat("en-US", {
@@ -171,19 +171,7 @@ export function ContentPage({
 
 			{document.slug === "about-us" ? <CompanyFacts /> : null}
 
-			{document.slug === "contact" ? (
-				<section className="container-shell section-y-tight">
-					<div className="section-head mb-6 max-w-2xl">
-						<p className="spec-label">Reach us</p>
-						<h2 className="type-title">Call, text, or email Wade&apos;s</h2>
-						<p className="type-lead">
-							Phone and email are on the card below. Saving the contact is
-							optional. Calling is the fastest way to get help.
-						</p>
-					</div>
-					<VirtualBusinessCard id="contact-business-card" />
-				</section>
-			) : null}
+			{document.slug === "contact" ? <ContactLead /> : null}
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
 			{document.slug === "about-us" ? (

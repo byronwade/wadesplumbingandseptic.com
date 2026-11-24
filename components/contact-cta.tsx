@@ -1,3 +1,4 @@
+import type { Route } from "next"
 import Link from "next/link"
 import { ArrowRight, Clock, Mail, Phone } from "@/components/icons"
 
@@ -8,7 +9,7 @@ import {
 } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { cn } from "@/lib/utils"
 
 export function ContactCta({
@@ -113,7 +114,7 @@ export function ContactCta({
 							}),
 							actionWidth,
 						)}
-						href={freeQuotePath}
+						href={freeQuoteHref as Route}
 					>
 						{freeQuoteCtaLabel}
 						<ArrowRight aria-hidden="true" />
