@@ -1,5 +1,6 @@
 import type { Route } from "next"
 
+import { isSepticWork } from "@/lib/answer-first"
 import type { ContentDocument } from "@/lib/content"
 import { faqSectionBody, splitContentBands } from "@/lib/content-conversion"
 import { resolveContentLayout } from "@/lib/content-layout"
@@ -14,12 +15,19 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
+import {
+	coverageDependsOnAddress,
+	serviceAreaLocations,
+} from "@/lib/service-areas"
+import { siteConfig } from "@/lib/site"
 import { extractSectionHeadings } from "@/lib/heading-anchors"
 import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
 import { stripLeadingMarkdownImage } from "@/lib/sanitize-content"
 
+import { AnswerFirst } from "@/components/answer-first"
 import { ArticleAside } from "@/components/article-aside"
 import { CompanyFacts } from "@/components/business-facts"
+import { GuideLocalLinks } from "@/components/guide-local-links"
 import { CityServiceGuides } from "@/components/city-service-guides"
 import { TownPageLinks } from "@/components/town-page-links"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
@@ -103,6 +111,17 @@ export function ContentPage({
 		...(faqPairs.length ? [faqPageJsonLd(faqPairs)] : []),
 	]
 
+	const showAnswerFirst = isPost || isServiceArea || document.slug === "contact"
+	const townLocation = isServiceArea
+		? serviceAreaLocations.find((area) => area.href === `/${document.slug}`)
+		: undefined
+	const answerPlace = isServiceArea
+		? cityNameFromServiceArea(document)
+		: siteConfig.serviceArea
+	const confirmAddress = townLocation
+		? coverageDependsOnAddress(townLocation)
+		: false
+
 	const articleBody =
 		isPost && document.image
 			? stripLeadingMarkdownImage(document.content)
@@ -173,6 +192,19 @@ export function ContentPage({
 				variant={isPost ? "article" : "page"}
 			/>
 
+			{showAnswerFirst ? (
+				<AnswerFirst
+					confirmAddress={confirmAddress}
+					includeSepticNote={
+						isServiceArea ||
+						document.slug === "contact" ||
+						isSepticWork(document.title)
+					}
+					place={answerPlace}
+					work="plumbing and septic service"
+				/>
+			) : null}
+
 			{document.slug === "about-us" ? <CompanyFacts /> : null}
 
 			{document.slug === "contact" && searchParams ? (
@@ -207,6 +239,12 @@ export function ContentPage({
 							<ContentGallery images={document.gallery} />
 						) : null}
 						<MarkdownContent anchorHeadings content={articleBody} demoteH1 />
+						{related ? (
+							<GuideLocalLinks
+								services={related.services}
+								towns={related.towns}
+							/>
+						) : null}
 					</article>
 					<ArticleAside headings={extractSectionHeadings(articleBody)} />
 				</div>

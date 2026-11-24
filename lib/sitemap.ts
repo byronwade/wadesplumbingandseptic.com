@@ -287,16 +287,19 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		pathname: "/glossary",
 		priority: 0.8,
 		changeFrequency: "monthly",
+		lastModified: newestContent,
 	})
 	upsertEntry(entries, {
 		pathname: "/glossary/plumbing",
 		priority: 0.72,
 		changeFrequency: "monthly",
+		lastModified: newestContent,
 	})
 	upsertEntry(entries, {
 		pathname: "/glossary/septic",
 		priority: 0.72,
 		changeFrequency: "monthly",
+		lastModified: newestContent,
 	})
 
 	const glossaryEntries = await getAllGlossaryEntries()
@@ -305,14 +308,28 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 			pathname: `/glossary/${topic}/${term.slug}`,
 			priority: 0.65,
 			changeFrequency: "monthly",
+			lastModified: newestContent,
 		})
 	}
 
 	for (const page of cityServicePages) {
+		const town = indexablePages.find(
+			(item) =>
+				item.slug ===
+				`service-area/${page.citySlug}-ca-plumbing-septic-services`,
+		)
+		const service = indexableServices.find(
+			(item) => item.slug === page.serviceSlug,
+		)
 		upsertEntry(entries, {
 			pathname: cityServicePath(page.citySlug, page.serviceSlug),
 			priority: 0.78,
 			changeFrequency: "monthly",
+			lastModified: maxTimestamp([
+				town ? contentLastModified(town) : undefined,
+				service ? contentLastModified(service) : undefined,
+				newestContent,
+			]),
 		})
 	}
 

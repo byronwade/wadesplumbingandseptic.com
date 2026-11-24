@@ -65,7 +65,7 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 									href={town.href as Route}
 									prefetch={false}
 								>
-									{town.name}
+									{town.name} plumbing and septic
 								</Link>
 							</li>
 						))}

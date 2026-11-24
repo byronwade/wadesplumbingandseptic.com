@@ -204,7 +204,7 @@ test("FAQPage schema repeats only visible pairs and skips held claims", () => {
 			assert.equal(entry.acceptedAnswer.text, match.answer)
 			assert.doesNotMatch(
 				`${entry.name} ${entry.acceptedAnswer.text}`,
-				/guarantee|warrant|insured|licensed|certified|years of experience|\b(?:hours?|days?|prompt|immediate|immediately|quickly|same-week|pumping|pumped)\b/i,
+				/guarantee|warrant|insured|licensed|certified|years of experience|\bprompt\b|\bimmediate(?:ly)?\b|\bquickly\b|\bsame-week\b|\bpumping\b|\bpumped\b|\b(?:few|several|\d+)\s+(?:hours?|days?)\b/i,
 			)
 		}
 	}
@@ -218,6 +218,15 @@ test("FAQPage schema repeats only visible pairs and skips held claims", () => {
 			},
 		]),
 		null,
+	)
+	const officeHours = {
+		question: "What are your hours?",
+		answer:
+			"Call 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM (closed Saturday and Sunday), or request a free quote.",
+	}
+	assert.equal(
+		serviceFaqJsonLd([officeHours])?.mainEntity[0]?.acceptedAnswer.text,
+		officeHours.answer,
 	)
 })
 

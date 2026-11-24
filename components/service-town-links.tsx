@@ -27,7 +27,7 @@ export function ServiceTownLinks() {
 								href={town.href as Route}
 								prefetch={false}
 							>
-								{town.name}
+								{town.name} plumbing and septic
 							</Link>
 						</li>
 					))}

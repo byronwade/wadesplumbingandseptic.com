@@ -249,3 +249,13 @@ export const serviceAreaMapBounds: [[number, number], [number, number]] = [
 export function locationsByCounty(county: ServiceAreaCounty) {
 	return serviceAreaLocations.filter((location) => location.county === county)
 }
+
+/**
+ * Santa Cruz County is served countywide. Santa Clara foothill towns
+ * (Los Gatos, Saratoga) are selected addresses only: confirm the property.
+ */
+export function coverageDependsOnAddress(
+	location: Pick<ServiceAreaLocation, "county">,
+) {
+	return location.county === "Santa Clara County"
+}

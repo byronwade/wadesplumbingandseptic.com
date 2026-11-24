@@ -173,6 +173,15 @@ async function main() {
 		"Priorities must stay within 0..1",
 	)
 
+	const missingLastmod = entries
+		.filter((entry) => !entry.lastModified)
+		.map((entry) => pathFromUrl(entry.url))
+	assert.deepEqual(
+		missingLastmod,
+		[],
+		"Indexable sitemap URLs need a lastmod date",
+	)
+
 	const orderedPriorities = entries.map((entry) => entry.priority ?? 0)
 	const sorted = [...orderedPriorities].sort((a, b) => b - a)
 	assert.deepEqual(
