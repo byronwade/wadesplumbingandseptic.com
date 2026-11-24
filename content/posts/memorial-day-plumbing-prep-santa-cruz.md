@@ -1,129 +1,83 @@
 ---
-title: "Get Capitola Plumbing Ready for Memorial Day, Santa Cruz"
+title: "Memorial Day Plumbing Prep for Capitola Homes"
 description: >-
-  Prepare your Capitola home for Memorial Day with essential plumbing checks
-  that help you avoid unexpected plumbing issues over the holiday weekend.
+  A practical plumbing and septic checklist before a holiday gathering in
+  Capitola and the rest of Santa Cruz County: drains, toilets, water heaters
+  and extra guests on septic.
 category: Septic Issues in Santa Cruz County
 date: "2026-05-25"
+updated: "2026-11-24"
 tags:
   - santa cruz
   - septic
   - plumbing
-  - septic issues in Santa Cruz County
   - memorial day plumbing
 image: >-
   /images/wordpress/a-metal-drainpipe-set-against-a-red-and-beige-striped-textured-wall-352284.webp
-imageAlt: "Get Capitola Plumbing Ready for Memorial Day, Santa Cruz"
+imageAlt: Metal drain pipe on a residential plumbing wall
 ---
+
+Holiday gatherings put extra load on toilets, kitchen drains, showers and, on septic, the tank and drainfield. A short check the week before, during office hours, is enough for most [Capitola](/service-area/capitola-ca-plumbing-septic-services) homes. Wade's Plumbing & Septic takes those calls Monday to Friday, 9:00 AM to 5:00 PM.
 
 ![Stacked concrete pipes ready for installation](/images/wordpress/stacked-concrete-pipes-in-an-outdoor-storage-area-surrounded-by-grass-ebc75f-1.webp)
 
-## Quick Answer for Santa Cruz Homeowners
+## Quick answer
 
-Prepare your Capitola home for Memorial Day with essential plumbing checks to ensure a stress-free holiday weekend. Our expert services can help you avoid unexpected plumbing issues and keep your home running smoothly.
+- Fix running toilets and dripping faucets so extra water is not going down the drain all weekend.
+- Keep grease, bones and wipes out of sinks and toilets.
+- If a drain has been slow for weeks, have it looked at before guests arrive.
+- On septic, spread laundry and showers out instead of running everything at once.
+- Our office is closed Saturday and Sunday, so a weekday check is the time to call.
 
-- Schedule a sewer line inspection to prevent holiday disruptions.
-- Ensure your drains are clear with professional cleaning services.
-- Consider upgrading fixtures for improved efficiency and aesthetics.
-- Address any unusual noises from your garbage disposal promptly.
-- Regular maintenance can prevent costly repairs down the line.
+## Kitchen and bathroom drains
 
-Memorial Day Plumbing Prep for [Capitola](/service-area/capitola-ca-plumbing-septic-services) Homes
+Grease from cooking is a leading cause of sewer blockages. Santa Cruz County Sanitation District asks residents not to pour fats, oil or grease down sinks or toilets. Let grease cool, put it in a container, and throw it away. Wipe pans before washing. Use a strainer.
 
-Make a splash this Memorial Day by ensuring your plumbing system is ready for the festivities! Avoid unexpected hiccups and keep the good times flowing with these essential tips for Capitola homeowners.
+A plunger handles most single-fixture clogs. Skip chemical drain openers, especially on septic. EPA advises using a drain snake or hot water instead. If several fixtures are slow, the clog is likely in the main line. See [how to clear a clogged drain](/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide) and [holiday plumbing tips](/how-to-avoid-common-holiday-plumbing-disasters).
 
-## Understanding the Importance of Pre-Holiday Plumbing Checks
+## Toilets and extra guests
 
-As Memorial Day approaches, homeowners in [Capitola, CA](/service-area/capitola-ca-plumbing-septic-services) are preparing for family gatherings and festive celebrations. With increased usage of plumbing systems during such events, it's crucial to ensure everything is functioning optimally. Conducting pre-holiday plumbing checks can prevent unexpected issues, allowing you to focus on enjoying the festivities.
+Put a lidded trash can in each bathroom and tell guests that only toilet paper goes in the toilet. A running toilet can add a large volume of water in a day. EPA notes that a leaky or running toilet can add as much as 200 gallons per day. Our [running toilet guide](/santa-cruz-toilet-running-solutions) covers the dye test.
 
-## Essential Plumbing Maintenance Tips for Memorial Day
+## Water heater and outdoor fixtures
 
-- **Inspect Drains and Pipes:** Look for signs of leaks or blockages. Our [expert pipe repair and replacement services](/service-offerings/pipe-repair-and-replacement) can address any concerns you may find.
-- **Test Water Pressure:** Ensure your water pressure is adequate, as low pressure can indicate underlying issues.
-- **Clear Clogs:** Use a plunger or drain snake to clear minor clogs before they become major problems.
-- **Check Appliances:** Inspect your water heater and other appliances for any signs of wear or inefficiency.
+Look at the water heater for pooling water, rust or a relief valve that drips. If you are replacing it, California requires earthquake strapping, and unincorporated Santa Cruz County requires a plumbing permit. See [repair or replace a water heater](/should-you-repair-or-replace-your-water-heater).
 
-## Septic System Readiness: What Capitola Homeowners Need to Know
+Hose bibs and irrigation backflow devices sit outside. If you will run sprinklers for a gathering, confirm the device has been tested on the schedule your water provider requires. See [backflow testing](/backflow-testing-santa-cruz-county-homes).
 
-Your septic system will likely see increased use during Memorial Day gatherings. Ensure it's ready by scheduling a [comprehensive septic inspection](/service-offerings/septic-tank-inspection-and-assessment) and performing regular maintenance. This can help prevent overflows or backups that could disrupt your celebration.
+## Septic homes
 
-## How to Prevent Common Plumbing Issues During Gatherings
+More people means more water. Spread showers and laundry across the weekend. Do not add a garbage disposal load of scraps on top of a full kitchen. EPA recommends limiting disposal use on septic.
 
-Preventing plumbing issues during gatherings is all about preparation. Here are some tips:
+If the tank is due for emptying, schedule that while the ground is dry, not during a party weekend. Wade's does not pump tanks. A [septic inspection](/service-offerings/septic-tank-inspection-and-assessment) can tell you whether the tank, filter or field needs attention. Our [Thanksgiving kitchen and septic guide](/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz) covers the same habits for a large meal.
 
-- **Limit Water Usage:** Encourage guests to stagger showers and laundry loads to prevent overloading your system.
-- **Dispose of Waste Properly:** Avoid flushing non-degradable items down the toilet, and ensure grease and food scraps are disposed of correctly.
-- **Monitor System Performance:** Keep an eye on your plumbing system's performance, and address any issues immediately.
+## When a camera inspection helps
 
-## The Role of Video Inspections in Pre-Holiday Prep
+If the same drain keeps clogging, or you are on the Santa Cruz County Sanitation District sewer and a sale or backup is in the picture, a [sewer camera inspection](/service-offerings/sewer-camera-inspection) shows whether the line is greasy, rooted or broken. That is more useful than cleaning the same clog twice.
 
-A sewer line video inspection can be invaluable in diagnosing potential problems before they become serious. Our [video inspections](/service-offerings/video-inspections) provide a clear view of your plumbing system's condition, helping you address issues proactively.
+## Frequently asked questions
 
-## Ensuring Optimal Water Quality for Your Guests
+### What plumbing problems show up during holiday gatherings?
 
-Providing clean, safe water for your guests is essential. Consider installing a water filtration system to enhance water quality. Our [water filtration installation services](/service-offerings/water-filtration-system-installation) ensure that your home's water is pure and safe for consumption.
+Clogged toilets, kitchen sinks full of grease, and low pressure from several showers at once. Several slow fixtures at the same time usually point to the main line or septic system, not one trap.
 
-### FAQ
+### How do I prep a septic system for extra guests?
 
-### What are the most common plumbing issues during holiday gatherings?
+Fix leaks, keep grease and wipes out, spread water use, and have the system inspected if it has been skipping its EPA interval. Wade's does not pump tanks.
 
-Common issues include clogged toilets, backed-up drains, and low water pressure due to increased usage.
+### Do I need a plumber before Memorial Day?
 
-### How can I prepare my septic system for increased usage?
+Only if something is already wrong: a slow main drain, a running toilet you cannot stop, a water heater that leaks, or septic warning signs. Quotes are free during office hours.
 
-Schedule a septic inspection and perform regular maintenance to ensure your system can handle the extra load.
+### How is holiday plumbing work priced?
 
-### Is it necessary to have a professional inspection before Memorial Day?
+Flat-rate pricing, quoted on site before work begins.
 
-![Sewer and drain service equipment](/images/work/drain-cleaning-equipment.webp)
+## Sources
 
-While not mandatory, a professional inspection can help identify potential issues and prevent costly repairs during your holiday gathering.
+- U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
+- Santa Cruz County Sanitation District, [Fats, Oil and Grease](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Env-FOG-Fats-Oil-Grease.pdf)
 
-### What should I do if I notice a plumbing problem during the holiday?
+## Request a free quote
 
-Contact a qualified professional and confirm their availability. Wade's takes calls for scheduling during business hours.
-
-## DIY Monitoring vs. Professional Services
-
-Homeowners may wonder whether to handle plumbing checks themselves or call in a professional. While DIY monitoring can help identify visible issues, professional services offer thorough inspections using advanced equipment, ensuring no problem goes unnoticed. Our [expert services](/services) provide peace of mind, especially before a big event.
-
-## Why Choose Trusted Local Service Quality?
-
-Choosing a trusted local service provider ensures you receive reliable and efficient solutions tailored to your specific needs. At Wade's Plumbing & Septic, we pride ourselves on our deep understanding of the local community and our commitment to customer satisfaction. Our team is ready to assist with all your plumbing and septic needs, ensuring your Memorial Day celebrations go off without a hitch.
-
-**Did You Know?** EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
-
-## Sources & Local References
-
-- [Wade's Plumbing & Septic](/)
-- [Plumbing & septic service areas overview](/service-areas)
-- [Capitola, CA Plumbing & Septic Services](/service-area/capitola-ca-plumbing-septic-services)
-- [Expert Tips](/expert-tips)
-
-Prepare your Capitola home for Memorial Day with a professional plumbing and septic inspection from Wade's Plumbing & Septic. **Contact us today for a free quote!**
-
-## Seasonal Tip
-
-Before the holiday rush, ensure your plumbing system is in top shape to avoid any unexpected issues during Memorial Day celebrations.
-
-## Homeowner Action Checklist
-
-- Book a sewer line video inspection to identify potential issues.
-- Clean drains to ensure optimal flow and prevent clogs.
-- Inspect and repair any leaky faucets or pipes.
-- Check your water heater for optimal performance.
-- Ensure your garbage disposal is functioning properly.
-- Consider installing a water filtration system for better water quality.
-- Test your sump pump to prevent basement flooding.
-
-## Need Plumbing or Septic Help?
-
-Contact Wade's Plumbing & Septic today for a free quote and ensure your plumbing is Memorial Day ready!
-
-Get Ready for the Holiday
-
-## Prepare Capitola Plumbing for Memorial Day
-
-Ensure your plumbing is in top shape for Memorial Day celebrations in Capitola, CA.
-
-[Call Us](tel:+18312254344)
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) for homes in [Capitola](/service-area/capitola-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -1,12 +1,12 @@
 ---
-title: Clear Clogged Drains Easily in Santa Cruz County, CA
+title: How to Clear a Clogged Drain Safely in Santa Cruz County
 description: >-
   How to clear a clogged sink, tub or shower drain safely with a plunger, hot
   water or a hand snake, why EPA advises against chemical drain openers, and the
   signs that point to a main line or septic problem instead.
 category: DIY Projects
 date: "2025-05-11"
-updated: "2026-10-25"
+updated: "2026-11-24"
 tags:
   - santa cruz plumbing
   - plumbing tips
@@ -113,6 +113,6 @@ Flat rate, quoted on site before work begins.
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - MedlinePlus, National Library of Medicine, [Drain Opener Poisoning](https://medlineplus.gov/ency/article/002780.htm)
 
-## Need help with a stubborn clog?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning) and [hydro jetting](/service-offerings/hydro-jetting) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning) and [hydro jetting](/service-offerings/hydro-jetting) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

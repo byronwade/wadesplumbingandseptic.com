@@ -105,6 +105,6 @@ Flat rate pricing, quoted on site before work begins.
 - U.S. EPA WaterSense, [Bathroom Sink Faucets technical sheet](https://www.epa.gov/system/files/documents/2023-08/ws-homes-TRM-3-BathroomSinkFaucetsTechSheet.pdf)
 - U.S. EPA, [How does the Safe Drinking Water Act limit lead in pipes, plumbing fittings, fixtures, faucets, solder and flux?](https://www.epa.gov/lead/how-does-safe-drinking-water-act-limit-lead-pipes-plumbing-fittings-fixtures-faucets-solder)
 
-## Need help with a faucet installation?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [faucet and fixture installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [faucet and fixture installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

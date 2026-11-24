@@ -85,6 +85,15 @@ export function splitH2Sections(content: string): H2Section[] {
 	})
 }
 
+/** FAQ section body used for FAQPage JSON-LD on blog posts. */
+export function faqSectionBody(content: string): string | undefined {
+	const section = splitH2Sections(content).find((item) =>
+		/^(frequently asked questions|faq)$/i.test(item.heading),
+	)
+	const body = section?.body.trim()
+	return body || undefined
+}
+
 /** Intro copy before the first H2, plus each H2 section for banded layouts. */
 export function splitContentBands(content: string) {
 	const sections = splitH2Sections(content)

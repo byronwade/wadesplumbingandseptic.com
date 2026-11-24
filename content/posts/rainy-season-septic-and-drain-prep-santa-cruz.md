@@ -5,6 +5,7 @@ description: >-
   Santa Cruz County homes on septic before and during the rainy season.
 category: Septic Issues in Santa Cruz County
 date: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz
   - rainy season
@@ -110,6 +111,6 @@ Sewage backing up into the house, a septic alarm that will not stop, or wastewat
 - U.S. EPA, [Septic Systems: What to Do after the Flood](https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood)
 - Santa Cruz County Environmental Health, [OWTS Repair and Upgrades](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx)
 
-## Need a septic check before the rains?
+## Request a free quote
 
-Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

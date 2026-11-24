@@ -1,12 +1,12 @@
 ---
-title: Experience Superior Hydro-Jetting in Santa Cruz County
+title: Hydro Jetting for Clogged Drains in Santa Cruz County
 description: >-
   What hydro jetting is, when it beats snaking, when it is the wrong tool, and
   how a camera inspection and good drain habits keep grease and roots from
   coming back in Santa Cruz County homes.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz county
   - plumbing services
@@ -111,6 +111,6 @@ Flat rate, quoted on site before work begins.
 - Santa Cruz County Sanitation District, [Fats, Oil and Grease](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Env-FOG-Fats-Oil-Grease.pdf)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need a line cleaned or inspected?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [hydro jetting](/service-offerings/hydro-jetting) and [drain cleaning](/service-offerings/drain-cleaning) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [hydro jetting](/service-offerings/hydro-jetting) and [drain cleaning](/service-offerings/drain-cleaning) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

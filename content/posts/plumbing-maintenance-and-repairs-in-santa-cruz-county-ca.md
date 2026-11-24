@@ -3,7 +3,7 @@ title: Plumbing Maintenance & Repairs in Santa Cruz County
 description: A practical home plumbing maintenance plan for shutoffs, leaks, water pressure, water heaters, drains, visible piping and sewer or septic lines.
 category: Plumbing Tips
 date: 2025-05-11
-updated: "2026-10-24"
+updated: "2026-11-24"
 image: /images/services/water-heater-service.webp
 imageAlt: "Water heater service"
 tags:
@@ -103,11 +103,25 @@ Save invoices, camera inspection videos, equipment model and serial numbers, per
 - **Fall:** clear gutters and point downspouts away from the house and any septic drainfield before the rains.
 - **Winter:** protect exposed pipes on cold nights in higher elevations, and keep an eye on drains during long storms.
 
+## Frequently asked questions
+
+### How often should I check for hidden leaks?
+
+EPA's meter test works any time: read the meter, use no water for two hours, and read it again. A few times a year, plus after a jump in the water bill, is a useful habit.
+
+### Where is the main water shutoff?
+
+Usually where the water line enters the house, in a garage or crawl space, or near the meter. On a private well, know the pump and pressure tank controls as well.
+
+### How is plumbing maintenance priced?
+
+Flat rate, quoted on site before work begins.
+
 ## Sources
 
 - U.S. EPA WaterSense, [Fix a Leak Week: Checking for Leaks](https://www.epa.gov/watersense/fix-leak-week)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need help with plumbing maintenance or repairs?
+## Request a free quote
 
-Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

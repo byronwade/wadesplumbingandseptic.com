@@ -100,6 +100,6 @@ Flat rate, quoted on site before work begins.
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - County of Santa Cruz, [Board Approves Septic Ordinance Changes](https://www.santacruzcountyca.gov/Portals/0/County/CAO/press%20releases/2022/SepticOrdinance.10262022.pdf) (October 26, 2022)
 
-## Need help with septic warning signs?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [inspections](/service-offerings/septic-tank-inspection-and-assessment) and [repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [inspections](/service-offerings/septic-tank-inspection-and-assessment) and [repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

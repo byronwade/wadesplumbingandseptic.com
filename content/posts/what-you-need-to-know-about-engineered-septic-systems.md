@@ -5,7 +5,7 @@ description: >-
   site conditions and maintenance considerations for Santa Cruz County homes.
 category: Septic Maintenance
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - local septic services
   - santa cruz county septic
@@ -159,10 +159,10 @@ They substantially reduce pollutants and pathogens, and many reduce nitrogen whi
 
 Flat-rate pricing, quoted on site before work begins.
 
-### What should I expect during the engineered septic system service?
+### What should I expect during an engineered septic installation?
 
-During the service, our certified experts at Wade's Plumbing & Septic will conduct a thorough site evaluation, design a custom system, and manage the installation process, ensuring minimal disruption to your property. We prioritize clear communication and efficiency throughout the project.
+A qualified professional evaluates the site and prepares the design. County Environmental Health reviews that design and issues the sewage disposal permit. Wade's installs the system to the approved design alongside the project's engineer. Wade's does not pump tanks.
 
-## Need help with an engineered septic system?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [engineered septic system installation](/service-offerings/engineered-septic-system-installation) and [septic design and engineering](/service-offerings/septic-tank-design-and-engineering) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [engineered septic system installation](/service-offerings/engineered-septic-system-installation) and [septic design and engineering](/service-offerings/septic-tank-design-and-engineering) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

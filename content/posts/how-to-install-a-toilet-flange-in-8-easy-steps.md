@@ -79,6 +79,6 @@ Often, yes. A repair ring or extension kit can fix a cracked or low flange witho
 
 - Oatey (manufacturer), [How to Install a Toilet Flange](https://oatey.com/resources/project-guides/install-toilet-flange)
 
-## Need help with a toilet flange?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [toilet repair](/service-offerings/toilet-repair) and [toilet installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [toilet repair](/service-offerings/toilet-repair) and [toilet installation](/service-offerings/fixture-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

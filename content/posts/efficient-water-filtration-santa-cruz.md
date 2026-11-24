@@ -119,6 +119,6 @@ Not in Santa Cruz County. The county sewage disposal ordinance says discharge fr
 - Santa Cruz County Environmental Health, [The Harmful Effects of Water Softener Discharge on Your Septic System](https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf)
 - Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 
-## Need help choosing a water filter?
+## Request a free quote
 
-Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

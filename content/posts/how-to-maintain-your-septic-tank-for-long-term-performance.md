@@ -72,6 +72,6 @@ Flat rate, quoted on site before work begins.
 - Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 - Oregon State University Extension Small Farms Program, [Septic System Additives: More Harm Than Help](https://smallfarms.oregonstate.edu/septic-system-additives-more-harm-help)
 
-## Need help with septic tank care?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment), [filter service](/service-offerings/septic-filter-cleaning-and-replacement) and [tank repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment), [filter service](/service-offerings/septic-filter-cleaning-and-replacement) and [tank repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

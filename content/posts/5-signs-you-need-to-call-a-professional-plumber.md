@@ -6,7 +6,7 @@ description: >-
   before you call.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-26"
+updated: "2026-11-24"
 tags:
   - santa cruz county
   - plumbing issues
@@ -80,6 +80,6 @@ Flat rate pricing, quoted on site before work begins.
 - PG&E, [Gas safety](https://www.pge.com/en/outages-and-safety/safety/gas-safety.html)
 - Santa Cruz County Public Works, [Preventing Sewer Overflows](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf)
 
-## Need help with plumbing warning signs?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [leak detection](/service-offerings/leak-detection), [drain cleaning](/service-offerings/drain-cleaning) and [pipe repair](/service-offerings/pipe-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [leak detection](/service-offerings/leak-detection), [drain cleaning](/service-offerings/drain-cleaning) and [pipe repair](/service-offerings/pipe-repair-and-replacement) for homes in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

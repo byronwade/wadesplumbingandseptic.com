@@ -5,7 +5,7 @@ description: >-
   County homeowners, changing septic performance and maintenance needs.
 category: Plumbing Tips
 date: "2026-04-05"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz
   - septic
@@ -53,7 +53,7 @@ To protect your septic system from future wildfires, consider implementing preve
 
 Santa Cruz County offers various resources and support for homeowners dealing with septic system repairs. Local plumbing and septic service providers, like Wade's Plumbing & Septic, are equipped to handle post-fire septic system challenges. Utilizing local expertise ensures that repairs are conducted in accordance with regional regulations and environmental considerations.
 
-### FAQ
+## Frequently asked questions
 
 ### What are the signs of septic system damage after a wildfire?
 
@@ -69,7 +69,7 @@ Yes, there are several local services in Santa Cruz County that specialize in se
 
 ### What should I do if my septic system is not functioning properly post-fire?
 
-If your septic system is not functioning properly after a fire, contact a licensed septic professional immediately. They can assess the damage and recommend appropriate repairs or replacements.
+If your septic system is not functioning properly after a fire, contact a licensed septic professional. They can assess the damage and recommend repairs or replacement. Wade's inspects and installs systems alongside engineers and does not pump tanks.
 
 ## Myths about Septic Systems and Wildfires
 
@@ -87,11 +87,7 @@ Delaying repairs can lead to more severe damage and costly repairs in the future
 
 Homeowners in Santa Cruz County may wonder whether to monitor their septic systems themselves or hire a professional. DIY monitoring can help identify obvious issues, but it lacks the thoroughness of a professional inspection. Professionals have the expertise to detect subtle problems and provide reliable solutions, ensuring your system is in optimal condition.
 
-## Trusted Local Service Quality
-
-Choosing a trusted local service provider for your septic system needs ensures quality and reliability. Local professionals understand the unique challenges faced by Santa Cruz County homeowners and offer personalized solutions. Their commitment to quality service and customer satisfaction sets them apart from non-local competitors.
-
-**Did You Know?** EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
+EPA recommends having a typical household septic system inspected by a professional at least every three years, and systems with pumps or other mechanical parts about once a year ([U.S. EPA](https://www.epa.gov/septic/how-care-your-septic-system)).
 
 ## Sources & Local References
 
@@ -113,6 +109,6 @@ As the rainy season approaches, ensure your septic system is prepared to handle 
 - Check for signs of soil erosion near the septic system.
 - Maintain a buffer zone of vegetation to stabilize soil.
 
-## Need help with a septic system after a fire?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [septic repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [septic repair](/service-offerings/septic-tank-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

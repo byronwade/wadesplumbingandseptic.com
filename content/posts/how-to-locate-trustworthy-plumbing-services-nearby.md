@@ -96,6 +96,6 @@ Quotes are free and pricing is flat rate, quoted on site before work begins.
 - Contractors State License Board, [Ten Tips for Hiring a Contractor](https://web.cslb.ca.gov/Resources/GuidesAndPublications/TenTipsCard_DUAL0425_ADA.pdf)
 - County of Santa Cruz Community Development and Infrastructure, [When is a Plumbing Permit Required?](https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx)
 
-## Need help with a plumbing project?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heaters](/service-offerings/water-heater-installation) and septic work across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heaters](/service-offerings/water-heater-installation) and septic work across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

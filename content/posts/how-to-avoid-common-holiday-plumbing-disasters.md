@@ -106,6 +106,6 @@ Flat rate, quoted on site before work begins.
 - Insurance Institute for Business & Home Safety, [How to Prevent Interior Water Damage from Plumbing and Appliances](https://ibhs.org/how-to-prevent-interior-water-damage-from-plumbing-and-appliances/)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need help with holiday plumbing?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [garbage disposal installation](/service-offerings/garbage-disposal-installation) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [garbage disposal installation](/service-offerings/garbage-disposal-installation) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -125,8 +125,7 @@ Flat rate, quoted on site before work begins.
 - Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 - U.S. EPA, [Consumer Confidence Reports](https://www.epa.gov/ccr)
 
-## Need help choosing a water softener?
-
+## Request a free quote
 ![New construction plumbing rough-in](/images/work/new-construction-rough-in.webp)
 
-Wade's Plumbing & Septic installs and services water softeners and filtration systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas), and handles [water softener maintenance](/service-offerings/water-softener-maintenance) and [water filtration system installation](/service-offerings/water-filtration-system-installation). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic installs and services water softeners and filtration systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas), and handles [water softener maintenance](/service-offerings/water-softener-maintenance) and [water filtration system installation](/service-offerings/water-filtration-system-installation). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

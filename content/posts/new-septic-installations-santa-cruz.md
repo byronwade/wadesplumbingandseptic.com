@@ -63,8 +63,7 @@ A sewage disposal permit for a structure stays valid as long as the building per
 
 A new system needs regular checks from the start. Systems with enhanced treatment come with ongoing obligations such as a maintenance contract and periodic inspections, described in our guide to [septic system types](/septic-system-types-santa-cruz). For conventional systems, our [septic system maintenance guide](/the-complete-guide-to-septic-system-maintenance) covers inspection and emptying intervals. When a site needs an engineered design, our [engineered septic system guide](/what-you-need-to-know-about-engineered-septic-systems) covers planning steps.
 
-## FAQ
-
+## Frequently asked questions
 ### Do I need a permit to replace a septic system in Santa Cruz County?
 
 Yes. The county requires a sewage disposal permit to install, replace, repair, upgrade or destroy a septic system.
@@ -90,4 +89,4 @@ Flat rate pricing, quoted on site before work begins.
 
 ## Planning a new septic system?
 
-Wade's Plumbing & Septic provides [engineered septic installation](/service-offerings/engineered-septic-system-installation), [septic compliance and permitting help](/service-offerings/septic-tank-system-compliance-and-permitting) and [septic replacement](/septic-replacement-santa-cruz) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [engineered septic installation](/service-offerings/engineered-septic-system-installation), [septic compliance and permitting help](/service-offerings/septic-tank-system-compliance-and-permitting) and [septic replacement](/septic-replacement-santa-cruz) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

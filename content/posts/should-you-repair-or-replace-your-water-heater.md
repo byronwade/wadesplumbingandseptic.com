@@ -1,12 +1,12 @@
 ---
-title: Top Water Heater Services for Santa Cruz County Homes
+title: Should You Repair or Replace Your Water Heater?
 description: >-
   How to decide whether to repair or replace a water heater: the warning signs,
-  what age and repair history tell you, efficient replacement options, and the
-  California earthquake strapping rule.
+  what age and repair history tell you, efficient replacement options, the
+  California earthquake strapping rule, and when a plumbing permit is required.
 category: Plumbing Tips
 date: "2025-06-17"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz county
   - plumbing services
@@ -73,7 +73,7 @@ Rebates and incentives for efficient water heaters change often. Check with your
 
 California Health and Safety Code section 19211 requires all new and replacement water heaters, and all existing residential water heaters, to be braced, anchored or strapped to resist falling or moving in an earthquake. It also requires the seller of a home with a water heater to certify in writing to the buyer that the water heater meets this rule. Any replacement should include proper strapping, and it is worth checking an existing heater before you list a home.
 
-Replacing a water heater often requires a permit too; the installer should confirm what your city or the county requires. A professional installation covers the permit, strapping, venting, gas or electrical connections and the relief valve discharge line. See [water heater installation](/service-offerings/water-heater-installation).
+Santa Cruz County Building Permits says a plumbing permit is required when plumbing, gas or drainage piping, a fixture, or water heating or treatment equipment is installed, altered, repaired, or replaced, unless the California Plumbing Code or County ordinance exempts the work. The same page notes that replacing a water heater requires a permit. Cities such as Santa Cruz, Capitola, Scotts Valley and Watsonville have their own building departments, so confirm locally. A professional installation covers the permit, strapping, venting, gas or electrical connections and the relief valve discharge line. See [water heater installation](/service-offerings/water-heater-installation).
 
 ## Keeping a water heater working
 
@@ -96,6 +96,10 @@ Yes. State law requires new, replacement and existing residential water heaters 
 
 It can be. DOE says heat pump water heaters can be two to three times more efficient than standard electric models. They need enough space and air around them, so the location matters.
 
+### Do I need a permit to replace a water heater?
+
+In unincorporated Santa Cruz County, yes. County Building Permits says replacing a water heater requires a plumbing permit. Confirm the rule with your city if you live in an incorporated area.
+
 ### How is pricing quoted for water heater replacement?
 
 Flat rate, quoted on site before work begins.
@@ -105,7 +109,8 @@ Flat rate, quoted on site before work begins.
 - U.S. Department of Energy, [Heat Pump Water Heaters](https://bsesc.energy.gov/energy-basics/water-heaters-heat-pumps)
 - ENERGY STAR, [Electric Water Heaters Fact Sheet](https://www.energystar.gov/sites/default/files/tools/ES_Electric_WH_Factsheet_2020.pdf)
 - California Health and Safety Code, [Section 19211](https://pfwt.ssc.ca.gov/wp-content/uploads/sites/17/2020/08/health_and_safety_19211.pdf)
+- Santa Cruz County Building Permits, [When is a Plumbing Permit Required?](https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx)
 
-## Need help with a water heater?
+## Request a free quote
 
-Wade's Plumbing & Septic repairs and replaces water heaters across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic repairs and replaces water heaters for homes in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

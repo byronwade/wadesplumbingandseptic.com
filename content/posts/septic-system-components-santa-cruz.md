@@ -112,6 +112,6 @@ Check the septic permit records for your parcel through County Environmental Hea
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - Santa Cruz County Environmental Health, [OWTS Repair and Upgrades](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx)
 
-## Need help with a septic component?
+## Request a free quote
 
-Wade's Plumbing & Septic inspects and repairs septic systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic inspects and repairs septic systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

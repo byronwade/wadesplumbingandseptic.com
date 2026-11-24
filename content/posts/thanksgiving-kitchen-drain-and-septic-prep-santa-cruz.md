@@ -6,6 +6,7 @@ description: >-
   homes can prep before Thanksgiving.
 category: Septic Issues in Santa Cruz County
 date: "2026-10-25"
+updated: "2026-11-24"
 tags:
   - santa cruz
   - thanksgiving
@@ -104,6 +105,6 @@ If a drain has been slow for weeks, a toilet runs, or your septic system has sho
 - Santa Cruz County Sanitation District, [Fats, Oil and Grease](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Env-FOG-Fats-Oil-Grease.pdf)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need help before the holiday?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [septic maintenance and care](/service-offerings/septic-tank-maintenance-and-care) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [septic maintenance and care](/service-offerings/septic-tank-maintenance-and-care) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

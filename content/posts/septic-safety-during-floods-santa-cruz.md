@@ -44,8 +44,7 @@ Flooding can also lift the floating scum layer in the tank and partly plug the o
 
 Clean the area and disinfect the floor. EPA suggests a solution of half a cup of chlorine bleach per gallon of water. If a home business sends chemicals into the system, take extra care to avoid skin, eye and breathing contact, and ask the state or EPA about cleanup.
 
-## FAQ
-
+## Frequently asked questions
 ### Should I pump my septic tank during a flood?
 
 No. Pumping a tank while the soil is saturated is only temporary and can cause the tank to float out of the ground. Wait until the soil drains, then have it pumped to remove silt.
@@ -67,6 +66,6 @@ Flat rate pricing, quoted on site before work begins.
 - U.S. EPA, [Septic Systems: What to Do after the Flood](https://www.epa.gov/ground-water-and-drinking-water/septic-systems-what-do-after-flood)
 - Santa Cruz County Environmental Health, [Qualified Professionals](https://scceh.com/NewHome/Programs/LandUse/QualifiedProfessionals.aspx)
 
-## Need a septic check after a storm?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [septic alarm installation](/service-offerings/septic-tank-alarm-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [septic alarm installation](/service-offerings/septic-tank-alarm-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

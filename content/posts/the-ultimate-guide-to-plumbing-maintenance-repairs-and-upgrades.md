@@ -1,79 +1,95 @@
 ---
-title: "Plumbing Maintenance & Repairs in Santa Cruz County, CA"
+title: "Plumbing Maintenance and Repairs in Santa Cruz County"
 description: >-
-  Proper maintenance keeps your plumbing system efficient and long-lasting. It
-  helps prevent leaks, clogs, and damage that can raise your water bill.
+  A practical hub for Santa Cruz County homeowners: leak checks, drains, water
+  heaters, pipes and septic care, with links to the detailed guides on this
+  site. Quotes are free.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz county
-  - septic services
-  - drain cleaning
-  - leak detection
   - plumbing maintenance
-  - home plumbing
   - plumbing repairs
-  - plumbing system
-  - water line repair
-  - fixture installation
+  - home plumbing
 image: /images/work/new-construction-rough-in.webp
 imageAlt: New construction plumbing rough-in
 ---
 
-As a homeowner, you know that maintaining your home is essential to keep it in good condition and avoid costly repairs. One of the most important systems in your home is the plumbing system. This system is responsible for providing clean water and removing waste, and it's essential to your daily life. In this guide, we'll cover everything you need to know about plumbing maintenance, repairs, and upgrades.
+Most plumbing work in a Santa Cruz County home is either catching a small problem early or replacing something that has already worn out. A short routine covers the first. A licensed plumber covers the second when the problem is in the pipes, the water heater, the main line or the septic system.
+
+Use this page as a map. Each topic links to a longer guide.
 
 ![Plumber installing steel pipes](/images/wordpress/close-up-of-a-plumbers-hands-installing-steel-pipes-indoors-showcasing-skilled-manual-work-5c43ba.webp)
 
-## Plumbing Maintenance
+## Find leaks before they damage the house
 
-Proper maintenance is crucial for the longevity and efficiency of your plumbing system. Regular maintenance can help prevent leaks, clogs, and other problems that can cause damage to your home and increase your water bill. Here are a few tips for maintaining your plumbing system:
+EPA WaterSense reports that the average household's leaks can waste more than 9,300 gallons of water a year. The meter test is the fastest check: turn off every fixture, read the meter, wait two hours without using water, and read it again. If it moved, water is going somewhere.
 
-- **Check for leaks** : Check for leaks in your faucets, toilets, and pipes. Even a small leak can waste a lot of water and increase your water bill.
-- **Check your water pressure** : High water pressure can cause damage to your pipes and fixtures. A pressure gauge can be used to check the pressure of your water supply. If the pressure is too high, consider installing a pressure-reducing valve.
-- **Inspect your pipes** : Look for any signs of corrosion, leaks, or other damage. If you notice any problems, contact a plumber to have them repaired.
-- **Clean your drains** : Use a plunger or a plumbing snake to remove any clogs in your drains. Avoid using chemical drain cleaners, as they can be harmful to your pipes.
-- **Have your septic tank inspected and pumped** : If you have a septic tank, have it inspected and pumped every 3-5 years to ensure that it's functioning properly.
+Our [hidden water leak guide](/6-signs-you-have-a-hidden-water-leak) covers stains, musty smells, a toilet that leaks into the bowl, and the extra clue for homes on a well: a pump that cycles when no one is using water. See [leak detection](/service-offerings/leak-detection) when you cannot find the source.
 
-## Plumbing Repairs
+## Keep drains and sewer lines moving
 
-Even with regular maintenance, plumbing problems can still occur. It's important to address any issues as soon as possible to prevent further damage and costly repairs. Here are a few common plumbing problems and how to fix them:
+One slow sink is usually hair or soap near the fixture. Several slow drains, a toilet that gurgles when a sink empties, or water coming up in a shower when you flush point to the main line or, on septic, the tank or drainfield.
 
-- **Leaky faucet** : A leaky faucet can be caused by a worn-out washer or O-ring. To fix a leaky faucet, turn off the water supply to the faucet and disassemble the faucet. Replace the washer or O-ring and reassemble the faucet.
-- **Running toilet** : A running toilet can waste a lot of water and increase your water bill. To fix a running toilet, check the flapper valve and the fill tube. If the flapper valve is worn or the fill tube is clogged, replace them.
-- **Clogged drain** : A clogged drain can be caused by a buildup of hair, soap, and other debris. To unclog a drain, use a plunger or a plumbing snake. If the clog is too deep, call a plumber.
-- **Leaking pipe** : A leaking pipe can cause damage to your home and increase your water bill. To fix a leaking pipe, turn off the water supply to the pipe and repair or replace the pipe.
+- Start with a plunger, not a chemical drain opener. EPA advises homes on septic to avoid chemical drain openers.
+- Recurring clogs often need a [sewer camera inspection](/service-offerings/sewer-camera-inspection) before anyone decides whether to snake, jet or repair the pipe.
+- Hydro jetting washes grease and sludge off the pipe wall when the pipe itself is sound. See [what hydro jetting is for](/the-benefits-of-hydro-jetting).
 
-## Plumbing Upgrades
+Step by step fixture clogs: [how to clear a clogged drain](/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide).
 
-Upgrading your plumbing system can improve its efficiency and save you money on your water bill. Here are a few plumbing upgrades to consider:
+## Water heaters: repair, replace, strap, permit
 
-- **Low-flow fixtures** : Low-flow fixtures, such as faucets and showerheads, use less water and can save you money on your water bill.
-- You can also find low-flow toilets, which use less water per flush. These fixtures can be easily installed by a professional plumber, and you can find them at most home improvement stores.
-- **Water-saving devices** : Another way to save water and money is to install water-saving devices, such as aerators and flow restrictors. These devices can be installed on faucets and showerheads to reduce the amount of water flowing through them.
-- **Tankless water heaters** : Tankless water heaters are becoming increasingly popular because they provide hot water on demand, rather than storing it in a tank. This means that you'll never run out of hot water, and it also saves energy because the heater only turns on when you need hot water.
-- **Smart home technology** : Smart home technology, such as smart water leak detectors, can help you monitor and control your plumbing system remotely. This can help you catch leaks early on, preventing damage to your property.
+Repair makes sense when the tank is sound and a part failed. Replacement makes sense when the tank is leaking, rusty inside, or failing often. California Health and Safety Code section 19211 requires residential water heaters to be braced, anchored or strapped against earthquakes. In unincorporated Santa Cruz County, replacing a water heater requires a plumbing permit.
 
-When considering plumbing upgrades, it's important to consult with a professional plumber to ensure that the upgrades are compatible with your existing plumbing system and that they are installed correctly. A professional plumber can also advise you on the best upgrades for your specific needs and budget.
+Full decision guide: [repair or replace a water heater](/should-you-repair-or-replace-your-water-heater). Service: [water heater installation](/service-offerings/water-heater-installation).
 
-For more information on plumbing upgrades, you can check out the following resources:
+## Pipes that leak, rust or lose pressure
 
-- [Energy Star](https://www.energystar.gov/products/plumbing_products)
-- [EPA's WaterSense](https://www.epa.gov/watersense)
-- [American Society of Plumbing Engineers](https://www.aspe.org/)
+Low pressure at one faucet is often an aerator. Low pressure everywhere, rusty water, or leaks that keep returning on the same run can mean galvanized or aging supply lines. A targeted repair can fix one section. A whole-house re-pipe replaces the supply piping. Santa Cruz County Building Permits says replacing pipes requires a plumbing permit unless the work is an exempt leak repair that does not rearrange piping.
 
-By regularly maintaining, repairing, and upgrading your plumbing system, you can ensure that it continues to function effectively and efficiently, saving you money and preventing damage to your property.
+See [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) and our guide on [how to prepare for a re-pipe](/how-to-prepare-for-a-re-pipe-santa-cruz).
+
+## Septic care, without pumping from Wade's
+
+If the home is not on public sewer, the tank and drainfield are part of the plumbing. EPA's baseline is an inspection at least every three years, and generally once a year when the system has pumps or other mechanical parts. Tanks are typically pumped every three to five years. Wade's inspects, repairs and installs systems with engineers. Wade's does not pump tanks.
+
+Start with the [septic maintenance guide](/the-complete-guide-to-septic-system-maintenance). Mountain towns such as [Felton](/service-area/felton-ca-plumbing-septic-services) and [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services) are mostly on septic.
+
+## A simple yearly rhythm
+
+- **Every month:** listen for a running toilet, look under sinks, and check the water heater pan or floor for dampness.
+- **Twice a year:** do the meter test and walk the drainfield if you have one.
+- **On the EPA schedule:** septic inspection, and pumping when the inspection says so.
+- **Before a cold snap in the mountains:** protect exposed pipes. See [frozen pipe prevention](/how-to-prevent-frozen-pipes-this-winter).
+
+The month by month list lives in [home plumbing maintenance](/the-importance-of-regular-plumbing-maintenance).
 
 ## Frequently Asked Questions
 
-### How is pricing quoted for plumbing maintenance in Santa Cruz County, CA?
+### What plumbing checks should I do myself?
 
-Flat-rate pricing, quoted on site before work begins.
+The meter leak test, a toilet dye test, cleaning faucet aerators, and knowing where the main shutoff is. Stop at gas, work inside walls, or a main line backup.
 
-### What should I expect during a plumbing maintenance service?
+### When is it time to call a plumber?
 
-During a plumbing maintenance service, our skilled technicians will inspect your plumbing system, identify any potential issues, and perform necessary maintenance tasks to ensure optimal performance. We prioritize transparency and will communicate any recommended repairs.
+When several drains are slow, a water heater tank is leaking, you cannot find a leak the meter shows, or the same clog keeps coming back. Our [five warning signs](/5-signs-you-need-to-call-a-professional-plumber) walks through those cases.
 
-## Need help with plumbing maintenance or upgrades?
+### How is plumbing work priced?
 
-Wade's Plumbing & Septic handles [pipe repair](/service-offerings/pipe-repair-and-replacement), [fixture installation](/service-offerings/fixture-installation) and [water heaters](/service-offerings/water-heater-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Flat-rate pricing, quoted on site before work begins. Quotes are free.
+
+### Does Wade's pump septic tanks?
+
+No. Wade's installs septic systems alongside engineers and inspects or repairs them. Emptying the tank is done by a licensed liquid waste hauler.
+
+## Sources
+
+- U.S. EPA WaterSense, [Fix a Leak Week](https://www.epa.gov/watersense/fix-leak-week)
+- U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
+- ENERGY STAR, [Plumbing products](https://www.energystar.gov/products/plumbing_products)
+- Santa Cruz County Building Permits, [When is a Plumbing Permit Required?](https://cdi.santacruzcountyca.gov/UPC/BuildingPermitsSafety/BuildingPermitsIndex/FrequentlyAskedQuestionsAboutBuildingPermits/WhenisaPlumbingPermitRequired.aspx)
+
+## Request a free quote
+
+Wade's Plumbing & Septic handles [pipe repair](/service-offerings/pipe-repair-and-replacement), [fixture installation](/service-offerings/fixture-installation) and [water heaters](/service-offerings/water-heater-installation) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

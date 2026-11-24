@@ -72,6 +72,6 @@ No. A clogged showerhead from mineral buildup is a common cause. Our [hard water
 - U.S. Consumer Product Safety Commission, [Tap Water Scalds](https://www.cpsc.gov/s3fs-public/5098-Tap-Water-Scalds.pdf)
 - Town of Truckee Building Division, [Water Temperature Limiting Devices](https://www.townoftruckee.gov/DocumentCenter/View/118)
 
-## Need help with a shower valve?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [shower installation and repair](/service-offerings/shower-installation-and-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [shower installation and repair](/service-offerings/shower-installation-and-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -1,7 +1,7 @@
 import type { Route } from "next"
 
 import type { ContentDocument } from "@/lib/content"
-import { splitContentBands } from "@/lib/content-conversion"
+import { faqSectionBody, splitContentBands } from "@/lib/content-conversion"
 import { resolveContentLayout } from "@/lib/content-layout"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
@@ -88,7 +88,9 @@ export function ContentPage({
 			? splitContentBands(document.content).sections.find(
 					(section) => section.heading === "Frequently Asked Questions",
 				)?.body
-			: undefined
+			: isPost
+				? faqSectionBody(document.content)
+				: undefined
 	const faqPairs = faqContent ? extractFaqPairs(faqContent) : []
 
 	const jsonLd = [
