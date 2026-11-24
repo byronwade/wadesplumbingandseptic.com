@@ -56,7 +56,14 @@ Santa Cruz County's wet season saturates soil, so a field that is already soggy 
 
 ## Warning signs
 
-Have the system checked if you notice slow drains in several fixtures, gurgling, sewage odors, wet or unusually green ground over the drainfield, or a high-water alarm on a pumped system. Our post on [septic trouble signs](/septic-trouble-signs-santa-cruz) explains what those usually mean.
+Have the system checked if these show up. They are starting points, not a diagnosis:
+
+- Slow drains or gurgling in several fixtures at once often point to the main line, a clogged effluent filter or outlet, or a tank that needs emptying.
+- Sewage odor near the tank often points to loose or cracked lids, or a tank that is too full.
+- Soggy ground, odor or surfacing water over the drainfield often points to an overloaded or failing drainfield.
+- A high-water alarm on a pumped system often means high water in the pump tank from a failed pump, float or control.
+
+Our post on [septic trouble signs](/septic-trouble-signs-santa-cruz) explains each one using EPA guidance.
 
 ## Frequently Asked Questions
 
