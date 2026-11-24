@@ -35,7 +35,7 @@ function fieldFromForm(form: HTMLFormElement): Record<string, string> {
 
 function QuoteOtherWays() {
 	return (
-		<div className="mt-4 flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center">
+		<div className="mt-4 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
 			<CallButton
 				className="w-full sm:w-auto"
 				desktopLabel={`Call ${contactInfo.phoneDisplay}`}
