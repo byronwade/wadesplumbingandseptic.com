@@ -166,7 +166,7 @@ test("service cards name the destination instead of Learn more", () => {
 		}),
 	)
 	assert.doesNotMatch(html, />Learn more</)
-	assert.ok(html.includes('aria-label="View Hydro Jetting"'), html)
+	assert.ok(html.includes('aria-label="View service: Hydro Jetting"'), html)
 	assert.ok(html.includes("View service"), html)
 })
 
