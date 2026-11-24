@@ -56,6 +56,7 @@ Our [rainy season septic and drain prep guide](/rainy-season-septic-and-drain-pr
 - **Watch guest season loads.** Extra people in the house mean extra wastewater, so spread out laundry and dishwashing.
 
 ## Frequently asked questions
+
 ### When is the best time of year for septic work in Santa Cruz County?
 
 Late summer and early fall, while the soil is dry and before the county's October 15 to April 15 rainy season. Wet ground makes digging harder, and installation work that leaves bare soil in that period needs county erosion control measures.

@@ -60,6 +60,7 @@ EPA notes that many pumps and controls need replacement every 10 to 20 years, an
 - **Write down what you see and when,** such as which drains, after what use, and whether it follows rain. That helps narrow the cause.
 
 ## Frequently asked questions
+
 ### Is one slow drain a septic problem?
 
 Usually not. A single slow fixture is most often a clog in that drain. Several slow or gurgling drains at once point more toward the main line, tank or drainfield.

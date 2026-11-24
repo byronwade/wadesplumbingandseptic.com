@@ -64,6 +64,7 @@ A sewage disposal permit for a structure stays valid as long as the building per
 A new system needs regular checks from the start. Systems with enhanced treatment come with ongoing obligations such as a maintenance contract and periodic inspections, described in our guide to [septic system types](/septic-system-types-santa-cruz). For conventional systems, our [septic system maintenance guide](/the-complete-guide-to-septic-system-maintenance) covers inspection and emptying intervals. When a site needs an engineered design, our [engineered septic system guide](/what-you-need-to-know-about-engineered-septic-systems) covers planning steps.
 
 ## Frequently asked questions
+
 ### Do I need a permit to replace a septic system in Santa Cruz County?
 
 Yes. The county requires a sewage disposal permit to install, replace, repair, upgrade or destroy a septic system.

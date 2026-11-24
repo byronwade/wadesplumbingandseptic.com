@@ -66,6 +66,7 @@ Karst is ground with caves, sinkholes or channels that can carry effluent quickl
 These rules are why many county properties need more than a tank and a gravity drainfield. Sites with shallow groundwater, fast or slow soils, steep slopes or nearby creeks often need [engineered or enhanced treatment systems](/what-you-need-to-know-about-engineered-septic-systems). Our guide to [septic system types](/septic-system-types-santa-cruz) explains the options, and the [rainy season septic guide](/rainy-season-septic-and-drain-prep-santa-cruz) covers what to watch for each winter.
 
 ## Frequently asked questions
+
 ### Why does Santa Cruz County test groundwater in winter?
 
 The water table is highest in the rainy season. The county requires wet weather observations after enough rain has fallen so that the drainfield design reflects the highest seasonal groundwater.
