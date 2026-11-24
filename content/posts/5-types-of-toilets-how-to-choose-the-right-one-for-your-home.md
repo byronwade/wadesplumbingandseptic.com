@@ -83,6 +83,6 @@ Flat rate pricing, quoted on site before work begins.
 - California Legislature, [SB 407 (2009), Civil Code Sections 1101.1 to 1101.8](https://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_0401-0450/sb_407_bill_20090915_enrolled.html)
 - U.S. Access Board, [2010 ADA Standards, Section 604.4](https://www.access-board.gov/ada/#ada-604)
 
-## Need help with a new toilet?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [toilet and fixture installation](/service-offerings/fixture-installation) and [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [toilet and fixture installation](/service-offerings/fixture-installation) and [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

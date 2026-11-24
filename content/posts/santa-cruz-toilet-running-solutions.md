@@ -70,6 +70,6 @@ EPA recommends at least every five years, or sooner if the dye test shows a leak
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - U.S. EPA WaterSense, [Fix a Leak Week](https://www.epa.gov/watersense/fix-leak-week)
 
-## Need help with a running toilet?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [toilet repair](/service-offerings/toilet-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

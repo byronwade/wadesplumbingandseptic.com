@@ -168,6 +168,12 @@ test("every schema node points at one business and one website @id", () => {
 	assert.deepEqual(article["@type"], ["BlogPosting", "Article"])
 	assert.equal(article.datePublished, "2026-04-13")
 	assert.equal(article.dateModified, "2026-04-13")
+	const refreshed = articleJsonLd({
+		...document,
+		updated: "2026-11-24",
+	})
+	assert.equal(refreshed.datePublished, "2026-04-13")
+	assert.equal(refreshed.dateModified, "2026-11-24")
 	assert.equal(article.author["@id"], businessId)
 	assert.equal(article.publisher["@id"], businessId)
 	assert.equal(article.publisher.logo["@type"], "ImageObject")

@@ -65,8 +65,7 @@ Karst is ground with caves, sinkholes or channels that can carry effluent quickl
 
 These rules are why many county properties need more than a tank and a gravity drainfield. Sites with shallow groundwater, fast or slow soils, steep slopes or nearby creeks often need [engineered or enhanced treatment systems](/what-you-need-to-know-about-engineered-septic-systems). Our guide to [septic system types](/septic-system-types-santa-cruz) explains the options, and the [rainy season septic guide](/rainy-season-septic-and-drain-prep-santa-cruz) covers what to watch for each winter.
 
-## FAQ
-
+## Frequently asked questions
 ### Why does Santa Cruz County test groundwater in winter?
 
 The water table is highest in the rainy season. The county requires wet weather observations after enough rain has fallen so that the drainfield design reflects the highest seasonal groundwater.
@@ -88,6 +87,6 @@ Flat rate pricing, quoted on site before work begins.
 - Santa Cruz County Local Agency Management Program, [Appendix A: Sewage Disposal Ordinance](https://scceh.org/Portals/6/App%20A%20Sewage%20Ordinance%208_2_2021%20v2_1.pdf)
 - Santa Cruz County Environmental Health, [Site Evaluation](https://scceh.com/NewHome/Programs/LandUse/SiteEvaluation.aspx)
 
-## Need help with a septic system on a challenging site?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement) and [engineered septic installation](/service-offerings/engineered-septic-system-installation) with project engineers across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [leach field repair](/service-offerings/septic-tank-leach-field-repair-and-replacement) and [engineered septic installation](/service-offerings/engineered-septic-system-installation) with project engineers across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

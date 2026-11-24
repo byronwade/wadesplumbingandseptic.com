@@ -76,6 +76,6 @@ Flat rate pricing, quoted on site before work begins.
 - Santa Cruz County Public Works, [Preventing Sewer Overflows](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/PreventingOverflow.pdf)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need help with plumbing maintenance?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater service](/service-offerings/water-heater-installation) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [leak detection](/service-offerings/leak-detection), [water heater service](/service-offerings/water-heater-installation) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

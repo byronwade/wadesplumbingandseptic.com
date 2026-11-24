@@ -85,6 +85,6 @@ They can cause serious burns, and EPA advises homes on septic to avoid them. A p
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - MedlinePlus, National Library of Medicine, [Drain Opener Poisoning](https://medlineplus.gov/ency/article/002780.htm)
 
-## Need help with slow drains?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [hydro jetting](/service-offerings/hydro-jetting) and [sewer camera inspections](/service-offerings/sewer-camera-inspection) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [hydro jetting](/service-offerings/hydro-jetting) and [sewer camera inspections](/service-offerings/sewer-camera-inspection) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

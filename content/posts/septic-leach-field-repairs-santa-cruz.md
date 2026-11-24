@@ -113,6 +113,6 @@ Long periods of rain can saturate the soil so it accepts less water, which slows
 - Santa Cruz County Environmental Health, [The Harmful Effects of Water Softener Discharge on Your Septic System](https://scceh.org/Portals/6/Env_Health/consumer_protection/Septic/Water%20Softener%20Effects%20on%20Septic%20System%20Handout.pdf)
 - Santa Cruz County Environmental Health, [OWTS Repair and Upgrades](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx)
 
-## Need a leach field evaluated?
+## Request a free quote
 
-Wade's Plumbing & Septic repairs and replaces leach fields across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic repairs and replaces leach fields across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -6,7 +6,7 @@ description: >-
   Cross guidance.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-10-25"
+updated: "2026-11-24"
 tags:
   - santa cruz plumbing
   - plumbing maintenance
@@ -102,6 +102,6 @@ Flat rate, quoted on site before work begins.
 
 - American Red Cross, [Frozen Pipes](https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html)
 
-## Need help with frozen or burst pipes?
+## Request a free quote
 
-Wade's Plumbing & Septic handles [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) and [leak detection](/service-offerings/leak-detection) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic handles [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) and [leak detection](/service-offerings/leak-detection) for homes in [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

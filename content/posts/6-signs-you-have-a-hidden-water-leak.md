@@ -5,7 +5,7 @@ description: >-
   face. Learn six warning signs your home may have a hidden water leak.
 category: Plumbing Tips
 date: "2025-05-27"
-updated: "2026-10-25"
+updated: "2026-11-24"
 tags:
   - santa cruz plumbing
   - water leak detection
@@ -82,6 +82,6 @@ Flat rate, quoted on site before work begins.
 - U.S. EPA WaterSense, [Fix a Leak Week](https://www.epa.gov/watersense/fix-leak-week)
 - U.S. EPA, [A Brief Guide to Mold, Moisture and Your Home](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home)
 
-## Need help with a hidden leak?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [leak detection](/service-offerings/leak-detection) and [pipe repair](/service-offerings/pipe-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [leak detection](/service-offerings/leak-detection) and [pipe repair](/service-offerings/pipe-repair-and-replacement) for homes in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

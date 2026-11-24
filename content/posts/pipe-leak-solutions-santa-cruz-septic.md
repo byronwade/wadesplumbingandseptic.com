@@ -112,6 +112,6 @@ No. Many problems are found with a camera and fixed at one spot. When the line n
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 - U.S. EPA WaterSense, [Fix a Leak Week: Checking for Leaks](https://www.epa.gov/watersense/fix-leak-week)
 
-## Need a leak found or fixed?
+## Request a free quote
 
-Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic serves homes across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

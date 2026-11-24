@@ -6,7 +6,7 @@ description: >-
   sewer line repairs are done.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
-updated: "2026-10-24"
+updated: "2026-11-24"
 tags:
   - santa cruz
   - septic
@@ -82,7 +82,7 @@ Our post on [slow drain solutions](/slow-drains-solutions-santa-cruz) explains h
 
 ## How sewer lines are inspected and repaired
 
-**Inspection.** A camera on a cable travels down the line through a cleanout and records cracks, roots, sags and separated joints, along with their distance from the access point. See [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [sewer line inspection](/service-offerings/sewer-line-inspection). If there is no cleanout, a [main line cleanout installation](/service-offerings/main-line-cleanout-installation) makes inspection and future maintenance much easier, and in the county district it is required before a sale closes unless the buyer takes on the work through an approved transfer of responsibility.
+**Inspection.** A camera on a cable travels down the line through a cleanout and records cracks, roots, sags and separated joints, along with their distance from the access point. See [sewer camera inspection](/service-offerings/sewer-camera-inspection), our homeowner guide to [what a sewer camera inspection shows](/sewer-camera-inspection-santa-cruz-homes), and [sewer line inspection](/service-offerings/sewer-line-inspection). If there is no cleanout, a [main line cleanout installation](/service-offerings/main-line-cleanout-installation) makes inspection and future maintenance much easier, and in the county district it is required before a sale closes unless the buyer takes on the work through an approved transfer of responsibility.
 
 **Repair options**, based on what the camera shows:
 
@@ -128,6 +128,6 @@ No. It depends on the pipe's condition, layout and access. A camera inspection s
 - Santa Cruz County Public Works, [Sewer Lateral Transfer of Responsibility Form](https://cdi.santacruzcountyca.gov/Portals/19/pdfs/Sanitation/Forms%20FAQs%20Laterals/MASTER%20-%20Transfer%20of%20Responsibility%20Form%202023.pdf)
 - City of Santa Cruz, [City Sanitary Sewer System](https://www.santacruzca.gov/Government/City-Departments/Public-Works/Wastewater/City-Sanitary-Sewer-System)
 
-## Need a sewer line inspected or repaired?
+## Request a free quote
 
-Wade's Plumbing & Septic inspects and repairs sewer lines across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic inspects and repairs sewer lines across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

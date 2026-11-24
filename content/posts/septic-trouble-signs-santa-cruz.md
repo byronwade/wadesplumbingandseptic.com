@@ -59,8 +59,7 @@ EPA notes that many pumps and controls need replacement every 10 to 20 years, an
 - **Keep people and pets away** from any surfacing sewage.
 - **Write down what you see and when,** such as which drains, after what use, and whether it follows rain. That helps narrow the cause.
 
-## FAQ
-
+## Frequently asked questions
 ### Is one slow drain a septic problem?
 
 Usually not. A single slow fixture is most often a clog in that drain. Several slow or gurgling drains at once point more toward the main line, tank or drainfield.
@@ -86,4 +85,4 @@ Flat rate pricing, quoted on site before work begins.
 
 ## Seeing septic warning signs?
 
-Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [drainfield repair](/service-offerings/drainfield-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [septic troubleshooting](/service-offerings/septic-tank-troubleshooting-and-diagnostic-services), [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) and [drainfield repair](/service-offerings/drainfield-repair-and-replacement) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

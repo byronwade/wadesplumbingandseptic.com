@@ -79,6 +79,6 @@ Santa Cruz County Public Works recommends mechanical clearing by a plumber at le
 - City of Santa Cruz Public Works, [City Sanitary Sewer System](https://www.santacruzca.gov/Government/City-Departments/Public-Works/Wastewater/City-Sanitary-Sewer-System)
 - U.S. EPA, [How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
 
-## Need help with a shower backup?
+## Request a free quote
 
-Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Request service](/contact) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [drain cleaning](/service-offerings/drain-cleaning), [sewer camera inspection](/service-offerings/sewer-camera-inspection) and [septic inspections](/service-offerings/septic-tank-inspection-and-assessment) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
