@@ -130,6 +130,8 @@ export async function getRelatedForTopic(
 			[topic.label, topic.description ?? "", ...(topic.keywords ?? [])].join(
 				" ",
 			),
+			3,
+			topic.excludeSlugs ?? [],
 		).map(townArchiveItem),
 	}
 }

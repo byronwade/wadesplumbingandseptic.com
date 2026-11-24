@@ -6,6 +6,9 @@ import { ContentCard } from "@/components/content-card"
 import type { ArchiveItem } from "@/lib/archive"
 import type { RelatedContent } from "@/lib/related-content"
 
+const chipClass =
+	"surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
+
 function RelatedGroup({
 	title,
 	items,
@@ -95,11 +98,11 @@ export function RelatedContentSections({
 								<ArrowRight aria-hidden="true" className="size-4" />
 							</Link>
 						</div>
-						<ul className="flex flex-wrap gap-3">
+						<ul className="flex flex-wrap gap-[min(0.75rem,12px)]">
 							{related.towns.map((item) => (
-								<li key={item.href}>
+								<li className="max-w-full min-w-0" key={item.href}>
 									<Link
-										className="surface-panel inline-flex px-4 py-2 text-sm font-semibold"
+										className={chipClass}
 										href={item.href as Route}
 										prefetch={false}
 									>

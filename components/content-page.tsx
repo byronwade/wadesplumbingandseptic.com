@@ -15,6 +15,10 @@ import {
 	serviceAreaJsonLd,
 	webPageJsonLd,
 } from "@/lib/seo"
+import {
+	coverageDependsOnAddress,
+	serviceAreaLocations,
+} from "@/lib/service-areas"
 import { siteConfig } from "@/lib/site"
 import { extractSectionHeadings } from "@/lib/heading-anchors"
 import { estimateReadingMinutes, formatReadingTime } from "@/lib/reading-time"
@@ -108,9 +112,15 @@ export function ContentPage({
 	]
 
 	const showAnswerFirst = isPost || isServiceArea || document.slug === "contact"
+	const townLocation = isServiceArea
+		? serviceAreaLocations.find((area) => area.href === `/${document.slug}`)
+		: undefined
 	const answerPlace = isServiceArea
 		? cityNameFromServiceArea(document)
 		: siteConfig.serviceArea
+	const confirmAddress = townLocation
+		? coverageDependsOnAddress(townLocation)
+		: false
 
 	const articleBody =
 		isPost && document.image
@@ -184,6 +194,7 @@ export function ContentPage({
 
 			{showAnswerFirst ? (
 				<AnswerFirst
+					confirmAddress={confirmAddress}
 					includeSepticNote={
 						isServiceArea ||
 						document.slug === "contact" ||

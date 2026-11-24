@@ -22,12 +22,33 @@ export function townArchiveItem(location: ServiceAreaLocation): ArchiveItem {
 	}
 }
 
+function isExcludedTown(
+	location: ServiceAreaLocation,
+	exclude: readonly string[],
+) {
+	if (exclude.length === 0) return false
+	const href = location.href.replace(/^\//, "")
+	const hubFile = `${location.slug}-ca-plumbing-septic-services`
+	return exclude.some((raw) => {
+		const value = raw.replace(/^\//, "").toLowerCase()
+		return (
+			value === location.slug ||
+			value === href ||
+			value === hubFile ||
+			value === `service-area/${hubFile}` ||
+			value.endsWith(`/${hubFile}`)
+		)
+	})
+}
+
 /** Towns named in the copy, then featured hubs so every guide has 1 to 3 local links. */
 export function relatedTownsFor(
 	text: string,
 	limit = 3,
+	exclude: readonly string[] = [],
 ): ServiceAreaLocation[] {
 	const scored = serviceAreaLocations
+		.filter((location) => !isExcludedTown(location, exclude))
 		.map((location) => ({
 			location,
 			score: mentionCount(text, location.name) + (location.featured ? 0.1 : 0),
@@ -42,7 +63,10 @@ export function relatedTownsFor(
 
 	const used = new Set(mentioned.map((item) => item.slug))
 	const featured = serviceAreaLocations.filter(
-		(location) => location.featured && !used.has(location.slug),
+		(location) =>
+			location.featured &&
+			!used.has(location.slug) &&
+			!isExcludedTown(location, exclude),
 	)
 	return [...mentioned, ...featured].slice(0, limit)
 }

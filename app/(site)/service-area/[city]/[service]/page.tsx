@@ -33,8 +33,12 @@ import {
 	serviceAreaPlaceJsonLd,
 	serviceFaqJsonLd,
 } from "@/lib/seo"
+import { coverageDependsOnAddress } from "@/lib/service-areas"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
+
+const chipClass =
+	"surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
 
 export function generateStaticParams() {
 	return getCityServiceStaticParams()
@@ -130,6 +134,7 @@ export default async function CityServicePage({
 			/>
 
 			<AnswerFirst
+				confirmAddress={coverageDependsOnAddress(location)}
 				includeSepticNote={isSepticWork(page.serviceTitle)}
 				place={`${location.name}, ${location.county}`}
 				work={page.serviceTitle.toLowerCase()}
@@ -258,12 +263,12 @@ export default async function CityServicePage({
 					<div className="mx-auto max-w-3xl">
 						<p className="spec-label">Nearby</p>
 						<h2 className="type-title mt-3">Other cities we serve</h2>
-						<ul className="mt-6 flex flex-wrap gap-3">
+						<ul className="mt-6 flex flex-wrap gap-[min(0.75rem,12px)]">
 							{nearby.map((item) => (
-								<li key={item.slug}>
+								<li className="max-w-full min-w-0" key={item.slug}>
 									<Link
 										prefetch={false}
-										className="surface-panel inline-flex px-4 py-2 text-sm font-semibold"
+										className={chipClass}
 										href={item.href as Route}
 									>
 										{item.name} plumbing and septic

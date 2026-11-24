@@ -7,11 +7,16 @@ import { AnswerFirst } from "../../components/answer-first"
 import {
 	answerFirstPlain,
 	cityServiceFaqs,
+	defaultCityServiceFaqs,
 	serviceWorkLabel,
 } from "../../lib/answer-first"
 import { cityServicePages, getCityLocation } from "../../lib/city-service-pages"
 import { weekdayHoursPhrase } from "../../lib/public-facts"
 import { serviceFaqJsonLd } from "../../lib/seo"
+import {
+	coverageDependsOnAddress,
+	serviceAreaLocations,
+} from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
 
 test("weekday hours match the confirmed office hours string", () => {
@@ -39,6 +44,51 @@ test("answer-first copy names the business, area, free quote and hours", () => {
 	assert.equal(
 		serviceWorkLabel("Drain Cleaning in Santa Cruz County"),
 		"Drain Cleaning",
+	)
+})
+
+test("foothill town answers require an address, not a blanket yes", () => {
+	for (const city of ["los-gatos", "saratoga"]) {
+		const location = serviceAreaLocations.find((item) => item.slug === city)
+		assert.ok(location, city)
+		assert.equal(coverageDependsOnAddress(location!), true)
+		const text = answerFirstPlain({
+			work: "plumbing and septic service",
+			place: location!.name,
+			confirmAddress: true,
+		})
+		assert.match(text, /selected addresses/i)
+		assert.match(text, /not full-town coverage/)
+		assert.match(text, /property address/)
+		assert.doesNotMatch(text, new RegExp(`provides .+ in ${location!.name}\\.`))
+		const html = renderToStaticMarkup(
+			createElement(AnswerFirst, {
+				work: "plumbing and septic service",
+				place: location!.name,
+				confirmAddress: true,
+			}),
+		)
+		assert.ok(html.includes("selected addresses"), html)
+		assert.ok(html.includes("not full-town coverage"), html)
+		const faqs = defaultCityServiceFaqs(
+			"Drain Cleaning",
+			location!,
+			"Hillside laterals and older homes are common here.",
+			["Root intrusion", "Older laterals", "Sloped lots"],
+		)
+		assert.match(faqs[0]!.answer, /not the whole town/)
+		assert.doesNotMatch(faqs[0]!.answer, /^Yes\./)
+	}
+
+	const aptos = serviceAreaLocations.find((item) => item.slug === "aptos")
+	assert.ok(aptos)
+	assert.equal(coverageDependsOnAddress(aptos!), false)
+	assert.match(
+		answerFirstPlain({
+			work: "plumbing and septic service",
+			place: aptos!.name,
+		}),
+		/provides plumbing and septic service in Aptos\./,
 	)
 })
 

@@ -1,11 +1,16 @@
 import { freeQuotePath, weekdayHoursPhrase } from "@/lib/public-facts"
-import type { ServiceAreaLocation } from "@/lib/service-areas"
+import {
+	coverageDependsOnAddress,
+	type ServiceAreaLocation,
+} from "@/lib/service-areas"
 import { siteConfig } from "@/lib/site"
 
 export type AnswerFirstInput = {
 	work: string
 	place: string
 	includeSepticNote?: boolean
+	/** Santa Clara foothill towns: coverage is address-dependent. */
+	confirmAddress?: boolean
 }
 
 type FaqPair = { question: string; answer: string }
@@ -18,15 +23,27 @@ export function isSepticWork(value: string) {
 	return /\bseptic\b/i.test(value)
 }
 
+function openingSentence({
+	work,
+	place,
+	confirmAddress = false,
+}: Pick<AnswerFirstInput, "work" | "place" | "confirmAddress">) {
+	if (confirmAddress) {
+		return `${siteConfig.name} provides ${work} for selected addresses in ${place}, near the Santa Cruz County line, not full-town coverage. Call with the property address to confirm.`
+	}
+	return `${siteConfig.name} provides ${work} in ${place}.`
+}
+
 export function answerFirstPlain({
 	work,
 	place,
 	includeSepticNote = false,
+	confirmAddress = false,
 }: AnswerFirstInput) {
 	const septic = includeSepticNote
 		? " Septic work is system installation with engineers, not tank pumping."
 		: ""
-	return `${siteConfig.name} provides ${work} in ${place}.${septic} Quotes are free. Call ${siteConfig.phone} ${weekdayHoursPhrase()} (closed Saturday and Sunday), or request a free quote.`
+	return `${openingSentence({ work, place, confirmAddress })}${septic} Quotes are free. Call ${siteConfig.phone} ${weekdayHoursPhrase()} (closed Saturday and Sunday), or request a free quote.`
 }
 
 function joinIssues(issues: string[]) {
@@ -58,10 +75,13 @@ export function defaultCityServiceFaqs(
 ): FaqPair[] {
 	const service = serviceTitle.toLowerCase()
 	const town = location.name
+	const servesTown = coverageDependsOnAddress(location)
+		? `Selected ${town} addresses near the Santa Cruz County line, not the whole town. Call ${siteConfig.phone} with the property address to confirm coverage.`
+		: `Yes. Wade's Plumbing & Septic provides ${service} for ${town} homes in ${location.county}.`
 	return [
 		{
 			question: `Does Wade's Plumbing & Septic provide ${service} in ${town}?`,
-			answer: `Yes. Wade's Plumbing & Septic provides ${service} for ${town} homes in ${location.county}. ${firstSentence(localAngle)} Quotes are free. Call ${siteConfig.phone} ${weekdayHoursPhrase()} (closed Saturday and Sunday), or request a free quote at ${siteConfig.url}${freeQuotePath}.`,
+			answer: `${servesTown} ${firstSentence(localAngle)} Quotes are free. Call ${siteConfig.phone} ${weekdayHoursPhrase()} (closed Saturday and Sunday), or request a free quote at ${siteConfig.url}${freeQuotePath}.`,
 		},
 		{
 			question: "How do I get a free quote?",

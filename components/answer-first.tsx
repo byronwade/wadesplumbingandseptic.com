@@ -16,10 +16,15 @@ export function AnswerFirst({
 	work,
 	place,
 	includeSepticNote = false,
+	confirmAddress = false,
 }: AnswerFirstInput) {
 	const septic = includeSepticNote
 		? " Septic work is system installation with engineers, not tank pumping."
 		: ""
+	const opening = confirmAddress
+		? `${siteConfig.name} provides ${work} for selected addresses in ${place}, near the Santa Cruz County line, not full-town coverage. Call with the property address to confirm.`
+		: `${siteConfig.name} provides ${work} in ${place}.`
+	const lead = `${opening}${septic}`
 
 	return (
 		<section
@@ -29,8 +34,7 @@ export function AnswerFirst({
 			<div className="container-shell py-5 sm:py-6">
 				<p className="spec-label">Quick answer</p>
 				<p className="mt-3 max-w-3xl text-sm leading-relaxed font-semibold sm:text-base">
-					{siteConfig.name} provides {work} in {place}.{septic} Quotes are free.
-					Call{" "}
+					{lead} Quotes are free. Call{" "}
 					<a className={linkClass} href={siteConfig.phoneHref}>
 						{siteConfig.phone}
 					</a>{" "}

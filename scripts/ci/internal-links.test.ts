@@ -7,6 +7,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 
 import { CityServiceGuides } from "../../components/city-service-guides"
 import { GuideLocalLinks } from "../../components/guide-local-links"
+import { RelatedContentSections } from "../../components/related-content"
 import { ServiceTownLinks } from "../../components/service-town-links"
 import { relatedTownsFor } from "../../lib/related-towns"
 import { cityServicePages, cityServicePath } from "../../lib/city-service-pages"
@@ -79,6 +80,46 @@ test("service pages name towns with descriptive plumbing and septic anchors", ()
 		html,
 	)
 	assert.ok(html.includes("Santa Cruz County"), html)
+})
+
+test("town hubs can exclude themselves from related town chips", () => {
+	const slug = "service-area/los-gatos-ca-plumbing-septic-services"
+	const towns = relatedTownsFor(
+		"Los Gatos, CA Plumbing & Septic Services selected coverage in Los Gatos",
+		3,
+		[slug],
+	)
+	assert.ok(towns.length >= 1 && towns.length <= 3)
+	assert.ok(
+		!towns.some((town) => town.slug === "los-gatos"),
+		towns.map((town) => town.slug).join(","),
+	)
+})
+
+test("related town chips use capped overflow wrap", () => {
+	const html = renderToStaticMarkup(
+		createElement(RelatedContentSections, {
+			related: {
+				posts: [],
+				services: [],
+				towns: [
+					{
+						slug: "aptos-hills-larkin-valley",
+						title: "Aptos Hills-Larkin Valley plumbing and septic",
+						description: "Aptos Hills-Larkin Valley",
+						category: "Santa Cruz County",
+						href: "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
+					},
+				],
+			},
+		}),
+	)
+	assert.ok(html.includes("[overflow-wrap:anywhere]"), html)
+	assert.ok(html.includes("max-w-full"), html)
+	assert.ok(
+		html.includes("Aptos Hills-Larkin Valley plumbing and septic"),
+		html,
+	)
 })
 
 test("city x service spokes are linked from their town hubs", () => {
