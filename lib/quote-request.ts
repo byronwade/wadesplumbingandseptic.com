@@ -141,6 +141,22 @@ export const quoteSuccessCopy = {
 export const quoteUnavailableCopy =
 	`We could not send that just now. Call ${siteConfig.phone} or email ${siteConfig.email}.` as const
 
+export const quoteInvalidCopy =
+	`Please include your name, a working phone number, and a short note. Or call ${siteConfig.phone}.` as const
+
+/** Default Resend From. The sending domain must be verified in Resend. */
+export const quoteDefaultFrom =
+	`${siteConfig.name} <${siteConfig.email}>` as const
+
+export function quoteFormErrorFromQuery(
+	quote: string | string[] | undefined,
+): string | null {
+	const flag = Array.isArray(quote) ? quote[0] : quote
+	if (flag === "error") return quoteUnavailableCopy
+	if (flag === "invalid") return quoteInvalidCopy
+	return null
+}
+
 /** Vercel Production is the only place a missing mailer should fail closed. */
 export function canAcceptWithoutMailer(vercelEnv = process.env.VERCEL_ENV) {
 	return vercelEnv !== "production"

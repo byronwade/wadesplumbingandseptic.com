@@ -8,6 +8,9 @@ import {
 	isValidUsPhone,
 	parseQuoteRequest,
 	phoneDigits,
+	quoteDefaultFrom,
+	quoteFormErrorFromQuery,
+	quoteInvalidCopy,
 	quoteSuccessCopy,
 	quoteUnavailableCopy,
 	type QuoteTownOption,
@@ -100,11 +103,17 @@ test("success and fallback copy stay inside confirmed facts", () => {
 		quoteUnavailableCopy,
 		new RegExp(contactInfo.phoneDisplay.replaceAll(".", "\\.")),
 	)
+	assert.match(
+		quoteInvalidCopy,
+		new RegExp(contactInfo.phoneDisplay.replaceAll(".", "\\.")),
+	)
 	assert.match(quoteUnavailableCopy, new RegExp(contactInfo.email))
 	for (const text of [
 		quoteSuccessCopy.title,
 		quoteSuccessCopy.body,
 		quoteUnavailableCopy,
+		quoteInvalidCopy,
+		quoteDefaultFrom,
 	]) {
 		assert.doesNotMatch(
 			text,
@@ -112,4 +121,16 @@ test("success and fallback copy stay inside confirmed facts", () => {
 		)
 		assert.doesNotMatch(text, /\$\d/)
 	}
+})
+
+test("quote email sends from the public support inbox by default", () => {
+	assert.equal(quoteDefaultFrom, `${siteConfig.name} <${siteConfig.email}>`)
+	assert.doesNotMatch(quoteDefaultFrom, /resend\.dev/)
+})
+
+test("no-JS redirects map to a visible form error", () => {
+	assert.equal(quoteFormErrorFromQuery("error"), quoteUnavailableCopy)
+	assert.equal(quoteFormErrorFromQuery("invalid"), quoteInvalidCopy)
+	assert.equal(quoteFormErrorFromQuery(undefined), null)
+	assert.equal(quoteFormErrorFromQuery(["error"]), quoteUnavailableCopy)
 })

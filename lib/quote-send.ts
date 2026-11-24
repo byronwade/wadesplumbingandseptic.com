@@ -5,6 +5,7 @@ import { put } from "@vercel/blob"
 import {
 	canAcceptWithoutMailer,
 	formatQuoteEmail,
+	quoteDefaultFrom,
 	type QuoteRequest,
 } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
@@ -14,10 +15,8 @@ export type QuoteDelivery =
 	| { ok: false; reason: "unavailable" | "upstream" }
 
 function quoteFromAddress() {
-	return (
-		process.env.QUOTE_FROM_EMAIL ??
-		"Wade's Plumbing & Septic <beth.t@example.com>"
-	)
+	const override = process.env.QUOTE_FROM_EMAIL?.trim()
+	return override || quoteDefaultFrom
 }
 
 async function storeQuoteBackup(request: QuoteRequest) {

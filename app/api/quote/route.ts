@@ -115,7 +115,7 @@ export async function POST(request: Request) {
 				{ status: 400 },
 			)
 		}
-		return redirectTo(request, "/contact?quote=error#quote")
+		return redirectTo(request, "/contact?quote=invalid#quote")
 	}
 
 	if (parsed.spam) {

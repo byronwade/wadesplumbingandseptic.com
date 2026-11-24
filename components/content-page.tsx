@@ -32,7 +32,7 @@ import { MarkdownContent } from "@/components/markdown-content"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
-import { ContactLead } from "@/components/contact-lead"
+import { ContactLeadSlot } from "@/components/contact-lead"
 
 function formatPostDate(date: string) {
 	return new Intl.DateTimeFormat("en-US", {
@@ -48,11 +48,13 @@ export function ContentPage({
 	isPost = false,
 	related,
 	viewStats,
+	searchParams,
 }: {
 	document: ContentDocument
 	isPost?: boolean
 	related?: RelatedContent
 	viewStats?: PageViewStats
+	searchParams?: Promise<{ quote?: string | string[] }>
 }) {
 	const isServiceArea = document.slug.startsWith("service-area/")
 	const isFaq = document.slug === "faq"
@@ -171,7 +173,9 @@ export function ContentPage({
 
 			{document.slug === "about-us" ? <CompanyFacts /> : null}
 
-			{document.slug === "contact" ? <ContactLead /> : null}
+			{document.slug === "contact" && searchParams ? (
+				<ContactLeadSlot searchParams={searchParams} />
+			) : null}
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
 			{document.slug === "about-us" ? (

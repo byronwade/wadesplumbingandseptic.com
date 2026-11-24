@@ -29,12 +29,18 @@ function fieldFromForm(form: HTMLFormElement): Record<string, string> {
 	return payload
 }
 
-export function QuoteForm({ towns }: { towns: QuoteTownOption[] }) {
+export function QuoteForm({
+	towns,
+	initialError = null,
+}: {
+	towns: QuoteTownOption[]
+	initialError?: string | null
+}) {
 	const formId = useId()
 	const successRef = useRef<HTMLHeadingElement>(null)
 	const [status, setStatus] = useState<FormStatus>("idle")
 	const [errors, setErrors] = useState<Partial<Record<QuoteField, string>>>({})
-	const [formError, setFormError] = useState<string | null>(null)
+	const [formError, setFormError] = useState<string | null>(initialError)
 
 	const nameId = `${formId}-name`
 	const phoneId = `${formId}-phone`

@@ -80,8 +80,10 @@ async function getRelatedForDocument(
 
 export default async function MarkdownPage({
 	params,
+	searchParams,
 }: {
 	params: Promise<{ slug: string[] }>
+	searchParams: Promise<{ quote?: string | string[] }>
 }) {
 	const { slug: slugParts } = await params
 	const slug = slugParts.join("/")
@@ -102,6 +104,7 @@ export default async function MarkdownPage({
 			document={resolved.document}
 			isPost={resolved.isPost}
 			related={related}
+			searchParams={searchParams}
 			viewStats={viewStats}
 		/>
 	)

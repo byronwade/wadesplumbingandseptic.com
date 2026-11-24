@@ -5,6 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 
 import { QuoteForm } from "../../components/quote-form"
 import { freeQuoteCtaLabel } from "../../lib/public-facts"
+import { quoteUnavailableCopy } from "../../lib/quote-request"
 import { siteConfig } from "../../lib/site"
 
 const html = renderToStaticMarkup(
@@ -36,4 +37,19 @@ test("quote form copy does not invent prices, hours claims, or pumping", () => {
 	assert.doesNotMatch(html, /Satisfaction guaranteed|Since 2005|Fast response/)
 	assert.doesNotMatch(html, /24\/7|emergency|pumping/i)
 	assert.doesNotMatch(html, /\$\d/)
+})
+
+test("a redirected failure is visible in server HTML without JavaScript", () => {
+	const errorHtml = renderToStaticMarkup(
+		createElement(QuoteForm, {
+			initialError: quoteUnavailableCopy,
+			towns: [
+				{ name: "Santa Cruz", slug: "santa-cruz" },
+				{ name: "Felton", slug: "felton" },
+			],
+		}),
+	)
+	assert.ok(errorHtml.includes(quoteUnavailableCopy), errorHtml)
+	assert.ok(errorHtml.includes('role="alert"'), errorHtml)
+	assert.ok(errorHtml.includes('action="/api/quote"'), errorHtml)
 })
