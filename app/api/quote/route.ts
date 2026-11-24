@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 
+import { isTrustedQuoteRequest, quoteClientIp } from "@/lib/quote-guard"
 import {
 	parseQuoteRequest,
 	quoteUnavailableCopy,
@@ -18,15 +19,6 @@ const towns: QuoteTownOption[] = serviceAreaLocations.map((location) => ({
 	slug: location.slug,
 }))
 
-function clientIp(request: Request) {
-	const forwarded = request.headers.get("x-forwarded-for")
-	if (forwarded) {
-		const first = forwarded.split(",")[0]?.trim()
-		if (first) return first
-	}
-	return request.headers.get("x-real-ip")?.trim() || "unknown"
-}
-
 function rateLimited(ip: string) {
 	const now = Date.now()
 	const stamps = (recent.get(ip) ?? []).filter(
@@ -39,18 +31,6 @@ function rateLimited(ip: string) {
 	stamps.push(now)
 	recent.set(ip, stamps)
 	return false
-}
-
-function isSameOrigin(request: Request) {
-	const origin = request.headers.get("origin")
-	if (!origin) return true
-	const host = request.headers.get("host")
-	if (!host) return false
-	try {
-		return new URL(origin).host === host
-	} catch {
-		return false
-	}
 }
 
 function wantsJson(request: Request, contentType: string) {
@@ -76,11 +56,11 @@ function redirectTo(request: Request, path: string) {
 }
 
 export async function POST(request: Request) {
-	if (!isSameOrigin(request)) {
+	if (!isTrustedQuoteRequest(request.headers)) {
 		return NextResponse.json({ error: "Invalid origin" }, { status: 403 })
 	}
 
-	const ip = clientIp(request)
+	const ip = quoteClientIp(request.headers)
 	if (rateLimited(ip)) {
 		return NextResponse.json(
 			{
