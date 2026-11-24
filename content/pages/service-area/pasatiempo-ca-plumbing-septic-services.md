@@ -73,4 +73,3 @@ Venting problems in older Pasatiempo homes sometimes cause slow drains that look
 ## Schedule service in Pasatiempo
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing service in Pasatiempo. We serve Santa Cruz County and know the hillside communities between Scotts Valley and Santa Cruz. Quotes are free: [Get a Free Quote](/contact).
-

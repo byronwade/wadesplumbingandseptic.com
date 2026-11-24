@@ -73,4 +73,3 @@ Many Ben Lomond homes draw from private wells with iron, manganese, or fine sedi
 ## Call Wade's
 
 Questions about a slow drain, a wet spot in the yard, or a well that can't keep up? Call **[831.225.4344](tel:+18312254344)**. See our full [service areas](/service-areas) map, read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your property before we roll a truck. Quotes are free: [Get a Free Quote](/contact).
-

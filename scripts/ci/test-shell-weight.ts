@@ -25,6 +25,8 @@ const bannedModules = [
 	"components/ui/command.tsx",
 	"components/ui/sheet.tsx",
 	"components/save-contact-prompt.tsx",
+	"components/site-header-nav.tsx",
+	"components/site-header-mobile-menu.tsx",
 ]
 
 const staticImport =
@@ -96,6 +98,14 @@ for (const banned of bannedModules) {
 assert.ok(
 	reached.includes("components/app-command-shell.tsx"),
 	"The root layout must mount AppCommandShell so Ctrl+K and the header search buttons work on every page.",
+)
+assert.ok(
+	reached.includes("components/deferred-header-nav.tsx"),
+	"The header must defer the Radix mega-menu so it stays out of the first load.",
+)
+assert.ok(
+	reached.includes("components/header-toolbar.tsx"),
+	"The header toolbar (search, call, mobile menu) must stay on every page.",
 )
 
 console.log(

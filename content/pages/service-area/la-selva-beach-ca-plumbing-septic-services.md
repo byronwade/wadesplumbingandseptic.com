@@ -69,4 +69,3 @@ La Selva Beach sits low enough that winter storms raise local groundwater and te
 ## La Selva Beach Contact
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for service in La Selva Beach. Quotes are free: [Get a Free Quote](/contact).
-

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Link from "next/link"
 import {
 	ArrowRight,
@@ -18,7 +19,6 @@ import { CallButton } from "@/components/call-button"
 import { HomeBelowFold } from "@/components/home-below-fold"
 import { HomeHeroMedia } from "@/components/home-hero-media"
 import { JsonLd } from "@/components/json-ld"
-import { ProblemFinder } from "@/components/problem-finder"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import {
@@ -30,6 +30,10 @@ import {
 import { finderProblems, finderSpokes, finderTowns } from "@/lib/problem-finder"
 import { buildPageMetadata, faqPageJsonLd } from "@/lib/seo"
 import { cn } from "@/lib/utils"
+
+const ProblemFinder = dynamic(() =>
+	import("@/components/problem-finder").then((mod) => mod.ProblemFinder),
+)
 
 export const metadata: Metadata = buildPageMetadata({
 	title: "Santa Cruz Plumbing & Septic",
