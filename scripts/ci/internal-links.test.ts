@@ -6,9 +6,11 @@ import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
 import { CityServiceGuides } from "../../components/city-service-guides"
+import { ContentCard } from "../../components/content-card"
 import { GuideLocalLinks } from "../../components/guide-local-links"
 import { RelatedContentSections } from "../../components/related-content"
 import { ServiceTownLinks } from "../../components/service-town-links"
+import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
 import { relatedTownsFor } from "../../lib/related-towns"
 import { cityServicePages, cityServicePath } from "../../lib/city-service-pages"
 import { serviceAreaLocations } from "../../lib/service-areas"
@@ -148,4 +150,33 @@ test("every service markdown file exists for city x service spokes", () => {
 		const file = path.join(servicesDir, `${page.serviceSlug}.md`)
 		assert.ok(fs.existsSync(file), file)
 	}
+})
+
+test("service cards name the destination instead of Learn more", () => {
+	const html = renderToStaticMarkup(
+		createElement(ContentCard, {
+			item: {
+				slug: "hydro-jetting",
+				title: "Hydro Jetting",
+				description: "Clear stubborn drains.",
+				category: "Plumbing",
+				href: "/service-offerings/hydro-jetting",
+			},
+			variant: "service",
+		}),
+	)
+	assert.doesNotMatch(html, />Learn more</)
+	assert.ok(html.includes('aria-label="View Hydro Jetting"'), html)
+	assert.ok(html.includes("View service"), html)
+})
+
+test("glossary term pages keep the same Call and Free Quote band as glossary hubs", () => {
+	const source = fs.readFileSync(
+		path.join("components", "glossary-term-page.tsx"),
+		"utf8",
+	)
+	assert.match(source, /<ContactCta/)
+	assert.match(source, /Need this explained for your home\?/)
+	assert.ok(freeQuoteCtaLabel)
+	assert.ok(freeQuoteHref.startsWith("/contact"))
 })
