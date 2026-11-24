@@ -7,7 +7,7 @@ import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
@@ -25,7 +25,7 @@ export function ContentConversionCta({
 	}
 }) {
 	const secondary = secondaryAction ?? {
-		href: freeQuotePath,
+		href: freeQuoteHref,
 		label: freeQuoteCtaLabel,
 		external: false,
 	}

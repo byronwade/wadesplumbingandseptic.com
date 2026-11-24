@@ -6,7 +6,7 @@ import { BadgeCheck, ChevronRight } from "@/components/icons"
 import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -306,7 +306,7 @@ export function ContentHero({
 										}),
 										"w-full sm:w-auto",
 									)}
-									href={freeQuotePath}
+									href={freeQuoteHref as Route}
 								>
 									{freeQuoteCtaLabel}
 								</Link>
@@ -384,9 +384,9 @@ export function ContentHero({
 										}),
 										"w-full sm:w-auto",
 									)}
-									href={tip ? "/contact" : "/service-areas"}
+									href={(tip ? freeQuoteHref : "/service-areas") as Route}
 								>
-									{tip ? "Ask us a question" : "Check your town"}
+									{tip ? "Get a Free Quote" : "Check your town"}
 								</Link>
 							</div>
 						</div>
@@ -455,7 +455,7 @@ export function ContentHero({
 									}),
 									"w-full sm:w-auto",
 								)}
-								href={freeQuotePath}
+								href={freeQuoteHref as Route}
 							>
 								{freeQuoteCtaLabel}
 							</Link>

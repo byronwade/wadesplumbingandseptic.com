@@ -39,6 +39,7 @@ import {
 	serviceNavLinks,
 	type MegaNavItem,
 } from "@/lib/navigation"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -231,7 +232,10 @@ function CompanyMegaMenu() {
 				</NavigationMenuLink>
 			</div>
 
-			<MegaFooter action={"/contact" as Route} actionLabel="Get a free quote" />
+			<MegaFooter
+				action={freeQuoteHref as Route}
+				actionLabel={freeQuoteCtaLabel}
+			/>
 		</div>
 	)
 }

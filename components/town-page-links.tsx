@@ -6,7 +6,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import {
 	freeQuoteCtaLabel,
-	freeQuotePath,
+	freeQuoteHref,
 	septicSummary,
 } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
@@ -110,7 +110,7 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 								}),
 								"w-full sm:w-auto",
 							)}
-							href={freeQuotePath as Route}
+							href={freeQuoteHref as Route}
 							prefetch={false}
 						>
 							{freeQuoteCtaLabel}

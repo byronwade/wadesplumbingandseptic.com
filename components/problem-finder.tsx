@@ -8,6 +8,7 @@ import { CallButton } from "@/components/call-button"
 import { ArrowRight } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
+import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import type { FinderProblem, FinderTown } from "@/lib/problem-finder"
 import { cn } from "@/lib/utils"
 
@@ -127,7 +128,7 @@ export function ProblemFinder({
 										Your town (optional)
 									</label>
 									<select
-										className="border-input bg-field mt-2 block min-h-12 w-full rounded-md border px-3 text-base shadow-[inset_0_1px_1px_oklch(0_0_0/0.18)]"
+										className="field-input mt-2 block w-full"
 										id={townFieldId}
 										onChange={(event) => setTownSlug(event.target.value)}
 										value={townSlug}
@@ -174,9 +175,9 @@ export function ProblemFinder({
 											}),
 											"w-full sm:w-auto sm:grow",
 										)}
-										href="/contact"
+										href={freeQuoteHref as Route}
 									>
-										Send a message
+										{freeQuoteCtaLabel}
 									</Link>
 								</div>
 							</>

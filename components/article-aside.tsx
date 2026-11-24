@@ -19,7 +19,7 @@ export function ArticleAside({
 							{headings.map((heading) => (
 								<li key={heading.id}>
 									<a
-										className="text-muted-foreground hover:text-primary leading-snug font-semibold transition-colors"
+										className="text-muted-foreground hover:text-primary focus-visible:ring-ring rounded-sm leading-snug font-semibold transition-colors outline-none focus-visible:ring-2"
 										href={`#${heading.id}`}
 									>
 										{heading.text}
