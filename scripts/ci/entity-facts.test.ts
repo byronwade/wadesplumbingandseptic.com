@@ -15,6 +15,7 @@ import {
 	bestGuideHrefs,
 	coreServiceSlugs,
 	publicFactRows,
+	recentGuides,
 } from "../../lib/public-facts"
 import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
 import {
@@ -338,6 +339,14 @@ test("llms.txt lists core services and best guides instead of dumping every post
 	}
 	for (const href of bestGuideHrefs)
 		assert.ok(body.includes(`${siteConfig.url}${href}`), href)
+	assert.ok(body.includes("## Recent guides"))
+	for (const guide of recentGuides) {
+		assert.ok(body.includes(`${siteConfig.url}${guide.href}`), guide.href)
+		assert.ok(
+			fs.existsSync(path.join("content", "posts", `${guide.href.slice(1)}.md`)),
+			guide.href,
+		)
+	}
 	for (const phrase of bannedPublicPhrases)
 		assert.equal(
 			body.toLowerCase().includes(phrase.toLowerCase()),

@@ -4,6 +4,7 @@ import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
 import { QuoteForm } from "../../components/quote-form"
+import { contactInfo } from "../../lib/contact"
 import { freeQuoteCtaLabel } from "../../lib/public-facts"
 import { quoteUnavailableCopy } from "../../lib/quote-request"
 import { siteConfig } from "../../lib/site"
@@ -52,4 +53,6 @@ test("a redirected failure is visible in server HTML without JavaScript", () => 
 	assert.ok(errorHtml.includes(quoteUnavailableCopy), errorHtml)
 	assert.ok(errorHtml.includes('role="alert"'), errorHtml)
 	assert.ok(errorHtml.includes('action="/api/quote"'), errorHtml)
+	assert.ok(errorHtml.includes(`href="${contactInfo.phoneHref}"`), errorHtml)
+	assert.ok(errorHtml.includes(`href="${contactInfo.emailHref}"`), errorHtml)
 })

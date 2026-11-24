@@ -209,16 +209,12 @@ export function localBusinessJsonLd(
 				url: "https://www.cslb.ca.gov",
 			},
 		})),
-		// Santa Cruz communities sit inside the named county, so a reference is
-		// enough. Santa Clara communities are spelled out: that county is not.
+		// Every community is a full Place on this node. Santa Cruz County is
+		// also named countywide; Santa Clara County is not, because coverage
+		// there is only the listed towns.
 		areaServed: [
 			santaCruzCountyJsonLd,
-			...serviceAreaLocations.map((location) => {
-				const place = serviceAreaPlaceJsonLd(location)
-				return location.county === "Santa Cruz County"
-					? { "@id": place["@id"] }
-					: place
-			}),
+			...serviceAreaLocations.map(serviceAreaPlaceJsonLd),
 		],
 		openingHours: "Mo-Fr 09:00-17:00",
 		openingHoursSpecification: [openingHoursJsonLd()],

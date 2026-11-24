@@ -234,19 +234,21 @@ export function SiteHeaderMobileMenu({
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						size="lg"
 					/>
-					<button
-						type="button"
+					<Link
+						prefetch={false}
 						className={cn(
 							buttonVariants({ variant: "outline", size: "lg", wrap: true }),
 							"w-full",
 						)}
-						onClick={() => {
+						href={freeQuoteHref as Route}
+						onClick={(event) => {
+							event.preventDefault()
 							closeMenu()
-							router.push(freeQuoteHref)
+							router.push(freeQuoteHref as Route)
 						}}
 					>
 						{freeQuoteCtaLabel}
-					</button>
+					</Link>
 				</SheetFooter>
 			</SheetContent>
 		</Sheet>

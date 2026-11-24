@@ -45,6 +45,22 @@ export const bestGuideHrefs = [
 	"/glossary",
 ] as const
 
+/** Newest homeowner guides listed in llms.txt. Keep this short. */
+export const recentGuides = [
+	{
+		href: "/how-to-prepare-for-a-re-pipe-santa-cruz",
+		title: "How to Prepare Your Santa Cruz County Home for a Re-pipe",
+	},
+	{
+		href: "/backflow-testing-santa-cruz-county-homes",
+		title: "Annual Backflow Testing for Santa Cruz County Homes",
+	},
+	{
+		href: "/sewer-camera-inspection-santa-cruz-homes",
+		title: "What a Sewer Camera Inspection Shows in Santa Cruz",
+	},
+] as const
+
 export const keyPages = [
 	{ href: "/services", title: "All Services" },
 	{ href: "/service-areas", title: "Service Areas" },

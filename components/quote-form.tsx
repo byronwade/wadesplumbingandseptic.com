@@ -4,7 +4,11 @@ import { useId, useRef, useState, type FormEvent } from "react"
 
 import { CallButton } from "@/components/call-button"
 import { Check, CircleHelp, Loader2 } from "@/components/icons"
-import { Button } from "@/components/ui/button"
+import {
+	EmailAddress,
+	ProtectedContactLink,
+} from "@/components/protected-contact"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import {
 	parseQuoteRequest,
@@ -27,6 +31,27 @@ function fieldFromForm(form: HTMLFormElement): Record<string, string> {
 		if (typeof value === "string") payload[key] = value
 	}
 	return payload
+}
+
+function QuoteOtherWays() {
+	return (
+		<div className="mt-4 flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center">
+			<CallButton
+				className="w-full sm:w-auto"
+				desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+				size="lg"
+			/>
+			<ProtectedContactLink
+				className={cn(
+					buttonVariants({ variant: "outline", size: "lg", wrap: true }),
+					"w-full sm:w-auto",
+				)}
+				kind="email"
+			>
+				Email <EmailAddress />
+			</ProtectedContactLink>
+		</div>
+	)
 }
 
 export function QuoteForm({
@@ -161,13 +186,20 @@ export function QuoteForm({
 			</div>
 
 			{formError ? (
-				<p
-					className="border-destructive/40 bg-destructive/10 text-destructive mb-5 flex gap-2 rounded-md border px-3 py-3 text-sm"
+				<div
+					className="border-destructive/40 bg-destructive/10 text-destructive mb-5 rounded-md border px-3 py-3 text-sm"
 					role="alert"
 				>
-					<CircleHelp aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
-					<span>{formError}</span>
-				</p>
+					<p className="flex gap-2">
+						<CircleHelp aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+						<span>{formError}</span>
+					</p>
+					{(status === "error" || initialError) && (
+						<div className="text-foreground">
+							<QuoteOtherWays />
+						</div>
+					)}
+				</div>
 			) : null}
 
 			<div className="grid gap-5">
