@@ -392,6 +392,11 @@ export function ContentHero({
 						</div>
 						{image ? (
 							<div className="hero-service-media relative hidden aspect-[4/3] overflow-hidden rounded-lg lg:block">
+								{/*
+								  Hidden below lg, so it is not the mobile LCP. Leave it
+								  lazy: a high-priority preload would still download on
+								  phones and race the first-screen type.
+								*/}
 								<ContentHeroImage alt={imageAlt?.trim() || title} src={image} />
 							</div>
 						) : null}

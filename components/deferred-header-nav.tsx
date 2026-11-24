@@ -15,7 +15,14 @@ import { StaticHeaderNav } from "@/components/static-header-nav"
  */
 const SiteHeaderNav = dynamic(
 	() => import("@/components/site-header-nav").then((mod) => mod.SiteHeaderNav),
-	{ ssr: false },
+	{
+		ssr: false,
+		/*
+		  Keep the server links on screen while the mega-menu chunk downloads.
+		  Flipping `ready` without a fallback unmounted the static nav first.
+		*/
+		loading: () => <StaticHeaderNav />,
+	},
 )
 
 export function DeferredHeaderNav() {
