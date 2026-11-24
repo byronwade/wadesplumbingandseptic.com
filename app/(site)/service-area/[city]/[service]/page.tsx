@@ -137,7 +137,7 @@ export default async function CityServicePage({
 									size: "lg",
 									wrap: true,
 								}),
-								"w-full sm:w-auto justify-center",
+								"w-full justify-center sm:w-auto",
 							)}
 							href={freeQuotePath as Route}
 						>

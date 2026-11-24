@@ -1,10 +1,8 @@
 "use client"
 
 import type { Route } from "next"
-import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
-import { useRef, useState } from "react"
 import {
 	ArrowRight,
 	BadgeCheck,
@@ -12,9 +10,7 @@ import {
 	Building2,
 	CircleHelp,
 	Droplets,
-	Menu,
 	Phone,
-	Search,
 	ShieldCheck,
 	Siren,
 	Star,
@@ -24,11 +20,9 @@ import {
 	type IconComponent,
 } from "@/components/icons"
 
-import { CallButton, CallIconButton } from "@/components/call-button"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { CallButton } from "@/components/call-button"
+import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { openGlobalSearch } from "@/lib/search-events"
-import { prefetchSearchIndex } from "@/lib/search-client"
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -47,14 +41,6 @@ import {
 } from "@/lib/navigation"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
-
-const SiteHeaderMobileMenu = dynamic(
-	() =>
-		import("@/components/site-header-mobile-menu").then(
-			(mod) => mod.SiteHeaderMobileMenu,
-		),
-	{ ssr: false },
-)
 
 const megaIcons: Record<MegaNavItem["icon"], IconComponent> = {
 	wrench: Wrench,
@@ -251,133 +237,56 @@ function CompanyMegaMenu() {
 }
 
 export function SiteHeaderNav() {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-	const [mobileMenuReady, setMobileMenuReady] = useState(false)
-	const mobileMenuTriggerRef = useRef<HTMLButtonElement>(null)
-
-	const openMobileMenu = () => {
-		setMobileMenuReady(true)
-		setMobileMenuOpen(true)
-	}
-
-	// The lazy menu has no Radix Trigger to restore focus to on dismissal.
-	const restoreMobileMenuFocus = (event: Event) => {
-		event.preventDefault()
-		mobileMenuTriggerRef.current?.focus()
-	}
-
 	return (
-		<>
-			<NavigationMenu
-				className="static hidden max-w-none flex-1 justify-center @min-[64rem]/header:flex"
-				aria-label="Primary navigation"
-			>
-				<NavigationMenuList>
-					<NavigationMenuItem>
+		<NavigationMenu
+			className="static hidden max-w-none flex-1 justify-center @min-[64rem]/header:flex"
+			aria-label="Primary navigation"
+		>
+			<NavigationMenuList>
+				<NavigationMenuItem>
+					<NavigationMenuLink asChild>
+						<Link
+							prefetch={false}
+							className={cn(navigationMenuTriggerStyle(), triggerClassName)}
+							href={"/" as Route}
+						>
+							Home
+						</Link>
+					</NavigationMenuLink>
+				</NavigationMenuItem>
+
+				<NavigationMenuItem>
+					<NavigationMenuTrigger className={triggerClassName}>
+						Services
+					</NavigationMenuTrigger>
+					<NavigationMenuContent>
+						<ServicesMegaMenu />
+					</NavigationMenuContent>
+				</NavigationMenuItem>
+
+				{midNavLinks.map((item) => (
+					<NavigationMenuItem key={item.href}>
 						<NavigationMenuLink asChild>
 							<Link
 								prefetch={false}
 								className={cn(navigationMenuTriggerStyle(), triggerClassName)}
-								href={"/" as Route}
+								href={item.href as Route}
 							>
-								Home
+								{item.label}
 							</Link>
 						</NavigationMenuLink>
 					</NavigationMenuItem>
+				))}
 
-					<NavigationMenuItem>
-						<NavigationMenuTrigger className={triggerClassName}>
-							Services
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ServicesMegaMenu />
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-
-					{midNavLinks.map((item) => (
-						<NavigationMenuItem key={item.href}>
-							<NavigationMenuLink asChild>
-								<Link
-									prefetch={false}
-									className={cn(navigationMenuTriggerStyle(), triggerClassName)}
-									href={item.href as Route}
-								>
-									{item.label}
-								</Link>
-							</NavigationMenuLink>
-						</NavigationMenuItem>
-					))}
-
-					<NavigationMenuItem>
-						<NavigationMenuTrigger className={triggerClassName}>
-							Company
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<CompanyMegaMenu />
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-				</NavigationMenuList>
-			</NavigationMenu>
-
-			<div className="hidden shrink-0 items-center gap-2 @min-[40rem]/header:flex">
-				<Button
-					type="button"
-					variant="ghost"
-					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark hover:bg-transparent"
-					aria-label="Search services, tips, and pages"
-					onMouseEnter={() => void prefetchSearchIndex()}
-					onFocus={() => void prefetchSearchIndex()}
-					onClick={openGlobalSearch}
-				>
-					<Search aria-hidden="true" className="size-5" />
-				</Button>
-				<CallButton
-					className="gap-2"
-					desktopLabel={contactInfo.phoneDisplay}
-					prefer="dial"
-					size="lg"
-					wrap={false}
-				/>
-			</div>
-
-			{/* Icon targets are sized in px: icons are not text, so enlarged text
-			    should not double them and push the menu button off screen. */}
-			<div className="flex shrink-0 items-center @min-[64rem]/header:hidden">
-				<Button
-					type="button"
-					variant="ghost"
-					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[16px]"
-					aria-label="Search services, tips, and pages"
-					onMouseEnter={() => void prefetchSearchIndex()}
-					onFocus={() => void prefetchSearchIndex()}
-					onClick={openGlobalSearch}
-				>
-					<Search aria-hidden="true" className="size-5" />
-				</Button>
-				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] rounded-md hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[20px]" />
-				<Button
-					ref={mobileMenuTriggerRef}
-					type="button"
-					variant="ghost"
-					size="icon"
-					className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] hover:bg-transparent [&_svg]:size-[16px]"
-					aria-label="Open main menu"
-					aria-expanded={mobileMenuOpen}
-					aria-haspopup="dialog"
-					onClick={openMobileMenu}
-				>
-					<Menu aria-hidden="true" className="size-5" />
-				</Button>
-				{mobileMenuReady ? (
-					<SiteHeaderMobileMenu
-						open={mobileMenuOpen}
-						onOpenChange={setMobileMenuOpen}
-						onCloseAutoFocus={restoreMobileMenuFocus}
-					/>
-				) : null}
-			</div>
-		</>
+				<NavigationMenuItem>
+					<NavigationMenuTrigger className={triggerClassName}>
+						Company
+					</NavigationMenuTrigger>
+					<NavigationMenuContent>
+						<CompanyMegaMenu />
+					</NavigationMenuContent>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+		</NavigationMenu>
 	)
 }

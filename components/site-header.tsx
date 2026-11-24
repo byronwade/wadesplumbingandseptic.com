@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { DeferredHeaderNav } from "@/components/deferred-header-nav"
+import { HeaderToolbar } from "@/components/header-toolbar"
 import { OfficeHoursStatus } from "@/components/office-status"
-import { SiteHeaderNav } from "@/components/site-header-nav"
 import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
@@ -56,7 +57,8 @@ export function SiteHeader() {
 						</Link>
 					</div>
 
-					<SiteHeaderNav />
+					<DeferredHeaderNav />
+					<HeaderToolbar />
 				</div>
 			</div>
 		</header>

@@ -1,5 +1,4 @@
 import type { Route } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { BadgeCheck, ChevronRight } from "@/components/icons"
@@ -10,6 +9,61 @@ import { contactInfo } from "@/lib/contact"
 import { freeQuoteCtaLabel, freeQuotePath } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
+
+/*
+  next/image fill + unoptimized dropped fetchPriority on interior heroes, so
+  the LCP photograph raced the header mark. A sized <img> keeps the same box
+  (parent already has aspect-ratio) and the high-priority hint.
+*/
+const heroAvifByWebp: Record<string, string> = {
+	"/images/locations/santa-cruz-redwoods.webp":
+		"/images/locations/santa-cruz-redwoods.avif",
+	"/images/services/drain-clearing.webp":
+		"/images/services/drain-clearing.avif",
+	"/images/team/wades-team.webp": "/images/team/wades-team.avif",
+	"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp":
+		"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.avif",
+}
+
+function ContentHeroImage({
+	src,
+	alt,
+	priority = false,
+}: {
+	src: string
+	alt: string
+	priority?: boolean
+}) {
+	const avifSrc = heroAvifByWebp[src]
+	const preloadHref = avifSrc ?? src
+
+	return (
+		<>
+			{priority ? (
+				<link
+					rel="preload"
+					as="image"
+					fetchPriority="high"
+					href={preloadHref}
+					{...(avifSrc ? { type: "image/avif" } : {})}
+				/>
+			) : null}
+			<picture>
+				{avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+				<img
+					alt={alt}
+					className="absolute inset-0 size-full object-cover"
+					decoding={priority ? "sync" : "async"}
+					fetchPriority={priority ? "high" : "low"}
+					height={900}
+					loading={priority ? "eager" : "lazy"}
+					src={src}
+					width={1600}
+				/>
+			</picture>
+		</>
+	)
+}
 
 /* Confirmed facts only: license and insurance, how pricing works, free quotes. */
 const serviceHeroFacts = [
@@ -203,14 +257,9 @@ export function ContentHero({
 					{image ? (
 						<figure className="hero-article-media mt-8 sm:mt-10">
 							<div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-[2/1] lg:aspect-[12/5]">
-								<Image
+								<ContentHeroImage
 									alt={imageAlt?.trim() || title}
-									className="object-cover"
-									decoding="sync"
-									fill
 									priority
-									quality={75}
-									sizes="(min-width: 1200px) 72rem, 100vw"
 									src={image}
 								/>
 							</div>
@@ -278,14 +327,9 @@ export function ContentHero({
 
 					{image ? (
 						<div className="hero-service-media relative aspect-[16/10] overflow-hidden rounded-xl shadow-[var(--shadow-float)] lg:aspect-[4/3]">
-							<Image
+							<ContentHeroImage
 								alt={imageAlt?.trim() || title}
-								className="object-cover"
-								decoding="sync"
-								fill
 								priority
-								quality={70}
-								sizes="(min-width: 1024px) 40vw, 100vw"
 								src={image}
 							/>
 						</div>
@@ -348,16 +392,7 @@ export function ContentHero({
 						</div>
 						{image ? (
 							<div className="hero-service-media relative hidden aspect-[4/3] overflow-hidden rounded-lg lg:block">
-								<Image
-									alt={imageAlt?.trim() || title}
-									className="object-cover"
-									decoding="sync"
-									fill
-									priority
-									quality={65}
-									sizes="26rem"
-									src={image}
-								/>
+								<ContentHeroImage alt={imageAlt?.trim() || title} src={image} />
 							</div>
 						) : null}
 					</div>
@@ -380,16 +415,7 @@ export function ContentHero({
 					aria-hidden="true"
 					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-35 lg:w-3/5"
 				>
-					<Image
-						alt=""
-						className="object-cover"
-						decoding="sync"
-						fill
-						priority
-						quality={50}
-						sizes="60vw"
-						src={image}
-					/>
+					<ContentHeroImage alt="" priority src={image} />
 					<div className="absolute inset-0 bg-[color-mix(in_oklab,var(--dark-1)_45%,transparent)]" />
 				</div>
 			) : null}

@@ -76,4 +76,3 @@ Santa Clara County permitting applies to septic work on the Santa Clara side of 
 ## Confirm coverage and schedule service
 
 **Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area. Quotes are free: [Get a Free Quote](/contact).
-

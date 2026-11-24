@@ -73,4 +73,3 @@ Common Amesti plumbing calls include kitchen and bathroom drain clogs, water hea
 ## Schedule service in Amesti
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) to schedule plumbing or septic service in Amesti. We cover all of Santa Cruz County and prioritize clear communication about timing, access, and what to expect on arrival. Quotes are free: [Get a Free Quote](/contact).
-

@@ -1,74 +1,33 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import Link from "next/link"
 import { useEffect, useState } from "react"
 
-import { CallLabel } from "@/components/call-label"
-import { buttonVariants } from "@/components/ui/button"
-import { contactInfo } from "@/lib/contact"
-import { cn } from "@/lib/utils"
+import { StaticHeaderNav } from "@/components/static-header-nav"
 
 /**
  * Static fallback + idle hydration for the Radix mega-menu. Keeping that
  * client tree off the main thread until after LCP is what moves mobile
  * performance from the mid-80s into the high 90s under Slow 4G.
+ *
+ * Phones never download the mega-menu chunk: the hamburger in HeaderToolbar
+ * covers navigation there.
  */
 const SiteHeaderNav = dynamic(
 	() => import("@/components/site-header-nav").then((mod) => mod.SiteHeaderNav),
 	{ ssr: false },
 )
 
-function HeaderNavFallback() {
-	return (
-		<nav aria-label="Primary" className="flex items-center gap-2 sm:gap-3">
-			<div className="hidden items-center gap-1 lg:flex">
-				<Link
-					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/services"
-				>
-					Services
-				</Link>
-				<Link
-					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/service-areas"
-				>
-					Areas
-				</Link>
-				<Link
-					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/expert-tips"
-				>
-					Tips
-				</Link>
-				<Link
-					prefetch={false}
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/contact"
-				>
-					Contact
-				</Link>
-			</div>
-			<a
-				className={cn(
-					buttonVariants({ size: "sm", variant: "default" }),
-					"inline-flex gap-2",
-				)}
-				href={contactInfo.phoneHref}
-			>
-				<CallLabel />
-			</a>
-		</nav>
-	)
-}
-
 export function DeferredHeaderNav() {
 	const [ready, setReady] = useState(false)
 
 	useEffect(() => {
+		const desktop = window.matchMedia("(min-width: 64rem)")
+		let idleId: number | undefined
+		let timeoutId: number | undefined
+
+		const load = () => setReady(true)
+
 		const idleWindow = window as Window & {
 			requestIdleCallback?: (
 				callback: IdleRequestCallback,
@@ -77,17 +36,28 @@ export function DeferredHeaderNav() {
 			cancelIdleCallback?: (handle: number) => void
 		}
 
-		if (idleWindow.requestIdleCallback) {
-			const id = idleWindow.requestIdleCallback(() => setReady(true), {
-				timeout: 2000,
-			})
-			return () => idleWindow.cancelIdleCallback?.(id)
+		const schedule = () => {
+			if (idleWindow.requestIdleCallback) {
+				idleId = idleWindow.requestIdleCallback(load, { timeout: 2000 })
+			} else {
+				timeoutId = window.setTimeout(load, 1)
+			}
 		}
 
-		const timer = globalThis.setTimeout(() => setReady(true), 1)
-		return () => globalThis.clearTimeout(timer)
+		if (desktop.matches) schedule()
+
+		const onChange = () => {
+			if (desktop.matches) load()
+		}
+		desktop.addEventListener("change", onChange)
+
+		return () => {
+			desktop.removeEventListener("change", onChange)
+			if (idleId !== undefined) idleWindow.cancelIdleCallback?.(idleId)
+			if (timeoutId !== undefined) window.clearTimeout(timeoutId)
+		}
 	}, [])
 
-	if (!ready) return <HeaderNavFallback />
+	if (!ready) return <StaticHeaderNav />
 	return <SiteHeaderNav />
 }

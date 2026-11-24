@@ -1,60 +1,58 @@
+import type { Route } from "next"
 import Link from "next/link"
 
-import { Phone } from "@/components/icons"
-import { buttonVariants } from "@/components/ui/button"
-import { contactInfo } from "@/lib/contact"
-import { cn } from "@/lib/utils"
+import { midNavLinks } from "@/lib/navigation"
+
+const linkClassName =
+	"hover:text-primary-bright focus:text-primary-bright focus-visible:ring-ring text-on-dark hover:bg-transparent focus:bg-transparent inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-3.5 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2 @max-[80rem]/header:px-2.5"
 
 /**
- * Server-only primary nav fallback. Phone number is the CTA — not save-contact.
+ * Server-rendered desktop links that match the mega-menu trigger row. Shown
+ * until the Radix menu hydrates on wide screens; hidden on phones where the
+ * toolbar hamburger is the menu.
  */
 export function StaticHeaderNav() {
 	return (
 		<nav
-			aria-label="Primary"
-			className="flex shrink-0 items-center gap-1.5 sm:gap-3"
+			aria-label="Primary navigation"
+			className="static hidden max-w-none flex-1 items-center justify-center @min-[64rem]/header:flex"
 		>
-			<div className="hidden items-center gap-1 lg:flex">
-				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/services"
-					prefetch={false}
-				>
-					Services
-				</Link>
-				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/service-areas"
-					prefetch={false}
-				>
-					Areas
-				</Link>
-				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/expert-tips"
-					prefetch={false}
-				>
-					Tips
-				</Link>
-				<Link
-					className="text-on-dark/90 hover:text-on-dark rounded-md px-3 py-2 text-sm font-semibold transition-colors"
-					href="/contact"
-					prefetch={false}
-				>
-					Contact
-				</Link>
-			</div>
-			<a
-				aria-label={`Call ${contactInfo.phoneDisplay}`}
-				className={cn(
-					buttonVariants({ size: "sm", variant: "default" }),
-					"inline-flex max-w-[10.75rem] gap-1.5 truncate px-2.5 text-xs sm:max-w-none sm:gap-2 sm:px-3 sm:text-sm",
-				)}
-				href={contactInfo.phoneHref}
-			>
-				<Phone aria-hidden="true" className="size-4 shrink-0" />
-				<span className="truncate">{contactInfo.phoneDisplay}</span>
-			</a>
+			<ul className="flex flex-1 list-none items-center justify-center gap-1">
+				<li>
+					<Link prefetch={false} className={linkClassName} href={"/" as Route}>
+						Home
+					</Link>
+				</li>
+				<li>
+					<Link
+						prefetch={false}
+						className={linkClassName}
+						href={"/services" as Route}
+					>
+						Services
+					</Link>
+				</li>
+				{midNavLinks.map((item) => (
+					<li key={item.href}>
+						<Link
+							prefetch={false}
+							className={linkClassName}
+							href={item.href as Route}
+						>
+							{item.label}
+						</Link>
+					</li>
+				))}
+				<li>
+					<Link
+						prefetch={false}
+						className={linkClassName}
+						href={"/about-us" as Route}
+					>
+						Company
+					</Link>
+				</li>
+			</ul>
 		</nav>
 	)
 }

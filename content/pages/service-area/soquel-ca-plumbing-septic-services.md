@@ -69,4 +69,3 @@ In Soquel, post-fire rebuilds and ADU additions increase fixture counts on septi
 ## Soquel Service Contact
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
-

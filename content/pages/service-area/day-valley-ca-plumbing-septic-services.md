@@ -75,4 +75,3 @@ Some Day Valley driveways are long, narrow, and steep, so tell Wade's about acce
 ## Schedule service in Day Valley
 
 Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Day Valley. We serve all of Santa Cruz County and are familiar with the Aptos hills and surrounding oak country. Quotes are free: [Get a Free Quote](/contact).
-

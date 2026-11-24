@@ -68,4 +68,3 @@ Aptos soils range from sandy to clay mixes depending on elevation, and condition
 ## Aptos Service from Wade's
 
 Call [831.225.4344](tel:+18312254344) for plumbing or septic help in Aptos. Quotes are free: [Get a Free Quote](/contact).
-
