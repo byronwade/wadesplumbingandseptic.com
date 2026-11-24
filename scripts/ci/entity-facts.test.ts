@@ -292,6 +292,15 @@ test("llms.txt link text repeats only confirmed business facts", async () => {
 	assert.deepEqual(businessFactIssues(prose), [])
 })
 
+test("the footer repeats the same business description, phone and hours", () => {
+	const footer = fs.readFileSync("components/site-footer.tsx", "utf8")
+	assert.ok(footer.includes("siteConfig.description"))
+	assert.ok(footer.includes("siteConfig.phone"))
+	assert.ok(footer.includes("siteConfig.hours"))
+	assert.ok(footer.includes("siteConfig.address.display"))
+	assert.ok(footer.includes("siteConfig.licenses"))
+})
+
 test("review pages and thank-you link the Google review URL", () => {
 	for (const file of [
 		"content/pages/about-us.md",

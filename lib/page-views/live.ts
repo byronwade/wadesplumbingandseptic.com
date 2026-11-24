@@ -59,5 +59,6 @@ export async function withRelatedViewStatsCached(
 	return {
 		services: attachViewStats(related.services, store, "service", today),
 		posts: attachViewStats(related.posts, store, "tip", today),
+		towns: related.towns,
 	}
 }

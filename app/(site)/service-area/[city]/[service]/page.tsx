@@ -4,13 +4,19 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Check } from "@/components/icons"
 
+import { AnswerFirst } from "@/components/answer-first"
 import { CallButton } from "@/components/call-button"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
+import { cityServiceFaqs, isSepticWork } from "@/lib/answer-first"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import {
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+	weekdayHoursPhrase,
+} from "@/lib/public-facts"
 import {
 	cityServicePath,
 	getCityLocation,
@@ -47,7 +53,7 @@ export async function generateMetadata({
 
 	return buildPageMetadata({
 		title: `${page.serviceTitle} in ${location.name}, CA`,
-		description: `${page.serviceTitle} for ${location.name} homes: ${page.commonIssues[0]!.replace(/\.$/, "")}. Quotes are free. Call 831.225.4344.`,
+		description: `${page.serviceTitle} for ${location.name} homes: ${page.commonIssues[0]!.replace(/\.$/, "")}. Quotes are free. Call 831.225.4344 ${weekdayHoursPhrase()}.`,
 		pathname: cityServicePath(city, service),
 		image: "/images/locations/santa-cruz-plumber.webp",
 	})
@@ -87,7 +93,14 @@ export default async function CityServicePage({
 		},
 	}
 
-	const faqSchema = page.faq ? serviceFaqJsonLd(page.faq) : null
+	const faqs = cityServiceFaqs(
+		page.serviceTitle,
+		location,
+		page.localAngle,
+		page.commonIssues,
+		page.faq,
+	)
+	const faqSchema = serviceFaqJsonLd(faqs)
 	const jsonLd = [
 		schema,
 		breadcrumbJsonLd([
@@ -108,12 +121,18 @@ export default async function CityServicePage({
 					{ href: cityHubHref, label: location.name },
 					{ label: page.serviceTitle },
 				]}
-				description={`${page.serviceTitle} for ${location.name}, ${location.county}. Local licensed help with a free quote and flat-rate pricing quoted on site.`}
+				description={`${page.serviceTitle} for ${location.name}, ${location.county}. Quotes are free. Call ${siteConfig.phone} ${weekdayHoursPhrase()}.`}
 				eyebrow={`${location.name}, CA`}
 				image={image}
 				imageAlt={`${page.serviceTitle} in ${location.name}`}
 				title={`${page.serviceTitle} in ${location.name}`}
 				variant="service"
+			/>
+
+			<AnswerFirst
+				includeSepticNote={isSepticWork(page.serviceTitle)}
+				place={`${location.name}, ${location.county}`}
+				work={page.serviceTitle.toLowerCase()}
 			/>
 
 			<section className="container-shell section-y">
@@ -213,14 +232,14 @@ export default async function CityServicePage({
 				</div>
 			</section>
 
-			{page.faq?.length ? (
+			{faqs.length ? (
 				<section className="surface-sunken border-border border-y">
 					<div className="container-shell section-y">
 						<div className="mx-auto max-w-3xl">
 							<p className="spec-label">FAQ</p>
 							<h2 className="type-title mt-3">Quick answers</h2>
 							<dl className="mt-[var(--space-block)] grid gap-6">
-								{page.faq.map((item) => (
+								{faqs.map((item) => (
 									<div key={item.question}>
 										<dt className="type-title text-xl">{item.question}</dt>
 										<dd className="type-body text-muted-foreground mt-2">
@@ -247,7 +266,7 @@ export default async function CityServicePage({
 										className="surface-panel inline-flex px-4 py-2 text-sm font-semibold"
 										href={item.href as Route}
 									>
-										{item.name}
+										{item.name} plumbing and septic
 									</Link>
 								</li>
 							))}

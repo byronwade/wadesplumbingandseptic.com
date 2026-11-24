@@ -8,10 +8,12 @@ import {
 	tokenize,
 	type RelatedSeedDocument,
 } from "@/lib/related-score"
+import { relatedTownsFor, townArchiveItem } from "@/lib/related-towns"
 
 export type RelatedContent = {
 	posts: ArchiveItem[]
 	services: ArchiveItem[]
+	towns: ArchiveItem[]
 }
 
 function toPostItem(post: RelatedSeedDocument): ArchiveItem {
@@ -48,6 +50,9 @@ export async function getRelatedForPost(
 			limits.services ?? 3,
 			exclude,
 		).map(toServiceItem),
+		towns: relatedTownsFor(
+			`${post.title}\n${post.description}\n${post.content}`,
+		).map(townArchiveItem),
 	}
 }
 
@@ -73,6 +78,7 @@ export async function getRelatedForService(
 			limits.services ?? 3,
 			exclude,
 		).map(toServiceItem),
+		towns: [],
 	}
 }
 
@@ -120,5 +126,10 @@ export async function getRelatedForTopic(
 			limits.services ?? 3,
 			exclude,
 		).map(toServiceItem),
+		towns: relatedTownsFor(
+			[topic.label, topic.description ?? "", ...(topic.keywords ?? [])].join(
+				" ",
+			),
+		).map(townArchiveItem),
 	}
 }

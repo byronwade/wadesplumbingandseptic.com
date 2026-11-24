@@ -13,6 +13,14 @@ export const notOfferedSummary = "septic tank pumping"
 
 export const quotesSummary = "Free"
 
+/** Weekday hours only, for quoteable sentences that also name Saturday/Sunday closed. */
+export function weekdayHoursPhrase() {
+	const closedAt = siteConfig.hours.indexOf(". Closed")
+	return closedAt === -1
+		? siteConfig.hours
+		: siteConfig.hours.slice(0, closedAt)
+}
+
 /** Visible quote CTA used on service, town, and contact conversion paths. */
 export const freeQuoteCtaLabel = "Get a Free Quote"
 export const freeQuotePath = "/contact"

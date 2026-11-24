@@ -1,3 +1,4 @@
+import { AnswerFirst } from "@/components/answer-first"
 import { CompactBusinessFacts } from "@/components/business-facts"
 import { ServiceCityLinks } from "@/components/city-service-guides"
 import { ServiceTownLinks } from "@/components/service-town-links"
@@ -8,12 +9,14 @@ import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
 import { RelatedContentSectionsWithStats } from "@/components/related-content-with-stats"
 import { ServiceContentSections } from "@/components/service-content-sections"
+import { isSepticWork, serviceWorkLabel } from "@/lib/answer-first"
 import type { ContentDocument } from "@/lib/content"
 import type { PageViewStats } from "@/lib/page-views"
 import type { RelatedContent } from "@/lib/related-content"
 import { getServiceImage } from "@/lib/service-images"
 import { parseServiceSections } from "@/lib/service-sections"
 import { breadcrumbJsonLd, serviceFaqJsonLd, serviceJsonLd } from "@/lib/seo"
+import { siteConfig } from "@/lib/site"
 
 export function ServiceLandingPage({
 	service,
@@ -42,6 +45,12 @@ export function ServiceLandingPage({
 				parent={{ href: "/services", label: "Services" }}
 				title={service.heroTitle ?? service.title}
 				variant="service"
+			/>
+
+			<AnswerFirst
+				includeSepticNote={isSepticWork(service.title)}
+				place={siteConfig.serviceArea}
+				work={serviceWorkLabel(service.title).toLowerCase()}
 			/>
 
 			<section

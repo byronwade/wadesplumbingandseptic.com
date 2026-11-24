@@ -82,8 +82,7 @@ export function SiteFooter() {
 							</span>
 						</Link>
 						<p className="text-on-dark-muted mt-5 max-w-xs text-sm leading-relaxed">
-							Family-owned plumbing and septic specialists. Honest
-							recommendations, clear pricing, and quality workmanship.
+							{siteConfig.description}
 						</p>
 						<p className="text-on-dark-muted mt-4 max-w-xs text-sm leading-relaxed">
 							{siteConfig.address.display}
