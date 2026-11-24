@@ -35,6 +35,14 @@ test("business schema links every existing mapped community exactly once", () =>
 				area["@id"] === `${siteConfig.url}${location.href}#area`,
 		)
 		assert.equal(matches.length, 1, location.name)
+		const place = matches[0] as {
+			"@type"?: string
+			name?: string
+			url?: string
+		}
+		assert.equal(place["@type"], "Place", location.name)
+		assert.equal(place.name, location.name)
+		assert.equal(place.url, `${siteConfig.url}${location.href}`)
 	}
 	// One countywide entry (Santa Cruz) plus every mapped community.
 	assert.equal(areas.length, serviceAreaLocations.length + 1)

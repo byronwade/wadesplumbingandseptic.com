@@ -5,7 +5,12 @@ import {
 } from "@/lib/city-service-pages"
 import { getAllRoutes } from "@/lib/content"
 import { LLMS_FULL_PATH, llmsBusinessSummary } from "@/lib/llms"
-import { bestGuides, coreServiceSlugs, keyPages } from "@/lib/public-facts"
+import {
+	bestGuides,
+	coreServiceSlugs,
+	keyPages,
+	recentGuides,
+} from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
@@ -28,6 +33,10 @@ export async function GET() {
 		.join("\n")
 
 	const guideLines = bestGuides()
+		.map((guide) => `- [${guide.title}](${siteConfig.url}${guide.href})`)
+		.join("\n")
+
+	const recentGuideLines = recentGuides
 		.map((guide) => `- [${guide.title}](${siteConfig.url}${guide.href})`)
 		.join("\n")
 
@@ -63,6 +72,10 @@ ${serviceLines}
 ${guideLines}
 
 - [Expert Tips](${siteConfig.url}/expert-tips)
+
+## Recent guides
+
+${recentGuideLines}
 
 ## Service areas
 

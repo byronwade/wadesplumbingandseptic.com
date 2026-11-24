@@ -1,5 +1,5 @@
 ---
-title: Plumbing Maintenance & Repairs in Santa Cruz County
+title: Home Plumbing Maintenance Plan for Santa Cruz County
 description: A practical home plumbing maintenance plan for shutoffs, leaks, water pressure, water heaters, drains, visible piping and sewer or septic lines.
 category: Plumbing Tips
 date: 2025-05-11

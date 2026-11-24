@@ -45,6 +45,7 @@ Flooding can also lift the floating scum layer in the tank and partly plug the o
 Clean the area and disinfect the floor. EPA suggests a solution of half a cup of chlorine bleach per gallon of water. If a home business sends chemicals into the system, take extra care to avoid skin, eye and breathing contact, and ask the state or EPA about cleanup.
 
 ## Frequently asked questions
+
 ### Should I pump my septic tank during a flood?
 
 No. Pumping a tank while the soil is saturated is only temporary and can cause the tank to float out of the ground. Wait until the soil drains, then have it pumped to remove silt.

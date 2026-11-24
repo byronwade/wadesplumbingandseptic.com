@@ -20,7 +20,7 @@ function quoteFromAddress() {
 }
 
 async function storeQuoteBackup(request: QuoteRequest) {
-	if (!process.env.BLOB_READ_WRITE_TOKEN) return
+	if (!process.env.BLOB_READ_WRITE_TOKEN) return false
 
 	const stamp = new Date().toISOString().replaceAll(":", "-")
 	await put(
@@ -35,6 +35,16 @@ async function storeQuoteBackup(request: QuoteRequest) {
 			contentType: "application/json",
 		},
 	)
+	return true
+}
+
+async function tryStoreQuoteBackup(request: QuoteRequest) {
+	try {
+		return await storeQuoteBackup(request)
+	} catch (error) {
+		console.error("quote: backup store failed", error)
+		return false
+	}
 }
 
 async function sendResend(apiKey: string, request: QuoteRequest) {
@@ -70,18 +80,11 @@ export async function deliverQuoteRequest(
 		try {
 			const sent = await sendResend(apiKey, request)
 			if (sent) {
-				try {
-					await storeQuoteBackup(request)
-				} catch (error) {
-					console.error("quote: backup store failed", error)
-				}
+				await tryStoreQuoteBackup(request)
 				return { ok: true, channel: "email" }
 			}
 		} catch (error) {
 			console.error("quote: email send failed", error)
-		}
-		if (!canAcceptWithoutMailer()) {
-			return { ok: false, reason: "upstream" }
 		}
 	}
 
@@ -95,5 +98,12 @@ export async function deliverQuoteRequest(
 		return { ok: true, channel: "dev" }
 	}
 
-	return { ok: false, reason: "unavailable" }
+	const reason = apiKey ? "upstream" : "unavailable"
+	const backedUp = await tryStoreQuoteBackup(request)
+	console.error("quote: delivery failed", {
+		reason: apiKey ? "upstream" : "missing_resend_api_key",
+		vercelEnv: process.env.VERCEL_ENV ?? "unset",
+		backedUp,
+	})
+	return { ok: false, reason }
 }

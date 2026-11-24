@@ -81,6 +81,7 @@ assert.deepEqual(documentTitle(named), { absolute: named })
 assert.deepEqual(home.title, "Santa Cruz Plumbing & Septic")
 
 // Guide titles are the search result headline, so they must fit what Google shows.
+const postTitles = new Map<string, string>()
 for (const file of readdirSync("content/posts")) {
 	if (!file.endsWith(".md")) continue
 	const { data } = matter(readFileSync(`content/posts/${file}`, "utf8"))
@@ -89,6 +90,18 @@ for (const file of readdirSync("content/posts")) {
 		title.length <= TITLE_MAX,
 		`content/posts/${file}: title is ${title.length} characters, over ${TITLE_MAX}: ${title}`,
 	)
+	const key = title
+		.replaceAll("&", "and")
+		.replace(/\s+/g, " ")
+		.trim()
+		.toLowerCase()
+	const previous = postTitles.get(key)
+	assert.equal(
+		previous,
+		undefined,
+		`duplicate post title "${title}": content/posts/${file} and ${previous}`,
+	)
+	postTitles.set(key, `content/posts/${file}`)
 }
 
 console.log("seo meta helpers ok")
