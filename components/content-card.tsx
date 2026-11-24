@@ -81,10 +81,13 @@ export function ContentCard({
 				</CardDescription>
 				<Link
 					prefetch={false}
+					aria-label={
+						variant === "service" ? `View ${item.title}` : `Read ${item.title}`
+					}
 					className="text-primary mt-4 inline-flex items-center gap-2 text-sm font-semibold"
 					href={item.href as Route}
 				>
-					{variant === "service" ? "Learn more" : "Read guide"}
+					{variant === "service" ? "View service" : "Read guide"}
 					<ArrowRight
 						aria-hidden="true"
 						className="size-4 transition-transform group-hover:translate-x-1"
