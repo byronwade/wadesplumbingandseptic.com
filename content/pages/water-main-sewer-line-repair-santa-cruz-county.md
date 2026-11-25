@@ -14,7 +14,7 @@ noindex: true
 
 Water main, service line, and sewer line repair in Santa Cruz County, starting with an inspection and clear repair options.
 
-[Call Now 831.225.4344](tel:8312254344)
+[Call Now 831.225.4344](tel:+18312254344)
 
 Serving Santa Cruz County. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 

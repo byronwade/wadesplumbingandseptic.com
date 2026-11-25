@@ -72,6 +72,12 @@ test("Markdown call links work in server HTML before JavaScript", () => {
 	assert.match(html, />Call Wade&#x27;s<\/a>/)
 })
 
+test("non-canonical business tel markdown still dials the published number", () => {
+	const html = render("[Call Now 831.225.4344](tel:8312254344)")
+	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)
+	assert.doesNotMatch(html, /href=""/)
+})
+
 test("Markdown email addresses wrap only after the @, linked or bare", () => {
 	const wrappable = siteConfig.email.replace("@", "@<wbr/>")
 	for (const source of [

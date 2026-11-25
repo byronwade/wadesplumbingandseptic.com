@@ -76,7 +76,7 @@ jobs:
   build:
     name: Build
     runs-on: [self-hosted, linux, x64, wades, wades-ci]
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -86,6 +86,57 @@ jobs:
 
       - name: Next.js production build
         run: npm run build
+
+      - name: Start production server
+        run: |
+          set -euo pipefail
+          PORT=$((41000 + RANDOM % 1000))
+          echo "SEO_CRAWL_PORT=$PORT" >> "$GITHUB_ENV"
+          echo "$PORT" > /tmp/next-seo-server.port
+          if command -v fuser >/dev/null 2>&1; then
+            fuser -k "${PORT}/tcp" || true
+          fi
+          npm run start -- -p "$PORT" &
+          echo $! > /tmp/next-seo-server.pid
+          for i in $(seq 1 45); do
+            if ! kill -0 "$(cat /tmp/next-seo-server.pid)" 2>/dev/null; then
+              echo "server process died" >&2
+              exit 1
+            fi
+            if curl -fsS "http://127.0.0.1:${PORT}/" >/dev/null; then
+              echo "server ready on ${PORT}"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "server failed to start" >&2
+          exit 1
+
+      - name: Crawl built pages for broken links and JSON-LD
+        run: BASE_URL=http://127.0.0.1:${SEO_CRAWL_PORT} npm run ci:built-seo
+
+      - name: Stop production server
+        if: always()
+        run: |
+          PORT=$(cat /tmp/next-seo-server.port 2>/dev/null || echo "")
+          if [ -f /tmp/next-seo-server.pid ]; then
+            PID=$(cat /tmp/next-seo-server.pid)
+            pkill -TERM -P "$PID" || true
+            kill "$PID" || true
+            sleep 1
+            pkill -KILL -P "$PID" || true
+            kill -9 "$PID" || true
+            rm -f /tmp/next-seo-server.pid
+          fi
+          if [ -n "$PORT" ]; then
+            if command -v fuser >/dev/null 2>&1; then
+              fuser -k "${PORT}/tcp" || true
+            fi
+            if command -v lsof >/dev/null 2>&1; then
+              lsof -tiTCP:"${PORT}" -sTCP:LISTEN | xargs -r kill -9 || true
+            fi
+          fi
+          rm -f /tmp/next-seo-server.port
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4

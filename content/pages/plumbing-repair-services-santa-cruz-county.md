@@ -14,7 +14,7 @@ noindex: true
 
 Drain, leak, water heater, and fixture repair in Santa Cruz County with free quotes and clear options before work starts.
 
-[Call Now 831.225.4344](tel:8312254344)
+[Call Now 831.225.4344](tel:+18312254344)
 
 Serving Santa Cruz County. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 

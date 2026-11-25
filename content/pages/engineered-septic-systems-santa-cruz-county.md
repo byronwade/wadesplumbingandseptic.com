@@ -26,7 +26,7 @@ noindex: true
 
 Engineered septic installation and upgrades for noncompliant or failed systems in Santa Cruz County, with permit planning.
 
-[Call Now 831.225.4344](tel:8312254344)
+[Call Now 831.225.4344](tel:+18312254344)
 
 Serving Santa Cruz County. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 
