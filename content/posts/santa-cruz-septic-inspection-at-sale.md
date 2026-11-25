@@ -16,7 +16,7 @@ image: /images/work/completed-multi-tank.webp
 imageAlt: Septic tank lids at grade on a Santa Cruz County hillside lot
 ---
 
-If you are selling a Santa Cruz County home on a septic system, County Environmental Health requires a point-of-sale inspection before the transfer. The seller has the system inspected, has the tank emptied by a registered liquid waste hauler, and gives the buyer a standard disclosure. Failures have to be repaired, or the buyer can take that responsibility in writing. Wade's Plumbing & Septic inspects systems, helps with permits, and installs repairs or replacements alongside the project's engineer. Wade's does not empty tanks.
+If you are selling a Santa Cruz County home on a septic system, County Environmental Health requires a point-of-sale inspection before the transfer. The seller has the system inspected, has the tank emptied by a registered liquid waste hauler, and gives the buyer a standard disclosure. Failures have to be repaired, or the buyer can take that responsibility in writing. Wade's Plumbing & Septic inspects systems, helps with permits, and installs repairs or replacements alongside the project's engineer. Quotes are free. Wade's does not empty tanks.
 
 ![Completed septic installation with tank lids at grade](/images/work/completed-multi-tank.webp)
 
@@ -69,7 +69,7 @@ Failures and structural defects have to be corrected under an Environmental Heal
 
 The Health Officer can allow more time if the owner is pursuing the repair with due diligence and circumstances beyond their control will prevent finishing in 90 days. Interim measures still have to prevent a public health or water quality impact.
 
-Minor maintenance is a different category. Repair or replacement of tank lids, risers, tees, ells, sewer tightlines, pumps, valves, or electrical components does not need a permit. The county still wants those items handled at transfer by the seller or the buyer. No Transfer of Responsibility form is required for that class of work.
+Minor maintenance is a different category. Replacement of tank lids, risers, tees, ells, or effluent filters does not need a permit. The county still wants those items handled at transfer by the seller or the buyer, and no Transfer of Responsibility form is required for that class of work. Installing or replacing a distribution device or diversion valve, or re-piping a damaged or clogged dispersal line without replacing the trench, needs a [Minor Repair Permit](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades/OWTSRepair.aspx) from Environmental Health.
 
 A third party or escrow can pay. Payment does not move legal responsibility. Only the approved transfer form does that.
 
@@ -132,6 +132,7 @@ Flat rate, quoted on site before work begins. Quotes are free.
 - Santa Cruz County Environmental Health, [Liquid Waste Pumping Companies Operating in Santa Cruz County Under Permit](https://www.scceh.com/Portals/6/Env_Health/Land%20Use/Pumper%20Documents/PumperTruckCompanies.pdf) (PDF, revised April 23, 2026)
 - Santa Cruz County Environmental Health, [Maintenance of an OWTS](https://scceh.com/NewHome/Programs/LandUse/MaintenanceofanOWTS.aspx)
 - Santa Cruz County Environmental Health, [OWTS Repair and Upgrades](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx)
+- Santa Cruz County Environmental Health, [OWTS Repair](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades/OWTSRepair.aspx)
 - Santa Cruz County Environmental Health, [Local Agency Management Program](https://scceh.com/NewHome/Programs/LandUse/LocalAgencyManagementProgram.aspx)
 
 ## Request a free quote
