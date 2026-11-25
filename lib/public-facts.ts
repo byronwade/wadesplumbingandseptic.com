@@ -56,16 +56,16 @@ export const bestGuideHrefs = [
 /** Newest homeowner guides listed in llms.txt. Keep this short. */
 export const recentGuides = [
 	{
+		href: "/santa-cruz-septic-inspection-at-sale",
+		title: "Santa Cruz County Septic Inspection at Sale",
+	},
+	{
+		href: "/slab-leak-signs-santa-cruz-homes",
+		title: "Signs of a Slab Leak in Santa Cruz County Homes",
+	},
+	{
 		href: "/how-to-prepare-for-a-re-pipe-santa-cruz",
 		title: "How to Prepare Your Santa Cruz County Home for a Re-pipe",
-	},
-	{
-		href: "/backflow-testing-santa-cruz-county-homes",
-		title: "Annual Backflow Testing for Santa Cruz County Homes",
-	},
-	{
-		href: "/sewer-camera-inspection-santa-cruz-homes",
-		title: "What a Sewer Camera Inspection Shows in Santa Cruz",
 	},
 ] as const
 

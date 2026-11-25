@@ -61,7 +61,7 @@ EPA warns that an unusable septic system or one in disrepair lowers property val
 - Needed repairs are the seller's responsibility unless the buyer and seller agree to transfer them.
 - For systems with enhanced treatment requirements, sellers must also disclose ongoing maintenance contracts and records.
 
-A problem you ignore now is one that will show up in the point-of-sale inspection later.
+A problem you ignore now is one that will show up in the [point-of-sale septic inspection](/santa-cruz-septic-inspection-at-sale) later.
 
 ## What to do when you notice a sign
 
