@@ -40,7 +40,7 @@ export function HomeHeroMedia() {
 	})
 
 	const {
-		props: { srcSet: portrait, ...rest },
+		props: { srcSet: portrait, src: portraitSrc, ...rest },
 	} = getImageProps({
 		...common,
 		/* Match the compressed source; avoid asking the optimizer for 768px. */
@@ -54,20 +54,22 @@ export function HomeHeroMedia() {
 		<>
 			{/*
 			  Discover the LCP file from <head> instead of after the 44KB HTML
-			  parse. Media keeps desktop from downloading the portrait.
+			  parse. Media keeps desktop from downloading the portrait. href
+			  must match <img src> (including any dpl query) or Chrome fetches
+			  the photograph twice.
 			*/}
 			<link
 				rel="preload"
 				as="image"
 				fetchPriority="high"
-				href={MOBILE_HERO}
+				href={portraitSrc ?? MOBILE_HERO}
 				media="(max-width: 639px)"
 			/>
 			<link
 				rel="preload"
 				as="image"
 				fetchPriority="high"
-				href={DESKTOP_HERO}
+				href={desktopSrc ?? DESKTOP_HERO}
 				media="(min-width: 640px)"
 			/>
 			<picture>
@@ -78,6 +80,7 @@ export function HomeHeroMedia() {
 				/>
 				<img
 					{...rest}
+					src={portraitSrc}
 					srcSet={portrait}
 					alt={common.alt}
 					className="absolute inset-0 size-full object-cover object-[50%_62%]"
