@@ -3,6 +3,7 @@ import assert from "node:assert/strict"
 import { jsonLdBusinessFactIssues } from "./business-facts"
 import {
 	canonicalHref,
+	classifyHref,
 	decodeFragment,
 	extractIds,
 	extractImages,
@@ -428,9 +429,17 @@ async function main() {
 		}
 
 		for (const link of extractLinks(body)) {
-			if (link.href.toLowerCase().startsWith("tel:")) {
-				if (link.href !== expectedTel)
-					issues.push(`${pathname}: call link ${link.href}`)
+			const classified = classifyHref(link.href)
+			const looksLikeCall =
+				classified.kind === "tel" ||
+				(classified.kind === "empty" &&
+					/call|831\.225\.4344|\+1\s*831/i.test(link.text))
+			if (classified.kind === "empty" || classified.kind === "tel") {
+				if (looksLikeCall && link.href !== expectedTel) {
+					issues.push(`${pathname}: call link ${link.href || "(empty href)"}`)
+				} else if (classified.kind === "empty") {
+					issues.push(`${pathname}: empty href`)
+				}
 				continue
 			}
 			const resolved = resolveInternalHref(link.href, pathname, origin)

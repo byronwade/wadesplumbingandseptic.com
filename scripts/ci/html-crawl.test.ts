@@ -53,6 +53,22 @@ test("HTML inventory reads title, description, canonical, links, images, and ids
 	assert.ok(extractIds(sample).has("quote"))
 })
 
+test("empty hrefs stay in the inventory so stripped Call Now links fail", () => {
+	const links = extractLinks(
+		'<a href="">Call Now 831.225.4344</a><a>no href attribute</a>',
+	)
+	assert.deepEqual(
+		links.map((link) => ({ href: link.href, text: link.text })),
+		[{ href: "", text: "Call Now 831.225.4344" }],
+	)
+	assert.equal(classifyHref("").kind, "empty")
+	assert.equal(classifyHref("   ").kind, "empty")
+	assert.equal(
+		resolveInternalHref("", "/contact", "http://127.0.0.1:3000"),
+		null,
+	)
+})
+
 test("JSON-LD script tags are not treated as visible links", () => {
 	const html = `<script><a href="/missing">nope</a></script><a href="/contact">ok</a>`
 	assert.deepEqual(

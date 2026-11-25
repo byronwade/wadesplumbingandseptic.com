@@ -69,7 +69,7 @@ export function extractLinks(html: string): HtmlLink[] {
 	const markup = stripNonMarkup(html)
 	for (const match of markup.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
 		const href = attr(match[1] ?? "", "href")
-		if (!href) continue
+		if (href === null) continue
 		const text = (match[2] ?? "")
 			.replace(/<[^>]+>/g, " ")
 			.replace(/\s+/g, " ")
@@ -118,7 +118,8 @@ const skipHref = /^(?:mailto:|javascript:|data:|blob:|#$)/i
 
 export function classifyHref(href: string) {
 	const trimmed = href.trim()
-	if (!trimmed || skipHref.test(trimmed)) return { kind: "skip" as const }
+	if (!trimmed) return { kind: "empty" as const }
+	if (skipHref.test(trimmed)) return { kind: "skip" as const }
 	if (trimmed.toLowerCase().startsWith("tel:")) return { kind: "tel" as const }
 	if (trimmed.startsWith("#"))
 		return { kind: "fragment" as const, href: trimmed }
@@ -137,7 +138,12 @@ export function resolveInternalHref(
 	origin: string,
 ) {
 	const classified = classifyHref(href)
-	if (classified.kind === "skip" || classified.kind === "tel") return null
+	if (
+		classified.kind === "skip" ||
+		classified.kind === "tel" ||
+		classified.kind === "empty"
+	)
+		return null
 	if (classified.kind === "fragment") {
 		return { pathname: pagePathname, hash: classified.href.slice(1) }
 	}
