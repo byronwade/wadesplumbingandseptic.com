@@ -57,14 +57,39 @@ export function cardImageSrc(src: string): string {
 	return narrowFor(src) ?? src
 }
 
-export function lcpPreload(src: string): { href: string; type?: string } {
+export type LcpPreload = {
+	href: string
+	type?: string
+	media?: string
+}
+
+/** Phone LCP file (first), then the matching wide-screen file when one exists. */
+export function lcpPreloads(src: string): LcpPreload[] {
 	const narrow = narrowFor(src)
 	const narrowAvif = narrow ? avifFor(narrow) : undefined
-	if (narrowAvif) return { href: narrowAvif, type: "image/avif" }
 	const fullAvif = avifFor(src)
-	if (fullAvif) return { href: fullAvif, type: "image/avif" }
-	if (narrow) return { href: narrow, type: "image/webp" }
-	return { href: src }
+	const phone: LcpPreload | undefined = narrowAvif
+		? { href: narrowAvif, type: "image/avif" }
+		: narrow
+			? { href: narrow, type: "image/webp" }
+			: fullAvif
+				? { href: fullAvif, type: "image/avif" }
+				: { href: src }
+
+	if (!narrow) return [phone]
+
+	const desktop: LcpPreload = fullAvif
+		? { href: fullAvif, type: "image/avif" }
+		: { href: src }
+
+	return [
+		{ ...phone, media: "(max-width: 827px)" },
+		{ ...desktop, media: "(min-width: 828px)" },
+	]
+}
+
+export function lcpPreload(src: string): LcpPreload {
+	return lcpPreloads(src)[0]
 }
 
 export type PictureSource = {

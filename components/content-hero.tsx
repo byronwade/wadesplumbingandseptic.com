@@ -7,7 +7,7 @@ import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
-import { lcpPreload, pictureSources } from "@/lib/responsive-image"
+import { lcpPreloads, pictureSources } from "@/lib/responsive-image"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -26,20 +26,24 @@ function ContentHeroImage({
 	alt: string
 	priority?: boolean
 }) {
-	const preload = lcpPreload(src)
+	const preloads = lcpPreloads(src)
 	const sources = pictureSources(src)
 
 	return (
 		<>
-			{priority ? (
-				<link
-					rel="preload"
-					as="image"
-					fetchPriority="high"
-					href={preload.href}
-					{...(preload.type ? { type: preload.type } : {})}
-				/>
-			) : null}
+			{priority
+				? preloads.map((preload) => (
+						<link
+							key={`${preload.href}:${preload.media ?? "all"}`}
+							rel="preload"
+							as="image"
+							fetchPriority="high"
+							href={preload.href}
+							{...(preload.type ? { type: preload.type } : {})}
+							{...(preload.media ? { media: preload.media } : {})}
+						/>
+					))
+				: null}
 			<picture>
 				{sources.map((source) => (
 					<source

@@ -6,7 +6,12 @@ import { imageConfigDefault } from "next/dist/shared/lib/image-config"
 import { renderToStaticMarkup } from "react-dom/server"
 
 import { HomeHeroMedia } from "../../components/home-hero-media"
-import { avifFor, lcpPreload, narrowFor } from "../../lib/responsive-image"
+import {
+	avifFor,
+	lcpPreload,
+	lcpPreloads,
+	narrowFor,
+} from "../../lib/responsive-image"
 import nextConfig from "../../next.config"
 
 const images = nextConfig.images
@@ -79,7 +84,12 @@ assert.equal(
 	lcpPreload(septicHero).href,
 	"/images/work/engineered-septic-hero-mobile.avif",
 )
+assert.equal(lcpPreload(septicHero).media, "(max-width: 827px)")
 assert.ok(existsSync(publicFile(lcpPreload(septicHero).href)))
+const septicPreloads = lcpPreloads(septicHero)
+assert.equal(septicPreloads.length, 2)
+assert.equal(septicPreloads[1]?.media, "(min-width: 828px)")
+assert.ok(septicPreloads[1] && existsSync(publicFile(septicPreloads[1].href)))
 
 const aptosHero = "/images/locations/river-and-redwoods.webp"
 const aptosNarrow = narrowFor(aptosHero)
