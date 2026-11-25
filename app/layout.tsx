@@ -9,11 +9,10 @@ import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 /*
-  Both faces are self-hosted from assets/fonts (SIL Open Font License, see the
-  OFL files beside them) so builds never fetch from Google Fonts. Each file is
-  the variable Latin subset, so every weight between 400 and 700 resolves
-  from one download. Inter carries the UI and headings; Geist Mono carries
-  phone numbers, licence numbers and other figures that must read exactly.
+  Inter is self-hosted from assets/fonts (SIL Open Font License, see the OFL
+  files beside it) so builds never fetch from Google Fonts. The variable Latin
+  subset covers every weight between 400 and 700 in one download. Tabular
+  figures use the system mono stack so every page skips a second 23KB face.
 */
 const inter = localFont({
 	src: [
@@ -26,21 +25,6 @@ const inter = localFont({
 	display: "swap",
 	variable: "--font-inter",
 	preload: true,
-})
-
-const geistMono = localFont({
-	src: [
-		{
-			path: "../assets/fonts/geist-mono-latin.woff2",
-			weight: "100 900",
-			style: "normal",
-		},
-	],
-	display: "optional",
-	variable: "--font-geist-mono",
-	/* Mono is for figures and labels, never first paint. */
-	preload: false,
-	adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {
@@ -101,7 +85,7 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`dark ${inter.variable} ${geistMono.variable}`}
+			className={`dark ${inter.variable}`}
 		>
 			<head>
 				<ThemeScript />
