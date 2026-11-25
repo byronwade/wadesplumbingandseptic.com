@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
-import { ThemeProvider } from "next-themes"
 
 import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
 import { ThemeHotkey } from "@/components/theme-hotkey"
+import { ThemeScript } from "@/components/theme-script"
 import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
@@ -36,7 +36,7 @@ const geistMono = localFont({
 			style: "normal",
 		},
 	],
-	display: "swap",
+	display: "optional",
 	variable: "--font-geist-mono",
 	/* Mono is for figures and labels, never first paint. */
 	preload: false,
@@ -101,27 +101,28 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`${inter.variable} ${geistMono.variable}`}
+			className={`dark ${inter.variable} ${geistMono.variable}`}
 		>
+			<head>
+				<ThemeScript />
+			</head>
 			<body className={inter.className}>
-				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-					<a
-						className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-						href="#main-content"
-					>
-						Skip to content
-					</a>
-					{children}
-					{/*
-					  NAP JSON-LD stays in the static HTML shell so AI crawlers that
-					  do not wait on streamed Suspense still see one LocalBusiness.
-					  Service pages keep their own Service nodes; this node does not
-					  repeat the 48-item offer catalog on every URL.
-					*/}
-					<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
-					<ThemeHotkey />
-					<AppCommandShell />
-				</ThemeProvider>
+				<a
+					className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+					href="#main-content"
+				>
+					Skip to content
+				</a>
+				{children}
+				{/*
+				  NAP JSON-LD stays in the static HTML shell so AI crawlers that
+				  do not wait on streamed Suspense still see one LocalBusiness.
+				  Service pages keep their own Service nodes; this node does not
+				  repeat the 48-item offer catalog on every URL.
+				*/}
+				<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
+				<ThemeHotkey />
+				<AppCommandShell />
 			</body>
 		</html>
 	)

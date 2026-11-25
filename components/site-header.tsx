@@ -41,8 +41,9 @@ export function SiteHeader() {
 							<Image
 								alt="Wade's Plumbing & Septic logo"
 								className="size-10 shrink-0 rounded-md sm:size-11"
+								fetchPriority="low"
 								height={44}
-								priority
+								loading="eager"
 								src="/images/brand/wades-mark-sm.webp"
 								width={44}
 							/>

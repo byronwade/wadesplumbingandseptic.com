@@ -7,24 +7,16 @@ import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import { lcpPreload, pictureSources } from "@/lib/responsive-image"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 /*
   next/image fill + unoptimized dropped fetchPriority on interior heroes, so
   the LCP photograph raced the header mark. A sized <img> keeps the same box
-  (parent already has aspect-ratio) and the high-priority hint.
+  (parent already has aspect-ratio) and the high-priority hint. Phone sources
+  are 640 to 828px so a 370px box does not download a 1200px original.
 */
-const heroAvifByWebp: Record<string, string> = {
-	"/images/locations/santa-cruz-redwoods.webp":
-		"/images/locations/santa-cruz-redwoods.avif",
-	"/images/services/drain-clearing.webp":
-		"/images/services/drain-clearing.avif",
-	"/images/team/wades-team.webp": "/images/team/wades-team.avif",
-	"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp":
-		"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.avif",
-}
-
 function ContentHeroImage({
 	src,
 	alt,
@@ -34,8 +26,8 @@ function ContentHeroImage({
 	alt: string
 	priority?: boolean
 }) {
-	const avifSrc = heroAvifByWebp[src]
-	const preloadHref = avifSrc ?? src
+	const preload = lcpPreload(src)
+	const sources = pictureSources(src)
 
 	return (
 		<>
@@ -44,12 +36,19 @@ function ContentHeroImage({
 					rel="preload"
 					as="image"
 					fetchPriority="high"
-					href={preloadHref}
-					{...(avifSrc ? { type: "image/avif" } : {})}
+					href={preload.href}
+					{...(preload.type ? { type: preload.type } : {})}
 				/>
 			) : null}
 			<picture>
-				{avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+				{sources.map((source) => (
+					<source
+						key={`${source.type ?? "img"}:${source.media ?? "all"}:${source.srcSet}`}
+						media={source.media}
+						srcSet={source.srcSet}
+						type={source.type}
+					/>
+				))}
 				<img
 					alt={alt}
 					className="absolute inset-0 size-full object-cover"

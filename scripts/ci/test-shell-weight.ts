@@ -19,7 +19,12 @@ const entries = [
 	"app/(site)/layout.tsx",
 	"components/virtual-business-card.tsx",
 ]
-const bannedPackages = ["cmdk", "sonner", "@radix-ui/react-dialog"]
+const bannedPackages = [
+	"cmdk",
+	"sonner",
+	"next-themes",
+	"@radix-ui/react-dialog",
+]
 const bannedModules = [
 	"components/command-menu.tsx",
 	"components/ui/command.tsx",

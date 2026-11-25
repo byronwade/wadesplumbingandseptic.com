@@ -1,5 +1,4 @@
 import type { Route } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CalendarDays } from "@/components/icons"
 
@@ -11,6 +10,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card"
 import type { ArchiveItem } from "@/lib/archive"
+import { cardImageSrc, pictureSources } from "@/lib/responsive-image"
 import { getServiceImage } from "@/lib/service-images"
 import { cn } from "@/lib/utils"
 
@@ -52,18 +52,29 @@ export function ContentCard({
 
 			tabIndex={-1}
 		>
-			<Image
-				alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
-				className="object-cover"
-				fill
-				quality={60}
-				sizes={
-					featured
-						? "(min-width: 1024px) 40rem, 100vw"
-						: "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-				}
-				src={image}
-			/>
+			{/*
+			  Local files skip /_next/image, so next/image would send the full
+			  original. Picture + a 640/828px sibling keeps archive cards small.
+			*/}
+			<picture>
+				{pictureSources(image).map((source) => (
+					<source
+						key={`${source.type ?? "img"}:${source.media ?? "all"}:${source.srcSet}`}
+						media={source.media}
+						srcSet={source.srcSet}
+						type={source.type}
+					/>
+				))}
+				<img
+					alt={item.imageAlt ?? `${item.title}, Wade's Plumbing & Septic`}
+					className="absolute inset-0 size-full object-cover"
+					decoding="async"
+					height={360}
+					loading="lazy"
+					src={cardImageSrc(image)}
+					width={640}
+				/>
+			</picture>
 			<span className="card-chip">{item.category}</span>
 		</Link>
 	)
