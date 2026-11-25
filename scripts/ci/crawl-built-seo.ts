@@ -46,14 +46,32 @@ async function fetchText(path: string, redirect: RequestRedirect = "manual") {
 	return { url, response, body: await response.text() }
 }
 
-function sitemapUrls(xml: string) {
-	return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => {
-		const loc = match[1]!
-		const lastmod = xml
-			.slice(match.index ?? 0)
-			.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]
-		return { loc, lastmod }
+/** Parse loc/lastmod from each <url> block so dates cannot leak across entries. */
+export function parseSitemapUrls(xml: string) {
+	return [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].flatMap((match) => {
+		const block = match[1] ?? ""
+		const loc = block.match(/<loc>([^<]+)<\/loc>/)?.[1]
+		if (!loc) return []
+		return [
+			{
+				loc,
+				lastmod: block.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1],
+			},
+		]
 	})
+}
+
+function assertSitemapParser() {
+	const parsed = parseSitemapUrls(`
+		<urlset>
+			<url><loc>https://example.com/a</loc></url>
+			<url><loc>https://example.com/b</loc><lastmod>2026-11-25</lastmod></url>
+		</urlset>
+	`)
+	assert.equal(parsed.length, 2)
+	assert.equal(parsed[0]?.loc, "https://example.com/a")
+	assert.equal(parsed[0]?.lastmod, undefined)
+	assert.equal(parsed[1]?.lastmod, "2026-11-25")
 }
 
 function canonicalHref(html: string) {
@@ -129,9 +147,11 @@ async function main() {
 		"robots.txt must not blanket-block the site",
 	)
 
+	assertSitemapParser()
+
 	const sitemap = await fetchText("/sitemap.xml", "follow")
 	assert.equal(sitemap.response.status, 200, "sitemap.xml must be 200")
-	const entries = sitemapUrls(sitemap.body)
+	const entries = parseSitemapUrls(sitemap.body)
 	assert.ok(entries.length > 50, `sitemap too small: ${entries.length}`)
 
 	const missingLastmod = entries.filter((entry) => !entry.lastmod)
