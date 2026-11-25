@@ -19,6 +19,8 @@ const postFiles = fs
 	.filter((name) => name.endsWith(".md"))
 
 const newPostSlugs = [
+	"santa-cruz-septic-inspection-at-sale",
+	"slab-leak-signs-santa-cruz-homes",
 	"how-to-prepare-for-a-re-pipe-santa-cruz",
 	"backflow-testing-santa-cruz-county-homes",
 	"sewer-camera-inspection-santa-cruz-homes",

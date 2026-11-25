@@ -53,7 +53,7 @@ A worn flapper can let water trickle from the tank into the bowl around the cloc
 
 ## Leaks in Santa Cruz County homes
 
-Homes on a private well, common in the Santa Cruz Mountains, have no utility bill or meter to flag a leak, so watch for a pump that runs when no one is using water. Raised floors and crawl spaces can hide a leak for a long time, so a look underneath with a flashlight is worth it if the other signs point to one. If you find a leak, shut off the water at the main or the fixture valve and dry the area as soon as you can.
+Homes on a private well, common in the Santa Cruz Mountains, have no utility bill or meter to flag a leak, so watch for a pump that runs when no one is using water. Raised floors and crawl spaces can hide a leak for a long time, so a look underneath with a flashlight is worth it if the other signs point to one. A warm or damp patch of concrete with no leak above it is a different problem: see [signs of a slab leak](/slab-leak-signs-santa-cruz-homes). If you find a leak, shut off the water at the main or the fixture valve and dry the area as soon as you can.
 
 ## Frequently asked questions
 
