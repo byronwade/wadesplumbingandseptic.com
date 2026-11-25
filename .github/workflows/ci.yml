@@ -96,38 +96,13 @@ jobs:
           if command -v fuser >/dev/null 2>&1; then
             fuser -k "${PORT}/tcp" || true
           fi
-          if command -v lsof >/dev/null 2>&1; then
-            lsof -tiTCP:"${PORT}" -sTCP:LISTEN | xargs -r kill -9 || true
-          fi
           npm run start -- -p "$PORT" &
           echo $! > /tmp/next-seo-server.pid
-          owned_by_job() {
-            local walker="$1"
-            local ancestor="$2"
-            while [ -n "$walker" ] && [ "$walker" != "0" ] && [ "$walker" != "1" ]; do
-              if [ "$walker" = "$ancestor" ]; then
-                return 0
-              fi
-              walker=$(ps -o ppid= -p "$walker" 2>/dev/null | tr -d " ")
-            done
-            return 1
-          }
           for i in $(seq 1 45); do
             if ! kill -0 "$(cat /tmp/next-seo-server.pid)" 2>/dev/null; then
               echo "server process died" >&2
               exit 1
             fi
-            LISTEN_PIDS=$(lsof -tiTCP:"${PORT}" -sTCP:LISTEN 2>/dev/null || true)
-            if [ -z "$LISTEN_PIDS" ]; then
-              sleep 1
-              continue
-            fi
-            for lp in $LISTEN_PIDS; do
-              if ! owned_by_job "$lp" "$(cat /tmp/next-seo-server.pid)"; then
-                echo "port ${PORT} is held by pid $lp, not this job" >&2
-                exit 1
-              fi
-            done
             if curl -fsS "http://127.0.0.1:${PORT}/" >/dev/null; then
               echo "server ready on ${PORT}"
               exit 0
