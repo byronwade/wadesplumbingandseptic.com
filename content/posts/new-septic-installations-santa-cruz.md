@@ -71,7 +71,7 @@ Yes. The county requires a sewage disposal permit to install, replace, repair, u
 
 ### Does adding a bedroom or ADU affect my septic system?
 
-It can. Adding bedrooms, more than 500 square feet, another structure or an accessory dwelling unit beyond what the system was permitted for brings in the county's upgrade standards.
+It can. Adding bedrooms, more than 500 square feet, another structure or an accessory dwelling unit beyond what the system was permitted for brings in the county's upgrade standards. The dedicated guide to [adding an ADU or bedroom on a Santa Cruz County septic](/adding-adu-bedroom-septic-santa-cruz) covers design flow, bedroom counting, and who designs versus installs.
 
 ### Who can install a septic system in Santa Cruz County?
 

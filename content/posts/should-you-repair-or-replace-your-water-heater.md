@@ -63,7 +63,7 @@ Age is a guide, not a deadline. The manufacture date is printed on the rating la
 
 **Heat pump water heaters.** The U.S. Department of Energy says these move heat from the surrounding air into the water and can be two to three times more efficient than conventional electric resistance water heaters. ENERGY STAR says certified models use less than half the energy of standard electric water heaters. They need space around the unit for air flow and because they pull heat from the air they can cool the room they are in, so a garage or utility area often works well.
 
-**Tankless water heaters.** These heat water as it flows instead of keeping a tank hot, which avoids standby heat loss. Each unit has a flow limit, so it has to be sized for how many fixtures run at once. Gas units may need a larger gas line and new venting. See [tankless water heater installation](/service-offerings/tankless-water-heater-installation).
+**Tankless water heaters.** These heat water as it flows instead of keeping a tank hot, which avoids standby heat loss. Each unit has a flow limit, so it has to be sized for how many fixtures run at once. Gas units may need a larger gas line and new venting. See [tankless water heater installation](/service-offerings/tankless-water-heater-installation) and the homeowner guide to [tankless water heaters in Santa Cruz County](/tankless-water-heater-santa-cruz-homes).
 
 **High efficiency tank models.** A like for like replacement with a newer, more efficient tank is often the simplest choice when space, venting or budget rule out other options.
 

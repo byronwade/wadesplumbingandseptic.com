@@ -57,7 +57,7 @@ Flat-rate pricing, quoted on site before work begins.
 ## FAQs About Tankless Water Heaters
 
 - **Why should I choose a tankless water heater over a traditional one?** Tankless systems are more energy-efficient, providing hot water on demand without holding a reserve, which saves on energy bills.
-- **How often should I perform maintenance on my tankless water heater?** Regular maintenance is recommended annually to ensure optimal performance and longevity.
+- **How often should I perform maintenance on my tankless water heater?** Follow the manufacturer's flush schedule. Hard water in parts of Santa Cruz County makes that upkeep more important. The homeowner guide to [tankless water heaters in Santa Cruz County](/tankless-water-heater-santa-cruz-homes) covers sizing, scale, gas supply, and permits.
 
 ## Why Choose Wade's Plumbing & Septic?
 
