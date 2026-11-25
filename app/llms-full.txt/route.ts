@@ -3,12 +3,14 @@ import {
 	llmsBusinessSummary,
 	llmsFullPageSlugs,
 	llmsFullSection,
+	llmsLinkLine,
 } from "@/lib/llms"
+import { recentGuides } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 /** Full-text companion to /llms.txt for AI assistants that read one file. */
 export async function GET() {
-	const { services, pages } = await getAllRoutes()
+	const { services, pages, posts } = await getAllRoutes()
 
 	const pageSections = llmsFullPageSlugs.flatMap((slug) => {
 		const page = pages.find((entry) => entry.slug === slug)
@@ -22,8 +24,38 @@ export async function GET() {
 		),
 	)
 
+	const recentGuideLines = recentGuides
+		.map((guide) => {
+			const post = posts.find((entry) => `/${entry.slug}` === guide.href)
+			return llmsLinkLine(
+				guide.title,
+				`${siteConfig.url}${guide.href}`,
+				post?.description,
+			)
+		})
+		.join("\n")
+
+	const areaLines = pages
+		.filter((page) => page.slug.startsWith("service-area/"))
+		.map((page) =>
+			llmsLinkLine(
+				page.title,
+				`${siteConfig.url}/${page.slug}`,
+				page.description,
+			),
+		)
+		.join("\n")
+
 	const body = `${llmsBusinessSummary()}
 Index: ${siteConfig.url}/llms.txt
+
+# Recent guides
+
+${recentGuideLines}
+
+# Service areas
+
+${areaLines}
 
 # Key pages
 

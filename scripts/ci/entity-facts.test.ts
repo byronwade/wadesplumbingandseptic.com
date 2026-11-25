@@ -10,7 +10,11 @@ import type { ContentDocument } from "../../lib/content"
 import { contactInfo } from "../../lib/contact"
 import { normalizeConversion } from "../../lib/content-conversion"
 import { faqs } from "../../lib/home-content"
-import { LLMS_FULL_PATH, llmsFullPageSlugs } from "../../lib/llms"
+import {
+	LLMS_FULL_PATH,
+	llmsFullPageSlugs,
+	oneLineSummary,
+} from "../../lib/llms"
 import {
 	bestGuideHrefs,
 	coreServiceSlugs,
@@ -36,6 +40,7 @@ import {
 	businessFactIssues,
 	jsonLdBusinessFactIssues,
 } from "./business-facts"
+import { jsonLdTypeIssues } from "./json-ld-validate"
 
 // lib/content and the llms routes are Next server modules; stub runtime-only imports.
 type Loader = (
@@ -150,6 +155,11 @@ test("every schema node points at one business and one website @id", () => {
 	assert.equal(businessId, `${siteConfig.url}/#business`)
 	assert.equal(localBusinessJsonLd()["@id"], businessId)
 	assert.equal(localBusinessJsonLd().name, siteConfig.name)
+	assert.ok(
+		localBusinessJsonLd()["@type"].includes("Plumber") &&
+			localBusinessJsonLd()["@type"].includes("LocalBusiness"),
+		"business node must be typed as Plumber and LocalBusiness",
+	)
 	assert.equal(websiteJsonLd()["@id"], websiteId)
 	assert.deepEqual(websiteJsonLd().publisher, { "@id": businessId })
 
@@ -167,6 +177,7 @@ test("every schema node points at one business and one website @id", () => {
 	}
 	const article = articleJsonLd(document)
 	assert.deepEqual(article["@type"], ["BlogPosting", "Article"])
+	assert.equal(article.url, `${siteConfig.url}/sample-article`)
 	assert.equal(article.datePublished, "2026-04-13")
 	assert.equal(article.dateModified, "2026-04-13")
 	const refreshed = articleJsonLd({
@@ -280,6 +291,18 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 		assert.ok(lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
 	for (const slug of ["warranties", "promotions", "testimonials", "about-us"])
 		assert.ok(!lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
+	assert.ok(body.includes("# Recent guides"))
+	assert.ok(body.includes("# Service areas"))
+	for (const guide of recentGuides)
+		assert.ok(
+			body.includes(`${siteConfig.url}${guide.href}`),
+			`llms-full recent guide: ${guide.href}`,
+		)
+	for (const location of serviceAreaLocations)
+		assert.ok(
+			body.includes(`${siteConfig.url}${location.href}`),
+			`llms-full town: ${location.href}`,
+		)
 
 	assert.ok(!body.includes("](/"), "Root-relative links must be absolute")
 	assert.deepEqual(businessFactIssues(body), [])
@@ -330,6 +353,16 @@ test("llms.txt names the core services, including engineered septic installation
 		"engineered septic system installation done alongside engineers",
 	])
 		assert.ok(services.includes(service), `Services line: ${service}`)
+})
+
+test("llms listings use a one-line factual summary", () => {
+	assert.equal(
+		oneLineSummary(
+			"Professional drain cleaning for slow sinks in Santa Cruz County. Quotes are free.",
+		),
+		"Professional drain cleaning for slow sinks in Santa Cruz County.",
+	)
+	assert.equal(oneLineSummary("  One sentence.  "), "One sentence.")
 })
 
 test("llms.txt lists core services and best guides instead of dumping every post", async () => {
@@ -405,6 +438,7 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 			[],
 			JSON.stringify(node["@type"]),
 		)
+		assert.deepEqual(jsonLdTypeIssues(node), [], JSON.stringify(node["@type"]))
 		for (const phrase of bannedPublicPhrases)
 			assert.equal(
 				JSON.stringify(node).toLowerCase().includes(phrase.toLowerCase()),

@@ -39,7 +39,7 @@ export const cityServicePages: CityServicePage[] = [
 			"Missing or buried lids that make pumping hard after storms",
 			"Root intrusion near older clay laterals",
 			"Uneven distribution on sloped drainfields",
-			"Real-estate deadlines needing same-week documentation",
+			"Real-estate deadlines needing inspection documentation",
 		],
 		permitNote:
 			"Santa Cruz County Environmental Health may require specific inspection forms for transfers. We document findings in plain language for your agent or lender.",

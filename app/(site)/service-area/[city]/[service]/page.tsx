@@ -30,6 +30,7 @@ import {
 	breadcrumbJsonLd,
 	buildPageMetadata,
 	businessId,
+	openingHoursJsonLd,
 	serviceAreaPlaceJsonLd,
 	serviceFaqJsonLd,
 } from "@/lib/seo"
@@ -84,6 +85,7 @@ export default async function CityServicePage({
 	const cityHubHref = location.href as Route
 	const pathname = cityServicePath(city, service)
 
+	const hours = openingHoursJsonLd()
 	const schema = {
 		"@context": "https://schema.org",
 		"@type": "Service",
@@ -94,6 +96,17 @@ export default async function CityServicePage({
 		areaServed: serviceAreaPlaceJsonLd(location),
 		provider: {
 			"@id": businessId,
+		},
+		hoursAvailable: hours,
+		availableChannel: {
+			"@type": "ServiceChannel",
+			serviceUrl: `${siteConfig.url}/contact`,
+			servicePhone: {
+				"@type": "ContactPoint",
+				telephone: siteConfig.phoneE164,
+				contactType: "customer service",
+				hoursAvailable: hours,
+			},
 		},
 	}
 

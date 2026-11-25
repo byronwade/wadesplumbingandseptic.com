@@ -71,4 +71,4 @@ A septic inspection before closing can prevent costly surprises when buying or s
 
 ## Schedule service in Freedom
 
-For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base and can often schedule same-week appointments for scheduled work. Quotes are free: [Get a Free Quote](/contact).
+For plumbing or septic help in Freedom, call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We serve Santa Cruz County from our local base. Call Monday to Friday, 9:00 AM to 5:00 PM to get on the schedule. Quotes are free: [Get a Free Quote](/contact).

@@ -72,6 +72,10 @@ async function main() {
 	assert.ok(pathSet.has("/glossary"), "Glossary hub must be present")
 	assert.ok(pathSet.has("/llms.txt"), "llms.txt must be present")
 	assert.ok(pathSet.has("/llms-full.txt"), "llms-full.txt must be present")
+	assert.ok(pathSet.has("/expert-tips/popular"), "popular tips archive")
+	assert.ok(pathSet.has("/expert-tips/trending"), "trending tips archive")
+	assert.ok(pathSet.has("/services/popular"), "popular services archive")
+	assert.ok(pathSet.has("/services/trending"), "trending services archive")
 
 	const home = entries.find((entry) => pathFromUrl(entry.url) === "/")
 	assert.equal(home?.priority, 1)
@@ -99,9 +103,13 @@ async function main() {
 		)
 	}
 
+	const rankedServiceArchives = new Set([
+		"/services/popular",
+		"/services/trending",
+	])
 	for (const path of paths) {
 		assert.ok(
-			!path.startsWith("/services/"),
+			!path.startsWith("/services/") || rankedServiceArchives.has(path),
 			`Use canonical service URLs, not ${path}`,
 		)
 		assert.ok(!path.startsWith("/api/"), `API routes must not appear: ${path}`)

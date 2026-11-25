@@ -20,6 +20,19 @@ export const LLMS_FULL_PATH = "/llms-full.txt"
  */
 export const llmsFullPageSlugs = ["faq", "contact", "service-areas"] as const
 
+/** First sentence of a description, for one-line llms listings. */
+export function oneLineSummary(text: string) {
+	const normalized = text.replace(/\s+/g, " ").trim()
+	if (!normalized) return ""
+	const match = normalized.match(/^.+?[.](?=\s|$)/)
+	return (match?.[0] ?? normalized).trim()
+}
+
+export function llmsLinkLine(title: string, url: string, description?: string) {
+	const summary = description ? oneLineSummary(description) : ""
+	return summary ? `- [${title}](${url}): ${summary}` : `- [${title}](${url})`
+}
+
 /** Opening block shared by llms.txt and llms-full.txt, built from siteConfig. */
 export function llmsBusinessSummary() {
 	return `# ${siteConfig.name}
