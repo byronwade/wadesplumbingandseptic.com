@@ -40,7 +40,7 @@ import {
 	businessFactIssues,
 	jsonLdBusinessFactIssues,
 } from "./business-facts"
-import { jsonLdTypeIssues } from "./json-ld-validate"
+import { jsonLdRequiredFieldIssues, jsonLdTypeIssues } from "./json-ld-validate"
 
 // lib/content and the llms routes are Next server modules; stub runtime-only imports.
 type Loader = (
@@ -439,6 +439,11 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 			JSON.stringify(node["@type"]),
 		)
 		assert.deepEqual(jsonLdTypeIssues(node), [], JSON.stringify(node["@type"]))
+		assert.deepEqual(
+			jsonLdRequiredFieldIssues(node),
+			[],
+			JSON.stringify(node["@type"]),
+		)
 		for (const phrase of bannedPublicPhrases)
 			assert.equal(
 				JSON.stringify(node).toLowerCase().includes(phrase.toLowerCase()),
@@ -637,6 +642,41 @@ test("Markdown internal links point at pages that exist", async () => {
 	assert.deepEqual(problems, [])
 })
 
+test("TSX and lib hrefs point at pages that exist", async () => {
+	const { buildSitemapEntries, SITEMAP_EXCLUDED_PATHS } =
+		await import("../../lib/sitemap")
+	const live = new Set([
+		...SITEMAP_EXCLUDED_PATHS,
+		"/sitemap.xml",
+		"/robots.txt",
+		"/manifest.webmanifest",
+		"/icon.svg",
+		"/contact.vcf",
+		"/api/quote",
+		"/api/page-view",
+		"/api/search-index",
+		"/api/og",
+		...(await buildSitemapEntries()).map(
+			(entry) =>
+				entry.url.slice(siteConfig.url.length).replace(/\/$/, "") || "/",
+		),
+	])
+	const problems: string[] = []
+	for (const file of sourceFiles(["app", "components", "lib"], /\.tsx?$/)) {
+		const text = fs.readFileSync(file, "utf8")
+		for (const [, href] of text.matchAll(
+			/(?:href\s*[:=]\s*)["'](\/(?!\/)[^"'`${]*)["']/g,
+		)) {
+			const pathname = href.replace(/[?#].*$/, "").replace(/\/$/, "") || "/"
+			if (live.has(pathname)) continue
+			if (fs.existsSync(path.join("public", pathname))) continue
+			if (pathname.startsWith("/images/")) continue
+			problems.push(`${file}: ${href} is not a page on the site`)
+		}
+	}
+	assert.deepEqual(problems, [])
+})
+
 test("robots.txt welcomes search and AI crawlers with the same private paths blocked", async () => {
 	const { default: robots } = await import("../../app/robots")
 	const config = robots()
@@ -683,9 +723,12 @@ test("every tel: link and call/text phone mention uses the business number", () 
 	]
 	for (const file of files) {
 		const source = fs.readFileSync(file, "utf8")
-		for (const [, number] of source.matchAll(/tel:([+\d().-]{7,})/g))
-			if (normalizePhone(number) !== expected)
+		for (const [, number] of source.matchAll(
+			/tel:(\+?[0-9][0-9.()-]*[0-9])/g,
+		)) {
+			if (`tel:${number}` !== siteConfig.phoneHref)
 				problems.push(`${file}: tel:${number}`)
+		}
 		for (const [, number] of source.matchAll(
 			/\b(?:call|text)(?:\s+(?:us|now|today|at))*[\s:]+\[?(\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4})/gi,
 		))

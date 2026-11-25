@@ -15,7 +15,7 @@ import {
 	ProtectedEmailText,
 	ProtectedPhoneText,
 } from "../../components/protected-contact"
-import { contactInfo } from "../../lib/contact"
+import { canonicalTelHref, contactInfo } from "../../lib/contact"
 import { siteConfig } from "../../lib/site"
 
 const wrappableEmail = contactInfo.email.replace("@", "@<wbr/>")
@@ -53,6 +53,13 @@ test("call controls preserve their accessible name and custom content", () => {
 	)
 	assert.ok(html.includes("<span>Call to schedule</span>"), html)
 	assert.ok(html.includes('class="contact-action"'), html)
+})
+
+test("non-canonical tel markdown rewrites to the published phone href", () => {
+	assert.equal(canonicalTelHref("tel:8312254344"), contactInfo.phoneHref)
+	assert.equal(canonicalTelHref("tel:+18312254344"), contactInfo.phoneHref)
+	assert.equal(canonicalTelHref("tel:5555555555"), null)
+	assert.equal(canonicalTelHref("/contact"), null)
 })
 
 test("visible phone and email text are usable links without hydration", () => {

@@ -16,7 +16,7 @@ eyebrow: Santa Cruz County
 
 Failing systems, failed perc tests, or aging conventional septic. Wade's delivers honest assessments and complete replacement planning in Santa Cruz County.
 
-[Call Now · 831.225.4344](tel:8312254344)
+[Call Now · 831.225.4344](tel:+18312254344)
 
 [Request A Free Estimate](/contact)
 
@@ -49,7 +49,7 @@ Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free.
 - What work needs to be scheduled?
 - Plumbing, sewer, or septic issue?
 
-[Call 831.225.4344](tel:8312254344)
+[Call 831.225.4344](tel:+18312254344)
 
 [Request a Free Estimate](/contact)
 
@@ -65,4 +65,4 @@ Yes. In Santa Cruz County, septic system replacements require permits through th
 
 Call our team first so we can confirm your service area and get you booked quickly.
 
-[Call 831.225.4344](tel:8312254344)
+[Call 831.225.4344](tel:+18312254344)

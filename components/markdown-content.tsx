@@ -11,6 +11,7 @@ import {
 	EmailAddress,
 	ProtectedContactLink,
 } from "@/components/protected-contact"
+import { canonicalTelHref } from "@/lib/contact"
 import { headingAnchor } from "@/lib/heading-anchors"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -98,7 +99,7 @@ function MarkdownLink({
 }
 
 function markdownUrlTransform(url: string) {
-	return url === siteConfig.phoneHref ? url : defaultUrlTransform(url)
+	return canonicalTelHref(url) ?? defaultUrlTransform(url)
 }
 
 /**
