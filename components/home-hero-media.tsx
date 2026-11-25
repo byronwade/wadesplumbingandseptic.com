@@ -1,5 +1,8 @@
 import { getImageProps } from "next/image"
 
+const MOBILE_HERO = "/images/work/engineered-septic-hero-portrait.webp"
+const DESKTOP_HERO = "/images/team/byron-working.webp"
+
 /*
  * Art direction for the cinematic frame. The viewport is landscape on desktop
  * and portrait on a phone, so the two orientations get different photographs
@@ -33,40 +36,63 @@ export function HomeHeroMedia() {
 		width: 1200,
 		height: 900,
 		quality: 52,
-		src: "/images/team/byron-working.webp",
+		src: DESKTOP_HERO,
 	})
 
 	const {
-		props: { srcSet: portrait, ...rest },
+		props: { srcSet: portrait, src: portraitSrc, ...rest },
 	} = getImageProps({
 		...common,
 		/* Match the compressed source; avoid asking the optimizer for 768px. */
 		width: 640,
 		height: 853,
 		quality: 52,
-		src: "/images/work/engineered-septic-hero-portrait.webp",
+		src: MOBILE_HERO,
 	})
 
 	return (
-		<picture>
-			<source
-				media="(min-width: 640px)"
-				srcSet={desktopSrcSet ?? desktopSrc}
-				sizes={HERO_SIZES}
-			/>
-			<img
-				{...rest}
-				srcSet={portrait}
-				alt={common.alt}
-				className="absolute inset-0 size-full object-cover object-[50%_62%]"
-				/*
-				  Sync decode: async decoding left the LCP image loaded but unpainted
-				  for ~2s under mobile Lighthouse (element render delay).
-				*/
-				decoding="sync"
+		<>
+			{/*
+			  Discover the LCP file from <head> instead of after the 44KB HTML
+			  parse. Media keeps desktop from downloading the portrait. href
+			  must match <img src> (including any dpl query) or Chrome fetches
+			  the photograph twice.
+			*/}
+			<link
+				rel="preload"
+				as="image"
 				fetchPriority="high"
-				loading="eager"
+				href={portraitSrc ?? MOBILE_HERO}
+				media="(max-width: 639px)"
 			/>
-		</picture>
+			<link
+				rel="preload"
+				as="image"
+				fetchPriority="high"
+				href={desktopSrc ?? DESKTOP_HERO}
+				media="(min-width: 640px)"
+			/>
+			<picture>
+				<source
+					media="(min-width: 640px)"
+					srcSet={desktopSrcSet ?? desktopSrc}
+					sizes={HERO_SIZES}
+				/>
+				<img
+					{...rest}
+					src={portraitSrc}
+					srcSet={portrait}
+					alt={common.alt}
+					className="absolute inset-0 size-full object-cover object-[50%_62%]"
+					/*
+					  Sync decode: async decoding left the LCP image loaded but unpainted
+					  for ~2s under mobile Lighthouse (element render delay).
+					*/
+					decoding="sync"
+					fetchPriority="high"
+					loading="eager"
+				/>
+			</picture>
+		</>
 	)
 }

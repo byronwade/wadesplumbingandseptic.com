@@ -1,19 +1,18 @@
 import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
-import { ThemeProvider } from "next-themes"
 
 import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
 import { ThemeHotkey } from "@/components/theme-hotkey"
+import { ThemeScript } from "@/components/theme-script"
 import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 /*
-  Both faces are self-hosted from assets/fonts (SIL Open Font License, see the
-  OFL files beside them) so builds never fetch from Google Fonts. Each file is
-  the variable Latin subset, so every weight between 400 and 700 resolves
-  from one download. Inter carries the UI and headings; Geist Mono carries
-  phone numbers, licence numbers and other figures that must read exactly.
+  Inter is self-hosted from assets/fonts (SIL Open Font License, see the OFL
+  files beside it) so builds never fetch from Google Fonts. The variable Latin
+  subset covers every weight between 400 and 700 in one download. Tabular
+  figures use the system mono stack so every page skips a second 23KB face.
 */
 const inter = localFont({
 	src: [
@@ -26,21 +25,6 @@ const inter = localFont({
 	display: "swap",
 	variable: "--font-inter",
 	preload: true,
-})
-
-const geistMono = localFont({
-	src: [
-		{
-			path: "../assets/fonts/geist-mono-latin.woff2",
-			weight: "100 900",
-			style: "normal",
-		},
-	],
-	display: "swap",
-	variable: "--font-geist-mono",
-	/* Mono is for figures and labels, never first paint. */
-	preload: false,
-	adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {
@@ -101,27 +85,28 @@ export default function RootLayout({
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`${inter.variable} ${geistMono.variable}`}
+			className={`dark ${inter.variable}`}
 		>
+			<head>
+				<ThemeScript />
+			</head>
 			<body className={inter.className}>
-				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-					<a
-						className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
-						href="#main-content"
-					>
-						Skip to content
-					</a>
-					{children}
-					{/*
-					  NAP JSON-LD stays in the static HTML shell so AI crawlers that
-					  do not wait on streamed Suspense still see one LocalBusiness.
-					  Service pages keep their own Service nodes; this node does not
-					  repeat the 48-item offer catalog on every URL.
-					*/}
-					<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
-					<ThemeHotkey />
-					<AppCommandShell />
-				</ThemeProvider>
+				<a
+					className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
+					href="#main-content"
+				>
+					Skip to content
+				</a>
+				{children}
+				{/*
+				  NAP JSON-LD stays in the static HTML shell so AI crawlers that
+				  do not wait on streamed Suspense still see one LocalBusiness.
+				  Service pages keep their own Service nodes; this node does not
+				  repeat the 48-item offer catalog on every URL.
+				*/}
+				<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
+				<ThemeHotkey />
+				<AppCommandShell />
 			</body>
 		</html>
 	)

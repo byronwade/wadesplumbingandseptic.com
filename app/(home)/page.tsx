@@ -185,7 +185,7 @@ export default function HomePage() {
 							{heroStats.map(({ label, value }) => (
 								<div className="flex items-baseline gap-2" key={label}>
 									<dt className="text-on-dark-subtle text-xs">{label}</dt>
-									<dd className="text-on-dark font-mono text-[0.8125rem] font-medium tabular-nums">
+									<dd className="text-on-dark text-[0.8125rem] font-medium tabular-nums">
 										{value}
 									</dd>
 								</div>

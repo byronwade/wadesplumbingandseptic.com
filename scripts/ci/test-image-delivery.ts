@@ -1,9 +1,17 @@
 import assert from "node:assert/strict"
+import { existsSync } from "node:fs"
+import { join } from "node:path"
 import { createElement } from "react"
 import { imageConfigDefault } from "next/dist/shared/lib/image-config"
 import { renderToStaticMarkup } from "react-dom/server"
 
 import { HomeHeroMedia } from "../../components/home-hero-media"
+import {
+	avifFor,
+	lcpPreload,
+	lcpPreloads,
+	narrowFor,
+} from "../../lib/responsive-image"
 import nextConfig from "../../next.config"
 
 const images = nextConfig.images
@@ -55,7 +63,54 @@ assert.match(
 	/decoding="sync"/,
 	`Hero <img> must decode synchronously so LCP is not held on async decode: ${img}`,
 )
+assert.match(
+	hero,
+	/rel="preload"[^>]*href="[^"]*engineered-septic-hero-portrait\.webp/,
+	`Homepage hero must preload the mobile LCP photograph: ${hero}`,
+)
+
+const publicRoot = join(__dirname, "../../public")
+function publicFile(src: string) {
+	return join(publicRoot, src.replace(/^\//, ""))
+}
+
+const septicHero = "/images/work/engineered-septic-hero.webp"
+assert.equal(
+	narrowFor(septicHero),
+	"/images/work/engineered-septic-hero-mobile.webp",
+	"Septic install LCP must use the landscape mobile file, not the 142KB portrait",
+)
+assert.equal(
+	lcpPreload(septicHero).href,
+	"/images/work/engineered-septic-hero-mobile.avif",
+)
+assert.equal(lcpPreload(septicHero).media, "(max-width: 827px)")
+assert.ok(existsSync(publicFile(lcpPreload(septicHero).href)))
+const septicPreloads = lcpPreloads(septicHero)
+assert.equal(septicPreloads.length, 2)
+assert.equal(septicPreloads[1]?.media, "(min-width: 828px)")
+assert.ok(septicPreloads[1] && existsSync(publicFile(septicPreloads[1].href)))
+
+const aptosHero = "/images/locations/river-and-redwoods.webp"
+const aptosNarrow = narrowFor(aptosHero)
+assert.ok(aptosNarrow, "Aptos town hero needs a phone-width file")
+assert.ok(existsSync(publicFile(aptosNarrow)))
+const aptosNarrowAvif = avifFor(aptosNarrow)
+assert.ok(aptosNarrowAvif, "Aptos town hero needs a phone-width AVIF")
+assert.ok(existsSync(publicFile(aptosNarrowAvif)))
+
+for (const src of [
+	septicHero,
+	aptosHero,
+	"/images/services/drain-clearing.webp",
+]) {
+	const preload = lcpPreload(src)
+	assert.ok(
+		existsSync(publicFile(preload.href)),
+		`missing LCP preload file ${preload.href} for ${src}`,
+	)
+}
 
 console.log(
-	"Image delivery policy passes: local images bypass /_next/image; homepage hero loads eagerly with sync decode and both sources.",
+	"Image delivery policy passes: local images bypass /_next/image; homepage hero loads eagerly with sync decode, both sources, and a mobile preload.",
 )
