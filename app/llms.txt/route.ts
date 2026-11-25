@@ -4,7 +4,7 @@ import {
 	getCityLocation,
 } from "@/lib/city-service-pages"
 import { getAllRoutes } from "@/lib/content"
-import { LLMS_FULL_PATH, llmsBusinessSummary } from "@/lib/llms"
+import { LLMS_FULL_PATH, llmsBusinessSummary, llmsLinkLine } from "@/lib/llms"
 import {
 	bestGuides,
 	coreServiceSlugs,
@@ -14,7 +14,7 @@ import {
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
-	const { services, pages } = await getAllRoutes()
+	const { services, pages, posts } = await getAllRoutes()
 
 	const serviceAreas = pages.filter((page) =>
 		page.slug.startsWith("service-area/"),
@@ -26,24 +26,37 @@ export async function GET() {
 	})
 
 	const serviceLines = coreServices
-		.map(
-			(service) =>
-				`- [${service.title}](${siteConfig.url}/service-offerings/${service.slug}): ${service.description}`,
+		.map((service) =>
+			llmsLinkLine(
+				service.title,
+				`${siteConfig.url}/service-offerings/${service.slug}`,
+				service.description,
+			),
 		)
 		.join("\n")
 
 	const guideLines = bestGuides()
-		.map((guide) => `- [${guide.title}](${siteConfig.url}${guide.href})`)
+		.map((guide) => llmsLinkLine(guide.title, `${siteConfig.url}${guide.href}`))
 		.join("\n")
 
 	const recentGuideLines = recentGuides
-		.map((guide) => `- [${guide.title}](${siteConfig.url}${guide.href})`)
+		.map((guide) => {
+			const post = posts.find((entry) => `/${entry.slug}` === guide.href)
+			return llmsLinkLine(
+				guide.title,
+				`${siteConfig.url}${guide.href}`,
+				post?.description,
+			)
+		})
 		.join("\n")
 
 	const areaLines = serviceAreas
-		.map(
-			(page) =>
-				`- [${page.title}](${siteConfig.url}/${page.slug}): ${page.description}`,
+		.map((page) =>
+			llmsLinkLine(
+				page.title,
+				`${siteConfig.url}/${page.slug}`,
+				page.description,
+			),
 		)
 		.join("\n")
 
@@ -55,7 +68,7 @@ export async function GET() {
 		.join("\n")
 
 	const keyPageLines = keyPages
-		.map((page) => `- [${page.title}](${siteConfig.url}${page.href})`)
+		.map((page) => llmsLinkLine(page.title, `${siteConfig.url}${page.href}`))
 		.join("\n")
 
 	const body = `${llmsBusinessSummary()}

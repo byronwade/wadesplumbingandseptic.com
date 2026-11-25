@@ -247,6 +247,7 @@ export function articleJsonLd(document: ContentDocument) {
 		"@type": ["BlogPosting", "Article"],
 		headline: document.title,
 		description: document.description,
+		url,
 		image: {
 			"@type": "ImageObject",
 			url: absoluteUrl(

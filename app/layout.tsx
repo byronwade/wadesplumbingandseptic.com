@@ -1,13 +1,10 @@
 import type { Metadata, Viewport } from "next"
-import { cacheLife, cacheTag } from "next/cache"
 import localFont from "next/font/local"
 import { ThemeProvider } from "next-themes"
-import { Suspense } from "react"
 
 import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
 import { ThemeHotkey } from "@/components/theme-hotkey"
-import { getCollection } from "@/lib/content"
 import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
@@ -97,23 +94,6 @@ export const viewport: Viewport = {
 	themeColor: "#0a0a0a",
 }
 
-async function RootJsonLd() {
-	"use cache"
-	cacheTag("content:services")
-	cacheLife("max")
-
-	const services = await getCollection("services")
-	const organizationSchema = localBusinessJsonLd(
-		services.map((service) => ({
-			slug: service.slug,
-			title: service.title,
-			description: service.description,
-		})),
-	)
-
-	return <JsonLd data={[websiteJsonLd(), organizationSchema]} />
-}
-
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -132,9 +112,13 @@ export default function RootLayout({
 						Skip to content
 					</a>
 					{children}
-					<Suspense fallback={null}>
-						<RootJsonLd />
-					</Suspense>
+					{/*
+					  NAP JSON-LD stays in the static HTML shell so AI crawlers that
+					  do not wait on streamed Suspense still see one LocalBusiness.
+					  Service pages keep their own Service nodes; this node does not
+					  repeat the 48-item offer catalog on every URL.
+					*/}
+					<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
 					<ThemeHotkey />
 					<AppCommandShell />
 				</ThemeProvider>

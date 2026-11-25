@@ -37,6 +37,7 @@
 		"ci:related": "tsx scripts/ci/test-related-content.ts",
 		"ci:page-views": "tsx scripts/ci/test-page-views.ts",
 		"ci:sitemap": "tsx scripts/ci/test-sitemap.ts",
+		"ci:built-seo": "tsx scripts/ci/crawl-built-seo.ts",
 		"ci:og": "tsx scripts/ci/test-og.ts",
 		"ci:images": "tsx scripts/ci/test-image-delivery.ts",
 		"ci:shell-weight": "tsx scripts/ci/test-shell-weight.ts",

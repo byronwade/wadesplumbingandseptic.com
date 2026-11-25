@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from "node:fs"
 
 import matter from "gray-matter"
 
+import { cityServicePages, getCityLocation } from "../../lib/city-service-pages"
 import {
 	OG_DESCRIPTION_MAX,
 	META_DESCRIPTION_MAX,
@@ -103,5 +104,67 @@ for (const file of readdirSync("content/posts")) {
 	)
 	postTitles.set(key, `content/posts/${file}`)
 }
+
+function collectFrontmatter(dir: string) {
+	return readdirSync(dir)
+		.filter((file) => file.endsWith(".md"))
+		.map((file) => {
+			const { data } = matter(readFileSync(`${dir}/${file}`, "utf8"))
+			return {
+				file: `${dir}/${file}`,
+				title: String(data.title ?? "").trim(),
+				description: String(data.description ?? "")
+					.replace(/\s+/g, " ")
+					.trim(),
+			}
+		})
+}
+
+function assertUnique(
+	items: Array<{ file: string; value: string }>,
+	label: string,
+) {
+	const seen = new Map<string, string>()
+	for (const item of items) {
+		assert.ok(item.value, `${item.file}: missing ${label}`)
+		const key = item.value.toLowerCase()
+		const previous = seen.get(key)
+		assert.equal(
+			previous,
+			undefined,
+			`duplicate ${label} "${item.value}": ${item.file} and ${previous}`,
+		)
+		seen.set(key, item.file)
+	}
+}
+
+const services = collectFrontmatter("content/services")
+const towns = collectFrontmatter("content/pages/service-area")
+assertUnique(
+	services.map((item) => ({ file: item.file, value: item.title })),
+	"service title",
+)
+assertUnique(
+	services.map((item) => ({ file: item.file, value: item.description })),
+	"service description",
+)
+assertUnique(
+	towns.map((item) => ({ file: item.file, value: item.title })),
+	"town title",
+)
+assertUnique(
+	towns.map((item) => ({ file: item.file, value: item.description })),
+	"town description",
+)
+
+const cityServiceTitles = cityServicePages.map((page) => {
+	const location = getCityLocation(page.citySlug)
+	assert.ok(location, page.citySlug)
+	return {
+		file: `${page.citySlug}/${page.serviceSlug}`,
+		value: `${page.serviceTitle} in ${location!.name}, CA`,
+	}
+})
+assertUnique(cityServiceTitles, "city-service title")
 
 console.log("seo meta helpers ok")

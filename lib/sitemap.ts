@@ -204,6 +204,28 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 		images: absoluteImages("/images/team/byron-working.webp"),
 	})
 
+	for (const pathname of ["/expert-tips/popular", "/expert-tips/trending"]) {
+		upsertEntry(entries, {
+			pathname,
+			priority: 0.55,
+			changeFrequency: "weekly",
+			lastModified: newestPost,
+			images: absoluteImages("/images/team/byron-working.webp"),
+		})
+	}
+
+	for (const pathname of ["/services/popular", "/services/trending"]) {
+		upsertEntry(entries, {
+			pathname,
+			priority: 0.55,
+			changeFrequency: "weekly",
+			lastModified: newestService,
+			images: absoluteImages(
+				"/images/work/commercial-plumbing-installation.webp",
+			),
+		})
+	}
+
 	upsertEntry(entries, {
 		pathname: "/llms.txt",
 		priority: 0.4,
