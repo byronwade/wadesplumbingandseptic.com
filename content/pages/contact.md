@@ -1,16 +1,15 @@
 ---
 title: Contact Us
 description: >-
-  Call or text 831.225.4344, email support@wadesinc.io, or request a free quote
-  online. Family-owned plumbing and septic for Santa Cruz County and selected
-  Santa Clara County communities. CSLB #1087260.
+  Call 831.225.4344 or email support@wadesinc.io during weekday hours.
+  Family-owned plumbing and septic for Santa Cruz County. Quotes are free.
 order: 7
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing & Septic team ready for service calls
 eyebrow: Call or Text 831.225.4344
 ---
 
-Call, text, or use the free quote form at the top of this page. Quotes are free. Flat-rate pricing, quoted on site before work begins.
+Call or text 831.225.4344, or email support@wadesinc.io. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 ## Phone
 
@@ -53,13 +52,13 @@ Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineSe
 
 ## Request a free quote
 
-Use the form at the top of this page, or call or text the number on the card. Quotes are free. Flat-rate pricing, quoted on site before work begins. If we recently finished work at your home, you can [leave us a review on Google](https://g.page/r/CblD5bImAMZtEAE/review).
+Call or text the number on the card, or email the office. Quotes are free. Flat-rate pricing, quoted on site before work begins. If we recently finished work at your home, you can [Review us on Google](https://g.page/r/CblD5bImAMZtEAE/review).
 
 ## Frequently Asked Questions
 
 ### How do I get a quote?
 
-Use the form on this page, call or text 831.225.4344, or email the property address and a short description of the problem. Quotes are free. Many jobs need an on-site look before we can give a firm number.
+Call or text 831.225.4344, or email the property address and a short description of the problem. Quotes are free. Many jobs need an on-site look before we can give a firm number.
 
 ### When can I schedule plumbing service?
 

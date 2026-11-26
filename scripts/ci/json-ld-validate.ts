@@ -94,6 +94,50 @@ export function parseJsonLdScripts(html: string): unknown[] {
 	return blocks
 }
 
+export const advertisedQuoteFormCopy =
+	/\bquote form\b|\buse the form\b|\brequest a free quote online\b/i
+
+const bannedBookingTypes = new Set([
+	"QuoteAction",
+	"ReserveAction",
+	"OrderAction",
+	"BuyAction",
+])
+
+/**
+ * Production hides the quote form when email delivery is not configured.
+ * Schema must not advertise a form, OrderAction, or other booking widget.
+ */
+export function jsonLdQuoteFormIssues(data: unknown, source = "$"): string[] {
+	const issues: string[] = []
+
+	function visit(value: unknown, here: string) {
+		if (Array.isArray(value)) {
+			value.forEach((item, index) => visit(item, `${here}[${index}]`))
+			return
+		}
+		if (value && typeof value === "object") {
+			const record = value as JsonLdNode
+			if ("potentialAction" in record)
+				issues.push(
+					`${here}: potentialAction is not published (no online booking form)`,
+				)
+			for (const type of schemaTypes(record["@type"])) {
+				if (bannedBookingTypes.has(type))
+					issues.push(`${here}: banned booking type ${type}`)
+			}
+			for (const [key, child] of Object.entries(record))
+				visit(child, `${here}.${key}`)
+			return
+		}
+		if (typeof value === "string" && advertisedQuoteFormCopy.test(value))
+			issues.push(`${here}: copy advertises a quote form that is not shown`)
+	}
+
+	visit(data, source)
+	return [...new Set(issues)]
+}
+
 export function jsonLdParseIssues(blocks: unknown[], source: string): string[] {
 	const issues: string[] = []
 	for (const [index, block] of blocks.entries()) {
@@ -106,6 +150,7 @@ export function jsonLdParseIssues(blocks: unknown[], source: string): string[] {
 		else {
 			issues.push(...jsonLdTypeIssues(block, `${source}[${index}]`))
 			issues.push(...jsonLdRequiredFieldIssues(block, `${source}[${index}]`))
+			issues.push(...jsonLdQuoteFormIssues(block, `${source}[${index}]`))
 		}
 	}
 	return issues
@@ -201,7 +246,7 @@ export function jsonLdRequiredFieldIssues(
 			}
 		}
 
-		if (types.includes("BlogPosting")) {
+		if (types.includes("BlogPosting") || types.includes("Article")) {
 			for (const field of [
 				"headline",
 				"image",

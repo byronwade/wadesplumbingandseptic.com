@@ -23,6 +23,7 @@ import {
 import { extractFaqPairs } from "../../lib/seo"
 import { serviceAreaLocations } from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
+import { advertisedQuoteFormCopy } from "./json-ld-validate"
 
 const servicesDir = path.join("content", "services")
 const townDir = path.join("content", "pages", "service-area")
@@ -90,7 +91,12 @@ test("contact copy only names towns already on the service-area map", () => {
 	assert.match(contact, /service areas/)
 	assert.match(contact, /Los Gatos/)
 	assert.match(contact, /Saratoga/)
-	assert.match(contact, /leave us a review on Google/)
+	assert.match(contact, /Review us on Google/)
+	assert.doesNotMatch(contact, advertisedQuoteFormCopy)
+	for (const pair of extractFaqPairs(contact)) {
+		assert.doesNotMatch(pair.question, advertisedQuoteFormCopy)
+		assert.doesNotMatch(pair.answer, advertisedQuoteFormCopy)
+	}
 	assert.ok(
 		contact.includes(siteConfig.googleReviewUrl),
 		"contact.md should use the confirmed Google review URL",
@@ -100,18 +106,18 @@ test("contact copy only names towns already on the service-area map", () => {
 test("Google review CTA uses the confirmed listing URL and honest label", () => {
 	const button = renderToStaticMarkup(createElement(GoogleReviewButton))
 	assert.ok(button.includes(`href="${siteConfig.googleReviewUrl}"`), button)
-	assert.ok(button.includes("Leave us a review on Google"), button)
+	assert.ok(button.includes("Review us on Google"), button)
 	assert.doesNotMatch(button, /★|star rating|AggregateRating|review count/i)
 
 	const invite = renderToStaticMarkup(createElement(GoogleReviewInvite))
 	assert.ok(invite.includes(`href="${siteConfig.googleReviewUrl}"`), invite)
-	assert.ok(invite.includes("Leave us a review on Google"), invite)
+	assert.ok(invite.includes("Review us on Google"), invite)
 	assert.ok(invite.includes(siteConfig.googleBusinessUrl), invite)
 })
 
 test("footer review button and featured towns stay inside the mapped catalog", () => {
 	const html = renderToStaticMarkup(createElement(SiteFooter))
-	assert.ok(html.includes("Leave us a review on Google"), html)
+	assert.ok(html.includes("Review us on Google"), html)
 	assert.ok(html.includes(`href="${siteConfig.googleReviewUrl}"`), html)
 	for (const location of serviceAreaLocations.filter(
 		(item) => item.featured || item.slug === "ben-lomond",

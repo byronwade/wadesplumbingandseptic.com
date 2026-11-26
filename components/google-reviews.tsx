@@ -3,9 +3,11 @@ import type { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site"
 
+export const googleReviewCtaLabel = "Review us on Google"
+
 export function GoogleReviewButton({
 	onDark = false,
-	children = "Leave us a review on Google",
+	children = googleReviewCtaLabel,
 }: {
 	onDark?: boolean
 	children?: ReactNode
@@ -28,7 +30,7 @@ export function GoogleReviewButton({
 
 export function GoogleReviewInvite({
 	message = "Share your experience with Wade's Plumbing & Septic.",
-	buttonLabel = "Leave us a review on Google",
+	buttonLabel = googleReviewCtaLabel,
 }: {
 	message?: string
 	buttonLabel?: string

@@ -15,6 +15,7 @@ import {
 	RECENT_GUIDE_COUNT,
 	llmsFullPageSlugs,
 	oneLineSummary,
+	selectIndexableGuides,
 	selectRecentGuides,
 } from "../../lib/llms"
 import {
@@ -41,7 +42,12 @@ import {
 	businessFactIssues,
 	jsonLdBusinessFactIssues,
 } from "./business-facts"
-import { jsonLdRequiredFieldIssues, jsonLdTypeIssues } from "./json-ld-validate"
+import {
+	advertisedQuoteFormCopy,
+	jsonLdQuoteFormIssues,
+	jsonLdRequiredFieldIssues,
+	jsonLdTypeIssues,
+} from "./json-ld-validate"
 
 // lib/content and the llms routes are Next server modules; stub runtime-only imports.
 type Loader = (
@@ -293,6 +299,7 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 	for (const slug of ["warranties", "promotions", "testimonials", "about-us"])
 		assert.ok(!lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
 	assert.ok(body.includes("# Recent guides"))
+	assert.ok(body.includes("# Guides"))
 	assert.ok(body.includes("# Service areas"))
 	const recent = selectRecentGuides(posts)
 	assert.equal(recent.length, RECENT_GUIDE_COUNT)
@@ -300,6 +307,11 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 		assert.ok(
 			body.includes(`${siteConfig.url}/${guide.slug}`),
 			`llms-full recent guide: ${guide.slug}`,
+		)
+	for (const guide of selectIndexableGuides(posts))
+		assert.ok(
+			body.includes(`${siteConfig.url}/${guide.slug}`),
+			`llms-full guide: ${guide.slug}`,
 		)
 	for (const location of serviceAreaLocations)
 		assert.ok(
@@ -309,6 +321,7 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 
 	assert.ok(!body.includes("](/"), "Root-relative links must be absolute")
 	assert.deepEqual(businessFactIssues(body), [])
+	assert.doesNotMatch(body, advertisedQuoteFormCopy)
 })
 
 test("llms.txt link text repeats only confirmed business facts", async () => {
@@ -384,9 +397,10 @@ test("llms listings use a one-line factual summary", () => {
 	assert.equal(oneLineSummary("  One sentence.  "), "One sentence.")
 })
 
-test("llms.txt lists core services and best guides instead of dumping every post", async () => {
+test("llms.txt lists every service and indexable guide as links, not full post bodies", async () => {
 	const body = await routeText("../../app/llms.txt/route")
 	assert.ok(body.includes("## Best guides"))
+	assert.ok(body.includes("## Guides"))
 	assert.equal(body.includes("## Expert tips"), false)
 	for (const slug of coreServiceSlugs) {
 		assert.ok(
@@ -402,7 +416,7 @@ test("llms.txt lists core services and best guides instead of dumping every post
 		assert.ok(body.includes(`${siteConfig.url}${href}`), href)
 	assert.ok(body.includes("## Recent guides"))
 	const { getAllRoutes } = await import("../../lib/content")
-	const { posts } = await getAllRoutes()
+	const { posts, services } = await getAllRoutes()
 	const recent = selectRecentGuides(posts)
 	assert.equal(recent.length, RECENT_GUIDE_COUNT)
 	for (const guide of recent) {
@@ -412,12 +426,26 @@ test("llms.txt lists core services and best guides instead of dumping every post
 			guide.slug,
 		)
 	}
+	for (const service of services)
+		assert.ok(
+			body.includes(`${siteConfig.url}/service-offerings/${service.slug}`),
+			service.slug,
+		)
+	for (const guide of selectIndexableGuides(posts)) {
+		assert.ok(body.includes(`${siteConfig.url}/${guide.slug}`), guide.slug)
+		assert.equal(
+			body.includes(`Source: ${siteConfig.url}/${guide.slug}`),
+			false,
+			`llms.txt must not dump full text for ${guide.slug}`,
+		)
+	}
 	for (const phrase of bannedPublicPhrases)
 		assert.equal(
 			body.toLowerCase().includes(phrase.toLowerCase()),
 			false,
 			phrase,
 		)
+	assert.doesNotMatch(body, advertisedQuoteFormCopy)
 })
 
 test("JSON-LD for the business, articles, services and homepage FAQ matches confirmed facts", () => {
@@ -467,6 +495,11 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 			[],
 			JSON.stringify(node["@type"]),
 		)
+		assert.deepEqual(
+			jsonLdQuoteFormIssues(node),
+			[],
+			JSON.stringify(node["@type"]),
+		)
 		for (const phrase of bannedPublicPhrases)
 			assert.equal(
 				JSON.stringify(node).toLowerCase().includes(phrase.toLowerCase()),
@@ -504,6 +537,8 @@ test("homepage FAQ answers what Wade's does with confirmed facts", () => {
 	const hours = answerTo(/\bhours\b/i)
 	assert.ok(hours.includes(siteConfig.hours), hours)
 	assert.ok(hours.includes(siteConfig.phone), hours)
+	assert.ok(hours.includes(siteConfig.email), hours)
+	assert.doesNotMatch(hours, /quote form|use the form|quote online/i)
 })
 
 /** Configured redirects plus Next's automatic trailing-slash normalization. */
@@ -726,6 +761,7 @@ test("robots.txt welcomes search and AI crawlers with the same private paths blo
 		"Google-Extended",
 		"Applebot-Extended",
 		"Bingbot",
+		"CCBot",
 	])
 		assert.ok(welcomedCrawlers.includes(bot), bot)
 

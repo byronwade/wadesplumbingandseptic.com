@@ -22,6 +22,23 @@ type RecentGuideSource = {
 	noindex?: boolean
 }
 
+function compareGuides<T extends RecentGuideSource>(left: T, right: T) {
+	const byDate = (right.date ?? "").localeCompare(left.date ?? "")
+	if (byDate !== 0) return byDate
+	const byUpdated = (right.updated ?? right.date ?? "").localeCompare(
+		left.updated ?? left.date ?? "",
+	)
+	if (byUpdated !== 0) return byUpdated
+	return left.slug.localeCompare(right.slug)
+}
+
+/** Every indexable Expert Tips post, newest first. */
+export function selectIndexableGuides<T extends RecentGuideSource>(
+	posts: T[],
+): T[] {
+	return [...posts].filter((post) => !post.noindex).sort(compareGuides)
+}
+
 /**
  * Newest indexable posts by published date. llms files read this instead of a
  * handwritten slug list so a new guide cannot ship without appearing there.
@@ -30,18 +47,7 @@ export function selectRecentGuides<T extends RecentGuideSource>(
 	posts: T[],
 	limit = RECENT_GUIDE_COUNT,
 ): T[] {
-	return [...posts]
-		.filter((post) => !post.noindex)
-		.sort((a, b) => {
-			const byDate = (b.date ?? "").localeCompare(a.date ?? "")
-			if (byDate !== 0) return byDate
-			const byUpdated = (b.updated ?? b.date ?? "").localeCompare(
-				a.updated ?? a.date ?? "",
-			)
-			if (byUpdated !== 0) return byUpdated
-			return a.slug.localeCompare(b.slug)
-		})
-		.slice(0, limit)
+	return selectIndexableGuides(posts).slice(0, limit)
 }
 
 /**

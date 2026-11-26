@@ -5,9 +5,14 @@ import path from "node:path"
 import matter from "gray-matter"
 
 import { contactInfo } from "../../lib/contact"
-import { RECENT_GUIDE_COUNT, selectRecentGuides } from "../../lib/llms"
+import {
+	RECENT_GUIDE_COUNT,
+	selectIndexableGuides,
+	selectRecentGuides,
+} from "../../lib/llms"
 import { weekdayHoursPhrase } from "../../lib/public-facts"
 import { quoteEmailConfigured } from "../../lib/quote-request"
+import { serviceAreaLocations } from "../../lib/service-areas"
 import { jsonLdBusinessFactIssues } from "./business-facts"
 import {
 	canonicalHref,
@@ -26,6 +31,7 @@ import {
 } from "./html-crawl"
 import {
 	collectJsonLdNodes,
+	advertisedQuoteFormCopy,
 	jsonLdParseIssues,
 	parseJsonLdScripts,
 	type JsonLdNode,
@@ -43,7 +49,9 @@ const requiredBots = [
 	"PerplexityBot",
 	"ClaudeBot",
 	"Google-Extended",
+	"Applebot-Extended",
 	"Bingbot",
+	"CCBot",
 ]
 
 const expectedName = "Wade's Plumbing & Septic"
@@ -109,7 +117,7 @@ function normalizeFrontmatterDate(value: unknown) {
 	return String(value).slice(0, 10)
 }
 
-function recentGuidesFromDisk() {
+function guidesFromDisk() {
 	const dir = path.join(process.cwd(), "content", "posts")
 	const posts = fs
 		.readdirSync(dir)
@@ -129,7 +137,7 @@ function recentGuidesFromDisk() {
 		RECENT_GUIDE_COUNT,
 		"content/posts must have enough indexable guides for llms.txt",
 	)
-	return recent
+	return { recent, all: selectIndexableGuides(posts) }
 }
 
 function assertSitemapParser() {
@@ -156,6 +164,50 @@ function isServiceOrTown(pathname: string) {
 		pathname.startsWith("/service-offerings/") ||
 		pathname.startsWith("/service-area/")
 	)
+}
+
+function isServicePage(pathname: string) {
+	return /^\/service-offerings\/[^/]+$/.test(pathname)
+}
+
+function isTownHub(pathname: string) {
+	return /^\/service-area\/[a-z0-9-]+-ca-plumbing-septic-services$/.test(
+		pathname,
+	)
+}
+
+function isCityServicePage(pathname: string) {
+	return /^\/service-area\/[^/]+\/[^/]+$/.test(pathname)
+}
+
+function decodeHtmlText(text: string) {
+	return text
+		.replace(/&amp;/g, "&")
+		.replace(/&#x27;|&apos;|&#39;/g, "'")
+		.replace(/&quot;/g, '"')
+}
+
+function titleNamesServiceOrTown(pathname: string, title: string) {
+	const lower = decodeHtmlText(title).toLowerCase()
+	if (isServicePage(pathname)) {
+		const slug = pathname.split("/")[2] ?? ""
+		const tokens = slug.split("-").filter((part) => part.length >= 4)
+		return tokens.some((token) => lower.includes(token))
+	}
+	if (isTownHub(pathname)) {
+		const location = serviceAreaLocations.find((item) => item.href === pathname)
+		return location ? lower.includes(location.name.toLowerCase()) : true
+	}
+	if (isCityServicePage(pathname)) {
+		const [, , city, service] = pathname.split("/")
+		const location = serviceAreaLocations.find((item) => item.slug === city)
+		const tokens = (service ?? "").split("-").filter((part) => part.length >= 4)
+		return (
+			Boolean(location && lower.includes(location.name.toLowerCase())) &&
+			tokens.some((token) => lower.includes(token))
+		)
+	}
+	return true
 }
 
 function isSkippablePath(pathname: string) {
@@ -319,7 +371,7 @@ async function main() {
 	const llmsFull = await fetchOnce("/llms-full.txt", "follow")
 	assert.equal(llms.response.status, 200)
 	assert.equal(llmsFull.response.status, 200)
-	const recentGuides = recentGuidesFromDisk()
+	const { recent: recentGuides, all: allGuides } = guidesFromDisk()
 	for (const [name, body] of [
 		["llms.txt", llms.body],
 		["llms-full.txt", llmsFull.body],
@@ -339,6 +391,9 @@ async function main() {
 				`${name} recent guide /${guide.slug}`,
 			)
 		}
+		for (const guide of allGuides) {
+			assert.ok(body.includes(`/${guide.slug}`), `${name} guide /${guide.slug}`)
+		}
 		assert.ok(
 			body.includes("/service-area/santa-cruz-ca-plumbing-septic-services"),
 			`${name} Santa Cruz town page`,
@@ -352,10 +407,10 @@ async function main() {
 	const sitemapPaths = new Set(
 		entries.map((entry) => new URL(entry.loc).pathname),
 	)
-	for (const guide of recentGuides) {
+	for (const guide of allGuides) {
 		assert.ok(
 			sitemapPaths.has(`/${guide.slug}`),
-			`recent guide missing from sitemap: /${guide.slug}`,
+			`guide missing from sitemap: /${guide.slug}`,
 		)
 	}
 
@@ -365,7 +420,15 @@ async function main() {
 	const pending = new Set<string>()
 	const assets = new Set<string>()
 	const fragments = new Map<string, Set<string>>()
+	const outbound = new Map<string, Set<string>>()
 	let plumberNodes = 0
+
+	function addHop(from: string, to: string) {
+		if (!to.startsWith("/") || isSkippablePath(to) || !isHtmlPath(to)) return
+		const edges = outbound.get(from) ?? new Set<string>()
+		edges.add(to)
+		outbound.set(from, edges)
+	}
 
 	function noteFragment(pathname: string, hash: string, from: string) {
 		if (!hash) return
@@ -429,9 +492,7 @@ async function main() {
 			)
 			for (const name of [
 				"Santa Cruz County, California",
-				"Santa Cruz",
-				"Watsonville",
-				"Los Gatos",
+				...serviceAreaLocations.map((location) => location.name),
 			]) {
 				if (!names.includes(name))
 					issues.push(`${pathname}: Service areaServed missing ${name}`)
@@ -463,21 +524,38 @@ async function main() {
 		const description = metaDescription(body)
 		const canonical = canonicalHref(body)
 		const expectedCanonical = `${expectedUrl}${pathname === "/" ? "" : pathname}`
+		const noindex = robotsNoindex(body)
 		if (!title) issues.push(`${pathname}: missing title`)
 		if (!description) issues.push(`${pathname}: missing meta description`)
-		if (titles.has(title) && isServiceOrTown(pathname))
+		const decodedTitle = decodeHtmlText(title)
+		const decodedDescription = decodeHtmlText(description)
+		if (decodedDescription && decodedDescription.length > 160)
 			issues.push(
-				`${pathname}: duplicate title "${title}" also on ${titles.get(title)}`,
+				`${pathname}: meta description is ${decodedDescription.length} characters`,
 			)
-		if (isServiceOrTown(pathname)) titles.set(title, pathname)
-		if (isServiceOrTown(pathname) && description) {
-			const previous = descriptions.get(description)
-			if (previous)
+		if (!noindex) {
+			if (titles.has(decodedTitle))
 				issues.push(
-					`${pathname}: duplicate meta description also on ${previous}`,
+					`${pathname}: duplicate title "${decodedTitle}" also on ${titles.get(decodedTitle)}`,
 				)
-			descriptions.set(description, pathname)
+			titles.set(decodedTitle, pathname)
+			if (decodedDescription) {
+				const previous = descriptions.get(decodedDescription)
+				if (previous)
+					issues.push(
+						`${pathname}: duplicate meta description also on ${previous}`,
+					)
+				descriptions.set(decodedDescription, pathname)
+			}
 		}
+		if (
+			title &&
+			(isServicePage(pathname) ||
+				isTownHub(pathname) ||
+				isCityServicePage(pathname)) &&
+			!titleNamesServiceOrTown(pathname, title)
+		)
+			issues.push(`${pathname}: title does not name the town or service`)
 		if (!canonical) issues.push(`${pathname}: missing canonical`)
 		else if (canonical !== expectedCanonical && canonical !== pathname)
 			issues.push(`${pathname}: canonical ${canonical}`)
@@ -518,6 +596,7 @@ async function main() {
 				continue
 			}
 			if ("external" in resolved) continue
+			addHop(pathname, resolved.pathname)
 			noteTarget(resolved.pathname, pathname, resolved.hash)
 		}
 
@@ -653,7 +732,37 @@ async function main() {
 				issues.push("/contact: call-or-email block missing email link")
 			if (!contact.body.includes(weekdayHoursPhrase()))
 				issues.push("/contact: call-or-email block missing office hours")
+			if (advertisedQuoteFormCopy.test(visiblePageText(contact.body)))
+				issues.push(
+					"/contact: visible copy still advertises a quote form while email is unconfigured",
+				)
 		}
+	}
+
+	const hopsFromHome = new Map<string, number>([["/", 0]])
+	const hopQueue = ["/"]
+	while (hopQueue.length) {
+		const node = hopQueue.shift()!
+		const depth = hopsFromHome.get(node) ?? 0
+		if (depth >= 2) continue
+		for (const next of outbound.get(node) ?? []) {
+			if (hopsFromHome.has(next)) continue
+			hopsFromHome.set(next, depth + 1)
+			hopQueue.push(next)
+		}
+	}
+	for (const pathname of sitemapPaths) {
+		if (
+			!isServicePage(pathname) &&
+			!isTownHub(pathname) &&
+			!isCityServicePage(pathname)
+		)
+			continue
+		const hops = hopsFromHome.get(pathname)
+		if (hops === undefined || hops > 2)
+			issues.push(
+				`${pathname}: not reachable within 2 clicks of home${hops === undefined ? "" : ` (${hops} hops)`}`,
+			)
 	}
 
 	await checkQuoteEndpoint(issues)

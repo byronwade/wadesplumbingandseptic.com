@@ -195,7 +195,7 @@ export const faqs = [
 	},
 	{
 		question: "What are your hours?",
-		answer: `Wade's office hours are ${siteConfig.hours}. Call ${siteConfig.phone} during those hours or request a free quote online.`,
+		answer: `Wade's office hours are ${siteConfig.hours}. Call ${siteConfig.phone} during those hours or email ${siteConfig.email}.`,
 	},
 	{
 		question: "What are the signs of a failing septic system?",

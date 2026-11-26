@@ -26,7 +26,7 @@ export const freeQuoteCtaLabel = "Get a Free Quote"
 /** Shown when quote email cannot be delivered, so Call stays the conversion path. */
 export const callForFreeQuoteLabel = "Call for a free quote"
 export const freeQuotePath = "/contact"
-/** Contact-page form fragment. Quote CTAs deep-link here. */
+/** Contact-page quote section fragment. Quote CTAs deep-link here. */
 export const freeQuoteHash = "quote"
 export const freeQuoteHref = `${freeQuotePath}#${freeQuoteHash}`
 
