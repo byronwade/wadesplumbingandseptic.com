@@ -8,10 +8,10 @@ order: 38
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-Protecting your home from basement flooding is essential, and a reliable sump pump installation can be your first line of defense. At Wade's Plumbing & Septic, we offer expert sump pump installation services to homeowners in Santa Cruz County, California. Our comprehensive approach ensures your property remains safe and dry, even during heavy rains or unexpected water leaks.
+Sump pump installation for Santa Cruz County homes is a new or replacement pump in a wet basement or crawl space, including the discharge line and a function test. Wade's Plumbing & Septic sizes the pump to the pit and existing piping. This is a groundwater sump pump, not a septic tank pump-out.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

@@ -39,7 +39,7 @@ Our septic work here includes:
 - **Drainfield assessment** when odors, wet spots, or slow drains point to leach failure, not a clog
 - **System upgrades** coordinated with [engineered septic options](/service-offerings/engineered-septic-system-installation) when Brookdale soils or slopes won't support a conventional repair
 
-A tank that hasn't been pumped in fifteen years doesn't always fail loudly. Sometimes it sends solids into the leach field until the only fix is replacement. We'd rather catch that on a routine visit than on a holiday weekend.
+A tank that has gone a long time without pumping does not always fail loudly. Solids can move into the leach field until the only fix is replacement. A routine inspection is a better time to catch that than a holiday weekend backup.
 
 ## Why Brookdale needs a local crew
 
@@ -49,7 +49,7 @@ We're family-owned and based in the county. We know the difference between a Bro
 
 ## Neighbors on the same stretch of Highway 9
 
-Brookdale sits between [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services). We serve both daily, the same San Lorenzo River watershed, the same septic-and-well fundamentals.
+Brookdale sits between [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services). We serve both, the same San Lorenzo River watershed, the same septic-and-well fundamentals.
 
 Wade's septic work in Brookdale is system installation, including engineered systems done alongside your engineer. We do not pump tanks.
 
@@ -69,7 +69,7 @@ Common Brookdale plumbing problems include galvanized and mixed materials corrod
 
 ### Can a Brookdale septic tank fail without obvious warning?
 
-Yes. A Brookdale tank that hasn't been pumped in fifteen years doesn't always fail loudly. Sometimes it sends solids into the leach field until the only fix is replacement, which Wade's would rather catch on a routine visit.
+Yes. A Brookdale tank that has gone a long time without pumping does not always fail loudly. Solids can move into the leach field until the only fix is replacement, which a routine inspection can catch earlier. Wade's does not pump tanks.
 
 ## Contact Wade's
 

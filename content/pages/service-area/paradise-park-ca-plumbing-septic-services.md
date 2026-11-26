@@ -30,9 +30,9 @@ We repair leaks, clear drains, replace heaters, and camera sewer lines before re
 
 Paradise Park is entirely on **onsite septic**. Proximity to the river corridor means setbacks, soil conditions, and seasonal groundwater deserve respect, not alarm, but honest assessment.
 
-**Seasonal occupancy.** A cabin used eight weekends a year still needs periodic pumping; biological activity doesn't pause because you're in San Jose. Conversely, over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used.
+**Seasonal occupancy.** A cabin used only on weekends still needs periodic pumping; biological activity does not pause because the house is empty. Over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used. Wade's does not pump tanks.
 
-**Aging infrastructure.** Original tanks and leach fields from the 1950s to 70s are still in the ground on some lots. Baffles corrode. Concrete spalls. Risers were never installed. We document condition so owners know whether they're maintaining or budgeting for replacement.
+**Aging infrastructure.** Older tanks and leach fields are still in the ground on some lots. Baffles corrode. Concrete spalls. Risers were never installed. We document condition so owners know whether they are maintaining or budgeting for replacement.
 
 **Wet winters.** Saturated soils reduce drainfield capacity. Slow drains in February aren't always a clog. They can be a full leach line. We distinguish septic failure from plumbing blockage.
 
@@ -56,7 +56,7 @@ Paradise Park is entirely on onsite septic. Because homes sit along the San Lore
 
 ### How often should a seasonal Paradise Park cabin have its septic tank pumped?
 
-A Paradise Park cabin used eight weekends a year still needs periodic pumping, but over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used. Wade's does not pump tanks, so book the pumping itself with a septic pumping company.
+A Paradise Park cabin used only on weekends still needs periodic pumping, but over-pumping a lightly used tank wastes money. Intervals should be based on how the home is actually used. Wade's does not pump tanks, so book tank pumping with a pumping company.
 
 ### Why do Paradise Park drains run slow in winter?
 

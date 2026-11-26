@@ -7,10 +7,10 @@ category: Plumbing
 order: 36
 image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic control panel
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-In Santa Cruz County, California, keeping your plumbing system in top shape is crucial, and a main line cleanout installation can be a game-changer for homeowners. This service ensures easy access to your main sewer line for routine maintenance and problems, aligning with updated plumbing codes designed to enhance efficiency and lower future costs. At Wade's Plumbing & Septic, we specialize in providing comprehensive main line cleanout installations that meet local regulations and safeguard your home against plumbing issues.
+A main line cleanout gives Santa Cruz County homes a code-friendly access point on the building sewer so cleaning and camera work do not require breaking pavement every time. Wade's Plumbing & Septic locates the line, installs the cleanout, and confirms it opens to the main.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

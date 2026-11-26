@@ -7,7 +7,7 @@ category: Septic
 order: 18
 image: /images/work/engineered-septic-hero.webp
 imageAlt: New septic system installation
-updated: "2026-10-20"
+updated: "2026-11-26"
 ---
 
 Wade's Plumbing & Septic installs new septic systems for Santa Cruz County homes, including conventional designs where they fit and engineered systems when slope, soil, or setbacks require them. We work through site constraints and permits with your engineer when an engineered design is needed, then install the system. We do not pump tanks. Quotes are free, and pricing is a flat rate quoted on site.
@@ -50,29 +50,20 @@ Our installation process is designed to be thorough and efficient, minimizing di
 
 ## Cost Factors and Installation Timeline
 
-The cost of a septic system installation can vary based on several factors, including system type, site conditions, and local permitting requirements. On average, the process takes a few weeks from start to finish, ensuring all aspects are handled with care and attention to detail. For a precise estimate, [contact Wade's Plumbing](/service-offerings/septic-tank-inspection-and-assessment) to schedule a consultation.
+Cost depends on system type, site conditions, and county permitting. Timeline depends on design, soils, and permit review. For a site-specific quote, start with a [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment) or call 831.225.4344 during office hours.
 
 Flat-rate pricing, quoted on site before work begins.
 
 ## FAQs About Septic System Installation
 
-- **What is the difference between conventional and engineered septic systems?** Conventional systems use a simple tank and drainfield, while engineered systems may include advanced treatment units for more challenging sites.
-- **How can I maintain my septic tank?** Regular inspections are vital to prevent issues. Consider [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care) services for expert assistance.
-
-For professional, reliable septic system installation in Santa Cruz County, trust Wade's Plumbing & Septic. Our team is here to guide you through every step, ensuring a seamless experience and a system that serves your home efficiently for years to come. **Contact us today** to schedule your consultation and take the first step toward a worry-free septic solution.
+- **What is the difference between conventional and engineered septic systems?** Conventional systems use a tank and drainfield. Engineered systems add treatment or dispersal when slope, soil, or setbacks make a standard layout a poor fit. See [engineered septic system installation](/service-offerings/engineered-septic-system-installation).
+- **How can I maintain my septic tank?** Regular inspections and filter service help. Wade's does not pump tanks; for pumping you will need a pumping company. See [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care).
+- **How do I get a quote?** Call 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM (closed Saturday and Sunday), or request a free quote.
 
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic is proud to offer premium septic system installation services across Santa Cruz County, CA. Our expert team is dedicated to serving the communities of Santa Cruz, Capitola, Scotts Valley, Watsonville, Aptos, and surrounding areas with professionalism and reliability.
+Wade's Plumbing & Septic installs septic systems across Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, Aptos, and the other towns on our [service areas](/service-areas) page.
 
-As a fully licensed contractor holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), we ensure that every project meets the highest standards of quality and safety.
+California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
-Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
-
-## Top-Tier Septic Installations in Santa Cruz County, CA
-
-Experience seamless and efficient septic installations with Wade's Plumbing & Septic, your trusted local experts.
-
-[Call Us Now](tel:+18312254344)
-
-Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
+Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Quotes are free.

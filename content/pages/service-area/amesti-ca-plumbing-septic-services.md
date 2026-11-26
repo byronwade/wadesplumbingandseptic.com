@@ -9,7 +9,7 @@ imageAlt: South Santa Cruz County rural property near Amesti, California
 
 Amesti is a quiet census-designated place tucked between Watsonville and the rolling agricultural lands south of the city, modest homes, small farms, and rural lots threaded by Amesti Creek and the county roads that connect Freedom, Las Lomas, and the Pajaro Valley floor. It is not a town center with a main street; it is a patchwork of residential parcels where septic systems, well pumps, and aging plumbing are part of daily life.
 
-Wade's Plumbing & Septic knows Amesti because we work across south Santa Cruz County every day. Whether you are dealing with a backed-up drain before harvest season or a septic alarm going off after a wet winter, we respond with practical diagnostics and honest recommendations.
+Wade's Plumbing & Septic serves Amesti as part of south Santa Cruz County coverage. Whether you are dealing with a backed-up drain before harvest season or a septic alarm going off after a wet winter, we diagnose the system and explain what we find before recommending work.
 
 ## Plumbing services in Amesti
 

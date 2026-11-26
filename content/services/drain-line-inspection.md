@@ -8,10 +8,10 @@ order: 44
 image: >-
   /images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp
 imageAlt: Storm drain covered with debris
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-When it comes to maintaining the integrity of your home's plumbing system, a professional **drain line inspection** is crucial. In Santa Cruz County, California, homeowners trust Wade's Plumbing & Septic for expert inspection services that ensure your pipes are in top condition. By using advanced camera technology, we can visually assess your drain lines to locate blockages, identify pipe damage, and detect potential problem areas before they lead to costly repairs.
+A drain line inspection for Santa Cruz County homes is a camera look inside the pipe so you can see roots, breaks, bellies, or grease before anyone digs. Wade's Plumbing & Septic runs the camera, shows you the footage, and explains whether [drain cleaning](/service-offerings/drain-cleaning), repair, or replacement is the next step.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

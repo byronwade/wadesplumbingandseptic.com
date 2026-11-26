@@ -7,10 +7,10 @@ category: Commercial
 order: 23
 image: /images/services/commercial-plumbing.webp
 imageAlt: Commercial plumbing service
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-Grease trap installation is an essential service for restaurants, commercial kitchens, and food processing facilities in Santa Cruz County, California. These systems play a critical role in preventing fats, oils, and grease (FOG) from entering the wastewater system, which can cause significant plumbing issues and environmental harm. At Wade's Plumbing & Septic, we specialize in comprehensive grease trap installation, ensuring your establishment remains compliant with local regulations.
+Grease trap installation for Santa Cruz County food-service businesses is a sized interceptor that keeps fats, oils, and grease out of the sewer or septic line. Wade's Plumbing & Septic installs to local requirements and explains access for future cleaning.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

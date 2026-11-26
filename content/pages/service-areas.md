@@ -68,9 +68,7 @@ Selected plumbing and project work may be available in:
 
 - [Los Gatos](/service-area/los-gatos-ca-plumbing-septic-services)
 - [Saratoga](/service-area/saratoga-ca-plumbing-septic-services)
-- Communities near the Santa Cruz County line
-
-Availability depends on project type and scheduling. Call with the property address so the team can confirm coverage.
+  Availability depends on project type and scheduling. Call with the property address so the team can confirm coverage. Los Gatos and Saratoga are selected addresses, not whole-town coverage.
 
 ## How service works in your area
 
