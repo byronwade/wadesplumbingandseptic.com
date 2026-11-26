@@ -123,10 +123,10 @@ assert.doesNotMatch(
 	/^["']use client["']/,
 	"Office hours markup must stay a server component. Live status belongs in the boot script.",
 )
-assert.doesNotMatch(
+assert.match(
 	readFileSync(join(root, "components/page-view-tracker.tsx"), "utf8"),
 	/^["']use client["']/,
-	"Page-view beacons must stay inline scripts, not a hydrated island.",
+	"Page-view beacons must stay a client effect so Next Link navigations still count.",
 )
 assert.match(
 	readFileSync(join(root, "app/layout.tsx"), "utf8"),

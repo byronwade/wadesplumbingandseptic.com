@@ -878,19 +878,17 @@
 		contain-intrinsic-size: auto 720px;
 	}
 
-	.office-hours-dot {
+	[data-office-hours]::before {
 		width: 0.5rem;
 		height: 0.5rem;
 		flex-shrink: 0;
 		border-radius: 9999px;
-	}
-
-	.office-hours-dot-open {
-		background: oklch(0.72 0.17 155);
-	}
-
-	.office-hours-dot-closed {
+		content: "";
 		background: var(--primary-bright);
+	}
+
+	[data-office-hours][data-open="true"]::before {
+		background: oklch(0.72 0.17 155);
 	}
 
 	/*
