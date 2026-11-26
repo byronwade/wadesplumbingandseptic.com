@@ -80,6 +80,16 @@ test("required-field checks fail closed on empty FAQ, breadcrumb, and plumber no
 			headline: "A guide",
 		}).some((issue) => issue.includes("datePublished")),
 	)
+	assert.ok(
+		jsonLdRequiredFieldIssues({
+			"@type": "BlogPosting",
+			headline: "A guide",
+			image: "https://www.wadesplumbingandseptic.com/images/example.webp",
+			url: "https://www.wadesplumbingandseptic.com/a-guide",
+			datePublished: "2026-11-25",
+			author: { "@type": "Organization", name: "Wade's Plumbing & Septic" },
+		}).some((issue) => issue.includes("dateModified")),
+	)
 })
 
 test("nested OfferCatalog services only require a name", () => {

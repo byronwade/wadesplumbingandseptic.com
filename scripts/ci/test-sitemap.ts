@@ -134,7 +134,17 @@ async function main() {
 		}
 	}
 
+	const { RECENT_GUIDE_COUNT, selectRecentGuides } =
+		await import("../../lib/llms")
 	const posts = (await getCollection("posts")).filter((post) => !post.noindex)
+	const recentGuides = selectRecentGuides(posts)
+	assert.equal(recentGuides.length, RECENT_GUIDE_COUNT)
+	for (const post of recentGuides) {
+		assert.ok(
+			pathSet.has(`/${post.slug}`),
+			`Recent guide missing from sitemap: /${post.slug}`,
+		)
+	}
 	const tagCounts = new Map<string, number>()
 	for (const post of posts) {
 		assert.ok(pathSet.has(`/${post.slug}`), `Missing tip URL: /${post.slug}`)

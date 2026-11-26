@@ -12,6 +12,38 @@ import { siteConfig } from "@/lib/site"
 
 export const LLMS_FULL_PATH = "/llms-full.txt"
 
+/** Newest Expert Tips posts listed in llms.txt / llms-full.txt. */
+export const RECENT_GUIDE_COUNT = 8
+
+type RecentGuideSource = {
+	slug: string
+	date?: string
+	updated?: string
+	noindex?: boolean
+}
+
+/**
+ * Newest indexable posts by published date. llms files read this instead of a
+ * handwritten slug list so a new guide cannot ship without appearing there.
+ */
+export function selectRecentGuides<T extends RecentGuideSource>(
+	posts: T[],
+	limit = RECENT_GUIDE_COUNT,
+): T[] {
+	return [...posts]
+		.filter((post) => !post.noindex)
+		.sort((a, b) => {
+			const byDate = (b.date ?? "").localeCompare(a.date ?? "")
+			if (byDate !== 0) return byDate
+			const byUpdated = (b.updated ?? b.date ?? "").localeCompare(
+				a.updated ?? a.date ?? "",
+			)
+			if (byUpdated !== 0) return byUpdated
+			return a.slug.localeCompare(b.slug)
+		})
+		.slice(0, limit)
+}
+
 /**
  * Existing pages copied in full into llms-full.txt. Warranties, promotions,
  * testimonials, insurance claims and about-us are left out on purpose: they

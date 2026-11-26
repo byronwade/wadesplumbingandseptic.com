@@ -1,5 +1,10 @@
 import assert from "node:assert/strict"
+import fs from "node:fs"
+import path from "node:path"
 
+import matter from "gray-matter"
+
+import { RECENT_GUIDE_COUNT, selectRecentGuides } from "../../lib/llms"
 import { jsonLdBusinessFactIssues } from "./business-facts"
 import {
 	canonicalHref,
@@ -13,6 +18,7 @@ import {
 	pageTitle,
 	resolveInternalHref,
 	visibleLead,
+	visiblePageText,
 	type HtmlImage,
 } from "./html-crawl"
 import {
@@ -92,6 +98,35 @@ export function parseSitemapUrls(xml: string) {
 			},
 		]
 	})
+}
+
+function normalizeFrontmatterDate(value: unknown) {
+	if (!value) return undefined
+	if (value instanceof Date) return value.toISOString().slice(0, 10)
+	return String(value).slice(0, 10)
+}
+
+function recentGuidesFromDisk() {
+	const dir = path.join(process.cwd(), "content", "posts")
+	const posts = fs
+		.readdirSync(dir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => {
+			const { data } = matter(fs.readFileSync(path.join(dir, name), "utf8"))
+			return {
+				slug: name.replace(/\.md$/, ""),
+				date: normalizeFrontmatterDate(data.date),
+				updated: normalizeFrontmatterDate(data.updated),
+				noindex: Boolean(data.noindex),
+			}
+		})
+	const recent = selectRecentGuides(posts)
+	assert.equal(
+		recent.length,
+		RECENT_GUIDE_COUNT,
+		"content/posts must have enough indexable guides for llms.txt",
+	)
+	return recent
 }
 
 function assertSitemapParser() {
@@ -281,6 +316,7 @@ async function main() {
 	const llmsFull = await fetchOnce("/llms-full.txt", "follow")
 	assert.equal(llms.response.status, 200)
 	assert.equal(llmsFull.response.status, 200)
+	const recentGuides = recentGuidesFromDisk()
 	for (const [name, body] of [
 		["llms.txt", llms.body],
 		["llms-full.txt", llmsFull.body],
@@ -294,26 +330,12 @@ async function main() {
 		)
 		assert.ok(body.includes(expectedUrl), `${name} URL`)
 		assert.ok(body.includes("Recent guides"), `${name} recent guides`)
-		assert.ok(
-			body.includes("/santa-cruz-septic-inspection-at-sale"),
-			`${name} #301 septic sale guide`,
-		)
-		assert.ok(
-			body.includes("/slab-leak-signs-santa-cruz-homes"),
-			`${name} #301 slab leak guide`,
-		)
-		assert.ok(
-			body.includes("/how-to-prepare-for-a-re-pipe-santa-cruz"),
-			`${name} #297 re-pipe guide`,
-		)
-		assert.ok(
-			body.includes("/backflow-testing-santa-cruz-county-homes"),
-			`${name} #297 backflow guide`,
-		)
-		assert.ok(
-			body.includes("/sewer-camera-inspection-santa-cruz-homes"),
-			`${name} #297 camera guide`,
-		)
+		for (const guide of recentGuides) {
+			assert.ok(
+				body.includes(`/${guide.slug}`),
+				`${name} recent guide /${guide.slug}`,
+			)
+		}
 		assert.ok(
 			body.includes("/service-area/santa-cruz-ca-plumbing-septic-services"),
 			`${name} Santa Cruz town page`,
@@ -327,6 +349,12 @@ async function main() {
 	const sitemapPaths = new Set(
 		entries.map((entry) => new URL(entry.loc).pathname),
 	)
+	for (const guide of recentGuides) {
+		assert.ok(
+			sitemapPaths.has(`/${guide.slug}`),
+			`recent guide missing from sitemap: /${guide.slug}`,
+		)
+	}
 
 	const titles = new Map<string, string>()
 	const descriptions = new Map<string, string>()
@@ -368,6 +396,44 @@ async function main() {
 		}
 
 		const nodes = blocks.flatMap((block) => collectJsonLdNodes(block))
+		const visible = visiblePageText(body)
+		for (const node of nodes) {
+			if (!nodeHasType(node, "FAQPage")) continue
+			const questions = Array.isArray(node.mainEntity) ? node.mainEntity : []
+			for (const item of questions) {
+				if (!item || typeof item !== "object") continue
+				const question = (item as JsonLdNode).name
+				if (typeof question !== "string" || !question) continue
+				if (!visible.includes(question))
+					issues.push(`${pathname}: FAQPage question not visible: ${question}`)
+			}
+		}
+		if (pathname.startsWith("/service-offerings/")) {
+			const service = nodes.find(
+				(node) =>
+					nodeHasType(node, "Service") &&
+					typeof node["@id"] === "string" &&
+					node["@id"].endsWith("#service"),
+			)
+			const areas = Array.isArray(service?.areaServed) ? service.areaServed : []
+			const names = areas.flatMap((area) =>
+				area &&
+				typeof area === "object" &&
+				"name" in area &&
+				typeof (area as JsonLdNode).name === "string"
+					? [(area as JsonLdNode).name as string]
+					: [],
+			)
+			for (const name of [
+				"Santa Cruz County, California",
+				"Santa Cruz",
+				"Watsonville",
+				"Los Gatos",
+			]) {
+				if (!names.includes(name))
+					issues.push(`${pathname}: Service areaServed missing ${name}`)
+			}
+		}
 		const business = nodes.find((node) => nodeHasType(node, "Plumber"))
 		if (business) {
 			plumberNodes += 1

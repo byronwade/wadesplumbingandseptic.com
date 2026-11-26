@@ -11,6 +11,7 @@ import {
 	serviceFaqJsonLd,
 	serviceJsonLd,
 } from "../../lib/seo"
+import { serviceAreaLocations } from "../../lib/service-areas"
 import {
 	extractServiceFaqs,
 	parseServiceSections,
@@ -275,4 +276,25 @@ test("Service schema books through the business phone, hours and contact page", 
 	)
 	assert.equal(schema.availableChannel.serviceUrl, `${siteConfig.url}/contact`)
 	assert.doesNotMatch(JSON.stringify(schema), /offers|price/i)
+})
+
+test("Service schema names Santa Cruz County and every mapped town page", () => {
+	const schema = serviceJsonLd(documentFor("drain-cleaning"))
+	const areas = schema.areaServed
+	assert.equal(areas.length, serviceAreaLocations.length + 1)
+	assert.equal(areas[0]?.name, "Santa Cruz County, California")
+	for (const location of serviceAreaLocations) {
+		const match = areas.find((area) => area.name === location.name)
+		assert.ok(match && "url" in match, location.name)
+		assert.equal(match.url, `${siteConfig.url}${location.href}`)
+	}
+	assert.ok(
+		areas.some((area) => area.name === "Los Gatos"),
+		"Los Gatos stays listed as a selected Santa Clara town",
+	)
+	assert.ok(
+		!areas.some((area) => area.name === "Santa Clara County, California"),
+		"Santa Clara is never named countywide",
+	)
+	assert.deepEqual(schema.areaServed, localBusinessJsonLd().areaServed)
 })

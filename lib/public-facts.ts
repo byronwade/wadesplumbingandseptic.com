@@ -53,42 +53,6 @@ export const bestGuideHrefs = [
 	"/glossary",
 ] as const
 
-/** Newest homeowner guides listed in llms.txt. Keep this short. */
-export const recentGuides = [
-	{
-		href: "/adding-adu-bedroom-septic-santa-cruz",
-		title: "Adding an ADU on a Santa Cruz County Septic",
-	},
-	{
-		href: "/septic-tank-destruction-sewer-connection-santa-cruz",
-		title: "Abandoning a Santa Cruz Septic Tank for Sewer",
-	},
-	{
-		href: "/tankless-water-heater-santa-cruz-homes",
-		title: "Tankless Water Heaters in Santa Cruz County Homes",
-	},
-	{
-		href: "/santa-cruz-septic-inspection-at-sale",
-		title: "Santa Cruz County Septic Inspection at Sale",
-	},
-	{
-		href: "/slab-leak-signs-santa-cruz-homes",
-		title: "Signs of a Slab Leak in Santa Cruz County Homes",
-	},
-	{
-		href: "/how-to-prepare-for-a-re-pipe-santa-cruz",
-		title: "How to Prepare Your Santa Cruz County Home for a Re-pipe",
-	},
-	{
-		href: "/backflow-testing-santa-cruz-county-homes",
-		title: "Annual Backflow Testing for Santa Cruz County Homes",
-	},
-	{
-		href: "/sewer-camera-inspection-santa-cruz-homes",
-		title: "What a Sewer Camera Inspection Shows in Santa Cruz",
-	},
-] as const
-
 export const keyPages = [
 	{ href: "/services", title: "All Services" },
 	{ href: "/service-areas", title: "Service Areas" },
