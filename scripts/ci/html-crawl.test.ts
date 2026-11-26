@@ -10,6 +10,7 @@ import {
 	metaDescription,
 	pageTitle,
 	resolveInternalHref,
+	visiblePageText,
 } from "./html-crawl"
 
 const sample = `
@@ -67,6 +68,17 @@ test("empty hrefs stay in the inventory so stripped Call Now links fail", () => 
 		resolveInternalHref("", "/contact", "http://127.0.0.1:3000"),
 		null,
 	)
+})
+
+test("visible page text ignores JSON-LD and decodes quotes in FAQ copy", () => {
+	const html = `
+		<script type="application/ld+json">{"@type":"FAQPage","mainEntity":[{"name":"Hidden?"}]}</script>
+		<h2>What does Wade&apos;s Plumbing &amp; Septic do?</h2>
+		<p>Quotes are free.</p>
+	`
+	const visible = visiblePageText(html)
+	assert.equal(visible.includes("Hidden?"), false)
+	assert.ok(visible.includes("What does Wade's Plumbing & Septic do?"))
 })
 
 test("JSON-LD script tags are not treated as visible links", () => {

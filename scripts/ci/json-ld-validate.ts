@@ -205,7 +205,9 @@ export function jsonLdRequiredFieldIssues(
 			for (const field of [
 				"headline",
 				"image",
+				"url",
 				"datePublished",
+				"dateModified",
 				"author",
 			] as const) {
 				if (!hasField(node, field)) issues.push(`${here}: missing ${field}`)

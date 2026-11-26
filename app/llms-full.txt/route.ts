@@ -4,8 +4,8 @@ import {
 	llmsFullPageSlugs,
 	llmsFullSection,
 	llmsLinkLine,
+	selectRecentGuides,
 } from "@/lib/llms"
-import { recentGuides } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 /** Full-text companion to /llms.txt for AI assistants that read one file. */
@@ -24,15 +24,14 @@ export async function GET() {
 		),
 	)
 
-	const recentGuideLines = recentGuides
-		.map((guide) => {
-			const post = posts.find((entry) => `/${entry.slug}` === guide.href)
-			return llmsLinkLine(
-				guide.title,
-				`${siteConfig.url}${guide.href}`,
-				post?.description,
-			)
-		})
+	const recentGuideLines = selectRecentGuides(posts)
+		.map((post) =>
+			llmsLinkLine(
+				post.title,
+				`${siteConfig.url}/${post.slug}`,
+				post.description,
+			),
+		)
 		.join("\n")
 
 	const areaLines = pages

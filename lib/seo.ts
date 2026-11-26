@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import {
-	locationsByCounty,
 	serviceAreaLocations,
 	type ServiceAreaLocation,
 } from "@/lib/service-areas"
@@ -383,10 +382,9 @@ export function serviceJsonLd(service: ContentDocument) {
 		url,
 		serviceType: service.category ?? "Service",
 		category: service.category,
-		areaServed: [
-			santaCruzCountyJsonLd,
-			...locationsByCounty("Santa Clara County").map(serviceAreaPlaceJsonLd),
-		],
+		// Same coverage as LocalBusiness: Santa Cruz County plus every town
+		// page already on the site, including the two Santa Clara communities.
+		areaServed: serviceAreasJsonLd(),
 		provider: { "@id": businessId },
 		brand: { "@type": "Brand", name: siteConfig.name },
 		hoursAvailable: hours,

@@ -12,14 +12,15 @@ import { normalizeConversion } from "../../lib/content-conversion"
 import { faqs } from "../../lib/home-content"
 import {
 	LLMS_FULL_PATH,
+	RECENT_GUIDE_COUNT,
 	llmsFullPageSlugs,
 	oneLineSummary,
+	selectRecentGuides,
 } from "../../lib/llms"
 import {
 	bestGuideHrefs,
 	coreServiceSlugs,
 	publicFactRows,
-	recentGuides,
 } from "../../lib/public-facts"
 import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
 import {
@@ -278,7 +279,7 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 		)
 
 	const { getAllRoutes } = await import("../../lib/content")
-	const { services } = await getAllRoutes()
+	const { services, posts } = await getAllRoutes()
 	assert.ok(services.length > 0)
 	for (const service of services)
 		assert.ok(
@@ -293,10 +294,12 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 		assert.ok(!lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
 	assert.ok(body.includes("# Recent guides"))
 	assert.ok(body.includes("# Service areas"))
-	for (const guide of recentGuides)
+	const recent = selectRecentGuides(posts)
+	assert.equal(recent.length, RECENT_GUIDE_COUNT)
+	for (const guide of recent)
 		assert.ok(
-			body.includes(`${siteConfig.url}${guide.href}`),
-			`llms-full recent guide: ${guide.href}`,
+			body.includes(`${siteConfig.url}/${guide.slug}`),
+			`llms-full recent guide: ${guide.slug}`,
 		)
 	for (const location of serviceAreaLocations)
 		assert.ok(
@@ -355,6 +358,22 @@ test("llms.txt names the core services, including engineered septic installation
 		assert.ok(services.includes(service), `Services line: ${service}`)
 })
 
+test("selectRecentGuides lists the newest indexable posts", () => {
+	const selected = selectRecentGuides(
+		[
+			{ slug: "old", date: "2026-01-01" },
+			{ slug: "hidden", date: "2026-12-01", noindex: true },
+			{ slug: "new-b", date: "2026-11-25", updated: "2026-11-25" },
+			{ slug: "new-a", date: "2026-11-25", updated: "2026-11-26" },
+		],
+		2,
+	)
+	assert.deepEqual(
+		selected.map((post) => post.slug),
+		["new-a", "new-b"],
+	)
+})
+
 test("llms listings use a one-line factual summary", () => {
 	assert.equal(
 		oneLineSummary(
@@ -382,11 +401,15 @@ test("llms.txt lists core services and best guides instead of dumping every post
 	for (const href of bestGuideHrefs)
 		assert.ok(body.includes(`${siteConfig.url}${href}`), href)
 	assert.ok(body.includes("## Recent guides"))
-	for (const guide of recentGuides) {
-		assert.ok(body.includes(`${siteConfig.url}${guide.href}`), guide.href)
+	const { getAllRoutes } = await import("../../lib/content")
+	const { posts } = await getAllRoutes()
+	const recent = selectRecentGuides(posts)
+	assert.equal(recent.length, RECENT_GUIDE_COUNT)
+	for (const guide of recent) {
+		assert.ok(body.includes(`${siteConfig.url}/${guide.slug}`), guide.slug)
 		assert.ok(
-			fs.existsSync(path.join("content", "posts", `${guide.href.slice(1)}.md`)),
-			guide.href,
+			fs.existsSync(path.join("content", "posts", `${guide.slug}.md`)),
+			guide.slug,
 		)
 	}
 	for (const phrase of bannedPublicPhrases)

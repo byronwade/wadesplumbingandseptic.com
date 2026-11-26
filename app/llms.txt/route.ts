@@ -4,13 +4,13 @@ import {
 	getCityLocation,
 } from "@/lib/city-service-pages"
 import { getAllRoutes } from "@/lib/content"
-import { LLMS_FULL_PATH, llmsBusinessSummary, llmsLinkLine } from "@/lib/llms"
 import {
-	bestGuides,
-	coreServiceSlugs,
-	keyPages,
-	recentGuides,
-} from "@/lib/public-facts"
+	LLMS_FULL_PATH,
+	llmsBusinessSummary,
+	llmsLinkLine,
+	selectRecentGuides,
+} from "@/lib/llms"
+import { bestGuides, coreServiceSlugs, keyPages } from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 export async function GET() {
@@ -39,15 +39,14 @@ export async function GET() {
 		.map((guide) => llmsLinkLine(guide.title, `${siteConfig.url}${guide.href}`))
 		.join("\n")
 
-	const recentGuideLines = recentGuides
-		.map((guide) => {
-			const post = posts.find((entry) => `/${entry.slug}` === guide.href)
-			return llmsLinkLine(
-				guide.title,
-				`${siteConfig.url}${guide.href}`,
-				post?.description,
-			)
-		})
+	const recentGuideLines = selectRecentGuides(posts)
+		.map((post) =>
+			llmsLinkLine(
+				post.title,
+				`${siteConfig.url}/${post.slug}`,
+				post.description,
+			),
+		)
 		.join("\n")
 
 	const areaLines = serviceAreas

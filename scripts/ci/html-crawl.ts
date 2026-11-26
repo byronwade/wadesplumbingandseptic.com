@@ -106,12 +106,19 @@ export function headingCount(html: string) {
 	return [...stripNonMarkup(html).matchAll(/<h1\b/gi)].length
 }
 
-export function visibleLead(html: string) {
+export function visiblePageText(html: string) {
 	return stripNonMarkup(html)
 		.replace(/<[^>]+>/g, " ")
+		.replace(/&nbsp;/g, " ")
+		.replace(/&amp;/g, "&")
+		.replace(/&apos;|&#39;|&#x27;/gi, "'")
+		.replace(/&quot;/g, '"')
 		.replace(/\s+/g, " ")
 		.trim()
-		.slice(0, 4000)
+}
+
+export function visibleLead(html: string) {
+	return visiblePageText(html).slice(0, 4000)
 }
 
 const skipHref = /^(?:mailto:|javascript:|data:|blob:|#$)/i
