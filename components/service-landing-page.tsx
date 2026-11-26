@@ -4,6 +4,7 @@ import { ServiceCityLinks } from "@/components/city-service-guides"
 import { ServiceTownLinks } from "@/components/service-town-links"
 import { ContentConversionCta } from "@/components/content-conversion-cta"
 import { ContentHero } from "@/components/content-hero"
+import { GoogleReviewInvite } from "@/components/google-reviews"
 import { JsonLd } from "@/components/json-ld"
 import { PageViewTracker } from "@/components/page-view-tracker"
 import { PageViewsStat } from "@/components/page-views-stat"
@@ -100,6 +101,10 @@ export function ServiceLandingPage({
 					servicesTitle="Related services"
 				/>
 			) : null}
+			<GoogleReviewInvite
+				buttonLabel="Leave us a review on Google"
+				message="If we recently finished this work at your home, you can leave us a review on Google."
+			/>
 			<ContentConversionCta conversion={service.conversion} />
 			<JsonLd
 				data={[

@@ -36,7 +36,7 @@ Coastal septic has its own failure modes:
 
 **Seasonal saturation.** Wet winters raise the water table in creek bottoms and low flats. Drainfields that perk fine in August struggle in February. Whole-house backups during storms often trace to a saturated leach field, not a clogged toilet.
 
-**Older unpermitted or grandfathered systems.** Ownership changes expose tanks nobody pumped in a decade. We locate, inspect, and document honestly for buyers and sellers.
+**Older unpermitted or grandfathered systems.** Ownership changes often expose tanks with unknown service history. We locate, inspect, and document honestly for buyers and sellers.
 
 **Slope and setback limits.** Bluff and hillside lots may require [engineered septic systems in Santa Cruz County](/service-offerings/engineered-septic-system-installation) for any major repair or replacement. We coordinate with designers who know coastal review, not inland templates.
 

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site"
 
 export function GoogleReviewButton({
 	onDark = false,
-	children = "Review us on Google",
+	children = "Leave us a review on Google",
 }: {
 	onDark?: boolean
 	children?: ReactNode
@@ -28,7 +28,7 @@ export function GoogleReviewButton({
 
 export function GoogleReviewInvite({
 	message = "Share your experience with Wade's Plumbing & Septic.",
-	buttonLabel = "Review us on Google",
+	buttonLabel = "Leave us a review on Google",
 }: {
 	message?: string
 	buttonLabel?: string

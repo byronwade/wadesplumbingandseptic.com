@@ -11,7 +11,7 @@ imageAlt: Industrial plumbing with pressure gauge
 updated: "2026-07-30"
 ---
 
-High-pressure jetting of septic and effluent lines for Santa Cruz County homes clears roots, sludge, and buildup in the pipes, not the tank. Wade's Plumbing & Septic does not pump tanks. Quotes are free, and pricing is a flat rate quoted on site.
+High-pressure jetting of septic and effluent lines for Santa Cruz County homes clears roots, sludge, and buildup in the pipes, not the tank. Wade's Plumbing & Septic does not pump tanks. If the line problem points to a new or replacement system, we install it alongside your engineer. Quotes are free, and pricing is a flat rate quoted on site.
 
 ## Understanding High Pressure Jetting for Septic Lines
 

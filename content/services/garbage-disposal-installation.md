@@ -8,10 +8,10 @@ order: 45
 image: >-
   /images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp
 imageAlt: Outdoor plumbing pipe system
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-Are you considering a new garbage disposal installation to enhance your kitchen's efficiency? At Wade's Plumbing & Septic, we specialize in professional garbage disposal installation services in Santa Cruz County, California. Our team ensures that your new unit is installed seamlessly, providing you with the convenience and functionality you need in your kitchen.
+Garbage disposal installation for Santa Cruz County kitchens is the swap or new install of the unit under the sink, including the drain fit and a function test. Wade's Plumbing & Septic matches the disposal to the sink and existing plumbing rather than forcing a unit that does not fit.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

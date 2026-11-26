@@ -8,10 +8,10 @@ order: 35
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-When it comes to ensuring the safety and functionality of your home's natural gas or propane system, reliable gas line repair is crucial. If you are a resident of Santa Cruz County, California, and in need of professional gas line repair, Wade's Plumbing & Septic is your trusted partner. Our expert technicians are well-equipped to handle any gas line issues, from detecting leaks to replacing corroded pipes. With our commitment to safety and adherence to local building codes, we ensure your gas line system operates flawlessly, providing peace of mind to homeowners.
+Gas line repair for Santa Cruz County homes is licensed work on natural gas or propane piping: leak diagnosis, damaged sections, and code-compliant connections. Wade's Plumbing & Septic inspects the line, explains the options, and quotes a flat rate before repair. If you smell gas, leave the area and call 911 and the utility from a safe location.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

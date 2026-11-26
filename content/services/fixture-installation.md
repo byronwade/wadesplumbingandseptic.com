@@ -8,10 +8,10 @@ order: 27
 image: >-
   /images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp
 imageAlt: Water flowing from a bathroom faucet
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-When it comes to fixture installation in Santa Cruz County, ensuring expert service is essential for long-lasting performance and efficiency. Whether you're upgrading your kitchen faucet, installing a new showerhead, or replacing an outdated toilet, Wade's Plumbing & Septic is your trusted partner for professional plumbing solutions.
+Fixture installation for Santa Cruz County homes covers new sinks, faucets, toilets, and related trim when you are remodeling or replacing a failed piece. Wade's Plumbing & Septic sets the fixture, makes the supply and drain connections, and tests for leaks before we leave.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

@@ -28,7 +28,7 @@ Low water pressure is a frequent complaint. On well-served properties, we check 
 
 ## Septic services in Las Lomas
 
-Private septic systems serve virtually every Las Lomas residence. Tank sizes typically range from 750 to 1,500 gallons depending on bedroom count and when the home was built. Drainfields on valley clay can work for years until groundwater, compaction, or root intrusion shortens their useful life.
+Private septic systems serve virtually every Las Lomas residence. Tank size and drainfield layout depend on bedroom count and when the home was built. Drainfields on valley clay can work for years until groundwater, compaction, or root intrusion shortens their useful life.
 
 Our Las Lomas septic work includes:
 
@@ -60,7 +60,7 @@ Yes. Wade's Plumbing & Septic serves Las Lomas as part of its south county cover
 
 ### How big are septic tanks in Las Lomas homes?
 
-Private septic systems serve virtually every Las Lomas residence, and tank sizes typically range from 750 to 1,500 gallons depending on bedroom count and when the home was built.
+Private septic systems serve virtually every Las Lomas residence, and tank size depends on bedroom count and when the home was built.
 
 ### Should I rethink my septic pumping schedule after adding an ADU in Las Lomas?
 

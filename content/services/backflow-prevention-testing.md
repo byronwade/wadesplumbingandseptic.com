@@ -8,10 +8,10 @@ order: 30
 image: >-
   /images/wordpress/industrial-building-facade-with-large-machinery-components-and-pipes-visible-314393.webp
 imageAlt: Industrial building with machinery and pipes
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-Backflow prevention testing is a crucial service to ensure the safety and purity of your drinking water. At Wade's Plumbing & Septic, we provide comprehensive testing services to safeguard your water system from contamination. Our certified technicians in Santa Cruz County, California, conduct thorough inspections in compliance with local regulations, offering peace of mind and ensuring your water supply remains safe and uncontaminated.
+Backflow prevention testing for Santa Cruz County properties is a scheduled check of the assembly that keeps used water out of the drinking-water line. Wade's Plumbing & Septic tests the device, records the results, and tells you if repair or replacement is needed.
 
 This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

@@ -8,6 +8,7 @@ import { AnswerFirst } from "@/components/answer-first"
 import { CallButton } from "@/components/call-button"
 import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
+import { GoogleReviewInvite } from "@/components/google-reviews"
 import { JsonLd } from "@/components/json-ld"
 import { buttonVariants } from "@/components/ui/button"
 import { cityServiceFaqs, isSepticWork } from "@/lib/answer-first"
@@ -293,6 +294,10 @@ export default async function CityServicePage({
 				</section>
 			) : null}
 
+			<GoogleReviewInvite
+				buttonLabel="Leave us a review on Google"
+				message="If we recently finished this work at your home, you can leave us a review on Google."
+			/>
 			<ContactCta />
 			<JsonLd data={jsonLd} />
 		</main>

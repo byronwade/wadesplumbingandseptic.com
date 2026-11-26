@@ -8,10 +8,10 @@ order: 17
 image: >-
   /images/wordpress/detailed-image-of-a-chrome-sink-drain-showcasing-water-droplets-and-a-metallic-finish-6a140e.webp
 imageAlt: Chrome sink drain close-up
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-In Santa Cruz County, a reliable septic system is essential for maintaining a healthy and functional home. When issues arise, it’s crucial to address them promptly with professional drainfield repair services. At Wade’s Plumbing & Septic, our expert team offers comprehensive drainfield repair in Santa Cruz to restore your septic system’s efficiency and longevity.
+Drainfield repair and replacement for Santa Cruz County septic systems is for wet spots, odors, and backups that start in the soil, not at a single fixture. Wade's Plumbing & Septic inspects the field, explains whether repair still makes sense, and installs a replacement alongside your engineer when the site needs an engineered design.
 
 We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

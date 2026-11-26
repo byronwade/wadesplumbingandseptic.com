@@ -7,10 +7,10 @@ category: Septic
 order: 19
 image: /images/work/multi-tank-excavation.webp
 imageAlt: Multi-tank septic excavation
-updated: "2026-07-30"
+updated: "2026-11-26"
 ---
 
-In Santa Cruz County, California, maintaining a reliable septic system is crucial for homeowners. Septic system upgrades enhance your existing system's performance, increase its capacity, and add advanced treatment capabilities, ensuring long-term efficiency and compliance with local regulations. At Wade's Plumbing & Septic, we specialize in providing customized solutions that cater to your specific needs, improving both the functionality and lifespan of your septic system.
+Septic system upgrades for Santa Cruz County homes cover added treatment, better access, or a new layout when the existing tank and field no longer match how the house is used. Wade's Plumbing & Septic installs the upgrade to the plan and works with your engineer when the county requires an engineered design.
 
 We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 

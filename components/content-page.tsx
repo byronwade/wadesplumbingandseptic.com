@@ -220,7 +220,7 @@ export function ContentPage({
 			) : null}
 			{document.slug === "thank-you" ? (
 				<GoogleReviewInvite
-					buttonLabel="Leave us a Google review"
+					buttonLabel="Leave us a review on Google"
 					message="If we recently finished plumbing or septic work at your home, the most helpful place to leave a review is Google."
 				/>
 			) : null}
@@ -268,6 +268,10 @@ export function ContentPage({
 				<>
 					<TownPageLinks pathname={`/${document.slug}`} />
 					<CityServiceGuides pathname={`/${document.slug}`} />
+					<GoogleReviewInvite
+						buttonLabel="Leave us a review on Google"
+						message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google."
+					/>
 				</>
 			) : null}
 
