@@ -6,7 +6,7 @@ description: >-
   the sewage disposal permit and county inspections.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-13"
-updated: "2026-10-30"
+updated: "2026-11-26"
 tags:
   - santa cruz county
   - new septic installations
@@ -33,7 +33,7 @@ Our post on [how Santa Cruz County terrain affects septic systems](/how-santa-cr
 
 For a home that already has a septic system, the first step is checking whether that system was permitted and what it was permitted for. The county's online Environmental Health files show the permitted number of structures, bedrooms and square footage. A parcel without a permitted system has to meet the standards for new development.
 
-- **Repair standards** apply when the current structures do not exceed what the system was permitted for. The county allows a one time addition of less than 500 square feet per parcel if no bedrooms are added.
+- **Repair standards** apply when the current structures do not exceed what the system was permitted for. The county allows a one time addition of up to 500 square feet per parcel if no bedrooms are added.
 - **Upgrade standards** apply when the home now has more bedrooms, more than 500 additional square feet, or more structures than the permit allowed. Adding a system or tank for an accessory dwelling unit is also an upgrade.
 
 The county counts any room other than a kitchen, bathroom and one living space as a bedroom.
@@ -71,7 +71,7 @@ Yes. The county requires a sewage disposal permit to install, replace, repair, u
 
 ### Does adding a bedroom or ADU affect my septic system?
 
-It can. Adding bedrooms, more than 500 square feet, another structure or an accessory dwelling unit beyond what the system was permitted for brings in the county's upgrade standards.
+It can. Adding bedrooms, more than 500 square feet, another structure or an accessory dwelling unit beyond what the system was permitted for brings in the county's upgrade standards. The dedicated guide to [adding an ADU or bedroom on a Santa Cruz County septic](/adding-adu-bedroom-septic-santa-cruz) covers design flow, bedroom counting, and who designs versus installs.
 
 ### Who can install a septic system in Santa Cruz County?
 

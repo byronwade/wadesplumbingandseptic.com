@@ -27,11 +27,13 @@ There are several signs that indicate a septic system may need decommissioning, 
 
 The abandonment process typically involves pumping out the tank, crushing or removing it, and filling the area with suitable materials to prevent future hazards. Documentation is crucial to ensure compliance with local health department regulations. Our team handles the tank removal, fill, and documentation, providing peace of mind that the job is done correctly and safely.
 
-- Having the remaining waste pumped out of the tank
+- Having the remaining waste pumped out of the tank (a county-permitted liquid waste hauler does this; Wade's does not pump tanks)
 - Removing or crushing the tank
 - Filling the void with sand or gravel
 - Documenting the abandonment
 - Ensuring regulatory compliance
+
+The homeowner guide to [abandoning a Santa Cruz septic tank for sewer](/septic-tank-destruction-sewer-connection-santa-cruz) walks through the County Environmental Health destruction permit and the Sanitation District lateral steps.
 
 ## Cost Factors and Timeline
 

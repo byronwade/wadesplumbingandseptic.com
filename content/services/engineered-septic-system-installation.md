@@ -35,7 +35,7 @@ Call us when you are dealing with:
 - A failed or noncompliant conventional system that cannot be replaced in kind
 - A vacant lot or rebuild that will not perk for a standard leach field
 - Surfacing effluent, odors after laundry, or backups tied to a stressed drainfield
-- An ADU, bedroom addition, or higher occupancy that outgrows the old system
+- An ADU, bedroom addition, or higher occupancy that outgrows the old system. See [adding an ADU on a Santa Cruz County septic](/adding-adu-bedroom-septic-santa-cruz).
 - Steep San Lorenzo Valley or foothill parcels with limited usable area
 - Real estate contingencies that require a path to a permitted system
 

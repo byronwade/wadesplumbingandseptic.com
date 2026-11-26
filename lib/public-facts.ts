@@ -56,6 +56,18 @@ export const bestGuideHrefs = [
 /** Newest homeowner guides listed in llms.txt. Keep this short. */
 export const recentGuides = [
 	{
+		href: "/adding-adu-bedroom-septic-santa-cruz",
+		title: "Adding an ADU on a Santa Cruz County Septic",
+	},
+	{
+		href: "/septic-tank-destruction-sewer-connection-santa-cruz",
+		title: "Abandoning a Santa Cruz Septic Tank for Sewer",
+	},
+	{
+		href: "/tankless-water-heater-santa-cruz-homes",
+		title: "Tankless Water Heaters in Santa Cruz County Homes",
+	},
+	{
 		href: "/santa-cruz-septic-inspection-at-sale",
 		title: "Santa Cruz County Septic Inspection at Sale",
 	},

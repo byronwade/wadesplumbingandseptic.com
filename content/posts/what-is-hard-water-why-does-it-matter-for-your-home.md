@@ -53,7 +53,7 @@ Other providers list hardness in their annual water quality report, called a Con
 USGS links hardness to scale on equipment and to needing more soap and detergent. In practice that shows up as:
 
 - **Scale on fixtures and shower glass**, the white crust left when water evaporates.
-- **Scale in water heaters**, where minerals settle as sediment. Our [water heater repair or replace guide](/should-you-repair-or-replace-your-water-heater) covers water heater upkeep.
+- **Scale in water heaters**, where minerals settle as sediment in a tank or restrict flow in a tankless heat exchanger. Our [water heater repair or replace guide](/should-you-repair-or-replace-your-water-heater) and [tankless water heater guide](/tankless-water-heater-santa-cruz-homes) cover upkeep.
 - **Clogged aerators and showerheads**, which slowly lose flow.
 - **Spots on dishes and soap scum**, because soap reacts with the minerals instead of lathering.
 
