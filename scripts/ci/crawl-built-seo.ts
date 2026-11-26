@@ -15,12 +15,15 @@ import { quoteEmailConfigured } from "../../lib/quote-request"
 import { serviceAreaLocations } from "../../lib/service-areas"
 import { jsonLdBusinessFactIssues } from "./business-facts"
 import {
+	INTER_FONT_PATH,
+	blockingScriptSrcs,
 	canonicalHref,
 	classifyHref,
 	decodeFragment,
 	extractIds,
 	extractImages,
 	extractLinks,
+	hasInterFontPreload,
 	headingCount,
 	metaDescription,
 	pageTitle,
@@ -419,9 +422,11 @@ async function main() {
 	const pages = new Map<string, PageRecord>()
 	const pending = new Set<string>()
 	const assets = new Set<string>()
+	const blockingScripts = new Set<string>()
 	const fragments = new Map<string, Set<string>>()
 	const outbound = new Map<string, Set<string>>()
 	let plumberNodes = 0
+	assets.add(INTER_FONT_PATH)
 
 	function addHop(from: string, to: string) {
 		if (!to.startsWith("/") || isSkippablePath(to) || !isHtmlPath(to)) return
@@ -449,6 +454,15 @@ async function main() {
 	}
 
 	function inspectHtml(pathname: string, body: string) {
+		if (!hasInterFontPreload(body))
+			issues.push(`${pathname}: missing Inter font preload`)
+		for (const src of blockingScriptSrcs(body)) {
+			if (!src.startsWith("/_next/static/")) continue
+			const assetPath = src.split("?")[0] ?? src
+			assets.add(assetPath)
+			blockingScripts.add(assetPath)
+		}
+
 		const blocks = parseJsonLdScripts(body)
 		if (blocks.length === 0) issues.push(`${pathname}: no JSON-LD`)
 		issues.push(...jsonLdParseIssues(blocks, pathname))
@@ -693,13 +707,18 @@ async function main() {
 
 	await mapPool([...assets], 8, async (pathname) => {
 		if (pages.has(pathname) && pages.get(pathname)?.status === 200) return
-		const { response } = await fetchOnce(pathname, "manual")
+		const { response, body } = await fetchOnce(pathname, "manual")
 		if (response.status >= 300 && response.status < 400) {
 			issues.push(`${pathname}: asset redirected`)
 			return
 		}
 		if (response.status !== 200)
 			issues.push(`${pathname}: asset HTTP ${response.status}`)
+		if (blockingScripts.has(pathname) && body.length > 20_000) {
+			issues.push(
+				`${pathname}: render-blocking script is ${body.length} bytes (budget 20KB). Modern browsers should not download polyfill-nomodule.`,
+			)
+		}
 	})
 
 	for (const [pathname, page] of pages) {

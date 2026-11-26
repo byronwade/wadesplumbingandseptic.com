@@ -107,7 +107,7 @@ export default function HomePage() {
 							before work begins.
 						</p>
 
-						<div className="motion-rise flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
+						<div className="flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
 							<LeadActions quoteArrow quoteEmailReady={quoteEmailReady} />
 						</div>
 					</div>

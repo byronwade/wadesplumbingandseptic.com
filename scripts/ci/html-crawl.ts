@@ -184,3 +184,33 @@ export function decodeFragment(hash: string) {
 		return hash
 	}
 }
+
+export const INTER_FONT_PATH = "/fonts/inter-latin.woff2"
+
+/** True when the document preloads the self-hosted Inter face. */
+export function hasInterFontPreload(html: string) {
+	for (const match of html.matchAll(/<link\b([^>]*)>/gi)) {
+		const open = match[1] ?? ""
+		if (attr(open, "rel") !== "preload") continue
+		if (attr(open, "as") !== "font") continue
+		const href = attr(open, "href") ?? ""
+		if (href === INTER_FONT_PATH || href.startsWith(`${INTER_FONT_PATH}?`))
+			return true
+	}
+	return false
+}
+
+/** Script src values that can delay first paint (no async, defer, module, or nomodule). */
+export function blockingScriptSrcs(html: string) {
+	const srcs: string[] = []
+	for (const match of html.matchAll(/<script\b([^>]*)>/gi)) {
+		const open = match[1] ?? ""
+		const src = attr(open, "src")
+		if (!src) continue
+		if (/\basync\b/i.test(open) || /\bdefer\b/i.test(open)) continue
+		if (/\bnomodule\b/i.test(open)) continue
+		if ((attr(open, "type") ?? "").toLowerCase() === "module") continue
+		srcs.push(src)
+	}
+	return srcs
+}

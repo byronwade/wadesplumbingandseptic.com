@@ -1,7 +1,9 @@
 import { getImageProps } from "next/image"
 
 const MOBILE_HERO = "/images/work/engineered-septic-hero-portrait.webp"
+const MOBILE_HERO_AVIF = "/images/work/engineered-septic-hero-portrait.avif"
 const DESKTOP_HERO = "/images/team/byron-working.webp"
+const DESKTOP_HERO_AVIF = "/images/team/byron-working.avif"
 
 /*
  * Art direction for the cinematic frame. The viewport is landscape on desktop
@@ -19,7 +21,8 @@ const DESKTOP_HERO = "/images/team/byron-working.webp"
  * With `images.unoptimized` there is no srcSet, so each source falls back to
  * its plain file; without that the desktop <source> was empty and desktop got
  * the portrait. The <img> is the homepage LCP, so it loads eagerly; <picture>
- * still fetches only the one matching source.
+ * still fetches only the one matching source. AVIF is listed first so supporting
+ * browsers skip the heavier WebP.
  */
 const HERO_SIZES = "100vw"
 
@@ -55,29 +58,37 @@ export function HomeHeroMedia() {
 			{/*
 			  Discover the LCP file from <head> instead of after the 44KB HTML
 			  parse. Media keeps desktop from downloading the portrait. href
-			  must match <img src> (including any dpl query) or Chrome fetches
-			  the photograph twice.
+			  must match the <source> the browser will pick, including type.
 			*/}
 			<link
 				rel="preload"
 				as="image"
+				type="image/avif"
 				fetchPriority="high"
-				href={portraitSrc ?? MOBILE_HERO}
+				href={MOBILE_HERO_AVIF}
 				media="(max-width: 639px)"
 			/>
 			<link
 				rel="preload"
 				as="image"
+				type="image/avif"
 				fetchPriority="high"
-				href={desktopSrc ?? DESKTOP_HERO}
+				href={DESKTOP_HERO_AVIF}
 				media="(min-width: 640px)"
 			/>
 			<picture>
 				<source
 					media="(min-width: 640px)"
+					srcSet={DESKTOP_HERO_AVIF}
+					type="image/avif"
+				/>
+				<source
+					media="(min-width: 640px)"
 					srcSet={desktopSrcSet ?? desktopSrc}
 					sizes={HERO_SIZES}
+					type="image/webp"
 				/>
+				<source srcSet={MOBILE_HERO_AVIF} type="image/avif" />
 				<img
 					{...rest}
 					src={portraitSrc}

@@ -5,9 +5,10 @@ import { useEffect } from "react"
 import type { PageViewKind } from "@/lib/page-views/types"
 
 /**
- * Fires once per mount after the page is interactive. Unique counting is
- * enforced server-side via an httpOnly cookie — this beacon only reports the
- * page identity.
+ * Fires once per mount after the page is interactive, including client-side
+ * navigations. Next does not run inline <script> tags inserted by Link, so
+ * this has to stay a client effect. Unique counting is enforced server-side
+ * via an httpOnly cookie; this beacon only reports the page identity.
  */
 export function PageViewTracker({
 	kind,

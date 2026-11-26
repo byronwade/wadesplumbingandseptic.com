@@ -2,11 +2,13 @@ import assert from "node:assert/strict"
 import test from "node:test"
 
 import {
+	blockingScriptSrcs,
 	canonicalHref,
 	classifyHref,
 	extractIds,
 	extractImages,
 	extractLinks,
+	hasInterFontPreload,
 	metaDescription,
 	pageTitle,
 	resolveInternalHref,
@@ -68,6 +70,38 @@ test("empty hrefs stay in the inventory so stripped Call Now links fail", () => 
 		resolveInternalHref("", "/contact", "http://127.0.0.1:3000"),
 		null,
 	)
+})
+
+test("font preload helper accepts either attribute order", () => {
+	assert.equal(
+		hasInterFontPreload(
+			'<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" />',
+		),
+		true,
+	)
+	assert.equal(
+		hasInterFontPreload(
+			'<link as="font" rel="preload" href="/fonts/inter-latin.woff2?dpl=x" />',
+		),
+		true,
+	)
+	assert.equal(
+		hasInterFontPreload(
+			'<link rel="preload" as="image" href="/fonts/inter-latin.woff2" />',
+		),
+		false,
+	)
+})
+
+test("blocking script helper ignores async, defer, module, and nomodule", () => {
+	const html = `
+		<script src="/a.js" async></script>
+		<script defer src="/b.js"></script>
+		<script type="module" src="/c.js"></script>
+		<script nomodule src="/d.js"></script>
+		<script src="/e.js"></script>
+	`
+	assert.deepEqual(blockingScriptSrcs(html), ["/e.js"])
 })
 
 test("visible page text ignores JSON-LD and decodes quotes in FAQ copy", () => {

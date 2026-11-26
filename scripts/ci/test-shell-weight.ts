@@ -18,6 +18,7 @@ const entries = [
 	"app/(home)/layout.tsx",
 	"app/(site)/layout.tsx",
 	"components/virtual-business-card.tsx",
+	"components/contact-lead.tsx",
 ]
 const bannedPackages = [
 	"cmdk",
@@ -32,6 +33,7 @@ const bannedModules = [
 	"components/save-contact-prompt.tsx",
 	"components/site-header-nav.tsx",
 	"components/site-header-mobile-menu.tsx",
+	"components/quote-form.tsx",
 ]
 
 const staticImport =
@@ -112,7 +114,30 @@ assert.ok(
 	reached.includes("components/header-toolbar.tsx"),
 	"The header toolbar (search, call, mobile menu) must stay on every page.",
 )
+assert.ok(
+	reached.includes("components/office-hours-script.tsx"),
+	"The root layout must mount the office-hours boot script so open/closed status works without a React island.",
+)
+assert.doesNotMatch(
+	readFileSync(join(root, "components/office-status.tsx"), "utf8"),
+	/^["']use client["']/,
+	"Office hours markup must stay a server component. Live status belongs in the boot script.",
+)
+assert.match(
+	readFileSync(join(root, "components/page-view-tracker.tsx"), "utf8"),
+	/^["']use client["']/,
+	"Page-view beacons must stay a client effect so Next Link navigations still count.",
+)
+assert.match(
+	readFileSync(join(root, "app/layout.tsx"), "utf8"),
+	/rel="preload"[\s\S]*href="\/fonts\/inter-latin\.woff2"[\s\S]*as="font"|href="\/fonts\/inter-latin\.woff2"[\s\S]*as="font"[\s\S]*rel="preload"/,
+	"Root layout must preload Inter from /fonts so LCP type is not gated on the CSS file.",
+)
+assert.ok(
+	existsSync(join(root, "public/fonts/inter-latin.woff2")),
+	"public/fonts/inter-latin.woff2 is the preloaded face. Do not point the preload at a hashed /_next/static/media URL.",
+)
 
 console.log(
-	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} entry points; search UI, contact prompt, toaster and unused icon weights stay out of the first load.`,
+	`Shell weight passes: ${reached.length} modules reachable from ${entries.length} entry points; search UI, quote form, contact prompt, toaster and unused icon weights stay out of the first load.`,
 )

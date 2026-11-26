@@ -39,13 +39,17 @@ process.env = {
 	__NEXT_IMAGE_OPTS: { ...imageConfigDefault, ...images },
 } as unknown as NodeJS.ProcessEnv
 const hero = renderToStaticMarkup(createElement(HomeHeroMedia))
-const source = hero.match(/<source\b[^>]*>/)?.[0] ?? ""
 const img = hero.match(/<img\b[^>]*>/)?.[0] ?? ""
 
 assert.match(
-	source,
+	hero,
 	/srcSet="[^"]*byron-working\.webp[^"]*"/,
-	`Desktop hero <source> needs the landscape photo: ${source}`,
+	`Desktop hero needs the landscape WebP: ${hero}`,
+)
+assert.match(
+	hero,
+	/srcSet="[^"]*byron-working\.avif[^"]*"/,
+	`Desktop hero needs the landscape AVIF: ${hero}`,
 )
 assert.match(
 	img,
@@ -65,14 +69,28 @@ assert.match(
 )
 assert.match(
 	hero,
-	/rel="preload"[^>]*href="[^"]*engineered-septic-hero-portrait\.webp/,
-	`Homepage hero must preload the mobile LCP photograph: ${hero}`,
+	/rel="preload"[^>]*href="[^"]*engineered-septic-hero-portrait\.avif/,
+	`Homepage hero must preload the mobile LCP AVIF: ${hero}`,
+)
+assert.match(
+	hero,
+	/srcSet="[^"]*engineered-septic-hero-portrait\.avif/,
+	`Homepage hero must offer a mobile AVIF source: ${hero}`,
 )
 
 const publicRoot = join(__dirname, "../../public")
 function publicFile(src: string) {
 	return join(publicRoot, src.replace(/^\//, ""))
 }
+
+assert.ok(
+	existsSync(publicFile("/images/work/engineered-septic-hero-portrait.avif")),
+	"missing homepage mobile LCP AVIF",
+)
+assert.ok(
+	existsSync(publicFile("/images/team/byron-working.avif")),
+	"missing homepage desktop LCP AVIF",
+)
 
 const septicHero = "/images/work/engineered-septic-hero.webp"
 assert.equal(
