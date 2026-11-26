@@ -31,6 +31,7 @@ export const welcomedCrawlers = [
 	"PerplexityBot",
 	"Perplexity-User",
 	"DuckAssistBot",
+	"CCBot",
 ]
 
 export function robotsRules(): MetadataRoute.Robots["rules"] {

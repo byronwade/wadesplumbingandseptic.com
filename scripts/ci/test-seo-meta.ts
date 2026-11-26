@@ -4,6 +4,7 @@ import { readdirSync, readFileSync } from "node:fs"
 import matter from "gray-matter"
 
 import { cityServicePages, getCityLocation } from "../../lib/city-service-pages"
+import { serviceAreaLocations } from "../../lib/service-areas"
 import {
 	OG_DESCRIPTION_MAX,
 	META_DESCRIPTION_MAX,
@@ -166,5 +167,40 @@ const cityServiceTitles = cityServicePages.map((page) => {
 	}
 })
 assertUnique(cityServiceTitles, "city-service title")
+
+for (const service of services) {
+	const slug = service.file
+		.replace(/^content\/services\//, "")
+		.replace(/\.md$/, "")
+	const tokens = slug.split("-").filter((part) => part.length >= 4)
+	assert.ok(
+		tokens.some((token) => service.title.toLowerCase().includes(token)),
+		`${service.file} title "${service.title}" should name the service`,
+	)
+}
+
+for (const town of towns) {
+	const location = serviceAreaLocations.find((item) =>
+		town.file.endsWith(`${item.slug}-ca-plumbing-septic-services.md`),
+	)
+	assert.ok(location, town.file)
+	assert.ok(
+		town.title.includes(location!.name),
+		`${town.file} title "${town.title}" should name ${location!.name}`,
+	)
+}
+
+for (const page of cityServicePages) {
+	const location = getCityLocation(page.citySlug)
+	assert.ok(location, page.citySlug)
+	const title = `${page.serviceTitle} in ${location!.name}, CA`
+	assert.ok(title.includes(location!.name), title)
+	assert.ok(
+		title
+			.toLowerCase()
+			.includes(page.serviceTitle.split(" ")[0]!.toLowerCase()),
+		title,
+	)
+}
 
 console.log("seo meta helpers ok")

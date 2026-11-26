@@ -9,6 +9,7 @@ import { CityServiceGuides } from "../../components/city-service-guides"
 import { ContentCard } from "../../components/content-card"
 import { GuideLocalLinks } from "../../components/guide-local-links"
 import { RelatedContentSections } from "../../components/related-content"
+import { ServiceDirectory } from "../../components/service-directory"
 import { ServiceTownLinks } from "../../components/service-town-links"
 import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
 import { relatedTownsFor } from "../../lib/related-towns"
@@ -168,6 +169,30 @@ test("service cards name the destination instead of Learn more", () => {
 	assert.doesNotMatch(html, />Learn more</)
 	assert.ok(html.includes('aria-label="View Hydro Jetting"'), html)
 	assert.ok(html.includes("View service"), html)
+})
+
+test("home lists every town and the services directory lists every service", () => {
+	const home = fs.readFileSync("components/home-below-fold.tsx", "utf8")
+	assert.ok(home.includes("locationsByCounty(county).map((town)"))
+	assert.ok(home.includes("town.href"))
+
+	const services = fs
+		.readdirSync(servicesDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => {
+			const raw = fs.readFileSync(path.join(servicesDir, name), "utf8")
+			return {
+				slug: name.replace(/\.md$/, ""),
+				title: raw.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1]?.trim() ?? name,
+				category: raw.match(/^category:\s*(.+)$/m)?.[1]?.trim(),
+			}
+		})
+	assert.ok(services.length > 20)
+	const html = renderToStaticMarkup(
+		createElement(ServiceDirectory, { services }),
+	)
+	for (const service of services)
+		assert.ok(html.includes(`/service-offerings/${service.slug}`), service.slug)
 })
 
 test("glossary term pages keep the same Call and Free Quote band as glossary hubs", () => {

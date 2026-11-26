@@ -303,10 +303,7 @@ export default async function CityServicePage({
 				</section>
 			) : null}
 
-			<GoogleReviewInvite
-				buttonLabel="Leave us a review on Google"
-				message="If we recently finished this work at your home, you can leave us a review on Google."
-			/>
+			<GoogleReviewInvite message="If we recently finished this work at your home, you can leave us a review on Google." />
 			<ContactCta />
 			<JsonLd data={jsonLd} />
 		</main>

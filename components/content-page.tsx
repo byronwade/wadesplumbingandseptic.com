@@ -211,16 +211,10 @@ export function ContentPage({
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
 			{document.slug === "about-us" ? (
-				<GoogleReviewInvite
-					buttonLabel="Leave us a review on Google"
-					message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google."
-				/>
+				<GoogleReviewInvite message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google." />
 			) : null}
 			{document.slug === "thank-you" ? (
-				<GoogleReviewInvite
-					buttonLabel="Leave us a review on Google"
-					message="If we recently finished plumbing or septic work at your home, the most helpful place to leave a review is Google."
-				/>
+				<GoogleReviewInvite message="If we recently finished plumbing or septic work at your home, the most helpful place to leave a review is Google." />
 			) : null}
 
 			{marketing ? (
@@ -256,20 +250,14 @@ export function ContentPage({
 			)}
 
 			{document.slug === "contact" ? (
-				<GoogleReviewInvite
-					buttonLabel="Leave us a review on Google"
-					message="If we recently finished work at your home, you can leave us a review on Google."
-				/>
+				<GoogleReviewInvite message="If we recently finished work at your home, you can leave us a review on Google." />
 			) : null}
 
 			{isServiceArea ? (
 				<>
 					<TownPageLinks pathname={`/${document.slug}`} />
 					<CityServiceGuides pathname={`/${document.slug}`} />
-					<GoogleReviewInvite
-						buttonLabel="Leave us a review on Google"
-						message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google."
-					/>
+					<GoogleReviewInvite message="If we recently finished plumbing or septic work at your home, you can leave us a review on Google." />
 				</>
 			) : null}
 

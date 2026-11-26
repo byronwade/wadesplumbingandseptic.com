@@ -8,6 +8,7 @@ import {
 	LLMS_FULL_PATH,
 	llmsBusinessSummary,
 	llmsLinkLine,
+	selectIndexableGuides,
 	selectRecentGuides,
 } from "@/lib/llms"
 import { bestGuides, coreServiceSlugs, keyPages } from "@/lib/public-facts"
@@ -24,8 +25,13 @@ export async function GET() {
 		const service = services.find((entry) => entry.slug === slug)
 		return service ? [service] : []
 	})
+	const coreSlugs = new Set(coreServices.map((service) => service.slug))
+	const remainingServices = services
+		.filter((service) => !coreSlugs.has(service.slug))
+		.slice()
+		.sort((left, right) => left.title.localeCompare(right.title))
 
-	const serviceLines = coreServices
+	const serviceLines = [...coreServices, ...remainingServices]
 		.map((service) =>
 			llmsLinkLine(
 				service.title,
@@ -40,6 +46,16 @@ export async function GET() {
 		.join("\n")
 
 	const recentGuideLines = selectRecentGuides(posts)
+		.map((post) =>
+			llmsLinkLine(
+				post.title,
+				`${siteConfig.url}/${post.slug}`,
+				post.description,
+			),
+		)
+		.join("\n")
+
+	const allGuideLines = selectIndexableGuides(posts)
 		.map((post) =>
 			llmsLinkLine(
 				post.title,
@@ -88,6 +104,10 @@ ${guideLines}
 ## Recent guides
 
 ${recentGuideLines}
+
+## Guides
+
+${allGuideLines}
 
 ## Service areas
 

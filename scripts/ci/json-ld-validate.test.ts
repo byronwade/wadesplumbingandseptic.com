@@ -12,6 +12,7 @@ import type { ContentDocument } from "../../lib/content"
 import { normalizeConversion } from "../../lib/content-conversion"
 import {
 	jsonLdParseIssues,
+	jsonLdQuoteFormIssues,
 	jsonLdRequiredFieldIssues,
 	parseJsonLdScripts,
 } from "./json-ld-validate"
@@ -103,6 +104,42 @@ test("nested OfferCatalog services only require a name", () => {
 			},
 		}),
 		[],
+	)
+})
+
+test("JSON-LD must not advertise a hidden quote form", () => {
+	assert.deepEqual(jsonLdQuoteFormIssues(localBusinessJsonLd()), [])
+	assert.deepEqual(
+		jsonLdQuoteFormIssues(
+			faqPageJsonLd([
+				{
+					question: "How do I get a quote?",
+					answer: "Call 831.225.4344 or email support@wadesinc.io.",
+				},
+			]),
+		),
+		[],
+	)
+	assert.ok(
+		jsonLdQuoteFormIssues({
+			"@type": "FAQPage",
+			mainEntity: [
+				{
+					"@type": "Question",
+					name: "How do I get a quote?",
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: "Use the form on this page.",
+					},
+				},
+			],
+		}).some((issue) => issue.includes("quote form")),
+	)
+	assert.ok(
+		jsonLdQuoteFormIssues({
+			"@type": "LocalBusiness",
+			potentialAction: { "@type": "ReserveAction" },
+		}).some((issue) => issue.includes("potentialAction")),
 	)
 })
 

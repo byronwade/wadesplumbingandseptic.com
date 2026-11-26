@@ -6,6 +6,7 @@ import { ContactCta } from "@/components/contact-cta"
 import { ContentHero } from "@/components/content-hero"
 import { JsonLd } from "@/components/json-ld"
 import { RankedContentArchive } from "@/components/ranked-content-archive"
+import { ServiceDirectory } from "@/components/service-directory"
 import { getCollection } from "@/lib/content"
 import {
 	breadcrumbJsonLd,
@@ -73,6 +74,8 @@ export default async function ServicesPage() {
 					})}
 				</ul>
 			</nav>
+
+			<ServiceDirectory services={items} />
 
 			<RankedContentArchive
 				allLabel="All services"

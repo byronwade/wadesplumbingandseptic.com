@@ -4,6 +4,7 @@ import {
 	llmsFullPageSlugs,
 	llmsFullSection,
 	llmsLinkLine,
+	selectIndexableGuides,
 	selectRecentGuides,
 } from "@/lib/llms"
 import { siteConfig } from "@/lib/site"
@@ -34,6 +35,16 @@ export async function GET() {
 		)
 		.join("\n")
 
+	const allGuideLines = selectIndexableGuides(posts)
+		.map((post) =>
+			llmsLinkLine(
+				post.title,
+				`${siteConfig.url}/${post.slug}`,
+				post.description,
+			),
+		)
+		.join("\n")
+
 	const areaLines = pages
 		.filter((page) => page.slug.startsWith("service-area/"))
 		.map((page) =>
@@ -51,6 +62,10 @@ Index: ${siteConfig.url}/llms.txt
 # Recent guides
 
 ${recentGuideLines}
+
+# Guides
+
+${allGuideLines}
 
 # Service areas
 
