@@ -31,6 +31,8 @@ const nextConfig: NextConfig = {
 			"next/dist/esm/build/polyfills/polyfill-module": "./lib/empty-module.js",
 			"next/dist/esm/build/polyfills/polyfill-module.js":
 				"./lib/empty-module.js",
+			"next/dist/build/polyfills/polyfill-nomodule": "./lib/empty-module.js",
+			"next/dist/build/polyfills/polyfill-nomodule.js": "./lib/empty-module.js",
 		},
 	},
 	webpack: (config) => {
@@ -40,6 +42,8 @@ const nextConfig: NextConfig = {
 			"next/dist/build/polyfills/polyfill-module.js": false,
 			"next/dist/esm/build/polyfills/polyfill-module": false,
 			"next/dist/esm/build/polyfills/polyfill-module.js": false,
+			"next/dist/build/polyfills/polyfill-nomodule": false,
+			"next/dist/build/polyfills/polyfill-nomodule.js": false,
 		}
 		return config
 	},
@@ -74,6 +78,15 @@ const nextConfig: NextConfig = {
 			},
 			{
 				source: "/icon.svg",
+				headers: [
+					{
+						key: "Cache-Control",
+						value: "public, max-age=31536000, immutable",
+					},
+				],
+			},
+			{
+				source: "/fonts/:path*",
 				headers: [
 					{
 						key: "Cache-Control",

@@ -192,11 +192,35 @@
 	   white on ink panels. Consumed by the button/control base classes. */
 	--ring-offset: var(--background);
 
+	--font-inter: Inter, "Inter Fallback";
 	--font-sans:
 		var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
 		sans-serif;
 	--font-display: var(--font-sans);
 	--font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+}
+
+/*
+  Inter is served from /fonts so the layout can preload a stable URL. next/font
+  was putting the face in a second stylesheet with no preload, so the browser
+  discovered the 48KB file only after the 100KB CSS. Fallback metrics match
+  the next/font size-adjust so swap does not shift the first line of type.
+*/
+@font-face {
+	font-family: Inter;
+	src: url("/fonts/inter-latin.woff2") format("woff2");
+	font-display: swap;
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Inter Fallback";
+	src: local("Arial");
+	ascent-override: 89.79%;
+	descent-override: 22.36%;
+	line-gap-override: 0%;
+	size-adjust: 107.89%;
 }
 
 /* The default. A near-black void, sheets one step brighter, cream type. */
@@ -851,7 +875,22 @@
 	/* Keep below-the-fold bands out of the critical rendering path. */
 	.section-defer {
 		content-visibility: auto;
-		contain-intrinsic-size: 1px 720px;
+		contain-intrinsic-size: auto 720px;
+	}
+
+	.office-hours-dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		flex-shrink: 0;
+		border-radius: 9999px;
+	}
+
+	.office-hours-dot-open {
+		background: oklch(0.72 0.17 155);
+	}
+
+	.office-hours-dot-closed {
+		background: var(--primary-bright);
 	}
 
 	/*

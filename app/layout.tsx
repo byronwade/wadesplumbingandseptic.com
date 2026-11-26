@@ -1,31 +1,11 @@
 import type { Metadata, Viewport } from "next"
-import localFont from "next/font/local"
 
 import { AppCommandShell } from "@/components/app-command-shell"
 import { JsonLd } from "@/components/json-ld"
-import { ThemeHotkey } from "@/components/theme-hotkey"
+import { OfficeHoursScript } from "@/components/office-hours-script"
 import { ThemeScript } from "@/components/theme-script"
 import { TITLE_SUFFIX, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
-
-/*
-  Inter is self-hosted from assets/fonts (SIL Open Font License, see the OFL
-  files beside it) so builds never fetch from Google Fonts. The variable Latin
-  subset covers every weight between 400 and 700 in one download. Tabular
-  figures use the system mono stack so every page skips a second 23KB face.
-*/
-const inter = localFont({
-	src: [
-		{
-			path: "../assets/fonts/inter-latin.woff2",
-			weight: "100 900",
-			style: "normal",
-		},
-	],
-	display: "swap",
-	variable: "--font-inter",
-	preload: true,
-})
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteConfig.url),
@@ -82,15 +62,22 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html
-			lang="en"
-			suppressHydrationWarning
-			className={`dark ${inter.variable}`}
-		>
+		<html lang="en" suppressHydrationWarning className="dark">
 			<head>
+				{/*
+				  Stable public URL so the face starts with the HTML, not after the
+				  100KB stylesheet. crossOrigin is required or the preload is unused.
+				*/}
+				<link
+					rel="preload"
+					href="/fonts/inter-latin.woff2"
+					as="font"
+					type="font/woff2"
+					crossOrigin="anonymous"
+				/>
 				<ThemeScript />
 			</head>
-			<body className={inter.className}>
+			<body>
 				<a
 					className="bg-foreground text-background sr-only z-[100] rounded-br-lg p-3 focus:not-sr-only focus:fixed focus:top-0 focus:left-0"
 					href="#main-content"
@@ -105,7 +92,7 @@ export default function RootLayout({
 				  repeat the 48-item offer catalog on every URL.
 				*/}
 				<JsonLd data={[websiteJsonLd(), localBusinessJsonLd()]} />
-				<ThemeHotkey />
+				<OfficeHoursScript />
 				<AppCommandShell />
 			</body>
 		</html>

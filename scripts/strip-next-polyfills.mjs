@@ -1,12 +1,14 @@
 /**
- * Next.js always embeds `polyfill-module` for APIs already native in its
- * supported browserslist (Chrome 111+, Safari 16.4+, …). Lighthouse still
- * flags those ~13 KiB as "legacy JavaScript".
+ * Next.js still emits two polyfill files that this browserslist does not
+ * need: `polyfill-module` (Array.at and friends, ~1KB) and
+ * `polyfill-nomodule` (full core-js for IE, ~110KB). Turbopack on this
+ * Next preview has been serving the nomodule file as a regular blocking
+ * script, so every phone downloads 110KB of unused JavaScript.
  *
- * Replace the module with a no-op before `next build` so modern clients do not
- * download dead polyfills. Safe for this project's browserslist floor.
+ * Replace both with a no-op before `next build`. Safe for chrome >= 111 /
+ * Safari 16.4.
  */
-import { writeFileSync, existsSync } from "node:fs"
+import { existsSync, readdirSync, statSync, writeFileSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { createRequire } from "node:module"
 
@@ -14,16 +16,24 @@ const require = createRequire(import.meta.url)
 const nextPkg = require.resolve("next/package.json")
 const nextRoot = dirname(nextPkg)
 
-const targets = [
-	join(nextRoot, "dist/build/polyfills/polyfill-module.js"),
-	join(nextRoot, "dist/esm/build/polyfills/polyfill-module.js"),
-]
-
 const stub =
 	"/* stripped for modern browserslist - see scripts/strip-next-polyfills.mjs */\n"
 
-for (const target of targets) {
-	if (!existsSync(target)) continue
-	writeFileSync(target, stub)
-	console.log(`stripped ${target}`)
+const polyfillName = /polyfill-(?:no)?module/
+
+function stripTree(dir) {
+	if (!existsSync(dir)) return
+	for (const name of readdirSync(dir)) {
+		const target = join(dir, name)
+		const stat = statSync(target)
+		if (stat.isDirectory()) {
+			stripTree(target)
+			continue
+		}
+		if (!polyfillName.test(name) || !name.endsWith(".js")) continue
+		writeFileSync(target, stub)
+		console.log(`stripped ${target}`)
+	}
 }
+
+stripTree(join(nextRoot, "dist"))

@@ -125,8 +125,11 @@ test("contact lead swaps the form for call-or-email when quote email is down", (
 		createElement(ContactLead, { quoteEmailReady: true }),
 	)
 	assert.ok(ready.includes('id="quote"'), ready)
-	assert.ok(ready.includes('action="/api/quote"'), ready)
 	assert.ok(ready.includes("Tell us what you need"), ready)
+	/*
+	  QuoteForm loads through import() so this static render does not inline
+	  the form module. The form's no-JS markup is covered by quote-form tests.
+	*/
 
 	const paused = renderToStaticMarkup(
 		createElement(ContactLead, { quoteEmailReady: false }),

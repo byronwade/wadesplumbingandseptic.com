@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 
-import { officeStatus } from "../../lib/office-hours"
+import { officeHoursBootScript, officeStatus } from "../../lib/office-hours"
 
 // Times are UTC; the office is in Pacific time (UTC-7 in October 2026).
 const at = (iso: string) => officeStatus(new Date(iso))
@@ -32,6 +32,15 @@ test("closed times point to the next opening", () => {
 		at("2026-10-31T19:00:00Z").label,
 		"Office closed now. Opens Monday at 9:00 AM",
 	)
+})
+
+test("the boot script carries the published days and clock", () => {
+	const script = officeHoursBootScript()
+	assert.match(script, /America\/Los_Angeles/)
+	assert.match(script, /"Monday"/)
+	assert.match(script, /"09:00"/)
+	assert.match(script, /"17:00"/)
+	assert.match(script, /data-office-hours/)
 })
 
 test("uses whatever hours the site publishes", () => {

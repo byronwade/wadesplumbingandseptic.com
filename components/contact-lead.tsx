@@ -1,7 +1,7 @@
+import dynamic from "next/dynamic"
 import { Suspense } from "react"
 
 import { QuoteCallEmail } from "@/components/quote-call-email"
-import { QuoteForm } from "@/components/quote-form"
 import { VirtualBusinessCard } from "@/components/virtual-business-card"
 import { callForFreeQuoteLabel, freeQuoteHash } from "@/lib/public-facts"
 import {
@@ -10,6 +10,10 @@ import {
 	type QuoteTownOption,
 } from "@/lib/quote-request"
 import { serviceAreaLocations } from "@/lib/service-areas"
+
+const QuoteForm = dynamic(() =>
+	import("@/components/quote-form").then((mod) => mod.QuoteForm),
+)
 
 const towns: QuoteTownOption[] = serviceAreaLocations.map((location) => ({
 	name: location.name,

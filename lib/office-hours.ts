@@ -79,3 +79,18 @@ export function officeStatus(
 		label: `Office closed now. Opens ${when} at ${clock(hours.opens)}`,
 	}
 }
+
+/**
+ * Tiny DOM updater for `[data-office-hours]`. Keep this in the same file as
+ * `officeStatus` so the published days and clock stay in one place.
+ */
+export function officeHoursBootScript(
+	hours: OpeningHours = siteConfig.openingHours,
+) {
+	const config = JSON.stringify({
+		days: hours.days,
+		opens: hours.opens,
+		closes: hours.closes,
+	})
+	return `(function(cfg){var TZ="America/Los_Angeles";function minutes(hhmm){var p=String(hhmm).split(":");return (+p[0]||0)*60+(+p[1]||0)}function clock(hhmm){var total=minutes(hhmm);var h=Math.floor(total/60),m=String(total%60).padStart(2,"0");return (h%12||12)+":"+m+" "+(h<12?"AM":"PM")}function dayName(i){return new Intl.DateTimeFormat("en-US",{timeZone:"UTC",weekday:"long"}).format(new Date(Date.UTC(2026,10,1+i)))}function parts(d){var p=new Intl.DateTimeFormat("en-US",{timeZone:TZ,weekday:"long",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(d);function g(t){for(var i=0;i<p.length;i++)if(p[i].type===t)return p[i].value}var weekday=g("weekday"),idx=0;for(;idx<7;idx++)if(dayName(idx)===weekday)break;return {day:idx,minute:(+g("hour"))*60+(+g("minute"))}}function status(now){var c=parts(now),day=c.day,minute=c.minute,opens=minutes(cfg.opens),closes=minutes(cfg.closes);function isOpenDay(off){return cfg.days.indexOf(dayName((day+off)%7))>=0}if(isOpenDay(0)&&minute>=opens&&minute<closes)return {open:true,label:"Office open now until "+clock(cfg.closes)};var offset=(isOpenDay(0)&&minute<opens)?0:-1;if(offset<0){for(var n=1;n<=7;n++)if(isOpenDay(n)){offset=n;break}}if(offset<0)return {open:false,label:"Office closed now"};var when=offset===0?"today":offset===1?"tomorrow":dayName((day+offset)%7);return {open:false,label:"Office closed now. Opens "+when+" at "+clock(cfg.opens)}}function paint(){var s=status(new Date());var nodes=document.querySelectorAll("[data-office-hours]");for(var i=0;i<nodes.length;i++){var el=nodes[i];while(el.firstChild)el.removeChild(el.firstChild);var dot=document.createElement("span");dot.setAttribute("aria-hidden","true");dot.className=s.open?"office-hours-dot office-hours-dot-open":"office-hours-dot office-hours-dot-closed";var text=document.createElement("span");text.appendChild(document.createTextNode(s.label));var sr=document.createElement("span");sr.className="sr-only";sr.textContent=". "+(el.getAttribute("data-office-hours")||"");text.appendChild(sr);el.appendChild(dot);el.appendChild(text)}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",paint);else paint();setInterval(paint,60000)})(${config})`
+}
