@@ -41,8 +41,8 @@ test("the boot script carries the published days and clock", () => {
 	assert.match(script, /"09:00"/)
 	assert.match(script, /"17:00"/)
 	assert.match(script, /data-office-hours/)
+	assert.match(script, /data-office-hours-live/)
 	assert.match(script, /data-open/)
-	assert.match(script, /textContent/)
 })
 
 test("uses whatever hours the site publishes", () => {

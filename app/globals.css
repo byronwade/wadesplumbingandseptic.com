@@ -891,6 +891,11 @@
 		background: oklch(0.72 0.17 155);
 	}
 
+	/* Until the live label is painted, skip the duplicate weekly hours. */
+	[data-office-hours]:not([data-open]) .office-hours-published {
+		display: none;
+	}
+
 	/*
 	  Scrim. One flat mix over the photograph, not a gradient: the type sits
 	  low in the frame and the mix is what keeps it legible on any photo.

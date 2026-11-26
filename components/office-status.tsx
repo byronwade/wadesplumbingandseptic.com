@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils"
 
 /**
  * Published hours in the first HTML. SiteHeader and MobileCallBar are server
- * components, so this span is not a hydrated island. A layout script updates
- * `data-open` and the text node after the visitor's clock is known. The
- * warning is a guard if a future client parent wraps this markup.
+ * components, so this span is not a hydrated island. The boot script only
+ * updates the live text and `data-open`. The sr-only copy stays the weekly
+ * schedule so screen readers keep Monday to Friday hours.
  */
 export function OfficeHoursStatus({ className }: { className?: string }) {
 	return (
@@ -14,7 +14,12 @@ export function OfficeHoursStatus({ className }: { className?: string }) {
 			data-office-hours={siteConfig.hours}
 			suppressHydrationWarning
 		>
-			{siteConfig.hours}
+			<span data-office-hours-live suppressHydrationWarning>
+				{siteConfig.hours}
+			</span>
+			<span className="office-hours-published sr-only">
+				. {siteConfig.hours}
+			</span>
 		</span>
 	)
 }
