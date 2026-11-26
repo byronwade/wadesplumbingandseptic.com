@@ -27,16 +27,11 @@ export function ContentConversionCta({
 	const secondary = secondaryAction ?? {
 		href: freeQuoteHref,
 		label: freeQuoteCtaLabel,
-		external: false,
 	}
 	const secondaryClassName = cn(
 		buttonVariants({ variant: "inverse", size: "xl", wrap: true }),
 		"w-full sm:w-auto",
 	)
-	const secondaryIsExternal =
-		Boolean(secondary.external) ||
-		Boolean(secondary.href?.startsWith("mailto:")) ||
-		Boolean(secondary.href?.startsWith("tel:"))
 
 	return (
 		<section className="surface-hero overflow-hidden">
@@ -51,34 +46,47 @@ export function ContentConversionCta({
 					</div>
 
 					<div className="reveal mt-8 flex min-w-0 flex-col flex-wrap items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-						<CallButton
-							className="w-full sm:w-auto"
-							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							prefer="dial"
-							size="xl"
-						/>
 						{secondary.contact ? (
-							<ProtectedContactLink
-								className={secondaryClassName}
-								kind={secondary.contact}
-							>
-								{secondary.label}
-								<ArrowRight aria-hidden="true" />
-							</ProtectedContactLink>
-						) : secondaryIsExternal && secondary.href ? (
-							<a className={secondaryClassName} href={secondary.href}>
-								{secondary.label}
-								<ArrowRight aria-hidden="true" />
-							</a>
+							<>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="xl"
+								/>
+								<ProtectedContactLink
+									className={secondaryClassName}
+									kind={secondary.contact}
+								>
+									{secondary.label}
+									<ArrowRight aria-hidden="true" />
+								</ProtectedContactLink>
+							</>
 						) : (
-							<Link
-								prefetch={false}
-								className={secondaryClassName}
-								href={(secondary.href ?? "/contact") as Route}
-							>
-								{secondary.label}
-								<ArrowRight aria-hidden="true" />
-							</Link>
+							<>
+								<Link
+									prefetch={false}
+									className={cn(
+										buttonVariants({
+											variant: "default",
+											size: "xl",
+											wrap: true,
+										}),
+										"w-full sm:w-auto",
+									)}
+									href={(secondary.href ?? freeQuoteHref) as Route}
+								>
+									{secondary.label}
+									<ArrowRight aria-hidden="true" />
+								</Link>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="xl"
+									variant="inverse"
+								/>
+							</>
 						)}
 					</div>
 				</div>

@@ -6,8 +6,7 @@ export const serviceGroups = [
 		href: "/service-category/plumbing",
 		linkLabel: "Residential services",
 		image: "/images/work/precision-valve-installation.webp",
-		description:
-			"Repairs and installations completed cleanly, honestly, and to code.",
+		description: "Repairs and installs done cleanly, honestly, and to code.",
 		items: [
 			"Leak detection & repair",
 			"Fixture installation & repair",
@@ -21,7 +20,7 @@ export const serviceGroups = [
 		linkLabel: "Commercial services",
 		image: "/images/work/commercial-plumbing-installation.webp",
 		description:
-			"Dependable commercial service that keeps your property operating.",
+			"Commercial plumbing and septic work that keeps the building operating.",
 		items: [
 			"Commercial water heaters",
 			"Backflow prevention",
@@ -183,7 +182,7 @@ export const testimonials = [
 export const faqs = [
 	{
 		question: "What does Wade's Plumbing & Septic do?",
-		answer: `Wade's Plumbing & Septic is a family-owned plumbing and septic company in ${siteConfig.address.city}, California, serving Santa Cruz County and licensed under ${siteConfig.licenses}. We handle residential and commercial plumbing, drain, sewer and water heater work, and install new and engineered septic systems alongside engineers.`,
+		answer: `Wade's Plumbing & Septic is a family-owned plumbing and septic company in ${siteConfig.address.city}, California. We serve Santa Cruz County and selected Santa Clara County communities, licensed under ${siteConfig.licenses}. Work includes residential and commercial plumbing, drains, sewer and water heaters, plus new and engineered septic installation alongside engineers.`,
 	},
 	{
 		question: "Does Wade's pump septic tanks?",
@@ -201,16 +200,16 @@ export const faqs = [
 	{
 		question: "What are the signs of a failing septic system?",
 		answer:
-			"Warning signs include slow drains, gurgling sounds, sewage backups, soggy areas around the drain field, unusually lush grass, strong odors, and contaminated well water.",
+			"Slow drains, gurgling fixtures, sewage odors or backups, soggy spots over the drainfield, and a patch of unusually green grass. Call for an inspection if you see those signs.",
 	},
 	{
 		question: "How long does a water heater typically last?",
 		answer:
-			"Conventional tank water heaters commonly last 8 to 12 years, while tankless models can last 15 to 20 years or longer with proper maintenance.",
+			"Tank water heaters commonly last 8 to 12 years. Tankless units often last 15 to 20 years with regular maintenance. Age is only a guide; condition and water quality matter more.",
 	},
 	{
 		question: "What areas do you serve?",
 		answer:
-			"We serve Santa Cruz County and selected Santa Clara County communities in California, including Los Gatos and Saratoga (generally west of Highway 101). Call us if you are unsure whether a specific address is inside the current service area.",
+			"We serve Santa Cruz County and selected Santa Clara County communities in California, including Los Gatos and Saratoga (generally west of Highway 101). Call with the street address if you are unsure.",
 	},
 ]

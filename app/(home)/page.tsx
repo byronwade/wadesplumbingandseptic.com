@@ -104,22 +104,17 @@ export default function HomePage() {
 
 					<div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
-							Wade&apos;s Plumbing &amp; Septic: no sales pressure, no
-							upselling, and local licensed professionals. Flat-rate pricing,
-							quoted on site before work begins.
+							Licensed plumbing and septic for Santa Cruz County homes and
+							businesses. No sales pressure. Flat-rate pricing, quoted on site
+							before work begins.
 						</p>
 
 						<div className="motion-rise flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								size="xl"
-							/>
 							<Link
 								prefetch={false}
 								className={cn(
 									buttonVariants({
-										variant: "inverse",
+										variant: "default",
 										size: "xl",
 										wrap: true,
 									}),
@@ -130,6 +125,12 @@ export default function HomePage() {
 								{freeQuoteCtaLabel}
 								<ArrowRight aria-hidden="true" />
 							</Link>
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								size="xl"
+								variant="inverse"
+							/>
 						</div>
 					</div>
 
