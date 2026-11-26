@@ -6,7 +6,7 @@ description: >-
   installs the work.
 category: Septic Issues in Santa Cruz County
 date: "2026-11-25"
-updated: "2026-11-25"
+updated: "2026-11-26"
 tags:
   - santa cruz county
   - accessory dwelling unit
@@ -24,7 +24,7 @@ Adding a bedroom or an accessory dwelling unit (ADU) on a Santa Cruz County sept
 ## Quick answer
 
 - Look up the parcel in Environmental Health's public files. The septic permit lists the structures, bedrooms, and square footage the system was approved for.
-- A one-time addition of less than 500 square feet with no extra bedrooms can stay on repair standards if the current house still matches that permit.
+- A one-time addition of up to 500 square feet with no extra bedrooms can stay on repair standards if the current house still matches that permit.
 - An ADU, extra bedrooms, or more than 500 added square feet brings in upgrade standards. The system has to meet (or be upgraded to meet) current rules for the total bedrooms and dwelling units.
 - An ADU is a separate unit for design flow. A detached ADU may have its own tank or share a combined system that is sized for both buildings.
 - Unincorporated county rules are in Chapter 7.38. If you live in Santa Cruz, Capitola, Scotts Valley, or Watsonville, confirm the septic path with that city's building department as well.
@@ -39,12 +39,9 @@ That record is the baseline. How you use a room today does not replace it. For t
 
 County Environmental Health defines a **repair** as replacing an old or malfunctioning permitted system that is still the right size for the house. **Upgrade** is a modification of a permitted system, including adding dispersal area or treatment components for a remodel, or installing an additional system or tank for an ADU on a developed parcel.
 
-On the county's [repair and upgrade page](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx):
+On the county's [repair and upgrade page](https://scceh.com/NewHome/Programs/LandUse/OWTSRepairUpgrades.aspx), repair standards apply if the current structures do not exceed what the OWTS was permitted for, with a one-time square-footage allowance per parcel if no bedrooms are added. Upgrade standards apply if the current structure has more bedrooms, more habitable area than that allowance, or more structures than the OWTS permit allowed.
 
-- Repair standards apply if the current structures do not exceed what the OWTS was permitted for. There is a one-time allowance per parcel of less than 500 square feet if no bedrooms are added.
-- Upgrade standards apply if the current structure has more bedrooms, more than 500 additional square feet, or more structures than the OWTS permit allowed.
-
-County Code Chapter 7.38.080 matches that split. A one-time addition of up to 500 square feet of habitable space with no increase in bedrooms may be approved with no change to the existing system if the addition does not encroach on the system or expansion area, the county has adequate information on the system, the one-time limit (which started January 1, 1993) has not already been used, and the system is functioning without failure.
+County Code Chapter 7.38.080 sets that allowance. A one-time addition of up to 500 square feet of habitable space with no increase in bedrooms may be approved with no change to the existing system if the addition does not encroach on the system or expansion area, the county has adequate information on the system, the one-time limit (which started January 1, 1993) has not already been used, and the system is functioning without failure.
 
 Additions of more than 500 square feet, extra bedrooms, or an ADU under Chapter 13.10 may be approved only if the OWTS meets, or is upgraded to meet, current standard or enhanced-treatment requirements for the **total** number of bedrooms and dwelling units in the project, including the existing ones.
 

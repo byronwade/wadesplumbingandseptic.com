@@ -388,7 +388,7 @@ export const cityServicePages: CityServicePage[] = [
 			{
 				question: "Can I add a room or ADU to a Felton home on septic?",
 				answer:
-					"It depends on what your system was permitted for. The county allows a one time addition under 500 square feet with no new bedrooms under repair standards. More bedrooms, more than 500 added square feet, or an extra unit usually means upgrade standards, and slopes over 30 percent need a technical report. Check your permitted system before you design the addition.",
+					"It depends on what your system was permitted for. The county allows a one time addition of up to 500 square feet with no new bedrooms under repair standards. More bedrooms, more than 500 added square feet, or an extra unit usually means upgrade standards, and slopes over 30 percent need a technical report. Check your permitted system before you design the addition.",
 			},
 			{
 				question: "What are the signs a Felton septic system is failing?",
@@ -500,7 +500,7 @@ export const cityServicePages: CityServicePage[] = [
 			{
 				question: "Can I add an ADU to a Scotts Valley home on septic?",
 				answer:
-					"Possibly, but it usually means more than the existing system. The county treats an additional tank or system for an accessory dwelling unit, extra bedrooms, or more than 500 added square feet as an upgrade, which must meet current standards. Repair standards only cover a one time addition under 500 square feet with no new bedrooms.",
+					"Possibly, but it usually means more than the existing system. The county treats an additional tank or system for an accessory dwelling unit, extra bedrooms, or more than 500 added square feet as an upgrade, which must meet current standards. Repair standards only cover a one time addition of up to 500 square feet with no new bedrooms.",
 			},
 			{
 				question: "How often should a Scotts Valley septic tank be pumped?",

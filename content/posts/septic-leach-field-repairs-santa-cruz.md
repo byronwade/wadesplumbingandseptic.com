@@ -5,7 +5,7 @@ description: >-
   and how Santa Cruz County repair and upgrade rules affect a leach field repair.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
-updated: "2026-10-24"
+updated: "2026-11-26"
 tags:
   - santa cruz
   - septic
@@ -68,7 +68,7 @@ The point of a [septic inspection](/service-offerings/septic-tank-inspection-and
 
 In Santa Cruz County, onsite wastewater treatment systems (OWTS) are permitted through County Environmental Health, and the rules depend on what is already permitted on your parcel.
 
-- **Repair** means replacing an old or malfunctioning system that was permitted and correctly sized. According to Environmental Health, repair standards apply when the house does not exceed what the system was permitted for, with a one time allowance of less than 500 square feet if no bedrooms are added.
+- **Repair** means replacing an old or malfunctioning system that was permitted and correctly sized. County Code Chapter 7.38.080 allows a one time addition of up to 500 square feet of habitable space if no bedrooms are added, when the house still matches what the system was permitted for.
 - **Upgrade** standards apply when the home now has more bedrooms, more than 500 additional square feet or more structures than the permit allowed, or when the work adds dispersal area or treatment components to meet current standards or serve an accessory dwelling unit.
 - **No permitted system** on record means the parcel has to meet current standards for new development.
 - **Steep ground:** a technical report is required when a system or future expansion area is proposed on slopes over 30 percent.
