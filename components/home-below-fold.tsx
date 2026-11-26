@@ -49,12 +49,12 @@ const specialtyPoints = [
 	{
 		icon: Gauge,
 		title: "Advanced ATU systems",
-		text: "For sites conventional contractors turn down.",
+		text: "For lots that need an engineered treatment design.",
 	},
 	{
 		icon: Droplets,
-		title: "Free site consultations",
-		text: "We tell you what can work before money changes hands.",
+		title: "Free quotes",
+		text: "We tell you what can work before you pay for the job.",
 	},
 ] as const
 
@@ -69,9 +69,9 @@ export function HomeBelowFold() {
 							Engineered <span className="text-primary">septic systems</span>
 						</h2>
 						<p className="type-lead">
-							When a standard system will not work (steep slopes, difficult
-							soil, tight lots, or sensitive environments), that is exactly
-							where we excel.
+							When a conventional system will not work (steep slopes, difficult
+							soil, tight lots, or sensitive sites), we install engineered
+							systems with your engineer.
 						</p>
 					</div>
 
@@ -177,7 +177,7 @@ export function HomeBelowFold() {
 						<Link
 							prefetch={false}
 							className={cn(
-								buttonVariants({ variant: "inverse", size: "lg", wrap: true }),
+								buttonVariants({ variant: "default", size: "lg", wrap: true }),
 								"w-full shrink-0 sm:w-auto",
 							)}
 							href={freeQuoteHref as Route}
@@ -221,8 +221,8 @@ export function HomeBelowFold() {
 							<p className="spec-label">What we do</p>
 							<h2 className="type-title">Plumbing &amp; septic services</h2>
 							<p className="type-lead">
-								From routine maintenance to complex installations, our licensed
-								team handles it cleanly, honestly, and on time.
+								Licensed plumbing and septic work for homes and businesses.
+								Quoted on site before we start.
 							</p>
 						</div>
 						<Link
@@ -416,16 +416,11 @@ export function HomeBelowFold() {
 							))}
 						</ol>
 						<div className="flex w-full min-w-0 flex-col flex-wrap gap-3 sm:flex-row">
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								size="xl"
-							/>
 							<Link
 								prefetch={false}
 								className={cn(
 									buttonVariants({
-										variant: "outline",
+										variant: "default",
 										size: "xl",
 										wrap: true,
 									}),
@@ -436,6 +431,12 @@ export function HomeBelowFold() {
 								{freeQuoteCtaLabel}
 								<ArrowRight aria-hidden="true" />
 							</Link>
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								size="xl"
+								variant="outline"
+							/>
 						</div>
 					</div>
 
@@ -522,9 +523,8 @@ export function HomeBelowFold() {
 							Ready to get started?
 						</h2>
 						<p className="type-lead text-on-dark-muted text-pretty">
-							Talk to a local licensed professional and get clear options with
-							no pressure. Quotes are free, and the price is set before any work
-							begins.
+							Call or request a free quote. We explain the options with no
+							pressure. The price is set before any work begins.
 						</p>
 					</div>
 					<div className="surface-float min-w-0 rounded-xl p-[min(1.75rem,28px)] sm:p-8">

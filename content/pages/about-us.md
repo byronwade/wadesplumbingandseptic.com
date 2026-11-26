@@ -30,35 +30,21 @@ gallery:
 eyebrow: About Wade's
 ---
 
-## About Wade's Plumbing & Septic
+Wade's Plumbing & Septic is a family-owned plumbing and septic company based in Ben Lomond. We serve Santa Cruz County and selected Santa Clara County communities.
 
-Wade's Plumbing & Septic is a family-owned and operated business delivering plumbing and septic solutions in Santa Cruz County. We've built our reputation on quality workmanship, honest recommendations, and exceptional customer service.
+## What we do
 
-## Our Mission
+Residential and commercial plumbing, drain and sewer work, water heaters, and septic system installation. Engineered systems are installed alongside your engineer.
 
-To provide dependable, high-quality plumbing and septic services that exceed customer expectations while maintaining the highest standards of integrity and professionalism.
+## What we do not do
 
-## Our Values
+Wade's does not pump septic tanks. For routine pumping, hire a pumping company.
 
-- **Integrity:** We always provide honest assessments and fair pricing.
-- **Quality:** We never compromise on the quality of our work.
-- **Reliability:** When we make a commitment, we honor it.
-- **Expertise:** Our team receives continuous training to stay current with industry advancements.
-- **Community:** We're proud to support the communities we serve.
+## How we work
 
-## The Wade's Difference
+We listen, explain what we find in plain language, and give a flat-rate price before work begins. Quotes are free. Office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
-What sets us apart is our customer-first approach. We listen to your concerns, explain the issues clearly, and provide options that fit your needs and budget. We're not just fixing plumbing problems; we're building lasting relationships with our customers.
-
-## Serving Santa Cruz County, CA
-
-At Wade's Plumbing & Septic, we proudly serve the diverse communities of Santa Cruz County, including Santa Cruz, Capitola, Scotts Valley, Watsonville, and Aptos. Our commitment to quality and customer satisfaction extends throughout the region.
-
-We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring our services meet the highest standards of safety and professionalism.
-
-**Office Hours:** Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
-
-Whether you need trenchless sewer line replacement, expert fixture installation, or certified septic system services, Wade's Plumbing & Septic is your trusted partner in Santa Cruz County, CA.
+We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
 ## Frequently Asked Questions
 
@@ -86,23 +72,19 @@ Quotes are free. Flat-rate pricing, quoted on site before work begins. Call 831.
 
 Call Wade's at 831.225.4344 Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. You can also request a free quote through our contact page.
 
-## Commercial Service Questions
+## Commercial work
 
-### How is pricing determined for commercial services at Wade's Plumbing & Septic?
+Wade's also handles commercial plumbing and septic installation for businesses in the service area. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
-The cost for commercial plumbing and septic services in Santa Cruz County varies based on the complexity and scope of the project. We offer competitive pricing and provide detailed estimates to ensure transparency and value for our clients.
+### How is pricing set for commercial work?
 
-Flat-rate pricing, quoted on site before work begins.
+Flat-rate pricing, quoted on site before work begins. Cost depends on the scope of the job.
 
 ### What should I expect during a commercial service visit?
 
-Our professional team will conduct a thorough assessment of your plumbing or septic issue, providing clear communication and expert solutions tailored to your needs. We prioritize minimal disruption to your business operations while delivering efficient and effective service.
+We assess the plumbing or septic issue, explain what we find, and agree on the work before we start. We aim to keep disruption to the business as low as the job allows.
 
-### What is the typical timeline for completing commercial plumbing or septic services?
-
-The timeline for commercial services in Santa Cruz County depends on the service type and complexity. Most projects are completed within a few days, with scheduling confirmed during business hours.
-
-## Services and Contact Details
+## Services and contact
 
 Explore our [plumbing and septic services](/services), including [engineered septic system installation](/service-offerings/engineered-septic-system-installation). Check our [service-area guide](/service-areas) for the communities we cover.
 

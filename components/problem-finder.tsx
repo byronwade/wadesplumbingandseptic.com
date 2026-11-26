@@ -160,16 +160,11 @@ export function ProblemFinder({
 								</div>
 
 								<div className="mt-auto flex flex-wrap gap-[min(0.5rem,8px)]">
-									<CallButton
-										className="w-full sm:w-auto sm:grow"
-										desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-										size="lg"
-									/>
 									<Link
 										prefetch={false}
 										className={cn(
 											buttonVariants({
-												variant: "outline",
+												variant: "default",
 												size: "lg",
 												wrap: true,
 											}),
@@ -179,6 +174,12 @@ export function ProblemFinder({
 									>
 										{freeQuoteCtaLabel}
 									</Link>
+									<CallButton
+										className="w-full sm:w-auto sm:grow"
+										desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+										size="lg"
+										variant="outline"
+									/>
 								</div>
 							</>
 						) : (

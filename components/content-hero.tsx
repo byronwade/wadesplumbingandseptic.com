@@ -293,17 +293,11 @@ export function ContentHero({
 						</div>
 						{actions ? (
 							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="xl"
-								/>
 								<Link
 									prefetch={false}
 									className={cn(
 										buttonVariants({
-											variant: "inverse",
+											variant: "default",
 											size: "xl",
 											wrap: true,
 										}),
@@ -313,6 +307,13 @@ export function ContentHero({
 								>
 									{freeQuoteCtaLabel}
 								</Link>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="xl"
+									variant="inverse"
+								/>
 							</div>
 						) : null}
 						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
@@ -352,7 +353,7 @@ export function ContentHero({
 		*/
 		return (
 			<header className="hero-index surface-hero relative overflow-hidden">
-				<div className="container-shell relative py-12 sm:py-16 lg:py-20">
+				<div className="container-shell relative py-10 sm:py-14 lg:py-16">
 					<BreadcrumbTrail items={trail} tone="dark" />
 					<div
 						className={cn(
@@ -371,27 +372,39 @@ export function ContentHero({
 								</p>
 							</div>
 							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="lg"
-								/>
 								<Link
 									prefetch={false}
 									className={cn(
 										buttonVariants({
-											variant: "inverse",
+											variant: "default",
 											size: "lg",
 											wrap: true,
 										}),
 										"w-full sm:w-auto",
 									)}
-									href={(tip ? freeQuoteHref : "/service-areas") as Route}
+									href={freeQuoteHref as Route}
 								>
-									{tip ? "Get a Free Quote" : "Check your town"}
+									{freeQuoteCtaLabel}
 								</Link>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="lg"
+									variant="inverse"
+								/>
 							</div>
+							{tip ? null : (
+								<p className="text-on-dark-muted mt-4 text-sm">
+									<Link
+										prefetch={false}
+										className="text-on-dark underline decoration-current/40 underline-offset-4 hover:decoration-current"
+										href={"/service-areas" as Route}
+									>
+										See if we serve your town
+									</Link>
+								</p>
+							)}
 						</div>
 						{image ? (
 							<div className="hero-service-media relative hidden aspect-[4/3] overflow-hidden rounded-lg lg:block">
@@ -432,7 +445,7 @@ export function ContentHero({
 				<span className="sr-only">{imageAlt?.trim() || title}</span>
 			) : null}
 
-			<div className="container-shell relative py-12 sm:py-16 lg:py-20">
+			<div className="container-shell relative py-10 sm:py-14 lg:py-16">
 				<BreadcrumbTrail items={trail} tone="dark" />
 				<div className="section-head max-w-2xl">
 					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
@@ -441,27 +454,37 @@ export function ContentHero({
 				</div>
 				{actions ? (
 					<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-						<CallButton
-							className="w-full sm:w-auto"
-							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							prefer="dial"
-							size="lg"
-						/>
-						{pageCta === "call" ? null : (
-							<Link
-								prefetch={false}
-								className={cn(
-									buttonVariants({
-										variant: "inverse",
-										size: "lg",
-										wrap: true,
-									}),
-									"w-full sm:w-auto",
-								)}
-								href={freeQuoteHref as Route}
-							>
-								{freeQuoteCtaLabel}
-							</Link>
+						{pageCta === "call" ? (
+							<CallButton
+								className="w-full sm:w-auto"
+								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+								prefer="dial"
+								size="lg"
+							/>
+						) : (
+							<>
+								<Link
+									prefetch={false}
+									className={cn(
+										buttonVariants({
+											variant: "default",
+											size: "lg",
+											wrap: true,
+										}),
+										"w-full sm:w-auto",
+									)}
+									href={freeQuoteHref as Route}
+								>
+									{freeQuoteCtaLabel}
+								</Link>
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									prefer="dial"
+									size="lg"
+									variant="inverse"
+								/>
+							</>
 						)}
 					</div>
 				) : null}

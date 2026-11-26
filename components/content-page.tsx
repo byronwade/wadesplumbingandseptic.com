@@ -92,7 +92,9 @@ export function ContentPage({
 	// pages carry the same "Frequently Asked Questions" section.
 	const faqContent = isFaq
 		? document.content
-		: document.slug === "about-us" || isServiceArea
+		: document.slug === "about-us" ||
+			  document.slug === "contact" ||
+			  isServiceArea
 			? splitContentBands(document.content).sections.find(
 					(section) => section.heading === "Frequently Asked Questions",
 				)?.body
@@ -181,16 +183,16 @@ export function ContentPage({
 				image={document.image}
 				imageAlt={document.imageAlt}
 				meta={articleMeta}
-				pageCta={
-					document.slug === "contact" || document.slug === "contact-call-first"
-						? "call"
-						: "contact"
-				}
+				pageCta="contact"
 				parent={parent}
 				showActions={!isPost}
 				title={document.heroTitle ?? document.title}
 				variant={isPost ? "article" : "page"}
 			/>
+
+			{document.slug === "contact" && searchParams ? (
+				<ContactLeadSlot searchParams={searchParams} />
+			) : null}
 
 			{showAnswerFirst ? (
 				<AnswerFirst
@@ -206,10 +208,6 @@ export function ContentPage({
 			) : null}
 
 			{document.slug === "about-us" ? <CompanyFacts /> : null}
-
-			{document.slug === "contact" && searchParams ? (
-				<ContactLeadSlot searchParams={searchParams} />
-			) : null}
 
 			{document.slug === "testimonials" ? <GoogleReviewInvite /> : null}
 			{document.slug === "about-us" ? (

@@ -25,8 +25,8 @@ export function ContactLead({
 				<p className="spec-label">Free quote</p>
 				<h2 className="type-title">Tell us what you need</h2>
 				<p className="type-lead">
-					Leave your name, phone, and a short note. We follow up during office
-					hours. Calling is faster if you can talk now.
+					Name, phone, and a short note. We follow up during office hours. Call
+					if you can talk now.
 				</p>
 			</div>
 			<div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10">

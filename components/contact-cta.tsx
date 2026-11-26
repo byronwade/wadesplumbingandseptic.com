@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils"
 
 export function ContactCta({
 	title = "Ready to get started?",
-	description = "Talk to a local licensed professional and get clear options with no pressure.",
+	description = "Call or request a free quote. Clear options, no pressure.",
 	compact = false,
 	/** Big Call button. Off by default in compact sidebars so pages do not stack Call on Call. */
 	showCall,
@@ -96,19 +96,11 @@ export function ContactCta({
 						compact ? "mt-5" : "sm:w-auto sm:flex-row sm:items-center",
 					)}
 				>
-					{includeCall ? (
-						<CallButton
-							className={actionWidth}
-							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							prefer="dial"
-							size={compact ? "lg" : "xl"}
-						/>
-					) : null}
 					<Link
 						prefetch={false}
 						className={cn(
 							buttonVariants({
-								variant: includeCall ? "inverse" : "default",
+								variant: "default",
 								size: compact ? "lg" : "xl",
 								wrap: true,
 							}),
@@ -119,6 +111,15 @@ export function ContactCta({
 						{freeQuoteCtaLabel}
 						<ArrowRight aria-hidden="true" />
 					</Link>
+					{includeCall ? (
+						<CallButton
+							className={actionWidth}
+							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+							prefer="dial"
+							size={compact ? "lg" : "xl"}
+							variant="inverse"
+						/>
+					) : null}
 				</div>
 			</div>
 		</section>

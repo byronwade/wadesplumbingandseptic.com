@@ -16,6 +16,7 @@ import { SiteFooter } from "../../components/site-footer"
 import { TownPageLinks } from "../../components/town-page-links"
 import { normalizeConversion } from "../../lib/content-conversion"
 import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
+import { extractFaqPairs } from "../../lib/seo"
 import { serviceAreaLocations } from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
 
@@ -116,6 +117,40 @@ test("footer review button and featured towns stay inside the mapped catalog", (
 	assert.doesNotMatch(html, /yelp/i)
 })
 
+test("catalog and company heroes lead with Get a Free Quote", () => {
+	const servicesHero = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "Plumbing and septic services for Santa Cruz County.",
+			indexKind: "service",
+			title: "Plumbing & Septic Services",
+			variant: "index",
+		}),
+	)
+	assert.ok(servicesHero.includes(freeQuoteCtaLabel), servicesHero)
+	assert.ok(servicesHero.includes(`href="${freeQuoteHref}"`), servicesHero)
+	assert.ok(
+		servicesHero.includes(`href="${siteConfig.phoneHref}"`),
+		servicesHero,
+	)
+	assert.doesNotMatch(servicesHero, /Check your town/)
+	assert.ok(servicesHero.includes("/service-areas"), servicesHero)
+
+	const aboutHero = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "Family-owned plumbing and septic in Santa Cruz County.",
+			title: "About Us",
+			variant: "page",
+		}),
+	)
+	const quoteIndex = aboutHero.indexOf(freeQuoteCtaLabel)
+	const callIndex = aboutHero.indexOf(`href="${siteConfig.phoneHref}"`)
+	assert.ok(quoteIndex !== -1 && callIndex !== -1, aboutHero)
+	assert.ok(
+		quoteIndex < callIndex,
+		"quote CTA should come before the call button",
+	)
+})
+
 test("service and town heroes show Call and Free Quote without JavaScript", () => {
 	const serviceHero = renderToStaticMarkup(
 		createElement(ContentHero, {
@@ -181,3 +216,34 @@ test("town pages keep a visible call path and free quote in the markdown", () =>
 		assert.doesNotMatch(body, /24\s*\/\s*7|\bemergenc(?:y|ies)\b/i, file)
 	}
 })
+
+test("FAQ page answers are direct and match FAQPage pairs", () => {
+	const raw = fs.readFileSync("content/pages/faq.md", "utf8")
+	const body = splitFrontmatter(raw).body
+	const pairs = extractFaqPairs(body)
+	assert.ok(
+		pairs.length >= 8,
+		`expected several FAQ pairs, got ${pairs.length}`,
+	)
+	for (const pair of pairs) {
+		assert.ok(pair.question.endsWith("?"), pair.question)
+		assert.match(body, new RegExp(`^### ${escapeRegExp(pair.question)}$`, "m"))
+		assert.ok(pair.answer.length > 20, pair.question)
+		assert.doesNotMatch(
+			pair.answer,
+			/Satisfaction guaranteed|Since 2005|Fast response/,
+		)
+		assert.doesNotMatch(pair.answer, /24\s*\/\s*7|\bemergenc(?:y|ies)\b/i)
+		assert.doesNotMatch(pair.question, /\bquickly\b|\bfast response\b/i)
+	}
+	const pumping = pairs.find((pair) => /pump septic tanks/i.test(pair.question))
+	assert.ok(pumping, "FAQ should say whether Wade's pumps tanks")
+	assert.match(pumping.answer, /^No\./)
+	const hours = pairs.find((pair) => /business hours/i.test(pair.question))
+	assert.ok(hours, "FAQ should state office hours")
+	assert.match(hours.answer, /Monday to Friday, 9:00 AM to 5:00 PM/)
+})
+
+function escapeRegExp(value: string) {
+	return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
