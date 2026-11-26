@@ -4,9 +4,11 @@ import Link from "next/link"
 import { DeferredHeaderNav } from "@/components/deferred-header-nav"
 import { HeaderToolbar } from "@/components/header-toolbar"
 import { OfficeHoursStatus } from "@/components/office-status"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
+	const quoteEmailReady = quoteEmailConfigured()
 	return (
 		<header className="bg-ink text-on-dark sticky top-0 z-50 shadow-[0_1px_0_0_oklch(1_0_0/0.07)]">
 			<div className="bg-ink-soft hidden sm:block">
@@ -58,8 +60,8 @@ export function SiteHeader() {
 						</Link>
 					</div>
 
-					<DeferredHeaderNav />
-					<HeaderToolbar />
+					<DeferredHeaderNav quoteEmailReady={quoteEmailReady} />
+					<HeaderToolbar quoteEmailReady={quoteEmailReady} />
 				</div>
 			</div>
 		</header>

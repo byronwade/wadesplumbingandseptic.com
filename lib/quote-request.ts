@@ -161,3 +161,16 @@ export function quoteFormErrorFromQuery(
 export function canAcceptWithoutMailer(vercelEnv = process.env.VERCEL_ENV) {
 	return vercelEnv !== "production"
 }
+
+/**
+ * True when quote email can be delivered, or when this is not Vercel
+ * Production (same preview/local exception as canAcceptWithoutMailer).
+ * Checks only whether RESEND_API_KEY is set. Never logs or returns the value.
+ */
+export function quoteEmailConfigured(
+	apiKey = process.env.RESEND_API_KEY,
+	vercelEnv = process.env.VERCEL_ENV,
+) {
+	if (typeof apiKey === "string" && apiKey.length > 0) return true
+	return canAcceptWithoutMailer(vercelEnv)
+}

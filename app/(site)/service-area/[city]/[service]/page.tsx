@@ -14,17 +14,19 @@ import { buttonVariants } from "@/components/ui/button"
 import { cityServiceFaqs, isSepticWork } from "@/lib/answer-first"
 import { contactInfo } from "@/lib/contact"
 import {
-	freeQuoteCtaLabel,
-	freeQuoteHref,
-	weekdayHoursPhrase,
-} from "@/lib/public-facts"
-import {
 	cityServicePath,
 	getCityLocation,
 	getCityServicePage,
 	getCityServiceStaticParams,
 	getNearbyCityLocations,
 } from "@/lib/city-service-pages"
+import {
+	callForFreeQuoteLabel,
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+	weekdayHoursPhrase,
+} from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { getDocument } from "@/lib/content"
 import { getServiceImage } from "@/lib/service-images"
 import {
@@ -76,6 +78,7 @@ export default async function CityServicePage({
 
 	if (!page || !location) notFound()
 
+	const quoteEmailReady = quoteEmailConfigured()
 	const serviceDoc = await getDocument("services", service)
 	const image = getServiceImage(
 		serviceDoc?.category,
@@ -167,20 +170,26 @@ export default async function CityServicePage({
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 							size="lg"
 						/>
-						<Link
-							prefetch={false}
-							className={cn(
-								buttonVariants({
-									variant: "outline",
-									size: "lg",
-									wrap: true,
-								}),
-								"w-full justify-center sm:w-auto",
-							)}
-							href={freeQuoteHref as Route}
-						>
-							{freeQuoteCtaLabel}
-						</Link>
+						{quoteEmailReady ? (
+							<Link
+								prefetch={false}
+								className={cn(
+									buttonVariants({
+										variant: "outline",
+										size: "lg",
+										wrap: true,
+									}),
+									"w-full justify-center sm:w-auto",
+								)}
+								href={freeQuoteHref as Route}
+							>
+								{freeQuoteCtaLabel}
+							</Link>
+						) : (
+							<p className="text-muted-foreground text-sm">
+								{callForFreeQuoteLabel}
+							</p>
+						)}
 					</div>
 				</div>
 			</section>

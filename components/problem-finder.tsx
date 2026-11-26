@@ -4,11 +4,8 @@ import type { Route } from "next"
 import Link from "next/link"
 import { useId, useState } from "react"
 
-import { CallButton } from "@/components/call-button"
 import { ArrowRight } from "@/components/icons"
-import { buttonVariants } from "@/components/ui/button"
-import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import { LeadActions } from "@/components/lead-actions"
 import type { FinderProblem, FinderTown } from "@/lib/problem-finder"
 import { cn } from "@/lib/utils"
 
@@ -21,10 +18,12 @@ export function ProblemFinder({
 	problems,
 	towns,
 	spokes,
+	quoteEmailReady,
 }: {
 	problems: FinderProblem[]
 	towns: FinderTown[]
 	spokes: string[]
+	quoteEmailReady: boolean
 }) {
 	const [problemId, setProblemId] = useState<string | null>(null)
 	const [townSlug, setTownSlug] = useState("")
@@ -160,25 +159,12 @@ export function ProblemFinder({
 								</div>
 
 								<div className="mt-auto flex flex-wrap gap-[min(0.5rem,8px)]">
-									<Link
-										prefetch={false}
-										className={cn(
-											buttonVariants({
-												variant: "default",
-												size: "lg",
-												wrap: true,
-											}),
-											"w-full sm:w-auto sm:grow",
-										)}
-										href={freeQuoteHref as Route}
-									>
-										{freeQuoteCtaLabel}
-									</Link>
-									<CallButton
-										className="w-full sm:w-auto sm:grow"
-										desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									<LeadActions
+										actionClassName="w-full sm:w-auto sm:grow"
+										callVariantWhenQuotePrimary="outline"
+										fallbackTextClassName="text-muted-foreground text-sm"
+										quoteEmailReady={quoteEmailReady}
 										size="lg"
-										variant="outline"
 									/>
 								</div>
 							</>

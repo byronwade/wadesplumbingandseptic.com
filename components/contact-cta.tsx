@@ -1,15 +1,12 @@
-import type { Route } from "next"
-import Link from "next/link"
-import { ArrowRight, Clock, Mail, Phone } from "@/components/icons"
+import { Clock, Mail, Phone } from "@/components/icons"
 
-import { CallButton } from "@/components/call-button"
+import { LeadActions } from "@/components/lead-actions"
 import {
 	ProtectedContactLink,
 	ProtectedEmailText,
 } from "@/components/protected-contact"
-import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { cn } from "@/lib/utils"
 
 export function ContactCta({
@@ -18,11 +15,13 @@ export function ContactCta({
 	compact = false,
 	/** Big Call button. Off by default in compact sidebars so pages do not stack Call on Call. */
 	showCall,
+	quoteEmailReady = quoteEmailConfigured(),
 }: {
 	title?: string
 	description?: string
 	compact?: boolean
 	showCall?: boolean
+	quoteEmailReady?: boolean
 }) {
 	/*
 	 * Give banner copy a text-sized basis and wrap whole columns before they
@@ -96,30 +95,13 @@ export function ContactCta({
 						compact ? "mt-5" : "sm:w-auto sm:flex-row sm:items-center",
 					)}
 				>
-					<Link
-						prefetch={false}
-						className={cn(
-							buttonVariants({
-								variant: "default",
-								size: compact ? "lg" : "xl",
-								wrap: true,
-							}),
-							actionWidth,
-						)}
-						href={freeQuoteHref as Route}
-					>
-						{freeQuoteCtaLabel}
-						<ArrowRight aria-hidden="true" />
-					</Link>
-					{includeCall ? (
-						<CallButton
-							className={actionWidth}
-							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-							prefer="dial"
-							size={compact ? "lg" : "xl"}
-							variant="inverse"
-						/>
-					) : null}
+					<LeadActions
+						actionClassName={actionWidth}
+						includeCallWhenQuotePrimary={includeCall}
+						quoteArrow
+						quoteEmailReady={quoteEmailReady}
+						size={compact ? "lg" : "xl"}
+					/>
 				</div>
 			</div>
 		</section>

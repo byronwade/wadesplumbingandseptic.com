@@ -4,9 +4,9 @@ import type { ReactNode } from "react"
 import { BadgeCheck, ChevronRight } from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
-import { buttonVariants } from "@/components/ui/button"
+import { LeadActions } from "@/components/lead-actions"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { lcpPreloads, pictureSources } from "@/lib/responsive-image"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -213,6 +213,7 @@ export function ContentHero({
 	meta,
 	showActions,
 	pageCta = "contact",
+	quoteEmailReady = quoteEmailConfigured(),
 }: {
 	title: string
 	description: string
@@ -233,6 +234,8 @@ export function ContentHero({
 	 * contact page itself so the button does not navigate nowhere.
 	 */
 	pageCta?: "contact" | "call"
+	/** Override for tests. Defaults to the build-time mailer check. */
+	quoteEmailReady?: boolean
 }) {
 	const kind = normalizeVariant(variant)
 	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
@@ -293,27 +296,7 @@ export function ContentHero({
 						</div>
 						{actions ? (
 							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-								<Link
-									prefetch={false}
-									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "xl",
-											wrap: true,
-										}),
-										"w-full sm:w-auto",
-									)}
-									href={freeQuoteHref as Route}
-								>
-									{freeQuoteCtaLabel}
-								</Link>
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="xl"
-									variant="inverse"
-								/>
+								<LeadActions quoteEmailReady={quoteEmailReady} />
 							</div>
 						) : null}
 						<ul className="text-on-dark-muted mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[0.8125rem] font-semibold">
@@ -372,27 +355,7 @@ export function ContentHero({
 								</p>
 							</div>
 							<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-								<Link
-									prefetch={false}
-									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "lg",
-											wrap: true,
-										}),
-										"w-full sm:w-auto",
-									)}
-									href={freeQuoteHref as Route}
-								>
-									{freeQuoteCtaLabel}
-								</Link>
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="lg"
-									variant="inverse"
-								/>
+								<LeadActions quoteEmailReady={quoteEmailReady} size="lg" />
 							</div>
 							{tip ? null : (
 								<p className="text-on-dark-muted mt-4 text-sm">
@@ -454,7 +417,7 @@ export function ContentHero({
 				</div>
 				{actions ? (
 					<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-						{pageCta === "call" ? (
+						{pageCta === "call" && quoteEmailReady ? (
 							<CallButton
 								className="w-full sm:w-auto"
 								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
@@ -462,29 +425,7 @@ export function ContentHero({
 								size="lg"
 							/>
 						) : (
-							<>
-								<Link
-									prefetch={false}
-									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "lg",
-											wrap: true,
-										}),
-										"w-full sm:w-auto",
-									)}
-									href={freeQuoteHref as Route}
-								>
-									{freeQuoteCtaLabel}
-								</Link>
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="lg"
-									variant="inverse"
-								/>
-							</>
+							<LeadActions quoteEmailReady={quoteEmailReady} size="lg" />
 						)}
 					</div>
 				) : null}

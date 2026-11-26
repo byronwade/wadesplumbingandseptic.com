@@ -17,6 +17,7 @@ import {
 
 import { CallButton } from "@/components/call-button"
 import { HomeFaq } from "@/components/home-faq"
+import { LeadActions } from "@/components/lead-actions"
 import {
 	EmailAddress,
 	ProtectedContactLink,
@@ -31,7 +32,12 @@ import {
 	trustedBrands,
 	workGallery,
 } from "@/lib/home-content"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import {
+	callForFreeQuoteLabel,
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+} from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { locationsByCounty } from "@/lib/service-areas"
 import { cn } from "@/lib/utils"
 
@@ -58,7 +64,11 @@ const specialtyPoints = [
 	},
 ] as const
 
-export function HomeBelowFold() {
+export function HomeBelowFold({
+	quoteEmailReady = quoteEmailConfigured(),
+}: {
+	quoteEmailReady?: boolean
+}) {
 	return (
 		<>
 			<section className="section-y section-defer">
@@ -174,17 +184,34 @@ export function HomeBelowFold() {
 								properties.
 							</p>
 						</div>
-						<Link
-							prefetch={false}
-							className={cn(
-								buttonVariants({ variant: "default", size: "lg", wrap: true }),
-								"w-full shrink-0 sm:w-auto",
-							)}
-							href={freeQuoteHref as Route}
-						>
-							{freeQuoteCtaLabel}
-							<ArrowRight aria-hidden="true" />
-						</Link>
+						{quoteEmailReady ? (
+							<Link
+								prefetch={false}
+								className={cn(
+									buttonVariants({
+										variant: "default",
+										size: "lg",
+										wrap: true,
+									}),
+									"w-full shrink-0 sm:w-auto",
+								)}
+								href={freeQuoteHref as Route}
+							>
+								{freeQuoteCtaLabel}
+								<ArrowRight aria-hidden="true" />
+							</Link>
+						) : (
+							<div className="flex w-full min-w-0 shrink-0 flex-col gap-2 sm:w-auto">
+								<CallButton
+									className="w-full sm:w-auto"
+									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
+									size="lg"
+								/>
+								<p className="text-on-dark-muted text-sm">
+									{callForFreeQuoteLabel}
+								</p>
+							</div>
+						)}
 					</div>
 					<div
 						aria-label="Project photos"
@@ -416,26 +443,11 @@ export function HomeBelowFold() {
 							))}
 						</ol>
 						<div className="flex w-full min-w-0 flex-col flex-wrap gap-3 sm:flex-row">
-							<Link
-								prefetch={false}
-								className={cn(
-									buttonVariants({
-										variant: "default",
-										size: "xl",
-										wrap: true,
-									}),
-									"w-full sm:w-auto",
-								)}
-								href={freeQuoteHref as Route}
-							>
-								{freeQuoteCtaLabel}
-								<ArrowRight aria-hidden="true" />
-							</Link>
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								size="xl"
-								variant="outline"
+							<LeadActions
+								callVariantWhenQuotePrimary="outline"
+								fallbackTextClassName="text-muted-foreground text-sm"
+								quoteArrow
+								quoteEmailReady={quoteEmailReady}
 							/>
 						</div>
 					</div>
@@ -557,17 +569,27 @@ export function HomeBelowFold() {
 								</ProtectedContactLink>
 							</li>
 						</ul>
-						<Link
-							prefetch={false}
-							className={cn(
-								buttonVariants({ variant: "default", size: "lg", wrap: true }),
-								"mt-6 w-full",
-							)}
-							href={freeQuoteHref as Route}
-						>
-							{freeQuoteCtaLabel}
-							<ArrowRight aria-hidden="true" />
-						</Link>
+						{quoteEmailReady ? (
+							<Link
+								prefetch={false}
+								className={cn(
+									buttonVariants({
+										variant: "default",
+										size: "lg",
+										wrap: true,
+									}),
+									"mt-6 w-full",
+								)}
+								href={freeQuoteHref as Route}
+							>
+								{freeQuoteCtaLabel}
+								<ArrowRight aria-hidden="true" />
+							</Link>
+						) : (
+							<p className="text-on-dark-muted mt-6 text-sm">
+								{callForFreeQuoteLabel}
+							</p>
+						)}
 					</div>
 				</div>
 			</section>

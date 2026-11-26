@@ -2,6 +2,8 @@ import { CallLabel } from "@/components/call-label"
 import { Phone } from "@/components/icons"
 import { OfficeHoursStatus } from "@/components/office-status"
 import { buttonVariants } from "@/components/ui/button"
+import { callForFreeQuoteLabel } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -13,7 +15,11 @@ import { cn } from "@/lib/utils"
  * cannot cover most of the screen; the hours stay readable to screen readers
  * here and visible in the footer.
  */
-export function MobileCallBar() {
+export function MobileCallBar({
+	quoteEmailReady = quoteEmailConfigured(),
+}: {
+	quoteEmailReady?: boolean
+}) {
 	return (
 		<nav
 			aria-label="Call Wade's Plumbing & Septic"
@@ -33,6 +39,11 @@ export function MobileCallBar() {
 					/>
 				</a>
 				<p className="text-muted-foreground text-center text-xs leading-4 @max-[20rem]:sr-only">
+					{quoteEmailReady ? null : (
+						<span className="text-foreground font-semibold">
+							{callForFreeQuoteLabel}.{" "}
+						</span>
+					)}
 					<OfficeHoursStatus className="justify-center" />
 				</p>
 			</div>

@@ -37,7 +37,11 @@ export function HeaderSearchButton({ className }: { className?: string }) {
 	)
 }
 
-export function HeaderMobileMenuButton() {
+export function HeaderMobileMenuButton({
+	quoteEmailReady,
+}: {
+	quoteEmailReady: boolean
+}) {
 	const [open, setOpen] = useState(false)
 	const [ready, setReady] = useState(false)
 	const triggerRef = useRef<HTMLButtonElement>(null)
@@ -70,6 +74,7 @@ export function HeaderMobileMenuButton() {
 					open={open}
 					onOpenChange={setOpen}
 					onCloseAutoFocus={restoreFocus}
+					quoteEmailReady={quoteEmailReady}
 				/>
 			) : null}
 		</>

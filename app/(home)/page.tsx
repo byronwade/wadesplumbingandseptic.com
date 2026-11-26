@@ -1,8 +1,7 @@
-import type { Metadata, Route } from "next"
+import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import {
-	ArrowRight,
 	ArrowUpRight,
 	Fire,
 	Handshake,
@@ -15,22 +14,19 @@ import {
 	type IconComponent,
 } from "@/components/icons"
 
-import { CallButton } from "@/components/call-button"
 import { HomeBelowFold } from "@/components/home-below-fold"
 import { HomeHeroMedia } from "@/components/home-hero-media"
 import { JsonLd } from "@/components/json-ld"
-import { buttonVariants } from "@/components/ui/button"
-import { contactInfo } from "@/lib/contact"
+import { LeadActions } from "@/components/lead-actions"
 import {
 	faqs,
 	heroQuickLinks,
 	heroStats,
 	proofPoints,
 } from "@/lib/home-content"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
 import { finderProblems, finderSpokes, finderTowns } from "@/lib/problem-finder"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { buildPageMetadata, faqPageJsonLd } from "@/lib/seo"
-import { cn } from "@/lib/utils"
 
 const ProblemFinder = dynamic(() =>
 	import("@/components/problem-finder").then((mod) => mod.ProblemFinder),
@@ -64,6 +60,8 @@ const proofIcons: Record<(typeof proofPoints)[number]["icon"], IconComponent> =
 	}
 
 export default function HomePage() {
+	const quoteEmailReady = quoteEmailConfigured()
+
 	return (
 		<main id="main-content">
 			{/*
@@ -110,27 +108,7 @@ export default function HomePage() {
 						</p>
 
 						<div className="motion-rise flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
-							<Link
-								prefetch={false}
-								className={cn(
-									buttonVariants({
-										variant: "default",
-										size: "xl",
-										wrap: true,
-									}),
-									"w-full sm:w-auto",
-								)}
-								href={freeQuoteHref as Route}
-							>
-								{freeQuoteCtaLabel}
-								<ArrowRight aria-hidden="true" />
-							</Link>
-							<CallButton
-								className="w-full sm:w-auto"
-								desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-								size="xl"
-								variant="inverse"
-							/>
+							<LeadActions quoteArrow quoteEmailReady={quoteEmailReady} />
 						</div>
 					</div>
 
@@ -230,6 +208,7 @@ export default function HomePage() {
 
 			<ProblemFinder
 				problems={finderProblems}
+				quoteEmailReady={quoteEmailReady}
 				spokes={finderSpokes}
 				towns={finderTowns}
 			/>
