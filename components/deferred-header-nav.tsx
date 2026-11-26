@@ -25,7 +25,11 @@ const SiteHeaderNav = dynamic(
 	},
 )
 
-export function DeferredHeaderNav() {
+export function DeferredHeaderNav({
+	quoteEmailReady,
+}: {
+	quoteEmailReady: boolean
+}) {
 	const [ready, setReady] = useState(false)
 
 	useEffect(() => {
@@ -66,5 +70,5 @@ export function DeferredHeaderNav() {
 	}, [])
 
 	if (!ready) return <StaticHeaderNav />
-	return <SiteHeaderNav />
+	return <SiteHeaderNav quoteEmailReady={quoteEmailReady} />
 }

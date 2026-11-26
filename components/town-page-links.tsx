@@ -5,10 +5,12 @@ import { CallButton } from "@/components/call-button"
 import { buttonVariants } from "@/components/ui/button"
 import { contactInfo } from "@/lib/contact"
 import {
+	callForFreeQuoteLabel,
 	freeQuoteCtaLabel,
 	freeQuoteHref,
 	septicSummary,
 } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 import {
 	locationFromPathname,
@@ -21,7 +23,13 @@ import { cn } from "@/lib/utils"
 const chipClass =
 	"surface-panel inline-flex max-w-full px-[min(1rem,16px)] py-[min(0.5rem,8px)] text-sm font-semibold [overflow-wrap:anywhere]"
 
-export function TownPageLinks({ pathname }: { pathname: string }) {
+export function TownPageLinks({
+	pathname,
+	quoteEmailReady = quoteEmailConfigured(),
+}: {
+	pathname: string
+	quoteEmailReady?: boolean
+}) {
 	const location = locationFromPathname(pathname)
 	if (!location) return null
 
@@ -101,20 +109,26 @@ export function TownPageLinks({ pathname }: { pathname: string }) {
 							desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 							size="lg"
 						/>
-						<Link
-							className={cn(
-								buttonVariants({
-									variant: "outline",
-									size: "lg",
-									wrap: true,
-								}),
-								"w-full sm:w-auto",
-							)}
-							href={freeQuoteHref as Route}
-							prefetch={false}
-						>
-							{freeQuoteCtaLabel}
-						</Link>
+						{quoteEmailReady ? (
+							<Link
+								className={cn(
+									buttonVariants({
+										variant: "outline",
+										size: "lg",
+										wrap: true,
+									}),
+									"w-full sm:w-auto",
+								)}
+								href={freeQuoteHref as Route}
+								prefetch={false}
+							>
+								{freeQuoteCtaLabel}
+							</Link>
+						) : (
+							<p className="text-muted-foreground text-sm">
+								{callForFreeQuoteLabel}
+							</p>
+						)}
 					</div>
 					<p className="text-muted-foreground mt-4 text-sm">
 						Office hours: {siteConfig.hours}.

@@ -4,7 +4,10 @@ import path from "node:path"
 
 import matter from "gray-matter"
 
+import { contactInfo } from "../../lib/contact"
 import { RECENT_GUIDE_COUNT, selectRecentGuides } from "../../lib/llms"
+import { weekdayHoursPhrase } from "../../lib/public-facts"
+import { quoteEmailConfigured } from "../../lib/quote-request"
 import { jsonLdBusinessFactIssues } from "./business-facts"
 import {
 	canonicalHref,
@@ -633,10 +636,24 @@ async function main() {
 	if (!contact || contact.status !== 200)
 		issues.push("/contact: missing from crawl")
 	else {
-		if (!contact.body.includes('action="/api/quote"'))
-			issues.push("/contact: quote form action missing")
 		if (!contact.ids.has("quote"))
 			issues.push("/contact: missing #quote target for Free Quote links")
+		if (quoteEmailConfigured()) {
+			if (!contact.body.includes('action="/api/quote"'))
+				issues.push("/contact: quote form action missing")
+		} else {
+			if (contact.body.includes('action="/api/quote"')) {
+				issues.push(
+					"/contact: quote form should be hidden when quote email is not configured",
+				)
+			}
+			if (!contact.body.includes(contactInfo.phoneHref))
+				issues.push("/contact: call-or-email block missing phone link")
+			if (!contact.body.includes(contactInfo.emailHref))
+				issues.push("/contact: call-or-email block missing email link")
+			if (!contact.body.includes(weekdayHoursPhrase()))
+				issues.push("/contact: call-or-email block missing office hours")
+		}
 	}
 
 	await checkQuoteEndpoint(issues)

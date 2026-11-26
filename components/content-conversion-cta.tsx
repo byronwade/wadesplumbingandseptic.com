@@ -1,18 +1,18 @@
-import type { Route } from "next"
-import Link from "next/link"
 import { ArrowRight } from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
+import { LeadActions } from "@/components/lead-actions"
 import { ProtectedContactLink } from "@/components/protected-contact"
 import { buttonVariants } from "@/components/ui/button"
 import type { ContentConversion } from "@/lib/content-conversion"
 import { contactInfo } from "@/lib/contact"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { cn } from "@/lib/utils"
 
 export function ContentConversionCta({
 	conversion,
 	secondaryAction,
+	quoteEmailReady = quoteEmailConfigured(),
 }: {
 	conversion: ContentConversion
 	/** Override the secondary CTA (defaults to Contact / Get a Free Quote). */
@@ -23,11 +23,9 @@ export function ContentConversionCta({
 		/** Native contact link that also works before JavaScript loads. */
 		contact?: "email" | "phone" | "vcard"
 	}
+	quoteEmailReady?: boolean
 }) {
-	const secondary = secondaryAction ?? {
-		href: freeQuoteHref,
-		label: freeQuoteCtaLabel,
-	}
+	const secondary = secondaryAction
 	const secondaryClassName = cn(
 		buttonVariants({ variant: "inverse", size: "xl", wrap: true }),
 		"w-full sm:w-auto",
@@ -46,7 +44,7 @@ export function ContentConversionCta({
 					</div>
 
 					<div className="reveal mt-8 flex min-w-0 flex-col flex-wrap items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-						{secondary.contact ? (
+						{secondary?.contact ? (
 							<>
 								<CallButton
 									className="w-full sm:w-auto"
@@ -63,30 +61,7 @@ export function ContentConversionCta({
 								</ProtectedContactLink>
 							</>
 						) : (
-							<>
-								<Link
-									prefetch={false}
-									className={cn(
-										buttonVariants({
-											variant: "default",
-											size: "xl",
-											wrap: true,
-										}),
-										"w-full sm:w-auto",
-									)}
-									href={(secondary.href ?? freeQuoteHref) as Route}
-								>
-									{secondary.label}
-									<ArrowRight aria-hidden="true" />
-								</Link>
-								<CallButton
-									className="w-full sm:w-auto"
-									desktopLabel={`Call ${contactInfo.phoneDisplay}`}
-									prefer="dial"
-									size="xl"
-									variant="inverse"
-								/>
-							</>
+							<LeadActions quoteArrow quoteEmailReady={quoteEmailReady} />
 						)}
 					</div>
 				</div>

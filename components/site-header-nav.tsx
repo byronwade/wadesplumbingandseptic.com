@@ -39,7 +39,11 @@ import {
 	serviceNavLinks,
 	type MegaNavItem,
 } from "@/lib/navigation"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import {
+	callForFreeQuoteLabel,
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+} from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -96,9 +100,11 @@ function MegaLink({ href, label, description, icon }: MegaNavItem) {
 function MegaFooter({
 	action,
 	actionLabel,
+	showAction = true,
 }: {
 	action: Route
 	actionLabel: string
+	showAction?: boolean
 }) {
 	return (
 		<div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
@@ -119,16 +125,20 @@ function MegaFooter({
 					size="sm"
 					wrap={false}
 				/>
-				<NavigationMenuLink asChild>
-					<Link
-						prefetch={false}
-						className={buttonVariants({ variant: "inverse", size: "sm" })}
-						href={action}
-					>
-						{actionLabel}
-						<ArrowRight aria-hidden="true" />
-					</Link>
-				</NavigationMenuLink>
+				{showAction ? (
+					<NavigationMenuLink asChild>
+						<Link
+							prefetch={false}
+							className={buttonVariants({ variant: "inverse", size: "sm" })}
+							href={action}
+						>
+							{actionLabel}
+							<ArrowRight aria-hidden="true" />
+						</Link>
+					</NavigationMenuLink>
+				) : (
+					<p className="text-on-dark-subtle text-xs">{callForFreeQuoteLabel}</p>
+				)}
 			</div>
 		</div>
 	)
@@ -187,7 +197,7 @@ function ServicesMegaMenu() {
 	)
 }
 
-function CompanyMegaMenu() {
+function CompanyMegaMenu({ quoteEmailReady }: { quoteEmailReady: boolean }) {
 	return (
 		<div className="container-shell py-7 lg:py-8">
 			<div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
@@ -235,12 +245,17 @@ function CompanyMegaMenu() {
 			<MegaFooter
 				action={freeQuoteHref as Route}
 				actionLabel={freeQuoteCtaLabel}
+				showAction={quoteEmailReady}
 			/>
 		</div>
 	)
 }
 
-export function SiteHeaderNav() {
+export function SiteHeaderNav({
+	quoteEmailReady,
+}: {
+	quoteEmailReady: boolean
+}) {
 	return (
 		<NavigationMenu
 			className="static hidden max-w-none flex-1 justify-center @min-[64rem]/header:flex"
@@ -287,7 +302,7 @@ export function SiteHeaderNav() {
 						Company
 					</NavigationMenuTrigger>
 					<NavigationMenuContent>
-						<CompanyMegaMenu />
+						<CompanyMegaMenu quoteEmailReady={quoteEmailReady} />
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 			</NavigationMenuList>

@@ -9,6 +9,7 @@ import {
 	parseQuoteRequest,
 	phoneDigits,
 	quoteDefaultFrom,
+	quoteEmailConfigured,
 	quoteFormErrorFromQuery,
 	quoteInvalidCopy,
 	quoteSuccessCopy,
@@ -91,6 +92,14 @@ test("only Vercel Production requires a mailer", () => {
 	assert.equal(canAcceptWithoutMailer(undefined), true)
 	assert.equal(canAcceptWithoutMailer("preview"), true)
 	assert.equal(canAcceptWithoutMailer("production"), false)
+})
+
+test("quote email is configured when the key exists or this is not Vercel Production", () => {
+	assert.equal(quoteEmailConfigured("present", "production"), true)
+	assert.equal(quoteEmailConfigured("present", "preview"), true)
+	assert.equal(quoteEmailConfigured("", "preview"), true)
+	assert.equal(quoteEmailConfigured("", undefined), true)
+	assert.equal(quoteEmailConfigured("", "production"), false)
 })
 
 test("success and fallback copy stay inside confirmed facts", () => {

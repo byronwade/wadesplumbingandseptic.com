@@ -10,7 +10,11 @@ import { contactInfo } from "@/lib/contact"
  * the hamburger are a small island so the Radix mega-menu can load after idle
  * on wide screens and never download on phones.
  */
-export function HeaderToolbar() {
+export function HeaderToolbar({
+	quoteEmailReady,
+}: {
+	quoteEmailReady: boolean
+}) {
 	return (
 		<>
 			<div className="hidden shrink-0 items-center gap-2 @min-[40rem]/header:flex">
@@ -29,7 +33,7 @@ export function HeaderToolbar() {
 			<div className="flex shrink-0 items-center @min-[64rem]/header:hidden">
 				<HeaderSearchButton className="size-[44px] @min-[40rem]/header:hidden [&_svg]:size-[16px]" />
 				<CallIconButton className="hover:text-primary-bright focus-visible:ring-offset-ink text-on-dark size-[44px] rounded-md hover:bg-transparent @min-[40rem]/header:hidden [&_svg]:size-[20px]" />
-				<HeaderMobileMenuButton />
+				<HeaderMobileMenuButton quoteEmailReady={quoteEmailReady} />
 			</div>
 		</>
 	)

@@ -15,7 +15,11 @@ import {
 import { SiteFooter } from "../../components/site-footer"
 import { TownPageLinks } from "../../components/town-page-links"
 import { normalizeConversion } from "../../lib/content-conversion"
-import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
+import {
+	callForFreeQuoteLabel,
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+} from "../../lib/public-facts"
 import { extractFaqPairs } from "../../lib/seo"
 import { serviceAreaLocations } from "../../lib/service-areas"
 import { siteConfig } from "../../lib/site"
@@ -149,6 +153,25 @@ test("catalog and company heroes lead with Get a Free Quote", () => {
 		quoteIndex < callIndex,
 		"quote CTA should come before the call button",
 	)
+
+	const aboutCallFirst = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "Family-owned plumbing and septic in Santa Cruz County.",
+			quoteEmailReady: false,
+			title: "About Us",
+			variant: "page",
+		}),
+	)
+	assert.equal(
+		aboutCallFirst.includes(`href="${freeQuoteHref}"`),
+		false,
+		aboutCallFirst,
+	)
+	assert.ok(
+		aboutCallFirst.includes(`href="${siteConfig.phoneHref}"`),
+		aboutCallFirst,
+	)
+	assert.ok(aboutCallFirst.includes(callForFreeQuoteLabel), aboutCallFirst)
 })
 
 test("service and town heroes show Call and Free Quote without JavaScript", () => {

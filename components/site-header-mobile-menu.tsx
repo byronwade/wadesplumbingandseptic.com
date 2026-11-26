@@ -26,7 +26,11 @@ import {
 	serviceNavLinks,
 	type NavLink,
 } from "@/lib/navigation"
-import { freeQuoteCtaLabel, freeQuoteHref } from "@/lib/public-facts"
+import {
+	callForFreeQuoteLabel,
+	freeQuoteCtaLabel,
+	freeQuoteHref,
+} from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -106,10 +110,12 @@ export function SiteHeaderMobileMenu({
 	open,
 	onOpenChange,
 	onCloseAutoFocus,
+	quoteEmailReady,
 }: {
 	open: boolean
 	onOpenChange: (open: boolean) => void
 	onCloseAutoFocus: (event: Event) => void
+	quoteEmailReady: boolean
 }) {
 	const router = useRouter()
 	const closeMenu = () => onOpenChange(false)
@@ -234,21 +240,27 @@ export function SiteHeaderMobileMenu({
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						size="lg"
 					/>
-					<Link
-						prefetch={false}
-						className={cn(
-							buttonVariants({ variant: "outline", size: "lg", wrap: true }),
-							"w-full",
-						)}
-						href={freeQuoteHref as Route}
-						onClick={(event) => {
-							event.preventDefault()
-							closeMenu()
-							router.push(freeQuoteHref as Route)
-						}}
-					>
-						{freeQuoteCtaLabel}
-					</Link>
+					{quoteEmailReady ? (
+						<Link
+							prefetch={false}
+							className={cn(
+								buttonVariants({ variant: "outline", size: "lg", wrap: true }),
+								"w-full",
+							)}
+							href={freeQuoteHref as Route}
+							onClick={(event) => {
+								event.preventDefault()
+								closeMenu()
+								router.push(freeQuoteHref as Route)
+							}}
+						>
+							{freeQuoteCtaLabel}
+						</Link>
+					) : (
+						<p className="text-muted-foreground text-center text-sm">
+							{callForFreeQuoteLabel}
+						</p>
+					)}
 				</SheetFooter>
 			</SheetContent>
 		</Sheet>
