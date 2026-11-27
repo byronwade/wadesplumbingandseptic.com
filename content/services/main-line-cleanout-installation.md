@@ -39,9 +39,9 @@ At Wade's Plumbing & Septic, we ensure every main line cleanout installation is 
 
 We take pride in providing a hassle-free experience, ensuring your property is treated with the utmost care during the installation process.
 
-## Timeline and Cost Factors
+## What affects your quote
 
-The timeline for a main line cleanout installation varies based on the complexity of your plumbing system. Typically, a standard installation can be completed within a day. Cost factors include the depth and location of your sewer line, the condition of existing pipes, and any additional repairs needed. We provide transparent pricing and detailed estimates to ensure no surprises.
+The timeline for a main line cleanout installation varies based on the complexity of your plumbing system. Typically, a standard installation can be completed within a day. Cost factors include the depth and location of your sewer line, the condition of existing pipes, and any additional repairs needed. We provide flat-rate pricing quoted on site and detailed estimates to ensure no surprises.
 
 ## Preventive Maintenance and Benefits
 
@@ -49,7 +49,7 @@ Regular maintenance, including professional [drain cleaning](/service-offerings/
 
 ## Why Choose Wade's Plumbing & Septic?
 
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County for our commitment to quality and customer satisfaction. Our team is licensed, experienced, and dedicated to providing responsive service tailored to your needs. Whether you require a main line cleanout installation or [alternative septic system installation](/service-offerings/engineered-septic-system-installation), we are your local experts.
+Wade's Plumbing & Septic is a trusted name in Santa Cruz County for our commitment to quality and clear communication. Our team is licensed, experienced, and dedicated to providing responsive service tailored to your needs. Whether you require a main line cleanout installation or [alternative septic system installation](/service-offerings/engineered-septic-system-installation), we are your local experts.
 
 ## Frequently Asked Questions
 

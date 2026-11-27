@@ -8,7 +8,7 @@ order: 27
 image: >-
   /images/wordpress/close-up-of-water-flowing-from-a-faucet-into-a-bathroom-sink-8aeca7.webp
 imageAlt: Water flowing from a bathroom faucet
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Fixture installation for Santa Cruz County homes covers new sinks, faucets, toilets, and related trim when you are remodeling or replacing a failed piece. Wade's Plumbing & Septic sets the fixture, makes the supply and drain connections, and tests for leaks before we leave.
@@ -19,7 +19,7 @@ This service is for Santa Cruz County homes and selected nearby foothill address
 
 Choosing the right team for your fixture installation in Santa Cruz County means selecting professionals who prioritize quality and reliability. At Wade's Plumbing & Septic, we complete each installation to code. Our licensed and highly-trained plumbers ensure that each installation is completed to code, with meticulous attention to detail, preventing leaks and enhancing the lifespan of your plumbing fixtures.
 
-Our local presence in Santa Cruz County allows us to provide prompt service and responsive support, ensuring your plumbing needs are met efficiently. We understand the unique characteristics of the homes in this area, allowing us to tailor our services to meet your specific requirements.
+We schedule fixture work during office hours, Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Homes in Santa Cruz County often have older supply lines and tight bathrooms, so we size the fixture and the connections to the plumbing that is already there.
 
 ## Signs You Need a New Fixture Installation
 
@@ -53,9 +53,9 @@ With precision and care, our team installs your chosen fixtures, ensuring secure
 
 After installation, we conduct a thorough inspection to ensure everything functions correctly and meets industry standards.
 
-## Cost Factors and Timeline for Fixture Installation
+## What affects your quote
 
-The cost of fixture installation depends on various factors, including the type of fixture, the complexity of the installation, and any additional plumbing modifications required. On average, simple installations can be completed within a few hours, while more extensive projects may take a day or two.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. On average, simple installations can be completed within a few hours, while more extensive projects may take a day or two.
 
 Flat-rate pricing, quoted on site before work begins.
 

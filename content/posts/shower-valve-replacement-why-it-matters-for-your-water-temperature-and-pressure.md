@@ -5,7 +5,7 @@ description: >-
   types California's plumbing code allows, and why scald protection matters.
 category: Plumbing Tips
 date: "2025-08-05"
-updated: "2026-10-26"
+updated: "2026-11-27"
 tags:
   - santa cruz county
   - plumbing services
@@ -21,8 +21,6 @@ imageAlt: Exploded diagram of a shower valve showing the cartridge, valve body, 
 **Quick answer:** A shower valve, hidden behind the handle, mixes hot and cold water. When it wears out, you get sudden hot or cold bursts when someone flushes, a handle that barely changes the temperature, or drips from the showerhead. Often a new cartridge fixes it; an old valve without scald protection is usually worth replacing. Building departments note that the California Plumbing Code calls for an ASSE 1016 temperature limiting valve on showers and tub showers, with a 120°F maximum.
 
 ![Chrome shower faucet](/images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp)
-
-We recently replaced a shower valve for a Santa Cruz homeowner whose shower swung between hot and cold and lost pressure whenever water was used elsewhere in the house. A new pressure balancing valve fixed it. Here is how to tell whether yours has the same problem.
 
 ## What a shower valve does
 
@@ -74,4 +72,4 @@ No. A clogged showerhead from mineral buildup is a common cause. Our [hard water
 
 ## Request a free quote
 
-Wade's Plumbing & Septic provides [shower installation and repair](/service-offerings/shower-installation-and-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic provides [shower installation and repair](/service-offerings/shower-installation-and-repair) across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call [831.225.4344](tel:+18312254344) during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

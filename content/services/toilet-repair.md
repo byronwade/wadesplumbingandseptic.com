@@ -38,11 +38,11 @@ Once the problem is identified, we provide a detailed explanation of the require
 
 Flat-rate pricing, quoted on site before work begins.
 
-## Cost Factors and Timeline
+## What affects your quote
 
-The cost of toilet repair in Santa Cruz can vary based on the extent of the issue and the parts needed. Simple fixes such as replacing a flapper or fill valve are typically quick and affordable. However, more complex problems, like sewer line issues, could require a more extensive repair process.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Simple fixes such as replacing a flapper or fill valve are typically quick and straightforward. However, more complex problems, like sewer line issues, could require a more extensive repair process.
 
-Our team is committed to providing competitive pricing without compromising on quality. We ensure that our clients in Santa Cruz County receive the best value for their investment.
+Our team is committed to providing flat-rate pricing quoted on site without compromising on quality. We ensure that our clients in Santa Cruz County receive the a flat rate quoted on site before work begins.
 
 ## Preventing Future Toilet Problems
 

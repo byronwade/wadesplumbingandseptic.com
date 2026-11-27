@@ -48,7 +48,7 @@ Our installation process is designed to be thorough and efficient, minimizing di
 - **Installation:** We handle excavation, system placement, and connections with precision.
 - **Final Inspection:** We ensure your system is fully operational and compliant with local regulations.
 
-## Cost Factors and Installation Timeline
+## What affects your quote
 
 Cost depends on system type, site conditions, and county permitting. Timeline depends on design, soils, and permit review. For a site-specific quote, start with a [septic tank inspection](/service-offerings/septic-tank-inspection-and-assessment) or call 831.225.4344 during office hours.
 

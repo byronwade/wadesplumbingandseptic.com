@@ -11,7 +11,7 @@ noindex: true
 
 ## Call 831.225.4344
 
-For the fastest help, call or text with:
+Call or text during office hours with:
 
 - The property city or ZIP code
 - Plumbing, septic, or commercial service type

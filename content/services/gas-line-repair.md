@@ -49,7 +49,7 @@ Once identified, we proceed with repairing or replacing the affected sections of
 
 After repairs, we conduct rigorous pressure testing to confirm the integrity of the gas line, ensuring there are no lingering issues.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 Flat-rate pricing, quoted on site before work begins.
 

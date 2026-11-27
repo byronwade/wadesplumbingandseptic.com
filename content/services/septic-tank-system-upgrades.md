@@ -37,9 +37,9 @@ Septic system challenges often arise from outdated systems, increased household 
 
 Upgrading your septic system involves several steps. Our team at Wade's Plumbing & Septic begins with a comprehensive [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) to determine the best course of action. Depending on the complexity of the upgrades, the process can take anywhere from a few days to a couple of weeks. We ensure minimal disruption to your daily life during this period.
 
-## Cost Factors of Septic System Upgrades
+## What affects your quote
 
-The cost of septic system upgrades varies based on the scope of the project. Factors influencing the cost include the size of your system, the type of upgrades needed, and any additional services required. Investing in quality upgrades can prevent the need for a full [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement), ultimately saving you money in the long run.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Factors influencing the cost include the size of your system, the type of upgrades needed, and any additional services required. Investing in quality upgrades can prevent the need for a full [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement).
 
 Flat-rate pricing, quoted on site before work begins.
 

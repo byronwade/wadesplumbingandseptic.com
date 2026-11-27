@@ -8,7 +8,7 @@ order: 29
 image: >-
   /images/wordpress/close-up-photo-of-a-weathered-drain-cover-embossed-with-san-francisco-showcasing-urban-texture-and-detail-725488.webp
 imageAlt: Weathered drain cover
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Storm drain cleaning for Santa Cruz County properties clears leaves, sediment, and debris from yard drains, catch basins, and downspout lines so winter rain has a path off the lot. Wade's Plumbing & Septic opens the line and notes if a broken pipe or missing grate is the real problem.
@@ -53,7 +53,7 @@ Using specialized equipment, such as [hydro jetting](/service-offerings/hydro-je
 
 Post-cleaning, we provide tailored maintenance advice to prevent future issues, ensuring the longevity of your system.
 
-## Timeline and Cost Factors for Storm Drain Cleaning
+## What affects your quote
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -63,7 +63,7 @@ The timeline for storm drain cleaning varies based on the extent of blockages an
 - The size and complexity of the drainage system
 - Equipment and techniques required
 
-Our team offers transparent pricing and detailed estimates before commencing any work, ensuring no surprises.
+Our team offers flat-rate pricing quoted on site and detailed estimates before commencing any work, ensuring no surprises.
 
 ## Preventative Measures for Storm Drain Maintenance
 
@@ -92,7 +92,7 @@ Wade's Plumbing & Septic provides storm drain cleaning in Santa Cruz County. Our
 
 At Wade's Plumbing & Septic, we proudly serve the entire Santa Cruz County, California area, including the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, and Aptos. Our team is committed to providing reliable storm drain clearing services to ensure your home remains safe from flooding and water damage.
 
-Our contractors are fully licensed and certified, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all services are performed to the highest standards of quality and safety.
+Our contractors hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
 

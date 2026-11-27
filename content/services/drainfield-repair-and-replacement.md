@@ -50,7 +50,7 @@ When you choose Wade’s Plumbing & Septic for drainfield repair in Santa Cruz, 
 
 We ensure that every step of the process is handled with precision, leveraging our extensive experience and local expertise.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The timeline for drainfield repair varies based on the extent of the damage. Simple repairs may take a few days, while complete replacements could extend over a week. Cost factors depend on the complexity of the repair, the size of the drainfield, and any additional [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) that may be needed.
 

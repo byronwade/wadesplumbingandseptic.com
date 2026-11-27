@@ -48,7 +48,7 @@ Our process for **water line repair in Santa Cruz** is thorough and efficient, e
 
 This meticulous approach guarantees long-lasting results and peace of mind.
 
-## Cost Factors and Timeline
+## What affects your quote
 
 The cost and timeline for water line repairs can vary based on several factors, such as:
 

@@ -32,7 +32,7 @@ export const glossaryHubs: Record<GlossaryTopic, GlossaryHub> = {
 			"Clear septic system definitions for tanks, drain fields, engineered treatment, alarms, and permitting in Santa Cruz County.",
 		intro: [
 			"Septic systems have their own language, especially once Santa Cruz County Environmental Health, soil conditions, and engineered treatment enter the conversation.",
-			"These definitions help homeowners understand inspections, pumping, repairs, and replacement options for conventional and advanced systems on coastal, mountain, and foothill lots.",
+			"These definitions help homeowners understand inspections, repairs, and replacement options for conventional and advanced systems on coastal, mountain, and foothill lots. Wade's installs septic systems alongside engineers and does not pump tanks.",
 		],
 		image: "/images/work/engineered-septic-hero.webp",
 		imageAlt: "Engineered septic installation in Santa Cruz County",

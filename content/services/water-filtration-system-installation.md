@@ -40,9 +40,9 @@ Our process begins with a comprehensive water test to identify the specific cont
 
 The timeline for installation can vary based on the complexity of the system, but most installations can be completed within a day.
 
-## Cost Factors for Water Filtration Systems
+## What affects your quote
 
-The cost of a water filtration system depends on several factors, including the type of system, the size of your home, and the specific contaminants being addressed. Whole-house systems typically cost more than point-of-use filters but provide comprehensive coverage. We offer transparent pricing and can provide a detailed estimate during the consultation phase.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Whole-house systems typically cost more than point-of-use filters but provide comprehensive coverage. We offer flat-rate pricing quoted on site and can provide a detailed estimate during the consultation phase.
 
 Flat-rate pricing, quoted on site before work begins.
 

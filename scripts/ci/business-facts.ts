@@ -4,11 +4,13 @@ export const confirmedHours =
 export const confirmedPricing =
 	"Flat-rate pricing, quoted on site before work begins."
 
-/** Phrases that must never appear in generated llms text or JSON-LD. */
+/** Phrases that must never appear in generated llms text, JSON-LD, or public copy. */
 export const bannedPublicPhrases = [
 	"Satisfaction guaranteed",
 	"Since 2005",
 	"Fast response",
+	"Need Help Now",
+	"Act Now",
 ] as const
 
 const bannedSchemaKeys =
@@ -92,9 +94,36 @@ export function businessFactIssues(source: string): string[] {
 		issues.push("price range")
 	}
 	if (
-		/\bemergenc(?:y|ies)\b|24\s*\/\s*7|after[ -]hours|\burgent\b/i.test(text)
+		/\bemergenc(?:y|ies)\b|24\s*\/\s*7|after[ -]hours|\burgent\b|\bsame[- ]day (?:service|dispatch|availability|emergency|repairs?)\b/i.test(
+			text,
+		)
 	) {
 		issues.push("unavailable service claim")
+	}
+	if (/\bneed help now\b|\bact now\b/i.test(text)) {
+		issues.push("urgent heading")
+	}
+	if (/\b(?:transparent|competitive) (?:pricing|rates)\b/i.test(text)) {
+		issues.push("unverified price claim")
+	}
+	if (/\bcustomer satisfaction\b/i.test(text)) {
+		issues.push("satisfaction guarantee")
+	}
+	if (
+		/\bcertified professionals\b|\bour certified\b|\bcertified (?:technicians?|team|experts?|expertise)\b|\blicensed and certified\b/i.test(
+			text,
+		)
+	) {
+		issues.push("unverified certification")
+	}
+	if (/\bdecades of experience\b/i.test(text)) {
+		issues.push("unverified years claim")
+	}
+	if (/\barrive on time\b|\bprompt service\b/i.test(text)) {
+		issues.push("unverified response-time claim")
+	}
+	if (/\b0\s*%\s*interest\b/i.test(text)) {
+		issues.push("unverified financing claim")
 	}
 	if (/\b4\.9\b|\b5[ -]star\b|★|California\s*(?:&|and)\s*Georgia/i.test(text)) {
 		issues.push("unverified rating or trust claim")

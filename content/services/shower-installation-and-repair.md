@@ -8,7 +8,7 @@ order: 47
 image: >-
   /images/wordpress/a-detailed-view-of-a-sleek-chrome-shower-faucet-in-a-clean-bathroom-setting-7921d7.webp
 imageAlt: Chrome shower faucet
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Shower installation and repair for Santa Cruz County bathrooms covers leaking valves, failed pans, weak pressure at the head, and fixture replacement. Wade's Plumbing & Septic diagnoses the valve and drain, explains repair versus replace, and quotes a flat rate before work begins.
@@ -37,9 +37,9 @@ At Wade's Plumbing & Septic, we follow a straightforward and efficient process t
 - **Installation:** We expertly install your chosen shower head, whether it's a standard fixed model, handheld, or rainfall system.
 - **Testing:** Post-installation, we test for proper function and optimal water pressure to ensure satisfaction.
 
-## Timeline and Cost Factors for Shower Head Replacement
+## What affects your quote
 
-The timeline for a shower head replacement is typically brief, often completed within an hour. Cost factors include the type of shower head chosen and any additional plumbing adjustments required. We provide transparent pricing and can offer recommendations on water-saving models that help reduce utility bills.
+The timeline for a shower head replacement is typically brief, often completed within an hour. Cost factors include the type of shower head chosen and any additional plumbing adjustments required. We provide flat-rate pricing quoted on site and can offer recommendations on water-saving models that help reduce utility bills.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -61,7 +61,7 @@ Ready to enhance your shower experience? Contact Wade's Plumbing & Septic today 
 
 Transform your bathroom with our expert fixture installation services in Santa Cruz County, CA.
 
-Call Us NowGet a Free Quote
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 ### Transform Your Shower in Santa Cruz County Today
 

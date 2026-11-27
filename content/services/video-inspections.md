@@ -54,7 +54,7 @@ We provide you with recorded video documentation and a detailed assessment of ou
 
 Based on our analysis, we offer expert advice and solutions tailored to your specific situation. Whether it's a simple [drain cleaning](/service-offerings/drain-cleaning) or more extensive [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement), we have you covered.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 A typical sewer line video inspection can be completed in a few hours, depending on the complexity and length of your sewer system. Cost factors include the extent of the inspection, any additional services required, and the state of your current plumbing system.
 

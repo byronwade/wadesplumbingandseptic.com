@@ -55,9 +55,9 @@ Once we have identified the right solution, our skilled technicians will proceed
 
 After installation, we conduct rigorous testing to certify the proper functioning of the device, providing you with documentation for your records.
 
-## Cost Factors of Backflow Prevention
+## What affects your quote
 
-The cost of backflow prevention installation can vary based on several factors, including the type of device, the complexity of the installation, and any necessary modifications to your existing plumbing system. At Wade's Plumbing & Septic, we provide transparent pricing and detailed estimates to help you make informed decisions.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. At Wade's Plumbing & Septic, we provide flat-rate pricing quoted on site and detailed estimates to help you make informed decisions.
 
 Flat-rate pricing, quoted on site before work begins.
 

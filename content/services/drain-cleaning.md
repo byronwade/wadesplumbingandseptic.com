@@ -41,7 +41,7 @@ At Wade's Plumbing & Septic, we follow a thorough process to ensure effective [d
 - **Safe Cleaning Methods:** Using eco-friendly and safe techniques, we clear the blockages without harming your pipes.
 - **Verification:** Post-cleaning, we verify the effectiveness of our service to ensure your satisfaction.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The timeline for drain cleaning varies based on the severity of the blockage, but most residential jobs are completed within a few hours. Cost factors include the complexity of the clog, pipe accessibility, and any additional repair needs. For a detailed estimate, contact Wade's Plumbing & Septic and let our experts assess your situation.
 
@@ -67,6 +67,6 @@ Backups occur when there is a blockage in your pipes. Regular cleaning can help 
 
 For drain cleaning in Santa Cruz County, Wade's Plumbing & Septic clears the blockage and, when needed, cameras the line before recommending the next step. Quotes are free.
 
-## Act Now to Prevent Costly Drain Issues
+## Ready for a free quote?
 
-Ensure your drains remain clog-free with our expert services in Santa Cruz County, CA.
+Wade's Plumbing & Septic provides drain cleaning across Santa Cruz County. Quotes are free. [Get a Free Quote](/contact#quote) or call [831.225.4344](tel:+18312254344) during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

@@ -7,7 +7,7 @@ category: Septic
 order: 10
 image: /images/services/septic-pumping-illustration.webp
 imageAlt: Septic filter cleaning and maintenance
-updated: "2026-10-20"
+updated: "2026-11-27"
 ---
 
 The effluent filter is a small part with a big job. It catches solids before wastewater leaves the tank, so your drainfield stays open and healthy. At Wade's Plumbing & Septic, **septic filter cleaning in Santa Cruz County** is careful, scheduled work that prevents backups and expensive field repairs.
@@ -57,13 +57,13 @@ For cleaning, we remove the cartridge, rinse solids back into the tank (not into
 
 We confirm flow at the outlet, secure lids, and leave the site clean. If levels or sludge suggest the tank is due, we say so before you book the next visit.
 
-## Service Timeline and Cost Factors
+## How long a visit takes
 
 Most filter cleanings finish in about one to two hours once we are on site. Replacement can take longer when the outlet needs hardware updates or the lid and risers are hard to access.
 
-Flat-rate pricing, quoted on site before work begins.
+Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
-Cost depends on:
+The work depends on:
 
 - Whether the job is cleaning only or a full cartridge replacement
 - Access: buried lids vs. risers at grade

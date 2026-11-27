@@ -46,17 +46,17 @@ At Wade's Plumbing & Septic, our **leak detection process** is thorough and effe
 
 This comprehensive approach ensures that leaks are identified without unnecessary disruption to your property.
 
-## Factors Affecting Leak Detection Costs
+## What affects your quote
 
 Flat-rate pricing, quoted on site before work begins.
 
-Several factors can influence the cost of leak detection services:
+Scope depends on:
 
-- **Location of the Leak:** Easily accessible leaks are quicker and cheaper to detect.
-- **Severity and Size:** Larger or multiple leaks may require more time and resources.
-- **Type of Leak:** Some types of leaks, like slab leaks, can be more complex to diagnose.
+- **Location of the leak:** buried or slab leaks take longer to find
+- **Severity and size:** more than one leak can mean a longer visit
+- **Type of leak:** some leaks, such as slab leaks, take more locating work
 
-For a customized quote, contact our team for a detailed assessment.
+Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Plumbing Leaks
 

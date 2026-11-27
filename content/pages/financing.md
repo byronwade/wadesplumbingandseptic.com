@@ -1,55 +1,38 @@
 ---
 title: Financing Options
 description: >-
-  Plumbing and septic problems can create unexpected financial strain. Wade's
-  offers flexible financing options for necessary repairs or replacements.
+  Ask about current payment options when you request a free quote for plumbing
+  or septic work in Santa Cruz County.
 order: 5
 eyebrow: Payment Options
+updated: "2026-11-27"
 ---
 
-## Flexible Financing Options
+## Payment options
 
-At Wade's Plumbing & Septic, we understand that plumbing and septic problems can create unexpected financial strain. That's why we offer flexible financing options to help you address necessary repairs or replacements without delay.
+Plumbing and septic work is quoted as a flat rate on site before work begins. Quotes are free. If you want to discuss payment options for a quoted job, call during office hours and we will tell you what is available for that project. We do not publish interest rates, monthly payment examples, or approval timelines on this site.
 
-## Available Financing Plans
+## How quoting works
 
-We partner with reputable financing providers to offer a range of payment plans that can accommodate various budgets and credit situations:
-
-- 0% interest plans (for qualified applicants)
-- Low monthly payment options
-- Extended payment terms
-- Quick approval process
-
-## Financing Process
-
-1.  Discuss your project with our technician
-2.  Review financing options available for your specific needs
-3.  Complete a simple application
-4.  Receive a quick decision
-5.  Proceed with necessary work upon approval
-
-## Ready to Get Started?
-
-Contact us to discuss your plumbing or septic needs and learn more about our current financing options. Our team will guide you through the process and help you find the payment solution that works best for your situation.
+1. Call [831.225.4344](tel:+18312254344) or [request a free quote](/contact#quote).
+2. We confirm the address and the work.
+3. On site, we explain findings and quote a flat rate before work begins.
+4. If you want to discuss payment options, ask while reviewing that quote.
 
 ## Serving Santa Cruz County, CA
 
-Wade's Plumbing & Septic proudly serves the following communities in Santa Cruz County, California: Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more. Our team is committed to providing top-notch plumbing and septic services throughout the region.
+Wade's Plumbing & Septic serves Santa Cruz County, California, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and the other towns on our [service areas](/service-areas) page. We do plumbing and septic installation work. We do not pump septic tanks.
 
 Contractor License: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 
-Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday. Call 831.225.4344 during business hours to schedule service.
-
-Our service area extends across Santa Cruz County, ensuring that residents and businesses have access to reliable and efficient plumbing and septic solutions whenever needed.
+Office hours: Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 
 ## Frequently Asked Questions
 
 ### How is pricing determined for plumbing and septic services in Santa Cruz County, CA?
 
-Our pricing for plumbing and septic services varies based on the specific needs of each project. We offer competitive rates and provide a detailed estimate after assessing your requirements.
+Flat-rate pricing, quoted on site before work begins. Quotes are free.
 
-Flat-rate pricing, quoted on site before work begins.
+### What should I expect during a service visit?
 
-### What should I expect during the service process with Wade's Plumbing & Septic?
-
-Our team of professionals will conduct a thorough assessment, explain the necessary steps, and keep you informed throughout the service process. We prioritize minimizing disruptions to your daily routine.
+We assess the issue, explain what we find, and quote a flat rate before work begins.

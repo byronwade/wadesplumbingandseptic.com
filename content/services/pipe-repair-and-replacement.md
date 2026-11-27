@@ -37,18 +37,14 @@ Our approach to pipe repair and replacement is thorough and streamlined. We begi
 
 We also offer related services like [drain cleaning](/service-offerings/drain-cleaning) and [fixture installation](/service-offerings/fixture-installation) to complement our pipe services, providing a comprehensive solution to all your plumbing needs.
 
-## Factors Affecting Pipe Repair Costs
+## What affects your quote
 
-The cost of pipe repair and replacement can vary based on several factors:
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Scope depends on:
 
 - Extent of damage
 - Type of pipe material
 - Accessibility of the affected area
 - Scope of work required
-
-Flat-rate pricing, quoted on site before work begins.
-
-We provide transparent pricing and detailed estimates to help you make informed decisions without any hidden surprises.
 
 ## Preventing Future Pipe Problems
 

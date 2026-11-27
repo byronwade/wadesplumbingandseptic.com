@@ -113,4 +113,4 @@ Flat rate, quoted on site before work begins.
 
 ## Request a free quote
 
-Wade's Plumbing & Septic repairs and replaces water heaters for homes in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic repairs and replaces water heaters for homes in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) and the rest of [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call [831.225.4344](tel:+18312254344) during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

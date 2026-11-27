@@ -1,7 +1,7 @@
 ---
 title: Plumbing & Septic Service Warranties
 description: Learn how Wade's documents workmanship, manufacturer coverage, customer-supplied equipment, and warranty service.
-eyebrow: Workmanship You Can Trust
+eyebrow: Workmanship documentation
 image: /images/work/precision-valve-installation.webp
 imageAlt: Clean professional plumbing valve installation
 ---

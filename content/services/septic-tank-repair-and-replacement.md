@@ -41,7 +41,7 @@ Our team conducts a thorough inspection to identify the root cause of the proble
 
 ### Repair or Replacement Decision
 
-Depending on the severity of the issue, we recommend either a repair or a complete tank replacement. Our goal is to provide a solution that is both cost-effective and long-lasting.
+Depending on the severity of the issue, we recommend either a repair or a complete tank replacement. We explain the options and quote a flat rate before work begins.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -49,7 +49,7 @@ Flat-rate pricing, quoted on site before work begins.
 
 We handle everything from excavation to installation, ensuring that the process is smooth and causes minimal disruption to your daily life. Our team is experienced in [septic tank distribution box repair and replacement](/service-offerings/septic-tank-distribution-box-repair-and-replacement) and [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement), ensuring a comprehensive service.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The timeline for a septic tank repair or replacement can vary based on the complexity of the issue. Most repairs are completed within a few days, while replacements might take longer. Cost factors include the extent of damage, tank size, and any additional services required such as [septic tank leach field repair and replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement).
 
@@ -70,7 +70,7 @@ It is recommended to have your septic system inspected every 3-5 years, dependin
 
 **What should I do if I notice foul odors?**
 
-Contact Wade's Plumbing & Septic immediately for an inspection to determine the cause and necessary repairs.
+Call Wade's Plumbing & Septic during office hours for an inspection to determine the cause and necessary repairs.
 
 Choosing Wade's Plumbing & Septic means partnering with a trusted local expert in Santa Cruz County. Our licensed team is committed to providing responsive and reliable service. If you're facing septic system challenges, don’t wait for the problem to escalate. [Contact Wade's Plumbing & Septic](/contact) today for a consultation.
 

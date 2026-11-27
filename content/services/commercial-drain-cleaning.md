@@ -8,7 +8,7 @@ category: Commercial
 order: 21
 image: /images/work/commercial-plumbing-installation.webp
 imageAlt: Commercial plumbing installation
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Commercial drain cleaning for Santa Cruz County restaurants, shops, and offices covers kitchen lines, restrooms, and floor drains that clog under daily use. Wade's Plumbing & Septic clears the blockage and, when the line history is unclear, cameras it before recommending the next step. See also [residential drain cleaning](/service-offerings/drain-cleaning).
@@ -33,9 +33,9 @@ Recognizing the signs that your drains need cleaning is vital. Look out for slow
 
 At Wade’s Plumbing & Septic, we utilize state-of-the-art equipment to handle clogged drains effectively. Our process includes a thorough [drain line inspection](/service-offerings/drain-line-inspection) to identify the source of the blockage, followed by targeted cleaning techniques such as [hydro jetting](/service-offerings/hydro-jetting), which uses high-pressure water jets to clear stubborn clogs.
 
-### Timeline and Cost Factors
+### What affects your quote
 
-The timeline for completing a commercial drain cleaning service depends on the severity of the blockage and the size of the plumbing system. Costs can vary based on these factors as well as the frequency of required maintenance. We provide transparent estimates to help you plan your maintenance budget effectively.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Timeline depends on blockage severity, system size, and how often the drains need service.
 
 ## Preventive Drain Care and Benefits
 

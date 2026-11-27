@@ -58,7 +58,7 @@ Using state-of-the-art camera equipment, we navigate through your pipes to locat
 
 After the inspection, we offer a detailed report of our findings along with recommended actions, such as [drain cleaning](/service-offerings/drain-cleaning) or [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement).
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The duration of a drain line inspection depends on the complexity of your plumbing system. Typically, it can be completed within a few hours. The cost varies based on factors such as the size of your home, the condition of the pipes, and the extent of any issues found during the inspection. For a personalized estimate, contact us today.
 
@@ -85,7 +85,7 @@ While DIY methods exist, professional inspections are more thorough and accurate
 
 ## Why Choose Wade's Plumbing & Septic?
 
-Wade's Plumbing & Septic is a trusted name in Santa Cruz County, CA. Our team of licensed professionals offers decades of experience in plumbing and septic services. We serve Santa Cruz County with free quotes and flat-rate pricing quoted on site before work begins. By choosing us, you ensure that your home's plumbing system receives the best care possible.
+Wade's Plumbing & Septic is a licensed plumbing and septic contractor in Santa Cruz County. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 Preserve the health and efficiency of your plumbing system with our comprehensive drain line inspection services. Contact Wade's Plumbing & Septic today to schedule your inspection and keep your home running smoothly. Call us or learn about our [drain cleaning service](/service-offerings/drain-cleaning) for help with clogs and maintaining a healthy plumbing system.
 

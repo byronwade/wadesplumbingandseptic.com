@@ -46,7 +46,7 @@ Understanding these common causes can help in taking preventive measures and sch
 
 At Wade's Plumbing & Septic, we make the inspection process as straightforward as possible. Our team will insert a small, flexible camera into your sewer line, transmitting real-time video to our technicians. This allows us to pinpoint the exact location and nature of any issues, which can inform the appropriate solution, whether it’s [pipe repair and replacement](/service-offerings/pipe-repair-and-replacement) or another service.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 Most sewer camera inspections are completed in under an hour, providing a quick and efficient diagnostic solution. Costs can vary depending on the complexity of the sewer line system and the extent of the issues found. However, investing in an inspection can prevent costlier repairs down the line.
 
