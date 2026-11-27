@@ -10,9 +10,7 @@ imageAlt: Septic distribution box and drain field work
 updated: "2026-11-26"
 ---
 
-Distribution box repair and replacement for Santa Cruz County septic systems restores even flow from the tank into the drainfield lines. Wade's Plumbing & Septic locates the box, explains whether repair or replacement is warranted, and installs to the plan with your engineer when the field itself needs an engineered redesign. We do not pump tanks.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Distribution box repair and replacement for Santa Cruz County septic systems restores even flow from the tank into the drainfield lines. Wade's Plumbing & Septic locates the box, explains whether repair or replacement is warranted, and installs to the plan with your engineer when the field itself needs an engineered redesign. We do not pump tanks. Quotes are free.
 
 ## Signs You Need Septic Tank Distribution Box Repair
 

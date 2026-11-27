@@ -10,9 +10,7 @@ imageAlt: Advanced septic system design
 updated: "2026-11-27"
 ---
 
-Septic system certification support for Santa Cruz County property transfers and permits is an inspection and written findings so buyers, sellers, and lenders can see the system's condition. Wade's Plumbing & Septic inspects and reports; we do not pump tanks. If the site needs a new or engineered system, we install it alongside your engineer.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Septic system certification support for Santa Cruz County property transfers and permits is an inspection and written findings so buyers, sellers, and lenders can see the system's condition. Wade's Plumbing & Septic inspects and reports; we do not pump tanks. If the site needs a new or engineered system, we install it alongside your engineer. Quotes are free.
 
 ## Understanding Septic System Certification in Santa Cruz County
 

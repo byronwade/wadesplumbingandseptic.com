@@ -154,6 +154,14 @@ assertFirstIncludes(topTitles("heat"), "Water Heater", "prefix heat → heater")
 
 assert.ok(suggestSearches("clog").length > 0, "suggestions for clog")
 assert.ok(
+	!suggestSearches("").includes("septic pumping"),
+	"empty suggestions must not advertise septic pumping",
+)
+assert.ok(
+	suggestSearches("").includes("septic installation"),
+	"empty suggestions include septic installation",
+)
+assert.ok(
 	highlightMatches("Drain Cleaning", "drain").some((part) => part.match),
 	"highlight matches drain",
 )

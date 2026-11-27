@@ -163,17 +163,6 @@ export const processSteps = [
 	},
 ] as const
 
-export const testimonials = [
-	[
-		"As a real estate professional, I love working with Wade’s Plumbing. They are courteous, professional, and always make sure my clients are taken care of.",
-		"Bailey Cotrona",
-	],
-	[
-		"They know their stuff, do great work, and are a pleasure to work with. They made me feel comfortable with a terrible situation that shut down my house.",
-		"Aaron Berger",
-	],
-] as const
-
 /**
  * Homepage FAQ, also published as FAQPage schema. The first four answer what
  * Wade's does, in words an AI assistant can quote on their own; facts come

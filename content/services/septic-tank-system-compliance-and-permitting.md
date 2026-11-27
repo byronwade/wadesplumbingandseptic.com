@@ -10,9 +10,7 @@ imageAlt: Completed multi-tank septic system
 updated: "2026-11-27"
 ---
 
-Septic compliance and permitting support for Santa Cruz County properties is help with county Environmental Health requirements when you are repairing, replacing, or installing a system. Wade's Plumbing & Septic installs to the permitted plan and works with your engineer when the site needs an engineered design.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Septic compliance and permitting support for Santa Cruz County properties is help with county Environmental Health requirements when you are repairing, replacing, or installing a system. Wade's Plumbing & Septic installs to the permitted plan and works with your engineer when the site needs an engineered design. We do not pump tanks. Quotes are free.
 
 ## Signs You Need Septic System Permitting
 
@@ -65,6 +63,6 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 ## Ensure Your Home Meets Local Regulations
 
-Guarantee peace of mind with our expert septic compliance services in Santa Cruz County.
+Request a free quote for septic compliance help in Santa Cruz County.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

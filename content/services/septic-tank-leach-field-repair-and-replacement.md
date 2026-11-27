@@ -10,9 +10,7 @@ imageAlt: Santa Cruz County engineered septic system
 updated: "2026-11-27"
 ---
 
-Leach field repair and replacement for Santa Cruz County septic systems is for fields that no longer accept effluent: wet ground, odors, or backups affecting the whole house. Wade's Plumbing & Septic inspects the field, explains options, and installs a replacement alongside your engineer when a conventional field will not fit. We do not pump tanks.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Leach field repair and replacement for Santa Cruz County septic systems is for fields that no longer accept effluent: wet ground, odors, or backups affecting the whole house. Wade's Plumbing & Septic inspects the field, explains options, and installs a replacement alongside your engineer when a conventional field will not fit. We do not pump tanks. Quotes are free.
 
 ## Signs You Need Septic Leach Field Repair or Replacement
 

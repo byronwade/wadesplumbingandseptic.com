@@ -114,4 +114,4 @@ At Wade's Plumbing & Septic, we are dedicated to enhancing your home's comfort a
 
 Experience the ultimate in comfort and style with our premium shower installations, tailored to enhance your bathroom's elegance.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)
