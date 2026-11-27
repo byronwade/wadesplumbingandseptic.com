@@ -3,8 +3,13 @@ import fs from "node:fs"
 import path from "node:path"
 
 import { faqs } from "../../lib/home-content"
-import { compactFactRows, publicFactRows } from "../../lib/public-facts"
 import {
+	compactFactRows,
+	factsFaqs,
+	publicFactRows,
+} from "../../lib/public-facts"
+import {
+	companyFactsJsonLd,
 	faqPageJsonLd,
 	localBusinessJsonLd,
 	websiteJsonLd,
@@ -79,6 +84,8 @@ const business = publicFactRows().find((row) => row.term === "Business")
 const hours = publicFactRows().find((row) => row.term === "Hours")
 const pricing = publicFactRows().find((row) => row.term === "Pricing")
 const phone = publicFactRows().find((row) => row.term === "Phone")
+const email = publicFactRows().find((row) => row.term === "Email")
+const license = publicFactRows().find((row) => row.term === "License")
 const office = publicFactRows().find((row) => row.term === "Office")
 if (business?.detail !== siteConfig.name)
 	errors.push("public facts Business does not match siteConfig.name")
@@ -88,13 +95,25 @@ if (pricing?.detail !== siteConfig.pricing)
 	errors.push("public facts Pricing does not match siteConfig.pricing")
 if (phone?.detail !== siteConfig.phone)
 	errors.push("public facts Phone does not match siteConfig.phone")
+if (email?.detail !== siteConfig.email)
+	errors.push("public facts Email does not match siteConfig.email")
+if (license?.detail !== siteConfig.licenses)
+	errors.push("public facts License does not match siteConfig.licenses")
 if (office?.detail !== siteConfig.address.display)
 	errors.push("public facts Office does not match siteConfig.address")
+
+for (const faq of factsFaqs()) {
+	const factErrors = businessFactIssues(`${faq.question}\n${faq.answer}`)
+	if (factErrors.length)
+		errors.push(`facts FAQ "${faq.question}": ${factErrors.join(", ")}`)
+}
 
 for (const [name, schema] of [
 	["LocalBusiness", localBusinessJsonLd()],
 	["WebSite", websiteJsonLd()],
 	["homepage FAQPage", faqPageJsonLd(faqs)],
+	["facts FAQPage", faqPageJsonLd(factsFaqs())],
+	["company facts", companyFactsJsonLd()],
 ] as const) {
 	for (const issue of jsonLdBusinessFactIssues(schema, name)) errors.push(issue)
 }
