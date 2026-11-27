@@ -5,8 +5,8 @@ description: >-
   and early problem detection in Santa Cruz County. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 2
-image: /images/services/septic-pumping-illustration.webp
-imageAlt: Septic system service access on a residential property
+image: /images/work/engineered-septic-hero.webp
+imageAlt: Engineered septic system work in Santa Cruz County
 updated: "2026-11-27"
 ---
 
@@ -72,7 +72,7 @@ During a septic inspection, we assess the system's components, check for signs o
 
 ## Thorough Septic Inspections in Santa Cruz County, CA
 
-Guarantee the reliability and efficiency of your septic system with our expert inspection services.
+Request a free quote for a septic inspection in Santa Cruz County.
 
 [Call Us Today](tel:+18312254344) [Get a Free Quote](/contact#quote)
 

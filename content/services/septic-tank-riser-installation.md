@@ -11,9 +11,7 @@ imageAlt: Septic installation equipment on site
 updated: "2026-11-27"
 ---
 
-Septic tank riser installation for Santa Cruz County homes brings tank lids up to grade so inspections and filter work do not require digging each visit. Wade's Plumbing & Septic installs watertight risers with secure lids so the tank can be opened from grade.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Septic tank riser installation for Santa Cruz County homes brings tank lids up to grade so inspections and filter work do not require digging each visit. Wade's Plumbing & Septic installs watertight risers with secure lids, works with your engineer when a new or engineered system is needed, and does not pump tanks. Quotes are free.
 
 ## Why risers help
 

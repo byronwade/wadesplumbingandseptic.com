@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react"
 
 import { CallButton } from "@/components/call-button"
+import { GoogleReviewButton } from "@/components/google-reviews"
 import { Check, CircleHelp, Loader2 } from "@/components/icons"
 import {
 	EmailAddress,
@@ -17,6 +18,7 @@ import {
 	type QuoteField,
 	type QuoteTownOption,
 } from "@/lib/quote-request"
+import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 type FormStatus = "idle" | "submitting" | "success" | "error"
@@ -57,9 +59,11 @@ function QuoteOtherWays() {
 export function QuoteForm({
 	towns,
 	initialError = null,
+	initialReceived = false,
 }: {
 	towns: QuoteTownOption[]
 	initialError?: string | null
+	initialReceived?: boolean
 }) {
 	const formId = useId()
 	const successRef = useRef<HTMLHeadingElement>(null)
@@ -68,7 +72,9 @@ export function QuoteForm({
 	const phoneRef = useRef<HTMLInputElement>(null)
 	const emailRef = useRef<HTMLInputElement>(null)
 	const messageRef = useRef<HTMLTextAreaElement>(null)
-	const [status, setStatus] = useState<FormStatus>("idle")
+	const [status, setStatus] = useState<FormStatus>(
+		initialReceived ? "success" : "idle",
+	)
 	const [errors, setErrors] = useState<Partial<Record<QuoteField, string>>>({})
 	const [formError, setFormError] = useState<string | null>(initialError)
 
@@ -186,6 +192,19 @@ export function QuoteForm({
 						desktopLabel={`Call ${contactInfo.phoneDisplay}`}
 						size="lg"
 					/>
+				</div>
+				<p className="text-muted-foreground mt-6 text-[0.9375rem] leading-relaxed">
+					If we recently finished work at your home, you can leave us a Google
+					review.
+				</p>
+				<div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+					<GoogleReviewButton />
+					<a
+						className="text-foreground focus-visible:ring-ring inline-flex min-h-11 items-center rounded-sm text-sm font-semibold underline underline-offset-4 outline-none focus-visible:ring-2"
+						href={siteConfig.googleBusinessUrl}
+					>
+						Read reviews on Google
+					</a>
 				</div>
 			</div>
 		)

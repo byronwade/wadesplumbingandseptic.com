@@ -5,16 +5,14 @@ description: >-
   drainfields. Call 831.225.4344. Quotes are free.
 category: Septic
 order: 10
-image: /images/services/septic-pumping-illustration.webp
-imageAlt: Septic filter cleaning and maintenance
+image: /images/work/completed-multi-tank.webp
+imageAlt: Completed septic tanks after installation
 updated: "2026-11-27"
 ---
 
-The effluent filter is a small part with a big job. It catches solids before wastewater leaves the tank, so your drainfield stays open and healthy. At Wade's Plumbing & Septic, **septic filter cleaning in Santa Cruz County** is careful, scheduled work that prevents backups and expensive field repairs.
+Wade's Plumbing & Septic cleans and replaces septic effluent filters for Santa Cruz County homes so solids stay out of the drainfield. We do not pump tanks; if the work points to a new or engineered system, we install it alongside your engineer. Quotes are free.
 
 Most systems with an effluent screen need attention every one to three years. Household size, water use, and whether the home has a garbage disposal all change that timing. We inspect the filter, clean or replace it, and confirm flow before we leave.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
 
 ## Understanding Septic Filter Cleaning and Replacement
 

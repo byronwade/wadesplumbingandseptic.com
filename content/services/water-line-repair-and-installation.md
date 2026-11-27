@@ -46,7 +46,7 @@ Our process for **water line repair in Santa Cruz** is thorough and efficient, e
 3. **Execution:** Our skilled technicians execute the repair or replacement, ensuring compliance with local codes and safety standards.
 4. **Testing and Cleanup:** After repairs, we test the system thoroughly and clean the area, leaving your property as it was.
 
-This meticulous approach guarantees long-lasting results and peace of mind.
+After the repair we test the line and leave the work area as we found it.
 
 ## What affects your quote
 

@@ -115,6 +115,17 @@ test("Google review CTA uses the confirmed listing URL and honest label", () => 
 	assert.ok(invite.includes(siteConfig.googleBusinessUrl), invite)
 })
 
+test("homepage points past customers to Google instead of invented quotes", () => {
+	const home = fs.readFileSync("components/home-below-fold.tsx", "utf8")
+	const content = fs.readFileSync("lib/home-content.ts", "utf8")
+	assert.doesNotMatch(home, /Bailey Cotrona|Aaron Berger/)
+	assert.doesNotMatch(content, /Bailey Cotrona|Aaron Berger/)
+	assert.ok(home.includes("GoogleReviewButton"), home)
+	assert.ok(home.includes("siteConfig.googleBusinessUrl"), home)
+	assert.match(home, /Leave us a Google review/)
+	assert.doesNotMatch(home, /★|AggregateRating/)
+})
+
 test("footer review button and featured towns stay inside the mapped catalog", () => {
 	const html = renderToStaticMarkup(createElement(SiteFooter))
 	assert.ok(html.includes("Review us on Google"), html)

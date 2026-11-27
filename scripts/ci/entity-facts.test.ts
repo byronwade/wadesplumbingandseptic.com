@@ -598,6 +598,16 @@ for (const archive of ["popular", "trending"]) {
 	})
 }
 
+test("/review redirects to the confirmed Google review URL", async () => {
+	const { default: nextConfig } = await import("../../next.config")
+	const response = await unstable_getResponseFromNextConfig({
+		url: "https://example.com/review",
+		nextConfig,
+	})
+	assert.equal(response.status, 308)
+	assert.equal(response.headers.get("location"), siteConfig.googleReviewUrl)
+})
+
 test("legacy /services/{slug} aliases redirect to /service-offerings/{slug}", async () => {
 	const { default: nextConfig } = await import("../../next.config")
 	for (const slug of [

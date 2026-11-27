@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 import { QuoteForm } from "../../components/quote-form"
 import { contactInfo } from "../../lib/contact"
 import { freeQuoteCtaLabel } from "../../lib/public-facts"
-import { quoteUnavailableCopy } from "../../lib/quote-request"
+import { quoteSuccessCopy, quoteUnavailableCopy } from "../../lib/quote-request"
 import { siteConfig } from "../../lib/site"
 
 const html = renderToStaticMarkup(
@@ -38,6 +38,26 @@ test("quote form copy does not invent prices, hours claims, or pumping", () => {
 	assert.doesNotMatch(html, /Satisfaction guaranteed|Since 2005|Fast response/)
 	assert.doesNotMatch(html, /24\/7|emergency|pumping/i)
 	assert.doesNotMatch(html, /\$\d/)
+})
+
+test("the received state invites a Google review without inventing ratings", () => {
+	const successHtml = renderToStaticMarkup(
+		createElement(QuoteForm, {
+			initialReceived: true,
+			towns: [
+				{ name: "Santa Cruz", slug: "santa-cruz" },
+				{ name: "Felton", slug: "felton" },
+			],
+		}),
+	)
+	assert.ok(successHtml.includes(quoteSuccessCopy.title), successHtml)
+	assert.ok(successHtml.includes(siteConfig.googleReviewUrl), successHtml)
+	assert.ok(successHtml.includes("Review us on Google"), successHtml)
+	assert.ok(successHtml.includes(siteConfig.googleBusinessUrl), successHtml)
+	assert.doesNotMatch(
+		successHtml,
+		/★|star rating|AggregateRating|review count/i,
+	)
 })
 
 test("a redirected failure is visible in server HTML without JavaScript", () => {

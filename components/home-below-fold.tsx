@@ -11,11 +11,11 @@ import {
 	Mail,
 	MapPin,
 	MapPinned,
-	Quotes,
 	ShieldCheck,
 } from "@/components/icons"
 
 import { CallButton } from "@/components/call-button"
+import { GoogleReviewButton } from "@/components/google-reviews"
 import { HomeFaq } from "@/components/home-faq"
 import { LeadActions } from "@/components/lead-actions"
 import {
@@ -28,7 +28,6 @@ import {
 	faqs,
 	processSteps,
 	serviceGroups,
-	testimonials,
 	trustedBrands,
 	workGallery,
 } from "@/lib/home-content"
@@ -39,6 +38,7 @@ import {
 } from "@/lib/public-facts"
 import { quoteEmailConfigured } from "@/lib/quote-request"
 import { locationsByCounty } from "@/lib/service-areas"
+import { siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 const specialtyPoints = [
@@ -411,8 +411,8 @@ export function HomeBelowFold({
 			{/*
 			  How it works. A numbered process replaces the old grid of four
 			  wrench cards, which restated the trust bar. Steps run down a rail
-			  so the sequence reads at a glance; the testimonial panel sits beside
-			  it as the outcome of that process.
+			  so the sequence reads at a glance; the Google review panel sits
+			  beside it as the outcome of that process.
 			*/}
 			<section className="section-y section-defer">
 				<div className="container-shell grid grid-cols-1 items-start gap-[var(--space-block)] [overflow-wrap:anywhere] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
@@ -453,40 +453,22 @@ export function HomeBelowFold({
 					</div>
 
 					<div className="surface-float @container relative overflow-hidden rounded-xl px-[min(1.75rem,28px)] py-8 sm:px-[min(2.5rem,40px)] sm:py-10 lg:sticky lg:top-[calc(var(--header-h)+1.5rem)]">
-						<Quotes
-							aria-hidden="true"
-							className="text-primary-bright size-12 opacity-90"
-						/>
-						<p className="spec-label mt-6">What customers say</p>
-						<div className="mt-6 space-y-8">
-							{testimonials.map(([quote, person], index) => (
-								<blockquote
-									className="border-b border-white/10 pb-8 last:border-0 last:pb-0"
-									key={person}
-								>
-									<p
-										className={cn(
-											"text-on-dark leading-snug font-medium tracking-[-0.01em] text-pretty",
-											index === 0
-												? "font-display text-[clamp(1.25rem,2.2vw,1.625rem)]"
-												: "text-[1.0625rem] leading-relaxed",
-										)}
-									>
-										“{quote}”
-									</p>
-									<footer className="mt-4 flex items-center gap-3">
-										<span
-											aria-hidden="true"
-											className="bg-primary text-primary-foreground grid size-9 shrink-0 place-items-center rounded-full text-sm font-semibold"
-										>
-											{person.charAt(0)}
-										</span>
-										<span className="text-on-dark-muted text-sm font-semibold">
-											{person}
-										</span>
-									</footer>
-								</blockquote>
-							))}
+						<p className="spec-label">Google reviews</p>
+						<h3 className="type-subtitle mt-6">Leave us a Google review</h3>
+						<p className="text-on-dark-muted mt-4 max-w-prose text-[0.9375rem] leading-relaxed">
+							If we recently finished plumbing or septic work at your home, the
+							most helpful place to share how the job went is Google. You can
+							also read reviews on our Google listing. We do not publish star
+							ratings or review counts on this site.
+						</p>
+						<div className="mt-8 flex flex-col items-start gap-3">
+							<GoogleReviewButton onDark />
+							<a
+								className="text-on-dark focus-visible:ring-ring inline-flex min-h-11 items-center rounded-sm text-sm font-semibold underline underline-offset-4 outline-none focus-visible:ring-2"
+								href={siteConfig.googleBusinessUrl}
+							>
+								Read reviews on Google
+							</a>
 						</div>
 						<Link
 							prefetch={false}
@@ -496,7 +478,7 @@ export function HomeBelowFold({
 							)}
 							href="/testimonials"
 						>
-							Read customer stories
+							How we handle reviews
 							<ArrowRight aria-hidden="true" />
 						</Link>
 					</div>

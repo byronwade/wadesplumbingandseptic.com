@@ -33,7 +33,7 @@ Our expert technicians follow a comprehensive process to ensure your new water h
 - **Assessment:** We evaluate your current system and discuss your needs to recommend the best water heater for your home.
 - **Removal:** Our team safely removes the old unit, minimizing disruption to your household.
 - **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
-- **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
+- **Testing:** We test the new heater after install to confirm it fires, heats, and shuts off as designed.
 
 ## What affects your quote
 
