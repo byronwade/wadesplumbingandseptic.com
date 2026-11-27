@@ -61,7 +61,7 @@ Ready to enhance your shower experience? Contact Wade's Plumbing & Septic today 
 
 Transform your bathroom with our expert fixture installation services in Santa Cruz County, CA.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ### Transform Your Shower in Santa Cruz County Today
 

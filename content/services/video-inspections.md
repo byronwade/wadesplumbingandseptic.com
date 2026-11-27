@@ -80,6 +80,6 @@ Choosing Wade's Plumbing & Septic means choosing reliability and expertise. Serv
 
 Experience peace of mind with our state-of-the-art video inspections, ensuring your plumbing system in Santa Cruz County operates flawlessly.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

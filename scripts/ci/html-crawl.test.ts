@@ -9,6 +9,7 @@ import {
 	extractImages,
 	extractLinks,
 	hasInterFontPreload,
+	headingCount,
 	metaDescription,
 	pageTitle,
 	resolveInternalHref,
@@ -24,6 +25,7 @@ const sample = `
     <script type="application/ld+json">{"@type":"Service"}</script>
   </head>
   <body>
+    <h1>Drain Cleaning</h1>
     <a href="/contact#quote">Get a Free Quote</a>
     <a href="tel:+18312254344">Call 831.225.4344</a>
     <a href="https://example.com">External</a>
@@ -54,6 +56,7 @@ test("HTML inventory reads title, description, canonical, links, images, and ids
 	assert.equal(images[0]?.width, "1600")
 	assert.equal(images[0]?.fill, false)
 	assert.ok(extractIds(sample).has("quote"))
+	assert.equal(headingCount(sample), 1)
 })
 
 test("empty hrefs stay in the inventory so stripped Call Now links fail", () => {

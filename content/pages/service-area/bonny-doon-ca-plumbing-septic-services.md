@@ -72,4 +72,4 @@ CZU losses brought new construction to Bonny Doon with modern plumbing codes, of
 
 ## Ridge-top service, straight answers
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for Bonny Doon plumbing or septic. Browse [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and gate notes. We'll plan the visit right the first time. Quotes are free: [Get a Free Quote](/contact).
+Call Wade's at **[831.225.4344](tel:+18312254344)** for Bonny Doon plumbing or septic. Browse [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and gate notes. We'll plan the visit right the first time. Quotes are free: [Get a Free Quote](/contact#quote).

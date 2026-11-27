@@ -68,4 +68,4 @@ Rio Del Mar homes can sit closed for weeks, then run at full capacity during sum
 
 ## Rio Del Mar Appointments
 
-Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service in Rio Del Mar. Quotes are free: [Get a Free Quote](/contact).
+Reach Wade's at [831.225.4344](tel:+18312254344) for plumbing or septic service in Rio Del Mar. Quotes are free: [Get a Free Quote](/contact#quote).

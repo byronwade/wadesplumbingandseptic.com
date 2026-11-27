@@ -74,4 +74,4 @@ Corralitos roads can be narrow and steep. If your tank is far from the road, tel
 
 ## Schedule service in Corralitos
 
-Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for Corralitos plumbing or septic service. We serve all of Santa Cruz County and regularly work along the Corralitos corridor and surrounding hills. Quotes are free: [Get a Free Quote](/contact).
+Call Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for Corralitos plumbing or septic service. We serve all of Santa Cruz County and regularly work along the Corralitos corridor and surrounding hills. Quotes are free: [Get a Free Quote](/contact#quote).

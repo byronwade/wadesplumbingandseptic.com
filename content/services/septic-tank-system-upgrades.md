@@ -61,7 +61,7 @@ Choosing Wade's Plumbing & Septic means selecting a team with extensive experien
 
 Enhance your home's efficiency and compliance with our expert septic system upgrades.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ### What Our Santa Cruz County Customers Are Saying
 

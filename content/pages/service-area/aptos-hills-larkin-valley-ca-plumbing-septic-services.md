@@ -74,4 +74,4 @@ Driveways in Aptos Hills-Larkin Valley can be long and steep, and service trucks
 
 ## Schedule service in Aptos Hills-Larkin Valley
 
-Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Aptos Hills-Larkin Valley. We serve Santa Cruz County and regularly work the Aptos hills and Larkin Valley corridor. Quotes are free: [Get a Free Quote](/contact).
+Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Aptos Hills-Larkin Valley. We serve Santa Cruz County and regularly work the Aptos hills and Larkin Valley corridor. Quotes are free: [Get a Free Quote](/contact#quote).

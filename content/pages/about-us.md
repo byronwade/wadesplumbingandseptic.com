@@ -88,6 +88,6 @@ We assess the plumbing or septic issue, explain what we find, and agree on the w
 
 Explore our [plumbing and septic services](/services), including [engineered septic system installation](/service-offerings/engineered-septic-system-installation). Check our [service-area guide](/service-areas) for the communities we cover.
 
-[Get a Free Quote](/contact) or [call 831.225.4344](tel:+18312254344) to discuss your project.
+[Get a Free Quote](/contact#quote) or [call 831.225.4344](tel:+18312254344) to discuss your project.
 
 If we recently finished plumbing or septic work at your home, you can [leave us a review on Google](https://g.page/r/CblD5bImAMZtEAE/review).

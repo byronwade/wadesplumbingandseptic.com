@@ -67,4 +67,4 @@ Capitola's vacation rental market puts extra cycles on disposals, washers, and w
 
 ## Call Wade's in Capitola
 
-For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
+For plumbing or septic service in Capitola, reach Wade's at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact#quote).

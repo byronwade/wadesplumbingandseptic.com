@@ -84,6 +84,6 @@ We hold California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitat
 
 Ensure your septic system is in top condition with our expert repair and replacement services.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

@@ -73,4 +73,4 @@ Yes. A Brookdale tank that has gone a long time without pumping does not always 
 
 ## Contact Wade's
 
-For Brookdale plumbing or septic service, call **[831.225.4344](tel:+18312254344)**. View all communities on [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. Quotes are free: [Get a Free Quote](/contact).
+For Brookdale plumbing or septic service, call **[831.225.4344](tel:+18312254344)**. View all communities on [service areas](/service-areas), learn more at [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. Quotes are free: [Get a Free Quote](/contact#quote).

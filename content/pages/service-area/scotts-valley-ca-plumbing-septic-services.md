@@ -69,4 +69,4 @@ Inland Scotts Valley sees colder overnight lows than the coast, occasionally eno
 
 ## Scotts Valley Appointments
 
-Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
+Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact#quote).

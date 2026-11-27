@@ -69,7 +69,7 @@ Choose Wade's Plumbing & Septic for your water softener maintenance needs in San
 
 Ensure your water treatment system operates at peak performance with our expert maintenance services in Santa Cruz County.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)
 

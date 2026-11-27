@@ -75,4 +75,4 @@ In the Saratoga foothills, exterior hose bibs and backup water sources should be
 
 ## Confirm coverage and schedule service
 
-**Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
+**Call with your full Saratoga address before booking.** Wade's Plumbing & Septic will confirm whether your property falls within our selected near-border service area. Reach us at [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact#quote).

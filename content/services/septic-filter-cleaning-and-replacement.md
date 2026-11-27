@@ -107,7 +107,7 @@ Yes. Wade's Plumbing & Septic serves Santa Cruz County and selected Santa Clara 
 
 Protect the tank outlet and the drainfield with professional filter cleaning or replacement from a local licensed team.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ## What Our Santa Cruz County Customers Are Saying
 

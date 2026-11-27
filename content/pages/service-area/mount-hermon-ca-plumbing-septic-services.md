@@ -68,4 +68,4 @@ In Mount Hermon homes on private wells, short cycling, air locks, and sediment a
 
 ## Talk to a local team
 
-Call Wade's Plumbing & Septic at **[831.225.4344](tel:+18312254344)** for Mount Hermon service. Browse [service areas](/service-areas), read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your home, year-round or seasonal, and we'll recommend a sensible first step. Quotes are free: [Get a Free Quote](/contact).
+Call Wade's Plumbing & Septic at **[831.225.4344](tel:+18312254344)** for Mount Hermon service. Browse [service areas](/service-areas), read about [septic solutions](/septic-solutions), or [contact us](/contact) to describe your home, year-round or seasonal, and we'll recommend a sensible first step. Quotes are free: [Get a Free Quote](/contact#quote).

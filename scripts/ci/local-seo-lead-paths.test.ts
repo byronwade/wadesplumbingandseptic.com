@@ -237,6 +237,13 @@ test("town pages keep a visible call path and free quote in the markdown", () =>
 		).body
 		assert.match(body, /831\.225\.4344/, file)
 		assert.match(body, /Get a Free Quote|Quotes are free/i, file)
+		for (const match of body.matchAll(/\[Get a Free Quote\]\(([^)]+)\)/g)) {
+			assert.equal(
+				match[1],
+				freeQuoteHref,
+				`${file}: Get a Free Quote should deep-link to ${freeQuoteHref}`,
+			)
+		}
 		assert.doesNotMatch(body, /750 to 1,500 gallons|fifteen years/)
 		assert.doesNotMatch(
 			body,
@@ -244,6 +251,28 @@ test("town pages keep a visible call path and free quote in the markdown", () =>
 		)
 		assert.doesNotMatch(body, /24\s*\/\s*7|\bemergenc(?:y|ies)\b/i, file)
 	}
+})
+
+test("Get a Free Quote markdown links deep-link to the contact form", () => {
+	function walk(dir: string) {
+		for (const name of fs.readdirSync(dir)) {
+			const full = path.join(dir, name)
+			if (fs.statSync(full).isDirectory()) {
+				walk(full)
+				continue
+			}
+			if (!name.endsWith(".md")) continue
+			const body = fs.readFileSync(full, "utf8")
+			for (const match of body.matchAll(/\[Get a Free Quote\]\(([^)]+)\)/g)) {
+				assert.equal(
+					match[1],
+					freeQuoteHref,
+					`${full}: Get a Free Quote should deep-link to ${freeQuoteHref}`,
+				)
+			}
+		}
+	}
+	walk("content")
 })
 
 test("FAQ page answers are direct and match FAQPage pairs", () => {

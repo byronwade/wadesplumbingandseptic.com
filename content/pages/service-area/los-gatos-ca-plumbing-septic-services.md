@@ -9,7 +9,7 @@ imageAlt: Hillside homes in the Los Gatos foothills near the Santa Cruz County b
 
 Los Gatos sits in the western Santa Clara Valley, upscale hillside neighborhoods, older downtown charm, and mountain-adjacent properties where Santa Clara County meets the Santa Cruz Mountains. Wade's Plumbing & Septic is based in Santa Cruz County, and our work in Los Gatos is **selected coverage only**: plumbing and project service for properties **near the Santa Cruz County line**, not blanket service across all of Los Gatos or Santa Clara County.
 
-If you are on the mountain side of town, closer to [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), or the county border, we may be able to help. **Call [831.225.4344](tel:+18312254344) with your property address** and we will confirm whether your location falls within our service area before scheduling. Quotes are free: [Get a Free Quote](/contact).
+If you are on the mountain side of town, closer to [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), or the county border, we may be able to help. **Call [831.225.4344](tel:+18312254344) with your property address** and we will confirm whether your location falls within our service area before scheduling. Quotes are free: [Get a Free Quote](/contact#quote).
 
 ## Plumbing services near Los Gatos
 
@@ -75,4 +75,4 @@ Santa Clara County permitting applies to septic work on the Santa Clara side of 
 
 ## Confirm coverage and schedule service
 
-**Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area. Quotes are free: [Get a Free Quote](/contact).
+**Please call with your full property address before assuming we serve your Los Gatos location.** Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344). We will let you know quickly whether your home falls within our selected near-border service area. Quotes are free: [Get a Free Quote](/contact#quote).

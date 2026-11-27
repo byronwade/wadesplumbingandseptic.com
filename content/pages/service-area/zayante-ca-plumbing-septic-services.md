@@ -69,4 +69,4 @@ Older Zayante systems may lack as-built drawings, so Wade's builds a picture fro
 
 ## Call before the backup needs a repair
 
-Wade's at **[831.225.4344](tel:+18312254344)** for Zayante plumbing and septic. See all coverage on [service areas](/service-areas), explore [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and symptoms. We'll tell you what to check before we drive out. Quotes are free: [Get a Free Quote](/contact).
+Wade's at **[831.225.4344](tel:+18312254344)** for Zayante plumbing and septic. See all coverage on [service areas](/service-areas), explore [septic solutions](/septic-solutions), or [contact us](/contact) with your road name and symptoms. We'll tell you what to check before we drive out. Quotes are free: [Get a Free Quote](/contact#quote).

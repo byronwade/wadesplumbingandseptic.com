@@ -72,4 +72,4 @@ Hard well water in Las Lomas accelerates scale in water heaters and leaves stain
 
 ## Schedule service in Las Lomas
 
-Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Las Lomas. We cover Santa Cruz County and can usually schedule service within a reasonable window, tell us if you are facing an active backup or leak. Quotes are free: [Get a Free Quote](/contact).
+Reach Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Las Lomas. We cover Santa Cruz County and can usually schedule service within a reasonable window, tell us if you are facing an active backup or leak. Quotes are free: [Get a Free Quote](/contact#quote).

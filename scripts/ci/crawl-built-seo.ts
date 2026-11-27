@@ -574,9 +574,10 @@ async function main() {
 		else if (canonical !== expectedCanonical && canonical !== pathname)
 			issues.push(`${pathname}: canonical ${canonical}`)
 
+		const h1 = headingCount(body)
+		if (h1 !== 1) issues.push(`${pathname}: expected 1 H1, found ${h1}`)
+
 		if (isServiceOrTown(pathname)) {
-			const h1 = headingCount(body)
-			if (h1 !== 1) issues.push(`${pathname}: expected 1 H1, found ${h1}`)
 			const lead = visibleLead(body)
 			if (!/Quotes are free/i.test(lead))
 				issues.push(`${pathname}: missing free-quote summary near the top`)
