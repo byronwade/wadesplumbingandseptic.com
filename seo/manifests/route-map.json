@@ -87,6 +87,28 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/adding-adu-bedroom-septic-santa-cruz",
+			"source_path": "content/posts/adding-adu-bedroom-septic-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/adding-adu-bedroom-septic-santa-cruz"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/backflow-testing-santa-cruz-county-homes",
+			"source_path": "content/posts/backflow-testing-santa-cruz-county-homes.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/backflow-testing-santa-cruz-county-homes"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/careers",
 			"source_path": "content/pages/careers.md",
 			"kind": "STATIC_ROUTE",
@@ -213,6 +235,17 @@
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/engineered-septic-systems-santa-cruz-county"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/enhanced-septic-operating-permit-santa-cruz",
+			"source_path": "content/posts/enhanced-septic-operating-permit-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/enhanced-septic-operating-permit-santa-cruz"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -431,6 +464,17 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"source_path": "content/posts/how-to-prepare-for-a-re-pipe-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/how-to-prepare-for-a-re-pipe-santa-cruz"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/how-to-prevent-frozen-pipes-this-winter",
 			"source_path": "content/posts/how-to-prevent-frozen-pipes-this-winter.md",
 			"kind": "STATIC_ROUTE",
@@ -493,6 +537,28 @@
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/new-septic-installations-santa-cruz"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/new-year-plumbing-reset-santa-cruz-homes",
+			"source_path": "content/posts/new-year-plumbing-reset-santa-cruz-homes.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/new-year-plumbing-reset-santa-cruz-homes"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/perc-test-site-evaluation-santa-cruz-septic",
+			"source_path": "content/posts/perc-test-site-evaluation-santa-cruz-septic.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/perc-test-site-evaluation-santa-cruz-septic"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -604,6 +670,17 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/santa-cruz-septic-inspection-at-sale",
+			"source_path": "content/posts/santa-cruz-septic-inspection-at-sale.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/santa-cruz-septic-inspection-at-sale"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/santa-cruz-toilet-running-solutions",
 			"source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
 			"kind": "STATIC_ROUTE",
@@ -697,6 +774,19 @@
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/septic-system-types-santa-cruz"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"source_path": "content/posts/septic-tank-destruction-sewer-connection-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": [
+				"/septic-tank-destruction-sewer-connection-santa-cruz"
+			],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -1733,17 +1823,6 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
-			"route_pattern": "/services/[slug]",
-			"source_path": "app/(site)/services/[slug]/page.tsx",
-			"kind": "DYNAMIC_RUNTIME_DATA",
-			"parameters": ["slug"],
-			"materialized_routes": [],
-			"materialization_state": "BLOCKED_MISSING_CREDENTIALS",
-			"data_source_paths": [],
-			"classification": "BLOCKED_MISSING_CREDENTIALS",
-			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
-		},
-		{
 			"route_pattern": "/services/popular",
 			"source_path": "app/(site)/services/popular/page.tsx",
 			"kind": "STATIC_ROUTE",
@@ -1760,6 +1839,17 @@
 			"kind": "STATIC_ROUTE",
 			"parameters": [],
 			"materialized_routes": ["/services/trending"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/sewer-camera-inspection-santa-cruz-homes",
+			"source_path": "content/posts/sewer-camera-inspection-santa-cruz-homes.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/sewer-camera-inspection-santa-cruz-homes"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",
@@ -1827,6 +1917,17 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/slab-leak-signs-santa-cruz-homes",
+			"source_path": "content/posts/slab-leak-signs-santa-cruz-homes.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/slab-leak-signs-santa-cruz-homes"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/slow-drains-solutions-santa-cruz",
 			"source_path": "content/posts/slow-drains-solutions-santa-cruz.md",
 			"kind": "STATIC_ROUTE",
@@ -1847,6 +1948,17 @@
 			"data_source_paths": [],
 			"classification": "BLOCKED_MISSING_CREDENTIALS",
 			"reason": "Concrete paths require runtime data that is not available to the offline sidecar."
+		},
+		{
+			"route_pattern": "/tankless-water-heater-santa-cruz-homes",
+			"source_path": "content/posts/tankless-water-heater-santa-cruz-homes.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/tankless-water-heater-santa-cruz-homes"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
 			"route_pattern": "/terms-of-service",
@@ -1963,6 +2075,17 @@
 			"materialized_routes": [
 				"/water-main-sewer-line-repair-santa-cruz-county"
 			],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
+			"route_pattern": "/water-service-line-repair-santa-cruz",
+			"source_path": "content/posts/water-service-line-repair-santa-cruz.md",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/water-service-line-repair-santa-cruz"],
 			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
 			"data_source_paths": [],
 			"classification": "MOCK_VERIFIED",

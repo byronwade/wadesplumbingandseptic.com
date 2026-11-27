@@ -53,6 +53,16 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/adding-adu-bedroom-septic-santa-cruz"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/backflow-testing-santa-cruz-county-homes"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/careers"
 		},
 		{
@@ -109,6 +119,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/engineered-septic-systems-santa-cruz-county"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/enhanced-septic-operating-permit-santa-cruz"
 		},
 		{
 			"severity": "info",
@@ -203,6 +218,11 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/how-to-prepare-for-a-re-pipe-santa-cruz"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/how-to-prevent-frozen-pipes-this-winter"
 		},
 		{
@@ -229,6 +249,16 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/new-septic-installations-santa-cruz"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/new-year-plumbing-reset-santa-cruz-homes"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/perc-test-site-evaluation-santa-cruz-septic"
 		},
 		{
 			"severity": "info",
@@ -278,6 +308,11 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/santa-cruz-septic-inspection-at-sale"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/santa-cruz-toilet-running-solutions"
 		},
 		{
@@ -319,6 +354,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/septic-system-types-santa-cruz"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/septic-tank-destruction-sewer-connection-santa-cruz"
 		},
 		{
 			"severity": "info",
@@ -742,16 +782,6 @@
 		},
 		{
 			"severity": "info",
-			"code": "METADATA_INHERITED_OR_UNDECLARED",
-			"url": "/services/[slug]"
-		},
-		{
-			"severity": "info",
-			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
-			"url": "/services/[slug]"
-		},
-		{
-			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/services/popular"
 		},
@@ -759,6 +789,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/services/trending"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/sewer-camera-inspection-santa-cruz-homes"
 		},
 		{
 			"severity": "info",
@@ -788,12 +823,22 @@
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/slab-leak-signs-santa-cruz-homes"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/slow-drains-solutions-santa-cruz"
 		},
 		{
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/tag/[slug]"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/tankless-water-heater-santa-cruz-homes"
 		},
 		{
 			"severity": "info",
@@ -844,6 +889,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/water-main-sewer-line-repair-santa-cruz-county"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/water-service-line-repair-santa-cruz"
 		},
 		{
 			"severity": "info",
