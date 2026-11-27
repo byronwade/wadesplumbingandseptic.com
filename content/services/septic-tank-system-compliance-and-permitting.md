@@ -65,4 +65,4 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 Request a free quote for septic compliance help in Santa Cruz County.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

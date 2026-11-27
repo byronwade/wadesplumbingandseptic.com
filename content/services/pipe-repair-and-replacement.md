@@ -8,7 +8,7 @@ order: 31
 image: >-
   /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
 imageAlt: Leaking water pipe outdoors
-updated: "2026-07-30"
+updated: "2026-11-27"
 ---
 
 Pipe repair and replacement for Santa Cruz County homes covers a single failed section and larger repiping when corrosion or low pressure shows up throughout the house. Wade's Plumbing & Septic works with copper, PEX, PVC, and galvanized lines, looks at the problem on site, explains the options, and quotes a flat rate before work begins. Quotes are free.
@@ -86,4 +86,4 @@ Swift and Reliable Solutions
 
 Ensure the longevity and efficiency of your plumbing system with our expert services in Santa Cruz County, CA.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

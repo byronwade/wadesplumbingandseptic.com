@@ -274,11 +274,13 @@ test("Get a Free Quote markdown links deep-link to the contact form", () => {
 			}
 			if (!name.endsWith(".md")) continue
 			const body = fs.readFileSync(full, "utf8")
-			for (const match of body.matchAll(/\[Get a Free Quote\]\(([^)]+)\)/g)) {
+			for (const match of body.matchAll(
+				/\[(?:Get a Free Quote|Request service)\]\(([^)]+)\)/g,
+			)) {
 				assert.equal(
 					match[1],
 					freeQuoteHref,
-					`${full}: Get a Free Quote should deep-link to ${freeQuoteHref}`,
+					`${full}: quote CTA should deep-link to ${freeQuoteHref}`,
 				)
 			}
 		}
