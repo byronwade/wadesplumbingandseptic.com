@@ -6,7 +6,7 @@ description: >-
   each part does and the signs it needs attention.
 category: Septic Issues in Santa Cruz County
 date: "2026-04-25"
-updated: "2026-10-24"
+updated: "2026-11-27"
 tags:
   - santa cruz
   - septic
@@ -45,7 +45,7 @@ The pipe from the house to the tank, laid at a slope so wastewater flows by grav
 
 ### Septic tank
 
-A buried, watertight tank, often concrete, with one or two compartments. Inlet and outlet baffles or tees slow the incoming flow and keep sludge and scum from leaving. The tank needs periodic pumping before sludge and scum build up far enough to escape. EPA recommends a professional inspection at least every three years for a typical household system.
+A buried, watertight tank, often concrete, with one or two compartments. Inlet and outlet baffles or tees slow the incoming flow and keep sludge and scum from leaving. The tank needs periodic pumping before sludge and scum build up far enough to escape. EPA recommends a professional inspection at least every three years for a typical household system. Wade's inspects tanks and repairs or replaces them with your engineer. Wade's does not pump tanks; book a licensed liquid waste hauler for emptying.
 
 What goes wrong: broken or missing baffles, cracks that let groundwater in or effluent out, and overdue pumping that sends solids toward the field. See [septic tank repair and replacement](/service-offerings/septic-tank-repair-and-replacement) and [septic inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment).
 
@@ -114,4 +114,4 @@ Check the septic permit records for your parcel through County Environmental Hea
 
 ## Request a free quote
 
-Wade's Plumbing & Septic inspects and repairs septic systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call during office hours, Monday to Friday, 9:00 AM to 5:00 PM.
+Wade's Plumbing & Septic inspects and repairs septic systems across [Santa Cruz County and nearby Santa Clara County communities](/service-areas). Quotes are free and pricing is flat rate, quoted on site before work begins. [Get a Free Quote](/contact#quote) or call [831.225.4344](tel:+18312254344) during office hours, Monday to Friday, 9:00 AM to 5:00 PM.

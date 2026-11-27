@@ -38,9 +38,9 @@ Our trenchless sewer line replacement process involves two main methods: pipe bu
 
 The timeline for a trenchless sewer line replacement varies based on the complexity of the project. Typically, it can be completed in just a few days, much quicker than traditional methods.
 
-## Factors Affecting Costs
+## What affects your quote
 
-The cost of trenchless sewer line replacement can vary based on several factors, including the length and depth of the sewer line, the extent of damage, and the method used. At Wade's Plumbing & Septic, we provide transparent pricing and detailed estimates, ensuring you understand every aspect of your investment.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. At Wade's Plumbing & Septic, we provide flat-rate pricing quoted on site and detailed estimates, ensuring you understand every aspect of your investment.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -53,7 +53,7 @@ While trenchless sewer line replacement offers a durable solution, regular maint
 Homeowners often have questions about trenchless sewer line replacement:
 
 - **How long does trenchless sewer line replacement last?** With proper maintenance, trenchless solutions can last 50 years or more.
-- **Is trenchless replacement more expensive than traditional methods?** While initial costs may be higher, the reduced labor and restoration costs often make it more cost-effective in the long run.
+- **How does trenchless compare with open-trench replacement?** Trenchless methods usually disturb less of the yard. The right method depends on pipe condition, access, and what the camera inspection shows. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 - **Can all sewer lines be replaced using trenchless methods?** Most lines can be addressed this way, but a thorough inspection will determine the best approach.
 
 Wade's Plumbing & Septic is the trusted choice for trenchless sewer line replacement in Santa Cruz County. As a licensed, local company with extensive experience, we offer responsive service and reliable solutions. For comprehensive plumbing and septic services, including [failed septic repair and replacement](/service-offerings/septic-tank-repair-and-replacement), trust our team.
@@ -62,7 +62,7 @@ If you're experiencing sewer line issues, don't wait for them to worsen. Contact
 
 Santa Cruz County's Trusted Sewer Experts
 
-## Effortless Trenchless Sewer Replacement
+## Trenchless sewer replacement
 
 Minimize disruption to your property with our seamless trenchless sewer replacement service.
 

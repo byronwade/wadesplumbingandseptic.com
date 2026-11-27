@@ -8,14 +8,14 @@ eyebrow: Compare
 order: 40
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Engineered septic installation on a Santa Cruz County hillside
-updated: "2026-07-30"
+updated: "2026-11-27"
 ---
 
 Santa Cruz County has both straightforward lots that support a conventional septic system and hillside or tight-soil parcels that need an engineered or advanced treatment design. The right choice is about what the site can percolate, what the county will approve, and what you can maintain for decades.
 
 ## Conventional septic: when it fits
 
-A conventional system usually means a septic tank plus a gravity drainfield in native soil. It is often the simplest and least expensive path when:
+A conventional system usually means a septic tank plus a gravity drainfield in native soil. It is often the simplest path when:
 
 - Perc tests and soil profiles meet county standards
 - Setbacks from wells, creeks, slopes, and structures are available
@@ -32,15 +32,15 @@ Engineered designs and advanced treatment units (ATUs) show up when conventional
 - Rebuilds after fire where the usable envelope changed
 - Small parcels that cannot fit a full conventional field
 
-These systems cost more up front and need clearer maintenance (alarms, filters, sometimes service contracts), but they are often what makes a property buildable or replaceable at all.
+These systems need clearer maintenance (alarms, filters, and often a service contract), but they are often what makes a property buildable or replaceable at all.
 
-Flat-rate pricing, quoted on site before work begins.
+Flat-rate pricing, quoted on site before work begins. Quotes are free.
 
 ## How to decide without guessing
 
-1. Start with an honest site assessment and soil/perc information, not a sales pitch for the most expensive option.
+1. Start with a site assessment and soil/perc information, not a preference for one system type.
 2. Ask what the county is likely to approve for your APN and proposed bedroom count.
-3. Compare lifetime maintenance, not only install price.
+3. Compare ongoing maintenance (inspections, filters, service contracts), not a price comparison on this page.
 4. If you are buying, get a [septic inspection](/service-offerings/septic-tank-inspection-and-assessment) before you commit to a repair path.
 
 Wade's Plumbing & Septic installs and services both conventional and engineered systems. We explain options in plain language and help you avoid paying for a plan the site cannot support.

@@ -37,9 +37,9 @@ If you notice any of these signs, it's time to consider a professional [drain cl
 
 Hydro jetting involves the use of a specialized nozzle connected to a high-pressure hose. This nozzle propels water at pressures up to 4,000 PSI, effectively clearing blockages and cleaning the inner surfaces of your pipes. The process begins with a thorough [drain line inspection](/service-offerings/drain-line-inspection) to assess the condition of your pipes and identify the exact location of blockages.
 
-### Timeline and Cost Factors
+### What affects your quote
 
-The duration of the hydro jetting process varies depending on the severity of the blockage and the length of the plumbing system. Typically, the service can be completed within a few hours. Several factors influence the cost, including the complexity of the job, the condition of your pipes, and the extent of the blockages.
+Visit length depends on the blockage and the length of the line. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Drain Clogs
 
@@ -53,7 +53,7 @@ For businesses, consider our [commercial drain cleaning](/service-offerings/comm
 
 ## Why Trust Wade's Plumbing & Septic?
 
-At Wade's Plumbing & Septic, we are committed to delivering reliable and efficient plumbing solutions. our licensed and responsive team is equipped to handle all your plumbing needs. We pride ourselves on our local expertise and customer-centric approach. Don't let clogged drains disrupt your day. Contact us today to schedule your hydro jetting drain cleaning service and experience the benefits of a clear and efficient plumbing system. Call us now or visit our website to learn more about our [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines) service.
+Wade's Plumbing & Septic provides hydro jetting for Santa Cruz County homes and businesses. Quotes are free. See also [high-pressure jetting for septic lines](/service-offerings/high-pressure-jetting-for-septic-lines).
 
 ## Clear Your Drains Today with Expert Hydro Jetting!
 

@@ -8,7 +8,7 @@ order: 46
 image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Tankless water heater installation
 featured: true
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Tankless water heater installation for Santa Cruz County homes is an on-demand unit with the gas or electric supply, venting, and water connections the house actually has. Wade's Plumbing & Septic explains permit and venting needs, then installs to code. Compare options on our [water heater installation](/service-offerings/water-heater-installation) page.
@@ -40,7 +40,7 @@ Our installation process is designed to ensure minimal disruption and maximum ef
 
 We begin with a thorough evaluation of your home's water heating needs, taking into account factors such as household size and existing plumbing infrastructure. This helps us determine the appropriate size and model for your tankless water heater.
 
-Next, our certified technicians handle all aspects of the installation, including:
+Next, our licensed plumbers handle all aspects of the installation, including:
 
 - Modifying gas lines to accommodate the new system
 - Installing proper venting solutions
@@ -48,9 +48,9 @@ Next, our certified technicians handle all aspects of the installation, includin
 
 Throughout the process, we follow all local codes and safety guidelines to ensure a seamless installation experience.
 
-## Cost Factors and Timeline for Installation
+## What affects your quote
 
-The cost of tankless water heater installation can vary based on several factors, including the size of the unit, any necessary modifications to gas lines, and the complexity of the venting required. On average, installations can take a day to complete, but we always strive to minimize inconvenience to your daily routine.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. On average, installations can take a day to complete, but we always strive to minimize inconvenience to your daily routine.
 
 Flat-rate pricing, quoted on site before work begins.
 

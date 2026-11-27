@@ -8,7 +8,7 @@ order: 45
 image: >-
   /images/wordpress/water-pipe-system-in-a-park-with-surrounding-greenery-and-autumn-leaves-7552d7.webp
 imageAlt: Outdoor plumbing pipe system
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Garbage disposal installation for Santa Cruz County kitchens is the swap or new install of the unit under the sink, including the drain fit and a function test. Wade's Plumbing & Septic matches the disposal to the sink and existing plumbing rather than forcing a unit that does not fit.
@@ -44,9 +44,9 @@ At Wade's Plumbing & Septic, our installation process is straightforward and eff
 - **Testing:** We test the unit to ensure it's functioning properly.
 - **Guidance:** Finally, we provide tips on proper usage and maintenance.
 
-## Cost Factors and Timeline
+## What affects your quote
 
-The cost of garbage disposal installation can vary based on several factors, including the type of unit and the complexity of the installation. Our team provides transparent pricing and a timeline tailored to your needs, usually completing installations within a few hours.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Our team provides flat-rate pricing quoted on site and a timeline tailored to your needs, usually completing installations within a few hours.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -86,7 +86,7 @@ Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and S
 
 For more details on our service areas, visit our [main service-area overview](/service-areas).
 
-## Top-Quality Garbage Disposal Installation in Santa Cruz
+## Ready for a free quote?
 
 Experience seamless waste management with our expert installation services, ensuring your kitchen runs smoothly and efficiently.
 

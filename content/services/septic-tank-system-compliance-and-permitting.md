@@ -7,7 +7,7 @@ category: Septic
 order: 14
 image: /images/work/completed-multi-tank.webp
 imageAlt: Completed multi-tank septic system
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Septic compliance and permitting support for Santa Cruz County properties is help with county Environmental Health requirements when you are repairing, replacing, or installing a system. Wade's Plumbing & Septic installs to the permitted plan and works with your engineer when the site needs an engineered design.
@@ -39,15 +39,9 @@ Once the design is finalized, we handle the submission of all necessary permit a
 
 Upon installation, our team coordinates with inspectors to ensure your system meets all necessary criteria for final approval. We also offer [septic tank inspection and assessment](/service-offerings/septic-tank-inspection-and-assessment) services to maintain ongoing compliance.
 
-## Factors Affecting Septic System Permitting Costs
+## What affects your quote
 
-Flat-rate pricing, quoted on site before work begins.
-
-Several factors impact the cost of septic system permitting:
-
-- **Site Conditions:** Soil quality and terrain can affect the complexity and cost of the system design.
-- **System Type:** Engineered systems or alternative installations may incur higher costs.
-- **Permit Fees:** These vary depending on local regulations and the scope of your installation.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. County permit fees are set by the agency, not by Wade's. Site conditions, soil, slope, and whether the design is conventional or engineered all change the work on the parcel.
 
 ## Preventing Septic System Challenges
 
@@ -65,7 +59,7 @@ Choosing Wade's Plumbing & Septic means partnering with a trusted local expert i
 
 At Wade's Plumbing & Septic, we are proud to provide expert septic system compliance services throughout Santa Cruz County, CA. Our service area includes the vibrant communities of Santa Cruz, Capitola, Watsonville, Scotts Valley, and Aptos, among others. With our local expertise and commitment to quality, we ensure that your septic system meets all necessary compliance standards.
 
-Our team is fully licensed and certified, holding California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that all work is performed to the highest standards of safety and professionalism.
+Our team holds California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System).
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 

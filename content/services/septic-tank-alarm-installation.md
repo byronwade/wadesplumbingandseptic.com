@@ -31,9 +31,9 @@ Choosing the right company for your septic tank alarm installation is vital for 
 
 Knowing when to install a septic tank alarm can save you time and money. Common signs that indicate the need for an alarm include frequent septic overflows, slow drainage, and unusual odors around your septic tank. These signs often point to underlying issues that a septic tank alarm can help detect early, preventing more severe problems.
 
-### Factors Affecting Installation Costs
+### What affects your quote
 
-The cost of septic tank alarm installation can vary based on several factors, including the complexity of your septic system and the type of alarm system you choose. Our team provides transparent pricing and will work with you to find a solution that fits your budget while ensuring optimal system performance.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Our team provides flat-rate pricing quoted on site and will work with you to find a solution quoted as a flat rate on site while ensuring optimal system performance.
 
 Flat-rate pricing, quoted on site before work begins.
 

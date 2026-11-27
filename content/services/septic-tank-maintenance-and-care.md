@@ -45,9 +45,9 @@ If you notice any of these signs, it's crucial to schedule a septic tank inspect
 
 Several factors can lead to septic system failures, including improper maintenance, excessive water usage, and flushing non-biodegradable items. Understanding these causes helps in preventing future issues and maintaining a healthy septic system.
 
-## Cost Factors and Scheduling for Septic Tank Maintenance
+## What affects your quote
 
-The cost of septic tank maintenance varies based on system size, complexity, and condition. Regularly scheduled maintenance plans are cost-effective and provide peace of mind. We tailor our services to your system type and usage patterns, providing detailed documentation of services performed and system condition.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Regular inspections and filter service protect the tank and field. We document the work and the system's condition. Wade's does not pump tanks.
 
 Flat-rate pricing, quoted on site before work begins.
 

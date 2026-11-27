@@ -239,7 +239,7 @@ for (const collection of COLLECTIONS) {
 			errors.push(`${file}: fake phone link "${phone}"; use tel:+18312254344`)
 		}
 
-		// Business-hours only: no 24/7 or "emergency line" claims.
+		// Business-hours only: no 24/7, emergency-line, or urgent-heading claims.
 		if (/emergency line/i.test(source)) {
 			errors.push(
 				`${file}: claims an "emergency line"; Wade's does not offer 24/7 or after-hours dispatch`,
@@ -248,6 +248,30 @@ for (const collection of COLLECTIONS) {
 		if (/24\/7/i.test(source) && !/do not offer 24\/7/i.test(source)) {
 			errors.push(
 				`${file}: claims 24/7 availability; use business hours (Mon to Fri 9:00am to 5:00pm) or explicit "do not offer 24/7"`,
+			)
+		}
+		if (/\bNeed Help Now\b/i.test(source)) {
+			errors.push(
+				`${file}: "Need Help Now" heading; use non-emergency wording such as "Ready for a Free Quote?"`,
+			)
+		}
+		if (/\bSatisfaction guaranteed\b/i.test(source)) {
+			errors.push(`${file}: banned phrase "Satisfaction guaranteed"`)
+		}
+		if (/\bSince 2005\b/i.test(source)) {
+			errors.push(`${file}: banned phrase "Since 2005"`)
+		}
+		if (/\bFast response\b/i.test(source)) {
+			errors.push(`${file}: banned phrase "Fast response"`)
+		}
+		if (/^#{1,3}\s+.*\bEffortless\b/im.test(prose)) {
+			errors.push(
+				`${file}: spammy "Effortless" heading; use the service noun and county name`,
+			)
+		}
+		if (/^#{1,3}\s+Act Now\b/im.test(prose)) {
+			errors.push(
+				`${file}: "Act Now" heading; use non-emergency wording such as "Ready for a Free Quote?"`,
 			)
 		}
 

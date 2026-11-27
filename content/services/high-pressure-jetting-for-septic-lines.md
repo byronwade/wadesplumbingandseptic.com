@@ -52,9 +52,9 @@ At Wade's Plumbing & Septic, our trained technicians follow a meticulous process
 
 This professional service is a cornerstone of effective [septic tank maintenance and care](/service-offerings/septic-tank-maintenance-and-care), ensuring your system operates smoothly.
 
-## Cost Factors and Timeline
+## What affects your quote
 
-The cost of high pressure jetting septic lines can vary based on factors such as the extent of blockages and the complexity of your septic system layout. However, it's a cost-effective preventive measure compared to the expenses associated with a [failed septic repair replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement). The process typically takes a few hours, minimizing disruption to your routine.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Clearing the lines can prevent a later [failed septic repair replacement](/service-offerings/septic-tank-leach-field-repair-and-replacement). The process typically takes a few hours.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -85,7 +85,7 @@ At Wade's Plumbing & Septic, we pride ourselves on providing reliable and effici
 
 Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, including the communities of Santa Cruz, Watsonville, Capitola, Scotts Valley, and Aptos. Our team is equipped to handle all your high-pressure septic jetting needs with precision and care.
 
-We are a licensed contractor with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that you receive the highest quality service from certified professionals.
+We are a licensed contractor with California contractor license CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System), ensuring that you receive the highest quality service from licensed crew.
 
 Our office hours are Monday to Friday, 9:00 AM to 5:00 PM. Closed Saturday and Sunday.
 

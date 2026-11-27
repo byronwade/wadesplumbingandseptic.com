@@ -7,6 +7,7 @@ order: 3
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
 eyebrow: Customer Reviews
+updated: "2026-11-27"
 ---
 
 ## Serving Santa Cruz County, CA
@@ -25,10 +26,8 @@ If we recently finished work at your home, [leave us a review on Google](https:/
 
 ### How is pricing determined for plumbing services in Santa Cruz County?
 
-The cost for plumbing services at Wade's Plumbing & Septic varies depending on the complexity of the job. We offer competitive pricing and provide detailed estimates to ensure transparency for all projects in Santa Cruz County, California.
-
-Flat-rate pricing, quoted on site before work begins.
+Flat-rate pricing, quoted on site before work begins. Quotes are free.
 
 ### What should I expect during a service appointment?
 
-During a service appointment, our professional team will arrive on time, assess the situation, and explain the process before starting any work. We prioritize clear communication and ensure the job is completed efficiently and tidily.
+We assess the issue, explain what we find, and quote a flat rate before starting work.

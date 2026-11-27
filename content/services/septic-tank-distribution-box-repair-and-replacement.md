@@ -48,17 +48,17 @@ Once exposed, our technicians assess whether [septic tank repair and replacement
 
 The time required for **septic tank distribution box repair** varies based on the extent of the damage. Generally, repairs can be completed within a day, while replacements might take a few days longer, especially if additional components need attention.
 
-## Cost Factors and Considerations
+## What affects your quote
 
 Flat-rate pricing, quoted on site before work begins.
 
-Several factors influence the cost of repairing or replacing a distribution box:
+Scope depends on:
 
 - Extent of damage
 - Accessibility of the distribution box
-- Material and labor costs
+- Whether the box can be repaired or needs replacement
 
-For a comprehensive assessment and an accurate estimate, it's best to contact Wade's Plumbing & Septic directly. Our transparent pricing ensures you know what to expect.
+Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 ## Preventing Future Distribution Box Issues
 

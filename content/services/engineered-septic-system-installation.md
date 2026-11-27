@@ -54,15 +54,15 @@ Timelines depend on soil work, engineering, and permit review. We keep you updat
 
 - Local, family-owned team focused on Santa Cruz County soils and codes
 - Experience with ATUs, mounds, and other advanced treatment setups
-- Honest talk about cost, maintenance, and what the county will accept
+- Clear talk about maintenance and what the county will accept
 - CSLB #1087260 with **C-36** plumbing and **C-42** sanitation system classifications
 - Same crew culture as our plumbing work: no pressure, clear pricing, clean job sites
 
-## Cost and next steps
+## Next steps
 
-Engineered systems cost more than a simple tank-and-field replacement because of treatment equipment, design, and site work. Ranges vary widely by system type, access, and soil conditions. We provide transparent estimates after we understand the site, and we separate what is known from what depends on engineering or county review.
+Engineered systems add treatment equipment, design, and site work that a conventional tank and field do not. After we understand the site, we quote a flat rate for the installation work Wade's will perform and separate what depends on engineering or county review.
 
-Flat-rate pricing, quoted on site before work begins.
+Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 Ongoing maintenance matters: filters, pumps, blowers, and service contracts keep advanced systems healthy. We set that expectation up front.
 

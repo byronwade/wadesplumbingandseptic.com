@@ -8,7 +8,7 @@ order: 34
 image: >-
   /images/wordpress/a-detailed-view-of-a-leaking-water-pipe-in-a-lush-green-garden-setting-b8ce2d.webp
 imageAlt: Leaking water pipe outdoors
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Smoke testing for Santa Cruz County drain and sewer lines finds leaks, broken vents, and illegal connections by introducing non-toxic smoke that escapes at defects. Wade's Plumbing & Septic uses the test when odors or infiltration cannot be seen from a cleanout or camera pass alone.
@@ -49,7 +49,7 @@ The smoke testing process is straightforward and efficient. Here's how it works:
 
 This method allows us to pinpoint problem areas without the need for extensive excavation or camera work, saving you both time and money.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The duration of a smoke test plumbing service can vary depending on the size and complexity of the plumbing system. Typically, a smoke test takes a few hours to complete. Cost factors may include the size of the property, accessibility of the plumbing system, and the extent of any detected issues.
 
@@ -69,17 +69,11 @@ Yes, the smoke used in our tests is non-toxic and odorless, ensuring safety for 
 
 No, it is not necessary to leave your home. Our technicians perform the test quickly and safely with minimal disruption.
 
-## Why Choose Wade's Plumbing & Septic?
+## Ready for a free quote?
 
-Wade's Plumbing & Septic is the trusted choice for plumbing services in Santa Cruz County. Our team is licensed, local, and responsive, ensuring you receive the best service possible. We pride ourselves on our expertise and customer satisfaction.
+Smoke testing finds leaks in plumbing and septic lines without tearing the system apart. Call during office hours. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
-For reliable smoke test plumbing services, contact Wade's Plumbing & Septic today. Our expert team is ready to help you maintain a safe and efficient plumbing system. Schedule your appointment now and experience the peace of mind that comes with knowing your home is in good hands.
-
-## Act Now for Efficient Smoke Tests in Santa Cruz County
-
-Ensure your septic system's integrity with our professional smoke testing services.
-
-[Call Us Now](tel:+18312254344)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
 
 ## Serving Santa Cruz County, CA
 

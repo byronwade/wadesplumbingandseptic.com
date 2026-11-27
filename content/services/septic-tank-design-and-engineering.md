@@ -29,7 +29,7 @@ Recognizing when you need septic tank design services is crucial. Here are some 
 
 Our process begins with an extensive site evaluation in Santa Cruz County, California. We analyze soil conditions, groundwater levels, and usage demands. Our engineered septic systems are tailored to meet these specific conditions, ensuring efficient waste processing and environmental safety. Through this comprehensive approach, we address common septic system challenges, ensuring a seamless installation process.
 
-### Timeline and Cost Factors
+### What affects your quote
 
 The timeline for septic tank design and installation can vary depending on the complexity of the project and permitting requirements. Typically, the process can take several weeks to a few months. Cost factors include system size, type (conventional, alternative, or advanced treatment), and site-specific engineering needs.
 

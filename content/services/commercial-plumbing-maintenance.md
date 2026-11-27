@@ -44,7 +44,7 @@ At Wade's Plumbing & Septic, our comprehensive maintenance process includes:
 - **Repairs:** Immediate addressing of any detected issues such as leaks or faulty fixtures.
 - **Customized scheduling:** Maintenance schedules are tailored to your business's specific needs.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 ### How Often Should Maintenance Be Scheduled?
 
@@ -52,7 +52,7 @@ Regular maintenance should be scheduled annually, but high-usage facilities migh
 
 Flat-rate pricing, quoted on site before work begins.
 
-The cost of **commercial plumbing maintenance** can vary based on several factors, including:
+What goes into the quote:
 
 - Size and complexity of the plumbing system
 - Frequency of maintenance visits

@@ -44,18 +44,18 @@ Next, we carefully remove the grease and accumulated waste, ensuring proper disp
 
 The frequency of **grease trap cleaning Santa Cruz** depends on the size of the trap and the volume of FOG produced. Typically, restaurants and commercial kitchens require cleaning every one to three months. Our experts can help determine the ideal schedule for your specific needs.
 
-## Factors Affecting Grease Trap Cleaning Costs
+## What affects your quote
 
 Flat-rate pricing, quoted on site before work begins.
 
-Several factors can influence the cost of grease trap cleaning, including:
+Scope depends on:
 
 - The size and design of the grease trap
-- The severity of FOG buildup
+- The amount of FOG buildup
 - Accessibility of the trap
-- Frequency of required maintenance
+- How often the trap needs service
 
-Our team provides transparent pricing based on these factors, ensuring no hidden fees.
+Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
 ## Prevention Tips for Grease Trap Maintenance
 

@@ -54,17 +54,13 @@ Using advanced camera technology, we conduct a detailed inspection of your sewer
 
 After the inspection, we provide a comprehensive report, complete with video evidence. Our team will explain the findings and offer recommendations for any necessary repairs or maintenance.
 
-## Factors Affecting the Cost of Sewer Line Inspection
+## What affects your quote
 
-The cost of a sewer line inspection can vary based on several factors:
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Scope depends on:
 
 - The length and accessibility of the sewer line
-- The complexity of the inspection process
+- The complexity of the inspection
 - Additional services required, such as [drain cleaning](/service-offerings/drain-cleaning) or pipe repair
-
-Flat-rate pricing, quoted on site before work begins.
-
-Wade's Plumbing & Septic offers competitive pricing, ensuring quality service at an affordable rate for residents of Santa Cruz County.
 
 ## Preventive Measures to Avoid Sewer Line Issues
 

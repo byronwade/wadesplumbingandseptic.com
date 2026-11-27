@@ -45,9 +45,9 @@ At Wade's Plumbing & Septic, our water softener maintenance service involves a t
 - **Cycle Testing:** All cycle times are tested to confirm proper operation.
 - **Resin Bed Sanitization:** The resin bed is sanitized to maintain efficiency.
 
-## Maintenance Timeline and Cost Factors
+## What affects your quote
 
-Water softener maintenance is typically recommended annually, although frequency may vary based on water hardness and usage. Costs can depend on the system's condition and specific requirements. Our team provides transparent pricing and detailed estimates, ensuring no surprises.
+Water softener maintenance is typically recommended annually, although frequency may vary based on water hardness and usage. Costs can depend on the system's condition and specific requirements. Our team provides flat-rate pricing quoted on site and detailed estimates, ensuring no surprises.
 
 Flat-rate pricing, quoted on site before work begins.
 

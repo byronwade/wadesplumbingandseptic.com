@@ -8,7 +8,7 @@ order: 30
 image: >-
   /images/wordpress/industrial-building-facade-with-large-machinery-components-and-pipes-visible-314393.webp
 imageAlt: Industrial building with machinery and pipes
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Backflow prevention testing for Santa Cruz County properties is a scheduled check of the assembly that keeps used water out of the drinking-water line. Wade's Plumbing & Septic tests the device, records the results, and tells you if repair or replacement is needed.
@@ -42,7 +42,7 @@ At Wade's Plumbing & Septic, our backflow prevention testing process is thorough
 - Provide detailed documentation of test results
 - Offer recommendations for repairs or replacements if necessary
 
-### Timeline and Cost Factors
+### What affects your quote
 
 The testing process typically takes a few hours, depending on the complexity of your system. Costs can vary based on the number of devices and any necessary repairs or replacements. Our team will provide a clear estimate before commencing work, ensuring transparency and no surprises.
 
@@ -72,7 +72,7 @@ Contact Wade's Plumbing & Septic today to schedule your backflow prevention test
 
 Wade's Plumbing & Septic is proud to offer reliable and professional backflow testing services throughout Santa Cruz County, California. Our service area includes the communities of Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, and more.
 
-Our team is fully licensed and certified
+Our licensed plumbing crew tests assemblies during office hours. Santa Cruz County Environmental Health keeps a public list of backflow prevention device testers as a reference.
 
 ## Ensure Safe Water with Backflow Testing
 

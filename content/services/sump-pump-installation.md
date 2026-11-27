@@ -43,7 +43,7 @@ We begin with a thorough assessment of your basement and surrounding landscape t
 - Installing check valves to prevent backflow.
 - Connecting the system to your home's electrical supply.
 
-## Timeline and Cost Factors
+## What affects your quote
 
 The timeline for sump pump installation can vary based on specific site conditions, but most projects are completed within a day. Factors affecting cost include the type of pump selected, the complexity of installation, and any additional features like battery backup systems.
 

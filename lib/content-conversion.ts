@@ -292,22 +292,22 @@ function kindCta(kind: PageKind, fallback: ConversionFallback): KindCta {
 			}
 		case "contact":
 			return {
-				eyebrow: "Local · Licensed · Responsive",
+				eyebrow: "Local · Licensed · Weekdays",
 				title: "Ready to schedule service?",
 				description:
-					"Call or text 831.225.4344. We confirm your address, triage the issue, and get you on the schedule.",
+					"Call or text 831.225.4344 during office hours. We confirm your address and the next available visit.",
 			}
 		case "about":
 			return {
-				eyebrow: "Local · Licensed · Responsive",
-				title: "Need a local licensed team you can trust?",
+				eyebrow: "Local · Licensed · Weekdays",
+				title: "Ready for a free quote?",
 				description:
 					pageDescription ||
-					"Family-owned plumbing and septic specialists. Clear options, honest pricing, and work done the right way.",
+					"Family-owned plumbing and septic specialists serving Santa Cruz County. Quotes are free. Flat-rate pricing, quoted on site before work begins.",
 			}
 		case "area":
 			return {
-				eyebrow: "Local · Licensed · Responsive",
+				eyebrow: "Local · Licensed · Weekdays",
 				title: "Need plumbing or septic help near you?",
 				description:
 					pageDescription ||
@@ -315,22 +315,22 @@ function kindCta(kind: PageKind, fallback: ConversionFallback): KindCta {
 			}
 		case "tip":
 			return {
-				eyebrow: "Local · Licensed · Responsive",
-				title: "Need this handled by a pro?",
+				eyebrow: "Local · Licensed · Weekdays",
+				title: "Ready for a free quote?",
 				description:
-					"Talk with Wade's for clear options and honest pricing. Call 831.225.4344 or request service online.",
+					"Talk with Wade's. Quotes are free. Call 831.225.4344 or request a free quote.",
 			}
 		case "service":
 			return {
-				eyebrow: "Local · Licensed · Responsive",
-				title: "Ready for clear options and honest pricing?",
+				eyebrow: "Local · Licensed · Weekdays",
+				title: "Ready for a free quote?",
 				description:
 					pageDescription ||
-					"Call 831.225.4344. A local licensed team will help you decide the right next step before work begins.",
+					"Call 831.225.4344. Quotes are free. Flat-rate pricing, quoted on site before work begins.",
 			}
 		default:
 			return {
-				eyebrow: "Local · Licensed · Responsive",
+				eyebrow: "Local · Licensed · Weekdays",
 				title: "Ready to talk with Wade's?",
 				description:
 					pageDescription ||

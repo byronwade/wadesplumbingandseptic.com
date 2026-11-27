@@ -35,9 +35,9 @@ Our expert technicians follow a comprehensive process to ensure your new water h
 - **Installation:** We install the new water heater, ensuring all connections are secure and the system is functioning properly.
 - **Testing:** We conduct thorough testing to guarantee optimal performance and efficiency.
 
-## Factors Affecting Water Heater Installation Costs
+## What affects your quote
 
-The cost of water heater installation can vary based on several factors, including the type of unit, the complexity of the installation, and any necessary upgrades to existing plumbing. Our team will provide a detailed estimate and work with you to find a solution that fits your budget.
+Quotes are free. Flat-rate pricing, quoted on site before work begins. Our team will provide a detailed estimate and work with you to find a solution quoted as a flat rate on site.
 
 Flat-rate pricing, quoted on site before work begins.
 
@@ -47,7 +47,7 @@ Regular maintenance and timely repairs can extend the lifespan of your water hea
 
 ## Frequently Asked Questions About Water Heater Installation
 
-**Should I repair or replace my water heater?** If your water heater is more than 10 years old or requires frequent repairs, replacement is often more cost-effective.
+**Should I repair or replace my water heater?** If your water heater is more than 10 years old or requires frequent repairs, replacement is often the better path.
 
 **How long does the installation take?** Most installations can be completed in 2-4 hours, depending on the complexity of the setup.
 
