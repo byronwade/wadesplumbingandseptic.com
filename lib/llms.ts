@@ -1,6 +1,7 @@
 import type { ContentDocument } from "@/lib/content"
 import {
 	bookFreeQuoteLine,
+	factsPagePath,
 	notOfferedSummary,
 	quotesSummary,
 	septicSummary,
@@ -92,7 +93,8 @@ Septic: ${septicSummary}
 Not offered: ${notOfferedSummary}
 Book a free quote: ${bookFreeQuoteLine()}
 Google Business Profile: ${siteConfig.googleBusinessUrl}
-Google reviews: ${siteConfig.googleReviewUrl}`
+Google reviews: ${siteConfig.googleReviewUrl}
+Facts: ${siteConfig.url}${factsPagePath}`
 }
 
 /** Nest page headings one level under the section title. */

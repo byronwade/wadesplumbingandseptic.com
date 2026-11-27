@@ -90,7 +90,13 @@ export function CompactBusinessFacts() {
  * Server-rendered facts on About Us. Plain HTML so crawlers and assistants
  * can read hours, towns, septic installation, and free quotes without JS.
  */
-export function CompanyFacts() {
+export function CompanyFacts({
+	currentPath,
+}: {
+	currentPath?: string
+} = {}) {
+	const links = factLinks.filter((item) => item.href !== currentPath)
+
 	return (
 		<section
 			aria-labelledby="company-facts-heading"
@@ -106,7 +112,7 @@ export function CompanyFacts() {
 				</p>
 				<FactRows columns="full" rows={publicFactRows()} />
 				<ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
-					{factLinks.map((item) => (
+					{links.map((item) => (
 						<li key={item.href}>
 							<Link
 								className={linkClass}

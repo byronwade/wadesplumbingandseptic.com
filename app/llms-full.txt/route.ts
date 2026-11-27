@@ -7,6 +7,11 @@ import {
 	selectIndexableGuides,
 	selectRecentGuides,
 } from "@/lib/llms"
+import {
+	factsPagePath,
+	factsPageTitle,
+	factsPlainText,
+} from "@/lib/public-facts"
 import { siteConfig } from "@/lib/site"
 
 /** Full-text companion to /llms.txt for AI assistants that read one file. */
@@ -58,6 +63,12 @@ export async function GET() {
 
 	const body = `${llmsBusinessSummary()}
 Index: ${siteConfig.url}/llms.txt
+
+# ${factsPageTitle}
+
+Source: ${siteConfig.url}${factsPagePath}
+
+${factsPlainText()}
 
 # Recent guides
 

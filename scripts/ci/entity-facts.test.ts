@@ -21,6 +21,8 @@ import {
 import {
 	bestGuideHrefs,
 	coreServiceSlugs,
+	factsFaqs,
+	factsPagePath,
 	publicFactRows,
 } from "../../lib/public-facts"
 import { crawlerDisallow, welcomedCrawlers } from "../../lib/robots"
@@ -28,6 +30,7 @@ import {
 	articleJsonLd,
 	businessId,
 	collectionPageJsonLd,
+	companyFactsJsonLd,
 	faqPageJsonLd,
 	localBusinessJsonLd,
 	serviceJsonLd,
@@ -258,6 +261,8 @@ const summaryLines = [
 	"Not offered: septic tank pumping",
 	`Google Business Profile: ${siteConfig.googleBusinessUrl}`,
 	`Google reviews: ${siteConfig.googleReviewUrl}`,
+	`Facts: ${siteConfig.url}${factsPagePath}`,
+	`License: ${siteConfig.licenses}`,
 ]
 
 test("llms.txt opens with the business summary and links the full text", async () => {
@@ -296,6 +301,9 @@ test("llms-full.txt carries the summary, every service and the key pages", async
 		)
 	for (const slug of llmsFullPageSlugs)
 		assert.ok(lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
+	assert.ok(lines.includes(`Source: ${siteConfig.url}${factsPagePath}`))
+	assert.ok(body.includes(`Business: ${siteConfig.name}`))
+	assert.ok(body.includes(`License: ${siteConfig.licenses}`))
 	for (const slug of ["warranties", "promotions", "testimonials", "about-us"])
 		assert.ok(!lines.includes(`Source: ${siteConfig.url}/${slug}`), slug)
 	assert.ok(body.includes("# Recent guides"))
@@ -475,6 +483,14 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 		facts.find((row) => row.term === "Phone")?.detail,
 		siteConfig.phone,
 	)
+	assert.equal(
+		facts.find((row) => row.term === "License")?.detail,
+		siteConfig.licenses,
+	)
+	assert.equal(
+		facts.find((row) => row.term === "Email")?.detail,
+		siteConfig.email,
+	)
 
 	const schema = [
 		localBusinessJsonLd(),
@@ -482,6 +498,8 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 		articleJsonLd(document),
 		serviceJsonLd(document),
 		faqPageJsonLd(faqs),
+		faqPageJsonLd(factsFaqs()),
+		companyFactsJsonLd(),
 	]
 	for (const node of schema) {
 		assert.deepEqual(
@@ -510,6 +528,33 @@ test("JSON-LD for the business, articles, services and homepage FAQ matches conf
 	assert.equal(serviceJsonLd(document).provider["@id"], businessId)
 	assert.equal("aggregateRating" in localBusinessJsonLd(), false)
 	assert.equal("review" in localBusinessJsonLd(), false)
+})
+
+test("facts page FAQs match confirmed hours, license, and septic installation", () => {
+	const pairs = factsFaqs()
+	assert.ok(pairs.length >= 5)
+	for (const faq of pairs)
+		assert.deepEqual(
+			businessFactIssues(`${faq.question}\n${faq.answer}`),
+			[],
+			faq.question,
+		)
+	const answerTo = (question: RegExp) => {
+		const faq = pairs.find((item) => question.test(item.question))
+		assert.ok(faq, `facts FAQ needs a question matching ${question}`)
+		return faq.answer
+	}
+	assert.match(
+		answerTo(/pump septic tanks/i),
+		/does not offer septic tank pumping/,
+	)
+	assert.match(
+		answerTo(/hours/i),
+		new RegExp(siteConfig.hours.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+	)
+	assert.match(answerTo(/license/i), /C-36/)
+	assert.match(answerTo(/license/i), /C-42/)
+	assert.match(answerTo(/what does wade's/i), /engineered septic/)
 })
 
 test("homepage FAQ answers what Wade's does with confirmed facts", () => {

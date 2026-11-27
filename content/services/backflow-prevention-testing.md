@@ -1,7 +1,7 @@
 ---
 title: Backflow Prevention Testing in Santa Cruz County
 description: >-
-  Certified backflow prevention testing and reporting for Santa Cruz County
+  Backflow prevention testing and reporting for Santa Cruz County
   properties. Stay compliant and protect your water supply. Call 831.225.4344. Quotes are free.
 category: Plumbing
 order: 30

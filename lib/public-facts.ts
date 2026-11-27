@@ -55,7 +55,15 @@ export const bestGuideHrefs = [
 	"/glossary",
 ] as const
 
+export const factsPagePath = "/facts"
+export const factsPageTitle = "Wade's Plumbing & Septic Facts"
+export const factsPageEyebrow = "Confirmed facts"
+export const factsUpdated = "2026-11-27"
+export const factsPageDescription =
+	"Confirmed facts for Wade's Plumbing & Septic: hours, phone, license, Santa Cruz County service area, septic installation with engineers, and free quotes."
+
 export const keyPages = [
+	{ href: factsPagePath, title: "Company Facts" },
 	{ href: "/services", title: "All Services" },
 	{ href: "/service-areas", title: "Service Areas" },
 	{ href: "/about-us", title: "About Us" },
@@ -70,6 +78,7 @@ export const keyPages = [
 
 /** Visible links under the About facts block. */
 export const factLinks = [
+	{ href: factsPagePath, title: "Company facts" },
 	{ href: "/services", title: "All services" },
 	{
 		href: "/service-offerings/engineered-septic-system-installation",
@@ -112,7 +121,7 @@ export function compactFactRows(): PublicFactRow[] {
 	]
 }
 
-/** Crawlable About-page facts. Every value is from siteConfig or the lists above. */
+/** Crawlable facts. Every value is from siteConfig or the lists above. */
 export function publicFactRows(): PublicFactRow[] {
 	return [
 		{ term: "Business", detail: siteConfig.name },
@@ -121,9 +130,9 @@ export function publicFactRows(): PublicFactRow[] {
 		{
 			term: "Septic",
 			detail:
-				"Installation alongside engineers, including engineered systems. Not septic tank pumping.",
+				"Installation alongside engineers, including engineered systems. Does not pump septic tanks.",
 		},
-		{ term: "Not offered", detail: "septic tank pumping" },
+		{ term: "Not offered", detail: "Does not pump septic tanks." },
 		{ term: "Service area", detail: siteConfig.serviceArea },
 		{ term: "Towns", detail: servedTowns().join(", ") },
 		{ term: "Hours", detail: siteConfig.hours },
@@ -133,6 +142,49 @@ export function publicFactRows(): PublicFactRow[] {
 		},
 		{ term: "Pricing", detail: siteConfig.pricing },
 		{ term: "Phone", detail: siteConfig.phone },
+		{ term: "Email", detail: siteConfig.email },
+		{ term: "License", detail: siteConfig.licenses },
 		{ term: "Office", detail: siteConfig.address.display },
+	]
+}
+
+/** Plain-text facts block for /llms-full.txt and assistants that skip HTML. */
+export function factsPlainText() {
+	return publicFactRows()
+		.map((row) => `${row.term}: ${row.detail}`)
+		.join("\n")
+}
+
+/**
+ * Visible FAQs on /facts, also published as FAQPage schema. Answers stay
+ * inside siteConfig so they cannot drift from the definition list.
+ */
+export function factsFaqs() {
+	return [
+		{
+			question: "What does Wade's Plumbing & Septic do?",
+			answer: `${siteConfig.name} is a family-owned plumbing and septic company in ${siteConfig.address.city}, California. ${servicesSummary}.`,
+		},
+		{
+			question: "Does Wade's pump septic tanks?",
+			answer:
+				"No. Wade's Plumbing & Septic does not offer septic tank pumping. Septic work is installation alongside engineers, including engineered systems. For routine pumping, contact a septic pumping company.",
+		},
+		{
+			question: "Are quotes free, and how is pricing set?",
+			answer: `Yes, quotes are free. ${siteConfig.pricing}`,
+		},
+		{
+			question: "What are your hours?",
+			answer: `Office hours are ${siteConfig.hours}. Call ${siteConfig.phone} during those hours or email ${siteConfig.email}.`,
+		},
+		{
+			question: "What areas do you serve?",
+			answer: `We serve ${siteConfig.serviceArea}. Call with the street address if you are unsure.`,
+		},
+		{
+			question: "What contractor license does Wade's hold?",
+			answer: `Wade's holds ${siteConfig.licenses}.`,
+		},
 	]
 }
