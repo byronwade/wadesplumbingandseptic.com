@@ -8,6 +8,7 @@ eyebrow: "Brookdale, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Brookdale canyon community along Highway 9 in the Santa Cruz Mountains
+updated: "2026-11-27"
 ---
 
 Brookdale is small enough to miss if you're not paying attention, a tight bend in Highway 9 between Boulder Creek and Ben Lomond, redwoods pressing close to the road, the historic lodge anchoring a community that has always lived with canyon constraints. There is no municipal sewer grid threading through these lots. Water often arrives from a well or a shared supply. Septic systems sit on hillsides where every square foot of leach line was fought for during the original install.

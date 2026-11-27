@@ -7,6 +7,7 @@ eyebrow: Call-First Intake
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing and Septic team
 noindex: true
+updated: "2026-11-26"
 ---
 
 ## Call 831.225.4344

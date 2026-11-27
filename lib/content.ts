@@ -1,5 +1,6 @@
 import "server-only"
 
+import { execFileSync } from "node:child_process"
 import fs from "node:fs"
 import path from "node:path"
 import matter from "gray-matter"
@@ -34,8 +35,9 @@ export type ContentDocument = {
 	date?: string
 	updated?: string
 	/**
-	 * ISO timestamp from the markdown file mtime. Used for sitemap lastmod when
-	 * frontmatter has no `updated` / `date`.
+	 * Calendar day of the last git commit that touched this file. Used for
+	 * sitemap lastmod when frontmatter has no `updated` / `date`. Never file
+	 * mtime: on Vercel that is the deploy clock, not an editorial date.
 	 */
 	sourceModified?: string
 	image?: string
@@ -54,10 +56,48 @@ function collectionPath(collection: Collection) {
 	return path.join(CONTENT_ROOT, collection)
 }
 
+const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/
+
 function normalizeDate(value: unknown) {
 	if (!value) return undefined
-	if (value instanceof Date) return value.toISOString().slice(0, 10)
-	return String(value)
+	const raw = value instanceof Date ? value.toISOString() : String(value)
+	const day = raw.slice(0, 10)
+	return DATE_ONLY.test(day) ? day : undefined
+}
+
+let gitContentDates: Map<string, string> | undefined
+
+/** Newest commit day per path under `content/` and `lib/glossary/`. */
+function loadGitContentDates() {
+	if (gitContentDates) return gitContentDates
+	gitContentDates = new Map()
+	try {
+		const output = execFileSync(
+			"git",
+			["log", "--format=%cs", "--name-only", "--", "content", "lib/glossary"],
+			{ encoding: "utf8", maxBuffer: 20_000_000 },
+		)
+		let current: string | undefined
+		for (const line of output.split("\n")) {
+			if (DATE_ONLY.test(line)) {
+				current = line
+				continue
+			}
+			if (!line || !current || gitContentDates.has(line)) continue
+			gitContentDates.set(line, current)
+		}
+	} catch {
+		// Shallow clones and git-less test stubs still have frontmatter dates.
+	}
+	return gitContentDates
+}
+
+function gitDayForFile(absolutePath: string) {
+	const relative = path
+		.relative(process.cwd(), absolutePath)
+		.split(path.sep)
+		.join("/")
+	return loadGitContentDates().get(relative)
 }
 
 function parseDocument(absolutePath: string, slug: string): ContentDocument {
@@ -70,7 +110,7 @@ function parseDocument(absolutePath: string, slug: string): ContentDocument {
 		sanitizeArticleContent(content),
 		{ title, description, slug, eyebrow },
 	)
-	const sourceModified = fs.statSync(absolutePath).mtime.toISOString()
+	const sourceModified = gitDayForFile(absolutePath)
 
 	return {
 		slug,

@@ -25,4 +25,6 @@ export type GlossaryHub = {
 	intro: string[]
 	image: string
 	imageAlt: string
+	/** Calendar day the term source file last changed. Sitemap lastmod. */
+	updated: string
 }

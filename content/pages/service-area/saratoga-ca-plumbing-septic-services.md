@@ -5,6 +5,7 @@ eyebrow: Saratoga, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Hillside Saratoga homes in the western Santa Clara Valley foothills
+updated: "2026-11-27"
 ---
 
 Saratoga occupies the wooded western edge of the Santa Clara Valley, custom homes on wooded lots, excellent schools, and a community that values privacy and property upkeep. Wade's Plumbing & Septic is a Santa Cruz County contractor, and our Saratoga coverage is **selected and address-specific**: we take plumbing and project work for properties **near the Santa Cruz County line and mountain foothills**, not across all of Saratoga or Santa Clara County.

@@ -7,6 +7,7 @@ eyebrow: "Scotts Valley, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwood hillside near Scotts Valley residential neighborhoods
+updated: "2026-11-27"
 ---
 
 Scotts Valley reads suburban on a map but behaves like a mountain town once you leave the Highway 17 corridor. Granite Creek, Skypark, and the neighborhoods threading toward Mount Hermon and Felton mix 1970s tract homes, 1990s builds, and wooded lots where the sewer main ends and septic responsibility begins. Elevation and pine-redwood root systems shape plumbing problems as much as pipe age.

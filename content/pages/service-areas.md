@@ -21,6 +21,7 @@ gallery:
     width: 1280
     height: 720
     caption: Local plumbing and septic service
+updated: "2026-11-26"
 ---
 
 ## Local knowledge matters

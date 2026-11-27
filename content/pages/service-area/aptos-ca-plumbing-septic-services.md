@@ -7,6 +7,7 @@ eyebrow: "Aptos, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Redwood and creek landscape typical of Aptos hillside properties
+updated: "2026-11-27"
 ---
 
 Aptos stretches from the Seascape bluffs and retail corridor along Aptos Creek Road up into redwood country toward the Forest of Nisene Marks and the hills above Valencia School. That range (flat coastal subdivisions, 1970s ranch neighborhoods, and wooded parcels on steep grades), means two houses on the same ZIP code can have completely different plumbing and wastewater setups.

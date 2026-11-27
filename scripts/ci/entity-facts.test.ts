@@ -585,6 +585,61 @@ test("sitemap and static App Router pages are not shadowed by redirects", async 
 })
 
 for (const archive of ["popular", "trending"]) {
+	test(`services ${archive} archive is not redirected`, async () => {
+		const { default: nextConfig } = await import("../../next.config")
+		for (const query of ["", "?page=2"]) {
+			const response = await unstable_getResponseFromNextConfig({
+				url: `https://example.com/services/${archive}${query}`,
+				nextConfig,
+			})
+			assert.equal(response.status, 200)
+			assert.equal(response.headers.get("location"), null)
+		}
+	})
+}
+
+test("legacy /services/{slug} aliases redirect to /service-offerings/{slug}", async () => {
+	const { default: nextConfig } = await import("../../next.config")
+	for (const slug of [
+		"drain-cleaning",
+		"engineered-septic-system-installation",
+	]) {
+		const response = await unstable_getResponseFromNextConfig({
+			url: `https://example.com/services/${slug}?ref=nav`,
+			nextConfig,
+		})
+		assert.equal(response.status, 308, slug)
+		assert.equal(
+			response.headers.get("location"),
+			`https://example.com/service-offerings/${slug}?ref=nav`,
+			slug,
+		)
+	}
+})
+
+test("retired /services/{slug} aliases skip the extra hop", async () => {
+	const { default: nextConfig } = await import("../../next.config")
+	for (const [slug, destination] of [
+		["septic-pumping", "/service-offerings/septic-tank-maintenance-and-care"],
+		["hydro-jetting-for-drain-clearing", "/service-offerings/hydro-jetting"],
+		["septic-installation", "/service-offerings/septic-system-installation"],
+	]) {
+		for (const prefix of ["/services", "/service-offerings"]) {
+			const response = await unstable_getResponseFromNextConfig({
+				url: `https://example.com${prefix}/${slug}`,
+				nextConfig,
+			})
+			assert.equal(response.status, 308, `${prefix}/${slug}`)
+			assert.equal(
+				response.headers.get("location"),
+				`https://example.com${destination}`,
+				`${prefix}/${slug}`,
+			)
+		}
+	}
+})
+
+for (const archive of ["popular", "trending"]) {
 	test(`expert-tips ${archive} archive is not redirected`, async () => {
 		const { default: nextConfig } = await import("../../next.config")
 		for (const query of ["", "?page=2&category=plumbing-tips"]) {

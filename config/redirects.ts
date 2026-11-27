@@ -46,6 +46,30 @@ const SERVICE_CATEGORY_ALIASES = [
 	["septic-services", "septic"],
 ] as const
 
+/**
+ * Retired service slugs that already 308 under /service-offerings/.
+ * The /services/ prefix must land on the live URL in one hop.
+ */
+const RETIRED_SERVICE_SLUGS = [
+	["hydro-jetting-for-drain-clearing", "/service-offerings/hydro-jetting"],
+	["storm-drain-clearing", "/service-offerings/storm-drain-cleaning"],
+	[
+		"shower-head-replacement",
+		"/service-offerings/shower-installation-and-repair",
+	],
+	["septic-pumping", "/service-offerings/septic-tank-maintenance-and-care"],
+	[
+		"septic-tank-cleaning-and-pumping",
+		"/service-offerings/septic-tank-maintenance-and-care",
+	],
+	["septic-installation", "/service-offerings/septic-system-installation"],
+	["commercial-repairs", "/service-offerings/commercial-plumbing-maintenance"],
+	[
+		"alternative-septic-system-installation",
+		"/service-offerings/engineered-septic-system-installation",
+	],
+] as const
+
 /** Routing configuration shared by Next and the server-side search inventory. */
 export const siteRedirects: SiteRedirect[] = [
 	// Retired availability pages resolve directly to a schedulable service.
@@ -234,6 +258,22 @@ export const siteRedirects: SiteRedirect[] = [
 		destination: "/service-category/commercial",
 		permanent: true,
 	},
+	// Retired slugs need both prefixes so /services/{slug} does not hop
+	// through /service-offerings/{slug} before the live page.
+	...RETIRED_SERVICE_SLUGS.flatMap(([slug, destination]) =>
+		[`/service-offerings/${slug}`, `/services/${slug}`].map((source) => ({
+			source,
+			destination,
+			permanent: true,
+		})),
+	),
+	{
+		// WordPress-era aliases. Canonical service URLs live under
+		// /service-offerings/. Ranked archives keep their own routes.
+		source: "/services/:slug((?!(?:popular|trending)(?:/|$))[^/]+)",
+		destination: "/service-offerings/:slug",
+		permanent: true,
+	},
 	{
 		source: "/service-category",
 		destination: "/services",
@@ -255,29 +295,10 @@ export const siteRedirects: SiteRedirect[] = [
 		permanent: true,
 	},
 	{
-		source: "/service-offerings/hydro-jetting-for-drain-clearing",
-		destination: "/service-offerings/hydro-jetting",
-		permanent: true,
-	},
-	{
-		source: "/service-offerings/storm-drain-clearing",
-		destination: "/service-offerings/storm-drain-cleaning",
-		permanent: true,
-	},
-	{
-		source: "/service-offerings/shower-head-replacement",
-		destination: "/service-offerings/shower-installation-and-repair",
-		permanent: true,
-	},
-	...[
-		"/service-offerings/septic-pumping",
-		"/service-offerings/septic-tank-cleaning-and-pumping",
-		"/santa-cruz/septic-pumping",
-	].map((source) => ({
-		source,
+		source: "/santa-cruz/septic-pumping",
 		destination: "/service-offerings/septic-tank-maintenance-and-care",
 		permanent: true,
-	})),
+	},
 	...["felton", "boulder-creek", "mount-hermon", "la-selva-beach"].map(
 		(city) => ({
 			source: `/service-area/${city}/septic-tank-cleaning-and-pumping`,
@@ -285,21 +306,6 @@ export const siteRedirects: SiteRedirect[] = [
 			permanent: true,
 		}),
 	),
-	{
-		source: "/service-offerings/septic-installation",
-		destination: "/service-offerings/septic-system-installation",
-		permanent: true,
-	},
-	{
-		source: "/service-offerings/commercial-repairs",
-		destination: "/service-offerings/commercial-plumbing-maintenance",
-		permanent: true,
-	},
-	{
-		source: "/service-offerings/alternative-septic-system-installation",
-		destination: "/service-offerings/engineered-septic-system-installation",
-		permanent: true,
-	},
 	{
 		source: "/engineered-septic-systems-santa-cruz-county",
 		destination: "/service-offerings/engineered-septic-system-installation",

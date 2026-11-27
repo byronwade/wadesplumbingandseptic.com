@@ -7,6 +7,7 @@ eyebrow: "La Selva Beach, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: La Selva Beach coastal community with wooded residential lots
+updated: "2026-11-27"
 ---
 
 La Selva Beach trades boardwalk crowds for a quieter rhythm, surf in the morning, fog by afternoon, and neighborhoods where people know which streets flood first when January rains arrive. The community stretches from beach-adjacent homes near San Andreas Road to wooded lots blending toward Corralitos and Watsonville. Housing ranges from mid-century beach houses to larger parcels where the septic tank is as important as the water heater.

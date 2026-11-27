@@ -4,6 +4,7 @@ description: Get professional plumbing diagnosis, repair documentation, photos, 
 eyebrow: Clear Claim Documentation
 image: /images/work/drain-cleaning-equipment.webp
 imageAlt: Exposed plumbing repair area at a property
+updated: "2026-10-19"
 ---
 
 ## Plumbing support after property damage

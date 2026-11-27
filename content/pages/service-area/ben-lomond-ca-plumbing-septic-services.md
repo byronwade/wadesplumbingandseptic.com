@@ -7,6 +7,7 @@ eyebrow: "Ben Lomond, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: "Redwood forest and mountain homes in Ben Lomond, California"
+updated: "2026-11-27"
 ---
 
 Ben Lomond doesn't announce itself. You drive past Felton on Highway 9, cross the river, and suddenly the road narrows, the canopy closes in, and every driveway points uphill at an angle that makes you rethink where you'd put a septic tank. That's the everyday reality for plumbing and septic work here, and it's why Wade's Plumbing & Septic has spent years in these canyons rather than treating Ben Lomond like a generic mountain town.

@@ -4,6 +4,7 @@ description: Find potential manufacturer and utility rebates for efficient water
 eyebrow: Efficiency Incentives
 image: /images/work/tankless-water-heater-installation.webp
 imageAlt: Exterior tankless water heater installation
+updated: "2026-07-29"
 ---
 
 ## Lower the cost of efficient equipment

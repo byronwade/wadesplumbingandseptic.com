@@ -9,6 +9,7 @@ image: /images/work/multi-tank-excavation.webp
 imageAlt: Excavation for a replacement septic system
 eyebrow: Septic Failure Response
 noindex: true
+updated: "2026-11-25"
 ---
 
 ## Failed Septic System Help

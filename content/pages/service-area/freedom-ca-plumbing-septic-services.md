@@ -5,6 +5,7 @@ eyebrow: Freedom, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural south Santa Cruz County landscape near Freedom, California
+updated: "2026-11-27"
 ---
 
 Freedom sits in the heart of south Santa Cruz County farm country, flat Pajaro Valley bottomlands mixed with older residential pockets along Freedom Boulevard and scattered rural parcels west toward the foothills. Most properties here are not on municipal sewer. Wells, septic systems, and agricultural water lines are everyday infrastructure, and when something fails, you need a crew that understands how this corridor actually works.

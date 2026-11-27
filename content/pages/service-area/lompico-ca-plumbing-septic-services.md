@@ -8,6 +8,7 @@ eyebrow: "Lompico, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural forest roads and mountain homes in the Lompico community near Zayante
+updated: "2026-11-27"
 ---
 
 Lompico is one of those Santa Cruz County places you commit to. The road in, the community's own character, homes set back among madrone and redwood on parcels that were never meant for tract-housing infrastructure. There is no city water main waiting at the corner. Sewer doesn't exist. Your plumbing and septic system _is_ your utility company, and when it fails, you're not calling a municipal crew.

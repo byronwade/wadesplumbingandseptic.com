@@ -5,6 +5,7 @@ eyebrow: Pasatiempo, CA
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Pasatiempo hillside homes overlooking the golf course in Santa Cruz County
+updated: "2026-11-27"
 ---
 
 Pasatiempo is a hillside community built around one of California's classic golf courses, winding roads, custom homes with canyon and fairway views, and a character distinct from both Santa Cruz below and Scotts Valley above. Developed in the 1920s and refined over decades, Pasatiempo attracts homeowners who care about their properties and expect plumbing work that respects older architecture, tight setbacks, and the quirks of homes that have been remodeled more than once.

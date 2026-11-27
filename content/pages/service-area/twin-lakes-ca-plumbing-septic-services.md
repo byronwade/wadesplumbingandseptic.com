@@ -7,6 +7,7 @@ eyebrow: "Twin Lakes, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Twin Lakes coastal community between Santa Cruz and Capitola
+updated: "2026-11-27"
 ---
 
 Twin Lakes is easy to miss on a commute, until a winter storm pushes surf close to the beach flats or a summer rental week ends with a plumbing surprise. Sandwiched between Santa Cruz and Capitola, this small beach neighborhood mixes narrow ocean-side lots, modest single-story homes, and a few properties climbing the bluff where wastewater setups change with elevation.

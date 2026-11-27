@@ -8,6 +8,7 @@ eyebrow: "Zayante, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Remote redwood roads and rural homes in the Zayante area of Santa Cruz County
+updated: "2026-11-27"
 ---
 
 Zayante doesn't show up on every map the same way twice. The name covers a scatter of homes off East Zayante Road, Old Felton Road, and the side lanes that branch into forest, places where GPS confidence drops and the plumber you hire needs to know how to find a tank lid under duff and fir needles.

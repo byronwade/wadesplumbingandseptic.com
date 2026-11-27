@@ -7,6 +7,7 @@ order: 7
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing & Septic team ready for service calls
 eyebrow: Call or Text 831.225.4344
+updated: "2026-11-26"
 ---
 
 Call or text 831.225.4344, or email support@wadesinc.io. Quotes are free. Flat-rate pricing, quoted on site before work begins.

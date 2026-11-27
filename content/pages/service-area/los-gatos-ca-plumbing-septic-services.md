@@ -5,6 +5,7 @@ eyebrow: Los Gatos, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Hillside homes in the Los Gatos foothills near the Santa Cruz County border
+updated: "2026-11-27"
 ---
 
 Los Gatos sits in the western Santa Clara Valley, upscale hillside neighborhoods, older downtown charm, and mountain-adjacent properties where Santa Clara County meets the Santa Cruz Mountains. Wade's Plumbing & Septic is based in Santa Cruz County, and our work in Los Gatos is **selected coverage only**: plumbing and project service for properties **near the Santa Cruz County line**, not blanket service across all of Los Gatos or Santa Clara County.

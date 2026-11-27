@@ -9,6 +9,7 @@ image: /images/locations/river-and-redwoods.webp
 imageAlt: >-
   Live Oak neighborhood between Santa Cruz and Capitola with mixed residential
   housing
+updated: "2026-11-27"
 ---
 
 Live Oak is the unincorporated stretch most people drive through without naming, until they own a house here. Soquel Drive and Portola Drive carry steady traffic past 1950s ranch homes, newer infill, and pockets that still feel rural a few blocks off the main roads. You are close enough to Seabright and Capitola for a short bike ride, but far enough from city hall that sewer versus septic answers come from county records, not a quick online map.

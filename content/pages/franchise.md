@@ -7,6 +7,7 @@ eyebrow: Company
 image: /images/team/wades-team.webp
 imageAlt: The Wade's Plumbing & Septic team
 noindex: true
+updated: "2026-10-19"
 ---
 
 ## Interested in growing with Wade's?

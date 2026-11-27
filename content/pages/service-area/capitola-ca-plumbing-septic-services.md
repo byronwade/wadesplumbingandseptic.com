@@ -7,6 +7,7 @@ eyebrow: "Capitola, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Capitola coastal neighborhood served by Wade's Plumbing and Septic
+updated: "2026-11-27"
 ---
 
 Capitola packs a lot of plumbing personality into a small footprint. The Village and Esplanade sit a few blocks from the wharf, where cottages and duplexes date to eras when pipes were smaller and bathrooms were added one at a time. Climb toward Upper Capitola and Capitola Road, and you find 1960s to 80s ranches on larger lots, some on city sewer, some still on septic as you approach the Soquel border.

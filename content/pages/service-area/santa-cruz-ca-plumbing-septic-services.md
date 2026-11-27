@@ -7,6 +7,7 @@ eyebrow: "Santa Cruz, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Redwood-lined hillside near Santa Cruz with residential plumbing service area
+updated: "2026-11-27"
 ---
 
 From the Westside flats along Mission Street to the redwood pockets above UC Santa Cruz, Santa Cruz homes sit in a tight band between ocean fog and canyon runoff. Wade's Plumbing & Septic works this mix of housing stock often enough to know that a Seabright bungalow from the 1920s and a Harvey West condo built in the 2000s rarely fail for the same reason, and that matters when a kitchen drain backs up or a hall floor is wet.
