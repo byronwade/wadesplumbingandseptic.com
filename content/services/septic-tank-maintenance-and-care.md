@@ -65,6 +65,6 @@ For all your septic system needs in Santa Cruz County, California, contact Wade'
 
 Ensure the longevity and efficiency of your septic system with our professional maintenance services.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

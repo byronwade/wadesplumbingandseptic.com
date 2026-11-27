@@ -102,6 +102,6 @@ During the repair service, our team will assess the condition of your leach fiel
 
 A working leach field keeps effluent in the soil instead of pooling in the yard. Call during office hours for a free quote. Flat-rate pricing, quoted on site before work begins.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

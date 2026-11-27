@@ -68,4 +68,4 @@ Ocean proximity in Twin Lakes accelerates corrosion on hose bibs, exterior shuto
 
 ## Twin Lakes Appointments
 
-Contact Wade's at [831.225.4344](tel:+18312254344) for Twin Lakes plumbing or septic service. Quotes are free: [Get a Free Quote](/contact).
+Contact Wade's at [831.225.4344](tel:+18312254344) for Twin Lakes plumbing or septic service. Quotes are free: [Get a Free Quote](/contact#quote).

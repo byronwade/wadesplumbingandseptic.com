@@ -74,4 +74,4 @@ Wade's handles septic tank location and lid exposure for Lompico homes when reco
 
 ## Schedule a visit
 
-Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time. Quotes are free: [Get a Free Quote](/contact).
+Call Wade's at **[831.225.4344](tel:+18312254344)** for Lompico plumbing or septic. Review [service areas](/service-areas), [septic solutions](/septic-solutions), or [contact us](/contact), include whether truck access is tight so we bring the right equipment the first time. Quotes are free: [Get a Free Quote](/contact#quote).

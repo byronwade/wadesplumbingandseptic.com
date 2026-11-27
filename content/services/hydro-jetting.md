@@ -57,7 +57,7 @@ Wade's Plumbing & Septic provides hydro jetting for Santa Cruz County homes and 
 
 ## Clear Your Drains Today with Expert Hydro Jetting!
 
-Clear stubborn drain and sewer lines with professional hydro jetting in Santa Cruz County. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+Clear stubborn drain and sewer lines with professional hydro jetting in Santa Cruz County. [Call Us Now](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ## Frequently Asked Questions
 

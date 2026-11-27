@@ -110,6 +110,6 @@ Whether you're in Santa Cruz or any of the surrounding communities, Wade's Plumb
 
 Gain peace of mind with our thorough drain inspections, ensuring optimal performance and preventing costly repairs.
 
-[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us Today](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

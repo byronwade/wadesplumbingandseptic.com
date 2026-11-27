@@ -84,7 +84,7 @@ Reliable Repair Services
 
 Ensure your bathroom fixtures operate efficiently with our trusted repair services.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ### Trusted Septic Toilet Repair in Santa Cruz County
 

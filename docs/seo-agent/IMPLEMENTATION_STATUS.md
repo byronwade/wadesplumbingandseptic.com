@@ -1,5 +1,13 @@
 # Eve SEO Agent Implementation Status
 
+## Public-site post-deploy QA after PRs 291 to 312 (2026-11-27)
+
+- Scope: local production-build regression pass after claim cleanup, AI schema/llms alignment, town/service pages, quote-form hide-when-unconfigured, Inter preload / polyfill strip, and the 114-file blog accuracy sweep. Phone, address, hours, and license values were not changed. No prices, ratings, reviews, emergency, 24/7, pumping-as-a-service, satisfaction, founding-year, or fast-response copy was added.
+- Found: keyboard submit on the quote form left focus on the button after validation failed, so a keyboard user had to Shift+Tab to the errors. Town and older service markdown still used `[Get a Free Quote](/contact)` while heroes already used `/contact#quote`. Sitemap crawl, JSON-LD, NAP, llms, robots, tel links, Inter preload, and banned-claim grep were clean.
+- Fix: the quote form focuses the first invalid field (or the failure alert when sending fails). Leftover Get a Free Quote markdown now points at `/contact#quote`. `crawl-built-seo` requires exactly one H1 on every HTML sitemap page, not only service and town URLs.
+- Guard: `quote-form.test.tsx` requires the failure alert to be focusable. `local-seo-lead-paths.test.ts` fails any `[Get a Free Quote](...)` in `content/` that is not `/contact#quote`.
+- Acceptance on Node 22.23.4 in this VM (not GitHub Actions): `npm run lint` exit 0; `npm run typecheck` exit 0; `npm run format:check` exit 0; `npm run seo:check` exit 0; `npm run build` exit 0; `npm run ci:built-seo` exit 0. Browser pass on home, services, Santa Cruz town, a guide, and contact at 360px: no console errors or hydration warnings, every Call button is `tel:+18312254344`, empty submit shows field errors and moves focus to Name. Truth state: `MOCK_VERIFIED` local repository, SEO, production-server, and browser checks. Not a ranking or indexing claim.
+
 ## Public-site blog and long-tail accuracy sweep (2026-11-27)
 
 - Scope: sitewide accuracy pass on Expert Tips posts, older service subpages, glossary hub copy, and footer-linked pages after PRs 291 to 311. Hard rules: Wade's installs septic systems with engineers and does not pump tanks; hours are Monday to Friday, 9:00 AM to 5:00 PM; no emergency, 24/7, same-day, or after-hours service; no Wade's prices or cost figures (flat-rate pricing quoted on site, quotes are free); no Satisfaction guaranteed, Since 2005, Fast response, invented reviews, ratings, or awards. Phone, address, hours, and license values were not changed. Google Business Profile was not touched.

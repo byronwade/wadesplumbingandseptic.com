@@ -72,4 +72,4 @@ In Davenport, marine air accelerates wear on exposed plumbing, leading to corrod
 
 ## North Coast service without the runaround
 
-For Davenport plumbing or septic, call Wade's at **[831.225.4344](tel:+18312254344)**. Explore all communities on [service areas](/service-areas), read [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. We'll tell you whether it's plumbing, septic, or both before we head up Highway 1. Quotes are free: [Get a Free Quote](/contact).
+For Davenport plumbing or septic, call Wade's at **[831.225.4344](tel:+18312254344)**. Explore all communities on [service areas](/service-areas), read [septic solutions](/septic-solutions), or [contact us](/contact) with your address and symptoms. We'll tell you whether it's plumbing, septic, or both before we head up Highway 1. Quotes are free: [Get a Free Quote](/contact#quote).

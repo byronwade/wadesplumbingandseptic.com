@@ -67,4 +67,4 @@ The Santa Cruz marine layer keeps soils damp much of the year, which feeds root 
 
 ## Schedule Service in Santa Cruz
 
-Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact).
+Wade's Plumbing & Septic serves Santa Cruz and neighboring communities. For issues, call [831.225.4344](tel:+18312254344). Quotes are free: [Get a Free Quote](/contact#quote).

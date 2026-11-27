@@ -66,4 +66,4 @@ Hard water mineral buildup shows up on fixtures throughout the Pajaro Valley, in
 
 ## Watsonville Area Contact
 
-Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+18312254344) for plumbing or septic service. Quotes are free: [Get a Free Quote](/contact).
+Wade's serves Watsonville and the surrounding valley. Call [831.225.4344](tel:+18312254344) for plumbing or septic service. Quotes are free: [Get a Free Quote](/contact#quote).

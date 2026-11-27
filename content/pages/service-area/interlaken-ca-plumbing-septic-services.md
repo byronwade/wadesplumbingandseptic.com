@@ -72,4 +72,4 @@ Not necessarily. Saturated soils after Interlaken winter rains can temporarily o
 
 ## Schedule service in Interlaken
 
-Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing. We will schedule a visit and come prepared for south county conditions. Quotes are free: [Get a Free Quote](/contact).
+Contact Wade's Plumbing & Septic at [831.225.4344](tel:+18312254344) for plumbing or septic service in Interlaken. Tell us your address and describe what you are seeing. We will schedule a visit and come prepared for south county conditions. Quotes are free: [Get a Free Quote](/contact#quote).

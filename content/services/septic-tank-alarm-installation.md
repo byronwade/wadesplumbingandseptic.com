@@ -55,6 +55,6 @@ If you're considering a septic tank alarm installation in Santa Cruz County, Cal
 
 Ensure the smooth operation of your septic system with our reliable alarm installations.
 
-[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us Now](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 Licensed Contractor: California CSLB #1087260 (C-36 Plumbing, C-42 Sanitation System)

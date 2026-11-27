@@ -1,6 +1,6 @@
 "use client"
 
-import { useId, useRef, useState, type FormEvent } from "react"
+import { useEffect, useId, useRef, useState, type FormEvent } from "react"
 
 import { CallButton } from "@/components/call-button"
 import { Check, CircleHelp, Loader2 } from "@/components/icons"
@@ -63,6 +63,11 @@ export function QuoteForm({
 }) {
 	const formId = useId()
 	const successRef = useRef<HTMLHeadingElement>(null)
+	const alertRef = useRef<HTMLDivElement>(null)
+	const nameRef = useRef<HTMLInputElement>(null)
+	const phoneRef = useRef<HTMLInputElement>(null)
+	const emailRef = useRef<HTMLInputElement>(null)
+	const messageRef = useRef<HTMLTextAreaElement>(null)
 	const [status, setStatus] = useState<FormStatus>("idle")
 	const [errors, setErrors] = useState<Partial<Record<QuoteField, string>>>({})
 	const [formError, setFormError] = useState<string | null>(initialError)
@@ -78,6 +83,25 @@ export function QuoteForm({
 		return errors[field] ? `${id}-error` : undefined
 	}
 
+	useEffect(() => {
+		if (status === "success") successRef.current?.focus()
+		if (status === "error") alertRef.current?.focus()
+	}, [status])
+
+	useEffect(() => {
+		if (initialError) alertRef.current?.focus()
+	}, [initialError])
+
+	function focusFirstError(nextErrors: Partial<Record<QuoteField, string>>) {
+		queueMicrotask(() => {
+			if (nextErrors.name) nameRef.current?.focus()
+			else if (nextErrors.phone) phoneRef.current?.focus()
+			else if (nextErrors.email) emailRef.current?.focus()
+			else if (nextErrors.message) messageRef.current?.focus()
+			else alertRef.current?.focus()
+		})
+	}
+
 	async function onSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault()
 		if (status === "submitting") return
@@ -88,6 +112,7 @@ export function QuoteForm({
 			setStatus("idle")
 			setErrors(parsed.errors)
 			setFormError("Please fix the highlighted fields and try again.")
+			focusFirstError(parsed.errors)
 			return
 		}
 
@@ -111,9 +136,13 @@ export function QuoteForm({
 					: {}
 
 			if (response.status === 400 && payloadBody.errors) {
-				setErrors(payloadBody.errors as Partial<Record<QuoteField, string>>)
+				const nextErrors = payloadBody.errors as Partial<
+					Record<QuoteField, string>
+				>
+				setErrors(nextErrors)
 				setFormError("Please fix the highlighted fields and try again.")
 				setStatus("idle")
+				focusFirstError(nextErrors)
 				return
 			}
 
@@ -128,7 +157,6 @@ export function QuoteForm({
 			}
 
 			setStatus("success")
-			queueMicrotask(() => successRef.current?.focus())
 		} catch {
 			setFormError(quoteUnavailableCopy)
 			setStatus("error")
@@ -188,7 +216,9 @@ export function QuoteForm({
 			{formError ? (
 				<div
 					className="border-destructive/40 bg-destructive/10 text-destructive mb-5 rounded-md border px-3 py-3 text-sm"
+					ref={alertRef}
 					role="alert"
+					tabIndex={-1}
 				>
 					<p className="flex gap-2">
 						<CircleHelp aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
@@ -215,6 +245,7 @@ export function QuoteForm({
 						id={nameId}
 						maxLength={80}
 						name="name"
+						ref={nameRef}
 						required
 						type="text"
 					/>
@@ -242,6 +273,7 @@ export function QuoteForm({
 							inputMode="tel"
 							maxLength={32}
 							name="phone"
+							ref={phoneRef}
 							required
 							type="tel"
 						/>
@@ -269,6 +301,7 @@ export function QuoteForm({
 							id={emailId}
 							maxLength={120}
 							name="email"
+							ref={emailRef}
 							type="email"
 						/>
 						{errors.email ? (
@@ -317,6 +350,7 @@ export function QuoteForm({
 						id={messageId}
 						maxLength={1000}
 						name="message"
+						ref={messageRef}
 						required
 						rows={5}
 					/>

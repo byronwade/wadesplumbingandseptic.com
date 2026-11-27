@@ -69,4 +69,4 @@ Part-time occupancy changes how septic systems load, so a Felton cabin used only
 
 ## Schedule service
 
-For plumbing or septic help in Felton, call Wade's at **[831.225.4344](tel:+18312254344)**. Browse all coverage on our [service areas](/service-areas) page, learn more about [septic solutions](/septic-solutions), or [contact us](/contact) with questions about your property. Quotes are free: [Get a Free Quote](/contact).
+For plumbing or septic help in Felton, call Wade's at **[831.225.4344](tel:+18312254344)**. Browse all coverage on our [service areas](/service-areas) page, learn more about [septic solutions](/septic-solutions), or [contact us](/contact) with questions about your property. Quotes are free: [Get a Free Quote](/contact#quote).

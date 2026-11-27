@@ -73,7 +73,7 @@ No, it is not necessary to leave your home. Our technicians perform the test qui
 
 Smoke testing finds leaks in plumbing and septic lines without tearing the system apart. Call during office hours. Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ## Serving Santa Cruz County, CA
 

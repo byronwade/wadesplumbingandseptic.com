@@ -52,6 +52,7 @@ test("a redirected failure is visible in server HTML without JavaScript", () => 
 	)
 	assert.ok(errorHtml.includes(quoteUnavailableCopy), errorHtml)
 	assert.ok(errorHtml.includes('role="alert"'), errorHtml)
+	assert.ok(errorHtml.includes('tabindex="-1"'), errorHtml)
 	assert.ok(errorHtml.includes('action="/api/quote"'), errorHtml)
 	assert.ok(errorHtml.includes(`href="${contactInfo.phoneHref}"`), errorHtml)
 	assert.ok(errorHtml.includes(`href="${contactInfo.emailHref}"`), errorHtml)

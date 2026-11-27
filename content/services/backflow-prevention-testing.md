@@ -78,7 +78,7 @@ Our licensed plumbing crew tests assemblies during office hours. Santa Cruz Coun
 
 Safeguard your home's drinking water with our expert backflow testing services in Santa Cruz County.
 
-[Call Us](tel:+18312254344) [Get a Free Quote](/contact)
+[Call Us](tel:+18312254344) [Get a Free Quote](/contact#quote)
 
 ### Safe Water Assurance: Backflow Testing in Santa Cruz County
 
