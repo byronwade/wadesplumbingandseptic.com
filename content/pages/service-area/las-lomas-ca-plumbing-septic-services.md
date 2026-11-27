@@ -5,6 +5,7 @@ eyebrow: Las Lomas, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Rural south county landscape near Las Lomas, California
+updated: "2026-11-27"
 ---
 
 Las Lomas is a small census-designated place in the far south of Santa Cruz County, residential pockets and rural parcels near the Watsonville city limits and the agricultural lands of the Pajaro Valley. It is not a place with a downtown or a shopping center; it is a collection of streets and lanes where families, farmworkers, and long-term residents live on septic, draw from wells, and depend on local contractors who actually show up.

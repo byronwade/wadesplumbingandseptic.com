@@ -5,6 +5,7 @@ eyebrow: Aptos Hills-Larkin Valley, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: Equestrian property and oak hills in Aptos Hills-Larkin Valley, California
+updated: "2026-11-27"
 ---
 
 Aptos Hills-Larkin Valley is one of Santa Cruz County's most distinctive rural communities, expansive oak-studded hills, equestrian properties, and custom homes on multi-acre parcels along Larkin Valley Road and the connecting lanes above Aptos. This is not suburban Aptos; it is horse-country living where private wells, septic systems, and barn plumbing are central to how properties function day to day.

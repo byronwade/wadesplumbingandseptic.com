@@ -5,6 +5,7 @@ eyebrow: Interlaken, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Rural residential area near Interlaken in Santa Cruz County, California
+updated: "2026-11-27"
 ---
 
 Interlaken is a small, unincorporated community on the eastern edge of the Watsonville area, residential streets and rural lanes where neighborhood houses sit close to strawberry fields, flower crops, and the open Pajaro Valley. Named for the Swiss lake country but firmly rooted in south Santa Cruz County, Interlaken is the kind of place where you know your neighbors and your plumber should know the difference between a municipal connection and a private septic system on the next parcel over.

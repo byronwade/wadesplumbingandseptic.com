@@ -235,6 +235,13 @@ export const siteRedirects: SiteRedirect[] = [
 		permanent: true,
 	},
 	{
+		// WordPress-era aliases. Canonical service URLs live under
+		// /service-offerings/. Ranked archives keep their own routes.
+		source: "/services/:slug((?!(?:popular|trending)(?:/|$))[^/]+)",
+		destination: "/service-offerings/:slug",
+		permanent: true,
+	},
+	{
 		source: "/service-category",
 		destination: "/services",
 		permanent: true,

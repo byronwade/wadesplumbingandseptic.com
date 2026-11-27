@@ -8,6 +8,7 @@ order: 60
 image: /images/work/engineered-septic-hero.webp
 imageAlt: Septic System Replacement in Santa Cruz County
 eyebrow: Santa Cruz County
+updated: "2026-11-25"
 ---
 
 **Licensed California Contractor** · Santa Cruz, CA service area

@@ -7,6 +7,7 @@ eyebrow: "Boulder Creek, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Boulder Creek redwood canyon and San Lorenzo River upstream of Felton
+updated: "2026-11-27"
 ---
 
 Highway 9 keeps climbing past Ben Lomond, the air cools, and Boulder Creek feels like the point where the San Lorenzo Valley turns genuinely rural. Mailboxes spaced farther apart. Driveways that switchback. Wells instead of water mains. Septic tanks you sometimes find on a pad you poured yourself because the original installer is three owners back in the chain of title.

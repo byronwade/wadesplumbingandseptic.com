@@ -5,6 +5,7 @@ eyebrow: Amesti, CA
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: South Santa Cruz County rural property near Amesti, California
+updated: "2026-11-27"
 ---
 
 Amesti is a quiet census-designated place tucked between Watsonville and the rolling agricultural lands south of the city, modest homes, small farms, and rural lots threaded by Amesti Creek and the county roads that connect Freedom, Las Lomas, and the Pajaro Valley floor. It is not a town center with a main street; it is a patchwork of residential parcels where septic systems, well pumps, and aging plumbing are part of daily life.

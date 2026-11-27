@@ -4,6 +4,7 @@ description: Learn how Wade's documents workmanship, manufacturer coverage, cust
 eyebrow: Workmanship documentation
 image: /images/work/precision-valve-installation.webp
 imageAlt: Clean professional plumbing valve installation
+updated: "2026-11-26"
 ---
 
 ## We stand behind authorized work

@@ -58,6 +58,12 @@ for (const collection of COLLECTIONS) {
 			warnings.push(`${file}: post missing date`)
 		}
 
+		if (!data.date && !data.updated) {
+			errors.push(
+				`${file}: missing date or updated (sitemap lastmod cannot use file mtime)`,
+			)
+		}
+
 		if (data.image && typeof data.image === "string") {
 			const imagePath = data.image.startsWith("/")
 				? path.join(process.cwd(), "public", data.image)

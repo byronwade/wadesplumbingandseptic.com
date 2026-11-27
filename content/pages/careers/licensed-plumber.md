@@ -6,6 +6,7 @@ description:
 eyebrow: Careers
 image: /images/team/byron-working.webp
 imageAlt: Wade's Plumbing & Septic field team at work
+updated: "2026-10-19"
 ---
 
 ## Job Description

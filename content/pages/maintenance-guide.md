@@ -3,6 +3,7 @@ title: Plumbing & Septic Maintenance Guide
 description: A practical homeowner maintenance schedule for drains, water heaters, water pressure, fixtures, sewer lines, and septic systems.
 eyebrow: Homeowner Resource
 order: 8
+updated: "2026-11-26"
 ---
 
 ## Monthly checks

@@ -5,6 +5,7 @@ eyebrow: Day Valley, CA
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Oak-studded hills and equestrian properties in Day Valley, Santa Cruz County
+updated: "2026-11-27"
 ---
 
 Day Valley occupies the oak-covered hills between Aptos and the Santa Cruz Mountains, a landscape of winding roads, horse properties, larger residential lots, and homes built to blend into the woodland rather than dominate it. Day Valley Road and connecting lanes serve a community where septic systems, private wells, and barn plumbing are as common as suburban sewer lines are elsewhere.

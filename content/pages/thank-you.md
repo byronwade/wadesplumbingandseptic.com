@@ -5,6 +5,7 @@ eyebrow: Message Received
 image: /images/team/wades-team.webp
 imageAlt: Wade's Plumbing & Septic team
 noindex: true
+updated: "2026-11-23"
 ---
 
 ## We got your message

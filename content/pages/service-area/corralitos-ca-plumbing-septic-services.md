@@ -5,6 +5,7 @@ eyebrow: Corralitos, CA
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Corralitos orchard and hillside countryside in Santa Cruz County
+updated: "2026-11-27"
 ---
 
 Corralitos is apple country, wine country, and quiet hillside living rolled into one, a rural corridor between Watsonville and Aptos where Corralitos Road winds past orchards, tasting rooms, horse properties, and homes on acreage tucked into oak and madrone woodland. Properties here are spread out, often on septic, frequently on wells, and built to take advantage of views that come with slopes, trees, and seasonal creeks.

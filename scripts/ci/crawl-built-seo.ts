@@ -369,6 +369,30 @@ async function main() {
 		[],
 		"sitemap lastmod values must be real dates",
 	)
+	const clockLastmod = entries.filter(
+		(entry) => entry.lastmod && /T\d{2}:\d{2}/.test(entry.lastmod),
+	)
+	assert.deepEqual(
+		clockLastmod.map((entry) => `${entry.loc} lastmod=${entry.lastmod}`),
+		[],
+		"sitemap lastmod must be a calendar day, not a deploy timestamp",
+	)
+
+	const serviceAlias = await fetchOnce("/services/drain-cleaning", "manual")
+	if (
+		serviceAlias.response.status !== 308 &&
+		serviceAlias.response.status !== 301
+	) {
+		issues.push(
+			`/services/drain-cleaning: expected redirect to /service-offerings/drain-cleaning, got ${serviceAlias.response.status}`,
+		)
+	} else if (
+		!(serviceAlias.location ?? "").includes("/service-offerings/drain-cleaning")
+	) {
+		issues.push(
+			`/services/drain-cleaning: redirected to ${serviceAlias.location} instead of /service-offerings/drain-cleaning`,
+		)
+	}
 
 	const llms = await fetchOnce("/llms.txt", "follow")
 	const llmsFull = await fetchOnce("/llms-full.txt", "follow")

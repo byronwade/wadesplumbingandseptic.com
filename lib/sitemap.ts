@@ -5,7 +5,7 @@ import { cacheLife, cacheTag } from "next/cache"
 
 import { cityServicePages, cityServicePath } from "@/lib/city-service-pages"
 import { getAllRoutes, taxonomySlug, type ContentDocument } from "@/lib/content"
-import { getAllGlossaryEntries } from "@/lib/glossary"
+import { getAllGlossaryEntries, glossaryHubs } from "@/lib/glossary"
 import { postCategoryAliases } from "@/lib/post-categories"
 import { absoluteUrl } from "@/lib/seo"
 import {
@@ -74,8 +74,20 @@ function pathnameToUrl(pathname: string) {
 	return path === "/" ? siteConfig.url : `${siteConfig.url}${path}`
 }
 
+const DATE_ONLY_LASTMOD = /^\d{4}-\d{2}-\d{2}$/
+
+/** Sitemap lastmod is a calendar day, never a deploy-time clock. */
+export function dateOnlyLastmod(value: string | Date | undefined) {
+	if (!value) return undefined
+	const raw = value instanceof Date ? value.toISOString() : String(value)
+	const day = raw.slice(0, 10)
+	return DATE_ONLY_LASTMOD.test(day) ? day : undefined
+}
+
 function contentLastModified(document: ContentDocument) {
-	return document.updated ?? document.date ?? document.sourceModified
+	return dateOnlyLastmod(
+		document.updated ?? document.date ?? document.sourceModified,
+	)
 }
 
 function absoluteImages(...candidates: Array<string | undefined>) {
@@ -91,9 +103,9 @@ function absoluteImages(...candidates: Array<string | undefined>) {
 function maxTimestamp(values: Array<string | Date | undefined>) {
 	let best: string | undefined
 	for (const value of values) {
-		if (!value) continue
-		const iso = value instanceof Date ? value.toISOString() : value
-		if (!best || iso > best) best = iso
+		const day = dateOnlyLastmod(value)
+		if (!day) continue
+		if (!best || day > best) best = day
 	}
 	return best
 }
@@ -305,23 +317,28 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 
 	// Tag archives are noindex browsing aids, so none belong in the sitemap.
 
+	const glossaryUpdated = maxTimestamp([
+		glossaryHubs.plumbing.updated,
+		glossaryHubs.septic.updated,
+	])
+
 	upsertEntry(entries, {
 		pathname: "/glossary",
 		priority: 0.8,
 		changeFrequency: "monthly",
-		lastModified: newestContent,
+		lastModified: glossaryUpdated,
 	})
 	upsertEntry(entries, {
 		pathname: "/glossary/plumbing",
 		priority: 0.72,
 		changeFrequency: "monthly",
-		lastModified: newestContent,
+		lastModified: glossaryHubs.plumbing.updated,
 	})
 	upsertEntry(entries, {
 		pathname: "/glossary/septic",
 		priority: 0.72,
 		changeFrequency: "monthly",
-		lastModified: newestContent,
+		lastModified: glossaryHubs.septic.updated,
 	})
 
 	const glossaryEntries = await getAllGlossaryEntries()
@@ -330,7 +347,7 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 			pathname: `/glossary/${topic}/${term.slug}`,
 			priority: 0.65,
 			changeFrequency: "monthly",
-			lastModified: newestContent,
+			lastModified: glossaryHubs[topic].updated,
 		})
 	}
 
@@ -350,7 +367,6 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 			lastModified: maxTimestamp([
 				town ? contentLastModified(town) : undefined,
 				service ? contentLastModified(service) : undefined,
-				newestContent,
 			]),
 		})
 	}

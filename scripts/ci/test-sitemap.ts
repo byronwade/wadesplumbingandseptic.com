@@ -40,7 +40,7 @@ const load = (
 
 async function main() {
 	const { getCollection, taxonomySlug } = await import("../../lib/content")
-	const { SITEMAP_EXCLUDED_PATHS, buildSitemapEntries } =
+	const { SITEMAP_EXCLUDED_PATHS, buildSitemapEntries, dateOnlyLastmod } =
 		await import("../../lib/sitemap")
 	const { siteConfig } = await import("../../lib/site")
 
@@ -200,6 +200,21 @@ async function main() {
 		"Indexable sitemap URLs need a lastmod date",
 	)
 
+	const clockLastmod = entries.filter((entry) => {
+		const value =
+			entry.lastModified instanceof Date
+				? entry.lastModified.toISOString()
+				: String(entry.lastModified)
+		return /T\d{2}:\d{2}/.test(value)
+	})
+	assert.deepEqual(
+		clockLastmod.map(
+			(entry) => `${pathFromUrl(entry.url)} ${entry.lastModified}`,
+		),
+		[],
+		"sitemap lastmod must be a calendar day, not a deploy timestamp",
+	)
+
 	const orderedPriorities = entries.map((entry) => entry.priority ?? 0)
 	const sorted = [...orderedPriorities].sort((a, b) => b - a)
 	assert.deepEqual(
@@ -212,6 +227,19 @@ async function main() {
 	const { serviceAreaLocations } = await import("../../lib/service-areas")
 	const { cityServicePages, cityServicePath, getCityLocation } =
 		await import("../../lib/city-service-pages")
+	for (const page of cityServicePages) {
+		const path = cityServicePath(page.citySlug, page.serviceSlug)
+		const entry = entries.find((item) => pathFromUrl(item.url) === path)
+		assert.ok(
+			dateOnlyLastmod(entry?.lastModified),
+			`city-service lastmod missing: ${path}`,
+		)
+		assert.doesNotMatch(
+			String(entry?.lastModified ?? ""),
+			/T\d{2}:\d{2}/,
+			`city-service lastmod is a clock time: ${path}`,
+		)
+	}
 	const directoryResponse = await GET()
 	assert.equal(
 		directoryResponse.headers.get("Content-Type"),

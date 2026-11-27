@@ -3,6 +3,7 @@ title: Careers at Wade's Plumbing & Septic
 description: Join a local plumbing and septic company built around honest work, craftsmanship, clear communication, and respect for customers.
 eyebrow: Join the Team
 order: 6
+updated: "2026-07-29"
 ---
 
 ## Build work you can be proud of

@@ -8,6 +8,7 @@ eyebrow: "Paradise Park, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: "San Lorenzo River and redwood cabin community near Paradise Park, California"
+updated: "2026-11-27"
 ---
 
 Paradise Park follows the San Lorenzo River, a narrow ribbon of homes and cabins between Felton and the forest, where the road shares space with redwoods and the sound of water is never far away. Some places are year-round residences; many are weekend retreats that wake up in summer and go quiet in winter. That pattern shapes every plumbing and septic decision Wade's Plumbing & Septic makes here.

@@ -20,6 +20,7 @@ gallery:
     width: 768
     height: 1024
     caption: Advanced treatment controls
+updated: "2026-11-23"
 ---
 
 ## One team for the complete septic system

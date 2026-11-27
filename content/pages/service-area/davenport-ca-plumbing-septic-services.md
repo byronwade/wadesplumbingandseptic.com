@@ -8,6 +8,7 @@ eyebrow: "Davenport, CA"
 order: 50
 image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: "Coastal North Coast landscape near Davenport, California along Highway 1"
+updated: "2026-11-27"
 ---
 
 Davenport sits where the Santa Cruz Mountains meet the Pacific, Highway 1, coastal fog, winter wind, and a scatter of homes that range from historic beach cottages to hillside ranches looking down on the ocean. It doesn't feel like the San Lorenzo Valley, and it shouldn't be serviced like Felton with a salt-air discount. Metal corrodes faster. Foundations shift in marine clay. Septic systems perch on slopes above the dairy flats and creek drainages, permitted under rules that account for coastal soils and seasonal groundwater.

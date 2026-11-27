@@ -10,6 +10,7 @@ image: /images/locations/santa-cruz-redwoods.webp
 imageAlt: >-
   Bonny Doon ridge roads, vineyards, and redwood forest in the Santa Cruz
   Mountains
+updated: "2026-11-27"
 ---
 
 Bonny Doon is ridge country. Pine Flat Road, Bonny Doon Road, Empire Grade, names that mean switchbacks, ocean glimpses through fog, and properties where the driveway is longer than some people's commute. Wineries, homesteads, and post-fire rebuilds share one truth: you're on your own for water and waste, and the county permit folder is thick.

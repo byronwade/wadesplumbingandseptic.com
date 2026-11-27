@@ -7,6 +7,7 @@ eyebrow: "Watsonville, CA"
 order: 50
 image: /images/locations/santa-cruz-plumber.webp
 imageAlt: Watsonville Pajaro Valley area homes served by Wade's Plumbing and Septic
+updated: "2026-11-27"
 ---
 
 Watsonville sits at the broad end of the Pajaro Valley, where agriculture, established neighborhoods, and newer subdivisions share the same groundwater basin. Downtown Victorians near Main Street, post-war homes south of Lake Watsonville, and rural parcels toward Freedom and Corralitos each carry different pipe materials, foundation types, and wastewater rules.

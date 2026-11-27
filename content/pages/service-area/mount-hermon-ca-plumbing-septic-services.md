@@ -8,6 +8,7 @@ eyebrow: "Mount Hermon, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: Forested residential roads near Mount Hermon and Scotts Valley border
+updated: "2026-11-27"
 ---
 
 Mount Hermon is its own pocket of the Santa Cruz Mountains, tucked off Graham Hill Road between Scotts Valley and the San Lorenzo Valley, shaded by second-growth redwoods, known to most outsiders for the conference grounds and to residents for quiet roads, dark nights, and infrastructure that doesn't behave like town.

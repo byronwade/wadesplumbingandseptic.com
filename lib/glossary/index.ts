@@ -23,6 +23,7 @@ export const glossaryHubs: Record<GlossaryTopic, GlossaryHub> = {
 		],
 		image: "/images/work/precision-valve-installation.webp",
 		imageAlt: "Precision plumbing valve installation",
+		updated: "2026-10-19",
 	},
 	septic: {
 		topic: "septic",
@@ -36,6 +37,7 @@ export const glossaryHubs: Record<GlossaryTopic, GlossaryHub> = {
 		],
 		image: "/images/work/engineered-septic-hero.webp",
 		imageAlt: "Engineered septic installation in Santa Cruz County",
+		updated: "2026-10-20",
 	},
 }
 

@@ -8,6 +8,7 @@ eyebrow: "Felton, CA"
 order: 50
 image: /images/locations/river-and-redwoods.webp
 imageAlt: "San Lorenzo River corridor and redwood canopy near Felton, California"
+updated: "2026-11-27"
 ---
 
 Felton sits where Highway 9 bends into the redwoods, close enough to Scotts Valley for groceries, far enough up the San Lorenzo Valley that most properties still run on septic, wells, and long supply lines buried under roots. Wade's Plumbing & Septic is a family-owned Santa Cruz County shop that knows this corridor: the mix of full-time homes near downtown, older cabins off Graham Hill Road, and hillside lots where a "simple" leak turns into a trench through clay and redwood feeder roots.
