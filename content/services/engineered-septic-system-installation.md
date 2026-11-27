@@ -33,7 +33,7 @@ County Environmental Health requirements and a licensed designer or engineer dri
 Call us when you are dealing with:
 
 - A failed or noncompliant conventional system that cannot be replaced in kind
-- A vacant lot or rebuild that will not perk for a standard leach field
+- A vacant lot or rebuild that will not perk for a standard leach field. See [perc tests and site evaluation](/perc-test-site-evaluation-santa-cruz-septic).
 - Surfacing effluent, odors after laundry, or backups tied to a stressed drainfield
 - An ADU, bedroom addition, or higher occupancy that outgrows the old system. See [adding an ADU on a Santa Cruz County septic](/adding-adu-bedroom-septic-santa-cruz).
 - Steep San Lorenzo Valley or foothill parcels with limited usable area
@@ -64,7 +64,7 @@ Engineered systems add treatment equipment, design, and site work that a convent
 
 Quotes are free. Flat-rate pricing, quoted on site before work begins.
 
-Ongoing maintenance matters: filters, pumps, blowers, and service contracts keep advanced systems healthy. We set that expectation up front.
+Ongoing maintenance matters: filters, pumps, blowers, and service contracts keep advanced systems healthy. We set that expectation up front. Santa Cruz County also requires an OSSP contract, deed notice, and sampling on enhanced systems. See [enhanced septic operating permits](/enhanced-septic-operating-permit-santa-cruz).
 
 ## Serving Santa Cruz County and west foothills
 

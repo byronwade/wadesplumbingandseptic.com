@@ -44,7 +44,7 @@ Santa Cruz County's Local Agency Management Program (LAMP) groups systems into c
 - **Nitrate concern areas.** New, repaired and replacement systems in soils that percolate faster than 5 minutes per inch need enhanced treatment with nitrogen reduction.
 - **Near streams.** New systems on undeveloped parcels are not permitted within certain distances of a stream, and required groundwater separation depends on how fast the soil percolates.
 
-Enhanced treatment systems come with ongoing obligations in Santa Cruz County, including a maintenance contract, a recorded deed notice, periodic inspection and an annual fee. Our [guide to engineered septic systems](/what-you-need-to-know-about-engineered-septic-systems) covers planning one, and [how the county's geography affects septic systems](/how-santa-cruz-countys-unique-geography-affects-septic-systems) explains why so many sites here need them.
+Enhanced treatment systems come with ongoing obligations in Santa Cruz County, including a maintenance contract, a recorded deed notice, periodic inspection and an annual fee. Our [operating permit guide](/enhanced-septic-operating-permit-santa-cruz) covers the OSSP contract, sampling, and tax-bill fee. The [guide to engineered septic systems](/what-you-need-to-know-about-engineered-septic-systems) covers planning one, and [how the county's geography affects septic systems](/how-santa-cruz-countys-unique-geography-affects-septic-systems) explains why so many sites here need them.
 
 ## How the type gets chosen
 

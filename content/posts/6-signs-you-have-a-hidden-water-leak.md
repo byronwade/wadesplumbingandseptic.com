@@ -29,7 +29,7 @@ According to EPA WaterSense, the average household's leaks can waste more than 9
 
 ## 1. A water bill that climbs without a reason
 
-If your household and habits have not changed but your water use has, something is running. EPA suggests checking your use during a colder month, when there is little outdoor watering: a family of four using more than 12,000 gallons a month likely has a serious leak. Compare a few bills from the same season to spot a jump.
+If your household and habits have not changed but your water use has, something is running. EPA suggests checking your use during a colder month, when there is little outdoor watering: a family of four using more than 12,000 gallons a month likely has a serious leak. Compare a few bills from the same season to spot a jump. A wet strip between the meter and the house is often the customer-side service line; see [who owns the water line](/water-service-line-repair-santa-cruz).
 
 ## 2. A water meter that moves when nothing is on
 

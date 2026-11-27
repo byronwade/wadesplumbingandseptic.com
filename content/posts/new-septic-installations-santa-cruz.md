@@ -42,10 +42,10 @@ The county counts any room other than a kitchen, bathroom and one living space a
 
 The county sets out who may do each part of the work:
 
-- **Site evaluation and design.** Soil studies, percolation tests and system designs are prepared by a California registered civil engineer, professional geologist, registered environmental health specialist or another professional the county approves.
+- **Site evaluation and design.** Soil studies, percolation tests and system designs are prepared by a California registered civil engineer, professional geologist, registered environmental health specialist or another professional the county approves. See [perc tests and site evaluation](/perc-test-site-evaluation-santa-cruz-septic).
 - **Slope reports.** Reports for steep slopes or other slope stability concerns come from a California licensed professional geologist or certified engineering geologist.
 - **Installation.** The installer must hold a California contractor license in Class A, Class B, C-36 or C-42. A Class B holder may install a system only as part of a new construction project.
-- **Maintenance of enhanced systems.** Onsite system service providers approved by the county and certified by the system manufacturer maintain enhanced treatment and alternative dispersal systems.
+- **Maintenance of enhanced systems.** Onsite system service providers approved by the county and certified by the system manufacturer maintain enhanced treatment and alternative dispersal systems. See [enhanced septic operating permits](/enhanced-septic-operating-permit-santa-cruz).
 
 Wade's Plumbing & Septic holds California contractor license CSLB #1087260 in the C-36 Plumbing and C-42 Sanitation System classes and installs systems to the design prepared by the project's engineer or other qualified professional.
 

@@ -29,7 +29,7 @@ Before a new system or a major repair is designed, Santa Cruz County Environment
 - Percolation tests, which measure how fast water soaks into the soil.
 - Groundwater and seasonal water table checks made during the rainy season.
 
-Not every step is needed if earlier data still applies. The county tells the owner and the qualified professional which steps are required after the records review and site visit.
+Not every step is needed if earlier data still applies. The county tells the owner and the qualified professional which steps are required after the records review and site visit. For the homeowner path (who files, how a perc test is run, and what the numbers decide), see [perc tests and site evaluation](/perc-test-site-evaluation-santa-cruz-septic).
 
 ## Steep slopes
 
