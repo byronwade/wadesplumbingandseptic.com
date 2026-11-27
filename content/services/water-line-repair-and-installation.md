@@ -11,7 +11,7 @@ imageAlt: Outdoor water treatment tanks
 updated: "2026-07-30"
 ---
 
-Water line repair and installation for Santa Cruz County homes and businesses covers leaks, breaks, and replacements from the meter or well to the house. Wade's Plumbing & Septic locates the problem, explains the options, and quotes a flat rate before digging. Quotes are free.
+Water line repair and installation for Santa Cruz County homes and businesses covers leaks, breaks, and replacements from the meter or well to the house. Wade's Plumbing & Septic locates the problem, explains the options, and quotes a flat rate before digging. Quotes are free. For the utility versus owner split, see [who owns the water line](/water-service-line-repair-santa-cruz).
 
 ## Signs You Need Water Line Repair in Santa Cruz
 

@@ -27,6 +27,9 @@ const newPostSlugs = [
 	"adding-adu-bedroom-septic-santa-cruz",
 	"septic-tank-destruction-sewer-connection-santa-cruz",
 	"tankless-water-heater-santa-cruz-homes",
+	"perc-test-site-evaluation-santa-cruz-septic",
+	"enhanced-septic-operating-permit-santa-cruz",
+	"water-service-line-repair-santa-cruz",
 ]
 
 test("faqSectionBody reads FAQ and Frequently asked questions headings", () => {

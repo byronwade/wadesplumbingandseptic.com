@@ -22,7 +22,7 @@ imageAlt: Engineered septic retaining wall and control panel
 
 An engineered septic system is the path Santa Cruz County uses when a conventional tank and gravity leach field cannot meet soil, slope, groundwater, or setback rules. A qualified professional designs it. County Environmental Health permits it. Wade's Plumbing & Septic installs it alongside that engineer. Wade's does not pump tanks. Quotes are free.
 
-The planning checklist below covers parcel records, site evaluation, design, permits, and maintenance. For county-approved treatment units such as MicroSepTec and Orenco AdvanTex, see the [Santa Cruz County guide to new septic systems](/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county).
+The planning checklist below covers parcel records, site evaluation, design, permits, and maintenance. For the perc test itself, see [perc tests and site evaluation](/perc-test-site-evaluation-santa-cruz-septic). After an enhanced system is in, the [operating permit and OSSP contract](/enhanced-septic-operating-permit-santa-cruz) keep it legal. For county-approved treatment units such as MicroSepTec and Orenco AdvanTex, see the [Santa Cruz County guide to new septic systems](/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county).
 
 ## What makes these systems different
 
