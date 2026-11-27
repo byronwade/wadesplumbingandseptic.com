@@ -394,6 +394,24 @@ async function main() {
 		)
 	}
 
+	const retiredAlias = await fetchOnce("/services/septic-pumping", "manual")
+	if (
+		retiredAlias.response.status !== 308 &&
+		retiredAlias.response.status !== 301
+	) {
+		issues.push(
+			`/services/septic-pumping: expected redirect to /service-offerings/septic-tank-maintenance-and-care, got ${retiredAlias.response.status}`,
+		)
+	} else if (
+		!(retiredAlias.location ?? "").includes(
+			"/service-offerings/septic-tank-maintenance-and-care",
+		)
+	) {
+		issues.push(
+			`/services/septic-pumping: redirected to ${retiredAlias.location} instead of /service-offerings/septic-tank-maintenance-and-care`,
+		)
+	}
+
 	const llms = await fetchOnce("/llms.txt", "follow")
 	const llmsFull = await fetchOnce("/llms-full.txt", "follow")
 	assert.equal(llms.response.status, 200)

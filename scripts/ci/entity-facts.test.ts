@@ -617,6 +617,28 @@ test("legacy /services/{slug} aliases redirect to /service-offerings/{slug}", as
 	}
 })
 
+test("retired /services/{slug} aliases skip the extra hop", async () => {
+	const { default: nextConfig } = await import("../../next.config")
+	for (const [slug, destination] of [
+		["septic-pumping", "/service-offerings/septic-tank-maintenance-and-care"],
+		["hydro-jetting-for-drain-clearing", "/service-offerings/hydro-jetting"],
+		["septic-installation", "/service-offerings/septic-system-installation"],
+	]) {
+		for (const prefix of ["/services", "/service-offerings"]) {
+			const response = await unstable_getResponseFromNextConfig({
+				url: `https://example.com${prefix}/${slug}`,
+				nextConfig,
+			})
+			assert.equal(response.status, 308, `${prefix}/${slug}`)
+			assert.equal(
+				response.headers.get("location"),
+				`https://example.com${destination}`,
+				`${prefix}/${slug}`,
+			)
+		}
+	}
+})
+
 for (const archive of ["popular", "trending"]) {
 	test(`expert-tips ${archive} archive is not redirected`, async () => {
 		const { default: nextConfig } = await import("../../next.config")
