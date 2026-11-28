@@ -7,6 +7,7 @@ import {
 	freeQuoteHref,
 	publicFactRows,
 } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 
 const linkClass =
@@ -40,7 +41,11 @@ function FactRows({
 }
 
 /** Four-row strip on service pages: area, hours, pricing, how to book. */
-export function CompactBusinessFacts() {
+export function CompactBusinessFacts({
+	quoteEmailReady = quoteEmailConfigured(),
+}: {
+	quoteEmailReady?: boolean
+}) {
 	const rows = compactFactRows()
 	const booking = rows.find((row) => row.term === "How to book")
 	const rest = rows.filter((row) => row.term !== "How to book")
@@ -68,16 +73,23 @@ export function CompactBusinessFacts() {
 							Call{" "}
 							<a className={linkClass} href={siteConfig.phoneHref}>
 								{siteConfig.phone}
-							</a>{" "}
-							or{" "}
-							<Link
-								className={linkClass}
-								href={freeQuoteHref as Route}
-								prefetch={false}
-							>
-								request a free quote
-							</Link>
-							.
+							</a>
+							{quoteEmailReady ? (
+								<>
+									{" "}
+									or{" "}
+									<Link
+										className={linkClass}
+										href={freeQuoteHref as Route}
+										prefetch={false}
+									>
+										request a free quote
+									</Link>
+									.
+								</>
+							) : (
+								<> for a free quote.</>
+							)}
 						</dd>
 					</div>
 				) : null}

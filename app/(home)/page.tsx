@@ -120,7 +120,7 @@ export default function HomePage() {
 					*/}
 					<nav
 						aria-label="Popular services"
-						className="mt-8 grid grid-cols-2 gap-2 sm:mt-10 sm:gap-3 lg:grid-cols-4"
+						className="mt-8 grid grid-cols-1 gap-2 min-[23rem]:grid-cols-2 sm:mt-10 sm:gap-3 lg:grid-cols-4"
 					>
 						{heroQuickLinks.map(({ label, detail, href, icon }) => {
 							const Icon = quickLinkIcons[icon]

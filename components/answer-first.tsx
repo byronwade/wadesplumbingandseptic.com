@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import { type AnswerFirstInput } from "@/lib/answer-first"
 import { freeQuoteHref, weekdayHoursPhrase } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 
 const linkClass =
@@ -10,14 +11,16 @@ const linkClass =
 
 /**
  * First-body paragraph assistants can quote: what Wade's does, where, how to
- * get a free quote, and weekday hours. Phone and quote stay real links.
+ * get a free quote, and weekday hours. Phone stays a real link. The quote
+ * form link is omitted when production cannot send email.
  */
 export function AnswerFirst({
 	work,
 	place,
 	includeSepticNote = false,
 	confirmAddress = false,
-}: AnswerFirstInput) {
+	quoteEmailReady = quoteEmailConfigured(),
+}: AnswerFirstInput & { quoteEmailReady?: boolean }) {
 	const septic = includeSepticNote
 		? " Septic work is system installation with engineers, not tank pumping."
 		: ""
@@ -38,14 +41,19 @@ export function AnswerFirst({
 					<a className={linkClass} href={siteConfig.phoneHref}>
 						{siteConfig.phone}
 					</a>{" "}
-					{weekdayHoursPhrase()} (closed Saturday and Sunday), or{" "}
-					<Link
-						className={linkClass}
-						href={freeQuoteHref as Route}
-						prefetch={false}
-					>
-						request a free quote
-					</Link>
+					{weekdayHoursPhrase()} (closed Saturday and Sunday)
+					{quoteEmailReady ? (
+						<>
+							, or{" "}
+							<Link
+								className={linkClass}
+								href={freeQuoteHref as Route}
+								prefetch={false}
+							>
+								request a free quote
+							</Link>
+						</>
+					) : null}
 					.
 				</p>
 			</div>

@@ -11,7 +11,7 @@ import {
 	serviceWorkLabel,
 } from "../../lib/answer-first"
 import { cityServicePages, getCityLocation } from "../../lib/city-service-pages"
-import { weekdayHoursPhrase } from "../../lib/public-facts"
+import { freeQuoteHref, weekdayHoursPhrase } from "../../lib/public-facts"
 import { serviceFaqJsonLd } from "../../lib/seo"
 import {
 	coverageDependsOnAddress,
@@ -105,6 +105,21 @@ test("the visible answer-first block matches the plain sentence", () => {
 	assert.ok(html.includes(siteConfig.phone), html)
 	assert.ok(html.includes(siteConfig.phoneHref), html)
 	assert.ok(html.includes("request a free quote"), html)
+	assert.ok(html.includes(weekdayHoursPhrase()), html)
+})
+
+test("answer-first omits the quote form link when email cannot send", () => {
+	const html = renderToStaticMarkup(
+		createElement(AnswerFirst, {
+			place: siteConfig.serviceArea,
+			quoteEmailReady: false,
+			work: "drain cleaning",
+		}),
+	)
+	assert.equal(html.includes(freeQuoteHref), false, html)
+	assert.equal(html.includes("request a free quote"), false, html)
+	assert.ok(html.includes("Quotes are free"), html)
+	assert.ok(html.includes(siteConfig.phoneHref), html)
 	assert.ok(html.includes(weekdayHoursPhrase()), html)
 })
 
