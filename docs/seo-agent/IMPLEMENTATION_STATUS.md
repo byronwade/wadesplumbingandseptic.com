@@ -1,5 +1,12 @@
 # Eve SEO Agent Implementation Status
 
+## 2026-11-28: Land New Year plumbing reset post (PR 317)
+
+- Scope: accuracy review, merge of main (PRs 316, 318, 319, 320), and content links so `/new-year-plumbing-reset-santa-cruz-homes` can ship inside the holiday-new-year-2027 10 to 35 day lead window. Did not edit Google Business Profile, post anywhere, or message anyone. Phone, address, hours, and license values were not changed.
+- Accuracy: cited sources were fetched on 2026-11-28. SFPUC shutoff locations, Oatey three to five year hose range plus wear signs (including rust at connectors), DOE 120°F / quart every three months / 10 to 15 year storage and 20+ tankless life, EPA WaterSense 9,300 gallons and nine percent / 50 gallons / meter and dye tests / five year flappers, EPA septic inspect every three years (yearly with pumps) and typical three to five year emptying, and Red Cross hose disconnect all match the post. No invented reviews, ratings, prices, licenses, years in business, emergency or 24/7 wording, Satisfaction guaranteed, Since 2005, or Fast response. Hours remain Monday to Friday, 9:00 AM to 5:00 PM. Quotes are free. Wade's does not pump tanks.
+- Fix: quoteable lead (who, Santa Cruz County, septic install with engineers not pumping, free quotes); in-body town hubs for Ben Lomond, Boulder Creek, and Felton; SFPUC tank-versus-main shutoff wording tightened; reverse links from related maintenance, frozen-pipe, holiday, septic-seasonal, and maintenance-guide pages; FAQ slug added to `blog-faq.test.ts`. Inventory regenerated with `node automation/seo-agent/scripts/generate-inventory.mjs` after merging main.
+- Verification: recorded after local `seo:check`, `format:check`, lint, typecheck, `ci:*` content checks, and build in this VM. Truth state: sources `LIVE_VERIFIED` on 2026-11-28 by direct fetch; local repository, SEO, and build `MOCK_VERIFIED`. Not a ranking or indexing claim. Next action: squash-merge PR 317 on green local checks, then confirm the live URL.
+
 ## Public-site internal linking and orphan-page pass (2026-11-28)
 
 - Scope: one public-site PR after PRs 303 to 318. Did not redo JSON-LD, llms, `/facts`, service or town page templates, Google review CTA, duplicate-URL redirects, or mobile speed work. Did not edit, merge, or close PR 317. Phone, address, hours, and license values were not changed. No prices, ratings, reviews, emergency, 24/7, pumping-as-a-service, satisfaction, founding-year, or fast-response copy was added.

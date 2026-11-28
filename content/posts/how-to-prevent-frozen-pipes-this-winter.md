@@ -6,7 +6,7 @@ description: >-
   Cross guidance.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-11-24"
+updated: "2026-11-28"
 tags:
   - santa cruz plumbing
   - plumbing maintenance
@@ -25,7 +25,7 @@ imageAlt: "New construction plumbing rough-in"
 
 Hard freezes are uncommon along the Santa Cruz County coast, but cold snaps do reach higher elevations and shaded canyons in the Santa Cruz Mountains, and the pipes most likely to freeze are the ones outside or in unheated spaces. Water expands as it freezes, which can split any kind of pipe. On nights near freezing, insulate exposed pipes, keep the heat steady, open sink cabinets on exterior walls and let a faucet trickle. If a pipe does freeze, thaw it with gentle heat, never an open flame.
 
-- Know where your main water shutoff is before you need it.
+- Know where your main water shutoff is before you need it. The [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes) covers finding and testing that valve.
 - Insulate hose bibs, irrigation lines, backflow devices and pipes in garages, crawl spaces and pump houses.
 - Keep the thermostat at the same temperature day and night, and no lower than 55°F if you go away.
 - On the coldest nights, let cold water trickle from faucets served by exposed pipes.

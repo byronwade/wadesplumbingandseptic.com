@@ -6,6 +6,7 @@ description: >-
   homes, based on EPA and Department of Energy guidance.
 category: Plumbing Tips
 date: "2026-11-27"
+updated: "2026-11-28"
 tags:
   - santa cruz
   - new year
@@ -14,6 +15,8 @@ tags:
 image: /images/services/water-heater-service.webp
 imageAlt: Technician turning a service valve on the pipes below a wall mounted tankless water heater
 ---
+
+Wade's Plumbing & Septic serves Santa Cruz County and nearby Santa Clara County communities with plumbing, water heater, leak, and septic installation work (with engineers). Wade's does not pump tanks. A New Year plumbing reset is a weekend checklist homeowners can finish themselves: shutoffs, washer hoses, water heater checks, a leak test, and a septic inspection plan. Quotes are free.
 
 ## Quick answer
 
@@ -32,7 +35,7 @@ After the holidays, a full house and heavy kitchen use are behind you, and in Sa
 
 When a pipe or supply line bursts, the main shutoff is what stops the water. Everyone in the house should know where it is.
 
-The San Francisco Public Utilities Commission's homeowner guidance describes where to look. The main shutoff is often outside the house or just inside the property line, in line with the water meter. In some homes it is in the garage, basement or a closet. It is usually a round handle gate valve, which closes by turning clockwise until it stops, or a ball valve with a lever handle that is off when it sits at a right angle to the pipe.
+The San Francisco Public Utilities Commission's homeowner guidance describes where to look. Most main shutoffs are outside the house or just inside the property line, in line with the water meter. In some homes the water supply is a tank in the garage, basement or a closet, and the shutoff is on that tank. The valve is usually a round handle gate valve, which closes by turning clockwise until it stops, or a ball valve with a lever handle that is off when it sits at a right angle to the pipe.
 
 For your reset:
 
@@ -51,6 +54,7 @@ Oatey, a plumbing products maker, says there is no universal rule, but most expe
 
 - Bulges or bubbles in rubber hoses
 - Frayed wires or exposed inner tubing on braided hoses
+- Rust or corrosion at the connectors
 - Kinks or sharp bends behind the machine
 - Any leak at the connections or along the hose
 
@@ -84,7 +88,7 @@ EPA also notes that toilet flappers wear out and should be checked periodically 
 
 ## 5. Plan the year for your septic system
 
-Many Santa Cruz County homes, especially in the mountains and rural areas, are on septic. A New Year reset is a good time to check when the system was last inspected and plan ahead, using EPA's guidance rather than a fixed schedule:
+Many Santa Cruz County homes, especially in the mountains and rural areas such as [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services) and [Felton](/service-area/felton-ca-plumbing-septic-services), are on septic. A New Year reset is a good time to check when the system was last inspected and plan ahead, using EPA's guidance rather than a fixed schedule:
 
 - **Inspection.** EPA says a typical household septic system should be inspected by a septic service professional at least every three years. Systems with pumps, float switches or other mechanical parts should generally be inspected once a year.
 - **Emptying the tank.** EPA says household tanks are typically pumped every three to five years, but the right timing depends on household size, wastewater, solids and tank size. The inspector measures the sludge and scum layers to decide.
@@ -107,7 +111,7 @@ Find and test the main and fixture shutoffs, check washer hoses, look over the w
 
 ### How do I find my main water shutoff?
 
-It is often outside the house or just inside the property line in line with the water meter, and in some homes it is in the garage, basement or a closet. Look for a round handle gate valve or a lever handle ball valve on the main supply pipe.
+It is often outside the house or just inside the property line in line with the water meter. In some homes the supply is a tank in the garage, basement or a closet. Look for a round handle gate valve or a lever handle ball valve.
 
 ### Should washer hoses be replaced on a schedule?
 

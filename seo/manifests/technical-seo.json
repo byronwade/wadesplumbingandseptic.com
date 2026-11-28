@@ -8,6 +8,7 @@
 		"/",
 		"/category/[slug]",
 		"/expert-tips",
+		"/facts",
 		"/glossary",
 		"/service-area/[city]/[service]",
 		"/service-areas",
@@ -139,6 +140,11 @@
 			"severity": "info",
 			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
 			"url": "/expert-tips/trending"
+		},
+		{
+			"severity": "info",
+			"code": "CANONICAL_INHERITED_OR_UNDECLARED",
+			"url": "/facts"
 		},
 		{
 			"severity": "info",

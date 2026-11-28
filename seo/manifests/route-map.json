@@ -285,6 +285,17 @@
 			"reason": "Static route pattern is directly declared in the repository."
 		},
 		{
+			"route_pattern": "/facts",
+			"source_path": "app/(site)/facts/page.tsx",
+			"kind": "STATIC_ROUTE",
+			"parameters": [],
+			"materialized_routes": ["/facts"],
+			"materialization_state": "REPOSITORY_ROUTE_DECLARED",
+			"data_source_paths": [],
+			"classification": "MOCK_VERIFIED",
+			"reason": "Static route pattern is directly declared in the repository."
+		},
+		{
 			"route_pattern": "/failed-septic-repair-replacement-santa-cruz-county",
 			"source_path": "content/pages/failed-septic-repair-replacement-santa-cruz-county.md",
 			"kind": "STATIC_ROUTE",

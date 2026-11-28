@@ -6,7 +6,7 @@ description: >-
   inspections, based on EPA, Energy Department and county guidance.
 category: Plumbing Tips
 date: "2025-05-13"
-updated: "2026-10-26"
+updated: "2026-11-28"
 tags:
   - santa cruz plumbing
   - plumbing maintenance
@@ -18,7 +18,7 @@ image: /images/wordpress/img-0503.webp
 imageAlt: New pressure regulator and shutoff valve on a copper water line outside a house
 ---
 
-Most plumbing failures give some warning first: a meter that creeps when nothing is running, a drain that slows a little more each month, sediment rumbling in a water heater. A short maintenance routine catches those signs early, while the fix is still small. This checklist groups the tasks by how often to do them, and notes which ones a homeowner can handle and which are better left to a plumber. A shorter [plumbing and septic maintenance schedule](/maintenance-guide) lists the same cadence on one page.
+Most plumbing failures give some warning first: a meter that creeps when nothing is running, a drain that slows a little more each month, sediment rumbling in a water heater. A short maintenance routine catches those signs early, while the fix is still small. This checklist groups the tasks by how often to do them, and notes which ones a homeowner can handle and which are better left to a plumber. A shorter [plumbing and septic maintenance schedule](/maintenance-guide) lists the same cadence on one page. For a January weekend version, see the [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes).
 
 ## Every month
 

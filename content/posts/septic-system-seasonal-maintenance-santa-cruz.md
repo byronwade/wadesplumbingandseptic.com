@@ -5,7 +5,7 @@ description: >-
   on EPA maintenance guidance and county rainy season rules for septic work.
 category: Plumbing Tips
 date: "2026-04-11"
-updated: "2026-10-30"
+updated: "2026-11-28"
 tags:
   - santa cruz county
   - septic maintenance
@@ -37,7 +37,7 @@ Our [rainy season septic and drain prep guide](/rainy-season-septic-and-drain-pr
 
 ## Winter: go easy on the system
 
-- **Spread out water use.** EPA recommends spreading laundry through the week instead of doing it all in one day, which can flood the drainfield. This matters most when the soil is already wet.
+- **Spread out water use.** EPA recommends spreading laundry through the week instead of doing it all in one day, which can flood the drainfield. This matters most when the soil is already wet. The [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes) is a January checklist for that inspection plan plus indoor plumbing checks.
 - **Fix leaks and running toilets.** EPA notes that one leaky or running toilet can add as much as 200 gallons a day, all of which goes to the septic system.
 - **Watch for warning signs.** Slow drains, gurgling, odors or soggy ground over the drainfield after storms can point to a problem. Our post on [septic trouble signs](/septic-trouble-signs-santa-cruz) explains what each can mean.
 - **If the ground floods, use as little water as you can and do not pump the tank.** Our [flood safety guide](/septic-safety-during-floods-santa-cruz) covers what to do during and after flooding.

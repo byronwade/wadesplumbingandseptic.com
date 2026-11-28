@@ -3,7 +3,7 @@ title: Home Plumbing Maintenance Plan for Santa Cruz County
 description: A practical home plumbing maintenance plan for shutoffs, leaks, water pressure, water heaters, drains, visible piping and sewer or septic lines.
 category: Plumbing Tips
 date: 2025-05-11
-updated: "2026-11-24"
+updated: "2026-11-28"
 image: /images/services/water-heater-service.webp
 imageAlt: "Water heater service"
 tags:
@@ -101,7 +101,7 @@ Save invoices, camera inspection videos, equipment model and serial numbers, per
 - **Spring:** check outdoor faucets and irrigation for leaks after winter, and do a meter test.
 - **Summer:** look over visible piping and the water heater, and test fixture shutoffs.
 - **Fall:** clear gutters and point downspouts away from the house and any septic drainfield before the rains.
-- **Winter:** protect exposed pipes on cold nights in higher elevations, and keep an eye on drains during long storms.
+- **Winter:** protect exposed pipes on cold nights in higher elevations, and keep an eye on drains during long storms. The [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes) is a January weekend version of this list.
 
 ## Frequently asked questions
 

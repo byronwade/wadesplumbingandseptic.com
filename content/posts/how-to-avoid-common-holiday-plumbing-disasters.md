@@ -5,7 +5,7 @@ description: >-
   plumbing problem. Here is how to prepare your plumbing for a full house.
 category: Plumbing Tips
 date: "2025-12-17"
-updated: "2026-10-25"
+updated: "2026-11-28"
 tags:
   - septic system care
   - santa cruz plumbing
@@ -30,6 +30,8 @@ A full house over the holidays means more showers, more flushes, more dishes and
 - Fix running toilets and stock each bathroom with a plunger and a small trash can.
 - Check the water heater for leaks, rust and sediment noise before the busy week.
 - Know where your main water shut-off is, and turn it off if you travel.
+
+After guests leave, the [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes) is the follow-up checklist for shutoffs, hoses, the water heater, leaks and septic planning.
 
 ![Warning sign on a wooden post](/images/wordpress/close-up-of-a-triangular-warning-sign-indicating-a-slippery-surface-fixed-to-a-wooden-post-f97ba2.webp)
 

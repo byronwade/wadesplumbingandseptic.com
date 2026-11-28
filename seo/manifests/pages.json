@@ -304,6 +304,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 1,
+			"url": "/facts",
+			"source_path": "app/(site)/facts/page.tsx",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/facts",
+			"type": "application_route",
+			"lifecycle": "EXISTING_UNMIGRATED",
+			"owner": null,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/failed-septic-repair-replacement-santa-cruz-county",
 			"source_path": "content/pages/failed-septic-repair-replacement-santa-cruz-county.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/failed-septic-repair-replacement-santa-cruz-county",
