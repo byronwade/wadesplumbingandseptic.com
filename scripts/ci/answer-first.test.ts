@@ -104,6 +104,11 @@ test("the visible answer-first block matches the plain sentence", () => {
 	assert.ok(html.includes("Septic"), html)
 	assert.ok(html.includes(siteConfig.phone), html)
 	assert.ok(html.includes(siteConfig.phoneHref), html)
+	assert.ok(
+		html.includes(`href="${siteConfig.phoneHref}"`) &&
+			html.includes("min-h-11"),
+		html,
+	)
 	assert.ok(html.includes("request a free quote"), html)
 	assert.ok(html.includes(weekdayHoursPhrase()), html)
 })

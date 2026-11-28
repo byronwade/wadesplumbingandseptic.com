@@ -156,6 +156,7 @@ test("compact facts keep the quote form link only when email can send", () => {
 	assert.equal(paused.includes(`href="${freeQuoteHref}"`), false, paused)
 	assert.equal(paused.includes("request a free quote"), false, paused)
 	assert.ok(paused.includes(`href="${siteConfig.phoneHref}"`), paused)
+	assert.ok(paused.includes("min-h-11"), paused)
 	assert.ok(paused.includes("for a free quote"), paused)
 })
 

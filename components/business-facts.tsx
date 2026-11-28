@@ -12,6 +12,9 @@ import { siteConfig } from "@/lib/site"
 
 const linkClass =
 	"text-primary underline decoration-current/40 underline-offset-4 hover:decoration-current"
+/** Phone and quote links in the glance strip match the 44px Quick-answer target. */
+const tapLinkClass =
+	"text-primary inline-flex min-h-11 items-center underline decoration-current/40 underline-offset-4 hover:decoration-current"
 
 function FactRows({
 	rows,
@@ -71,7 +74,7 @@ export function CompactBusinessFacts({
 						</dt>
 						<dd className="mt-1 text-sm font-semibold">
 							Call{" "}
-							<a className={linkClass} href={siteConfig.phoneHref}>
+							<a className={tapLinkClass} href={siteConfig.phoneHref}>
 								{siteConfig.phone}
 							</a>
 							{quoteEmailReady ? (
@@ -79,7 +82,7 @@ export function CompactBusinessFacts({
 									{" "}
 									or{" "}
 									<Link
-										className={linkClass}
+										className={tapLinkClass}
 										href={freeQuoteHref as Route}
 										prefetch={false}
 									>

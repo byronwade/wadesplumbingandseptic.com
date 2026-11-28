@@ -554,9 +554,16 @@ async function main() {
 					issues.push(`${pathname}: Service areaServed missing ${name}`)
 			}
 		}
-		const business = nodes.find((node) => nodeHasType(node, "Plumber"))
-		if (business) {
+		const plumbers = nodes.filter((node) => nodeHasType(node, "Plumber"))
+		if (plumbers.length !== 1) {
+			issues.push(
+				`${pathname}: expected 1 Plumber node, found ${plumbers.length}`,
+			)
+		} else {
 			plumberNodes += 1
+			const business = plumbers[0]!
+			if (business["@id"] !== `${expectedUrl}/#business`)
+				issues.push(`${pathname}: LocalBusiness @id ${String(business["@id"])}`)
 			if (business.name !== expectedName)
 				issues.push(`${pathname}: LocalBusiness name ${String(business.name)}`)
 			if (business.telephone !== expectedPhone)
@@ -574,6 +581,15 @@ async function main() {
 				issues.push(
 					`${pathname}: LocalBusiness street ${String(address?.streetAddress)}`,
 				)
+		}
+		if (
+			isServicePage(pathname) ||
+			isTownHub(pathname) ||
+			isCityServicePage(pathname) ||
+			nodes.some((node) => nodeHasType(node, "BlogPosting"))
+		) {
+			if (!nodes.some((node) => nodeHasType(node, "BreadcrumbList")))
+				issues.push(`${pathname}: missing BreadcrumbList`)
 		}
 
 		const title = pageTitle(body)
