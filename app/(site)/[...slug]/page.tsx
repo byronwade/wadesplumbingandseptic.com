@@ -72,7 +72,7 @@ async function getRelatedForDocument(
 				],
 				excludeSlugs: [document.slug],
 			},
-			{ posts: 3, services: 3 },
+			{ posts: 4, services: 3 },
 		)
 	}
 	return undefined

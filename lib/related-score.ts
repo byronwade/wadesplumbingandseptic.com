@@ -191,8 +191,55 @@ export function scoreCandidate(
 	score += overlapScore(seed.bridges, tokens, 3)
 	score += overlapScore(seed.bridges, bridges, 2)
 	score += overlapScore(seed.tokens, bridges, 2)
+	score -= exclusiveTopicPenalty(
+		seed.slug,
+		seed.bridges,
+		candidate.slug,
+		bridges,
+	)
 
 	return score
+}
+
+const HEATER_BRIDGES = ["water-heater", "tankless", "heater"] as const
+const SEPTIC_BRIDGES = [
+	"septic",
+	"leach",
+	"drainfield",
+	"pumping",
+	"engineered",
+] as const
+
+function hasBridge(bridges: Set<string>, keys: readonly string[]) {
+	return keys.some((key) => bridges.has(key))
+}
+
+/** Keep water-heater pages away from septic-only posts, and the reverse. */
+function exclusiveTopicPenalty(
+	seedSlug: string,
+	seedBridges: Set<string>,
+	candidateSlug: string,
+	candidateBridges: Set<string>,
+) {
+	const seedHeater =
+		hasBridge(seedBridges, HEATER_BRIDGES) ||
+		/water-heater|tankless/.test(seedSlug)
+	const candidateHeater =
+		hasBridge(candidateBridges, HEATER_BRIDGES) ||
+		/water-heater|tankless/.test(candidateSlug)
+	const seedSeptic =
+		/septic/.test(seedSlug) ||
+		(hasBridge(seedBridges, SEPTIC_BRIDGES) && !seedHeater)
+	const candidateSeptic =
+		/septic/.test(candidateSlug) ||
+		(hasBridge(candidateBridges, SEPTIC_BRIDGES) && !candidateHeater)
+
+	if (seedHeater && candidateSeptic && !candidateHeater) return 40
+	if (seedSeptic && candidateHeater && !candidateSeptic) return 40
+	if (seedBridges.has("commercial") && !candidateBridges.has("commercial")) {
+		return 4
+	}
+	return 0
 }
 
 export function rankDocuments(

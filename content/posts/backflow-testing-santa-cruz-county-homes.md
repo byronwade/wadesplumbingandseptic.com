@@ -48,7 +48,7 @@ The Handbook also says testers must notify the water system as soon as possible 
 
 ## How local districts apply that
 
-Each water system writes its own ordinance or policy on top of the Handbook. One local example is Soquel Creek Water District Ordinance 25-01 (June 3, 2025), which covers much of [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services) and Soquel. That ordinance:
+Each water system writes its own ordinance or policy on top of the Handbook. One local example is Soquel Creek Water District Ordinance 25-01 (June 3, 2025), which covers much of [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services) and [Soquel](/service-area/soquel-ca-plumbing-septic-services). That ordinance:
 
 - Requires an approved assembly before service in listed hazard cases, including an auxiliary water supply (such as a well), a booster pump, or plumbing that handles sewage or recycled water
 - Puts installation, upkeep and annual testing on the customer, at the customer's expense

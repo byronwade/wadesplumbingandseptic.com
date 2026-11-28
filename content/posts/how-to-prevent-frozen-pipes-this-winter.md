@@ -41,7 +41,7 @@ The American Red Cross lists the pipes that freeze most often:
 - Pipes in unheated interior spaces such as basements, crawl spaces, attics, garages and kitchen cabinets
 - Pipes that run along exterior walls with little insulation
 
-Around Santa Cruz County, add a few local ones to that list: irrigation backflow preventers above ground, pipes in detached garages and sheds, and, on rural properties, the lines and pressure tank in a well pump house. Homes in the mountains, such as around Boulder Creek, Ben Lomond, Felton, Bonny Doon and the Summit area, are more likely to see freezing nights than homes near the coast.
+Around Santa Cruz County, add a few local ones to that list: irrigation backflow preventers above ground, pipes in detached garages and sheds, and, on rural properties, the lines and pressure tank in a well pump house. Homes in the mountains, such as around [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services), [Bonny Doon](/service-area/bonny-doon-ca-plumbing-septic-services) and the Summit area, are more likely to see freezing nights than homes near the coast.
 
 ## Before a cold snap
 

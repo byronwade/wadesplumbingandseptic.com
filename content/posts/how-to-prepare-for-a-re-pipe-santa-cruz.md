@@ -48,7 +48,7 @@ That does not mean every Santa Cruz County home has a lead service line. Ask you
 
 Santa Cruz County Building Permits says a plumbing permit is required when plumbing, gas or drainage piping, a fixture, or water heating or treatment equipment is installed, altered, repaired, or replaced, unless the California Plumbing Code or County ordinance exempts the work. Exempt work includes stopping leaks in drains, soil, waste or vent pipe, clearing stoppages, and repairing leaks in pipes, valves or fixtures when the repair does not replace or rearrange those parts.
 
-A whole-house re-pipe replaces and rearranges piping, so it needs a permit in the unincorporated county. If you live in Santa Cruz, Capitola, Scotts Valley or Watsonville, confirm the rule with that city's building department. The installer should pull the permit for the work they do.
+A whole-house re-pipe replaces and rearranges piping, so it needs a permit in the unincorporated county. If you live in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) or [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), confirm the rule with that city's building department. The installer should pull the permit for the work they do.
 
 ## What to decide before the quote
 

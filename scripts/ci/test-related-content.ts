@@ -33,6 +33,14 @@ const posts: RelatedSeedDocument[] = [
 		category: "Septic Maintenance",
 		tags: ["septic"],
 	},
+	{
+		slug: "should-you-repair-or-replace-your-water-heater",
+		title: "Should You Repair or Replace Your Water Heater?",
+		description: "Repair or replace a water heater.",
+		content: "Tankless and tank water heater replacement.",
+		category: "Plumbing Tips",
+		tags: ["water heater"],
+	},
 ]
 
 const services: RelatedSeedDocument[] = [
@@ -79,6 +87,20 @@ const septicTips = rankDocuments(septicSeed, posts, "post", 3)
 assert.ok(
 	septicTips.some((post) => post.slug.includes("septic")),
 	`expected septic tip, got ${septicTips.map((item) => item.slug).join(", ")}`,
+)
+
+const heater: RelatedSeedDocument = {
+	slug: "water-heater-installation",
+	title: "Water Heater Installation",
+	description: "Tank and tankless water heater installation.",
+	content: "Install a tank or tankless water heater to code.",
+	category: "Plumbing",
+}
+
+const heaterPosts = rankDocuments(seedFromDocument(heater), posts, "post", 3)
+assert.ok(
+	heaterPosts.every((post) => !post.slug.includes("septic")),
+	`water heater related leaked septic posts: ${heaterPosts.map((item) => item.slug).join(", ")}`,
 )
 
 console.log("related content ok")

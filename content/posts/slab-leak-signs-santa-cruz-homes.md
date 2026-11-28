@@ -71,7 +71,7 @@ Once the leak is found, the choices are a spot repair in the slab, rerouting tha
 
 Santa Cruz County Building Permits says a plumbing permit is required when plumbing, gas or drainage piping, a fixture, or water heating or treatment equipment is installed, altered, repaired or replaced, unless the California Plumbing Code or County ordinance exempts the work. Exempt work includes stopping leaks in drains, soil, waste or vent pipe, clearing stoppages, and repairing leaks in pipes, valves or fixtures when the repair does not replace or rearrange those parts.
 
-Replacing an under-slab water line, or rerouting it so the run is no longer under the floor, replaces or rearranges piping. That work needs a permit in the unincorporated county. If you live in Santa Cruz, Capitola, Scotts Valley or Watsonville, confirm the rule with that city's building department. The installer should pull the permit for the work they do.
+Replacing an under-slab water line, or rerouting it so the run is no longer under the floor, replaces or rearranges piping. That work needs a permit in the unincorporated county. If you live in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) or [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), confirm the rule with that city's building department. The installer should pull the permit for the work they do.
 
 ## What the plumbing code requires under a slab
 

@@ -39,7 +39,7 @@ Hardness is reported as calcium carbonate, in milligrams per liter (mg/L), parts
 
 ## How hard is water in Santa Cruz County?
 
-It depends on your provider. Soquel Creek Water District, which serves Capitola, Soquel, Aptos and La Selva Beach, publishes these ranges from 2017 data:
+It depends on your provider. Soquel Creek Water District, which serves [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Soquel](/service-area/soquel-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services) and [La Selva Beach](/service-area/la-selva-beach-ca-plumbing-septic-services), publishes these ranges from 2017 data:
 
 - Capitola and Soquel (41st Avenue to Park Avenue): about 150 to 370 ppm
 - Soquel and Aptos (Park Avenue to State Park Drive): about 140 to 300 ppm

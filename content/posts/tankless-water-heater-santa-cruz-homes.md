@@ -27,7 +27,7 @@ A tankless (demand) water heater warms water as it flows instead of keeping a ta
 - Size the unit by gallons per minute and the temperature rise from your coldest incoming water, not by matching the old tank's gallon label.
 - Scale from hard water restricts flow through a tankless heat exchanger. The U.S. Department of Energy's Building America measure guideline says to flush the unit according to the manufacturer.
 - Gas units often need a larger dedicated gas line than a tank heater. DOE notes that in most cases the in-house line serving the unit will need to be 3/4 inch.
-- In unincorporated Santa Cruz County, replacing a water heater requires a plumbing permit. Confirm the rule with the city if you live in Santa Cruz, Capitola, Scotts Valley, or Watsonville.
+- In unincorporated Santa Cruz County, replacing a water heater requires a plumbing permit. Confirm the rule with the city if you live in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), or [Watsonville](/service-area/watsonville-ca-plumbing-septic-services).
 
 ## How a tankless unit differs from a tank
 
