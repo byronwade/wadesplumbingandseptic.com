@@ -1,5 +1,7 @@
 import type { NextConfig } from "next"
 
+import { siteConfig } from "../lib/site"
+
 type SiteRedirect = Awaited<
 	ReturnType<NonNullable<NextConfig["redirects"]>>
 >[number]
@@ -110,6 +112,11 @@ export const siteRedirects: SiteRedirect[] = [
 		{ source: `/expert-tips/${slug}`, destination, permanent: true },
 	]),
 	{ source: "/about", destination: "/about-us", permanent: true },
+	{
+		source: "/review",
+		destination: siteConfig.googleReviewUrl,
+		permanent: true,
+	},
 	{ source: "/blog", destination: "/expert-tips", permanent: true },
 	{ source: "/contact-us", destination: "/contact", permanent: true },
 	{

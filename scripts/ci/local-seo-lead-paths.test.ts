@@ -115,6 +115,17 @@ test("Google review CTA uses the confirmed listing URL and honest label", () => 
 	assert.ok(invite.includes(siteConfig.googleBusinessUrl), invite)
 })
 
+test("homepage points past customers to Google instead of invented quotes", () => {
+	const home = fs.readFileSync("components/home-below-fold.tsx", "utf8")
+	const content = fs.readFileSync("lib/home-content.ts", "utf8")
+	assert.doesNotMatch(home, /Bailey Cotrona|Aaron Berger/)
+	assert.doesNotMatch(content, /Bailey Cotrona|Aaron Berger/)
+	assert.ok(home.includes("GoogleReviewButton"), home)
+	assert.ok(home.includes("siteConfig.googleBusinessUrl"), home)
+	assert.match(home, /Leave us a Google review/)
+	assert.doesNotMatch(home, /★|AggregateRating/)
+})
+
 test("footer review button and featured towns stay inside the mapped catalog", () => {
 	const html = renderToStaticMarkup(createElement(SiteFooter))
 	assert.ok(html.includes("Review us on Google"), html)
@@ -263,11 +274,13 @@ test("Get a Free Quote markdown links deep-link to the contact form", () => {
 			}
 			if (!name.endsWith(".md")) continue
 			const body = fs.readFileSync(full, "utf8")
-			for (const match of body.matchAll(/\[Get a Free Quote\]\(([^)]+)\)/g)) {
+			for (const match of body.matchAll(
+				/\[(?:Get a Free Quote|Request service)\]\(([^)]+)\)/g,
+			)) {
 				assert.equal(
 					match[1],
 					freeQuoteHref,
-					`${full}: Get a Free Quote should deep-link to ${freeQuoteHref}`,
+					`${full}: quote CTA should deep-link to ${freeQuoteHref}`,
 				)
 			}
 		}

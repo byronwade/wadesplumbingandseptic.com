@@ -10,9 +10,7 @@ imageAlt: Sewer and drain service equipment
 updated: "2026-11-26"
 ---
 
-Video pipe inspections for Santa Cruz County drains, sewers, and septic lines let you see roots, breaks, and buildup before anyone digs. Wade's Plumbing & Septic records the run and explains cleaning versus repair. For septic tanks we inspect and install; we do not pump.
-
-We do not pump tanks. When a new or replacement system needs an engineered design, we install it alongside your engineer. This service is for Santa Cruz County homes and selected nearby foothill addresses. Quotes are free.
+Video pipe inspections for Santa Cruz County drains, sewers, and septic lines let you see roots, breaks, and buildup before anyone digs. Wade's Plumbing & Septic records the run and explains cleaning versus repair. For septic tanks we inspect and install alongside your engineer; we do not pump tanks. Quotes are free.
 
 ## Signs You Need a Sewer Line Video Inspection
 

@@ -781,7 +781,7 @@ export function suggestSearches(query: string, limit = 6): string[] {
 
 	const defaults = [
 		"clogged drain",
-		"septic pumping",
+		"septic installation",
 		"water heater",
 		"toilet repair",
 		"leak detection",

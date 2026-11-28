@@ -2,6 +2,7 @@ import assert from "node:assert/strict"
 
 import {
 	rankDocuments,
+	scoreCandidate,
 	seedFromDocument,
 	type RelatedSeedDocument,
 } from "../../lib/related-score"
@@ -32,6 +33,14 @@ const posts: RelatedSeedDocument[] = [
 		content: "Pump septic tanks on a regular schedule.",
 		category: "Septic Maintenance",
 		tags: ["septic"],
+	},
+	{
+		slug: "should-you-repair-or-replace-your-water-heater",
+		title: "Should You Repair or Replace Your Water Heater?",
+		description: "Repair or replace a water heater.",
+		content: "Tankless and tank water heater replacement.",
+		category: "Plumbing Tips",
+		tags: ["water heater"],
 	},
 ]
 
@@ -79,6 +88,66 @@ const septicTips = rankDocuments(septicSeed, posts, "post", 3)
 assert.ok(
 	septicTips.some((post) => post.slug.includes("septic")),
 	`expected septic tip, got ${septicTips.map((item) => item.slug).join(", ")}`,
+)
+
+const heater: RelatedSeedDocument = {
+	slug: "water-heater-installation",
+	title: "Water Heater Installation",
+	description: "Tank and tankless water heater installation.",
+	content: "Install a tank or tankless water heater to code.",
+	category: "Plumbing",
+}
+
+const heaterPosts = rankDocuments(seedFromDocument(heater), posts, "post", 3)
+assert.ok(
+	heaterPosts.every((post) => !post.slug.includes("septic")),
+	`water heater related leaked septic posts: ${heaterPosts.map((item) => item.slug).join(", ")}`,
+)
+
+const townHub: RelatedSeedDocument = {
+	slug: "__topic__Santa Cruz plumbing and septic",
+	title: "Santa Cruz plumbing and septic",
+	description: "Santa Cruz plumbing and septic",
+	content: "Santa Cruz plumbing septic",
+	tags: ["plumbing", "septic"],
+}
+
+const maintenanceHub: RelatedSeedDocument = {
+	slug: "maintenance-guide",
+	title: "Plumbing & Septic Maintenance Guide",
+	description:
+		"A practical homeowner maintenance schedule for drains, water heaters, water pressure, fixtures, sewer lines, and septic systems.",
+	content: "Inspect the water heater. Review septic alarms.",
+}
+
+const heaterPost = posts[3]!
+const septicPost = posts[2]!
+const townSeed = seedFromDocument(townHub)
+const maintenanceSeed = seedFromDocument(maintenanceHub)
+
+assert.ok(
+	scoreCandidate(townSeed, heaterPost, "post") > 0,
+	"town hubs should still rank water heater guides",
+)
+assert.ok(
+	scoreCandidate(townSeed, septicPost, "post") > 0,
+	"town hubs should still rank septic guides",
+)
+assert.ok(
+	scoreCandidate(maintenanceSeed, heaterPost, "post") > 0,
+	"mixed maintenance guides should still rank water heater posts",
+)
+assert.ok(
+	scoreCandidate(maintenanceSeed, septicPost, "post") > 0,
+	"mixed maintenance guides should still rank septic posts",
+)
+assert.ok(
+	scoreCandidate(seedFromDocument(heater), septicPost, "post") <= 0,
+	"water heater pages should not rank septic-only posts",
+)
+assert.ok(
+	scoreCandidate(septicSeed, heaterPost, "post") <= 0,
+	"septic pages should not rank water-heater-only posts",
 )
 
 console.log("related content ok")

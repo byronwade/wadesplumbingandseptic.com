@@ -64,6 +64,7 @@ export const primaryNavigation = [
 
 export const companyNavigation = [
 	{ href: "/about-us", label: "About Us" },
+	{ href: "/facts", label: "Company Facts" },
 	{ href: "/testimonials", label: "Customer Reviews" },
 	{ href: "/faq", label: "FAQ" },
 	{ href: "/financing", label: "Financing" },

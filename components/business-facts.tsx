@@ -7,6 +7,7 @@ import {
 	freeQuoteHref,
 	publicFactRows,
 } from "@/lib/public-facts"
+import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 
 const linkClass =
@@ -40,7 +41,11 @@ function FactRows({
 }
 
 /** Four-row strip on service pages: area, hours, pricing, how to book. */
-export function CompactBusinessFacts() {
+export function CompactBusinessFacts({
+	quoteEmailReady = quoteEmailConfigured(),
+}: {
+	quoteEmailReady?: boolean
+}) {
 	const rows = compactFactRows()
 	const booking = rows.find((row) => row.term === "How to book")
 	const rest = rows.filter((row) => row.term !== "How to book")
@@ -68,16 +73,23 @@ export function CompactBusinessFacts() {
 							Call{" "}
 							<a className={linkClass} href={siteConfig.phoneHref}>
 								{siteConfig.phone}
-							</a>{" "}
-							or{" "}
-							<Link
-								className={linkClass}
-								href={freeQuoteHref as Route}
-								prefetch={false}
-							>
-								request a free quote
-							</Link>
-							.
+							</a>
+							{quoteEmailReady ? (
+								<>
+									{" "}
+									or{" "}
+									<Link
+										className={linkClass}
+										href={freeQuoteHref as Route}
+										prefetch={false}
+									>
+										request a free quote
+									</Link>
+									.
+								</>
+							) : (
+								<> for a free quote.</>
+							)}
 						</dd>
 					</div>
 				) : null}
@@ -90,7 +102,13 @@ export function CompactBusinessFacts() {
  * Server-rendered facts on About Us. Plain HTML so crawlers and assistants
  * can read hours, towns, septic installation, and free quotes without JS.
  */
-export function CompanyFacts() {
+export function CompanyFacts({
+	currentPath,
+}: {
+	currentPath?: string
+} = {}) {
+	const links = factLinks.filter((item) => item.href !== currentPath)
+
 	return (
 		<section
 			aria-labelledby="company-facts-heading"
@@ -106,7 +124,7 @@ export function CompanyFacts() {
 				</p>
 				<FactRows columns="full" rows={publicFactRows()} />
 				<ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
-					{factLinks.map((item) => (
+					{links.map((item) => (
 						<li key={item.href}>
 							<Link
 								className={linkClass}

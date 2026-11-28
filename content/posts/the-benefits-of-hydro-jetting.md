@@ -45,7 +45,7 @@ Most jetting goes in through a cleanout, an access point on the drain line. If y
 | After the job         | Buildup on the pipe wall can remain     | Wall is washed and debris flushed out              |
 | Pipe condition needed | Works in most pipes                     | Pipe should be intact; inspect first               |
 
-For a one time clog in a bathroom sink, a snake is often all it takes. Our guide to [clearing a clogged drain](/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide) covers what you can try yourself first. When the same drain keeps clogging, or several fixtures back up at once, the problem is usually farther down the line, and that is where jetting earns its keep. See [slow drain solutions](/slow-drains-solutions-santa-cruz) for how to tell the difference.
+For a one time clog in a bathroom sink, a snake is often all it takes. Our guide to [clearing a clogged drain](/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide) covers what you can try yourself first. When the same drain keeps clogging, or several fixtures back up at once, the problem is usually farther down the line, and that is where jetting earns its keep. See [slow drain solutions](/slow-drains-solutions-santa-cruz) for how to tell the difference, and [hydro jetting vs snaking](/compare/hydro-jetting-vs-snaking) for the tool choice.
 
 ## When jetting is the wrong tool
 
@@ -79,7 +79,7 @@ The pipe from the house to the tank can be jetted like any other drain line, and
 
 ## How often should a line be jetted?
 
-There is no single schedule. A home that had one grease clog and changed its habits may never need it again. A line with roots near an old joint, or a long run with a slight sag, may need cleaning on a regular cycle until the pipe is repaired. Restaurants and other commercial kitchens are a different case; see [commercial drain cleaning](/service-offerings/commercial-drain-cleaning) and [grease trap cleaning](/service-offerings/grease-trap-cleaning).
+There is no single schedule. A home that had one grease clog and changed its habits may never need it again. A line with roots near an old joint, or a long run with a slight sag, may need cleaning on a regular cycle until the pipe is repaired. Restaurants and other commercial kitchens are a different case; see [commercial drain cleaning](/service-offerings/commercial-drain-cleaning), [grease trap cleaning](/service-offerings/grease-trap-cleaning) and [grease trap installation](/service-offerings/grease-trap-installation).
 
 The best guide is what the camera shows and how often the clog has come back.
 

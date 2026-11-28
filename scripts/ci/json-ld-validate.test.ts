@@ -4,6 +4,7 @@ import test from "node:test"
 import {
 	articleJsonLd,
 	breadcrumbJsonLd,
+	companyFactsJsonLd,
 	faqPageJsonLd,
 	localBusinessJsonLd,
 	serviceJsonLd,
@@ -46,6 +47,7 @@ test("site JSON-LD generators include the required fields", () => {
 			{ name: "Home", path: "/" },
 			{ name: "Drain Cleaning", path: "/service-offerings/drain-cleaning" },
 		]),
+		companyFactsJsonLd(),
 	]
 	for (const node of nodes) {
 		assert.deepEqual(

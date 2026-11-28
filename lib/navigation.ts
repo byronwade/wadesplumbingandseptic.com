@@ -75,6 +75,13 @@ export const companyNavLinks: MegaNavItem[] = [
 		icon: "users",
 	},
 	{
+		href: "/facts",
+		label: "Company Facts",
+		description:
+			"Hours, license, service area, and what Wade's does not offer.",
+		icon: "badge",
+	},
+	{
 		href: "/testimonials",
 		label: "Customer Reviews",
 		description: "What homeowners and partners say about Wade’s.",

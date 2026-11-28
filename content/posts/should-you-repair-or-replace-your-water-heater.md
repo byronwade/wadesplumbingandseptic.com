@@ -23,7 +23,7 @@ imageAlt: Water heater in a home
 
 ## Quick answer
 
-Repair usually makes sense when the tank itself is sound and the problem is a part, such as a thermostat, heating element, igniter, gas valve or relief valve. Replacement usually makes sense when the tank is leaking, the unit is old and failing more often, or a repair would cost a large share of a new heater. If you replace it, it is worth looking at a more efficient model, and in California every water heater must be strapped against earthquakes.
+Repair usually makes sense when the tank itself is sound and the problem is a part, such as a thermostat, heating element, igniter, gas valve or relief valve. Replacement usually makes sense when the tank is leaking, the unit is old and failing more often, or a repair would cost a large share of a new heater. If you replace it, it is worth looking at a more efficient model, and in California every water heater must be strapped against earthquakes. The shorter [repair versus replace](/compare/repair-vs-replace-water-heater) page is the same decision in one place.
 
 - **Repair:** a failed part on a tank that is not leaking.
 - **Replace:** water leaking from the tank itself, rust in the tank, or repeated breakdowns on an older unit.
@@ -73,7 +73,7 @@ Rebates and incentives for efficient water heaters change often. Check with your
 
 California Health and Safety Code section 19211 requires all new and replacement water heaters, and all existing residential water heaters, to be braced, anchored or strapped to resist falling or moving in an earthquake. It also requires the seller of a home with a water heater to certify in writing to the buyer that the water heater meets this rule. Any replacement should include proper strapping, and it is worth checking an existing heater before you list a home.
 
-Santa Cruz County Building Permits says a plumbing permit is required when plumbing, gas or drainage piping, a fixture, or water heating or treatment equipment is installed, altered, repaired, or replaced, unless the California Plumbing Code or County ordinance exempts the work. The same page notes that replacing a water heater requires a permit. Cities such as Santa Cruz, Capitola, Scotts Valley and Watsonville have their own building departments, so confirm locally. A professional installation covers the permit, strapping, venting, gas or electrical connections and the relief valve discharge line. See [water heater installation](/service-offerings/water-heater-installation).
+Santa Cruz County Building Permits says a plumbing permit is required when plumbing, gas or drainage piping, a fixture, or water heating or treatment equipment is installed, altered, repaired, or replaced, unless the California Plumbing Code or County ordinance exempts the work. The same page notes that replacing a water heater requires a permit. Cities such as [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) and [Watsonville](/service-area/watsonville-ca-plumbing-septic-services) have their own building departments, so confirm locally. A professional installation covers the permit, strapping, venting, gas or electrical connections and the relief valve discharge line. See [water heater installation](/service-offerings/water-heater-installation).
 
 ## Keeping a water heater working
 

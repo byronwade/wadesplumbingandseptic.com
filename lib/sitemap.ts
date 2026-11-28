@@ -7,6 +7,7 @@ import { cityServicePages, cityServicePath } from "@/lib/city-service-pages"
 import { getAllRoutes, taxonomySlug, type ContentDocument } from "@/lib/content"
 import { getAllGlossaryEntries, glossaryHubs } from "@/lib/glossary"
 import { postCategoryAliases } from "@/lib/post-categories"
+import { factsPagePath, factsUpdated } from "@/lib/public-facts"
 import { absoluteUrl } from "@/lib/seo"
 import {
 	serviceCategories,
@@ -43,6 +44,7 @@ const PATH_PRIORITY: Record<string, number> = {
 	"/expert-tips": 0.9,
 	"/contact": 0.9,
 	"/about-us": 0.8,
+	"/facts": 0.85,
 	"/financing": 0.75,
 	"/warranties": 0.75,
 	"/faq": 0.7,
@@ -237,6 +239,13 @@ export async function buildSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 			),
 		})
 	}
+
+	upsertEntry(entries, {
+		pathname: factsPagePath,
+		priority: 0.85,
+		changeFrequency: "monthly",
+		lastModified: factsUpdated,
+	})
 
 	upsertEntry(entries, {
 		pathname: "/llms.txt",

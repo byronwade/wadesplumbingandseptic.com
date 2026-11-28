@@ -8,7 +8,7 @@ order: 38
 image: >-
   /images/wordpress/rusty-outdoor-plumbing-pipes-with-pressure-gauges-and-warning-signs-on-a-wall-70277e.webp
 imageAlt: Outdoor plumbing pipes with gauges
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 Sump pump installation for Santa Cruz County homes is a new or replacement pump in a wet basement or crawl space, including the discharge line and a function test. Wade's Plumbing & Septic sizes the pump to the pit and existing piping. This is a groundwater sump pump, not a septic tank pump-out.
@@ -75,4 +75,4 @@ Wade's Plumbing & Septic proudly serves the entire Santa Cruz County area, inclu
 
 Ensure your Santa Cruz County home stays dry and safe with our reliable sump pump installation services.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

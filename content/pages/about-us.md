@@ -31,7 +31,7 @@ eyebrow: About Wade's
 updated: "2026-11-27"
 ---
 
-Wade's Plumbing & Septic is a family-owned plumbing and septic company based in Ben Lomond. We serve Santa Cruz County and selected Santa Clara County communities.
+Wade's Plumbing & Septic is a family-owned plumbing and septic company based in Ben Lomond. We serve Santa Cruz County and selected Santa Clara County communities. A short [company facts](/facts) page lists hours, license, service area, and what Wade's does not offer.
 
 ## What we do
 

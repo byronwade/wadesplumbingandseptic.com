@@ -37,6 +37,7 @@ Wade's works on the tank, distribution components, pumps, alarms, treatment equi
 - System upgrades, abandonment, and replacement
 - Design coordination, permitting, and compliance
 - Alternative and engineered treatment systems
+- [Commercial septic services](/service-offerings/commercial-septic-services) for businesses and multi-unit properties
 
 ## Engineered systems for difficult properties
 

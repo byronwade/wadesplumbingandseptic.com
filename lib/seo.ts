@@ -3,6 +3,12 @@ import type { Metadata } from "next"
 import type { ContentDocument } from "@/lib/content"
 import { buildOgImagePath, defaultOgEyebrow } from "@/lib/og"
 import {
+	factsPageDescription,
+	factsPagePath,
+	factsPageTitle,
+	publicFactRows,
+} from "@/lib/public-facts"
+import {
 	serviceAreaLocations,
 	type ServiceAreaLocation,
 } from "@/lib/service-areas"
@@ -293,6 +299,25 @@ export function webPageJsonLd(document: ContentDocument) {
 		about: {
 			"@id": businessId,
 		},
+	}
+}
+
+/** Quotable company facts as DefinedTerm rows, used on /facts. */
+export function companyFactsJsonLd() {
+	const url = absoluteUrl(factsPagePath)
+	return {
+		"@context": "https://schema.org",
+		"@type": "DefinedTermSet",
+		"@id": `${url}#facts`,
+		name: factsPageTitle,
+		description: factsPageDescription,
+		url,
+		about: { "@id": businessId },
+		hasDefinedTerm: publicFactRows().map((row) => ({
+			"@type": "DefinedTerm",
+			name: row.term,
+			description: row.detail,
+		})),
 	}
 }
 

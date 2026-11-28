@@ -150,6 +150,10 @@ export const townGuideLinks = [
 		title: "Conventional vs engineered septic",
 	},
 	{
+		href: "/maintenance-guide",
+		title: "Plumbing and septic maintenance schedule",
+	},
+	{
 		href: "/how-to-locate-trustworthy-plumbing-services-nearby",
 		title: "How to choose a plumber",
 	},

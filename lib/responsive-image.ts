@@ -17,6 +17,13 @@ const extraNarrow = {
 		"/images/work/advanced-septic-control-panel-640.webp",
 	"/images/work/engineered-retaining-wall.webp":
 		"/images/work/engineered-retaining-wall-640.webp",
+	/*
+	  Generator emits 828px for this file, but the service hero box is ~372px
+	  on phones. A 640px sibling cuts the unused-image waste without dropping
+	  the generated 828 mapping from a rerun.
+	*/
+	"/images/services/drain-clearing.webp":
+		"/images/services/drain-clearing-640.webp",
 } as const
 
 const extraAvif = {
@@ -30,6 +37,8 @@ const extraAvif = {
 		"/images/work/advanced-septic-control-panel-640.avif",
 	"/images/work/engineered-retaining-wall-640.webp":
 		"/images/work/engineered-retaining-wall-640.avif",
+	"/images/services/drain-clearing-640.webp":
+		"/images/services/drain-clearing-640.avif",
 	"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.webp":
 		"/images/wordpress/close-up-of-a-storm-drain-covered-with-leaves-and-debris-during-rainfall-5ed9d8.avif",
 } as const

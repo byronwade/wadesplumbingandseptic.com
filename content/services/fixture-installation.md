@@ -102,4 +102,4 @@ Whether you're in the heart of Santa Cruz or the surrounding areas, Wade's Plumb
 
 Enhance the functionality and aesthetics of your home with our professional fixture installation services, tailored for Santa Cruz County, CA.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

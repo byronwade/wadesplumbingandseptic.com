@@ -126,6 +126,7 @@ export function seedFromDocument(document: RelatedSeedDocument) {
 		tags: new Set((document.tags ?? []).map((tag) => tag.toLowerCase())),
 		tokens: tokenize(haystack),
 		bridges: bridgeTokens(haystack),
+		topics: metadataTopics(document),
 	}
 }
 
@@ -191,8 +192,73 @@ export function scoreCandidate(
 	score += overlapScore(seed.bridges, tokens, 3)
 	score += overlapScore(seed.bridges, bridges, 2)
 	score += overlapScore(seed.tokens, bridges, 2)
+	score -= exclusiveTopicPenalty(seed, candidate, bridges)
 
 	return score
+}
+
+type TopicFlags = {
+	exclusiveHeater: boolean
+	exclusiveSeptic: boolean
+}
+
+/**
+ * Topic flags from title, description, slug, category, and tags only.
+ * Body copy is skipped so the company name "Wade's Plumbing & Septic" does
+ * not make a water-heater page look mixed, and so town hubs that name both
+ * trades stay mixed instead of septic-only.
+ */
+function metadataTopics(document: {
+	slug: string
+	title: string
+	description: string
+	category?: string
+	tags?: string[]
+}): TopicFlags {
+	const haystack = [
+		document.slug.replaceAll("-", " "),
+		document.title,
+		document.description,
+		document.category ?? "",
+		...(document.tags ?? []),
+	].join(" ")
+	const hubHaystack = [
+		document.slug.replaceAll("-", " "),
+		document.title,
+		document.description,
+		document.category ?? "",
+	].join(" ")
+	const heater = /\bwater[\s-]?heater\b|\btankless\b/i.test(haystack)
+	const septic = /\bseptic\b/i.test(haystack)
+	const mixedHub =
+		/\bplumbing\b.{0,20}\bseptic\b|\bseptic\b.{0,20}\bplumbing\b/i.test(
+			hubHaystack,
+		)
+
+	return {
+		exclusiveHeater: heater && !septic && !mixedHub,
+		exclusiveSeptic: septic && !heater && !mixedHub,
+	}
+}
+
+/** Keep water-heater-only pages away from septic-only posts, and the reverse. */
+function exclusiveTopicPenalty(
+	seed: ReturnType<typeof seedFromDocument>,
+	candidate: RelatedSeedDocument,
+	candidateBridges: Set<string>,
+) {
+	const candidateTopics = metadataTopics(candidate)
+
+	if (seed.topics.exclusiveHeater && candidateTopics.exclusiveSeptic) {
+		return 40
+	}
+	if (seed.topics.exclusiveSeptic && candidateTopics.exclusiveHeater) {
+		return 40
+	}
+	if (seed.bridges.has("commercial") && !candidateBridges.has("commercial")) {
+		return 4
+	}
+	return 0
 }
 
 export function rankDocuments(

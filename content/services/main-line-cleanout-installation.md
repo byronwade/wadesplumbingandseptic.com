@@ -7,7 +7,7 @@ category: Plumbing
 order: 36
 image: /images/work/advanced-septic-control-panel.webp
 imageAlt: Advanced septic control panel
-updated: "2026-11-26"
+updated: "2026-11-27"
 ---
 
 A main line cleanout gives Santa Cruz County homes a code-friendly access point on the building sewer so cleaning and camera work do not require breaking pavement every time. Wade's Plumbing & Septic locates the line, installs the cleanout, and confirms it opens to the main.
@@ -75,4 +75,4 @@ For more information on the areas we serve, please visit our [service area overv
 
 Keep your plumbing system in top condition with our expert main line cleanout services.
 
-[Call us](tel:+18312254344) [Request service](/contact)
+[Call us](tel:+18312254344) [Get a Free Quote](/contact#quote)

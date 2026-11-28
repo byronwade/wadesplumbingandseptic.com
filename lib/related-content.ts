@@ -68,7 +68,7 @@ export async function getRelatedForService(
 	const exclude = new Set([service.slug])
 
 	return {
-		posts: rankDocuments(seed, posts, "post", limits.posts ?? 3, exclude).map(
+		posts: rankDocuments(seed, posts, "post", limits.posts ?? 4, exclude).map(
 			toPostItem,
 		),
 		services: rankDocuments(
@@ -116,7 +116,7 @@ export async function getRelatedForTopic(
 	}
 
 	return {
-		posts: rankDocuments(seed, posts, "post", limits.posts ?? 3, exclude).map(
+		posts: rankDocuments(seed, posts, "post", limits.posts ?? 4, exclude).map(
 			toPostItem,
 		),
 		services: rankDocuments(
