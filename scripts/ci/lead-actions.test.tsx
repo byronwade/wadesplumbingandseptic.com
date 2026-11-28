@@ -3,6 +3,7 @@ import test from "node:test"
 import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
+import { CompactBusinessFacts } from "../../components/business-facts"
 import { ContactLead } from "../../components/contact-lead"
 import { ContentConversionCta } from "../../components/content-conversion-cta"
 import { ContentHero } from "../../components/content-hero"
@@ -140,4 +141,35 @@ test("contact lead swaps the form for call-or-email when quote email is down", (
 	assert.ok(paused.includes(`href="${contactInfo.phoneHref}"`), paused)
 	assert.ok(paused.includes(`href="${contactInfo.emailHref}"`), paused)
 	assert.ok(paused.includes(weekdayHoursPhrase()), paused)
+})
+
+test("compact facts keep the quote form link only when email can send", () => {
+	const ready = renderToStaticMarkup(
+		createElement(CompactBusinessFacts, { quoteEmailReady: true }),
+	)
+	assert.ok(ready.includes(`href="${freeQuoteHref}"`), ready)
+	assert.ok(ready.includes("request a free quote"), ready)
+
+	const paused = renderToStaticMarkup(
+		createElement(CompactBusinessFacts, { quoteEmailReady: false }),
+	)
+	assert.equal(paused.includes(`href="${freeQuoteHref}"`), false, paused)
+	assert.equal(paused.includes("request a free quote"), false, paused)
+	assert.ok(paused.includes(`href="${siteConfig.phoneHref}"`), paused)
+	assert.ok(paused.includes("for a free quote"), paused)
+})
+
+test("page-hero photo wash is hidden on phones so it cannot be the LCP", () => {
+	const html = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "Plumbing and septic for Santa Cruz, CA.",
+			image: "/images/locations/santa-cruz-redwoods.webp",
+			title: "Santa Cruz, CA Plumbing & Septic Services",
+			variant: "page",
+		}),
+	)
+	assert.match(html, /hidden w-full opacity-35 lg:block/)
+	assert.doesNotMatch(html, /fetchPriority="high"/i)
+	assert.doesNotMatch(html, /rel="preload"/)
+	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)
 })

@@ -117,11 +117,18 @@ const aptosNarrowAvif = avifFor(aptosNarrow)
 assert.ok(aptosNarrowAvif, "Aptos town hero needs a phone-width AVIF")
 assert.ok(existsSync(publicFile(aptosNarrowAvif)))
 
-for (const src of [
-	septicHero,
-	aptosHero,
-	"/images/services/drain-clearing.webp",
-]) {
+const drainHero = "/images/services/drain-clearing.webp"
+assert.equal(
+	narrowFor(drainHero),
+	"/images/services/drain-clearing-640.webp",
+	"Drain-cleaning service LCP must use the 640px file, not the 828px sibling",
+)
+assert.equal(
+	lcpPreload(drainHero).href,
+	"/images/services/drain-clearing-640.avif",
+)
+
+for (const src of [septicHero, aptosHero, drainHero]) {
 	const preload = lcpPreload(src)
 	assert.ok(
 		existsSync(publicFile(preload.href)),

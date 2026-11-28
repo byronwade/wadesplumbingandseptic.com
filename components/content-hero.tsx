@@ -389,6 +389,10 @@ export function ContentHero({
 	  Company, area and utility pages. Same dark band as the home and service
 	  heroes so every template opens in the brand, with the page photo as a
 	  faded wash on the right and the call path in the first screen.
+
+	  The wash is hidden below lg so a 35% opacity decoration cannot become
+	  the mobile LCP. Leave it lazy: a high-priority preload still downloads
+	  on phones and races the first-screen type.
 	*/
 	const actions = showActions ?? true
 
@@ -397,9 +401,9 @@ export function ContentHero({
 			{image ? (
 				<div
 					aria-hidden="true"
-					className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full opacity-35 lg:w-3/5"
+					className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-full opacity-35 lg:block lg:w-3/5"
 				>
-					<ContentHeroImage alt="" priority src={image} />
+					<ContentHeroImage alt="" src={image} />
 					<div className="absolute inset-0 bg-[color-mix(in_oklab,var(--dark-1)_45%,transparent)]" />
 				</div>
 			) : null}
