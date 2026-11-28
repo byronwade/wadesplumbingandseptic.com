@@ -126,6 +126,7 @@ export function seedFromDocument(document: RelatedSeedDocument) {
 		tags: new Set((document.tags ?? []).map((tag) => tag.toLowerCase())),
 		tokens: tokenize(haystack),
 		bridges: bridgeTokens(haystack),
+		topics: metadataTopics(document),
 	}
 }
 
@@ -191,52 +192,70 @@ export function scoreCandidate(
 	score += overlapScore(seed.bridges, tokens, 3)
 	score += overlapScore(seed.bridges, bridges, 2)
 	score += overlapScore(seed.tokens, bridges, 2)
-	score -= exclusiveTopicPenalty(
-		seed.slug,
-		seed.bridges,
-		candidate.slug,
-		bridges,
-	)
+	score -= exclusiveTopicPenalty(seed, candidate, bridges)
 
 	return score
 }
 
-const HEATER_BRIDGES = ["water-heater", "tankless", "heater"] as const
-const SEPTIC_BRIDGES = [
-	"septic",
-	"leach",
-	"drainfield",
-	"pumping",
-	"engineered",
-] as const
-
-function hasBridge(bridges: Set<string>, keys: readonly string[]) {
-	return keys.some((key) => bridges.has(key))
+type TopicFlags = {
+	exclusiveHeater: boolean
+	exclusiveSeptic: boolean
 }
 
-/** Keep water-heater pages away from septic-only posts, and the reverse. */
+/**
+ * Topic flags from title, description, slug, category, and tags only.
+ * Body copy is skipped so the company name "Wade's Plumbing & Septic" does
+ * not make a water-heater page look mixed, and so town hubs that name both
+ * trades stay mixed instead of septic-only.
+ */
+function metadataTopics(document: {
+	slug: string
+	title: string
+	description: string
+	category?: string
+	tags?: string[]
+}): TopicFlags {
+	const haystack = [
+		document.slug.replaceAll("-", " "),
+		document.title,
+		document.description,
+		document.category ?? "",
+		...(document.tags ?? []),
+	].join(" ")
+	const hubHaystack = [
+		document.slug.replaceAll("-", " "),
+		document.title,
+		document.description,
+		document.category ?? "",
+	].join(" ")
+	const heater = /\bwater[\s-]?heater\b|\btankless\b/i.test(haystack)
+	const septic = /\bseptic\b/i.test(haystack)
+	const mixedHub =
+		/\bplumbing\b.{0,20}\bseptic\b|\bseptic\b.{0,20}\bplumbing\b/i.test(
+			hubHaystack,
+		)
+
+	return {
+		exclusiveHeater: heater && !septic && !mixedHub,
+		exclusiveSeptic: septic && !heater && !mixedHub,
+	}
+}
+
+/** Keep water-heater-only pages away from septic-only posts, and the reverse. */
 function exclusiveTopicPenalty(
-	seedSlug: string,
-	seedBridges: Set<string>,
-	candidateSlug: string,
+	seed: ReturnType<typeof seedFromDocument>,
+	candidate: RelatedSeedDocument,
 	candidateBridges: Set<string>,
 ) {
-	const seedHeater =
-		hasBridge(seedBridges, HEATER_BRIDGES) ||
-		/water-heater|tankless/.test(seedSlug)
-	const candidateHeater =
-		hasBridge(candidateBridges, HEATER_BRIDGES) ||
-		/water-heater|tankless/.test(candidateSlug)
-	const seedSeptic =
-		/septic/.test(seedSlug) ||
-		(hasBridge(seedBridges, SEPTIC_BRIDGES) && !seedHeater)
-	const candidateSeptic =
-		/septic/.test(candidateSlug) ||
-		(hasBridge(candidateBridges, SEPTIC_BRIDGES) && !candidateHeater)
+	const candidateTopics = metadataTopics(candidate)
 
-	if (seedHeater && candidateSeptic && !candidateHeater) return 40
-	if (seedSeptic && candidateHeater && !candidateSeptic) return 40
-	if (seedBridges.has("commercial") && !candidateBridges.has("commercial")) {
+	if (seed.topics.exclusiveHeater && candidateTopics.exclusiveSeptic) {
+		return 40
+	}
+	if (seed.topics.exclusiveSeptic && candidateTopics.exclusiveHeater) {
+		return 40
+	}
+	if (seed.bridges.has("commercial") && !candidateBridges.has("commercial")) {
 		return 4
 	}
 	return 0

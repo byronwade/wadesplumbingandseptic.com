@@ -2,6 +2,7 @@ import assert from "node:assert/strict"
 import fs from "node:fs"
 import path from "node:path"
 import test from "node:test"
+import matter from "gray-matter"
 import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
@@ -16,6 +17,7 @@ import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
 import { relatedTownsFor } from "../../lib/related-towns"
 import {
 	rankDocuments,
+	scoreCandidate,
 	seedFromDocument,
 	type RelatedSeedDocument,
 } from "../../lib/related-score"
@@ -230,23 +232,17 @@ function markdownHrefs(file: string) {
 }
 
 function parseSeed(file: string): RelatedSeedDocument {
-	const raw = fs.readFileSync(file, "utf8")
-	const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
-	const frontmatter = match?.[1] ?? ""
-	const content = match?.[2] ?? raw
+	const { data, content } = matter(fs.readFileSync(file, "utf8"))
 	return {
 		slug: path.basename(file, ".md"),
 		title:
-			frontmatter.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1]?.trim() ??
-			path.basename(file, ".md"),
-		description:
-			frontmatter.match(/^description:\s*["']?(.+?)["']?\s*$/m)?.[1]?.trim() ??
-			"",
+			typeof data.title === "string" ? data.title : path.basename(file, ".md"),
+		description: typeof data.description === "string" ? data.description : "",
 		content,
-		category: frontmatter.match(/^category:\s*(.+)$/m)?.[1]?.trim(),
-		tags: [...frontmatter.matchAll(/^\s+-\s+(.+)$/gm)].map((item) =>
-			item[1]!.trim(),
-		),
+		category: typeof data.category === "string" ? data.category : undefined,
+		tags: Array.isArray(data.tags)
+			? data.tags.map((tag) => String(tag))
+			: undefined,
 	}
 }
 
@@ -382,5 +378,50 @@ test("water heater related guides stay on water heater topics", () => {
 				!/septic/i.test(post.slug),
 		),
 		related.map((post) => post.slug).join(", "),
+	)
+})
+
+test("mixed plumbing and septic hubs keep both heater and septic guides", () => {
+	const posts = fs
+		.readdirSync(postsDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => parseSeed(path.join(postsDir, name)))
+	const heaterPost = posts.find(
+		(post) =>
+			post.slug.includes("water-heater") || post.slug.includes("tankless"),
+	)
+	const septicPost = posts.find(
+		(post) =>
+			post.slug.includes("septic") && !post.slug.includes("water-heater"),
+	)
+	assert.ok(heaterPost, "expected a water heater post")
+	assert.ok(septicPost, "expected a septic post")
+
+	const townSeed = seedFromDocument({
+		slug: "__topic__felton-ca-plumbing-septic-services",
+		title: "Felton plumbing and septic",
+		description: "Felton plumbing and septic",
+		content: "Felton plumbing septic",
+		tags: ["plumbing", "septic"],
+	})
+	const maintenanceSeed = seedFromDocument(
+		parseSeed(path.join("content", "pages", "maintenance-guide.md")),
+	)
+
+	assert.ok(
+		scoreCandidate(townSeed, heaterPost!, "post") > 0,
+		"town hub dropped a water heater guide",
+	)
+	assert.ok(
+		scoreCandidate(townSeed, septicPost!, "post") > 0,
+		"town hub dropped a septic guide",
+	)
+	assert.ok(
+		scoreCandidate(maintenanceSeed, heaterPost!, "post") > 0,
+		"maintenance guide dropped a water heater post",
+	)
+	assert.ok(
+		scoreCandidate(maintenanceSeed, septicPost!, "post") > 0,
+		"maintenance guide dropped a septic post",
 	)
 })
