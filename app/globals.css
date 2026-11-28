@@ -183,6 +183,10 @@
 	/* Visible header height, used to size the cinematic hero to the viewport.
 	   Matches the 64px bar on phones; the utility bar adds 28px from sm up. */
 	--header-h: 4rem;
+	/* Sticky mobile call bar. 0 on desktop (the bar is lg:hidden). Phones and
+	   tablets reserve this so first-screen heroes and focused fields sit above
+	   the bar instead of under it. */
+	--call-bar-h: 0px;
 
 	/* Motion: 120ms ease-out, transform and opacity only. */
 	--motion-fast: 120ms;
@@ -267,6 +271,19 @@
 	:root {
 		/* Utility bar (28px) + main bar (72px) + hairline. */
 		--header-h: 6.5rem;
+	}
+}
+
+@media (width < 64rem) {
+	:root {
+		/* Button + hours line + padding, matching .mobile-call-bar. */
+		--call-bar-h: 6.5rem;
+	}
+}
+
+@media print {
+	:root {
+		--call-bar-h: 0px;
 	}
 }
 
@@ -357,7 +374,9 @@
 	/* Keep keyboard-focused content above the mobile call bar. */
 	@media (width < 64rem) {
 		html:has(.mobile-call-bar) {
-			scroll-padding-bottom: calc(10rem + env(safe-area-inset-bottom));
+			scroll-padding-bottom: calc(
+				var(--call-bar-h) + 2.5rem + env(safe-area-inset-bottom)
+			);
 		}
 	}
 
@@ -429,6 +448,7 @@
 
 	#quote {
 		scroll-margin-top: calc(var(--header-h) + 1.25rem);
+		scroll-margin-bottom: calc(var(--call-bar-h) + 1.25rem);
 	}
 
 	/*
@@ -446,6 +466,7 @@
 		color: var(--foreground);
 		box-shadow: inset 0 1px 1px oklch(0 0 0 / 0.18);
 		outline: none;
+		scroll-margin-bottom: calc(var(--call-bar-h) + 1rem);
 	}
 
 	.field-input:focus-visible {
@@ -851,8 +872,9 @@
 	}
 
 	/*
-	  Cinematic hero. Sized to the visible viewport minus the header, so the whole
-	  frame is on screen at once instead of being cropped by the sticky bar.
+	  Cinematic hero. Sized to the visible viewport minus the header and the
+	  mobile call bar, so the credential row and shortcut tiles sit above the
+	  sticky Call control instead of under it.
 
 	  svh, not vh or dvh: vh ignores mobile browser chrome and overflows, dvh
 	  changes as the URL bar hides and makes the headline resize while you scroll.
@@ -866,7 +888,7 @@
 		isolation: isolate;
 		display: flex;
 		flex-direction: column;
-		min-height: calc(100svh - var(--header-h));
+		min-height: calc(100svh - var(--header-h) - var(--call-bar-h));
 		overflow: clip;
 		background: var(--ink);
 		color: var(--on-dark);
@@ -921,11 +943,11 @@
 	.hero-pick {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
-		min-height: 3.75rem;
+		gap: 0.5rem;
+		min-height: 2.75rem;
 		min-width: 0;
 		overflow-wrap: anywhere;
-		padding: 0.875rem;
+		padding: 0.65rem 0.75rem;
 		border: 1px solid color-mix(in oklab, white 12%, transparent);
 		border-radius: var(--radius-lg);
 		background: color-mix(in oklab, var(--ink) 78%, transparent);
@@ -945,6 +967,8 @@
 
 	@media (width >= 40rem) {
 		.hero-pick {
+			min-height: 3.75rem;
+			gap: 0.75rem;
 			padding: 1rem 1.125rem;
 		}
 	}

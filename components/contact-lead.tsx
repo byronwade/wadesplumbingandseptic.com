@@ -28,7 +28,10 @@ export function ContactLead({
 	quoteEmailReady?: boolean
 }) {
 	return (
-		<section className="container-shell section-y-tight" id={freeQuoteHash}>
+		<section
+			className="container-shell section-y-tight pb-[calc(var(--space-section-y-tight)+var(--call-bar-h))]"
+			id={freeQuoteHash}
+		>
 			<div className="section-head mb-6 max-w-2xl">
 				<p className="spec-label">Free quote</p>
 				{quoteEmailReady ? (

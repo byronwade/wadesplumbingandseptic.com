@@ -159,6 +159,37 @@ test("compact facts keep the quote form link only when email can send", () => {
 	assert.ok(paused.includes("for a free quote"), paused)
 })
 
+test("article heroes put Call and Free Quote above the fold on guides", () => {
+	const ready = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "How to maintain a septic system in Santa Cruz County.",
+			quoteEmailReady: true,
+			title: "Septic System Maintenance in Santa Cruz County",
+			variant: "article",
+		}),
+	)
+	assert.ok(ready.includes(freeQuoteCtaLabel), ready)
+	assert.ok(ready.includes(`href="${freeQuoteHref}"`), ready)
+	assert.ok(ready.includes(`href="${siteConfig.phoneHref}"`), ready)
+	assert.ok(
+		ready.indexOf(freeQuoteCtaLabel) <
+			ready.indexOf(`href="${siteConfig.phoneHref}"`),
+		ready,
+	)
+
+	const paused = renderToStaticMarkup(
+		createElement(ContentHero, {
+			description: "How to maintain a septic system in Santa Cruz County.",
+			quoteEmailReady: false,
+			title: "Septic System Maintenance in Santa Cruz County",
+			variant: "article",
+		}),
+	)
+	assert.equal(paused.includes(`href="${freeQuoteHref}"`), false, paused)
+	assert.ok(paused.includes(`href="${siteConfig.phoneHref}"`), paused)
+	assert.ok(paused.includes(callForFreeQuoteLabel), paused)
+})
+
 test("page-hero photo wash is hidden on phones so it cannot be the LCP", () => {
 	const html = renderToStaticMarkup(
 		createElement(ContentHero, {

@@ -168,6 +168,19 @@ test("header call buttons can keep their fixed one-line size", () => {
 	assert.ok(!classes.includes("min-h-9"), classes.join(" "))
 })
 
+test("the cinematic hero reserves space for the sticky mobile call bar", () => {
+	const css = fs.readFileSync("app/globals.css", "utf8")
+	assert.match(css, /--call-bar-h/)
+	assert.match(
+		css,
+		/100svh - var\(--header-h\) - var\(--call-bar-h\)/,
+		"home hero min-height must clear the call bar",
+	)
+	const home = fs.readFileSync("app/(home)/page.tsx", "utf8")
+	assert.match(home, /min-\[22\.5rem\]:grid-cols-2/)
+	assert.doesNotMatch(home, /min-\[23rem\]:grid-cols-2/)
+})
+
 test("mobile call bar keeps the number and full hours in its HTML", () => {
 	const html = renderToStaticMarkup(createElement(MobileCallBar))
 	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)

@@ -185,7 +185,6 @@ export function ContentPage({
 				meta={articleMeta}
 				pageCta="contact"
 				parent={parent}
-				showActions={!isPost}
 				title={document.heroTitle ?? document.title}
 				variant={isPost ? "article" : "page"}
 			/>

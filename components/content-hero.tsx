@@ -195,7 +195,7 @@ function normalizeVariant(
 /**
  * Interior page heroes. The homepage cinematic hero is separate on purpose.
  *
- * - article: editorial / blog post intro (light, featured image, no CTAs)
+ * - article: editorial / blog post intro (light, featured image, Call / Free Quote)
  * - service: work-photo band under a quiet title row (one call action)
  * - index: compact catalog intro for /services and /expert-tips
  * - page: quieter utility / company / area landing intro
@@ -241,9 +241,11 @@ export function ContentHero({
 	const trail = buildBreadcrumbs({ title, parent, breadcrumbs })
 
 	if (kind === "article") {
+		const actions = showActions ?? true
+
 		return (
 			<header className="hero-article border-border border-b">
-				<div className="article-wide-shell pt-10 pb-8 sm:pt-14 sm:pb-12">
+				<div className="article-wide-shell pt-10 pb-[calc(2rem+var(--call-bar-h))] sm:pt-14 sm:pb-[calc(3rem+var(--call-bar-h))] lg:pb-12">
 					<BreadcrumbTrail items={trail} tone="light" />
 					<div className="section-head max-w-3xl">
 						{eyebrow ? (
@@ -256,6 +258,16 @@ export function ContentHero({
 						<h1 className="type-headline text-foreground">{title}</h1>
 						<p className="type-lead text-muted-foreground">{description}</p>
 					</div>
+					{actions ? (
+						<div className="mt-8 flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+							<LeadActions
+								callVariantWhenQuotePrimary="outline"
+								fallbackTextClassName="text-muted-foreground text-sm"
+								quoteEmailReady={quoteEmailReady}
+								size="lg"
+							/>
+						</div>
+					) : null}
 					{meta ? (
 						<div className="text-muted-foreground mt-6">{meta}</div>
 					) : null}
@@ -286,7 +298,7 @@ export function ContentHero({
 		*/
 		return (
 			<header className="hero-service surface-hero overflow-hidden">
-				<div className="container-shell grid grid-cols-1 items-center gap-8 pt-8 pb-10 sm:pt-10 sm:pb-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14 lg:py-14">
+				<div className="container-shell grid grid-cols-1 items-center gap-8 pt-8 pb-[calc(2.5rem+var(--call-bar-h))] sm:pt-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-14 lg:py-14">
 					<div className="min-w-0">
 						<BreadcrumbTrail items={trail} tone="dark" />
 						<div className="section-head">
@@ -336,7 +348,7 @@ export function ContentHero({
 		*/
 		return (
 			<header className="hero-index surface-hero relative overflow-hidden">
-				<div className="container-shell relative py-10 sm:py-14 lg:py-16">
+				<div className="container-shell relative pt-10 pb-[calc(2.5rem+var(--call-bar-h))] sm:pt-14 lg:py-16">
 					<BreadcrumbTrail items={trail} tone="dark" />
 					<div
 						className={cn(
@@ -412,7 +424,7 @@ export function ContentHero({
 				<span className="sr-only">{imageAlt?.trim() || title}</span>
 			) : null}
 
-			<div className="container-shell relative py-10 sm:py-14 lg:py-16">
+			<div className="container-shell relative pt-10 pb-[calc(2.5rem+var(--call-bar-h))] sm:pt-14 lg:py-16">
 				<BreadcrumbTrail items={trail} tone="dark" />
 				<div className="section-head max-w-2xl">
 					{eyebrow ? <p className="spec-label">{eyebrow}</p> : null}
