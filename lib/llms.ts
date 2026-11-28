@@ -72,6 +72,19 @@ export function llmsLinkLine(title: string, url: string, description?: string) {
 	return summary ? `- [${title}](${url}): ${summary}` : `- [${title}](${url})`
 }
 
+/** Site paths named in an llms file, including Source: lines and markdown links. */
+export function extractLlmsSitePaths(body: string, origin = siteConfig.url) {
+	const paths = new Set<string>()
+	const escaped = origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+	const pattern = new RegExp(`${escaped}[^\\s)>\\]"']*`, "g")
+	for (const [raw] of body.matchAll(pattern)) {
+		const cleaned = raw.replace(/[#?].*$/, "").replace(/[.,;:]+$/, "")
+		const pathname = cleaned.slice(origin.length) || "/"
+		if (pathname) paths.add(pathname)
+	}
+	return paths
+}
+
 /** Opening block shared by llms.txt and llms-full.txt, built from siteConfig. */
 export function llmsBusinessSummary() {
 	return `# ${siteConfig.name}

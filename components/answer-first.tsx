@@ -6,8 +6,9 @@ import { freeQuoteHref, weekdayHoursPhrase } from "@/lib/public-facts"
 import { quoteEmailConfigured } from "@/lib/quote-request"
 import { siteConfig } from "@/lib/site"
 
-const linkClass =
-	"text-primary underline decoration-current/40 underline-offset-4 hover:decoration-current"
+/** Inline Quick-answer links stay 44px tall so a phone number is tappable. */
+const tapLinkClass =
+	"text-primary inline-flex min-h-11 items-center underline decoration-current/40 underline-offset-4 hover:decoration-current"
 
 /**
  * First-body paragraph assistants can quote: what Wade's does, where, how to
@@ -38,7 +39,7 @@ export function AnswerFirst({
 				<p className="spec-label">Quick answer</p>
 				<p className="mt-3 max-w-3xl text-sm leading-relaxed font-semibold sm:text-base">
 					{lead} Quotes are free. Call{" "}
-					<a className={linkClass} href={siteConfig.phoneHref}>
+					<a className={tapLinkClass} href={siteConfig.phoneHref}>
 						{siteConfig.phone}
 					</a>{" "}
 					{weekdayHoursPhrase()} (closed Saturday and Sunday)
@@ -46,7 +47,7 @@ export function AnswerFirst({
 						<>
 							, or{" "}
 							<Link
-								className={linkClass}
+								className={tapLinkClass}
 								href={freeQuoteHref as Route}
 								prefetch={false}
 							>
