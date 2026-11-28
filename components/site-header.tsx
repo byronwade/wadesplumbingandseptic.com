@@ -36,7 +36,7 @@ export function SiteHeader() {
 					<div className="@container min-w-0 flex-1 @min-[64rem]/header:@container-normal @min-[64rem]/header:flex-initial">
 						<Link
 							prefetch={false}
-							className="flex max-w-full items-center gap-2.5 sm:gap-3"
+							className="flex min-h-11 max-w-full items-center gap-2.5 sm:gap-3"
 							href="/"
 							aria-label="Wade's Plumbing & Septic home"
 						>

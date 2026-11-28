@@ -83,14 +83,14 @@ export default function HomePage() {
 				</div>
 
 				{/* Top line: where we are. */}
-				<div className="container-shell relative flex items-start justify-between gap-6 pt-8 sm:pt-10">
+				<div className="container-shell relative flex items-start justify-between gap-6 pt-5 sm:pt-10">
 					<p className="spec-label text-on-dark-muted">Santa Cruz County, CA</p>
 					<p className="text-on-dark-subtle hidden text-xs sm:block">
 						Family owned
 					</p>
 				</div>
 
-				<div className="container-shell relative mt-auto pt-10 pb-8 sm:pb-10">
+				<div className="container-shell relative mt-auto pt-6 pb-4 sm:pt-10 sm:pb-10">
 					{/*
 					  Title and lead paint immediately. Entrance motion on first-screen
 					  copy delayed LCP under mobile Lighthouse (~2s element render delay).
@@ -100,7 +100,7 @@ export default function HomePage() {
 						<span className="text-primary-bright">and septic</span>
 					</h1>
 
-					<div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+					<div className="mt-5 flex flex-col gap-5 sm:mt-8 sm:gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<p className="type-lead text-on-dark-muted max-w-md">
 							Licensed plumbing and septic for Santa Cruz County homes and
 							businesses. No sales pressure. Flat-rate pricing, quoted on site
@@ -108,7 +108,11 @@ export default function HomePage() {
 						</p>
 
 						<div className="flex min-w-0 flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center lg:shrink-0">
-							<LeadActions quoteArrow quoteEmailReady={quoteEmailReady} />
+							<LeadActions
+								quoteArrow
+								quoteEmailReady={quoteEmailReady}
+								size="lg"
+							/>
 						</div>
 					</div>
 
@@ -117,10 +121,13 @@ export default function HomePage() {
 					  the four common ones are a tap away from the first screen rather
 					  than behind the menu. Solid tint, no backdrop blur: blur over the
 					  photo would repaint every scroll frame.
+
+					  One column below 360px so labels such as "Water heaters" do not
+					  wrap mid-word; two columns from 22.5rem (360px) up.
 					*/}
 					<nav
 						aria-label="Popular services"
-						className="mt-8 grid grid-cols-1 gap-2 min-[23rem]:grid-cols-2 sm:mt-10 sm:gap-3 lg:grid-cols-4"
+						className="mt-5 grid grid-cols-1 gap-2 min-[22.5rem]:grid-cols-2 sm:mt-10 sm:gap-3 lg:grid-cols-4"
 					>
 						{heroQuickLinks.map(({ label, detail, href, icon }) => {
 							const Icon = quickLinkIcons[icon]
@@ -145,7 +152,7 @@ export default function HomePage() {
 									</span>
 									<ArrowUpRight
 										aria-hidden="true"
-										className="text-on-dark-subtle group-hover:text-on-dark ml-auto size-4 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+										className="text-on-dark-subtle group-hover:text-on-dark ml-auto hidden size-4 shrink-0 self-start transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:block"
 									/>
 								</Link>
 							)
@@ -154,11 +161,11 @@ export default function HomePage() {
 				</div>
 
 				{/*
-				  Credential bar on the bottom edge. Keeps the licence numbers in the
-				  first frame without adding another row of chips, and gives the
-				  photograph a hard bottom rule to sit on.
+				  Credential bar on the bottom edge. Desktop only: on phones the
+				  sticky call bar owns that edge, and the proof row under the hero
+				  already repeats licence, pricing, and hours.
 				*/}
-				<div className="relative bg-black/55 shadow-[inset_0_1px_0_oklch(1_0_0/0.1)]">
+				<div className="relative hidden bg-black/55 shadow-[inset_0_1px_0_oklch(1_0_0/0.1)] lg:block">
 					<div className="container-shell flex items-center justify-between gap-6 py-3.5">
 						<dl className="flex flex-wrap items-center gap-x-7 gap-y-1.5">
 							{heroStats.map(({ label, value }) => (
