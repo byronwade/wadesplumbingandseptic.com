@@ -1,0 +1,87 @@
+{
+	"schema_version": "1.0",
+	"run_id": "manual-new-year-post-2026-11-27",
+	"collected_at": "2026-11-27T17:30:00+00:00",
+	"source": "sfpuc-oatey-us-doe-us-epa-american-red-cross",
+	"source_url_or_tool": "https://www.epa.gov/watersense/fix-leak-week",
+	"scope": "New evidence-backed post planned in seo/manifests/local-demand-calendar.json (holiday-new-year-2027), inside its 10 to 35 day lead window",
+	"classification": "LIVE_VERIFIED",
+	"redaction": "NO_SECRETS_OR_PERSONAL_DATA",
+	"retention_class": "VERSIONED_MINIMAL_PUBLIC_SUMMARY",
+	"sha256": "7a40a3c0a1b7777ab416eb0d8e7cc07038fe6909031e51bbf1a594c9cc140fd6",
+	"payload": {
+		"post": "content/posts/new-year-plumbing-reset-santa-cruz-homes.md",
+		"observations": [
+			{
+				"id": "sfpuc-shutoff",
+				"source_url": "https://www.sfpuc.gov/learning/emergency-preparedness/home-water-shutoff-valve",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Main shutoff is often outside or just inside the property in line with the water meter, or in a garage, basement or closet; gate valves close clockwise until they stop; ball valves are off at a right angle to the pipe.",
+				"inference_limit": "San Francisco utility guidance used as general homeowner guidance, not a Santa Cruz County rule.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "oatey-washer-hose",
+				"source_url": "https://oatey.com/faqs-blog-videos-case-studies/blog/when-should-i-change-my-washing-machine-hose",
+				"source_tier": "MANUFACTURER",
+				"classification": "LIVE_VERIFIED",
+				"summary": "No universal rule; most experts recommend replacing washing machine hoses every three to five years or sooner; signs: bulges in rubber hoses, frayed braided hoses, kinks, leaks.",
+				"inference_limit": "Manufacturer guidance, presented as such.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "doe-energy-saver-guide",
+				"source_url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Set water heater to 120F, considered safe for most of the population; drain a quart from the tank every 3 months to remove sediment following manufacturer directions; insulate hot water pipes; most storage water heaters last 10 to 15 years, tankless more than 20.",
+				"inference_limit": "National efficiency guidance.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "epa-watersense-fix-a-leak",
+				"source_url": "https://www.epa.gov/watersense/fix-leak-week",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Average household leaks can waste more than 9,300 gallons a year; nine percent of homes waste 50 gallons or more per day; meter test over two hours of no use; food coloring toilet test within 10 minutes; replace flappers at least every five years.",
+				"inference_limit": "National estimates.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "epa-septic-care",
+				"source_url": "https://www.epa.gov/septic/how-care-your-septic-system",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Inspect at least every three years, systems with pumps or mechanical parts generally once a year; tanks typically pumped every three to five years depending on household size, wastewater, solids and tank size; keep records; spread laundry; fix running toilets; keep roof drains and sump water away from the drainfield.",
+				"inference_limit": "National homeowner guidance; not a local code requirement.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "redcross-frozen-pipes",
+				"source_url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html",
+				"source_tier": "GOVERNMENT_OR_STANDARD",
+				"classification": "LIVE_VERIFIED",
+				"summary": "Remove, drain and store outdoor hoses; close inside valves supplying outdoor hose bibs.",
+				"inference_limit": "National cold weather guidance; freezes are uncommon on the coast.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			},
+			{
+				"id": "repository-facts",
+				"source_url": "lib/site.ts",
+				"source_tier": "REPOSITORY_FACT",
+				"classification": "MOCK_VERIFIED",
+				"summary": "Office hours Monday to Friday 9:00 AM to 5:00 PM, flat rate pricing quoted on site; Wade's does not pump septic tanks; links only to existing services and posts. No holiday hours claimed.",
+				"inference_limit": "Business facts from site config.",
+				"collected_at": "2026-11-27T17:30:00+00:00",
+				"scope": "New seasonal post"
+			}
+		]
+	}
+}

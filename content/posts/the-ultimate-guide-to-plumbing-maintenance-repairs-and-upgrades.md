@@ -6,7 +6,7 @@ description: >-
   site. Quotes are free.
 category: Plumbing Tips
 date: "2025-05-11"
-updated: "2026-11-24"
+updated: "2026-11-28"
 tags:
   - santa cruz county
   - plumbing maintenance
@@ -63,7 +63,7 @@ Start with the [septic maintenance guide](/the-complete-guide-to-septic-system-m
 - **On the EPA schedule:** septic inspection, and pumping when the inspection says so.
 - **Before a cold snap in the mountains:** protect exposed pipes. See [frozen pipe prevention](/how-to-prevent-frozen-pipes-this-winter).
 
-The month by month list lives in [home plumbing maintenance](/the-importance-of-regular-plumbing-maintenance). The one-page [maintenance schedule](/maintenance-guide) is the short version.
+The month by month list lives in [home plumbing maintenance](/the-importance-of-regular-plumbing-maintenance). The one-page [maintenance schedule](/maintenance-guide) is the short version. For a January weekend pass, see the [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes).
 
 ## Frequently Asked Questions
 

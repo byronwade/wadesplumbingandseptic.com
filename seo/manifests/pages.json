@@ -88,6 +88,30 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/adding-adu-bedroom-septic-santa-cruz",
+			"source_path": "content/posts/adding-adu-bedroom-septic-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/adding-adu-bedroom-septic-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/backflow-testing-santa-cruz-county-homes",
+			"source_path": "content/posts/backflow-testing-santa-cruz-county-homes.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/backflow-testing-santa-cruz-county-homes",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/careers",
 			"source_path": "content/pages/careers.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/careers",
@@ -232,6 +256,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/enhanced-septic-operating-permit-santa-cruz",
+			"source_path": "content/posts/enhanced-septic-operating-permit-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/enhanced-septic-operating-permit-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"metadata_declared": true,
 			"canonical_declared": false,
 			"json_ld_blocks": 1,
@@ -262,6 +298,18 @@
 			"url": "/expert-tips/trending",
 			"source_path": "app/(site)/expert-tips/trending/page.tsx",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/expert-tips/trending",
+			"type": "application_route",
+			"lifecycle": "EXISTING_UNMIGRATED",
+			"owner": null,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 1,
+			"url": "/facts",
+			"source_path": "app/(site)/facts/page.tsx",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/facts",
 			"type": "application_route",
 			"lifecycle": "EXISTING_UNMIGRATED",
 			"owner": null,
@@ -448,6 +496,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"source_path": "content/posts/how-to-prepare-for-a-re-pipe-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/how-to-prevent-frozen-pipes-this-winter",
 			"source_path": "content/posts/how-to-prevent-frozen-pipes-this-winter.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/how-to-prevent-frozen-pipes-this-winter",
@@ -511,6 +571,30 @@
 			"url": "/new-septic-installations-santa-cruz",
 			"source_path": "content/posts/new-septic-installations-santa-cruz.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/new-septic-installations-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/new-year-plumbing-reset-santa-cruz-homes",
+			"source_path": "content/posts/new-year-plumbing-reset-santa-cruz-homes.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/new-year-plumbing-reset-santa-cruz-homes",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/perc-test-site-evaluation-santa-cruz-septic",
+			"source_path": "content/posts/perc-test-site-evaluation-santa-cruz-septic.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/perc-test-site-evaluation-santa-cruz-septic",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,
@@ -628,6 +712,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/santa-cruz-septic-inspection-at-sale",
+			"source_path": "content/posts/santa-cruz-septic-inspection-at-sale.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz-septic-inspection-at-sale",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/santa-cruz-toilet-running-solutions",
 			"source_path": "content/posts/santa-cruz-toilet-running-solutions.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/santa-cruz-toilet-running-solutions",
@@ -727,6 +823,18 @@
 			"url": "/septic-system-types-santa-cruz",
 			"source_path": "content/posts/septic-system-types-santa-cruz.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/septic-system-types-santa-cruz",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"source_path": "content/posts/septic-tank-destruction-sewer-connection-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/septic-tank-destruction-sewer-connection-santa-cruz",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,
@@ -1744,18 +1852,6 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"metadata_declared": false,
-			"canonical_declared": false,
-			"json_ld_blocks": 0,
-			"url": "/services/[slug]",
-			"source_path": "app/(site)/services/[slug]/page.tsx",
-			"canonical_url": "https://www.wadesplumbingandseptic.com/services/[slug]",
-			"type": "application_route",
-			"lifecycle": "EXISTING_UNMIGRATED",
-			"owner": null,
-			"classification": "MOCK_VERIFIED"
-		},
-		{
 			"metadata_declared": true,
 			"canonical_declared": false,
 			"json_ld_blocks": 0,
@@ -1777,6 +1873,18 @@
 			"type": "application_route",
 			"lifecycle": "EXISTING_UNMIGRATED",
 			"owner": null,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/sewer-camera-inspection-santa-cruz-homes",
+			"source_path": "content/posts/sewer-camera-inspection-santa-cruz-homes.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/sewer-camera-inspection-santa-cruz-homes",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1840,6 +1948,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"url": "/slab-leak-signs-santa-cruz-homes",
+			"source_path": "content/posts/slab-leak-signs-santa-cruz-homes.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/slab-leak-signs-santa-cruz-homes",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"url": "/slow-drains-solutions-santa-cruz",
 			"source_path": "content/posts/slow-drains-solutions-santa-cruz.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/slow-drains-solutions-santa-cruz",
@@ -1861,6 +1981,18 @@
 			"type": "application_route",
 			"lifecycle": "EXISTING_UNMIGRATED",
 			"owner": null,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/tankless-water-heater-santa-cruz-homes",
+			"source_path": "content/posts/tankless-water-heater-santa-cruz-homes.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/tankless-water-heater-santa-cruz-homes",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1975,6 +2107,18 @@
 			"url": "/water-main-sewer-line-repair-santa-cruz-county",
 			"source_path": "content/pages/water-main-sewer-line-repair-santa-cruz-county.md",
 			"canonical_url": "https://www.wadesplumbingandseptic.com/water-main-sewer-line-repair-santa-cruz-county",
+			"type": "markdown_content",
+			"lifecycle": "CONTENT_MANAGED",
+			"owner": null,
+			"metadata_declared": true,
+			"canonical_declared": false,
+			"json_ld_blocks": 0,
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"url": "/water-service-line-repair-santa-cruz",
+			"source_path": "content/posts/water-service-line-repair-santa-cruz.md",
+			"canonical_url": "https://www.wadesplumbingandseptic.com/water-service-line-repair-santa-cruz",
 			"type": "markdown_content",
 			"lifecycle": "CONTENT_MANAGED",
 			"owner": null,

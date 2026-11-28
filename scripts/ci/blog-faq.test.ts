@@ -30,6 +30,7 @@ const newPostSlugs = [
 	"perc-test-site-evaluation-santa-cruz-septic",
 	"enhanced-septic-operating-permit-santa-cruz",
 	"water-service-line-repair-santa-cruz",
+	"new-year-plumbing-reset-santa-cruz-homes",
 ]
 
 test("faqSectionBody reads FAQ and Frequently asked questions headings", () => {

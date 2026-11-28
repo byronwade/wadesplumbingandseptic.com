@@ -3,7 +3,7 @@ title: Plumbing & Septic Maintenance Guide
 description: A practical homeowner maintenance schedule for drains, water heaters, water pressure, fixtures, sewer lines, and septic systems.
 eyebrow: Homeowner Resource
 order: 8
-updated: "2026-11-26"
+updated: "2026-11-28"
 ---
 
 ## Monthly checks
@@ -15,7 +15,7 @@ updated: "2026-11-26"
 
 ## Every six months
 
-- Test the main water shutoff and accessible fixture stops.
+- Test the main water shutoff and accessible fixture stops. The [New Year plumbing reset](/new-year-plumbing-reset-santa-cruz-homes) walks through that check plus washer hoses, a leak test and septic planning.
 - Clean faucet aerators and showerheads.
 - Inspect the water heater area for rust, moisture, or unusual sounds.
 - Confirm exterior drains remain clear before the rainy season.

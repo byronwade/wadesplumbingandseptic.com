@@ -9,6 +9,8 @@
 		"/6-signs-you-have-a-hidden-water-leak",
 		"/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
 		"/about-us",
+		"/adding-adu-bedroom-septic-santa-cruz",
+		"/backflow-testing-santa-cruz-county-homes",
 		"/careers",
 		"/careers/customer-service-representative",
 		"/careers/licensed-plumber",
@@ -21,9 +23,11 @@
 		"/contact-call-first",
 		"/efficient-water-filtration-santa-cruz",
 		"/engineered-septic-systems-santa-cruz-county",
+		"/enhanced-septic-operating-permit-santa-cruz",
 		"/expert-tips",
 		"/expert-tips/popular",
 		"/expert-tips/trending",
+		"/facts",
 		"/failed-septic-repair-replacement-santa-cruz-county",
 		"/faq",
 		"/financing",
@@ -39,12 +43,15 @@
 		"/how-to-install-a-toilet-flange-in-8-easy-steps",
 		"/how-to-locate-trustworthy-plumbing-services-nearby",
 		"/how-to-maintain-your-septic-tank-for-long-term-performance",
+		"/how-to-prepare-for-a-re-pipe-santa-cruz",
 		"/how-to-prevent-frozen-pipes-this-winter",
 		"/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
 		"/insurance-claims",
 		"/maintenance-guide",
 		"/memorial-day-plumbing-prep-santa-cruz",
 		"/new-septic-installations-santa-cruz",
+		"/new-year-plumbing-reset-santa-cruz-homes",
+		"/perc-test-site-evaluation-santa-cruz-septic",
 		"/pipe-leak-solutions-santa-cruz-septic",
 		"/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
 		"/plumbing-repair-services-santa-cruz-county",
@@ -54,6 +61,7 @@
 		"/rainy-season-septic-and-drain-prep-santa-cruz",
 		"/rebates",
 		"/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
+		"/santa-cruz-septic-inspection-at-sale",
 		"/santa-cruz-toilet-running-solutions",
 		"/septic-leach-field-repairs-santa-cruz",
 		"/septic-replacement-santa-cruz",
@@ -63,6 +71,7 @@
 		"/septic-system-components-santa-cruz",
 		"/septic-system-seasonal-maintenance-santa-cruz",
 		"/septic-system-types-santa-cruz",
+		"/septic-tank-destruction-sewer-connection-santa-cruz",
 		"/septic-trouble-signs-santa-cruz",
 		"/service-area/[city]/[service]",
 		"/service-area/amesti-ca-plumbing-septic-services",
@@ -147,16 +156,18 @@
 		"/service-offerings/water-line-repair-and-installation",
 		"/service-offerings/water-softener-maintenance",
 		"/services",
-		"/services/[slug]",
 		"/services/popular",
 		"/services/trending",
+		"/sewer-camera-inspection-santa-cruz-homes",
 		"/sewer-line-repair-essentials-santa-cruz",
 		"/should-you-call-a-plumber-or-fix-it-yourself",
 		"/should-you-repair-or-replace-your-water-heater",
 		"/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
 		"/signs-your-drain-field-needs-professional-repair",
+		"/slab-leak-signs-santa-cruz-homes",
 		"/slow-drains-solutions-santa-cruz",
 		"/tag/[slug]",
+		"/tankless-water-heater-santa-cruz-homes",
 		"/terms-of-service",
 		"/testimonials",
 		"/thank-you",
@@ -167,6 +178,7 @@
 		"/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
 		"/warranties",
 		"/water-main-sewer-line-repair-santa-cruz-county",
+		"/water-service-line-repair-santa-cruz",
 		"/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
 		"/what-is-hard-water-why-does-it-matter-for-your-home",
 		"/what-you-need-to-know-about-engineered-septic-systems",
@@ -174,12 +186,6 @@
 		"/why-you-should-never-ignore-septic-system-warning-signs"
 	],
 	"edges": [
-		{
-			"from": "/",
-			"to": "/services",
-			"anchor": "UNRESOLVED_STATIC_SOURCE",
-			"classification": "MOCK_VERIFIED"
-		},
 		{
 			"from": "/5-signs-you-need-to-call-a-professional-plumber",
 			"to": "/why-is-dirty-water-backing-up-into-your-shower",
@@ -218,6 +224,18 @@
 		},
 		{
 			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/5-signs-you-need-to-call-a-professional-plumber",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -225,7 +243,7 @@
 		{
 			"from": "/5-signs-you-need-to-call-a-professional-plumber",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -267,13 +285,25 @@
 		{
 			"from": "/5-types-of-toilets-how-to-choose-the-right-one-for-your-home",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/water-service-line-repair-santa-cruz",
+			"anchor": "who owns the water line",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/6-signs-you-have-a-hidden-water-leak",
 			"to": "/santa-cruz-toilet-running-solutions",
 			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/slab-leak-signs-santa-cruz-homes",
+			"anchor": "signs of a slab leak",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -290,6 +320,18 @@
 		},
 		{
 			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/6-signs-you-have-a-hidden-water-leak",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -297,19 +339,43 @@
 		{
 			"from": "/6-signs-you-have-a-hidden-water-leak",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/new-septic-installations-santa-cruz",
+			"anchor": "new septic installations in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County terrain affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/santa-cruz-septic-inspection-at-sale",
+			"anchor": "Santa Cruz County septic inspection at sale",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
 			"to": "/what-you-need-to-know-about-engineered-septic-systems",
-			"anchor": "engineered septic planning checklist",
+			"anchor": "what you need to know about engineered septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
-			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "engineered septic systems",
+			"to": "/septic-system-types-santa-cruz",
+			"anchor": "septic system types in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "complete guide to septic system maintenance",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -320,8 +386,32 @@
 		},
 		{
 			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
-			"to": "/service-offerings/septic-tank-design-and-engineering",
-			"anchor": "septic design and engineering",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "septic compliance and permitting help",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -333,7 +423,13 @@
 		{
 			"from": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/about-us",
+			"to": "/facts",
+			"anchor": "company facts",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -357,7 +453,205 @@
 		{
 			"from": "/about-us",
 			"to": "/contact",
-			"anchor": "Request a free quote",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/new-septic-installations-santa-cruz",
+			"anchor": "new septic installations in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/what-you-need-to-know-about-engineered-septic-systems",
+			"anchor": "engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"anchor": "new septic options in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "installs engineered systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-upgrades",
+			"anchor": "Septic system upgrades",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting help",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County terrain affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"anchor": "septic tank destruction when connecting to sewer",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-upgrades",
+			"anchor": "septic system upgrades",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/adding-adu-bedroom-septic-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-offerings/backflow-prevention-testing",
+			"anchor": "backflow prevention testing",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-area/soquel-ca-plumbing-septic-services",
+			"anchor": "Soquel",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/how-to-prevent-frozen-pipes-this-winter",
+			"anchor": "how to prevent frozen pipes",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-offerings/backflow-prevention-testing",
+			"anchor": "backflow prevention testing",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-offerings/backflow-prevention-installation",
+			"anchor": "backflow prevention installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/backflow-testing-santa-cruz-county-homes",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -459,7 +753,19 @@
 		{
 			"from": "/contact",
 			"to": "/service-areas",
-			"anchor": "service area map",
+			"anchor": "service areas",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/contact",
+			"to": "/facts",
+			"anchor": "company facts",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/efficient-water-filtration-santa-cruz",
+			"to": "/service-area/soquel-ca-plumbing-septic-services",
+			"anchor": "Soquel",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -519,13 +825,115 @@
 		{
 			"from": "/efficient-water-filtration-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/engineered-septic-systems-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "installs engineered systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting support",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/septic-system-types-santa-cruz",
+			"anchor": "septic system types for Santa Cruz County homes",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/what-you-need-to-know-about-engineered-septic-systems",
+			"anchor": "engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/new-septic-installations-santa-cruz",
+			"anchor": "new installation path",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/perc-test-site-evaluation-santa-cruz-septic",
+			"anchor": "perc test and site evaluation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-upgrades",
+			"anchor": "septic system upgrades",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting help",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/enhanced-septic-operating-permit-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -537,6 +945,12 @@
 		{
 			"from": "/expert-tips/trending",
 			"to": "/expert-tips",
+			"anchor": "UNRESOLVED_STATIC_SOURCE",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/facts",
+			"to": "/",
 			"anchor": "UNRESOLVED_STATIC_SOURCE",
 			"classification": "MOCK_VERIFIED"
 		},
@@ -554,8 +968,74 @@
 		},
 		{
 			"from": "/faq",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"anchor": "Los Gatos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/service-area/saratoga-ca-plumbing-septic-services",
+			"anchor": "Saratoga",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
 			"to": "/service-areas",
 			"anchor": "service areas",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/faq",
+			"to": "/facts",
+			"anchor": "company facts",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -573,7 +1053,25 @@
 		{
 			"from": "/faq",
 			"to": "/contact",
-			"anchor": "request service online",
+			"anchor": "request a free quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/financing",
+			"to": "/contact",
+			"anchor": "request a free quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/financing",
+			"to": "/service-areas",
+			"anchor": "service areas",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"to": "/perc-test-site-evaluation-santa-cruz-septic",
+			"anchor": "perc tests and site evaluation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -621,7 +1119,13 @@
 		{
 			"from": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -681,7 +1185,7 @@
 		{
 			"from": "/how-to-avoid-common-holiday-plumbing-disasters",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -699,7 +1203,7 @@
 		{
 			"from": "/how-to-install-a-new-bathroom-faucet-a-weekend-diy-project",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -723,7 +1227,7 @@
 		{
 			"from": "/how-to-install-a-toilet-flange-in-8-easy-steps",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -759,7 +1263,7 @@
 		{
 			"from": "/how-to-locate-trustworthy-plumbing-services-nearby",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -813,7 +1317,139 @@
 		{
 			"from": "/how-to-maintain-your-septic-tank-for-long-term-performance",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden leak guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "Pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-offerings/fixture-installation",
+			"anchor": "fixture installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/backflow-testing-santa-cruz-county-homes",
+			"anchor": "backflow testing",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/sewer-camera-inspection-santa-cruz-homes",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/bonny-doon-ca-plumbing-septic-services",
+			"anchor": "Bonny Doon",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -836,6 +1472,18 @@
 		},
 		{
 			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/how-to-prevent-frozen-pipes-this-winter",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -843,7 +1491,7 @@
 		{
 			"from": "/how-to-prevent-frozen-pipes-this-winter",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -885,7 +1533,19 @@
 		{
 			"from": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/maintenance-guide",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/maintenance-guide",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -896,62 +1556,104 @@
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola, CA",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "how to clear a clogged drain",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/service-offerings/pipe-repair-and-replacement",
-			"anchor": "expert pipe repair and replacement services",
+			"to": "/how-to-avoid-common-holiday-plumbing-disasters",
+			"anchor": "holiday plumbing tips",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/memorial-day-plumbing-prep-santa-cruz",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/memorial-day-plumbing-prep-santa-cruz",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/memorial-day-plumbing-prep-santa-cruz",
+			"to": "/backflow-testing-santa-cruz-county-homes",
+			"anchor": "backflow testing",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
 			"to": "/service-offerings/septic-tank-inspection-and-assessment",
-			"anchor": "comprehensive septic inspection",
+			"anchor": "septic inspection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/service-offerings/video-inspections",
-			"anchor": "video inspections",
+			"to": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
+			"anchor": "Thanksgiving kitchen and septic guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/service-offerings/water-filtration-system-installation",
-			"anchor": "water filtration installation services",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/services",
-			"anchor": "expert services",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/service-areas",
-			"anchor": "Plumbing & septic service areas overview",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/memorial-day-plumbing-prep-santa-cruz",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspections",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
 			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola, CA Plumbing & Septic Services",
+			"anchor": "Capitola",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/memorial-day-plumbing-prep-santa-cruz",
-			"to": "/expert-tips",
-			"anchor": "Expert Tips",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/memorial-day-plumbing-prep-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"anchor": "how Santa Cruz County terrain affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/perc-test-site-evaluation-santa-cruz-septic",
+			"anchor": "perc tests and site evaluation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/enhanced-septic-operating-permit-santa-cruz",
+			"anchor": "enhanced septic operating permits",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -970,6 +1672,18 @@
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/what-you-need-to-know-about-engineered-septic-systems",
 			"anchor": "engineered septic system guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/adding-adu-bedroom-septic-santa-cruz",
+			"anchor": "adding an ADU or bedroom on a Santa Cruz County septic",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-septic-installations-santa-cruz",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -999,7 +1713,211 @@
 		{
 			"from": "/new-septic-installations-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/the-importance-of-regular-plumbing-maintenance",
+			"anchor": "the importance of regular plumbing maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/santa-cruz-toilet-running-solutions",
+			"anchor": "running toilet guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "signs of a hidden water leak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/septic-system-seasonal-maintenance-santa-cruz",
+			"anchor": "seasonal septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/how-to-prevent-frozen-pipes-this-winter",
+			"anchor": "frozen pipe guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-offerings/septic-tank-maintenance-and-care",
+			"anchor": "septic maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/new-year-plumbing-reset-santa-cruz-homes",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "installs engineered systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
+			"anchor": "how Santa Cruz County terrain affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/what-you-need-to-know-about-engineered-septic-systems",
+			"anchor": "enhanced treatment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/new-septic-installations-santa-cruz",
+			"anchor": "new septic installation path",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/adding-adu-bedroom-septic-santa-cruz",
+			"anchor": "adding an ADU on a Santa Cruz County septic",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-offerings/septic-tank-design-and-engineering",
+			"anchor": "septic design support",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "new septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/perc-test-site-evaluation-santa-cruz-septic",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1101,7 +2019,7 @@
 		{
 			"from": "/pipe-leak-solutions-santa-cruz-septic",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1178,6 +2096,12 @@
 		},
 		{
 			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -1185,7 +2109,7 @@
 		{
 			"from": "/plumbing-maintenance-and-repairs-in-santa-cruz-county-ca",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1251,7 +2175,7 @@
 		{
 			"from": "/plumbing-terms-every-homeowner-should-know",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1268,6 +2192,24 @@
 		},
 		{
 			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic system maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"anchor": "rainy season septic prep checklist",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"to": "/service-offerings/septic-tank-maintenance-and-care",
 			"anchor": "septic maintenance and care",
 			"classification": "MOCK_VERIFIED"
@@ -1280,6 +2222,18 @@
 		},
 		{
 			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -1287,7 +2241,7 @@
 		{
 			"from": "/proper-care-and-maintenance-of-your-septic-tank-a-comprehensive-guide",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1312,6 +2266,12 @@
 			"from": "/rainy-season-septic-and-drain-prep-santa-cruz",
 			"to": "/how-santa-cruz-countys-unique-geography-affects-septic-systems",
 			"anchor": "how Santa Cruz County geography affects septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/rainy-season-septic-and-drain-prep-santa-cruz",
+			"to": "/service-offerings/storm-drain-cleaning",
+			"anchor": "storm drain",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1389,7 +2349,7 @@
 		{
 			"from": "/rainy-season-septic-and-drain-prep-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1431,7 +2391,109 @@
 		{
 			"from": "/salt-water-softeners-vs-water-conditioners-which-is-right-for-you",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/new-septic-installations-santa-cruz",
+			"anchor": "new septic installations in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection and assessment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-system-certification",
+			"anchor": "certification support",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-tank-system-compliance-and-permitting",
+			"anchor": "compliance and permitting help",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/what-you-need-to-know-about-engineered-septic-systems",
+			"anchor": "engineered septic system guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-system-certification",
+			"anchor": "certification support",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "septic repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/santa-cruz-septic-inspection-at-sale",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1467,7 +2529,7 @@
 		{
 			"from": "/santa-cruz-toilet-running-solutions",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1545,7 +2607,7 @@
 		{
 			"from": "/septic-leach-field-repairs-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1599,7 +2661,13 @@
 		{
 			"from": "/septic-safety-during-floods-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-solutions",
+			"to": "/service-offerings/commercial-septic-services",
+			"anchor": "Commercial septic services",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1641,7 +2709,7 @@
 		{
 			"from": "/septic-system-challenges-santa-cruz-fire",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1749,7 +2817,7 @@
 		{
 			"from": "/septic-system-components-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1774,6 +2842,12 @@
 			"from": "/septic-system-seasonal-maintenance-santa-cruz",
 			"to": "/rainy-season-septic-and-drain-prep-santa-cruz",
 			"anchor": "rainy season septic and drain prep guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-seasonal-maintenance-santa-cruz",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1821,7 +2895,13 @@
 		{
 			"from": "/septic-system-seasonal-maintenance-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-system-types-santa-cruz",
+			"to": "/enhanced-septic-operating-permit-santa-cruz",
+			"anchor": "operating permit guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1875,7 +2955,91 @@
 		{
 			"from": "/septic-system-types-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/live-oak-ca-plumbing-septic-services",
+			"anchor": "Live Oak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-offerings/septic-system-abandonment",
+			"anchor": "septic system abandonment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/sewer-camera-inspection-santa-cruz-homes",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-offerings/septic-system-abandonment",
+			"anchor": "septic system abandonment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/live-oak-ca-plumbing-septic-services",
+			"anchor": "Live Oak",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1935,7 +3099,7 @@
 		{
 			"from": "/septic-trouble-signs-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1952,38 +3116,32 @@
 		},
 		{
 			"from": "/service-area/amesti-ca-plumbing-septic-services",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/amesti-ca-plumbing-septic-services",
-			"to": "/service-area/freedom-ca-plumbing-septic-services",
-			"anchor": "Freedom",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/amesti-ca-plumbing-septic-services",
-			"to": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"anchor": "Las Lomas",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/amesti-ca-plumbing-septic-services",
-			"to": "/service-area/interlaken-ca-plumbing-septic-services",
-			"anchor": "Interlaken",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/amesti-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/amesti-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -1994,98 +3152,56 @@
 		},
 		{
 			"from": "/service-area/aptos-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "Septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/aptos-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
 			"anchor": "engineered septic solutions",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"anchor": "Rio Del Mar",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/service-area/day-valley-ca-plumbing-septic-services",
-			"anchor": "Day Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"anchor": "Aptos Hills Larkin Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"to": "/service-area/day-valley-ca-plumbing-septic-services",
-			"anchor": "Day Valley",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"to": "/service-area/corralitos-ca-plumbing-septic-services",
-			"anchor": "Corralitos",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2128,6 +3244,12 @@
 			"from": "/service-area/ben-lomond-ca-plumbing-septic-services",
 			"to": "/contact",
 			"anchor": "contact us",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2173,9 +3295,21 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/service-area/bonny-doon-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/service-area/boulder-creek-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "engineered septic system",
+			"anchor": "engineered septic systems",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2221,6 +3355,12 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/service-area/brookdale-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
 			"anchor": "engineered septic options",
@@ -2257,105 +3397,57 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/service-area/brookdale-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/capitola-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "Septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/service-area/capitola-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
-			"anchor": "engineered septic designs",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/service-area/live-oak-ca-plumbing-septic-services",
-			"anchor": "Live Oak",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/service-offerings/septic-tank-repair-and-replacement",
-			"anchor": "Failed septic repair",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
+			"anchor": "Engineered septic designs",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/capitola-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/capitola-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/service-area/freedom-ca-plumbing-septic-services",
-			"anchor": "Freedom",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/service-area/day-valley-ca-plumbing-septic-services",
-			"anchor": "Day Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/corralitos-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/corralitos-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2401,45 +3493,45 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
+			"from": "/service-area/davenport-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-hills-larkin-valley-ca-plumbing-septic-services",
-			"anchor": "Aptos Hills-Larkin Valley",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/service-area/corralitos-ca-plumbing-septic-services",
-			"anchor": "Corralitos",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/day-valley-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/day-valley-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/felton-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2491,87 +3583,69 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"from": "/service-area/felton-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/service-area/amesti-ca-plumbing-septic-services",
-			"anchor": "Amesti",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"anchor": "Las Lomas",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/service-area/corralitos-ca-plumbing-septic-services",
-			"anchor": "Corralitos",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/freedom-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/freedom-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/service-area/freedom-ca-plumbing-septic-services",
-			"anchor": "Freedom",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"anchor": "La Selva Beach",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/service-area/amesti-ca-plumbing-septic-services",
-			"anchor": "Amesti",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/interlaken-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/interlaken-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2588,86 +3662,38 @@
 		},
 		{
 			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"anchor": "Rio Del Mar",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/service-area/corralitos-ca-plumbing-septic-services",
-			"anchor": "Corralitos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"to": "/service-area/watsonville-ca-plumbing-septic-services",
-			"anchor": "Watsonville",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"to": "/service-area/freedom-ca-plumbing-septic-services",
-			"anchor": "Freedom",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"to": "/service-area/amesti-ca-plumbing-septic-services",
-			"anchor": "Amesti",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"to": "/service-area/interlaken-ca-plumbing-septic-services",
-			"anchor": "Interlaken",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/las-lomas-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2684,50 +3710,8 @@
 		},
 		{
 			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"anchor": "Twin Lakes",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/live-oak-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2767,15 +3751,9 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
-			"anchor": "Boulder Creek",
+			"from": "/service-area/lompico-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2788,36 +3766,42 @@
 			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
 			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
 			"anchor": "Boulder Creek",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/service-area/saratoga-ca-plumbing-septic-services",
-			"anchor": "Saratoga",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/los-gatos-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2863,6 +3847,12 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/service-area/mount-hermon-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/service-area/paradise-park-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
 			"anchor": "engineered septic system",
@@ -2899,45 +3889,39 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
+			"from": "/service-area/paradise-park-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/service-area/bonny-doon-ca-plumbing-septic-services",
-			"anchor": "Bonny Doon",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/pasatiempo-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -2954,44 +3938,14 @@
 		},
 		{
 			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/service-area/la-selva-beach-ca-plumbing-septic-services",
-			"anchor": "La Selva Beach",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
-			"from": "/service-area/rio-del-mar-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "Septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3008,56 +3962,8 @@
 		},
 		{
 			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/service-area/live-oak-ca-plumbing-septic-services",
-			"anchor": "Live Oak",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"anchor": "Twin Lakes",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"anchor": "Pasatiempo",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "All service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3074,44 +3980,32 @@
 		},
 		{
 			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"anchor": "Scotts Valley",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
-			"anchor": "Boulder Creek",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/service-area/los-gatos-ca-plumbing-septic-services",
-			"anchor": "Los Gatos",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/saratoga-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/saratoga-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3122,56 +4016,20 @@
 		},
 		{
 			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"to": "/service-offerings/septic-system-installation",
+			"anchor": "Septic system installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
 			"to": "/service-offerings/engineered-septic-system-installation",
 			"anchor": "Engineered septic designs",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/service-area/mount-hermon-ca-plumbing-septic-services",
-			"anchor": "Mount Hermon",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/service-area/felton-ca-plumbing-septic-services",
-			"anchor": "Felton",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/service-area/pasatiempo-ca-plumbing-septic-services",
-			"anchor": "Pasatiempo",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "All service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/scotts-valley-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3188,50 +4046,8 @@
 		},
 		{
 			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/service-area/capitola-ca-plumbing-septic-services",
-			"anchor": "Capitola",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/service-area/aptos-ca-plumbing-septic-services",
-			"anchor": "Aptos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/service-area/day-valley-ca-plumbing-septic-services",
-			"anchor": "Day Valley",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "All service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact us",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/soquel-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3248,50 +4064,8 @@
 		},
 		{
 			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
-			"anchor": "Santa Cruz",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/service-area/live-oak-ca-plumbing-septic-services",
-			"anchor": "Live Oak",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/service-area/soquel-ca-plumbing-septic-services",
-			"anchor": "Soquel",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/twin-lakes-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About Wade's",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3308,56 +4082,8 @@
 		},
 		{
 			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/service-area/freedom-ca-plumbing-septic-services",
-			"anchor": "Freedom",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/service-area/amesti-ca-plumbing-septic-services",
-			"anchor": "Amesti",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/service-area/interlaken-ca-plumbing-septic-services",
-			"anchor": "Interlaken",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/service-area/corralitos-ca-plumbing-septic-services",
-			"anchor": "Corralitos",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/service-areas",
-			"anchor": "Service areas",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/septic-solutions",
-			"anchor": "Septic solutions",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/expert-tips",
-			"anchor": "Expert tips",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
 			"to": "/contact",
-			"anchor": "Contact",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-area/watsonville-ca-plumbing-septic-services",
-			"to": "/about-us",
-			"anchor": "About us",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3400,6 +4126,12 @@
 			"from": "/service-area/zayante-ca-plumbing-septic-services",
 			"to": "/contact",
 			"anchor": "contact us",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-area/zayante-ca-plumbing-septic-services",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3447,7 +4179,7 @@
 		{
 			"from": "/service-offerings/commercial-drain-cleaning",
 			"to": "/service-offerings/drain-cleaning",
-			"anchor": "drain cleaning",
+			"anchor": "residential drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3524,8 +4256,8 @@
 		},
 		{
 			"from": "/service-offerings/commercial-septic-services",
-			"to": "/contact",
-			"anchor": "contact Wade's Plumbing & Septic",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3566,8 +4298,8 @@
 		},
 		{
 			"from": "/service-offerings/commercial-septic-services",
-			"to": "/service-areas",
-			"anchor": "main service-area overview",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3580,6 +4312,18 @@
 			"from": "/service-offerings/drain-cleaning",
 			"to": "/service-offerings/commercial-plumbing-maintenance",
 			"anchor": "drain cleaning and maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/drain-cleaning",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/drain-line-inspection",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3638,6 +4382,18 @@
 		},
 		{
 			"from": "/service-offerings/engineered-septic-system-installation",
+			"to": "/perc-test-site-evaluation-santa-cruz-septic",
+			"anchor": "perc tests and site evaluation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/engineered-septic-system-installation",
+			"to": "/adding-adu-bedroom-septic-santa-cruz",
+			"anchor": "adding an ADU on a Santa Cruz County septic",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/engineered-septic-system-installation",
 			"to": "/service-offerings/septic-tank-inspection-and-assessment",
 			"anchor": "septic tank inspection",
 			"classification": "MOCK_VERIFIED"
@@ -3652,6 +4408,12 @@
 			"from": "/service-offerings/engineered-septic-system-installation",
 			"to": "/service-offerings/septic-tank-design-and-engineering",
 			"anchor": "septic design support",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/engineered-septic-system-installation",
+			"to": "/enhanced-septic-operating-permit-santa-cruz",
+			"anchor": "enhanced septic operating permits",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3681,7 +4443,7 @@
 		{
 			"from": "/service-offerings/fixture-installation",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3733,6 +4495,18 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/service-offerings/grease-trap-installation",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/grease-trap-installation",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/service-offerings/high-pressure-jetting-for-septic-lines",
 			"to": "/service-offerings/septic-tank-repair-and-replacement",
 			"anchor": "septic tank repair and replacement",
@@ -3754,12 +4528,6 @@
 			"from": "/service-offerings/high-pressure-jetting-for-septic-lines",
 			"to": "/service-offerings/septic-filter-cleaning-and-replacement",
 			"anchor": "septic filter cleaning and replacement",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-offerings/hydro-jetting",
-			"to": "/service-offerings/drain-cleaning",
-			"anchor": "drain cleaning",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3825,7 +4593,7 @@
 		{
 			"from": "/service-offerings/main-line-cleanout-installation",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3891,7 +4659,7 @@
 		{
 			"from": "/service-offerings/pipe-repair-and-replacement",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3932,8 +4700,8 @@
 		},
 		{
 			"from": "/service-offerings/septic-system-abandonment",
-			"to": "/service-offerings/septic-tank-maintenance-and-care",
-			"anchor": "septic tank maintenance and care",
+			"to": "/septic-tank-destruction-sewer-connection-santa-cruz",
+			"anchor": "abandoning a Santa Cruz septic tank for sewer",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3944,8 +4712,50 @@
 		},
 		{
 			"from": "/service-offerings/septic-system-abandonment",
-			"to": "/septic-system-challenges-santa-cruz-fire",
-			"anchor": "blog on septic system challenges",
+			"to": "/service-offerings/septic-tank-maintenance-and-care",
+			"anchor": "septic tank maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/septic-replacement-santa-cruz",
+			"anchor": "septic replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-abandonment",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -3987,13 +4797,25 @@
 		{
 			"from": "/service-offerings/septic-system-installation",
 			"to": "/service-offerings/septic-tank-inspection-and-assessment",
-			"anchor": "contact Wade's Plumbing",
+			"anchor": "septic tank inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-installation",
+			"to": "/service-offerings/engineered-septic-system-installation",
+			"anchor": "engineered septic system installation",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-offerings/septic-system-installation",
 			"to": "/service-offerings/septic-tank-maintenance-and-care",
 			"anchor": "septic tank maintenance and care",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-system-installation",
+			"to": "/service-areas",
+			"anchor": "service areas",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4005,7 +4827,7 @@
 		{
 			"from": "/service-offerings/septic-tank-alarm-installation",
 			"to": "/contact",
-			"anchor": "Contact Wade's Plumbing & Septic",
+			"anchor": "contact Wade's Plumbing & Septic",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4190,6 +5012,24 @@
 		},
 		{
 			"from": "/service-offerings/septic-tank-riser-installation",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-tank-riser-installation",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-tank-riser-installation",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-tank-riser-installation",
 			"to": "/contact",
 			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
@@ -4227,7 +5067,7 @@
 		{
 			"from": "/service-offerings/septic-tank-system-compliance-and-permitting",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4293,19 +5133,37 @@
 		{
 			"from": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
 			"to": "/how-to-maintain-your-septic-tank-for-long-term-performance",
-			"anchor": "guide on maintaining your septic tank",
+			"anchor": "how to maintain your septic tank",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
 			"to": "/service-offerings/septic-tank-inspection-and-assessment",
-			"anchor": "contact us today",
+			"anchor": "inspection and assessment",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"to": "/service-offerings/septic-tank-repair-and-replacement",
+			"anchor": "repair or replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-offerings/septic-tank-troubleshooting-and-diagnostic-services",
 			"to": "/contact",
 			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/sewer-camera-inspection",
+			"to": "/service-offerings/sewer-line-inspection",
+			"anchor": "sewer line inspection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4365,7 +5223,13 @@
 		{
 			"from": "/service-offerings/shower-installation-and-repair",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/shower-installation-and-repair",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4378,6 +5242,12 @@
 			"from": "/service-offerings/smoke-tests",
 			"to": "/service-offerings/drain-line-inspection",
 			"anchor": "drain line inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/smoke-tests",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4449,12 +5319,6 @@
 		{
 			"from": "/service-offerings/storm-drain-cleaning",
 			"to": "/service-offerings/drain-cleaning",
-			"anchor": "drain cleaning",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/service-offerings/storm-drain-cleaning",
-			"to": "/service-offerings/drain-cleaning",
 			"anchor": "our professional drain cleaning services",
 			"classification": "MOCK_VERIFIED"
 		},
@@ -4503,13 +5367,19 @@
 		{
 			"from": "/service-offerings/sump-pump-installation",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/service-offerings/tankless-water-heater-installation",
 			"to": "/service-offerings/water-heater-installation",
 			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/tankless-water-heater-installation",
+			"to": "/tankless-water-heater-santa-cruz-homes",
+			"anchor": "tankless water heaters in Santa Cruz County",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4610,6 +5480,12 @@
 		},
 		{
 			"from": "/service-offerings/water-line-repair-and-installation",
+			"to": "/water-service-line-repair-santa-cruz",
+			"anchor": "who owns the water line",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/service-offerings/water-line-repair-and-installation",
 			"to": "/service-offerings/backflow-prevention-installation",
 			"anchor": "backflow prevention devices",
 			"classification": "MOCK_VERIFIED"
@@ -4645,6 +5521,102 @@
 			"classification": "MOCK_VERIFIED"
 		},
 		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/video-inspections",
+			"anchor": "video pipe inspections",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/septic-tank-inspection-and-assessment",
+			"anchor": "septic inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/the-benefits-of-hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/sewer-line-repair-essentials-santa-cruz",
+			"anchor": "sewer line repair essentials",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/main-line-cleanout-installation",
+			"anchor": "main line cleanout installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/septic-trouble-signs-santa-cruz",
+			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/drain-cleaning",
+			"anchor": "drain cleaning",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-offerings/hydro-jetting",
+			"anchor": "hydro jetting",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-camera-inspection-santa-cruz-homes",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
 			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/pipe-leak-solutions-santa-cruz-septic",
 			"anchor": "pipe leak guide",
@@ -4666,6 +5638,12 @@
 			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/service-offerings/sewer-camera-inspection",
 			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/sewer-line-repair-essentials-santa-cruz",
+			"to": "/sewer-camera-inspection-santa-cruz-homes",
+			"anchor": "what a sewer camera inspection shows",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4713,7 +5691,7 @@
 		{
 			"from": "/sewer-line-repair-essentials-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4732,6 +5710,30 @@
 			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
 			"to": "/why-is-dirty-water-backing-up-into-your-shower",
 			"anchor": "why dirty water backs up into a shower",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4773,7 +5775,13 @@
 		{
 			"from": "/should-you-call-a-plumber-or-fix-it-yourself",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/compare/repair-vs-replace-water-heater",
+			"anchor": "repair versus replace",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4790,8 +5798,50 @@
 		},
 		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/tankless-water-heater-santa-cruz-homes",
+			"anchor": "tankless water heaters in Santa Cruz County",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/service-offerings/water-heater-installation",
 			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/should-you-repair-or-replace-your-water-heater",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4803,7 +5853,7 @@
 		{
 			"from": "/should-you-repair-or-replace-your-water-heater",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4827,7 +5877,7 @@
 		{
 			"from": "/shower-valve-replacement-why-it-matters-for-your-water-temperature-and-pressure",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4869,7 +5919,115 @@
 		{
 			"from": "/signs-your-drain-field-needs-professional-repair",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden leak guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-offerings/water-line-repair-and-installation",
+			"anchor": "water line repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"anchor": "re-pipe guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/slab-leak-signs-santa-cruz-homes",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4929,7 +6087,121 @@
 		{
 			"from": "/slow-drains-solutions-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-offerings/tankless-water-heater-installation",
+			"anchor": "tankless",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "tank",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"anchor": "hard water guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-offerings/gas-line-repair",
+			"anchor": "Gas line repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/adding-adu-bedroom-septic-santa-cruz",
+			"anchor": "adding an ADU on a Santa Cruz County septic",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-offerings/tankless-water-heater-installation",
+			"anchor": "tankless water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/tankless-water-heater-santa-cruz-homes",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -4942,6 +6214,12 @@
 			"from": "/terms-of-service",
 			"to": "/contact",
 			"anchor": "contact page",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/testimonials",
+			"to": "/service-areas",
+			"anchor": "service areas",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5019,7 +6297,7 @@
 		{
 			"from": "/thanksgiving-kitchen-drain-and-septic-prep-santa-cruz",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5038,6 +6316,12 @@
 			"from": "/the-benefits-of-hydro-jetting",
 			"to": "/slow-drains-solutions-santa-cruz",
 			"anchor": "slow drain solutions",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/compare/hydro-jetting-vs-snaking",
+			"anchor": "hydro jetting vs snaking",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5108,6 +6392,12 @@
 		},
 		{
 			"from": "/the-benefits-of-hydro-jetting",
+			"to": "/service-offerings/grease-trap-installation",
+			"anchor": "grease trap installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-benefits-of-hydro-jetting",
 			"to": "/service-offerings/hydro-jetting",
 			"anchor": "hydro jetting",
 			"classification": "MOCK_VERIFIED"
@@ -5127,7 +6417,7 @@
 		{
 			"from": "/the-benefits-of-hydro-jetting",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5168,6 +6458,18 @@
 		},
 		{
 			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-complete-guide-to-septic-system-maintenance",
 			"to": "/service-areas",
 			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
 			"classification": "MOCK_VERIFIED"
@@ -5175,7 +6477,19 @@
 		{
 			"from": "/the-complete-guide-to-septic-system-maintenance",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/maintenance-guide",
+			"anchor": "plumbing and septic maintenance schedule",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-importance-of-regular-plumbing-maintenance",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5223,7 +6537,109 @@
 		{
 			"from": "/the-importance-of-regular-plumbing-maintenance",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden water leak guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/sewer-camera-inspection",
+			"anchor": "sewer camera inspection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/the-benefits-of-hydro-jetting",
+			"anchor": "what hydro jetting is for",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/how-to-properly-clear-a-clogged-drain-a-step-by-step-guide",
+			"anchor": "how to clear a clogged drain",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/should-you-repair-or-replace-your-water-heater",
+			"anchor": "repair or replace a water heater",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/water-heater-installation",
+			"anchor": "water heater installation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair and replacement",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"anchor": "how to prepare for a re-pipe",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/the-complete-guide-to-septic-system-maintenance",
+			"anchor": "septic maintenance guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/how-to-prevent-frozen-pipes-this-winter",
+			"anchor": "frozen pipe prevention",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/the-importance-of-regular-plumbing-maintenance",
+			"anchor": "home plumbing maintenance",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/maintenance-guide",
+			"anchor": "maintenance schedule",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/new-year-plumbing-reset-santa-cruz-homes",
+			"anchor": "New Year plumbing reset",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
+			"to": "/5-signs-you-need-to-call-a-professional-plumber",
+			"anchor": "five warning signs",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5253,7 +6669,7 @@
 		{
 			"from": "/the-ultimate-guide-to-plumbing-maintenance-repairs-and-upgrades",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5266,6 +6682,150 @@
 			"from": "/water-main-sewer-line-repair-santa-cruz-county",
 			"to": "/contact",
 			"anchor": "Go To Contact Form",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/water-line-repair-and-installation",
+			"anchor": "water line repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/soquel-ca-plumbing-septic-services",
+			"anchor": "Soquel",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/ben-lomond-ca-plumbing-septic-services",
+			"anchor": "Ben Lomond",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/boulder-creek-ca-plumbing-septic-services",
+			"anchor": "Boulder Creek",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/watsonville-ca-plumbing-septic-services",
+			"anchor": "Watsonville",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/scotts-valley-ca-plumbing-septic-services",
+			"anchor": "Scotts Valley",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/6-signs-you-have-a-hidden-water-leak",
+			"anchor": "hidden leak signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "Leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/how-to-prepare-for-a-re-pipe-santa-cruz",
+			"anchor": "how to prepare for a re-pipe",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/water-line-repair-and-installation",
+			"anchor": "water line repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/leak-detection",
+			"anchor": "leak detection",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-offerings/pipe-repair-and-replacement",
+			"anchor": "pipe repair",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/santa-cruz-ca-plumbing-septic-services",
+			"anchor": "Santa Cruz",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-area/felton-ca-plumbing-septic-services",
+			"anchor": "Felton",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/service-areas",
+			"anchor": "Santa Cruz County and nearby Santa Clara County communities",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/water-service-line-repair-santa-cruz",
+			"to": "/contact",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5295,13 +6855,43 @@
 		{
 			"from": "/water-softeners-vs-whole-house-filtration-systems-which-is-right-for-your-home",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-area/capitola-ca-plumbing-septic-services",
+			"anchor": "Capitola",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-area/soquel-ca-plumbing-septic-services",
+			"anchor": "Soquel",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-area/aptos-ca-plumbing-septic-services",
+			"anchor": "Aptos",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/service-area/la-selva-beach-ca-plumbing-septic-services",
+			"anchor": "La Selva Beach",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
 			"to": "/should-you-repair-or-replace-your-water-heater",
 			"anchor": "water heater repair or replace guide",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
+			"to": "/tankless-water-heater-santa-cruz-homes",
+			"anchor": "tankless water heater guide",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5331,7 +6921,25 @@
 		{
 			"from": "/what-is-hard-water-why-does-it-matter-for-your-home",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/perc-test-site-evaluation-santa-cruz-septic",
+			"anchor": "perc tests and site evaluation",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/enhanced-septic-operating-permit-santa-cruz",
+			"anchor": "operating permit and OSSP contract",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/what-you-need-to-know-about-engineered-septic-systems",
+			"to": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
+			"anchor": "Santa Cruz County guide to new septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5342,8 +6950,8 @@
 		},
 		{
 			"from": "/what-you-need-to-know-about-engineered-septic-systems",
-			"to": "/a-homeowners-guide-to-new-septic-systems-in-santa-cruz-county",
-			"anchor": "guide to advanced septic systems in Santa Cruz County",
+			"to": "/compare/conventional-vs-engineered-septic",
+			"anchor": "conventional vs engineered septic",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5356,12 +6964,6 @@
 			"from": "/what-you-need-to-know-about-engineered-septic-systems",
 			"to": "/contact",
 			"anchor": "Request an installation quote",
-			"classification": "MOCK_VERIFIED"
-		},
-		{
-			"from": "/what-you-need-to-know-about-engineered-septic-systems",
-			"to": "/compare/conventional-vs-engineered-septic",
-			"anchor": "Compare conventional and engineered septic systems",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5385,7 +6987,7 @@
 		{
 			"from": "/what-you-need-to-know-about-engineered-septic-systems",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5433,13 +7035,19 @@
 		{
 			"from": "/why-is-dirty-water-backing-up-into-your-shower",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
 			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
 			"to": "/septic-trouble-signs-santa-cruz",
 			"anchor": "septic trouble signs",
+			"classification": "MOCK_VERIFIED"
+		},
+		{
+			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
+			"to": "/santa-cruz-septic-inspection-at-sale",
+			"anchor": "point-of-sale septic inspection",
 			"classification": "MOCK_VERIFIED"
 		},
 		{
@@ -5475,7 +7083,7 @@
 		{
 			"from": "/why-you-should-never-ignore-septic-system-warning-signs",
 			"to": "/contact",
-			"anchor": "Request service",
+			"anchor": "Get a Free Quote",
 			"classification": "MOCK_VERIFIED"
 		}
 	]
