@@ -15,6 +15,7 @@ import { siteConfig } from "../../lib/site"
 import {
 	featuredTownLinks,
 	nearbyTownsFor,
+	townGuideLinks,
 	townServiceLinks,
 } from "../../lib/town-page-links"
 
@@ -62,6 +63,8 @@ test("town hubs render nearby towns, core services, and a free-quote call path",
 		html.includes("/service-offerings/engineered-septic-system-installation"),
 		html,
 	)
+	assert.ok(townGuideLinks.length >= 2 && townGuideLinks.length <= 4)
+	assert.ok(html.includes("/maintenance-guide"), html)
 	assert.ok(html.includes("not pumping"), html)
 	assert.ok(html.includes(freeQuoteCtaLabel), html)
 	assert.ok(html.includes(`href="${siteConfig.phoneHref}"`), html)

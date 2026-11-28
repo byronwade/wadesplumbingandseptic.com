@@ -17,7 +17,7 @@ image: /images/work/drain-cleaning-equipment.webp
 imageAlt: Drain cleaning and inspection equipment used on residential sewer lines
 ---
 
-A sewer camera inspection is a recording of the inside of a drain or sewer line. A camera on a cable goes in through a cleanout and shows cracks, roots, grease, sags and separated joints, along with the distance from the access point. It does not repair the pipe. It tells you whether the next step is cleaning, a spot repair, a larger replacement or leaving the line alone. Wade's Plumbing & Septic provides [sewer camera inspections](/service-offerings/sewer-camera-inspection). Quotes are free.
+A sewer camera inspection is a recording of the inside of a drain or sewer line. A camera on a cable goes in through a cleanout and shows cracks, roots, grease, sags and separated joints, along with the distance from the access point. It does not repair the pipe. It tells you whether the next step is cleaning, a spot repair, a larger replacement or leaving the line alone. Wade's Plumbing & Septic provides [sewer camera inspections](/service-offerings/sewer-camera-inspection) and [video pipe inspections](/service-offerings/video-inspections). Quotes are free.
 
 ![Drain cleaning equipment](/images/work/drain-cleaning-equipment.webp)
 

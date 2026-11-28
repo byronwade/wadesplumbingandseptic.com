@@ -52,7 +52,7 @@ The county lists these as exempt:
 - Clearing stoppages
 - Repairing leaks in pipes, valves or fixtures, as long as the repair does not replace or rearrange them
 
-If you live inside a city such as Santa Cruz, Capitola, Scotts Valley or Watsonville, check with that city's building department, because each city issues its own permits. When you are not sure, ask before starting, since permits are much easier to get before the work than after.
+If you live inside a city such as [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services) or [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), check with that city's building department, because each city issues its own permits. When you are not sure, ask before starting, since permits are much easier to get before the work than after.
 
 ## Know the license rules when you hire
 

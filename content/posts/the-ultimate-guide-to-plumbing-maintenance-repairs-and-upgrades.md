@@ -63,7 +63,7 @@ Start with the [septic maintenance guide](/the-complete-guide-to-septic-system-m
 - **On the EPA schedule:** septic inspection, and pumping when the inspection says so.
 - **Before a cold snap in the mountains:** protect exposed pipes. See [frozen pipe prevention](/how-to-prevent-frozen-pipes-this-winter).
 
-The month by month list lives in [home plumbing maintenance](/the-importance-of-regular-plumbing-maintenance).
+The month by month list lives in [home plumbing maintenance](/the-importance-of-regular-plumbing-maintenance). The one-page [maintenance schedule](/maintenance-guide) is the short version.
 
 ## Frequently Asked Questions
 

@@ -2,6 +2,7 @@ import assert from "node:assert/strict"
 import fs from "node:fs"
 import path from "node:path"
 import test from "node:test"
+import matter from "gray-matter"
 import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 
@@ -11,10 +12,18 @@ import { GuideLocalLinks } from "../../components/guide-local-links"
 import { RelatedContentSections } from "../../components/related-content"
 import { ServiceDirectory } from "../../components/service-directory"
 import { ServiceTownLinks } from "../../components/service-town-links"
+import { TownPageLinks } from "../../components/town-page-links"
 import { freeQuoteCtaLabel, freeQuoteHref } from "../../lib/public-facts"
 import { relatedTownsFor } from "../../lib/related-towns"
+import {
+	rankDocuments,
+	scoreCandidate,
+	seedFromDocument,
+	type RelatedSeedDocument,
+} from "../../lib/related-score"
 import { cityServicePages, cityServicePath } from "../../lib/city-service-pages"
 import { serviceAreaLocations } from "../../lib/service-areas"
+import { townGuideLinks } from "../../lib/town-page-links"
 
 const postsDir = path.join("content", "posts")
 const servicesDir = path.join("content", "services")
@@ -204,4 +213,215 @@ test("glossary term pages keep the same Call and Free Quote band as glossary hub
 	assert.match(source, /Need this explained for your home\?/)
 	assert.ok(freeQuoteCtaLabel)
 	assert.ok(freeQuoteHref.startsWith("/contact"))
+})
+
+function walkMarkdown(dir: string): string[] {
+	const files: string[] = []
+	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+		const full = path.join(dir, entry.name)
+		if (entry.isDirectory()) files.push(...walkMarkdown(full))
+		else if (entry.name.endsWith(".md")) files.push(full)
+	}
+	return files
+}
+
+function markdownHrefs(file: string) {
+	return [...markdownBody(file).matchAll(/\]\((\/(?!\/)[^)\s#?]*)/g)].map(
+		(match) => match[1]!.replace(/\/$/, "") || "/",
+	)
+}
+
+function parseSeed(file: string): RelatedSeedDocument {
+	const { data, content } = matter(fs.readFileSync(file, "utf8"))
+	return {
+		slug: path.basename(file, ".md"),
+		title:
+			typeof data.title === "string" ? data.title : path.basename(file, ".md"),
+		description: typeof data.description === "string" ? data.description : "",
+		content,
+		category: typeof data.category === "string" ? data.category : undefined,
+		tags: Array.isArray(data.tags)
+			? data.tags.map((tag) => String(tag))
+			: undefined,
+	}
+}
+
+test("every blog post links a service page and a town or service-areas hub", () => {
+	const files = fs.readdirSync(postsDir).filter((name) => name.endsWith(".md"))
+	assert.ok(files.length > 0)
+	for (const file of files) {
+		const hrefs = markdownHrefs(path.join(postsDir, file))
+		assert.ok(
+			hrefs.some((href) => href.startsWith("/service-offerings/")),
+			`${file} has no service page link`,
+		)
+		assert.ok(
+			hrefs.some(
+				(href) =>
+					href === "/service-areas" || href.startsWith("/service-area/"),
+			),
+			`${file} has no town or service-areas link`,
+		)
+	}
+})
+
+test("indexable money pages are not markdown orphans", () => {
+	const inbound = new Map<string, string[]>()
+	function add(href: string, from: string) {
+		const list = inbound.get(href) ?? []
+		list.push(from)
+		inbound.set(href, list)
+	}
+
+	for (const file of walkMarkdown("content")) {
+		for (const href of markdownHrefs(file)) add(href, file)
+	}
+
+	const required = [
+		"/facts",
+		"/maintenance-guide",
+		"/septic-solutions",
+		"/compare/conventional-vs-engineered-septic",
+		"/compare/hydro-jetting-vs-snaking",
+		"/compare/repair-vs-replace-water-heater",
+		...fs
+			.readdirSync(servicesDir)
+			.filter((name) => name.endsWith(".md"))
+			.map((name) => `/service-offerings/${name.replace(/\.md$/, "")}`),
+	]
+
+	const missing = required.filter(
+		(href) => (inbound.get(href) ?? []).length < 1,
+	)
+	assert.deepEqual(missing, [])
+})
+
+test("town hubs keep 2 to 4 homeowner guide links", () => {
+	assert.ok(townGuideLinks.length >= 2 && townGuideLinks.length <= 4)
+	assert.ok(townGuideLinks.some((guide) => guide.href === "/maintenance-guide"))
+	const html = renderToStaticMarkup(
+		createElement(TownPageLinks, {
+			pathname: "/service-area/felton-ca-plumbing-septic-services",
+		}),
+	)
+	for (const guide of townGuideLinks) {
+		assert.ok(html.includes(guide.href), guide.href)
+	}
+})
+
+test("every service and town topic ranks 2 to 4 related guides", () => {
+	const posts = fs
+		.readdirSync(postsDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => parseSeed(path.join(postsDir, name)))
+	assert.ok(posts.length > 20)
+
+	const services = fs
+		.readdirSync(servicesDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => parseSeed(path.join(servicesDir, name)))
+
+	for (const service of services) {
+		const related = rankDocuments(
+			seedFromDocument(service),
+			posts,
+			"post",
+			4,
+			new Set([service.slug]),
+		)
+		assert.ok(
+			related.length >= 2 && related.length <= 4,
+			`${service.slug}: ${related.length} related guides`,
+		)
+	}
+
+	for (const location of serviceAreaLocations) {
+		const related = rankDocuments(
+			seedFromDocument({
+				slug: `__topic__${location.slug}`,
+				title: `${location.name} plumbing and septic`,
+				description: `${location.name} plumbing and septic`,
+				content: `${location.name} plumbing septic`,
+				tags: ["plumbing", "septic"],
+			}),
+			posts,
+			"post",
+			4,
+		)
+		assert.ok(
+			related.length >= 2 && related.length <= 4,
+			`${location.slug}: ${related.length} related guides`,
+		)
+	}
+})
+
+test("water heater related guides stay on water heater topics", () => {
+	const posts = fs
+		.readdirSync(postsDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => parseSeed(path.join(postsDir, name)))
+	const heater = parseSeed(
+		path.join(servicesDir, "water-heater-installation.md"),
+	)
+	const related = rankDocuments(seedFromDocument(heater), posts, "post", 4)
+	assert.ok(
+		related.some(
+			(post) =>
+				post.slug.includes("water-heater") || post.slug.includes("tankless"),
+		),
+		related.map((post) => post.slug).join(", "),
+	)
+	assert.ok(
+		related.every(
+			(post) =>
+				/water.?heater|tankless/i.test(`${post.slug} ${post.title}`) ||
+				!/septic/i.test(post.slug),
+		),
+		related.map((post) => post.slug).join(", "),
+	)
+})
+
+test("mixed plumbing and septic hubs keep both heater and septic guides", () => {
+	const posts = fs
+		.readdirSync(postsDir)
+		.filter((name) => name.endsWith(".md"))
+		.map((name) => parseSeed(path.join(postsDir, name)))
+	const heaterPost = posts.find(
+		(post) =>
+			post.slug.includes("water-heater") || post.slug.includes("tankless"),
+	)
+	const septicPost = posts.find(
+		(post) =>
+			post.slug.includes("septic") && !post.slug.includes("water-heater"),
+	)
+	assert.ok(heaterPost, "expected a water heater post")
+	assert.ok(septicPost, "expected a septic post")
+
+	const townSeed = seedFromDocument({
+		slug: "__topic__felton-ca-plumbing-septic-services",
+		title: "Felton plumbing and septic",
+		description: "Felton plumbing and septic",
+		content: "Felton plumbing septic",
+		tags: ["plumbing", "septic"],
+	})
+	const maintenanceSeed = seedFromDocument(
+		parseSeed(path.join("content", "pages", "maintenance-guide.md")),
+	)
+
+	assert.ok(
+		scoreCandidate(townSeed, heaterPost!, "post") > 0,
+		"town hub dropped a water heater guide",
+	)
+	assert.ok(
+		scoreCandidate(townSeed, septicPost!, "post") > 0,
+		"town hub dropped a septic guide",
+	)
+	assert.ok(
+		scoreCandidate(maintenanceSeed, heaterPost!, "post") > 0,
+		"maintenance guide dropped a water heater post",
+	)
+	assert.ok(
+		scoreCandidate(maintenanceSeed, septicPost!, "post") > 0,
+		"maintenance guide dropped a septic post",
+	)
 })

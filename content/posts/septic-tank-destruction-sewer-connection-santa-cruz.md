@@ -35,7 +35,7 @@ Santa Cruz County Public Works tells owners to contact the Sanitation Department
 
 Chapter 7.38.042 of the County Code also prohibits a **new** OWTS when the property line is within 200 feet of a public sewer and connection is feasible (available by annexation or contract, and technically feasible). A connection ban or moratorium by itself does not make the connection infeasible. That rule is about new systems, not a requirement that every existing septic house hook up today. It is a reason to ask the district before you budget a septic replacement.
 
-City of Santa Cruz, Watsonville, and other sewer agencies have their own connection rules. This post follows County Environmental Health and County Sanitation District pages. If you are inside a city, start with that city's sanitation or public works office.
+The City of [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), and other sewer agencies have their own connection rules. This post follows County Environmental Health and County Sanitation District pages. If you are inside a city, start with that city's sanitation or public works office.
 
 Homes in [Live Oak](/service-area/live-oak-ca-plumbing-septic-services), [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), and [Capitola](/service-area/capitola-ca-plumbing-septic-services) sit closer to public sewer than mountain parcels. Availability is still parcel-specific.
 

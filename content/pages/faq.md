@@ -15,7 +15,7 @@ Short answers to common plumbing and septic questions. If yours is not here, [co
 
 ### What areas do you service?
 
-Santa Cruz County, including Santa Cruz, Watsonville, Scotts Valley, Capitola, Aptos, Felton, Ben Lomond, and Boulder Creek, plus selected Los Gatos and Saratoga addresses generally west of Highway 101. See the full [service areas](/service-areas) list, or call 831.225.4344 with the street address.
+Santa Cruz County, including [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Aptos](/service-area/aptos-ca-plumbing-septic-services), [Felton](/service-area/felton-ca-plumbing-septic-services), [Ben Lomond](/service-area/ben-lomond-ca-plumbing-septic-services), and [Boulder Creek](/service-area/boulder-creek-ca-plumbing-septic-services), plus selected [Los Gatos](/service-area/los-gatos-ca-plumbing-septic-services) and [Saratoga](/service-area/saratoga-ca-plumbing-septic-services) addresses generally west of Highway 101. See the full [service areas](/service-areas) list, or call 831.225.4344 with the street address. The [company facts](/facts) page lists hours, license, and what Wade's does not offer.
 
 ### What are your business hours?
 

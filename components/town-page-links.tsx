@@ -88,7 +88,7 @@ export function TownPageLinks({
 						</li>
 					</ul>
 
-					<p className="spec-label mt-12">Guides</p>
+					<p className="spec-label mt-12">Homeowner guides</p>
 					<ul className="mt-4 flex flex-col gap-2 text-sm font-semibold">
 						{townGuideLinks.map((guide) => (
 							<li key={guide.href}>

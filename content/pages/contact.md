@@ -49,7 +49,7 @@ Call during office hours to book service. If you reach us outside those hours, l
 - **California CSLB #1087260**
 - Classifications include **C-36** (Plumbing) and **C-42** (Sanitation System)
 
-Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx) before you hire.
+Look up the license on the [CSLB license check](https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx) before you hire. A short [company facts](/facts) page lists hours, license, service area, and what Wade's does not offer.
 
 ## Request a free quote
 

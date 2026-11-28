@@ -37,7 +37,7 @@ Many homes in the San Lorenzo Valley and the Santa Cruz Mountains, including [Be
 
 Pick a dry afternoon and walk the path from your house to the tank and drainfield.
 
-- **Downspouts and drains.** Follow each downspout and any sump pump or French drain outlet. If it empties toward the tank or drainfield, redirect it. EPA guidance is to keep roof drains, sump pumps and other rainwater drainage away from the drainfield area.
+- **Downspouts and drains.** Follow each downspout and any sump pump or French drain outlet. If it empties toward the tank or drainfield, redirect it. EPA guidance is to keep roof drains, sump pumps and other rainwater drainage away from the drainfield area. A blocked yard or [storm drain](/service-offerings/storm-drain-cleaning) can pond water toward the field until it is cleared.
 - **Low spots and channels.** Look for places where runoff from a driveway or hillside will flow across the drainfield. A small swale or berm that sends water around the area can help. On steep or unstable ground, get advice before regrading.
 - **Lids, risers and cleanouts.** Make sure tank lids and inspection ports are secure, intact and not buried. Cracked lids and missing caps let rainwater and silt in. If your lids are deep underground, [septic tank risers](/service-offerings/septic-tank-riser-installation) make future checks much easier.
 - **Alarms and pumps.** If your system has a pump chamber or an alarm panel, confirm the alarm light and buzzer work. EPA recommends that alternative systems with pumps, float switches or other mechanical parts be inspected more often, generally once a year. An [alarm](/service-offerings/septic-tank-alarm-installation) gives you early notice if a pump stops keeping up.

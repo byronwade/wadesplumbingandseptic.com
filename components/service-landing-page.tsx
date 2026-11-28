@@ -96,7 +96,7 @@ export function ServiceLandingPage({
 
 			{related ? (
 				<RelatedContentSectionsWithStats
-					postsTitle="Related expert tips"
+					postsTitle="Related guides"
 					related={related}
 					servicesTitle="Related services"
 				/>

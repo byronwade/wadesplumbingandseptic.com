@@ -27,7 +27,7 @@ Adding a bedroom or an accessory dwelling unit (ADU) on a Santa Cruz County sept
 - A one-time addition of up to 500 square feet with no extra bedrooms can stay on repair standards if the current house still matches that permit.
 - An ADU, extra bedrooms, or more than 500 added square feet brings in upgrade standards. The system has to meet (or be upgraded to meet) current rules for the total bedrooms and dwelling units.
 - An ADU is a separate unit for design flow. A detached ADU may have its own tank or share a combined system that is sized for both buildings.
-- Unincorporated county rules are in Chapter 7.38. If you live in Santa Cruz, Capitola, Scotts Valley, or Watsonville, confirm the septic path with that city's building department as well.
+- Unincorporated county rules are in Chapter 7.38. If you live in [Santa Cruz](/service-area/santa-cruz-ca-plumbing-septic-services), [Capitola](/service-area/capitola-ca-plumbing-septic-services), [Scotts Valley](/service-area/scotts-valley-ca-plumbing-septic-services), or [Watsonville](/service-area/watsonville-ca-plumbing-septic-services), confirm the septic path with that city's building department as well.
 
 ## Start with the permit, not the floor plan
 
